@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>대출 상환 계산기 - 원리금균등·원금균등·만기일시 계산 | jptcalc</title>
+  <meta name="description" content="대출 원금, 금리, 기간을 입력하면 월 상환액과 총 이자를 자동 계산합니다. 원리금균등·원금균등·만기일시 상환 비교." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/finance/loan-repayment/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="대출 상환 계산기 | jptcalc" />
+  <meta property="og:description" content="대출 원금, 금리, 기간을 입력하면 월 상환액과 총 이자를 자동 계산합니다. 원리금균등·원금균등·만기일시 상환 비교." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/finance/loan-repayment/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="대출 상환 계산기 | jptcalc" />
+  <meta name="twitter:description" content="대출 원금, 금리, 기간을 입력하면 월 상환액과 총 이자를 자동 계산합니다. 원리금균등·원금균등·만기일시 상환 비교." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/affiliate-banner.css" />
+  <link rel="stylesheet" href="/assets/finance-common.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"대출 상환 계산기",
+    "url":"https://www.jptcalc.kr/calc/finance/loan-repayment/",
+    "applicationCategory":"FinanceApplication",
+    "operatingSystem":"All",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+      {"@type":"ListItem","position":2,"name":"금융·이자 계산기","item":"https://www.jptcalc.kr/calc/finance/"},
+      {"@type":"ListItem","position":3,"name":"대출 상환 계산기","item":"https://www.jptcalc.kr/calc/finance/loan-repayment/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"원리금균등과 원금균등 상환 중 어떤 것이 유리한가요?","acceptedAnswer":{"@type":"Answer","text":"총 이자 부담은 원금균등이 원리금균등보다 적습니다. 예를 들어 3억원, 30년, 연 4% 대출에서 원리금균등 총 이자는 약 2억 1,500만원, 원금균등 총 이자는 약 1억 8,000만원으로 약 3,500만원 차이가 납니다. 다만 원금균등은 초기 상환 부담이 크므로, 소득이 안정적이라면 원금균등, 초기 부담을 줄이고 싶다면 원리금균등을 선택하세요."}},{"@type":"Question","name":"중도상환수수료는 얼마나 되나요?","acceptedAnswer":{"@type":"Answer","text":"일반적으로 대출 실행 후 3년 이내 중도상환 시 잔여 원금의 1~1.5% 수준의 수수료가 부과됩니다. 3년이 지나면 면제되는 상품이 많습니다. 단, 인터넷전문은행이나 일부 정책대출(디딤돌대출 등)은 수수료가 다를 수 있어 계약서 확인이 필요합니다."}},{"@type":"Question","name":"변동금리와 고정금리 중 어떤 것을 선택해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"금리 인하가 예상되는 시기에는 변동금리, 금리 인상이 예상될 때는 고정금리가 유리합니다. 혼합형(초기 3~5년 고정 후 변동)도 많이 활용됩니다. 장기 대출일수록 금리 변동 리스크가 크므로, 상환 기간과 금리 전망을 함께 고려해 결정하세요."}},{"@type":"Question","name":"대출 금리를 낮추는 방법은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"① 신용점수를 높이면 우대금리 적용이 가능합니다. ② 주거래 은행을 통한 급여이체·자동이체 연계 시 우대금리 혜택이 있습니다. ③ 같은 조건이라도 여러 은행을 비교하면 0.3~0.5%p 차이가 날 수 있습니다. ④ 인터넷전문은행은 일반 은행보다 금리가 낮은 경우가 많습니다. ⑤ 대출 갈아타기(대환대출)로 더 낮은 금리로 이동할 수도 있습니다."}},{"@type":"Question","name":"대출 상환 기간이 길면 유리한가요?","acceptedAnswer":{"@type":"Answer","text":"상환 기간이 길면 월 상환액이 줄어들어 단기 부담이 낮아지지만, 총 이자 부담은 크게 증가합니다. 예를 들어 1억원, 4% 대출에서 20년 상환 시 총 이자 약 4,400만원, 30년 상환 시 약 6,900만원으로 2,500만원 차이가 납니다. 여유가 생기면 부분 조기상환을 통해 원금을 줄이는 전략이 효과적입니다."}}]}</script>
+  <style>
+    input[type=number]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(99,102,241,0.15)}
+    .result-card{background:linear-gradient(135deg,#EEF2FF 0%,#E0E7FF 100%);border:1px solid rgba(99,102,241,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-highlight{background:rgba(99,102,241,0.1);border-radius:12px;padding:16px;margin-bottom:16px;text-align:center}
+    .rh-label{font-size:12px;color:var(--gray-500);margin-bottom:4px}
+    .rh-value{font-size:28px;font-weight:900;color:var(--primary)}
+    .rh-sub{font-size:12px;color:var(--gray-500);margin-top:2px}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+      <a href="/calc/finance/" class="nav-item active"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/finance/">금융·이자 계산기</a><span class="breadcrumb-sep">›</span><span>대출 상환 계산기</span></div>
+    <div class="page-header-badge">🏠 3가지 상환방식 비교</div>
+    <h1>대출 상환 계산기</h1>
+    <p>대출원금·금리·기간으로 월 상환액과 총 이자를 계산하세요</p>
+  </div>
+    <div class="card">
+      <div class="card-title">대출 정보</div>
+      <div class="field">
+        <div class="field-label">대출 원금 <span class="label-hint">만원 단위</span></div>
+        <div class="input-wrap"><input type="number" id="loan-amount" placeholder="예) 30000" oninput="calc()" /><span class="unit">만원</span></div>
+        <div class="converted" id="loan-display"></div>
+      </div>
+      <div class="field">
+        <div class="field-label">연 금리</div>
+        <div class="input-wrap"><input type="number" id="loan-rate" placeholder="예) 4.5" step="0.1" oninput="calc()" /><span class="unit">%</span></div>
+      </div>
+      <div class="field">
+        <div class="field-label">대출 기간</div>
+        <div class="seg-group" style="margin-bottom:0" id="loan-period-group">
+          <button class="seg-btn" onclick="setLoanPeriod(10,this)">10년</button>
+          <button class="seg-btn" onclick="setLoanPeriod(20,this)">20년</button>
+          <button class="seg-btn active" onclick="setLoanPeriod(30,this)">30년</button>
+          <button class="seg-btn" onclick="setLoanPeriod(35,this)">35년</button>
+        </div>
+      </div>
+      <div class="field">
+        <div class="field-label">상환 방식</div>
+        <div class="seg-group" style="margin-bottom:0" id="loan-type-group">
+          <button class="seg-btn active" onclick="setLoanType('equal',this)">원리금균등</button>
+          <button class="seg-btn" onclick="setLoanType('principal',this)">원금균등</button>
+          <button class="seg-btn" onclick="setLoanType('bullet',this)">만기일시</button>
+        </div>
+      </div>
+    </div>
+    <div class="result-card" id="result">
+      <div class="result-highlight">
+        <div class="rh-label">월 상환액</div>
+        <div class="rh-value" id="loan-monthly">-</div>
+        <div class="rh-sub" id="loan-type-label">원리금균등 기준</div>
+      </div>
+      <div class="result-row"><span class="result-label">대출 원금</span><span class="result-value" id="loan-r-principal">-</span></div>
+      <div class="result-row"><span class="result-label">총 이자</span><span class="result-value" id="loan-r-interest">-</span></div>
+      <div class="result-row result-total-row">
+        <span class="result-total-label">총 상환액</span>
+        <span class="result-total-value" id="loan-r-total">-</span>
+      </div>
+      <p class="result-note">※ 원리금균등: 매월 동일 금액 납부. 원금균등: 초기 납부액 높고 점점 감소. 만기일시: 매월 이자만 납부 후 만기 원금 일시 상환.</p>
+      <a class="affiliate-banner" href="https://linkmoa.kr/click.php?m=mycredit1&a=A100703525&l=0000" target="_blank" rel="noopener noreferrer sponsored">
+        <div class="affiliate-banner__text">
+          <div class="affiliate-banner__title">대출 전 내 신용점수부터 확인하세요</div>
+          <div class="affiliate-banner__desc">NICE지키미에서 무료 신용점수 조회</div>
+        </div>
+        <span class="affiliate-banner__cta">신용점수 확인하기 →</span>
+      </a>
+    </div>
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>대출 상환 방식, 어떤 것이 유리할까?</h2>
+      <p>대출 상환 방식은 원리금균등, 원금균등, 만기일시 세 가지입니다. 방식에 따라 월 상환액과 총 이자가 수천만 원까지 차이 나므로, 자신의 소득 상황과 자금 계획에 맞는 방식을 선택하는 것이 중요합니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box">
+          <strong>원리금균등 상환</strong>
+          <span>매월 동일한 금액(원금+이자)을 납부. 예측 가능한 자금 계획에 유리. 초기 이자 비중이 높고 후반부로 갈수록 원금 비중이 커집니다.</span>
+        </div>
+        <div class="guide-box">
+          <strong>원금균등 상환</strong>
+          <span>매월 동일한 원금 + 감소하는 이자 납부. 초기 부담이 크지만 총 이자가 가장 적어 장기적으로 유리합니다.</span>
+        </div>
+        <div class="guide-box">
+          <strong>만기일시 상환</strong>
+          <span>매월 이자만 납부하고 만기에 원금을 전액 일시 상환. 월 부담은 최소이지만 총 이자 부담이 가장 크고 만기 시 목돈이 필요합니다.</span>
+        </div>
+        <div class="guide-box">
+          <strong>중도상환 전략</strong>
+          <span>3년 이후 중도상환수수료 면제 상품이 많습니다. 여윳돈이 생기면 부분 조기상환으로 원금을 줄이면 남은 이자를 크게 절감할 수 있습니다.</span>
+        </div>
+      </div>
+      <p class="ref-links">금리 비교: <a href="https://fine.fss.or.kr" target="_blank" rel="noopener">금융소비자포털(fine.fss.or.kr)</a> · 대환대출: <a href="https://www.loanportal.or.kr" target="_blank" rel="noopener">대출갈아타기 포털</a></p>
+    </div>
+    <div class="guide-card">
+      <h2>실제 사용 예시</h2>
+      <p>대출 원금·금리·상환방식 조합에 따라 월 납부액과 총 이자가 어떻게 달라지는지 비교해보세요.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>사례</th>
+            <th>대출 원금</th>
+            <th>연 금리</th>
+            <th>상환 기간</th>
+            <th>월 납부액</th>
+            <th>총 이자</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>직장인 주택담보대출 (원리금균등)</td>
+            <td>3억원</td>
+            <td>연 4%</td>
+            <td>30년</td>
+            <td>약 143만원</td>
+            <td>약 2억 1,500만원</td>
+          </tr>
+          <tr>
+            <td>전세대출 만기일시 상환</td>
+            <td>1억 5천만원</td>
+            <td>연 3.5%</td>
+            <td>2년</td>
+            <td>약 44만원(이자)</td>
+            <td>약 1,050만원</td>
+          </tr>
+          <tr>
+            <td>신용대출 원금균등 상환</td>
+            <td>3,000만원</td>
+            <td>연 6%</td>
+            <td>3년</td>
+            <td>초기 약 98만원</td>
+            <td>약 277만원</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="ref-links">* 위 수치는 참고용 추정치입니다. 거치 기간, 대출 취급수수료, 금리 변동 등에 따라 실제 금액은 달라집니다.</p>
+      <h3>자주 헷갈리는 입력값</h3>
+      <ul>
+        <li><strong>대출 금리는 연 기준:</strong> 은행에서 안내받는 금리는 연 기준입니다. 월 환산 시 ÷12로 계산됩니다. 변동금리 대출은 현재 적용 금리를 기준으로 입력하세요.</li>
+        <li><strong>거치 기간 포함 여부:</strong> 거치 기간(이자만 납부) 이후 원금 상환이 시작됩니다. 거치 기간 중에는 이자만 납부하므로 총 이자가 증가합니다.</li>
+        <li><strong>실제 대출 원금 확인:</strong> 취급수수료, 인지세 등이 차감된 후 실제 수령액과 대출 원금(상환 기준)이 다를 수 있습니다. 계약서상 대출 원금을 기준으로 입력하세요.</li>
+        <li><strong>상환 기간 단위:</strong> 상환 기간은 '개월' 단위 또는 '년' 단위로 입력합니다. 주택담보대출은 통상 20~30년, 신용대출은 1~5년 단위가 일반적입니다.</li>
+      </ul>
+      <h3>결과 해석 방법</h3>
+      <p>계산 결과에서 <strong>월 상환액</strong>은 소득의 30~35% 이내가 일반적인 권장 기준입니다. <strong>총 납부 이자</strong>는 상환 방식·기간에 따라 크게 달라집니다. 동일 조건에서 원리금균등보다 원금균등이 총 이자가 적고, 기간이 짧을수록 총 이자는 감소합니다. 여윳돈이 생기면 조기상환으로 원금을 줄이는 것이 이자 절감에 가장 효과적입니다.</p>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item">
+        <h3>원리금균등과 원금균등 중 어떤 것이 유리한가요?</h3>
+        <p>총 이자는 원금균등이 더 적습니다. 3억원, 30년, 연 4% 기준으로 원리금균등 총 이자는 약 2억 1,500만원, 원금균등은 약 1억 8,000만원으로 약 3,500만원 차이가 납니다. 다만 원금균등은 초기 상환액이 높으므로, 소득이 안정적이면 원금균등, 초기 부담을 줄이고 싶으면 원리금균등이 적합합니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>중도상환수수료는 얼마나 되나요?</h3>
+        <p>일반적으로 대출 실행 후 3년 이내 중도상환 시 잔여 원금의 1~1.5% 수준의 수수료가 부과됩니다. 3년이 지나면 면제되는 상품이 많습니다. 단, 인터넷전문은행이나 일부 정책대출(디딤돌대출, 버팀목대출 등)은 조건이 다를 수 있어 계약서를 반드시 확인하세요.</p>
+      </div>
+      <div class="faq-item">
+        <h3>변동금리와 고정금리 중 어떤 것을 선택해야 하나요?</h3>
+        <p>금리 인하가 예상될 때는 변동금리, 인상이 예상될 때는 고정금리가 유리합니다. 혼합형(초기 3~5년 고정 후 변동)도 많이 활용됩니다. 장기 대출일수록 금리 변동 리스크가 크므로, 상환 기간과 향후 금리 방향을 함께 고려해 결정하세요.</p>
+      </div>
+      <div class="faq-item">
+        <h3>대출 금리를 낮추는 방법은 무엇인가요?</h3>
+        <p>① 신용점수를 높이면 우대금리 적용이 가능합니다. ② 주거래 은행 급여이체·자동이체 연계 시 우대금리 혜택이 있습니다. ③ 여러 은행을 비교하면 0.3~0.5%p 차이가 날 수 있습니다. ④ 인터넷전문은행은 일반 은행보다 금리가 낮은 경우가 많습니다. ⑤ 대환대출 포털(loanportal.or.kr)에서 더 낮은 금리 상품으로 갈아탈 수 있습니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>대출 기간이 길면 유리한가요?</h3>
+        <p>기간이 길면 월 상환액은 줄지만 총 이자 부담은 크게 늘어납니다. 1억원, 4% 기준으로 20년 상환 시 총 이자 약 4,400만원, 30년 상환 시 약 6,900만원으로 2,500만원 차이가 납니다. 월 부담을 낮추면서도 여유가 생기면 부분 조기상환으로 원금을 줄이는 전략이 효과적입니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>대환대출(갈아타기)은 언제 고려해야 하나요?</h3>
+        <p>현재 대출 금리보다 0.3%p 이상 낮은 상품이 있고, 남은 대출 기간이 충분히 남아 있다면 대환을 검토할 가치가 있습니다. 단, 중도상환수수료(통상 잔여 원금의 1~1.5%)와 신규 대출 취급수수료를 감안해 실제 절감 효과를 계산해야 합니다. 금융감독원 대출갈아타기 포털(loanportal.or.kr)에서 은행별 금리를 한눈에 비교할 수 있습니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>DSR 40%는 어떻게 계산하나요?</h3>
+        <p>DSR(총부채원리금상환비율)은 연간 모든 대출 원리금 상환액을 연 소득으로 나눈 비율입니다. 예를 들어 연 소득 6,000만원인 경우 DSR 40% 적용 시 연간 총 원리금 상환액이 2,400만원(월 200만원)을 넘으면 추가 대출이 제한됩니다. 이 계산기를 활용해 월 상환액을 먼저 확인한 뒤 <a href="/calc/realestate/dsr/">DSR 계산기</a>로 대출 가능 한도를 확인하세요.</p>
+      </div>
+    </div>
+    <div class="update-note">2026년 금융 기준으로 작성되었습니다. 금리·수수료 기준은 금융기관마다 다를 수 있으니 <a href="https://fine.fss.or.kr" target="_blank" rel="noopener">금융소비자포털(fine.fss.or.kr)</a>에서 최신 정보를 확인하세요.<br>최종 검토: 2026.03</div>
+  </div>
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '은행업감독규정 및 여신심사 가이드라인, 2026년 금융기준',
+    appliedFrom: '2026년 1월 1일',
+    exceptions: [
+      '중도상환수수료는 금융기관·상품별로 다르며 대출 후 3년 경과 시 면제되는 상품도 있습니다',
+      '변동금리 대출은 기준금리(KOFIX 등) 변동 시 상환액이 달라집니다',
+      '원금균등·원리금균등 방식에 따라 총 납입 이자 차이가 수백만원 이상 발생할 수 있습니다',
+    ],
+    references: [
+      { name: '금융소비자포털(fine.fss.or.kr)', url: 'https://fine.fss.or.kr' },
+      { name: '대환대출포털(loanportal.or.kr)', url: 'https://www.loanportal.or.kr' },
+    ],
+    lastReviewed: '2026.03',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 금융·이자 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/finance/deposit/" class="sibling-link">🏦 예금 이자</a>
+      <a href="/calc/finance/savings/" class="sibling-link">💳 적금 만기금액</a>
+      <a href="/calc/finance/compound/" class="sibling-link">📈 복리 계산</a>
+      <a href="/calc/finance/loan-repayment/" class="sibling-link current">🏠 대출 상환</a>
+      <a href="/calc/finance/investment/" class="sibling-link">💹 투자 수익률</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script>
+
+let loanPeriod=30, loanType='equal';
+function Ww(w){return Math.round(w).toLocaleString()+'원';}
+function setLoanPeriod(y,btn){loanPeriod=y;document.querySelectorAll('#loan-period-group .seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');calc();}
+function setLoanType(t,btn){loanType=t;document.querySelectorAll('#loan-type-group .seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');calc();}
+function showConverted(inputEl,dispEl){const v=parseFloat(inputEl.value);if(!v||v<=0){dispEl.textContent='';return;}dispEl.textContent=v>=10000?'= '+(v/10000).toFixed(2)+'억원':'= '+v.toLocaleString()+'만원';}
+function calc(){
+  const P=parseFloat(document.getElementById('loan-amount').value)||0;
+  const r=parseFloat(document.getElementById('loan-rate').value)||0;
+  showConverted(document.getElementById('loan-amount'),document.getElementById('loan-display'));
+  const res=document.getElementById('result');
+  if(!P||!r){res.classList.remove('show');return;}
+  res.classList.add('show');
+  const principal=P*10000;
+  const n=loanPeriod*12;
+  const mr=r/100/12;
+  let monthly=0, totalInterest=0, totalPay=0;
+  if(loanType==='equal'){
+    monthly=principal*mr*Math.pow(1+mr,n)/(Math.pow(1+mr,n)-1);
+    totalPay=monthly*n; totalInterest=totalPay-principal;
+  } else if(loanType==='principal'){
+    monthly=principal/n+principal*mr;
+    totalInterest=principal*mr*(n+1)/2;
+    totalPay=principal+totalInterest;
+  } else {
+    monthly=principal*mr;
+    totalInterest=monthly*n;
+    totalPay=principal+totalInterest;
+  }
+  const labels={equal:'원리금균등',principal:'원금균등 (첫 달)',bullet:'만기일시 (월 이자)'};
+  document.getElementById('loan-monthly').textContent=Ww(monthly);
+  document.getElementById('loan-type-label').textContent=labels[loanType]+' 기준';
+  document.getElementById('loan-r-principal').textContent=Ww(principal);
+  document.getElementById('loan-r-interest').textContent=Ww(totalInterest);
+  document.getElementById('loan-r-total').textContent=Ww(totalPay);
+}
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/finance-detail-shell.js"></script>
+</body>
+</html>

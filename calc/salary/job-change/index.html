@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>이직 연봉 비교 계산기 - 실수령 기준 최소연봉 역산 | 제이퍼 계산기</title>
+  <meta name="description" content="이직 시 목표 실수령 증가액을 달성하기 위해 필요한 최소 연봉을 역산합니다. 현재 연봉과 원하는 월 실수령 증가액을 입력하세요." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/salary/job-change/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="이직 연봉 비교 계산기 | 제이퍼 계산기" />
+  <meta property="og:description" content="이직 시 목표 실수령 증가액을 달성하기 위해 필요한 최소 연봉을 역산합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/salary/job-change/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="이직 연봉 비교 계산기 | 제이퍼 계산기" />
+  <meta name="twitter:description" content="이직 시 목표 실수령 증가액을 달성하기 위해 필요한 최소 연봉을 역산합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/salary-common.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"이직 연봉 비교 계산기",
+    "url":"https://www.jptcalc.kr/calc/salary/job-change/",
+    "applicationCategory":"FinanceApplication",
+    "operatingSystem":"All",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+      {"@type":"ListItem","position":2,"name":"이직/연봉 계산기","item":"https://www.jptcalc.kr/calc/salary/"},
+      {"@type":"ListItem","position":3,"name":"이직 연봉 비교 계산기","item":"https://www.jptcalc.kr/calc/salary/job-change/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"이직 시 최소 몇 % 연봉이 올라야 실질적으로 이득인가요?","acceptedAnswer":{"@type":"Answer","text":"이직 비용(출퇴근 거리 증가, 적응 기간 등)을 고려하면 최소 10~20% 인상이 일반적인 기준입니다. 단순 연봉 비교가 아니라 실수령 기준으로 비교해야 실제 이득을 정확히 파악할 수 있습니다."}},{"@type":"Question","name":"이 계산기로 무엇을 알 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"현재 연봉과 목표 월 실수령 증가액을 입력하면, 그 목표를 달성하기 위해 필요한 최소 이직 연봉을 역산해 줍니다. 현재 월 실수령액과 목표 월 실수령액, 그리고 필요한 연봉 인상액도 함께 확인할 수 있습니다."}},{"@type":"Question","name":"퇴직금이 이직 결정에 영향을 주나요?","acceptedAnswer":{"@type":"Answer","text":"현 직장에서 쌓인 퇴직금은 퇴사 시 정산되므로 이직 자체로 인해 손해가 발생하지는 않습니다. 하지만 재직기간이 길수록 복리 효과로 누적 퇴직금이 크므로 장기 재직자는 이직 시기를 신중하게 판단하는 것이 좋습니다."}},{"@type":"Question","name":"복지 차이는 어떻게 연봉에 환산하나요?","acceptedAnswer":{"@type":"Answer","text":"식대, 교통비, 자기개발비 등 비과세 복지항목은 월 금액으로 환산해 실수령에 더하면 됩니다. 예를 들어 식대 월 20만원, 교통비 월 10만원이면 실질 월 실수령에 30만원을 추가하여 비교하는 것이 정확합니다."}}]}</script>
+  <style>
+    /* job-change 고유 스타일 - 공통 스타일은 /assets/salary-common.css 참조 */
+    .input-wrap{position:relative}
+    .input-wrap .unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none}
+    input[type=number],input[type=text]{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
+    input[type=number]::placeholder{color:var(--gray-400);font-weight:400}
+    input[type=number]:focus,input[type=text]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(59,130,246,0.15)}
+    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
+    .seg-group{display:flex;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:18px}
+    .seg-btn{flex:1;border:none;border-radius:7px;background:transparent;padding:9px 4px;font-size:12px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap}
+    .seg-btn:hover{color:var(--gray-700)}
+    .seg-btn.active{background:var(--primary);color:#fff;font-weight:700}
+    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
+    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
+    .result-card{background:linear-gradient(135deg,#EFF6FF 0%,#DBEAFE 100%);border:1px solid rgba(59,130,246,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-row+.result-row{border-top:1px solid rgba(0,0,0,0.07)}
+    .result-total-row{border-top:1px solid rgba(0,0,0,0.15)!important;margin-top:4px;padding-top:14px!important}
+    .result-total-value{font-size:24px;font-weight:900;color:var(--gray-900)}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/salary/" class="nav-item active"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/salary/">이직/연봉 계산기</a><span class="breadcrumb-sep">›</span><span>이직 연봉 비교 계산기</span></div>
+    <div class="page-header-badge">💼 실수령 기준 역산</div>
+    <h1>이직 연봉 비교 계산기</h1>
+    <p>목표 실수령 증가를 위한 최소 연봉을 계산하세요</p>
+  </div>
+    <div class="card">
+      <div class="card-title">현재 상황</div>
+      <div class="field">
+        <div class="field-label">현재 연봉 <span class="label-hint">만원 단위</span></div>
+        <div class="input-wrap">
+          <input type="number" id="s1-current" placeholder="예) 4200" oninput="calcNego()" />
+          <span class="unit">만원</span>
+        </div>
+      </div>
+      <div class="field">
+        <div class="field-label">목표 월 실수령 증가액 <span class="label-hint">만원 단위</span></div>
+        <div class="input-wrap">
+          <input type="number" id="s1-target-raise" placeholder="예) 30" oninput="calcNego()" />
+          <span class="unit">만원</span>
+        </div>
+        <div class="field-hint">💡 매월 손에 쥐는 돈이 이 만큼 늘길 원하는 경우</div>
+      </div>
+    </div>
+    <div class="result-card" id="s1-result">
+      <div style="margin-bottom:14px;">
+        <div class="result-highlight">
+          <div class="rh-label">필요한 최소 연봉</div>
+          <div class="rh-value" id="s1-needed">-</div>
+          <div class="rh-sub" id="s1-needed-pct">현재 대비 +0%</div>
+        </div>
+      </div>
+      <div class="result-row"><span class="result-label">현재 월 실수령액</span><span class="result-value" id="s1-cur-net">-</span></div>
+      <div class="result-row"><span class="result-label">목표 월 실수령액</span><span class="result-value" id="s1-tgt-net">-</span></div>
+      <div class="result-row result-total-row">
+        <span class="result-total-label">연봉 인상 필요액</span>
+        <span class="result-total-value" id="s1-diff">-</span>
+      </div>
+      <p class="result-note">※ 부양가족 1인(본인) 기준. 세금 외 복리후생, 이직비용도 함께 고려하세요.</p>
+    </div>
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>이직 연봉 비교 계산기는 언제 쓰나요?</h2>
+      <p>이직 제안을 받았을 때, 현재 연봉 대비 실수령 기준으로 최소 몇 % 이상 올라야 실질적인 이득인지 판단할 때 사용합니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>최소 인상폭</strong><span>이직 비용을 고려한 최소 연봉 인상 기준</span></div>
+        <div class="guide-box"><strong>실수령 역산</strong><span>원하는 실수령액에 필요한 연봉 역산</span></div>
+        <div class="guide-box"><strong>숨은 비용</strong><span>출퇴근·복지·퇴직금 차이까지 고려</span></div>
+      </div>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>이직 시 최소 몇 % 올라야 이득인가요?</h3><p>이직 비용(교통비, 적응기간 등)을 고려하면 최소 10~20% 인상이 일반적입니다. 실수령 기준으로 비교해야 합니다.</p></div>
+      <div class="faq-item"><h3>퇴직금이 이직 판단에 영향을 주나요?</h3><p>현 직장에서 쌓인 퇴직금은 퇴사 시 정산되므로 이직 자체로 손해는 아니지만, 재직기간이 길수록 신중히 비교하세요.</p></div>
+      <div class="faq-item"><h3>복지 차이는 어떻게 환산하나요?</h3><p>식대·교통비·자기개발비 등 비과세 복지를 월급으로 환산해 합산하면 더 정확한 비교가 됩니다.</p></div>
+      <div class="update-note">최종 검토: 2026.03.24 · 계산 결과는 참고용입니다.</div>
+    </div>
+  </div>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 이직/연봉 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/salary/take-home-pay/" class="sibling-link">💵 연봉 실수령액</a>
+      <a href="/calc/salary/job-change/" class="sibling-link current">📊 이직 연봉 비교</a>
+      <a href="/calc/salary/hourly-wage/" class="sibling-link">⏱️ 시급·일급 변환</a>
+      <a href="/calc/salary/raise-rate/" class="sibling-link">📈 연봉 인상률</a>
+      <a href="/calc/salary/comparison/" class="sibling-link">⚖️ 연봉 비교</a>
+      <a href="/calc/salary/severance/" class="sibling-link">📦 퇴직금</a>
+      <a href="/calc/salary/unemployment/" class="sibling-link">🛟 실업급여</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script>
+function fmtW(won) {
+  won = Math.round(won);
+  if (isNaN(won) || won === 0) return '-';
+  if (Math.abs(won) >= 100000000) {
+    const uk = Math.floor(Math.abs(won)/100000000) * Math.sign(won);
+    const rem = Math.round((Math.abs(won) % 100000000)/10000);
+    return rem > 0 ? `${uk.toLocaleString()}억 ${rem.toLocaleString()}만원` : `${uk.toLocaleString()}억원`;
+  }
+  if (Math.abs(won) >= 10000) {
+    const man = Math.floor(Math.abs(won)/10000) * Math.sign(won);
+    const rem = Math.round(Math.abs(won) % 10000);
+    return rem >= 1000 ? `${man.toLocaleString()}만 ${rem.toLocaleString()}원` : `${man.toLocaleString()}만원`;
+  }
+  return `${won.toLocaleString()}원`;
+}
+function fmtM(man) { return fmtW(man * 10000); }
+function comma(n) { return Math.round(n).toLocaleString() + '원'; }
+
+function calcAnnualTax(annual_man, dep_count) {
+  const annual = annual_man * 10000;
+  let wdc = 0;
+  if (annual <= 5000000) wdc = annual * 0.7;
+  else if (annual <= 15000000) wdc = 3500000 + (annual - 5000000) * 0.4;
+  else if (annual <= 45000000) wdc = 7500000 + (annual - 15000000) * 0.15;
+  else if (annual <= 100000000) wdc = 12000000 + (annual - 45000000) * 0.05;
+  else wdc = 14750000 + (annual - 100000000) * 0.02;
+  wdc = Math.min(wdc, 20000000);
+  const grossIncome = annual - wdc;
+  const personalDed = 1500000 * Math.max(dep_count, 1);
+  const taxBase = Math.max(grossIncome - personalDed, 0);
+  let tax = 0;
+  if (taxBase <= 14000000) tax = taxBase * 0.06;
+  else if (taxBase <= 50000000) tax = 840000 + (taxBase - 14000000) * 0.15;
+  else if (taxBase <= 88000000) tax = 6240000 + (taxBase - 50000000) * 0.24;
+  else if (taxBase <= 150000000) tax = 15360000 + (taxBase - 88000000) * 0.35;
+  else if (taxBase <= 300000000) tax = 37060000 + (taxBase - 150000000) * 0.38;
+  else if (taxBase <= 500000000) tax = 94060000 + (taxBase - 300000000) * 0.40;
+  else if (taxBase <= 1000000000) tax = 174060000 + (taxBase - 500000000) * 0.42;
+  else tax = 384060000 + (taxBase - 1000000000) * 0.45;
+  let taxCredit = 0;
+  if (tax <= 1300000) taxCredit = tax * 0.55;
+  else taxCredit = 715000 + (tax - 1300000) * 0.30;
+  taxCredit = Math.min(taxCredit, 740000);
+  if (annual <= 33000000) taxCredit = Math.min(taxCredit, 740000);
+  else if (annual <= 70000000) taxCredit = Math.min(taxCredit, 681000);
+  else taxCredit = Math.min(taxCredit, 500000);
+  tax = Math.max(tax - taxCredit - 70000, 0);
+  return tax;
+}
+
+function calcMonthly(annual_man, dep_count) {
+  const monthly = annual_man * 10000 / 12;
+  const pension = Math.min(monthly, 6370000) * 0.0475;
+  const health = monthly * 0.03595;
+  const ltc = health * 0.1314;
+  const emp = monthly * 0.009;
+  const annualTax = calcAnnualTax(annual_man, dep_count);
+  const monthlyTax = Math.max(Math.round(annualTax / 12 / 10) * 10, 0);
+  const localTax = Math.round(monthlyTax * 0.1 / 10) * 10;
+  const totalDedu = pension + health + ltc + emp + monthlyTax + localTax;
+  const net = monthly - totalDedu;
+  return { monthly, pension, health, ltc, emp, monthlyTax, localTax, totalDedu, net };
+}
+
+function calcNego() {
+  const cur = parseFloat(document.getElementById('s1-current').value);
+  const raise = parseFloat(document.getElementById('s1-target-raise').value);
+  const res = document.getElementById('s1-result');
+  if (!cur || cur <= 0 || !raise || raise <= 0) { res.classList.remove('show'); return; }
+  res.classList.add('show');
+  const curR = calcMonthly(cur, 1);
+  const targetNet = curR.net + raise * 10000;
+  let lo = cur, hi = cur * 3;
+  for (let i = 0; i < 50; i++) {
+    const mid = (lo + hi) / 2;
+    const r = calcMonthly(mid, 1);
+    if (r.net < targetNet) lo = mid;
+    else hi = mid;
+  }
+  const neededAnnual = Math.ceil((lo + hi) / 2);
+  const pct = ((neededAnnual - cur) / cur * 100).toFixed(1);
+  document.getElementById('s1-needed').textContent = fmtM(neededAnnual);
+  document.getElementById('s1-needed-pct').textContent = `현재 대비 +${pct}%`;
+  document.getElementById('s1-cur-net').textContent = comma(curR.net);
+  document.getElementById('s1-tgt-net').textContent = comma(targetNet);
+  document.getElementById('s1-diff').textContent = fmtM(neededAnnual - cur);
+}
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/salary-detail-shell.js"></script>
+</body>
+</html>

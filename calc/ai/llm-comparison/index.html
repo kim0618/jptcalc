@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LLM 모델 성능·가격 비교표 - GPT vs Claude vs Gemini | 제이퍼 계산기</title>
+  <meta name="description" content="2026년 3월 기준 GPT-4o, Claude Sonnet 4.6, Gemini 2.5 Pro 등 주요 LLM 모델의 가격, 컨텍스트 윈도우, 벤치마크 점수 비교." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/ai/llm-comparison/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="LLM 모델 성능·가격 비교표 | 제이퍼 계산기" />
+  <meta property="og:description" content="2026년 3월 기준 GPT-4o, Claude Sonnet 4.6, Gemini 2.5 Pro 등 주요 LLM 모델의 가격, 컨텍스트 윈도우, 벤치마크 점수 비교." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/ai/llm-comparison/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="LLM 모델 성능·가격 비교표 | 제이퍼 계산기" />
+  <meta name="twitter:description" content="2026년 3월 기준 GPT-4o, Claude Sonnet 4.6, Gemini 2.5 Pro 등 주요 LLM 모델의 가격, 컨텍스트 윈도우, 벤치마크 점수 비교." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/ai-common.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"LLM 모델 성능·가격 비교표","url":"https://www.jptcalc.kr/calc/ai/llm-comparison/","applicationCategory":"BusinessApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+    {"@type":"ListItem","position":2,"name":"AI / 테크 비용 계산기","item":"https://www.jptcalc.kr/calc/ai/"},
+    {"@type":"ListItem","position":3,"name":"LLM 모델 성능·가격 비교표","item":"https://www.jptcalc.kr/calc/ai/llm-comparison/"}
+  ]}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"LLM 벤치마크 점수는 절대적인 성능 기준인가요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. HumanEval, MMLU 등 공개 벤치마크 기반 상대 비교용 점수이며, 실제 서비스 적용 시 프롬프트 설계에 따라 결과가 달라질 수 있습니다. 서비스 요구사항에 맞는 실제 사용 사례로 직접 테스트해보는 것이 가장 신뢰할 수 있는 방법입니다."}},{"@type":"Question","name":"LLM API 가격이 자주 바뀌나요?","acceptedAnswer":{"@type":"Answer","text":"네. AI 모델 가격은 경쟁과 기술 발전에 따라 빠르게 변동됩니다. 특히 최근 몇 년간 주요 모델의 가격이 크게 인하되는 추세입니다. 실제 서비스 적용 전 반드시 각 벤더 공식 사이트에서 최신 가격을 확인하세요."}},{"@type":"Question","name":"컨텍스트 윈도우가 크면 항상 좋은가요?","acceptedAnswer":{"@type":"Answer","text":"긴 문서 처리나 대화 기록 유지에는 유리하지만, 토큰 사용량이 늘어 비용도 증가합니다. 또한 컨텍스트가 길어질수록 응답 품질이 저하되는 경우도 있습니다. 실제 사용 패턴에 맞는 모델을 선택하는 것이 중요합니다."}}]}</script>
+  <style>
+    /* llm-comparison 고유 스타일 */
+    .input-wrap{position:relative}
+    .input-wrap .unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none}
+    input[type=number],select{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
+    select{padding:12px 16px;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 5l3 3 3-3' stroke='%239CA3AF' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+    input::placeholder{color:var(--gray-400);font-weight:400}
+    input:focus,select:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(139,92,246,0.15)}
+    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
+    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
+    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
+    .result-card{background:linear-gradient(135deg,#F5F3FF 0%,#EDE9FE 100%);border:1px solid var(--primary-border);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-row+.result-row{border-top:1px solid rgba(0,0,0,0.07)}
+    .result-total-row{border-top:1px solid rgba(0,0,0,0.15)!important;margin-top:4px;padding-top:14px!important}
+    .result-total-value{font-size:24px;font-weight:900;color:var(--gray-900)}
+    /* LLM 비교표: 모바일에서 가로 스크롤 유지 */
+    @media (max-width: 767px) {
+      #llm-table th, #llm-table td { white-space: nowrap; padding: 10px 12px; font-size: 13px; word-break: normal; }
+      #llm-table td:first-child, #llm-table td:last-child { white-space: nowrap; }
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/ai/" class="nav-item active"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/ai/">AI / 테크 비용 계산기</a><span class="breadcrumb-sep">›</span><span>LLM 모델 성능·가격 비교표</span></div>
+    <div class="page-header-badge">📊 2026년 3월 확인 기준</div>
+    <h1>LLM 모델 성능·가격 비교표</h1>
+    <p>GPT, Claude, Gemini 등 주요 LLM의 가격과 성능을 한눈에 비교하세요</p>
+  </div>
+    <div class="card guide-card">
+      <div class="card-title">LLM 모델별 성능 / 가격 비교표</div>
+      <div class="info-box"><span class="info-icon">💡</span><p>2026년 3월 기준 주요 LLM 모델의 가격, 컨텍스트 윈도우, 벤치마크 점수를 한눈에 비교합니다.</p></div>
+      <div class="guide-table-wrap">
+      <table id="llm-table">
+        <thead><tr>
+          <th>모델</th>
+          <th>입력<br>($/1M)</th>
+          <th>출력<br>($/1M)</th>
+          <th>컨텍스트</th>
+          <th>코딩</th>
+          <th>추론</th>
+        </tr></thead>
+        <tbody id="llm-tbody"></tbody>
+      </table>
+      </div>
+      <div style="font-size:11px;color:var(--gray-500);margin-top:12px;">* 코딩/추론 점수는 HumanEval, MMLU 등 공개 벤치마크 기반 <strong>상대 비교용 점수</strong>로, 절대값이 아닌 모델 간 비교에 참고하세요. 가격은 2026년 3월 기준이며 변동될 수 있습니다.</div>
+    </div>
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>LLM 비교표는 언제 쓰나요?</h2>
+      <p>서비스에 적합한 LLM 모델을 선택할 때 가격, 컨텍스트 윈도우, 코딩·추론 성능을 한눈에 비교하면 의사결정 시간을 줄일 수 있습니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>가격 비교</strong><span>입력·출력 토큰 단가를 모델별로 직접 비교</span></div>
+        <div class="guide-box"><strong>성능 비교</strong><span>코딩·추론 벤치마크 기준 상대 점수 확인</span></div>
+        <div class="guide-box"><strong>모델 선택</strong><span>비용 대비 성능 효율이 높은 모델 판단</span></div>
+      </div>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>벤치마크 점수는 절대적인가요?</h3><p>아닙니다. HumanEval, MMLU 등 공개 벤치마크 기반 상대 비교용 점수이며, 실제 서비스 적용 시 프롬프트 설계에 따라 결과가 달라질 수 있습니다.</p></div>
+      <div class="faq-item"><h3>가격이 자주 바뀌나요?</h3><p>네. AI 모델 가격은 경쟁과 기술 발전에 따라 빠르게 변동됩니다. 실제 적용 전 벤더 공식 사이트에서 최신 가격을 확인하세요.</p></div>
+      <div class="faq-item"><h3>컨텍스트 윈도우가 크면 항상 좋은가요?</h3><p>긴 문서 처리에는 유리하지만, 토큰 사용량이 늘어 비용도 증가합니다. 실제 사용 패턴에 맞는 모델을 선택하는 것이 중요합니다.</p></div>
+      <div class="update-note">최종 검토: 2026.03.25 · 가격과 성능은 변동될 수 있습니다.</div>
+    </div>
+  </div>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 AI / 테크 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/ai/api-token/" class="sibling-link">⚡ API 토큰 비용</a>
+      <a href="/calc/ai/gpu-cloud/" class="sibling-link">💻 GPU 클라우드</a>
+      <a href="/calc/ai/saas-comparison/" class="sibling-link">⚖️ SaaS vs 자체구축</a>
+      <a href="/calc/ai/llm-comparison/" class="sibling-link current">📊 LLM 비교표</a>
+      <a href="/calc/ai/infra-forecast/" class="sibling-link">🚀 인프라 예측</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script src="/assets/ai-models-config.js"></script>
+<script>
+// 테이블은 /assets/ai-models-config.js 데이터에서 자동 생성됩니다
+(function(){
+  var d=window.AI_MODELS,order=window.AI_MODELS_TABLE_ORDER;
+  var minIn=Math.min.apply(null,order.map(function(id){return d[id].input;}));
+  var minOut=Math.min.apply(null,order.map(function(id){return d[id].output;}));
+  var maxCode=Math.max.apply(null,order.map(function(id){return d[id].coding;}));
+  var maxReas=Math.max.apply(null,order.map(function(id){return d[id].reasoning;}));
+  var s='text-align:center';
+  var sBest=s+';color:var(--primary);font-weight:700';
+  var tbody=document.getElementById('llm-tbody');
+  tbody.innerHTML=order.map(function(id){
+    var m=d[id];
+    var isMinIn=m.input===minIn, isMinOut=m.output===minOut;
+    var isMaxCode=m.coding===maxCode, isMaxReas=m.reasoning===maxReas;
+    return '<tr>'+
+      '<td>'+m.name+'</td>'+
+      '<td style="'+(isMinIn?sBest:s)+'">$'+m.input.toFixed(2)+'</td>'+
+      '<td style="'+(isMinOut?sBest:s)+'">$'+m.output.toFixed(2)+'</td>'+
+      '<td style="'+s+'">'+m.ctx+'</td>'+
+      '<td style="'+(isMaxCode?sBest:s)+'">'+m.coding+'</td>'+
+      '<td style="'+(isMaxReas?sBest:s)+'">'+m.reasoning+'</td>'+
+    '</tr>';
+  }).join('');
+})();
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/ai-detail-shell.js"></script>
+</body>
+</html>

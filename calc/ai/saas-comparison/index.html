@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI SaaS vs 자체구축 비용 비교 계산기 | 제이퍼 계산기</title>
+  <meta name="description" content="AI SaaS API 비용과 자체 GPU 서버 구축 비용을 비교하고 손익분기점을 계산합니다." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/ai/saas-comparison/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AI SaaS vs 자체구축 비용 비교 | 제이퍼 계산기" />
+  <meta property="og:description" content="AI SaaS API 비용과 자체 GPU 서버 구축 비용을 비교하고 손익분기점을 계산합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/ai/saas-comparison/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="AI SaaS vs 자체구축 비용 비교 | 제이퍼 계산기" />
+  <meta name="twitter:description" content="AI SaaS API 비용과 자체 GPU 서버 구축 비용을 비교하고 손익분기점을 계산합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/ai-common.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"AI SaaS vs 자체구축 비용 비교","url":"https://www.jptcalc.kr/calc/ai/saas-comparison/","applicationCategory":"BusinessApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+    {"@type":"ListItem","position":2,"name":"AI / 테크 비용 계산기","item":"https://www.jptcalc.kr/calc/ai/"},
+    {"@type":"ListItem","position":3,"name":"AI SaaS vs 자체구축 비용 비교","item":"https://www.jptcalc.kr/calc/ai/saas-comparison/"}
+  ]}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"SaaS와 자체구축의 손익분기점이란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"SaaS 비용과 자체구축 비용이 같아지는 월 API 호출량입니다. 이 호출량 이상이면 자체구축이, 이하면 SaaS가 비용 효율적입니다. 서비스 성장 계획을 고려해 손익분기점 도달 시점을 미리 파악해 두는 것이 중요합니다."}},{"@type":"Question","name":"자체구축 시 DevOps 인건비를 왜 포함해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"서버 운영, 모니터링, 장애 대응, 보안 패치 등에 전담 인력이 필요하기 때문입니다. 이를 빠뜨리면 비용이 과소평가되어 잘못된 의사결정으로 이어질 수 있습니다. DevOps 인력 비용은 클라우드 서버 비용과 맞먹거나 초과하는 경우도 많습니다."}},{"@type":"Question","name":"SaaS와 자체구축을 혼용하는 하이브리드 방식은 어떤가요?","acceptedAnswer":{"@type":"Answer","text":"기본 트래픽은 자체 서버로 처리하고, 급증 시에만 SaaS를 활용하는 방식도 가능합니다. 비용과 안정성의 균형을 맞출 수 있으며, 갑작스러운 트래픽 증가에도 서비스 품질을 유지할 수 있는 장점이 있습니다."}}]}</script>
+  <style>
+    /* saas-comparison 고유 스타일 - 공통 스타일은 /assets/ai-common.css 참조 */
+    .input-wrap{position:relative}
+    .input-wrap .unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none}
+    input[type=number],select{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
+    select{padding:12px 16px;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 5l3 3 3-3' stroke='%239CA3AF' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+    input::placeholder{color:var(--gray-400);font-weight:400}
+    input:focus,select:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(139,92,246,0.15)}
+    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
+    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
+    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
+    .result-card{background:linear-gradient(135deg,#F5F3FF 0%,#EDE9FE 100%);border:1px solid var(--primary-border);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-row+.result-row{border-top:1px solid rgba(0,0,0,0.07)}
+    .result-total-row{border-top:1px solid rgba(0,0,0,0.15)!important;margin-top:4px;padding-top:14px!important}
+    .result-total-value{font-size:24px;font-weight:900;color:var(--gray-900)}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/ai/" class="nav-item active"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/ai/">AI / 테크 비용 계산기</a><span class="breadcrumb-sep">›</span><span>AI SaaS vs 자체구축 비용 비교</span></div>
+    <div class="page-header-badge">⚖️ 손익분기점 자동 계산</div>
+    <h1>AI SaaS vs 자체구축 비용 비교</h1>
+    <p>API 기반 SaaS와 자체 GPU 서버 구축의 월 비용·손익분기점을 비교하세요</p>
+  </div>
+    <div class="card">
+      <div class="card-title">AI SaaS vs 자체구축 비용 비교</div>
+      <div class="info-box"><span class="info-icon">💡</span><p>API 기반 SaaS와 자체 GPU 서버 구축 시 월 비용·손익분기점을 비교합니다.</p></div>
+      <div class="field"><div class="field-label"><span>월 API 호출 수</span></div><div class="input-wrap"><input type="number" id="saas-calls" placeholder="예)100000" oninput="calc()"><span class="unit">회/월</span></div></div>
+      <div class="field"><div class="field-label"><span>호출당 평균 비용 (SaaS)</span></div><div class="input-wrap"><input type="number" id="saas-cost-per" placeholder="예) 0.01" step="0.001" oninput="calc()"><span class="unit">USD/회</span></div></div>
+      <div class="field"><div class="field-label"><span>자체구축 월 서버 비용</span></div><div class="input-wrap"><input type="number" id="saas-server" placeholder="예) 3000" oninput="calc()"><span class="unit">USD/월</span></div></div>
+      <div class="field"><div class="field-label"><span>자체구축 인건비 (DevOps)</span></div><div class="input-wrap"><input type="number" id="saas-labor" placeholder="예) 2000" oninput="calc()"><span class="unit">USD/월</span></div></div>
+      <div class="field"><div class="field-label"><span>환율</span></div><div class="input-wrap"><input type="number" id="saas-exchange" placeholder="예) 1450" oninput="calc()"><span class="unit">원/달러</span></div></div>
+      <div class="result-card" id="result"><div id="result-content"></div></div>
+    </div>
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>SaaS vs 자체구축 비교는 언제 쓰나요?</h2>
+      <p>AI 서비스를 외부 API로 운영할지, 자체 GPU 서버를 구축할지 결정할 때 월 비용과 손익분기점을 미리 비교하면 합리적인 판단에 도움이 됩니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>초기 단계</strong><span>트래픽이 적을 때는 SaaS가 유리한 경우가 많음</span></div>
+        <div class="guide-box"><strong>성장 단계</strong><span>호출량이 증가하면 자체구축이 유리해지는 구간 존재</span></div>
+        <div class="guide-box"><strong>숨은 비용</strong><span>DevOps 인건비, 장애 대응 비용도 함께 고려</span></div>
+      </div>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>손익분기점이란 무엇인가요?</h3><p>SaaS 비용과 자체구축 비용이 같아지는 호출량입니다. 이 이상이면 자체구축이, 이하면 SaaS가 비용 효율적입니다.</p></div>
+      <div class="faq-item"><h3>자체구축 시 DevOps 인건비를 왜 포함하나요?</h3><p>서버 운영, 모니터링, 장애 대응, 보안 패치 등에 전담 인력이 필요하기 때문입니다. 이를 빼면 비용이 과소평가됩니다.</p></div>
+      <div class="faq-item"><h3>하이브리드 방식은 어떤가요?</h3><p>기본 트래픽은 자체 서버로, 급증 시에만 SaaS를 쓰는 방식도 가능합니다. 비용과 안정성의 균형을 맞출 수 있습니다.</p></div>
+      <div class="update-note">최종 검토: 2026.03.25 · 실제 비용은 서비스 규모와 조건에 따라 달라집니다.</div>
+    </div>
+  </div>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 AI / 테크 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/ai/api-token/" class="sibling-link">⚡ API 토큰 비용</a>
+      <a href="/calc/ai/gpu-cloud/" class="sibling-link">💻 GPU 클라우드</a>
+      <a href="/calc/ai/saas-comparison/" class="sibling-link current">⚖️ SaaS vs 자체구축</a>
+      <a href="/calc/ai/llm-comparison/" class="sibling-link">📊 LLM 비교표</a>
+      <a href="/calc/ai/infra-forecast/" class="sibling-link">🚀 인프라 예측</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script>
+
+function fmtUsd(v){return '$'+v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function fmtKrw(v){v=Math.round(v);if(v>=100000000)return Math.floor(v/100000000).toLocaleString()+'억 '+Math.floor((v%100000000)/10000).toLocaleString()+'만원';if(v>=10000)return Math.floor(v/10000).toLocaleString()+'만 '+(v%10000).toLocaleString()+'원';return v.toLocaleString()+'원';}
+function calc(){
+  const calls=parseFloat(document.getElementById('saas-calls').value)||0,costPer=parseFloat(document.getElementById('saas-cost-per').value)||0,server=parseFloat(document.getElementById('saas-server').value)||0,labor=parseFloat(document.getElementById('saas-labor').value)||0,ex=parseFloat(document.getElementById('saas-exchange').value)||1450;
+  if(!calls){document.getElementById('result').classList.remove('show');return;}
+  const saasCost=calls*costPer,selfCost=server+labor,cheaper=saasCost<selfCost?'SaaS':'자체구축',diff=Math.abs(saasCost-selfCost),breakeven=costPer>0?Math.ceil(selfCost/costPer):0;
+  document.getElementById('result-content').innerHTML=`
+    <div class="result-row"><span class="result-label">SaaS 월 비용</span><span class="result-value" style="${saasCost<=selfCost?'color:var(--primary);font-weight:800':''}">${fmtUsd(saasCost)} (${fmtKrw(saasCost*ex)})</span></div>
+    <div class="result-row"><span class="result-label">자체구축 월 비용</span><span class="result-value" style="${selfCost<=saasCost?'color:var(--primary);font-weight:800':''}">${fmtUsd(selfCost)} (${fmtKrw(selfCost*ex)})</span></div>
+    <div class="result-row result-total-row"><span class="result-total-label">${cheaper}가 유리</span><span class="result-total-value">월 ${fmtUsd(diff)} 절감</span></div>
+    <div class="result-row"><span class="result-label">손익분기점</span><span class="result-value" style="color:var(--primary);">월 ${breakeven.toLocaleString()}회</span></div>
+    <div class="result-row"><span class="result-label">연간 차이</span><span class="result-value">${fmtUsd(diff*12)} (${fmtKrw(diff*12*ex)})</span></div>
+    <div class="result-note">* 자체구축은 초기 세팅 비용 별도 / DevOps 인건비 포함 기준<br>* ${breakeven.toLocaleString()}회/월 이상이면 자체구축이 유리해지기 시작</div>`;
+  document.getElementById('result').classList.add('show');
+}
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/ai-detail-shell.js"></script>
+</body>
+</html>

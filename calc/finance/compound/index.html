@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>복리 계산기 - 복리이자·72법칙 자동계산 | jptcalc</title>
+  <meta name="description" content="원금, 연 수익률, 투자 기간을 입력하면 복리 최종 금액과 72법칙으로 원금 2배 기간을 계산합니다." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/finance/compound/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="복리 계산기 | jptcalc" />
+  <meta property="og:description" content="원금, 연 수익률, 투자 기간을 입력하면 복리 최종 금액과 72법칙으로 원금 2배 기간을 계산합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/finance/compound/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="복리 계산기 | jptcalc" />
+  <meta name="twitter:description" content="원금, 연 수익률, 투자 기간을 입력하면 복리 최종 금액과 72법칙으로 원금 2배 기간을 계산합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/finance-common.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"복리 계산기",
+    "url":"https://www.jptcalc.kr/calc/finance/compound/",
+    "applicationCategory":"FinanceApplication",
+    "operatingSystem":"All",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+      {"@type":"ListItem","position":2,"name":"금융·이자 계산기","item":"https://www.jptcalc.kr/calc/finance/"},
+      {"@type":"ListItem","position":3,"name":"복리 계산기","item":"https://www.jptcalc.kr/calc/finance/compound/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"72의 법칙이란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"72를 연 수익률(%)로 나누면 원금이 2배가 되는 대략적인 기간(년)을 구할 수 있는 간편 공식입니다. 예를 들어 연 6% 수익률이면 약 12년(72÷6)이 걸립니다. 복잡한 계산 없이 투자 기간을 빠르게 가늠할 수 있어 실용적인 지표로 널리 활용됩니다."}},{"@type":"Question","name":"연복리와 월복리 차이가 얼마나 되나요?","acceptedAnswer":{"@type":"Answer","text":"같은 연 수익률이라도 복리 주기가 짧을수록 최종 금액이 커집니다. 다만 일반적인 금리 수준에서는 그 차이가 크지 않으며, 장기 투자 시 차이가 누적됩니다. 연복리보다 월복리가, 월복리보다 일복리가 유리합니다."}},{"@type":"Question","name":"인플레이션을 감안해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"네, 명목 수익률에서 인플레이션을 차감한 실질 수익률로 계산해야 실제 구매력 기준의 자산 증가를 파악할 수 있습니다. 예를 들어 수익률이 7%이고 인플레이션이 3%라면 실질 수익률은 약 4%입니다."}},{"@type":"Question","name":"복리와 단리의 차이는 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"단리는 원금에만 이자가 붙지만, 복리는 원금과 이전에 발생한 이자 모두에 이자가 붙습니다. 투자 기간이 길어질수록 복리와 단리의 차이가 급격히 벌어지며, 장기 투자에서 복리 효과는 기하급수적으로 커집니다."}}]}</script>
+  <style>
+    input[type=number]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(99,102,241,0.15)}
+    .result-card{background:linear-gradient(135deg,#EEF2FF 0%,#E0E7FF 100%);border:1px solid rgba(99,102,241,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-highlight{background:rgba(99,102,241,0.1);border-radius:12px;padding:16px;margin-bottom:16px;text-align:center}
+    .rh-label{font-size:12px;color:var(--gray-500);margin-bottom:4px}
+    .rh-value{font-size:28px;font-weight:900;color:var(--primary)}
+    .rh-sub{font-size:12px;color:var(--gray-500);margin-top:2px}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+      <a href="/calc/finance/" class="nav-item active"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/finance/">금융·이자 계산기</a><span class="breadcrumb-sep">›</span><span>복리 계산기</span></div>
+    <div class="page-header-badge">📈 연·분기·월 복리 지원</div>
+    <h1>복리 계산기</h1>
+    <p>원금·수익률·기간으로 복리 수익과 72법칙 결과를 확인하세요</p>
+  </div>
+    <div class="card">
+      <div class="card-title">복리 계산</div>
+      <div class="field">
+        <div class="field-label">원금 <span class="label-hint">만원 단위</span></div>
+        <div class="input-wrap"><input type="number" id="comp-principal" placeholder="예) 1000" oninput="calc()" /><span class="unit">만원</span></div>
+        <div class="converted" id="comp-display"></div>
+      </div>
+      <div class="field">
+        <div class="field-label">연 수익률</div>
+        <div class="input-wrap"><input type="number" id="comp-rate" placeholder="예) 7" step="0.1" oninput="calc()" /><span class="unit">%</span></div>
+      </div>
+      <div class="field">
+        <div class="field-label">투자 기간</div>
+        <div class="input-wrap"><input type="number" id="comp-years" placeholder="예) 10" oninput="calc()" /><span class="unit">년</span></div>
+      </div>
+      <div class="field">
+        <div class="field-label">복리 주기</div>
+        <div class="seg-group" style="margin-bottom:0" id="comp-freq-group">
+          <button class="seg-btn active" onclick="setFreq(1,this)">연 복리</button>
+          <button class="seg-btn" onclick="setFreq(4,this)">분기 복리</button>
+          <button class="seg-btn" onclick="setFreq(12,this)">월 복리</button>
+        </div>
+      </div>
+    </div>
+    <div class="result-card" id="result">
+      <div class="result-highlight">
+        <div class="rh-label">최종 금액</div>
+        <div class="rh-value" id="comp-total">-</div>
+        <div class="rh-sub" id="comp-profit-sub">수익 -</div>
+      </div>
+      <div class="result-row"><span class="result-label">원금</span><span class="result-value" id="comp-r-principal">-</span></div>
+      <div class="result-row"><span class="result-label">수익</span><span class="result-value" id="comp-r-profit">-</span></div>
+      <div class="result-row"><span class="result-label">총 수익률</span><span class="result-value" id="comp-r-rate">-</span></div>
+      <div class="result-row result-total-row">
+        <span class="result-total-label">72 법칙 (원금 2배 기간)</span>
+        <span class="result-total-value" id="comp-rule72">-</span>
+      </div>
+      <p class="result-note">※ 72 법칙: 72 ÷ 연수익률 = 원금이 2배가 되는 대략적인 기간입니다.</p>
+    </div>
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>복리의 힘, 왜 '시간'이 가장 중요한가</h2>
+      <p>복리는 원금뿐 아니라 이전 기간에 발생한 이자에도 이자가 붙는 방식입니다. 투자 기간이 길어질수록 복리 효과는 기하급수적으로 커지며, 이것이 바로 "복리는 세계 8번째 불가사의"라 불리는 이유입니다. 같은 수익률이라도 시작 시점이 빠를수록 최종 자산이 크게 달라집니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>복리 vs 단리</strong><span>기간이 길수록 복리와 단리의 차이가 급격히 벌어집니다</span></div>
+        <div class="guide-box"><strong>72의 법칙</strong><span>72를 연수익률로 나누면 원금 2배 소요 기간을 알 수 있습니다</span></div>
+        <div class="guide-box"><strong>복리 주기 효과</strong><span>연복리보다 월복리가, 월복리보다 일복리가 유리합니다</span></div>
+      </div>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>72의 법칙이란 무엇인가요?</h3><p>72를 연 수익률(%)로 나누면 원금이 2배가 되는 대략적인 기간(년)을 구할 수 있는 간편 공식입니다. 예를 들어 연 6% 수익률이면 약 12년(72÷6)이 걸립니다.</p></div>
+      <div class="faq-item"><h3>연복리와 월복리 차이가 얼마나 되나요?</h3><p>같은 연 수익률이라도 복리 주기가 짧을수록 최종 금액이 커집니다. 다만 일반적인 금리 수준에서는 그 차이가 크지 않으며, 장기 투자 시 차이가 누적됩니다.</p></div>
+      <div class="faq-item"><h3>인플레이션을 감안해야 하나요?</h3><p>네, 명목 수익률에서 인플레이션을 차감한 실질 수익률로 계산해야 실제 구매력 기준의 자산 증가를 파악할 수 있습니다.</p></div>
+      <div class="update-note">최종 검토: 2026.03.25 · 계산 결과는 참고용입니다.</div>
+    </div>
+  </div>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 금융·이자 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/finance/deposit/" class="sibling-link">🏦 예금 이자</a>
+      <a href="/calc/finance/savings/" class="sibling-link">💳 적금 만기금액</a>
+      <a href="/calc/finance/compound/" class="sibling-link current">📈 복리 계산</a>
+      <a href="/calc/finance/loan-repayment/" class="sibling-link">🏠 대출 상환</a>
+      <a href="/calc/finance/investment/" class="sibling-link">💹 투자 수익률</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script>
+
+let freq=1;
+function Wm(man){if(man>=10000)return(man/10000).toFixed(2)+'억원';return man.toLocaleString()+'만원';}
+function setFreq(f,btn){freq=f;document.querySelectorAll('#comp-freq-group .seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');calc();}
+function showConverted(inputEl,dispEl){const v=parseFloat(inputEl.value);if(!v||v<=0){dispEl.textContent='';return;}dispEl.textContent=v>=10000?'= '+(v/10000).toFixed(2)+'억원':'= '+v.toLocaleString()+'만원';}
+function calc(){
+  const p=parseFloat(document.getElementById('comp-principal').value)||0;
+  const r=parseFloat(document.getElementById('comp-rate').value)||0;
+  const y=parseFloat(document.getElementById('comp-years').value)||0;
+  showConverted(document.getElementById('comp-principal'),document.getElementById('comp-display'));
+  const res=document.getElementById('result');
+  if(!p||!r||!y){res.classList.remove('show');return;}
+  res.classList.add('show');
+  const total=p*Math.pow(1+r/100/freq,freq*y);
+  const profit=total-p;
+  const rule72=(72/r).toFixed(1);
+  document.getElementById('comp-total').textContent=Wm(total);
+  document.getElementById('comp-profit-sub').textContent='수익 +'+Wm(profit);
+  document.getElementById('comp-r-principal').textContent=Wm(p);
+  document.getElementById('comp-r-profit').textContent='+'+Wm(profit);
+  document.getElementById('comp-r-rate').textContent='+'+(((total/p)-1)*100).toFixed(2)+'%';
+  document.getElementById('comp-rule72').textContent='약 '+rule72+'년';
+}
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/finance-detail-shell.js"></script>
+</body>
+</html>

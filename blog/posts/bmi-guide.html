@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMI 정상범위와 한국인 기준 - 체중 관리 가이드 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="BMI 계산법, 한국인 기준 정상·과체중·비만 범위, BMI의 한계점과 올바른 체중 관리 방법을 정리했습니다." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="BMI 정상범위와 한국인 기준 - 체중 관리 가이드 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="BMI 계산법, 한국인 기준 정상·과체중·비만 범위, BMI의 한계점과 올바른 체중 관리 방법을 정리했습니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/bmi-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/bmi-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#10B981;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(16,185,129,0.15);color:#10B981;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body p{margin-bottom:14px}
+    .post-body ul{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#10B981;text-decoration:none}
+    .highlight-box{background:rgba(16,185,129,0.08);border-left:4px solid #10B981;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#065f46;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#10B981;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:24px 0 10px}
+    .faq-item{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:12px;padding:20px;margin:16px 0}
+    .faq-q{font-weight:800;color:#111827;margin-bottom:8px;font-size:15px}
+    .faq-a{color:#374151;font-size:14px;line-height:1.7;margin:0}
+    td.low{color:#3B82F6;font-weight:700}
+    td.ok{color:#059669;font-weight:700}
+    td.warn{color:#F59E0B;font-weight:700}
+    td.high{color:#EF4444;font-weight:700}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo"><div class="logo-icon"><img src="../../assets/logo.svg" alt="로고"/></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+<div class="post-wrap">
+  <span class="post-tag">건강</span>
+  <h1>BMI 정상범위와 한국인 기준 - 체중 관리 가이드</h1>
+  <div class="post-meta"><span>📅 2026.03.21</span><span>·</span><span>4분 읽기</span></div>
+  <div class="post-body">
+    <p>BMI(체질량지수)는 신장과 체중으로 비만도를 측정하는 가장 간단한 방법입니다. 단, 한국인에게는 서양 기준이 아닌 아시아 기준을 적용해야 합니다.</p>
+
+    <div class="highlight-box">
+      <p><strong>이 글이 필요한 사람:</strong> 내 BMI가 정상 범위인지 확인하고 싶은 분 / 한국인 기준이 서양과 어떻게 다른지 궁금한 분 / BMI 수치만으로 건강을 판단하기 어려운 이유를 알고 싶은 분</p>
+    </div>
+
+    <h2>BMI 계산 방법</h2>
+    <p><strong>BMI = 체중(kg) ÷ 신장(m)²</strong></p>
+    <p>예시: 키 170cm, 몸무게 65kg → BMI = 65 ÷ (1.70)² = 22.5</p>
+
+    <h2>한국인(아시아인) BMI 기준</h2>
+    <div class="table-wrap"><table>
+      <tr><th>BMI</th><th>분류</th><th>건강 위험도</th><th>권장 대응</th></tr>
+      <tr><td>18.5 미만</td><td class="low">저체중</td><td>영양 불균형 위험</td><td>단백질·균형식 섭취 늘리기, 근력 운동 시작</td></tr>
+      <tr><td>18.5 ~ 22.9</td><td class="ok">정상</td><td>낮음</td><td>현 상태 유지, 규칙적 운동 지속</td></tr>
+      <tr><td>23.0 ~ 24.9</td><td class="warn">과체중 (위험체중)</td><td>중간</td><td>식이 조정, 유산소 운동 주 3회 이상</td></tr>
+      <tr><td>25.0 ~ 29.9</td><td class="high">1단계 비만</td><td>높음</td><td>의료기관 상담, 식이 및 운동 병행 관리</td></tr>
+      <tr><td>30.0 이상</td><td class="high">2단계 비만</td><td>매우 높음</td><td>의료진 진료 권장</td></tr>
+    </table></div>
+    <p style="margin: 1.2em 0;">
+      👉 <a href="https://www.jptcalc.kr/calc/health/bmi/" style="color: #2563eb; font-weight: 600;">BMI 계산기로 직접 계산해보기</a>
+    </p>
+
+    <div class="highlight-box"><p>WHO 서양 기준은 25 이상이 과체중이지만, 한국·아시아 기준은 23 이상부터 과체중입니다. 같은 BMI라도 아시아인의 체지방률이 더 높기 때문입니다.</p></div>
+
+    <h2>BMI의 한계 - 수치만으로 판단하면 안 되는 이유</h2>
+    <ul>
+      <li><strong>근육량 미반영</strong>: 근육이 많은 운동선수는 BMI가 25 이상이어도 비만이 아닙니다. 반대로 근육이 적고 체지방이 많은 "마른 비만"은 BMI가 정상이어도 건강 위험이 높습니다.</li>
+      <li><strong>체지방 분포 무시</strong>: 복부 내장지방은 심혈관 질환·당뇨 위험과 직결되지만 BMI로는 측정할 수 없습니다. 허리둘레가 더 직접적인 지표입니다.</li>
+      <li><strong>노인·청소년 부정확</strong>: 노인은 근육이 줄고 지방이 늘어 BMI가 정상이어도 체지방 과다일 수 있습니다. 청소년은 성장 단계에 따라 다른 기준이 적용됩니다.</li>
+      <li><strong>성별 차이</strong>: 같은 BMI라도 여성이 남성보다 체지방률이 약 5~10%p 더 높습니다.</li>
+    </ul>
+
+    <h2>자주 헷갈리는 조건</h2>
+    <h3>"BMI 정상인데 건강검진에서 이상이 나왔어요"</h3>
+    <p>BMI는 체중과 신장만 반영합니다. 혈압·혈당·콜레스테롤 등 대사 지표는 BMI와 별개입니다. BMI가 정상이어도 운동 부족, 식습관, 유전적 요인으로 대사 이상이 발생할 수 있습니다.</p>
+    <h3>"다이어트 후 BMI가 정상이 됐는데 과식 충동이 심해요"</h3>
+    <p>급격한 체중 감량은 기초대사량을 낮추고 식욕 관련 호르몬 균형을 깰 수 있습니다. 감량 속도를 조절하고, 근력 운동을 병행해 근육량을 유지하는 것이 중요합니다.</p>
+
+    <h2>BMI와 함께 확인할 지표</h2>
+    <ul>
+      <li><strong>허리둘레</strong>: 남성 90cm, 여성 85cm 이상이면 복부비만 (<a href="https://www.kosso.or.kr">대한비만학회</a> 기준)</li>
+      <li><strong>체지방률</strong>: 남성 25% 이상, 여성 30% 이상이면 비만에 해당</li>
+      <li><strong>혈압·혈당·콜레스테롤</strong>: BMI보다 심혈관 건강을 직접 보여주는 지표입니다</li>
+    </ul>
+
+    <h2>적정 체중 유지를 위한 실천법</h2>
+    <ul>
+      <li><strong>유산소 운동</strong>: 주 150분 이상 (빠른 걷기, 자전거, 수영 등). 칼로리 소모와 심폐 기능 향상에 효과적입니다.</li>
+      <li><strong>근력 운동</strong>: 주 2회 이상. 근육량 유지는 기초대사량을 높여 장기적 체중 관리에 도움이 됩니다.</li>
+      <li><strong>식이 섬유 섭취</strong>: 채소·과일·통곡물로 포만감을 높이고 열량 밀도를 낮춥니다.</li>
+      <li><strong>수면 7~8시간</strong>: 수면 부족 시 식욕 호르몬(그렐린) 분비가 증가해 과식으로 이어질 수 있습니다.</li>
+    </ul>
+
+    <h2>자주 묻는 질문 (FAQ)</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. BMI 22인데 살이 쪄 보인다는 말을 들었습니다. 왜 그런가요?</div>
+      <p class="faq-a">BMI는 체지방 분포를 반영하지 않습니다. 팔다리가 가늘고 복부에 체지방이 집중된 "마른 비만" 체형은 BMI가 정상이어도 체지방률이 높을 수 있습니다. 허리둘레나 체지방률을 함께 확인해 보세요.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 한국인 기준 BMI 23이 과체중인데, 서양 기준으로는 정상입니다. 어떤 기준을 따라야 하나요?</div>
+      <p class="faq-a">한국인이라면 <a href="https://www.kosso.or.kr">대한비만학회</a>·WHO 아시아태평양 기준(23 이상 과체중)을 따르는 것이 적절합니다. 아시아인은 같은 BMI에서 서양인보다 체지방률이 높고 대사 위험이 더 높다는 연구 결과가 반영된 기준입니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 근육이 많으면 BMI 수치가 높게 나오나요?</div>
+      <p class="faq-a">그렇습니다. 근육은 지방보다 무겁기 때문에 근육량이 많은 사람은 BMI가 25 이상으로 나와도 실제로는 비만이 아닐 수 있습니다. 이 경우 BMI보다 체지방률이나 허리둘레가 더 의미 있는 지표입니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. BMI가 1단계 비만(25~29.9)이면 다이어트를 반드시 해야 하나요?</div>
+      <p class="faq-a">반드시는 아닙니다. 혈압·혈당·콜레스테롤 등 대사 지표가 정상이고 특별한 증상이 없다면 급격한 감량보다 운동 증가와 식습관 개선부터 시작하는 것이 권장됩니다. 단, 2단계 비만(30 이상)이거나 대사 지표에 이상이 있다면 의료진 상담이 필요합니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 청소년이나 임산부도 이 기준을 적용할 수 있나요?</div>
+      <p class="faq-a">청소년은 성별·연령별 백분위수 기준을 별도로 적용하며, 이 표의 성인 기준과 다릅니다. 임산부는 체중 변화가 정상적인 과정이므로 임신 중 BMI로 비만을 판단하지 않습니다. 두 경우 모두 의료진의 판단을 따르는 것이 원칙입니다.</p>
+    </div>
+
+    <h2>마무리</h2>
+    <p>BMI는 간단하지만 체지방 분포, 근육량, 연령별 차이를 반영하지 못하는 한계가 있습니다. 한국인에게는 23 이상부터 과체중으로 분류되는 아시아 기준이 적용됩니다. BMI 수치 하나로 건강을 단정하기보다 허리둘레, 체지방률, 대사 지표를 함께 확인하고, 이상이 있다면 의료진 상담을 받는 것이 중요합니다. 건강한 체중 유지는 특정 수치 도달보다 운동·수면·식습관의 지속적 관리가 더 중요합니다.</p>
+
+    <div class="cta-box">
+      <p>내 BMI와 적정 체중 범위를 바로 계산해보세요.</p>
+      <a href="../../calc/health/bmi/" class="cta-btn">BMI 계산하기</a>
+    </div>
+    <p style="font-size: 13px; color: #6B7280; margin-top: 8px;">관련 계산기: <a href="https://www.jptcalc.kr/calc/health/bmr/">기초대사량 계산기</a> · <a href="https://www.jptcalc.kr/calc/health/body-fat/">체지방률 계산기</a></p>
+  </div>
+</div>
+<footer class="site-footer"><p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용입니다.</p></footer>
+  <script src="/assets/footer-unified.js" defer></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "WHO BMI 기준·대한비만학회 가이드라인",
+  referenceOrg: "세계보건기구(WHO)·대한비만학회",
+  lastReviewed: "2026.03",
+  relatedCalc: { name: 'BMI 계산기', url: '/calc/health/bmi/' },
+  category: 'health'
+};
+</script>
+<script src="/assets/blog-article-info.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>

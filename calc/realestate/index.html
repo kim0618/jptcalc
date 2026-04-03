@@ -1,0 +1,3059 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>부동산 계산기 - 취득세·양도세·중개수수료·대출이자 무료 계산 | 제이퍼 계산기</title>
+  <meta name="description" content="부동산 중개수수료, 취득세, 양도소득세, 전월세전환, 대출이자, 임대수익률, 종합부동산세, 증여세, 재산세를 한 번에 무료로 계산하세요. 2026년 세법 기준." />
+  <meta name="keywords" content="부동산계산기,중개수수료계산기,취득세계산기,양도소득세계산기,전월세전환계산기,대출이자계산기,임대수익률계산기,종합부동산세,증여세계산기" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/realestate/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="부동산 계산기 - 취득세·양도세·중개수수료 무료 계산" />
+  <meta property="og:description" content="중개수수료, 취득세, 양도소득세, 전월세전환, 대출이자, 종합부동산세, 증여세까지 한 번에." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/realestate/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="부동산 계산기 - 취득세·양도세·중개수수료 무료 계산" />
+  <meta name="twitter:description" content="중개수수료, 취득세, 양도소득세, 전월세전환, 대출이자, 종합부동산세, 증여세까지 한 번에." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+
+  <!-- 구조화 데이터 (Google 검색 리치 결과) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "부동산 계산기",
+    "url": "https://www.jptcalc.kr/calc/realestate/",
+    "description": "중개수수료, 취득세, 양도소득세, 전월세전환, 대출이자, 임대수익률 무료 계산기",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "KRW"
+    },
+    "inLanguage": "ko-KR"
+  }
+</script>
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"취득세는 언제까지 납부해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"부동산 취득일로부터 60일 이내에 신고·납부해야 합니다. 상속은 상속개시일이 속하는 달의 말일로부터 6개월 이내입니다. 기한을 넘기면 신고불성실·납부지연 가산세가 부과됩니다."}},{"@type":"Question","name":"1세대 1주택 양도세 비과세 조건은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"세대 구성원 전체가 1채만 보유하고 2년 이상 보유(조정대상지역은 거주 2년 추가)해야 합니다. 양도가액 12억원 이하는 전액 비과세이며, 초과분에 대해서만 과세됩니다."}},{"@type":"Question","name":"보유세 기준일은 언제인가요?","acceptedAnswer":{"@type":"Answer","text":"재산세·종합부동산세 모두 매년 6월 1일이 과세기준일입니다. 5월 말에 매도하면 그 해 보유세를 내지 않아도 되고, 6월 2일 이후 취득하면 그 해 보유세가 부과되지 않습니다."}}]}</script>
+
+  <!-- html2canvas (이미지 저장) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+
+  <!-- Google Analytics -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BRSX3F10MZ');
+  </script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #F59E0B;
+      --primary-light: rgba(245,158,11,0.12);
+      --primary-border: rgba(245,158,11,0.3);
+      --primary-mid: #FDE68A;
+      --accent: #FBBF24;
+      --success: #10B981;
+      --warning: #F59E0B;
+      --danger: #EF4444;
+      --gray-50: #F9FAFB;
+      --gray-100: #F3F4F6;
+      --gray-200: #E5E7EB;
+      --gray-300: #D1D5DB;
+      --gray-400: #9CA3AF;
+      --gray-500: #6B7280;
+      --gray-600: #4B5563;
+      --gray-700: #374151;
+      --gray-800: #1F2937;
+      --gray-900: #111827;
+      --dark-bg: #F5F6F8;
+      --dark-card: #FFFFFF;
+      --dark-border: rgba(0,0,0,0.06);
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+      --shadow-lg: 0 10px 32px rgba(245,158,11,0.15), 0 4px 12px rgba(0,0,0,0.10);
+      --c-realestate:#F59E0B; --c-tax:#10B981; --c-ai:#8B5CF6; --c-salary:#3B82F6; --c-pet:#F472B6; --c-health:#10B981; --c-finance:#6366F1; --c-date:#F97316;
+    }
+
+    .hidden { display: none !important; }
+
+    html {
+      font-size: 16px;
+      overflow-y: scroll;
+      scrollbar-gutter: stable;
+    }
+    body {
+      font-family: 'Pretendard', -apple-system, 'Apple SD Gothic Neo', sans-serif;
+      background: #F5F6F8;
+      color: var(--gray-900);
+      min-height: 100dvh;
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* 전체 앱 최대 너비 래퍼 */
+    .app-container {
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      min-height: 100dvh;
+      background: var(--gray-50);
+      position: relative;
+      box-shadow: 0 0 80px rgba(0,0,0,0.3);
+    }
+
+    /* ── 헤더 ── */
+    .app-header {
+      background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 50%, #FDE68A 100%);
+      padding: 28px 24px 32px;
+      padding-top: calc(28px + env(safe-area-inset-top));
+      position: relative;
+      overflow: hidden;
+    }
+    .app-header::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 160px; height: 160px;
+      border-radius: 50%;
+      background: rgba(245,158,11,0.15);
+    }
+    .app-header::after {
+      content: '';
+      position: absolute;
+      bottom: -20px; left: 30px;
+      width: 100px; height: 100px;
+      border-radius: 50%;
+      background: rgba(245,158,11,0.10);
+    }
+    .header-inner {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(245,158,11,0.15);
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--gray-800);
+      margin-bottom: 10px;
+      letter-spacing: 0.3px;
+      border: 1px solid rgba(245,158,11,0.25);
+    }
+    .header-title {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--gray-900);
+      letter-spacing: -0.8px;
+      line-height: 1.15;
+    }
+    .header-sub {
+      font-size: 12px;
+      color: var(--gray-600);
+      margin-top: 6px;
+      font-weight: 500;
+      letter-spacing: 0.2px;
+    }
+    .header-logo {
+      width: 52px;
+      height: 52px;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .header-logo svg {
+      width: 52px;
+      height: 52px;
+      overflow: visible;
+    }
+
+    /* ── 탭 ── */
+    .main-wrap { padding: 20px 20px 120px; }
+    .tab-wrap {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      margin: 0 0 20px;
+    }
+    .tab-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      background: #fff;
+      border: 1.5px solid var(--gray-200);
+      border-radius: 14px;
+      padding: 14px 4px 12px;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s ease;
+      min-height: auto;
+    }
+    .tab-btn .tab-icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tab-btn .tab-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--gray-400);
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke 0.2s;
+    }
+    .tab-btn .tab-label {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--gray-400);
+      white-space: nowrap;
+      transition: color 0.2s;
+    }
+    .tab-btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-2px);
+    }
+    .tab-btn.active .tab-icon svg { stroke: #fff; }
+    .tab-btn.active .tab-label { color: rgba(255,255,255,0.95); }
+
+    /* ── 섹션 ── */
+    .calc-section { display: none; }
+    .calc-section.active { display: block; }
+
+    /* ── 카드 ── */
+    .card {
+      background: var(--dark-card);
+      border-radius: 16px;
+      border: 1px solid var(--dark-border);
+      padding: 24px;
+      margin-bottom: 14px;
+    }
+    .card-title {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--gray-500);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    /* ── 세그먼트 버튼 ── */
+    .seg-group {
+      display: flex;
+      background: var(--gray-100);
+      border-radius: 10px;
+      padding: 3px;
+      gap: 3px;
+      margin-bottom: 16px;
+    }
+    .seg-btn {
+      flex: 1;
+      border: none;
+      border-radius: 8px;
+      background: transparent;
+      padding: 9px 4px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gray-500);
+      cursor: pointer;
+      transition: all 0.18s;
+      font-family: inherit;
+    }
+    .seg-btn.active {
+      background: #fff;
+      color: var(--primary);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      font-weight: 700;
+    }
+
+    /* ── 인풋 ── */
+    .field { margin-bottom: 16px; }
+    .field-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gray-600);
+      margin-bottom: 8px;
+    }
+    .field-label .label-hint {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--primary);
+      background: var(--primary-light);
+      padding: 2px 7px;
+      border-radius: 20px;
+    }
+    .input-wrap { position: relative; }
+    .input-wrap .unit {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gray-400);
+      pointer-events: none;
+    }
+    input[type=number] {
+      width: 100%;
+      border: 1.5px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 13px 50px 13px 16px;
+      font-size: 15px;
+      font-weight: 600;
+      font-family: 'Pretendard', sans-serif;
+      color: var(--gray-900);
+      background: #fff;
+      outline: none;
+      transition: border-color 0.18s, box-shadow 0.18s;
+      -moz-appearance: textfield;
+    }
+    input[type=number]::placeholder { color: var(--gray-300); font-weight: 500; }
+    input[type=number]:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(245,158,11,0.15);
+    }
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
+    .converted {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 5px;
+      min-height: 16px;
+    }
+    .field-hint {
+      font-size: 11px;
+      color: var(--gray-400);
+      margin-top: 5px;
+    }
+
+    /* ── 결과 카드 ── */
+    .result-card {
+      background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 8px;
+      display: none;
+    }
+    .result-card.show { display: block; }
+    .result-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+    }
+    .result-row + .result-row { border-top: 1px solid rgba(0,0,0,0.06); }
+    .result-label {
+      font-size: 13px;
+      color: var(--gray-600);
+      font-weight: 500;
+    }
+    .result-value {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--gray-800);
+    }
+    .result-total-row {
+      border-top: 2px solid rgba(245,158,11,0.3) !important;
+      margin-top: 4px;
+      padding-top: 14px !important;
+    }
+    .result-total-label {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--gray-900);
+    }
+    .result-total-value {
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--primary);
+    }
+    .result-note {
+      font-size: 11px;
+      color: var(--gray-500);
+      margin-top: 12px;
+      line-height: 1.6;
+    }
+
+    /* 결과 뱃지 */
+    .result-badge {
+      display: inline-block;
+      background: rgba(0,0,0,0.06);
+      border-radius: 6px;
+      padding: 2px 8px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--gray-900);
+    }
+
+    /* ── 정보 박스 ── */
+    .info-box {
+      background: var(--primary-light);
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+    .info-box .info-icon { font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+    .info-box p { font-size: 12px; color: var(--primary); font-weight: 500; line-height: 1.5; }
+
+    /* ── 요율표 ── */
+    .rate-table-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      border: 1.5px solid var(--gray-200);
+      background: #fff;
+      border-radius: 12px;
+      padding: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gray-500);
+      cursor: pointer;
+      margin-top: 12px;
+      transition: all 0.2s;
+    }
+    .rate-table-toggle:hover { border-color: var(--primary); color: var(--primary); }
+    .rate-table-toggle .arrow { transition: transform 0.2s; }
+    .rate-table-toggle.open .arrow { transform: rotate(180deg); }
+    .rate-table-wrap { display: none; margin-top: 12px; }
+    .rate-table-wrap.show { display: block; }
+    .rate-tbl {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    .rate-tbl th {
+      background: var(--gray-100);
+      padding: 8px 6px;
+      font-weight: 700;
+      color: var(--gray-700);
+      border-bottom: 1.5px solid var(--gray-200);
+      text-align: center;
+    }
+    .rate-tbl td {
+      padding: 8px 6px;
+      text-align: center;
+      color: var(--gray-700);
+      border-bottom: 1px solid var(--gray-100);
+      font-weight: 500;
+    }
+    .rate-tbl tr:last-child td { border-bottom: none; }
+    .rate-tbl-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--gray-500);
+      margin: 16px 0 8px;
+      letter-spacing: 0.3px;
+    }
+    .rate-tbl-title:first-child { margin-top: 0; }
+
+    /* ── 계산기록 & 저장/복사 버튼 ── */
+    .action-row {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .action-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      padding: 11px;
+      border: 1.5px solid var(--gray-200);
+      border-radius: 12px;
+      background: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gray-500);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .action-btn:hover { border-color: var(--primary); color: var(--primary); }
+    .action-btn svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .history-panel { margin-top: 12px; display: none; }
+    .history-panel.show { display: block; }
+    .history-item {
+      background: #fff;
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin-bottom: 8px;
+      position: relative;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .history-item:hover { border-color: var(--primary); }
+    .history-item .hi-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gray-700);
+      margin-bottom: 4px;
+    }
+    .history-item .hi-detail {
+      font-size: 11px;
+      color: var(--gray-400);
+      line-height: 1.5;
+    }
+    .history-item .hi-result {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-top: 4px;
+    }
+    .history-item .hi-delete {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 22px;
+      height: 22px;
+      border: none;
+      background: var(--gray-100);
+      border-radius: 6px;
+      color: var(--gray-400);
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .history-item .hi-delete:hover { background: var(--danger); color: #fff; }
+    .history-empty {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: var(--gray-400);
+    }
+    .history-clear-all {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: var(--gray-100);
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gray-400);
+      cursor: pointer;
+      margin-top: 4px;
+    }
+    .history-clear-all:hover { background: var(--danger); color: #fff; }
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gray-900);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      z-index: 9999;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+    .toast.show { opacity: 1; }
+
+    /* ── jcalc 로고 애니메이션 (모두 미세한 움직임) ── */
+    .jl-c1 { animation: jl-f1 5.2s ease-in-out infinite 0.0s; }
+    .jl-c2 { animation: jl-f2 6.0s ease-in-out infinite 0.9s; }
+    .jl-c3 { animation: jl-f3 4.8s ease-in-out infinite 1.7s; }
+    .jl-c4 { animation: jl-f4 6.5s ease-in-out infinite 0.4s; }
+    .jl-c5 { animation: jl-f5 5.6s ease-in-out infinite 1.2s; }
+    .jl-c6 { animation: jl-f6 3.2s ease-in-out infinite 0.2s; }
+    .jl-c7 { animation: jl-f7 3.8s ease-in-out infinite 0.7s; }
+    .jl-c8 { animation: jl-f8 2.9s ease-in-out infinite 1.5s; }
+    .jl-c9 { animation: jl-f9 4.1s ease-in-out infinite 0.5s; }
+    @keyframes jl-f1 { 0%,100%{transform:translate(0px,0px) rotate(0deg)}   50%{transform:translate(1px,-2px) rotate(5deg)} }
+    @keyframes jl-f2 { 0%,100%{transform:translate(0px,0px) rotate(-2deg)}  50%{transform:translate(-2px,1px) rotate(4deg)} }
+    @keyframes jl-f3 { 0%,100%{transform:translate(0px,0px) rotate(2deg)}   50%{transform:translate(2px,2px)  rotate(-4deg)} }
+    @keyframes jl-f4 { 0%,100%{transform:translate(0px,0px) rotate(-3deg)}  50%{transform:translate(-1px,-2px) rotate(5deg)} }
+    @keyframes jl-f5 { 0%,100%{transform:translate(0px,0px) rotate(3deg)}   50%{transform:translate(2px,-1px) rotate(-5deg)} }
+    @keyframes jl-f6 { 0%,100%{transform:translate(0px,0px) rotate(20deg)}  50%{transform:translate(-3px,-4px) rotate(34deg)} }
+    @keyframes jl-f7 { 0%,100%{transform:translate(0px,0px) rotate(-15deg)} 50%{transform:translate(4px,-3px) rotate(-30deg)} }
+    @keyframes jl-f8 { 0%,100%{transform:translate(0px,0px) rotate(40deg)}  50%{transform:translate(3px,4px)  rotate(26deg)} }
+    @keyframes jl-f9 { 0%,100%{transform:translate(0px,0px) rotate(-32deg)} 50%{transform:translate(-4px,3px) rotate(-18deg)} }
+
+    /* ── date input ── */
+    input[type=date] {
+      width: 100%;
+      border: 1.5px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 13px 16px;
+      font-size: 15px;
+      font-weight: 600;
+      font-family: 'Pretendard', sans-serif;
+      color: var(--gray-900);
+      background: #fff;
+      outline: none;
+      transition: border-color 0.18s, box-shadow 0.18s;
+    }
+    input[type=date]:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(245,158,11,0.18);
+    }
+    .date-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .holding-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--primary-light);
+      color: var(--primary);
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-top: 6px;
+      min-height: 28px;
+    }
+    .yd-exempt-banner {
+      background: linear-gradient(135deg, #065F46, #047857);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      margin-top: 4px;
+    }
+    .yd-exempt-banner .eb-icon { font-size: 28px; margin-bottom: 8px; }
+    .yd-exempt-banner .eb-title { font-size: 18px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+    .yd-exempt-banner .eb-desc { font-size: 13px; color: rgba(255,255,255,0.8); }
+
+    /* ── 반응형 페이지 레이아웃 ── */
+    .page-layout {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100dvh;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .app-container {
+      align-self: stretch;
+    }
+
+    /* 사이드바 공통 */
+    .ad-sidebar {
+      flex-shrink: 0;
+      position: sticky;
+      top: 0;
+      height: 100dvh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 24px 0;
+      display: none;
+    }
+    .ad-sidebar::-webkit-scrollbar { display: none; }
+    .ad-sidebar-left { display: none !important; }
+    .ad-sidebar-right { width: 300px; margin-left: 20px; }
+
+    /* 광고 슬롯 공통 스타일 */
+    .ad-slot {
+      background: rgba(0,0,0,0.03);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray-400);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-align: center;
+      line-height: 1.8;
+      backdrop-filter: blur(4px);
+    }
+    .ad-slot-rect { width: 300px; height: 250px; }
+    .ad-slot-half { width: 300px; height: 600px; margin-top: 16px; }
+
+    /* 모바일 하단 고정 배너 */
+    .ad-mobile-banner {
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      padding-bottom: env(safe-area-inset-bottom, 0);
+      background: rgba(255,255,255,0.96);
+      border-top: 1px solid rgba(0,0,0,0.06);
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      color: var(--gray-400);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      backdrop-filter: blur(8px);
+    }
+
+    /* 섹션 내 인라인 광고 */
+    .ad-inline {
+      margin: 14px 0 4px;
+      min-height: 90px;
+      background: var(--gray-100);
+      border: 1px dashed var(--gray-200);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray-400);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      overflow: hidden;
+    }
+    /* 결과가 없을 때 인라인 광고 숨김 */
+    .ad-inline-wrap {
+      display: none;
+    }
+    .ad-inline-wrap.show {
+      display: block;
+    }
+
+    /* ── 사이드바 위젯 ── */
+    .sidebar-widget {
+      margin-top: 16px;
+      background: rgba(0,0,0,0.03);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 16px;
+      padding: 18px 16px;
+      backdrop-filter: blur(4px);
+    }
+    .sw-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--gray-600);
+      letter-spacing: 0.5px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+    .sw-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--gray-600);
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    .sw-item:last-child { margin-bottom: 0; }
+    .sw-item strong { color: var(--gray-800); }
+    .sw-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+
+    /* ── 설명 섹션 ── */
+    .explain-section { margin-top: 12px; }
+    .explain-toggle {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      border: 1.5px solid var(--gray-200);
+      border-radius: 14px;
+      padding: 14px 18px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gray-700);
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: left;
+    }
+    .explain-toggle:hover { border-color: var(--primary); color: var(--primary); }
+    .explain-toggle.open { border-radius: 14px 14px 0 0; border-color: var(--primary); color: var(--primary); }
+    .explain-toggle .etarrow { transition: transform 0.2s; font-size: 11px; }
+    .explain-toggle.open .etarrow { transform: rotate(180deg); }
+    .explain-body {
+      display: none;
+      background: #fff;
+      border: 1.5px solid var(--primary);
+      border-top: none;
+      border-radius: 0 0 14px 14px;
+      padding: 18px 18px 20px;
+    }
+    .explain-body.show { display: block; }
+    .explain-body h3 { font-size: 13px; font-weight: 800; color: var(--gray-700); margin: 14px 0 6px; }
+    .explain-body h3:first-child { margin-top: 0; }
+    .explain-body p { font-size: 13px; color: var(--gray-500); line-height: 1.75; margin-bottom: 6px; }
+    .explain-body ul { margin: 4px 0 8px 16px; }
+    .explain-body li { font-size: 13px; color: var(--gray-500); line-height: 1.75; }
+    .explain-body strong { color: var(--gray-700); font-weight: 700; }
+
+    /* ── 태블릿 (768px 이상): 콘텐츠 확장 ── */
+    @media (min-width: 768px) {
+      .ad-mobile-banner { display: none; }
+      .main-wrap { padding: 28px 32px 60px; }
+
+      .app-header { padding: 32px 36px 40px; }
+      .header-title { font-size: 28px; }
+      .header-sub { font-size: 13px; }
+
+      .tab-wrap { gap: 8px; margin-bottom: 24px; }
+      .tab-btn {
+        padding: 16px 6px 14px;
+        border-radius: 16px;
+      }
+      .tab-btn .tab-icon { width: 28px; height: 28px; }
+      .tab-btn .tab-icon svg { width: 22px; height: 22px; }
+      .tab-btn .tab-label {
+        font-size: 11px;
+        white-space: nowrap;
+      }
+
+      .card { padding: 24px; border-radius: 20px; margin-bottom: 16px; }
+      .result-card { padding: 26px 24px; border-radius: 20px; margin-top: 8px; }
+      .result-total-value { font-size: 26px; }
+      .result-value { font-size: 15px; }
+      .result-label { font-size: 14px; }
+      .card-title { font-size: 12px; }
+
+      .seg-btn { padding: 11px 8px; font-size: 14px; }
+      input[type=number] { padding: 14px 48px 14px 18px; }
+      .field-label { font-size: 13px; }
+    }
+
+    /* ── 데스크탑 (1080px 이상): 우측 사이드바 표시 ── */
+    @media (min-width: 1080px) {
+      .ad-sidebar-right { display: block; }
+
+      .tab-btn .tab-label { font-size: 12px; }
+      .tab-btn .tab-icon { width: 30px; height: 30px; }
+      .tab-btn .tab-icon svg { width: 24px; height: 24px; }
+    }
+
+
+    /* ── 새 공통 헤더/사이드바 오버라이드 ── */
+    .site-header {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(15,17,23,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--dark-border);
+    }
+    .sh-inner {
+      max-width: 1400px; margin: 0 auto; padding: 0 24px;
+      height: 60px; display: flex; align-items: center; gap: 32px;
+    }
+    .sh-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; flex-shrink: 0;
+    }
+    .sh-logo-icon {
+      width: 32px; height: 32px; background: #F59E0B;
+      border-radius: 8px; display: flex; align-items: center;
+      justify-content: center; font-size: 16px;
+    }
+    .sh-logo-text { font-size: 18px; font-weight: 900; color: #fff; letter-spacing: -0.5px; }
+    .sh-logo-text span { color: #818CF8; }
+    .sh-nav { display: flex; align-items: center; gap: 2px; flex: 1; }
+    .sh-nav-item {
+      display: flex; align-items: center; gap: 6px;
+      padding: 6px 12px; border-radius: 8px;
+      text-decoration: none; font-size: 13px; font-weight: 600;
+      color: #9CA3AF; transition: all 0.15s; white-space: nowrap;
+    }
+    .sh-nav-item:hover { background: rgba(255,255,255,0.06); color: #fff; }
+    .sh-nav-item.sh-active { background: rgba(245,158,11,0.12); color: #F59E0B; }
+    .sh-nav-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+    .sh-cta { margin-left: auto; flex-shrink: 0; }
+    .sh-btn-blog {
+      padding: 7px 14px; border-radius: 8px; font-size: 13px; font-weight: 700;
+      border: 1px solid rgba(255,255,255,0.2); background: transparent;
+      color: #D1D5DB; text-decoration: none; transition: all 0.15s;
+    }
+    .sh-btn-blog:hover { border-color: #F59E0B; color: #F59E0B; }
+    .sh-hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 4px; margin-left: auto;
+      background: none; border: none;
+    }
+    .sh-hamburger span { display: block; width: 22px; height: 2px; background: #9CA3AF; border-radius: 2px; }
+
+    /* 3단 레이아웃 래퍼 */
+    .mega-layout {
+      max-width: 1400px; margin: 0 auto; padding: 28px 24px;
+      display: grid;
+      grid-template-columns: 220px 1fr 300px;
+      gap: 24px; align-items: start;
+    }
+
+    /* 좌측 사이드바 */
+    .mega-sidebar-left { position: sticky; top: 88px; }
+    .msl-section { margin-bottom: 20px; }
+    .msl-title {
+      font-size: 10px; font-weight: 800; letter-spacing: 1px;
+      color: #6B7280; text-transform: uppercase;
+      margin-bottom: 8px; padding: 0 8px;
+    }
+    .msl-nav { display: flex; flex-direction: column; gap: 2px; }
+    .msl-link {
+      display: flex; align-items: center; gap: 10px;
+      padding: 9px 10px; border-radius: 10px;
+      text-decoration: none; font-size: 13px; font-weight: 600;
+      color: var(--gray-500); transition: all 0.15s;
+    }
+    .msl-link:hover { background: rgba(0,0,0,0.04); color: var(--gray-900); }
+    .msl-link.msl-active { background: rgba(245,158,11,0.12); color: #F59E0B; }
+    .msl-icon { font-size: 16px; flex-shrink: 0; width: 20px; text-align: center; }
+    .msl-badge {
+      margin-left: auto; font-size: 10px; font-weight: 700;
+      background: rgba(0,0,0,0.06); border-radius: 4px;
+      padding: 1px 6px; color: #6B7280;
+    }
+    .msl-link.msl-active .msl-badge { background: rgba(245,158,11,0.15); color: #F59E0B; }
+    .msl-divider { height: 1px; background: rgba(0,0,0,0.06); margin: 10px 0; }
+
+    /* 계산기 탭 목록 */
+    .msl-calc-list { display: flex; flex-direction: column; gap: 2px; }
+    .msl-calc-btn {
+      display: flex; align-items: center; gap: 8px;
+      padding: 8px 10px; border-radius: 8px;
+      text-decoration: none; font-size: 12px; font-weight: 600;
+      color: var(--gray-500); transition: all 0.15s; cursor: pointer;
+      background: none; border: none; width: 100%; text-align: left;
+      font-family: inherit;
+    }
+    .msl-calc-btn:hover { background: rgba(0,0,0,0.04); color: var(--gray-700); }
+    .msl-calc-btn.msl-calc-active { background: rgba(245,158,11,0.12); color: #F59E0B; }
+    .msl-calc-dot { width: 5px; height: 5px; border-radius: 50%; background: #F59E0B; flex-shrink: 0; }
+
+    /* ── 새 페이지 헤더 (부동산) ── */
+    .page-header {
+      background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 50%, #FDE68A 100%);
+      border: 1px solid rgba(245,158,11,0.2);
+      border-radius: 20px; padding: 32px 32px 28px;
+      margin-bottom: 24px; position: relative; overflow: hidden;
+    }
+    .page-header::before {
+      content: ''; position: absolute; top: -60px; right: -60px;
+      width: 240px; height: 240px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(245,158,11,0.2) 0%, transparent 70%);
+    }
+    .breadcrumb {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 12px; color: var(--gray-500); margin-bottom: 14px;
+    }
+    .breadcrumb a { color: var(--gray-500); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--primary); }
+    .breadcrumb-sep { font-size: 10px; }
+    .page-header-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.3);
+      border-radius: 20px; padding: 4px 12px;
+      font-size: 11px; font-weight: 700; color: var(--primary); margin-bottom: 10px;
+    }
+    .page-header h1 { font-size: 26px; font-weight: 900; color: var(--gray-900); letter-spacing: -0.5px; line-height: 1.2; margin-bottom: 8px; }
+    .page-header p { font-size: 13px; color: var(--gray-600); font-weight: 500; }
+
+    /* ── 새 탭 네비 (horizontal) ── */
+    .tab-nav {
+      display: flex; flex-wrap: wrap; gap: 6px;
+      background: #fff; border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 14px; padding: 6px;
+      margin-bottom: 20px;
+    }
+    .tab-nav .tab-btn {
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      padding: 8px 12px; border-radius: 9px;
+      border: none; background: transparent;
+      font-size: 12px; font-weight: 600; color: var(--gray-500);
+      cursor: pointer; transition: all 0.18s; white-space: nowrap;
+      font-family: inherit; flex-direction: row; min-height: auto;
+      text-decoration: none;
+      box-shadow: none; transform: none; border-color: transparent;
+      flex: 1 1 auto;
+    }
+    .tab-nav .tab-btn:hover { background: rgba(0,0,0,0.04); color: var(--gray-700); }
+    .tab-nav .tab-btn.active { background: var(--primary); color: #fff; font-weight: 700; transform: none; }
+    .t-icon { font-size: 15px; }
+
+
+    /* ── 대표 상세 계산기 허브 ── */
+    .detail-hub {
+      background: #fff; border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 18px; padding: 20px; margin-bottom: 20px;
+      box-shadow: 0 10px 24px rgba(15,23,42,0.04);
+    }
+    .detail-hub-head {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 10px; margin-bottom: 14px;
+    }
+    .detail-hub-title {
+      font-size: 18px; font-weight: 900; color: var(--gray-900); letter-spacing: -0.3px;
+    }
+    .detail-hub-copy {
+      font-size: 12px; color: var(--gray-600); line-height: 1.6;
+    }
+    .detail-hub-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px;
+    }
+    .detail-hub-card {
+      display: block; text-decoration: none; color: inherit;
+      border: 1px solid rgba(245,158,11,0.14); border-radius: 16px;
+      background: linear-gradient(180deg, rgba(255,251,235,0.98) 0%, rgba(255,255,255,1) 100%);
+      padding: 16px; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+      box-shadow: 0 8px 20px rgba(245,158,11,0.05);
+    }
+    .detail-hub-card:hover {
+      transform: translateY(-2px); box-shadow: 0 14px 28px rgba(15,23,42,0.08);
+      border-color: rgba(245,158,11,0.28);
+    }
+    .detail-hub-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 10px; border-radius: 999px;
+      background: rgba(245,158,11,0.12); color: var(--primary);
+      font-size: 10px; font-weight: 800; letter-spacing: 0.02em; margin-bottom: 10px;
+    }
+    .detail-hub-name {
+      font-size: 16px; font-weight: 900; color: var(--gray-900); margin-bottom: 6px;
+    }
+    .detail-hub-desc {
+      font-size: 12px; color: var(--gray-600); line-height: 1.6; min-height: 38px;
+    }
+    .detail-hub-arrow {
+      margin-top: 12px; display: inline-flex; align-items: center; gap: 6px;
+      font-size: 11px; font-weight: 800; color: var(--primary);
+    }
+
+    /* main-content wrapper */
+    .main-content { min-width: 0; }
+
+    /* 앱 컨테이너 오버라이드 - 3단 그리드 안에서 */
+    .app-container {
+      max-width: none !important;
+      box-shadow: none !important;
+      background: transparent !important;
+      min-width: 0;
+    }
+    .app-header {
+      border-radius: 20px !important;
+      margin-bottom: 0 !important;
+    }
+
+    /* 우측 사이드바 새 스타일 */
+    .mega-sidebar-right {
+      position: sticky; top: 88px;
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .msr-ad-card {
+      background: #FFFFFF; border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 14px; overflow: hidden;
+    }
+    .msr-ad-label { font-size: 10px; font-weight: 700; color: #4B5563; letter-spacing: 0.5px; padding: 8px 14px 4px; }
+    .msr-slot-rect { width: 100%; height: 250px; background: rgba(0,0,0,0.03); display: flex; align-items: center; justify-content: center; }
+    .msr-slot-half { width: 100%; height: 600px; background: rgba(0,0,0,0.03); display: flex; align-items: center; justify-content: center; }
+    .msr-placeholder { font-size: 11px; color: var(--gray-400); }
+    .msr-widget { background: #FFFFFF; border: 1px solid rgba(0,0,0,0.06); border-radius: 14px; padding: 18px; }
+    .msr-widget-title { font-size: 11px; font-weight: 800; color: #6B7280; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 12px; }
+    .msr-widget-list { display: flex; flex-direction: column; gap: 4px; }
+    .msr-widget-link {
+      display: flex; align-items: center; gap: 8px;
+      padding: 8px 10px; border-radius: 8px; text-decoration: none; transition: background 0.15s;
+    }
+    .msr-widget-link:hover { background: rgba(0,0,0,0.04); }
+    .msr-widget-icon { font-size: 14px; flex-shrink: 0; }
+    .msr-widget-text { font-size: 12px; font-weight: 600; color: var(--gray-500); line-height: 1.4; }
+    .msr-widget-link:hover .msr-widget-text { color: var(--gray-900); }
+
+    /* 새 공통 푸터 */
+    .mega-footer {
+      border-top: 1px solid rgba(0,0,0,0.06); padding: 28px 24px;
+    }
+    .mega-footer-inner {
+      max-width: 1400px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; align-items: center;
+      justify-content: space-between; gap: 12px;
+    }
+    .mega-footer-links { display: flex; flex-wrap: wrap; gap: 4px; }
+    .mega-footer-links a {
+      font-size: 10px; font-weight: 600; color: #6B7280;
+      text-decoration: none; padding: 4px 10px; border-radius: 6px; transition: all 0.15s;
+    }
+    .mega-footer-links a:hover { color: #F59E0B; background: rgba(245,158,11,0.08); }
+    .mega-footer-copy { font-size: 10px; color: #4B5563; }
+
+    /* 오버레이 */
+    .mega-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 150; }
+    .mega-overlay.open { display: block; }
+
+    /* 반응형 */
+    @media (max-width: 1199px) {
+      .mega-layout { grid-template-columns: 200px 1fr; }
+      .mega-sidebar-right { display: none; }
+    }
+    @media (max-width: 767px) {
+      .sh-inner { padding: 0 16px; }
+      .sh-nav, .sh-cta { display: none; }
+      .sh-hamburger { display: flex; }
+      .mega-layout { grid-template-columns: 1fr; padding: 16px; gap: 16px; }
+      .mega-sidebar-left { display: none; }
+      .mega-sidebar-left.open {
+        display: block; position: fixed; top: 60px; left: 0; bottom: 0;
+        width: 260px; background: #FFFFFF; border-right: 1px solid rgba(0,0,0,0.06);
+        padding: 20px 12px; overflow-y: auto; z-index: 200;
+      }
+    }
+
+    /* ── Hub Page ─────────────────────────────────── */
+    .hub-popular { margin-bottom: 28px; }
+    .hub-section-label {
+      font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+      color: var(--gray-400); margin-bottom: 10px;
+    }
+    .hub-popular-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+    }
+    .hub-popular-card {
+      display: flex; align-items: center; gap: 12px;
+      padding: 16px 18px; background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+      border: 1px solid rgba(245,158,11,0.3); border-radius: 14px;
+      text-decoration: none; transition: all 0.15s;
+    }
+    .hub-popular-card:hover {
+      border-color: var(--primary); box-shadow: 0 4px 14px rgba(245,158,11,0.2);
+      transform: translateY(-2px);
+    }
+    .hub-popular-icon { font-size: 26px; flex-shrink: 0; }
+    .hub-popular-info { flex: 1; min-width: 0; }
+    .hub-popular-name { font-size: 14px; font-weight: 800; color: var(--gray-900); margin-bottom: 2px; }
+    .hub-popular-desc { font-size: 11.5px; color: var(--gray-500); line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .hub-popular-arrow { font-size: 14px; color: var(--primary); font-weight: 700; flex-shrink: 0; }
+
+    .calc-hub { margin-top: 0; }
+    .calc-hub-group { margin-bottom: 24px; }
+    .calc-hub-group-title {
+      font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+      color: var(--gray-400); margin-bottom: 10px; padding-bottom: 8px;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .calc-hub-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
+    }
+    .calc-hub-card {
+      display: flex; flex-direction: column; gap: 5px;
+      padding: 14px; background: #FFFFFF;
+      border: 1px solid var(--gray-200); border-radius: 12px;
+      text-decoration: none; transition: all 0.15s;
+    }
+    .calc-hub-card:hover {
+      border-color: var(--primary);
+      box-shadow: 0 3px 10px rgba(245,158,11,0.12);
+      transform: translateY(-1px);
+    }
+    .calc-hub-icon { font-size: 20px; line-height: 1; margin-bottom: 2px; }
+    .calc-hub-name { font-size: 12.5px; font-weight: 700; color: var(--gray-900); }
+    .calc-hub-desc { font-size: 11px; color: var(--gray-500); line-height: 1.4; }
+    .calc-hub-arrow { margin-top: auto; padding-top: 6px; font-size: 10px; font-weight: 700; color: var(--primary); }
+
+    @media (max-width: 1199px) {
+      .hub-popular-grid { grid-template-columns: repeat(3, 1fr); }
+      .calc-hub-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 767px) {
+      .hub-popular-grid { grid-template-columns: 1fr; }
+      .calc-hub-grid { grid-template-columns: repeat(2, 1fr); }
+      .hub-popular-desc { white-space: normal; }
+    }
+
+    /* ══ 카테고리 소개 ══ */
+    .hub-intro { background:#fff; border:1px solid var(--gray-200); border-radius:14px; padding:18px 20px; margin-bottom:20px; font-size:13px; color:var(--gray-600); line-height:1.75; }
+
+    /* ══ 상황별 계산기 안내 ══ */
+    .hub-guide { margin-bottom:24px; }
+    .hub-guide-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:8px; }
+    .hub-guide-item { display:flex; align-items:flex-start; gap:10px; padding:12px 14px; background:#fff; border:1px solid var(--gray-200); border-radius:12px; text-decoration:none; transition:all 0.15s; }
+    .hub-guide-item:hover { border-color:var(--primary); box-shadow:0 2px 8px var(--primary-light); }
+    .hub-guide-info { flex:1; min-width:0; }
+    .hub-guide-situation { font-size:11px; color:var(--gray-500); margin-bottom:2px; }
+    .hub-guide-calc { font-size:13px; font-weight:700; color:var(--gray-900); }
+    .hub-guide-arrow { margin-left:auto; font-size:12px; color:var(--primary); font-weight:700; flex-shrink:0; padding-top:2px; }
+
+    /* ══ FAQ ══ */
+    .hub-faq { margin-top:8px; }
+    .hub-faq-list { display:flex; flex-direction:column; gap:8px; }
+    .hub-faq-item { background:#fff; border:1px solid var(--gray-200); border-radius:12px; padding:14px 16px; }
+    .hub-faq-q { font-size:13px; font-weight:700; color:var(--gray-900); margin-bottom:6px; display:flex; align-items:flex-start; gap:8px; }
+    .hub-faq-q::before { content:'Q'; font-size:11px; font-weight:800; color:var(--primary); background:var(--primary-light); border-radius:4px; padding:1px 6px; flex-shrink:0; line-height:1.7; }
+    .hub-faq-a { font-size:12.5px; color:var(--gray-600); line-height:1.7; padding-left:26px; }
+
+    @media (max-width:767px) { .hub-guide-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- 공통 상단 헤더 -->
+<header class="site-header">
+  <div class="sh-inner">
+    <a href="../../" class="sh-logo">
+      <div class="sh-logo-icon"><img src="../../assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div>
+      <span class="sh-logo-text">제이퍼<span>계산기</span></span>
+    </a>
+    <nav class="sh-nav">
+      <a href="../realestate/" class="sh-nav-item sh-active"><span class="sh-nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="../tax/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="../ai/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="../salary/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="../pet/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#F472B6;"></span>반려동물</a>
+      <a href="../finance/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="../health/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="../date/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+    </nav>
+    <div class="sh-cta">
+      <a href="../../blog/" class="sh-btn-blog">블로그</a>
+    </div>
+    <button class="sh-hamburger" onclick="toggleMegaMenu()" aria-label="메뉴">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mega-overlay" id="mega-overlay" onclick="toggleMegaMenu()"></div>
+
+<!-- 3단 레이아웃 -->
+<div class="mega-layout">
+
+<!-- 좌측 사이드바 -->
+<aside class="mega-sidebar-left" id="mega-sidebar-left">
+  <div class="msl-section">
+    <div class="msl-title">카테고리</div>
+    <nav class="msl-nav">
+      <a href="../../" class="msl-link"><span class="msl-icon">🧮</span>전체 보기</a>
+      <a href="../realestate/" class="msl-link msl-active"><span class="msl-icon">&#127968;</span>부동산<span class="msl-badge">15</span></a>
+      <a href="../tax/" class="msl-link"><span class="msl-icon">&#128176;</span>프리랜서 세금<span class="msl-badge">5</span></a>
+      <a href="../ai/" class="msl-link"><span class="msl-icon">&#129302;</span>AI / 테크<span class="msl-badge">5</span></a>
+      <a href="../salary/" class="msl-link"><span class="msl-icon">&#128200;</span>이직 / 연봉<span class="msl-badge">7</span></a>
+      <a href="../pet/" class="msl-link"><span class="msl-icon">&#128062;</span>반려동물<span class="msl-badge">5</span></a>
+      <a href="../finance/" class="msl-link"><span class="msl-icon">&#127974;</span>금융 · 이자<span class="msl-badge">5</span></a>
+      <a href="../health/" class="msl-link"><span class="msl-icon">&#127939;</span>건강<span class="msl-badge">5</span></a>
+      <a href="../date/" class="msl-link"><span class="msl-icon">&#128197;</span>날짜 · D-day<span class="msl-badge">5</span></a>
+    </nav>
+  </div>
+  <div class="msl-divider"></div>
+  <div class="msl-section">
+    <div class="msl-title">부동산 계산기</div>
+    <div class="msl-calc-list">
+      <a class="msl-calc-btn" href="/calc/realestate/brokerage/"><span class="msl-calc-dot"></span>중개수수료</a>
+      <a class="msl-calc-btn" href="/calc/realestate/acquisition/"><span class="msl-calc-dot"></span>취득세</a>
+      <a class="msl-calc-btn" href="/calc/realestate/conversion/"><span class="msl-calc-dot"></span>전월세 전환율</a>
+      <a class="msl-calc-btn" href="/calc/realestate/loan/"><span class="msl-calc-dot"></span>대출이자</a>
+      <a class="msl-calc-btn" href="/calc/realestate/rental/"><span class="msl-calc-dot"></span>임대수익률</a>
+      <a class="msl-calc-btn" href="/calc/realestate/capital-gains/"><span class="msl-calc-dot"></span>양도소득세</a>
+      <a class="msl-calc-btn" href="/calc/realestate/jongbu/"><span class="msl-calc-dot"></span>종합부동산세</a>
+      <a class="msl-calc-btn" href="/calc/realestate/gift/"><span class="msl-calc-dot"></span>증여세</a>
+      <a class="msl-calc-btn" href="/calc/realestate/pyeong/"><span class="msl-calc-dot"></span>평수 변환</a>
+      <a class="msl-calc-btn" href="/calc/realestate/propertytax/"><span class="msl-calc-dot"></span>재산세</a>
+      <a class="msl-calc-btn" href="/calc/realestate/inheritance/"><span class="msl-calc-dot"></span>상속세</a>
+      <a class="msl-calc-btn" href="/calc/realestate/dsr/"><span class="msl-calc-dot"></span>대출한도 (DSR)</a>
+      <a class="msl-calc-btn" href="/calc/realestate/registry/"><span class="msl-calc-dot"></span>등기비용</a>
+      <a class="msl-calc-btn" href="/calc/realestate/joint/"><span class="msl-calc-dot"></span>공동명의비교</a>
+    </div>
+  </div>
+</aside>
+
+<!-- 계산기 본체 -->
+<main class="main-content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../../">홈</a><span class="breadcrumb-sep">›</span><span>부동산 계산기</span></div>
+    <div class="page-header-badge">🏠 2026년 기준 반영</div>
+    <h1>부동산 계산기</h1>
+    <p>취득·보유·매도·대출까지 부동산 전 과정 15가지 계산기</p>
+  </div>
+
+  <!-- 카테고리 소개 -->
+  <div class="hub-intro">
+    부동산 거래는 취득부터 보유, 매도까지 단계마다 세금과 비용이 발생합니다. 구입 전 취득세·중개수수료를 확인하고, 보유 중에는 재산세·종합부동산세를, 매도 전에는 양도소득세를 미리 파악해두면 자금 계획에 도움이 됩니다. 15개 계산기를 단계별로 활용하세요.
+  </div>
+
+  <!-- 자주 찾는 계산기 -->
+  <div class="hub-popular">
+    <div class="hub-section-label">자주 찾는 계산기</div>
+    <div class="hub-popular-grid">
+      <a class="hub-popular-card" href="/calc/realestate/brokerage/">
+        <div class="hub-popular-icon">🏠</div>
+        <div class="hub-popular-info">
+          <div class="hub-popular-name">중개수수료</div>
+          <div class="hub-popular-desc">매매·전세·월세 법정 상한 수수료</div>
+        </div>
+        <div class="hub-popular-arrow">→</div>
+      </a>
+      <a class="hub-popular-card" href="/calc/realestate/acquisition/">
+        <div class="hub-popular-icon">📄</div>
+        <div class="hub-popular-info">
+          <div class="hub-popular-name">취득세</div>
+          <div class="hub-popular-desc">주택 수·조정지역별 세율 자동 반영</div>
+        </div>
+        <div class="hub-popular-arrow">→</div>
+      </a>
+      <a class="hub-popular-card" href="/calc/realestate/capital-gains/">
+        <div class="hub-popular-icon">📈</div>
+        <div class="hub-popular-info">
+          <div class="hub-popular-name">양도소득세</div>
+          <div class="hub-popular-desc">취득가·보유기간 기준 예상 세액</div>
+        </div>
+        <div class="hub-popular-arrow">→</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- 상황별 안내 -->
+  <div class="hub-guide">
+    <div class="hub-section-label">상황별 추천 계산기</div>
+    <div class="hub-guide-grid">
+      <a class="hub-guide-item" href="/calc/realestate/acquisition/">
+        <div class="hub-guide-info">
+          <div class="hub-guide-situation">집을 살 때 - 취득 단계</div>
+          <div class="hub-guide-calc">취득세 + 중개수수료 + 등기비용</div>
+        </div>
+        <div class="hub-guide-arrow">→</div>
+      </a>
+      <a class="hub-guide-item" href="/calc/realestate/capital-gains/">
+        <div class="hub-guide-info">
+          <div class="hub-guide-situation">집을 팔 때 - 매도 단계</div>
+          <div class="hub-guide-calc">양도소득세 + 중개수수료</div>
+        </div>
+        <div class="hub-guide-arrow">→</div>
+      </a>
+      <a class="hub-guide-item" href="/calc/realestate/property-tax-comprehensive/">
+        <div class="hub-guide-info">
+          <div class="hub-guide-situation">집을 보유하는 동안</div>
+          <div class="hub-guide-calc">보유세 종합 (재산세 + 종부세)</div>
+        </div>
+        <div class="hub-guide-arrow">→</div>
+      </a>
+      <a class="hub-guide-item" href="/calc/realestate/gift/">
+        <div class="hub-guide-info">
+          <div class="hub-guide-situation">자녀·배우자에게 물려줄 때</div>
+          <div class="hub-guide-calc">증여세 / 상속세</div>
+        </div>
+        <div class="hub-guide-arrow">→</div>
+      </a>
+      <a class="hub-guide-item" href="/calc/realestate/dsr/">
+        <div class="hub-guide-info">
+          <div class="hub-guide-situation">대출을 받을 때</div>
+          <div class="hub-guide-calc">대출한도(DSR) + 대출이자</div>
+        </div>
+        <div class="hub-guide-arrow">→</div>
+      </a>
+      <a class="hub-guide-item" href="/calc/realestate/conversion/">
+        <div class="hub-guide-info">
+          <div class="hub-guide-situation">전세 → 월세 전환 검토 시</div>
+          <div class="hub-guide-calc">전월세 전환율 + 임대수익률</div>
+        </div>
+        <div class="hub-guide-arrow">→</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- 전체 계산기 -->
+  <div class="calc-hub">
+
+    <div class="calc-hub-group">
+      <div class="calc-hub-group-title">매매·거래 비용</div>
+      <div class="calc-hub-grid">
+        <a class="calc-hub-card" href="/calc/realestate/brokerage/">
+          <div class="calc-hub-icon">🏠</div>
+          <div class="calc-hub-name">중개수수료</div>
+          <div class="calc-hub-desc">법정 상한 수수료 자동 계산</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
+        <a class="calc-hub-card" href="/calc/realestate/acquisition/">
+          <div class="calc-hub-icon">📄</div>
+          <div class="calc-hub-name">취득세</div>
+          <div class="calc-hub-desc">주택 수·지역별 세율 반영</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
+        <a class="calc-hub-card" href="/calc/realestate/registry/">
+          <div class="calc-hub-icon">📋</div>
+          <div class="calc-hub-name">등기비용</div>
+          <div class="calc-hub-desc">등록면허세·교육세·수수료</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
+        <a class="calc-hub-card" href="/calc/realestate/pyeong/">
+          <div class="calc-hub-icon">📐</div>
+          <div class="calc-hub-name">평수 변환</div>
+          <div class="calc-hub-desc">평 ↔ m² 단위 환산</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="calc-hub-group">
+      <div class="calc-hub-group-title">양도·증여·상속 세금</div>
+      <div class="calc-hub-grid">
+        <a class="calc-hub-card" href="/calc/realestate/capital-gains/">
+          <div class="calc-hub-icon">📈</div>
+          <div class="calc-hub-name">양도소득세</div>
+          <div class="calc-hub-desc">취득가·보유기간 기준 세액</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
+        <a class="calc-hub-card" href="/calc/realestate/gift/">
+          <div class="calc-hub-icon">🎁</div>
+          <div class="calc-hub-name">증여세</div>
+          <div class="calc-hub-desc">증여재산·공제 적용 세액</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
+        <a class="calc-hub-card" href="/calc/realestate/inheritance/">
+          <div class="calc-hub-icon">📜</div>
+          <div class="calc-hub-name">상속세</div>
+          <div class="calc-hub-desc">배우자·자녀공제 자동 적용</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="calc-hub-group">
+      <div class="calc-hub-group-title">보유세</div>
+      <div class="calc-hub-grid">
+        <a class="calc-hub-card" href="/calc/realestate/propertytax/">
+          <div class="calc-hub-icon">🏛️</div>
+          <div class="calc-hub-name">재산세</div>
+          <div class="calc-hub-desc">공시가격 기준 연간 재산세</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
+        <a class="calc-hub-card" href="/calc/realestate/jongbu/">
+          <div class="calc-hub-icon">🏦</div>
+          <div class="calc-hub-name">종합부동산세</div>
+          <div class="calc-hub-desc">종부세·농어촌특별세 계산</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
+        <a class="calc-hub-card" href="/calc/realestate/property-tax-comprehensive/">
+          <div class="calc-hub-icon">💼</div>
+          <div class="calc-hub-name">보유세 종합</div>
+          <div class="calc-hub-desc">재산세+종부세 합산 계산</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
+        <a class="calc-hub-card" href="/calc/realestate/joint/">
+          <div class="calc-hub-icon">👥</div>
+          <div class="calc-hub-name">공동명의 비교</div>
+          <div class="calc-hub-desc">단독 vs 공동 절세 효과</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="calc-hub-group">
+      <div class="calc-hub-group-title">대출·투자·수익</div>
+      <div class="calc-hub-grid">
+        <a class="calc-hub-card" href="/calc/realestate/loan/">
+          <div class="calc-hub-icon">💰</div>
+          <div class="calc-hub-name">대출이자</div>
+          <div class="calc-hub-desc">상환 방식별 월납입액·총이자</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
+        <a class="calc-hub-card" href="/calc/realestate/dsr/">
+          <div class="calc-hub-icon">🔢</div>
+          <div class="calc-hub-name">대출한도 (DSR)</div>
+          <div class="calc-hub-desc">소득 대비 대출 가능 한도</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
+        <a class="calc-hub-card" href="/calc/realestate/rental/">
+          <div class="calc-hub-icon">📊</div>
+          <div class="calc-hub-name">임대수익률</div>
+          <div class="calc-hub-desc">단순·실투자 수익률 비교</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
+        <a class="calc-hub-card" href="/calc/realestate/conversion/">
+          <div class="calc-hub-icon">🔄</div>
+          <div class="calc-hub-name">전월세 전환율</div>
+          <div class="calc-hub-desc">보증금 ↔ 월세 전환 계산</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FAQ -->
+  <div class="hub-faq">
+    <div class="hub-section-label">자주 묻는 질문</div>
+    <div class="hub-faq-list">
+      <div class="hub-faq-item">
+        <div class="hub-faq-q">취득세는 언제까지 납부해야 하나요?</div>
+        <p class="hub-faq-a">부동산 취득일로부터 60일 이내에 신고·납부해야 합니다. 상속은 상속개시일이 속하는 달의 말일로부터 6개월 이내입니다. 기한을 넘기면 신고불성실·납부지연 가산세가 부과됩니다.</p>
+      </div>
+      <div class="hub-faq-item">
+        <div class="hub-faq-q">1세대 1주택 양도세 비과세 조건은 무엇인가요?</div>
+        <p class="hub-faq-a">세대 구성원 전체가 1채만 보유하고 2년 이상 보유(조정대상지역은 거주 2년 추가)해야 합니다. 양도가액 12억원 이하는 전액 비과세이며, 초과분에 대해서만 과세됩니다.</p>
+      </div>
+      <div class="hub-faq-item">
+        <div class="hub-faq-q">보유세 기준일은 언제인가요?</div>
+        <p class="hub-faq-a">재산세·종합부동산세 모두 매년 6월 1일이 과세기준일입니다. 5월 말에 매도하면 그 해 보유세를 내지 않아도 되고, 6월 2일 이후 취득하면 그 해 보유세가 부과되지 않습니다.</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- 우측 사이드바 (새 스타일) -->
+<aside class="mega-sidebar-right">
+  <div class="msr-widget">
+    <div class="msr-widget-title">관련 계산기</div>
+    <div class="msr-widget-list">
+      <a href="../tax/" class="msr-widget-link"><span class="msr-widget-icon">&#128176;</span><span class="msr-widget-text">프리랜서 세금 계산기</span></a>
+      <a href="../salary/" class="msr-widget-link"><span class="msr-widget-icon">&#128200;</span><span class="msr-widget-text">연봉 실수령액 계산기</span></a>
+    </div>
+  </div>
+  <div class="msr-widget">
+    <div class="msr-widget-title">관련 블로그</div>
+    <div class="msr-widget-list">
+      <a href="/blog/posts/capital-gains-tax.html" class="msr-widget-link"><span class="msr-widget-icon">📝</span><span class="msr-widget-text">양도소득세 절세 방법 총정리</span></a>
+      <a href="/blog/posts/acquisition-tax-2026.html" class="msr-widget-link"><span class="msr-widget-icon">📝</span><span class="msr-widget-text">2026년 취득세 완벽 정리</span></a>
+      <a href="/blog/posts/realestate-agent-fee.html" class="msr-widget-link"><span class="msr-widget-icon">📝</span><span class="msr-widget-text">부동산 중개수수료 계산법</span></a>
+    </div>
+  </div>
+</aside>
+
+</div><!-- /mega-layout -->
+
+<!-- 새 공통 푸터 -->
+<footer class="mega-footer">
+  <div class="mega-footer-inner">
+    <div class="mega-footer-links">
+      <a href="../../">홈</a>
+      <a href="../../about.html">소개</a>
+      <a href="../../privacy.html">개인정보처리방침</a>
+      <a href="../../terms.html">이용약관</a>
+      <a href="../../contact.html">문의하기</a>
+      <a href="../../disclaimer.html">면책조항</a>
+    </div>
+    <p class="mega-footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
+  </div>
+</footer>
+
+<!-- 모바일 하단 고정 배너 -->
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ── 상태 ─────────────────────────────────────────────────
+let tradeType = '매매';
+let houseCnt  = 1;
+let isAdjust  = false;
+let convDir   = 'to-monthly';
+let repayType = 'equal-payment';
+let rateMode  = 'auto';
+let propType  = '주택';
+let acqMethod = '매수';
+
+// ── 탭 ──────────────────────────────────────────────────
+function switchTab(name, btn) {
+  document.querySelectorAll('.calc-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab-nav .tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.msl-calc-btn').forEach(b => b.classList.remove('msl-calc-active'));
+  const section = document.getElementById('tab-' + name);
+  section.classList.add('active');
+  // 탭 네비 active 동기화 (사이드바에서 클릭해도 탭 네비 강조)
+  const tabNavBtn = document.querySelector(`.tab-nav .tab-btn[onclick*="'${name}'"]`);
+  if (tabNavBtn) tabNavBtn.classList.add('active');
+  // 사이드바 동기화
+  const sideBtn = document.querySelector(`.msl-calc-btn[onclick*="${name}"]`);
+  if (sideBtn) sideBtn.classList.add('msl-calc-active');
+  // 해당 탭 설명 섹션 자동 열기
+  section.querySelectorAll('.explain-toggle').forEach(t => {
+    t.classList.add('open');
+    t.nextElementSibling.classList.add('show');
+  });
+}
+
+function toggleMegaMenu() {
+  document.getElementById('mega-sidebar-left').classList.toggle('open');
+  document.getElementById('mega-overlay').classList.toggle('open');
+}
+
+// ── 유틸 ────────────────────────────────────────────────
+// 만원 단위 입력 → 억/만원 표시
+function fmt(man) {
+  if (!man && man !== 0) return '-';
+  if (isNaN(man)) return '-';
+  const won = Math.round(man) * 10000;
+  if (won >= 100000000) {
+    const uk  = Math.floor(won / 100000000);
+    const rem = Math.round((won % 100000000) / 10000);
+    return rem > 0 ? `${uk}억 ${rem.toLocaleString()}만원` : `${uk}억원`;
+  }
+  return `${Math.round(man).toLocaleString()}만원`;
+}
+
+// 원 단위 입력 → 천원 단위까지 표시 (수수료용)
+function fmtWon(won) {
+  won = Math.round(won);
+  if (isNaN(won) || won === 0) return '-';
+  if (won >= 100000000) {
+    const uk  = Math.floor(won / 100000000);
+    const rem = Math.round((won % 100000000) / 10000);
+    return rem > 0 ? `${uk}억 ${rem.toLocaleString()}만원` : `${uk}억원`;
+  }
+  if (won >= 10000) {
+    const man = Math.floor(won / 10000);
+    const chun = Math.round((won % 10000) / 1000);
+    if (chun > 0) return `${man.toLocaleString()}만 ${chun}천원`;
+    return `${man.toLocaleString()}만원`;
+  }
+  return `${won.toLocaleString()}원`;
+}
+
+function showConverted(inputEl, dispEl) {
+  const v = parseFloat(inputEl.value);
+  dispEl.textContent = v > 0 ? `= ${fmt(v)}` : '';
+}
+
+function setActive(selector, activeEl) {
+  document.querySelectorAll(selector).forEach(b => b.classList.remove('active'));
+  activeEl.classList.add('active');
+}
+
+// ── 1. 중개수수료 ────────────────────────────────────────
+function selectRateMode(mode, btn) {
+  rateMode = mode;
+  setActive('.seg-btn[onclick^="selectRateMode"]', btn);
+  document.getElementById('custom-rate-field').classList.toggle('hidden', mode === 'auto');
+  calcBrokerage();
+}
+
+function selectTradeType(type, btn) {
+  tradeType = type;
+  setActive('.seg-btn[onclick^="selectTradeType"]', btn);
+  const isMonthlyType = type === '월세' || type === '반전세';
+  document.getElementById('price-field').classList.toggle('hidden', isMonthlyType);
+  document.getElementById('monthly-field').classList.toggle('hidden', !isMonthlyType);
+  // 반전세 안내 표시
+  const hint = document.getElementById('monthly-type-hint');
+  if (type === '반전세') {
+    hint.textContent = '반전세: 보증금이 높고 월세가 낮은 형태 (수수료 계산은 월세와 동일)';
+    hint.style.display = 'block';
+  } else {
+    hint.style.display = 'none';
+  }
+  calcBrokerage();
+}
+
+let brokerPropType = '주택';
+
+function toggleRateTable(btn) {
+  btn.classList.toggle('open');
+  document.getElementById('rate-table-wrap').classList.toggle('show');
+}
+
+// ── 토스트 ──
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 1800);
+}
+
+// ── 계산기록 시스템 (localStorage) ──
+function getHistory(key) {
+  try { return JSON.parse(localStorage.getItem('jcalc_' + key) || '[]'); }
+  catch { return []; }
+}
+function setHistory(key, arr) {
+  localStorage.setItem('jcalc_' + key, JSON.stringify(arr.slice(0, 30)));
+}
+
+function getBrokerageSnapshot() {
+  const resultEl = document.getElementById('brokerage-result');
+  if (!resultEl.classList.contains('show')) return null;
+  const rate = document.getElementById('b-rate').textContent;
+  const fee  = document.getElementById('b-fee').textContent;
+  const vat  = document.getElementById('b-fee-vat').textContent;
+  let desc = brokerPropType + ' / ' + tradeType;
+  if (tradeType === '월세' || tradeType === '반전세') {
+    const dep = document.getElementById('deposit').value;
+    const mon = document.getElementById('monthly-rent').value;
+    desc += ` / 보증금 ${dep}만원 · 월세 ${mon}만원`;
+  } else {
+    const price = document.getElementById('trade-price').value;
+    desc += ` / ${price}만원`;
+  }
+  return { desc, rate, fee, vat, time: new Date().toLocaleString('ko-KR') };
+}
+
+function saveHistory(type) {
+  let snapshot = null;
+  if (type === 'brokerage') snapshot = getBrokerageSnapshot();
+  if (!snapshot) { showToast('먼저 계산을 해주세요'); return; }
+  const arr = getHistory(type);
+  arr.unshift(snapshot);
+  setHistory(type, arr);
+  showToast('저장되었습니다');
+  renderHistory(type);
+}
+
+function renderHistory(type) {
+  const panel = document.getElementById('history-' + type);
+  const arr = getHistory(type);
+  if (!arr.length) {
+    panel.innerHTML = '<div class="history-empty">저장된 기록이 없습니다</div>';
+    return;
+  }
+  let html = '';
+  arr.forEach((item, i) => {
+    html += `<div class="history-item" onclick="restoreHistory('${type}', ${i})">
+      <button class="hi-delete" onclick="event.stopPropagation(); deleteHistory('${type}', ${i})">✕</button>
+      <div class="hi-title">${item.desc}</div>
+      <div class="hi-detail">요율 ${item.rate} · VAT포함 ${item.vat}</div>
+      <div class="hi-result">${item.fee}</div>
+      <div style="font-size:10px;color:var(--gray-400);margin-top:4px">${item.time}</div>
+    </div>`;
+  });
+  html += `<button class="history-clear-all" onclick="clearHistory('${type}')">전체 삭제</button>`;
+  panel.innerHTML = html;
+}
+
+function deleteHistory(type, idx) {
+  const arr = getHistory(type);
+  arr.splice(idx, 1);
+  setHistory(type, arr);
+  renderHistory(type);
+  showToast('삭제되었습니다');
+}
+
+function clearHistory(type) {
+  localStorage.removeItem('jcalc_' + type);
+  renderHistory(type);
+  showToast('전체 삭제되었습니다');
+}
+
+function toggleHistory(type) {
+  const panel = document.getElementById('history-' + type);
+  panel.classList.toggle('show');
+  if (panel.classList.contains('show')) renderHistory(type);
+}
+
+function restoreHistory(type, idx) {
+  const arr = getHistory(type);
+  const item = arr[idx];
+  if (!item) return;
+  // 현재는 결과만 보여줌 (복원은 복잡한 UI 상태가 필요하므로 복사로 대체)
+  showToast('복사하려면 복사 버튼을 눌러주세요');
+}
+
+// ── 복사 ──
+function copyResult(type) {
+  let text = '';
+  if (type === 'brokerage') {
+    const snap = getBrokerageSnapshot();
+    if (!snap) { showToast('먼저 계산을 해주세요'); return; }
+    text = `[중개수수료 계산결과]\n${snap.desc}\n요율: ${snap.rate}\n수수료: ${snap.fee}\nVAT 포함: ${snap.vat}`;
+  }
+  navigator.clipboard.writeText(text).then(() => {
+    showToast('클립보드에 복사되었습니다');
+  }).catch(() => {
+    showToast('복사 실패 - 브라우저 설정을 확인해주세요');
+  });
+}
+
+function selectBrokerPropType(type, btn) {
+  brokerPropType = type;
+  setActive('.seg-btn[onclick^="selectBrokerPropType"]', btn);
+  document.getElementById('broker-officetel-hint').classList.toggle('hidden', type !== '오피스텔');
+  // 주택이외는 월세/반전세 없음 → 매매로 초기화
+  if (type === '주택이외') {
+    const 매매Btn = document.querySelector('.seg-btn[onclick*="매매"]');
+    selectTradeType('매매', 매매Btn);
+    document.querySelectorAll('.seg-btn[onclick*="전세"], .seg-btn[onclick*="월세"], .seg-btn[onclick*="반전세"]')
+      .forEach(b => b.disabled = true);
+  } else {
+    document.querySelectorAll('.seg-btn[onclick^="selectTradeType"]')
+      .forEach(b => b.disabled = false);
+  }
+  calcBrokerage();
+}
+
+function getBrokerageRate(priceMan, type) {
+  const p = priceMan * 10000;
+  // 오피스텔(주거용, 85㎡ 이하): 매매 0.5%, 임대 0.4% - 한도 없음
+  if (brokerPropType === '오피스텔') {
+    return type === '매매'
+      ? { rate: 0.005, limit: null }
+      : { rate: 0.004, limit: null };
+  }
+  // 주택이외(상가·토지·업무용 오피스텔): 0.9% - 한도 없음
+  if (brokerPropType === '주택이외') {
+    return { rate: 0.009, limit: null };
+  }
+  // 주택
+  if (type === '매매') {
+    if (p < 50000000)    return { rate: 0.006, limit: 250000 };
+    if (p < 200000000)   return { rate: 0.005, limit: 800000 };
+    if (p < 900000000)   return { rate: 0.004, limit: null };
+    if (p < 1200000000)  return { rate: 0.005, limit: null };
+    if (p < 1500000000)  return { rate: 0.006, limit: null };
+    return { rate: 0.007, limit: null };
+  } else {
+    if (p < 50000000)    return { rate: 0.005, limit: 200000 };
+    if (p < 100000000)   return { rate: 0.004, limit: 300000 };
+    if (p < 600000000)   return { rate: 0.003, limit: null };
+    if (p < 1200000000)  return { rate: 0.004, limit: null };
+    if (p < 1500000000)  return { rate: 0.005, limit: null };
+    return { rate: 0.008, limit: null };
+  }
+}
+
+function calcBrokerage() {
+  let priceMan;
+  if (tradeType === '월세' || tradeType === '반전세') {
+    const dep     = parseFloat(document.getElementById('deposit').value) || 0;
+    const monthly = parseFloat(document.getElementById('monthly-rent').value) || 0;
+    if (!dep && !monthly) { document.getElementById('brokerage-result').classList.remove('show'); return; }
+    const c1 = dep + monthly * 100;
+    const c2 = dep + monthly * 70;
+    priceMan = c1 < 5000 ? c2 : c1;
+  } else {
+    priceMan = parseFloat(document.getElementById('trade-price').value);
+    showConverted(document.getElementById('trade-price'), document.getElementById('price-display'));
+    if (!priceMan) { document.getElementById('brokerage-result').classList.remove('show'); return; }
+  }
+
+  const rateType = (tradeType === '월세' || tradeType === '반전세') ? '전세' : tradeType;
+  const { rate, limit } = getBrokerageRate(priceMan, rateType);
+  let legalFee = priceMan * 10000 * rate;
+  if (limit) legalFee = Math.min(legalFee, limit);
+
+  document.getElementById('b-rate').textContent = (rate * 100).toFixed(2) + '%';
+  document.getElementById('b-max').textContent = limit
+    ? `${fmtWon(limit)} (한도)`
+    : fmtWon(legalFee);
+
+  const customRow = document.getElementById('b-custom-row');
+  let finalFee = legalFee;
+
+  if (rateMode === 'custom') {
+    const cr = parseFloat(document.getElementById('custom-rate').value);
+    if (cr > 0) {
+      const cf = priceMan * 10000 * (cr / 100);
+      document.getElementById('b-custom-fee').textContent = fmtWon(cf);
+      finalFee = cf;
+      customRow.style.display = 'flex';
+    } else {
+      customRow.style.display = 'none';
+    }
+  } else {
+    customRow.style.display = 'none';
+  }
+
+  document.getElementById('b-fee').textContent = fmtWon(finalFee);
+  document.getElementById('b-fee-vat').textContent = fmtWon(finalFee * 1.1);
+  document.getElementById('brokerage-result').classList.add('show');
+  document.getElementById('ad-brokerage').classList.add('show');
+}
+
+// ── 2. 취득세 ────────────────────────────────────────────
+function selectPropType(type, btn) {
+  propType = type;
+  setActive('.seg-btn[onclick^="selectPropType"]', btn);
+  const isHouse = type === '주택';
+  document.getElementById('house-cnt-field').classList.toggle('hidden', !isHouse || acqMethod !== '매수');
+  updateAcqMethodInfo();
+  calcAcquisition();
+}
+
+function selectAcqMethod(method, btn) {
+  acqMethod = method;
+  setActive('.seg-btn[onclick^="selectAcqMethod"]', btn);
+  const showHouse = propType === '주택' && method === '매수';
+  document.getElementById('house-cnt-field').classList.toggle('hidden', !showHouse);
+  updateAcqMethodInfo();
+  calcAcquisition();
+}
+
+function updateAcqMethodInfo() {
+  const infoEl = document.getElementById('acq-method-info');
+  const descEl = document.getElementById('acq-method-desc');
+  if (acqMethod === '매수') {
+    infoEl.classList.add('hidden');
+    return;
+  }
+  infoEl.classList.remove('hidden');
+  if (acqMethod === '증여') {
+    if (propType === '주택') {
+      descEl.textContent = '주택 증여 취득세: 비조정지역 3.5% / 조정대상지역 12% (단, 1세대 1주택자가 배우자·직계존비속에게 증여 시 예외 적용될 수 있습니다)';
+    } else {
+      descEl.textContent = `${propType} 증여 취득세: 3.5% (지방교육세·농특세 별도)`;
+    }
+  } else {
+    descEl.textContent = `${propType} 상속 취득세: 2.8% (지방교육세·농특세 별도)`;
+  }
+}
+
+function selectHouseCnt(n, btn) {
+  houseCnt = n;
+  setActive('.seg-btn[onclick^="selectHouseCnt"]', btn);
+  document.getElementById('adjust-field').classList.toggle('hidden', n === 4);
+  calcAcquisition();
+}
+
+function selectAdjust(v, btn) {
+  isAdjust = v;
+  setActive('.seg-btn[onclick^="selectAdjust"]', btn);
+  calcAcquisition();
+}
+
+function getAcqRate(priceMan, cnt, adjust) {
+  if (acqMethod === '증여') {
+    if (propType === '주택' && adjust) return 0.12;
+    return 0.035;
+  }
+  if (acqMethod === '상속') return 0.028;
+  if (propType !== '주택') return 0.04;
+  const p = priceMan * 10000;
+  if (cnt === 4) return 0.12;
+  if (cnt === 1) {
+    if (p <= 600000000) return 0.01;
+    if (p <= 900000000) return (p * 2 / 300000000 - 3) / 100;
+    return 0.03;
+  }
+  if (cnt === 2) return adjust ? 0.08 : 0.01;
+  if (cnt === 3) return adjust ? 0.12 : 0.08;
+  return 0.01;
+}
+
+function calcAcquisition() {
+  const priceMan = parseFloat(document.getElementById('acq-price').value);
+  showConverted(document.getElementById('acq-price'), document.getElementById('acq-price-display'));
+  if (!priceMan) { document.getElementById('acq-result').classList.remove('show'); return; }
+
+  const rate     = getAcqRate(priceMan, houseCnt, isAdjust);
+  const price    = priceMan * 10000;
+  const acqTax   = price * rate;
+  const eduRate  = rate >= 0.08 ? 0.4 : 0.1;
+  const eduTax   = acqTax * eduRate;
+  const ruralRate = rate >= 0.08 ? 0.01 : 0.002;
+  const ruralTax  = price * ruralRate;
+  const total    = acqTax + eduTax + ruralTax;
+
+  document.getElementById('acq-rate').textContent  = (rate * 100).toFixed(2) + '%';
+  document.getElementById('acq-tax').textContent   = fmt(Math.round(acqTax / 10000));
+  document.getElementById('edu-tax').textContent   = fmt(Math.round(eduTax / 10000));
+  document.getElementById('rural-tax').textContent = fmt(Math.round(ruralTax / 10000));
+  document.getElementById('acq-total').textContent = fmt(Math.round(total / 10000));
+  document.getElementById('acq-result').classList.add('show');
+  document.getElementById('ad-acquisition').classList.add('show');
+}
+
+// ── 3. 전월세 전환 ───────────────────────────────────────
+function selectConvDir(dir, btn) {
+  convDir = dir;
+  setActive('.seg-btn[onclick^="selectConvDir"]', btn);
+  document.getElementById('conv-to-monthly').classList.toggle('hidden', dir === 'to-jeonse');
+  document.getElementById('conv-to-jeonse').classList.toggle('hidden', dir === 'to-monthly');
+  document.getElementById('conv-result').classList.remove('show');
+}
+
+function calcConversion() {
+  const rate = parseFloat(document.getElementById('conv-rate').value) / 100;
+  if (!rate) return;
+
+  let html = '';
+  if (convDir === 'to-monthly') {
+    const jeonse = parseFloat(document.getElementById('jeonse-amount').value) || 0;
+    const newDep = parseFloat(document.getElementById('new-deposit').value) || 0;
+    if (!jeonse) { document.getElementById('conv-result').classList.remove('show'); return; }
+    const diff = jeonse - newDep;
+    if (diff <= 0) { document.getElementById('conv-result').classList.remove('show'); return; }
+    const monthly = Math.round(diff * rate / 12);
+    html = `
+      <div class="result-row"><span class="result-label">보증금 차액</span><span class="result-value">${fmt(diff)}</span></div>
+      <div class="result-row result-total-row">
+        <span class="result-total-label">월세</span>
+        <span class="result-total-value">${fmt(monthly)}<span style="font-size:14px;font-weight:600;opacity:.7">/월</span></span>
+      </div>
+      <div class="result-note">보증금 ${fmt(newDep)} + 월 ${fmt(monthly)}</div>`;
+  } else {
+    const dep     = parseFloat(document.getElementById('curr-deposit').value) || 0;
+    const monthly = parseFloat(document.getElementById('curr-monthly').value) || 0;
+    if (!monthly) { document.getElementById('conv-result').classList.remove('show'); return; }
+    const added = Math.round(monthly * 12 / rate);
+    const total = dep + added;
+    html = `
+      <div class="result-row"><span class="result-label">월세 환산 전세금</span><span class="result-value">${fmt(added)}</span></div>
+      <div class="result-row result-total-row">
+        <span class="result-total-label">전세 환산금액</span>
+        <span class="result-total-value">${fmt(total)}</span>
+      </div>`;
+  }
+  document.getElementById('conv-result-content').innerHTML = html;
+  document.getElementById('conv-result').classList.add('show');
+  document.getElementById('ad-conversion').classList.add('show');
+}
+
+// ── 5. 임대수익률 ─────────────────────────────────────────
+function calcRental() {
+  const buyPrice   = parseFloat(document.getElementById('buy-price').value) || 0;
+  const loanAmt    = parseFloat(document.getElementById('rental-loan').value) || 0;
+  const loanRate   = parseFloat(document.getElementById('rental-loan-rate').value) || 0;
+  const deposit    = parseFloat(document.getElementById('rental-deposit').value) || 0;
+  const monthly    = parseFloat(document.getElementById('rental-monthly').value) || 0;
+  const otherCost  = parseFloat(document.getElementById('rental-cost').value) || 0;
+
+  showConverted(document.getElementById('buy-price'), document.getElementById('buy-price-display'));
+
+  if (!buyPrice || !monthly) {
+    document.getElementById('rental-result').classList.remove('show'); return;
+  }
+
+  const annualRent    = monthly * 12;                          // 연 임대수입
+  const annualLoanInt = loanAmt * (loanRate / 100);           // 연 대출이자
+  const annualNet     = annualRent - annualLoanInt - otherCost; // 연 순수익
+  const realInvest    = buyPrice - deposit - loanAmt;          // 실투자금
+  const grossYield    = buyPrice > deposit
+    ? (annualRent / (buyPrice - deposit)) * 100 : 0;           // 총수익률
+  const netYield      = realInvest > 0
+    ? (annualNet / realInvest) * 100 : 0;                      // 순수익률
+
+  document.getElementById('rental-result-content').innerHTML = `
+    <div class="result-row"><span class="result-label">실투자금</span><span class="result-value">${fmt(realInvest)}</span></div>
+    <div class="result-row"><span class="result-label">연 임대수입</span><span class="result-value">${fmt(annualRent)}</span></div>
+    <div class="result-row"><span class="result-label">연 대출이자</span><span class="result-value">${fmt(Math.round(annualLoanInt))}</span></div>
+    <div class="result-row"><span class="result-label">연 순수익</span><span class="result-value">${fmt(Math.round(annualNet))}</span></div>
+    <div class="result-row"><span class="result-label">총수익률 (세전)</span><span class="result-value">${grossYield.toFixed(2)}%</span></div>
+    <div class="result-row result-total-row">
+      <span class="result-total-label">순수익률</span>
+      <span class="result-total-value">${netYield.toFixed(2)}%</span>
+    </div>
+    <div class="result-note">* 총수익률 = 연임대수입 ÷ (매입가-보증금) / 순수익률 = 연순수익 ÷ 실투자금</div>
+  `;
+  document.getElementById('rental-result').classList.add('show');
+  document.getElementById('ad-rental').classList.add('show');
+}
+
+// ── 4. 대출이자 ──────────────────────────────────────────
+function selectRepay(type, btn) {
+  repayType = type;
+  setActive('.seg-btn[onclick^="selectRepay"]', btn);
+  calcLoan();
+}
+
+function calcLoan() {
+  const amountMan  = parseFloat(document.getElementById('loan-amount').value);
+  const annualRate = parseFloat(document.getElementById('loan-rate').value) / 100;
+  const years      = parseFloat(document.getElementById('loan-period').value);
+  showConverted(document.getElementById('loan-amount'), document.getElementById('loan-display'));
+
+  if (!amountMan || !annualRate || !years) {
+    document.getElementById('loan-result').classList.remove('show'); return;
+  }
+
+  const principal   = amountMan * 10000;
+  const monthlyRate = annualRate / 12;
+  const months      = years * 12;
+  let html = '';
+
+  if (repayType === 'equal-payment') {
+    const payment       = principal * monthlyRate * Math.pow(1 + monthlyRate, months) / (Math.pow(1 + monthlyRate, months) - 1);
+    const totalPay      = payment * months;
+    const totalInterest = totalPay - principal;
+    html = `
+      <div class="result-row"><span class="result-label">총 납입금액</span><span class="result-value">${fmt(Math.round(totalPay / 10000))}</span></div>
+      <div class="result-row"><span class="result-label">총 이자</span><span class="result-value">${fmt(Math.round(totalInterest / 10000))}</span></div>
+      <div class="result-row result-total-row">
+        <span class="result-total-label">월 납입금</span>
+        <span class="result-total-value">${fmt(Math.round(payment / 10000))}<span style="font-size:14px;font-weight:600;opacity:.7">/월</span></span>
+      </div>`;
+  } else if (repayType === 'equal-principal') {
+    const monthlyPrincipal = principal / months;
+    const firstPayment     = monthlyPrincipal + principal * monthlyRate;
+    const lastPayment      = monthlyPrincipal + monthlyPrincipal * monthlyRate;
+    const totalInterest    = monthlyRate * principal * (months + 1) / 2;
+    html = `
+      <div class="result-row"><span class="result-label">첫 달 납입금</span><span class="result-value">${fmt(Math.round(firstPayment / 10000))}</span></div>
+      <div class="result-row"><span class="result-label">마지막 달 납입금</span><span class="result-value">${fmt(Math.round(lastPayment / 10000))}</span></div>
+      <div class="result-row result-total-row">
+        <span class="result-total-label">총 이자</span>
+        <span class="result-total-value">${fmt(Math.round(totalInterest / 10000))}</span>
+      </div>`;
+  } else {
+    const monthlyInterest = principal * monthlyRate;
+    const totalInterest   = monthlyInterest * months;
+    html = `
+      <div class="result-row"><span class="result-label">만기 상환 원금</span><span class="result-value">${fmt(amountMan)}</span></div>
+      <div class="result-row"><span class="result-label">총 이자</span><span class="result-value">${fmt(Math.round(totalInterest / 10000))}</span></div>
+      <div class="result-row result-total-row">
+        <span class="result-total-label">월 이자</span>
+        <span class="result-total-value">${fmt(Math.round(monthlyInterest / 10000))}<span style="font-size:14px;font-weight:600;opacity:.7">/월</span></span>
+      </div>`;
+  }
+
+  document.getElementById('loan-result-content').innerHTML = html;
+  document.getElementById('loan-result').classList.add('show');
+  document.getElementById('ad-loan').classList.add('show');
+}
+
+// ── 6. 양도소득세 ─────────────────────────────────────────
+let ydPropType   = '주택';
+let ydHouseCnt   = 1;
+let ydIsAdjust   = false;
+let ydIsUnreg    = false;
+
+function ydSelectPropType(type, btn) {
+  ydPropType = type;
+  setActive('.seg-btn[onclick^="ydSelectPropType"]', btn);
+  const isHouse = type === '주택';
+  document.getElementById('yd-house-card').style.display = isHouse ? '' : 'none';
+  document.getElementById('yd-residence-field').style.display = isHouse ? '' : 'none';
+  calcYangdo();
+}
+function ydSelectHouse(n, btn) {
+  ydHouseCnt = n;
+  setActive('.seg-btn[onclick^="ydSelectHouse"]', btn);
+  calcYangdo();
+}
+function ydSelectAdjust(v, btn) {
+  ydIsAdjust = v;
+  setActive('.seg-btn[onclick^="ydSelectAdjust"]', btn);
+  calcYangdo();
+}
+function ydSelectUnreg(v, btn) {
+  ydIsUnreg = v;
+  setActive('.seg-btn[onclick^="ydSelectUnreg"]', btn);
+  calcYangdo();
+}
+
+// 누진세율 계산 (만원 입력 → 만원 반환)
+function calcProgressiveTaxMan(baseMan) {
+  if (baseMan <= 0)     return 0;
+  if (baseMan <= 1400)  return baseMan * 0.06;
+  if (baseMan <= 5000)  return baseMan * 0.15 - 126;
+  if (baseMan <= 8800)  return baseMan * 0.24 - 576;
+  if (baseMan <= 15000) return baseMan * 0.35 - 1544;
+  if (baseMan <= 30000) return baseMan * 0.38 - 1994;
+  if (baseMan <= 50000) return baseMan * 0.40 - 2594;
+  if (baseMan <= 100000)return baseMan * 0.42 - 3594;
+  return baseMan * 0.45 - 6594;
+}
+
+function calcYangdo() {
+  const saleMan     = parseFloat(document.getElementById('yd-sale').value) || 0;
+  const buyMan      = parseFloat(document.getElementById('yd-buy').value) || 0;
+  const expensesMan = parseFloat(document.getElementById('yd-expenses').value) || 0;
+  const buyDateStr  = document.getElementById('yd-buy-date').value;
+  const saleDateStr = document.getElementById('yd-sale-date').value;
+  const residYears  = parseFloat(document.getElementById('yd-residence').value) || 0;
+
+  showConverted(document.getElementById('yd-sale'), document.getElementById('yd-sale-display'));
+  showConverted(document.getElementById('yd-buy'),  document.getElementById('yd-buy-display'));
+
+  // 보유기간 계산
+  const holdingBadge = document.getElementById('yd-holding-display');
+  let holdingDays = 0, holdingYearsInt = 0;
+  if (buyDateStr && saleDateStr) {
+    const buyDate  = new Date(buyDateStr);
+    const saleDate = new Date(saleDateStr);
+    holdingDays = (saleDate - buyDate) / 86400000;
+    if (holdingDays <= 0) {
+      holdingBadge.textContent = '⚠ 양도일이 취득일보다 빠릅니다';
+      document.getElementById('yd-result').classList.remove('show');
+      document.getElementById('yd-exempt-banner').style.display = 'none';
+      return;
+    }
+    holdingYearsInt = Math.floor(holdingDays / 365.25);
+    const holdingMonths = Math.floor((holdingDays % 365.25) / 30.44);
+    holdingBadge.textContent = `보유기간: ${holdingYearsInt}년 ${holdingMonths}개월 (${Math.round(holdingDays)}일)`;
+  } else {
+    holdingBadge.textContent = '취득일·양도일을 입력하면 보유기간이 표시됩니다';
+  }
+
+  if (!saleMan || !buyMan || !buyDateStr || !saleDateStr || holdingDays <= 0) {
+    document.getElementById('yd-result').classList.remove('show');
+    document.getElementById('yd-exempt-banner').style.display = 'none';
+    return;
+  }
+
+  // 양도차익
+  const gainMan = saleMan - buyMan - expensesMan;
+  if (gainMan <= 0) {
+    document.getElementById('yd-exempt-banner').style.display = 'none';
+    document.getElementById('yd-result-content').innerHTML = `
+      <div class="result-row">
+        <span class="result-label">양도차익</span>
+        <span class="result-value" style="color:#10B981">손실 (${fmt(gainMan)})</span>
+      </div>
+      <div class="result-note">* 양도차익이 없으므로 양도소득세가 없습니다</div>`;
+    document.getElementById('yd-result').classList.add('show');
+    return;
+  }
+
+  // ── 비과세 판단 (1세대 1주택) ──
+  const is1House = ydPropType === '주택' && ydHouseCnt === 1;
+  const holdOk   = holdingYearsInt >= 2;
+  const residOk  = !ydIsAdjust || residYears >= 2;
+  const isExempt = is1House && holdOk && residOk;
+
+  let taxableGainMan = gainMan;
+  let exemptNote = '';
+
+  if (isExempt) {
+    if (saleMan <= 120000) {
+      // 전액 비과세
+      document.getElementById('yd-exempt-banner').style.display = 'block';
+      document.getElementById('yd-exempt-desc').textContent =
+        `양도가액 ${fmt(saleMan)} - 12억 이하 1세대 1주택으로 전액 비과세됩니다`;
+      document.getElementById('yd-result').classList.remove('show');
+      return;
+    } else {
+      // 고가주택: 12억 초과분만 과세
+      const taxableRatio = (saleMan - 120000) / saleMan;
+      taxableGainMan = gainMan * taxableRatio;
+      exemptNote = `고가주택 - 12억 초과분 ${(taxableRatio * 100).toFixed(1)}%만 과세 (나머지 비과세)`;
+    }
+  }
+  document.getElementById('yd-exempt-banner').style.display = 'none';
+
+  // ── 세율 결정 ──
+  let flatRate = 0, flatNote = '';
+
+  if (ydIsUnreg) {
+    flatRate = 0.70; flatNote = '미등기 양도 70%';
+  } else if (holdingDays < 365) {
+    if (ydPropType === '분양권') { flatRate = 0.70; flatNote = '1년 미만 보유 분양권 70%'; }
+    else if (ydPropType === '주택') { flatRate = 0.70; flatNote = '1년 미만 보유 주택 70%'; }
+    else { flatRate = 0.50; flatNote = '1년 미만 보유 50%'; }
+  } else if (holdingDays < 730) {
+    if (ydPropType === '분양권') { flatRate = 0.60; flatNote = '2년 미만 보유 분양권 60%'; }
+    else if (ydPropType === '주택') { flatRate = 0.60; flatNote = '2년 미만 보유 주택 60%'; }
+    else { flatRate = 0.40; flatNote = '2년 미만 보유 40%'; }
+  }
+
+  const isHeavyTax = ydPropType === '주택' && ydIsAdjust && !isExempt
+                     && flatRate === 0 && ydHouseCnt >= 2 && ydHouseCnt !== 9;
+  const heavySurcharge = ydHouseCnt === 2 ? 0.20 : 0.30;
+
+  // ── 장기보유특별공제 ──
+  let longTermRate = 0;
+  const canDeduct = !ydIsUnreg && holdingYearsInt >= 3 && flatRate === 0 && !isHeavyTax;
+  if (canDeduct) {
+    if (isExempt) {
+      const holdRate  = Math.min(holdingYearsInt * 0.04, 0.40);
+      const residRate = Math.min(Math.floor(residYears) * 0.04, 0.40);
+      longTermRate = Math.min(holdRate + residRate, 0.80);
+    } else {
+      longTermRate = Math.min(holdingYearsInt * 0.02, 0.30);
+    }
+  }
+  const longTermDeductMan = Math.round(taxableGainMan * longTermRate);
+  const gainAfterDeductMan = taxableGainMan - longTermDeductMan;
+
+  // 기본공제 250만원
+  const basicDeductMan = 250;
+  const taxableBaseMan = Math.max(gainAfterDeductMan - basicDeductMan, 0);
+
+  // ── 세금 계산 ──
+  let taxMan = 0, taxNote = '';
+  if (flatRate > 0) {
+    taxMan = taxableBaseMan * flatRate;
+    taxNote = flatNote;
+  } else if (ydHouseCnt === 9) {
+    taxMan = calcProgressiveTaxMan(taxableBaseMan) + taxableBaseMan * 0.10;
+    taxNote = '법인 (누진세율 + 10%p)';
+  } else if (isHeavyTax) {
+    taxMan = calcProgressiveTaxMan(taxableBaseMan) + taxableBaseMan * heavySurcharge;
+    taxNote = `${ydHouseCnt}주택 조정지역 중과 (+${heavySurcharge * 100}%p)`;
+  } else {
+    taxMan = calcProgressiveTaxMan(taxableBaseMan);
+    taxNote = '일반 누진세율';
+  }
+
+  const localTaxMan = taxMan * 0.10;
+  const totalTaxMan = taxMan + localTaxMan;
+  const effectiveRate = gainMan > 0 ? (totalTaxMan / gainMan * 100).toFixed(1) : 0;
+
+  // ── 결과 렌더링 ──
+  let html = '';
+  if (exemptNote) {
+    html += `<div class="result-row"><span class="result-label">비과세 적용</span>
+      <span class="result-value" style="color:#10B981;font-size:12px">${exemptNote}</span></div>`;
+  }
+  html += `
+    <div class="result-row"><span class="result-label">양도차익</span><span class="result-value">${fmt(Math.round(gainMan))}</span></div>
+    <div class="result-row"><span class="result-label">과세 양도차익</span><span class="result-value">${fmt(Math.round(taxableGainMan))}</span></div>`;
+  if (longTermDeductMan > 0) {
+    html += `<div class="result-row"><span class="result-label">장기보유특별공제 (${(longTermRate*100).toFixed(0)}%)</span>
+      <span class="result-value">- ${fmt(longTermDeductMan)}</span></div>`;
+  }
+  html += `
+    <div class="result-row"><span class="result-label">기본공제</span><span class="result-value">- ${fmt(basicDeductMan)}</span></div>
+    <div class="result-row"><span class="result-label">과세표준</span><span class="result-value">${fmt(Math.round(taxableBaseMan))}</span></div>
+    <div class="result-row"><span class="result-label">적용 세율</span><span class="result-value"><span class="result-badge">${taxNote}</span></span></div>
+    <div class="result-row"><span class="result-label">양도소득세</span><span class="result-value">${fmt(Math.round(taxMan))}</span></div>
+    <div class="result-row"><span class="result-label">지방소득세 (10%)</span><span class="result-value">${fmt(Math.round(localTaxMan))}</span></div>
+    <div class="result-row result-total-row">
+      <span class="result-total-label">총 납부세액</span>
+      <span class="result-total-value">${fmt(Math.round(totalTaxMan))}</span>
+    </div>
+    <div class="result-row"><span class="result-label">실효세율 (차익 대비)</span><span class="result-value">${effectiveRate}%</span></div>
+    <div class="result-note">* 예정신고: 양도일 다음 달 말일까지 / 확정신고: 다음 해 5월<br>* 실제 세액은 관할 세무서 또는 세무사 확인 필요</div>`;
+
+  document.getElementById('yd-result-content').innerHTML = html;
+  document.getElementById('yd-result').classList.add('show');
+  document.getElementById('ad-yangdo').classList.add('show');
+}
+
+// ── 12. 대출한도 (DSR/LTV) ───────────────────────────────
+let dsrZone  = '투기과열';
+let dsrHouse = '무주택';
+let dsrTier  = '1금융';
+
+function dsrSelectZone(v, btn)  { dsrZone  = v; setActive('.seg-btn[onclick^="dsrSelectZone"]',  btn); calcDSR(); }
+function dsrSelectHouse(v, btn) { dsrHouse = v; setActive('.seg-btn[onclick^="dsrSelectHouse"]', btn); calcDSR(); }
+function dsrSelectTier(v, btn)  { dsrTier  = v; setActive('.seg-btn[onclick^="dsrSelectTier"]',  btn); calcDSR(); }
+
+function getLTV(zone, house) {
+  if (zone === '투기과열') return house === '무주택' ? 0.50 : 0.50;
+  if (zone === '조정')     return house === '무주택' ? 0.70 : 0.60;
+  return 0.70; // 비규제
+}
+
+// 월 원리금 역산 → 대출금액 (원리금균등)
+function calcLoanFromPayment(monthlyPaymentMan, annualRatePct, years) {
+  const r = (annualRatePct / 100) / 12;
+  const n = years * 12;
+  if (r === 0) return monthlyPaymentMan * n;
+  return monthlyPaymentMan * (1 - Math.pow(1 + r, -n)) / r;
+}
+
+function calcDSR() {
+  const priceMan    = parseFloat(document.getElementById('dsr-price').value)    || 0;
+  const incomeMan   = parseFloat(document.getElementById('dsr-income').value)   || 0;
+  const existingMan = parseFloat(document.getElementById('dsr-existing').value) || 0;
+  const period      = parseFloat(document.getElementById('dsr-period').value)   || 30;
+  const ratePct     = parseFloat(document.getElementById('dsr-rate').value)     || 4.5;
+  showConverted(document.getElementById('dsr-price'), document.getElementById('dsr-price-display'));
+
+  if (!priceMan && !incomeMan) { document.getElementById('dsr-result').classList.remove('show'); return; }
+
+  // ── LTV 한도 ──
+  const ltvRatio  = getLTV(dsrZone, dsrHouse);
+  const ltvLimitMan = priceMan * ltvRatio;
+
+  // ── DSR 한도 ──
+  const dsrLimit      = dsrTier === '1금융' ? 0.40 : 0.50;
+  const annualCapMan  = incomeMan * dsrLimit;            // 연간 상환 가능 총액
+  const remainCapMan  = Math.max(annualCapMan - existingMan, 0); // 기존 대출 차감
+  const monthlyCapMan = remainCapMan / 12;               // 월 상환 여유
+
+  // 월 상환액으로 역산한 대출 원금
+  const dsrLimitMan = monthlyCapMan > 0
+    ? calcLoanFromPayment(monthlyCapMan, ratePct, period)
+    : 0;
+
+  // ── 최종 한도 ──
+  const finalLimitMan = priceMan > 0
+    ? Math.min(ltvLimitMan, dsrLimitMan)
+    : dsrLimitMan;
+
+  const binding = (priceMan > 0 && ltvLimitMan <= dsrLimitMan) ? 'LTV' : 'DSR';
+
+  // 결과 HTML
+  let html = '';
+
+  if (priceMan > 0) {
+    html += `
+      <div class="result-row"><span class="result-label">LTV 한도 (${(ltvRatio*100).toFixed(0)}%)</span><span class="result-value">${fmt(Math.round(ltvLimitMan))}</span></div>`;
+  }
+
+  if (incomeMan > 0) {
+    html += `
+      <div class="result-row"><span class="result-label">DSR 연간 한도 (${dsrLimit*100}%)</span><span class="result-value">${fmt(Math.round(annualCapMan))}/년</span></div>
+      <div class="result-row"><span class="result-label">기존 대출 차감</span><span class="result-value">- ${fmt(existingMan)}/년</span></div>
+      <div class="result-row"><span class="result-label">월 상환 여유</span><span class="result-value">${fmt(Math.round(monthlyCapMan))}/월</span></div>
+      <div class="result-row"><span class="result-label">DSR 한도 (${period}년·${ratePct}%)</span><span class="result-value">${fmt(Math.round(dsrLimitMan))}</span></div>`;
+  }
+
+  if (priceMan > 0 && incomeMan > 0) {
+    html += `
+      <div class="result-row result-total-row">
+        <span class="result-total-label">최종 대출 한도</span>
+        <span class="result-total-value">${fmt(Math.round(finalLimitMan))}</span>
+      </div>
+      <div class="result-row">
+        <span class="result-label">제한 요인</span>
+        <span class="result-value"><span class="result-badge">${binding} 우선 적용</span></span>
+      </div>
+      <div class="result-row">
+        <span class="result-label">자기자본 필요액</span>
+        <span class="result-value">${fmt(Math.round(priceMan - finalLimitMan))}</span>
+      </div>`;
+  } else if (priceMan > 0) {
+    html += `<div class="result-row result-total-row"><span class="result-total-label">LTV 대출 한도</span><span class="result-total-value">${fmt(Math.round(ltvLimitMan))}</span></div>`;
+  } else {
+    html += `<div class="result-row result-total-row"><span class="result-total-label">DSR 대출 한도</span><span class="result-total-value">${fmt(Math.round(dsrLimitMan))}</span></div>`;
+  }
+
+  html += `<div class="result-note">* ${dsrZone} / ${dsrHouse} / ${dsrTier} 기준<br>* 실제 한도는 금융기관·상품별로 다를 수 있습니다<br>* <strong>스트레스 DSR 미반영:</strong> 2024년 2단계 스트레스 DSR 적용 시 가산금리(0.75%p 이상)가 추가되어 실제 한도가 이보다 낮을 수 있습니다. 실제 심사는 금융기관에서 확인하세요.</div>`;
+
+  document.getElementById('dsr-result-content').innerHTML = html;
+  document.getElementById('dsr-result').classList.add('show');
+  document.getElementById('ad-dsr').classList.add('show');
+}
+
+// ── 10. 재산세 ───────────────────────────────────────────
+let ptType = '일반주택';
+
+function ptSelectType(type, btn) {
+  ptType = type;
+  setActive('.seg-btn[onclick^="ptSelectType"]', btn);
+  document.getElementById('pt-1house-hint').classList.toggle('hidden', type !== '1세대1주택');
+  calcPropertyTax();
+}
+
+function getPropertyTaxMan(baseMan, type) {
+  if (type === '토지') {
+    // 종합합산토지
+    if (baseMan <= 5000)  return baseMan * 0.002;
+    if (baseMan <= 10000) return 10 + (baseMan - 5000) * 0.003;
+    return 25 + (baseMan - 10000) * 0.005;
+  }
+  if (type === '건축물') return baseMan * 0.0025;
+  // 주택 (일반 or 1세대1주택)
+  const is1House = type === '1세대1주택';
+  if (is1House) {
+    if (baseMan <= 6000)  return baseMan * 0.0005;
+    if (baseMan <= 15000) return 3 + (baseMan - 6000) * 0.001;
+    if (baseMan <= 30000) return 12 + (baseMan - 15000) * 0.002;
+    return 42 + (baseMan - 30000) * 0.0035;
+  } else {
+    if (baseMan <= 6000)  return baseMan * 0.001;
+    if (baseMan <= 15000) return 6 + (baseMan - 6000) * 0.0015;
+    if (baseMan <= 30000) return 19.5 + (baseMan - 15000) * 0.0025;
+    return 57 + (baseMan - 30000) * 0.004;
+  }
+}
+
+function calcPropertyTax() {
+  const priceMan = parseFloat(document.getElementById('pt-price').value) || 0;
+  showConverted(document.getElementById('pt-price'), document.getElementById('pt-price-display'));
+  if (!priceMan) { document.getElementById('pt-result').classList.remove('show'); return; }
+
+  // 공정시장가액비율 (2026년 기준)
+  const isLand  = ptType === '토지';
+  const isBldg  = ptType === '건축물';
+  const is1H    = ptType === '1세대1주택';
+  let ratio;
+  if (isLand || isBldg) {
+    ratio = 0.70;
+  } else if (is1H) {
+    if (priceMan <= 30000) ratio = 0.43;
+    else if (priceMan <= 60000) ratio = 0.44;
+    else ratio = 0.45;
+  } else {
+    ratio = 0.60;
+  }
+
+  const baseMan   = priceMan * ratio;
+  const taxMan    = getPropertyTaxMan(baseMan, ptType);
+  const eduMan    = taxMan * 0.20;                  // 지방교육세 20%
+  const urbanMan  = (isLand || isBldg) ? 0 : baseMan * 0.0014; // 도시지역분 0.14% (주택만)
+  const totalMan  = taxMan + eduMan + urbanMan;
+
+  // 납부 일정
+  const scheduleNote = (isLand || isBldg)
+    ? '* 토지·건축물: 9월 한 번에 납부'
+    : '* 주택: 7월(1/2) · 9월(1/2) 분할 납부';
+
+  document.getElementById('pt-result-content').innerHTML = `
+    <div class="result-row"><span class="result-label">공시가격</span><span class="result-value">${fmt(priceMan)}</span></div>
+    <div class="result-row"><span class="result-label">공정시장가액비율</span><span class="result-value">${(ratio * 100).toFixed(0)}%</span></div>
+    <div class="result-row"><span class="result-label">과세표준</span><span class="result-value">${fmt(Math.round(baseMan))}</span></div>
+    <div class="result-row"><span class="result-label">재산세 (본세)</span><span class="result-value">${fmt(Math.round(taxMan))}</span></div>
+    <div class="result-row"><span class="result-label">지방교육세 (20%)</span><span class="result-value">${fmt(Math.round(eduMan))}</span></div>
+    ${!isLand && !isBldg ? `<div class="result-row"><span class="result-label">도시지역분 (0.14%)</span><span class="result-value">${fmt(Math.round(urbanMan))}</span></div>` : ''}
+    <div class="result-row result-total-row">
+      <span class="result-total-label">총 납부세액</span>
+      <span class="result-total-value">${fmt(Math.round(totalMan))}</span>
+    </div>
+    ${!isLand && !isBldg ? `<div class="result-row"><span class="result-label">7월 납부 (1/2)</span><span class="result-value">${fmt(Math.round(totalMan / 2))}</span></div>
+    <div class="result-row"><span class="result-label">9월 납부 (1/2)</span><span class="result-value">${fmt(Math.round(totalMan / 2))}</span></div>` : ''}
+    <div class="result-note">${scheduleNote}<br>* 2026년 기준 / 실제 세액은 관할 지자체 확인</div>`;
+  document.getElementById('pt-result').classList.add('show');
+  document.getElementById('ad-propertytax').classList.add('show');
+}
+
+// ── 11. 상속세 ───────────────────────────────────────────
+let inhHasSpouse = true;
+
+function inhSelectSpouse(v, btn) {
+  inhHasSpouse = v;
+  setActive('.seg-btn[onclick^="inhSelectSpouse"]', btn);
+  document.getElementById('inh-spouse-amount-field').style.display = v ? '' : 'none';
+  calcInheritance();
+}
+
+function getInheritanceTax(baseMan) {
+  if (baseMan <= 10000)  return baseMan * 0.10;
+  if (baseMan <= 50000)  return baseMan * 0.20 - 1000;
+  if (baseMan <= 100000) return baseMan * 0.30 - 6000;
+  if (baseMan <= 300000) return baseMan * 0.40 - 16000;
+  return baseMan * 0.50 - 46000;
+}
+
+function calcInheritance() {
+  const totalMan    = parseFloat(document.getElementById('inh-total').value) || 0;
+  const debtMan     = parseFloat(document.getElementById('inh-debt').value) || 0;
+  const childrenCnt = parseFloat(document.getElementById('inh-children').value) || 0;
+  const spouseAmt   = parseFloat(document.getElementById('inh-spouse-amount').value) || 0;
+  showConverted(document.getElementById('inh-total'), document.getElementById('inh-total-display'));
+
+  if (!totalMan) { document.getElementById('inh-result').classList.remove('show'); return; }
+
+  const netMan = Math.max(totalMan - debtMan, 0);
+
+  // 일괄공제: max(기초2억 + 자녀공제, 5억)
+  const basicDeduct    = 20000;
+  const childDeduct    = childrenCnt * 5000;
+  const lumpDeduct     = Math.max(basicDeduct + childDeduct, 50000); // 5억
+
+  // 배우자공제: 실제상속액 기준 최소 5억 ~ 최대 30억
+  let spouseDeduct = 0;
+  if (inhHasSpouse) {
+    const actualSpouse = spouseAmt > 0 ? spouseAmt : 50000; // 미입력 시 최소 5억
+    spouseDeduct = Math.min(Math.max(actualSpouse, 50000), 300000);
+  }
+
+  const totalDeduct  = lumpDeduct + spouseDeduct;
+  const baseMan      = Math.max(netMan - totalDeduct, 0);
+  const taxMan       = baseMan > 0 ? getInheritanceTax(baseMan) : 0;
+  const localTaxMan  = taxMan * 0.10; // 지방소득세 없음 (상속세는 국세)
+  // 상속세는 신고세액공제 없음
+
+  const deductLabel = lumpDeduct === 50000 ? '일괄공제 (5억)' : `일괄공제 (기초2억+자녀${childrenCnt}명)`;
+
+  document.getElementById('inh-result-content').innerHTML = `
+    <div class="result-row"><span class="result-label">총 상속재산</span><span class="result-value">${fmt(totalMan)}</span></div>
+    <div class="result-row"><span class="result-label">채무·장례비 공제</span><span class="result-value">- ${fmt(debtMan)}</span></div>
+    <div class="result-row"><span class="result-label">순 상속재산</span><span class="result-value">${fmt(netMan)}</span></div>
+    <div class="result-row"><span class="result-label">${deductLabel}</span><span class="result-value">- ${fmt(lumpDeduct)}</span></div>
+    ${inhHasSpouse ? `<div class="result-row"><span class="result-label">배우자공제</span><span class="result-value">- ${fmt(spouseDeduct)}</span></div>` : ''}
+    <div class="result-row"><span class="result-label">과세표준</span><span class="result-value">${fmt(Math.round(baseMan))}</span></div>
+    <div class="result-row result-total-row">
+      <span class="result-total-label">납부할 상속세</span>
+      <span class="result-total-value">${fmt(Math.round(taxMan))}</span>
+    </div>
+    <div class="result-note">* 상속 개시일(사망일)로부터 6개월 이내 신고<br>* 배우자공제는 실제 상속금액 기준 (미입력 시 법정 최소 5억 적용)<br>* 실제 세액은 세무사 확인 필요</div>`;
+  document.getElementById('inh-result').classList.add('show');
+  document.getElementById('ad-inheritance').classList.add('show');
+}
+
+// ── 9. 평수 변환 ──────────────────────────────────────────
+const PY_RATE = 3.30579; // 1평 = 3.30579㎡
+
+function calcPyeong(from) {
+  const pyeongEl = document.getElementById('py-pyeong');
+  const sqmEl    = document.getElementById('py-sqm');
+  const toSqm    = document.getElementById('py-to-sqm');
+  const toPy     = document.getElementById('py-to-pyeong');
+
+  if (from === 'py') {
+    const v = parseFloat(pyeongEl.value);
+    if (v > 0) {
+      toSqm.innerHTML = `<strong>${(v * PY_RATE).toFixed(2)}</strong><span style="font-size:14px;margin-left:3px;font-weight:600">㎡</span>`;
+      sqmEl.value = '';
+      toPy.innerHTML = `<span style="font-size:13px;color:var(--gray-400);font-weight:500">평</span>`;
+    } else {
+      toSqm.innerHTML = `<span style="font-size:13px;color:var(--gray-400);font-weight:500">㎡</span>`;
+    }
+  } else {
+    const v = parseFloat(sqmEl.value);
+    if (v > 0) {
+      toPy.innerHTML = `<strong>${(v / PY_RATE).toFixed(2)}</strong><span style="font-size:14px;margin-left:3px;font-weight:600">평</span>`;
+      pyeongEl.value = '';
+      toSqm.innerHTML = `<span style="font-size:13px;color:var(--gray-400);font-weight:500">㎡</span>`;
+    } else {
+      toPy.innerHTML = `<span style="font-size:13px;color:var(--gray-400);font-weight:500">평</span>`;
+    }
+  }
+}
+
+// ── 설명 토글 ──
+function toggleExplain(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('show');
+}
+
+// 페이지 로드 시 현재 활성 탭의 설명 섹션만 열기
+document.addEventListener('DOMContentLoaded', function() {
+  const activeSection = document.querySelector('.calc-section.active');
+  if (activeSection) {
+    activeSection.querySelectorAll('.explain-toggle').forEach(btn => {
+      btn.classList.add('open');
+      btn.nextElementSibling.classList.add('show');
+    });
+  }
+});
+
+// ── 이미지 저장 ──
+function saveAsImage(resultId, title) {
+  const el = document.getElementById(resultId);
+  if (!el.classList.contains('show')) { showToast('먼저 계산을 해주세요'); return; }
+  showToast('이미지 저장 중...');
+  html2canvas(el, { scale: 2, useCORS: true }).then(canvas => {
+    const link = document.createElement('a');
+    link.download = `부동산계산기_${title}.png`;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+    showToast('이미지가 저장되었습니다');
+  }).catch(() => showToast('저장 실패 - 다시 시도해주세요'));
+}
+
+// ── 7. 종합부동산세 ──────────────────────────────────────
+let jbType = '일반1주택';
+
+function jbSelectType(type, btn) {
+  jbType = type;
+  setActive('.seg-btn[onclick^="jbSelectType"]', btn);
+  calcJongbu();
+}
+
+function calcJongbu() {
+  const priceMan = parseFloat(document.getElementById('jb-price').value) || 0;
+  showConverted(document.getElementById('jb-price'), document.getElementById('jb-price-display'));
+  if (!priceMan) { document.getElementById('jb-result').classList.remove('show'); return; }
+
+  // 기본공제 (2026년 기준: 1세대1주택 12억, 일반·다주택 9억)
+  const deductMan = jbType === '1세대1주택' ? 120000 : 90000;
+  const taxableMan = Math.max(priceMan - deductMan, 0);
+  if (taxableMan === 0) {
+    document.getElementById('jb-result-content').innerHTML = `
+      <div class="result-row">
+        <span class="result-label">공시가격</span>
+        <span class="result-value">${fmt(priceMan)}</span>
+      </div>
+      <div class="result-row result-total-row">
+        <span class="result-total-label">종합부동산세</span>
+        <span class="result-total-value" style="color:#10B981">비과세</span>
+      </div>
+      <div class="result-note">* 기본공제(${fmt(deductMan)}) 이하로 과세 대상이 아닙니다</div>`;
+    document.getElementById('jb-result').classList.add('show');
+    document.getElementById('ad-jongbu').classList.add('show');
+    return;
+  }
+
+  // 과세표준 = 과세대상 × 공정시장가액비율 60%
+  const baseMan = taxableMan * 0.6;
+
+  // 2주택 이하 세율 (2026년 기준, 국세청)
+  function getJbTaxGeneral(b) {
+    if (b <= 30000)  return b * 0.005;
+    if (b <= 60000)  return b * 0.007 - 60;
+    if (b <= 120000) return b * 0.010 - 240;
+    if (b <= 250000) return b * 0.013 - 600;
+    if (b <= 940000) return b * 0.020 - 2350;
+    return b * 0.027 - 8930;
+  }
+  // 3주택 이상 세율 (2026년 기준, 국세청)
+  function getJbTaxMulti(b) {
+    if (b <= 30000)  return b * 0.005;
+    if (b <= 60000)  return b * 0.007 - 60;
+    if (b <= 120000) return b * 0.010 - 240;
+    if (b <= 250000) return b * 0.020 - 1440;
+    if (b <= 500000) return b * 0.030 - 3940;
+    if (b <= 940000) return b * 0.040 - 8940;
+    return b * 0.050 - 18340;
+  }
+
+  let jbTaxMan = jbType === '다주택' ? getJbTaxMulti(baseMan) : getJbTaxGeneral(baseMan);
+
+  const ruralTaxMan = jbTaxMan * 0.20; // 농어촌특별세 20%
+  const totalTaxMan = jbTaxMan + ruralTaxMan;
+
+  document.getElementById('jb-result-content').innerHTML = `
+    <div class="result-row"><span class="result-label">공시가격 합산</span><span class="result-value">${fmt(priceMan)}</span></div>
+    <div class="result-row"><span class="result-label">기본공제</span><span class="result-value">- ${fmt(deductMan)}</span></div>
+    <div class="result-row"><span class="result-label">공정시장가액비율 적용 (60%)</span><span class="result-value">${fmt(Math.round(baseMan))}</span></div>
+    <div class="result-row"><span class="result-label">종합부동산세</span><span class="result-value">${fmt(Math.round(jbTaxMan))}</span></div>
+    <div class="result-row"><span class="result-label">농어촌특별세 (20%)</span><span class="result-value">${fmt(Math.round(ruralTaxMan))}</span></div>
+    <div class="result-row result-total-row">
+      <span class="result-total-label">총 납부세액</span>
+      <span class="result-total-value">${fmt(Math.round(totalTaxMan))}</span>
+    </div>
+    <div class="result-note">* 2026년 기준 / 재산세 중복분 공제 미적용 / 실제 세액은 관할 세무서 확인</div>`;
+  document.getElementById('jb-result').classList.add('show');
+  document.getElementById('ad-jongbu').classList.add('show');
+}
+
+// ── 13. 등기비용 ─────────────────────────────────────────
+let regPropType  = '주택소형';
+let regAcqMethod2 = '매수';
+let regHouseCnt2 = 1;
+let regIsAdjust2 = false;
+let regArea      = '서울';
+
+function selectRegPropType(type, btn) {
+  regPropType = type;
+  setActive('.seg-btn[onclick^="selectRegPropType"]', btn);
+  const isHousing = type === '주택소형' || type === '주택대형';
+  document.getElementById('reg-house-field').classList.toggle('hidden', !isHousing);
+  document.getElementById('reg-bond-field').classList.toggle('hidden', !isHousing);
+  document.getElementById('reg-officetel-hint').classList.toggle('hidden', type !== '오피스텔');
+  calcRegistry();
+}
+function selectRegAcqMethod(m, btn) {
+  regAcqMethod2 = m;
+  setActive('.seg-btn[onclick^="selectRegAcqMethod"]', btn);
+  calcRegistry();
+}
+function selectRegHouseCnt(n, btn) {
+  regHouseCnt2 = n;
+  setActive('.seg-btn[onclick^="selectRegHouseCnt"]', btn);
+  calcRegistry();
+}
+function selectRegAdjust(v, btn) {
+  regIsAdjust2 = v;
+  setActive('.seg-btn[onclick^="selectRegAdjust"]', btn);
+  calcRegistry();
+}
+function selectRegArea(a, btn) {
+  regArea = a;
+  setActive('.seg-btn[onclick^="selectRegArea"]', btn);
+  calcRegistry();
+}
+
+function calcRegistry() {
+  const priceMan = parseFloat(document.getElementById('reg-price').value) || 0;
+  showConverted(document.getElementById('reg-price'), document.getElementById('reg-price-display'));
+  const el = document.getElementById('reg-result');
+  if (!priceMan) { el.style.display = 'none'; return; }
+
+  const price = priceMan * 10000;
+  const isHousing    = regPropType === '주택소형' || regPropType === '주택대형';
+  const isOfficetel  = regPropType === '오피스텔';
+  const isSmallHousing = regPropType === '주택소형';
+
+  // ── 취득세율
+  let acqRate = 0.04; // 상가·토지·오피스텔 기본 4%
+  if (isHousing && regAcqMethod2 === '매수') {
+    acqRate = getAcqRate(priceMan, regHouseCnt2, regIsAdjust2);
+  } else if (isHousing && regAcqMethod2 === '증여') {
+    acqRate = regHouseCnt2 >= 3 && regIsAdjust2 ? 0.12 : (regHouseCnt2 >= 2 && regIsAdjust2 ? 0.085 : 0.035);
+  } else if (isHousing && regAcqMethod2 === '상속') {
+    acqRate = 0.028;
+  } else if (isOfficetel) {
+    // 오피스텔: 주거용/업무용 무관 취득세 4%, 증여 3.5%, 상속 2.8%
+    acqRate = regAcqMethod2 === '상속' ? 0.028 : (regAcqMethod2 === '증여' ? 0.035 : 0.04);
+  } else {
+    acqRate = regAcqMethod2 === '상속' ? 0.028 : (regAcqMethod2 === '증여' ? 0.035 : 0.04);
+  }
+
+  const acqTax = price * acqRate;
+  const eduRate = acqRate >= 0.08 ? 0.4 : 0.1;
+  const eduTax  = acqTax * eduRate;
+  // 농어촌특별세: 85㎡ 이하 주택 면제 / 오피스텔 0.2% 적용
+  const ruralRate = (isHousing && isSmallHousing) ? 0 : (acqRate >= 0.08 ? 0.01 : 0.002);
+  const ruralTax  = price * ruralRate;
+  const taxTotal  = acqTax + eduTax + ruralTax;
+
+  // ── 국민주택채권 (주택만 적용, 오피스텔·상가토지 없음)
+  let bondRate = 0;
+  if (isHousing) {
+    if (regArea === '서울') bondRate = 0.013;
+    else if (regArea === '광역시') bondRate = 0.010;
+    else bondRate = isSmallHousing ? 0.007 : 0.008;
+  }
+  const bondAmt      = price * bondRate;
+  const bondDiscount = 0.03;
+  const bondCost     = Math.round(bondAmt * bondDiscount);
+
+  // ── 법무사 수수료 (추정치)
+  let lawyerFee = 350000;
+  if (priceMan >= 100000) lawyerFee = 1000000;
+  else if (priceMan >= 50000) lawyerFee = 800000;
+  else if (priceMan >= 30000) lawyerFee = 650000;
+  else if (priceMan >= 20000) lawyerFee = 550000;
+  else if (priceMan >= 10000) lawyerFee = 450000;
+  else if (priceMan >= 5000) lawyerFee = 400000;
+  else lawyerFee = 350000;
+
+  // ── 등기 신청수수료
+  const registFee = 15000;
+
+  const grandTotal = taxTotal + bondCost + lawyerFee + registFee;
+
+  const html = `
+    <div class="result-row"><span class="result-label">취득세 (${(acqRate*100).toFixed(2)}%)</span><span class="result-value">${fmt(Math.round(acqTax/10000))}</span></div>
+    <div class="result-row"><span class="result-label">지방교육세</span><span class="result-value">${fmt(Math.round(eduTax/10000))}</span></div>
+    <div class="result-row"><span class="result-label">농어촌특별세${isHousing && isSmallHousing ? ' (85㎡↓ 면제)' : ''}</span><span class="result-value">${isHousing && isSmallHousing ? '면제' : fmt(Math.round(ruralTax/10000))}</span></div>
+    <div class="result-row" style="border-bottom:1px dashed rgba(0,0,0,0.1)"><span class="result-label" style="font-weight:700">세금 소계</span><span class="result-value" style="font-weight:700">${fmt(Math.round(taxTotal/10000))}</span></div>
+    ${isHousing ? `<div class="result-row"><span class="result-label">국민주택채권 매입액 (${(bondRate*100).toFixed(1)}%)<br><span style="font-size:11px;color:var(--gray-400)">즉시매도 실부담 (~3% 할인)</span></span><span class="result-value">${fmt(Math.round(bondAmt/10000))}<br><span style="font-size:12px;color:var(--gray-500)">실부담 ≈ ${fmtWon(bondCost)}</span></span></div>` : (isOfficetel ? `<div class="result-row"><span class="result-label">국민주택채권</span><span class="result-value" style="color:var(--gray-400)">해당 없음</span></div>` : '')}
+    <div class="result-row"><span class="result-label">법무사 수수료 <span style="font-size:11px;color:var(--gray-400)">(추정치 - 협의 가능)</span></span><span class="result-value">${fmtWon(lawyerFee)}</span></div>
+    <div class="result-row"><span class="result-label">등기신청 수수료</span><span class="result-value">${fmtWon(registFee)}</span></div>
+    <div class="result-row result-total-row">
+      <span class="result-total-label">총 등기비용 (예상)</span>
+      <span class="result-total-value">${fmt(Math.round(grandTotal/10000))}</span>
+    </div>
+    <div class="result-note">* 법무사 수수료는 추정치입니다. 셀프등기 시 절약 가능<br>* 국민주택채권 할인율은 매도 시점 시장금리에 따라 변동<br>* 채권 즉시 매도 시 증권사 수수료 소정 발생</div>`;
+
+  el.style.display = 'block';
+  document.getElementById('reg-result-content').innerHTML = html;
+}
+
+// ── 14. 공동명의 세금비교 ─────────────────────────────────
+let jointHoldType = '1주택';
+
+function selectJointType(t, btn) {
+  jointHoldType = t;
+  setActive('.seg-btn[onclick^="selectJointType"]', btn);
+  calcJoint();
+}
+
+function calcJointTax(baseMan) {
+  // 종부세 누진세율 (주택, 2주택이하 2026 기준)
+  const brackets = [
+    [30000, 0.005], [30000, 0.007], [60000, 0.010],
+    [130000, 0.013], [690000, 0.020], [Infinity, 0.027]
+  ];
+  let tax = 0, prev = 0;
+  for (const [limit, rate] of brackets) {
+    const band = Math.min(baseMan - prev, limit);
+    if (band <= 0) break;
+    tax += band * rate;
+    prev += limit;
+    if (prev >= baseMan) break;
+  }
+  return Math.max(tax, 0);
+}
+
+function getYangdoTax(gainMan, years, is1House) {
+  // 장기보유특별공제
+  let ltDeductRate = 0;
+  if (is1House) {
+    if (years >= 10) ltDeductRate = 0.80;
+    else if (years >= 9) ltDeductRate = 0.72;
+    else if (years >= 8) ltDeductRate = 0.64;
+    else if (years >= 7) ltDeductRate = 0.56;
+    else if (years >= 6) ltDeductRate = 0.48;
+    else if (years >= 5) ltDeductRate = 0.40;
+    else if (years >= 4) ltDeductRate = 0.32;
+    else if (years >= 3) ltDeductRate = 0.24;
+  } else {
+    if (years >= 15) ltDeductRate = 0.30;
+    else if (years >= 10) ltDeductRate = 0.20;
+    else if (years >= 5) ltDeductRate = 0.10;
+    else if (years >= 3) ltDeductRate = 0.06;
+  }
+  const afterLt = gainMan * (1 - ltDeductRate);
+  const base = Math.max(afterLt - 250, 0); // 기본공제 250만원
+  // 소득세 누진세율
+  let tax = 0;
+  if (base <= 1400) tax = base * 0.06;
+  else if (base <= 5000) tax = base * 0.15 - 126;
+  else if (base <= 8800) tax = base * 0.24 - 576;
+  else if (base <= 15000) tax = base * 0.35 - 1544;
+  else if (base <= 30000) tax = base * 0.38 - 1994;
+  else if (base <= 50000) tax = base * 0.40 - 2594;
+  else tax = base * 0.42 - 3594;
+  tax *= 1.1; // 지방소득세 10%
+  return Math.max(tax, 0);
+}
+
+function calcJoint() {
+  const pubPriceMan  = parseFloat(document.getElementById('joint-public-price').value) || 0;
+  const buyPriceMan  = parseFloat(document.getElementById('joint-buy-price').value) || 0;
+  const sellPriceMan = parseFloat(document.getElementById('joint-sell-price').value) || 0;
+  const years        = parseFloat(document.getElementById('joint-years').value) || 0;
+  const el = document.getElementById('joint-result');
+  showConverted(document.getElementById('joint-public-price'), document.getElementById('joint-public-display'));
+  if (!pubPriceMan && !sellPriceMan) { el.style.display = 'none'; return; }
+
+  const is1House = jointHoldType === '1주택';
+  const fmrv60 = 0.60; // 공정시장가액비율
+
+  // ── 종부세 계산 ──
+  // 단독 1주택 특례: 12억 공제 / 일반: 9억
+  const soloDeduct  = is1House ? 120000 : 90000;
+  const soloBase    = Math.max(pubPriceMan - soloDeduct, 0) * fmrv60;
+  const soloJbTax   = calcJointTax(soloBase) * 1.2; // 농특세 20% 포함
+
+  // 공동명의: 각자 50% 보유, 각자 9억 공제 (공동명의는 특례 미적용)
+  const jointEachPrice = pubPriceMan * 0.5;
+  const jointEachBase  = Math.max(jointEachPrice - 90000, 0) * fmrv60;
+  const jointJbTax     = calcJointTax(jointEachBase) * 2 * 1.2; // 2인 합산 + 농특세
+
+  // ── 양도세 계산 ──
+  let soloYangdo = 0, jointYangdo = 0;
+  if (sellPriceMan > buyPriceMan && buyPriceMan > 0) {
+    const gain = sellPriceMan - buyPriceMan;
+    // 1주택 비과세 여부 (공시가격 12억 이하 + 2년 이상 거주 가정)
+    const exempt = is1House && sellPriceMan <= 120000 && years >= 2;
+    if (exempt) {
+      soloYangdo = 0;
+      jointYangdo = 0;
+    } else {
+      soloYangdo = getYangdoTax(gain, years, is1House);
+      // 공동명의: 각자 절반 양도차익
+      const jointEachGain = gain * 0.5;
+      jointYangdo = getYangdoTax(jointEachGain, years, is1House) * 2;
+    }
+  }
+
+  const jbSavingAnnual  = soloJbTax - jointJbTax;
+  const yangdoSaving    = soloYangdo - jointYangdo;
+  const totalSaving     = jbSavingAnnual * years + yangdoSaving;
+
+  function diffBadge(diff) {
+    if (diff > 0) return `<span style="color:#10B981;font-size:11px;font-weight:700"> ▼ ${fmt(Math.round(Math.abs(diff)))} 절세</span>`;
+    if (diff < 0) return `<span style="color:#EF4444;font-size:11px;font-weight:700"> ▲ ${fmt(Math.round(Math.abs(diff)))} 불리</span>`;
+    return `<span style="color:var(--gray-400);font-size:11px"> 동일</span>`;
+  }
+
+  const exempt1h = is1House && sellPriceMan > 0 && sellPriceMan <= 120000 && years >= 2;
+
+  const html = `
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:12px">
+      <div style="background:var(--gray-100);border-radius:8px 0 0 8px;padding:10px;text-align:center;font-size:12px;font-weight:700;color:var(--gray-600)">단독명의</div>
+      <div style="background:rgba(245,158,11,0.12);border-radius:0 8px 8px 0;padding:10px;text-align:center;font-size:12px;font-weight:700;color:var(--primary)">공동명의 (50:50)</div>
+    </div>
+    <div class="result-row"><span class="result-label">종부세 (연)</span><span class="result-value" style="display:flex;flex-direction:column;align-items:flex-end;gap:2px"><span style="color:var(--gray-500)">${soloBase > 0 ? fmt(Math.round(soloJbTax)) : '비과세'}</span><span style="color:var(--primary)">${jointEachBase > 0 ? fmt(Math.round(jointJbTax)) : '비과세'}${diffBadge(jbSavingAnnual)}</span></span></div>
+    ${sellPriceMan > buyPriceMan && buyPriceMan > 0 ? `
+    <div class="result-row"><span class="result-label">양도세 (매도 시)</span><span class="result-value" style="display:flex;flex-direction:column;align-items:flex-end;gap:2px"><span style="color:var(--gray-500)">${exempt1h ? '비과세' : fmt(Math.round(soloYangdo))}</span><span style="color:var(--primary)">${exempt1h ? '비과세' : fmt(Math.round(jointYangdo))}${exempt1h ? '' : diffBadge(yangdoSaving)}</span></span></div>` : ''}
+    <div class="result-row result-total-row">
+      <span class="result-total-label">${years > 0 ? `${years}년 보유 총 절세 예상` : '예상 절세액'}</span>
+      <span class="result-total-value" style="color:${totalSaving >= 0 ? 'var(--primary)' : '#EF4444'}">${totalSaving >= 0 ? fmt(Math.round(totalSaving)) : '- ' + fmt(Math.round(Math.abs(totalSaving)))}</span>
+    </div>
+    <div style="margin-top:10px;padding:10px 12px;border-radius:8px;font-size:12px;font-weight:600;text-align:center;background:${totalSaving > 500 ? 'rgba(16,185,129,0.1)' : totalSaving < -500 ? 'rgba(239,68,68,0.1)' : 'var(--gray-100)'};color:${totalSaving > 500 ? '#065F46' : totalSaving < -500 ? '#7F1D1D' : 'var(--gray-600)'}">
+      ${totalSaving > 500 ? `✅ 공동명의가 약 ${fmt(Math.round(totalSaving))} 유리합니다` : totalSaving < -500 ? `⚠️ 단독명의가 약 ${fmt(Math.round(Math.abs(totalSaving)))} 유리합니다` : '두 방식이 비슷합니다'}
+    </div>
+    <div class="result-note">* 종부세: 2026년 기준, 재산세 중복분 공제 미적용<br>* 양도세: 지방소득세 포함, 기타 필요경비 미포함 추정치<br>* 실제 절세효과는 개인 소득·보유자산에 따라 다릅니다</div>`;
+
+  el.style.display = 'block';
+  document.getElementById('joint-result-content').innerHTML = html;
+}
+
+// ── 8. 증여세 ─────────────────────────────────────────────
+let giftRel = '배우자';
+const GIFT_DEDUCT = { '배우자': 60000, '직계성인': 5000, '직계미성년': 2000, '기타친족': 1000 };
+const GIFT_DEDUCT_LABEL = { '배우자': '6억원', '직계성인': '5,000만원', '직계미성년': '2,000만원', '기타친족': '1,000만원' };
+
+function giftSelectRel(rel, btn) {
+  giftRel = rel;
+  setActive('.seg-btn[onclick^="giftSelectRel"]', btn);
+  document.getElementById('gift-rel-desc').textContent =
+    { '배우자':'배우자 공제: 6억원 (10년 합산)',
+      '직계성인':'직계존비속 공제: 5,000만원 (10년 합산)',
+      '직계미성년':'미성년 직계존비속 공제: 2,000만원 (10년 합산)',
+      '기타친족':'기타친족 공제: 1,000만원 (10년 합산)' }[rel];
+  calcGift();
+}
+
+function calcGift() {
+  const amountMan = parseFloat(document.getElementById('gift-amount').value) || 0;
+  const usedMan   = parseFloat(document.getElementById('gift-used').value) || 0;
+  showConverted(document.getElementById('gift-amount'), document.getElementById('gift-amount-display'));
+  if (!amountMan) { document.getElementById('gift-result').classList.remove('show'); return; }
+
+  const maxDeduct  = GIFT_DEDUCT[giftRel];
+  const remainDeduct = Math.max(maxDeduct - usedMan, 0);
+  const baseMan    = Math.max(amountMan - remainDeduct, 0);
+
+  function getGiftTax(b) {
+    if (b <= 10000)  return b * 0.10;
+    if (b <= 50000)  return b * 0.20 - 1000;
+    if (b <= 100000) return b * 0.30 - 6000;
+    if (b <= 300000) return b * 0.40 - 16000;
+    return b * 0.50 - 46000;
+  }
+
+  const rawTaxMan    = baseMan > 0 ? getGiftTax(baseMan) : 0;
+  const reportDiscountMan = Math.round(rawTaxMan * 0.03); // 신고세액공제 3%
+  const finalTaxMan  = rawTaxMan - reportDiscountMan;
+
+  document.getElementById('gift-result-content').innerHTML = `
+    <div class="result-row"><span class="result-label">증여재산가액</span><span class="result-value">${fmt(amountMan)}</span></div>
+    <div class="result-row"><span class="result-label">증여재산 공제 (${GIFT_DEDUCT_LABEL[giftRel]})</span><span class="result-value">- ${fmt(remainDeduct)}</span></div>
+    <div class="result-row"><span class="result-label">과세표준</span><span class="result-value">${fmt(Math.round(baseMan))}</span></div>
+    <div class="result-row"><span class="result-label">산출세액</span><span class="result-value">${fmt(Math.round(rawTaxMan))}</span></div>
+    <div class="result-row"><span class="result-label">신고세액공제 (3%)</span><span class="result-value">- ${fmt(reportDiscountMan)}</span></div>
+    <div class="result-row result-total-row">
+      <span class="result-total-label">납부할 증여세</span>
+      <span class="result-total-value">${fmt(Math.round(finalTaxMan))}</span>
+    </div>
+    <div class="result-note">* 증여일 속하는 달 말일로부터 3개월 이내 신고 시 3% 공제 적용<br>* 10년 내 동일인 증여액은 합산 과세됩니다</div>`;
+  document.getElementById('gift-result').classList.add('show');
+  document.getElementById('ad-gift').classList.add('show');
+}
+</script>
+
+<script src="/assets/calc-result-tools.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+
+<script id="realestate-deeplink-script">
+function activateTabFromLocation() {
+  try {
+    let key = (location.hash || '').replace(/^#/, '');
+    if (!key) {
+      const qs = new URLSearchParams(location.search);
+      key = qs.get('tab') || '';
+    }
+    if (!key) return;
+    key = key.replace(/^tab-/, '');
+    const alias = {
+      'brokerage':'brokerage',
+      'acquisition':'acquisition',
+      'conversion':'conversion',
+      'loan':'loan',
+      'rental':'rental',
+      'capital-gains':'yangdo',
+      'yangdo':'yangdo',
+      'jongbu':'jongbu',
+      'gift':'gift',
+      'pyeong':'pyeong',
+      'propertytax':'propertytax',
+      'inheritance':'inheritance',
+      'dsr':'dsr',
+      'registry':'registry',
+      'joint':'joint'
+    };
+    const mapped = alias[key];
+    if (!mapped || typeof switchTab !== 'function') return;
+    switchTab(mapped);
+  } catch (e) {}
+}
+window.addEventListener('hashchange', activateTabFromLocation);
+document.addEventListener('DOMContentLoaded', function(){ setTimeout(activateTabFromLocation, 0); });
+</script>
+</body>
+</html>

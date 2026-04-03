@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>대출 원리금균등 vs 원금균등 상환 - 어떤 게 유리할까? | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="대출 상환 방식 원리금균등과 원금균등의 차이, 총 이자 비교, 내 상황에 맞는 선택 방법을 정리했습니다." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="대출 원리금균등 vs 원금균등 상환 - 어떤 게 유리할까? | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="대출 상환 방식 원리금균등과 원금균등의 차이, 총 이자 비교, 내 상황에 맞는 선택 방법을 정리했습니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/loan-repayment.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/loan-repayment.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#6366F1;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(99,102,241,0.15);color:#6366F1;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body p{margin-bottom:14px}
+    .post-body ul{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#6366F1;text-decoration:none}
+    .highlight-box{background:rgba(99,102,241,0.08);border-left:4px solid #6366F1;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#3730a3;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#6366F1;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:24px 0 10px}
+    .faq-item{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:12px;padding:20px;margin:16px 0}
+    .faq-q{font-weight:800;color:#111827;margin-bottom:8px;font-size:15px}
+    .faq-a{color:#374151;font-size:14px;line-height:1.7;margin:0}
+    td.good{color:#059669;font-weight:700}
+    td.bad{color:#DC2626;font-weight:700}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo"><div class="logo-icon"><img src="../../assets/logo.svg" alt="로고"/></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+<div class="post-wrap">
+  <span class="post-tag">금융</span>
+  <h1>대출 원리금균등 vs 원금균등 상환 - 어떤 게 유리할까?</h1>
+  <div class="post-meta"><span>📅 2026.03.16</span><span>·</span><span>5분 읽기</span></div>
+  <div class="post-body">
+    <p>주택담보대출·신용대출 상담 시 상환 방식을 고르라는 요청을 받습니다. 원리금균등·원금균등·만기일시상환 세 가지 중 무엇을 선택하느냐에 따라 수천만 원의 이자 차이가 생깁니다. 내 상황에 맞는 방식을 고르는 기준을 정리합니다.</p>
+
+    <h2>세 가지 상환 방식 한눈에 비교</h2>
+    <div class="table-wrap"><table>
+      <tr><th>구분</th><th>원리금균등상환</th><th>원금균등상환</th><th>만기일시상환</th></tr>
+      <tr><td>월 납입액</td><td>매월 동일</td><td>초기 높고 점점 감소</td><td>이자만 납입, 만기에 원금</td></tr>
+      <tr><td>총 이자</td><td>중간</td><td class="good">가장 적음</td><td class="bad">가장 많음</td></tr>
+      <tr><td>초기 부담</td><td>중간</td><td class="bad">높음</td><td class="good">가장 낮음</td></tr>
+      <tr><td>DSR 계산</td><td>월 납입액 기준</td><td>초기 납입액 기준</td><td>이자만 포함 (기관별 상이)</td></tr>
+      <tr><td>주요 사용처</td><td>주택담보대출, 신용대출</td><td>소득 여유 있는 경우</td><td>단기 사업자대출, 전세자금</td></tr>
+    </table></div>
+    <p style="margin: 1.2em 0;">
+      👉 <a href="https://www.jptcalc.kr/calc/finance/loan-repayment/" style="color: #2563eb; font-weight: 600;">대출 상환 계산기로 직접 계산해보기</a>
+    </p>
+
+    <div class="highlight-box"><p>만기일시상환은 월 부담이 가장 낮지만 총 이자가 두 배 이상 많습니다. 주택담보대출에는 일반적으로 원리금균등 또는 원금균등이 적용됩니다.</p></div>
+
+    <h2>실제 이자 비교 - 3억원, 연 4%, 30년</h2>
+    <div class="table-wrap"><table>
+      <tr><th>구분</th><th>원리금균등</th><th>원금균등</th><th>만기일시상환</th></tr>
+      <tr><td>첫 달 납입액</td><td>1,432,248원</td><td>1,833,333원</td><td>1,000,000원</td></tr>
+      <tr><td>마지막 달 납입액</td><td>1,432,248원</td><td>약 836,000원</td><td>301,000,000원</td></tr>
+      <tr><td>총 이자</td><td>약 2억 1,561만원</td><td class="good">약 1억 8,050만원</td><td class="bad">약 3억 6,000만원</td></tr>
+      <tr><td>원리금균등 대비 차이</td><td>기준</td><td class="good">약 3,500만원 절약</td><td class="bad">약 1억 4,400만원 추가</td></tr>
+    </table></div>
+
+    <p>원금균등이 원리금균등보다 총 이자 면에서 약 3,500만원 유리합니다. 30년 대출에서 이 차이는 상당히 큰 금액입니다.</p>
+
+    <h2>DSR이란? - 대출 가능 금액의 기준</h2>
+    <p>DSR(총부채원리금상환비율)은 연 소득 대비 연간 원리금 상환액의 비율입니다. 은행권 기준 40% 이하여야 대출이 가능합니다.</p>
+    <div class="highlight-box">
+      <p><strong>DSR = 연간 원리금 상환액 ÷ 연 소득 × 100</strong><br />
+      예: 연소득 5,000만원 → 연간 상환 한도 2,000만원 → 월 한도 약 166만원<br />
+      원리금균등 월 143만원(연 4%) → DSR 약 34% → 대출 가능<br />
+      금리가 6%로 오른다면 월 180만원 → DSR 약 43% → 초과로 대출 거절 가능</p>
+    </div>
+    <ul>
+      <li>원리금균등은 매월 납입액이 일정해 DSR 계산이 직관적</li>
+      <li>원금균등은 초기 높은 납입액 기준으로 DSR 심사 → 한도가 더 낮을 수 있음</li>
+      <li>금리 인상 리스크: 변동금리 선택 시 DSR 여유를 넉넉히 확보해야 함</li>
+    </ul>
+
+    <h2>내 상황에 맞는 선택 기준</h2>
+    <ul>
+      <li><strong>원리금균등 선택</strong>: 월 납입액을 예측해 가계부 관리하고 싶을 때, 초기 여유 자금이 부족할 때, DSR 한도가 빠듯할 때</li>
+      <li><strong>원금균등 선택</strong>: 대출 초기 소득이 높거나 안정적일 때, 장기 대출로 이자를 최소화하고 싶을 때, DSR 여유가 충분할 때</li>
+      <li><strong>만기일시상환 선택</strong>: 단기 사업 운전자금처럼 만기 시 원금을 일괄 상환할 수 있는 구조일 때 (장기 주택담보대출에는 부적합)</li>
+    </ul>
+
+    <h2>중도상환 전략</h2>
+    <p>여유 자금이 생겼을 때 중도상환하면 총 이자를 크게 줄일 수 있습니다. 그러나 순서와 타이밍이 중요합니다.</p>
+    <h3>중도상환수수료 확인부터</h3>
+    <p>대부분 대출 취급일로부터 3년 이내에는 중도상환수수료가 부과됩니다. 수수료율은 통상 0.6~1.2% 수준입니다. 수수료가 면제되는 시점 이후에 집중 상환하는 것이 효율적입니다.</p>
+    <h3>기간 단축 vs 납입액 감소</h3>
+    <p>원리금균등 대출에서 중도상환 후 두 가지를 선택할 수 있습니다.</p>
+    <ul>
+      <li><strong>기간 단축:</strong> 월 납입액은 유지하고 남은 기간을 줄임 → 이자 절약 효과 더 큼</li>
+      <li><strong>납입액 감소:</strong> 기간은 유지하고 월 부담을 줄임 → 현금흐름 개선에 유리</li>
+    </ul>
+    <p>이자를 최소화하는 것이 목적이라면 <strong>기간 단축</strong>을 선택하는 것이 일반적으로 유리합니다.</p>
+    <h3>중도상환 효과 예시</h3>
+    <p>3억원 연 4% 원리금균등 30년 대출, 5년 후 3,000만원 중도상환(기간 단축 선택):</p>
+    <ul>
+      <li>중도상환 전 잔여 이자: 약 1억 5,700만원</li>
+      <li>중도상환 후 이자 절감 효과: 약 3,200만원 (수수료 0% 기준)</li>
+      <li>상환 기간 단축: 약 5년 8개월 단축</li>
+    </ul>
+
+    <h2>자주 헷갈리는 입력값</h2>
+    <h3>거치기간</h3>
+    <p>거치기간은 원금 상환 없이 이자만 내는 기간입니다. 거치 중에는 원금이 줄지 않아 이자가 그대로 발생합니다. 3억원을 2년 거치 후 28년 상환하면, 28년치 이자 외에 거치 2년치 이자가 추가됩니다. 거치기간이 길수록 총 이자가 늘어납니다.</p>
+    <h3>연 금리를 월 금리로 환산</h3>
+    <p>계산기에 연 4%를 입력하면 내부적으로 월 금리 0.3333%(= 4% ÷ 12)로 나눠 계산됩니다. 복리 계산이므로 단순히 연 이자를 12로 나눈 값과 약간 차이가 있습니다.</p>
+    <h3>변동금리와 고정금리</h3>
+    <p>변동금리는 초기 금리가 낮지만 금리 인상 시 월 납입액이 늘어납니다. 고정금리는 납입액이 확정되어 계획이 쉽습니다. 금리 상승기에는 고정금리, 하락기에는 변동금리가 유리할 수 있습니다.</p>
+
+    <div class="cta-box">
+      <p>내 대출 조건으로 월 납입액과 총 이자를 직접 계산해보세요.</p>
+      <a href="../../calc/finance/loan-repayment/" class="cta-btn">대출 이자 계산하기</a>
+    </div>
+    <p style="font-size: 13px; color: #6B7280; margin-top: 8px;">관련 계산기: <a href="https://www.jptcalc.kr/calc/realestate/dsr/">DSR 대출한도 계산기</a> · <a href="https://www.jptcalc.kr/calc/finance/deposit/">예금 이자 계산기</a></p>
+
+    <h2>자주 묻는 질문 (FAQ)</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 원리금균등과 원금균등 중 DSR 한도 측면에서 어느 쪽이 더 많이 빌릴 수 있나요?</div>
+      <p class="faq-a">원리금균등이 유리합니다. 원금균등은 초기 납입액이 더 높아 DSR 계산 시 불리하게 적용됩니다. 대출 한도를 최대화하려면 원리금균등을 선택하는 것이 일반적으로 낫습니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 이미 원리금균등으로 대출 받았는데, 도중에 원금균등으로 바꿀 수 있나요?</div>
+      <p class="faq-a">대출 상환 방식은 중도 변경이 원칙적으로 불가능합니다. 다만 대환대출(기존 대출을 새 대출로 전환)을 통해 상환 방식을 바꿀 수 있습니다. 이 경우 중도상환수수료와 신규 취급 수수료를 비교해 이득이 있는지 따져야 합니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 중도상환수수료가 없는 대출도 있나요?</div>
+      <p class="faq-a">있습니다. 정책금융(디딤돌대출, 보금자리론 등)은 중도상환수수료가 면제이거나 매우 낮습니다. 시중은행 상품도 취급 후 3년이 지나면 수수료 없이 중도상환할 수 있습니다. 카카오뱅크·케이뱅크 등 인터넷은행 신용대출도 무료 중도상환이 가능한 경우가 많습니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 만기일시상환은 왜 주택담보대출에 잘 안 쓰이나요?</div>
+      <p class="faq-a">총 이자 부담이 원리금균등의 약 1.7배에 달하고, 만기에 원금 전액 마련이 어렵기 때문입니다. 금융당국도 주택담보대출에 만기일시상환 적용을 제한하고 있습니다. 만기일시상환은 주로 1~3년 단기 사업자대출이나 전세자금 일부에 활용됩니다.</p>
+    </div>
+
+    <h2>마무리</h2>
+    <p>같은 금액, 같은 금리의 대출이라도 상환 방식에 따라 수천만 원의 이자 차이가 납니다. 이자 절약이 목표라면 원금균등, 월 현금흐름 관리가 중요하다면 원리금균등이 맞습니다. 만기일시상환은 장기 주택담보대출에는 적합하지 않습니다. 대출 전 계산기로 총 이자를 미리 파악하고, 중도상환 계획까지 세워두는 것이 현명한 접근입니다.</p>
+  </div>
+</div>
+<footer class="site-footer"><p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용입니다.</p></footer>
+  <script>
+  window.ARTICLE_INFO_CONFIG = {
+    author: '제이퍼 계산기 편집팀',
+    reviewBasis: '은행업감독규정·여신심사 가이드라인, 2026년 금융기준',
+    lastReviewed: '2026.03.26',
+    disclaimer: '이 글은 정보 제공 목적으로 작성되었습니다. 실제 대출 금리·조건은 금융기관마다 다르므로 금융소비자포털(fine.fss.or.kr)에서 비교 확인하세요.',
+  };
+  </script>
+  <script>
+window.ARTICLE_INFO_CONFIG.relatedCalc = { name: '대출 상환 계산기', url: '/calc/finance/loan-repayment/' };
+window.ARTICLE_INFO_CONFIG.category = 'finance';
+</script>
+<script src="/assets/blog-article-info.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>

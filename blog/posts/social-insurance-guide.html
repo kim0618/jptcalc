@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4대보험료 계산 완전 가이드 (2026년 기준) | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="2026년 기준 4대보험료(국민연금·건강보험·고용보험·산재보험) 근로자·사업주 부담률과 실제 계산 예시를 한번에 확인하세요." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="4대보험료 계산 완전 가이드 (2026년 기준) | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="2026년 기준 4대보험료(국민연금·건강보험·고용보험·산재보험) 근로자·사업주 부담률과 실제 계산 예시를 한번에 확인하세요." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/social-insurance-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/social-insurance-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BRSX3F10MZ');
+  </script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #10B981;
+      --gray-400: #9CA3AF; --gray-500: #6B7280; --gray-600: #4B5563;
+      --dark-bg: #ffffff; --dark-card: #F9FAFB; --dark-border: rgba(0,0,0,0.08);
+    }
+    body { font-family: 'Pretendard', -apple-system, sans-serif; background: #ffffff; color: #111827; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+
+    .site-header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .header-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; gap: 24px; }
+    .site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .logo-icon { width: 32px; height: 32px; }
+    .logo-icon img { width: 32px; height: 32px; display: block; }
+    .logo-text { font-size: 18px; font-weight: 900; color: #111827; letter-spacing: -0.5px; }
+    .logo-text span { color: #818CF8; }
+    .header-back { margin-left: auto; font-size: 13px; font-weight: 600; color: #6B7280; text-decoration: none !important; }
+    .header-back:hover { color: #111827; }
+
+    .post-wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+    .post-tag { display: inline-block; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; background: rgba(16,185,129,0.15); color: #10B981; margin-bottom: 16px; }
+    h1 { font-size: 26px; font-weight: 900; color: #111827; line-height: 1.35; margin-bottom: 12px; }
+    .post-meta { font-size: 13px; color: #4B5563; margin-bottom: 36px; display: flex; gap: 12px; }
+    .post-body { font-size: 15px; color: #111827; line-height: 1.8; }
+    .post-body h2 { font-size: 19px; font-weight: 800; color: #111827; margin: 40px 0 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .post-body h3 { font-size: 16px; font-weight: 700; color: #111827; margin: 24px 0 10px; }
+    .post-body p { margin-bottom: 14px; }
+    .post-body ul, .post-body ol { margin: 10px 0 14px 20px; }
+    .post-body li { margin-bottom: 8px; }
+    .post-body a { color: #10B981; text-decoration: none !important; }
+    .post-body a:hover { text-decoration: underline; }
+    .highlight-box { background: rgba(16,185,129,0.08); border-left: 4px solid #10B981; border-radius: 0 10px 10px 0; padding: 16px 20px; margin: 20px 0; }
+    .highlight-box p { margin: 0; color: #065F46; font-size: 14px; }
+    .table-wrap { overflow-x: auto; margin: 20px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th { background: #F9FAFB; color: #111827; font-weight: 700; padding: 10px 14px; text-align: left; border: 1px solid rgba(0,0,0,0.08); }
+    td { padding: 10px 14px; border: 1px solid rgba(0,0,0,0.08); color: #1F2937; }
+    tr:hover td { background: rgba(0,0,0,0.02); }
+    td.rate { color: #10B981; font-weight: 700; }
+    .cta-box { background: #F9FAFB; border: 1px solid rgba(0,0,0,0.08); border-radius: 14px; padding: 24px; margin: 40px 0; text-align: center; }
+    .cta-box p { color: #374151; font-size: 14px; margin-bottom: 14px; }
+    .cta-btn { display: inline-block; padding: 12px 28px; background: #10B981; color: #fff !important; font-size: 14px; font-weight: 800; border-radius: 10px; text-decoration: none !important; }
+    .cta-btn:hover { opacity: 0.9; }
+    .calc-example { background: #F9FAFB; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; padding: 20px; margin: 16px 0; }
+    .calc-example h3 { margin-top: 0; margin-bottom: 12px; }
+    .calc-example ul { margin-top: 0; }
+    .calc-example .total { font-weight: 800; color: #065F46; font-size: 15px; margin-top: 8px; }
+    .faq-item { background: #F9FAFB; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; padding: 20px; margin: 16px 0; }
+    .faq-q { font-weight: 800; color: #111827; margin-bottom: 8px; font-size: 15px; }
+    .faq-a { color: #374151; font-size: 14px; line-height: 1.7; margin: 0; }
+    .site-footer { border-top: 1px solid rgba(0,0,0,0.08); padding: 24px; text-align: center; }
+    .footer-copy { font-size: 10px; color: #374151; }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo">
+      <div class="logo-icon"><img src="../../assets/logo.svg" alt="제이퍼 계산기 로고" /></div>
+      <span class="logo-text">제이퍼<span>계산기</span></span>
+    </a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+
+<div class="post-wrap">
+  <span class="post-tag">세금</span>
+  <h1>4대보험료 계산 완전 가이드 (2026년 기준) - 근로자·사업주 부담률과 계산법</h1>
+  <div class="post-meta">
+    <span>📅 2026.04.02</span>
+    <span>·</span>
+    <span>6분 읽기</span>
+  </div>
+
+  <div class="post-body">
+    <p>매달 월급에서 빠져나가는 4대보험료, 정확히 얼마인지 알고 계신가요? 국민연금·건강보험·고용보험·산재보험 네 가지 보험의 2026년 최신 요율과 실제 계산 방법을 근로자와 사업주 관점에서 모두 정리했습니다. 월급 300만원과 400만원 예시로 실제 공제액까지 확인해 보세요.</p>
+
+    <div class="highlight-box">
+      <p><strong>이 글이 필요한 사람:</strong> 급여명세서의 4대보험 공제액이 맞는지 확인하고 싶은 근로자 / 직원 고용 시 사업주 부담분이 얼마인지 알고 싶은 사업주 / 프리랜서·자영업자로 지역가입자 보험료가 궁금한 분</p>
+    </div>
+
+    <h2>4대보험이란?</h2>
+    <p>4대보험은 국민이 질병·노령·실업·산업재해 등 사회적 위험에 대비할 수 있도록 법으로 의무 가입하게 한 사회보험 제도입니다. 근로자를 고용한 사업장은 반드시 4대보험에 가입해야 하며, 보험료는 근로자와 사업주가 법정 비율로 나눠 부담합니다.</p>
+    <ul>
+      <li><strong>국민연금:</strong> 노령·장애·사망 시 연금급여를 지급하는 노후 소득보장 제도</li>
+      <li><strong>건강보험:</strong> 질병·부상으로 인한 의료비를 보장하는 제도. 장기요양보험이 건강보험에 포함되어 함께 부과됩니다.</li>
+      <li><strong>고용보험:</strong> 실직 시 실업급여를 지급하고 직업능력 개발을 지원하는 제도</li>
+      <li><strong>산재보험:</strong> 업무상 재해 발생 시 치료비·휴업급여 등을 보장. 보험료 전액을 사업주가 부담합니다.</li>
+    </ul>
+    <p>4대보험 관련 공식 정보는 <a href="https://www.nhis.or.kr" target="_blank" rel="noopener">국민건강보험공단(nhis.or.kr)</a>과 <a href="https://www.moel.go.kr" target="_blank" rel="noopener">고용노동부(moel.go.kr)</a> 홈페이지에서 확인할 수 있습니다.</p>
+
+    <h2>2026년 4대보험 요율표</h2>
+    <p>2026년 현재 적용되는 4대보험 보험료율은 아래와 같습니다. 근로자와 사업주가 각각 부담하는 비율을 확인하세요.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>보험 종류</th>
+            <th>전체 요율</th>
+            <th>근로자 부담</th>
+            <th>사업주 부담</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>국민연금</td>
+            <td class="rate">9.0%</td>
+            <td>4.5%</td>
+            <td>4.5%</td>
+          </tr>
+          <tr>
+            <td>건강보험</td>
+            <td class="rate">7.09%</td>
+            <td>3.545%</td>
+            <td>3.545%</td>
+          </tr>
+          <tr>
+            <td>장기요양보험</td>
+            <td class="rate">건강보험료의 12.95%</td>
+            <td>50%</td>
+            <td>50%</td>
+          </tr>
+          <tr>
+            <td>고용보험 (실업급여)</td>
+            <td class="rate">1.8%</td>
+            <td>0.9%</td>
+            <td>0.9%</td>
+          </tr>
+          <tr>
+            <td>산재보험</td>
+            <td class="rate">업종별 상이</td>
+            <td>없음</td>
+            <td>전액</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>장기요양보험은 별도 요율이 아니라 건강보험료 금액에 12.95%를 곱해 산출합니다. 고용보험 중 고용안정·직업능력개발 사업 분담금은 사업주가 추가로 부담하며, 기업 규모에 따라 0.25%~0.85%가 추가됩니다. 아래 계산 예시는 실업급여분(0.9%)만 포함합니다.</p>
+
+    <h2>계산 예시 1 - 월급 300만원 근로자 부담액</h2>
+
+    <div class="calc-example">
+      <h3>월 기본급 3,000,000원 기준</h3>
+      <ul>
+        <li>국민연금: 3,000,000 × 4.5% = <strong>135,000원</strong></li>
+        <li>건강보험: 3,000,000 × 3.545% = <strong>106,350원</strong></li>
+        <li>장기요양보험: 106,350 × 12.95% = <strong>13,772원</strong></li>
+        <li>고용보험: 3,000,000 × 0.9% = <strong>27,000원</strong></li>
+      </ul>
+      <p class="total">근로자 월 부담 합계: 282,122원</p>
+    </div>
+
+    <p>월급 300만원인 근로자는 매달 약 28만 2천원이 4대보험료로 공제됩니다. 사업주도 동일한 금액(산재보험 추가)을 별도 부담하므로 실제 인건비는 훨씬 높습니다.</p>
+
+    <h2>계산 예시 2 - 월급 400만원 근로자 부담액</h2>
+
+    <div class="calc-example">
+      <h3>월 기본급 4,000,000원 기준</h3>
+      <ul>
+        <li>국민연금: 4,000,000 × 4.5% = <strong>180,000원</strong></li>
+        <li>건강보험: 4,000,000 × 3.545% = <strong>141,800원</strong></li>
+        <li>장기요양보험: 141,800 × 12.95% = <strong>18,363원</strong></li>
+        <li>고용보험: 4,000,000 × 0.9% = <strong>36,000원</strong></li>
+      </ul>
+      <p class="total">근로자 월 부담 합계: 376,163원</p>
+    </div>
+
+    <p>월급이 100만원 늘어날 때마다 4대보험 부담액은 약 9만 4천원씩 증가합니다. 연봉 협상 시 세전 연봉뿐만 아니라 실수령액도 꼭 계산해 보세요.</p>
+
+    <div class="cta-box">
+      <p>내 월급 기준 4대보험 공제액을 바로 계산해보세요.</p>
+      <a href="../../calc/tax/insurance-comparison/" class="cta-btn">4대보험료 계산기로 계산하기</a>
+    </div>
+    <p style="font-size: 13px; color: #6B7280; margin-top: 8px;">관련 계산기: <a href="../../calc/tax/salary/" style="color:#10B981;">실수령액 계산기</a> · <a href="../../calc/tax/income/" style="color:#10B981;">소득세 계산기</a></p>
+
+    <h2>월급별 4대보험료 요약표 (근로자 부담)</h2>
+    <p>아래 표는 각 월급 구간에서 근로자가 실제로 부담하는 4대보험료 합계입니다. (산재보험 제외, 근로자 부담분만)</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>월급</th>
+            <th>국민연금</th>
+            <th>건강+장기요양</th>
+            <th>고용보험</th>
+            <th>합계</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>200만원</td>
+            <td>90,000원</td>
+            <td class="rate">80,082원</td>
+            <td>18,000원</td>
+            <td><strong>188,082원</strong></td>
+          </tr>
+          <tr>
+            <td>300만원</td>
+            <td>135,000원</td>
+            <td class="rate">120,122원</td>
+            <td>27,000원</td>
+            <td><strong>282,122원</strong></td>
+          </tr>
+          <tr>
+            <td>400만원</td>
+            <td>180,000원</td>
+            <td class="rate">160,163원</td>
+            <td>36,000원</td>
+            <td><strong>376,163원</strong></td>
+          </tr>
+          <tr>
+            <td>500만원</td>
+            <td>225,000원</td>
+            <td class="rate">200,204원</td>
+            <td>45,000원</td>
+            <td><strong>470,204원</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="highlight-box">
+      <p><strong>200만원 건강+장기요양 계산:</strong> 건강보험 2,000,000 × 3.545% = 70,900원 + 장기요양 70,900 × 12.95% = 9,182원 = 합계 80,082원<br /><br />
+      <strong>500만원 건강+장기요양 계산:</strong> 건강보험 5,000,000 × 3.545% = 177,250원 + 장기요양 177,250 × 12.95% = 22,954원 = 합계 200,204원</p>
+    </div>
+
+    <h2>국민연금 기준소득월액 상한과 하한</h2>
+    <p>국민연금은 실제 월급이 아닌 <strong>기준소득월액</strong>에 요율을 적용합니다. 2026년 기준 상한과 하한은 다음과 같습니다.</p>
+    <ul>
+      <li><strong>상한액:</strong> 약 617만원 - 월급이 617만원을 초과해도 617만원 기준으로 계산 (최대 국민연금 공제액: 617만원 × 4.5% = 277,650원)</li>
+      <li><strong>하한액:</strong> 39만원 - 월급이 39만원 미만이어도 39만원을 기준으로 계산 (최소 공제액: 39만원 × 4.5% = 17,550원)</li>
+    </ul>
+    <p>따라서 월급이 아무리 높더라도 국민연금 근로자 부담분의 상한은 월 277,650원입니다. 매년 7월 기준소득월액 상한·하한이 조정되므로 <a href="https://www.nhis.or.kr" target="_blank" rel="noopener">국민건강보험공단</a> 공지를 확인하세요.</p>
+
+    <h2>건강보험 피부양자 자격 요건</h2>
+    <p>직장가입자의 배우자·부모·자녀 등은 별도 보험료 없이 피부양자로 등록해 건강보험 혜택을 받을 수 있습니다. 다만 소득·재산 요건을 충족해야 합니다.</p>
+
+    <h3>소득 요건</h3>
+    <ul>
+      <li>연간 소득 합산 2,000만원 이하</li>
+      <li>사업소득이 있는 경우: 사업소득이 연 500만원 이하이거나 사업자등록이 없는 경우</li>
+      <li>금융소득(이자·배당 합산): 연 1,000만원 이하</li>
+    </ul>
+
+    <h3>재산 요건</h3>
+    <ul>
+      <li>재산세 과세표준이 5억 4천만원 이하</li>
+      <li>재산세 과세표준이 5억 4천만원 초과~9억원 이하인 경우 연간 소득 1,000만원 이하</li>
+    </ul>
+    <p>피부양자 자격 요건을 충족하지 못하면 지역가입자로 전환되어 별도 보험료가 부과됩니다. 정확한 요건은 <a href="https://www.nhis.or.kr" target="_blank" rel="noopener">국민건강보험공단(nhis.or.kr)</a>에서 확인하세요.</p>
+
+    <h2>프리랜서·자영업자의 지역가입자 보험료</h2>
+    <p>직장에 소속되지 않은 프리랜서나 자영업자는 직장가입자가 아닌 <strong>지역가입자</strong>로 분류되어 보험료 계산 방식이 다릅니다.</p>
+
+    <h3>직장가입자 vs 지역가입자 차이</h3>
+    <ul>
+      <li><strong>직장가입자:</strong> 월급(보수월액) 기준으로 보험료 산정. 사업주와 50%씩 부담.</li>
+      <li><strong>지역가입자:</strong> 소득뿐만 아니라 재산(주택·자동차 포함)·생활 수준을 점수화해 보험료 산정. 전액 본인 부담.</li>
+    </ul>
+
+    <h3>국민연금 지역가입자</h3>
+    <p>지역가입자의 국민연금은 신고한 소득(기준소득월액)에 9%를 전액 본인이 부담합니다. 직장가입자는 9% 중 4.5%만 내지만, 지역가입자는 9% 전부를 납부해야 합니다.</p>
+
+    <h3>건강보험 지역가입자</h3>
+    <p>지역가입자 건강보험료는 소득·재산·자동차를 점수화한 부과점수에 점수당 단가(2026년 기준 208.4원)를 곱해 산출합니다. 재산이 많거나 고가 차량을 보유한 경우 보험료가 높아질 수 있어, 직장 퇴직 후 지역가입자로 전환되면 보험료가 크게 오르는 경우가 많습니다.</p>
+
+    <div class="highlight-box">
+      <p><strong>프리랜서 팁:</strong> 연 소득이 일정 수준 이하이고 가족 중 직장가입자가 있다면, 해당 가입자의 피부양자로 등록하는 것이 유리할 수 있습니다. 피부양자 요건을 사전에 확인해 보세요.</p>
+    </div>
+
+    <h2>자주 묻는 질문 (FAQ)</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 4대보험료는 세전 월급 기준으로 계산하나요?</div>
+      <p class="faq-a">네, 4대보험료는 세전 급여(보수월액)를 기준으로 계산합니다. 다만 식대 등 비과세 항목은 보수월액에서 제외될 수 있습니다. 예를 들어 월급 300만원 중 식대 20만원이 비과세라면 280만원을 기준으로 보험료를 계산하는 경우도 있습니다. 정확한 기준은 각 보험공단 고시를 따릅니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 사업주가 부담하는 4대보험료는 얼마나 되나요?</div>
+      <p class="faq-a">국민연금과 건강보험은 근로자와 동일하게 50%씩 부담합니다. 고용보험(실업급여분)도 0.9%로 근로자와 동일하지만, 고용안정·직업능력개발 사업 분담금이 사업주 부담으로 추가됩니다(기업 규모에 따라 0.25%~0.85%). 산재보험은 전액 사업주가 부담하며 업종에 따라 요율이 다릅니다. 월급 300만원 기준 사업주 추가 부담 합계는 약 30만원 이상으로 인건비 책정 시 반드시 포함해야 합니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 아르바이트·단시간 근로자도 4대보험에 가입해야 하나요?</div>
+      <p class="faq-a">원칙적으로 근로자를 1명 이상 고용한 사업장은 4대보험 의무 가입 대상입니다. 다만 단시간 근로자(주 15시간 미만)는 국민연금과 건강보험 적용이 제외될 수 있습니다. 고용보험은 주 15시간 미만·월 60시간 미만 근무자는 적용 제외가 가능하지만, 3개월 이상 계속 근무 시 가입 의무가 생깁니다. 산재보험은 근로 시간과 무관하게 모든 근로자에게 적용됩니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 퇴직 후 건강보험료는 어떻게 되나요?</div>
+      <p class="faq-a">퇴직 후 직장가입자 자격을 잃으면 두 가지 선택지가 있습니다. 첫째, 직장 재직 중 납부하던 건강보험료 전액(근로자분+사업주분, 최대 36개월)을 혼자 내는 임의계속가입 제도를 활용할 수 있습니다. 이 방법이 지역가입자로 전환해 재산까지 포함한 보험료를 내는 것보다 유리한 경우가 많습니다. 둘째, 가족 직장가입자의 피부양자로 등록하는 방법도 있습니다. 소득과 재산 요건을 충족한다면 보험료 없이 혜택을 유지할 수 있습니다.</p>
+    </div>
+
+    <h2>마무리</h2>
+    <p>4대보험은 매달 급여에서 자동으로 공제되기 때문에 정확한 금액을 모르고 지나치기 쉽습니다. 2026년 기준 국민연금 9.0%, 건강보험 7.09%, 장기요양 건강보험료의 12.95%, 고용보험(실업급여) 1.8%를 기억해 두면 내 공제액이 맞는지 스스로 확인할 수 있습니다. 특히 연봉 협상 시 세전 금액뿐만 아니라 4대보험 공제 후 실수령액도 반드시 계산해 보세요. 보험료율 변경 여부는 매년 <a href="https://www.nhis.or.kr" target="_blank" rel="noopener">국민건강보험공단</a>과 <a href="https://www.moel.go.kr" target="_blank" rel="noopener">고용노동부</a> 공지를 통해 확인하시기 바랍니다.</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용이며 정확한 보험료는 관련 기관에 문의하세요.</p>
+</footer>
+
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "국민건강보험공단, 국민연금공단, 고용노동부 기준, 2026년",
+  basisDate: "2026년 기준",
+  referenceOrg: "국민건강보험공단",
+  lastReviewed: '2026.04.02',
+  disclaimer: "본 내용은 참고용이며 실제 보험료는 기준소득월액, 정산 여부에 따라 달라질 수 있습니다.",
+  relatedCalc: { name: '4대보험료 계산기', url: '/calc/tax/insurance-comparison/' },
+  category: 'tax'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>

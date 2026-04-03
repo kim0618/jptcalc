@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>반려동물 월 생활비 계산기 - 강아지·고양이 월비용 | jptcalc</title>
+  <meta name="description" content="강아지·고양이 월 사료비, 간식비, 미용비, 병원비 등 항목별 월 생활비를 자동 계산합니다." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/pet/monthly-cost/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="반려동물 월 생활비 계산기 | jptcalc" />
+  <meta property="og:description" content="강아지·고양이 월 사료비, 간식비, 미용비, 병원비 등 항목별 월 생활비를 자동 계산합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/pet/monthly-cost/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/pet-common.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"반려동물 월 생활비 계산기","url":"https://www.jptcalc.kr/calc/pet/monthly-cost/","applicationCategory":"LifestyleApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+    {"@type":"ListItem","position":2,"name":"반려동물 비용 계산기","item":"https://www.jptcalc.kr/calc/pet/"},
+    {"@type":"ListItem","position":3,"name":"반려동물 월 생활비 계산기","item":"https://www.jptcalc.kr/calc/pet/monthly-cost/"}
+  ]}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"소형견과 대형견의 월 비용 차이는 얼마나 되나요?","acceptedAnswer":{"@type":"Answer","text":"대형견은 사료량이 2~3배 많고 미용비도 높아, 소형견 대비 월 10~15만원 정도 더 소요됩니다."}},{"@type":"Question","name":"고양이와 강아지 중 어느 쪽이 월 비용이 적게 드나요?","acceptedAnswer":{"@type":"Answer","text":"일반적으로 고양이가 미용비·산책용품이 불필요해 월 5~10만원 정도 적게 듭니다. 다만 모래비와 스크래처 교체 비용이 발생합니다."}},{"@type":"Question","name":"월 생활비 외에 추가로 준비해야 할 비용이 있나요?","acceptedAnswer":{"@type":"Answer","text":"정기 예방접종, 연 1~2회 건강검진, 갑작스러운 질병·사고 대비 비상 의료비를 별도로 준비하는 것이 좋습니다."}}]}</script>
+  <style>
+    /* monthly-cost 고유 스타일 - 공통 스타일은 /assets/pet-common.css 참조 */
+    .input-wrap{position:relative}
+    .input-wrap .unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none}
+    input[type=number],select{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
+    select{padding:12px 16px;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 5l3 3 3-3' stroke='%239CA3AF' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+    input::placeholder{color:var(--gray-400);font-weight:400}
+    input:focus,select:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(244,114,182,0.15)}
+    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
+    .seg-group{display:flex;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:18px}
+    .seg-btn{flex:1;border:none;border-radius:7px;background:transparent;padding:9px 4px;font-size:12px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap}
+    .seg-btn.active{background:var(--primary);color:#fff;font-weight:700}
+    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
+    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
+    .result-card{background:linear-gradient(135deg,#FDF2F8 0%,#FCE7F3 100%);border:1px solid rgba(244,114,182,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-row+.result-row{border-top:1px solid rgba(0,0,0,0.07)}
+    .result-total-row{border-top:1px solid rgba(0,0,0,0.15)!important;margin-top:4px;padding-top:14px!important}
+    .result-total-value{font-size:24px;font-weight:900;color:var(--gray-900)}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/pet/" class="nav-item active"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/pet/">반려동물 비용 계산기</a><span class="breadcrumb-sep">›</span><span>반려동물 월 생활비 계산기</span></div>
+    <div class="page-header-badge">📅 소형견·대형견·고양이 기준</div>
+    <h1>반려동물 월 생활비 계산기</h1>
+    <p>사료·간식·미용·병원비 등 월 항목별 생활비를 계산하세요</p>
+  </div>
+    <div class="card">
+      <div class="card-title">동물 종류 · 크기</div>
+      <div class="seg-group"><button class="seg-btn active" onclick="setType('dog-small',this)">소형견</button><button class="seg-btn" onclick="setType('dog-large',this)">대형견</button><button class="seg-btn" onclick="setType('cat',this)">고양이</button></div>
+    </div>
+    <div class="card">
+      <div class="card-title">월 항목별 비용</div>
+      <div class="cost-item"><span class="cost-label">사료</span><div class="input-wrap"><input type="number" id="m-food" placeholder="예) 5" oninput="calc()" /><span class="unit">만원</span></div></div>
+      <div class="cost-item"><span class="cost-label">간식·영양제</span><div class="input-wrap"><input type="number" id="m-snack" placeholder="예) 2" oninput="calc()" /><span class="unit">만원</span></div></div>
+      <div class="cost-item"><span class="cost-label">모래·패드</span><div class="input-wrap"><input type="number" id="m-litter" placeholder="예) 2" oninput="calc()" /><span class="unit">만원</span></div></div>
+      <div class="cost-item"><span class="cost-label">미용</span><div class="input-wrap"><input type="number" id="m-grooming" placeholder="예) 5" oninput="calc()" /><span class="unit">만원</span></div></div>
+      <div class="cost-item"><span class="cost-label">정기 병원비</span><div class="input-wrap"><input type="number" id="m-vet" placeholder="예) 2" oninput="calc()" /><span class="unit">만원</span></div></div>
+      <div class="cost-item"><span class="cost-label">장난감·소모품</span><div class="input-wrap"><input type="number" id="m-toy" placeholder="예) 1" oninput="calc()" /><span class="unit">만원</span></div></div>
+      <div class="cost-item"><span class="cost-label">펫시터·호텔</span><div class="input-wrap"><input type="number" id="m-hotel" placeholder="예) 0" oninput="calc()" /><span class="unit">만원</span></div></div>
+    </div>
+    <div class="result-card" id="result">
+      <div class="result-highlight"><div class="rh-label">월 생활비 합계</div><div class="rh-value" id="r-total">-</div><div class="rh-sub" id="r-annual">연간 -</div></div>
+      <div class="result-row result-total-row"><span class="result-total-label">월 합계</span><span class="result-total-value" id="r-grand">-</span></div>
+      <p class="result-note">※ 미용이 불필요한 품종은 제외하세요. 입력값은 평균 시장가 참고용 기본값이며, 지역·품종·개인 환경에 따라 실제 비용은 크게 다를 수 있습니다. 이 결과는 확정 비용이 아닌 예산 계획 참고용입니다.</p>
+    </div>
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>반려동물 월 생활비, 얼마나 들까?</h2>
+      <p>반려동물을 키우면 매달 사료비, 간식비, 미용비, 정기 병원비 등 다양한 항목의 지출이 발생합니다. 미리 월 예산을 계획하면 무리 없는 반려 생활을 유지할 수 있습니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>항목별 예산 설정</strong><span>사료·간식·미용·병원비 등 항목별로 월 지출을 파악하세요</span></div>
+        <div class="guide-box"><strong>동물 종류별 차이</strong><span>소형견·대형견·고양이에 따라 기본 비용이 크게 달라집니다</span></div>
+        <div class="guide-box"><strong>연간 비용 환산</strong><span>월 비용을 연간으로 환산하면 장기 예산 계획에 도움됩니다</span></div>
+      </div>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>소형견과 대형견의 월 비용 차이는 얼마나 되나요?</h3><p>대형견은 사료량이 2~3배 많고 미용비도 높아, 소형견 대비 월 10~15만원 정도 더 소요됩니다.</p></div>
+      <div class="faq-item"><h3>고양이와 강아지 중 어느 쪽이 비용이 적게 드나요?</h3><p>일반적으로 고양이가 미용비·산책용품이 불필요해 월 5~10만원 정도 적게 듭니다. 다만 모래비와 스크래처 교체 비용이 발생합니다.</p></div>
+      <div class="faq-item"><h3>월 생활비 외에 추가로 준비해야 할 비용이 있나요?</h3><p>정기 예방접종, 연 1~2회 건강검진, 갑작스러운 질병·사고 대비 비상 의료비를 별도로 준비하는 것이 좋습니다.</p></div>
+      <div class="update-note">최종 검토: 2026.03.25 · 계산 결과는 참고용입니다.</div>
+    </div>
+  </div>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 반려동물 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/pet/adoption/" class="sibling-link">🏠 입양 초기비용</a>
+      <a href="/calc/pet/monthly-cost/" class="sibling-link current">📅 월 생활비</a>
+      <a href="/calc/pet/medical/" class="sibling-link">🏥 의료비 예산</a>
+      <a href="/calc/pet/insurance/" class="sibling-link">🛡️ 펫보험 비교</a>
+      <a href="/calc/pet/lifetime-cost/" class="sibling-link">📊 평생 양육비용</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">© 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script>
+
+function W(m){if(!m&&m!==0)return'-';m=Math.round(m);if(m>=10000)return Math.floor(m/10000).toLocaleString()+'억원';return m.toLocaleString()+'만원';}
+function gv(id){return parseFloat(document.getElementById(id).value)||0;}
+const defaults={'dog-small':{food:5,snack:2,litter:2,grooming:5,vet:2,toy:1,hotel:0},'dog-large':{food:10,snack:3,litter:2,grooming:8,vet:2,toy:1,hotel:0},'cat':{food:4,snack:2,litter:3,grooming:0,vet:2,toy:1,hotel:0}};
+function setType(t,btn){btn.parentElement.querySelectorAll('.seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const d=defaults[t];['food','snack','litter','grooming','vet','toy','hotel'].forEach(k=>{document.getElementById('m-'+k).value=d[k];});calc();}
+function calc(){
+  const keys=['food','snack','litter','grooming','vet','toy','hotel'];let total=0;let hasInput=false;keys.forEach(k=>{const v=gv('m-'+k);total+=v;if(v>0)hasInput=true;});
+  const res=document.getElementById('result');
+  if(!hasInput){res.classList.remove('show');return;}
+  res.classList.add('show');
+  document.getElementById('r-total').textContent=W(total);
+  document.getElementById('r-annual').textContent='연간 '+W(total*12);
+  document.getElementById('r-grand').textContent=W(total);
+}
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/pet-detail-shell.js"></script>
+</body>
+</html>

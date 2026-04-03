@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>요일 계산기 - 특정 날짜의 요일 확인 | jptcalc</title>
+  <meta name="description" content="특정 날짜의 요일을 확인하세요. 과거·미래 어떤 날짜든 요일을 정확하게 계산합니다. 같은 달의 동일 요일 목록도 표시." />
+  <meta name="keywords" content="요일계산기,요일확인,날짜요일,무슨요일,요일찾기" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/date/weekday/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="요일 계산기 - 특정 날짜의 요일 확인" />
+  <meta property="og:description" content="과거·미래 어떤 날짜든 요일을 정확하게 계산합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/date/weekday/" />
+  <meta property="og:site_name" content="jptcalc" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="요일 계산기 | jptcalc" />
+  <meta name="twitter:description" content="과거·미래 어떤 날짜든 요일을 정확하게 계산합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"요일 계산기","url":"https://www.jptcalc.kr/calc/date/weekday/","description":"특정 날짜의 요일을 확인하는 무료 계산기","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"inLanguage":"ko-KR"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},{"@type":"ListItem","position":2,"name":"날짜·D-day 계산기","item":"https://www.jptcalc.kr/calc/date/"},{"@type":"ListItem","position":3,"name":"요일 계산기"}]}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"과거 날짜의 요일도 계산할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네, 과거와 미래 어떤 날짜든 정확하게 요일을 계산할 수 있습니다. 생일, 역사적 사건일, 수십 년 후의 날짜까지 모두 지원합니다."}},{"@type":"Question","name":"같은 달의 동일 요일 목록은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"선택한 날짜가 속한 달에서 같은 요일에 해당하는 모든 날짜를 표시합니다. 예를 들어 수요일을 선택하면 그 달의 모든 수요일 날짜와 해당 달에 그 요일이 몇 번 있는지를 함께 보여줍니다."}},{"@type":"Question","name":"윤년 2월 29일도 정확히 계산되나요?","acceptedAnswer":{"@type":"Answer","text":"네, 윤년 여부를 자동으로 판별하여 2월 29일의 요일도 정확하게 계산합니다. 4년마다 돌아오는 윤년 날짜도 정상적으로 처리됩니다."}},{"@type":"Question","name":"요일 계산기는 어떤 상황에 유용한가요?","acceptedAnswer":{"@type":"Answer","text":"생일이 무슨 요일인지 확인하거나, 명절·공휴일·기념일이 어떤 요일에 해당하는지 미리 파악할 때 유용합니다. 여행, 행사, 약속 등의 일정을 계획할 때도 활용할 수 있습니다."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/date-common.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <style>
+    input[type=date],.flatpickr-input{width:100%;border:1.5px solid var(--gray-200);border-radius:12px;padding:13px 16px;font-size:15px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:#fff;outline:none;transition:border-color .18s,box-shadow .18s}
+    input[type=date]:focus,.flatpickr-input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(249,115,22,0.15)}
+    .flatpickr-day.selected,.flatpickr-day.selected:hover{background:var(--primary);border-color:var(--primary)}
+    .flatpickr-day.today{border-color:var(--primary)}
+    .flatpickr-months .flatpickr-month{height:36px}
+    .flatpickr-current-month .flatpickr-monthDropdown-months,.flatpickr-current-month input.cur-year{font-size:14px;font-weight:700}
+    .calc-btn{width:100%;border:none;border-radius:12px;padding:14px;font-size:15px;font-weight:700;color:#fff;background:var(--primary);cursor:pointer;transition:all .18s;font-family:inherit;margin-top:4px}
+    .calc-btn:hover{opacity:.9;transform:translateY(-1px)}
+    .result-card{background:linear-gradient(135deg,#FFF7ED 0%,#FFEDD5 100%);border:1px solid rgba(249,115,22,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .weekday-display{text-align:center;padding:24px}
+    .weekday-date{font-size:13px;color:var(--gray-500);margin-bottom:8px}
+    .weekday-name{font-size:48px;font-weight:900;color:var(--primary);margin-bottom:8px}
+    .weekday-full{font-size:15px;color:var(--gray-700);font-weight:600}
+  </style>
+</head>
+<body>
+<header class="site-header"><div class="header-inner"><a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="로고" style="width:32px;height:32px;display:block" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a><nav class="header-nav"><a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B"></span>부동산</a><a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981"></span>프리랜서 세금</a><a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6"></span>AI/테크</a><a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6"></span>이직/연봉</a><a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6"></span>반려동물</a><a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1"></span>금융·이자</a><a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981"></span>건강</a><a href="/calc/date/" class="nav-item active"><span class="nav-dot" style="background:#F97316"></span>날짜·D-day</a></nav><div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div><button class="hamburger" onclick="document.querySelector('.header-nav').classList.toggle('show')" aria-label="메뉴"><span></span><span></span><span></span></button></div></header>
+<main class="page-wrap">
+  <div class="page-header"><div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/date/">날짜·D-day 계산기</a><span class="breadcrumb-sep">›</span><span>요일 계산기</span></div>
+    <div class="page-header-badge">📆 무료 온라인 계산기</div><h1>요일 계산기</h1><p>과거·미래 어떤 날짜든 요일을 정확하게 확인합니다</p></div>
+  <div class="card"><div class="card-title">특정 날짜의 요일</div><div class="field"><div class="field-label">날짜 선택</div><input type="date" id="weekday-date" /></div><button class="calc-btn" onclick="calcWeekday()">요일 확인하기</button></div>
+  <div class="result-card" id="weekday-result"><div class="weekday-display"><div class="weekday-date" id="weekday-date-str"></div><div class="weekday-name" id="weekday-name"></div><div class="weekday-full" id="weekday-full"></div></div><div id="weekday-info" style="margin-top:8px"></div></div>
+
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>요일 계산 활용 가이드</h2>
+      <p>특정 날짜의 요일을 빠르게 확인할 수 있습니다. 생일, 기념일, 공휴일 등 과거나 미래 어떤 날짜든 정확한 요일을 계산합니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>생일 요일 확인</strong><span>내가 태어난 날이 무슨 요일이었는지, 다음 생일이 무슨 요일인지 확인하세요.</span></div>
+        <div class="guide-box"><strong>공휴일·기념일</strong><span>명절, 공휴일, 결혼기념일 등이 무슨 요일에 해당하는지 미리 확인합니다.</span></div>
+        <div class="guide-box"><strong>일정 계획</strong><span>특정 날짜의 요일을 확인하여 여행, 행사, 약속 일정을 계획하세요.</span></div>
+      </div>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>과거 날짜의 요일도 계산할 수 있나요?</h3><p>네, 과거와 미래 어떤 날짜든 정확하게 요일을 계산할 수 있습니다.</p></div>
+      <div class="faq-item"><h3>같은 달의 동일 요일 목록은 무엇인가요?</h3><p>선택한 날짜가 속한 달에서 같은 요일에 해당하는 모든 날짜를 표시합니다. 예를 들어 수요일을 선택하면 그 달의 모든 수요일 날짜를 보여줍니다.</p></div>
+      <div class="faq-item"><h3>윤년 2월 29일도 정확히 계산되나요?</h3><p>네, 윤년 여부를 자동으로 판별하여 2월 29일의 요일도 정확하게 계산합니다.</p></div>
+    </div>
+  </div>
+
+  <div class="sibling-section"><div class="sibling-title">다른 날짜 계산기</div><div class="sibling-grid"><a href="/calc/date/dday/" class="sibling-link"><span class="sibling-icon">⏳</span><span class="sibling-text">D-day 계산기</span></a><a href="/calc/date/date-difference/" class="sibling-link"><span class="sibling-icon">📐</span><span class="sibling-text">날짜 차이 계산기</span></a><a href="/calc/date/age/" class="sibling-link"><span class="sibling-icon">🎂</span><span class="sibling-text">만 나이 계산기</span></a><a href="/calc/date/weekday/" class="sibling-link current"><span class="sibling-icon">📆</span><span class="sibling-text">요일 계산기</span></a><a href="/calc/date/date-add/" class="sibling-link"><span class="sibling-icon">➕</span><span class="sibling-text">날짜 더하기/빼기</span></a></div></div>
+</main>
+<footer class="site-footer"><div class="footer-inner"><div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div><span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span></div></footer>
+<script>
+var KO_DAYS=['일요일','월요일','화요일','수요일','목요일','금요일','토요일'];
+var KO_DAYS_SHORT=['일','월','화','수','목','금','토'];
+var WEEK_COLORS=['#EF4444','#6B7280','#6B7280','#6B7280','#6B7280','#6B7280','#3B82F6'];
+function parseDate(str){if(!str)return null;var p=str.split('-');return new Date(+p[0],+p[1]-1,+p[2])}
+function koDateStr(d){return d.getFullYear()+'년 '+(d.getMonth()+1)+'월 '+d.getDate()+'일'}
+function today(){var n=new Date();return new Date(n.getFullYear(),n.getMonth(),n.getDate())}
+function toDateStr(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function diffDays(a,b){return Math.round((b-a)/86400000)}
+function calcWeekday(){
+  var d=parseDate(document.getElementById('weekday-date').value);
+  if(!d){alert('날짜를 입력해주세요.');return}
+  var dow=d.getDay();var color=WEEK_COLORS[dow];var tod=today();var diff=diffDays(tod,d);
+  var diffStr='';if(diff===0)diffStr='(오늘)';else if(diff>0)diffStr='(오늘로부터 '+diff+'일 후)';else diffStr='(오늘로부터 '+Math.abs(diff)+'일 전)';
+  document.getElementById('weekday-date-str').textContent=koDateStr(d)+' '+diffStr;
+  var nameEl=document.getElementById('weekday-name');nameEl.textContent=KO_DAYS_SHORT[dow]+'요일';nameEl.style.color=color;
+  document.getElementById('weekday-full').textContent=KO_DAYS[dow];
+  var year=d.getFullYear(),month=d.getMonth();var sameList=[];
+  for(var day=1;day<=31;day++){var t=new Date(year,month,day);if(t.getMonth()!==month)break;if(t.getDay()===dow)sameList.push(t.getDate())}
+  document.getElementById('weekday-info').innerHTML='<div class="result-row"><span class="result-label">'+d.getFullYear()+'년 '+(d.getMonth()+1)+'월의 '+KO_DAYS[dow]+'</span><span class="result-value">'+sameList.map(function(x){return x+'일'}).join(', ')+'</span></div><div class="result-row"><span class="result-label">이 달의 '+KO_DAYS[dow]+' 수</span><span class="result-value">'+sameList.length+'회</span></div>';
+  document.getElementById('weekday-result').classList.add('show');
+}
+(function(){document.getElementById('weekday-date').value=toDateStr(today())})();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
+<script>document.querySelectorAll('input[type=date]').forEach(function(el){flatpickr(el,{locale:'ko',dateFormat:'Y-m-d',disableMobile:true,monthSelectorType:'dropdown',allowInput:true})});</script>
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/date-detail-shell.js"></script>
+</body>
+</html>

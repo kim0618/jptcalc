@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>예금 이자 계산기 - 세후이자·만기수령액 자동계산 | jptcalc</title>
+  <meta name="description" content="예금 원금, 금리, 기간을 입력하면 세전·세후 이자와 만기 수령액을 자동 계산합니다. 이자소득세 15.4% 기준 적용." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/finance/deposit/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="예금 이자 계산기 | jptcalc" />
+  <meta property="og:description" content="예금 원금, 금리, 기간을 입력하면 세전·세후 이자와 만기 수령액을 자동 계산합니다. 이자소득세 15.4% 기준 적용." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/finance/deposit/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="예금 이자 계산기 | jptcalc" />
+  <meta name="twitter:description" content="예금 원금, 금리, 기간을 입력하면 세전·세후 이자와 만기 수령액을 자동 계산합니다. 이자소득세 15.4% 기준 적용." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/affiliate-banner.css" />
+  <link rel="stylesheet" href="/assets/finance-common.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"예금 이자 계산기",
+    "url":"https://www.jptcalc.kr/calc/finance/deposit/",
+    "applicationCategory":"FinanceApplication",
+    "operatingSystem":"All",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+      {"@type":"ListItem","position":2,"name":"금융·이자 계산기","item":"https://www.jptcalc.kr/calc/finance/"},
+      {"@type":"ListItem","position":3,"name":"예금 이자 계산기","item":"https://www.jptcalc.kr/calc/finance/deposit/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"예금 이자에 세금이 얼마나 붙나요?","acceptedAnswer":{"@type":"Answer","text":"이자소득세 15.4%(소득세 14% + 지방소득세 1.4%)가 원천징수됩니다. 비과세 종합저축이나 ISA 계좌를 활용하면 세금을 줄일 수 있습니다. 65세 이상 고령자는 비과세 종합저축(5천만원 한도)을 통해 이자소득세를 면제받을 수 있습니다."}},{"@type":"Question","name":"예금 금리가 같으면 어디에 넣어도 같은가요?","acceptedAnswer":{"@type":"Answer","text":"금리가 같더라도 이자 지급 방식(만기일시 지급, 월이자 지급)에 따라 실수령액이 달라질 수 있습니다. 복리 상품인지 단리 상품인지도 확인하세요. 월이자 지급 방식은 수령한 이자를 재투자하면 실질 수익이 더 높아질 수 있습니다."}},{"@type":"Question","name":"중도 해지하면 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"약정 기간 전에 해지하면 중도해지 금리가 적용되어 약정 금리보다 크게 낮아집니다. 가입 전 중도해지 금리를 꼭 확인하세요. 경우에 따라 약정 금리의 10~30% 수준만 지급되기도 합니다."}},{"@type":"Question","name":"예금과 적금 중 어느 쪽이 이자가 더 많나요?","acceptedAnswer":{"@type":"Answer","text":"같은 금리라면 예금이 더 많습니다. 예금은 전액을 처음부터 예치하지만, 적금은 매월 분할 납입하므로 마지막 납입금은 1개월 치 이자만 받기 때문입니다. 동일 금리 기준 적금 이자는 예금의 약 절반 수준입니다."}},{"@type":"Question","name":"금융소득종합과세 대상이 되면 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"연간 이자·배당 소득 합계가 2천만원을 초과하면 다른 소득과 합산하여 종합소득세로 과세됩니다. 고액 예금자는 분산 가입이나 ISA 활용을 검토하세요. 종합과세 시 최고 세율이 45%에 달할 수 있어 절세 전략이 중요합니다."}}]}</script>
+  <style>
+    input[type=number]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(99,102,241,0.15)}
+    .result-card{background:linear-gradient(135deg,#EEF2FF 0%,#E0E7FF 100%);border:1px solid rgba(99,102,241,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-highlight{background:rgba(99,102,241,0.1);border-radius:12px;padding:16px;margin-bottom:16px;text-align:center}
+    .rh-label{font-size:12px;color:var(--gray-500);margin-bottom:4px}
+    .rh-value{font-size:28px;font-weight:900;color:var(--primary)}
+    .rh-sub{font-size:12px;color:var(--gray-500);margin-top:2px}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+      <a href="/calc/finance/" class="nav-item active"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/finance/">금융·이자 계산기</a><span class="breadcrumb-sep">›</span><span>예금 이자 계산기</span></div>
+    <div class="page-header-badge">🏦 이자소득세 15.4% 기준 적용</div>
+    <h1>예금 이자 계산기</h1>
+    <p>예치금액·금리·기간으로 세후 이자와 만기 수령액을 계산하세요</p>
+  </div>
+    <div class="card">
+      <div class="card-title">예금 정보</div>
+      <div class="field">
+        <div class="field-label">예치금액 <span class="label-hint">만원 단위</span></div>
+        <div class="input-wrap"><input type="number" id="dep-amount" placeholder="예) 1000" oninput="calc()" /><span class="unit">만원</span></div>
+        <div class="converted" id="dep-display"></div>
+      </div>
+      <div class="field">
+        <div class="field-label">연 금리</div>
+        <div class="input-wrap"><input type="number" id="dep-rate" placeholder="예) 3.5" step="0.1" oninput="calc()" /><span class="unit">%</span></div>
+      </div>
+      <div class="field">
+        <div class="field-label">예치 기간</div>
+        <div class="seg-group" style="margin-bottom:0" id="dep-period-group">
+          <button class="seg-btn active" onclick="setPeriod(6,this)">6개월</button>
+          <button class="seg-btn" onclick="setPeriod(12,this)">12개월</button>
+          <button class="seg-btn" onclick="setPeriod(24,this)">24개월</button>
+          <button class="seg-btn" onclick="setPeriod(36,this)">36개월</button>
+        </div>
+      </div>
+    </div>
+    <div class="result-card" id="result">
+      <div class="result-highlight">
+        <div class="rh-label">세후 이자</div>
+        <div class="rh-value" id="dep-net-interest">-</div>
+        <div class="rh-sub" id="dep-maturity">만기 수령액 -</div>
+      </div>
+      <div class="result-row"><span class="result-label">원금</span><span class="result-value" id="dep-principal">-</span></div>
+      <div class="result-row"><span class="result-label">세전 이자</span><span class="result-value" id="dep-gross-int">-</span></div>
+      <div class="result-row"><span class="result-label">이자소득세 (15.4%)</span><span class="result-value" id="dep-tax">-</span></div>
+      <div class="result-row result-total-row">
+        <span class="result-total-label">만기 수령액</span>
+        <span class="result-total-value" id="dep-total">-</span>
+      </div>
+      <p class="result-note">※ 이자소득세 15.4% (소득세 14% + 지방소득세 1.4%) 적용. 비과세 종합저축·ISA 등은 세율이 다를 수 있습니다.</p>
+      <a class="affiliate-banner" href="https://bestmore.net/click.php?m=allcredit&a=A100703525&l=0000" target="_blank" rel="noopener noreferrer sponsored">
+        <div class="affiliate-banner__text">
+          <div class="affiliate-banner__title">내 신용등급, 무료로 확인하고 관리하세요</div>
+          <div class="affiliate-banner__desc">올크레딧에서 신용등급 무료 조회</div>
+        </div>
+        <span class="affiliate-banner__cta">신용등급 확인하기 →</span>
+      </a>
+    </div>
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>정기예금 이자 계산, 이것만 알면 됩니다</h2>
+      <p>정기예금은 일정 금액을 약정 기간 동안 예치하고 만기에 원금과 이자를 수령하는 금융 상품입니다. 금리가 높을수록, 예치 기간이 길수록 이자가 많아지지만, 이자소득세 15.4%가 원천징수되므로 세후 수령액을 반드시 확인해야 합니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>단리 이자 계산</strong><span>원금 x 금리 x 기간으로 이자를 계산합니다</span></div>
+        <div class="guide-box"><strong>이자소득세 15.4%</strong><span>소득세 14% + 지방소득세 1.4% 원천징수</span></div>
+        <div class="guide-box"><strong>예금자 보호</strong><span>1인당 5천만 원까지 예금자보호법 적용</span></div>
+      </div>
+    </div>
+    <div class="guide-card">
+      <h2>예치 금액·기간별 세후 이자 비교</h2>
+      <p>연 3.5% 단리 기준, 이자소득세 15.4% 차감 후 실제 수령하는 이자를 비교합니다.</p>
+      <div class="guide-table-wrap">
+        <table>
+          <thead><tr><th>예치 금액</th><th>6개월</th><th>12개월</th><th>24개월</th></tr></thead>
+          <tbody>
+            <tr><td>1,000만원</td><td>약 14.8만원</td><td>약 29.6만원</td><td>약 59.2만원</td></tr>
+            <tr><td>3,000만원</td><td>약 44.4만원</td><td>약 88.8만원</td><td>약 177.7만원</td></tr>
+            <tr><td>5,000만원</td><td>약 74.0만원</td><td>약 148.1만원</td><td>약 296.1만원</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:12px;color:var(--gray-500);margin-top:8px">※ 실제 이자는 금융기관별 금리에 따라 다릅니다. 위 표는 연 3.5% 단리, 이자소득세 15.4% 적용 기준 참고 수치입니다.</p>
+    </div>
+    <div class="guide-card">
+      <h2>입력값과 결과 해석</h2>
+      <h3>입력 시 확인 포인트</h3>
+      <ul>
+        <li><strong>예치 금액</strong>은 실제 예금에 넣을 원금을 입력합니다. 이자를 포함한 만기 수령액이 아닙니다.</li>
+        <li><strong>금리</strong>는 금융기관에서 제시한 연 이율(세전)을 입력하세요. 우대금리 조건이 있다면 충족 여부를 확인한 뒤 입력하는 것이 정확합니다.</li>
+        <li>금리는 가입 시점 기준으로 약정되며, 시장 금리 변동과 무관하게 만기까지 유지됩니다. 단, 변동금리 상품은 예외입니다.</li>
+        <li>이자소득세 15.4%는 자동 원천징수됩니다. 비과세 종합저축(65세 이상, 5천만원 한도)이나 ISA 계좌는 세율이 다르므로 별도 확인이 필요합니다.</li>
+      </ul>
+      <h3>결과 해석 방법</h3>
+      <p>만기 수령액 = 원금 + 세전 이자 - 이자소득세. 세전 이자와 세후 이자의 차이를 확인하고, 실제 가입 전 금융기관의 상품 설명서에서 이자 계산 방식(단리/복리)과 이자 지급 시점을 꼭 확인하세요.</p>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>예금 이자에 세금이 얼마나 붙나요?</h3><p>이자소득세 15.4%(소득세 14% + 지방소득세 1.4%)가 원천징수됩니다. 비과세 종합저축이나 ISA 계좌를 활용하면 세금을 줄일 수 있습니다.</p></div>
+      <div class="faq-item"><h3>예금 금리가 같으면 어디에 넣어도 같은가요?</h3><p>금리가 같더라도 이자 지급 방식(만기일시 지급, 월이자 지급)에 따라 실수령액이 달라질 수 있습니다. 복리 상품인지 단리 상품인지도 확인하세요.</p></div>
+      <div class="faq-item"><h3>중도 해지하면 어떻게 되나요?</h3><p>약정 기간 전에 해지하면 중도해지 금리가 적용되어 약정 금리보다 크게 낮아집니다. 가입 전 중도해지 금리를 꼭 확인하세요.</p></div>
+      <div class="faq-item"><h3>예금과 적금 중 어느 쪽이 이자가 더 많나요?</h3><p>같은 금리라면 예금이 더 많습니다. 예금은 전액을 처음부터 예치하지만, 적금은 매월 분할 납입하므로 마지막 납입금은 1개월 치 이자만 받기 때문입니다.</p></div>
+      <div class="faq-item"><h3>금융소득종합과세 대상이 되면 어떻게 되나요?</h3><p>연간 이자·배당 소득 합계가 2천만원을 초과하면 다른 소득과 합산하여 종합소득세로 과세됩니다. 고액 예금자는 분산 가입이나 ISA 활용을 검토하세요.</p></div>
+      <div class="update-note">최종 검토: 2026.03.25 · 금리는 금융기관별로 다르며 수시로 변동됩니다. 가입 전 해당 금융기관에서 최신 금리를 확인하세요.</div>
+    </div>
+  </div>
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '이자소득세 15.4%(소득세 14% + 지방소득세 1.4%) 원천징수, 예금자보호법',
+    appliedFrom: '2026년 1월 1일',
+    exceptions: [
+      '금리는 금융기관 및 상품별로 다르며, 가입 시점의 약정 금리가 적용됩니다',
+      '비과세 종합저축, ISA 계좌 등을 활용하면 이자소득세를 줄일 수 있습니다',
+      '예금자보호는 1인당 금융기관별 5천만원까지 적용됩니다 (원금+이자 합산)',
+    ],
+    references: [
+      { name: '금융소비자포털(fine.fss.or.kr)', url: 'https://fine.fss.or.kr' },
+      { name: '예금보험공사(kdic.or.kr)', url: 'https://www.kdic.or.kr' },
+    ],
+    lastReviewed: '2026.03.25',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 금융·이자 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/finance/deposit/" class="sibling-link current">🏦 예금 이자</a>
+      <a href="/calc/finance/savings/" class="sibling-link">💳 적금 만기금액</a>
+      <a href="/calc/finance/compound/" class="sibling-link">📈 복리 계산</a>
+      <a href="/calc/finance/loan-repayment/" class="sibling-link">🏠 대출 상환</a>
+      <a href="/calc/finance/investment/" class="sibling-link">💹 투자 수익률</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script>
+
+let period=6;
+function Ww(w){return Math.round(w).toLocaleString()+'원';}
+function setPeriod(m,btn){period=m;document.querySelectorAll('#dep-period-group .seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');calc();}
+function showConverted(inputEl,dispEl){const v=parseFloat(inputEl.value);if(!v||v<=0){dispEl.textContent='';return;}dispEl.textContent=v>=10000?'= '+(v/10000).toFixed(2)+'억원':'= '+v.toLocaleString()+'만원';}
+function calc(){
+  const a=parseFloat(document.getElementById('dep-amount').value)||0;
+  const r=parseFloat(document.getElementById('dep-rate').value)||0;
+  showConverted(document.getElementById('dep-amount'),document.getElementById('dep-display'));
+  const res=document.getElementById('result');
+  if(!a||!r){res.classList.remove('show');return;}
+  res.classList.add('show');
+  const gross=a*10000*(r/100)*(period/12);
+  const tax=gross*0.154;
+  const net=gross-tax;
+  const total=a*10000+net;
+  document.getElementById('dep-net-interest').textContent=Ww(net);
+  document.getElementById('dep-maturity').textContent='만기 수령액 '+Ww(total);
+  document.getElementById('dep-principal').textContent=Ww(a*10000);
+  document.getElementById('dep-gross-int').textContent=Ww(gross);
+  document.getElementById('dep-tax').textContent='-'+Ww(tax);
+  document.getElementById('dep-total').textContent=Ww(total);
+}
+calc();
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/finance-detail-shell.js"></script>
+</body>
+</html>

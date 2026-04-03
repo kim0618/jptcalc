@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>다이어트 목표 칼로리 계산법 - 기초대사량(BMR)부터 TDEE까지 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="살 빼려면 하루 몇 칼로리를 먹어야 할까요? BMR(기초대사량)과 TDEE(하루 소비 칼로리) 계산법, 주 0.5kg 감량을 위한 목표 칼로리 설정 공식과 실제 예시를 정리했습니다." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="다이어트 목표 칼로리 계산법 - 기초대사량(BMR)부터 TDEE까지 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="살 빼려면 하루 몇 칼로리를 먹어야 할까요? BMR(기초대사량)과 TDEE(하루 소비 칼로리) 계산법, 주 0.5kg 감량을 위한 목표 칼로리 설정 공식과 실제 예시를 정리했습니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/diet-calorie-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/diet-calorie-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#10B981;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(16,185,129,0.15);color:#10B981;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:24px 0 10px}
+    .post-body p{margin-bottom:14px}
+    .post-body ul{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#10B981;text-decoration:none}
+    .highlight-box{background:rgba(16,185,129,0.08);border-left:4px solid #10B981;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#065F46;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    td.highlight{color:#10B981;font-weight:700}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#10B981;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .faq-item{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:12px;padding:20px;margin:16px 0}
+    .faq-q{font-weight:800;color:#111827;margin-bottom:8px;font-size:15px}
+    .faq-a{color:#374151;font-size:14px;line-height:1.7;margin:0}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo"><div class="logo-icon"><img src="../../assets/logo.svg" alt="로고"/></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+<div class="post-wrap">
+  <span class="post-tag">건강</span>
+  <h1>살 빼려면 하루 칼로리를 얼마나 줄여야 할까? BMR·TDEE 기반 다이어트 계획법</h1>
+  <div class="post-meta"><span>📅 2026.03.29</span><span>·</span><span>5분 읽기</span></div>
+  <div class="post-body">
+    <p>다이어트를 결심하고 "덜 먹어야지"라고 마음먹어도, 얼마나 줄여야 하는지 기준이 없으면 너무 굶거나 아무 효과가 없는 수준에 머물게 됩니다.</p>
+    <p>다이어트 칼로리 계획은 공식이 있습니다. 내 기초대사량과 하루 에너지 소비량을 계산하고, 거기서 적절히 빼면 됩니다. 단, 너무 많이 줄이면 근육이 빠지고 기초대사량이 낮아지는 역효과가 생깁니다.</p>
+
+    <h2>3단계 개념: BMR → TDEE → 목표 칼로리</h2>
+    <h3>1단계: BMR (기초대사량)</h3>
+    <p><strong>BMR(Basal Metabolic Rate)</strong>은 아무것도 하지 않고 누워만 있어도 생명 유지를 위해 소모되는 최소 에너지입니다.</p>
+    <p>가장 널리 쓰이는 Mifflin-St Jeor 공식:</p>
+    <ul>
+      <li><strong>남성:</strong> BMR = 10 × 체중(kg) + 6.25 × 키(cm) − 5 × 나이 + 5</li>
+      <li><strong>여성:</strong> BMR = 10 × 체중(kg) + 6.25 × 키(cm) − 5 × 나이 − 161</li>
+    </ul>
+    <h3>2단계: TDEE (하루 총 에너지 소비량)</h3>
+    <p><strong>TDEE(Total Daily Energy Expenditure)</strong>는 BMR에 일상 활동량을 반영한 실제 하루 소비 칼로리입니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>활동 수준</th><th>설명</th><th>계수</th></tr>
+      <tr><td>거의 안 움직임</td><td>사무직, 운동 없음</td><td>BMR × 1.2</td></tr>
+      <tr><td>가벼운 활동</td><td>주 1~3회 운동</td><td>BMR × 1.375</td></tr>
+      <tr><td>보통 활동</td><td>주 3~5회 운동</td><td>BMR × 1.55</td></tr>
+      <tr><td>활발한 활동</td><td>주 6~7회 운동</td><td>BMR × 1.725</td></tr>
+    </table></div>
+    <p style="margin: 1.2em 0;">
+      👉 <a href="https://www.jptcalc.kr/calc/health/calories/" style="color: #2563eb; font-weight: 600;">칼로리 계산기로 직접 계산해보기</a>
+    </p>
+    <h3>3단계: 목표 칼로리 설정</h3>
+    <p>1kg 체지방 = 약 7,700kcal. 주 0.5kg 감량 목표라면 일일 칼로리 적자 = 7,700 × 0.5 ÷ 7 ≒ <strong>550kcal</strong>입니다.</p>
+    <p><strong>목표 칼로리 = TDEE − 550kcal</strong></p>
+
+    <h2>실제 예시 2가지</h2>
+    <h3>예시 1 - 30세 여성, 키 162cm, 체중 63kg, 사무직</h3>
+    <ul>
+      <li>BMR = 10×63 + 6.25×162 − 5×30 − 161 = <strong>1,331.5kcal</strong></li>
+      <li>TDEE = 1,331.5 × 1.2 ≒ <strong>1,598kcal</strong></li>
+      <li>목표 칼로리 (주 0.5kg 감량) = 1,598 − 550 ≒ <strong>1,048kcal</strong></li>
+    </ul>
+    <p>1,048kcal는 성인 여성 기준 상당히 낮은 수치입니다. 이 경우 운동을 추가해 TDEE를 높이거나 감량 속도를 늦추는 것이 더 건강합니다.</p>
+    <h3>예시 2 - 35세 남성, 키 175cm, 체중 80kg, 주 3회 운동</h3>
+    <ul>
+      <li>BMR = 10×80 + 6.25×175 − 5×35 + 5 = <strong>1,723.75kcal</strong></li>
+      <li>TDEE = 1,723.75 × 1.55 ≒ <strong>2,672kcal</strong></li>
+      <li>목표 칼로리 = 2,672 − 550 ≒ <strong>2,122kcal</strong></li>
+    </ul>
+    <p>운동을 병행하면 충분한 식사량을 유지하면서 감량이 가능합니다. 2,122kcal는 남성 기준 무리 없는 수준입니다.</p>
+
+    <h2>자주 헷갈리는 포인트</h2>
+    <h3>칼로리를 너무 많이 줄이면 역효과</h3>
+    <p>BMR 이하로 칼로리를 줄이면 근육이 분해되고 기초대사량 자체가 낮아집니다. 단기 감량 후 요요 현상의 주된 원인입니다. <a href="https://www.mohw.go.kr">보건복지부</a>에서도 일반적으로 <strong>TDEE의 20% 이상은 줄이지 않는 것</strong>을 권장합니다.</p>
+    <h3>체중보다 체지방률이 중요</h3>
+    <p>운동 병행 시 체중이 제자리여도 체지방률이 낮아지면 신체 개선이 이루어지고 있는 것입니다. 체성분을 함께 확인하세요.</p>
+    <h3>운동으로 소모되는 칼로리는 생각보다 적다</h3>
+    <p>1시간 빠른 걷기로 소모되는 칼로리는 약 200~300kcal입니다. 초코바 1개와 맞먹습니다. 운동만으로 칼로리 적자를 만들기는 어렵고, 식이 조절과의 병행이 훨씬 효율적입니다.</p>
+
+    <div class="cta-box">
+      <p>키·체중·나이·성별을 입력하면 BMR과 활동 수준별 TDEE, 목표 칼로리를 바로 산출할 수 있습니다.</p>
+      <a href="../../calc/health/bmr/" class="cta-btn">기초대사량(BMR) 계산하기</a>
+    </div>
+    <p style="font-size: 13px; color: #6B7280; margin-top: 8px;">관련 계산기: <a href="https://www.jptcalc.kr/calc/health/bmi/">BMI 계산기</a> · <a href="https://www.jptcalc.kr/calc/health/bmr/">기초대사량 계산기</a></p>
+
+    <h2>자주 묻는 질문 (FAQ)</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 다이어트 중 단백질 섭취는 얼마나 해야 하나요?</div>
+      <p class="faq-a">근육 손실을 최소화하려면 체중 1kg당 1.2~2g의 단백질 섭취를 권장하는 경우가 많습니다. 80kg 남성이라면 하루 96~160g 수준입니다. 총 칼로리를 줄이더라도 단백질 비율은 유지하는 것이 좋습니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 운동 없이 식이 조절만으로도 살을 뺄 수 있나요?</div>
+      <p class="faq-a">가능합니다. 칼로리 균형의 원리상 적자만 유지하면 체중은 줄어듭니다. 단 운동 없이 감량하면 근육도 함께 빠질 수 있어 장기적으로 기초대사량 저하로 이어질 수 있습니다. 가볍게라도 운동을 병행하는 것을 권장합니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 체중 감량 속도가 너무 느린 것 같으면 어떻게 해야 하나요?</div>
+      <p class="faq-a">먼저 실제 섭취 칼로리를 정확히 기록해보는 것이 중요합니다. 사람들은 평균적으로 자신의 섭취 칼로리를 20~40% 정도 과소평가하는 경향이 있습니다. 칼로리 적자가 맞는지 확인한 뒤 조정하세요.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 나이가 들면 기초대사량이 낮아지는 게 맞나요?</div>
+      <p class="faq-a">일반적으로 30세 이후 10년마다 기초대사량이 약 2~5% 감소합니다. 이를 보완하려면 근육량 유지가 중요합니다. 근육 조직은 지방 조직보다 기초대사량 소비가 많기 때문입니다.</p>
+    </div>
+
+    <h2>마무리</h2>
+    <p>다이어트의 핵심은 목표 칼로리를 감으로 줄이는 것이 아니라, 내 신체 기준점(BMR → TDEE)을 알고 거기서 적정 적자를 만드는 것입니다. 주 0.5kg 감량을 목표로 꾸준히 유지하는 것이 장기적으로 더 효과적입니다.</p>
+    <p>운동별 칼로리 소모량은 <a href="../../calc/health/calories/">칼로리 소모 계산기</a>에서 확인해보세요.</p>
+  </div>
+</div>
+<footer class="site-footer"><p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 일반적인 건강 정보를 제공하는 참고용 자료입니다. 개인의 건강 상태나 기저질환에 따라 적절한 칼로리 범위는 달라질 수 있으며 필요 시 의료 전문가와 상담하시기 바랍니다.</p></footer>
+<script src="/assets/footer-unified.js" defer></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "Mifflin-St Jeor 공식·운동생리학 일반 원칙 기준, 2026년",
+  lastReviewed: '2026.03.29'
+};
+</script>
+<script>
+window.ARTICLE_INFO_CONFIG.relatedCalc = { name: '기초대사량(BMR) 계산기', url: '/calc/health/bmr/' };
+window.ARTICLE_INFO_CONFIG.category = 'health';
+</script>
+<script src="/assets/blog-article-info.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D-day 계산기 - 디데이 카운터·기념일 계산 | jptcalc</title>
+  <meta name="description" content="D-day 카운트다운 계산기. 수능, 결혼기념일, 프로젝트 마감일 등 목표일까지 남은 날수를 정확하게 계산하세요. 100일, 200일, 1주년 기념일도 자동 표시." />
+  <meta name="keywords" content="D-day계산기,디데이계산기,기념일계산기,D-day카운터,남은날수계산" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/date/dday/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="D-day 계산기 - 디데이 카운터·기념일 계산" />
+  <meta property="og:description" content="목표일까지 남은 날수를 정확하게 계산하세요. 100일, 200일, 1주년 기념일도 자동 표시됩니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/date/dday/" />
+  <meta property="og:site_name" content="jptcalc" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="D-day 계산기 - 디데이 카운터·기념일 계산 | jptcalc" />
+  <meta name="twitter:description" content="목표일까지 남은 날수를 정확하게 계산하세요. 100일, 200일, 1주년 기념일도 자동 표시됩니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"D-day 계산기","url":"https://www.jptcalc.kr/calc/date/dday/","description":"D-day 카운트다운 계산기 - 목표일까지 남은 날수 계산, 기념일 자동 표시","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"inLanguage":"ko-KR"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},{"@type":"ListItem","position":2,"name":"날짜·D-day 계산기","item":"https://www.jptcalc.kr/calc/date/"},{"@type":"ListItem","position":3,"name":"D-day 계산기"}]}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"D-day란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"D-day(디데이)는 특정 목표일까지 남은 날수를 표시하는 방식입니다. D-0은 목표일 당일, D-1은 하루 전, D+1은 목표일이 하루 지난 것을 의미합니다. 수능, 결혼기념일, 프로젝트 마감일 등에 활용됩니다."}},{"@type":"Question","name":"D-day에서 D-0은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"D-0은 목표일 당일을 의미합니다. 목표일이 오늘이면 D-0, 내일이면 D-1로 표시되며, 목표일이 지나면 D+숫자 형태로 경과 일수를 표시합니다."}},{"@type":"Question","name":"기념일 100일·200일 계산은 어떻게 하나요?","acceptedAnswer":{"@type":"Answer","text":"만남 첫날을 기준(D+0)으로 설정하면 100일, 200일, 1주년, 2주년 기념일이 자동으로 표시됩니다. 본 계산기는 첫날을 포함하여 계산하며, 주요 기념일 날짜와 요일을 함께 안내합니다."}},{"@type":"Question","name":"음력 기념일도 계산할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"현재는 양력 기준으로만 계산됩니다. 음력 기념일은 매년 양력 날짜가 달라지므로 음력을 양력으로 변환한 후 입력해야 합니다."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/date-common.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <style>
+    input[type=text],input[type=date],.flatpickr-input{width:100%;border:1.5px solid var(--gray-200);border-radius:12px;padding:13px 16px;font-size:15px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:#fff;outline:none;transition:border-color .18s,box-shadow .18s}
+    input:focus,.flatpickr-input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(249,115,22,0.15)}
+    .flatpickr-day.selected,.flatpickr-day.selected:hover{background:var(--primary);border-color:var(--primary)}
+    .flatpickr-day.today{border-color:var(--primary)}
+    .flatpickr-months .flatpickr-month{height:36px}
+    .flatpickr-current-month .flatpickr-monthDropdown-months,.flatpickr-current-month input.cur-year{font-size:14px;font-weight:700}
+    input::placeholder{color:var(--gray-300);font-weight:500}
+    .calc-btn{width:100%;border:none;border-radius:12px;padding:14px;font-size:15px;font-weight:700;color:#fff;background:var(--primary);cursor:pointer;transition:all .18s;font-family:inherit;margin-top:4px}
+    .calc-btn:hover{opacity:.9;transform:translateY(-1px)}
+    .calc-btn:active{transform:translateY(0)}
+    .result-card{background:linear-gradient(135deg,#FFF7ED 0%,#FFEDD5 100%);border:1px solid rgba(249,115,22,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .dday-display{background:linear-gradient(135deg,var(--primary) 0%,#EA580C 100%);border-radius:20px;padding:32px;text-align:center;margin-bottom:16px}
+    .dday-label{font-size:14px;font-weight:700;color:rgba(255,255,255,0.7);margin-bottom:8px}
+    .dday-number{font-size:64px;font-weight:900;color:#fff;line-height:1;letter-spacing:-2px}
+    .dday-title{font-size:14px;color:rgba(255,255,255,0.7);margin-top:8px}
+    .anniversary-list{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+    .anniversary-item{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--dark-border);border-radius:10px;padding:12px 16px}
+    .ann-left{font-size:13px;font-weight:600;color:var(--gray-700)}
+    .ann-right{font-size:13px;font-weight:700;color:var(--primary)}
+    .seo-card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:28px;margin-top:14px}
+    .seo-card h2{font-size:16px;font-weight:800;color:var(--gray-900);margin-bottom:12px}
+    .seo-card h3{font-size:13px;font-weight:700;color:var(--gray-700);margin:16px 0 6px}
+    .seo-card p{font-size:13px;color:var(--gray-600);line-height:1.8;margin-bottom:6px}
+    @media(max-width:767px){
+      .dday-number{font-size:48px}
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="로고" style="width:32px;height:32px;display:block" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981"></span>프리랜서 세금</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6"></span>AI/테크</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6"></span>이직/연봉</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6"></span>반려동물</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981"></span>건강</a>
+      <a href="/calc/date/" class="nav-item active"><span class="nav-dot" style="background:#F97316"></span>날짜·D-day</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" onclick="document.querySelector('.header-nav').classList.toggle('show')" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/date/">날짜·D-day 계산기</a><span class="breadcrumb-sep">›</span><span>D-day 계산기</span></div>
+    <div class="page-header-badge">⏳ 무료 온라인 계산기</div>
+    <h1>D-day 계산기</h1>
+    <p>수능, 결혼기념일, 프로젝트 마감일 등 목표일까지 남은 날수를 정확하게 계산합니다</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">D-day 카운터</div>
+    <div class="field">
+      <div class="field-label">D-day 이름 (선택)</div>
+      <input type="text" id="dday-title" placeholder="예)수능 D-day, 결혼기념일" />
+    </div>
+    <div class="field">
+      <div class="field-label">목표 날짜</div>
+      <input type="date" id="dday-target" />
+    </div>
+    <button class="calc-btn" onclick="calcDday()">D-day 계산하기</button>
+  </div>
+  <div class="result-card" id="dday-result">
+    <div id="dday-display-wrap"></div>
+    <div class="anniversary-list" id="anniversary-list"></div>
+    <div class="result-note">※ 오늘 날짜 기준으로 계산됩니다. D-0은 당일, 양수는 앞으로 남은 날, 음수는 지난 날수입니다.</div>
+  </div>
+
+  <div class="seo-card">
+    <h2>D-day 계산기 이용 안내</h2>
+    <h3>D-day란?</h3>
+    <p>D-day(디데이)는 특정 목표일까지 남은 날수를 표시하는 방식입니다. D-0은 당일, D-1은 하루 전, D+1은 목표일이 하루 지난 것을 의미합니다. 수능, 결혼기념일, 프로젝트 마감일 등에 활용됩니다.</p>
+    <h3>기념일 D-day는 어떻게 계산하나요?</h3>
+    <p>100일, 200일 기념일은 만남 첫날을 D+0(또는 D+1)으로 보는 방식이 있습니다. 본 계산기는 첫날을 포함한 방식으로 계산하며, 주요 기념일(100일, 200일, 1주년, 2주년)을 자동으로 표시해드립니다.</p>
+  </div>
+
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>D-day 카운트다운 활용 가이드</h2>
+      <p>D-day 계산기는 목표일까지 남은 날수를 빠르게 확인할 수 있는 도구입니다. 시험 준비, 여행 계획, 프로젝트 마감 등 다양한 상황에서 활용하세요.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>수능·시험 D-day</strong><span>시험일까지 남은 날수를 확인하고 학습 계획을 세워보세요.</span></div>
+        <div class="guide-box"><strong>기념일 관리</strong><span>연인·결혼 기념일의 100일, 200일, 1주년 등을 자동으로 확인합니다.</span></div>
+        <div class="guide-box"><strong>프로젝트 마감</strong><span>업무 마감일까지 남은 기간을 파악하여 일정을 관리하세요.</span></div>
+      </div>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>D-day에서 D-0은 무엇인가요?</h3><p>D-0은 목표일 당일을 의미합니다. 목표일이 오늘이면 D-0, 내일이면 D-1로 표시됩니다.</p></div>
+      <div class="faq-item"><h3>D-day 계산에서 시작일은 포함되나요?</h3><p>본 계산기는 시작일을 포함하여 계산합니다. 서비스마다 기준이 다를 수 있으니 참고하세요.</p></div>
+      <div class="faq-item"><h3>음력 기념일도 계산할 수 있나요?</h3><p>현재는 양력 기준으로만 계산됩니다. 음력 기념일은 매년 양력 날짜가 달라지므로 별도 변환이 필요합니다.</p></div>
+    </div>
+  </div>
+
+  <div class="sibling-section">
+    <div class="sibling-title">다른 날짜 계산기</div>
+    <div class="sibling-grid">
+      <a href="/calc/date/dday/" class="sibling-link current"><span class="sibling-icon">⏳</span><span class="sibling-text">D-day 계산기</span></a>
+      <a href="/calc/date/date-difference/" class="sibling-link"><span class="sibling-icon">📐</span><span class="sibling-text">날짜 차이 계산기</span></a>
+      <a href="/calc/date/age/" class="sibling-link"><span class="sibling-icon">🎂</span><span class="sibling-text">만 나이 계산기</span></a>
+      <a href="/calc/date/weekday/" class="sibling-link"><span class="sibling-icon">📆</span><span class="sibling-text">요일 계산기</span></a>
+      <a href="/calc/date/date-add/" class="sibling-link"><span class="sibling-icon">➕</span><span class="sibling-text">날짜 더하기/빼기</span></a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+<div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div><span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+
+<script>
+const KO_DAYS=['일요일','월요일','화요일','수요일','목요일','금요일','토요일'];
+const KO_DAYS_SHORT=['일','월','화','수','목','금','토'];
+function parseDate(str){if(!str)return null;const[y,m,d]=str.split('-').map(Number);return new Date(y,m-1,d)}
+function koDateStr(d){return`${d.getFullYear()}년 ${d.getMonth()+1}월 ${d.getDate()}일`}
+function today(){const n=new Date();return new Date(n.getFullYear(),n.getMonth(),n.getDate())}
+function toDateStr(d){return`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
+function diffDays(a,b){return Math.round((b-a)/86400000)}
+
+function calcDday(){
+  const target=parseDate(document.getElementById('dday-target').value);
+  if(!target){alert('목표 날짜를 입력해주세요.');return}
+  const title=document.getElementById('dday-title').value||'목표일';
+  const tod=today();
+  const diff=diffDays(tod,target);
+  let dLabel,dNum;
+  if(diff===0){dLabel='오늘이 바로!';dNum='D-0'}
+  else if(diff>0){dLabel='목표일까지';dNum=`D-${diff}`}
+  else{dLabel='목표일로부터';dNum=`D+${Math.abs(diff)}`}
+  document.getElementById('dday-display-wrap').innerHTML=`<div class="dday-display"><div class="dday-label">${dLabel}</div><div class="dday-number">${dNum}</div><div class="dday-title">${title} · ${koDateStr(target)}</div></div>`;
+  const annList=document.getElementById('anniversary-list');
+  if(diff>0){
+    const milestones=[{label:'100일',days:100},{label:'200일',days:200},{label:'1주년',days:365},{label:'2주년',days:730}];
+    let html='<div style="font-size:12px;font-weight:700;color:var(--gray-500);margin-bottom:8px">목표일 이후 기념일</div>';
+    milestones.forEach(m=>{const d2=new Date(target.getTime()+m.days*86400000);html+=`<div class="anniversary-item"><span class="ann-left">${m.label} (${koDateStr(d2)})</span><span class="ann-right">${KO_DAYS_SHORT[d2.getDay()]}요일</span></div>`});
+    annList.innerHTML=html;
+  }else{
+    const base=target;const milestones=[100,200,365,500,730,1000];
+    let html='<div style="font-size:12px;font-weight:700;color:var(--gray-500);margin-bottom:8px">경과 기념일 (시작일 기준)</div>';
+    milestones.forEach(days=>{const d2=new Date(base.getTime()+days*86400000);const passed=diffDays(d2,tod);const label=days===365?'1주년':days===730?'2주년':days===1000?'1000일':`${days}일`;const status=passed>=0?`(${passed}일 전)`:`(${Math.abs(passed)}일 후)`;html+=`<div class="anniversary-item"><span class="ann-left">${label} · ${koDateStr(d2)}</span><span class="ann-right">${status}</span></div>`});
+    annList.innerHTML=html;
+  }
+  document.getElementById('dday-result').classList.add('show');
+}
+(function(){document.getElementById('dday-target').value=toDateStr(today())})();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
+<script>document.querySelectorAll('input[type=date]').forEach(function(el){flatpickr(el,{locale:'ko',dateFormat:'Y-m-d',disableMobile:true,monthSelectorType:'dropdown',allowInput:true})});</script>
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/date-detail-shell.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>부가가치세 계산기 - 프리랜서 세금 계산기 | jptcalc</title>
+  <meta name="description" content="간이과세자·일반과세자 부가가치세 신고액을 자동 계산합니다. 매출액, 매입액, 업종별 부가가치율 입력으로 납부 세액을 확인하세요." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/tax/vat/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="부가가치세 계산기 | jptcalc" />
+  <meta property="og:description" content="간이과세자·일반과세자 부가가치세 신고액을 자동 계산합니다. 매출액, 매입액, 업종별 부가가치율 입력으로 납부 세액을 확인하세요." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/tax/vat/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="부가가치세 계산기 | jptcalc" />
+  <meta name="twitter:description" content="간이과세자·일반과세자 부가가치세 신고액을 자동 계산합니다. 매출액, 매입액, 업종별 부가가치율 입력으로 납부 세액을 확인하세요." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"부가가치세 계산기",
+    "url":"https://www.jptcalc.kr/calc/tax/vat/",
+    "applicationCategory":"FinanceApplication",
+    "operatingSystem":"All",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+      {"@type":"ListItem","position":2,"name":"프리랜서 세금 계산기","item":"https://www.jptcalc.kr/calc/tax/"},
+      {"@type":"ListItem","position":3,"name":"부가가치세 계산기","item":"https://www.jptcalc.kr/calc/tax/vat/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"3.3% 프리랜서도 부가가치세를 내야 하나요?","acceptedAnswer":{"@type":"Answer","text":"사업자등록 없이 3.3% 원천징수만 받는 경우에는 부가세 대상이 아닙니다. 사업자등록을 하고 세금계산서를 발행하면 부가세 신고 대상이 됩니다."}},{"@type":"Question","name":"간이과세자와 일반과세자는 어떻게 구분하나요?","acceptedAnswer":{"@type":"Answer","text":"직전 연도 매출이 1억 400만원 미만이면 간이과세자, 이상이면 일반과세자입니다. 일부 업종은 간이과세가 적용되지 않을 수 있으며, 연 4,800만원 미만 간이과세자는 부가세 납부가 면제될 수 있습니다."}},{"@type":"Question","name":"매입세액 공제는 어떤 경우에 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"사업과 관련된 지출에 대해 세금계산서를 받은 경우 매입세액을 공제받을 수 있습니다. 간이과세자는 매입액의 0.5%만 공제되며, 일반과세자는 매입세액 전액을 공제받습니다."}},{"@type":"Question","name":"일반과세자와 간이과세자의 부가세 계산 방식이 어떻게 다른가요?","acceptedAnswer":{"@type":"Answer","text":"일반과세자는 매출세액(매출의 10%)에서 매입세액을 차감한 금액을 납부합니다. 간이과세자는 업종별 부가가치율(15~50%)을 적용한 부가가치액에 10%를 곱해 세액을 산출합니다."}}]}</script>
+  <link rel="stylesheet" href="/assets/tax-common.css" />
+  <style>
+    /* vat 고유 스타일 - 공통 스타일은 /assets/tax-common.css 참조 */
+    .input-wrap { position: relative; }
+    .input-wrap .unit { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); font-size: 13px; font-weight: 600; color: var(--gray-500); pointer-events: none; }
+    input[type=number],input[type=text]{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
+    input[type=number]::placeholder{color:var(--gray-400);font-weight:400}
+    input[type=number]:focus,input[type=text]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(16,185,129,0.15)}
+    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
+    .seg-group{display:flex;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:18px}
+    .seg-btn{flex:1;border:none;border-radius:7px;background:transparent;padding:9px 4px;font-size:12px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap}
+    .seg-btn:hover{color:var(--gray-700)}
+    .seg-btn.active{background:var(--primary);color:#fff;font-weight:700}
+    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
+    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
+    .result-card{background:linear-gradient(135deg,#ECFDF5 0%,#D1FAE5 100%);border:1px solid rgba(16,185,129,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-row+.result-row{border-top:1px solid rgba(0,0,0,0.07)}
+    .result-total-row{border-top:1px solid rgba(0,0,0,0.15)!important;margin-top:4px;padding-top:14px!important}
+    .result-total-value{font-size:24px;font-weight:900;color:var(--gray-900)}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item active"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/tax/">프리랜서 세금 계산기</a><span class="breadcrumb-sep">›</span><span>부가가치세 계산기</span></div>
+    <div class="page-header-badge">&#128196; 간이/일반 자동 전환</div>
+    <h1>부가가치세 계산기</h1>
+    <p>간이과세자·일반과세자별 부가가치세 납부 세액을 계산합니다</p>
+  </div>
+  <div class="card">
+    <div class="card-title">부가가치세 신고액 계산</div>
+    <div class="info-box">
+      <span class="info-icon">&#128161;</span>
+      <p>연 매출 <strong>1억 400만원 미만</strong>은 간이과세자, 이상은 일반과세자로 봅니다. 다만 일부 업종은 간이과세 적용에 예외가 있을 수 있으며, 연 4,800만원 미만은 부가세 납부가 면제될 수 있습니다.</p>
+    </div>
+    <div class="field">
+      <div class="field-label"><span>과세자 유형</span></div>
+      <div class="seg-group">
+        <button class="seg-btn active" onclick="setVatType('simple',this)">간이과세자</button>
+        <button class="seg-btn" onclick="setVatType('general',this)">일반과세자</button>
+      </div>
+    </div>
+    <div class="field">
+      <div class="field-label"><span>반기 매출액</span> <span class="label-hint">만원 단위</span></div>
+      <div class="input-wrap">
+        <input type="number" id="vat-sales" placeholder="예)3000" oninput="calcVat()">
+        <span class="unit">만원</span>
+      </div>
+      <div class="converted" id="vat-sales-display"></div>
+    </div>
+    <div class="field">
+      <div class="field-label"><span>매입액 (세금계산서)</span> <span class="label-hint">만원 단위</span></div>
+      <div class="input-wrap">
+        <input type="number" id="vat-purchase" placeholder="예)500" oninput="calcVat()">
+        <span class="unit">만원</span>
+      </div>
+      <div class="converted" id="vat-purchase-display"></div>
+    </div>
+    <div id="vat-simple-rate" class="field">
+      <div class="field-label"><span>업종별 부가가치율</span></div>
+      <div class="seg-group" style="flex-wrap:wrap;">
+        <button class="seg-btn active" onclick="setSimpleRate(0.30,this)" style="flex:0 0 calc(33% - 2px)">서비스 30%</button>
+        <button class="seg-btn" onclick="setSimpleRate(0.40,this)" style="flex:0 0 calc(33% - 2px)">음식·숙박 40%</button>
+        <button class="seg-btn" onclick="setSimpleRate(0.20,this)" style="flex:0 0 calc(33% - 2px)">제조 20%</button>
+        <button class="seg-btn" onclick="setSimpleRate(0.15,this)" style="flex:0 0 calc(33% - 2px)">소매 15%</button>
+        <button class="seg-btn" onclick="setSimpleRate(0.50,this)" style="flex:0 0 calc(33% - 2px)">부동산 50%</button>
+      </div>
+    </div>
+    <div class="result-card" id="vat-result"><div id="vat-result-content"></div></div>
+  </div>
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>부가가치세 계산기는 언제 쓰나요?</h2>
+      <p>사업자등록을 한 프리랜서나 1인 사업자가 부가가치세 신고 전에 예상 납부 세액을 미리 확인할 때 사용합니다. 간이과세자와 일반과세자의 계산 방식이 다르므로 본인의 과세 유형을 먼저 확인하세요.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>일반과세자</strong><span>매출세액(10%)에서 매입세액을 차감한 금액 납부</span></div>
+        <div class="guide-box"><strong>간이과세자</strong><span>업종별 부가가치율을 적용해 세액 산출</span></div>
+        <div class="guide-box"><strong>납부 면제</strong><span>간이과세 연 4,800만원 미만은 납부 면제 가능</span></div>
+      </div>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>3.3% 프리랜서도 부가세를 내야 하나요?</h3><p>사업자등록 없이 3.3% 원천징수만 받는 경우에는 부가세 대상이 아닙니다. 사업자등록을 하고 세금계산서를 발행하면 부가세 신고 대상입니다.</p></div>
+      <div class="faq-item"><h3>간이과세자와 일반과세자는 어떻게 구분하나요?</h3><p>직전 연도 매출이 1억 400만원 미만이면 간이과세자, 이상이면 일반과세자입니다. 일부 업종은 간이과세가 적용되지 않을 수 있습니다.</p></div>
+      <div class="faq-item"><h3>매입세액 공제는 어떤 경우에 받을 수 있나요?</h3><p>사업과 관련된 지출에 대해 세금계산서를 받은 경우 매입세액을 공제받을 수 있습니다. 간이과세자는 매입액의 0.5%만 공제됩니다.</p></div>
+      <div class="update-note">최종 검토: 2026.03.24 · 계산 결과는 참고용입니다.</div>
+    </div>
+  </div>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 프리랜서 세금 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/tax/withholding/" class="sibling-link">&#128178; 3.3% 원천징수</a>
+      <a href="/calc/tax/income-tax/" class="sibling-link">&#128200; 종합소득세</a>
+      <a href="/calc/tax/vat/" class="sibling-link current">&#128196; 부가가치세</a>
+      <a href="/calc/tax/insurance-comparison/" class="sibling-link">&#128101; 4대보험 비교</a>
+      <a href="/calc/tax/freelancer-income/" class="sibling-link">&#128179; 월 순수입</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script>
+function fmtWon(won) {
+  won = Math.round(won);
+  if (Math.abs(won) >= 100000000) {
+    const e = Math.floor(Math.abs(won)/100000000), r = Math.abs(won)%100000000;
+    const s = won<0?'-':'';
+    return r===0 ? s+e.toLocaleString()+'억원' : s+e.toLocaleString()+'억 '+Math.floor(r/10000).toLocaleString()+'만원';
+  }
+  if (Math.abs(won) >= 10000) {
+    const m = Math.floor(Math.abs(won)/10000), r = Math.abs(won)%10000;
+    const s = won<0?'-':'';
+    return r===0 ? s+m.toLocaleString()+'만원' : s+m.toLocaleString()+'만 '+r.toLocaleString()+'원';
+  }
+  return won.toLocaleString()+'원';
+}
+function fmt(man) {
+  if (man===0) return '0원';
+  return fmtWon(Math.round(man*10000));
+}
+function showConverted(input, display) {
+  if (!display) return;
+  const v = parseFloat(input.value);
+  display.textContent = (!v||v===0) ? '' : '= '+fmtWon(v*10000);
+}
+function setActive(parent, btn, sel) {
+  parent.querySelectorAll(sel||'.seg-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+let vatType='simple', simpleRate=0.30;
+function setVatType(type, btn) {
+  vatType=type;
+  setActive(btn.closest('.seg-group'), btn);
+  document.getElementById('vat-simple-rate').style.display = type==='simple'?'block':'none';
+  calcVat();
+}
+function setSimpleRate(rate, btn) {
+  simpleRate=rate;
+  setActive(btn.closest('.seg-group'), btn);
+  calcVat();
+}
+function calcVat() {
+  const sales=parseFloat(document.getElementById('vat-sales').value)||0;
+  const purchase=parseFloat(document.getElementById('vat-purchase').value)||0;
+  showConverted(document.getElementById('vat-sales'), document.getElementById('vat-sales-display'));
+  showConverted(document.getElementById('vat-purchase'), document.getElementById('vat-purchase-display'));
+  if (!sales) { document.getElementById('vat-result').classList.remove('show'); return; }
+  let html='';
+  if (vatType==='general') {
+    const out=sales*0.10, inp=purchase*0.10, pay=Math.max(out-inp,0);
+    html=`<div class="result-row"><span class="result-label">매출 공급가액</span><span class="result-value">${fmt(sales)}</span></div>
+    <div class="result-row"><span class="result-label">매출세액 (10%)</span><span class="result-value">${fmt(Math.round(out))}</span></div>
+    <div class="result-row"><span class="result-label">매입세액 공제</span><span class="result-value">- ${fmt(Math.round(inp))}</span></div>
+    <div class="result-row result-total-row"><span class="result-total-label">납부 부가세</span><span class="result-total-value">${fmt(Math.round(pay))}</span></div>
+    <div class="result-note">* 일반과세자 기준 / 반기 신고</div>`;
+  } else {
+    const vatAmt=sales*simpleRate*0.10, credit=purchase*0.005, pay=Math.max(vatAmt-credit,0), exempt=sales<2400;
+    html=`<div class="result-row"><span class="result-label">매출액</span><span class="result-value">${fmt(sales)}</span></div>
+    <div class="result-row"><span class="result-label">부가가치액 (${Math.round(simpleRate*100)}%)</span><span class="result-value">${fmt(Math.round(sales*simpleRate))}</span></div>
+    <div class="result-row"><span class="result-label">부가세 (10%)</span><span class="result-value">${fmt(Math.round(vatAmt))}</span></div>
+    <div class="result-row"><span class="result-label">매입세액공제 (0.5%)</span><span class="result-value">- ${fmt(Math.round(credit))}</span></div>
+    <div class="result-row result-total-row"><span class="result-total-label">${exempt?'납부 면제':'납부 부가세'}</span><span class="result-total-value">${exempt?'0원':fmt(Math.round(pay))}</span></div>
+    <div class="result-note">${exempt?'* 반기 2,400만원 미만(연 4,800만원) → 납부 면제':'* 간이과세자 기준 / 연 1회 신고'}</div>`;
+  }
+  document.getElementById('vat-result-content').innerHTML = html;
+  document.getElementById('vat-result').classList.add('show');
+}
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/tax-detail-shell.js"></script>
+</body>
+</html>

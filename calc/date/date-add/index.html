@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>날짜 더하기/빼기 계산기 - 년·월·일 단위 날짜 연산 | jptcalc</title>
+  <meta name="description" content="특정 날짜에서 년, 월, 일을 더하거나 빼서 결과 날짜를 계산합니다. 계약 만료일, 복무 기간 등 날짜 연산에 유용한 무료 계산기." />
+  <meta name="keywords" content="날짜더하기,날짜빼기,날짜계산기,기간계산,날짜연산,몇일후" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/date/date-add/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="날짜 더하기/빼기 계산기 - 날짜 연산" />
+  <meta property="og:description" content="특정 날짜에서 년, 월, 일을 더하거나 빼서 결과 날짜를 계산합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/date/date-add/" />
+  <meta property="og:site_name" content="jptcalc" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="날짜 더하기/빼기 계산기 | jptcalc" />
+  <meta name="twitter:description" content="특정 날짜에서 년, 월, 일을 더하거나 빼서 결과 날짜를 계산합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"날짜 더하기/빼기 계산기","url":"https://www.jptcalc.kr/calc/date/date-add/","description":"날짜에 년·월·일을 더하거나 빼는 무료 계산기","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"inLanguage":"ko-KR"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},{"@type":"ListItem","position":2,"name":"날짜·D-day 계산기","item":"https://www.jptcalc.kr/calc/date/"},{"@type":"ListItem","position":3,"name":"날짜 더하기/빼기"}]}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"날짜 더하기/빼기 계산기는 어떤 상황에 유용한가요?","acceptedAnswer":{"@type":"Answer","text":"계약 만료일, 군 복무 전역 예정일, 신고·납부 기한 등을 계산할 때 유용합니다. 시작일에서 계약 기간만큼 더하거나, 기준일에서 법정 기한을 더해 정확한 마감일을 산출할 수 있습니다."}},{"@type":"Question","name":"월 단위 계산 시 말일은 어떻게 처리되나요?","acceptedAnswer":{"@type":"Answer","text":"1월 31일에 1개월을 더하면 2월 28일(또는 윤년의 경우 29일)로 계산됩니다. 해당 월에 그 날짜가 존재하지 않으면 자동으로 그 달의 마지막 날로 조정됩니다."}},{"@type":"Question","name":"년, 월, 일을 동시에 더할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네, 년·월·일 세 값을 동시에 입력할 수 있으며, 년 → 월 → 일 순서로 순차 계산됩니다. 각 단위를 0으로 두면 해당 단위는 계산에서 제외됩니다."}},{"@type":"Question","name":"빼기 계산도 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"네, 연산 버튼을 '빼기'로 전환하면 입력한 기간만큼 과거 날짜를 계산합니다. 예를 들어 오늘에서 100일을 빼면 100일 전 날짜를 확인할 수 있습니다."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/date-common.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <style>
+    input[type=date],input[type=number],.flatpickr-input{width:100%;border:1.5px solid var(--gray-200);border-radius:12px;padding:13px 16px;font-size:15px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:#fff;outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
+    .flatpickr-day.selected,.flatpickr-day.selected:hover{background:var(--primary);border-color:var(--primary)}
+    .flatpickr-day.today{border-color:var(--primary)}
+    .flatpickr-months .flatpickr-month{height:36px}
+    .flatpickr-current-month .flatpickr-monthDropdown-months,.flatpickr-current-month input.cur-year{font-size:14px;font-weight:700}
+    input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none}
+    input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(249,115,22,0.15)}
+    .input-wrap{position:relative}
+    .input-wrap .unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:12px;font-weight:600;color:var(--gray-400);pointer-events:none}
+    .seg-group{display:flex;background:var(--gray-100);border-radius:10px;padding:3px;gap:3px;margin-bottom:16px}
+    .seg-btn{flex:1;border:none;border-radius:8px;background:transparent;padding:9px 4px;font-size:13px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap}
+    .seg-btn.active{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,0.08);font-weight:700}
+    .calc-btn{width:100%;border:none;border-radius:12px;padding:14px;font-size:15px;font-weight:700;color:#fff;background:var(--primary);cursor:pointer;transition:all .18s;font-family:inherit;margin-top:4px}
+    .calc-btn:hover{opacity:.9;transform:translateY(-1px)}
+    .result-card{background:linear-gradient(135deg,#FFF7ED 0%,#FFEDD5 100%);border:1px solid rgba(249,115,22,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-highlight{background:rgba(249,115,22,0.1);border-radius:12px;padding:16px;margin-bottom:16px;text-align:center}
+    .rh-label{font-size:12px;color:var(--gray-500);margin-bottom:4px}
+    .rh-value{font-size:24px;font-weight:900;color:var(--primary)}
+    .rh-sub{font-size:12px;color:var(--gray-500);margin-top:2px}
+    .result-total-row{border-top:2px solid rgba(249,115,22,0.3)!important;margin-top:4px;padding-top:14px!important}
+    .result-total-label{font-size:14px;font-weight:700;color:var(--gray-900)}
+    .result-total-value{font-size:20px;font-weight:900;color:var(--primary)}
+  </style>
+</head>
+<body>
+<header class="site-header"><div class="header-inner"><a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="로고" style="width:32px;height:32px;display:block" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a><nav class="header-nav"><a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B"></span>부동산</a><a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981"></span>프리랜서 세금</a><a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6"></span>AI/테크</a><a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6"></span>이직/연봉</a><a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6"></span>반려동물</a><a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1"></span>금융·이자</a><a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981"></span>건강</a><a href="/calc/date/" class="nav-item active"><span class="nav-dot" style="background:#F97316"></span>날짜·D-day</a></nav><div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div><button class="hamburger" onclick="document.querySelector('.header-nav').classList.toggle('show')" aria-label="메뉴"><span></span><span></span><span></span></button></div></header>
+<main class="page-wrap">
+  <div class="page-header"><div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/date/">날짜·D-day 계산기</a><span class="breadcrumb-sep">›</span><span>날짜 더하기/빼기</span></div>
+    <div class="page-header-badge">➕ 무료 온라인 계산기</div><h1>날짜 더하기/빼기 계산기</h1><p>특정 날짜에서 년, 월, 일을 더하거나 빼서 결과 날짜를 계산합니다</p></div>
+  <div class="card"><div class="card-title">날짜 더하기 / 빼기</div><div class="field"><div class="field-label">시작 날짜</div><input type="date" id="add-start" /></div><div class="field"><div class="field-label">연산</div><div class="seg-group"><button class="seg-btn active" id="add-op-plus" onclick="setAddOp('+',this)">+ 더하기</button><button class="seg-btn" id="add-op-minus" onclick="setAddOp('-',this)">- 빼기</button></div></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:16px"><div><div class="field-label" style="margin-bottom:6px">년</div><div class="input-wrap"><input type="number" id="add-years" value="0" min="0" /><span class="unit">년</span></div></div><div><div class="field-label" style="margin-bottom:6px">월</div><div class="input-wrap"><input type="number" id="add-months" value="0" min="0" /><span class="unit">월</span></div></div><div><div class="field-label" style="margin-bottom:6px">일</div><div class="input-wrap"><input type="number" id="add-days" value="0" min="0" /><span class="unit">일</span></div></div></div><button class="calc-btn" onclick="calcAdd()">결과 날짜 계산하기</button></div>
+  <div class="result-card" id="add-result"><div class="result-highlight"><div class="rh-label" id="add-op-label">더한 결과</div><div class="rh-value" id="add-result-date"></div><div class="rh-sub" id="add-result-weekday"></div></div><div id="add-detail"></div></div>
+
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>날짜 더하기/빼기 활용 가이드</h2>
+      <p>특정 날짜에서 년, 월, 일을 더하거나 빼서 결과 날짜를 정확하게 계산합니다. 계약 만료일, 복무 기간, 신고 기한 등을 파악할 때 유용합니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>계약 만료일</strong><span>계약 시작일에서 계약 기간을 더해 만료일을 정확히 산출합니다.</span></div>
+        <div class="guide-box"><strong>복무 기간 계산</strong><span>입대일에서 복무 기간을 더하면 전역 예정일을 확인할 수 있습니다.</span></div>
+        <div class="guide-box"><strong>신고·납부 기한</strong><span>기준일에서 법정 기한을 더해 정확한 마감일을 계산하세요.</span></div>
+      </div>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>월 단위 계산 시 말일은 어떻게 처리되나요?</h3><p>1월 31일에 1개월을 더하면 2월 28일(또는 29일)로 계산됩니다. 해당 월의 마지막 날로 자동 조정됩니다.</p></div>
+      <div class="faq-item"><h3>년, 월, 일을 동시에 더할 수 있나요?</h3><p>네, 세 가지를 동시에 입력하면 년 → 월 → 일 순서로 순차 계산됩니다.</p></div>
+      <div class="faq-item"><h3>빼기 계산도 가능한가요?</h3><p>네, 연산을 '빼기'로 전환하면 입력한 기간만큼 과거 날짜를 계산합니다.</p></div>
+    </div>
+  </div>
+
+  <div class="sibling-section"><div class="sibling-title">다른 날짜 계산기</div><div class="sibling-grid"><a href="/calc/date/dday/" class="sibling-link"><span class="sibling-icon">⏳</span><span class="sibling-text">D-day 계산기</span></a><a href="/calc/date/date-difference/" class="sibling-link"><span class="sibling-icon">📐</span><span class="sibling-text">날짜 차이 계산기</span></a><a href="/calc/date/age/" class="sibling-link"><span class="sibling-icon">🎂</span><span class="sibling-text">만 나이 계산기</span></a><a href="/calc/date/weekday/" class="sibling-link"><span class="sibling-icon">📆</span><span class="sibling-text">요일 계산기</span></a><a href="/calc/date/date-add/" class="sibling-link current"><span class="sibling-icon">➕</span><span class="sibling-text">날짜 더하기/빼기</span></a></div></div>
+</main>
+<footer class="site-footer"><div class="footer-inner"><div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div><span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span></div></footer>
+<script>
+var KO_DAYS=['일요일','월요일','화요일','수요일','목요일','금요일','토요일'];
+var WEEK_COLORS=['#EF4444','#6B7280','#6B7280','#6B7280','#6B7280','#6B7280','#3B82F6'];
+var addOp='+';
+function parseDate(str){if(!str)return null;var p=str.split('-');return new Date(+p[0],+p[1]-1,+p[2])}
+function koDateStr(d){return d.getFullYear()+'년 '+(d.getMonth()+1)+'월 '+d.getDate()+'일'}
+function today(){var n=new Date();return new Date(n.getFullYear(),n.getMonth(),n.getDate())}
+function toDateStr(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function diffDays(a,b){return Math.round((b-a)/86400000)}
+function setAddOp(op,btn){addOp=op;btn.parentElement.querySelectorAll('.seg-btn').forEach(function(b){b.classList.remove('active')});btn.classList.add('active')}
+function calcAdd(){
+  var start=parseDate(document.getElementById('add-start').value);
+  if(!start){alert('시작 날짜를 입력해주세요.');return}
+  var years=parseInt(document.getElementById('add-years').value)||0;
+  var months=parseInt(document.getElementById('add-months').value)||0;
+  var days=parseInt(document.getElementById('add-days').value)||0;
+  var result=new Date(start);var sign=addOp==='+'?1:-1;
+  result.setFullYear(result.getFullYear()+sign*years);
+  if(months){var targetMonth=result.getMonth()+sign*months;var dayOfMonth=result.getDate();result.setDate(1);result.setMonth(targetMonth);var lastDay=new Date(result.getFullYear(),result.getMonth()+1,0).getDate();result.setDate(Math.min(dayOfMonth,lastDay))}
+  result.setDate(result.getDate()+sign*days);
+  var opLabel=addOp==='+'?'더한':'뺀';var totalDays=Math.abs(diffDays(start,result));var dow=result.getDay();var weekdayColor=WEEK_COLORS[dow];
+  document.getElementById('add-op-label').textContent=opLabel+' 결과';
+  document.getElementById('add-result-date').textContent=koDateStr(result);
+  var sub=document.getElementById('add-result-weekday');sub.textContent=KO_DAYS[dow];sub.style.color=weekdayColor;
+  var addedParts=[];if(years)addedParts.push(years+'년');if(months)addedParts.push(months+'개월');if(days)addedParts.push(days+'일');
+  var addedStr=addedParts.join(' ')||'0일';
+  document.getElementById('add-detail').innerHTML='<div class="result-row"><span class="result-label">시작 날짜</span><span class="result-value">'+koDateStr(start)+' ('+KO_DAYS[start.getDay()]+')</span></div><div class="result-row"><span class="result-label">'+(addOp==='+'?'더하기':'빼기')+'</span><span class="result-value">'+addedStr+'</span></div><div class="result-row result-total-row"><span class="result-total-label">결과 날짜</span><span class="result-total-value">'+koDateStr(result)+' ('+KO_DAYS[dow]+')</span></div><div class="result-row"><span class="result-label">총 차이</span><span class="result-value">'+totalDays.toLocaleString()+'일</span></div>';
+  document.getElementById('add-result').classList.add('show');
+}
+(function(){document.getElementById('add-start').value=toDateStr(today())})();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
+<script>document.querySelectorAll('input[type=date]').forEach(function(el){flatpickr(el,{locale:'ko',dateFormat:'Y-m-d',disableMobile:true,monthSelectorType:'dropdown',allowInput:true})});</script>
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/date-detail-shell.js"></script>
+</body>
+</html>

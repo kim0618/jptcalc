@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>연봉 인상률 계산법 - 3% 오르면 실수령액 실제로 얼마 늘까? | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="연봉이 오르면 세금과 보험료도 함께 오릅니다. 연봉 구간별 인상 시 실수령액 변화, 실질 인상률 계산법, 협상에서 실수령 기준 제시 전략까지 정리했습니다." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="연봉 인상률 계산법 - 3% 오르면 실수령액 실제로 얼마 늘까? | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="연봉이 오르면 세금과 보험료도 함께 오릅니다. 연봉 구간별 인상 시 실수령액 변화, 실질 인상률 계산법, 협상에서 실수령 기준 제시 전략까지 정리했습니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/salary-raise-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/salary-raise-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#3B82F6;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(59,130,246,0.15);color:#3B82F6;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:24px 0 10px}
+    .post-body p{margin-bottom:14px}
+    .post-body ul{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#3B82F6;text-decoration:none}
+    .highlight-box{background:rgba(59,130,246,0.08);border-left:4px solid #3B82F6;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#1E40AF;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    td.highlight{color:#3B82F6;font-weight:700}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#3B82F6;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .faq-item{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:12px;padding:20px;margin:16px 0}
+    .faq-q{font-weight:800;color:#111827;margin-bottom:8px;font-size:15px}
+    .faq-a{color:#374151;font-size:14px;line-height:1.7;margin:0}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo"><div class="logo-icon"><img src="../../assets/logo.svg" alt="로고"/></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+<div class="post-wrap">
+  <span class="post-tag">연봉</span>
+  <h1>연봉 3% 인상, 실수령액으로 환산하면 실제로 얼마 오를까?</h1>
+  <div class="post-meta"><span>📅 2026.03.29</span><span>·</span><span>5분 읽기</span></div>
+  <div class="post-body">
+    <p>연봉 협상 시즌마다 "올해 3% 인상"이라는 말을 들으면 기쁘기도 하고 뭔가 작게 느껴지기도 합니다. 그 3%가 실제 월급에 얼마로 반영되는지 계산해본 사람은 생각보다 많지 않습니다.</p>
+    <p>연봉이 오르면 세금과 4대보험료도 함께 오르기 때문에, 명목 인상률보다 <strong>실수령액 증가분은 더 작습니다.</strong> 협상 전에 미리 계산해두면 현실적인 목표 설정이 가능합니다.</p>
+
+    <h2>연봉 인상이 실수령액에 미치는 구조</h2>
+    <p>연봉이 오르면 다음 세 가지가 함께 변합니다.</p>
+    <ul>
+      <li><strong>소득세 증가</strong> - 과세 구간이 올라갈수록 세율도 높아지는 누진 구조</li>
+      <li><strong>4대보험료 증가</strong> - 건강보험, 국민연금, 고용보험 보험료 상승</li>
+      <li><strong>실수령액 증가</strong> - 위 두 가지를 제외한 실제 손에 쥐는 금액</li>
+    </ul>
+    <p>그래서 인상률이 같아도 <strong>현재 연봉 구간에 따라 실수령 증가분이 달라집니다.</strong></p>
+
+    <h2>연봉 구간별 인상 시 실수령액 변화 예시</h2>
+    <p>2026년 기준 4대보험·소득세 공제 반영, 부양가족 없음, 비과세 120만원 가정 기준입니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>현재 연봉</th><th>인상률</th><th>인상 후 연봉</th><th>월 실수령 증가</th><th>실질 인상률</th></tr>
+      <tr><td>3,600만원</td><td>3%</td><td>3,708만원</td><td>약 +7만원</td><td>약 2.6%</td></tr>
+      <tr><td>4,800만원</td><td>3%</td><td>4,944만원</td><td>약 +8.5만원</td><td>약 2.4%</td></tr>
+      <tr><td>6,000만원</td><td>3%</td><td>6,180만원</td><td>약 +9.7만원</td><td>약 2.2%</td></tr>
+      <tr><td>3,600만원</td><td>10%</td><td>3,960만원</td><td class="highlight">약 +23만원</td><td class="highlight">약 8.5%</td></tr>
+      <tr><td>4,800만원</td><td>10%</td><td>5,280만원</td><td class="highlight">약 +28만원</td><td class="highlight">약 8.3%</td></tr>
+    </table></div>
+    <p style="margin: 1.2em 0;">
+      👉 <a href="https://www.jptcalc.kr/calc/salary/raise-rate/" style="color: #2563eb; font-weight: 600;">연봉 인상률 계산기로 직접 계산해보기</a>
+    </p>
+    <p>위 수치는 참고용 예시이며, 개인의 부양가족 수·비과세 항목·건강보험료 정산 등에 따라 달라질 수 있습니다.</p>
+
+    <h2>협상에서 실수령 기준으로 말하면 달라지는 것</h2>
+    <p>"10% 인상해주세요"보다 <strong>"월 실수령액 기준으로 30만원 인상을 원합니다"</strong>라고 말하면 양쪽이 같은 기준으로 이야기할 수 있습니다.</p>
+    <p>월 30만원 실수령 증가에 필요한 연봉 인상액을 역산하면:</p>
+    <ul>
+      <li>연봉 4,000만원대 기준: 연봉 약 450~500만원 인상 필요</li>
+      <li>인상률로 환산하면: 약 11~12%</li>
+    </ul>
+    <div class="highlight-box"><p>물가 상승률도 반영하면: <strong>실질 인상률 = 명목 인상률 - 물가 상승률</strong>. <a href="https://kostat.go.kr">통계청</a>이 발표하는 소비자물가지수를 기준으로 하며, 인상률이 물가 상승률 이하라면 실질 구매력은 그대로이거나 오히려 감소합니다.</p></div>
+
+    <h2>자주 헷갈리는 포인트</h2>
+    <h3>연봉 계약서의 금액은 세전 기준이다</h3>
+    <p>계약서에 "연봉 5,000만원"이라고 써 있으면 이는 세전 기준입니다. 실수령액은 세금과 보험료를 빼야 나옵니다.</p>
+    <h3>인상률 %는 같아도 절대 금액은 연봉마다 다르다</h3>
+    <p>연봉 3,000만원의 5%와 연봉 6,000만원의 5%는 절대 금액이 두 배 차이입니다. 같은 인상률이어도 현재 연봉이 낮을수록 실제 증가분이 적습니다.</p>
+    <h3>인센티브·성과급은 기본급과 분리해서 보자</h3>
+    <p>성과급은 정기적이지 않은 경우 고정 연봉으로 보기 어렵습니다. 협상 시 기본급 인상과 성과급을 분리해서 논의하는 것이 좋습니다.</p>
+
+    <div class="cta-box">
+      <p>현재 연봉과 인상률을 입력하면 인상 전후 월 실수령액 차이를 바로 비교할 수 있습니다.</p>
+      <a href="../../calc/salary/raise-rate/" class="cta-btn">연봉 인상률 계산하기</a>
+    </div>
+    <p style="font-size: 13px; color: #6B7280; margin-top: 8px;">관련 계산기: <a href="https://www.jptcalc.kr/calc/salary/take-home-pay/">연봉 실수령액 계산기</a> · <a href="https://www.jptcalc.kr/calc/salary/job-change/">이직 연봉 비교 계산기</a></p>
+
+    <h2>자주 묻는 질문 (FAQ)</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 연봉 인상 시 건강보험료도 함께 올라가나요?</div>
+      <p class="faq-a">그렇습니다. 건강보험료는 매월 급여에서 공제되며, 연말에 전년도 소득을 기준으로 정산도 이루어집니다. 연봉이 오르면 월 공제액과 연말 추가납부 가능성 모두 높아집니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 비과세 항목을 늘리면 실수령액이 더 올라가나요?</div>
+      <p class="faq-a">식대 비과세(월 20만원), 자가운전 보조금 비과세(월 20만원) 등 비과세 항목은 세금 계산 기준 소득에서 제외됩니다. 합법적 범위 내에서 비과세를 최대화하면 같은 연봉에서 실수령을 높일 수 있습니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 이직 제안과 현 직장 인상 중 어느 쪽이 유리한지 비교하려면?</div>
+      <p class="faq-a">두 조건의 실수령액 차이를 먼저 계산해보는 것이 출발점입니다. 연봉 외에도 복리후생, 교통비, 식비 지원 등 비금전적 요소까지 합산해 비교하세요.</p>
+    </div>
+
+    <h2>마무리</h2>
+    <p>연봉 3% 인상이 실수령액으로는 월 7~10만원 수준에 그칠 수 있습니다. 협상 전에 미리 역산해두면 "월 얼마를 더 받으려면 연봉을 얼마 올려야 하는지"를 구체적으로 요구할 수 있습니다.</p>
+    <p>이직도 함께 고민 중이라면 <a href="../../calc/salary/job-change/">이직 연봉 비교 계산기</a>도 함께 확인해보세요.</p>
+  </div>
+</div>
+<footer class="site-footer"><p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용입니다. 예시 수치는 2026년 기준 추정치이며 개인 상황에 따라 실제 값과 다를 수 있습니다.</p></footer>
+<script src="/assets/footer-unified.js" defer></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "2026년 소득세법·4대보험료율 기준",
+  lastReviewed: '2026.03.29'
+};
+</script>
+<script>
+window.ARTICLE_INFO_CONFIG.relatedCalc = { name: '연봉 인상률 계산기', url: '/calc/salary/raise-rate/' };
+window.ARTICLE_INFO_CONFIG.category = 'salary';
+</script>
+<script src="/assets/blog-article-info.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>

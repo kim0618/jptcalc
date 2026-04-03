@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>AI / 테크 비용 계산기 - API 토큰·GPU 클라우드·SaaS 비교·LLM 비교·인프라 예측 무료 계산</title>
+  <meta name="description" content="AI API 토큰, GPU 클라우드, SaaS vs 자체구축 비용 비교, LLM 성능·가격 비교, 인프라 월비용 예측까지 무료로 계산하세요." />
+  <meta name="keywords" content="AI비용계산기,API토큰비용,GPU클라우드비교,SaaS비교,LLM비교,인프라비용예측" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/ai/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AI / 테크 비용 계산기 - API 토큰·GPU 클라우드·SaaS 비교 무료 계산" />
+  <meta property="og:description" content="AI API 토큰, GPU 클라우드, SaaS vs 자체구축 비용 비교, LLM 성능·가격 비교, 인프라 월비용 예측까지 무료로 계산하세요." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/ai/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI / 테크 비용 계산기 - API 토큰·GPU 클라우드·SaaS 비교 무료 계산" />
+  <meta name="twitter:description" content="AI API 토큰, GPU 클라우드, SaaS vs 자체구축 비용 비교, LLM 성능·가격 비교, 인프라 월비용 예측까지 무료로 계산하세요." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "AI / 테크 비용 계산기",
+    "url": "https://www.jptcalc.kr/calc/ai/",
+    "description": "AI API 토큰 비용, GPU 클라우드 비교, SaaS vs 자체구축, LLM 비교표, 인프라 월비용 예측 계산기",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "KRW"
+    },
+    "inLanguage": "ko-KR"
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"AI API 토큰 비용은 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"모델별(GPT, Claude, Gemini 등) 입력·출력 토큰 단가에 예상 사용량을 곱해 일/월/연 비용을 계산합니다. 본 계산기에서 모델을 선택하고 예상 사용량을 입력하면 자동으로 비교됩니다."}},{"@type":"Question","name":"GPU 클라우드 비용 비교는 어떻게 하나요?","acceptedAnswer":{"@type":"Answer","text":"AWS, GCP, Azure 등 주요 클라우드의 GPU 인스턴스 시간당·월별 비용을 비교합니다. GPU 종류, 사용 시간, 예약 옵션에 따른 비용 차이를 확인할 수 있습니다."}},{"@type":"Question","name":"SaaS vs 자체구축 중 어느 쪽이 유리한가요?","acceptedAnswer":{"@type":"Answer","text":"사용자 수, 월 이용료, 자체구축 초기비용·유지비 등에 따라 달라집니다. 본 계산기의 SaaS vs 자체구축 비교 탭에서 손익분기점을 자동으로 계산해보세요."}}]}
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BRSX3F10MZ');
+  </script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #8B5CF6;
+      --primary-light: rgba(139,92,246,0.12);
+      --primary-border: rgba(139,92,246,0.3);
+      --gray-50: #F9FAFB; --gray-100: #F3F4F6; --gray-200: #E5E7EB;
+      --gray-300: #D1D5DB; --gray-400: #9CA3AF; --gray-500: #6B7280;
+      --gray-600: #4B5563; --gray-700: #374151; --gray-800: #1F2937; --gray-900: #111827;
+      --dark-bg: #F5F6F8; --dark-card: #FFFFFF; --dark-border: rgba(0,0,0,0.06);
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+      --shadow-lg: 0 10px 32px rgba(139,92,246,0.15), 0 4px 12px rgba(0,0,0,0.10);
+      --c-realestate:#F59E0B; --c-tax:#10B981; --c-ai:#8B5CF6; --c-salary:#3B82F6; --c-pet:#F472B6; --c-health:#10B981; --c-finance:#6366F1; --c-date:#F97316;
+    }
+
+    .hidden { display: none !important; }
+    html { font-size: 16px; overflow-y: scroll; scrollbar-gutter: stable; }
+    body {
+      font-family: 'Pretendard', -apple-system, 'Apple SD Gothic Neo', sans-serif;
+      background: #F5F6F8; color: var(--gray-900);
+      min-height: 100dvh; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent;
+    }
+
+    /* ══ 헤더 ══ */
+    .site-header {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(15,17,23,0.95); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .sh-inner { max-width: 1400px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; gap: 32px; }
+    .sh-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .sh-logo-icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
+    .sh-logo-text { font-size: 18px; font-weight: 900; color: #fff; letter-spacing: -0.5px; line-height: 1; }
+    .sh-nav { display: flex; align-items: center; gap: 2px; flex: 1; min-width: 0; }
+    .sh-nav-item { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 8px; text-decoration: none; font-size: 13px; font-weight: 600; color: #9CA3AF; transition: all 0.15s; white-space: nowrap; }
+    .sh-nav-item:hover { background: rgba(255,255,255,0.06); color: #fff; }
+    .sh-nav-item.sh-active { background: rgba(139,92,246,0.12); color: #8B5CF6; }
+    .sh-nav-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+    .sh-cta { margin-left: auto; flex-shrink: 0; }
+    .sh-btn-blog { padding: 7px 14px; border-radius: 8px; font-size: 13px; font-weight: 700; border: 1px solid rgba(255,255,255,0.2); background: transparent; color: #D1D5DB; text-decoration: none; transition: all 0.15s; display: inline-block; }
+    .sh-btn-blog:hover { border-color: #8B5CF6; color: #8B5CF6; }
+    .sh-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; margin-left: auto; background: none; border: none; }
+    .sh-hamburger span { display: block; width: 22px; height: 2px; background: #9CA3AF; border-radius: 2px; }
+
+    /* ══ 3단 레이아웃 ══ */
+    .mega-layout { max-width: 1400px; margin: 0 auto; padding: 28px 24px; display: grid; grid-template-columns: 220px 1fr 300px; gap: 24px; align-items: start; }
+    .mega-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 150; }
+    .mega-overlay.open { display: block; }
+
+    /* 좌측 사이드바 */
+    .mega-sidebar-left { position: sticky; top: 88px; }
+    .msl-section { margin-bottom: 20px; }
+    .msl-title { font-size: 10px; font-weight: 800; letter-spacing: 1px; color: var(--gray-500); text-transform: uppercase; margin-bottom: 8px; padding: 0 8px; }
+    .msl-nav, .msl-calc-list { display: flex; flex-direction: column; gap: 2px; }
+    .msl-link { display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 10px; text-decoration: none; font-size: 13px; font-weight: 600; color: var(--gray-500); transition: all 0.15s; }
+    .msl-link:hover { background: rgba(0,0,0,0.04); color: var(--gray-900); }
+    .msl-link.msl-active { background: rgba(139,92,246,0.12); color: #8B5CF6; }
+    .msl-icon { font-size: 16px; flex-shrink: 0; width: 20px; text-align: center; }
+    .msl-badge { margin-left: auto; font-size: 10px; font-weight: 700; background: rgba(0,0,0,0.06); border-radius: 4px; padding: 1px 6px; color: var(--gray-500); }
+    .msl-link.msl-active .msl-badge { background: rgba(139,92,246,0.15); color: #8B5CF6; }
+    .msl-divider { height: 1px; background: var(--dark-border); margin: 10px 0; }
+    .msl-calc-btn { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border-radius: 8px; text-decoration: none; font-size: 12px; font-weight: 600; color: var(--gray-500); transition: all 0.15s; }
+    .msl-calc-btn:hover { background: rgba(0,0,0,0.04); color: var(--gray-700); }
+    .msl-calc-btn.msl-calc-active { background: rgba(139,92,246,0.12); color: #8B5CF6; }
+    .msl-calc-dot { width: 5px; height: 5px; border-radius: 50%; background: #8B5CF6; flex-shrink: 0; }
+
+    /* ══ 메인 콘텐츠 ══ */
+    .main-content { min-width: 0; }
+
+    /* 페이지 헤더 */
+    .page-header {
+      background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 50%, #DDD6FE 100%);
+      border: 1px solid rgba(139,92,246,0.2);
+      border-radius: 20px; padding: 32px 32px 28px;
+      margin-bottom: 24px; position: relative; overflow: hidden;
+    }
+    .page-header::before {
+      content: ''; position: absolute; top: -60px; right: -60px;
+      width: 240px; height: 240px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(139,92,246,0.15) 0%, transparent 70%);
+    }
+    .breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--gray-500); margin-bottom: 14px; }
+    .breadcrumb a { color: var(--gray-500); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--primary); }
+    .breadcrumb-sep { font-size: 10px; }
+    .page-header-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(139,92,246,0.15); border: 1px solid var(--primary-border);
+      border-radius: 20px; padding: 4px 12px;
+      font-size: 11px; font-weight: 700; color: var(--primary); margin-bottom: 10px;
+    }
+    .page-header h1 { font-size: 26px; font-weight: 900; color: var(--gray-900); letter-spacing: -0.5px; line-height: 1.2; margin-bottom: 8px; }
+    .page-header p { font-size: 13px; color: var(--gray-600); font-weight: 500; }
+
+    /* ══ 자주 찾는 계산기 ══ */
+    .hub-section-label { font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--gray-400); margin-bottom: 10px; }
+    .hub-popular { margin-bottom: 24px; }
+    .hub-popular-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .hub-popular-card {
+      display: flex; align-items: center; gap: 12px;
+      padding: 16px 18px; background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%);
+      border: 1px solid rgba(139,92,246,0.3); border-radius: 14px;
+      text-decoration: none; transition: all 0.15s;
+      min-width: 0; overflow: hidden;
+    }
+    .hub-popular-card:hover {
+      border-color: var(--primary);
+      box-shadow: 0 4px 14px rgba(139,92,246,0.2);
+      transform: translateY(-2px);
+    }
+    .hub-popular-icon { font-size: 26px; flex-shrink: 0; }
+    .hub-popular-info { flex: 1; min-width: 0; }
+    .hub-popular-name { font-size: 14px; font-weight: 800; color: var(--gray-900); margin-bottom: 2px; }
+    .hub-popular-desc { font-size: 11.5px; color: var(--gray-500); line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .hub-popular-arrow { font-size: 14px; color: var(--primary); font-weight: 700; flex-shrink: 0; }
+
+    /* ══ 전체 계산기 그리드 ══ */
+    .calc-hub { margin-top: 0; }
+    .calc-hub-group { margin-bottom: 24px; }
+    .calc-hub-group-title {
+      font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+      color: var(--gray-400); margin-bottom: 10px; padding-bottom: 8px;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .calc-hub-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .calc-hub-card {
+      display: flex; flex-direction: column; gap: 5px;
+      padding: 14px; background: #FFFFFF;
+      border: 1px solid var(--gray-200); border-radius: 12px;
+      text-decoration: none; transition: all 0.15s;
+    }
+    .calc-hub-card:hover {
+      border-color: var(--primary);
+      box-shadow: 0 3px 10px rgba(139,92,246,0.12);
+      transform: translateY(-1px);
+    }
+    .calc-hub-icon { font-size: 20px; line-height: 1; margin-bottom: 2px; }
+    .calc-hub-name { font-size: 12.5px; font-weight: 700; color: var(--gray-900); }
+    .calc-hub-desc { font-size: 11px; color: var(--gray-500); line-height: 1.4; }
+    .calc-hub-arrow { margin-top: auto; padding-top: 6px; font-size: 10px; font-weight: 700; color: var(--primary); }
+
+    /* ══ FAQ ══ */
+    .hub-faq { margin-top:8px; }
+    .hub-faq-list { display:flex; flex-direction:column; gap:8px; }
+    .hub-faq-item { background:#fff; border:1px solid var(--gray-200); border-radius:12px; padding:14px 16px; }
+    .hub-faq-q { font-size:13px; font-weight:700; color:var(--gray-900); margin-bottom:6px; display:flex; align-items:flex-start; gap:8px; }
+    .hub-faq-q::before { content:'Q'; font-size:11px; font-weight:800; color:var(--primary); background:var(--primary-light); border-radius:4px; padding:1px 6px; flex-shrink:0; line-height:1.7; }
+    .hub-faq-a { font-size:12.5px; color:var(--gray-600); line-height:1.7; padding-left:26px; }
+
+    /* ══ 우측 사이드바 ══ */
+    .mega-sidebar-right { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 16px; }
+    .msr-widget { background: #fff; border: 1px solid rgba(0,0,0,0.06); border-radius: 14px; padding: 18px; box-shadow: 0 10px 24px rgba(15,23,42,0.04); }
+    .msr-widget-title { font-size: 11px; font-weight: 800; color: var(--gray-500); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 12px; }
+    .msr-widget-list { display: flex; flex-direction: column; gap: 4px; }
+    .msr-widget-link { display: flex; align-items: flex-start; gap: 8px; padding: 8px 10px; border-radius: 8px; text-decoration: none; transition: background 0.15s; }
+    .msr-widget-link:hover { background: rgba(0,0,0,0.04); }
+    .msr-widget-icon { font-size: 14px; flex-shrink: 0; line-height: 1.4; }
+    .msr-widget-text { font-size: 12px; font-weight: 600; color: var(--gray-500); line-height: 1.55; }
+    .msr-widget-link:hover .msr-widget-text { color: var(--gray-900); }
+
+    /* ══ 푸터 ══ */
+    .mega-footer { border-top: 1px solid var(--dark-border); padding: 28px 24px; margin-top: 0; }
+    .mega-footer-inner { max-width: 1400px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+    .mega-footer-links { display: flex; flex-wrap: wrap; gap: 4px; }
+    .mega-footer-links a { font-size: 10px; font-weight: 600; color: var(--gray-500); text-decoration: none; padding: 4px 10px; border-radius: 6px; transition: all 0.15s; }
+    .mega-footer-links a:hover { color: var(--primary); background: rgba(139,92,246,0.08); }
+    .mega-footer-copy { font-size: 10px; color: var(--gray-600); }
+
+    /* ══ 반응형 ══ */
+    @media (max-width: 1199px) {
+      .mega-layout { grid-template-columns: 200px 1fr; }
+      .mega-sidebar-right { display: none; }
+      .hub-popular-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 767px) {
+      .sh-inner { padding: 0 16px; }
+      .sh-nav, .sh-cta { display: none; }
+      .sh-hamburger { display: flex; }
+      .mega-layout { grid-template-columns: 1fr; padding: 16px; gap: 16px; }
+      .mega-sidebar-left { display: none; }
+      .mega-sidebar-left.open {
+        display: block; position: fixed; top: 60px; left: 0; bottom: 0;
+        width: 260px; background: #FFFFFF; border-right: 1px solid var(--dark-border);
+        padding: 20px 12px; overflow-y: auto; z-index: 200;
+      }
+      .page-header { padding: 24px 20px; }
+      .page-header h1 { font-size: 22px; }
+      .hub-popular-grid { grid-template-columns: 1fr; }
+      .calc-hub-grid { grid-template-columns: repeat(2, 1fr); }
+      .hub-popular-desc { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 공통 상단 헤더 -->
+<header class="site-header">
+  <div class="sh-inner">
+    <a href="/" class="sh-logo">
+      <div class="sh-logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div>
+      <span class="sh-logo-text">제이퍼<span style="color:#818CF8">계산기</span></span>
+    </a>
+    <nav class="sh-nav">
+      <a href="/calc/realestate/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/ai/" class="sh-nav-item sh-active"><span class="sh-nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/salary/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/pet/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#F472B6;"></span>반려동물</a>
+      <a href="/calc/finance/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/date/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+    </nav>
+    <div class="sh-cta">
+      <a href="/blog/" class="sh-btn-blog">블로그</a>
+    </div>
+    <button class="sh-hamburger" onclick="toggleMegaMenu()" aria-label="메뉴">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mega-overlay" id="mega-overlay" onclick="toggleMegaMenu()"></div>
+
+<!-- 3단 레이아웃 -->
+<div class="mega-layout">
+
+<!-- 좌측 사이드바 -->
+<aside class="mega-sidebar-left" id="mega-sidebar-left">
+  <div class="msl-section">
+    <div class="msl-title">카테고리</div>
+    <nav class="msl-nav">
+      <a href="/" class="msl-link"><span class="msl-icon">🧮</span>전체 보기</a>
+      <a href="/calc/realestate/" class="msl-link"><span class="msl-icon">🏠</span>부동산<span class="msl-badge">15</span></a>
+      <a href="/calc/tax/" class="msl-link"><span class="msl-icon">💰</span>프리랜서 세금<span class="msl-badge">5</span></a>
+      <a href="/calc/ai/" class="msl-link msl-active"><span class="msl-icon">🤖</span>AI / 테크<span class="msl-badge">5</span></a>
+      <a href="/calc/salary/" class="msl-link"><span class="msl-icon">📈</span>이직 / 연봉<span class="msl-badge">7</span></a>
+      <a href="/calc/pet/" class="msl-link"><span class="msl-icon">🐾</span>반려동물<span class="msl-badge">5</span></a>
+      <a href="/calc/finance/" class="msl-link"><span class="msl-icon">🏦</span>금융 · 이자<span class="msl-badge">5</span></a>
+      <a href="/calc/health/" class="msl-link"><span class="msl-icon">🏃</span>건강<span class="msl-badge">5</span></a>
+      <a href="/calc/date/" class="msl-link"><span class="msl-icon">📅</span>날짜 · D-day<span class="msl-badge">5</span></a>
+    </nav>
+  </div>
+  <div class="msl-divider"></div>
+  <div class="msl-section">
+    <div class="msl-title">AI / 테크 계산기</div>
+    <div class="msl-calc-list">
+      <a class="msl-calc-btn" href="/calc/ai/api-token/"><span class="msl-calc-dot"></span>API 토큰 비용</a>
+      <a class="msl-calc-btn" href="/calc/ai/gpu-cloud/"><span class="msl-calc-dot"></span>GPU 클라우드</a>
+      <a class="msl-calc-btn" href="/calc/ai/saas-comparison/"><span class="msl-calc-dot"></span>SaaS vs 자체구축</a>
+      <a class="msl-calc-btn" href="/calc/ai/llm-comparison/"><span class="msl-calc-dot"></span>LLM 비교표</a>
+      <a class="msl-calc-btn" href="/calc/ai/infra-forecast/"><span class="msl-calc-dot"></span>인프라 예측</a>
+    </div>
+  </div>
+</aside>
+
+<!-- 계산기 본체 -->
+<main class="main-content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><span>AI / 테크 계산기</span></div>
+    <div class="page-header-badge">🤖 2026년 기준 반영</div>
+    <h1>AI / 테크 비용 계산기</h1>
+    <p>API 토큰 · GPU 클라우드 · SaaS 비교 · LLM 비교 · 인프라 예측</p>
+  </div>
+
+  <!-- 자주 찾는 계산기 -->
+  <div class="hub-popular">
+    <div class="hub-section-label">자주 찾는 계산기</div>
+    <div class="hub-popular-grid">
+      <a class="hub-popular-card" href="/calc/ai/api-token/">
+        <div class="hub-popular-icon">⚡</div>
+        <div class="hub-popular-info">
+          <div class="hub-popular-name">API 토큰 비용</div>
+          <div class="hub-popular-desc">ChatGPT·Claude·Gemini API 비용 비교</div>
+        </div>
+        <div class="hub-popular-arrow">→</div>
+      </a>
+      <a class="hub-popular-card" href="/calc/ai/gpu-cloud/">
+        <div class="hub-popular-icon">💻</div>
+        <div class="hub-popular-info">
+          <div class="hub-popular-name">GPU 클라우드</div>
+          <div class="hub-popular-desc">AWS·GCP·Azure GPU 비용 비교</div>
+        </div>
+        <div class="hub-popular-arrow">→</div>
+      </a>
+      <a class="hub-popular-card" href="/calc/ai/llm-comparison/">
+        <div class="hub-popular-icon">📊</div>
+        <div class="hub-popular-info">
+          <div class="hub-popular-name">LLM 비교표</div>
+          <div class="hub-popular-desc">LLM 모델 가격·성능 한눈에 비교</div>
+        </div>
+        <div class="hub-popular-arrow">→</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- 전체 계산기 -->
+  <div class="calc-hub">
+
+    <div class="calc-hub-group">
+      <div class="calc-hub-group-title">API · 비용 계산</div>
+      <div class="calc-hub-grid">
+        <a class="calc-hub-card" href="/calc/ai/api-token/">
+          <div class="calc-hub-icon">⚡</div>
+          <div class="calc-hub-name">API 토큰 비용</div>
+          <div class="calc-hub-desc">모델별 토큰 비용 일/월/연 계산</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
+        <a class="calc-hub-card" href="/calc/ai/gpu-cloud/">
+          <div class="calc-hub-icon">💻</div>
+          <div class="calc-hub-name">GPU 클라우드</div>
+          <div class="calc-hub-desc">AWS·GCP·Azure GPU 비용 비교</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
+        <a class="calc-hub-card" href="/calc/ai/saas-comparison/">
+          <div class="calc-hub-icon">⚖️</div>
+          <div class="calc-hub-name">SaaS vs 자체구축</div>
+          <div class="calc-hub-desc">손익분기점 자동 계산</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="calc-hub-group">
+      <div class="calc-hub-group-title">비교 · 예측</div>
+      <div class="calc-hub-grid">
+        <a class="calc-hub-card" href="/calc/ai/llm-comparison/">
+          <div class="calc-hub-icon">📊</div>
+          <div class="calc-hub-name">LLM 비교표</div>
+          <div class="calc-hub-desc">GPT vs Claude vs Gemini 비교</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
+        <a class="calc-hub-card" href="/calc/ai/infra-forecast/">
+          <div class="calc-hub-icon">🚀</div>
+          <div class="calc-hub-name">인프라 예측</div>
+          <div class="calc-hub-desc">항목별 월 인프라 비용 합산</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FAQ -->
+  <div class="hub-faq">
+    <div class="hub-section-label">자주 묻는 질문</div>
+    <div class="hub-faq-list">
+      <div class="hub-faq-item">
+        <div class="hub-faq-q">AI API 토큰 비용은 어떻게 계산하나요?</div>
+        <p class="hub-faq-a">모델별(GPT, Claude, Gemini 등) 입력·출력 토큰 단가에 예상 사용량을 곱해 계산합니다. 같은 작업이라도 모델에 따라 토큰 수와 단가가 다르므로, API 토큰 비용 계산기에서 모델별로 비교해보세요.</p>
+      </div>
+      <div class="hub-faq-item">
+        <div class="hub-faq-q">GPU 클라우드 서비스는 어떤 걸 선택해야 하나요?</div>
+        <p class="hub-faq-a">AWS, GCP, Azure 등 주요 클라우드의 GPU 인스턴스는 종류·지역·예약 옵션에 따라 가격이 크게 달라집니다. GPU 클라우드 비교 계산기에서 예상 사용 시간과 GPU 종류를 입력하면 월 비용을 자동으로 비교할 수 있습니다.</p>
+      </div>
+      <div class="hub-faq-item">
+        <div class="hub-faq-q">SaaS와 자체구축 중 어느 쪽이 유리한가요?</div>
+        <p class="hub-faq-a">사용자 수가 적고 빠른 도입이 필요하면 SaaS가, 장기적으로 사용자가 많으면 자체구축이 유리합니다. SaaS vs 자체구축 비교 계산기에서 손익분기점을 확인해보세요.</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- 우측 사이드바 -->
+<aside class="mega-sidebar-right">
+  <div class="msr-widget">
+    <div class="msr-widget-title">관련 카테고리</div>
+    <div class="msr-widget-list">
+      <a href="/calc/tax/" class="msr-widget-link"><span class="msr-widget-icon">💰</span><span class="msr-widget-text">프리랜서 세금 계산기</span></a>
+      <a href="/calc/salary/" class="msr-widget-link"><span class="msr-widget-icon">📈</span><span class="msr-widget-text">이직/연봉 계산기</span></a>
+      <a href="/calc/finance/" class="msr-widget-link"><span class="msr-widget-icon">🏦</span><span class="msr-widget-text">금융·이자 계산기</span></a>
+    </div>
+  </div>
+</aside>
+
+</div><!-- /mega-layout -->
+
+<!-- 공통 푸터 -->
+<footer class="mega-footer">
+  <div class="mega-footer-inner">
+    <div class="mega-footer-links">
+      <a href="/">홈</a>
+      <a href="/about.html">소개</a>
+      <a href="/privacy.html">개인정보처리방침</a>
+      <a href="/terms.html">이용약관</a>
+      <a href="/contact.html">문의하기</a>
+      <a href="/disclaimer.html">면책조항</a>
+    </div>
+    <p class="mega-footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
+  </div>
+</footer>
+
+<script>
+function toggleMegaMenu() {
+  document.getElementById('mega-sidebar-left').classList.toggle('open');
+  document.getElementById('mega-overlay').classList.toggle('open');
+}
+</script>
+  <script src="/assets/footer-unified.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>펫보험 비교 계산기 - 보험가입 vs 미가입 비용 비교 | jptcalc</title>
+  <meta name="description" content="펫보험 월 보험료와 보장률을 입력하면 보험 가입 시와 미가입 시 연간 총 지출을 비교합니다." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/pet/insurance/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="펫보험 비교 계산기 | jptcalc" />
+  <meta property="og:description" content="펫보험 월 보험료와 보장률을 입력하면 보험 가입 시와 미가입 시 연간 총 지출을 비교합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/pet/insurance/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/pet-common.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"펫보험 비교 계산기","url":"https://www.jptcalc.kr/calc/pet/insurance/","applicationCategory":"LifestyleApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+    {"@type":"ListItem","position":2,"name":"반려동물 비용 계산기","item":"https://www.jptcalc.kr/calc/pet/"},
+    {"@type":"ListItem","position":3,"name":"펫보험 비교 계산기","item":"https://www.jptcalc.kr/calc/pet/insurance/"}
+  ]}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"펫보험 보장률 70%면 병원비 전액의 70%를 돌려받나요?","acceptedAnswer":{"@type":"Answer","text":"보장률 70%는 보장 대상 항목에 한해 적용됩니다. 자기부담금, 면책항목, 보장한도가 있으므로 실제 환급액은 달라질 수 있습니다."}},{"@type":"Question","name":"펫보험 보험료는 나이에 따라 올라가나요?","acceptedAnswer":{"@type":"Answer","text":"대부분 갱신형 상품으로, 반려동물 나이가 많아질수록 보험료가 인상됩니다. 가입 시 나이 제한(보통 8~10세)도 있습니다."}},{"@type":"Question","name":"펫보험 없이 의료비를 직접 적립하는 것이 더 나을 수도 있나요?","acceptedAnswer":{"@type":"Answer","text":"건강한 반려동물이라면 월 보험료만큼 적립하는 것이 유리할 수 있지만, 큰 수술이나 만성질환 시 보험이 훨씬 유리합니다."}}]}</script>
+  <style>
+    /* insurance 고유 스타일 - 공통 스타일은 /assets/pet-common.css 참조 */
+    .input-wrap{position:relative}
+    .input-wrap .unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none}
+    input[type=number],select{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
+    select{padding:12px 16px;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 5l3 3 3-3' stroke='%239CA3AF' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+    input::placeholder{color:var(--gray-400);font-weight:400}
+    input:focus,select:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(244,114,182,0.15)}
+    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
+    .seg-group{display:flex;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:18px}
+    .seg-btn{flex:1;border:none;border-radius:7px;background:transparent;padding:9px 4px;font-size:12px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap}
+    .seg-btn.active{background:var(--primary);color:#fff;font-weight:700}
+    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
+    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
+    .result-card{background:linear-gradient(135deg,#FDF2F8 0%,#FCE7F3 100%);border:1px solid rgba(244,114,182,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-row+.result-row{border-top:1px solid rgba(0,0,0,0.07)}
+    .result-total-row{border-top:1px solid rgba(0,0,0,0.15)!important;margin-top:4px;padding-top:14px!important}
+    .result-total-value{font-size:24px;font-weight:900;color:var(--gray-900)}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/pet/" class="nav-item active"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/pet/">반려동물 비용 계산기</a><span class="breadcrumb-sep">›</span><span>펫보험 비교 계산기</span></div>
+    <div class="page-header-badge">🛡️ 보장률별 비교 분석</div>
+    <h1>펫보험 비교 계산기</h1>
+    <p>보험 가입 vs 미가입 시 연간 지출을 비교하세요</p>
+  </div>
+    <div class="card">
+      <div class="card-title">보험료 설정</div>
+      <div class="field"><div class="field-label">월 보험료</div><div class="input-wrap"><input type="number" id="ins-premium" placeholder="예) 5" oninput="calc()" /><span class="unit">만원</span></div><div class="field-hint">💡 소형견 1세 기준 월 2~5만원 / 중형견 3~8만원 / 고양이 1~4만원</div></div>
+      <div class="field"><div class="field-label">보장률</div><div class="seg-group" style="margin-bottom:0"><button class="seg-btn" onclick="setRate(50,this)">50%</button><button class="seg-btn active" onclick="setRate(70,this)">70%</button><button class="seg-btn" onclick="setRate(80,this)">80%</button></div></div>
+      <div class="field"><div class="field-label">연간 예상 병원비 (미보험)</div><div class="input-wrap"><input type="number" id="ins-annual" placeholder="예) 100" oninput="calc()" /><span class="unit">만원</span></div></div>
+    </div>
+    <div class="result-card" id="result">
+      <div id="result-content"></div>
+      <p class="result-note">※ 자기부담금, 면책기간, 보장 한도 등 약관마다 다릅니다. 보험료는 나이·품종·보험사별로 크게 차이가 납니다. 이 계산기의 결과는 평균 시장가 기반 추정치이며, 실제 보험료는 보험사 공식 채널에서 확인하세요.</p>
+    </div>
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>펫보험, 가입하면 정말 이득일까?</h2>
+      <p>펫보험은 월 보험료를 내고 병원비의 일정 비율을 보장받는 상품입니다. 보험료, 보장률, 자기부담금, 면책기간 등을 종합적으로 비교해야 실제로 유리한지 판단할 수 있습니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>보장률 비교</strong><span>50%·70%·80% 보장률에 따라 본인부담금과 총 지출이 크게 달라집니다</span></div>
+        <div class="guide-box"><strong>손익분기점 확인</strong><span>연간 병원비가 일정 금액 이상이면 보험 가입이 유리해집니다</span></div>
+        <div class="guide-box"><strong>약관 핵심 체크</strong><span>면책기간, 보장한도, 갱신형 여부 등 약관 조건을 꼭 확인하세요</span></div>
+      </div>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>펫보험 보장률 70%면 병원비 전액의 70%를 돌려받나요?</h3><p>보장률 70%는 보장 대상 항목에 한해 적용됩니다. 자기부담금, 면책항목, 보장한도가 있으므로 실제 환급액은 달라질 수 있습니다.</p></div>
+      <div class="faq-item"><h3>보험료는 나이에 따라 올라가나요?</h3><p>대부분 갱신형 상품으로, 반려동물 나이가 많아질수록 보험료가 인상됩니다. 가입 시 나이 제한(보통 8~10세)도 있습니다.</p></div>
+      <div class="faq-item"><h3>보험 없이 의료비 적립이 더 나을 수도 있나요?</h3><p>건강한 반려동물이라면 월 보험료만큼 적립하는 것이 유리할 수 있지만, 큰 수술이나 만성질환 시 보험이 훨씬 유리합니다.</p></div>
+      <div class="update-note">최종 검토: 2026.03.25 · 계산 결과는 참고용입니다.</div>
+    </div>
+  </div>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 반려동물 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/pet/adoption/" class="sibling-link">🏠 입양 초기비용</a>
+      <a href="/calc/pet/monthly-cost/" class="sibling-link">📅 월 생활비</a>
+      <a href="/calc/pet/medical/" class="sibling-link">🏥 의료비 예산</a>
+      <a href="/calc/pet/insurance/" class="sibling-link current">🛡️ 펫보험 비교</a>
+      <a href="/calc/pet/lifetime-cost/" class="sibling-link">📊 평생 양육비용</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">© 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script>
+
+function W(m){if(!m&&m!==0)return'-';m=Math.round(m);return m.toLocaleString()+'만원';}
+let insRate=70;
+function setRate(r,btn){insRate=r;btn.parentElement.querySelectorAll('.seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');calc();}
+function calc(){
+  const premium=parseFloat(document.getElementById('ins-premium').value)||0;
+  const annualVet=parseFloat(document.getElementById('ins-annual').value)||0;
+  if(!premium||!annualVet){document.getElementById('result').classList.remove('show');return;}
+  document.getElementById('result').classList.add('show');
+  const ap=premium*12,covered=annualVet*insRate/100,copay=annualVet-covered,totalIns=ap+copay,totalNo=annualVet;
+  let verdict='';
+  if(totalIns<totalNo){verdict=`✅ <strong>보험 가입이 유리</strong>합니다. 연간 <strong>${W(totalNo-totalIns)}</strong> 절감.`;}
+  else{verdict=`⚠️ 예상 병원비 기준 <strong>미가입이 ${W(totalIns-totalNo)} 저렴</strong>합니다. 단, 큰 수술 시 보험이 유리할 수 있습니다.`;}
+  document.getElementById('result-content').innerHTML=`
+    <div class="result-row"><span class="result-label">연간 보험료</span><span class="result-value">${W(ap)}</span></div>
+    <div class="result-row"><span class="result-label">보험사 지급액</span><span class="result-value">${W(covered)}</span></div>
+    <div class="result-row"><span class="result-label">본인부담 (보험)</span><span class="result-value">${W(copay)}</span></div>
+    <div class="result-row"><span class="result-label">보험 가입 시 총 지출</span><span class="result-value" style="color:var(--primary);font-weight:800">${W(totalIns)}</span></div>
+    <div class="result-row"><span class="result-label">미가입 시 총 지출</span><span class="result-value">${W(totalNo)}</span></div>
+    <div style="margin-top:14px;padding:12px;background:rgba(244,114,182,0.08);border-radius:10px;font-size:12px;line-height:1.6">${verdict}</div>`;
+}
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/pet-detail-shell.js"></script>
+</body>
+</html>

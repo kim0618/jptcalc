@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>전세 vs 월세 - 어떤 게 더 유리할까? 기회비용으로 따져보기 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="전세와 월세 중 어떤 선택이 유리한지 기회비용으로 계산하는 방법. 손익분기 금리 공식과 실제 비교 예시를 통해 내 상황에 맞는 선택을 찾아보세요." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="전세 vs 월세 - 어떤 게 더 유리할까? 기회비용으로 따져보기 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="전세와 월세 중 어떤 선택이 유리한지 기회비용으로 계산하는 방법. 손익분기 금리 공식과 실제 비교 예시를 통해 내 상황에 맞는 선택을 찾아보세요." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/jeonse-vs-wolse.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/jeonse-vs-wolse.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <!-- Google Analytics -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BRSX3F10MZ');
+  </script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #F59E0B;
+      --gray-400: #9CA3AF; --gray-500: #6B7280; --gray-600: #4B5563;
+      --dark-bg: #ffffff; --dark-card: #F9FAFB; --dark-border: rgba(0,0,0,0.08);
+    }
+    body { font-family: 'Pretendard', -apple-system, sans-serif; background: #ffffff; color: #111827; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+
+    .site-header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .header-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; gap: 24px; }
+    .site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .logo-icon { width: 32px; height: 32px; }
+    .logo-icon img { width: 32px; height: 32px; display: block; }
+    .logo-text { font-size: 18px; font-weight: 900; color: #111827; letter-spacing: -0.5px; }
+    .logo-text span { color: #818CF8; }
+    .header-back { margin-left: auto; font-size: 13px; font-weight: 600; color: #6B7280; text-decoration: none !important; }
+    .header-back:hover { color: #111827; }
+
+    .post-wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+    .post-tag { display: inline-block; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; background: rgba(245,158,11,0.15); color: #F59E0B; margin-bottom: 16px; }
+    h1 { font-size: 26px; font-weight: 900; color: #111827; line-height: 1.35; margin-bottom: 12px; }
+    .post-meta { font-size: 13px; color: #4B5563; margin-bottom: 36px; display: flex; gap: 12px; }
+    .post-body { font-size: 15px; color: #111827; line-height: 1.8; }
+    .post-body h2 { font-size: 19px; font-weight: 800; color: #111827; margin: 40px 0 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .post-body h3 { font-size: 16px; font-weight: 700; color: #111827; margin: 24px 0 10px; }
+    .post-body p { margin-bottom: 14px; }
+    .post-body ul, .post-body ol { margin: 10px 0 14px 20px; }
+    .post-body li { margin-bottom: 8px; }
+    .post-body a { color: var(--primary); text-decoration: none !important; }
+    .post-body a:hover { text-decoration: underline; }
+    .highlight-box { background: rgba(245,158,11,0.08); border-left: 4px solid #F59E0B; border-radius: 0 10px 10px 0; padding: 16px 20px; margin: 20px 0; }
+    .highlight-box p { margin: 0; color: #92400E; font-size: 14px; }
+    .table-wrap { overflow-x: auto; margin: 20px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th { background: #F9FAFB; color: #111827; font-weight: 700; padding: 10px 14px; text-align: left; border: 1px solid rgba(0,0,0,0.08); }
+    td { padding: 10px 14px; border: 1px solid rgba(0,0,0,0.08); color: #1F2937; }
+    tr:hover td { background: rgba(0,0,0,0.02); }
+    td.win { font-weight: 700; color: #F59E0B; }
+    td.center { text-align: center; }
+    .cta-box { background: #F9FAFB; border: 1px solid rgba(0,0,0,0.08); border-radius: 14px; padding: 24px; margin: 40px 0; text-align: center; }
+    .cta-box p { color: #374151; font-size: 14px; margin-bottom: 14px; }
+    .cta-btn { display: inline-block; padding: 12px 28px; background: #F59E0B; color: #fff !important; font-size: 14px; font-weight: 800; border-radius: 10px; text-decoration: none !important; }
+    .cta-btn:hover { opacity: 0.9; }
+    .faq-item { background: #F9FAFB; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; padding: 20px; margin: 16px 0; }
+    .faq-q { font-weight: 800; color: #111827; margin-bottom: 8px; font-size: 15px; }
+    .faq-a { color: #374151; font-size: 14px; line-height: 1.7; margin: 0; }
+    .step-box { display: flex; gap: 16px; margin: 16px 0; }
+    .step-num { flex-shrink: 0; width: 28px; height: 28px; background: #F59E0B; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; margin-top: 2px; }
+    .step-content { flex: 1; }
+    .step-content strong { display: block; font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+
+    .site-footer { border-top: 1px solid rgba(0,0,0,0.08); padding: 24px; text-align: center; }
+    .footer-copy { font-size: 10px; color: #374151; }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo">
+      <div class="logo-icon"><img src="../../assets/logo.svg" alt="제이퍼 계산기 로고" /></div>
+      <span class="logo-text">제이퍼<span>계산기</span></span>
+    </a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+
+<div class="post-wrap">
+  <span class="post-tag">부동산</span>
+  <h1>전세 vs 월세 - 어떤 게 더 유리할까? 기회비용으로 따져보기</h1>
+  <div class="post-meta">
+    <span>📅 2026.03.26</span>
+    <span>·</span>
+    <span>5분 읽기</span>
+  </div>
+
+  <div class="post-body">
+    <p>"전세로 살면 목돈이 묶이니 월세가 낫지 않나요?" 반대로 "월세는 매달 나가는 돈이 아깝다"는 말도 있습니다. 어느 쪽이 맞을까요? 정답은 <strong>기회비용 계산</strong>에 달려 있습니다. 숫자로 직접 비교해 보겠습니다.</p>
+
+    <div class="highlight-box">
+      <p><strong>이 글이 필요한 사람:</strong> 전세와 월세 중 어느 쪽을 선택할지 고민 중인 분 / 기회비용 개념으로 임대차 조건을 비교하고 싶은 분 / 손익분기 금리를 직접 계산해보고 싶은 분</p>
+    </div>
+
+    <h2>핵심 개념 - 기회비용이란?</h2>
+    <p>전세를 선택하면 보증금이라는 목돈이 묶입니다. 그 돈을 다른 곳에 투자하거나 저축했다면 얻을 수 있었던 수익이 바로 <strong>기회비용</strong>입니다. 전세의 진짜 비용은 0원이 아니라 "묶인 돈의 기회비용"입니다.</p>
+    <p>반대로 월세는 매달 직접 나가는 비용이 있지만, 보증금으로 묶이는 금액이 작으므로 나머지 자금을 운용할 수 있습니다.</p>
+
+    <h2>손익분기 금리 공식</h2>
+    <p>전세와 월세가 <strong>동등한 비용 조건</strong>이 되는 금리를 손익분기 금리라고 합니다.</p>
+
+    <div class="highlight-box">
+      <p><strong>손익분기 금리(%) = 월세 × 12 ÷ (전세보증금 − 월세보증금) × 100</strong><br />
+      이 금리보다 자금 운용 수익률이 높으면 → 월세가 유리<br />
+      이 금리보다 자금 운용 수익률이 낮으면 → 전세가 유리</p>
+    </div>
+
+    <h2>실제 비교 예시</h2>
+
+    <h3>예시 A: 전세 3억원 vs 보증금 5,000만원 + 월세 80만원</h3>
+    <ul>
+      <li>전세보증금: 3억원 / 월세보증금: 5,000만원</li>
+      <li>차이 보증금: 3억 − 5,000만원 = <strong>2억5,000만원</strong></li>
+      <li>손익분기 금리: 80만원 × 12 ÷ 2억5,000만원 × 100 = <strong>연 3.84%</strong></li>
+    </ul>
+    <p>→ 2억5,000만원을 연 3.84% 이상으로 운용할 수 있다면 월세가 유리, 그 이하라면 전세가 유리합니다.</p>
+
+    <h3>예시 B: 전세 2억원 vs 보증금 2,000만원 + 월세 60만원</h3>
+    <ul>
+      <li>차이 보증금: 1억8,000만원</li>
+      <li>손익분기 금리: 60만원 × 12 ÷ 1억8,000만원 × 100 = <strong>연 4.0%</strong></li>
+    </ul>
+    <p>→ 은행 예금 금리가 3% 수준이라면 전세가 더 유리한 선택입니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>조건</th><th>차이 보증금</th><th>월세</th><th>손익분기 금리</th></tr>
+        <tr><td>예시 A</td><td>2억5,000만원</td><td>80만원</td><td class="win">연 3.84%</td></tr>
+        <tr><td>예시 B</td><td>1억8,000만원</td><td>60만원</td><td class="win">연 4.0%</td></tr>
+        <tr><td>예시 C (반전세)</td><td>5,000만원</td><td>50만원</td><td class="win">연 12%</td></tr>
+      </table>
+    </div>
+    <p style="margin: 1.2em 0;">
+      👉 <a href="https://www.jptcalc.kr/calc/realestate/conversion/" style="color: #2563eb; font-weight: 600;">전월세 전환율 계산기로 직접 계산해보기</a>
+    </p>
+    <p>예시 C처럼 반전세(보증금이 크고 월세가 높음) 조건은 손익분기 금리가 매우 높아 전세가 유리한 경우가 많습니다.</p>
+
+    <h2>전세 vs 월세 비교표</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>항목</th><th>전세</th><th>월세</th></tr>
+        <tr><td>초기 목돈</td><td>많음 (수억원)</td><td>적음 (수천만원)</td></tr>
+        <tr><td>매월 현금 지출</td><td>없음</td><td>있음 (50~150만원)</td></tr>
+        <tr><td>자금 유동성</td><td>낮음 (묶임)</td><td>높음 (운용 가능)</td></tr>
+        <tr><td>금리 상승 시</td><td>유리</td><td>불리 (월세 인상 압력)</td></tr>
+        <tr><td>금리 하락 시</td><td>불리 (전세가 인상 압력)</td><td>상대적 유리</td></tr>
+        <tr><td>보증금 반환 리스크</td><td>있음 (전세사기 주의)</td><td>적음</td></tr>
+        <tr><td>세입자 우선순위</td><td>확정일자·전입신고 필수</td><td>동일</td></tr>
+      </table>
+    </div>
+
+    <h2>전세를 선택하면 안 되는 경우</h2>
+
+    <h3>전세가율 80% 이상인 매물</h3>
+    <p>전세보증금이 매매가격의 80% 이상이면 집값이 조금만 떨어져도 집주인이 보증금을 돌려주지 못할 수 있습니다. 전세가율이 높을수록 리스크가 커집니다. 계약 전 반드시 등기부등본과 근저당 설정액을 확인하세요.</p>
+
+    <h3>집주인의 부채가 많은 경우</h3>
+    <p>등기부등본에 근저당, 가압류, 압류가 설정되어 있다면 경매 시 보증금 전액 회수가 불가능할 수 있습니다. 선순위 채권 합계 + 전세보증금이 집값의 70%를 넘지 않는지 반드시 확인하세요.</p>
+
+    <h3>전세보증보험 가입이 안 되는 매물</h3>
+    <p>HUG(주택도시보증공사) 또는 SGI서울보증의 전세보증보험에 가입할 수 없는 매물은 전세 계약을 피하는 것이 안전합니다. 보험 가입 가능 여부를 먼저 확인하세요.</p>
+
+    <h2>월세를 선택하면 좋은 경우</h2>
+    <ul>
+      <li>목돈을 주식·ETF 등 연 4% 이상 수익을 기대할 수 있는 곳에 투자하는 분</li>
+      <li>단기 거주(1~2년) 계획이라 이사 리스크를 최소화하고 싶은 분</li>
+      <li>전세 시장 불안정 지역에 거주할 예정인 분</li>
+      <li>보증금을 마련하기 어려운 사회초년생</li>
+    </ul>
+
+    <h2>월세 세액공제 - 놓치면 손해</h2>
+    <p>월세를 내는 무주택 세입자는 <strong>월세 세액공제</strong>를 받을 수 있습니다. 이를 포함하면 월세의 실질 비용이 줄어들어 손익분기 계산에 반영해야 합니다.</p>
+    <ul>
+      <li>대상: 연 소득 8,000만원 이하 무주택 근로자 (종합소득세 신고자 포함)</li>
+      <li>공제율: 연 소득 5,500만원 이하 17%, 5,500~8,000만원 15%</li>
+      <li>한도: 연 월세 지출액 1,000만원까지 (공제액 최대 170만원)</li>
+      <li>적용 조건: 확정일자·전입신고 완료, 주거용 주택(고시원·오피스텔 포함)</li>
+    </ul>
+    <p>예를 들어 월세 80만원 × 12 = 960만원에 17% 세액공제 적용 시 연 163만원 절세 → 실질 월세 부담이 월 66.4만원으로 줄어듭니다.</p>
+
+    <div class="cta-box">
+      <p>부동산 중개수수료, 취득세 등 다른 부동산 비용도 미리 계산해보세요.</p>
+      <a href="../../calc/realestate/conversion/" class="cta-btn">부동산 계산기 바로가기</a>
+    </div>
+    <p style="font-size: 13px; color: #6B7280; margin-top: 8px;">관련 계산기: <a href="https://www.jptcalc.kr/calc/realestate/dsr/">DSR 대출한도 계산기</a> · <a href="https://www.jptcalc.kr/calc/realestate/loan/">대출 이자 계산기</a></p>
+
+    <h2>자주 묻는 질문 (FAQ)</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 전세금 반환 보증보험은 꼭 들어야 하나요?</div>
+      <p class="faq-a">필수는 아니지만 강력히 권장합니다. 연 보험료는 전세보증금의 약 0.1~0.15% 수준(3억 전세 시 연 30~45만원)으로 크지 않지만, 전세사기 또는 집주인 파산 시 보증금 전액을 보호받을 수 있습니다. 단, 가입 요건(전세가율, 집주인 신용 등)을 충족해야 합니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 전세에서 월세로 바꿀 때 전환율은 어떻게 정해지나요?</div>
+      <p class="faq-a">주택임대차보호법은 전세→월세 전환 시 적용할 수 있는 전환율 상한을 규정합니다. 2026년 기준 법정 전환율 상한은 연 10%와 한국은행 기준금리+대통령령이 정한 이율 중 낮은 값입니다. 집주인이 이를 초과한 전환을 요구하면 거절할 수 있습니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 반전세와 월세는 어떻게 다른가요?</div>
+      <p class="faq-a">반전세는 보증금이 전세보증금에 가깝게 높고 월세가 추가로 있는 형태입니다. 일반 월세는 보증금이 낮고 월세가 높은 형태입니다. 법적 구분은 없고 관행적 용어입니다. 손익분기 금리 공식은 두 경우 모두 동일하게 적용할 수 있습니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 전세자금대출을 받으면 전세가 더 불리해지나요?</div>
+      <p class="faq-a">전세자금대출 이자를 내면 전세의 실질 비용이 발생합니다. 예를 들어 전세보증금 3억 중 1억5,000만원을 연 4% 대출로 충당하면 연 이자 600만원 = 월 50만원이 추가 비용이 됩니다. 이 이자 비용과 월세를 비교해 유리한 쪽을 선택하세요.</p>
+    </div>
+
+    <h2>마무리</h2>
+    <p>전세와 월세 중 절대적으로 유리한 쪽은 없습니다. 지역별 전월세 시세는 <a href="https://www.reb.or.kr">한국부동산원</a>에서, 임대차 관련 정책은 <a href="https://www.molit.go.kr">국토교통부</a>에서 확인할 수 있습니다. 손익분기 금리 공식으로 본인의 자금 운용 수익률과 비교하고, 전세 리스크(전세가율, 보증보험 가입 여부)까지 고려해 결정하세요. 금리가 높을수록 월세가 불리해지고, 전세 시장 불안정 지역일수록 보증금 안전성이 더 중요해집니다. 계약 전 등기부등본 확인과 전세보증보험 가입 가능 여부 확인은 필수입니다.</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용이며 정확한 판단은 전문가에게 문의하세요.</p>
+</footer>
+
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '주택임대차보호법·주택도시보증공사 기준, 2026년',
+  referenceOrg: '주택도시보증공사',
+  lastReviewed: '2026.03.26',
+  disclaimer: '이 글은 정보 제공 목적으로 작성되었습니다. 임대차 계약 조건은 지역·매물·시장 상황에 따라 달라지므로 계약 전 공인중개사 또는 법률 전문가의 확인을 받으세요.',
+};
+</script>
+<script>
+window.ARTICLE_INFO_CONFIG.relatedCalc = { name: '전월세전환 계산기', url: '/calc/realestate/conversion/' };
+window.ARTICLE_INFO_CONFIG.category = 'realestate';
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>

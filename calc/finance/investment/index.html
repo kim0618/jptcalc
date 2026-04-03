@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>투자 수익률 계산기 - 총수익률·CAGR 자동계산 | jptcalc</title>
+  <meta name="description" content="매입금액, 현재가, 보유기간을 입력하면 총 수익률과 연평균 수익률(CAGR)을 자동 계산합니다." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/finance/investment/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="투자 수익률 계산기 | jptcalc" />
+  <meta property="og:description" content="매입금액, 현재가, 보유기간을 입력하면 총 수익률과 연평균 수익률(CAGR)을 자동 계산합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/finance/investment/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="투자 수익률 계산기 | jptcalc" />
+  <meta name="twitter:description" content="매입금액, 현재가, 보유기간을 입력하면 총 수익률과 연평균 수익률(CAGR)을 자동 계산합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/finance-common.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"투자 수익률 계산기",
+    "url":"https://www.jptcalc.kr/calc/finance/investment/",
+    "applicationCategory":"FinanceApplication",
+    "operatingSystem":"All",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+      {"@type":"ListItem","position":2,"name":"금융·이자 계산기","item":"https://www.jptcalc.kr/calc/finance/"},
+      {"@type":"ListItem","position":3,"name":"투자 수익률 계산기","item":"https://www.jptcalc.kr/calc/finance/investment/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"CAGR이란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"CAGR(Compound Annual Growth Rate)은 연평균 복합성장률로, 투자 기간 동안 매년 일정하게 성장했다고 가정할 때의 연간 수익률입니다. 서로 다른 기간의 투자 성과를 비교할 때 유용합니다. 예를 들어 3년간 총 수익률 30%와 10년간 총 수익률 30%는 CAGR로 환산하면 각각 약 9.1%와 2.7%로 차이가 명확하게 드러납니다."}},{"@type":"Question","name":"배당 수익도 수익률에 포함해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"네, 총 투자 수익률(Total Return)은 시세 차익뿐 아니라 배당금·이자 등 모든 수익을 포함해야 정확한 투자 성과를 평가할 수 있습니다. 배당을 제외한 수익률은 실제 성과를 과소평가할 수 있으며, 특히 배당주나 채권 투자에서는 배당·이자가 수익의 핵심 구성 요소입니다."}},{"@type":"Question","name":"과거 수익률로 미래를 예측할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"과거 수익률은 참고 지표일 뿐 미래 수익을 보장하지 않습니다. 시장 환경, 경제 상황 등에 따라 실제 수익은 크게 달라질 수 있습니다. 투자 의사결정 시 과거 성과와 함께 자산의 미래 전망, 리스크 수준, 분산 투자 여부를 종합적으로 검토하는 것이 중요합니다."}},{"@type":"Question","name":"총 수익률과 연평균 수익률(CAGR)은 어떻게 다른가요?","acceptedAnswer":{"@type":"Answer","text":"총 수익률은 투자 기간 전체에 걸쳐 얼마나 수익이 발생했는지를 나타내는 누적 지표이고, CAGR은 이를 연 단위로 환산한 평균 성장률입니다. 투자 기간이 다른 상품들을 공정하게 비교하려면 CAGR을 기준으로 삼는 것이 정확합니다."}}]}</script>
+  <style>
+    input[type=number]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(99,102,241,0.15)}
+    .result-card{background:linear-gradient(135deg,#EEF2FF 0%,#E0E7FF 100%);border:1px solid rgba(99,102,241,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-highlight{background:rgba(99,102,241,0.1);border-radius:12px;padding:16px;margin-bottom:16px;text-align:center}
+    .rh-label{font-size:12px;color:var(--gray-500);margin-bottom:4px}
+    .rh-value{font-size:28px;font-weight:900;color:var(--primary)}
+    .rh-sub{font-size:12px;color:var(--gray-500);margin-top:2px}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+      <a href="/calc/finance/" class="nav-item active"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/finance/">금융·이자 계산기</a><span class="breadcrumb-sep">›</span><span>투자 수익률 계산기</span></div>
+    <div class="page-header-badge">💹 CAGR 연평균 복합성장률 지원</div>
+    <h1>투자 수익률 계산기</h1>
+    <p>매입·매도 금액으로 총 수익률과 CAGR을 계산하세요</p>
+  </div>
+    <div class="card">
+      <div class="card-title">투자 정보</div>
+      <div class="field">
+        <div class="field-label">매입 금액 <span class="label-hint">만원 단위</span></div>
+        <div class="input-wrap"><input type="number" id="inv-buy" placeholder="예) 1000" oninput="calc()" /><span class="unit">만원</span></div>
+      </div>
+      <div class="field">
+        <div class="field-label">현재 (매도) 금액 <span class="label-hint">만원 단위</span></div>
+        <div class="input-wrap"><input type="number" id="inv-sell" placeholder="예) 1350" oninput="calc()" /><span class="unit">만원</span></div>
+      </div>
+      <div class="field">
+        <div class="field-label">보유 기간</div>
+        <div class="input-wrap"><input type="number" id="inv-years" placeholder="예) 3" step="0.5" oninput="calc()" /><span class="unit">년</span></div>
+      </div>
+      <div class="field">
+        <div class="field-label">배당·이자 수익 <span class="label-hint">만원 단위</span></div>
+        <div class="input-wrap"><input type="number" id="inv-dividend" placeholder="예) 50" oninput="calc()" /><span class="unit">만원</span></div>
+        <div class="field-hint">보유 기간 전체 합산</div>
+      </div>
+    </div>
+    <div class="result-card" id="result">
+      <div class="result-highlight">
+        <div class="rh-label">총 수익률</div>
+        <div class="rh-value" id="inv-total-rate">-</div>
+        <div class="rh-sub" id="inv-cagr-sub">연평균 수익률 (CAGR) -</div>
+      </div>
+      <div class="result-row"><span class="result-label">매입 금액</span><span class="result-value" id="inv-r-buy">-</span></div>
+      <div class="result-row"><span class="result-label">평가 차익</span><span class="result-value" id="inv-r-gain">-</span></div>
+      <div class="result-row"><span class="result-label">배당·이자 수익</span><span class="result-value" id="inv-r-div">-</span></div>
+      <div class="result-row"><span class="result-label">총 수익</span><span class="result-value" id="inv-r-profit">-</span></div>
+      <div class="result-row result-total-row">
+        <span class="result-total-label">연평균 수익률 (CAGR)</span>
+        <span class="result-total-value" id="inv-r-cagr">-</span>
+      </div>
+      <p class="result-note">※ CAGR(연평균복합성장률) = (최종가치/초기가치)^(1/기간) - 1. 세금 미반영 수익률입니다.</p>
+    </div>
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>투자 수익률, 제대로 계산하는 법</h2>
+      <p>투자 수익률은 단순히 얼마를 벌었는지뿐 아니라 투자 기간을 고려한 연평균 수익률(CAGR)로 비교해야 정확합니다. 3년간 30% 수익과 10년간 30% 수익은 전혀 다른 성과이며, CAGR을 통해 다양한 투자 상품의 성과를 공정하게 비교할 수 있습니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>총 수익률</strong><span>(매도가 - 매입가 + 배당) / 매입가 x 100</span></div>
+        <div class="guide-box"><strong>CAGR (연환산)</strong><span>투자 기간을 반영한 연평균 복합성장률</span></div>
+        <div class="guide-box"><strong>실질 수익률</strong><span>수수료·세금 차감 후 실제 순수익 기준</span></div>
+      </div>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>CAGR이란 무엇인가요?</h3><p>CAGR(Compound Annual Growth Rate)은 연평균 복합성장률로, 투자 기간 동안 매년 일정하게 성장했다고 가정할 때의 연간 수익률입니다. 서로 다른 기간의 투자 성과를 비교할 때 유용합니다.</p></div>
+      <div class="faq-item"><h3>배당 수익도 수익률에 포함해야 하나요?</h3><p>네, 총 투자 수익률(Total Return)은 시세 차익뿐 아니라 배당금·이자 등 모든 수익을 포함해야 정확한 투자 성과를 평가할 수 있습니다.</p></div>
+      <div class="faq-item"><h3>과거 수익률로 미래를 예측할 수 있나요?</h3><p>과거 수익률은 참고 지표일 뿐 미래 수익을 보장하지 않습니다. 시장 환경, 경제 상황 등에 따라 실제 수익은 크게 달라질 수 있습니다.</p></div>
+      <div class="update-note">최종 검토: 2026.03.25 · 계산 결과는 참고용입니다.</div>
+    </div>
+  </div>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 금융·이자 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/finance/deposit/" class="sibling-link">🏦 예금 이자</a>
+      <a href="/calc/finance/savings/" class="sibling-link">💳 적금 만기금액</a>
+      <a href="/calc/finance/compound/" class="sibling-link">📈 복리 계산</a>
+      <a href="/calc/finance/loan-repayment/" class="sibling-link">🏠 대출 상환</a>
+      <a href="/calc/finance/investment/" class="sibling-link current">💹 투자 수익률</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script>
+
+function Wm(man){if(man>=10000)return(man/10000).toFixed(2)+'억원';return man.toLocaleString()+'만원';}
+function calc(){
+  const buy=parseFloat(document.getElementById('inv-buy').value)||0;
+  const sell=parseFloat(document.getElementById('inv-sell').value)||0;
+  const years=parseFloat(document.getElementById('inv-years').value)||0;
+  const div=parseFloat(document.getElementById('inv-dividend').value)||0;
+  const res=document.getElementById('result');
+  if(!buy||!sell){res.classList.remove('show');return;}
+  res.classList.add('show');
+  const gain=sell-buy, profit=gain+div;
+  const totalRate=(profit/buy*100).toFixed(2);
+  const cagr=years>0?(Math.pow((sell+div)/buy,1/years)-1)*100:0;
+  document.getElementById('inv-total-rate').textContent=(totalRate>=0?'+':'')+totalRate+'%';
+  document.getElementById('inv-cagr-sub').textContent='연평균 수익률 (CAGR) '+(years>0?(cagr>=0?'+':'')+cagr.toFixed(2)+'%':'기간 입력 필요');
+  document.getElementById('inv-r-buy').textContent=Wm(buy);
+  document.getElementById('inv-r-gain').textContent=(gain>=0?'+':'')+Wm(gain);
+  document.getElementById('inv-r-div').textContent='+'+Wm(div);
+  document.getElementById('inv-r-profit').textContent=(profit>=0?'+':'')+Wm(profit);
+  document.getElementById('inv-r-cagr').textContent=years>0?(cagr>=0?'+':'')+cagr.toFixed(2)+'%':'-';
+}
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/finance-detail-shell.js"></script>
+</body>
+</html>

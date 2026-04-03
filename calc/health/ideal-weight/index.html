@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>적정체중 계산기 - BMI 22 기준·브로카 공식 | jptcalc</title>
+  <meta name="description" content="적정체중 계산기. BMI 22 기준과 브로카 공식으로 키에 맞는 적정 체중, 정상 체중 범위를 계산합니다." />
+  <meta name="keywords" content="적정체중계산기,정상체중,표준체중,브로카공식,키별체중" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/health/ideal-weight/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="적정체중 계산기 - BMI 22·브로카 공식" />
+  <meta property="og:description" content="키에 맞는 적정 체중과 정상 체중 범위를 계산합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/health/ideal-weight/" />
+  <meta property="og:site_name" content="jptcalc" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="적정체중 계산기 - BMI 22 기준·브로카 공식 | jptcalc" />
+  <meta name="twitter:description" content="키에 맞는 적정 체중과 정상 체중 범위를 계산합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"적정체중 계산기","url":"https://www.jptcalc.kr/calc/health/ideal-weight/","description":"적정체중 계산기. BMI 22 기준과 브로카 공식으로 키에 맞는 적정 체중, 정상 체중 범위를 계산합니다.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"inLanguage":"ko-KR"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},{"@type":"ListItem","position":2,"name":"건강 계산기","item":"https://www.jptcalc.kr/calc/health/"},{"@type":"ListItem","position":3,"name":"적정체중 계산기"}]}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"적정체중이란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"적정체중(이상체중)은 키에 따라 건강을 유지하기에 가장 적합한 체중을 말합니다. 질병 위험이 가장 낮고 수명이 길어지는 체중으로, BMI 22 기준 또는 브로카 공식 등 여러 방법으로 추정할 수 있습니다."}},{"@type":"Question","name":"BMI 22 기준과 브로카 공식 중 어떤 것이 더 정확한가요?","acceptedAnswer":{"@type":"Answer","text":"BMI 22 기준이 통계적으로 더 신뢰할 수 있는 방법입니다. 브로카 공식은 간편하지만 키가 매우 크거나 작은 경우 오차가 커질 수 있습니다. 두 공식의 결과를 참고하되, 체지방률과 함께 종합적으로 판단하는 것이 좋습니다."}},{"@type":"Question","name":"적정체중과 미용체중은 다른 건가요?","acceptedAnswer":{"@type":"Answer","text":"네, 다릅니다. 적정체중은 건강 기준(BMI 22)이고, 미용체중은 BMI 20 기준으로 더 낮습니다. 건강을 위해서는 적정체중을 목표로 하는 것이 바람직하며, 미용체중을 무리하게 추구하면 건강에 해로울 수 있습니다."}},{"@type":"Question","name":"근육량이 많은 사람도 같은 적정체중 기준을 적용하나요?","acceptedAnswer":{"@type":"Answer","text":"근육량이 많은 사람은 체중이 적정체중보다 높아도 건강할 수 있습니다. 이 경우 체지방률을 함께 확인하는 것이 정확한 건강 상태 파악에 도움이 되며, 단일 수치보다 BMI 18.5~23 범위로 이해하는 것이 좋습니다."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/health-common.css" />
+  <style>
+    input[type=number]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(16,185,129,0.15)}.result-card{background:linear-gradient(135deg,#ECFDF5 0%,#D1FAE5 100%);border:1px solid rgba(16,185,129,0.25)}
+.seo-card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:16px}
+.seo-card h2{font-size:18px;font-weight:900;color:var(--gray-900);margin-bottom:12px}
+.seo-card h3{font-size:14px;font-weight:700;color:var(--gray-700);margin:16px 0 8px}
+.seo-card h3:first-of-type{margin-top:0}
+.seo-card p{font-size:13px;color:var(--gray-600);line-height:1.8;margin-bottom:8px}
+.seo-card ul{padding-left:20px;margin:8px 0}
+.seo-card li{font-size:13px;color:var(--gray-600);line-height:1.8}
+  </style>
+</head>
+<body>
+<header class="site-header"><div class="header-inner"><a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="로고" style="width:32px;height:32px;display:block" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a><nav class="header-nav"><a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B"></span>부동산</a><a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981"></span>프리랜서 세금</a><a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6"></span>AI/테크</a><a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6"></span>이직/연봉</a><a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6"></span>반려동물</a><a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1"></span>금융·이자</a><a href="/calc/health/" class="nav-item active"><span class="nav-dot" style="background:#10B981"></span>건강</a><a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316"></span>날짜·D-day</a></nav><div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div><button class="hamburger" onclick="document.querySelector('.header-nav').classList.toggle('show')" aria-label="메뉴"><span></span><span></span><span></span></button></div></header>
+<main class="page-wrap">
+  <div class="page-header"><div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/health/">건강 계산기</a><span class="breadcrumb-sep">›</span><span>적정체중 계산기</span></div><div class="page-header-badge">🎯 무료 온라인 계산기</div><h1>적정체중 계산기</h1><p>BMI 22 기준과 브로카 공식으로 키에 맞는 적정 체중을 계산합니다</p></div>
+
+  <div class="card"><div class="card-title">키 입력</div><div class="field"><div class="field-label">키</div><div class="input-wrap"><input type="number" id="iw-height" placeholder="예) 170" oninput="calcIdealWeight()" /><span class="unit">cm</span></div></div><div class="seg-group" id="iw-sex-group"><button class="seg-btn active" onclick="setIwSex('male',this)">남성</button><button class="seg-btn" onclick="setIwSex('female',this)">여성</button></div></div>
+  <div class="result-card" id="s2-result"><div class="result-highlight"><div class="rh-label">적정 체중 (BMI 22 기준)</div><div class="rh-value" id="iw-ideal">-</div><div class="rh-sub" id="iw-range">정상 범위: -</div></div><div class="result-row"><span class="result-label">저체중 기준 이하</span><span class="result-value" id="iw-under">-</span></div><div class="result-row"><span class="result-label">정상 범위</span><span class="result-value" id="iw-normal">-</span></div><div class="result-row"><span class="result-label">과체중 시작</span><span class="result-value" id="iw-over">-</span></div><div class="result-row"><span class="result-label">비만 시작</span><span class="result-value" id="iw-obese">-</span></div><div class="result-row result-total-row"><span class="result-total-label">브로카 공식 적정체중</span><span class="result-total-value" id="iw-broca">-</span></div><p class="result-note">※ BMI 22 기준 = 키(m)² × 22. 브로카 공식(남)= (키-100)×0.9, (여)= (키-100)×0.85</p></div>
+  <div class="seo-card"><h2>적정체중 계산기 이용 안내</h2><h3>적정체중 계산법</h3><p>가장 일반적인 방법은 BMI 22 기준입니다. 적정체중 = 키(m)² × 22. 브로카 공식은 남성 (키-100)×0.9, 여성 (키-100)×0.85입니다.</p></div>
+
+  <section class="guide-section seo-card">
+    <h2>적정체중 계산 가이드</h2>
+    <h3>적정체중이란?</h3>
+    <p>적정체중(이상체중)은 키에 따라 건강을 유지하기에 가장 적합한 체중을 말합니다. 질병 위험이 가장 낮고 수명이 길어지는 체중으로, 여러 공식을 통해 추정할 수 있습니다.</p>
+    <h3>주요 계산 공식 비교</h3>
+    <ul>
+      <li>BMI 22 기준: 키(m)의 제곱 x 22. 아시아인에게 가장 많이 사용</li>
+      <li>브로카 공식(남): (키cm - 100) x 0.9</li>
+      <li>브로카 공식(여): (키cm - 100) x 0.85</li>
+      <li>로렌츠 공식(남): 키cm - 100 - (키cm - 150) / 4</li>
+      <li>로렌츠 공식(여): 키cm - 100 - (키cm - 150) / 2.5</li>
+    </ul>
+    <h3>적정체중 범위</h3>
+    <p>적정체중은 단일 수치보다 범위로 이해하는 것이 좋습니다. BMI 18.5~23 사이가 한국인의 정상 체중 범위이며, 개인의 근육량, 골격 크기, 체형에 따라 적정 범위가 달라질 수 있습니다.</p>
+  </section>
+
+  <section class="guide-section seo-card">
+    <h2>자주 묻는 질문 (FAQ)</h2>
+    <h3>Q. BMI 22 기준과 브로카 공식 중 어떤 것이 더 정확한가요?</h3>
+    <p>BMI 22 기준이 통계적으로 더 신뢰할 수 있는 방법입니다. 브로카 공식은 간편하지만 키가 매우 크거나 작은 경우 오차가 커질 수 있습니다. 두 공식의 결과를 참고하되, 체지방률과 함께 종합적으로 판단하세요.</p>
+    <h3>Q. 적정체중과 미용체중은 다른 건가요?</h3>
+    <p>네, 다릅니다. 적정체중은 건강 기준(BMI 22)이고, 미용체중은 BMI 20 기준으로 더 낮습니다. 건강을 위해서는 적정체중을 목표로 하는 것이 바람직합니다.</p>
+    <h3>Q. 근육량이 많은 사람도 같은 기준을 적용하나요?</h3>
+    <p>근육량이 많은 사람은 체중이 적정체중보다 높아도 건강할 수 있습니다. 이 경우 체지방률을 함께 확인하는 것이 정확한 건강 상태 파악에 도움이 됩니다.</p>
+  </section>
+
+  <div class="sibling-section"><div class="sibling-title">다른 건강 계산기</div><div class="sibling-grid"><a href="/calc/health/bmi/" class="sibling-link"><span class="sibling-icon">⚖️</span><span class="sibling-text">BMI 계산기</span></a><a href="/calc/health/bmr/" class="sibling-link"><span class="sibling-icon">🔥</span><span class="sibling-text">기초대사량 계산기</span></a><a href="/calc/health/ideal-weight/" class="sibling-link current"><span class="sibling-icon">🎯</span><span class="sibling-text">적정체중 계산기</span></a><a href="/calc/health/body-fat/" class="sibling-link"><span class="sibling-icon">💪</span><span class="sibling-text">체지방률 계산기</span></a><a href="/calc/health/calories/" class="sibling-link"><span class="sibling-icon">🏃</span><span class="sibling-text">칼로리 소모 계산기</span></a></div></div>
+
+</main>
+<footer class="site-footer"><div class="footer-inner"><div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div><span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span></div></footer>
+
+<script>
+var iwSex='male';
+function setIwSex(s,btn){iwSex=s;btn.parentElement.querySelectorAll('.seg-btn').forEach(function(b){b.classList.remove('active')});btn.classList.add('active');calcIdealWeight()}
+function calcIdealWeight(){var h=parseFloat(document.getElementById('iw-height').value);var res=document.getElementById('s2-result');if(!h){res.classList.remove('show');return}res.classList.add('show');var hm=h/100;var ideal=hm*hm*22;var normalMin=hm*hm*18.5,normalMax=hm*hm*23;var overStart=hm*hm*25,obeseStart=hm*hm*30;var broca=iwSex==='male'?(h-100)*0.9:(h-100)*0.85;document.getElementById('iw-ideal').textContent=ideal.toFixed(1)+'kg';document.getElementById('iw-range').textContent='정상 범위: '+normalMin.toFixed(1)+'~'+normalMax.toFixed(1)+'kg';document.getElementById('iw-under').textContent=normalMin.toFixed(1)+'kg 미만';document.getElementById('iw-normal').textContent=normalMin.toFixed(1)+'~'+normalMax.toFixed(1)+'kg';document.getElementById('iw-over').textContent=normalMax.toFixed(1)+'kg~';document.getElementById('iw-obese').textContent=overStart.toFixed(1)+'kg~';document.getElementById('iw-broca').textContent=broca.toFixed(1)+'kg'}
+</script>
+
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/health-detail-shell.js"></script>
+</body>
+</html>

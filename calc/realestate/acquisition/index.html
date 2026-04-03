@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>취득세 계산기 2026 - 주택·상가·토지 취득세 무료 계산 | JPT</title>
+  <meta name="description" content="2026년 기준 부동산 취득세를 무료로 계산하세요. 주택 수, 조정대상지역 여부, 증여·상속에 따른 세율과 지방교육세·농어촌특별세까지 자동 계산." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/realestate/acquisition/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="취득세 계산기 2026 - 주택·상가·토지 취득세 무료 계산 | JPT" />
+  <meta property="og:description" content="2026년 기준 부동산 취득세를 무료로 계산하세요. 주택 수, 조정대상지역 여부, 증여·상속에 따른 세율과 지방교육세·농어촌특별세까지 자동 계산." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/realestate/acquisition/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="취득세 계산기 2026 - 주택·상가·토지 취득세 무료 계산 | JPT" />
+  <meta name="twitter:description" content="2026년 기준 부동산 취득세를 무료로 계산하세요. 주택 수, 조정대상지역 여부, 증여·상속에 따른 세율과 지방교육세·농어촌특별세까지 자동 계산." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "취득세 계산기",
+        "url": "https://www.jptcalc.kr/calc/realestate/acquisition/",
+        "description": "2026년 기준 부동산 취득세를 무료로 계산하세요. 주택 수, 조정대상지역 여부, 증여·상속에 따른 세율과 지방교육세·농어촌특별세까지 자동 계산.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "KRW"},
+        "inLanguage": "ko-KR"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.jptcalc.kr/"},
+          {"@type": "ListItem", "position": 2, "name": "부동산 계산기", "item": "https://www.jptcalc.kr/calc/realestate/"},
+          {"@type": "ListItem", "position": 3, "name": "취득세 계산기", "item": "https://www.jptcalc.kr/calc/realestate/acquisition/"}
+        ]
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"취득세는 언제까지 신고·납부해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"부동산 취득일로부터 60일 이내에 신고·납부해야 합니다. 기한을 넘기면 무신고가산세(20%) 또는 과소신고가산세(10%)와 납부지연가산세가 추가로 부과됩니다. 잔금 납부일과 등기접수일 중 빠른 날을 취득일로 봅니다."}},{"@type":"Question","name":"생애최초 주택 취득세 감면을 받으려면 어떻게 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"생애 처음으로 주택을 구입하는 경우 취득세의 50%(최대 200만원 한도)를 감면받을 수 있습니다. 수도권 기준 주택가액 12억원 이하, 비수도권 9억원 이하 요건을 충족해야 합니다. 취득 후 3개월 이내 실거주 요건도 있으며, 감면 신청은 관할 지자체(시·군·구청)에 합니다."}},{"@type":"Question","name":"조정대상지역이 취득세에 미치는 영향은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"2주택 취득 시 비조정지역은 1~3% 기본 세율이 적용되지만, 조정대상지역은 8%의 중과세율이 적용됩니다. 3주택은 비조정지역 8%, 조정대상지역 12%입니다. 조정대상지역 현황은 국토교통부 공고에서 확인할 수 있습니다."}},{"@type":"Question","name":"분양권도 취득세 계산 시 주택 수에 포함되나요?","acceptedAnswer":{"@type":"Answer","text":"2020년 8월 12일 이후 취득한 분양권은 취득세 중과 판단 시 주택 수에 포함됩니다. 분양권 자체를 취득할 때는 취득세가 부과되지 않지만, 실제 주택으로 완공 후 취득 시 그 시점의 주택 수로 세율이 결정됩니다."}},{"@type":"Question","name":"증여로 주택을 받을 때 취득세율은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"증여로 주택을 취득하는 경우 비조정지역은 3.5%, 조정대상지역은 12%의 취득세율이 적용됩니다. 여기에 지방교육세와 농어촌특별세가 추가됩니다. 상속은 조정지역 여부와 관계없이 2.8%가 적용됩니다."}},{"@type":"Question","name":"취득세 신고는 어디서 하나요?","acceptedAnswer":{"@type":"Answer","text":"위텍스(wetax.go.kr)에서 온라인으로 신고·납부할 수 있습니다. 또는 부동산 소재지 관할 시·군·구청 세무과에서 직접 신고할 수 있습니다. 법무사에게 등기를 위임하면 취득세 신고·납부도 함께 처리해 주는 경우가 많습니다."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/affiliate-banner.css" />
+  <link rel="stylesheet" href="/assets/realestate-common.css" />
+  <style>
+    @media (max-width: 480px) {
+      .seg-group-4 .seg-btn { min-width: calc(50% - 3px); }
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item active"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" onclick="var m=document.querySelector('.mob-menu'); if(m)m.classList.toggle('open');" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mob-menu">
+  <a href="/calc/realestate/" class="mob-link active"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+  <a href="/calc/tax/" class="mob-link"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+  <a href="/calc/ai/" class="mob-link"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+  <a href="/calc/salary/" class="mob-link"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+  <a href="/calc/pet/" class="mob-link"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+  <a href="/calc/finance/" class="mob-link"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+  <a href="/calc/health/" class="mob-link"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+  <a href="/calc/date/" class="mob-link"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+  <a href="/blog/" class="mob-link">블로그</a>
+</div>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a> &rsaquo; <a href="/calc/realestate/">부동산 계산기</a> &rsaquo; 취득세 계산기</div>
+    <div class="page-badge">부동산 계산기</div>
+    <h1 class="page-title">취득세 계산기</h1>
+    <p class="page-subtitle">2026년 기준 · 주택 수·지역별 세율 자동 계산</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">부동산 유형</div>
+    <div class="seg-group seg-group-4">
+      <button class="seg-btn active" onclick="selectPropType('주택', this)">주택</button>
+      <button class="seg-btn" onclick="selectPropType('상가', this)">상가</button>
+      <button class="seg-btn" onclick="selectPropType('토지', this)">토지</button>
+      <button class="seg-btn" onclick="selectPropType('오피스텔', this)">오피스텔</button>
+    </div>
+    <div class="card-title">취득 방법</div>
+    <div class="seg-group" style="margin-bottom:0">
+      <button class="seg-btn active" onclick="selectAcqMethod('매수', this)">매수</button>
+      <button class="seg-btn" onclick="selectAcqMethod('증여', this)">증여</button>
+      <button class="seg-btn" onclick="selectAcqMethod('상속', this)">상속</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">취득 정보</div>
+    <div class="field">
+      <div class="field-label">취득가액 <span class="label-hint">만원 단위</span></div>
+      <div class="input-wrap">
+        <input type="number" id="acq-price" placeholder="예) 90,000" oninput="calcAcquisition()" />
+        <span class="unit">만원</span>
+      </div>
+      <div class="converted" id="acq-price-display"></div>
+    </div>
+    <div id="house-cnt-field">
+      <div class="card-title">주택 수 (취득 후 기준)</div>
+      <div class="seg-group">
+        <button class="seg-btn active" onclick="selectHouseCnt(1, this)">1주택</button>
+        <button class="seg-btn" onclick="selectHouseCnt(2, this)">2주택</button>
+        <button class="seg-btn" onclick="selectHouseCnt(3, this)">3주택</button>
+        <button class="seg-btn" onclick="selectHouseCnt(4, this)">법인</button>
+      </div>
+      <div id="adjust-field">
+        <div class="card-title">지역 구분</div>
+        <div class="seg-group" style="margin-bottom:0">
+          <button class="seg-btn active" onclick="selectAdjust(false, this)">비조정지역</button>
+          <button class="seg-btn" onclick="selectAdjust(true, this)">조정대상지역</button>
+        </div>
+      </div>
+    </div>
+    <div id="acq-method-info" class="hidden">
+      <div id="acq-method-desc" style="font-size:12px; color:var(--primary); background:var(--primary-light); border-radius:8px; padding:10px 12px; line-height:1.6;"></div>
+    </div>
+  </div>
+  <div class="result-card" id="acq-result">
+    <div class="result-row"><span class="result-label">취득세율</span><span class="result-value"><span id="acq-rate"></span></span></div>
+    <div class="result-row"><span class="result-label">취득세</span><span class="result-value" id="acq-tax"></span></div>
+    <div class="result-row"><span class="result-label">지방교육세</span><span class="result-value" id="edu-tax"></span></div>
+    <div class="result-row"><span class="result-label">농어촌특별세</span><span class="result-value" id="rural-tax"></span></div>
+    <div class="result-row result-total-row"><span class="result-total-label">총 납부세액</span><span class="result-total-value" id="acq-total"></span></div>
+    <div class="result-note">* 85㎡ 초과 기준 / 실제 세액은 관할 세무서에서 확인하세요</div>
+    <a class="affiliate-banner" href="https://bestmore.net/click.php?m=allcredit&a=A100703525&l=0000" target="_blank" rel="noopener noreferrer sponsored">
+      <div class="affiliate-banner__text">
+        <div class="affiliate-banner__title">올크레딧 - 내 신용점수 무료 조회</div>
+        <div class="affiliate-banner__desc">KCB 신용점수를 무료로 확인하고 맞춤 금융상품을 추천받으세요</div>
+      </div>
+      <span class="affiliate-banner__cta">무료 조회 →</span>
+    </a>
+  </div>
+  <div class="explain-section">
+    <button class="explain-toggle" onclick="toggleExplain(this)">취득세 완벽 가이드 <span class="etarrow">▼</span></button>
+    <div class="explain-body">
+      <h3>취득세란?</h3><p>부동산을 취득할 때 납부하는 지방세. 취득일로부터 <strong>60일 이내</strong> 신고·납부.</p>
+      <h3>주택 매수 세율 핵심</h3>
+      <ul><li>1주택 6억 이하: <strong>1%</strong></li><li>1주택 6억~9억: <strong>1~3%</strong></li><li>1주택 9억 초과: <strong>3%</strong></li><li>조정지역 2주택: <strong>8%</strong></li><li>3주택 이상: <strong>12%</strong></li></ul>
+      <h3>추가 세목</h3>
+      <ul><li>지방교육세: 취득세의 10% (중과 시 40%)</li><li>농어촌특별세: 취득가액의 0.2% (중과 시 1%)</li></ul>
+    </div>
+  </div>
+
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>취득세 계산 전 반드시 확인할 핵심</h2>
+      <p>취득세는 부동산을 취득할 때 납부하는 지방세입니다. 취득 방법(매수·증여·상속), 주택 수, 지역에 따라 세율이 크게 달라지며, 신고·납부 기한을 놓치면 가산세가 부과됩니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box">
+          <strong>주택 취득세율 한눈에 보기</strong>
+          <span>1주택(6억 이하) 1% / 1주택(6억~9억) 1~3% / 1주택(9억 초과) 3% / 조정지역 2주택 8% / 3주택 이상·법인 12%</span>
+        </div>
+        <div class="guide-box">
+          <strong>일시적 2주택 특례</strong>
+          <span>기존 주택을 취득일로부터 3년 이내에 처분하면, 취득 시점에 1주택 세율을 적용받을 수 있습니다. 요건 불충족 시 중과세액 추징됩니다.</span>
+        </div>
+        <div class="guide-box">
+          <strong>신고·납부 기한</strong>
+          <span>잔금 납부일(취득일)로부터 60일 이내. 위택스(wetax.go.kr) 온라인 또는 관할 시·군·구청 방문 신고. 기한 초과 시 가산세 20% 부과.</span>
+        </div>
+        <div class="guide-box">
+          <strong>추가 세목</strong>
+          <span>지방교육세: 취득세의 10% (중과 시 40%) / 농어촌특별세: 취득가액의 0.2% (전용면적 85㎡ 이하 면제, 중과 시 1%)</span>
+        </div>
+      </div>
+      <p class="ref-links">신고·납부: <a href="https://www.wetax.go.kr" target="_blank" rel="noopener">위택스(wetax.go.kr)</a> · 정책 확인: <a href="https://www.molit.go.kr" target="_blank" rel="noopener">국토교통부(molit.go.kr)</a></p>
+    </div>
+    <div class="guide-card">
+      <h2>실제 계산 사례 3가지 - 취득세</h2>
+      <p>취득가액, 주택 수, 지역에 따라 총 납부세액이 수천만 원까지 차이가 납니다. 계약 전 미리 시뮬레이션하세요.</p>
+      <div class="guide-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>상황</th>
+              <th>조건</th>
+              <th>총 납부세액 (약)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1주택 6억 매수</td>
+              <td>비조정지역 / 취득세 1% + 교육세 0.1%</td>
+              <td class="text-success">약 660만원</td>
+            </tr>
+            <tr>
+              <td>1주택 10억 매수</td>
+              <td>비조정지역 85㎡ 초과 / 취득세 3% + 교육세 0.3% + 농특세 0.2%</td>
+              <td>약 3,500만원</td>
+            </tr>
+            <tr>
+              <td>2주택 10억 매수 (조정)</td>
+              <td>조정대상지역 / 취득세 8% + 교육세 3.2% + 농특세 1%</td>
+              <td class="text-danger">약 1억 2,200만원</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>입력 시 자주 헷갈리는 부분</h3>
+      <ul>
+        <li><strong>취득가액</strong>은 실제 매매 계약가 기준입니다. 증여는 증여재산 평가액, 상속은 시가 또는 공시가격이 기준입니다.</li>
+        <li><strong>주택 수</strong>는 취득 후 기준으로 입력합니다. 예: 기존 1주택자가 1채 더 사면 2주택으로 입력.</li>
+        <li>분양권·입주권은 2021년 이후 취득분부터 주택 수에 포함되어 세율에 영향을 줍니다.</li>
+        <li>85㎡ 이하 주택은 농어촌특별세가 면제됩니다.</li>
+      </ul>
+      <h3>결과 해석 방법</h3>
+      <p>계산 결과는 취득세 + 지방교육세 + 농어촌특별세 합산 기준입니다. 잔금 납부일로부터 <strong>60일 이내</strong> 신고·납부해야 하며, 기한을 넘기면 신고불성실가산세(20%) 및 납부지연가산세가 부과됩니다. 실제 세액은 관할 시·군·구청에서 확인하세요.</p>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item">
+        <h3>취득세 신고·납부는 어디서 하나요?</h3>
+        <p>위택스(wetax.go.kr)에서 온라인으로 신고·납부하거나, 관할 시·군·구청 세무과를 직접 방문해 처리할 수 있습니다. 잔금일(또는 등기접수일 중 빠른 날)로부터 60일 이내에 처리해야 합니다. 법무사를 통해 등기를 진행하는 경우 취득세 신고를 대행해 주는 것이 일반적이지만, 최종 확인은 본인이 직접 해야 합니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>일시적 2주택 특례는 어떤 경우에 적용되나요?</h3>
+        <p>기존 주택을 1채 보유한 상태에서 새 주택을 취득한 경우, 기존 주택을 취득일로부터 3년 이내에 처분하면 새 주택 취득세를 1주택 세율(1~3%)로 납부할 수 있습니다. 단, 기한 내 처분하지 않으면 차액(중과세율과 1주택 세율의 차이)을 추징당합니다. 조정대상지역 내 주택 취득과 처분 요건이 더 엄격할 수 있으니 반드시 확인하세요.</p>
+      </div>
+      <div class="faq-item">
+        <h3>증여·상속으로 취득한 경우 세율이 다른가요?</h3>
+        <p>증여는 시가를 기준으로 3.5%, 상속은 2.8%의 취득세율이 적용됩니다(주택 기준). 매매 취득과 세율 체계가 다릅니다. 농어촌특별세와 지방교육세도 각각 별도로 부과됩니다. 증여·상속의 경우 취득가액 산정 기준도 달라질 수 있어 위택스 또는 세무 전문가를 통해 확인하는 것이 좋습니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>분양권·입주권 취득 시 취득세는 어떻게 계산되나요?</h3>
+        <p>2021년 이후 취득한 분양권은 주택 수에 포함되어 취득세 중과 여부에 영향을 줍니다. 분양권 자체를 취득(매수·증여)할 때는 분양 계약가의 일정 비율로 취득세가 부과됩니다. 준공 후 주택으로 전환 시 실제 취득가액 기준으로 다시 취득세가 산정됩니다. 분양권 취득세는 구조가 복잡하므로 위택스 또는 세무사를 통한 확인을 권장합니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>취득세를 기한 내 납부하지 못하면 어떻게 되나요?</h3>
+        <p>신고기한(취득일로부터 60일) 내 무신고 시 신고불성실가산세 20%, 납부불성실가산세(1일 0.022%)가 추가 부과됩니다. 등기 신청을 위해서는 취득세 납부영수증이 필요하므로, 잔금 납부 후 등기 전까지 취득세를 먼저 납부하는 것이 일반적인 절차입니다. 납부 후에도 과소신고 사실이 발견되면 차액과 가산세가 추징될 수 있습니다.</p>
+      </div>
+    </div>
+    <div class="update-note">2026년 지방세법 기준으로 작성되었습니다. 세율·공제 기준은 변경될 수 있으니 <a href="https://www.wetax.go.kr" target="_blank" rel="noopener">위택스(wetax.go.kr)</a> 또는 관할 시·군·구청에서 확인하세요.<br>최종 검토: 2026.03</div>
+  </div>
+
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '지방세법 제10조~제16조, 지방세법 시행령, 2026년 1월 1일 기준',
+    appliedFrom: '2026년 1월 1일',
+    exceptions: [
+      '분양권·입주권 취득 시 주택 수 산입 여부가 취득세율에 영향을 줍니다',
+      '일시적 2주택 특례(처분기한 3년 이내) 요건 충족 시 중과세 제외 가능합니다',
+      '조정대상지역 지정·해제에 따라 다주택 중과세율 적용 여부가 달라집니다',
+    ],
+    references: [
+      { name: '위택스(wetax.go.kr)', url: 'https://www.wetax.go.kr' },
+      { name: '국토교통부(molit.go.kr)', url: 'https://www.molit.go.kr' },
+    ],
+    lastReviewed: '2026.03',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
+  <div class="siblings-section">
+    <div class="siblings-title">다른 부동산 계산기</div>
+    <div class="siblings-grid">
+<a href="/calc/realestate/brokerage/" class="sibling-link">중개수수료</a>
+<a href="/calc/realestate/acquisition/" class="sibling-link current">취득세</a>
+<a href="/calc/realestate/conversion/" class="sibling-link">전월세전환</a>
+<a href="/calc/realestate/loan/" class="sibling-link">대출이자</a>
+<a href="/calc/realestate/rental/" class="sibling-link">임대수익률</a>
+<a href="/calc/realestate/capital-gains/" class="sibling-link">양도소득세</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+      <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
+  </div>
+</footer>
+<div class="toast" id="toast"></div>
+<script>
+
+function fmt(man) {
+  if (!man && man !== 0) return '-';
+  if (isNaN(man)) return '-';
+  const won = Math.round(man) * 10000;
+  if (won >= 100000000) {
+    const uk = Math.floor(won / 100000000);
+    const rem = Math.round((won % 100000000) / 10000);
+    return rem > 0 ? uk + '억 ' + rem.toLocaleString() + '만원' : uk + '억원';
+  }
+  return Math.round(man).toLocaleString() + '만원';
+}
+function fmtWon(won) {
+  won = Math.round(won);
+  if (isNaN(won) || won === 0) return '-';
+  if (won >= 100000000) {
+    const uk = Math.floor(won / 100000000);
+    const rem = Math.round((won % 100000000) / 10000);
+    return rem > 0 ? uk + '억 ' + rem.toLocaleString() + '만원' : uk + '억원';
+  }
+  if (won >= 10000) {
+    const man = Math.floor(won / 10000);
+    const chun = Math.round((won % 10000) / 1000);
+    if (chun > 0) return man.toLocaleString() + '만 ' + chun + '천원';
+    return man.toLocaleString() + '만원';
+  }
+  return won.toLocaleString() + '원';
+}
+function showConverted(inputEl, dispEl) {
+  const v = parseFloat(inputEl.value);
+  dispEl.textContent = v > 0 ? '= ' + fmt(v) : '';
+}
+function setActive(selector, activeEl) {
+  document.querySelectorAll(selector).forEach(b => b.classList.remove('active'));
+  activeEl.classList.add('active');
+}
+function toggleExplain(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('show');
+}
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 1800);
+}
+function saveAsImage(resultId, title) {
+  const el = document.getElementById(resultId);
+  if (!el.classList.contains('show') && el.style.display === 'none') { showToast('먼저 계산을 해주세요'); return; }
+  showToast('이미지 저장 중...');
+  html2canvas(el, { scale: 2, useCORS: true }).then(canvas => {
+    const link = document.createElement('a');
+    link.download = '부동산계산기_' + title + '.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+    showToast('이미지가 저장되었습니다');
+  }).catch(() => showToast('저장 실패 - 다시 시도해주세요'));
+}
+document.addEventListener('DOMContentLoaded', function() {
+  const et = document.querySelector('.explain-toggle');
+  if (et) { et.classList.add('open'); et.nextElementSibling.classList.add('show'); }
+});
+
+
+let propType = '주택', acqMethod = '매수', houseCnt = 1, isAdjust = false;
+function selectPropType(type, btn) {
+  propType = type;
+  setActive('.seg-btn[onclick^="selectPropType"]', btn);
+  document.getElementById('house-cnt-field').classList.toggle('hidden', type !== '주택' || acqMethod !== '매수');
+  updateAcqMethodInfo(); calcAcquisition();
+}
+function selectAcqMethod(method, btn) {
+  acqMethod = method;
+  setActive('.seg-btn[onclick^="selectAcqMethod"]', btn);
+  document.getElementById('house-cnt-field').classList.toggle('hidden', !(propType === '주택' && method === '매수'));
+  updateAcqMethodInfo(); calcAcquisition();
+}
+function updateAcqMethodInfo() {
+  const infoEl = document.getElementById('acq-method-info');
+  const descEl = document.getElementById('acq-method-desc');
+  if (acqMethod === '매수') { infoEl.classList.add('hidden'); return; }
+  infoEl.classList.remove('hidden');
+  if (acqMethod === '증여') {
+    descEl.textContent = propType === '주택'
+      ? '주택 증여: 비조정지역 3.5% / 조정대상지역 12%'
+      : propType + ' 증여 취득세: 3.5%';
+  } else {
+    descEl.textContent = propType + ' 상속 취득세: 2.8%';
+  }
+}
+function selectHouseCnt(n, btn) {
+  houseCnt = n;
+  setActive('.seg-btn[onclick^="selectHouseCnt"]', btn);
+  document.getElementById('adjust-field').classList.toggle('hidden', n === 4);
+  calcAcquisition();
+}
+function selectAdjust(v, btn) {
+  isAdjust = v;
+  setActive('.seg-btn[onclick^="selectAdjust"]', btn);
+  calcAcquisition();
+}
+function getAcqRate(priceMan, cnt, adjust) {
+  if (acqMethod === '증여') { return propType === '주택' && adjust ? 0.12 : 0.035; }
+  if (acqMethod === '상속') return 0.028;
+  if (propType !== '주택') return 0.04;
+  const p = priceMan * 10000;
+  if (cnt === 4) return 0.12;
+  if (cnt === 1) {
+    if (p <= 600000000) return 0.01;
+    if (p <= 900000000) return (p * 2 / 300000000 - 3) / 100;
+    return 0.03;
+  }
+  if (cnt === 2) return adjust ? 0.08 : 0.01;
+  if (cnt === 3) return adjust ? 0.12 : 0.08;
+  return 0.01;
+}
+function calcAcquisition() {
+  const priceMan = parseFloat(document.getElementById('acq-price').value);
+  showConverted(document.getElementById('acq-price'), document.getElementById('acq-price-display'));
+  if (!priceMan) { document.getElementById('acq-result').classList.remove('show'); return; }
+  const rate = getAcqRate(priceMan, houseCnt, isAdjust);
+  const price = priceMan * 10000;
+  const acqTax = price * rate;
+  const eduRate = rate >= 0.08 ? 0.4 : 0.1;
+  const eduTax = acqTax * eduRate;
+  const ruralRate = rate >= 0.08 ? 0.01 : 0.002;
+  const ruralTax = price * ruralRate;
+  const total = acqTax + eduTax + ruralTax;
+  document.getElementById('acq-rate').textContent = (rate * 100).toFixed(2) + '%';
+  document.getElementById('acq-tax').textContent = fmt(Math.round(acqTax / 10000));
+  document.getElementById('edu-tax').textContent = fmt(Math.round(eduTax / 10000));
+  document.getElementById('rural-tax').textContent = fmt(Math.round(ruralTax / 10000));
+  document.getElementById('acq-total').textContent = fmt(Math.round(total / 10000));
+  document.getElementById('acq-result').classList.add('show');
+}
+
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+  <script src="/assets/realestate-shell.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>연봉 비교 계산기 - 두 연봉 실수령액 비교 | jptcalc</title>
+  <meta name="description" content="연봉 A와 연봉 B의 월 실수령액, 연 실수령액, 공제액을 2026년 세율 기준으로 비교합니다." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/salary/comparison/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="연봉 비교 계산기 | jptcalc" />
+  <meta property="og:description" content="연봉 A와 연봉 B의 월 실수령액, 연 실수령액, 공제액을 2026년 세율 기준으로 비교합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/salary/comparison/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/salary-common.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"연봉 비교 계산기","url":"https://www.jptcalc.kr/calc/salary/comparison/","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+    {"@type":"ListItem","position":2,"name":"이직/연봉 계산기","item":"https://www.jptcalc.kr/calc/salary/"},
+    {"@type":"ListItem","position":3,"name":"연봉 비교 계산기","item":"https://www.jptcalc.kr/calc/salary/comparison/"}
+  ]}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"연봉 비교 계산기는 어떤 상황에서 유용한가요?","acceptedAnswer":{"@type":"Answer","text":"이직 제안이나 연봉 협상 시 두 연봉의 세후 실수령액을 나란히 비교할 때 유용합니다. 세전 연봉만으로는 실제 소득 차이를 파악하기 어렵기 때문에 실수령 기준으로 비교하면 더 정확한 판단을 내릴 수 있습니다."}},{"@type":"Question","name":"연봉 500만원 차이면 실수령은 얼마나 차이나나요?","acceptedAnswer":{"@type":"Answer","text":"세율 구간에 따라 다르지만, 연봉 4,000만원대에서 500만원 차이는 월 실수령 약 30~35만원 차이입니다. 고연봉일수록 누진세 영향으로 실수령 차이는 세전 차이보다 작아집니다."}},{"@type":"Question","name":"4대보험도 연봉에 비례하여 공제되나요?","acceptedAnswer":{"@type":"Answer","text":"국민연금은 기준소득월액 상한(월 590만원)이 있어 일정 수준 이상에서는 더 늘어나지 않습니다. 건강보험과 고용보험은 연봉에 비례하며, 고연봉일수록 소득세 비중이 더 크게 증가합니다."}},{"@type":"Question","name":"비과세 항목은 실수령액에 어떤 영향을 주나요?","acceptedAnswer":{"@type":"Answer","text":"식대(월 20만원), 자가운전보조금 등 비과세 항목은 과세표준에서 제외되어 소득세와 4대보험 부담이 줄어듭니다. 따라서 비과세 복리후생이 많은 회사의 실수령액이 더 높을 수 있으므로 총보수 관점에서 비교하는 것이 중요합니다."}}]}</script>
+  <style>
+    /* comparison 고유 스타일 - 공통 스타일은 /assets/salary-common.css 참조 */
+    .input-wrap{position:relative}
+    .input-wrap .unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none}
+    input[type=number],input[type=text]{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
+    input[type=number]::placeholder{color:var(--gray-400);font-weight:400}
+    input[type=number]:focus,input[type=text]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(59,130,246,0.15)}
+    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
+    .seg-group{display:flex;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:18px}
+    .seg-btn{flex:1;border:none;border-radius:7px;background:transparent;padding:9px 4px;font-size:12px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap}
+    .seg-btn:hover{color:var(--gray-700)}
+    .seg-btn.active{background:var(--primary);color:#fff;font-weight:700}
+    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
+    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
+    .result-card{background:linear-gradient(135deg,#EFF6FF 0%,#DBEAFE 100%);border:1px solid rgba(59,130,246,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-row+.result-row{border-top:1px solid rgba(0,0,0,0.07)}
+    .result-total-row{border-top:1px solid rgba(0,0,0,0.15)!important;margin-top:4px;padding-top:14px!important}
+    .result-total-value{font-size:24px;font-weight:900;color:var(--gray-900)}
+    .comp-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media(max-width:767px){.comp-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/salary/" class="nav-item active"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span>›</span><a href="/calc/salary/">이직/연봉 계산기</a><span>›</span><span>연봉 비교 계산기</span></div>
+    <div class="page-header-badge">⚖️ 2026년 4대보험·소득세 기준</div>
+    <h1>연봉 비교 계산기</h1>
+    <p>두 연봉의 실수령액을 나란히 비교하세요</p>
+  </div>
+  
+    <div class="comp-grid" style="margin-bottom:14px;">
+      <div class="card" style="border-top:3px solid #3B82F6;margin-bottom:0">
+        <div class="card-title" style="color:#3B82F6;">연봉 A</div>
+        <div class="field">
+          <div class="field-label">세전 연봉 <span class="label-hint">만원 단위</span></div>
+          <div class="input-wrap"><input type="number" id="s4-a" placeholder="예) 4500" oninput="calc()" /><span class="unit">만원</span></div>
+        </div>
+      </div>
+      <div class="card" style="border-top:3px solid #F59E0B;margin-bottom:0">
+        <div class="card-title" style="color:#F59E0B;">연봉 B</div>
+        <div class="field">
+          <div class="field-label">세전 연봉 <span class="label-hint">만원 단위</span></div>
+          <div class="input-wrap"><input type="number" id="s4-b" placeholder="예) 5200" oninput="calc()" /><span class="unit">만원</span></div>
+        </div>
+      </div>
+    </div>
+    <div id="result" style="display:none">
+      <div class="comp-grid" style="margin-bottom:12px;">
+        <div>
+          <div class="result-card show" style="margin:0">
+            <div class="rh-label" style="color:#3B82F6;font-weight:800;margin-bottom:10px;">연봉 A</div>
+            <div class="result-row"><span class="result-label">세전 연봉</span><span class="result-value" id="s4-a-gross">-</span></div>
+            <div class="result-row"><span class="result-label">월 실수령</span><span class="result-value" id="s4-a-net">-</span></div>
+            <div class="result-row"><span class="result-label">연 실수령</span><span class="result-value" id="s4-a-annual">-</span></div>
+            <div class="result-row"><span class="result-label">월 공제합계</span><span class="result-value" id="s4-a-dedu">-</span></div>
+            <div class="result-row"><span class="result-label">실수령률</span><span class="result-value" id="s4-a-rate">-</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="result-card show" style="margin:0;background:linear-gradient(135deg,#FFFBEB 0%,#FEF3C7 100%)">
+            <div class="rh-label" style="color:#F59E0B;font-weight:800;margin-bottom:10px;">연봉 B</div>
+            <div class="result-row"><span class="result-label">세전 연봉</span><span class="result-value" id="s4-b-gross">-</span></div>
+            <div class="result-row"><span class="result-label">월 실수령</span><span class="result-value" id="s4-b-net">-</span></div>
+            <div class="result-row"><span class="result-label">연 실수령</span><span class="result-value" id="s4-b-annual">-</span></div>
+            <div class="result-row"><span class="result-label">월 공제합계</span><span class="result-value" id="s4-b-dedu">-</span></div>
+            <div class="result-row"><span class="result-label">실수령률</span><span class="result-value" id="s4-b-rate">-</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="result-card show" id="diff-box" style="text-align:center;padding:16px;font-size:15px;font-weight:600;color:var(--gray-700)"></div>
+    </div>
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>연봉 비교 계산기는 언제 쓰나요?</h2>
+      <p>이직 제안이나 연봉 협상 시, 두 연봉을 세후 실수령액 기준으로 비교하면 실제 소득 차이를 정확히 파악할 수 있습니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>이직 비교</strong><span>현재 연봉과 제안 연봉의 실수령 차이 확인</span></div>
+        <div class="guide-box"><strong>세율 구간</strong><span>연봉 구간에 따른 세율 변화 효과 확인</span></div>
+        <div class="guide-box"><strong>총보수 비교</strong><span>복지·성과급 포함 총보수 관점에서 판단</span></div>
+      </div>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>연봉 500만원 차이면 실수령은 얼마 차이나나요?</h3><p>세율 구간에 따라 다르지만, 연봉 4,000만원대에서 500만원 차이는 월 실수령 약 30~35만원 차이입니다.</p></div>
+      <div class="faq-item"><h3>4대보험도 연봉에 비례하나요?</h3><p>국민연금은 상한이 있고(월 590만원), 건강보험·고용보험은 비례합니다. 고연봉일수록 소득세 비중이 더 커집니다.</p></div>
+      <div class="faq-item"><h3>비과세 항목은 어떻게 반영하나요?</h3><p>식대(월 20만원), 자가운전보조금 등 비과세 항목은 과세표준에서 제외되므로 실수령액이 늘어납니다.</p></div>
+      <div class="update-note">최종 검토: 2026.03.24 · 계산 결과는 참고용입니다.</div>
+    </div>
+  </div>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 이직/연봉 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/salary/take-home-pay/" class="sibling-link">💵 연봉 실수령액</a>
+      <a href="/calc/salary/job-change/" class="sibling-link">📊 이직 연봉 협상</a>
+      <a href="/calc/salary/hourly-wage/" class="sibling-link">⏱️ 시급·일급 계산</a>
+      <a href="/calc/salary/raise-rate/" class="sibling-link">📈 연봉 인상률</a>
+      <a href="/calc/salary/comparison/" class="sibling-link current">⚖️ 연봉 비교</a>
+      <a href="/calc/salary/severance/" class="sibling-link">📦 퇴직금</a>
+      <a href="/calc/salary/unemployment/" class="sibling-link">🛟 실업급여</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script>
+
+function fmtW(won){won=Math.round(won);if(isNaN(won)||won===0)return'-';if(Math.abs(won)>=100000000){const uk=Math.floor(Math.abs(won)/100000000)*Math.sign(won);const rem=Math.round((Math.abs(won)%100000000)/10000);return rem>0?uk.toLocaleString()+'억 '+rem.toLocaleString()+'만원':uk.toLocaleString()+'억원';}if(Math.abs(won)>=10000){const man=Math.floor(Math.abs(won)/10000)*Math.sign(won);const rem=Math.round(Math.abs(won)%10000);return rem>=1000?man.toLocaleString()+'만 '+rem.toLocaleString()+'원':man.toLocaleString()+'만원';}return won.toLocaleString()+'원';}
+function fmtM(man){return fmtW(man*10000);}
+function comma(n){return Math.round(n).toLocaleString()+'원';}
+function calcAnnualTax(annual_man,dep_count){const annual=annual_man*10000;let wdc=0;if(annual<=5000000)wdc=annual*0.7;else if(annual<=15000000)wdc=3500000+(annual-5000000)*0.4;else if(annual<=45000000)wdc=7500000+(annual-15000000)*0.15;else if(annual<=100000000)wdc=12000000+(annual-45000000)*0.05;else wdc=14750000+(annual-100000000)*0.02;wdc=Math.min(wdc,20000000);const grossIncome=annual-wdc;const personalDed=1500000*Math.max(dep_count,1);const taxBase=Math.max(grossIncome-personalDed,0);let tax=0;if(taxBase<=14000000)tax=taxBase*0.06;else if(taxBase<=50000000)tax=840000+(taxBase-14000000)*0.15;else if(taxBase<=88000000)tax=6240000+(taxBase-50000000)*0.24;else if(taxBase<=150000000)tax=15360000+(taxBase-88000000)*0.35;else if(taxBase<=300000000)tax=37060000+(taxBase-150000000)*0.38;else if(taxBase<=500000000)tax=94060000+(taxBase-300000000)*0.40;else if(taxBase<=1000000000)tax=174060000+(taxBase-500000000)*0.42;else tax=384060000+(taxBase-1000000000)*0.45;let taxCredit=0;if(tax<=1300000)taxCredit=tax*0.55;else taxCredit=715000+(tax-1300000)*0.30;if(annual<=33000000)taxCredit=Math.min(taxCredit,740000);else if(annual<=70000000)taxCredit=Math.min(taxCredit,681000);else taxCredit=Math.min(taxCredit,500000);tax=Math.max(tax-taxCredit-70000,0);return tax;}
+function calcMonthly(annual_man,dep_count){const monthly=annual_man*10000/12;const pension=Math.min(monthly,6370000)*0.0475;const health=monthly*0.03595;const ltc=health*0.1314;const emp=monthly*0.009;const annualTax=calcAnnualTax(annual_man,dep_count);const monthlyTax=Math.max(Math.round(annualTax/12/10)*10,0);const localTax=Math.round(monthlyTax*0.1/10)*10;const totalDedu=pension+health+ltc+emp+monthlyTax+localTax;const net=monthly-totalDedu;return{monthly,pension,health,ltc,emp,monthlyTax,localTax,totalDedu,net};}
+
+function calc(){
+  const a=parseFloat(document.getElementById('s4-a').value);
+  const b=parseFloat(document.getElementById('s4-b').value);
+  const res=document.getElementById('result');
+  if(!a||!b||a<=0||b<=0){res.style.display='none';return;}
+  res.style.display='block';
+  const rA=calcMonthly(a,1),rB=calcMonthly(b,1);
+  document.getElementById('s4-a-gross').textContent=fmtM(a);
+  document.getElementById('s4-a-net').textContent=comma(rA.net);
+  document.getElementById('s4-a-annual').textContent=fmtW(rA.net*12);
+  document.getElementById('s4-a-dedu').textContent=comma(rA.totalDedu);
+  document.getElementById('s4-a-rate').textContent=(rA.net/rA.monthly*100).toFixed(1)+'%';
+  document.getElementById('s4-b-gross').textContent=fmtM(b);
+  document.getElementById('s4-b-net').textContent=comma(rB.net);
+  document.getElementById('s4-b-annual').textContent=fmtW(rB.net*12);
+  document.getElementById('s4-b-dedu').textContent=comma(rB.totalDedu);
+  document.getElementById('s4-b-rate').textContent=(rB.net/rB.monthly*100).toFixed(1)+'%';
+  const diff=rB.net-rA.net;
+  const box=document.getElementById('diff-box');
+  if(diff>0)box.innerHTML='연봉 B가 연봉 A보다 월 <strong style="color:#3B82F6;font-size:18px">'+comma(diff)+'</strong> 더 실수령';
+  else if(diff<0)box.innerHTML='연봉 A가 연봉 B보다 월 <strong style="color:#3B82F6;font-size:18px">'+comma(Math.abs(diff))+'</strong> 더 실수령';
+  else box.innerHTML='두 연봉의 <strong>월 실수령액이 동일</strong>합니다';
+}
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/salary-detail-shell.js"></script>
+</body>
+</html>

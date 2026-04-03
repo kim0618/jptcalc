@@ -1,0 +1,74 @@
+/* ── Affiliate Banner Component ─────────────────────────────── */
+/* 사용법: result-card 바로 다음에 .affiliate-banner 삽입            */
+
+.affiliate-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #EFF6FF;
+  border: 1px solid rgba(59,130,246,0.2);
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  text-decoration: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  cursor: pointer;
+}
+
+.affiliate-banner:hover {
+  border-color: rgba(59,130,246,0.45);
+  box-shadow: 0 2px 8px rgba(59,130,246,0.12);
+}
+
+.affiliate-banner__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.affiliate-banner__title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1E40AF;
+  line-height: 1.4;
+  margin-bottom: 2px;
+}
+
+.affiliate-banner__desc {
+  font-size: 12px;
+  color: #3B82F6;
+  font-weight: 500;
+}
+
+.affiliate-banner__cta {
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: #1D4ED8;
+  background: #fff;
+  border: 1.5px solid rgba(59,130,246,0.4);
+  border-radius: 8px;
+  padding: 7px 13px;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+
+.affiliate-banner:hover .affiliate-banner__cta {
+  background: #3B82F6;
+  color: #fff;
+  border-color: #3B82F6;
+}
+
+@media (max-width: 480px) {
+  .affiliate-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .affiliate-banner__cta {
+    width: 100%;
+    text-align: center;
+  }
+}

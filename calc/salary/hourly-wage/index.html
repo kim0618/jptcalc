@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>시급·일급 변환 계산기 - 연봉↔시급 자동변환 | 제이퍼 계산기</title>
+  <meta name="description" content="연봉을 시급·일급·주급·월급으로 변환하거나, 시급에서 연봉을 계산합니다. 2026년 최저시급 비교 기능 포함." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/salary/hourly-wage/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="시급·일급 변환 계산기 | 제이퍼 계산기" />
+  <meta property="og:description" content="연봉을 시급·일급·주급·월급으로 변환하거나, 시급에서 연봉을 계산합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/salary/hourly-wage/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="시급·일급 변환 계산기 | 제이퍼 계산기" />
+  <meta name="twitter:description" content="연봉을 시급·일급·주급·월급으로 변환하거나, 시급에서 연봉을 계산합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/salary-common.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"시급·일급 변환 계산기",
+    "url":"https://www.jptcalc.kr/calc/salary/hourly-wage/",
+    "applicationCategory":"FinanceApplication",
+    "operatingSystem":"All",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+      {"@type":"ListItem","position":2,"name":"이직/연봉 계산기","item":"https://www.jptcalc.kr/calc/salary/"},
+      {"@type":"ListItem","position":3,"name":"시급·일급 변환 계산기","item":"https://www.jptcalc.kr/calc/salary/hourly-wage/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"월 209시간은 어떻게 계산되나요?","acceptedAnswer":{"@type":"Answer","text":"주 40시간 근무 기준으로 (주 40시간 + 유급 주휴 8시간) × 52주 ÷ 12개월로 산출되며, 법정 유급 주휴시간을 포함한 기준입니다. 주 44시간이나 52시간 근무 시에는 월 환산 시간이 달라집니다."}},{"@type":"Question","name":"2026년 최저시급은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"2026년 최저시급은 10,320원이며, 월 209시간 기준 최저월급은 약 2,156,880원입니다. 최저시급 미만으로 지급하는 것은 근로기준법 위반이므로 아르바이트·파트타임 시 반드시 확인해야 합니다."}},{"@type":"Question","name":"연봉 3,000만원이면 시급이 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"월 209시간 기준으로 계산하면 약 11,960원입니다. 실제로는 초과근무 수당 포함 여부, 주 근무시간 등에 따라 달라질 수 있습니다."}},{"@type":"Question","name":"시급으로 계산할 때 일급은 어떻게 산출되나요?","acceptedAnswer":{"@type":"Answer","text":"일급은 시급에 하루 근무시간(8시간, 9시간, 10시간 중 선택)을 곱하여 계산합니다. 주급은 시급 × 주 40시간, 월급은 시급 × 209시간으로 산출합니다."}}]}</script>
+  <style>
+    /* hourly-wage 고유 스타일 - 공통 스타일은 /assets/salary-common.css 참조 */
+    .input-wrap{position:relative}
+    .input-wrap .unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none}
+    input[type=number],input[type=text]{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
+    input[type=number]::placeholder{color:var(--gray-400);font-weight:400}
+    input[type=number]:focus,input[type=text]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(59,130,246,0.15)}
+    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
+    .seg-group{display:flex;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:18px}
+    .seg-btn{flex:1;border:none;border-radius:7px;background:transparent;padding:9px 4px;font-size:12px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap}
+    .seg-btn:hover{color:var(--gray-700)}
+    .seg-btn.active{background:var(--primary);color:#fff;font-weight:700}
+    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
+    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
+    .result-card{background:linear-gradient(135deg,#EFF6FF 0%,#DBEAFE 100%);border:1px solid rgba(59,130,246,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-row+.result-row{border-top:1px solid rgba(0,0,0,0.07)}
+    .result-total-row{border-top:1px solid rgba(0,0,0,0.15)!important;margin-top:4px;padding-top:14px!important}
+    .result-total-value{font-size:24px;font-weight:900;color:var(--gray-900)}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/salary/" class="nav-item active"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/salary/">이직/연봉 계산기</a><span class="breadcrumb-sep">›</span><span>시급·일급 변환 계산기</span></div>
+    <div class="page-header-badge">📌 2026년 최저시급 10,320원</div>
+    <h1>시급·일급 변환 계산기</h1>
+    <p>연봉 ↔ 시급·일급·주급·월급 자유롭게 변환하세요</p>
+  </div>
+    <div class="card">
+      <div class="card-title">계산 기준</div>
+      <div class="info-box">
+        <span class="info-icon">📌</span>
+        <p>2026년 최저시급 <strong>10,320원</strong> · 월 환산(주 40시간, 209시간) <strong>2,156,880원</strong></p>
+      </div>
+      <div class="seg-group" id="s2-mode-group">
+        <button class="seg-btn active" onclick="setS2Mode('annual',this)">연봉으로 계산</button>
+        <button class="seg-btn" onclick="setS2Mode('hourly',this)">시급으로 계산</button>
+      </div>
+      <div id="s2-annual-input">
+        <div class="field">
+          <div class="field-label">연봉 <span class="label-hint">만원 단위</span></div>
+          <div class="input-wrap">
+            <input type="number" id="s2-salary" placeholder="예) 3600" oninput="calcHourly()" />
+            <span class="unit">만원</span>
+          </div>
+        </div>
+        <div class="field">
+          <div class="field-label">주 근무시간</div>
+          <div class="seg-group" style="margin-bottom:0">
+            <button class="seg-btn active" onclick="setWeekHours(40,this)">40시간</button>
+            <button class="seg-btn" onclick="setWeekHours(44,this)">44시간</button>
+            <button class="seg-btn" onclick="setWeekHours(52,this)">52시간</button>
+          </div>
+        </div>
+      </div>
+      <div id="s2-hourly-input" class="hidden">
+        <div class="field">
+          <div class="field-label">시급</div>
+          <div class="input-wrap">
+            <input type="number" id="s2-hour-wage" placeholder="예) 15000" oninput="calcFromHourly()" />
+            <span class="unit">원</span>
+          </div>
+        </div>
+        <div class="field">
+          <div class="field-label">일 근무시간</div>
+          <div class="seg-group" style="margin-bottom:0">
+            <button class="seg-btn active" onclick="setDayHours(8,this)">8시간</button>
+            <button class="seg-btn" onclick="setDayHours(9,this)">9시간</button>
+            <button class="seg-btn" onclick="setDayHours(10,this)">10시간</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="result-card" id="s2-result">
+      <div class="result-row"><span class="result-label">시급</span><span class="result-value" id="s2-r-hourly">-</span></div>
+      <div class="result-row"><span class="result-label">일급 (8시간 기준)</span><span class="result-value" id="s2-r-daily">-</span></div>
+      <div class="result-row"><span class="result-label">주급 (주 40시간)</span><span class="result-value" id="s2-r-weekly">-</span></div>
+      <div class="result-row"><span class="result-label">월급 (월 209시간)</span><span class="result-value" id="s2-r-monthly">-</span></div>
+      <div class="result-row result-total-row">
+        <span class="result-total-label">연봉</span>
+        <span class="result-total-value" id="s2-r-annual">-</span>
+      </div>
+      <div id="s2-min-compare" class="result-note" style="margin-top:12px;"></div>
+    </div>
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>시급·일급 변환 계산기는 언제 쓰나요?</h2>
+      <p>아르바이트, 파트타임, 프리랜서 등 시간 단위로 보수를 받는 경우 연봉·월급으로 환산하거나, 반대로 연봉을 시급으로 확인할 때 유용합니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>시급→연봉</strong><span>시급 기준 연간 예상 소득 확인</span></div>
+        <div class="guide-box"><strong>연봉→시급</strong><span>내 연봉의 실제 시간당 가치 확인</span></div>
+        <div class="guide-box"><strong>최저시급</strong><span>2026년 최저시급 10,320원 기준 확인</span></div>
+      </div>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>월 209시간은 어떻게 계산되나요?</h3><p>주 40시간 × 52주 ÷ 12개월 + 유급 주휴시간을 포함한 법정 기준입니다.</p></div>
+      <div class="faq-item"><h3>연봉 3,000만원이면 시급이 얼마인가요?</h3><p>월 209시간 기준 약 11,960원입니다. 실제로는 초과근무·수당 포함 여부에 따라 달라집니다.</p></div>
+      <div class="faq-item"><h3>2026년 최저시급은 얼마인가요?</h3><p>10,320원이며, 월 209시간 기준 최저월급은 약 2,156,880원입니다.</p></div>
+      <div class="update-note">최종 검토: 2026.03.24 · 계산 결과는 참고용입니다.</div>
+    </div>
+  </div>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 이직/연봉 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/salary/take-home-pay/" class="sibling-link">💵 연봉 실수령액</a>
+      <a href="/calc/salary/job-change/" class="sibling-link">📊 이직 연봉 비교</a>
+      <a href="/calc/salary/hourly-wage/" class="sibling-link current">⏱️ 시급·일급 변환</a>
+      <a href="/calc/salary/raise-rate/" class="sibling-link">📈 연봉 인상률</a>
+      <a href="/calc/salary/comparison/" class="sibling-link">⚖️ 연봉 비교</a>
+      <a href="/calc/salary/severance/" class="sibling-link">📦 퇴직금</a>
+      <a href="/calc/salary/unemployment/" class="sibling-link">🛟 실업급여</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script>
+function fmtW(won) {
+  won = Math.round(won);
+  if (isNaN(won) || won === 0) return '-';
+  if (Math.abs(won) >= 100000000) {
+    const uk = Math.floor(Math.abs(won)/100000000) * Math.sign(won);
+    const rem = Math.round((Math.abs(won) % 100000000)/10000);
+    return rem > 0 ? `${uk.toLocaleString()}억 ${rem.toLocaleString()}만원` : `${uk.toLocaleString()}억원`;
+  }
+  if (Math.abs(won) >= 10000) {
+    const man = Math.floor(Math.abs(won)/10000) * Math.sign(won);
+    const rem = Math.round(Math.abs(won) % 10000);
+    return rem >= 1000 ? `${man.toLocaleString()}만 ${rem.toLocaleString()}원` : `${man.toLocaleString()}만원`;
+  }
+  return `${won.toLocaleString()}원`;
+}
+function fmtM(man) { return fmtW(man * 10000); }
+function comma(n) { return Math.round(n).toLocaleString() + '원'; }
+
+let weekHours = 40;
+let dayHours = 8;
+let s2mode = 'annual';
+
+function setS2Mode(mode, btn) {
+  s2mode = mode;
+  document.querySelectorAll('#s2-mode-group .seg-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  if (mode === 'annual') {
+    document.getElementById('s2-annual-input').classList.remove('hidden');
+    document.getElementById('s2-hourly-input').classList.add('hidden');
+    calcHourly();
+  } else {
+    document.getElementById('s2-annual-input').classList.add('hidden');
+    document.getElementById('s2-hourly-input').classList.remove('hidden');
+    calcFromHourly();
+  }
+}
+
+function setWeekHours(h, btn) {
+  weekHours = h;
+  document.querySelectorAll('#s2-annual-input .seg-group .seg-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  calcHourly();
+}
+
+function setDayHours(h, btn) {
+  dayHours = h;
+  document.querySelectorAll('#s2-hourly-input .seg-group .seg-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  calcFromHourly();
+}
+
+function calcHourly() {
+  const v = parseFloat(document.getElementById('s2-salary').value);
+  const res = document.getElementById('s2-result');
+  if (!v || v <= 0) { res.classList.remove('show'); return; }
+  res.classList.add('show');
+  const annual = v * 10000;
+  const monthlyPay = annual / 12;
+  const monthlyHours = weekHours === 40 ? 209 : weekHours === 44 ? 226 : 252;
+  const hourly = monthlyPay / monthlyHours;
+  const daily = hourly * 8;
+  const weekly = hourly * weekHours;
+  document.getElementById('s2-r-hourly').textContent = comma(hourly);
+  document.getElementById('s2-r-daily').textContent = comma(daily);
+  document.getElementById('s2-r-weekly').textContent = comma(weekly);
+  document.getElementById('s2-r-monthly').textContent = comma(monthlyPay);
+  document.getElementById('s2-r-annual').textContent = fmtM(v);
+  const minWage = 10320;
+  const cmp = document.getElementById('s2-min-compare');
+  if (hourly < minWage) {
+    cmp.innerHTML = `⚠️ 시급이 2026년 최저시급(10,320원)보다 낮습니다.`;
+    cmp.style.color = '#EF4444';
+  } else {
+    cmp.innerHTML = `✅ 최저시급(10,320원) 대비 <strong>${((hourly/minWage-1)*100).toFixed(0)}%</strong> 높은 시급입니다.`;
+    cmp.style.color = '';
+  }
+}
+
+function calcFromHourly() {
+  const h = parseFloat(document.getElementById('s2-hour-wage').value);
+  const res = document.getElementById('s2-result');
+  if (!h || h <= 0) { res.classList.remove('show'); return; }
+  res.classList.add('show');
+  const daily = h * dayHours;
+  const weekly = h * 40;
+  const monthlyHours = 209;
+  const monthly = h * monthlyHours;
+  const annual = monthly * 12;
+  document.getElementById('s2-r-hourly').textContent = comma(h);
+  document.getElementById('s2-r-daily').textContent = comma(daily);
+  document.getElementById('s2-r-weekly').textContent = comma(weekly);
+  document.getElementById('s2-r-monthly').textContent = comma(monthly);
+  document.getElementById('s2-r-annual').textContent = fmtW(annual);
+  const minWage = 10320;
+  const cmp = document.getElementById('s2-min-compare');
+  if (h < minWage) {
+    cmp.innerHTML = `⚠️ 입력한 시급이 2026년 최저시급(10,320원)보다 낮습니다.`;
+    cmp.style.color = '#EF4444';
+  } else {
+    cmp.innerHTML = `✅ 최저시급(10,320원) 대비 <strong>${((h/minWage-1)*100).toFixed(0)}%</strong> 높은 시급입니다.`;
+    cmp.style.color = '';
+  }
+}
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/salary-detail-shell.js"></script>
+</body>
+</html>

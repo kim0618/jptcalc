@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ISA 계좌 절세 효과, 실제로 얼마나 될까? 한도·세금 계산법 총정리 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="ISA 종류(일반형·서민형·농어민형), 비과세 한도, 분리과세, 실제 절세 효과 계산 예시. ISA 계좌로 얼마나 세금을 아낄 수 있는지 수치로 정리." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="ISA 계좌 절세 효과, 실제로 얼마나 될까? 한도·세금 계산법 총정리 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="ISA 종류(일반형·서민형·농어민형), 비과세 한도, 분리과세, 실제 절세 효과 계산 예시. ISA 계좌로 얼마나 세금을 아낄 수 있는지 수치로 정리." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/isa-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/isa-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#6366F1;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(99,102,241,0.15);color:#6366F1;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:24px 0 10px}
+    .post-body p{margin-bottom:14px}
+    .post-body ul{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#6366F1;text-decoration:none}
+    .highlight-box{background:rgba(99,102,241,0.08);border-left:4px solid #6366F1;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#3730A3;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    td.highlight{color:#6366F1;font-weight:700}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#6366F1;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .faq-item{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:12px;padding:20px;margin:16px 0}
+    .faq-q{font-weight:800;color:#111827;margin-bottom:8px;font-size:15px}
+    .faq-a{color:#374151;font-size:14px;line-height:1.7;margin:0}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo"><div class="logo-icon"><img src="../../assets/logo.svg" alt="로고"/></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+<div class="post-wrap">
+  <span class="post-tag">금융</span>
+  <h1>ISA 계좌 절세 효과, 실제로 얼마나 될까? 한도·세금 계산법 총정리</h1>
+  <div class="post-meta"><span>📅 2026.03.29</span><span>·</span><span>7분 읽기</span></div>
+
+  <div class="post-body">
+    <p>ISA(개인종합자산관리계좌)는 국내에서 가장 실용적인 절세 계좌 중 하나입니다. 예·적금, 펀드, ETF, 주식까지 다양한 금융상품을 하나의 계좌에서 운용하면서 이자·배당 수익에 대한 세금을 줄일 수 있습니다. 그런데 막상 "얼마나 절세가 되나요?"라는 질문에 명확히 답하는 사람은 드뭅니다. 실제 수치로 계산해봤습니다.</p>
+
+    <h2>ISA란 무엇인가</h2>
+    <p>ISA는 Individual Savings Account의 약자로, <a href="https://www.fsc.go.kr">금융위원회</a>가 도입한 '통합 절세 계좌'입니다. 하나의 계좌 안에서 여러 금융상품을 함께 운용할 수 있으며, 2016년 도입 이후 여러 차례 제도가 개선되어 현재는 상당히 실용적인 혜택을 제공합니다.</p>
+
+    <p>일반 계좌에서 금융 수익이 발생하면 15.4%의 이자·배당소득세가 원천징수됩니다. ISA에서는 이 세금을 일정 한도까지 완전히 면제하고, 한도를 초과한 수익은 9.9%의 낮은 세율로 분리 과세합니다. 종합소득세 과세 대상에서도 빠집니다.</p>
+
+    <h2>ISA 종류별 비교</h2>
+    <p>ISA는 가입자의 소득 수준에 따라 일반형, 서민형, 농어민형 세 가지로 나뉩니다. 비과세 한도가 다르며, 서민형과 농어민형이 혜택이 더 큽니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>구분</th><th>일반형</th><th>서민형</th><th>농어민형</th></tr>
+        <tr><td>비과세 한도</td><td>200만원</td><td class="highlight">400만원</td><td class="highlight">400만원</td></tr>
+        <tr><td>초과분 세율</td><td>9.9% (분리과세)</td><td>9.9% (분리과세)</td><td>9.9% (분리과세)</td></tr>
+        <tr><td>연간 납입 한도</td><td>2,000만원</td><td>2,000만원</td><td>2,000만원</td></tr>
+        <tr><td>총 납입 한도 (5년)</td><td>1억원</td><td>1억원</td><td>1억원</td></tr>
+        <tr><td>의무 가입 기간</td><td>3년</td><td>3년</td><td>3년</td></tr>
+        <tr><td>가입 자격</td><td>만 19세 이상 거주자 (근로·사업소득자 또는 만 15세 이상 근로소득자)</td><td>직전연도 근로소득 5천만원 이하 또는 종합소득 3.8천만원 이하</td><td>농어민 소득자</td></tr>
+      </table>
+    </div>
+    <p style="margin: 1.2em 0;">
+      👉 <a href="https://www.jptcalc.kr/calc/finance/deposit/" style="color: #2563eb; font-weight: 600;">예금 이자 계산기로 직접 계산해보기</a>
+    </p>
+
+    <div class="highlight-box">
+      <p>ISA는 3년 의무 가입 기간이 있으며, 이 기간 안에는 원칙적으로 전액 인출이 불가합니다. 단, 납입 원금 범위 내에서는 중도 인출이 허용됩니다. 예를 들어 2,000만원을 납입하고 수익이 300만원 생겨 총 2,300만원이 있다면, 수익 300만원을 제외한 원금 2,000만원까지는 중도 인출이 가능합니다. 비상금을 ISA에 넣어두는 것도 가능하다는 의미입니다.</p>
+    </div>
+
+    <h2>비과세·분리과세 혜택 계산</h2>
+    <p>ISA의 핵심 혜택은 두 가지입니다. 비과세 한도까지는 세금 0%, 초과분은 9.9% 분리과세(일반 세율 15.4% 대비 5.5%p 낮음).</p>
+
+    <h3>일반 계좌와 ISA의 세금 비교 (수익 500만원 케이스 - 일반형)</h3>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>구분</th><th>일반 계좌</th><th>ISA 일반형</th><th>ISA 서민형</th></tr>
+        <tr><td>총 수익</td><td>500만원</td><td>500만원</td><td>500만원</td></tr>
+        <tr><td>비과세 한도</td><td>없음</td><td>200만원</td><td>400만원</td></tr>
+        <tr><td>과세 대상 수익</td><td>500만원</td><td>300만원</td><td>100만원</td></tr>
+        <tr><td>적용 세율</td><td>15.4%</td><td>9.9%</td><td>9.9%</td></tr>
+        <tr><td>납부 세금</td><td class="highlight">77만원</td><td class="highlight">29.7만원</td><td class="highlight">9.9만원</td></tr>
+        <tr><td><strong>절세 금액</strong></td><td>-</td><td class="highlight"><strong>47.3만원 절세</strong></td><td class="highlight"><strong>67.1만원 절세</strong></td></tr>
+      </table>
+    </div>
+
+    <h2>실제 절세 효과 시뮬레이션</h2>
+    <p>매년 1,000만원씩 ISA에 납입하고 연 5%의 수익률을 가정해봤습니다. 3년 후 만기 해지 시 세금 차이를 비교합니다.</p>
+
+    <h3>3년간 1,000만원 x 연 5% 수익률 - 일반형 기준</h3>
+    <ul>
+      <li>3년 후 원금 합계: 3,000만원</li>
+      <li>3년 누적 수익(단리 근사치): 약 300만원</li>
+      <li>일반 계좌 세금: 300만원 x 15.4% = 약 46.2만원</li>
+      <li>ISA 일반형 세금: (300만원 - 200만원) x 9.9% = 9.9만원</li>
+      <li><strong>절세 효과: 약 36.3만원</strong></li>
+    </ul>
+
+    <p>수익률이 높을수록, 납입 금액이 클수록 절세 효과도 커집니다. 서민형 가입자라면 비과세 한도 400만원이 적용되어 같은 조건에서 3년 누적 수익 300만원 전액 비과세가 됩니다 (세금 0원 vs 일반계좌 46.2만원).</p>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>연간 납입액</th><th>예상 수익률</th><th>3년 수익 (추정)</th><th>일반계좌 세금</th><th>ISA 일반형 세금</th><th>절세액</th></tr>
+        <tr><td>500만원</td><td>4%</td><td>약 90만원</td><td>13.9만원</td><td>0원 (한도 이하)</td><td class="highlight">13.9만원</td></tr>
+        <tr><td>1,000만원</td><td>5%</td><td>약 300만원</td><td>46.2만원</td><td>9.9만원</td><td class="highlight">36.3만원</td></tr>
+        <tr><td>2,000만원</td><td>5%</td><td>약 600만원</td><td>92.4만원</td><td>39.6만원</td><td class="highlight">52.8만원</td></tr>
+        <tr><td>2,000만원</td><td>7%</td><td>약 900만원</td><td>138.6만원</td><td>69.3만원</td><td class="highlight">69.3만원</td></tr>
+      </table>
+    </div>
+
+    <h2>ISA 활용 전략</h2>
+    <p>ISA 단독으로도 절세 효과가 있지만, 다른 절세 계좌와 조합하면 효과가 극대화됩니다.</p>
+
+    <h3>ISA + IRP + 연금저축 조합 전략</h3>
+    <ul>
+      <li><strong>ISA (연 2,000만원 한도)</strong>: 단기·중기 자금 운용, ETF·예금 등 자유롭게 운용. 3년 후 만기 수령액을 IRP나 연금저축에 이전 시 추가 세액공제 혜택 (최대 300만원 추가 공제)</li>
+      <li><strong>연금저축 (연 600만원 한도)</strong>: 납입액의 13.2~16.5% 세액공제. 노후 자금 장기 운용.</li>
+      <li><strong>IRP (연 900만원 한도, 연금저축 합산)</strong>: 세액공제 한도 확장. 퇴직금 이관 가능.</li>
+    </ul>
+
+    <p>세 계좌를 모두 최대한 활용하면 연간 최대 세액공제 효과와 운용 수익의 절세 혜택을 동시에 누릴 수 있습니다. ISA 만기 후 연금 계좌로 이전하는 흐름을 만들면 자금 연속성도 생깁니다.</p>
+
+    <h3>ISA 운용 시 주의사항</h3>
+    <ul>
+      <li>금융소득종합과세 대상자(연 금융소득 2,000만원 초과)는 ISA 가입 불가</li>
+      <li>직전연도 금융소득이 2,000만원 초과된 해에는 가입 자격 상실</li>
+      <li>계좌 내 손익은 통산됩니다. A 상품에서 손실, B 상품에서 이익이 나면 순이익 기준으로 과세</li>
+      <li>만기 해지 후 재가입 시 다시 3년 의무 기간 카운트 시작</li>
+    </ul>
+
+    <div class="cta-box">
+      <p>ISA 절세 효과를 내 수익과 납입액에 맞게 직접 계산하고 싶다면 금융 계산기를 이용해보세요.</p>
+      <a href="../../calc/finance/savings/" class="cta-btn">금융 계산기 바로가기</a>
+    </div>
+    <p style="font-size: 13px; color: #6B7280; margin-top: 8px;">관련 계산기: <a href="https://www.jptcalc.kr/calc/finance/compound/">복리 계산기</a> · <a href="https://www.jptcalc.kr/calc/finance/savings/">적금 만기 계산기</a></p>
+
+    <h2>자주 묻는 질문</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. ISA 계좌는 어디서 개설하나요? 은행과 증권사 중 어디가 좋은가요?</div>
+      <p class="faq-a">시중 은행, 증권사, 저축은행 등 대부분의 금융기관에서 개설 가능합니다. 단, 운용 가능한 상품 범위가 다릅니다. 은행 ISA는 예·적금, 펀드 위주이고, 증권사 ISA(신탁형·일임형·중개형)는 국내 주식, ETF, 펀드까지 넓게 운용할 수 있습니다. 직접 투자(주식, ETF)를 원한다면 증권사의 '중개형 ISA'가 적합합니다. 수수료와 운용 자유도를 기준으로 본인에게 맞는 곳을 선택하세요.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. ISA에서 주식 직접 투자가 가능한가요?</div>
+      <p class="faq-a">2021년 도입된 중개형 ISA를 이용하면 국내 상장 주식과 ETF에 직접 투자할 수 있습니다. 다만 해외 주식 직접 투자는 ISA 내에서 불가능합니다. 해외 ETF(예: S&P500 ETF 국내 상장 버전)는 가능합니다. 국내 주식 매매차익은 원래 비과세이므로, ISA 내에서 주식 투자 시 실질 절세 효과는 배당금과 이자 수익 부분에서 나옵니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. ISA 만기 후 재가입할 수 있나요? 계속 유지하는 게 유리한가요?</div>
+      <p class="faq-a">3년 의무 기간 이후 만기 해지하고 다시 가입하는 것이 가능합니다. 재가입하면 비과세 한도가 다시 초기화되어 동일한 혜택을 반복적으로 받을 수 있습니다. 만기 해지 후 60일 이내에 만기 수령액을 연금저축이나 IRP에 이전하면 이전 금액의 10% (최대 300만원)를 추가 세액공제 받을 수 있습니다. 즉, ISA 만기 시 바로 연금 계좌로 이전하는 것이 세금 측면에서 가장 유리한 전략입니다.</p>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-copy">© 2026 제이퍼 계산기 · <a href="../../" style="color:inherit">jptcalc.kr</a></div>
+</footer>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '조세특례제한법·금융위원회 ISA 제도 안내, 2026년 기준',
+  lastReviewed: '2026.03.29',
+  referenceOrg: '금융위원회·금융감독원',
+  relatedCalc: { name: '금융 계산기', url: '../../calc/finance/' },
+  category: 'finance',
+};
+</script>
+<script src="../../assets/footer-unified.js" defer></script>
+<script src="../../assets/blog-article-info.js" defer></script>
+<script src="../../assets/blog-review-footer.js" defer></script>
+</body>
+</html>

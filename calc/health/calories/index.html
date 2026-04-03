@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>칼로리 소모 계산기 - TDEE·다이어트·벌크업 칼로리 | jptcalc</title>
+  <meta name="description" content="칼로리 소모 계산기. 활동량에 따른 하루 총 에너지 소모량(TDEE)과 다이어트·벌크업 칼로리를 계산합니다." />
+  <meta name="keywords" content="칼로리계산기,TDEE계산기,다이어트칼로리,하루칼로리소모량" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/health/calories/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="칼로리 소모 계산기 - TDEE 계산" />
+  <meta property="og:description" content="활동량에 따른 하루 총 칼로리 소모량과 다이어트 칼로리를 계산합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/health/calories/" />
+  <meta property="og:site_name" content="jptcalc" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="칼로리 소모 계산기 - TDEE·다이어트·벌크업 칼로리 | jptcalc" />
+  <meta name="twitter:description" content="활동량에 따른 하루 총 칼로리 소모량과 다이어트 칼로리를 계산합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"칼로리 소모 계산기","url":"https://www.jptcalc.kr/calc/health/calories/","description":"칼로리 소모 계산기. 활동량에 따른 하루 총 에너지 소모량(TDEE)과 다이어트·벌크업 칼로리를 계산합니다.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"inLanguage":"ko-KR"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},{"@type":"ListItem","position":2,"name":"건강 계산기","item":"https://www.jptcalc.kr/calc/health/"},{"@type":"ListItem","position":3,"name":"칼로리 소모 계산기"}]}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"TDEE(총 일일 에너지 소모량)란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"TDEE(Total Daily Energy Expenditure)는 하루 동안 소모하는 총 칼로리로, 기초대사량(BMR)에 활동계수를 곱하여 계산합니다. 체중 유지를 위해서는 TDEE만큼의 칼로리를 섭취해야 하며, 다이어트나 벌크업 시 이를 기준으로 섭취량을 조절합니다."}},{"@type":"Question","name":"TDEE보다 훨씬 적게 먹으면 더 빨리 살이 빠지나요?","acceptedAnswer":{"@type":"Answer","text":"과도한 칼로리 적자는 오히려 역효과를 낼 수 있습니다. 신체가 에너지 절약 모드에 들어가 대사율이 떨어지고, 근육이 분해되며, 요요 현상이 발생할 수 있습니다. 하루 최소 기초대사량 이상은 섭취하고, TDEE보다 300~500kcal 정도의 적자를 유지하는 것이 권장됩니다."}},{"@type":"Question","name":"운동을 하면 TDEE가 얼마나 증가하나요?","acceptedAnswer":{"@type":"Answer","text":"활동 수준에 따라 TDEE는 BMR의 1.2배(거의 운동 없음)에서 1.9배(매우 격렬한 운동)까지 달라집니다. 예를 들어 BMR이 1,500kcal인 사람이 보통 운동을 하면 TDEE는 약 2,325kcal이 됩니다."}},{"@type":"Question","name":"다이어트와 벌크업 칼로리는 어떻게 설정하나요?","acceptedAnswer":{"@type":"Answer","text":"체중 감량을 위해서는 TDEE보다 300~500kcal 적게, 근육 증가를 위해서는 300~500kcal 많이 섭취합니다. 하루 500kcal 적자를 유지하면 주당 약 0.5kg 감량이 가능하며, 급격한 칼로리 제한보다 꾸준한 조절이 효과적입니다."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/health-common.css" />
+  <style>
+    input[type=number]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(16,185,129,0.15)}.result-card{background:linear-gradient(135deg,#ECFDF5 0%,#D1FAE5 100%);border:1px solid rgba(16,185,129,0.25)}
+.seo-card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:16px}
+.seo-card h2{font-size:18px;font-weight:900;color:var(--gray-900);margin-bottom:12px}
+.seo-card h3{font-size:14px;font-weight:700;color:var(--gray-700);margin:16px 0 8px}
+.seo-card h3:first-of-type{margin-top:0}
+.seo-card p{font-size:13px;color:var(--gray-600);line-height:1.8;margin-bottom:8px}
+.seo-card ul{padding-left:20px;margin:8px 0}
+.seo-card li{font-size:13px;color:var(--gray-600);line-height:1.8}
+  </style>
+</head>
+<body>
+<header class="site-header"><div class="header-inner"><a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="로고" style="width:32px;height:32px;display:block" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a><nav class="header-nav"><a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B"></span>부동산</a><a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981"></span>프리랜서 세금</a><a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6"></span>AI/테크</a><a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6"></span>이직/연봉</a><a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6"></span>반려동물</a><a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1"></span>금융·이자</a><a href="/calc/health/" class="nav-item active"><span class="nav-dot" style="background:#10B981"></span>건강</a><a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316"></span>날짜·D-day</a></nav><div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div><button class="hamburger" onclick="document.querySelector('.header-nav').classList.toggle('show')" aria-label="메뉴"><span></span><span></span><span></span></button></div></header>
+<main class="page-wrap">
+  <div class="page-header"><div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/health/">건강 계산기</a><span class="breadcrumb-sep">›</span><span>칼로리 소모 계산기</span></div><div class="page-header-badge">🏃 무료 온라인 계산기</div><h1>칼로리 소모 계산기</h1><p>활동량에 따른 하루 총 에너지 소모량(TDEE)을 계산합니다</p></div>
+
+  <div class="card"><div class="card-title">기본 정보</div><div class="seg-group" id="cal-sex-group"><button class="seg-btn active" onclick="setCalSex('male',this)">남성</button><button class="seg-btn" onclick="setCalSex('female',this)">여성</button></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px"><div class="field" style="margin-bottom:0"><div class="field-label">나이</div><div class="input-wrap"><input type="number" id="cal-age" placeholder="예) 25" oninput="calcCalorie()" /><span class="unit">세</span></div></div><div class="field" style="margin-bottom:0"><div class="field-label">키</div><div class="input-wrap"><input type="number" id="cal-height" placeholder="예) 170" oninput="calcCalorie()" /><span class="unit">cm</span></div></div><div class="field" style="margin-bottom:0"><div class="field-label">체중</div><div class="input-wrap"><input type="number" id="cal-weight" placeholder="예) 65" oninput="calcCalorie()" /><span class="unit">kg</span></div></div></div></div><div class="card"><div class="card-title">활동 수준</div><div class="activity-grid" id="activity-grid"><button class="activity-btn active" onclick="setActivity(1.2,this)"><div class="ab-icon">🛋️</div><div class="ab-label">거의 안함</div><div class="ab-desc">사무직, 운동 없음</div></button><button class="activity-btn" onclick="setActivity(1.375,this)"><div class="ab-icon">🚶</div><div class="ab-label">가벼운 운동</div><div class="ab-desc">주 1~3회</div></button><button class="activity-btn" onclick="setActivity(1.55,this)"><div class="ab-icon">🏊</div><div class="ab-label">보통 운동</div><div class="ab-desc">주 3~5회</div></button><button class="activity-btn" onclick="setActivity(1.725,this)"><div class="ab-icon">🏋️</div><div class="ab-label">격렬한 운동</div><div class="ab-desc">주 6~7회</div></button><button class="activity-btn" onclick="setActivity(1.9,this)"><div class="ab-icon">⚡</div><div class="ab-label">매우 격렬</div><div class="ab-desc">육체노동 / 하루 2회</div></button></div></div>
+  <div class="result-card" id="s4-result"><div class="result-highlight"><div class="rh-label">하루 유지 칼로리 (TDEE)</div><div class="rh-value" id="cal-tdee">-</div><div class="rh-sub" id="cal-bmr-sub">기초대사량: -</div></div><div class="result-row"><span class="result-label">다이어트 (−500kcal)</span><span class="result-value" id="cal-diet">-</span></div><div class="result-row"><span class="result-label">체중 유지</span><span class="result-value" id="cal-maintain">-</span></div><div class="result-row result-total-row"><span class="result-total-label">벌크업 (+500kcal)</span><span class="result-total-value" id="cal-bulk">-</span></div><p class="result-note">※ 다이어트 시 하루 500kcal 적게 섭취하면 주 0.5kg 감량 가능.</p></div>
+  <div class="seo-card"><h2>칼로리 소모 계산기 이용 안내</h2><h3>TDEE란?</h3><p>TDEE(Total Daily Energy Expenditure)는 하루 총 에너지 소모량으로, 기초대사량(BMR)에 활동계수를 곱하여 계산합니다. 다이어트·벌크업 칼로리 설계에 활용합니다.</p></div>
+
+  <section class="guide-section seo-card">
+    <h2>칼로리 소모 가이드</h2>
+    <h3>TDEE(총 일일 에너지 소모량)란?</h3>
+    <p>TDEE는 하루 동안 소모하는 총 칼로리로, 기초대사량(BMR)에 활동계수를 곱하여 계산합니다. 체중 유지를 위해서는 TDEE만큼의 칼로리를 섭취해야 하며, 다이어트나 벌크업 시 이를 기준으로 조절합니다.</p>
+    <h3>활동계수별 의미</h3>
+    <ul>
+      <li>거의 안함 (x1.2): 사무직, 운동 없음</li>
+      <li>가벼운 운동 (x1.375): 주 1~3회 가벼운 운동</li>
+      <li>보통 운동 (x1.55): 주 3~5회 중간 강도 운동</li>
+      <li>격렬한 운동 (x1.725): 주 6~7회 높은 강도 운동</li>
+      <li>매우 격렬 (x1.9): 육체노동 또는 하루 2회 이상 운동</li>
+    </ul>
+    <h3>다이어트·벌크업 칼로리 설계</h3>
+    <p>체중 감량을 위해서는 TDEE보다 300~500kcal 적게, 근육 증가를 위해서는 300~500kcal 많이 섭취합니다. 하루 500kcal 적자를 유지하면 주당 약 0.5kg 감량이 가능합니다.</p>
+  </section>
+
+  <section class="guide-section seo-card">
+    <h2>자주 묻는 질문 (FAQ)</h2>
+    <h3>Q. TDEE보다 훨씬 적게 먹으면 더 빨리 살이 빠지나요?</h3>
+    <p>과도한 칼로리 적자는 오히려 역효과를 낼 수 있습니다. 신체가 에너지 절약 모드에 들어가 대사율이 떨어지고, 근육이 분해되며, 요요 현상이 발생할 수 있습니다. 하루 최소 기초대사량 이상은 섭취하세요.</p>
+    <h3>Q. 운동을 하면 TDEE가 얼마나 증가하나요?</h3>
+    <p>활동 수준에 따라 TDEE는 BMR의 1.2배에서 1.9배까지 달라집니다. 예를 들어 BMR이 1,500kcal인 사람이 보통 운동을 하면 TDEE는 약 2,325kcal이 됩니다.</p>
+    <h3>Q. 다이어트 중 운동을 늘리면 더 많이 먹어도 되나요?</h3>
+    <p>운동량이 늘면 TDEE가 증가하므로 그에 맞춰 섭취 칼로리를 조절할 수 있습니다. 다만, 운동으로 소모하는 칼로리를 과대평가하지 않도록 주의하세요.</p>
+  </section>
+
+  <div class="sibling-section"><div class="sibling-title">다른 건강 계산기</div><div class="sibling-grid"><a href="/calc/health/bmi/" class="sibling-link"><span class="sibling-icon">⚖️</span><span class="sibling-text">BMI 계산기</span></a><a href="/calc/health/bmr/" class="sibling-link"><span class="sibling-icon">🔥</span><span class="sibling-text">기초대사량 계산기</span></a><a href="/calc/health/ideal-weight/" class="sibling-link"><span class="sibling-icon">🎯</span><span class="sibling-text">적정체중 계산기</span></a><a href="/calc/health/body-fat/" class="sibling-link"><span class="sibling-icon">💪</span><span class="sibling-text">체지방률 계산기</span></a><a href="/calc/health/calories/" class="sibling-link current"><span class="sibling-icon">🏃</span><span class="sibling-text">칼로리 소모 계산기</span></a></div></div>
+
+</main>
+<footer class="site-footer"><div class="footer-inner"><div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div><span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span></div></footer>
+
+<script>
+var calSex='male',activityFactor=1.2;
+function setCalSex(s,btn){calSex=s;btn.parentElement.querySelectorAll('.seg-btn').forEach(function(b){b.classList.remove('active')});btn.classList.add('active');calcCalorie()}
+function setActivity(f,btn){activityFactor=f;document.querySelectorAll('#activity-grid .activity-btn').forEach(function(b){b.classList.remove('active')});btn.classList.add('active');calcCalorie()}
+function calcCalorie(){var age=parseFloat(document.getElementById('cal-age').value);var h=parseFloat(document.getElementById('cal-height').value);var w=parseFloat(document.getElementById('cal-weight').value);var res=document.getElementById('s4-result');if(!age||!h||!w){res.classList.remove('show');return}res.classList.add('show');var bmr=10*w+6.25*h-5*age+(calSex==='male'?5:-161);var tdee=Math.round(bmr*activityFactor);document.getElementById('cal-tdee').textContent=tdee.toLocaleString()+' kcal';document.getElementById('cal-bmr-sub').textContent='기초대사량: '+Math.round(bmr).toLocaleString()+' kcal';document.getElementById('cal-diet').textContent=(tdee-500).toLocaleString()+' kcal';document.getElementById('cal-maintain').textContent=tdee.toLocaleString()+' kcal';document.getElementById('cal-bulk').textContent=(tdee+500).toLocaleString()+' kcal'}
+</script>
+
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/health-detail-shell.js"></script>
+</body>
+</html>

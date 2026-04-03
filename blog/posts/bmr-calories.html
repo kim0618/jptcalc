@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>기초대사량(BMR)과 하루 필요 칼로리 계산법 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="기초대사량(BMR) 계산 공식, 활동계수별 하루 총 칼로리 필요량, 다이어트·증량 시 목표 칼로리 설정 방법을 정리했습니다." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="기초대사량(BMR)과 하루 필요 칼로리 계산법 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="기초대사량(BMR) 계산 공식, 활동계수별 하루 총 칼로리 필요량, 다이어트·증량 시 목표 칼로리 설정 방법을 정리했습니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/bmr-calories.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/bmr-calories.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#10B981;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(16,185,129,0.15);color:#10B981;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body p{margin-bottom:14px}
+    .post-body ul{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#10B981;text-decoration:none}
+    .highlight-box{background:rgba(16,185,129,0.08);border-left:4px solid #10B981;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#065f46;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#10B981;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo"><div class="logo-icon"><img src="../../assets/logo.svg" alt="로고"/></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+<div class="post-wrap">
+  <span class="post-tag">건강</span>
+  <h1>기초대사량(BMR)과 하루 필요 칼로리 계산법</h1>
+  <div class="post-meta"><span>📅 2026.03.22</span><span>·</span><span>5분 읽기</span></div>
+  <div class="post-body">
+    <p>다이어트나 증량을 목표로 할 때 가장 먼저 알아야 할 것이 기초대사량(BMR)과 하루 총 칼로리 소모량(TDEE)입니다. 이를 기반으로 목표 칼로리를 설정해야 효과적입니다.</p>
+
+    <h2>기초대사량(BMR)이란?</h2>
+    <p>아무것도 하지 않고 누워만 있어도 생명 유지에 필요한 최소 칼로리입니다. 심장 박동, 호흡, 체온 유지 등에 사용됩니다.</p>
+
+    <h2>Mifflin-St Jeor 공식 (가장 정확)</h2>
+    <ul>
+      <li><strong>남성</strong>: (10 × 체중kg) + (6.25 × 신장cm) - (5 × 나이) + 5</li>
+      <li><strong>여성</strong>: (10 × 체중kg) + (6.25 × 신장cm) - (5 × 나이) - 161</li>
+    </ul>
+    <p>예시: 남성, 30세, 70kg, 175cm → BMR = 700 + 1,093.75 - 150 + 5 = <strong>1,648.75 kcal</strong></p>
+
+    <h2>활동 계수 적용 (TDEE 계산)</h2>
+    <div class="table-wrap"><table>
+      <tr><th>활동 수준</th><th>계수</th><th>예시</th></tr>
+      <tr><td>거의 없음 (좌식)</td><td>× 1.2</td><td>사무직, 운동 안 함</td></tr>
+      <tr><td>가벼운 활동</td><td>× 1.375</td><td>주 1~3일 가벼운 운동</td></tr>
+      <tr><td>보통 활동</td><td>× 1.55</td><td>주 3~5일 운동</td></tr>
+      <tr><td>활발한 활동</td><td>× 1.725</td><td>주 6~7일 운동</td></tr>
+      <tr><td>매우 활발</td><td>× 1.9</td><td>하루 2회 운동, 육체 노동</td></tr>
+    </table></div>
+    <p style="margin: 1.2em 0;">
+      👉 <a href="https://www.jptcalc.kr/calc/health/bmr/" style="color: #2563eb; font-weight: 600;">기초대사량 계산기로 직접 계산해보기</a>
+    </p>
+
+    <div class="highlight-box"><p>위 예시 남성이 사무직(좌식)이라면 TDEE = 1,648 × 1.2 = 약 1,978 kcal. 이것이 체중 유지를 위한 하루 칼로리입니다.</p></div>
+
+    <h2>목표별 칼로리 설정</h2>
+    <div class="table-wrap"><table>
+      <tr><th>목표</th><th>칼로리 조정</th><th>예상 변화</th></tr>
+      <tr><td>체중 감량</td><td>TDEE - 300~500 kcal</td><td>주 0.3~0.5kg 감량</td></tr>
+      <tr><td>체중 유지</td><td>TDEE와 동일</td><td>체중 유지</td></tr>
+      <tr><td>근육 증량</td><td>TDEE + 200~300 kcal</td><td>주 0.2~0.3kg 증가</td></tr>
+    </table></div>
+
+    <h2>다이어트 시 주의사항</h2>
+    <ul>
+      <li>여성 최소 1,200 kcal, 남성 최소 1,500 kcal 이하로 내리지 않기</li>
+      <li>너무 급격한 제한은 근육 손실 및 기초대사량 저하 유발</li>
+      <li>단백질 충분히 섭취 (체중 1kg당 1.6~2.2g)</li>
+      <li>주 1회 치팅데이로 대사 속도 유지</li>
+    </ul>
+
+    <h2>운동별 칼로리 소모량 비교</h2>
+    <p>체중 70kg 성인 남성 기준, 30분 운동 시 대략적인 칼로리 소모량입니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>운동 종류</th><th>30분 소모 칼로리</th><th>1시간 소모 칼로리</th></tr>
+      <tr><td>걷기 (보통 속도)</td><td>약 130 kcal</td><td>약 260 kcal</td></tr>
+      <tr><td>조깅 (8km/h)</td><td>약 280 kcal</td><td>약 560 kcal</td></tr>
+      <tr><td>자전거 (보통 속도)</td><td>약 210 kcal</td><td>약 420 kcal</td></tr>
+      <tr><td>수영 (자유형)</td><td>약 250 kcal</td><td>약 500 kcal</td></tr>
+      <tr><td>웨이트 트레이닝</td><td>약 180 kcal</td><td>약 360 kcal</td></tr>
+      <tr><td>줄넘기</td><td>약 350 kcal</td><td>약 700 kcal</td></tr>
+    </table></div>
+    <p>실제 소모 칼로리는 체중, 운동 강도, 개인 체력에 따라 달라집니다. 보다 정확한 수치는 <a href="https://www.mohw.go.kr">보건복지부(mohw.go.kr)</a>의 한국인 영양섭취기준을 참고하세요.</p>
+
+    <h2>BMR 계산 예시 - 여성</h2>
+    <p>여성, 28세, 55kg, 163cm인 경우를 Mifflin-St Jeor 공식으로 계산해봅니다.</p>
+    <ul>
+      <li>BMR = (10 x 55) + (6.25 x 163) - (5 x 28) - 161</li>
+      <li>= 550 + 1,018.75 - 140 - 161 = <strong>1,267.75 kcal</strong></li>
+    </ul>
+    <p>이 여성이 주 3~5일 운동을 한다면(보통 활동), TDEE = 1,268 x 1.55 = 약 <strong>1,965 kcal</strong>이 하루 권장 칼로리입니다.</p>
+
+    <h2>자주 묻는 질문 (FAQ)</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 기초대사량(BMR)을 높이는 방법이 있나요?</div>
+      <p class="faq-a">근육량을 늘리는 것이 가장 효과적입니다. 근육은 지방보다 안정 시 칼로리 소모가 약 3배 높기 때문에, 웨이트 트레이닝 등 근력운동을 꾸준히 하면 기초대사량이 증가합니다. 또한 충분한 수면(7~8시간), 적절한 단백질 섭취, 규칙적인 식사도 기초대사량 유지에 도움이 됩니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 나이가 들면 기초대사량이 줄어드나요?</div>
+      <p class="faq-a">네, 일반적으로 30세 이후 10년마다 기초대사량이 약 2~3%씩 감소합니다. 이는 주로 근육량 감소에 기인합니다. 50대의 기초대사량은 20대 대비 약 10~15% 낮아질 수 있습니다. 나이가 들수록 근력운동의 중요성이 커지는 이유입니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 다이어트 중인데 기초대사량 이하로 먹어도 되나요?</div>
+      <p class="faq-a">기초대사량 이하로 칼로리를 섭취하면 신체가 에너지 절약 모드로 전환되어 오히려 대사량이 떨어지고, 근육 손실이 발생합니다. 다이어트 시에는 TDEE에서 300~500 kcal 정도를 줄이되, 기초대사량 이상은 반드시 섭취하는 것을 권장합니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. BMR과 TDEE의 차이가 무엇인가요?</div>
+      <p class="faq-a">BMR(기초대사량)은 생명 유지에 필요한 최소 칼로리이고, TDEE(총 일일 에너지 소비량)는 BMR에 일상 활동과 운동에 의한 칼로리 소모를 더한 값입니다. 체중 관리 시에는 TDEE를 기준으로 칼로리를 조절해야 합니다.</p>
+    </div>
+
+    <h2>마무리</h2>
+    <p>기초대사량과 TDEE를 정확히 파악하면 무리한 다이어트 없이도 효과적인 체중 관리가 가능합니다. 본인의 수치를 계산기로 확인한 뒤, 목표에 맞는 칼로리를 설정해보세요.</p>
+
+    <div class="cta-box">
+      <p>내 기초대사량과 하루 필요 칼로리를 계산해보세요.</p>
+      <a href="../../calc/health/bmr/" class="cta-btn">칼로리 계산하기</a>
+    </div>
+    <p style="font-size: 13px; color: #6B7280; margin-top: 8px;">관련 계산기: <a href="https://www.jptcalc.kr/calc/health/bmi/">BMI 계산기</a> · <a href="https://www.jptcalc.kr/calc/health/calories/">칼로리 계산기</a></p>
+  </div>
+</div>
+<footer class="site-footer"><p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용입니다.</p></footer>
+  <script src="/assets/footer-unified.js" defer></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "Harris-Benedict 방정식·Mifflin-St Jeor 방정식, WHO 영양 가이드라인",
+  referenceOrg: "세계보건기구(WHO)",
+  lastReviewed: '2026.03'
+};
+</script>
+<script>
+window.ARTICLE_INFO_CONFIG.relatedCalc = { name: '기초대사량 계산기', url: '/calc/health/bmr/' };
+window.ARTICLE_INFO_CONFIG.category = 'health';
+</script>
+<script src="/assets/blog-article-info.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>

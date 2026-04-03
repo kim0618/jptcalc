@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>기초대사량 계산기 - BMR·활동별 칼로리 계산 | jptcalc</title>
+  <meta name="description" content="기초대사량(BMR) 계산기. Mifflin-St Jeor 공식으로 하루 최소 필요 열량과 활동별 칼로리 소모량을 계산합니다." />
+  <meta name="keywords" content="기초대사량계산기,BMR계산기,칼로리계산,하루열량계산" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/health/bmr/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="기초대사량 계산기 - BMR 계산" />
+  <meta property="og:description" content="Mifflin-St Jeor 공식으로 기초대사량과 활동별 칼로리를 계산합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/health/bmr/" />
+  <meta property="og:site_name" content="jptcalc" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="기초대사량 계산기 - BMR·활동별 칼로리 계산 | jptcalc" />
+  <meta name="twitter:description" content="Mifflin-St Jeor 공식으로 기초대사량과 활동별 칼로리를 계산합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"기초대사량 계산기","url":"https://www.jptcalc.kr/calc/health/bmr/","description":"기초대사량(BMR) 계산기. Mifflin-St Jeor 공식으로 하루 최소 필요 열량과 활동별 칼로리 소모량을 계산합니다.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"inLanguage":"ko-KR"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},{"@type":"ListItem","position":2,"name":"건강 계산기","item":"https://www.jptcalc.kr/calc/health/"},{"@type":"ListItem","position":3,"name":"기초대사량 계산기"}]}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"기초대사량(BMR)이란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"기초대사량(Basal Metabolic Rate)은 아무것도 하지 않고 가만히 있을 때 생명 유지에 필요한 최소 에너지량입니다. 심장 박동, 호흡, 체온 유지, 세포 활동 등에 사용되며 하루 총 에너지 소모의 약 60~75%를 차지합니다."}},{"@type":"Question","name":"기초대사량보다 적게 먹으면 안 되나요?","acceptedAnswer":{"@type":"Answer","text":"기초대사량 이하로 칼로리를 섭취하면 신체가 에너지 절약 모드에 들어가 대사율이 떨어지고, 근육 손실이 발생할 수 있습니다. 건강한 다이어트를 위해서는 기초대사량 이상을 섭취하되 TDEE보다 300~500kcal 적게 먹는 것이 권장됩니다."}},{"@type":"Question","name":"기초대사량을 높이려면 어떻게 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"근력 운동으로 근육량을 늘리는 것이 가장 효과적입니다. 충분한 단백질 섭취, 규칙적인 식사, 충분한 수면도 기초대사량 유지에 도움이 됩니다. 나이가 들수록 BMR이 감소하므로 꾸준한 근력 운동이 중요합니다."}},{"@type":"Question","name":"Mifflin-St Jeor 공식과 Harris-Benedict 공식의 차이는 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"Harris-Benedict 공식은 1919년에 개발된 전통적 공식이고, Mifflin-St Jeor 공식은 1990년에 발표된 개정 공식입니다. 연구에 따르면 Mifflin-St Jeor 공식이 현대인의 BMR을 더 정확하게 예측하며, 이 계산기도 해당 공식을 사용합니다."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/health-common.css" />
+  <style>
+    input[type=number]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(16,185,129,0.15)}.result-card{background:linear-gradient(135deg,#ECFDF5 0%,#D1FAE5 100%);border:1px solid rgba(16,185,129,0.25)}
+.seo-card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:16px}
+.seo-card h2{font-size:18px;font-weight:900;color:var(--gray-900);margin-bottom:12px}
+.seo-card h3{font-size:14px;font-weight:700;color:var(--gray-700);margin:16px 0 8px}
+.seo-card h3:first-of-type{margin-top:0}
+.seo-card p{font-size:13px;color:var(--gray-600);line-height:1.8;margin-bottom:8px}
+.seo-card ul{padding-left:20px;margin:8px 0}
+.seo-card li{font-size:13px;color:var(--gray-600);line-height:1.8}
+  </style>
+</head>
+<body>
+<header class="site-header"><div class="header-inner"><a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="로고" style="width:32px;height:32px;display:block" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a><nav class="header-nav"><a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B"></span>부동산</a><a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981"></span>프리랜서 세금</a><a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6"></span>AI/테크</a><a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6"></span>이직/연봉</a><a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6"></span>반려동물</a><a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1"></span>금융·이자</a><a href="/calc/health/" class="nav-item active"><span class="nav-dot" style="background:#10B981"></span>건강</a><a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316"></span>날짜·D-day</a></nav><div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div><button class="hamburger" onclick="document.querySelector('.header-nav').classList.toggle('show')" aria-label="메뉴"><span></span><span></span><span></span></button></div></header>
+<main class="page-wrap">
+  <div class="page-header"><div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/health/">건강 계산기</a><span class="breadcrumb-sep">›</span><span>기초대사량 계산기</span></div><div class="page-header-badge">🔥 무료 온라인 계산기</div><h1>기초대사량 계산기</h1><p>Mifflin-St Jeor 공식으로 하루 최소 필요 열량을 계산합니다</p></div>
+
+  <div class="card"><div class="card-title">기본 정보</div><div class="seg-group" id="bmr-sex"><button class="seg-btn active" onclick="setBmrSex('male',this)">남성</button><button class="seg-btn" onclick="setBmrSex('female',this)">여성</button></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px"><div class="field" style="margin-bottom:0"><div class="field-label">나이</div><div class="input-wrap"><input type="number" id="bmr-age" placeholder="예) 25" oninput="calcBmr()" /><span class="unit">세</span></div></div><div class="field" style="margin-bottom:0"><div class="field-label">키</div><div class="input-wrap"><input type="number" id="bmr-height" placeholder="예) 170" oninput="calcBmr()" /><span class="unit">cm</span></div></div><div class="field" style="margin-bottom:0"><div class="field-label">체중</div><div class="input-wrap"><input type="number" id="bmr-weight" placeholder="예) 65" oninput="calcBmr()" /><span class="unit">kg</span></div></div></div></div>
+  <div class="result-card" id="s1-result"><div class="result-highlight"><div class="rh-label">기초대사량 (BMR)</div><div class="rh-value" id="bmr-value">-</div><div class="rh-sub">하루 최소 필요 열량</div></div><div class="result-row"><span class="result-label">활동 거의 없음 (×1.2)</span><span class="result-value" id="bmr-sed">-</span></div><div class="result-row"><span class="result-label">가벼운 운동 (×1.375)</span><span class="result-value" id="bmr-light">-</span></div><div class="result-row"><span class="result-label">보통 운동 (×1.55)</span><span class="result-value" id="bmr-mod">-</span></div><div class="result-row"><span class="result-label">격렬한 운동 (×1.725)</span><span class="result-value" id="bmr-active">-</span></div><div class="result-row result-total-row"><span class="result-total-label">매우 격렬한 운동 (×1.9)</span><span class="result-total-value" id="bmr-very">-</span></div><p class="result-note">※ Mifflin-St Jeor 공식 기준.</p></div>
+  <div class="seo-card"><h2>기초대사량 계산기 이용 안내</h2><h3>기초대사량(BMR)이란?</h3><p>기초대사량은 아무것도 하지 않고 가만히 있을 때 생명 유지에 필요한 최소 에너지량입니다. Mifflin-St Jeor 공식이 현재 가장 정확한 BMR 계산법입니다.</p></div>
+
+  <section class="guide-section seo-card">
+    <h2>기초대사량(BMR) 가이드</h2>
+    <h3>기초대사량이란?</h3>
+    <p>기초대사량(Basal Metabolic Rate)은 생명 유지에 필요한 최소 에너지량으로, 심장 박동, 호흡, 체온 유지, 세포 활동 등에 사용됩니다. 하루 총 에너지 소모의 약 60~75%를 차지합니다.</p>
+    <h3>BMR에 영향을 미치는 요인</h3>
+    <ul>
+      <li>근육량: 근육이 많을수록 BMR이 높습니다</li>
+      <li>나이: 나이가 들수록 BMR이 감소합니다</li>
+      <li>성별: 일반적으로 남성이 여성보다 BMR이 높습니다</li>
+      <li>체온: 체온이 1도 상승하면 BMR이 약 13% 증가합니다</li>
+      <li>호르몬: 갑상선 호르몬이 BMR에 큰 영향을 줍니다</li>
+    </ul>
+    <h3>Mifflin-St Jeor 공식</h3>
+    <p>본 계산기는 현재 가장 정확하다고 평가받는 Mifflin-St Jeor 공식을 사용합니다. 남성: 10 x 체중(kg) + 6.25 x 키(cm) - 5 x 나이 + 5, 여성: 10 x 체중(kg) + 6.25 x 키(cm) - 5 x 나이 - 161.</p>
+  </section>
+
+  <section class="guide-section seo-card">
+    <h2>자주 묻는 질문 (FAQ)</h2>
+    <h3>Q. 기초대사량보다 적게 먹으면 안 되나요?</h3>
+    <p>기초대사량 이하로 칼로리를 섭취하면 신체가 에너지 절약 모드에 들어가 대사율이 떨어지고, 근육 손실이 발생할 수 있습니다. 건강한 다이어트를 위해서는 기초대사량 이상을 섭취하되 TDEE보다 300~500kcal 적게 먹는 것이 권장됩니다.</p>
+    <h3>Q. 기초대사량을 높이려면 어떻게 해야 하나요?</h3>
+    <p>근력 운동으로 근육량을 늘리는 것이 가장 효과적입니다. 충분한 단백질 섭취, 규칙적인 식사, 충분한 수면도 기초대사량 유지에 도움이 됩니다.</p>
+    <h3>Q. Harris-Benedict 공식과 차이는 무엇인가요?</h3>
+    <p>Harris-Benedict 공식은 1919년에 개발된 전통적 공식이고, Mifflin-St Jeor 공식은 1990년에 발표된 개정 공식입니다. 연구에 따르면 Mifflin-St Jeor 공식이 현대인의 BMR을 더 정확하게 예측합니다.</p>
+  </section>
+
+  <div class="sibling-section"><div class="sibling-title">다른 건강 계산기</div><div class="sibling-grid"><a href="/calc/health/bmi/" class="sibling-link"><span class="sibling-icon">⚖️</span><span class="sibling-text">BMI 계산기</span></a><a href="/calc/health/bmr/" class="sibling-link current"><span class="sibling-icon">🔥</span><span class="sibling-text">기초대사량 계산기</span></a><a href="/calc/health/ideal-weight/" class="sibling-link"><span class="sibling-icon">🎯</span><span class="sibling-text">적정체중 계산기</span></a><a href="/calc/health/body-fat/" class="sibling-link"><span class="sibling-icon">💪</span><span class="sibling-text">체지방률 계산기</span></a><a href="/calc/health/calories/" class="sibling-link"><span class="sibling-icon">🏃</span><span class="sibling-text">칼로리 소모 계산기</span></a></div></div>
+
+</main>
+<footer class="site-footer"><div class="footer-inner"><div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div><span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span></div></footer>
+
+<script>
+var bmrSex='male';
+function setBmrSex(s,btn){bmrSex=s;btn.parentElement.querySelectorAll('.seg-btn').forEach(function(b){b.classList.remove('active')});btn.classList.add('active');calcBmr()}
+function calcBmr(){var age=parseFloat(document.getElementById('bmr-age').value);var h=parseFloat(document.getElementById('bmr-height').value);var w=parseFloat(document.getElementById('bmr-weight').value);var res=document.getElementById('s1-result');if(!age||!h||!w){res.classList.remove('show');return}res.classList.add('show');var bmr=10*w+6.25*h-5*age+(bmrSex==='male'?5:-161);document.getElementById('bmr-value').textContent=Math.round(bmr)+' kcal';document.getElementById('bmr-sed').textContent=Math.round(bmr*1.2).toLocaleString()+' kcal';document.getElementById('bmr-light').textContent=Math.round(bmr*1.375).toLocaleString()+' kcal';document.getElementById('bmr-mod').textContent=Math.round(bmr*1.55).toLocaleString()+' kcal';document.getElementById('bmr-active').textContent=Math.round(bmr*1.725).toLocaleString()+' kcal';document.getElementById('bmr-very').textContent=Math.round(bmr*1.9).toLocaleString()+' kcal'}
+</script>
+
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/health-detail-shell.js"></script>
+</body>
+</html>

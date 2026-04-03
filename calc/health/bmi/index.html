@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMI 계산기 - 비만도 측정·체질량지수 계산 | jptcalc</title>
+  <meta name="description" content="BMI(체질량지수) 계산기. 키와 체중을 입력하면 비만도를 측정하고 정상 체중 범위와 적정 체중을 알려드립니다." />
+  <meta name="keywords" content="BMI계산기,비만도계산기,체질량지수,BMI측정,비만측정" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/health/bmi/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BMI 계산기 - 비만도 측정" />
+  <meta property="og:description" content="키와 체중을 입력하면 BMI 지수와 비만도를 즉시 계산합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/health/bmi/" />
+  <meta property="og:site_name" content="jptcalc" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="BMI 계산기 - 비만도 측정·체질량지수 계산 | jptcalc" />
+  <meta name="twitter:description" content="키와 체중을 입력하면 BMI 지수와 비만도를 즉시 계산합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"BMI 계산기","url":"https://www.jptcalc.kr/calc/health/bmi/","description":"BMI(체질량지수) 계산기. 키와 체중을 입력하면 비만도를 측정하고 정상 체중 범위와 적정 체중을 알려드립니다.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"inLanguage":"ko-KR"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},{"@type":"ListItem","position":2,"name":"건강 계산기","item":"https://www.jptcalc.kr/calc/health/"},{"@type":"ListItem","position":3,"name":"BMI 계산기"}]}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"BMI가 정상이면 건강한 건가요?","acceptedAnswer":{"@type":"Answer","text":"BMI는 체중과 키만으로 계산하므로 체지방률이나 내장지방을 반영하지 않습니다. BMI가 정상이더라도 체지방률이 높은 '마른 비만'일 수 있으므로, 체지방률 측정을 함께 하는 것이 좋습니다."}},{"@type":"Question","name":"아시아 기준과 WHO 기준은 왜 다른가요?","acceptedAnswer":{"@type":"Answer","text":"아시아인은 같은 BMI에서도 서양인보다 체지방률이 높고 대사 질환 위험이 크기 때문에, 아시아태평양 기준에서는 과체중 기준을 BMI 25가 아닌 23으로 낮추었습니다. 한국 대한비만학회도 이 기준을 채택하고 있습니다."}},{"@type":"Question","name":"어린이와 청소년도 같은 BMI 기준을 사용하나요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 소아·청소년은 성별, 연령별 BMI 백분위수를 사용합니다. 질병관리청의 소아·청소년 성장도표를 기준으로 해당 연령 대비 백분위를 확인해야 하며, 성인 기준을 그대로 적용하면 안 됩니다."}},{"@type":"Question","name":"BMI의 한계는 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"BMI는 근육량, 체지방 분포, 골밀도를 반영하지 못합니다. 근육량이 많은 운동선수는 BMI가 높게 나오지만 실제 비만이 아닐 수 있고, 반대로 BMI가 정상이어도 체지방률이 높은 마른 비만일 수 있습니다. 정확한 건강 상태 파악을 위해 체지방률, 허리둘레, 혈압, 혈당 등을 함께 확인하는 것이 좋습니다."}},{"@type":"Question","name":"BMI만 보고 다이어트를 시작해도 되나요?","acceptedAnswer":{"@type":"Answer","text":"BMI는 체중 관리의 방향을 잡는 참고 지표입니다. 무리한 식이 제한이나 운동은 건강에 해로울 수 있으므로, 체중 감량이 필요하다고 판단되면 의료 전문가와 상담 후 계획을 세우는 것이 안전합니다."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/health-common.css" />
+  <style>
+    input[type=number]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(16,185,129,0.15)}.result-card{background:linear-gradient(135deg,#ECFDF5 0%,#D1FAE5 100%);border:1px solid rgba(16,185,129,0.25)}.bmi-status.저체중{background:rgba(59,130,246,0.15);color:#3B82F6}.bmi-status.정상{background:rgba(16,185,129,0.15);color:#10B981}.bmi-status.과체중{background:rgba(245,158,11,0.15);color:#F59E0B}.bmi-status.비만{background:rgba(239,68,68,0.15);color:#EF4444}.bmi-status.고도비만{background:rgba(239,68,68,0.15);color:#EF4444}
+.seo-card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:16px}
+.seo-card h2{font-size:18px;font-weight:900;color:var(--gray-900);margin-bottom:12px}
+.seo-card h3{font-size:14px;font-weight:700;color:var(--gray-700);margin:16px 0 8px}
+.seo-card h3:first-of-type{margin-top:0}
+.seo-card p{font-size:13px;color:var(--gray-600);line-height:1.8;margin-bottom:8px}
+.seo-card ul{padding-left:20px;margin:8px 0}
+.seo-card li{font-size:13px;color:var(--gray-600);line-height:1.8}
+  </style>
+</head>
+<body>
+<header class="site-header"><div class="header-inner"><a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="로고" style="width:32px;height:32px;display:block" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a><nav class="header-nav"><a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B"></span>부동산</a><a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981"></span>프리랜서 세금</a><a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6"></span>AI/테크</a><a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6"></span>이직/연봉</a><a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6"></span>반려동물</a><a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1"></span>금융·이자</a><a href="/calc/health/" class="nav-item active"><span class="nav-dot" style="background:#10B981"></span>건강</a><a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316"></span>날짜·D-day</a></nav><div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div><button class="hamburger" onclick="document.querySelector('.header-nav').classList.toggle('show')" aria-label="메뉴"><span></span><span></span><span></span></button></div></header>
+<main class="page-wrap">
+  <div class="page-header"><div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/health/">건강 계산기</a><span class="breadcrumb-sep">›</span><span>BMI 계산기</span></div><div class="page-header-badge">⚖️ 무료 온라인 계산기</div><h1>BMI 계산기</h1><p>키와 체중으로 체질량지수(BMI)를 계산하고 비만도를 확인합니다</p></div>
+
+  <div class="card"><div class="card-title">BMI 계산</div><div class="field"><div class="field-label">키</div><div class="input-wrap"><input type="number" id="bmi-height" placeholder="예) 170" oninput="calcBmi()" /><span class="unit">cm</span></div></div><div class="field"><div class="field-label">체중</div><div class="input-wrap"><input type="number" id="bmi-weight" placeholder="예) 65" oninput="calcBmi()" /><span class="unit">kg</span></div></div></div>
+  <div class="result-card" id="s0-result"><div class="result-highlight"><div class="rh-label">BMI 지수</div><div class="rh-value" id="bmi-value">-</div><div><span class="bmi-status" id="bmi-status-badge">-</span></div></div><div class="bmi-gauge"><div class="bmi-track"><div class="bmi-needle" id="bmi-needle" style="left:0%"></div></div><div class="bmi-labels"><span>저체중<br>&lt;18.5</span><span>정상<br>18.5~23</span><span>과체중<br>23~25</span><span>비만<br>25~30</span><span>고도비만<br>30+</span></div></div><div class="result-row"><span class="result-label">현재 체중</span><span class="result-value" id="bmi-cur-weight">-</span></div><div class="result-row"><span class="result-label">정상 체중 범위 (BMI 18.5~23)</span><span class="result-value" id="bmi-normal-range">-</span></div><div class="result-row"><span class="result-label">적정 체중 (BMI 22)</span><span class="result-value" id="bmi-ideal">-</span></div><div class="result-row result-total-row"><span class="result-total-label">체중 차이</span><span class="result-total-value" id="bmi-diff">-</span></div><p class="result-note">※ 한국·아시아태평양 기준: BMI 18.5 미만=저체중, 18.5~23=정상, 23~25=과체중, 25~30=비만, 30+=고도비만</p></div>
+  <div class="guide-section">
+    <div class="seo-card">
+      <h2>BMI 계산기, 이런 분에게 필요합니다</h2>
+      <p>체중 관리를 시작하거나 건강검진 결과를 해석할 때, 내 체중이 키 대비 어느 범위인지 빠르게 확인할 수 있습니다. BMI는 간편한 선별 지표이지 확정 진단 도구가 아니므로, 수치에 과도한 의미를 부여하기보다 전체적인 건강 상태와 함께 판단하는 것이 중요합니다.</p>
+      <div class="guide-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0">
+        <div class="guide-box" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;padding:14px"><strong>계산 공식</strong><span style="display:block;font-size:12px;color:#6B7280;margin-top:4px">체중(kg) / 키(m)의 제곱. 예: 65kg, 170cm → 65 / 1.7² = 22.5</span></div>
+        <div class="guide-box" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;padding:14px"><strong>한국 기준</strong><span style="display:block;font-size:12px;color:#6B7280;margin-top:4px">대한비만학회 기준: 23 이상 과체중, 25 이상 비만 (WHO 기준과 다름)</span></div>
+        <div class="guide-box" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;padding:14px"><strong>측정 한계</strong><span style="display:block;font-size:12px;color:#6B7280;margin-top:4px">근육량·체지방 분포를 반영하지 않으므로 체지방률과 함께 확인 권장</span></div>
+        <div class="guide-box" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;padding:14px"><strong>건강 안내</strong><span style="display:block;font-size:12px;color:#6B7280;margin-top:4px">BMI는 참고 지표입니다. 체중 관리·식이 조절은 의료 전문가와 상담하세요</span></div>
+      </div>
+    </div>
+    <div class="seo-card">
+      <h2>BMI 해석 가이드</h2>
+      <h3>BMI 수치별 의미 (아시아태평양 기준)</h3>
+      <p>BMI(Body Mass Index)는 체중(kg)을 키(m)의 제곱으로 나눈 값입니다. WHO 기준은 BMI 25부터 과체중이지만, 한국을 포함한 아시아태평양 기준은 BMI 23부터 과체중으로 분류합니다. 아시아인은 같은 BMI에서도 서양인보다 체지방률이 높고 대사 질환 위험이 크기 때문입니다.</p>
+      <ul>
+        <li>BMI 18.5 미만: 저체중 - 영양 부족·면역력 저하 위험</li>
+        <li>BMI 18.5~23: 정상 - 건강 체중 범위</li>
+        <li>BMI 23~25: 과체중 - 생활습관 개선 권장</li>
+        <li>BMI 25~30: 비만 - 당뇨·고혈압 등 만성질환 위험 증가</li>
+        <li>BMI 30 이상: 고도비만 - 적극적 체중 관리 필요</li>
+      </ul>
+      <h3>입력 시 주의사항</h3>
+      <ul>
+        <li><strong>키</strong>는 신발을 벗은 상태의 신장을 입력하세요. 건강검진 결과지 기준이 가장 정확합니다.</li>
+        <li><strong>체중</strong>은 아침 공복, 가벼운 옷차림 기준이 일관된 측정에 유리합니다.</li>
+        <li>이 계산기는 <strong>만 18세 이상 성인</strong>을 대상으로 합니다. 소아·청소년은 성별·연령별 백분위수 기준을 사용해야 합니다.</li>
+        <li>임산부, 수유부, 운동선수 등은 BMI만으로 건강 상태를 판단하기 어렵습니다.</li>
+      </ul>
+      <h3>BMI의 한계</h3>
+      <p>BMI는 근육량, 체지방 분포, 골밀도를 반영하지 못합니다. 근육량이 많은 운동선수는 BMI가 높게 나오지만 실제 비만이 아닐 수 있고, 반대로 BMI가 정상이어도 체지방률이 높은 '마른 비만'일 수 있습니다. 정확한 건강 상태 파악을 위해 체지방률, 허리둘레, 혈압, 혈당 등을 함께 확인하는 것이 좋습니다.</p>
+    </div>
+    <div class="seo-card">
+      <h2>자주 묻는 질문 (FAQ)</h2>
+      <h3>Q. BMI가 정상이면 건강한 건가요?</h3>
+      <p>BMI는 체중과 키만으로 계산하므로 체지방률이나 내장지방을 반영하지 않습니다. BMI가 정상이더라도 체지방률이 높은 '마른 비만'일 수 있으므로, 체지방률 측정을 함께 하는 것이 좋습니다.</p>
+      <h3>Q. 아시아 기준과 WHO 기준은 왜 다른가요?</h3>
+      <p>아시아인은 같은 BMI에서도 서양인보다 체지방률이 높고 대사 질환 위험이 크기 때문에, 아시아태평양 기준에서는 과체중 기준을 BMI 25가 아닌 23으로 낮추었습니다.</p>
+      <h3>Q. 어린이와 청소년도 같은 기준을 사용하나요?</h3>
+      <p>아닙니다. 소아·청소년은 성별, 연령별 BMI 백분위수를 사용합니다. 질병관리청의 소아·청소년 성장도표를 기준으로 해당 연령 대비 백분위를 확인해야 합니다.</p>
+      <h3>Q. BMI만 보고 다이어트를 시작해도 되나요?</h3>
+      <p>BMI는 체중 관리의 방향을 잡는 참고 지표입니다. 무리한 식이 제한이나 운동은 건강에 해로울 수 있으므로, 체중 감량이 필요하다고 판단되면 의료 전문가와 상담 후 계획을 세우는 것이 안전합니다.</p>
+      <h3>Q. 같은 키·체중인데 건강검진 결과와 다르게 나와요.</h3>
+      <p>측정 시점(아침/저녁), 측정 장비, 반올림 방식에 따라 소수점 차이가 날 수 있습니다. 이 계산기는 소수점 첫째자리까지 표시하며, 건강검진 기관의 측정값과 약간 다를 수 있습니다.</p>
+      <div class="update-note" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:10px 14px;margin-top:14px;font-size:12px;color:#6B7280">최종 검토: 2026.03 · 이 계산기는 건강 참고용이며 의료 진단을 대체하지 않습니다. 체중 관리·식이 조절은 의료 전문가와 상담하세요.</div>
+    </div>
+  </div>
+
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: 'WHO 비만 기준 및 대한비만학회 아시아태평양 기준 (BMI 23 과체중, BMI 25 비만)',
+    appliedFrom: '대한비만학회 2018년 진료지침 기준',
+    exceptions: [
+      'BMI는 체중과 키만으로 산출하며, 체지방률이나 근육량을 반영하지 않습니다',
+      '소아·청소년은 성별·연령별 백분위수 기준을 사용하므로 본 계산기의 성인 기준과 다릅니다',
+      '임산부, 운동선수 등 특수한 경우 BMI만으로 건강 상태를 판단할 수 없습니다',
+    ],
+    references: [
+      { name: '대한비만학회(kosso.or.kr)', url: 'https://www.kosso.or.kr' },
+      { name: '질병관리청 건강정보포털(health.kdca.go.kr)', url: 'https://health.kdca.go.kr' },
+    ],
+    lastReviewed: '2026.03',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
+  <div class="sibling-section"><div class="sibling-title">다른 건강 계산기</div><div class="sibling-grid"><a href="/calc/health/bmi/" class="sibling-link current"><span class="sibling-icon">⚖️</span><span class="sibling-text">BMI 계산기</span></a><a href="/calc/health/bmr/" class="sibling-link"><span class="sibling-icon">🔥</span><span class="sibling-text">기초대사량 계산기</span></a><a href="/calc/health/ideal-weight/" class="sibling-link"><span class="sibling-icon">🎯</span><span class="sibling-text">적정체중 계산기</span></a><a href="/calc/health/body-fat/" class="sibling-link"><span class="sibling-icon">💪</span><span class="sibling-text">체지방률 계산기</span></a><a href="/calc/health/calories/" class="sibling-link"><span class="sibling-icon">🏃</span><span class="sibling-text">칼로리 소모 계산기</span></a></div></div>
+
+</main>
+<footer class="site-footer"><div class="footer-inner"><div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div><span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span></div></footer>
+
+<script>
+function calcBmi(){var h=parseFloat(document.getElementById('bmi-height').value);var w=parseFloat(document.getElementById('bmi-weight').value);var res=document.getElementById('s0-result');if(!h||!w){res.classList.remove('show');return}res.classList.add('show');var hm=h/100,bmi=w/(hm*hm);document.getElementById('bmi-value').textContent=bmi.toFixed(1);var status='정상';if(bmi<18.5)status='저체중';else if(bmi<23)status='정상';else if(bmi<25)status='과체중';else if(bmi<30)status='비만';else status='고도비만';var badge=document.getElementById('bmi-status-badge');badge.textContent=status;badge.className='bmi-status '+status;var pct=Math.min(Math.max((bmi-15)/25*100,0),100);document.getElementById('bmi-needle').style.left=pct+'%';var ideal=hm*hm*22,normalMin=hm*hm*18.5,normalMax=hm*hm*23;var diff=w-ideal;document.getElementById('bmi-cur-weight').textContent=w+'kg';document.getElementById('bmi-normal-range').textContent=normalMin.toFixed(1)+'~'+normalMax.toFixed(1)+'kg';document.getElementById('bmi-ideal').textContent=ideal.toFixed(1)+'kg';document.getElementById('bmi-diff').textContent=(diff>=0?'+':'')+diff.toFixed(1)+'kg';document.getElementById('bmi-diff').style.color=Math.abs(diff)<2?'#10B981':diff>0?'#EF4444':'#3B82F6'}
+</script>
+
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/health-detail-shell.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>특정 날짜의 요일 계산법 - 과거·미래 날짜 요일 바로 확인하기 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="특정 날짜가 무슨 요일인지 계산하는 방법. 생일, 기념일, 공휴일 요일 확인법과 요일 계산 공식(젤러 공식), 실생활 활용 사례까지 정리합니다." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="특정 날짜의 요일 계산법 - 과거·미래 날짜 요일 바로 확인하기 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="특정 날짜가 무슨 요일인지 계산하는 방법. 생일, 기념일, 공휴일 요일 확인법과 요일 계산 공식(젤러 공식), 실생활 활용 사례까지 정리합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/weekday-calculator-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/weekday-calculator-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <!-- Google Analytics -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BRSX3F10MZ');
+  </script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #F97316;
+      --gray-400: #9CA3AF; --gray-500: #6B7280; --gray-600: #4B5563;
+      --dark-bg: #ffffff; --dark-card: #F9FAFB; --dark-border: rgba(0,0,0,0.08);
+    }
+    body { font-family: 'Pretendard', -apple-system, sans-serif; background: #ffffff; color: #111827; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+
+    .site-header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .header-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; gap: 24px; }
+    .site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .logo-icon { width: 32px; height: 32px; }
+    .logo-icon img { width: 32px; height: 32px; display: block; }
+    .logo-text { font-size: 18px; font-weight: 900; color: #111827; letter-spacing: -0.5px; }
+    .logo-text span { color: #818CF8; }
+    .header-back { margin-left: auto; font-size: 13px; font-weight: 600; color: #6B7280; text-decoration: none !important; }
+    .header-back:hover { color: #111827; }
+
+    .post-wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+    .post-tag { display: inline-block; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; background: rgba(249,115,22,0.15); color: #F97316; margin-bottom: 16px; }
+    h1 { font-size: 26px; font-weight: 900; color: #111827; line-height: 1.35; margin-bottom: 12px; }
+    .post-meta { font-size: 13px; color: #4B5563; margin-bottom: 36px; display: flex; gap: 12px; }
+    .post-body { font-size: 15px; color: #111827; line-height: 1.8; }
+    .post-body h2 { font-size: 19px; font-weight: 800; color: #111827; margin: 40px 0 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .post-body h3 { font-size: 16px; font-weight: 700; color: #111827; margin: 24px 0 10px; }
+    .post-body p { margin-bottom: 14px; }
+    .post-body ul, .post-body ol { margin: 10px 0 14px 20px; }
+    .post-body li { margin-bottom: 8px; }
+    .post-body a { color: var(--primary); text-decoration: none !important; }
+    .post-body a:hover { text-decoration: underline; }
+    .highlight-box { background: rgba(249,115,22,0.08); border-left: 4px solid var(--primary); border-radius: 0 10px 10px 0; padding: 16px 20px; margin: 20px 0; }
+    .highlight-box p { margin: 0; color: #9A3412; font-size: 14px; }
+    .table-wrap { overflow-x: auto; margin: 20px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th { background: #F9FAFB; color: #111827; font-weight: 700; padding: 10px 14px; text-align: left; border: 1px solid rgba(0,0,0,0.08); }
+    td { padding: 10px 14px; border: 1px solid rgba(0,0,0,0.08); color: #1F2937; }
+    tr:hover td { background: rgba(0,0,0,0.02); }
+    .cta-box { background: #F9FAFB; border: 1px solid rgba(0,0,0,0.08); border-radius: 14px; padding: 24px; margin: 40px 0; text-align: center; }
+    .cta-box p { color: #374151; font-size: 14px; margin-bottom: 14px; }
+    .cta-btn { display: inline-block; padding: 12px 28px; background: #F97316; color: #fff !important; font-size: 14px; font-weight: 800; border-radius: 10px; text-decoration: none !important; }
+    .cta-btn:hover { opacity: 0.9; }
+
+    .faq-item { background: #F9FAFB; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; padding: 20px; margin: 16px 0; }
+    .faq-q { font-weight: 800; color: #111827; margin-bottom: 8px; font-size: 15px; }
+    .faq-a { color: #374151; font-size: 14px; line-height: 1.7; margin: 0; }
+    td.rate { text-align: center; font-weight: 700; color: #F97316; }
+    td.total-rate { text-align: center; font-weight: 700; color: #111827; }
+
+    .site-footer { border-top: 1px solid rgba(0,0,0,0.08); padding: 24px; text-align: center; }
+    .footer-copy { font-size: 10px; color: #374151; }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo">
+      <div class="logo-icon"><img src="../../assets/logo.svg" alt="제이퍼 계산기 로고" /></div>
+      <span class="logo-text">제이퍼<span>계산기</span></span>
+    </a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+
+<div class="post-wrap">
+  <span class="post-tag">날짜·D-day</span>
+  <h1>특정 날짜의 요일 계산법 - 과거·미래 날짜 요일 바로 확인하기</h1>
+  <div class="post-meta">
+    <span>📅 2026.03.31</span>
+    <span>·</span>
+    <span>5분 읽기</span>
+  </div>
+
+  <div class="post-body">
+    <p>"내 생일이 무슨 요일이지?", "올해 크리스마스가 무슨 요일이야?", "계약 만료일 30일 후가 주말이면 어쩌지?" 일상에서 특정 날짜의 요일이 궁금한 순간이 자주 있습니다. 요일 계산 방법과 실생활에서 요일이 중요한 경우를 정리합니다.</p>
+
+    <div class="highlight-box">
+      <p><strong>이 글이 필요한 사람:</strong> 특정 날짜의 요일을 빠르게 확인하고 싶은 분 / 일정 계획 시 요일을 미리 파악하고 싶은 분 / 요일 계산 원리가 궁금한 분</p>
+    </div>
+
+    <h2>요일이 중요한 실생활 상황</h2>
+
+    <h3>1. 업무·계약 관련</h3>
+    <ul>
+      <li><strong>계약 만료일:</strong> 만료일이 주말이나 공휴일이면 다음 영업일로 자동 연장되는 경우가 많음</li>
+      <li><strong>급여일:</strong> 급여일이 주말이면 전 금요일에 지급되는지, 다음 월요일에 지급되는지 확인 필요</li>
+      <li><strong>납부 기한:</strong> 세금, 공과금 납부 기한이 주말이면 다음 영업일까지 유예</li>
+    </ul>
+
+    <h3>2. 여행·행사 계획</h3>
+    <ul>
+      <li><strong>연차 사용:</strong> 공휴일 앞뒤 요일을 확인해서 징검다리 연휴 만들기</li>
+      <li><strong>항공권·숙소 예약:</strong> 요일에 따라 가격이 크게 달라짐 (금·토 출발이 가장 비쌈)</li>
+      <li><strong>결혼식·돌잔치:</strong> 날짜를 정할 때 토요일인지 일요일인지가 중요</li>
+    </ul>
+
+    <h3>3. 기념일·생일</h3>
+    <ul>
+      <li>올해 생일이 무슨 요일인지</li>
+      <li>내가 태어난 날이 무슨 요일이었는지</li>
+      <li>결혼기념일, 연인 기념일의 요일 확인</li>
+    </ul>
+
+    <p style="margin: 1.2em 0;">
+      👉 <a href="https://www.jptcalc.kr/calc/date/weekday/" style="color: #2563eb; font-weight: 600;">요일 계산기로 바로 확인해보기</a>
+    </p>
+
+    <h2>2026년 주요 날짜 요일 정리</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>날짜</th><th>요일</th><th>비고</th></tr>
+        <tr><td>1월 1일 (신정)</td><td class="rate">목요일</td><td>금요일 연차 시 4일 연휴</td></tr>
+        <tr><td>2월 16~18일 (설연휴)</td><td class="rate">월~수요일</td><td>주말 포함 5일 연휴</td></tr>
+        <tr><td>3월 1일 (삼일절)</td><td class="rate">일요일</td><td>대체공휴일 3/2(월) 적용</td></tr>
+        <tr><td>5월 5일 (어린이날)</td><td class="rate">화요일</td><td>월요일 연차 시 4일 연휴</td></tr>
+        <tr><td>5월 24일 (부처님오신날)</td><td class="rate">일요일</td><td>대체공휴일 5/25(월) 적용</td></tr>
+        <tr><td>6월 6일 (현충일)</td><td class="rate">토요일</td><td>대체공휴일 미적용</td></tr>
+        <tr><td>8월 15일 (광복절)</td><td class="rate">토요일</td><td>대체공휴일 8/17(월) 적용</td></tr>
+        <tr><td>9월 24~26일 (추석)</td><td class="rate">목~토요일</td><td>일요일 포함 4일 연휴</td></tr>
+        <tr><td>10월 3일 (개천절)</td><td class="rate">토요일</td><td>대체공휴일 10/5(월) 적용</td></tr>
+        <tr><td>10월 9일 (한글날)</td><td class="rate">금요일</td><td>토·일 포함 3일 연휴</td></tr>
+        <tr><td>12월 25일 (크리스마스)</td><td class="rate">금요일</td><td>토·일 포함 3일 연휴</td></tr>
+      </table>
+    </div>
+
+    <h2>요일 계산의 원리 - 젤러 공식</h2>
+    <p>수학적으로 요일을 계산하는 대표적인 방법이 <strong>젤러 공식(Zeller's Formula)</strong>입니다. 실제로 암산으로 쓰기보다는 계산기가 이 원리를 활용합니다.</p>
+    <div class="highlight-box">
+      <p><strong>h = (q + [13(m+1)/5] + K + [K/4] + [J/4] - 2J) mod 7</strong><br />
+      q: 일, m: 월(3월=3, 1·2월은 전년도 13·14월로 처리), K: 연도 끝 두 자리, J: 연도 앞 두 자리<br />
+      결과: 0=토, 1=일, 2=월, 3=화, 4=수, 5=목, 6=금</p>
+    </div>
+    <p>예를 들어 2026년 12월 25일을 계산하면:</p>
+    <ul>
+      <li>q=25, m=12, K=26, J=20</li>
+      <li>h = (25 + [13x13/5] + 26 + [26/4] + [20/4] - 2x20) mod 7</li>
+      <li>h = (25 + 33 + 26 + 6 + 5 - 40) mod 7 = 55 mod 7 = <strong>6 (금요일)</strong></li>
+    </ul>
+    <p>복잡하죠? 계산기에 날짜만 입력하면 바로 나오니 직접 외울 필요는 없습니다.</p>
+
+    <h2>요일 패턴 - 알아두면 유용한 규칙</h2>
+
+    <h3>같은 날짜의 요일은 매년 하루씩 밀린다</h3>
+    <p>평년에는 365일 = 52주 + 1일이므로, 같은 날짜의 요일이 매년 하루씩 뒤로 밀립니다. 윤년에는 2일 밀립니다.</p>
+    <ul>
+      <li>2025년 1월 1일: 수요일</li>
+      <li>2026년 1월 1일: 목요일 (+1일)</li>
+      <li>2027년 1월 1일: 금요일 (+1일)</li>
+    </ul>
+
+    <h3>같은 요일이 반복되는 주기</h3>
+    <p>달력은 정확히 <strong>400년</strong> 주기로 반복됩니다. 하지만 실용적으로는 <strong>28년 주기</strong>로 거의 동일한 달력이 반복됩니다(윤년 배치가 같을 때). 즉, 1998년과 2026년의 달력이 동일합니다.</p>
+
+    <div class="cta-box">
+      <p>특정 날짜가 무슨 요일인지 바로 확인해보세요.</p>
+      <a href="../../calc/date/weekday/" class="cta-btn">요일 계산하기</a>
+    </div>
+    <p style="font-size:13px;color:#6B7280;margin-top:8px;">관련 계산기: <a href="https://www.jptcalc.kr/calc/date/dday/">D-day 계산기</a> · <a href="https://www.jptcalc.kr/calc/date/date-difference/">날짜 차이 계산기</a></p>
+
+    <h2>자주 묻는 질문 (FAQ)</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 과거 날짜의 요일도 확인할 수 있나요?</div>
+      <p class="faq-a">네, 요일 계산기에 과거 날짜를 입력하면 그날이 무슨 요일이었는지 바로 확인됩니다. 예를 들어 자신이 태어난 날의 요일, 역사적 사건이 발생한 요일 등을 확인할 수 있습니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 대체공휴일은 어떤 경우에 적용되나요?</div>
+      <p class="faq-a">설날·추석 연휴가 주말과 겹치거나, 어린이날·삼일절·광복절·개천절·한글날·석가탄신일·크리스마스가 주말과 겹치면 대체공휴일이 적용됩니다. 현충일(6월 6일)은 대체공휴일 대상이 아닙니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 윤년은 어떻게 결정되나요?</div>
+      <p class="faq-a">4로 나눠지는 해는 윤년이지만, 100으로 나눠지는 해는 평년, 400으로 나눠지는 해는 다시 윤년입니다. 2024년은 윤년(4로 나눠짐), 2100년은 평년(100으로 나눠짐), 2000년은 윤년(400으로 나눠짐)이었습니다. 윤년에는 2월 29일이 추가되어 366일입니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 같은 달력이 반복되는 해는 언제인가요?</div>
+      <p class="faq-a">평년끼리, 윤년끼리 비교했을 때 보통 6년, 11년, 또는 28년 주기로 같은 달력이 반복됩니다. 2026년(평년)은 1998년, 2037년과 동일한 달력입니다. 정확한 반복 주기는 윤년 배치에 따라 달라집니다.</p>
+    </div>
+
+    <h2>마무리</h2>
+    <p>요일 하나가 일정 계획, 비용, 계약 조건을 바꿀 수 있습니다. 연차를 효율적으로 쓰려면 공휴일 요일을 미리 파악하는 것이 중요하고, 계약·납부 관련해서는 만료일이 주말인지 평일인지 반드시 확인해야 합니다. 날짜를 입력하면 요일이 바로 나오는 계산기를 활용해서 빠르게 확인해보세요.</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용입니다.</p>
+</footer>
+
+  <script>
+  window.ARTICLE_INFO_CONFIG = {
+    author: '제이퍼 계산기 편집팀',
+    reviewBasis: '그레고리력 기준, 대체공휴일에 관한 법률',
+    basisDate: '2026년 기준',
+    referenceOrg: '행정안전부·한국천문연구원',
+    lastReviewed: '2026.03.31',
+    disclaimer: '이 글은 정보 제공 목적으로 작성되었습니다. 공휴일 및 대체공휴일 적용은 관련 법률 개정에 따라 변경될 수 있으므로 행정안전부 공지를 확인하세요.',
+    relatedCalc: { name: '요일 계산기', url: '/calc/date/weekday/' },
+    category: 'date'
+  };
+  </script>
+<script src="/assets/blog-article-info.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>

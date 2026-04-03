@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>제이퍼 계산기 (JPT Calc) | 세금·연봉·금융·부동산 무료 계산기</title>
+  <meta name="description" content="제이퍼 계산기(JPT Calc)는 세금, 연봉, 금융, 부동산, 건강, 날짜 등 52개 무료 계산기를 한곳에 모았습니다." />
+  <meta name="keywords" content="계산기,부동산계산기,세금계산기,연봉계산기,금융계산기,BMI계산기,D-day계산기,만나이계산기,프리랜서세금" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="canonical" href="https://www.jptcalc.kr/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="제이퍼 계산기 (JPT Calc) | 무료 계산기 모음" />
+  <meta property="og:description" content="제이퍼 계산기(JPT Calc)에서 세금, 연봉, 금융, 부동산, 건강, 날짜 계산기를 무료로 이용하세요." />
+  <meta property="og:url" content="https://www.jptcalc.kr/" />
+  <meta property="og:site_name" content="제이퍼 계산기 (JPT Calc)" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="제이퍼 계산기 (JPT Calc) | 무료 계산기 모음" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:description" content="제이퍼 계산기(JPT Calc)에서 세금, 연봉, 금융, 부동산, 건강, 날짜 계산기를 무료로 이용하세요." />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"제이퍼 계산기","url":"https://www.jptcalc.kr/","description":"부동산, 프리랜서 세금, 연봉, 금융·이자, 건강(BMI), 날짜·D-day 등 52개 계산기","inLanguage":"ko-KR"}
+  </script>
+  <!-- Google Analytics -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BRSX3F10MZ');
+  </script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary:       #4F46E5;
+      --primary-light: #EEF2FF;
+      --gray-50:  #F9FAFB;
+      --gray-100: #F3F4F6;
+      --gray-200: #E5E7EB;
+      --gray-300: #D1D5DB;
+      --gray-400: #9CA3AF;
+      --gray-500: #6B7280;
+      --gray-700: #374151;
+      --gray-800: #1F2937;
+      --gray-900: #111827;
+      --dark-bg:  #F5F6F8;
+      --dark-card:#FFFFFF;
+      --dark-border: rgba(0,0,0,0.06);
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.06);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.08);
+      /* 카테고리 색상 */
+      --c-realestate: #F59E0B;
+      --c-tax:        #10B981;
+      --c-ai:         #8B5CF6;
+      --c-salary:     #3B82F6;
+      --c-pet:        #F472B6;
+      --c-health:     #10B981;
+      --c-finance:    #6366F1;
+      --c-date:       #F97316;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: 'Pretendard', -apple-system, 'Apple SD Gothic Neo', sans-serif;
+      background: var(--dark-bg);
+      color: var(--gray-900);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ══════════════════════════════════
+       공통 상단 헤더 네비게이션
+    ══════════════════════════════════ */
+    .site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,17,23,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--dark-border);
+    }
+    .header-inner {
+      max-width: 1400px; margin: 0 auto;
+      padding: 0 24px;
+      height: 60px;
+      display: flex; align-items: center; gap: 32px;
+    }
+    .site-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; flex-shrink: 0;
+    }
+    .logo-icon {
+      width: 32px; height: 32px; flex-shrink: 0;
+    }
+    .logo-icon img { width: 32px; height: 32px; display: block; }
+    .logo-text {
+      font-size: 18px; font-weight: 900; color: #fff;
+      letter-spacing: -0.5px;
+    }
+    .logo-text span { color: #818CF8; }
+    .header-nav {
+      display: flex; align-items: center; gap: 4px;
+      flex: 1;
+    }
+    .nav-item {
+      display: flex; align-items: center; gap: 6px;
+      padding: 6px 12px; border-radius: 8px;
+      text-decoration: none; font-size: 13px; font-weight: 600;
+      color: var(--gray-400); transition: all 0.15s;
+      white-space: nowrap;
+    }
+    .nav-item:hover { background: rgba(255,255,255,0.1); color: #fff; }
+    .nav-item.active { color: #fff; }
+    .nav-dot {
+      width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
+    }
+    .header-cta {
+      margin-left: auto; flex-shrink: 0;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .btn-blog {
+      padding: 7px 16px; border-radius: 8px;
+      font-size: 13px; font-weight: 700;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: transparent; color: var(--gray-300);
+      text-decoration: none; transition: all 0.15s;
+    }
+    .btn-blog:hover { border-color: var(--primary); color: var(--primary); }
+    /* 모바일 햄버거 */
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 4px; margin-left: auto;
+      background: none; border: none;
+    }
+    .hamburger span {
+      display: block; width: 22px; height: 2px;
+      background: var(--gray-400); border-radius: 2px; transition: all 0.2s;
+    }
+
+    /* ══════════════════════════════════
+       3단 레이아웃
+    ══════════════════════════════════ */
+    .site-layout {
+      max-width: 1400px; margin: 0 auto;
+      padding: 28px 24px;
+      display: grid;
+      grid-template-columns: 220px 1fr 300px;
+      gap: 24px;
+      align-items: start;
+    }
+
+    /* ── 좌측 사이드바 ── */
+    .sidebar-left {
+      position: sticky; top: 88px;
+    }
+    .sidebar-section { margin-bottom: 24px; }
+    .sidebar-title {
+      font-size: 10px; font-weight: 800; letter-spacing: 1px;
+      color: var(--gray-500); text-transform: uppercase;
+      margin-bottom: 8px; padding: 0 8px;
+    }
+    .sidebar-nav { display: flex; flex-direction: column; gap: 2px; }
+    .sidebar-link {
+      display: flex; align-items: center; gap: 10px;
+      padding: 9px 10px; border-radius: 10px;
+      text-decoration: none; font-size: 13px; font-weight: 600;
+      color: var(--gray-400); transition: all 0.15s;
+    }
+    .sidebar-link:hover { background: rgba(0,0,0,0.04); color: var(--gray-900); }
+    .sidebar-link.active { background: rgba(79,70,229,0.12); color: var(--primary); }
+    .sidebar-link .s-icon { font-size: 16px; flex-shrink: 0; width: 20px; text-align: center; }
+    .sidebar-link .s-badge {
+      margin-left: auto; font-size: 10px; font-weight: 700;
+      background: rgba(0,0,0,0.06); border-radius: 4px;
+      padding: 1px 6px; color: var(--gray-500);
+    }
+    .sidebar-link.active .s-badge { background: rgba(79,70,229,0.2); color: var(--primary); }
+    .sidebar-divider {
+      height: 1px; background: var(--dark-border); margin: 12px 0;
+    }
+
+    /* ── 메인 콘텐츠 ── */
+    .main-content { min-width: 0; }
+
+    /* 히어로 */
+    .hero {
+      background: linear-gradient(135deg, #FFFFFF 0%, #F0F2F5 100%);
+      border: 1px solid var(--dark-border);
+      border-radius: 20px;
+      padding: 40px 36px;
+      margin-bottom: 28px;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: -60px; right: -60px;
+      width: 240px; height: 240px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(79,70,229,0.12) 0%, transparent 70%);
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(79,70,229,0.15); border: 1px solid rgba(79,70,229,0.3);
+      border-radius: 20px; padding: 5px 14px;
+      font-size: 12px; font-weight: 700; color: var(--primary);
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: 36px; font-weight: 900; color: var(--gray-900);
+      letter-spacing: -1px; line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .hero h1 span { color: var(--primary); }
+    .hero-sub {
+      font-size: 15px; color: var(--gray-600); font-weight: 500;
+      line-height: 1.6; max-width: 520px;
+    }
+    .hero-stats {
+      display: flex; gap: 28px; margin-top: 24px;
+    }
+    .hero-stat { display: flex; flex-direction: column; gap: 2px; }
+    .hero-stat-num { font-size: 22px; font-weight: 900; color: var(--gray-900); }
+    .hero-stat-num span { color: var(--primary); }
+    .hero-stat-label { font-size: 11px; color: var(--gray-500); font-weight: 600; }
+
+    /* 섹션 타이틀 */
+    .section-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: 14px; font-weight: 800; color: var(--gray-900); letter-spacing: -0.3px;
+    }
+    .section-more {
+      font-size: 12px; font-weight: 600; color: var(--gray-500);
+      text-decoration: none; transition: color 0.15s;
+    }
+    .section-more:hover { color: var(--primary); }
+
+    /* 카테고리 카드 그리드 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .cat-card {
+      background: var(--dark-card);
+      border: 1px solid var(--dark-border);
+      border-radius: 16px;
+      padding: 20px 18px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s;
+      display: block;
+      position: relative; overflow: hidden;
+    }
+    .cat-card::after {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      border-radius: 16px 16px 0 0;
+    }
+    .cat-card:hover {
+      border-color: rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+    .cat-card.c-realestate::after { background: var(--c-realestate); }
+    .cat-card.c-tax::after        { background: var(--c-tax); }
+    .cat-card.c-ai::after         { background: var(--c-ai); }
+    .cat-card.c-salary::after     { background: var(--c-salary); }
+    .cat-card.c-pet::after        { background: var(--c-pet); }
+    .cat-card.c-health::after     { background: var(--c-health); }
+    .cat-card.c-finance::after    { background: var(--c-finance); }
+    .cat-card.c-date::after       { background: var(--c-date); }
+    .cat-card:hover.c-realestate  { box-shadow: 0 8px 32px rgba(245,158,11,0.15); }
+    .cat-card:hover.c-tax         { box-shadow: 0 8px 32px rgba(16,185,129,0.15); }
+    .cat-card:hover.c-ai          { box-shadow: 0 8px 32px rgba(139,92,246,0.15); }
+    .cat-card:hover.c-salary      { box-shadow: 0 8px 32px rgba(59,130,246,0.15); }
+    .cat-card:hover.c-pet         { box-shadow: 0 8px 32px rgba(244,114,182,0.15); }
+    .cat-card:hover.c-health      { box-shadow: 0 8px 32px rgba(16,185,129,0.15); }
+    .cat-card:hover.c-finance     { box-shadow: 0 8px 32px rgba(99,102,241,0.15); }
+    .cat-card:hover.c-date        { box-shadow: 0 8px 32px rgba(249,115,22,0.15); }
+
+    .cat-icon-wrap {
+      width: 40px; height: 40px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; margin-bottom: 12px;
+    }
+    .c-realestate .cat-icon-wrap { background: rgba(245,158,11,0.12); }
+    .c-tax .cat-icon-wrap        { background: rgba(16,185,129,0.12); }
+    .c-ai .cat-icon-wrap         { background: rgba(139,92,246,0.12); }
+    .c-salary .cat-icon-wrap     { background: rgba(59,130,246,0.12); }
+    .c-pet .cat-icon-wrap        { background: rgba(244,114,182,0.12); }
+    .c-health .cat-icon-wrap     { background: rgba(16,185,129,0.12); }
+    .c-finance .cat-icon-wrap    { background: rgba(99,102,241,0.12); }
+    .c-date .cat-icon-wrap       { background: rgba(249,115,22,0.12); }
+
+    .cat-name {
+      font-size: 14px; font-weight: 800; color: var(--gray-900); margin-bottom: 4px;
+    }
+    .cat-desc {
+      font-size: 11px; color: var(--gray-500); font-weight: 500;
+      line-height: 1.5; margin-bottom: 10px;
+    }
+    .cat-pills { display: flex; flex-wrap: wrap; gap: 5px; }
+    .cat-pill {
+      font-size: 10px; font-weight: 600; border-radius: 20px;
+      padding: 4px 10px;
+      background: #fff;
+      transition: all 0.2s;
+      display: inline-flex; align-items: center; gap: 4px;
+    }
+    .cat-pill::before {
+      content: '';
+      width: 5px; height: 5px; border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .cat-pill.more { background: none; border: 1px dashed rgba(0,0,0,0.15); padding: 4px 8px; color: var(--gray-500) !important; }
+    .cat-pill.more::before { display: none; }
+    .c-realestate .cat-pill { border: 1px solid rgba(245,158,11,0.3); color: #B45309; }
+    .c-realestate .cat-pill::before { background: var(--c-realestate); }
+    .c-tax .cat-pill         { border: 1px solid rgba(16,185,129,0.3); color: #047857; }
+    .c-tax .cat-pill::before { background: var(--c-tax); }
+    .c-ai .cat-pill          { border: 1px solid rgba(139,92,246,0.3); color: #6D28D9; }
+    .c-ai .cat-pill::before  { background: var(--c-ai); }
+    .c-salary .cat-pill      { border: 1px solid rgba(59,130,246,0.3); color: #1D4ED8; }
+    .c-salary .cat-pill::before { background: var(--c-salary); }
+    .c-pet .cat-pill         { border: 1px solid rgba(244,114,182,0.3); color: #BE185D; }
+    .c-pet .cat-pill::before { background: var(--c-pet); }
+    .c-health .cat-pill      { border: 1px solid rgba(16,185,129,0.3); color: #047857; }
+    .c-health .cat-pill::before { background: var(--c-health); }
+    .c-finance .cat-pill     { border: 1px solid rgba(99,102,241,0.3); color: #4338CA; }
+    .c-finance .cat-pill::before { background: var(--c-finance); }
+    .c-date .cat-pill        { border: 1px solid rgba(249,115,22,0.3); color: #C2410C; }
+    .c-date .cat-pill::before { background: var(--c-date); }
+    /* hover: pills fill */
+    .cat-card:hover .cat-pill { background: rgba(0,0,0,0.04); }
+    .c-realestate:hover .cat-pill { background: rgba(245,158,11,0.1); border-color: rgba(245,158,11,0.5); }
+    .c-tax:hover .cat-pill        { background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.5); }
+    .c-ai:hover .cat-pill         { background: rgba(139,92,246,0.1); border-color: rgba(139,92,246,0.5); }
+    .c-salary:hover .cat-pill     { background: rgba(59,130,246,0.1); border-color: rgba(59,130,246,0.5); }
+    .c-pet:hover .cat-pill        { background: rgba(244,114,182,0.1); border-color: rgba(244,114,182,0.5); }
+    .c-health:hover .cat-pill     { background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.5); }
+    .c-finance:hover .cat-pill    { background: rgba(99,102,241,0.1); border-color: rgba(99,102,241,0.5); }
+    .c-date:hover .cat-pill       { background: rgba(249,115,22,0.1); border-color: rgba(249,115,22,0.5); }
+
+    /* 인기 계산기 리스트 */
+    .popular-list { display: flex; flex-direction: column; gap: 6px; margin-bottom: 32px; }
+    .popular-item {
+      display: flex; align-items: center; gap: 14px;
+      background: var(--dark-card); border: 1px solid var(--dark-border);
+      border-radius: 12px; padding: 14px 18px;
+      text-decoration: none; color: inherit; transition: all 0.15s;
+    }
+    .popular-item:hover {
+      border-color: rgba(0,0,0,0.1);
+      background: rgba(0,0,0,0.02);
+    }
+    .popular-rank {
+      font-size: 13px; font-weight: 900; color: var(--primary);
+      min-width: 22px; text-align: center;
+    }
+    .popular-rank.dim { color: var(--gray-600); }
+    .popular-dot {
+      width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+    }
+    .popular-name { flex: 1; font-size: 14px; font-weight: 600; color: var(--gray-800); }
+    .popular-cat  { font-size: 11px; font-weight: 600; color: var(--gray-500); }
+    .popular-arrow { color: var(--gray-400); font-size: 18px; }
+
+    /* 소개 텍스트 (SEO) */
+    .about-card {
+      background: var(--dark-card); border: 1px solid var(--dark-border);
+      border-radius: 16px; padding: 28px 28px;
+    }
+    .about-card h2 {
+      font-size: 18px; font-weight: 800; color: var(--gray-900); margin-bottom: 12px;
+    }
+    .about-card p {
+      font-size: 14px; color: var(--gray-600); line-height: 1.8;
+      font-weight: 400; margin-bottom: 10px;
+    }
+    .about-card p:last-child { margin-bottom: 0; }
+    .about-card strong { color: var(--gray-900); font-weight: 700; }
+
+    /* ── 우측 사이드바 ── */
+    .sidebar-right {
+      position: sticky; top: 88px;
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .ad-card {
+      background: var(--dark-card); border: 1px solid var(--dark-border);
+      border-radius: 14px; overflow: hidden;
+    }
+    .ad-card-label {
+      font-size: 10px; font-weight: 700; color: var(--gray-600);
+      letter-spacing: 0.5px; padding: 8px 14px 4px;
+    }
+    .ad-slot-rect {
+      width: 100%; height: 250px;
+      background: rgba(0,0,0,0.03);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .ad-slot-half {
+      width: 100%; height: 600px;
+      background: rgba(0,0,0,0.03);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .ad-placeholder { font-size: 11px; color: var(--gray-400); font-weight: 600; }
+    /* 추천 카드 */
+    .recommend-card {
+      background: var(--dark-card); border: 1px solid var(--dark-border);
+      border-radius: 14px; padding: 18px;
+    }
+    .recommend-title { font-size: 12px; font-weight: 800; color: var(--gray-400); margin-bottom: 12px; }
+    .recommend-list { display: flex; flex-direction: column; gap: 6px; }
+    .recommend-link {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; padding: 8px 10px;
+      border-radius: 8px; transition: background 0.15s;
+    }
+    .recommend-link:hover { background: rgba(0,0,0,0.04); }
+    .recommend-icon { font-size: 14px; flex-shrink: 0; }
+    .recommend-text { font-size: 12px; font-weight: 600; color: var(--gray-700); line-height: 1.3; }
+
+    /* ══════════════════════════════════
+       푸터
+    ══════════════════════════════════ */
+    .site-footer {
+      border-top: 1px solid var(--dark-border);
+      padding: 36px 24px;
+    }
+    .footer-inner {
+      max-width: 1400px; margin: 0 auto;
+      display: flex; flex-wrap: wrap;
+      align-items: center; justify-content: space-between;
+      gap: 16px;
+    }
+    .footer-links {
+      display: flex; flex-wrap: wrap; gap: 4px;
+    }
+    .footer-links a {
+      font-size: 12px; font-weight: 600; color: var(--gray-500);
+      text-decoration: none; padding: 4px 10px; border-radius: 6px;
+      transition: all 0.15s;
+    }
+    .footer-links a:hover { color: var(--primary); background: rgba(79,70,229,0.08); }
+    .footer-copy { font-size: 10px; color: var(--gray-600); }
+
+    /* ══════════════════════════════════
+       반응형
+    ══════════════════════════════════ */
+    @media (max-width: 1199px) {
+      .site-layout {
+        grid-template-columns: 200px 1fr;
+      }
+      .sidebar-right { display: none; }
+      .hero h1 { font-size: 30px; }
+      .category-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 767px) {
+      .header-inner { padding: 0 16px; }
+      .header-nav, .header-cta { display: none; }
+      .hamburger { display: flex; }
+      .site-layout {
+        grid-template-columns: 1fr;
+        padding: 16px;
+        gap: 16px;
+      }
+      .sidebar-left { display: none; }
+      .sidebar-left.open {
+        display: block; position: fixed;
+        top: 60px; left: 0; bottom: 0; width: 260px;
+        background: #FFFFFF; border-right: 1px solid var(--dark-border);
+        padding: 20px 12px; overflow-y: auto; z-index: 200;
+      }
+      .hero { padding: 28px 22px; }
+      .hero h1 { font-size: 26px; }
+      .hero-stats { gap: 20px; }
+      .category-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .popular-item { padding: 12px 14px; }
+    }
+    @media (max-width: 400px) {
+      .category-grid { grid-template-columns: 1fr; }
+    }
+
+    /* 모바일 오버레이 */
+    .overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.5); z-index: 150;
+    }
+    .overlay.open { display: block; }
+  </style>
+</head>
+<body>
+
+<!-- ── 상단 헤더 ── -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="./" class="site-logo">
+      <div class="logo-icon"><img src="./assets/logo.svg" alt="제이퍼 계산기 로고" /></div>
+      <span class="logo-text">제이퍼<span>계산기</span></span>
+    </a>
+    <nav class="header-nav">
+      <a href="./calc/realestate/" class="nav-item">
+        <span class="nav-dot" style="background:var(--c-realestate);"></span>부동산
+      </a>
+      <a href="./calc/tax/" class="nav-item">
+        <span class="nav-dot" style="background:var(--c-tax);"></span>프리랜서 세금
+      </a>
+      <a href="./calc/ai/" class="nav-item">
+        <span class="nav-dot" style="background:var(--c-ai);"></span>AI/테크
+      </a>
+      <a href="./calc/salary/" class="nav-item">
+        <span class="nav-dot" style="background:var(--c-salary);"></span>이직/연봉
+      </a>
+      <a href="./calc/finance/" class="nav-item">
+        <span class="nav-dot" style="background:var(--c-finance);"></span>금융·이자
+      </a>
+      <a href="./calc/health/" class="nav-item">
+        <span class="nav-dot" style="background:var(--c-health);"></span>건강
+      </a>
+      <a href="./calc/pet/" class="nav-item">
+        <span class="nav-dot" style="background:var(--c-pet);"></span>반려동물
+      </a>
+      <a href="./calc/date/" class="nav-item">
+        <span class="nav-dot" style="background:var(--c-date);"></span>날짜·D-day
+      </a>
+    </nav>
+    <div class="header-cta">
+      <a href="./blog/" class="btn-blog">블로그</a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="메뉴">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+<!-- ── 3단 레이아웃 ── -->
+<div class="site-layout">
+
+  <!-- 좌측 사이드바 -->
+  <aside class="sidebar-left" id="sidebar-left">
+    <div class="sidebar-section">
+      <div class="sidebar-title">카테고리</div>
+      <nav class="sidebar-nav">
+        <a href="./" class="sidebar-link active">
+          <span class="s-icon">🧮</span> 전체 보기
+        </a>
+        <a href="./calc/realestate/" class="sidebar-link">
+          <span class="s-icon">&#127968;</span> 부동산
+          <span class="s-badge">15</span>
+        </a>
+        <a href="./calc/tax/" class="sidebar-link">
+          <span class="s-icon">&#128176;</span> 프리랜서 세금
+          <span class="s-badge">5</span>
+        </a>
+        <a href="./calc/ai/" class="sidebar-link">
+          <span class="s-icon">&#129302;</span> AI / 테크
+          <span class="s-badge">5</span>
+        </a>
+        <a href="./calc/salary/" class="sidebar-link">
+          <span class="s-icon">&#128200;</span> 이직 / 연봉
+          <span class="s-badge">7</span>
+        </a>
+        <a href="./calc/pet/" class="sidebar-link">
+          <span class="s-icon">&#128062;</span> 반려동물
+          <span class="s-badge">5</span>
+        </a>
+        <a href="./calc/finance/" class="sidebar-link">
+          <span class="s-icon">&#127974;</span> 금융 · 이자
+          <span class="s-badge">5</span>
+        </a>
+        <a href="./calc/health/" class="sidebar-link">
+          <span class="s-icon">&#127939;</span> 건강
+          <span class="s-badge">5</span>
+        </a>
+        <a href="./calc/date/" class="sidebar-link">
+          <span class="s-icon">&#128197;</span> 날짜 · D-day
+          <span class="s-badge">5</span>
+        </a>
+      </nav>
+    </div>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">빠른 이동</div>
+      <nav class="sidebar-nav">
+        <a href="./blog/" class="sidebar-link"><span class="s-icon">&#128221;</span> 블로그</a>
+        <a href="./about.html" class="sidebar-link"><span class="s-icon">&#8505;&#65039;</span> 소개</a>
+        <a href="./contact.html" class="sidebar-link"><span class="s-icon">&#9993;&#65039;</span> 문의하기</a>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- 메인 콘텐츠 -->
+  <main class="main-content">
+
+    <!-- 히어로 -->
+    <section class="hero">
+      <div class="hero-badge">&#9889; 2026 공개 기준 반영</div>
+      <h1>모든 계산을<br><span>한 곳</span>에서</h1>
+      <p class="hero-sub">세금, 연봉, 금융, 부동산, 건강, 날짜 계산을 한 곳에서 빠르게 확인하세요. 52개 계산기와 8개 카테고리를 무료로 제공합니다.</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">52<span>개</span></div>
+          <div class="hero-stat-label">무료 계산기</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">8<span>개</span></div>
+          <div class="hero-stat-label">전문 카테고리</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">2026<span>년</span></div>
+          <div class="hero-stat-label">최신 세율</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 카테고리 카드 -->
+    <div class="section-header">
+      <h2 class="section-title">&#128202; 계산기 카테고리</h2>
+    </div>
+    <div class="category-grid">
+      <a href="./calc/realestate/" class="cat-card c-realestate">
+        <div class="cat-icon-wrap">&#127968;</div>
+        <div class="cat-name">부동산</div>
+        <div class="cat-desc">거래·세금·대출 관련 모든 부동산 계산</div>
+        <div class="cat-pills">
+          <span class="cat-pill">취득세</span>
+          <span class="cat-pill">양도세</span>
+          <span class="cat-pill">중개수수료</span>
+          <span class="cat-pill">대출이자</span>
+          <span class="cat-pill more">+11</span>
+        </div>
+      </a>
+      <a href="./calc/tax/" class="cat-card c-tax">
+        <div class="cat-icon-wrap">&#128176;</div>
+        <div class="cat-name">프리랜서 세금</div>
+        <div class="cat-desc">프리랜서·1인 사업자 세금 완벽 분석</div>
+        <div class="cat-pills">
+          <span class="cat-pill">3.3% 원천징수</span>
+          <span class="cat-pill">종합소득세</span>
+          <span class="cat-pill">부가세</span>
+          <span class="cat-pill">4대보험</span>
+          <span class="cat-pill more">+1</span>
+        </div>
+      </a>
+      <a href="./calc/ai/" class="cat-card c-ai">
+        <div class="cat-icon-wrap">&#129302;</div>
+        <div class="cat-name">AI / 테크</div>
+        <div class="cat-desc">AI·클라우드 서비스 비용 정밀 계산</div>
+        <div class="cat-pills">
+          <span class="cat-pill">토큰 비용</span>
+          <span class="cat-pill">GPU 클라우드</span>
+          <span class="cat-pill">SaaS 비교</span>
+          <span class="cat-pill">인프라 예측</span>
+          <span class="cat-pill more">+1</span>
+        </div>
+      </a>
+      <a href="./calc/salary/" class="cat-card c-salary">
+        <div class="cat-icon-wrap">&#128200;</div>
+        <div class="cat-name">이직 / 연봉</div>
+        <div class="cat-desc">이직 전후 총보상·실수령액 비교</div>
+        <div class="cat-pills">
+          <span class="cat-pill">실수령액</span>
+          <span class="cat-pill">스톡옵션</span>
+          <span class="cat-pill">총보상 비교</span>
+          <span class="cat-pill">퇴직금</span>
+          <span class="cat-pill more">+3</span>
+        </div>
+      </a>
+      <a href="./calc/pet/" class="cat-card c-pet">
+        <div class="cat-icon-wrap">&#128062;</div>
+        <div class="cat-name">반려동물</div>
+        <div class="cat-desc">반려동물 양육·보험·생애 비용 계산</div>
+        <div class="cat-pills">
+          <span class="cat-pill">월 양육비</span>
+          <span class="cat-pill">펫보험</span>
+          <span class="cat-pill">생애 비용</span>
+          <span class="cat-pill">진료비</span>
+          <span class="cat-pill more">+1</span>
+        </div>
+      </a>
+      <a href="./calc/finance/" class="cat-card c-finance">
+        <div class="cat-icon-wrap">&#127974;</div>
+        <div class="cat-name">금융 · 이자</div>
+        <div class="cat-desc">예금·적금·복리·대출·투자수익률 계산</div>
+        <div class="cat-pills">
+          <span class="cat-pill">예금이자</span>
+          <span class="cat-pill">적금만기</span>
+          <span class="cat-pill">복리계산</span>
+          <span class="cat-pill">대출상환</span>
+          <span class="cat-pill more">+1</span>
+        </div>
+      </a>
+      <a href="./calc/health/" class="cat-card c-health">
+        <div class="cat-icon-wrap">&#127939;</div>
+        <div class="cat-name">건강</div>
+        <div class="cat-desc">BMI·기초대사량·적정체중·칼로리 계산</div>
+        <div class="cat-pills">
+          <span class="cat-pill">BMI</span>
+          <span class="cat-pill">기초대사량</span>
+          <span class="cat-pill">체지방률</span>
+          <span class="cat-pill">칼로리</span>
+          <span class="cat-pill more">+1</span>
+        </div>
+      </a>
+      <a href="./calc/date/" class="cat-card c-date">
+        <div class="cat-icon-wrap">&#128197;</div>
+        <div class="cat-name">날짜 · D-day</div>
+        <div class="cat-desc">D-day·날짜차이·만나이·요일 계산</div>
+        <div class="cat-pills">
+          <span class="cat-pill">D-day</span>
+          <span class="cat-pill">날짜차이</span>
+          <span class="cat-pill">만 나이</span>
+          <span class="cat-pill">요일</span>
+          <span class="cat-pill more">+1</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- 인기 계산기 -->
+    <div class="section-header">
+      <h2 class="section-title">&#128293; 인기 계산기 TOP 7</h2>
+    </div>
+    <div class="popular-list">
+      <a href="./calc/realestate/brokerage/" class="popular-item">
+        <span class="popular-rank">1</span>
+        <span class="popular-dot" style="background:var(--c-realestate);"></span>
+        <div>
+          <div class="popular-name">부동산 중개수수료 계산기</div>
+          <div class="popular-cat">부동산</div>
+        </div>
+        <span class="popular-arrow">›</span>
+      </a>
+      <a href="./calc/realestate/acquisition/" class="popular-item">
+        <span class="popular-rank">2</span>
+        <span class="popular-dot" style="background:var(--c-realestate);"></span>
+        <div>
+          <div class="popular-name">취득세 계산기</div>
+          <div class="popular-cat">부동산</div>
+        </div>
+        <span class="popular-arrow">›</span>
+      </a>
+      <a href="./calc/tax/withholding/" class="popular-item">
+        <span class="popular-rank">3</span>
+        <span class="popular-dot" style="background:var(--c-tax);"></span>
+        <div>
+          <div class="popular-name">3.3% 원천징수 실수령액 계산기</div>
+          <div class="popular-cat">프리랜서 세금</div>
+        </div>
+        <span class="popular-arrow">›</span>
+      </a>
+      <a href="./calc/realestate/capital-gains/" class="popular-item">
+        <span class="popular-rank">4</span>
+        <span class="popular-dot" style="background:var(--c-realestate);"></span>
+        <div>
+          <div class="popular-name">양도소득세 계산기</div>
+          <div class="popular-cat">부동산</div>
+        </div>
+        <span class="popular-arrow">›</span>
+      </a>
+      <a href="./calc/realestate/conversion/" class="popular-item">
+        <span class="popular-rank">5</span>
+        <span class="popular-dot" style="background:var(--c-realestate);"></span>
+        <div>
+          <div class="popular-name">전월세 전환율 계산기</div>
+          <div class="popular-cat">부동산</div>
+        </div>
+        <span class="popular-arrow">›</span>
+      </a>
+      <a href="./calc/realestate/loan/" class="popular-item">
+        <span class="popular-rank">6</span>
+        <span class="popular-dot" style="background:var(--c-realestate);"></span>
+        <div>
+          <div class="popular-name">대출 이자 계산기</div>
+          <div class="popular-cat">부동산</div>
+        </div>
+        <span class="popular-arrow">›</span>
+      </a>
+      <a href="./calc/salary/take-home-pay/" class="popular-item">
+        <span class="popular-rank">7</span>
+        <span class="popular-dot" style="background:var(--c-salary);"></span>
+        <div>
+          <div class="popular-name">연봉 실수령액 계산기</div>
+          <div class="popular-cat">이직 / 연봉</div>
+        </div>
+        <span class="popular-arrow">›</span>
+      </a>
+    </div>
+
+    <!-- 소개 (SEO) -->
+    <div class="about-card">
+      <h2>제이퍼 계산기란?</h2>
+      <p>
+        <strong>제이퍼 계산기 (JPT Calc)</strong>는 일상과 업무에 필요한 계산을 한 곳에서 빠르게 처리할 수 있도록 만든 무료 계산기 서비스입니다.
+        부동산 거래 시 필요한 취득세·양도소득세 계산부터, 프리랜서를 위한 3.3% 원천징수 실수령액 계산,
+        이직 연봉 실수령액, 예금·적금·대출 금융 계산, BMI·기초대사량 건강 계산, D-day·만나이 날짜 계산까지 -
+        <strong>52개 계산기와 8개 카테고리</strong>를 모두 무료로 이용할 수 있습니다.
+      </p>
+      <p>
+        주요 계산기는 <strong>2026 공개 기준과 일반적인 계산 공식</strong>을 바탕으로 제공되며, PC와 모바일 모두에서 편리하게 사용할 수 있도록 최적화되어 있습니다.
+        복잡한 계산을 쉽고 빠르게 - 제이퍼 계산기와 함께하세요.
+      </p>
+    </div>
+
+  </main>
+
+  <!-- 우측 사이드바 -->
+  <aside class="sidebar-right">
+    <div class="recommend-card">
+      <div class="recommend-title">👉 함께 많이 쓰는 계산기</div>
+      <div class="recommend-list" id="daily-recommend"></div>
+    </div>
+  </aside>
+
+</div>
+
+<!-- 푸터 -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="./about.html">사이트 소개</a>
+      <a href="./privacy.html">개인정보처리방침</a>
+      <a href="./terms.html">이용약관</a>
+      <a href="./contact.html">문의하기</a>
+      <a href="./disclaimer.html">면책조항</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 제이퍼 계산기 (JPT Calc) - 본 계산 결과는 참고용입니다.</p>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  const sidebar = document.getElementById('sidebar-left');
+  const overlay = document.getElementById('overlay');
+  sidebar.classList.toggle('open');
+  overlay.classList.toggle('open');
+}
+
+// ── 오늘의 추천 계산기 (날짜 기반 자동 로테이션) ──────────────
+(function() {
+  const ALL = [
+    { href:'./calc/tax/withholding/', icon:'💰', title:'3.3% 원천징수',        sub:'프리랜서 실수령액 계산' },
+    { href:'./calc/tax/income-tax/', icon:'📊', title:'종합소득세 예상 세액',  sub:'절세 전략까지 한눈에' },
+    { href:'./calc/tax/vat/',     icon:'🧾', title:'부가세 계산기',         sub:'일반·간이과세 자동 계산' },
+    { href:'./calc/realestate/acquisition/', icon:'🏠', title:'취득세 계산기',         sub:'2026 공개 기준 반영' },
+    { href:'./calc/realestate/registry/', icon:'📋', title:'등기비용 계산기',        sub:'채권·법무사비 포함 총액' },
+    { href:'./calc/realestate/joint/',    icon:'👥', title:'공동명의 세금비교',      sub:'단독 vs 공동 절세 분석' },
+    { href:'./calc/realestate/capital-gains/', icon:'📈', title:'양도소득세 계산기',      sub:'장기보유공제 자동 적용' },
+    { href:'./calc/realestate/dsr/',      icon:'🔢', title:'대출한도(DSR) 계산기',  sub:'LTV·DSR 동시 계산' },
+    { href:'./calc/salary/take-home-pay/', icon:'💼', title:'연봉 실수령액 계산기',   sub:'2026년 4대보험 기준' },
+    { href:'./calc/salary/comparison/',  icon:'🔄', title:'이직 연봉 비교',         sub:'세후 차이 한눈에 비교' },
+    { href:'./calc/finance/deposit/',    icon:'🏦', title:'예금·적금 이자 계산기', sub:'단리·복리 수익 비교' },
+    { href:'./calc/finance/loan-repayment/', icon:'💳', title:'대출 이자 계산기',       sub:'원리금·원금균등 비교' },
+    { href:'./calc/health/bmi/',         icon:'⚖️', title:'BMI 비만도 계산기',     sub:'WHO 기준 체중 평가' },
+    { href:'./calc/health/bmr/',         icon:'🔥', title:'기초대사량(BMR) 계산기',sub:'하루 칼로리 소모량' },
+    { href:'./calc/health/body-fat/',    icon:'🏃', title:'체지방률 계산기',        sub:'US Navy 공식 적용' },
+    { href:'./calc/ai/api-token/', icon:'🤖', title:'ChatGPT API 비용 계산', sub:'GPT-4o vs Claude 비교' },
+    { href:'./calc/ai/saas-comparison/', icon:'🖼️', title:'AI SaaS 비용 비교',     sub:'서비스별 비용 한눈에' },
+    { href:'./calc/pet/monthly-cost/',   icon:'🐾', title:'반려동물 월 양육비',     sub:'월별 비용 상세 계산' },
+    { href:'./calc/pet/lifetime-cost/',  icon:'🍖', title:'반려동물 생애 비용',     sub:'평생 양육비 분석' },
+    { href:'./calc/date/dday/', icon:'📅', title:'D-day 카운터',           sub:'기념일·목표일 계산' },
+    { href:'./calc/date/age/', icon:'🎂', title:'만 나이 계산기',         sub:'법적 만 나이 즉시 확인' },
+    { href:'./calc/date/date-difference/', icon:'📆', title:'날짜 차이 계산기',       sub:'영업일·주수 포함 계산' },
+    { href:'./calc/realestate/brokerage/', icon:'🏢', title:'중개수수료 계산기',      sub:'지역별 상한요율 안내' },
+    { href:'./calc/realestate/gift/',      icon:'💎', title:'증여세 계산기',          sub:'관계별 공제 자동 적용' },
+  ];
+
+  // 오늘 날짜 기준 시작 인덱스 (매일 4칸씩 이동)
+  const today = new Date();
+  const dayNum = Math.floor(today.getTime() / 86400000); // 에포크 기준 일수
+  const startIdx = (dayNum * 4) % ALL.length;
+
+  // 4개 선택 (순환, 중복 없음)
+  const picks = [];
+  for (let i = 0; i < 4; i++) {
+    picks.push(ALL[(startIdx + i) % ALL.length]);
+  }
+
+  const list = document.getElementById('daily-recommend');
+  if (!list) return;
+  list.innerHTML = picks.map(p => `
+    <a href="${p.href}" class="recommend-link">
+      <span class="recommend-icon">${p.icon}</span>
+      <span class="recommend-text">${p.title}<br><span style="font-weight:500;color:var(--gray-400)">${p.sub}</span></span>
+    </a>`).join('');
+})();
+</script>
+  <script src="/assets/site-config.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+  <script>
+    // hero 통계 숫자를 site-config.js 기준으로 동기화
+    (function() {
+      var cfg = window.JPTCALC_CONFIG;
+      if (!cfg) return;
+      var numEl = document.querySelector('.hero-stat-num');
+      if (numEl) numEl.innerHTML = cfg.totalCalcs + '<span>개</span>';
+      var catEl = document.querySelectorAll('.hero-stat-num')[1];
+      if (catEl) catEl.innerHTML = cfg.categories + '<span>개</span>';
+    })();
+  </script>
+</body>
+</html>

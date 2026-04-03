@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>연봉 인상률 계산기 - 인상률·월실수령 차이 자동계산 | 제이퍼 계산기</title>
+  <meta name="description" content="인상 전후 연봉을 입력하면 인상률과 월 추가 실수령액을 자동 계산합니다." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/salary/raise-rate/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="연봉 인상률 계산기 | 제이퍼 계산기" />
+  <meta property="og:description" content="인상 전후 연봉을 입력하면 인상률과 월 추가 실수령액을 자동 계산합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/salary/raise-rate/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="연봉 인상률 계산기 | 제이퍼 계산기" />
+  <meta name="twitter:description" content="인상 전후 연봉을 입력하면 인상률과 월 추가 실수령액을 자동 계산합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/salary-common.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"연봉 인상률 계산기",
+    "url":"https://www.jptcalc.kr/calc/salary/raise-rate/",
+    "applicationCategory":"FinanceApplication",
+    "operatingSystem":"All",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+      {"@type":"ListItem","position":2,"name":"이직/연봉 계산기","item":"https://www.jptcalc.kr/calc/salary/"},
+      {"@type":"ListItem","position":3,"name":"연봉 인상률 계산기","item":"https://www.jptcalc.kr/calc/salary/raise-rate/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"연봉 5% 인상이면 실수령도 5% 늘어나나요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 소득세는 누진세 구조라 연봉이 높아질수록 세율이 올라 실수령 증가폭은 5%보다 작습니다. 고연봉 구간일수록 세금과 4대보험 부담이 비례적으로 더 늘어납니다."}},{"@type":"Question","name":"물가상승률보다 낮은 연봉 인상은 실질 삭감인가요?","acceptedAnswer":{"@type":"Answer","text":"네, 맞습니다. 예를 들어 물가상승률이 3%인데 연봉 인상률이 2%라면 같은 돈으로 살 수 있는 재화와 서비스의 양이 줄어 실질 구매력은 오히려 하락합니다. 연봉 협상 시 물가상승률과 비교해 실질 인상 여부를 확인하는 것이 중요합니다."}},{"@type":"Question","name":"이 계산기로 무엇을 확인할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"인상 전후 연봉을 입력하면 연봉 인상률(%), 연간 인상액, 그리고 세금과 4대보험 공제 후 예상 월 추가 실수령액을 자동으로 계산합니다. 협상 전에 미리 기대치를 설정하거나 인상 결과를 확인하는 데 활용할 수 있습니다."}},{"@type":"Question","name":"업계 평균 연봉 인상률은 어디서 확인할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"한국경영자총협회, 잡코리아, 사람인 등에서 매년 발표하는 임금인상률 조사 자료를 참고하면 됩니다. 업종별·규모별 평균 인상률이 달라질 수 있으므로 본인이 속한 업계 기준 자료를 확인하는 것이 좋습니다."}}]}</script>
+  <style>
+    /* raise-rate 고유 스타일 - 공통 스타일은 /assets/salary-common.css 참조 */
+    .input-wrap{position:relative}
+    .input-wrap .unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none}
+    input[type=number],input[type=text]{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
+    input[type=number]::placeholder{color:var(--gray-400);font-weight:400}
+    input[type=number]:focus,input[type=text]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(59,130,246,0.15)}
+    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
+    .seg-group{display:flex;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:18px}
+    .seg-btn{flex:1;border:none;border-radius:7px;background:transparent;padding:9px 4px;font-size:12px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap}
+    .seg-btn:hover{color:var(--gray-700)}
+    .seg-btn.active{background:var(--primary);color:#fff;font-weight:700}
+    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
+    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
+    .result-card{background:linear-gradient(135deg,#EFF6FF 0%,#DBEAFE 100%);border:1px solid rgba(59,130,246,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-row+.result-row{border-top:1px solid rgba(0,0,0,0.07)}
+    .result-total-row{border-top:1px solid rgba(0,0,0,0.15)!important;margin-top:4px;padding-top:14px!important}
+    .result-total-value{font-size:24px;font-weight:900;color:var(--gray-900)}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/salary/" class="nav-item active"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/salary/">이직/연봉 계산기</a><span class="breadcrumb-sep">›</span><span>연봉 인상률 계산기</span></div>
+    <div class="page-header-badge">💼 실수령 차이 자동 계산</div>
+    <h1>연봉 인상률 계산기</h1>
+    <p>인상 전후 연봉으로 인상률과 월 실수령 차이를 확인하세요</p>
+  </div>
+    <div class="card">
+      <div class="card-title">인상 전후 연봉</div>
+      <div class="field">
+        <div class="field-label">인상 전 연봉 <span class="label-hint">만원 단위</span></div>
+        <div class="input-wrap">
+          <input type="number" id="s3-before" placeholder="예) 4000" oninput="calcRaise()" />
+          <span class="unit">만원</span>
+        </div>
+      </div>
+      <div class="field">
+        <div class="field-label">인상 후 연봉 <span class="label-hint">만원 단위</span></div>
+        <div class="input-wrap">
+          <input type="number" id="s3-after" placeholder="예) 4500" oninput="calcRaise()" />
+          <span class="unit">만원</span>
+        </div>
+      </div>
+    </div>
+    <div class="result-card" id="s3-result">
+      <div class="raise-banner show" id="s3-banner">
+        <div class="rb-label">연봉 인상률</div>
+        <div class="rb-value" id="s3-pct">-</div>
+        <div class="rb-sub" id="s3-pct-sub">-</div>
+      </div>
+      <div class="result-row" style="margin-top:14px;"><span class="result-label">인상 전 연봉</span><span class="result-value" id="s3-r-before">-</span></div>
+      <div class="result-row"><span class="result-label">인상 후 연봉</span><span class="result-value" id="s3-r-after">-</span></div>
+      <div class="result-row"><span class="result-label">연간 인상액</span><span class="result-value" id="s3-diff">-</span></div>
+      <div class="result-row result-total-row">
+        <span class="result-total-label">월 추가 실수령 (예상)</span>
+        <span class="result-total-value" id="s3-monthly-diff">-</span>
+      </div>
+      <p class="result-note">※ 월 추가 실수령액은 세금·4대보험 공제 후 예상값입니다.</p>
+    </div>
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>연봉 인상률 계산기는 언제 쓰나요?</h2>
+      <p>연봉 협상이나 연간 인상 시 인상률과 실수령 변화를 미리 확인하면 기대치를 조정하고 협상에 활용할 수 있습니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>인상률 확인</strong><span>전년 대비 인상 비율과 금액 계산</span></div>
+        <div class="guide-box"><strong>실수령 차이</strong><span>인상 전후 월 실수령 변화 확인</span></div>
+        <div class="guide-box"><strong>물가 반영</strong><span>물가상승률 대비 실질 인상 여부 판단</span></div>
+      </div>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>연봉 5% 인상이면 실수령도 5% 느나요?</h3><p>아닙니다. 소득세는 누진세라 연봉이 높아질수록 세율이 올라 실수령 증가폭은 5%보다 작습니다.</p></div>
+      <div class="faq-item"><h3>물가상승률보다 낮은 인상은 실질 삭감인가요?</h3><p>네. 물가상승률 3%에 인상률 2%라면 실질 구매력은 오히려 줄어듭니다.</p></div>
+      <div class="faq-item"><h3>업계 평균 인상률은 어디서 확인하나요?</h3><p>한국경영자총협회, 잡코리아 등에서 발표하는 연간 임금인상률 조사를 참고하세요.</p></div>
+      <div class="update-note">최종 검토: 2026.03.24 · 계산 결과는 참고용입니다.</div>
+    </div>
+  </div>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 이직/연봉 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/salary/take-home-pay/" class="sibling-link">💵 연봉 실수령액</a>
+      <a href="/calc/salary/job-change/" class="sibling-link">📊 이직 연봉 비교</a>
+      <a href="/calc/salary/hourly-wage/" class="sibling-link">⏱️ 시급·일급 변환</a>
+      <a href="/calc/salary/raise-rate/" class="sibling-link current">📈 연봉 인상률</a>
+      <a href="/calc/salary/comparison/" class="sibling-link">⚖️ 연봉 비교</a>
+      <a href="/calc/salary/severance/" class="sibling-link">📦 퇴직금</a>
+      <a href="/calc/salary/unemployment/" class="sibling-link">🛟 실업급여</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script>
+function fmtW(won) {
+  won = Math.round(won);
+  if (isNaN(won) || won === 0) return '-';
+  if (Math.abs(won) >= 100000000) {
+    const uk = Math.floor(Math.abs(won)/100000000) * Math.sign(won);
+    const rem = Math.round((Math.abs(won) % 100000000)/10000);
+    return rem > 0 ? `${uk.toLocaleString()}억 ${rem.toLocaleString()}만원` : `${uk.toLocaleString()}억원`;
+  }
+  if (Math.abs(won) >= 10000) {
+    const man = Math.floor(Math.abs(won)/10000) * Math.sign(won);
+    const rem = Math.round(Math.abs(won) % 10000);
+    return rem >= 1000 ? `${man.toLocaleString()}만 ${rem.toLocaleString()}원` : `${man.toLocaleString()}만원`;
+  }
+  return `${won.toLocaleString()}원`;
+}
+function fmtM(man) { return fmtW(man * 10000); }
+function comma(n) { return Math.round(n).toLocaleString() + '원'; }
+
+function calcAnnualTax(annual_man, dep_count) {
+  const annual = annual_man * 10000;
+  let wdc = 0;
+  if (annual <= 5000000) wdc = annual * 0.7;
+  else if (annual <= 15000000) wdc = 3500000 + (annual - 5000000) * 0.4;
+  else if (annual <= 45000000) wdc = 7500000 + (annual - 15000000) * 0.15;
+  else if (annual <= 100000000) wdc = 12000000 + (annual - 45000000) * 0.05;
+  else wdc = 14750000 + (annual - 100000000) * 0.02;
+  wdc = Math.min(wdc, 20000000);
+  const grossIncome = annual - wdc;
+  const personalDed = 1500000 * Math.max(dep_count, 1);
+  const taxBase = Math.max(grossIncome - personalDed, 0);
+  let tax = 0;
+  if (taxBase <= 14000000) tax = taxBase * 0.06;
+  else if (taxBase <= 50000000) tax = 840000 + (taxBase - 14000000) * 0.15;
+  else if (taxBase <= 88000000) tax = 6240000 + (taxBase - 50000000) * 0.24;
+  else if (taxBase <= 150000000) tax = 15360000 + (taxBase - 88000000) * 0.35;
+  else if (taxBase <= 300000000) tax = 37060000 + (taxBase - 150000000) * 0.38;
+  else if (taxBase <= 500000000) tax = 94060000 + (taxBase - 300000000) * 0.40;
+  else if (taxBase <= 1000000000) tax = 174060000 + (taxBase - 500000000) * 0.42;
+  else tax = 384060000 + (taxBase - 1000000000) * 0.45;
+  let taxCredit = 0;
+  if (tax <= 1300000) taxCredit = tax * 0.55;
+  else taxCredit = 715000 + (tax - 1300000) * 0.30;
+  taxCredit = Math.min(taxCredit, 740000);
+  if (annual <= 33000000) taxCredit = Math.min(taxCredit, 740000);
+  else if (annual <= 70000000) taxCredit = Math.min(taxCredit, 681000);
+  else taxCredit = Math.min(taxCredit, 500000);
+  tax = Math.max(tax - taxCredit - 70000, 0);
+  return tax;
+}
+
+function calcMonthly(annual_man, dep_count) {
+  const monthly = annual_man * 10000 / 12;
+  const pension = Math.min(monthly, 6370000) * 0.0475;
+  const health = monthly * 0.03595;
+  const ltc = health * 0.1314;
+  const emp = monthly * 0.009;
+  const annualTax = calcAnnualTax(annual_man, dep_count);
+  const monthlyTax = Math.max(Math.round(annualTax / 12 / 10) * 10, 0);
+  const localTax = Math.round(monthlyTax * 0.1 / 10) * 10;
+  const totalDedu = pension + health + ltc + emp + monthlyTax + localTax;
+  const net = monthly - totalDedu;
+  return { monthly, pension, health, ltc, emp, monthlyTax, localTax, totalDedu, net };
+}
+
+function calcRaise() {
+  const before = parseFloat(document.getElementById('s3-before').value);
+  const after = parseFloat(document.getElementById('s3-after').value);
+  const res = document.getElementById('s3-result');
+  if (!before || !after || before <= 0 || after <= 0) { res.classList.remove('show'); return; }
+  res.classList.add('show');
+  const pct = ((after - before) / before * 100);
+  const diff = after - before;
+  const rBefore = calcMonthly(before, 1);
+  const rAfter = calcMonthly(after, 1);
+  const monthlyDiff = rAfter.net - rBefore.net;
+  document.getElementById('s3-pct').textContent = (pct >= 0 ? '+' : '') + pct.toFixed(2) + '%';
+  document.getElementById('s3-pct-sub').textContent = pct >= 0 ? `${fmtM(diff)} 인상` : `${fmtM(Math.abs(diff))} 삭감`;
+  document.getElementById('s3-r-before').textContent = fmtM(before);
+  document.getElementById('s3-r-after').textContent = fmtM(after);
+  document.getElementById('s3-diff').textContent = (pct >= 0 ? '+' : '') + fmtM(diff);
+  document.getElementById('s3-monthly-diff').textContent = (monthlyDiff >= 0 ? '+' : '-') + comma(Math.abs(monthlyDiff));
+}
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/salary-detail-shell.js"></script>
+</body>
+</html>

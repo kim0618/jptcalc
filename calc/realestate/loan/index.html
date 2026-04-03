@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>부동산 대출이자 계산기 - 원리금균등·원금균등·만기일시 | 제이퍼 계산기</title>
+  <meta name="description" content="주택담보대출 이자를 상환 방식별로 무료 계산하세요. 원리금균등, 원금균등, 만기일시 방식별 월 납입금과 총 이자를 비교합니다." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/realestate/loan/" />
+  <meta property="og:type" content="website" /><meta property="og:title" content="부동산 대출이자 계산기 - 원리금균등·원금균등·만기일시 | 제이퍼 계산기" />
+  <meta property="og:description" content="주택담보대출 이자를 상환 방식별로 무료 계산하세요. 원리금균등, 원금균등, 만기일시 방식별 월 납입금과 총 이자를 비교합니다." /><meta property="og:url" content="https://www.jptcalc.kr/calc/realestate/loan/" />
+  <meta property="og:site_name" content="제이퍼 계산기" /><meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="부동산 대출이자 계산기 - 원리금균등·원금균등·만기일시 | 제이퍼 계산기" />
+  <meta name="twitter:description" content="주택담보대출 이자를 상환 방식별로 무료 계산하세요. 원리금균등, 원금균등, 만기일시 방식별 월 납입금과 총 이자를 비교합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"대출이자 계산기","url":"https://www.jptcalc.kr/calc/realestate/loan/","description":"주택담보대출 이자를 상환 방식별로 무료 계산하세요. 원리금균등, 원금균등, 만기일시 방식별 월 납입금과 총 이자를 비교합니다.","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"inLanguage":"ko-KR"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},{"@type":"ListItem","position":2,"name":"부동산 계산기","item":"https://www.jptcalc.kr/calc/realestate/"},{"@type":"ListItem","position":3,"name":"대출이자 계산기","item":"https://www.jptcalc.kr/calc/realestate/loan/"}]}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"원리금균등상환 방식이란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"매달 납입금액이 동일한 방식으로 가장 일반적인 주택담보대출 상환 방법입니다. 매월 일정한 금액을 납부하므로 가계 예산 관리가 쉽습니다."}},{"@type":"Question","name":"원금균등상환과 원리금균등상환 중 어느 것이 유리한가요?","acceptedAnswer":{"@type":"Answer","text":"총 이자 부담은 원금균등상환이 가장 적습니다. 다만 초기 납입금이 크다는 단점이 있습니다. 초기 납입 여력이 있다면 원금균등상환이 이자 절감 측면에서 유리합니다."}},{"@type":"Question","name":"만기일시상환 방식은 어떤 방식인가요?","acceptedAnswer":{"@type":"Answer","text":"만기까지 이자만 납부하고 만기에 원금 전액을 상환하는 방식입니다. 매월 납입 부담이 낮지만 총 이자 부담이 세 가지 방식 중 가장 큽니다."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/realestate-common.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item active"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" onclick="var m=document.querySelector('.mob-menu'); if(m)m.classList.toggle('open');" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mob-menu">
+  <a href="/calc/realestate/" class="mob-link active"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+  <a href="/calc/tax/" class="mob-link"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+  <a href="/calc/ai/" class="mob-link"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+  <a href="/calc/salary/" class="mob-link"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+  <a href="/calc/pet/" class="mob-link"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+  <a href="/calc/finance/" class="mob-link"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+  <a href="/calc/health/" class="mob-link"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+  <a href="/calc/date/" class="mob-link"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+  <a href="/blog/" class="mob-link">블로그</a>
+</div>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a> &rsaquo; <a href="/calc/realestate/">부동산 계산기</a> &rsaquo; 대출이자 계산기</div>
+    <div class="page-badge">부동산 계산기</div>
+    <h1 class="page-title">대출이자 계산기</h1>
+    <p class="page-subtitle">상환 방식별 월 납입금·총 이자 비교</p>
+  </div>
+  <div class="card">
+    <div class="card-title">대출 정보</div>
+    <div class="field"><div class="field-label">대출금액 <span class="label-hint">만원 단위</span></div>
+      <div class="input-wrap"><input type="number" id="loan-amount" placeholder="예) 30,000" oninput="calcLoan()" /><span class="unit">만원</span></div>
+      <div class="converted" id="loan-display"></div></div>
+    <div class="field"><div class="field-label">연 이자율</div>
+      <div class="input-wrap"><input type="number" id="loan-rate" placeholder="예) 4.0" step="0.1" oninput="calcLoan()" /><span class="unit">%</span></div></div>
+    <div class="field" style="margin-bottom:0"><div class="field-label">대출 기간</div>
+      <div class="input-wrap"><input type="number" id="loan-period" placeholder="예) 30" oninput="calcLoan()" /><span class="unit">년</span></div></div>
+  </div>
+  <div class="card">
+    <div class="card-title">상환 방식</div>
+    <div class="seg-group" style="margin-bottom:0">
+      <button class="seg-btn active" onclick="selectRepay('equal-payment', this)">원리금균등</button>
+      <button class="seg-btn" onclick="selectRepay('equal-principal', this)">원금균등</button>
+      <button class="seg-btn" onclick="selectRepay('bullet', this)">만기일시</button>
+    </div>
+  </div>
+  <div class="result-card" id="loan-result"><div id="loan-result-content"></div></div>
+  <div class="explain-section">
+    <button class="explain-toggle" onclick="toggleExplain(this)">대출이자 상환방식 비교 가이드 <span class="etarrow">▼</span></button>
+    <div class="explain-body">
+      <h3>원리금균등상환</h3><p>매달 납입금액이 <strong>동일</strong>. 가장 일반적인 주택담보대출 방식.</p>
+      <h3>원금균등상환</h3><p>초기 납입금이 크지만 <strong>총 이자 부담이 가장 적습니다.</strong></p>
+      <h3>만기일시상환</h3><p>만기까지 이자만 납부하고 <strong>만기에 원금 전액</strong> 상환. 총 이자 부담이 가장 큽니다.</p>
+    </div>
+  </div>
+  <div class="siblings-section">
+    <div class="siblings-title">다른 부동산 계산기</div>
+    <div class="siblings-grid">
+      <a href="/calc/realestate/brokerage/" class="sibling-link">중개수수료</a>
+      <a href="/calc/realestate/acquisition/" class="sibling-link">취득세</a>
+      <a href="/calc/realestate/conversion/" class="sibling-link">전월세전환</a>
+      <a href="/calc/realestate/loan/" class="sibling-link current">대출이자</a>
+      <a href="/calc/realestate/rental/" class="sibling-link">임대수익률</a>
+      <a href="/calc/realestate/capital-gains/" class="sibling-link">양도소득세</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+      <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
+  </div>
+</footer>
+<div class="toast" id="toast"></div>
+<script>
+function fmt(man) {
+  if (!man && man !== 0) return '-'; if (isNaN(man)) return '-';
+  const won = Math.round(man) * 10000;
+  if (won >= 100000000) { const uk=Math.floor(won/100000000); const rem=Math.round((won%100000000)/10000); return rem>0?uk+'억 '+rem.toLocaleString()+'만원':uk+'억원'; }
+  return Math.round(man).toLocaleString() + '만원';
+}
+function fmtWon(won) {
+  won = Math.round(won); if (isNaN(won)||won===0) return '-';
+  if (won>=100000000){const uk=Math.floor(won/100000000);const rem=Math.round((won%100000000)/10000);return rem>0?uk+'억 '+rem.toLocaleString()+'만원':uk+'억원';}
+  if (won>=10000){const man=Math.floor(won/10000);const chun=Math.round((won%10000)/1000);if(chun>0)return man.toLocaleString()+'만 '+chun+'천원';return man.toLocaleString()+'만원';}
+  return won.toLocaleString()+'원';
+}
+function showConverted(inputEl, dispEl) { const v=parseFloat(inputEl.value); dispEl.textContent=v>0?'= '+fmt(v):''; }
+function setActive(selector, activeEl) { document.querySelectorAll(selector).forEach(b=>b.classList.remove('active')); activeEl.classList.add('active'); }
+function toggleExplain(btn) { btn.classList.toggle('open'); btn.nextElementSibling.classList.toggle('show'); }
+function showToast(msg) { const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1800); }
+function saveAsImage(resultId, title) {
+  const el=document.getElementById(resultId);
+  if(el.style.display==='none'&&!el.classList.contains('show')){showToast('먼저 계산을 해주세요');return;}
+  showToast('이미지 저장 중...');
+  html2canvas(el,{scale:2,useCORS:true}).then(canvas=>{const link=document.createElement('a');link.download='부동산계산기_'+title+'.png';link.href=canvas.toDataURL('image/png');link.click();showToast('이미지가 저장되었습니다');}).catch(()=>showToast('저장 실패'));
+}
+document.addEventListener('DOMContentLoaded',function(){const et=document.querySelector('.explain-toggle');if(et){et.classList.add('open');et.nextElementSibling.classList.add('show');}});
+
+let repayType = 'equal-payment';
+function selectRepay(type, btn) { repayType = type; setActive('.seg-btn[onclick^="selectRepay"]', btn); calcLoan(); }
+function calcLoan() {
+  const amountMan = parseFloat(document.getElementById('loan-amount').value);
+  const annualRate = parseFloat(document.getElementById('loan-rate').value) / 100;
+  const years = parseFloat(document.getElementById('loan-period').value);
+  showConverted(document.getElementById('loan-amount'), document.getElementById('loan-display'));
+  if (!amountMan || !annualRate || !years) { document.getElementById('loan-result').classList.remove('show'); return; }
+  const principal = amountMan * 10000;
+  const monthlyRate = annualRate / 12;
+  const months = years * 12;
+  let html = '';
+  if (repayType === 'equal-payment') {
+    const payment = principal * monthlyRate * Math.pow(1+monthlyRate, months) / (Math.pow(1+monthlyRate, months)-1);
+    const totalPay = payment * months;
+    const totalInterest = totalPay - principal;
+    html = '<div class="result-row"><span class="result-label">총 납입금액</span><span class="result-value">'+fmt(Math.round(totalPay/10000))+'</span></div><div class="result-row"><span class="result-label">총 이자</span><span class="result-value">'+fmt(Math.round(totalInterest/10000))+'</span></div><div class="result-row result-total-row"><span class="result-total-label">월 납입금</span><span class="result-total-value">'+fmt(Math.round(payment/10000))+'<span style="font-size:14px;font-weight:600;opacity:.7">/월</span></span></div>';
+  } else if (repayType === 'equal-principal') {
+    const mp = principal / months;
+    const firstPayment = mp + principal * monthlyRate;
+    const lastPayment = mp + mp * monthlyRate;
+    const totalInterest = monthlyRate * principal * (months+1) / 2;
+    html = '<div class="result-row"><span class="result-label">첫 달 납입금</span><span class="result-value">'+fmt(Math.round(firstPayment/10000))+'</span></div><div class="result-row"><span class="result-label">마지막 달 납입금</span><span class="result-value">'+fmt(Math.round(lastPayment/10000))+'</span></div><div class="result-row result-total-row"><span class="result-total-label">총 이자</span><span class="result-total-value">'+fmt(Math.round(totalInterest/10000))+'</span></div>';
+  } else {
+    const monthlyInterest = principal * monthlyRate;
+    const totalInterest = monthlyInterest * months;
+    html = '<div class="result-row"><span class="result-label">만기 상환 원금</span><span class="result-value">'+fmt(amountMan)+'</span></div><div class="result-row"><span class="result-label">총 이자</span><span class="result-value">'+fmt(Math.round(totalInterest/10000))+'</span></div><div class="result-row result-total-row"><span class="result-total-label">월 이자</span><span class="result-total-value">'+fmt(Math.round(monthlyInterest/10000))+'<span style="font-size:14px;font-weight:600;opacity:.7">/월</span></span></div>';
+  }
+  document.getElementById('loan-result-content').innerHTML = html;
+  document.getElementById('loan-result').classList.add('show');
+}
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+  <script src="/assets/realestate-shell.js"></script>
+</body></html>

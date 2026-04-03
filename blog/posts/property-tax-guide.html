@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026년 재산세 완벽 정리 - 납부 시기, 세율, 계산법 총정리 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="2026년 재산세 납부 시기, 세율표, 계산 방법을 한번에 정리. 공시가격 기준 실제 납부액 계산 예시와 절세 팁까지 확인하세요." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="2026년 재산세 완벽 정리 - 납부 시기, 세율, 계산법 총정리 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="2026년 재산세 납부 시기, 세율표, 계산 방법을 한번에 정리. 공시가격 기준 실제 납부액 계산 예시와 절세 팁까지 확인하세요." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/property-tax-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/property-tax-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <!-- Google Analytics -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BRSX3F10MZ');
+  </script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #F59E0B;
+      --gray-400: #9CA3AF; --gray-500: #6B7280; --gray-600: #4B5563;
+      --dark-bg: #ffffff; --dark-card: #F9FAFB; --dark-border: rgba(0,0,0,0.08);
+    }
+    body { font-family: 'Pretendard', -apple-system, sans-serif; background: #ffffff; color: #111827; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+
+    .site-header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .header-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; gap: 24px; }
+    .site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .logo-icon { width: 32px; height: 32px; }
+    .logo-icon img { width: 32px; height: 32px; display: block; }
+    .logo-text { font-size: 18px; font-weight: 900; color: #111827; letter-spacing: -0.5px; }
+    .logo-text span { color: #818CF8; }
+    .header-back { margin-left: auto; font-size: 13px; font-weight: 600; color: #6B7280; text-decoration: none !important; }
+    .header-back:hover { color: #111827; }
+
+    .post-wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+    .post-tag { display: inline-block; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; background: rgba(245,158,11,0.15); color: #F59E0B; margin-bottom: 16px; }
+    h1 { font-size: 26px; font-weight: 900; color: #111827; line-height: 1.35; margin-bottom: 12px; }
+    .post-meta { font-size: 13px; color: #4B5563; margin-bottom: 36px; display: flex; gap: 12px; }
+    .post-body { font-size: 15px; color: #111827; line-height: 1.8; }
+    .post-body h2 { font-size: 19px; font-weight: 800; color: #111827; margin: 40px 0 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .post-body h3 { font-size: 16px; font-weight: 700; color: #111827; margin: 24px 0 10px; }
+    .post-body p { margin-bottom: 14px; }
+    .post-body ul, .post-body ol { margin: 10px 0 14px 20px; }
+    .post-body li { margin-bottom: 8px; }
+    .post-body a { color: var(--primary); text-decoration: none !important; }
+    .post-body a:hover { text-decoration: underline; }
+    .highlight-box { background: rgba(245,158,11,0.1); border-left: 4px solid var(--primary); border-radius: 0 10px 10px 0; padding: 16px 20px; margin: 20px 0; }
+    .highlight-box p { margin: 0; color: #92400E; font-size: 14px; }
+    .table-wrap { overflow-x: auto; margin: 20px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th { background: #F9FAFB; color: #111827; font-weight: 700; padding: 10px 14px; text-align: left; border: 1px solid rgba(0,0,0,0.08); }
+    td { padding: 10px 14px; border: 1px solid rgba(0,0,0,0.08); color: #1F2937; }
+    tr:hover td { background: rgba(0,0,0,0.02); }
+    .cta-box { background: #F9FAFB; border: 1px solid rgba(0,0,0,0.08); border-radius: 14px; padding: 24px; margin: 40px 0; text-align: center; }
+    .cta-box p { color: #374151; font-size: 14px; margin-bottom: 14px; }
+    .cta-btn { display: inline-block; padding: 12px 28px; background: #F59E0B; color: #fff !important; font-size: 14px; font-weight: 800; border-radius: 10px; text-decoration: none !important; }
+    .cta-btn:hover { opacity: 0.9; }
+
+    .step-box { display: flex; gap: 16px; margin: 16px 0; }
+    .step-num { flex-shrink: 0; width: 28px; height: 28px; background: #F59E0B; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; margin-top: 2px; }
+    .step-content { flex: 1; }
+    .step-content strong { display: block; font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .faq-item { background: #F9FAFB; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; padding: 20px; margin: 16px 0; }
+    .faq-q { font-weight: 800; color: #111827; margin-bottom: 8px; font-size: 15px; }
+    .faq-a { color: #374151; font-size: 14px; line-height: 1.7; margin: 0; }
+    td.rate { text-align: center; font-weight: 700; color: #F59E0B; }
+    td.total-rate { text-align: center; font-weight: 700; color: #111827; }
+
+    .site-footer { border-top: 1px solid rgba(0,0,0,0.08); padding: 24px; text-align: center; }
+    .footer-copy { font-size: 10px; color: #374151; }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo">
+      <div class="logo-icon"><img src="../../assets/logo.svg" alt="제이퍼 계산기 로고" /></div>
+      <span class="logo-text">제이퍼<span>계산기</span></span>
+    </a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+
+<div class="post-wrap">
+  <span class="post-tag">부동산</span>
+  <h1>2026년 재산세 완벽 정리 - 납부 시기, 세율, 계산법 총정리</h1>
+  <div class="post-meta">
+    <span>📅 2026.03.30</span>
+    <span>·</span>
+    <span>6분 읽기</span>
+  </div>
+
+  <div class="post-body">
+    <p>매년 7월과 9월, 주택을 보유한 사람이라면 어김없이 날아오는 고지서가 있습니다. 바로 재산세입니다. 금액이 크지 않다고 넘기기 쉽지만, 공시가격 상승기에는 전년 대비 수십만 원 이상 오르기도 합니다. 2026년 현행 기준 재산세 세율, 계산 구조, 납부 시기, 절세 포인트를 실제 사례와 함께 정리합니다.</p>
+
+    <div class="highlight-box">
+      <p><strong>이 글이 필요한 사람:</strong> 올해 처음 주택을 보유하게 된 분 / 공시가격 변동에 따른 재산세 변화가 궁금한 분 / 재산세와 종합부동산세의 차이를 알고 싶은 분</p>
+    </div>
+
+    <h2>재산세란?</h2>
+    <p>재산세는 매년 6월 1일 기준으로 주택, 토지, 건축물 등 부동산을 보유한 사람에게 부과되는 지방세입니다. 관할 시·군·구청에서 고지서를 발송하며, 별도의 신고 없이 납부만 하면 됩니다.</p>
+    <ul>
+      <li><strong>과세 기준일:</strong> 매년 6월 1일 - 이 날 소유자에게 전액 부과</li>
+      <li><strong>과세 대상:</strong> 주택(부속토지 포함), 건축물, 토지, 선박, 항공기</li>
+      <li><strong>부과 주체:</strong> 지방자치단체 (시·군·구)</li>
+    </ul>
+    <p>6월 1일이 기준이므로 <strong>5월 31일에 집을 팔면 매수자가</strong>, <strong>6월 2일에 팔면 매도자(본인)가</strong> 해당 연도 재산세 전액을 납부합니다. 매매 시기를 정할 때 반드시 고려해야 할 포인트입니다.</p>
+
+    <h2>재산세 납부 시기</h2>
+    <p>주택 재산세는 <strong>연 2회 분할 납부</strong>합니다.</p>
+    <div class="table-wrap">
+      <table>
+        <tr><th>구분</th><th>납부 기간</th><th>대상</th></tr>
+        <tr><td>1기분</td><td class="rate">7월 16일 ~ 7월 31일</td><td>재산세의 1/2</td></tr>
+        <tr><td>2기분</td><td class="rate">9월 16일 ~ 9월 30일</td><td>재산세의 1/2</td></tr>
+      </table>
+    </div>
+    <p>다만 재산세 총액이 <strong>20만원 이하</strong>인 경우 7월에 전액 한꺼번에 부과됩니다. 납부 기한을 넘기면 3%의 납부불성실 가산금이 붙고, 세액이 30만원 이상이면 매월 0.75%의 중가산금이 최대 60개월간 추가됩니다.</p>
+
+    <h2>2026년 주택 재산세율</h2>
+    <p>주택 재산세는 <strong>공시가격에 공정시장가액비율(60%)을 곱한 과세표준</strong>에 누진세율을 적용합니다.</p>
+
+    <h3>과세표준 구간별 세율</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>과세표준</th><th>세율</th><th>누진공제</th></tr>
+        <tr><td>6,000만원 이하</td><td class="rate">0.1%</td><td>-</td></tr>
+        <tr><td>6,000만원 초과 ~ 1.5억원 이하</td><td class="rate">0.15%</td><td>3만원</td></tr>
+        <tr><td>1.5억원 초과 ~ 3억원 이하</td><td class="rate">0.25%</td><td>18만원</td></tr>
+        <tr><td>3억원 초과</td><td class="rate">0.4%</td><td>63만원</td></tr>
+      </table>
+    </div>
+    <p style="margin: 1.2em 0;">
+      👉 <a href="https://www.jptcalc.kr/calc/realestate/propertytax/" style="color: #2563eb; font-weight: 600;">재산세 계산기로 내 재산세 바로 계산해보기</a>
+    </p>
+
+    <h3>공정시장가액비율이란?</h3>
+    <p>공시가격 전체에 세율을 적용하는 것이 아니라, 일정 비율만 과세표준으로 삼습니다. 현재 주택 재산세의 공정시장가액비율은 <strong>60%</strong>입니다. 즉, 공시가격이 5억원이면 과세표준은 3억원이 됩니다.</p>
+
+    <h2>실제 납부액: 도시지역분·지방교육세 포함</h2>
+    <p>재산세 고지서에는 순수 재산세 외에 추가 세목이 함께 부과됩니다.</p>
+    <div class="table-wrap">
+      <table>
+        <tr><th>세목</th><th>세율</th><th>비고</th></tr>
+        <tr><td>재산세</td><td class="rate">0.1% ~ 0.4%</td><td>과세표준 구간별 누진</td></tr>
+        <tr><td>지방교육세</td><td class="rate">재산세액의 20%</td><td>교육 재원 목적</td></tr>
+        <tr><td>도시지역분</td><td class="rate">과세표준의 0.14%</td><td>도시지역 내 토지·건물만 해당</td></tr>
+      </table>
+    </div>
+    <p>도시지역분은 도시계획구역 안에 있는 부동산에만 부과됩니다. 대부분의 아파트·주택이 해당되므로, 실질적으로 거의 모든 주택 소유자가 납부하게 됩니다.</p>
+
+    <h2>계산 예시</h2>
+
+    <h3>예시 1: 공시가격 3억원 아파트 (도시지역)</h3>
+    <ul>
+      <li>과세표준: 3억원 x 60% = <strong>1.8억원</strong></li>
+      <li>재산세: 1.8억원 x 0.25% - 18만원 = <strong>27만원</strong></li>
+      <li>지방교육세: 27만원 x 20% = <strong>5.4만원</strong></li>
+      <li>도시지역분: 1.8억원 x 0.14% = <strong>25.2만원</strong></li>
+      <li><strong>총 납부액: 약 57.6만원</strong> (1기 28.8만원 / 2기 28.8만원)</li>
+    </ul>
+
+    <h3>예시 2: 공시가격 6억원 아파트 (도시지역)</h3>
+    <ul>
+      <li>과세표준: 6억원 x 60% = <strong>3.6억원</strong></li>
+      <li>재산세: 3.6억원 x 0.4% - 63만원 = <strong>81만원</strong></li>
+      <li>지방교육세: 81만원 x 20% = <strong>16.2만원</strong></li>
+      <li>도시지역분: 3.6억원 x 0.14% = <strong>50.4만원</strong></li>
+      <li><strong>총 납부액: 약 147.6만원</strong> (1기 73.8만원 / 2기 73.8만원)</li>
+    </ul>
+
+    <h3>예시 3: 공시가격 10억원 아파트 (도시지역)</h3>
+    <ul>
+      <li>과세표준: 10억원 x 60% = <strong>6억원</strong></li>
+      <li>재산세: 6억원 x 0.4% - 63만원 = <strong>177만원</strong></li>
+      <li>지방교육세: 177만원 x 20% = <strong>35.4만원</strong></li>
+      <li>도시지역분: 6억원 x 0.14% = <strong>84만원</strong></li>
+      <li><strong>총 납부액: 약 296.4만원</strong> (1기 148.2만원 / 2기 148.2만원)</li>
+    </ul>
+
+    <div class="highlight-box">
+      <p>공시가격 10억원 주택의 재산세 총 납부액은 약 296만원입니다. 여기에 공시가격이 9억원(공시가격 기준)을 초과하면 종합부동산세가 별도로 부과될 수 있습니다.</p>
+    </div>
+
+    <h2>세부담 상한제</h2>
+    <p>공시가격이 급등하더라도 재산세가 한꺼번에 크게 오르지 않도록 <strong>세부담 상한제</strong>가 적용됩니다. 전년도 재산세 대비 일정 비율 이상 오를 수 없습니다.</p>
+    <div class="table-wrap">
+      <table>
+        <tr><th>공시가격 구간</th><th>세부담 상한</th></tr>
+        <tr><td>3억원 이하</td><td class="rate">전년 대비 105%</td></tr>
+        <tr><td>3억원 초과 ~ 6억원 이하</td><td class="rate">전년 대비 110%</td></tr>
+        <tr><td>6억원 초과</td><td class="rate">전년 대비 130%</td></tr>
+      </table>
+    </div>
+    <p>예를 들어 공시가격 3억원 이하 주택의 작년 재산세가 30만원이었다면, 올해 세율 적용 결과가 40만원이더라도 실제 납부액은 31.5만원(30만원 x 105%)으로 제한됩니다.</p>
+
+    <h2>재산세 vs 종합부동산세, 무엇이 다른가?</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>구분</th><th>재산세</th><th>종합부동산세</th></tr>
+        <tr><td>과세 주체</td><td>지방자치단체</td><td>국세청</td></tr>
+        <tr><td>부과 기준</td><td>물건별 과세 (주택 1채마다)</td><td>인별 합산 (보유 주택 전체)</td></tr>
+        <tr><td>과세 대상</td><td>모든 부동산 보유자</td><td>공시가격 합산 9억원 초과 (1세대 1주택 12억원)</td></tr>
+        <tr><td>납부 시기</td><td>7월, 9월</td><td>12월</td></tr>
+        <tr><td>세율</td><td>0.1% ~ 0.4%</td><td>0.5% ~ 2.7% (다주택 중과 시 더 높음)</td></tr>
+      </table>
+    </div>
+    <p>재산세는 모든 주택 소유자에게 부과되고, 종합부동산세는 일정 금액 이상 보유자에게 추가로 부과됩니다. 종합부동산세 계산 시 이미 납부한 재산세는 세액공제로 차감됩니다.</p>
+
+    <h2>재산세 절세 팁</h2>
+
+    <h3>1. 매매 시기 조절</h3>
+    <p>6월 1일이 과세 기준일이므로, <strong>매수자라면 6월 2일 이후</strong>, <strong>매도자라면 5월 31일 이전</strong>에 잔금을 치르면 해당 연도 재산세를 피할 수 있습니다. 수백만 원 차이가 날 수 있으므로 계약 시 날짜를 잘 조율하세요.</p>
+
+    <h3>2. 공시가격 이의신청</h3>
+    <p>매년 3~4월 공시가격이 공개되면 30일 이내에 이의신청이 가능합니다. 실거래가 대비 공시가격이 지나치게 높거나 인근 유사 주택과 차이가 큰 경우 조정받을 수 있습니다. 한국부동산원 부동산 공시가격 알리미에서 확인 가능합니다.</p>
+
+    <h3>3. 카드 납부 혜택 활용</h3>
+    <p>재산세는 신용카드로 납부할 수 있으며, 일부 카드사에서 무이자 할부 또는 포인트 적립 혜택을 제공합니다. 납부 전 카드사 이벤트를 확인하면 소소한 절세 효과를 볼 수 있습니다.</p>
+
+    <div class="cta-box">
+      <p>내 주택의 재산세가 얼마인지 바로 계산해보세요.</p>
+      <a href="../../calc/realestate/propertytax/" class="cta-btn">재산세 계산하기</a>
+    </div>
+    <p style="font-size:13px;color:#6B7280;margin-top:8px;">관련 계산기: <a href="https://www.jptcalc.kr/calc/realestate/acquisition/">취득세 계산기</a> · <a href="https://www.jptcalc.kr/calc/realestate/jongbu/">종합부동산세 계산기</a></p>
+
+    <h2>자주 묻는 질문 (FAQ)</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 재산세는 매년 내야 하나요?</div>
+      <p class="faq-a">네, 재산세는 매년 6월 1일 기준 부동산 소유자에게 부과되는 세금으로, 보유하고 있는 한 매년 납부해야 합니다. 주택의 경우 7월과 9월에 1/2씩 나눠 납부합니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 공동명의 주택의 재산세는 누가 내나요?</div>
+      <p class="faq-a">공동명의인 경우 각자의 지분 비율에 따라 재산세가 분할 부과됩니다. 예를 들어 부부 5:5 공동명의라면 각각 재산세의 절반씩 고지서를 받게 됩니다. 다만 한 사람이 대표로 납부할 수도 있습니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 1주택자인데 재산세와 종합부동산세를 둘 다 내야 하나요?</div>
+      <p class="faq-a">재산세는 모든 주택 소유자가 내야 합니다. 종합부동산세는 1세대 1주택자 기준 공시가격 12억원 초과 시에만 부과됩니다. 공시가격 12억원 이하라면 재산세만 납부하면 됩니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 재산세 납부 기한을 놓치면 어떻게 되나요?</div>
+      <p class="faq-a">납부 기한 경과 시 즉시 3%의 납부불성실 가산금이 부과됩니다. 세액이 30만원 이상인 경우 매월 0.75%의 중가산금이 최대 60개월간 추가됩니다. 위택스(wetax.go.kr)에서 온라인 납부가 가능하니 기한 내 처리하세요.</p>
+    </div>
+
+    <h2>마무리</h2>
+    <p>재산세는 주택을 보유하는 한 매년 납부하는 세금입니다. 공시가격과 공정시장가액비율에 따라 과세표준이 결정되고, 누진세율이 적용되므로 공시가격이 높을수록 세 부담이 커집니다. 매매 시기 조절, 공시가격 이의신청, 카드 납부 혜택 등 활용 가능한 절세 방법도 챙기세요. 정확한 세액은 관할 지자체 또는 위택스에서 확인하시기 바랍니다.</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
+</footer>
+
+  <script>
+  window.ARTICLE_INFO_CONFIG = {
+    author: '제이퍼 계산기 편집팀',
+    reviewBasis: '지방세법 제111조~제122조',
+    basisDate: '2026년 기준',
+    referenceOrg: '행정안전부·각 지방자치단체',
+    lastReviewed: '2026.03.30',
+    disclaimer: '이 글은 정보 제공 목적으로 작성되었습니다. 실제 재산세는 공시가격·공정시장가액비율·세부담 상한 적용에 따라 달라지므로 관할 지방자치단체 또는 위택스에서 확인하세요.',
+    relatedCalc: { name: '재산세 계산기', url: '/calc/realestate/propertytax/' },
+    category: 'realestate'
+  };
+  </script>
+<script src="/assets/blog-article-info.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>

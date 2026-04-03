@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI 인프라 월비용 예측 계산기 - 스타트업 인프라 비용 | 제이퍼 계산기</title>
+  <meta name="description" content="AI 스타트업 인프라 운영에 필요한 LLM API, 클라우드 서버, DB, 스토리지 등 항목별 월 비용을 합산 예측합니다." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/ai/infra-forecast/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AI 인프라 월비용 예측 계산기 | 제이퍼 계산기" />
+  <meta property="og:description" content="AI 스타트업 인프라 운영에 필요한 LLM API, 클라우드 서버, DB, 스토리지 등 항목별 월 비용을 합산 예측합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/ai/infra-forecast/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="AI 인프라 월비용 예측 계산기 | 제이퍼 계산기" />
+  <meta name="twitter:description" content="AI 스타트업 인프라 운영에 필요한 LLM API, 클라우드 서버, DB, 스토리지 등 항목별 월 비용을 합산 예측합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/ai-common.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"AI 인프라 월비용 예측 계산기","url":"https://www.jptcalc.kr/calc/ai/infra-forecast/","applicationCategory":"BusinessApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+    {"@type":"ListItem","position":2,"name":"AI / 테크 비용 계산기","item":"https://www.jptcalc.kr/calc/ai/"},
+    {"@type":"ListItem","position":3,"name":"AI 인프라 월비용 예측 계산기","item":"https://www.jptcalc.kr/calc/ai/infra-forecast/"}
+  ]}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"트래픽이 늘면 인프라 비용이 비례해서 늘어나나요?","acceptedAnswer":{"@type":"Answer","text":"대부분의 클라우드 비용은 비선형적으로 증가합니다. LLM API 비용은 사용량에 정비례하지만, 서버와 DB는 스케일링 방식에 따라 다릅니다. 오토스케일링 설정과 데이터베이스 티어 변경 시점을 미리 계획하는 것이 중요합니다."}},{"@type":"Question","name":"모니터링 비용도 인프라 예산에 포함해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"네, 반드시 포함해야 합니다. Datadog, CloudWatch 등 모니터링 도구 비용은 인프라 규모에 따라 월 수백 달러에 달할 수 있어 빠뜨리면 예산 차이가 큽니다. 장애 조기 감지와 성능 최적화를 위해 모니터링은 필수 항목입니다."}},{"@type":"Question","name":"AI 스타트업 초기 단계에서 가장 큰 비용 항목은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"초기에는 대부분 LLM API 비용이 가장 큽니다. 서비스 성장 후에는 GPU 서버와 DB 비용이 급격히 늘어나는 경우가 많습니다. 초기에는 LLM API 최적화(프롬프트 길이, 캐싱)에 집중하고, 성장 단계에서 자체 인프라 전환 시점을 검토하는 것이 효과적입니다."}}]}</script>
+  <style>
+    /* infra-forecast 고유 스타일 */
+    .input-wrap{position:relative}
+    .input-wrap .unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none}
+    input[type=number],select{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
+    select{padding:12px 16px;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 5l3 3 3-3' stroke='%239CA3AF' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+    input::placeholder{color:var(--gray-400);font-weight:400}
+    input:focus,select:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(139,92,246,0.15)}
+    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
+    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
+    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
+    .result-card{background:linear-gradient(135deg,#F5F3FF 0%,#EDE9FE 100%);border:1px solid var(--primary-border);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-row+.result-row{border-top:1px solid rgba(0,0,0,0.07)}
+    .result-total-row{border-top:1px solid rgba(0,0,0,0.15)!important;margin-top:4px;padding-top:14px!important}
+    .result-total-value{font-size:24px;font-weight:900;color:var(--gray-900)}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/ai/" class="nav-item active"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/ai/">AI / 테크 비용 계산기</a><span class="breadcrumb-sep">›</span><span>AI 인프라 월비용 예측 계산기</span></div>
+    <div class="page-header-badge">🚀 항목별 비중 자동 계산</div>
+    <h1>AI 인프라 월비용 예측 계산기</h1>
+    <p>AI 서비스 운영에 필요한 인프라 항목별 월 비용을 합산 예측하세요</p>
+  </div>
+    <div class="card">
+      <div class="card-title">AI 스타트업 인프라 월비용 예측</div>
+      <div class="info-box"><span class="info-icon">💡</span><p>AI 서비스 운영에 필요한 주요 인프라 항목별 예상 비용을 합산합니다.</p></div>
+      <div class="field"><div class="field-label"><span>LLM API 비용</span></div><div class="input-wrap"><input type="number" id="infra-api" placeholder="예)500" oninput="calc()"><span class="unit">USD/월</span></div></div>
+      <div class="field"><div class="field-label"><span>클라우드 서버 (컴퓨팅)</span></div><div class="input-wrap"><input type="number" id="infra-compute" placeholder="예)200" oninput="calc()"><span class="unit">USD/월</span></div></div>
+      <div class="field"><div class="field-label"><span>데이터베이스</span></div><div class="input-wrap"><input type="number" id="infra-db" placeholder="예)100" oninput="calc()"><span class="unit">USD/월</span></div></div>
+      <div class="field"><div class="field-label"><span>스토리지 (S3/GCS)</span></div><div class="input-wrap"><input type="number" id="infra-storage" placeholder="예)50" oninput="calc()"><span class="unit">USD/월</span></div></div>
+      <div class="field"><div class="field-label"><span>CDN / 네트워크</span></div><div class="input-wrap"><input type="number" id="infra-cdn" placeholder="예)30" oninput="calc()"><span class="unit">USD/월</span></div></div>
+      <div class="field"><div class="field-label"><span>모니터링</span></div><div class="input-wrap"><input type="number" id="infra-monitor" placeholder="예)50" oninput="calc()"><span class="unit">USD/월</span></div></div>
+      <div class="field"><div class="field-label"><span>기타 SaaS</span></div><div class="input-wrap"><input type="number" id="infra-misc" placeholder="예)100" oninput="calc()"><span class="unit">USD/월</span></div></div>
+      <div class="field"><div class="field-label"><span>환율</span></div><div class="input-wrap"><input type="number" id="infra-exchange" placeholder="예) 1450" oninput="calc()"><span class="unit">원/달러</span></div></div>
+      <div class="result-card" id="result"><div id="result-content"></div></div>
+    </div>
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>인프라 월비용 예측 계산기는 언제 쓰나요?</h2>
+      <p>AI 스타트업이나 사내 AI 프로젝트의 인프라 비용을 항목별로 합산해 월 예산을 미리 잡을 때 사용합니다. 예상보다 큰 비용 항목을 사전에 파악할 수 있습니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>예산 수립</strong><span>LLM API, 서버, DB, 스토리지 등 항목별 합산</span></div>
+        <div class="guide-box"><strong>비중 확인</strong><span>전체 비용 중 각 항목의 비중을 퍼센트로 표시</span></div>
+        <div class="guide-box"><strong>연간 추정</strong><span>월 비용 기반 연간 인프라 예산 추정</span></div>
+      </div>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>트래픽이 늘면 비용이 비례해서 늘어나나요?</h3><p>대부분의 클라우드 비용은 비선형적으로 증가합니다. 특히 LLM API 비용은 사용량에 정비례하지만, 서버와 DB는 스케일링 방식에 따라 다릅니다.</p></div>
+      <div class="faq-item"><h3>모니터링 비용도 포함해야 하나요?</h3><p>네. Datadog, CloudWatch 등 모니터링 도구 비용은 인프라 규모에 따라 월 수백 달러에 달할 수 있어 빠뜨리면 예산 차이가 큽니다.</p></div>
+      <div class="faq-item"><h3>초기 단계에서 가장 큰 비용 항목은?</h3><p>대부분 LLM API 비용이 가장 큽니다. 서비스 성장 후에는 GPU 서버와 DB 비용이 급격히 늘어나는 경우가 많습니다.</p></div>
+      <div class="update-note">최종 검토: 2026.03.25 · 실제 비용은 서비스 규모와 트래픽에 따라 달라집니다.</div>
+    </div>
+  </div>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 AI / 테크 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/ai/api-token/" class="sibling-link">⚡ API 토큰 비용</a>
+      <a href="/calc/ai/gpu-cloud/" class="sibling-link">💻 GPU 클라우드</a>
+      <a href="/calc/ai/saas-comparison/" class="sibling-link">⚖️ SaaS vs 자체구축</a>
+      <a href="/calc/ai/llm-comparison/" class="sibling-link">📊 LLM 비교표</a>
+      <a href="/calc/ai/infra-forecast/" class="sibling-link current">🚀 인프라 예측</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script>
+
+function fmtUsd(v){return '$'+v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function fmtKrw(v){v=Math.round(v);if(v>=100000000)return Math.floor(v/100000000).toLocaleString()+'억 '+Math.floor((v%100000000)/10000).toLocaleString()+'만원';if(v>=10000)return Math.floor(v/10000).toLocaleString()+'만 '+(v%10000).toLocaleString()+'원';return v.toLocaleString()+'원';}
+function calc(){
+  const ids=['infra-api','infra-compute','infra-db','infra-storage','infra-cdn','infra-monitor','infra-misc'];
+  const names=['LLM API','클라우드 서버','데이터베이스','스토리지','CDN/네트워크','모니터링','기타 SaaS'];
+  const ex=parseFloat(document.getElementById('infra-exchange').value)||1450;
+  let total=0;const items=[];
+  ids.forEach((id,i)=>{const v=parseFloat(document.getElementById(id).value)||0;total+=v;if(v>0)items.push({name:names[i],val:v});});
+  if(!total){document.getElementById('result').classList.remove('show');return;}
+  let html=items.map(i=>`<div class="result-row"><span class="result-label">${i.name}</span><span class="result-value">${fmtUsd(i.val)} (${(i.val/total*100).toFixed(0)}%)</span></div>`).join('');
+  html+=`<div class="result-row result-total-row"><span class="result-total-label">월 총 인프라 비용</span><span class="result-total-value">${fmtUsd(total)}</span></div>
+    <div class="result-row"><span class="result-label">월 비용 (원화)</span><span class="result-value" style="color:var(--primary);font-size:17px;font-weight:800;">${fmtKrw(total*ex)}</span></div>
+    <div class="result-row"><span class="result-label">연간 추정 비용</span><span class="result-value">${fmtUsd(total*12)} (${fmtKrw(total*12*ex)})</span></div>
+    <div class="result-note">* 트래픽 증가에 따라 비용이 비선형적으로 증가할 수 있습니다</div>`;
+  document.getElementById('result-content').innerHTML=html;
+  document.getElementById('result').classList.add('show');
+}
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/ai-detail-shell.js"></script>
+</body>
+</html>

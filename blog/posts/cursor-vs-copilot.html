@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cursor vs GitHub Copilot - AI 코딩 도구, 실제 생산성은 얼마나 다를까? | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="Cursor와 GitHub Copilot 기능 비교(자동완성, 코드 생성, 에러 수정), 가격 비교, 실제 사용 시나리오별 추천. 어떤 AI 코딩 어시스턴트가 더 생산적인지 비교 분석합니다." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Cursor vs GitHub Copilot - AI 코딩 도구, 실제 생산성은 얼마나 다를까? | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="Cursor와 GitHub Copilot 기능 비교(자동완성, 코드 생성, 에러 수정), 가격 비교, 실제 사용 시나리오별 추천. 어떤 AI 코딩 어시스턴트가 더 생산적인지 비교 분석합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/cursor-vs-copilot.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/cursor-vs-copilot.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#8B5CF6;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(139,92,246,0.15);color:#8B5CF6;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:24px 0 10px}
+    .post-body p{margin-bottom:14px}
+    .post-body ul{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#8B5CF6;text-decoration:none}
+    .highlight-box{background:rgba(139,92,246,0.08);border-left:4px solid #8B5CF6;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#4C1D95;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    td.highlight{color:#8B5CF6;font-weight:700}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#8B5CF6;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .faq-item{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:12px;padding:20px;margin:16px 0}
+    .faq-q{font-weight:800;color:#111827;margin-bottom:8px;font-size:15px}
+    .faq-a{color:#374151;font-size:14px;line-height:1.7;margin:0}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo"><div class="logo-icon"><img src="../../assets/logo.svg" alt="로고"/></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+<div class="post-wrap">
+  <span class="post-tag">AI·테크</span>
+  <h1>Cursor vs GitHub Copilot - AI 코딩 도구, 실제 생산성은 얼마나 다를까?</h1>
+  <div class="post-meta">
+    <span>2026.03.29</span>
+    <span>·</span>
+    <span>읽는 시간 약 7분</span>
+  </div>
+
+  <div class="post-body">
+
+    <p>AI 코딩 어시스턴트 시장에서 가장 많이 비교되는 두 제품이 Cursor와 GitHub Copilot입니다. 두 도구 모두 코드 자동완성, 채팅 기반 코드 생성, 에러 수정 기능을 제공하지만, 작동 방식과 철학이 근본적으로 다릅니다. 어떤 도구가 자신의 개발 방식에 더 잘 맞는지 기능과 가격, 실제 시나리오로 비교해봅니다.</p>
+
+    <div class="highlight-box">
+      <p><strong>핵심 차이 - Cursor는 IDE 자체, Copilot은 플러그인</strong><br>
+      Cursor는 VS Code를 기반으로 만들어진 독립 IDE입니다. AI 기능이 에디터 깊숙이 통합되어 있어 파일 트리 전체를 컨텍스트로 활용하는 Composer 기능 등이 가능합니다.<br>
+      반면 GitHub Copilot은 기존 VS Code, JetBrains, Neovim 등에 플러그인 형태로 추가됩니다. 익숙한 환경을 그대로 사용할 수 있다는 장점이 있지만, 컨텍스트 활용 범위나 AI 통합 깊이는 Cursor보다 제한적입니다.</p>
+    </div>
+
+    <h2>두 도구의 핵심 차이</h2>
+    <p>Cursor는 2023년 등장 이후 "AI-first IDE"를 표방하며 빠르게 성장했습니다. VS Code 익스텐션 호환성을 유지하면서도 AI 기능을 에디터 레벨에서 제공합니다. 특히 멀티파일 컨텍스트를 활용한 Composer 기능은 기존 Copilot 채팅과 비교해 실용적인 차이를 만들어냅니다.</p>
+    <p>GitHub Copilot은 Microsoft와 OpenAI의 협업으로 2021년 출시된 선발 주자입니다. 깃허브 코드베이스를 학습했다는 강점이 있으며, 최근에는 Copilot Workspace, 코드 리뷰 자동화 등 기능을 빠르게 확장하고 있습니다. JetBrains 계열 IDE를 주력으로 사용하는 개발자라면 Copilot이 사실상 유일한 주요 선택지입니다.</p>
+
+    <h2>두 도구가 사용하는 AI 모델</h2>
+    <p>AI 코딩 도구의 품질은 내부에서 사용하는 모델에 크게 영향을 받습니다. Cursor Pro는 GPT-4o, Claude Sonnet, Claude Opus, Gemini Pro 등 여러 최신 모델을 사용자가 직접 선택해서 쓸 수 있습니다. 작업의 성격에 따라 가장 적합한 모델을 고를 수 있다는 점이 큰 장점입니다. 예를 들어 복잡한 알고리즘 구현에는 Claude를, 빠른 자동완성에는 경량 모델을 선택하는 방식입니다.</p>
+    <p>GitHub Copilot은 주로 GPT-4o를 기반으로 동작하며, 일부 기능에서 Claude 모델을 베타 지원하기 시작했습니다. 모델 선택권은 Cursor에 비해 제한적이지만, GitHub 코드베이스를 학습에 활용한 코드 완성 품질이 실용적으로 높다는 평가도 있습니다. 특히 오픈소스 라이브러리 사용 패턴이나 일반적인 코드 패턴 자동완성에서 오랜 학습 데이터의 이점이 나타납니다.</p>
+
+    <h2>기능 비교</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>기능</th>
+            <th>Cursor</th>
+            <th>GitHub Copilot</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>인라인 코드 자동완성</td><td class="highlight">우수 - 다음 줄 예측 포함</td><td>우수 - 오랜 학습 데이터 강점</td></tr>
+          <tr><td>멀티파일 Composer</td><td class="highlight">지원 (프로젝트 전체 수정 가능)</td><td>제한적 (Workspace 베타 제공)</td></tr>
+          <tr><td>채팅 (Chat/Ask)</td><td class="highlight">인라인 + 사이드패널 모두 지원</td><td>사이드패널 지원</td></tr>
+          <tr><td>컨텍스트 길이</td><td class="highlight">긴 컨텍스트 지원 (모델 의존)</td><td>비교적 짧음</td></tr>
+          <tr><td>지원 IDE</td><td>Cursor 단독 (VS Code 기반)</td><td class="highlight">VS Code, JetBrains, Neovim 등</td></tr>
+          <tr><td>에러 수정 (Fix)</td><td class="highlight">터미널 에러 직접 수정 연동</td><td>인라인 수정 제안</td></tr>
+          <tr><td>코드베이스 인덱싱</td><td class="highlight">로컬 인덱싱 지원</td><td>오픈 파일 기준</td></tr>
+          <tr><td>사용 가능 모델</td><td class="highlight">GPT-4o, Claude, Gemini 선택 가능</td><td>GPT-4o 기반 (일부 Claude 베타)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin: 1.2em 0;">
+      👉 <a href="https://www.jptcalc.kr/calc/ai/saas-comparison/" style="color: #2563eb; font-weight: 600;">SaaS 비용 비교 계산기로 직접 계산해보기</a>
+    </p>
+
+    <h2>가격 비교</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>플랜</th>
+            <th>Cursor</th>
+            <th>GitHub Copilot</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>무료</td><td>Hobby (2주 Pro 체험 포함, 이후 제한)</td><td class="highlight">개인 무료 플랜 (2026년 기준 월 2,000 완성 제공)</td></tr>
+          <tr><td>개인 유료</td><td class="highlight">Pro $20/월</td><td>Individual $10/월 (연간 $100)</td></tr>
+          <tr><td>팀/비즈니스</td><td class="highlight">Business $40/월/인</td><td>Business $19/월/인</td></tr>
+          <tr><td>엔터프라이즈</td><td>별도 문의</td><td>Enterprise $39/월/인</td></tr>
+          <tr><td>추가 AI 사용량</td><td>$20 플랜에 사용량 포함, 초과 시 과금</td><td>플랜 내 무제한</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>가격만 보면 GitHub Copilot이 저렴합니다. 특히 팀 단위로 도입할 때 Copilot Business는 Cursor Business 대비 절반 수준입니다. 하지만 Cursor Pro의 멀티모델 선택 기능과 멀티파일 Composer 기능을 활용한 생산성 향상이 가격 차이를 상쇄할 수 있습니다.</p>
+
+    <h2>실제 사용 시나리오별 비교</h2>
+    <h3>시나리오 1: 신규 기능 개발</h3>
+    <p>새로운 기능을 처음부터 개발할 때는 Cursor의 Composer가 강점을 발휘합니다. "결제 페이지 컴포넌트를 만들고 기존 cart.ts 모듈과 연결해줘" 같은 자연어 지시로 여러 파일에 걸친 코드를 한 번에 생성할 수 있습니다. Copilot은 단일 파일 내 자동완성이나 채팅 제안 방식이어서 여러 파일을 동시에 수정하려면 수동 작업이 필요합니다.</p>
+
+    <h3>시나리오 2: 레거시 코드 리팩토링</h3>
+    <p>레거시 코드베이스를 리팩토링할 때는 코드베이스 인덱싱 능력이 중요합니다. Cursor는 로컬 코드베이스를 인덱싱해 "이 함수가 어디서 호출되고 있어? 관련 파일 모두 수정해줘" 같은 요청이 가능합니다. Copilot은 현재 열린 파일과 최근 파일 기반으로 컨텍스트를 구성하므로, 대규모 레거시 코드에서는 제한이 생깁니다.</p>
+
+    <h3>시나리오 3: 버그 수정</h3>
+    <p>버그 수정에서는 두 도구 모두 경쟁력이 있습니다. Cursor는 터미널 에러 메시지를 직접 채팅창으로 가져와 수정 방안을 제시하는 기능이 편리합니다. Copilot은 인라인 채팅(Ctrl+I)으로 에러 위치에서 바로 수정 제안을 받을 수 있습니다. 단순 버그 수정은 두 도구의 체감 차이가 크지 않습니다.</p>
+
+    <h2>보안 및 데이터 프라이버시</h2>
+    <p>기업 환경에서 AI 코딩 도구를 도입할 때 보안은 빠질 수 없는 고려 사항입니다.</p>
+    <p>Cursor는 Privacy Mode를 제공합니다. 이 모드를 활성화하면 코드가 서버에 저장되지 않으며, AI 모델 학습에도 사용되지 않습니다. 하지만 Cursor 자체가 클라우드 기반 AI 호출을 하므로, 코드가 네트워크를 통해 전송되는 구조임은 동일합니다.</p>
+    <p>GitHub Copilot은 GitHub Enterprise Cloud를 사용하는 조직에서 코드 스니펫이 서버에 저장되지 않도록 설정할 수 있습니다. 또한 Copilot for Business 이상 플랜은 코드 데이터를 학습에 활용하지 않는다고 명시합니다. 금융·의료 등 보안 규정이 엄격한 조직이라면 GitHub의 기업 보안 정책 문서를 기반으로 IT 보안팀 승인 절차를 거치는 것이 일반적입니다.</p>
+
+    <h2>학습 곡선과 전환 비용</h2>
+    <p>Cursor는 VS Code 기반이지만 UI가 다소 다릅니다. 기존 VS Code 사용자라면 1-2일 내에 익숙해질 수 있지만, 설정 마이그레이션(폰트, 테마, 단축키, 익스텐션 재설치)에 시간이 걸립니다. VS Code 프로필 가져오기 기능으로 일부 자동화가 가능합니다.</p>
+    <p>GitHub Copilot은 기존 에디터에 플러그인을 설치하는 방식이라 전환 비용이 거의 없습니다. 익숙한 환경 그대로 AI 기능만 추가됩니다. 팀 전체 도입 시에도 각자의 IDE를 유지하면서 일괄 적용이 가능해 온보딩 부담이 적습니다.</p>
+
+    <h2>어떤 걸 선택해야 할까</h2>
+    <ul>
+      <li><strong>Cursor 추천:</strong> 개인 또는 소규모 팀, VS Code를 주력으로 사용, 새 프로젝트 개발이 많음, 멀티파일 AI 편집 기능이 중요한 경우, 다양한 AI 모델을 선택해 쓰고 싶은 경우</li>
+      <li><strong>Copilot 추천:</strong> JetBrains(IntelliJ, PyCharm 등) 사용자, 기업 보안 정책으로 플러그인 방식 선호, 팀 단위 비용 최소화, 이미 GitHub Enterprise를 사용 중인 조직, 에디터 전환 없이 바로 AI를 추가하고 싶은 경우</li>
+    </ul>
+
+    <div class="cta-box">
+      <p>AI 도구 도입 비용을 팀 규모에 맞게 미리 계산해보세요.</p>
+      <a href="../../calc/ai/api-token/" class="cta-btn">AI 비용 계산기 바로가기</a>
+    </div>
+    <p style="font-size: 13px; color: #6B7280; margin-top: 8px;">관련 계산기: <a href="https://www.jptcalc.kr/calc/ai/api-token/">AI 토큰 비용 계산기</a> · <a href="https://www.jptcalc.kr/calc/ai/gpu-cloud/">GPU 클라우드 비교</a></p>
+
+    <h2>자주 묻는 질문 (FAQ)</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 무료로 써볼 수 있나요?</div>
+      <p class="faq-a">두 도구 모두 무료 체험이 가능합니다. Cursor는 첫 가입 시 2주간 Pro 기능을 무료로 체험할 수 있으며, 이후 Hobby 플랜(제한된 사용량)으로 전환됩니다. GitHub Copilot은 2026년 기준 개인 무료 플랜을 제공하고 있으며, 월 2,000건의 코드 완성과 제한된 채팅 사용이 가능합니다. 간단한 일상 작업 정도는 두 도구의 무료 플랜으로도 충분히 체험할 수 있습니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 팀 단위로 라이선스를 구매할 때 어느 쪽이 유리한가요?</div>
+      <p class="faq-a">비용만 보면 GitHub Copilot Business($19/인/월)가 Cursor Business($40/인/월)보다 저렴합니다. 10명 팀 기준으로 연간 약 2,520달러 차이가 납니다. 하지만 Cursor는 멀티모델 선택(Claude, GPT-4o, Gemini 등)과 Composer 기능이 포함되어 있어 개발 생산성 향상 효과가 비용 차이를 상쇄할 수 있습니다. 기업 보안 정책 관점에서는 GitHub Enterprise와 통합된 Copilot이 관리 편의성 면에서 유리합니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. VS Code에서 Cursor와 Copilot을 동시에 쓸 수 있나요?</div>
+      <p class="faq-a">Cursor는 VS Code를 기반으로 만들어진 별도 애플리케이션이므로, 일반 VS Code와 동시에 사용은 가능하지만 같은 에디터 창에서 두 기능이 공존하지는 않습니다. VS Code에서 Copilot 플러그인을 쓰면서 별도로 Cursor를 실행하는 방식으로 병행 체험은 가능합니다. 다만 Cursor가 VS Code 기반이라 대부분의 익스텐션이 호환되므로, Cursor로 완전히 전환해도 기존 VS Code 환경과 거의 동일하게 사용할 수 있습니다.</p>
+    </div>
+
+  </div>
+</div>
+<footer class="site-footer">
+  <div class="footer-copy">© 2026 제이퍼 계산기 · <a href="../../" style="color:inherit">jptcalc.kr</a></div>
+</footer>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: 'Cursor·GitHub Copilot 공식 문서, 2026년 3월 기준',
+  lastReviewed: '2026.03.29',
+  referenceOrg: 'Anysphere(Cursor)·GitHub',
+  relatedCalc: { name: 'AI 비용 계산기', url: '../../calc/ai/' },
+  category: 'ai',
+};
+</script>
+<script src="../../assets/footer-unified.js" defer></script>
+<script src="../../assets/blog-article-info.js" defer></script>
+<script src="../../assets/blog-review-footer.js" defer></script>
+</body>
+</html>

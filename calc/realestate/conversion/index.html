@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>전월세전환 계산기 - 전세·월세 상호 환산 무료 계산 | 제이퍼 계산기</title>
+  <meta name="description" content="전세를 월세로, 월세를 전세로 전환하는 금액을 무료로 계산하세요. 법정 전월세 전환율 기준으로 정확하게 계산합니다." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/realestate/conversion/" />
+  <meta property="og:type" content="website" /><meta property="og:title" content="전월세전환 계산기 - 전세·월세 상호 환산 무료 계산 | 제이퍼 계산기" />
+  <meta property="og:description" content="전세를 월세로, 월세를 전세로 전환하는 금액을 무료로 계산하세요. 법정 전월세 전환율 기준으로 정확하게 계산합니다." /><meta property="og:url" content="https://www.jptcalc.kr/calc/realestate/conversion/" />
+  <meta property="og:site_name" content="제이퍼 계산기" /><meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="전월세전환 계산기 - 전세·월세 상호 환산 무료 계산 | 제이퍼 계산기" />
+  <meta name="twitter:description" content="전세를 월세로, 월세를 전세로 전환하는 금액을 무료로 계산하세요. 법정 전월세 전환율 기준으로 정확하게 계산합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"전월세전환 계산기","url":"https://www.jptcalc.kr/calc/realestate/conversion/","description":"전세를 월세로, 월세를 전세로 전환하는 금액을 무료로 계산하세요. 법정 전월세 전환율 기준으로 정확하게 계산합니다.","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"inLanguage":"ko-KR"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},{"@type":"ListItem","position":2,"name":"부동산 계산기","item":"https://www.jptcalc.kr/calc/realestate/"},{"@type":"ListItem","position":3,"name":"전월세전환 계산기","item":"https://www.jptcalc.kr/calc/realestate/conversion/"}]}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"전월세 전환이란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"전세보증금을 월세로 바꾸거나, 반대로 월세를 전세로 환산하는 계산입니다. 보증금 차액에 전환율을 곱해 월 임대료를 산정하거나, 반대로 월세를 전세금으로 환산할 때 사용합니다."}},{"@type":"Question","name":"법정 전월세 전환율 상한은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"법정 상한은 기준금리 + 2%입니다. 법정 상한을 초과하는 전환율은 무효이며, 주택임대차보호법 제7조의2에 따라 임대인이 보증금을 월세로 전환할 때 적용됩니다."}},{"@type":"Question","name":"전월세 전환 계산 공식은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"전세→월세 전환 시: 월세 = (전세금 - 보증금) × 전환율 ÷ 12입니다. 월세→전세 전환 시: 전세환산금 = 현재보증금 + (월세 × 12 ÷ 전환율)입니다."}},{"@type":"Question","name":"시장 전환율과 법정 기준이 다를 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네. 계약 협의에서는 체감 시장 조건이 반영되지만, 분쟁이나 기준 검토에서는 법정 기준을 별도로 확인해야 합니다. 관리비, 주차비, 옵션 등 실질 비용도 함께 비교해야 합니다."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/realestate-common.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item active"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" onclick="var m=document.querySelector('.mob-menu'); if(m)m.classList.toggle('open');" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mob-menu">
+  <a href="/calc/realestate/" class="mob-link active"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+  <a href="/calc/tax/" class="mob-link"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+  <a href="/calc/ai/" class="mob-link"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+  <a href="/calc/salary/" class="mob-link"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+  <a href="/calc/pet/" class="mob-link"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+  <a href="/calc/finance/" class="mob-link"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+  <a href="/calc/health/" class="mob-link"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+  <a href="/calc/date/" class="mob-link"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+  <a href="/blog/" class="mob-link">블로그</a>
+</div>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a> &rsaquo; <a href="/calc/realestate/">부동산 계산기</a> &rsaquo; 전월세전환 계산기</div>
+    <div class="page-badge">부동산 계산기</div>
+    <h1 class="page-title">전월세전환 계산기</h1>
+    <p class="page-subtitle">전월세 전환율 적용 · 전세↔월세 상호 환산</p>
+  </div>
+  <div class="card">
+    <div class="card-title">전환 방향</div>
+    <div class="seg-group">
+      <button class="seg-btn active" onclick="selectConvDir('to-monthly', this)">전세 → 월세</button>
+      <button class="seg-btn" onclick="selectConvDir('to-jeonse', this)">월세 → 전세</button>
+    </div>
+    <div id="conv-to-monthly">
+      <div class="field"><div class="field-label">전세금 <span class="label-hint">만원 단위</span></div>
+        <div class="input-wrap"><input type="number" id="jeonse-amount" placeholder="예) 30,000" oninput="calcConversion()" /><span class="unit">만원</span></div></div>
+      <div class="field"><div class="field-label">월세 전환 후 보증금 <span class="label-hint">만원 단위</span></div>
+        <div class="input-wrap"><input type="number" id="new-deposit" placeholder="예) 5,000" oninput="calcConversion()" /><span class="unit">만원</span></div></div>
+    </div>
+    <div id="conv-to-jeonse" class="hidden">
+      <div class="field"><div class="field-label">현재 보증금 <span class="label-hint">만원 단위</span></div>
+        <div class="input-wrap"><input type="number" id="curr-deposit" placeholder="예) 5,000" oninput="calcConversion()" /><span class="unit">만원</span></div></div>
+      <div class="field"><div class="field-label">월세 <span class="label-hint">만원 단위</span></div>
+        <div class="input-wrap"><input type="number" id="curr-monthly" placeholder="예) 80" oninput="calcConversion()" /><span class="unit">만원</span></div></div>
+    </div>
+    <div class="field" style="margin-top:4px">
+      <div class="field-label">전월세 전환율</div>
+      <div class="input-wrap"><input type="number" id="conv-rate" placeholder="예) 4.5" step="0.1" oninput="calcConversion()" /><span class="unit">%</span></div>
+      <div class="field-hint">법정 상한: 기준금리 + 2% (기준금리는 변동될 수 있으니 한국은행 공시 기준으로 확인하세요)</div>
+    </div>
+  </div>
+  <div class="result-card" id="conv-result"><div id="conv-result-content"></div></div>
+  <div class="explain-section">
+    <button class="explain-toggle" onclick="toggleExplain(this)">전월세전환 완벽 가이드 <span class="etarrow">▼</span></button>
+    <div class="explain-body">
+      <h3>전월세 전환이란?</h3><p>전세보증금을 월세로 바꾸거나, 반대로 월세를 전세로 환산하는 계산입니다.</p>
+      <h3>법정 전환율 상한</h3><ul><li>법정 상한 = <strong>기준금리 + 2%</strong></li><li>법정 상한 초과 전환율은 무효</li></ul>
+      <h3>계산 공식</h3><ul><li>월세 = (전세금 - 보증금) × 전환율 ÷ 12</li><li>전세환산 = 현재보증금 + (월세 × 12 ÷ 전환율)</li></ul>
+    </div>
+  </div>
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>전월세 전환율 계산이 필요한 순간</h2>
+      <p>보증금을 월세로 얼마나 돌릴지, 또는 월세를 보증금으로 얼마나 상쇄할지 협의할 때 기준값이 필요합니다. 전환율 계산기는 여러 제안안을 같은 기준으로 비교하는 데 유용합니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>계약 협의</strong><span>보증금 1천만원 변경 시 월세 차이 확인</span></div>
+        <div class="guide-box"><strong>비교 판단</strong><span>두 매물의 실질 조건을 같은 기준으로 비교</span></div>
+        <div class="guide-box"><strong>주의</strong><span>시장 관행과 법정 기준은 다를 수 있음</span></div>
+      </div>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>전월세 전환율이 낮을수록 좋은가요?</h3><p>세입자와 임대인 입장에 따라 다릅니다. 중요한 것은 같은 금액 기준으로 월 부담과 초기 자금 부담을 함께 비교하는 것입니다.</p></div>
+      <div class="faq-item"><h3>시장 전환율과 법정 기준이 다를 수 있나요?</h3><p>네. 계약 협의에서는 체감 시장 조건이 반영되지만, 분쟁이나 기준 검토에서는 별도 기준을 함께 확인해야 할 수 있습니다.</p></div>
+      <div class="faq-item"><h3>계산 결과만 보고 바로 계약해도 되나요?</h3><p>아닙니다. 관리비, 주차비, 옵션, 계약기간 등 실질 비용도 같이 비교해야 합니다.</p></div>
+      <div class="update-note">최종 검토: 2026.03.24 · 실제 계약 조건과 함께 판단하세요.</div>
+    </div>
+  </div>
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '주택임대차보호법 제7조의2(월차임 전환 시 산정률), 한국은행 기준금리 반영',
+    appliedFrom: '2026년 1월 1일',
+    exceptions: [
+      '법정 전환율 상한(기준금리 + 2%)은 임대인이 보증금을 월세로 전환할 때 적용되는 상한입니다',
+      '시장에서 실제 적용되는 전환율은 지역·매물 조건에 따라 법정 기준과 다를 수 있습니다',
+      '관리비, 주차비, 옵션 비용 등 실질 비용은 별도로 비교해야 합니다',
+    ],
+    references: [
+      { name: '한국은행 기준금리(bok.or.kr)', url: 'https://www.bok.or.kr' },
+      { name: '국토교통부(molit.go.kr)', url: 'https://www.molit.go.kr' },
+    ],
+    lastReviewed: '2026.03.24',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
+  <div class="siblings-section">
+    <div class="siblings-title">다른 부동산 계산기</div>
+    <div class="siblings-grid">
+      <a href="/calc/realestate/brokerage/" class="sibling-link">중개수수료</a>
+      <a href="/calc/realestate/acquisition/" class="sibling-link">취득세</a>
+      <a href="/calc/realestate/conversion/" class="sibling-link current">전월세전환</a>
+      <a href="/calc/realestate/loan/" class="sibling-link">대출이자</a>
+      <a href="/calc/realestate/rental/" class="sibling-link">임대수익률</a>
+      <a href="/calc/realestate/capital-gains/" class="sibling-link">양도소득세</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+      <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
+  </div>
+</footer>
+<div class="toast" id="toast"></div>
+<script>
+function fmt(man) {
+  if (!man && man !== 0) return '-'; if (isNaN(man)) return '-';
+  const won = Math.round(man) * 10000;
+  if (won >= 100000000) { const uk=Math.floor(won/100000000); const rem=Math.round((won%100000000)/10000); return rem>0?uk+'억 '+rem.toLocaleString()+'만원':uk+'억원'; }
+  return Math.round(man).toLocaleString() + '만원';
+}
+function fmtWon(won) {
+  won = Math.round(won); if (isNaN(won)||won===0) return '-';
+  if (won>=100000000){const uk=Math.floor(won/100000000);const rem=Math.round((won%100000000)/10000);return rem>0?uk+'억 '+rem.toLocaleString()+'만원':uk+'억원';}
+  if (won>=10000){const man=Math.floor(won/10000);const chun=Math.round((won%10000)/1000);if(chun>0)return man.toLocaleString()+'만 '+chun+'천원';return man.toLocaleString()+'만원';}
+  return won.toLocaleString()+'원';
+}
+function showConverted(inputEl, dispEl) { const v=parseFloat(inputEl.value); dispEl.textContent=v>0?'= '+fmt(v):''; }
+function setActive(selector, activeEl) { document.querySelectorAll(selector).forEach(b=>b.classList.remove('active')); activeEl.classList.add('active'); }
+function toggleExplain(btn) { btn.classList.toggle('open'); btn.nextElementSibling.classList.toggle('show'); }
+function showToast(msg) { const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1800); }
+function saveAsImage(resultId, title) {
+  const el=document.getElementById(resultId);
+  if(el.style.display==='none'&&!el.classList.contains('show')){showToast('먼저 계산을 해주세요');return;}
+  showToast('이미지 저장 중...');
+  html2canvas(el,{scale:2,useCORS:true}).then(canvas=>{const link=document.createElement('a');link.download='부동산계산기_'+title+'.png';link.href=canvas.toDataURL('image/png');link.click();showToast('이미지가 저장되었습니다');}).catch(()=>showToast('저장 실패'));
+}
+document.addEventListener('DOMContentLoaded',function(){const et=document.querySelector('.explain-toggle');if(et){et.classList.add('open');et.nextElementSibling.classList.add('show');}});
+
+let convDir = 'to-monthly';
+function selectConvDir(dir, btn) {
+  convDir = dir;
+  setActive('.seg-btn[onclick^="selectConvDir"]', btn);
+  document.getElementById('conv-to-monthly').classList.toggle('hidden', dir === 'to-jeonse');
+  document.getElementById('conv-to-jeonse').classList.toggle('hidden', dir === 'to-monthly');
+  document.getElementById('conv-result').classList.remove('show');
+}
+function calcConversion() {
+  const rate = parseFloat(document.getElementById('conv-rate').value) / 100;
+  if (!rate) return;
+  let html = '';
+  if (convDir === 'to-monthly') {
+    const jeonse = parseFloat(document.getElementById('jeonse-amount').value) || 0;
+    const newDep = parseFloat(document.getElementById('new-deposit').value) || 0;
+    if (!jeonse) { document.getElementById('conv-result').classList.remove('show'); return; }
+    const diff = jeonse - newDep;
+    if (diff <= 0) { document.getElementById('conv-result').classList.remove('show'); return; }
+    const monthly = Math.round(diff * rate / 12);
+    html = '<div class="result-row"><span class="result-label">보증금 차액</span><span class="result-value">'+fmt(diff)+'</span></div><div class="result-row result-total-row"><span class="result-total-label">월세</span><span class="result-total-value">'+fmt(monthly)+'<span style="font-size:14px;font-weight:600;opacity:.7">/월</span></span></div><div class="result-note">보증금 '+fmt(newDep)+' + 월 '+fmt(monthly)+'</div>';
+  } else {
+    const dep = parseFloat(document.getElementById('curr-deposit').value) || 0;
+    const monthly = parseFloat(document.getElementById('curr-monthly').value) || 0;
+    if (!monthly) { document.getElementById('conv-result').classList.remove('show'); return; }
+    const added = Math.round(monthly * 12 / rate);
+    const total = dep + added;
+    html = '<div class="result-row"><span class="result-label">월세 환산 전세금</span><span class="result-value">'+fmt(added)+'</span></div><div class="result-row result-total-row"><span class="result-total-label">전세 환산금액</span><span class="result-total-value">'+fmt(total)+'</span></div>';
+  }
+  document.getElementById('conv-result-content').innerHTML = html;
+  document.getElementById('conv-result').classList.add('show');
+}
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+  <script src="/assets/realestate-shell.js"></script>
+</body></html>

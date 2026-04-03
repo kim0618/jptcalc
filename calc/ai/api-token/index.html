@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI API 토큰 비용 계산기 - ChatGPT·Claude·Gemini 비용 비교 | 제이퍼 계산기</title>
+  <meta name="description" content="GPT-4o, Claude Sonnet 4.6, Gemini 등 LLM API 토큰 비용을 일/월/연 단위로 자동 계산합니다. 한국어 토큰 환산 포함." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/ai/api-token/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AI API 토큰 비용 계산기 | 제이퍼 계산기" />
+  <meta property="og:description" content="GPT-4o, Claude Sonnet 4.6, Gemini 등 LLM API 토큰 비용을 일/월/연 단위로 자동 계산합니다. 한국어 토큰 환산 포함." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/ai/api-token/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="AI API 토큰 비용 계산기 | 제이퍼 계산기" />
+  <meta name="twitter:description" content="GPT-4o, Claude Sonnet 4.6, Gemini 등 LLM API 토큰 비용을 일/월/연 단위로 자동 계산합니다. 한국어 토큰 환산 포함." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/ai-common.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"AI API 토큰 비용 계산기","url":"https://www.jptcalc.kr/calc/ai/api-token/","applicationCategory":"BusinessApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+    {"@type":"ListItem","position":2,"name":"AI / 테크 비용 계산기","item":"https://www.jptcalc.kr/calc/ai/"},
+    {"@type":"ListItem","position":3,"name":"AI API 토큰 비용 계산기","item":"https://www.jptcalc.kr/calc/ai/api-token/"}
+  ]}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"한국어 서비스는 토큰이 더 많이 들 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"한국어는 영어보다 토큰 소비가 많습니다. 일반적으로 한국어 1글자는 약 2~3 토큰, 영어 1단어는 약 1.3 토큰으로 환산됩니다. 문장 구조와 응답 길이에 따라 다를 수 있으므로 실제 프롬프트와 평균 응답 길이로 샘플링해 보는 것이 가장 정확합니다."}},{"@type":"Question","name":"캐시, 배치 처리, 짧은 응답 유도는 얼마나 중요한가요?","acceptedAnswer":{"@type":"Answer","text":"이러한 최적화 방법은 운영비에 직접적인 영향을 줍니다. 특히 출력 토큰이 긴 서비스는 응답 길이 최적화 효과가 크며, 프롬프트 캐싱이나 배치 API를 활용하면 비용을 추가로 절감할 수 있습니다."}},{"@type":"Question","name":"실제 청구액과 계산 결과가 차이 날 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네, 차이가 날 수 있습니다. 환율, 벤더별 과금 시점, 추가 기능 사용 여부, 가격 정책 변경에 따라 실제 청구액이 달라질 수 있습니다. 최종 예산 수립 전에는 반드시 각 벤더의 공식 요금표를 확인하시기 바랍니다."}}]}</script>
+  <style>
+    /* api-token 고유 스타일 - 공통 스타일은 /assets/ai-common.css 참조 */
+    .input-wrap{position:relative}
+    .input-wrap .unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none}
+    input[type=number],select{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
+    select{padding:12px 16px;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 5l3 3 3-3' stroke='%239CA3AF' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+    input::placeholder{color:var(--gray-400);font-weight:400}
+    input:focus,select:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(139,92,246,0.15)}
+    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
+    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
+    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
+    .result-card{background:linear-gradient(135deg,#F5F3FF 0%,#EDE9FE 100%);border:1px solid var(--primary-border);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-row+.result-row{border-top:1px solid rgba(0,0,0,0.07)}
+    .result-total-row{border-top:1px solid rgba(0,0,0,0.15)!important;margin-top:4px;padding-top:14px!important}
+    .result-total-value{font-size:24px;font-weight:900;color:var(--gray-900)}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/ai/" class="nav-item active"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/ai/">AI / 테크 비용 계산기</a><span class="breadcrumb-sep">›</span><span>AI API 토큰 비용 계산기</span></div>
+    <div class="page-header-badge">⚡ 2026년 3월 확인 기준</div>
+    <h1>AI API 토큰 비용 계산기</h1>
+    <p>ChatGPT·Claude·Gemini API 토큰 비용을 모델별로 비교 계산하세요</p>
+  </div>
+    <div class="card">
+      <div class="card-title">LLM API 토큰 비용 계산</div>
+      <div class="info-box"><span class="info-icon">💡</span><p>모델별 입력/출력 토큰 가격이 다릅니다. 한국어 1글자 ≈ 2~3 토큰, 영어 1단어 ≈ 1.3 토큰 기준입니다.</p></div>
+      <div class="field">
+        <div class="field-label"><span>모델 선택</span></div>
+        <select id="api-model" onchange="calc()"><!-- /assets/ai-models-config.js 에서 동적 생성 --></select>
+      </div>
+      <div class="field">
+        <div class="field-label"><span>일 평균 요청 횟수</span></div>
+        <div class="input-wrap"><input type="number" id="api-requests" placeholder="예)1000" oninput="calc()"><span class="unit">회/일</span></div>
+      </div>
+      <div class="field">
+        <div class="field-label"><span>요청당 평균 입력 토큰</span></div>
+        <div class="input-wrap"><input type="number" id="api-input-tokens" placeholder="예) 500" oninput="calc()"><span class="unit">토큰</span></div>
+      </div>
+      <div class="field">
+        <div class="field-label"><span>요청당 평균 출력 토큰</span></div>
+        <div class="input-wrap"><input type="number" id="api-output-tokens" placeholder="예) 300" oninput="calc()"><span class="unit">토큰</span></div>
+      </div>
+      <div class="field">
+        <div class="field-label"><span>환율 (USD/KRW)</span></div>
+        <div class="input-wrap"><input type="number" id="api-exchange" placeholder="예) 1450" oninput="calc()"><span class="unit">원</span></div>
+      </div>
+      <div class="result-card" id="result"><div id="result-content"></div></div>
+    </div>
+  
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>AI API 토큰 비용 계산기를 언제 쓰나요?</h2>
+      <p>ChatGPT, Claude, Gemini 같은 모델을 서비스에 붙일 때는 응답 품질만큼 운영비 추정이 중요합니다. 이 계산기는 테스트 단계의 월 예상 비용, 사용자 증가 시 손익분기점, 모델 변경 전후의 비용 차이를 빠르게 확인하는 데 적합합니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>PoC 단계</strong><span>일일 요청량 기준 월 예산 추정</span></div>
+        <div class="guide-box"><strong>운영 단계</strong><span>입력·출력 토큰 비중별 비용 비교</span></div>
+        <div class="guide-box"><strong>의사결정</strong><span>모델 성능 대비 비용 효율 검토</span></div>
+      </div>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>한국어 서비스는 토큰이 더 많이 들 수 있나요?</h3><p>문장 구조와 응답 길이에 따라 다를 수 있습니다. 실제 프롬프트와 평균 응답 길이로 샘플링해 보는 것이 가장 정확합니다.</p></div>
+      <div class="faq-item"><h3>캐시, 배치 처리, 짧은 응답 유도는 얼마나 중요하나요?</h3><p>운영비에 직접적인 영향을 줍니다. 특히 출력 토큰이 긴 서비스는 응답 길이 최적화 효과가 큽니다.</p></div>
+      <div class="faq-item"><h3>실제 청구액과 차이가 날 수 있나요?</h3><p>환율, 벤더별 과금 시점, 추가 기능 사용 여부, 가격 정책 변경에 따라 차이가 날 수 있습니다.</p></div>
+      <div class="update-note">최종 검토: 2026.03.25 · 실제 과금 전 벤더 요금표를 다시 확인하세요.</div>
+    </div>
+  </div>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 AI / 테크 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/ai/api-token/" class="sibling-link current">⚡ API 토큰 비용</a>
+      <a href="/calc/ai/gpu-cloud/" class="sibling-link">💻 GPU 클라우드</a>
+      <a href="/calc/ai/saas-comparison/" class="sibling-link">⚖️ SaaS vs 자체구축</a>
+      <a href="/calc/ai/llm-comparison/" class="sibling-link">📊 LLM 비교표</a>
+      <a href="/calc/ai/infra-forecast/" class="sibling-link">🚀 인프라 예측</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script src="/assets/ai-models-config.js"></script>
+<script>
+// 모델 드롭다운을 /assets/ai-models-config.js 데이터에서 동적 생성합니다
+(function(){
+  var sel=document.getElementById('api-model');
+  window.AI_MODELS_SELECT_ORDER.forEach(function(id){
+    var m=window.AI_MODELS[id];
+    var opt=document.createElement('option');
+    opt.value=id;
+    opt.textContent=m.name+' ($'+m.input.toFixed(2)+' / $'+m.output.toFixed(2)+' per 1M)';
+    if(id===window.AI_MODELS_DEFAULT)opt.selected=true;
+    sel.appendChild(opt);
+  });
+})();
+function fmtUsd(v){return '$'+v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function fmtKrw(v){v=Math.round(v);if(v>=100000000)return Math.floor(v/100000000).toLocaleString()+'억 '+Math.floor((v%100000000)/10000).toLocaleString()+'만원';if(v>=10000)return Math.floor(v/10000).toLocaleString()+'만 '+(v%10000).toLocaleString()+'원';return v.toLocaleString()+'원';}
+function calc(){
+  const mk=document.getElementById('api-model').value,m=window.AI_MODELS[mk];
+  const reqs=parseFloat(document.getElementById('api-requests').value)||0;
+  const inTok=parseFloat(document.getElementById('api-input-tokens').value)||0;
+  const outTok=parseFloat(document.getElementById('api-output-tokens').value)||0;
+  const ex=parseFloat(document.getElementById('api-exchange').value)||1450;
+  if(!reqs){document.getElementById('result').classList.remove('show');return;}
+  const dIn=(reqs*inTok/1e6)*m.input,dOut=(reqs*outTok/1e6)*m.output,dT=dIn+dOut,mT=dT*30,yT=dT*365;
+  document.getElementById('result-content').innerHTML=`
+    <div class="result-row"><span class="result-label">모델</span><span class="result-value">${m.name}</span></div>
+    <div class="result-row"><span class="result-label">일 총 토큰</span><span class="result-value">입력 ${(reqs*inTok).toLocaleString()} + 출력 ${(reqs*outTok).toLocaleString()}</span></div>
+    <div class="result-row"><span class="result-label">일 비용</span><span class="result-value">${fmtUsd(dT)} (${fmtKrw(dT*ex)})</span></div>
+    <div class="result-row result-total-row"><span class="result-total-label">월 비용 (30일)</span><span class="result-total-value">${fmtUsd(mT)}</span></div>
+    <div class="result-row"><span class="result-label">월 비용 (원화)</span><span class="result-value" style="color:var(--primary);font-size:17px;font-weight:800;">${fmtKrw(mT*ex)}</span></div>
+    <div class="result-row"><span class="result-label">연 비용 추정</span><span class="result-value">${fmtUsd(yT)} (${fmtKrw(yT*ex)})</span></div>
+    <div class="result-note">* 가격: 입력 $${m.input}/1M, 출력 $${m.output}/1M 토큰 기준<br>* 프롬프트 캐싱, 배치 API 할인 미반영</div>`;
+  document.getElementById('result').classList.add('show');
+}
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/ai-detail-shell.js"></script>
+</body>
+</html>
