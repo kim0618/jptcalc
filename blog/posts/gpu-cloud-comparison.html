@@ -56,6 +56,77 @@
     .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
     .footer-copy{font-size:10px;color:#6B7280}
   </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "GPU 클라우드 서버 비용 비교 - AWS vs GCP vs Azure vs Lambda",
+  "description": "AI·딥러닝 GPU 클라우드 서버 비용 비교. AWS, GCP, Azure, Lambda Labs, Vast.ai 가격 및 특징을 정리했습니다.",
+  "author": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.jptcalc.kr/android-chrome-512x512.png"
+    }
+  },
+  "datePublished": "2026-03-23",
+  "dateModified": "2026-03-23",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.jptcalc.kr/blog/posts/gpu-cloud-comparison.html"
+  },
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "AI·테크",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "스팟(Spot) 인스턴스를 사용하면 얼마나 절약할 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AWS Spot, GCP Preemptible 인스턴스를 사용하면 온디맨드 대비 최대 60~70% 비용을 절감할 수 있습니다. 다만 클라우드 제공자가 언제든 인스턴스를 회수할 수 있으므로, 체크포인트 저장이 가능한 학습 작업에 적합합니다. 추론 서비스처럼 안정성이 중요한 용도에는 권장하지 않습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "온프레미스 GPU 서버와 클라우드 중 어느 쪽이 경제적인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "월 500시간 이상 지속적으로 GPU를 사용하는 경우, 온프레미스가 2~3년 기준으로 더 경제적입니다. A100 서버 1대의 초기 투자비가 약 1.5~2억 원 수준이지만, 3년 클라우드 비용과 비교하면 손익 분기점을 넘깁니다. 반대로 사용량이 불규칙하거나 월 100시간 미만이면 클라우드가 유리합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "AI 학습용으로 어떤 GPU를 선택해야 하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "소규모 실험이나 파인튜닝에는 A100 40GB 1장으로 충분한 경우가 많습니다. 7B 이상의 LLM 학습에는 A100 80GB 또는 H100이 필요하며, 70B 이상 모델은 멀티 GPU(4~8장) 구성이 필수입니다. 추론 전용이라면 T4나 L4 같은 저가 GPU도 좋은 선택입니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "스타트업 크레딧 프로그램은 어떻게 신청하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AWS Activate, Google for Startups Cloud Program, Microsoft for Startups 모두 온라인으로 신청할 수 있습니다. 일반적으로 $1,000~$100,000 상당의 크레딧을 제공하며, 스타트업 단계에 따라 금액이 다릅니다. 액셀러레이터나 VC 추천을 받으면 더 높은 금액의 크레딧을 받을 수 있습니다."
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 <header class="site-header">
@@ -120,6 +191,17 @@
       <tr><td>H100 80GB</td><td>$3.29</td><td>약 2.5x</td><td>약 1.5x</td></tr>
     </table></div>
     <p>대규모 LLM 파인튜닝이나 학습 시 H100이 총 비용 면에서 유리한 경우가 많습니다. 반면 소규모 실험이나 추론 작업에서는 A100의 가성비가 여전히 좋습니다(NVIDIA 공식 벤치마크 기준).</p>
+
+    <h2>월 비용 시뮬레이션 - 실제 얼마가 나올까</h2>
+    <p>하루 8시간, 주 5일(월 약 176시간) GPU를 사용한다고 가정할 때 클라우드별 월 예상 비용을 비교합니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>클라우드</th><th>GPU</th><th>온디맨드 월 비용</th><th>스팟/선점 월 비용</th></tr>
+      <tr><td>GCP</td><td>A100 x1</td><td>약 $646 (약 88만원)</td><td>약 $226 (약 31만원)</td></tr>
+      <tr><td>Azure</td><td>A100 x1</td><td>약 $598 (약 82만원)</td><td>약 $239 (약 33만원)</td></tr>
+      <tr><td>Lambda Labs</td><td>A100 x1</td><td>약 $350 (약 48만원)</td><td>-</td></tr>
+      <tr><td>Vast.ai</td><td>A100 x1</td><td>약 $158~$440</td><td>-</td></tr>
+    </table></div>
+    <p>환율 1,370원/$ 기준 추정치입니다. Lambda Labs는 스팟 옵션이 없지만 온디맨드 가격 자체가 낮아 월 기준으로도 경쟁력이 있습니다. 사용 시간이 월 400시간을 넘으면 예약 인스턴스나 온프레미스 전환을 검토하는 것이 합리적입니다.</p>
 
     <h2>자주 묻는 질문 (FAQ)</h2>
 

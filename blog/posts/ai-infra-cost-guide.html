@@ -81,6 +81,77 @@
     .site-footer { border-top: 1px solid rgba(0,0,0,0.08); padding: 24px; text-align: center; }
     .footer-copy { font-size: 10px; color: #374151; }
   </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI 서비스 운영 비용, 월 얼마나 들까? 인프라 비용 예측 가이드",
+  "description": "AI 서비스 운영에 필요한 GPU, API, 스토리지, 트래픽 비용을 항목별로 정리. 월 사용자 1만·10만·100만 명 규모별 실제 비용 시뮬레이션과 절감 전략까지 확인하세요.",
+  "author": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.jptcalc.kr/android-chrome-512x512.png"
+    }
+  },
+  "datePublished": "2026-03-31",
+  "dateModified": "2026-03-31",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.jptcalc.kr/blog/posts/ai-infra-cost-guide.html"
+  },
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "AI/테크",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "AI 서비스를 시작할 때 최소 비용은 얼마인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "API 호출 방식으로 시작하면 월 30~50만원 수준에서 가능합니다. 서버 비용(월 5~10만원) + API 비용(사용량에 따라)으로 구성됩니다. 트래픽이 적은 초기에는 API 방식이 압도적으로 유리합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "API 비용이 갑자기 폭증하는 경우가 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "있습니다. 트래픽 급증, 프롬프트 인젝션 공격, 무한 루프 버그 등으로 비용이 예상치 못하게 올라갈 수 있습니다. OpenAI와 Anthropic 모두 월간 사용량 상한(Usage Limit)을 설정할 수 있으니 반드시 설정해두세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "오픈소스 모델(Llama 등)을 직접 운영하면 비용이 줄어드나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "대량 처리 시에는 줄어듭니다. 하지만 GPU 서버 비용(A100 1대 월 $2,000~4,000)과 운영 인력이 필요합니다. 일 요청 10만 건 이상이고 DevOps 역량이 있다면 비용 효율적이지만, 소규모 서비스에서는 API 호출이 더 저렴합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "비용 예측이 어려울 때 어떻게 해야 하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "먼저 소규모로 API 방식으로 시작해서 실제 사용 패턴(일 요청 수, 평균 토큰 수, 피크 시간대)을 2~4주간 측정하세요. 그 데이터를 기반으로 인프라 비용 예측 계산기에 입력하면 정확한 월 비용을 산출할 수 있습니다."
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 

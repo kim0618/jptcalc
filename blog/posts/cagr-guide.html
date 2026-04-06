@@ -58,6 +58,77 @@
     .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
     .footer-copy{font-size:10px;color:#6B7280}
   </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "CAGR(연평균 성장률)로 투자 수익률 제대로 비교하는 법",
+  "description": "투자 기간이 다른 상품을 비교할 때는 단순 수익률이 아닌 CAGR(연평균 성장률)이 필요합니다. 공식, 펀드 비교 예시, 목표 수익률 역산 방법까지 정리했습니다.",
+  "author": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.jptcalc.kr/android-chrome-512x512.png"
+    }
+  },
+  "datePublished": "2026-03-29",
+  "dateModified": "2026-03-29",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.jptcalc.kr/blog/posts/cagr-guide.html"
+  },
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "금융",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "CAGR이 높을수록 무조건 좋은 투자인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "아닙니다. CAGR은 수익률만 표시하고 위험도를 반영하지 않습니다. 변동성, 최대 낙폭, 유동성 등도 함께 평가해야 합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "부동산 수익률도 CAGR로 계산할 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "그렇습니다. 5년 전 3억에 산 아파트가 4.5억이 됐다면 CAGR ≒ 8.45%. 단 취득세·양도세·보유세·대출이자를 빼야 실질 수익률이 나옵니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "목표 수익률이 너무 높으면 위험하다는 기준이 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "연평균 15% 이상의 CAGR을 기대하는 투자는 그만큼 변동성과 위험도가 높다는 의미입니다. 장기 평균 주식 시장 수익률(S&P500 역사적 평균 약 10%)을 기준 삼아 현실적으로 목표를 설정하는 것이 좋습니다. 한국은행 경제통계시스템에서 국내 시장 수익률 데이터도 확인할 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "적금이나 예금도 CAGR로 표시할 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "가능합니다. 연 3% 단리 예금은 1년 단위로 보면 CAGR과 같습니다. 단 복리 예금은 이자가 원금에 합산되므로 실질 CAGR이 약간 더 높습니다."
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 <header class="site-header">
@@ -112,6 +183,18 @@
       <a href="../../calc/finance/investment/" class="cta-btn">투자 수익률(CAGR) 계산하기</a>
     </div>
     <p style="font-size: 13px; color: #6B7280; margin-top: 8px;">관련 계산기: <a href="https://www.jptcalc.kr/calc/finance/deposit/">예금 이자 계산기</a> · <a href="https://www.jptcalc.kr/calc/finance/savings/">적금 만기 계산기</a></p>
+
+    <h2>주요 자산별 역사적 CAGR 비교</h2>
+    <p>CAGR의 실질적 감각을 잡으려면 주요 자산군의 장기 수익률을 비교해보는 것이 도움이 됩니다. 아래는 한국 시장 기준 약 10~20년 장기 데이터를 참고한 대략적인 수치입니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>자산</th><th>기간</th><th>대략적 CAGR</th><th>비고</th></tr>
+      <tr><td>KOSPI 지수</td><td>2006~2025 (약 20년)</td><td>약 4~6%</td><td>배당 미포함 기준, 변동성 큼</td></tr>
+      <tr><td>S&P500 (원화 환산)</td><td>2006~2025</td><td>약 10~12%</td><td>환율 변동 포함 시 차이 발생</td></tr>
+      <tr><td>서울 아파트</td><td>2006~2025</td><td>약 5~8%</td><td>지역·면적별 편차 큼</td></tr>
+      <tr><td>정기 예금</td><td>2016~2025 (약 10년)</td><td>약 2~3%</td><td>세전 기준, 안정적</td></tr>
+      <tr><td>금(국제 금값)</td><td>2006~2025</td><td>약 8~10%</td><td>원화 환산 시 환율 영향 있음</td></tr>
+    </table></div>
+    <p>위 표에서 볼 수 있듯이, 높은 CAGR은 높은 변동성과 함께 옵니다. KOSPI의 CAGR이 4~6%로 상대적으로 낮아 보이지만, 중간에 -40% 이상 하락한 해(2008년, 2020년 등)가 있었기 때문입니다. 반면 정기 예금은 CAGR이 낮지만 원금 손실 위험이 거의 없습니다. 자신의 투자 목표와 감당 가능한 위험 수준에 맞춰 현실적인 목표 CAGR을 설정하는 것이 중요합니다.</p>
 
     <h2>자주 묻는 질문 (FAQ)</h2>
 

@@ -53,6 +53,77 @@
     .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
     .footer-copy{font-size:10px;color:#6B7280}
   </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "날짜 차이 계산 - 두 날짜 사이 일수·주수·개월 수 구하기",
+  "description": "두 날짜 사이의 일수, 주수, 개월 수, 연수를 계산하는 방법과 윤년 계산, 근무일수 계산 방법을 정리했습니다.",
+  "author": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.jptcalc.kr/android-chrome-512x512.png"
+    }
+  },
+  "datePublished": "2026-03-23",
+  "dateModified": "2026-03-23",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.jptcalc.kr/blog/posts/date-difference.html"
+  },
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "날짜·D-day",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "윤년이 포함된 기간의 날짜 차이는 어떻게 계산하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "윤년(2월 29일이 있는 해)이 포함된 기간은 해당 연도의 일수가 366일이 됩니다. 예를 들어 2024년 1월 1일부터 2025년 1월 1일까지는 366일이고, 2025년 1월 1일부터 2026년 1월 1일까지는 365일입니다. 날짜 계산기는 윤년을 자동으로 반영하므로, 수작업보다 계산기를 이용하는 것이 정확합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "근무일수(영업일)만 계산하려면 어떻게 하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "근무일수는 전체 날짜 차이에서 토·일요일과 법정 공휴일을 빼서 계산합니다. 대략적인 방법으로는 전체 일수에서 (일수 / 7 x 2)를 빼면 주말을 제외한 일수가 나옵니다. 여기서 기간 내 공휴일(연 15일 내외)을 추가로 빼면 됩니다. 대체공휴일도 포함해야 하므로 정확한 계산은 계산기를 활용하세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "날짜 차이를 개월 수로 변환할 때 왜 30으로 나누면 안 되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "월별 일수가 28일(2월)부터 31일까지 다르기 때문입니다. 예를 들어 1월 31일부터 2월 28일까지는 28일이지만 1개월이 아닌 0개월 28일입니다. 반면 2월 1일부터 3월 1일까지는 28일(또는 29일)이지만 정확히 1개월입니다. 정확한 개월 수 계산은 월 단위로 세는 방식(역에 의한 계산)을 사용해야 합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "시작일을 포함해서 세나요, 제외하고 세나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "용도에 따라 다릅니다. 민법 제157조에 따르면 기간 계산 시 초일(시작일)은 산입하지 않는 것이 원칙입니다. 하지만 계약서에서 \"OO일부터\"라고 명시하면 해당일을 포함합니다. 근속 연수는 입사일을 포함하고, 법적 기한(소송 기간 등)은 초일을 제외하는 것이 일반적입니다. 헷갈리면 날짜 차이 계산기에서 \"시작일 포함\" 옵션을 확인해보세요."
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 <header class="site-header">

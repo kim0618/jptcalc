@@ -56,6 +56,77 @@
     .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
     .footer-copy{font-size:10px;color:#6B7280}
   </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ChatGPT API 비용 계산 - 토큰 요금 완전 정리",
+  "description": "ChatGPT API 토큰 요금 체계, GPT-4o·GPT-4 Turbo·GPT-3.5 모델별 비용 비교, 실제 사용량 기준 월 비용 예측 방법을 정리했습니다.",
+  "author": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.jptcalc.kr/android-chrome-512x512.png"
+    }
+  },
+  "datePublished": "2026-03-21",
+  "dateModified": "2026-03-21",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.jptcalc.kr/blog/posts/chatgpt-api-cost.html"
+  },
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "AI/테크",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "API 토큰 비용을 줄이는 가장 효과적인 방법은?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "가장 즉각적인 방법은 모델 선택 최적화입니다. 단순 분류, 요약, 포맷 변환 등은 GPT-4o mini로 충분하며, GPT-4o 대비 약 94% 저렴합니다. 그다음으로는 시스템 프롬프트 길이 최적화(불필요한 예시 제거), 응답 캐싱(동일 질문 재호출 방지), Batch API 활용(50% 할인) 순으로 효과가 큽니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "응답 캐싱은 어떻게 구현하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OpenAI API 자체에는 캐싱 기능이 없으므로, 서버 측에서 구현해야 합니다. 가장 간단한 방법은 Redis나 Memcached에 입력 프롬프트의 해시값을 키로, API 응답을 값으로 저장하는 것입니다. 동일하거나 유사한 질문이 반복되는 FAQ 봇, 고객 상담 봇 등에서 API 호출을 30~50% 줄일 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "GPT-4o와 GPT-4o mini 중 어떤 모델을 선택해야 하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GPT-4o mini는 단순 텍스트 생성, 분류, 요약, 번역 등 대부분의 일반 작업에서 충분한 성능을 보입니다. GPT-4o는 복잡한 추론, 코드 생성, 멀티모달(이미지 분석) 작업에서 확실한 성능 차이를 보입니다. 많은 서비스에서 라우팅 방식을 사용해, 간단한 요청은 mini로, 복잡한 요청만 GPT-4o로 보내는 전략을 씁니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "한국어 서비스에서 토큰 비용이 더 많이 드는 이유는?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OpenAI의 토크나이저(tiktoken)는 영어 중심으로 설계되어, 한국어 1글자가 평균 2~3토큰으로 인코딩됩니다. 동일한 내용을 영어로 처리하면 한국어 대비 토큰 소비가 약 40~60% 줄어듭니다. 내부 처리는 영어로 하고 입출력만 한국어로 변환하는 방식으로 비용을 절감하는 방법도 있습니다."
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 <header class="site-header">
