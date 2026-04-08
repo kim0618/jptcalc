@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>군 전역일 계산법 - 입대일 기준 전역 날짜 정확히 계산하기 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="2026년 기준 군 전역일 계산법 총정리. 육군 18개월, 해군 20개월, 공군 21개월 등 군별 복무기간 비교와 사회복무요원 기간, 입대 시기별 전역일 계산 예시, 전역일 변경 사유까지 한번에 확인하세요." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="군 전역일 계산법 - 입대일 기준 전역 날짜 정확히 계산하기 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="2026년 기준 군 전역일 계산법 총정리. 육군 18개월, 해군 20개월, 공군 21개월 등 군별 복무기간 비교와 사회복무요원 기간, 입대일 기준 전역일 계산 예시까지 확인하세요." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/military-discharge-date.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/military-discharge-date.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#F97316;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(249,115,22,0.15);color:#F97316;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:24px 0 10px}
+    .post-body p{margin-bottom:14px}
+    .post-body ul,.post-body ol{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#F97316;text-decoration:none}
+    .highlight-box{background:rgba(249,115,22,0.08);border-left:4px solid #F97316;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#9A3412;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    td.rate{color:#F97316;font-weight:700}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#F97316;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .faq-item{margin:24px 0}
+    .faq-q{font-weight:800;font-size:15px;color:#111827;margin-bottom:6px}
+    .faq-a{font-size:14px;color:#374151;line-height:1.8}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "군 전역일 계산법 - 입대일 기준 전역 날짜 정확히 계산하기",
+  "description": "2026년 기준 군 전역일 계산법 총정리. 육군 18개월, 해군 20개월, 공군 21개월 등 군별 복무기간 비교와 사회복무요원 기간, 입대 시기별 전역일 계산 예시, 전역일 변경 사유까지 한번에 확인하세요.",
+  "author": { "@type": "Organization", "name": "제이퍼 계산기", "url": "https://www.jptcalc.kr" },
+  "publisher": { "@type": "Organization", "name": "제이퍼 계산기", "url": "https://www.jptcalc.kr", "logo": { "@type": "ImageObject", "url": "https://www.jptcalc.kr/android-chrome-512x512.png" } },
+  "datePublished": "2026-04-08",
+  "dateModified": "2026-04-08",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.jptcalc.kr/blog/posts/military-discharge-date.html" },
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "날짜·D-day",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "군 복무기간이 앞으로 더 줄어들 가능성이 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "2018~2020년에 걸쳐 육군 기준 21개월에서 18개월로 단축이 완료된 이후, 추가 단축은 확정된 바 없습니다. 국방부는 병력 규모와 안보 상황을 종합적으로 고려해 복무기간을 결정하며, 단축보다는 복무 여건 개선 쪽에 초점을 맞추고 있습니다. 다만 국회에서 추가 단축 법안이 발의된 적이 있으므로, 병무청 공지사항을 수시로 확인하는 것이 좋습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "복무 중 입원하면 전역일이 뒤로 밀리나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "군 복무 중 질병이나 부상으로 입원하더라도 원칙적으로 전역일은 변동되지 않습니다. 입원 기간도 복무 기간에 포함됩니다. 다만 예외적으로 군사법원의 판결에 따라 징역이나 구금 처분을 받은 경우, 그 기간은 복무 기간에서 제외되어 전역일이 늦어질 수 있습니다. 이 경우 해당 기간만큼 복무 종료일이 연장됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "포상 휴가를 많이 받으면 전역이 빨라지나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "포상 휴가는 전역일에 영향을 주지 않습니다. 휴가 기간도 복무 기간에 포함되기 때문입니다. 정기 휴가, 포상 휴가, 위로 휴가 등 모든 휴가가 마찬가지입니다. 실제 전역일을 앞당기는 유일한 방법은 법률 개정에 의한 복무기간 단축뿐입니다. 다만 마지막 휴가를 전역일 직전에 사용하면 실질적으로 부대를 일찍 떠나는 효과가 있어, 이를 '사실상 조기 전역'으로 오해하는 경우가 많습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "군 복무기간이 국민연금 가입기간에 반영되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "군 복무기간 중 최대 6개월이 국민연금 가입기간으로 추가 산입됩니다. 이를 '군복무 크레딧'이라고 하며, 2008년 1월 1일 이후 입대한 사람부터 적용됩니다. 별도 신청 없이 전역 후 국민연금에 가입하면 자동으로 반영됩니다. 다만 최대 6개월까지만 인정되므로, 18개월 복무하더라도 6개월분만 산입됩니다. 연금 수령액에 직접 영향을 주는 부분이니 전역 후 국민연금공단에서 가입 내역을 확인해보세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "입대 연기는 최대 몇 번까지 가능한가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "입영 연기 사유와 횟수는 병역법 시행령에 정해져 있습니다. 학업 사유의 경우 재학 중인 기간 동안 연기가 가능하며, 질병·재해 등의 사유는 해당 기간 동안 연기됩니다. 단순히 개인 사정으로 무한정 연기할 수는 없고, 만 28세까지는 반드시 입영해야 합니다. 정당한 사유 없이 입영을 기피하면 병역법 위반으로 처벌 대상이 됩니다. 구체적인 연기 가능 횟수와 사유는 병무청 홈페이지에서 본인의 병역 처분 유형에 맞게 확인하세요."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo"><div class="logo-icon"><img src="../../assets/logo.svg" alt="로고"/></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+<div class="post-wrap">
+  <span class="post-tag">날짜·D-day</span>
+  <h1>군 전역일 계산법 - 입대일 기준 전역 날짜 정확히 계산하기</h1>
+  <div class="post-meta"><span>📅 2026.04.08</span><span>·</span><span>5분 읽기</span></div>
+  <div class="post-body">
+
+    <p>입영 통지서가 우편함에 꽂혀 있던 날, 제일 먼저 한 검색이 뭐였는지 기억나시나요. 아마 "나 언제 전역하지?"였을 겁니다. 입대일은 정해졌는데 전역일은 바로 안 보이니까, 달력 앞에서 손가락으로 하나하나 세다가 포기하는 사람도 적지 않습니다.</p>
+    <p>답은 간단합니다. 공식 하나만 알면 전역일을 바로 구할 수 있고, 거기서 역산해서 복학 시기나 취업 준비 계획까지 세울 수 있습니다.</p>
+
+    <h2>전역일 계산 공식 - 딱 한 줄</h2>
+    <p>전역일 계산 공식은 다음과 같습니다.</p>
+    <div class="highlight-box"><p><strong>전역일 = 입대일 + 복무기간(개월) - 1일</strong><br>입대 당일이 복무 1일째로 산입되기 때문에 복무기간 만료일의 <strong>전날</strong>에 전역합니다.</p></div>
+    <p>예를 들어 2026년 4월 8일에 육군으로 입대하면, 18개월 후인 2027년 10월 8일이 복무 만료일이고, 전역일은 그 전날인 <strong>2027년 10월 7일</strong>입니다. 복무 기간을 날짜로 환산하면 총 548일(입대일·전역일 포함)입니다.</p>
+    <p>여기서 주의할 점이 하나 있는데요. "개월"은 달력 기준입니다. 1월 31일에 입대해서 18개월을 더하면 7월 31일이 만료일이지, 단순히 30일 x 18 = 540일을 더하는 게 아닙니다. 월마다 일수가 다르기 때문에 <a href="../posts/date-add-guide.html" style="color:#F97316;">날짜 더하기 계산기</a>를 활용하면 실수를 줄일 수 있습니다.</p>
+
+    <h2>2026년 군별 복무기간 비교</h2>
+    <p>복무 유형에 따라 기간이 크게 다릅니다. 같은 현역이라도 군종에 따라 최대 3개월 차이가 나고, 대체복무까지 포함하면 16개월 이상 벌어집니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>복무 유형</th><th>복무기간</th><th>2026.04.08 입대 시 전역일</th><th>총 일수(포함)</th></tr>
+      <tr><td>육군·해병대</td><td class="rate">18개월</td><td>2027.10.07</td><td>548일</td></tr>
+      <tr><td>해군</td><td class="rate">20개월</td><td>2027.12.07</td><td>609일</td></tr>
+      <tr><td>공군</td><td class="rate">21개월</td><td>2028.01.07</td><td>640일</td></tr>
+      <tr><td>사회복무요원</td><td class="rate">21개월</td><td>2028.01.07</td><td>640일</td></tr>
+      <tr><td>산업기능요원(제조)</td><td class="rate">34개월</td><td>2029.02.07</td><td>1,036일</td></tr>
+      <tr><td>전문연구요원</td><td class="rate">36개월</td><td>2029.04.07</td><td>1,096일</td></tr>
+    </table></div>
+    <p>육군과 해병대가 18개월로 가장 짧고, 전문연구요원이 36개월로 가장 깁니다. 산업기능요원과 전문연구요원은 복무 기간이 길지만 해당 분야 경력으로 인정받을 수 있다는 차이가 있습니다.</p>
+
+    <div style="margin:24px 0;overflow-x:auto">
+<svg role="img" width="100%" viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+  <title>군별 복무기간 비교 차트</title>
+  <rect width="680" height="260" rx="12" fill="#F9FAFB"/>
+  <text x="24" y="32" font-size="14" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">군별 복무기간 비교 (2026년 기준)</text>
+  <text x="24" y="72" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">육군·해병대</text>
+  <rect x="130" y="58" width="270" height="22" rx="4" fill="#F97316" opacity="0.85"/>
+  <text x="408" y="74" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">18개월</text>
+  <text x="24" y="112" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">해군</text>
+  <rect x="130" y="98" width="300" height="22" rx="4" fill="#FB923C" opacity="0.75"/>
+  <text x="438" y="114" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">20개월</text>
+  <text x="24" y="152" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">공군</text>
+  <rect x="130" y="138" width="315" height="22" rx="4" fill="#FDBA74" opacity="0.8"/>
+  <text x="453" y="154" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">21개월</text>
+  <text x="24" y="192" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">사회복무요원</text>
+  <rect x="130" y="178" width="315" height="22" rx="4" fill="#FDBA74" opacity="0.7"/>
+  <text x="453" y="194" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">21개월</text>
+  <text x="24" y="232" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">산업기능요원</text>
+  <rect x="130" y="218" width="510" height="22" rx="4" fill="#D1D5DB"/>
+  <text x="548" y="234" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">34개월</text>
+</svg>
+    </div>
+
+    <h2>입대 시기에 따라 전역 계절이 달라진다</h2>
+    <p>같은 육군이라도 입대 시기에 따라 전역하는 계절이 완전히 달라집니다. 복학이나 취업 일정을 고려한다면 입대 시기 선택이 중요합니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>입대월 (2026년)</th><th>전역일 (육군 18개월)</th><th>전역 계절</th><th>참고</th></tr>
+      <tr><td>1월</td><td>2027년 7월</td><td>여름</td><td>2학기 복학 가능</td></tr>
+      <tr><td>3월</td><td>2027년 9월</td><td>가을</td><td>2학기 중간 복학</td></tr>
+      <tr><td>4월</td><td>2027년 10월</td><td>가을</td><td>다음해 1학기 준비</td></tr>
+      <tr><td>7월</td><td>2028년 1월</td><td>겨울</td><td>1학기 복학 가능</td></tr>
+      <tr><td>9월</td><td>2028년 3월</td><td>봄</td><td>1학기 바로 복학</td></tr>
+      <tr><td>11월</td><td>2028년 5월</td><td>봄</td><td>2학기부터 복학</td></tr>
+    </table></div>
+    <p>개인적으로는 9월 입대가 복학에 유리하다고 봅니다. 2028년 3월에 전역하면 바로 1학기 개강에 맞출 수 있어서 학기 공백이 거의 없습니다. 반면 4월이나 11월 입대는 전역 후 다음 학기까지 몇 달을 기다려야 합니다.</p>
+
+    <h3>시나리오 1: 대학생 A씨(22세), 육군 4월 입대</h3>
+    <div class="highlight-box"><p>A씨는 2학년 1학기를 마치고 2026년 4월 8일 육군에 입대합니다.<br>복무기간: 18개월<br>전역일: 2026.04.08 + 18개월 - 1일 = <strong>2027년 10월 7일</strong><br>검산: 4월 → 10월 = 6개월, 여기에 1년 추가 = 18개월. 만료일 10월 8일의 전날 = 10월 7일 ✓<br>전역 후 2028년 3월 복학까지 약 5개월 여유가 있어 자격증 취득이나 여행을 계획할 수 있습니다.</p></div>
+
+    <h3>시나리오 2: 취업 준비생 B씨(21세), 공군 3월 입대</h3>
+    <div class="highlight-box"><p>B씨는 공군에 지원해 2026년 3월 3일 입대합니다.<br>복무기간: 21개월<br>전역일: 2026.03.03 + 21개월 - 1일 = <strong>2027년 12월 2일</strong><br>검산: 3월 + 21개월 = 다음해 12월. 만료일 12월 3일의 전날 = 12월 2일 ✓<br>A씨보다 한 달 먼저 입대했지만 전역은 2개월 늦습니다. 공군은 3개월 더 복무하는 대신 근무 환경이 양호하다는 평가가 많습니다.</p></div>
+
+    <p>두 시나리오를 비교하면, A씨(육군)는 548일, B씨(공군)는 640일을 복무합니다. 차이는 92일, 약 3개월입니다. 3개월을 더 복무하더라도 공군의 근무 환경을 선호하는 사람이 많아 공군 경쟁률은 꾸준히 높습니다.</p>
+
+    <p style="margin: 1.5em 0;">
+      👉 <a href="https://www.jptcalc.kr/calc/date/date-add/" style="color: #F97316; font-weight: 600;">날짜 더하기 계산기로 내 전역일 직접 계산해보기</a>
+    </p>
+
+    <h2>사회복무요원·대체복무는 기간이 다르다</h2>
+    <p>현역 외 복무 유형은 기간과 근무 방식이 크게 다릅니다. 특히 산업기능요원과 전문연구요원은 복무 기간이 길지만 해당 분야 실무 경력이 쌓인다는 점이 현역과의 가장 큰 차이입니다.</p>
+
+    <h3>시나리오 3: 사회복무요원 C씨(23세), 5월 소집</h3>
+    <div class="highlight-box"><p>C씨는 보충역 판정을 받아 2026년 5월 12일 사회복무요원으로 소집됩니다.<br>복무기간: 21개월<br>복무 종료일: 2026.05.12 + 21개월 - 1일 = <strong>2028년 2월 11일</strong><br>검산: 5월 + 21개월 = 다다음해 2월. 만료일 2월 12일의 전날 = 2월 11일 ✓<br>사회복무요원은 출퇴근 근무이므로 퇴근 후 시간 활용이 가능합니다. C씨는 복무 중 독학으로 자격증 시험을 준비할 계획입니다.</p></div>
+
+    <h3>시나리오 4: 산업기능요원 D씨(24세), 6월 편입</h3>
+    <div class="highlight-box"><p>D씨는 IT 기업에서 산업기능요원으로 2026년 6월 1일 편입됩니다.<br>복무기간: 34개월<br>복무 종료일: 2026.06.01 + 34개월 - 1일 = <strong>2029년 3월 31일</strong><br>검산: 6월 + 34개월 = 2년 10개월 후 = 2029년 4월. 만료일 4월 1일의 전날 = 3월 31일 ✓<br>복무 기간이 34개월로 길지만, 해당 기업에서 정규직으로 근무하면서 급여를 받고 경력도 쌓입니다. 전역 후 이직 시 경력 인정이 가능합니다.</p></div>
+
+    <p>C씨(사회복무요원 21개월)와 D씨(산업기능요원 34개월)의 복무 기간 차이는 13개월입니다. D씨가 1년 넘게 더 복무하지만, 그 기간이 곧 직장 경력이 되므로 단순히 "오래 복무한다"고만 볼 수는 없습니다.</p>
+
+    <h2>전역일이 바뀌는 경우 - 이것만 알면 당황 안 한다</h2>
+    <p>"전역일이 갑자기 바뀔 수 있다"는 이야기를 듣고 불안해하는 분들이 있습니다. 실제로 전역일이 변경되는 경우는 제한적입니다.</p>
+    <ul>
+      <li><strong>군사법원 판결:</strong> 구금·징역 처분을 받으면 해당 기간이 복무 기간에서 제외됩니다. 이 경우에만 전역일이 뒤로 밀립니다.</li>
+      <li><strong>법률 개정:</strong> 복무기간 단축 법안이 통과되면 복무 중인 병사에게도 적용될 수 있습니다. 2018~2020년 단축 시 복무 중이던 병사들의 전역일이 앞당겨진 사례가 있습니다.</li>
+      <li><strong>입원·휴가:</strong> 질병 입원이나 포상 휴가는 전역일에 영향을 주지 않습니다. 휴가 기간도 복무 기간에 포함됩니다.</li>
+      <li><strong>훈련소 vs 자대:</strong> 훈련소 입소일이 곧 입대일입니다. 자대 배치일이 아니라 훈련소에 처음 들어간 날부터 복무 기간을 셉니다.</li>
+    </ul>
+    <p>핵심은 이겁니다. 정상적으로 복무하는 한 전역일은 바뀌지 않습니다. <a href="../posts/dday-counter.html" style="color:#F97316;">D-day 계산기</a>에 전역일을 등록해두면 남은 일수를 매일 확인할 수 있습니다.</p>
+
+    <h2>복무기간 변천사 - 예전엔 얼마나 길었나</h2>
+    <p>군 복무기간은 시대에 따라 꾸준히 줄어왔습니다. 아버지 세대와 비교하면 지금이 절반 수준입니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>시기</th><th>육군</th><th>해군</th><th>공군</th><th>비고</th></tr>
+      <tr><td>1993년 이전</td><td>30개월</td><td>36개월</td><td>36개월</td><td>-</td></tr>
+      <tr><td>1994~2003년</td><td>26개월</td><td>30개월</td><td>30개월</td><td>단축 1차</td></tr>
+      <tr><td>2004~2017년</td><td>21개월</td><td>23개월</td><td>24개월</td><td>단축 2차</td></tr>
+      <tr><td>2020년~현재</td><td class="rate">18개월</td><td class="rate">20개월</td><td class="rate">21개월</td><td>단축 3차 완료</td></tr>
+    </table></div>
+    <p>1993년 이전에는 육군만 30개월, 공군은 36개월이었습니다. 지금의 거의 두 배입니다. <a href="../posts/korean-age-system.html" style="color:#F97316;">만 나이 계산</a>으로 부모님 입대 시기를 역산해보면, 당시 복무 기간이 얼마였는지 짐작할 수 있습니다. 아버지께 "저는 18개월이에요"라고 했을 때의 반응이 상상되시죠.</p>
+
+    <div class="cta-box">
+      <p>입대일을 입력하면 전역일을 바로 계산할 수 있습니다.</p>
+      <a href="../../calc/date/date-add/" class="cta-btn">날짜 더하기 계산기로 전역일 계산하기</a>
+    </div>
+    <p style="font-size:13px;color:#6B7280;margin-top:8px;">관련 계산기: <a href="https://www.jptcalc.kr/calc/date/dday/">D-day 계산기</a> · <a href="https://www.jptcalc.kr/calc/date/date-difference/">날짜 차이 계산기</a></p>
+
+    <h2>자주 묻는 질문 (FAQ)</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 군 복무기간이 앞으로 더 줄어들 가능성이 있나요?</div>
+      <p class="faq-a">2018~2020년에 걸쳐 육군 기준 21개월에서 18개월로 단축이 완료된 이후, 추가 단축은 확정된 바 없습니다. 국방부는 병력 규모와 안보 상황을 종합적으로 고려해 복무기간을 결정하며, 단축보다는 복무 여건 개선 쪽에 초점을 맞추고 있습니다. 다만 국회에서 추가 단축 법안이 발의된 적이 있으므로, <a href="https://www.mma.go.kr" style="color:#F97316;">병무청</a> 공지사항을 수시로 확인하는 것이 좋습니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 복무 중 입원하면 전역일이 뒤로 밀리나요?</div>
+      <p class="faq-a">군 복무 중 질병이나 부상으로 입원하더라도 원칙적으로 전역일은 변동되지 않습니다. 입원 기간도 복무 기간에 포함됩니다. 다만 예외적으로 군사법원의 판결에 따라 징역이나 구금 처분을 받은 경우, 그 기간은 복무 기간에서 제외되어 전역일이 늦어질 수 있습니다. 이 경우 해당 기간만큼 복무 종료일이 연장됩니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 포상 휴가를 많이 받으면 전역이 빨라지나요?</div>
+      <p class="faq-a">포상 휴가는 전역일에 영향을 주지 않습니다. 휴가 기간도 복무 기간에 포함되기 때문입니다. 정기 휴가, 포상 휴가, 위로 휴가 등 모든 휴가가 마찬가지입니다. 실제 전역일을 앞당기는 유일한 방법은 법률 개정에 의한 복무기간 단축뿐입니다. 다만 마지막 휴가를 전역일 직전에 사용하면 실질적으로 부대를 일찍 떠나는 효과가 있어, 이를 "사실상 조기 전역"으로 오해하는 경우가 많습니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 군 복무기간이 국민연금 가입기간에 반영되나요?</div>
+      <p class="faq-a">군 복무기간 중 최대 6개월이 국민연금 가입기간으로 추가 산입됩니다. 이를 '군복무 크레딧'이라고 하며, 2008년 1월 1일 이후 입대한 사람부터 적용됩니다. 별도 신청 없이 전역 후 국민연금에 가입하면 자동으로 반영됩니다. 다만 최대 6개월까지만 인정되므로 18개월 복무하더라도 6개월분만 산입됩니다. 연금 수령액에 직접 영향을 주는 부분이니 전역 후 국민연금공단에서 가입 내역을 확인해보세요.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 입대 연기는 최대 몇 번까지 가능한가요?</div>
+      <p class="faq-a">입영 연기 사유와 횟수는 병역법 시행령에 정해져 있습니다. 학업 사유의 경우 재학 중인 기간 동안 연기가 가능하며, 질병이나 재해 등은 해당 기간 동안 연기됩니다. 단순히 개인 사정으로 무한정 연기할 수는 없고, 만 28세까지는 반드시 입영해야 합니다. 정당한 사유 없이 입영을 기피하면 병역법 위반으로 처벌 대상이 됩니다. 구체적인 연기 가능 횟수와 사유는 <a href="https://www.mma.go.kr" style="color:#F97316;">병무청</a> 홈페이지에서 본인의 병역 처분 유형에 맞게 확인하세요.</p>
+    </div>
+
+    <h2>체크리스트로 마무리</h2>
+    <p>전역일 계산은 "입대일 + 복무기간 - 1일"이 전부입니다. 복잡할 것 없습니다. 다만 군종별로 복무기간이 다르고, 입대 시기에 따라 전역 계절이 달라지므로 복학이나 취업 계획과 연결해서 생각할 필요가 있습니다. 사회복무요원이나 산업기능요원은 현역과 기간이 다르니 본인의 복무 유형을 정확히 확인하세요. 전역일을 알았다면 <a href="../posts/dday-counter.html" style="color:#F97316;">D-day 계산기</a>에 등록해두고, 남은 날을 하루하루 줄여나가면 됩니다. 복무 기간이 인생의 낭비가 아니라 다음 단계를 준비하는 시간이 되길 바랍니다.</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용이며 정확한 복무기간은 병무청에 확인하세요.</p>
+</footer>
+
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '병역법 및 병역법 시행령',
+  basisDate: '2026년 기준',
+  referenceOrg: '병무청',
+  lastReviewed: '2026.04.08',
+  disclaimer: '이 글은 정보 제공 목적으로 작성되었습니다. 실제 복무기간과 전역일은 병역 처분 유형·입대 시기에 따라 달라지므로 병무청에 확인하세요.',
+  relatedCalc: { name: '날짜 더하기 계산기', url: '/calc/date/date-add/' },
+  category: 'date'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>
