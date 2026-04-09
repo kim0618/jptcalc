@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LLM API 토큰 단가 비교 2026 - Claude, GPT, Gemini 실사용 비용 총정리 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="2026년 기준 Claude, GPT, Gemini 주요 LLM API 모델별 토큰 단가를 비교하고, 실제 서비스 시나리오별 월 비용을 계산합니다. 모델 선택 기준과 비용 최적화 전략까지 정리했습니다." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="LLM API 토큰 단가 비교 2026 - Claude, GPT, Gemini 실사용 비용 총정리 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="2026년 기준 Claude, GPT, Gemini 주요 LLM API 모델별 토큰 단가를 비교하고, 실제 서비스 시나리오별 월 비용을 계산합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/llm-api-price-comparison.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/llm-api-price-comparison.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#8B5CF6;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(139,92,246,0.15);color:#8B5CF6;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:24px 0 10px}
+    .post-body p{margin-bottom:14px}
+    .post-body ul{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#8B5CF6;text-decoration:none}
+    .highlight-box{background:rgba(139,92,246,0.08);border-left:4px solid #8B5CF6;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#5B21B6;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    td.highlight{color:#8B5CF6;font-weight:700}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#8B5CF6;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .faq-item{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:12px;padding:20px;margin:16px 0}
+    .faq-q{font-weight:800;color:#111827;margin-bottom:8px;font-size:15px}
+    .faq-a{color:#374151;font-size:14px;line-height:1.7;margin:0}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "LLM API 토큰 단가 비교 2026 - Claude, GPT, Gemini 실사용 비용 총정리",
+  "description": "2026년 기준 Claude, GPT, Gemini 주요 LLM API 모델별 토큰 단가를 비교하고, 실제 서비스 시나리오별 월 비용을 계산합니다. 모델 선택 기준과 비용 최적화 전략까지 정리했습니다.",
+  "author": { "@type": "Organization", "name": "제이퍼 계산기", "url": "https://www.jptcalc.kr" },
+  "publisher": { "@type": "Organization", "name": "제이퍼 계산기", "url": "https://www.jptcalc.kr", "logo": { "@type": "ImageObject", "url": "https://www.jptcalc.kr/android-chrome-512x512.png" } },
+  "datePublished": "2026-04-09",
+  "dateModified": "2026-04-09",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.jptcalc.kr/blog/posts/llm-api-price-comparison.html" },
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "AI·테크",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "한국어 서비스에서 토큰 비용이 영어보다 비싼 이유는?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "대부분의 LLM 토크나이저는 영어 중심으로 학습되어, 한국어 1글자가 평균 2~3토큰으로 분해됩니다. 같은 의미의 문장이라도 한국어로 처리하면 영어 대비 토큰이 1.5~2배 더 소비됩니다. Claude의 경우 한국어 토큰 효율이 GPT 대비 약 10~15% 높다는 테스트 결과가 있으며, Gemini도 다국어 최적화를 강조하고 있습니다. 비용을 줄이려면 시스템 프롬프트는 영어로 작성하고 사용자 응답만 한국어로 처리하는 방식이 효과적입니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "월 100만 원 예산이면 어떤 모델 조합이 최적인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "월 100만 원(약 $700) 예산이라면, 단일 프리미엄 모델만 쓰기보다 라우팅 전략이 훨씬 효율적입니다. 단순 분류·요약 요청(전체의 60~70%)은 GPT-4o mini나 Claude Haiku로 처리하고, 복잡한 추론·분석 요청만 Claude Sonnet이나 GPT-4o로 보내면 됩니다. 이 방식으로 하루 약 5,000건의 요청을 처리할 수 있습니다. 반면 Claude Opus만 사용하면 동일 예산으로 하루 500건도 어렵습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gemini의 무료 티어는 프로덕션에서도 사용 가능한가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google은 Gemini API에 무료 티어를 제공하지만, 분당 요청 수(RPM)가 15회, 일일 토큰 한도가 100만 토큰으로 제한됩니다. 프로토타입이나 개인 프로젝트에는 충분하지만, 실제 서비스에 적용하기에는 한계가 명확합니다. 무료 티어에서는 입력 데이터가 모델 학습에 사용될 수 있다는 점도 유의해야 합니다. 유료 전환 시 RPM이 1,000회 이상으로 올라가고, 데이터 학습 제외 옵션도 제공됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "API 비용을 줄이는 가장 효과적인 방법은?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "가장 즉각적인 방법은 프롬프트 캐싱입니다. Anthropic과 OpenAI 모두 프롬프트 캐싱을 지원하며, 반복되는 시스템 프롬프트에 대해 입력 토큰 비용을 최대 90%까지 절감할 수 있습니다. 두 번째는 모델 라우팅으로, 요청 복잡도에 따라 경량 모델과 고성능 모델을 자동 분배하는 방식입니다. 세 번째로 max_tokens 파라미터를 적절히 제한해 불필요한 출력 토큰을 줄이는 것이 있습니다. 이 세 가지를 조합하면 동일 품질 대비 비용을 50~70% 절감할 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "토큰 단가 외에 숨겨진 비용 요소가 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "토큰 단가만 보면 놓치는 비용이 세 가지 있습니다. 첫째, 레이턴시 차이입니다. 응답 속도가 느린 모델은 서버 대기 시간이 길어져 인프라 비용이 올라갑니다. 둘째, 재시도 비용입니다. 안정성이 낮은 API는 타임아웃과 에러로 인한 재호출이 잦아 실제 비용이 공식 단가의 1.1~1.3배가 됩니다. 셋째, 파인튜닝 비용입니다. OpenAI GPT-4o 파인튜닝은 학습 토큰당 $25/1M로, 기본 추론 대비 3배 이상 비쌉니다. 총소유비용(TCO)을 따질 때 이 세 가지를 반드시 포함해야 합니다."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo"><div class="logo-icon"><img src="../../assets/logo.svg" alt="로고"/></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+<div class="post-wrap">
+  <span class="post-tag">AI·테크</span>
+  <h1>LLM API 토큰 단가 비교 2026 - Claude, GPT, Gemini 실사용 비용 총정리</h1>
+  <div class="post-meta">
+    <span>2026.04.09</span>
+    <span>·</span>
+    <span>읽는 시간 약 8분</span>
+  </div>
+
+  <div class="post-body">
+
+    <p>2026년 4월 기준, 주요 LLM API의 토큰 단가는 1년 전 대비 평균 40% 이상 하락했습니다. 그런데 단가가 내려갔다고 비용이 줄었느냐 하면, 꼭 그렇지도 않습니다. 모델이 다양해지면서 "어떤 모델을, 어떤 조합으로 쓰느냐"가 월 청구서를 결정하는 핵심 변수가 됐습니다.</p>
+
+    <p>이 글에서는 Claude(Anthropic), GPT(OpenAI), Gemini(Google) 세 진영의 모델별 토큰 단가를 직접 비교하고, 실제 서비스 시나리오에서 월 비용이 얼마나 차이 나는지 계산해봅니다. 결론부터 말하면, 단일 모델 올인보다 모델 라우팅 전략이 비용을 절반 이하로 줄여줍니다.</p>
+
+    <h2>2026년 주요 LLM API 토큰 단가표</h2>
+    <p>아래 표는 각 벤더의 공식 가격 페이지에서 확인한 수치입니다. 단위는 100만 토큰(1M tokens)당 USD 기준이며, 환율은 1달러 = 1,430원으로 환산했습니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>모델</th>
+            <th>입력 ($/1M)</th>
+            <th>출력 ($/1M)</th>
+            <th>입력 원화 환산</th>
+            <th>출력 원화 환산</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Claude Opus 4</strong></td>
+            <td>$15</td>
+            <td>$75</td>
+            <td>₩21,450</td>
+            <td>₩107,250</td>
+          </tr>
+          <tr>
+            <td><strong>Claude Sonnet 4</strong></td>
+            <td>$3</td>
+            <td>$15</td>
+            <td>₩4,290</td>
+            <td>₩21,450</td>
+          </tr>
+          <tr>
+            <td><strong>Claude Haiku 4</strong></td>
+            <td>$0.80</td>
+            <td>$4</td>
+            <td>₩1,144</td>
+            <td>₩5,720</td>
+          </tr>
+          <tr>
+            <td><strong>GPT-4o</strong></td>
+            <td>$2.50</td>
+            <td>$10</td>
+            <td>₩3,575</td>
+            <td>₩14,300</td>
+          </tr>
+          <tr>
+            <td><strong>GPT-4o mini</strong></td>
+            <td>$0.15</td>
+            <td>$0.60</td>
+            <td>₩215</td>
+            <td>₩858</td>
+          </tr>
+          <tr>
+            <td><strong>GPT-4.1</strong></td>
+            <td>$2</td>
+            <td>$8</td>
+            <td>₩2,860</td>
+            <td>₩11,440</td>
+          </tr>
+          <tr>
+            <td><strong>GPT-4.1 mini</strong></td>
+            <td>$0.40</td>
+            <td>$1.60</td>
+            <td>₩572</td>
+            <td>₩2,288</td>
+          </tr>
+          <tr>
+            <td><strong>Gemini 2.5 Pro</strong></td>
+            <td>$1.25</td>
+            <td>$10</td>
+            <td>₩1,788</td>
+            <td>₩14,300</td>
+          </tr>
+          <tr>
+            <td><strong>Gemini 2.5 Flash</strong></td>
+            <td>$0.15</td>
+            <td>$0.60</td>
+            <td>₩215</td>
+            <td>₩858</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>표를 보면 패턴이 보입니다. 각 벤더 모두 프리미엄-중간-경량 3단계 라인업을 갖추고 있고, 경량 모델 간 가격 차이는 거의 없습니다. 차이가 크게 벌어지는 건 프리미엄 티어입니다. Claude Opus 4의 출력 단가($75/1M)는 GPT-4o mini 출력 단가($0.60/1M)의 125배입니다.</p>
+
+    <div style="margin:24px 0;overflow-x:auto">
+<svg role="img" width="100%" viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg">
+  <title>주요 LLM 모델 출력 토큰 단가 비교 차트</title>
+  <rect width="680" height="320" rx="12" fill="#F9FAFB"/>
+  <text x="24" y="32" font-size="14" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">출력 토큰 단가 비교 ($/1M tokens)</text>
+  <text x="24" y="50" font-size="11" fill="#6B7280" font-family="Pretendard,sans-serif">2026년 4월 기준, 낮을수록 저렴</text>
+
+  <text x="24" y="82" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">Claude Opus 4</text>
+  <rect x="150" y="68" width="440" height="20" rx="4" fill="#8B5CF6" opacity="0.9"/>
+  <text x="596" y="83" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">$75</text>
+
+  <text x="24" y="114" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">Claude Sonnet 4</text>
+  <rect x="150" y="100" width="88" height="20" rx="4" fill="#8B5CF6" opacity="0.7"/>
+  <text x="244" y="115" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">$15</text>
+
+  <text x="24" y="146" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">GPT-4o</text>
+  <rect x="150" y="132" width="59" height="20" rx="4" fill="#10B981" opacity="0.8"/>
+  <text x="215" y="147" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">$10</text>
+
+  <text x="24" y="178" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">Gemini 2.5 Pro</text>
+  <rect x="150" y="164" width="59" height="20" rx="4" fill="#F59E0B" opacity="0.8"/>
+  <text x="215" y="179" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">$10</text>
+
+  <text x="24" y="210" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">GPT-4.1</text>
+  <rect x="150" y="196" width="47" height="20" rx="4" fill="#10B981" opacity="0.6"/>
+  <text x="203" y="211" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">$8</text>
+
+  <text x="24" y="242" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">Claude Haiku 4</text>
+  <rect x="150" y="228" width="24" height="20" rx="4" fill="#8B5CF6" opacity="0.5"/>
+  <text x="180" y="243" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">$4</text>
+
+  <text x="24" y="274" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">GPT-4.1 mini</text>
+  <rect x="150" y="260" width="10" height="20" rx="4" fill="#10B981" opacity="0.4"/>
+  <text x="166" y="275" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">$1.6</text>
+
+  <text x="24" y="306" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">GPT-4o mini / Flash</text>
+  <rect x="150" y="292" width="5" height="20" rx="4" fill="#D1D5DB"/>
+  <text x="161" y="307" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">$0.6</text>
+</svg>
+    </div>
+
+    <h2>같은 작업, 모델에 따라 비용이 이렇게 다릅니다</h2>
+
+    <p>숫자만 늘어놓으면 감이 안 옵니다. 실제 서비스 상황을 가정하고 월 비용을 계산해보겠습니다. 여기서 주의할 점이 하나 있는데요. 토큰 단가뿐 아니라 모델별 토큰 효율(같은 질문에 얼마나 많은 토큰을 소비하는지)도 비용에 영향을 줍니다.</p>
+
+    <h3>시나리오 1: 고객 상담 챗봇 (하루 1,000건)</h3>
+
+    <div class="highlight-box">
+      <p><strong>조건</strong><br>
+      - 하루 1,000건, 월 30,000건 요청<br>
+      - 건당 평균 입력 800토큰, 출력 400토큰<br>
+      - 월 총 입력 24M tokens, 출력 12M tokens</p>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>모델</th>
+            <th>월 입력 비용</th>
+            <th>월 출력 비용</th>
+            <th>월 합계 (원화)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Claude Sonnet 4</td>
+            <td>$72</td>
+            <td>$180</td>
+            <td class="highlight">₩360,360</td>
+          </tr>
+          <tr>
+            <td>GPT-4o</td>
+            <td>$60</td>
+            <td>$120</td>
+            <td class="highlight">₩257,400</td>
+          </tr>
+          <tr>
+            <td>GPT-4.1</td>
+            <td>$48</td>
+            <td>$96</td>
+            <td class="highlight">₩205,920</td>
+          </tr>
+          <tr>
+            <td>Gemini 2.5 Pro</td>
+            <td>$30</td>
+            <td>$120</td>
+            <td class="highlight">₩214,500</td>
+          </tr>
+          <tr>
+            <td>Claude Haiku 4</td>
+            <td>$19.2</td>
+            <td>$48</td>
+            <td class="highlight">₩96,096</td>
+          </tr>
+          <tr>
+            <td>GPT-4o mini</td>
+            <td>$3.6</td>
+            <td>$7.2</td>
+            <td class="highlight">₩15,444</td>
+          </tr>
+          <tr>
+            <td>Gemini 2.5 Flash</td>
+            <td>$3.6</td>
+            <td>$7.2</td>
+            <td class="highlight">₩15,444</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>같은 상담 챗봇인데, Claude Sonnet 4를 쓰면 월 36만 원, GPT-4o mini를 쓰면 월 1.5만 원입니다. 차이가 23배. 물론 응답 품질도 차이가 나지만, 단순 FAQ 응대라면 경량 모델로도 충분합니다. <a href="../posts/chatgpt-api-cost.html" style="color:#8B5CF6;">ChatGPT API 비용 계산</a> 글에서 GPT 모델별 비용 구조를 더 자세히 다루고 있으니 참고하세요.</p>
+
+    <h3>시나리오 2: AI 코드 리뷰 도구 (하루 200건, 긴 컨텍스트)</h3>
+
+    <div class="highlight-box">
+      <p><strong>조건</strong><br>
+      - 하루 200건, 월 6,000건 요청<br>
+      - 건당 평균 입력 5,000토큰(코드 포함), 출력 1,500토큰<br>
+      - 월 총 입력 30M tokens, 출력 9M tokens</p>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>모델</th>
+            <th>월 합계 (USD)</th>
+            <th>월 합계 (원화)</th>
+            <th>건당 비용</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Claude Opus 4</td>
+            <td>$1,125</td>
+            <td>₩1,608,750</td>
+            <td>₩268</td>
+          </tr>
+          <tr>
+            <td>Claude Sonnet 4</td>
+            <td>$225</td>
+            <td>₩321,750</td>
+            <td>₩54</td>
+          </tr>
+          <tr>
+            <td>GPT-4.1</td>
+            <td>$132</td>
+            <td>₩188,760</td>
+            <td>₩31</td>
+          </tr>
+          <tr>
+            <td>Gemini 2.5 Pro</td>
+            <td>$127.5</td>
+            <td>₩182,325</td>
+            <td>₩30</td>
+          </tr>
+          <tr>
+            <td>GPT-4o</td>
+            <td>$165</td>
+            <td>₩235,950</td>
+            <td>₩39</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>코드 리뷰처럼 입력이 긴 작업에서는 입력 단가의 비중이 커집니다. Gemini 2.5 Pro가 입력 $1.25/1M으로 가장 저렴하고, GPT-4.1도 $2/1M로 선전합니다. 검산해보면, Claude Sonnet 4 기준 입력 비용 = 30M x $3/1M = $90, 출력 비용 = 9M x $15/1M = $135, 합계 $225입니다. Claude Opus 4 기준 입력 = 30M x $15/1M = $450, 출력 = 9M x $75/1M = $675, 합계 $1,125입니다.</p>
+
+    <h3>시나리오 3: 모델 라우팅 전략 (하이브리드)</h3>
+
+    <p>개인적으로는 이 방식이 가장 현실적이라고 봅니다. 스타트업 B사(직원 15명)가 사내 AI 어시스턴트를 운영하는 상황을 가정합니다.</p>
+
+    <div class="highlight-box">
+      <p><strong>조건</strong><br>
+      - 월 총 50,000건 요청<br>
+      - 단순 요청 70%(35,000건): Claude Haiku 4 처리<br>
+      - 중간 요청 25%(12,500건): GPT-4.1 처리<br>
+      - 복잡한 요청 5%(2,500건): Claude Sonnet 4 처리<br>
+      - 건당 평균 입력 1,000토큰, 출력 500토큰</p>
+    </div>
+
+    <p>각 티어별 비용을 계산합니다.</p>
+    <ul>
+      <li><strong>Haiku 티어:</strong> 입력 35M x $0.80/1M = $28, 출력 17.5M x $4/1M = $70 → $98</li>
+      <li><strong>GPT-4.1 티어:</strong> 입력 12.5M x $2/1M = $25, 출력 6.25M x $8/1M = $50 → $75</li>
+      <li><strong>Sonnet 티어:</strong> 입력 2.5M x $3/1M = $7.5, 출력 1.25M x $15/1M = $18.75 → $26.25</li>
+      <li><strong>월 합계:</strong> $199.25 → <strong>₩284,928</strong></li>
+    </ul>
+
+    <p>만약 이 50,000건을 전부 Claude Sonnet 4로 처리했다면? 입력 50M x $3 = $150, 출력 25M x $15 = $375, 합계 $525(₩750,750)입니다. 라우팅 전략으로 <strong>62% 비용 절감</strong>. 답은 간단합니다.</p>
+
+    <h2>벤더별 숨은 차이점 - 단가만 보면 놓치는 것들</h2>
+
+    <p>토큰 단가표만으로는 실제 비용을 정확히 예측할 수 없습니다. 벤더마다 과금 방식, 캐싱 정책, 컨텍스트 윈도우 크기가 다르기 때문입니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>항목</th>
+            <th>Anthropic (Claude)</th>
+            <th>OpenAI (GPT)</th>
+            <th>Google (Gemini)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>프롬프트 캐싱</strong></td>
+            <td>지원 (입력의 10% 과금)</td>
+            <td>지원 (입력의 50% 과금)</td>
+            <td>지원 (입력의 25% 과금)</td>
+          </tr>
+          <tr>
+            <td><strong>최대 컨텍스트</strong></td>
+            <td>200K tokens</td>
+            <td>128K tokens</td>
+            <td>1M tokens</td>
+          </tr>
+          <tr>
+            <td><strong>무료 티어</strong></td>
+            <td>없음</td>
+            <td>제한적</td>
+            <td>있음 (15 RPM)</td>
+          </tr>
+          <tr>
+            <td><strong>배치 API 할인</strong></td>
+            <td>50% 할인</td>
+            <td>50% 할인</td>
+            <td>50% 할인</td>
+          </tr>
+          <tr>
+            <td><strong>한국어 토큰 효율</strong></td>
+            <td>상대적 우수</td>
+            <td>보통</td>
+            <td>보통~우수</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>여기서 눈에 띄는 건 프롬프트 캐싱입니다. 반복되는 시스템 프롬프트가 길다면 Claude의 캐싱이 가장 유리합니다. 캐시 히트 시 입력 토큰 비용이 원래의 10%만 과금되니까요. 반대로 매번 다른 프롬프트를 보내는 서비스라면 캐싱 효과가 미미합니다.</p>
+
+    <p>컨텍스트 윈도우도 중요합니다. Gemini 2.5 Pro의 1M 토큰 컨텍스트는 긴 문서 분석에서 독보적입니다. 다만 컨텍스트가 길어질수록 토큰 소비도 늘어나므로, "큰 창 = 항상 유리"는 아닙니다. <a href="../posts/claude-vs-gpt.html" style="color:#8B5CF6;">Claude vs GPT 비교</a> 글에서 성능 차이를 더 구체적으로 다루고 있습니다.</p>
+
+    <h2>프롬프트 캐싱으로 실제 얼마나 아낄 수 있나</h2>
+
+    <p>캐싱 효과를 체감하려면 구체적인 숫자가 필요합니다. 시스템 프롬프트 2,000토큰을 매 요청마다 보내는 챗봇이 하루 1,000건을 처리한다고 가정합니다.</p>
+
+    <h3>캐싱 없이 (Claude Sonnet 4)</h3>
+    <ul>
+      <li>시스템 프롬프트 입력: 월 60M tokens x $3/1M = $180</li>
+      <li>사용자 입력 + 출력: 별도</li>
+    </ul>
+
+    <h3>캐싱 적용 시 (Claude Sonnet 4)</h3>
+    <ul>
+      <li>캐시 히트: 월 60M tokens x $0.30/1M = $18</li>
+      <li>절감액: $162/월 (₩231,660)</li>
+    </ul>
+
+    <p>시스템 프롬프트 부분만으로 월 23만 원 절감입니다. 시스템 프롬프트가 5,000토큰 이상인 서비스라면 절감 폭이 더 커집니다. OpenAI는 캐시 히트 시 50% 과금이므로, 같은 조건에서 $90 절감($180 → $90)에 그칩니다.</p>
+
+    <h2>어떤 모델을 언제 써야 하나 - 의사결정 기준</h2>
+
+    <p>"제일 비싼 거 쓰면 되겠지"라고 생각하기 쉽지만, 실제로는 그렇지 않습니다. 비용 대비 품질을 따져야 합니다.</p>
+
+    <ul>
+      <li><strong>단순 분류·태깅·요약:</strong> GPT-4o mini, Gemini 2.5 Flash, Claude Haiku 4 - 월 2만 원 이하로 수만 건 처리 가능</li>
+      <li><strong>고객 응대·콘텐츠 생성:</strong> GPT-4.1, Claude Sonnet 4, Gemini 2.5 Pro - 품질과 비용의 균형점</li>
+      <li><strong>복잡한 추론·코드 생성·연구:</strong> Claude Opus 4, GPT-4o - 비용이 높지만 정확도 차이가 크다면 투자 가치 있음</li>
+    </ul>
+
+    <p><a href="../../calc/ai/api-token/" style="color:#8B5CF6;">AI API 비용 계산기</a>로 본인 서비스의 예상 사용량을 입력하면 모델별 월 비용을 바로 비교해볼 수 있습니다. 요청 건수, 평균 토큰 수, 환율만 넣으면 됩니다.</p>
+
+    <h2>2026년 가격 트렌드 - 앞으로 더 내려갈까</h2>
+
+    <p>지난 1년간의 흐름을 보면, 경량 모델 가격은 바닥에 근접했고, 프리미엄 모델도 꾸준히 하락 중입니다. 주요 변화를 정리하면 이렇습니다.</p>
+
+    <ul>
+      <li>OpenAI GPT-4o mini 출시 후 경량 모델 가격 경쟁이 본격화</li>
+      <li>Google이 Gemini 무료 티어로 진입 장벽을 낮추면서 전체 시장 단가 하락 압력</li>
+      <li>Anthropic은 프롬프트 캐싱 할인율을 높여 실질 비용 경쟁력 확보</li>
+      <li>배치 API(비실시간 처리) 할인이 세 벤더 모두 50%로 표준화</li>
+    </ul>
+
+    <p>단가 자체보다는 "같은 비용으로 더 좋은 모델을 쓸 수 있게 되는" 방향으로 움직이고 있습니다. 6개월 전 Sonnet급 비용으로 지금은 더 나은 성능의 모델을 쓸 수 있다는 뜻입니다. GPU 인프라 비용이 궁금하다면 <a href="../posts/gpu-cloud-comparison.html" style="color:#8B5CF6;">GPU 클라우드 비용 비교</a> 글도 참고해보세요.</p>
+
+    <div class="cta-box">
+      <p>내 서비스의 LLM API 월 비용, 직접 계산해보세요.</p>
+      <a href="../../calc/ai/api-token/" class="cta-btn">AI API 비용 계산기 바로가기</a>
+    </div>
+    <p style="font-size:13px;color:#6B7280;margin-top:8px;">관련 계산기: <a href="https://www.jptcalc.kr/calc/ai/llm-comparison/">LLM 모델 비교</a> · <a href="https://www.jptcalc.kr/calc/ai/saas-comparison/">SaaS 비용 비교</a></p>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 한국어 서비스에서 토큰 비용이 영어보다 비싼 이유는?</div>
+      <p class="faq-a">대부분의 LLM 토크나이저는 영어 중심으로 학습되어, 한국어 1글자가 평균 2~3토큰으로 분해됩니다. 같은 의미의 문장이라도 한국어로 처리하면 영어 대비 토큰이 1.5~2배 더 소비됩니다. Claude의 경우 한국어 토큰 효율이 GPT 대비 약 10~15% 높다는 테스트 결과가 있으며, Gemini도 다국어 최적화를 강조하고 있습니다. 비용을 줄이려면 시스템 프롬프트는 영어로 작성하고 사용자 응답만 한국어로 처리하는 방식이 효과적입니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 월 100만 원 예산이면 어떤 모델 조합이 최적인가요?</div>
+      <p class="faq-a">월 100만 원(약 $700) 예산이라면, 단일 프리미엄 모델만 쓰기보다 라우팅 전략이 훨씬 효율적입니다. 단순 분류·요약 요청(전체의 60~70%)은 GPT-4o mini나 Claude Haiku로 처리하고, 복잡한 추론·분석 요청만 Claude Sonnet이나 GPT-4o로 보내면 됩니다. 이 방식으로 하루 약 5,000건의 요청을 처리할 수 있습니다. 반면 Claude Opus만 사용하면 동일 예산으로 하루 500건도 어렵습니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. Gemini의 무료 티어는 프로덕션에서도 사용 가능한가요?</div>
+      <p class="faq-a">Google은 Gemini API에 무료 티어를 제공하지만, 분당 요청 수(RPM)가 15회, 일일 토큰 한도가 100만 토큰으로 제한됩니다. 프로토타입이나 개인 프로젝트에는 충분하지만, 실제 서비스에 적용하기에는 한계가 명확합니다. 무료 티어에서는 입력 데이터가 모델 학습에 사용될 수 있다는 점도 유의해야 합니다. 유료 전환 시 RPM이 1,000회 이상으로 올라가고, 데이터 학습 제외 옵션도 제공됩니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. API 비용을 줄이는 가장 효과적인 방법은?</div>
+      <p class="faq-a">가장 즉각적인 방법은 프롬프트 캐싱입니다. Anthropic과 OpenAI 모두 프롬프트 캐싱을 지원하며, 반복되는 시스템 프롬프트에 대해 입력 토큰 비용을 최대 90%까지 절감할 수 있습니다. 두 번째는 모델 라우팅으로, 요청 복잡도에 따라 경량 모델과 고성능 모델을 자동 분배하는 방식입니다. 세 번째로 max_tokens 파라미터를 적절히 제한해 불필요한 출력 토큰을 줄이는 것이 있습니다. 이 세 가지를 조합하면 동일 품질 대비 비용을 50~70% 절감할 수 있습니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 토큰 단가 외에 숨겨진 비용 요소가 있나요?</div>
+      <p class="faq-a">토큰 단가만 보면 놓치는 비용이 세 가지 있습니다. 첫째, 레이턴시 차이입니다. 응답 속도가 느린 모델은 서버 대기 시간이 길어져 인프라 비용이 올라갑니다. 둘째, 재시도 비용입니다. 안정성이 낮은 API는 타임아웃과 에러로 인한 재호출이 잦아 실제 비용이 공식 단가의 1.1~1.3배가 됩니다. 셋째, 파인튜닝 비용입니다. OpenAI GPT-4o 파인튜닝은 학습 토큰당 $25/1M로, 기본 추론 대비 3배 이상 비쌉니다. 총소유비용(TCO)을 따질 때 이 세 가지를 반드시 포함해야 합니다.</p>
+    </div>
+
+    <h2>정리하면</h2>
+    <p>LLM API 비용은 "어떤 모델을 쓰느냐"보다 "어떻게 조합하느냐"에 더 크게 좌우됩니다. 경량 모델 간 가격 차이는 거의 사라졌고, 프리미엄 모델에서만 벤더 간 큰 차이가 남아 있습니다. 모델 라우팅, 프롬프트 캐싱, 배치 API 세 가지만 제대로 활용해도 단일 모델 대비 50% 이상 비용을 줄일 수 있습니다. 본인 서비스의 요청 패턴을 먼저 파악하고, 그에 맞는 모델 조합을 찾는 것이 핵심입니다. <a href="../../calc/ai/api-token/" style="color:#8B5CF6;">AI API 비용 계산기</a>로 직접 시뮬레이션해보시길 권합니다.</p>
+
+  </div>
+</div>
+<footer class="site-footer"><p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용입니다.</p></footer>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "Anthropic, OpenAI, Google 공식 가격 정책",
+  basisDate: "2026년 4월 기준",
+  referenceOrg: "Anthropic, OpenAI, Google",
+  lastReviewed: '2026.04.09',
+  disclaimer: "본 내용은 참고용이며, API 가격은 각 벤더의 정책 변경에 따라 달라질 수 있습니다.",
+  relatedCalc: { name: 'AI API 비용 계산기', url: '/calc/ai/api-token/' },
+  category: 'ai'
+};
+</script>
+<script src="/assets/blog-article-info.js" defer></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>
