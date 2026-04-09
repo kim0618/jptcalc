@@ -92,7 +92,7 @@
       "name": "월 100만 원 예산이면 어떤 모델 조합이 최적인가요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "월 100만 원(약 $700) 예산이라면, 단일 프리미엄 모델만 쓰기보다 라우팅 전략이 훨씬 효율적입니다. 단순 분류·요약 요청(전체의 60~70%)은 GPT-4o mini나 Claude Haiku로 처리하고, 복잡한 추론·분석 요청만 Claude Sonnet이나 GPT-4o로 보내면 됩니다. 이 방식으로 하루 약 5,000건의 요청을 처리할 수 있습니다. 반면 Claude Opus만 사용하면 동일 예산으로 하루 500건도 어렵습니다."
+        "text": "월 100만 원(약 $700) 예산이라면, 단일 프리미엄 모델만 쓰기보다 라우팅 전략이 훨씬 효율적입니다. 단순 분류·요약 요청(전체의 60~70%)은 GPT-4o mini나 Claude Haiku 4.5로 처리하고, 복잡한 추론·분석 요청만 Claude Sonnet이나 GPT-4o로 보내면 됩니다. 이 방식으로 하루 약 5,000건의 요청을 처리할 수 있습니다. 반면 Claude Opus만 사용하면 동일 예산으로 하루 500건도 어렵습니다."
       }
     },
     {
@@ -175,7 +175,7 @@
             <td>₩21,450</td>
           </tr>
           <tr>
-            <td><strong>Claude Haiku 4</strong></td>
+            <td><strong>Claude Haiku 4.5</strong></td>
             <td>$0.80</td>
             <td>$4</td>
             <td>₩1,144</td>
@@ -217,6 +217,13 @@
             <td>₩14,300</td>
           </tr>
           <tr>
+            <td><strong>Gemini 2.5 Pro (200K+)</strong></td>
+            <td>$2.50</td>
+            <td>$15</td>
+            <td>₩3,575</td>
+            <td>₩21,450</td>
+          </tr>
+          <tr>
             <td><strong>Gemini 2.5 Flash</strong></td>
             <td>$0.15</td>
             <td>$0.60</td>
@@ -226,6 +233,8 @@
         </tbody>
       </table>
     </div>
+
+    <p style="font-size:13px;color:#6B7280;margin-top:4px;">* Gemini 2.5 Pro는 200K 토큰 이하/이상으로 가격이 다름. Gemini 2.5 Flash는 non-thinking 모드 기준(thinking 활성화 시 출력 $3.50/1M).</p>
 
     <p>표를 보면 패턴이 보입니다. 각 벤더 모두 프리미엄-중간-경량 3단계 라인업을 갖추고 있고, 경량 모델 간 가격 차이는 거의 없습니다. 차이가 크게 벌어지는 건 프리미엄 티어입니다. Claude Opus 4의 출력 단가($75/1M)는 GPT-4o mini 출력 단가($0.60/1M)의 125배입니다.</p>
 
@@ -256,7 +265,7 @@
   <rect x="150" y="196" width="47" height="20" rx="4" fill="#10B981" opacity="0.6"/>
   <text x="203" y="211" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">$8</text>
 
-  <text x="24" y="242" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">Claude Haiku 4</text>
+  <text x="24" y="242" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">Claude Haiku 4.5</text>
   <rect x="150" y="228" width="24" height="20" rx="4" fill="#8B5CF6" opacity="0.5"/>
   <text x="180" y="243" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">$4</text>
 
@@ -319,7 +328,7 @@
             <td class="highlight">₩214,500</td>
           </tr>
           <tr>
-            <td>Claude Haiku 4</td>
+            <td>Claude Haiku 4.5</td>
             <td>$19.2</td>
             <td>$48</td>
             <td class="highlight">₩96,096</td>
@@ -405,7 +414,7 @@
     <div class="highlight-box">
       <p><strong>조건</strong><br>
       - 월 총 50,000건 요청<br>
-      - 단순 요청 70%(35,000건): Claude Haiku 4 처리<br>
+      - 단순 요청 70%(35,000건): Claude Haiku 4.5 처리<br>
       - 중간 요청 25%(12,500건): GPT-4.1 처리<br>
       - 복잡한 요청 5%(2,500건): Claude Sonnet 4 처리<br>
       - 건당 평균 입력 1,000토큰, 출력 500토큰</p>
@@ -497,7 +506,7 @@
     <p>"제일 비싼 거 쓰면 되겠지"라고 생각하기 쉽지만, 실제로는 그렇지 않습니다. 비용 대비 품질을 따져야 합니다.</p>
 
     <ul>
-      <li><strong>단순 분류·태깅·요약:</strong> GPT-4o mini, Gemini 2.5 Flash, Claude Haiku 4 - 월 2만 원 이하로 수만 건 처리 가능</li>
+      <li><strong>단순 분류·태깅·요약:</strong> GPT-4o mini, Gemini 2.5 Flash, Claude Haiku 4.5 - 월 2만 원 이하로 수만 건 처리 가능</li>
       <li><strong>고객 응대·콘텐츠 생성:</strong> GPT-4.1, Claude Sonnet 4, Gemini 2.5 Pro - 품질과 비용의 균형점</li>
       <li><strong>복잡한 추론·코드 생성·연구:</strong> Claude Opus 4, GPT-4o - 비용이 높지만 정확도 차이가 크다면 투자 가치 있음</li>
     </ul>
@@ -530,7 +539,7 @@
 
     <div class="faq-item">
       <div class="faq-q">Q. 월 100만 원 예산이면 어떤 모델 조합이 최적인가요?</div>
-      <p class="faq-a">월 100만 원(약 $700) 예산이라면, 단일 프리미엄 모델만 쓰기보다 라우팅 전략이 훨씬 효율적입니다. 단순 분류·요약 요청(전체의 60~70%)은 GPT-4o mini나 Claude Haiku로 처리하고, 복잡한 추론·분석 요청만 Claude Sonnet이나 GPT-4o로 보내면 됩니다. 이 방식으로 하루 약 5,000건의 요청을 처리할 수 있습니다. 반면 Claude Opus만 사용하면 동일 예산으로 하루 500건도 어렵습니다.</p>
+      <p class="faq-a">월 100만 원(약 $700) 예산이라면, 단일 프리미엄 모델만 쓰기보다 라우팅 전략이 훨씬 효율적입니다. 단순 분류·요약 요청(전체의 60~70%)은 GPT-4o mini나 Claude Haiku 4.5로 처리하고, 복잡한 추론·분석 요청만 Claude Sonnet이나 GPT-4o로 보내면 됩니다. 이 방식으로 하루 약 5,000건의 요청을 처리할 수 있습니다. 반면 Claude Opus만 사용하면 동일 예산으로 하루 500건도 어렵습니다.</p>
     </div>
 
     <div class="faq-item">
