@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>종합부동산세, 결국 얼마인가 - 2026년 세율·계산 예시·절세까지 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="2026년 종합부동산세 과세 기준, 세율표(0.5~2.7%), 공시가격별 실제 계산 예시 4가지, 1세대 1주택 고령자·장기보유 세액공제까지 정리했습니다. 종부세 계산기로 내 세금을 미리 확인하세요." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="종합부동산세, 결국 얼마인가 - 2026년 세율·계산 예시·절세까지 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="2026년 종합부동산세 과세 기준, 세율표(0.5~2.7%), 공시가격별 실제 계산 예시 4가지, 1세대 1주택 고령자·장기보유 세액공제까지 정리했습니다. 종부세 계산기로 내 세금을 미리 확인하세요." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/jongbu-tax-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/jongbu-tax-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BRSX3F10MZ');
+  </script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #F59E0B;
+      --gray-400: #9CA3AF; --gray-500: #6B7280; --gray-600: #4B5563;
+      --dark-bg: #ffffff; --dark-card: #F9FAFB; --dark-border: rgba(0,0,0,0.08);
+    }
+    body { font-family: 'Pretendard', -apple-system, sans-serif; background: #ffffff; color: #111827; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+
+    .site-header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .header-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; gap: 24px; }
+    .site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .logo-icon { width: 32px; height: 32px; }
+    .logo-icon img { width: 32px; height: 32px; display: block; }
+    .logo-text { font-size: 18px; font-weight: 900; color: #111827; letter-spacing: -0.5px; }
+    .logo-text span { color: #818CF8; }
+    .header-back { margin-left: auto; font-size: 13px; font-weight: 600; color: #6B7280; text-decoration: none !important; }
+    .header-back:hover { color: #111827; }
+
+    .post-wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+    .post-tag { display: inline-block; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; background: rgba(245,158,11,0.15); color: #F59E0B; margin-bottom: 16px; }
+    h1 { font-size: 26px; font-weight: 900; color: #111827; line-height: 1.35; margin-bottom: 12px; }
+    .post-meta { font-size: 13px; color: #4B5563; margin-bottom: 36px; display: flex; gap: 12px; }
+    .post-body { font-size: 15px; color: #111827; line-height: 1.8; }
+    .post-body h2 { font-size: 19px; font-weight: 800; color: #111827; margin: 40px 0 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .post-body h3 { font-size: 16px; font-weight: 700; color: #111827; margin: 24px 0 10px; }
+    .post-body p { margin-bottom: 14px; }
+    .post-body ul, .post-body ol { margin: 10px 0 14px 20px; }
+    .post-body li { margin-bottom: 8px; }
+    .post-body a { color: #F59E0B; text-decoration: none !important; }
+    .post-body a:hover { text-decoration: underline !important; }
+    .highlight-box { background: rgba(245,158,11,0.1); border-left: 4px solid var(--primary); border-radius: 0 10px 10px 0; padding: 16px 20px; margin: 20px 0; }
+    .highlight-box p { margin: 0; color: #92400E; font-size: 14px; }
+    .table-wrap { overflow-x: auto; margin: 20px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th { background: #F9FAFB; color: #111827; font-weight: 700; padding: 10px 14px; text-align: left; border: 1px solid rgba(0,0,0,0.08); }
+    td { padding: 10px 14px; border: 1px solid rgba(0,0,0,0.08); color: #1F2937; }
+    tr:hover td { background: rgba(0,0,0,0.02); }
+    .cta-box { background: #F9FAFB; border: 1px solid rgba(0,0,0,0.08); border-radius: 14px; padding: 24px; margin: 40px 0; text-align: center; }
+    .cta-box p { color: #374151; font-size: 14px; margin-bottom: 14px; }
+    .cta-btn { display: inline-block; padding: 12px 28px; background: #F59E0B; color: #fff !important; font-size: 14px; font-weight: 800; border-radius: 10px; text-decoration: none !important; }
+    .cta-btn:hover { opacity: 0.9; }
+    .faq-item { background: #F9FAFB; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; padding: 20px; margin: 16px 0; }
+    .faq-q { font-weight: 800; color: #111827; margin-bottom: 8px; font-size: 15px; }
+    .faq-a { color: #374151; font-size: 14px; line-height: 1.7; margin: 0; }
+    td.rate { text-align: center; font-weight: 700; color: #F59E0B; }
+    td.total-rate { text-align: center; font-weight: 700; color: #111827; }
+
+    .site-footer { border-top: 1px solid rgba(0,0,0,0.08); padding: 24px; text-align: center; }
+    .footer-copy { font-size: 10px; color: #374151; }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "종합부동산세, 결국 얼마인가 - 2026년 세율·계산 예시·절세까지",
+  "description": "2026년 종합부동산세 과세 기준, 세율표(0.5~2.7%), 공시가격별 실제 계산 예시 4가지, 1세대 1주택 고령자·장기보유 세액공제까지 정리했습니다. 종부세 계산기로 내 세금을 미리 확인하세요.",
+  "author": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.jptcalc.kr/android-chrome-512x512.png"
+    }
+  },
+  "datePublished": "2026-04-10",
+  "dateModified": "2026-04-10",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.jptcalc.kr/blog/posts/jongbu-tax-guide.html"
+  },
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "부동산",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "종합부동산세 과세 대상이 아닌 부동산은?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "종부세는 주택과 토지에만 부과됩니다. 상가·오피스텔(업무용)·공장 등 주거용이 아닌 건물은 과세 대상이 아닙니다. 다만 주거용 오피스텔의 경우 재산세가 주택 기준으로 부과되면 종부세 합산 대상이 될 수 있으므로, 용도 변경 전후의 세금 차이를 반드시 확인해야 합니다. 나대지·잡종지 등 토지는 별도합산 또는 종합합산 과세표준에 따라 종부세가 부과될 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "부부 공동명의면 종부세가 줄어드나?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "줄어들 수 있습니다. 종부세는 인별 과세이므로, 부부 공동명의(각 50%)로 공시가격 20억원 주택을 보유하면 각각 10억원씩 계산됩니다. 다만 공동명의 시 1세대 1주택 기본공제 12억원 대신 인당 9억원(합산 18억원)이 적용되고, 고령자·장기보유 세액공제를 받을 수 없습니다. 공시가격 구간에 따라 단독명의가 유리한 경우도 있으므로 두 가지를 비교해봐야 합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "종부세를 나눠서 낼 수 있나?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "가능합니다. 종부세 납부세액이 250만원을 초과하면 분납 신청을 할 수 있습니다. 납부세액이 500만원 이하인 경우 250만원을 초과하는 금액을, 500만원을 초과하면 세액의 50% 이하를 6개월 이내에 나눠 낼 수 있습니다. 분납 신청은 12월 납부 기간 내에 관할 세무서에 해야 하며, 분납 기간에는 이자가 붙지 않습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "재산세와 종부세를 둘 다 내야 하나?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네, 둘 다 내야 합니다. 다만 이중과세를 방지하기 위해 종부세 계산 시 재산세로 이미 납부한 금액을 공제해줍니다. 구체적으로는 종부세 과세표준에 재산세 공정시장가액비율(60%)을 적용한 금액 중 재산세 상당액을 빼는 방식입니다. 따라서 재산세를 낸 뒤 종부세에서 같은 금액을 또 내는 것은 아닙니다. 재산세는 7월·9월에, 종부세는 12월에 각각 고지됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "일시적 2주택인데 종부세가 중과되나?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "2023년 세법 개정 이후 다주택자 종부세 중과세율은 폐지되었습니다. 2주택이든 3주택이든 동일한 세율(0.5~2.7%)이 적용됩니다. 다만 기본공제가 1세대 1주택 12억원에서 9억원으로 줄어들고, 고령자·장기보유 세액공제를 받을 수 없다는 차이가 있습니다. 이사 등으로 일시적 2주택이 된 경우, 종전 주택을 처분 기한 내에 매도하면 양도소득세 비과세를 받을 수 있지만 종부세 과세기준일(6월 1일) 시점 보유 현황에 따라 종부세는 부과됩니다."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo">
+      <div class="logo-icon"><img src="../../assets/logo.svg" alt="제이퍼 계산기 로고" /></div>
+      <span class="logo-text">제이퍼<span>계산기</span></span>
+    </a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+
+<div class="post-wrap">
+  <span class="post-tag">부동산</span>
+  <h1>종합부동산세, 결국 얼마인가 - 2026년 세율·계산 예시·절세까지</h1>
+  <div class="post-meta">
+    <span>📅 2026.04.10</span>
+    <span>·</span>
+    <span>7분 읽기</span>
+  </div>
+
+  <div class="post-body">
+    <p>결론부터 말하면, 공시가격 15억원짜리 아파트 1채를 가진 사람의 종합부동산세(종부세)는 연 108만원입니다. 같은 15억이라도 60세 이상이면서 10년 넘게 보유했다면 43만원으로 줄어듭니다. 반대로 공시가격 합산 25억원의 3주택자는 864만원. 조건에 따라 20배까지 차이가 납니다.</p>
+    <p>6월 1일 과세기준일이 두 달도 안 남았습니다. 12월에 고지서를 받고 당황하기 전에, 지금 내 종부세가 얼마인지 먼저 파악해두는 게 좋습니다.</p>
+
+    <h2>0.5%에서 2.7%, 세율표부터 보자</h2>
+    <p>종부세 세율은 과세표준 구간에 따라 7단계로 나뉩니다. 2023년 세법 개정으로 다주택 중과세율이 폐지되면서, 1주택이든 다주택이든 동일한 세율표가 적용됩니다. 달라지는 건 기본공제 금액과 세액공제 가능 여부뿐입니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>과세표준</th><th>세율</th><th>누진공제</th></tr>
+        <tr><td>3억원 이하</td><td class="rate">0.5%</td><td>-</td></tr>
+        <tr><td>3억 초과 ~ 6억원</td><td class="rate">0.7%</td><td>60만원</td></tr>
+        <tr><td>6억 초과 ~ 12억원</td><td class="rate">1.0%</td><td>240만원</td></tr>
+        <tr><td>12억 초과 ~ 25억원</td><td class="rate">1.3%</td><td>600만원</td></tr>
+        <tr><td>25억 초과 ~ 50억원</td><td class="rate">1.5%</td><td>1,100만원</td></tr>
+        <tr><td>50억 초과 ~ 94억원</td><td class="rate">2.0%</td><td>3,600만원</td></tr>
+        <tr><td>94억원 초과</td><td class="rate">2.7%</td><td>1억 180만원</td></tr>
+      </table>
+    </div>
+    <p>여기서 중요한 건 "과세표준"이 공시가격이 아니라는 점입니다. 과세표준 계산은 이렇습니다.</p>
+    <div class="highlight-box">
+      <p><strong>과세표준 = (공시가격 합산 - 기본공제) × 공정시장가액비율(60%)</strong><br />
+      1세대 1주택: 기본공제 <strong>12억원</strong> / 그 외: 기본공제 <strong>9억원</strong></p>
+    </div>
+    <p>공정시장가액비율 60%가 적용되기 때문에, 실제 과세표준은 공시가격에서 공제를 뺀 금액의 60%입니다. 공시가격 15억원 1주택자라면 (15-12)×0.6 = 1.8억원이 과세표준이 됩니다.</p>
+
+    <div style="margin:24px 0;overflow-x:auto">
+    <svg role="img" width="100%" viewBox="0 0 680 280" xmlns="http://www.w3.org/2000/svg">
+      <title>1세대 1주택 공시가격별 종부세 비교 (세액공제 미적용)</title>
+      <rect width="680" height="280" rx="12" fill="#F9FAFB"/>
+      <text x="24" y="32" font-size="14" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">공시가격별 종부세+농특세 합계 (1세대 1주택, 세액공제 미적용)</text>
+      <text x="24" y="72" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">12억원</text>
+      <rect x="120" y="58" width="4" height="22" rx="4" fill="#D1D5DB"/>
+      <text x="132" y="74" font-size="13" font-weight="700" fill="#6B7280" font-family="Pretendard,sans-serif">0원 (기본공제 이하)</text>
+      <text x="24" y="112" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">15억원</text>
+      <rect x="120" y="98" width="56" height="22" rx="4" fill="#F59E0B" opacity="0.7"/>
+      <text x="184" y="114" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">108만원</text>
+      <text x="24" y="152" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">20억원</text>
+      <rect x="120" y="138" width="172" height="22" rx="4" fill="#F59E0B" opacity="0.8"/>
+      <text x="300" y="154" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">331만원</text>
+      <text x="24" y="192" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">25억원</text>
+      <rect x="120" y="178" width="336" height="22" rx="4" fill="#F59E0B" opacity="0.9"/>
+      <text x="464" y="194" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">648만원</text>
+      <text x="24" y="232" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">30억원</text>
+      <rect x="120" y="218" width="520" height="22" rx="4" fill="#F59E0B"/>
+      <text x="500" y="234" font-size="13" font-weight="700" fill="#FFFFFF" font-family="Pretendard,sans-serif">1,008만원</text>
+      <line x1="120" y1="252" x2="648" y2="252" stroke="#D1D5DB" stroke-width="1"/>
+      <text x="120" y="268" font-size="11" fill="#9CA3AF" font-family="Pretendard,sans-serif">0</text>
+      <text x="318" y="268" font-size="11" fill="#9CA3AF" font-family="Pretendard,sans-serif">500만</text>
+      <text x="616" y="268" font-size="11" fill="#9CA3AF" font-family="Pretendard,sans-serif">1,000만</text>
+    </svg>
+    </div>
+
+    <h2>6월 1일이 왜 중요한가</h2>
+    <p>종부세의 과세기준일은 매년 6월 1일입니다. 이 날 기준으로 보유하고 있는 주택의 공시가격을 합산해서 종부세를 계산합니다. 핵심은 딱 하나. <strong>6월 1일에 이름이 등기부에 올라가 있느냐 아니냐</strong>입니다.</p>
+    <ul>
+      <li>5월 31일에 매도하면 → 매도자에게 종부세 부과 안 됨</li>
+      <li>6월 2일에 매도하면 → 매도자에게 그 해 종부세 부과</li>
+      <li>6월 1일에 매수하면 → 매수자에게 종부세 부과</li>
+    </ul>
+    <p>이사나 매매 일정을 조율할 수 있다면, 6월 1일 전후로 등기 이전 시점을 조정하는 것만으로 수백만 원의 차이가 생길 수 있습니다. 여기서 주의할 점이 하나 있는데요. 매매계약을 5월에 체결해도 잔금일이 6월 이후면 등기 이전이 6월 이후가 되므로 매도자 명의로 종부세가 부과됩니다.</p>
+    <p>납부 시기는 12월 1일부터 12월 15일까지입니다. <a href="https://www.nts.go.kr" style="color:#F59E0B;">국세청</a>에서 매년 11월 말에 고지서를 발송합니다.</p>
+
+    <h2>시나리오별로 직접 계산해보면</h2>
+    <p>숫자로 보는 게 가장 빠릅니다. 2026년 기준 공시가격과 보유 현황별로 4가지 사례를 계산했습니다.</p>
+
+    <h3>시나리오 1: 신혼부부 B씨 (45세, 공시가격 15억원 아파트 1채, 보유 3년)</h3>
+    <ul>
+      <li>1세대 1주택 기본공제: 12억원</li>
+      <li>과세표준: (15억 - 12억) × 60% = <strong>1.8억원</strong></li>
+      <li>세율 0.5% (3억원 이하 구간)</li>
+      <li>종부세: 1.8억 × 0.5% = 90만원</li>
+      <li>세액공제: 45세(고령자 해당 없음), 3년 보유(장기보유 해당 없음) → 0원</li>
+      <li>농어촌특별세(20%): 18만원</li>
+      <li><strong>총 납부액: 108만원</strong></li>
+    </ul>
+
+    <h3>시나리오 2: 은퇴자 C씨 (68세, 공시가격 20억원 아파트 1채, 18년 보유)</h3>
+    <ul>
+      <li>과세표준: (20억 - 12억) × 60% = <strong>4.8억원</strong></li>
+      <li>세율 0.7% (3~6억 구간), 누진공제 60만원</li>
+      <li>종부세: 4.8억 × 0.7% - 60만 = 336만 - 60만 = 276만원</li>
+      <li>고령자 공제 30%(65~70세) + 장기보유 공제 50%(15년 이상) = 합산 80% (한도 내)</li>
+      <li>공제 후 종부세: 276만 × 20% = <strong>55.2만원</strong></li>
+      <li>농어촌특별세: 11만원</li>
+      <li><strong>총 납부액: 약 66만원</strong></li>
+    </ul>
+    <p>검산: 276만 × (1 - 0.8) = 55.2만원. 농특세 55.2만 × 20% = 11.04만원. 합계 66.24만원.</p>
+
+    <div class="highlight-box">
+      <p>같은 20억원 아파트인데 시나리오 1(108만원)과 시나리오 2(66만원)가 다릅니다. 고령자+장기보유 세액공제가 이 차이를 만듭니다. 시나리오 1은 45세+3년 보유라 공제가 전혀 없고, 시나리오 2는 68세+18년 보유로 80% 공제를 받습니다.</p>
+    </div>
+
+    <h3>시나리오 3: 다주택 투자자 D씨 (50세, 공시가격 합산 25억원, 3채 보유)</h3>
+    <ul>
+      <li>기본공제: 9억원 (1세대 1주택 아님)</li>
+      <li>과세표준: (25억 - 9억) × 60% = <strong>9.6억원</strong></li>
+      <li>세율 1.0% (6~12억 구간), 누진공제 240만원</li>
+      <li>종부세: 9.6억 × 1.0% - 240만 = 960만 - 240만 = 720만원</li>
+      <li>세액공제: 다주택자는 고령자·장기보유 공제 불가 → 0원</li>
+      <li>농어촌특별세: 144만원</li>
+      <li><strong>총 납부액: 864만원</strong></li>
+    </ul>
+    <p>검산: 9.6억 × 0.01 = 960만, 960 - 240 = 720만. 농특세 720 × 0.2 = 144만. 합계 864만원.</p>
+
+    <h3>시나리오 4: 같은 25억원이지만 1주택 E씨 (70세, 20년 보유)</h3>
+    <ul>
+      <li>기본공제: 12억원 (1세대 1주택)</li>
+      <li>과세표준: (25억 - 12억) × 60% = <strong>7.8억원</strong></li>
+      <li>세율 1.0%, 누진공제 240만원</li>
+      <li>종부세: 7.8억 × 1.0% - 240만 = 780만 - 240만 = 540만원</li>
+      <li>고령자 40%(70세 이상) + 장기보유 50%(15년 이상) = 90% → 한도 80% 적용</li>
+      <li>공제 후 종부세: 540만 × 20% = <strong>108만원</strong></li>
+      <li>농어촌특별세: 21.6만원</li>
+      <li><strong>총 납부액: 약 130만원</strong></li>
+    </ul>
+    <p>답은 간단합니다. 같은 25억원이라도 다주택 864만원 vs 1주택 고령·장기보유 130만원. 6.6배 차이입니다.</p>
+
+    <p style="margin: 1.2em 0;">
+      👉 <a href="https://www.jptcalc.kr/calc/realestate/jongbu/" style="color:#F59E0B;font-weight:600;">종합부동산세 계산기로 내 세금 바로 계산해보기</a>
+    </p>
+
+    <h2>1세대 1주택 세액공제 - 최대 80%까지</h2>
+    <p>1세대 1주택자에게만 적용되는 세액공제가 있습니다. 고령자 공제와 장기보유 공제, 두 가지를 합산해서 최대 80%까지 종부세를 깎아줍니다. 개인적으로는 이 공제가 종부세에서 가장 중요한 변수라고 봅니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>구분</th><th>조건</th><th>공제율</th></tr>
+        <tr><td rowspan="3">고령자 공제</td><td>만 60세 이상 ~ 65세 미만</td><td class="rate">20%</td></tr>
+        <tr><td>만 65세 이상 ~ 70세 미만</td><td class="rate">30%</td></tr>
+        <tr><td>만 70세 이상</td><td class="rate">40%</td></tr>
+        <tr><td rowspan="3">장기보유 공제</td><td>5년 이상 ~ 10년 미만</td><td class="rate">20%</td></tr>
+        <tr><td>10년 이상 ~ 15년 미만</td><td class="rate">40%</td></tr>
+        <tr><td>15년 이상</td><td class="rate">50%</td></tr>
+        <tr><td colspan="2"><strong>합산 한도</strong></td><td class="total-rate"><strong>80%</strong></td></tr>
+      </table>
+    </div>
+
+    <p>70세 이상이면서 15년 이상 보유하면 합산 90%지만, 한도가 80%라 80%까지만 적용됩니다. 그래도 종부세의 80%를 깎아준다는 건 상당합니다. 위의 시나리오 4처럼 540만원 세액이 108만원으로 줄어드니까요.</p>
+
+    <p style="font-size:14px;margin:16px 0;">👨‍👩‍👧 부모님께도 알려드리세요 - <a href="https://www.bumohyetaek.kr/articles/finance-safety/senior-tax-benefit" style="color:#F59E0B;">65세 이상 노인 세금 감면 혜택과 절세 방법 총정리</a></p>
+
+    <h2>재산세랑 뭐가 다른 건가</h2>
+    <p>"이미 <a href="../posts/property-tax-guide.html" style="color:#F59E0B;">재산세</a>를 내고 있는데 종부세까지 내야 해?" 이런 의문이 당연합니다. 둘 다 부동산 보유세이긴 한데, 과세 주체와 기준이 다릅니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>구분</th><th>재산세</th><th>종합부동산세</th></tr>
+        <tr><td>과세 주체</td><td>지방자치단체(시·군·구)</td><td>국세청</td></tr>
+        <tr><td>과세 기준</td><td>개별 부동산 공시가격</td><td>인별 합산 공시가격</td></tr>
+        <tr><td>기본공제</td><td>없음 (공정시장가액비율로 조정)</td><td>9억원 / 1세대 1주택 12억원</td></tr>
+        <tr><td>세율</td><td>0.1% ~ 0.4%</td><td>0.5% ~ 2.7%</td></tr>
+        <tr><td>납부 시기</td><td>7월(건물분), 9월(토지분)</td><td>12월 1~15일</td></tr>
+        <tr><td>이중과세 조정</td><td colspan="2" style="text-align:center;">종부세에서 재산세 상당액 공제</td></tr>
+      </table>
+    </div>
+
+    <p>핵심은 이겁니다. 재산세는 모든 부동산 소유자가 내고, 종부세는 공시가격 합산이 기본공제를 넘는 사람만 냅니다. 그리고 재산세로 이미 낸 금액은 종부세에서 빼줍니다. 완전히 이중으로 과세되는 건 아닙니다.</p>
+
+    <p>부동산을 취득하는 단계에서의 세금이 궁금하다면 <a href="../posts/acquisition-tax-2026.html" style="color:#F59E0B;">2026년 취득세 가이드</a>도 참고해보세요. 보유세(재산세+종부세)와 취득세를 함께 따져봐야 전체 세금 부담을 알 수 있습니다.</p>
+
+    <p>부동산을 자녀에게 이전하는 방법으로 종부세를 줄이려는 분도 있는데, 이 경우 <a href="../posts/gift-tax-guide.html" style="color:#F59E0B;">증여세</a>가 발생할 수 있으니 반드시 세무사와 상담 후 진행하시기 바랍니다.</p>
+
+    <div class="cta-box">
+      <p>공시가격만 입력하면 종부세가 자동으로 계산됩니다. 고령자·장기보유 세액공제도 반영됩니다.</p>
+      <a href="../../calc/realestate/jongbu/" class="cta-btn">종합부동산세 계산하기</a>
+    </div>
+    <p style="font-size:13px;color:#6B7280;margin-top:8px;">관련 계산기: <a href="https://www.jptcalc.kr/calc/realestate/propertytax/">재산세 계산기</a> · <a href="https://www.jptcalc.kr/calc/realestate/acquisition/">취득세 계산기</a></p>
+
+    <h2>자주 묻는 질문</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 종합부동산세 과세 대상이 아닌 부동산은?</div>
+      <p class="faq-a">종부세는 주택과 토지에만 부과됩니다. 상가·오피스텔(업무용)·공장 등 주거용이 아닌 건물은 과세 대상이 아닙니다. 다만 주거용 오피스텔의 경우 재산세가 주택 기준으로 부과되면 종부세 합산 대상이 될 수 있으므로, 용도 변경 전후의 세금 차이를 반드시 확인해야 합니다. 나대지·잡종지 등 토지는 별도합산 또는 종합합산 과세표준에 따라 종부세가 부과될 수 있습니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 부부 공동명의면 종부세가 줄어드나?</div>
+      <p class="faq-a">줄어들 수 있습니다. 종부세는 인별 과세이므로, 부부 공동명의(각 50%)로 공시가격 20억원 주택을 보유하면 각각 10억원씩 계산됩니다. 다만 공동명의 시 1세대 1주택 기본공제 12억원 대신 인당 9억원(합산 18억원)이 적용되고, 고령자·장기보유 세액공제를 받을 수 없습니다. 공시가격 구간에 따라 단독명의가 유리한 경우도 있으므로 두 가지를 비교해봐야 합니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 종부세를 나눠서 낼 수 있나?</div>
+      <p class="faq-a">가능합니다. 종부세 납부세액이 250만원을 초과하면 분납 신청을 할 수 있습니다. 납부세액이 500만원 이하인 경우 250만원을 초과하는 금액을, 500만원을 초과하면 세액의 50% 이하를 6개월 이내에 나눠 낼 수 있습니다. 분납 신청은 12월 납부 기간 내에 관할 세무서에 해야 하며, 분납 기간에는 이자가 붙지 않습니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 재산세와 종부세를 둘 다 내야 하나?</div>
+      <p class="faq-a">네, 둘 다 내야 합니다. 다만 이중과세를 방지하기 위해 종부세 계산 시 재산세로 이미 납부한 금액을 공제해줍니다. 구체적으로는 종부세 과세표준에 재산세 공정시장가액비율(60%)을 적용한 금액 중 재산세 상당액을 빼는 방식입니다. 따라서 재산세를 낸 뒤 종부세에서 같은 금액을 또 내는 것은 아닙니다. 재산세는 7월·9월에, 종부세는 12월에 각각 고지됩니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 일시적 2주택인데 종부세가 중과되나?</div>
+      <p class="faq-a">2023년 세법 개정 이후 다주택자 종부세 중과세율은 폐지되었습니다. 2주택이든 3주택이든 동일한 세율(0.5~2.7%)이 적용됩니다. 다만 기본공제가 1세대 1주택 12억원에서 9억원으로 줄어들고, 고령자·장기보유 세액공제를 받을 수 없다는 차이가 있습니다. 이사 등으로 일시적 2주택이 된 경우, 종전 주택을 처분 기한 내에 매도하면 양도소득세 비과세를 받을 수 있지만 종부세 과세기준일(6월 1일) 시점 보유 현황에 따라 종부세는 부과됩니다.</p>
+    </div>
+
+    <h2>체크리스트로 정리하면</h2>
+    <p>종부세는 공시가격, 보유 주택 수, 나이, 보유 기간 네 가지가 세액을 결정합니다. 공시가격이 기본공제(1주택 12억, 다주택 9억)를 넘지 않으면 종부세 대상이 아닙니다. 대상이라면 과세표준에 0.5~2.7% 세율을 적용하되, 1세대 1주택 고령자·장기보유 공제로 최대 80%까지 줄일 수 있습니다. 6월 1일 과세기준일 전에 매매 일정을 조율하면 그 해 종부세 자체를 피할 수도 있습니다.</p>
+    <p>정확한 세액은 매년 <a href="https://www.reb.or.kr" style="color:#F59E0B;">한국부동산원</a>에서 발표하는 공시가격을 기준으로 달라지므로, 계산기에 올해 공시가격을 입력해서 먼저 확인해보시기 바랍니다. 세부 사항이나 절세 전략은 세무사 상담을 권장합니다.</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
+</footer>
+
+  <script>
+  window.ARTICLE_INFO_CONFIG = {
+    author: '제이퍼 계산기 편집팀',
+    reviewBasis: '종합부동산세법 제7조~제14조',
+    basisDate: '2026년 기준',
+    referenceOrg: '국세청·한국부동산원',
+    lastReviewed: '2026.04.10',
+    disclaimer: '이 글은 정보 제공 목적으로 작성되었습니다. 실제 종부세는 공시가격·보유 현황·세액공제 조건에 따라 달라지므로 관할 세무서 또는 세무사에게 확인하세요.',
+    relatedCalc: { name: '종합부동산세 계산기', url: '/calc/realestate/jongbu/' },
+    category: 'realestate'
+  };
+  </script>
+<script src="/assets/blog-article-info.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>

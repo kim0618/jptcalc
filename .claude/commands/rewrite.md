@@ -23,6 +23,9 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - visceral-fat-guide.html
 - gift-tax-guide.html
 - social-insurance-guide.html
+- llm-api-price-comparison.html
+- military-discharge-date.html
+- pet-cost-saving-tips.html
 
 ## 작업 순서
 
