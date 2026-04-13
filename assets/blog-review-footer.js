@@ -76,17 +76,31 @@
       return;
     }
 
-    // fallback: .post-body 끝에 삽입
+    // fallback: .post-body 끝에 삽입 (블로그)
     var body = document.querySelector('.post-body');
     if (body) {
       body.appendChild(block);
       return;
     }
 
-    // fallback: .post-wrap 끝에 삽입
+    // fallback: .post-wrap 끝에 삽입 (블로그)
     var wrap = document.querySelector('.post-wrap');
     if (wrap) {
       wrap.appendChild(block);
+      return;
+    }
+
+    // fallback: .guide-section 끝에 삽입 (계산기)
+    var guide = document.querySelector('.guide-section');
+    if (guide) {
+      guide.appendChild(block);
+      return;
+    }
+
+    // fallback: main.page-wrap 끝에 삽입 (계산기)
+    var pageWrap = document.querySelector('main.page-wrap');
+    if (pageWrap) {
+      pageWrap.appendChild(block);
     }
   }
 

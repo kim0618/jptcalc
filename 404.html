@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>페이지를 찾을 수 없습니다 | 제이퍼 계산기</title>
+  <meta name="description" content="요청하신 페이지가 존재하지 않습니다. 제이퍼 계산기 홈으로 이동하세요." />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Pretendard', -apple-system, sans-serif;
+      background: #ffffff;
+      color: #111827;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .container {
+      text-align: center;
+      padding: 40px 24px;
+      max-width: 480px;
+    }
+    .error-code {
+      font-size: 80px;
+      font-weight: 900;
+      color: #E5E7EB;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #111827;
+      margin-bottom: 12px;
+    }
+    p {
+      font-size: 14px;
+      color: #6B7280;
+      margin-bottom: 28px;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+    .btn-primary {
+      background: #3730A3;
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background: #312E81;
+    }
+    .btn-secondary {
+      background: #F3F4F6;
+      color: #374151;
+    }
+    .btn-secondary:hover {
+      background: #E5E7EB;
+    }
+    .categories {
+      margin-top: 36px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+    .cat-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #6B7280;
+      text-decoration: none;
+      background: #F9FAFB;
+      border: 1px solid #F3F4F6;
+      transition: all 0.15s;
+    }
+    .cat-link:hover {
+      background: #EEF2FF;
+      color: #3730A3;
+      border-color: #C7D2FE;
+    }
+    .cat-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="error-code">404</div>
+    <h1>페이지를 찾을 수 없습니다</h1>
+    <p>요청하신 페이지가 이동되었거나 삭제되었을 수 있습니다.<br>아래 링크에서 원하는 계산기를 찾아보세요.</p>
+    <div class="links">
+      <a href="/" class="btn btn-primary">홈으로 이동</a>
+      <a href="/blog/" class="btn btn-secondary">블로그</a>
+    </div>
+    <div class="categories">
+      <a href="/calc/realestate/" class="cat-link"><span class="cat-dot" style="background:#F59E0B"></span>부동산</a>
+      <a href="/calc/tax/" class="cat-link"><span class="cat-dot" style="background:#10B981"></span>프리랜서 세금</a>
+      <a href="/calc/ai/" class="cat-link"><span class="cat-dot" style="background:#8B5CF6"></span>AI/테크</a>
+      <a href="/calc/salary/" class="cat-link"><span class="cat-dot" style="background:#3B82F6"></span>이직/연봉</a>
+      <a href="/calc/pet/" class="cat-link"><span class="cat-dot" style="background:#F472B6"></span>반려동물</a>
+      <a href="/calc/finance/" class="cat-link"><span class="cat-dot" style="background:#6366F1"></span>금융·이자</a>
+      <a href="/calc/health/" class="cat-link"><span class="cat-dot" style="background:#10B981"></span>건강</a>
+      <a href="/calc/date/" class="cat-link"><span class="cat-dot" style="background:#F97316"></span>날짜·D-day</a>
+    </div>
+  </div>
+</body>
+</html>

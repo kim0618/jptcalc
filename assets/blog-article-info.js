@@ -187,17 +187,24 @@
     wrapper.innerHTML = html;
     var block = wrapper.firstChild;
 
-    // .post-meta 바로 다음에 삽입
+    // .post-meta 바로 다음에 삽입 (블로그)
     var meta = document.querySelector('.post-meta');
     if (meta && meta.parentNode) {
       meta.parentNode.insertBefore(block, meta.nextSibling);
       return;
     }
 
-    // fallback: .post-body 앞에 삽입
+    // fallback: .post-body 앞에 삽입 (블로그)
     var body = document.querySelector('.post-body');
     if (body && body.parentNode) {
       body.parentNode.insertBefore(block, body);
+      return;
+    }
+
+    // fallback: .page-header 다음에 삽입 (계산기 페이지)
+    var pageHeader = document.querySelector('.page-header');
+    if (pageHeader && pageHeader.parentNode) {
+      pageHeader.parentNode.insertBefore(block, pageHeader.nextSibling);
     }
   }
 
