@@ -100,7 +100,7 @@
       .date-shell-layout .main-content{min-width:0;}
       .date-shell-layout .page-wrap,.date-shell-layout .app-container{max-width:none !important;width:100% !important;margin:0 !important;min-width:0;background:transparent !important;box-shadow:none !important;min-height:0 !important;display:flex !important;flex-direction:column !important;gap:12px !important;}
       .date-shell-layout .page-wrap>*,.date-shell-layout .app-container>*{margin-top:0 !important;margin-bottom:0 !important;}
-      .date-shell-layout .page-wrap>.page-header,.date-shell-layout .app-container>.page-header{margin-bottom:8px !important;}
+      .date-shell-layout .page-wrap>.page-header,.date-shell-layout .app-container>.page-header{margin-bottom:0px !important;}
       .date-shell-layout .main-wrap,.date-shell-layout .page-wrap{padding:0 !important;}
       .date-shell-layout .guide-section{margin-top:0 !important;gap:12px !important;}
       .date-shell-layout .siblings-section{display:none !important;}
@@ -150,12 +150,12 @@
             <a class="msl-link" href="/"><span class="msl-icon">🧮</span><span>전체 보기</span></a>
             <a class="msl-link" href="/calc/realestate/"><span class="msl-icon">🏠</span><span>부동산</span><span class="msl-badge">15</span></a>
             <a class="msl-link" href="/calc/tax/"><span class="msl-icon">💰</span><span>프리랜서 세금</span><span class="msl-badge">5</span></a>
-            <a class="msl-link" href="/calc/ai/"><span class="msl-icon">🤖</span><span>AI / 테크</span><span class="msl-badge">5</span></a>
             <a class="msl-link" href="/calc/salary/"><span class="msl-icon">📈</span><span>이직 / 연봉</span><span class="msl-badge">7</span></a>
-            <a class="msl-link" href="/calc/pet/"><span class="msl-icon">🐾</span><span>반려동물</span><span class="msl-badge">5</span></a>
             <a class="msl-link" href="/calc/finance/"><span class="msl-icon">🏦</span><span>금융 · 이자</span><span class="msl-badge">5</span></a>
             <a class="msl-link" href="/calc/health/"><span class="msl-icon">🏃</span><span>건강</span><span class="msl-badge">5</span></a>
             <a class="msl-link msl-active" href="/calc/date/"><span class="msl-icon">📅</span><span>날짜 · D-day</span><span class="msl-badge">6</span></a>
+            <a class="msl-link" href="/calc/ai/"><span class="msl-icon">🤖</span><span>AI / 테크</span><span class="msl-badge">5</span></a>
+            <a class="msl-link" href="/calc/pet/"><span class="msl-icon">🐾</span><span>반려동물</span><span class="msl-badge">5</span></a>
           </div>
         </div>
         <div class="msl-divider"></div>

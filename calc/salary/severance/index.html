@@ -61,12 +61,12 @@
     <nav class="header-nav">
       <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
       <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
       <a href="/calc/salary/" class="nav-item active"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
       <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
       <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
       <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
     </nav>
     <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
     <button class="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
@@ -102,10 +102,12 @@
       <div class="field">
         <div class="field-label">퇴직 직전 3개월 평균 월급여 <span class="label-hint">만원 단위</span></div>
         <div class="input-wrap"><input type="number" id="rt-monthly" placeholder="예) 350" oninput="calc()" /><span class="unit">만원</span></div>
+        <div class="converted" id="rt-monthly-conv"></div>
       </div>
       <div class="field">
         <div class="field-label">연간 상여금 합계 <span class="label-hint">만원 단위</span></div>
         <div class="input-wrap"><input type="number" id="rt-bonus" placeholder="예) 200" oninput="calc()" /><span class="unit">만원</span></div>
+        <div class="converted" id="rt-bonus-conv"></div>
         <div class="field-hint">연봉에 포함된 상여금이면 0으로 입력</div>
       </div>
     </div>
@@ -270,6 +272,8 @@ function calc(){
   const em=parseInt(document.getElementById('rt-end-m').value)||0;
   const monthly=parseFloat(document.getElementById('rt-monthly').value)||0;
   const bonus=parseFloat(document.getElementById('rt-bonus').value)||0;
+  document.getElementById('rt-monthly-conv').textContent = monthly > 0 ? fmtM(monthly) : '';
+  document.getElementById('rt-bonus-conv').textContent = bonus > 0 ? fmtM(bonus) : '';
   const res=document.getElementById('result');
   if(!sy||!sm||!ey||!em||!monthly){res.classList.remove('show');return;}
   const startDate=new Date(sy,sm-1,1);

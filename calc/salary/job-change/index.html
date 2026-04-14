@@ -76,12 +76,12 @@
     <nav class="header-nav">
       <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
       <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
       <a href="/calc/salary/" class="nav-item active"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
       <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
       <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
       <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
     </nav>
     <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
     <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
@@ -102,6 +102,7 @@
           <input type="number" id="s1-current" placeholder="예) 4200" oninput="calcNego()" />
           <span class="unit">만원</span>
         </div>
+        <div class="converted" id="s1-current-conv"></div>
       </div>
       <div class="field">
         <div class="field-label">목표 월 실수령 증가액 <span class="label-hint">만원 단위</span></div>
@@ -109,6 +110,7 @@
           <input type="number" id="s1-target-raise" placeholder="예) 30" oninput="calcNego()" />
           <span class="unit">만원</span>
         </div>
+        <div class="converted" id="s1-raise-conv"></div>
         <div class="field-hint">💡 매월 손에 쥐는 돈이 이 만큼 늘길 원하는 경우</div>
       </div>
     </div>
@@ -233,6 +235,8 @@ function calcMonthly(annual_man, dep_count) {
 function calcNego() {
   const cur = parseFloat(document.getElementById('s1-current').value);
   const raise = parseFloat(document.getElementById('s1-target-raise').value);
+  document.getElementById('s1-current-conv').textContent = cur > 0 ? fmtM(cur) : '';
+  document.getElementById('s1-raise-conv').textContent = raise > 0 ? fmtM(raise) : '';
   const res = document.getElementById('s1-result');
   if (!cur || cur <= 0 || !raise || raise <= 0) { res.classList.remove('show'); return; }
   res.classList.add('show');

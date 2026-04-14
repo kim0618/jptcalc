@@ -13,6 +13,10 @@
         ['/calc/realestate/acquisition/','📄','취득세 계산기'],
         ['/calc/realestate/conversion/','🔄','전월세전환 계산기'],
         ['/calc/realestate/registry/','📋','등기비용 계산기']
+      ],
+      guides: [
+        ['/blog/posts/realestate-agent-fee.html','부동산 중개수수료, 나는 얼마 내야 할까?'],
+        ['/blog/posts/jeonse-vs-wolse.html','전세 vs 월세, 어떤 게 더 유리할까?']
       ]
     },
     'acquisition': {
@@ -28,6 +32,10 @@
         ['/calc/realestate/brokerage/','🏠','중개수수료 계산기'],
         ['/calc/realestate/capital-gains/','📈','양도소득세 계산기'],
         ['/calc/realestate/propertytax/','🏛️','재산세 계산기']
+      ],
+      guides: [
+        ['/blog/posts/acquisition-tax-2026.html','2026년 취득세 완벽 정리'],
+        ['/blog/posts/realestate-agent-fee.html','부동산 중개수수료, 나는 얼마 내야 할까?']
       ]
     },
     'conversion': {
@@ -43,6 +51,10 @@
         ['/calc/realestate/brokerage/','🏠','중개수수료 계산기'],
         ['/calc/realestate/rental/','📊','임대수익률 계산기'],
         ['/calc/realestate/dsr/','🔢','대출한도(DSR) 계산기']
+      ],
+      guides: [
+        ['/blog/posts/jeonse-vs-wolse.html','전세 vs 월세, 어떤 게 더 유리할까?'],
+        ['/blog/posts/realestate-agent-fee.html','부동산 중개수수료, 나는 얼마 내야 할까?']
       ]
     },
     'loan': {
@@ -58,6 +70,10 @@
         ['/calc/realestate/rental/','📊','임대수익률 계산기'],
         ['/calc/realestate/dsr/','🔢','대출한도(DSR) 계산기'],
         ['/calc/realestate/joint/','👥','공동명의비교 계산기']
+      ],
+      guides: [
+        ['/blog/posts/mortgage-dsr-guide.html','주택담보대출 한도 계산법 - DSR·LTV 총정리'],
+        ['/blog/posts/loan-refinance-guide.html','대환대출 완벽 가이드 - 대출 갈아타기']
       ]
     },
     'rental': {
@@ -73,6 +89,10 @@
         ['/calc/realestate/loan/','💰','대출이자 계산기'],
         ['/calc/realestate/conversion/','🔄','전월세전환 계산기'],
         ['/calc/realestate/propertytax/','🏛️','재산세 계산기']
+      ],
+      guides: [
+        ['/blog/posts/jeonse-vs-wolse.html','전세 vs 월세, 어떤 게 더 유리할까?'],
+        ['/blog/posts/realestate-agent-fee.html','부동산 중개수수료, 나는 얼마 내야 할까?']
       ]
     },
     'jongbu': {
@@ -88,6 +108,10 @@
         ['/calc/realestate/acquisition/','📄','취득세 계산기'],
         ['/calc/realestate/propertytax/','🏛️','재산세 계산기'],
         ['/calc/realestate/joint/','👥','공동명의비교 계산기']
+      ],
+      guides: [
+        ['/blog/posts/jongbu-tax-guide.html','종합부동산세, 결국 얼마인가 - 2026년 총정리'],
+        ['/blog/posts/property-tax-guide.html','2026년 재산세 완벽 정리']
       ]
     },
     'capital-gains': {
@@ -103,6 +127,10 @@
         ['/calc/realestate/acquisition/','📄','취득세 계산기'],
         ['/calc/realestate/brokerage/','🏠','중개수수료 계산기'],
         ['/calc/realestate/inheritance/','📜','상속세 계산기']
+      ],
+      guides: [
+        ['/blog/posts/capital-gains-tax.html','양도소득세 절세 방법 총정리 - 2026년 기준'],
+        ['/blog/posts/acquisition-tax-2026.html','2026년 취득세 완벽 정리']
       ]
     },
     'gift': {
@@ -118,6 +146,10 @@
         ['/calc/realestate/jongbu/','🏦','종합부동산세 계산기'],
         ['/calc/realestate/acquisition/','📄','취득세 계산기'],
         ['/calc/realestate/inheritance/','📜','상속세 계산기']
+      ],
+      guides: [
+        ['/blog/posts/gift-tax-guide.html','증여세 계산 완전 가이드 - 공제·세율·절세 전략'],
+        ['/blog/posts/inheritance-tax-guide.html','상속세 계산 가이드 2026 - 세율·공제·절세']
       ]
     },
     'pyeong': {
@@ -133,7 +165,8 @@
         ['/calc/realestate/brokerage/','🏠','중개수수료 계산기'],
         ['/calc/realestate/acquisition/','📄','취득세 계산기'],
         ['/calc/realestate/propertytax/','🏛️','재산세 계산기']
-      ]
+      ],
+      guides: []
     },
     'propertytax': {
       title: '재산세',
@@ -148,6 +181,10 @@
         ['/calc/realestate/jongbu/','🏦','종합부동산세 계산기'],
         ['/calc/realestate/property-tax-comprehensive/','💼','보유세 종합 계산기'],
         ['/calc/realestate/acquisition/','📄','취득세 계산기']
+      ],
+      guides: [
+        ['/blog/posts/property-tax-guide.html','2026년 재산세 완벽 정리 - 납부 시기·세율·계산법'],
+        ['/blog/posts/jongbu-tax-guide.html','종합부동산세, 결국 얼마인가 - 2026년 총정리']
       ]
     },
     'inheritance': {
@@ -163,6 +200,10 @@
         ['/calc/realestate/gift/','🎁','증여세 계산기'],
         ['/calc/realestate/acquisition/','📄','취득세 계산기'],
         ['/calc/realestate/capital-gains/','📈','양도소득세 계산기']
+      ],
+      guides: [
+        ['/blog/posts/inheritance-tax-guide.html','상속세 계산 가이드 2026 - 세율·공제·절세'],
+        ['/blog/posts/gift-tax-guide.html','증여세 계산 완전 가이드 - 공제·세율·절세 전략']
       ]
     },
     'dsr': {
@@ -178,6 +219,10 @@
         ['/calc/realestate/loan/','💰','대출이자 계산기'],
         ['/calc/realestate/rental/','📊','임대수익률 계산기'],
         ['/calc/realestate/joint/','👥','공동명의 비교 계산기']
+      ],
+      guides: [
+        ['/blog/posts/mortgage-dsr-guide.html','주택담보대출 한도 계산법 - DSR·LTV 총정리'],
+        ['/blog/posts/loan-refinance-guide.html','대환대출 완벽 가이드 - 대출 갈아타기']
       ]
     },
     'registry': {
@@ -193,7 +238,8 @@
         ['/calc/realestate/acquisition/','📄','취득세 계산기'],
         ['/calc/realestate/brokerage/','🏠','중개수수료 계산기'],
         ['/calc/realestate/capital-gains/','📈','양도소득세 계산기']
-      ]
+      ],
+      guides: []
     },
     'joint': {
       title: '공동명의 비교',
@@ -208,6 +254,10 @@
         ['/calc/realestate/jongbu/','🏦','종합부동산세 계산기'],
         ['/calc/realestate/property-tax-comprehensive/','💼','보유세 종합 계산기'],
         ['/calc/realestate/capital-gains/','📈','양도소득세 계산기']
+      ],
+      guides: [
+        ['/blog/posts/jongbu-tax-guide.html','종합부동산세, 결국 얼마인가 - 2026년 총정리'],
+        ['/blog/posts/property-tax-guide.html','2026년 재산세 완벽 정리']
       ]
     },
     'property-tax-comprehensive': {
@@ -223,6 +273,10 @@
         ['/calc/realestate/propertytax/','🏛️','재산세 계산기'],
         ['/calc/realestate/jongbu/','🏦','종합부동산세 계산기'],
         ['/calc/realestate/joint/','👥','공동명의 비교 계산기']
+      ],
+      guides: [
+        ['/blog/posts/property-tax-guide.html','2026년 재산세 완벽 정리'],
+        ['/blog/posts/jongbu-tax-guide.html','종합부동산세, 결국 얼마인가 - 2026년 총정리']
       ]
     }
   };
@@ -253,13 +307,17 @@
   function ensureStyles() {
     if (document.getElementById('realestate-shell-styles')) return;
     const css = `
-      .realestate-shell-layout{max-width:1400px;margin:0 auto;padding:28px 24px;display:grid;grid-template-columns:220px minmax(0,1fr) 300px;gap:24px;align-items:start;}
-      .realestate-shell-layout .page-header{border:1px solid rgba(245,158,11,0.2) !important;padding:32px 32px 28px !important;position:relative !important;overflow:hidden !important;line-height:normal !important;}
+      .realestate-shell-layout{max-width:1400px;margin:0 auto;padding:20px 24px;display:grid;grid-template-columns:220px minmax(0,1fr) 300px;gap:24px;align-items:start;}
+      .realestate-shell-layout .page-header{border:1px solid rgba(245,158,11,0.2) !important;padding:24px 28px 14px !important;margin-bottom:12px !important;border-radius:14px !important;position:relative !important;overflow:hidden !important;line-height:normal !important;}
       .realestate-shell-layout .page-header::before{content:'';position:absolute;top:-60px;right:-60px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(245,158,11,0.2) 0%,transparent 70%);}
       .realestate-shell-layout .main-content{min-width:0;}
       .realestate-shell-layout .page-wrap,.realestate-shell-layout .app-container{max-width:none !important;width:100% !important;margin:0 !important;min-width:0;background:transparent !important;box-shadow:none !important;min-height:0 !important;}
       .realestate-shell-layout .main-wrap,.realestate-shell-layout .page-wrap{padding:0 !important;}
-      .realestate-shell-layout .guide-section{margin-top:24px;}
+      .realestate-shell-layout .article-info{margin-bottom:12px !important;}
+      .realestate-shell-layout .review-footer{margin-top:12px !important;}
+      .realestate-shell-layout .guide-section .review-footer{margin-top:0 !important;}
+      .realestate-shell-layout .guide-section>.update-note{margin-top:0 !important;}
+      .realestate-shell-layout .guide-section{margin-top:12px;}
       .realestate-shell-layout .siblings-section{display:none !important;}
       .mega-sidebar-left{position:sticky;top:88px;line-height:normal;}
       .msl-section{margin-bottom:20px;}
@@ -276,17 +334,24 @@
       .msl-calc-btn:hover{background:rgba(0,0,0,.04);color:#374151;}
       .msl-calc-btn.msl-calc-active{background:rgba(245,158,11,.12);color:#F59E0B;}
       .msl-calc-dot{width:5px;height:5px;border-radius:50%;background:#F59E0B;flex-shrink:0;}
-      .mega-sidebar-right{position:sticky;top:88px;display:flex;flex-direction:column;gap:16px;}
-      .msr-widget{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:14px;padding:18px;box-shadow:0 10px 24px rgba(15,23,42,.04);}
-      .msr-widget-title{font-size:11px;font-weight:800;color:#6B7280;letter-spacing:.5px;text-transform:uppercase;margin-bottom:12px;}
+      .mega-sidebar-right{position:sticky;top:88px;display:flex;flex-direction:column;gap:12px;}
+      .msr-widget{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:14px;padding:14px 16px;box-shadow:0 10px 24px rgba(15,23,42,.04);}
+      .msr-widget-title{font-size:11px;font-weight:800;color:#6B7280;letter-spacing:.5px;text-transform:uppercase;margin-bottom:10px;}
       .msr-widget-link{display:flex;align-items:flex-start;gap:8px;padding:8px 10px;border-radius:8px;text-decoration:none;transition:background .15s;}
       .msr-widget-link:hover{background:rgba(0,0,0,.04);}
       .msr-widget-icon{font-size:14px;flex-shrink:0;line-height:1.4;}
       .msr-widget-text{font-size:12px;font-weight:600;color:#667085;line-height:1.55;}
       .msr-widget-link:hover .msr-widget-text{color:#111827;}
       .msr-note{font-size:11px;color:#98A2B3;line-height:1.6;padding:0 10px;}
+      .mobile-guides{display:none;margin-top:16px;}
+      .mobile-guides__title{font-size:11px;font-weight:800;color:#6B7280;letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px;}
+      .mobile-guides__list{display:flex;flex-direction:column;gap:6px;}
+      .mobile-guides__link{display:flex;align-items:center;gap:10px;padding:11px 14px;background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:12px;text-decoration:none;transition:border-color .15s;}
+      .mobile-guides__link:hover{border-color:#F59E0B;}
+      .mobile-guides__icon{font-size:15px;flex-shrink:0;}
+      .mobile-guides__text{font-size:13px;font-weight:600;color:#374151;flex:1;line-height:1.4;}
       @media (max-width:1199px){.realestate-shell-layout{grid-template-columns:200px minmax(0,1fr)}.mega-sidebar-right{display:none;}}
-      @media (max-width:767px){.realestate-shell-layout{grid-template-columns:1fr;padding:16px;gap:16px}.mega-sidebar-left,.mega-sidebar-right{display:none;}}
+      @media (max-width:767px){.realestate-shell-layout{grid-template-columns:1fr;padding:16px;gap:16px}.mega-sidebar-left,.mega-sidebar-right{display:none;}.mobile-guides{display:block;}}
     `;
     const style = document.createElement('style');
     style.id = 'realestate-shell-styles';
@@ -307,12 +372,12 @@
             <a class="msl-link" href="/"><span class="msl-icon">🧮</span><span>전체 보기</span></a>
             <a class="msl-link msl-active" href="/calc/realestate/"><span class="msl-icon">🏠</span><span>부동산</span><span class="msl-badge">15</span></a>
             <a class="msl-link" href="/calc/tax/"><span class="msl-icon">💰</span><span>프리랜서 세금</span><span class="msl-badge">5</span></a>
-            <a class="msl-link" href="/calc/ai/"><span class="msl-icon">🤖</span><span>AI / 테크</span><span class="msl-badge">5</span></a>
             <a class="msl-link" href="/calc/salary/"><span class="msl-icon">📈</span><span>이직 / 연봉</span><span class="msl-badge">7</span></a>
-            <a class="msl-link" href="/calc/pet/"><span class="msl-icon">🐾</span><span>반려동물</span><span class="msl-badge">5</span></a>
             <a class="msl-link" href="/calc/finance/"><span class="msl-icon">🏦</span><span>금융 · 이자</span><span class="msl-badge">5</span></a>
             <a class="msl-link" href="/calc/health/"><span class="msl-icon">🏃</span><span>건강</span><span class="msl-badge">5</span></a>
             <a class="msl-link" href="/calc/date/"><span class="msl-icon">📅</span><span>날짜 · D-day</span><span class="msl-badge">5</span></a>
+            <a class="msl-link" href="/calc/ai/"><span class="msl-icon">🤖</span><span>AI / 테크</span><span class="msl-badge">5</span></a>
+            <a class="msl-link" href="/calc/pet/"><span class="msl-icon">🐾</span><span>반려동물</span><span class="msl-badge">5</span></a>
           </div>
         </div>
         <div class="msl-divider"></div>
@@ -325,9 +390,15 @@
   }
 
   function rightSidebarHtml(slug) {
-    const conf = slugMap[slug] || {title:'부동산 계산기', emoji:'🏠', tips:[], related:[]};
+    const conf = slugMap[slug] || {title:'부동산 계산기', emoji:'🏠', tips:[], related:[], guides:[]};
     const tips = conf.tips.map(t => `<div class="msr-widget-link"><span class="msr-widget-icon">${conf.emoji}</span><span class="msr-widget-text">${t}</span></div>`).join('');
     const related = conf.related.map(([href, icon, label]) => `<a class="msr-widget-link" href="${href}"><span class="msr-widget-icon">${icon}</span><span class="msr-widget-text">${label}</span></a>`).join('');
+    const guidesHtml = (conf.guides && conf.guides.length)
+      ? `<div class="msr-widget">
+          <div class="msr-widget-title">관련 가이드</div>
+          <div class="msr-widget-list">${conf.guides.map(([href, label]) => `<a class="msr-widget-link" href="${href}"><span class="msr-widget-icon">📖</span><span class="msr-widget-text">${label}</span></a>`).join('')}</div>
+        </div>`
+      : '';
     return `
       <aside class="mega-sidebar-right">
         <div class="msr-widget">
@@ -335,6 +406,7 @@
           <div class="msr-widget-list">${related}</div>
           <div class="msr-note">부동산 카테고리 안에서 바로 이어서 비교할 수 있게 구성했습니다.</div>
         </div>
+        ${guidesHtml}
       </aside>
     `;
   }
@@ -357,6 +429,20 @@
     const main = shell.querySelector('.main-content');
     main.appendChild(content);
     if (guide && guide !== content && !main.contains(guide)) main.appendChild(guide);
+
+    const conf = slugMap[slug];
+    if (conf.guides && conf.guides.length) {
+      const mobileGuides = document.createElement('div');
+      mobileGuides.className = 'mobile-guides';
+      mobileGuides.innerHTML =
+        '<div class="mobile-guides__title">관련 가이드</div>' +
+        '<div class="mobile-guides__list">' +
+        conf.guides.map(([href, label]) =>
+          `<a class="mobile-guides__link" href="${href}"><span class="mobile-guides__icon">📖</span><span class="mobile-guides__text">${label}</span></a>`
+        ).join('') +
+        '</div>';
+      content.appendChild(mobileGuides);
+    }
 
     if (footer) body.insertBefore(shell, footer);
     else body.appendChild(shell);

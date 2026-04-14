@@ -53,7 +53,7 @@
     .sh-btn-blog:hover{border-color:#F59E0B;color:#F59E0B;}
     .sh-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;margin-left:auto;background:none;border:none;}
     .sh-hamburger span{display:block;width:22px;height:2px;background:#9CA3AF;border-radius:2px;}
-    .mega-layout{max-width:1400px;margin:0 auto;padding:28px 24px;display:grid;grid-template-columns:220px minmax(0,1fr) 300px;gap:24px;align-items:start;}
+    .mega-layout{max-width:1400px;margin:0 auto;padding:20px 24px;display:grid;grid-template-columns:220px minmax(0,1fr) 300px;gap:24px;align-items:start;}
     .mega-sidebar-left{position:sticky;top:88px;align-self:start;}
     .msl-section{margin-bottom:20px;}
     .msl-title{font-size:11px;font-weight:800;letter-spacing:.2px;color:#6B7280;margin-bottom:8px;padding:0 8px;}
@@ -67,9 +67,9 @@
     .msl-link.msl-active .msl-badge{background:rgba(245,158,11,.15);color:#F59E0B;}
     .msl-divider{height:1px;background:rgba(0,0,0,.06);margin:10px 0;}
     .msl-calc-dot{width:5px;height:5px;border-radius:50%;background:#F59E0B;flex-shrink:0;}
-    .mega-sidebar-right{position:sticky;top:88px;display:flex;flex-direction:column;gap:16px;align-self:start;}
-    .msr-widget{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:14px;padding:18px;}
-    .msr-widget-title{font-size:11px;font-weight:800;color:#6B7280;letter-spacing:.2px;margin-bottom:12px;}
+    .mega-sidebar-right{position:sticky;top:88px;display:flex;flex-direction:column;gap:12px;align-self:start;}
+    .msr-widget{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:14px;padding:14px 16px;}
+    .msr-widget-title{font-size:11px;font-weight:800;color:#6B7280;letter-spacing:.2px;margin-bottom:10px;}
     .msr-widget-list{display:flex;flex-direction:column;gap:4px;}
     .msr-widget-link{display:flex;align-items:flex-start;gap:8px;padding:8px 10px;border-radius:8px;text-decoration:none;transition:background .15s;}
     .msr-widget-link:hover{background:rgba(0,0,0,.04);}
@@ -80,7 +80,7 @@
     .mega-overlay.open{display:block;}
     .page-wrap.realestate-shell-main{max-width:none!important;width:100%!important;margin:0!important;padding:0!important;min-width:0;display:flex!important;flex-direction:column!important;gap:12px!important;}
     .realestate-shell-main>*{margin-top:0!important;margin-bottom:0!important;min-width:0!important;}
-    .realestate-shell-main>.page-header{margin-bottom:8px!important;}
+    .realestate-shell-main>.page-header{margin-bottom:0px!important;}
         .realestate-shell-main .card{width:100%!important;box-sizing:border-box!important;}
     .realestate-shell-main .card .field{min-width:0;}
     .realestate-shell-main .card,
@@ -106,12 +106,12 @@
       <nav class="sh-nav">
         <a href="/calc/realestate/" class="sh-nav-item sh-active"><span class="sh-nav-dot" style="background:#F59E0B"></span>부동산</a>
         <a href="/calc/tax/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#10B981"></span>프리랜서 세금</a>
-        <a href="/calc/ai/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#8B5CF6"></span>AI/테크</a>
         <a href="/calc/salary/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#3B82F6"></span>이직/연봉</a>
-        <a href="/calc/pet/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#F472B6"></span>반려동물</a>
         <a href="/calc/finance/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#6366F1"></span>금융·이자</a>
         <a href="/calc/health/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#10B981"></span>건강</a>
         <a href="/calc/date/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#F97316"></span>날짜·D-day</a>
+        <a href="/calc/ai/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#8B5CF6"></span>AI/테크</a>
+        <a href="/calc/pet/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#F472B6"></span>반려동물</a>
       </nav>
       <div class="sh-cta"><a href="/blog/" class="sh-btn-blog">블로그</a></div>
       <button class="sh-hamburger" type="button" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
@@ -154,12 +154,12 @@
         <a href="/" class="msl-link"><span class="msl-icon">🧮</span>전체 보기</a>
         <a href="/calc/realestate/" class="msl-link msl-active"><span class="msl-icon">🏠</span>부동산<span class="msl-badge">15</span></a>
         <a href="/calc/tax/" class="msl-link"><span class="msl-icon">💰</span>프리랜서 세금<span class="msl-badge">5</span></a>
-        <a href="/calc/ai/" class="msl-link"><span class="msl-icon">🤖</span>AI / 테크<span class="msl-badge">5</span></a>
         <a href="/calc/salary/" class="msl-link"><span class="msl-icon">📈</span>이직 / 연봉<span class="msl-badge">7</span></a>
-        <a href="/calc/pet/" class="msl-link"><span class="msl-icon">🐾</span>반려동물<span class="msl-badge">5</span></a>
         <a href="/calc/finance/" class="msl-link"><span class="msl-icon">🏦</span>금융 · 이자<span class="msl-badge">5</span></a>
         <a href="/calc/health/" class="msl-link"><span class="msl-icon">🏃</span>건강<span class="msl-badge">5</span></a>
         <a href="/calc/date/" class="msl-link"><span class="msl-icon">📅</span>날짜 · D-day<span class="msl-badge">5</span></a>
+        <a href="/calc/ai/" class="msl-link"><span class="msl-icon">🤖</span>AI / 테크<span class="msl-badge">5</span></a>
+        <a href="/calc/pet/" class="msl-link"><span class="msl-icon">🐾</span>반려동물<span class="msl-badge">5</span></a>
       </nav>
     </div>
     <div class="msl-divider"></div>

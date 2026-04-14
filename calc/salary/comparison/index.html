@@ -63,12 +63,12 @@
     <nav class="header-nav">
       <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
       <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
       <a href="/calc/salary/" class="nav-item active"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
       <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
       <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
       <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
     </nav>
     <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
     <button class="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
@@ -88,6 +88,7 @@
         <div class="field">
           <div class="field-label">세전 연봉 <span class="label-hint">만원 단위</span></div>
           <div class="input-wrap"><input type="number" id="s4-a" placeholder="예) 4500" oninput="calc()" /><span class="unit">만원</span></div>
+          <div class="converted" id="s4-a-conv"></div>
         </div>
       </div>
       <div class="card" style="border-top:3px solid #F59E0B;margin-bottom:0">
@@ -95,6 +96,7 @@
         <div class="field">
           <div class="field-label">세전 연봉 <span class="label-hint">만원 단위</span></div>
           <div class="input-wrap"><input type="number" id="s4-b" placeholder="예) 5200" oninput="calc()" /><span class="unit">만원</span></div>
+          <div class="converted" id="s4-b-conv"></div>
         </div>
       </div>
     </div>
@@ -171,6 +173,8 @@ function calcMonthly(annual_man,dep_count){const monthly=annual_man*10000/12;con
 function calc(){
   const a=parseFloat(document.getElementById('s4-a').value);
   const b=parseFloat(document.getElementById('s4-b').value);
+  document.getElementById('s4-a-conv').textContent=a>0?fmtM(a):'';
+  document.getElementById('s4-b-conv').textContent=b>0?fmtM(b):'';
   const res=document.getElementById('result');
   if(!a||!b||a<=0||b<=0){res.style.display='none';return;}
   res.style.display='block';

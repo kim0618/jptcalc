@@ -76,12 +76,12 @@
     <nav class="header-nav">
       <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
       <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
       <a href="/calc/salary/" class="nav-item active"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
       <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
       <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
       <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
     </nav>
     <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
     <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
@@ -102,6 +102,7 @@
           <input type="number" id="s3-before" placeholder="예) 4000" oninput="calcRaise()" />
           <span class="unit">만원</span>
         </div>
+        <div class="converted" id="s3-before-conv"></div>
       </div>
       <div class="field">
         <div class="field-label">인상 후 연봉 <span class="label-hint">만원 단위</span></div>
@@ -109,6 +110,7 @@
           <input type="number" id="s3-after" placeholder="예) 4500" oninput="calcRaise()" />
           <span class="unit">만원</span>
         </div>
+        <div class="converted" id="s3-after-conv"></div>
       </div>
     </div>
     <div class="result-card" id="s3-result">
@@ -231,6 +233,8 @@ function calcMonthly(annual_man, dep_count) {
 function calcRaise() {
   const before = parseFloat(document.getElementById('s3-before').value);
   const after = parseFloat(document.getElementById('s3-after').value);
+  document.getElementById('s3-before-conv').textContent = before > 0 ? fmtM(before) : '';
+  document.getElementById('s3-after-conv').textContent = after > 0 ? fmtM(after) : '';
   const res = document.getElementById('s3-result');
   if (!before || !after || before <= 0 || after <= 0) { res.classList.remove('show'); return; }
   res.classList.add('show');

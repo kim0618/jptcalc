@@ -11,9 +11,9 @@
 window.AI_MODELS = {
   gpt4o:         { name: 'GPT-4o',            input: 2.50,  output: 10.00, ctx: '128K', coding: 88, reasoning: 88 },
   gpt4omini:     { name: 'GPT-4o-mini',        input: 0.15,  output:  0.60, ctx: '128K', coding: 78, reasoning: 75 },
-  claude4opus:   { name: 'Claude Opus 4.6',    input: 5.00,  output: 25.00, ctx: '200K', coding: 95, reasoning: 96 },
-  claude4sonnet: { name: 'Claude Sonnet 4.6',  input: 3.00,  output: 15.00, ctx: '200K', coding: 92, reasoning: 90 },
-  claude4haiku:  { name: 'Claude Haiku 4.5',   input: 1.00,  output:  5.00, ctx: '200K', coding: 82, reasoning: 80 },
+  claude4opus:   { name: 'Claude Opus 4.6',    input: 15.00, output: 75.00, ctx: '200K', coding: 95, reasoning: 96 },
+  claude4sonnet: { name: 'Claude Sonnet 4.6',  input:  3.00, output: 15.00, ctx: '200K', coding: 92, reasoning: 90 },
+  claude4haiku:  { name: 'Claude Haiku 4.5',   input:  0.80, output:  4.00, ctx: '200K', coding: 82, reasoning: 80 },
   gemini2pro:    { name: 'Gemini 2.5 Pro',     input: 1.25,  output: 10.00, ctx: '1M',   coding: 87, reasoning: 92 },
   gemini2flash:  { name: 'Gemini 2.0 Flash',   input: 0.10,  output:  0.40, ctx: '1M',   coding: 75, reasoning: 72 },
 };
@@ -36,4 +36,4 @@ window.AI_MODELS_SELECT_ORDER = [
 window.AI_MODELS_DEFAULT = 'claude4sonnet';
 
 // 데이터 확인 기준일
-window.AI_MODELS_UPDATED = '2026-03-25';
+window.AI_MODELS_UPDATED = '2026-04-14';
