@@ -421,10 +421,10 @@ function calcAcquisition() {
   const rate = getAcqRate(priceMan, houseCnt, isAdjust);
   const price = priceMan * 10000;
   const acqTax = price * rate;
-  const eduRate = rate >= 0.08 ? 0.4 : 0.1;
-  const eduTax = acqTax * eduRate;
-  const ruralRate = rate >= 0.08 ? 0.01 : 0.002;
-  const ruralTax = price * ruralRate;
+  // 지방교육세: 중과(8%+) 0.4% 고정, 일반 취득세×10%
+  const eduTax = rate >= 0.08 ? price * 0.004 : acqTax * 0.1;
+  // 농어촌특별세(85㎡ 초과 기준): 중과 (적용세율-2%)×10%, 일반 0.2%
+  const ruralTax = rate >= 0.08 ? price * (rate - 0.02) * 0.1 : price * 0.002;
   const total = acqTax + eduTax + ruralTax;
   document.getElementById('acq-rate').textContent = (rate * 100).toFixed(2) + '%';
   document.getElementById('acq-tax').textContent = fmt(Math.round(acqTax / 10000));

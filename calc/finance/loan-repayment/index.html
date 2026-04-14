@@ -57,6 +57,22 @@
     .rh-label{font-size:12px;color:var(--gray-500);margin-bottom:4px}
     .rh-value{font-size:28px;font-weight:900;color:var(--primary)}
     .rh-sub{font-size:12px;color:var(--gray-500);margin-top:2px}
+    /* Schedule */
+    .schedule-card{background:#fff;border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:var(--shadow-sm);border:1px solid var(--gray-100);display:none}
+    .schedule-card.show{display:block}
+    .schedule-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:8px}
+    .schedule-toggle{margin-bottom:0!important}
+    .schedule-toggle .seg-btn{flex:none;min-width:auto;padding:6px 14px;font-size:12px}
+    .schedule-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;max-height:480px;overflow-y:auto;border:1px solid var(--gray-200);border-radius:10px}
+    .schedule-wrap table{width:100%;border-collapse:collapse;font-size:13px;white-space:nowrap}
+    .schedule-wrap thead{position:sticky;top:0;z-index:1}
+    .schedule-wrap th{background:var(--gray-50);padding:10px 12px;text-align:right;font-size:11px;font-weight:700;color:var(--gray-500);border-bottom:2px solid var(--gray-200)}
+    .schedule-wrap th:first-child{text-align:center}
+    .schedule-wrap td{padding:8px 12px;text-align:right;font-size:12px;color:var(--gray-600);border-bottom:1px solid var(--gray-100)}
+    .schedule-wrap td:first-child{text-align:center;font-weight:700;color:var(--gray-700)}
+    .schedule-wrap tbody tr:hover{background:rgba(99,102,241,0.04)}
+    .schedule-wrap tbody tr:last-child td{border-bottom:none}
+    .schedule-wrap .yr-row td{background:var(--gray-50);font-weight:700;color:var(--gray-800)}
   </style>
 </head>
 <body>
@@ -127,6 +143,18 @@
       </div>
       <p class="result-note">※ 원리금균등: 매월 동일 금액 납부. 원금균등: 초기 납부액 높고 점점 감소. 만기일시: 매월 이자만 납부 후 만기 원금 일시 상환.</p>
 </div>
+    <div class="schedule-card" id="schedule-card">
+      <div class="schedule-header">
+        <div class="card-title" style="margin-bottom:0">상환 스케줄</div>
+        <div class="seg-group schedule-toggle" id="schedule-toggle">
+          <button class="seg-btn active" onclick="setScheduleView('yearly',this)">연도별</button>
+          <button class="seg-btn" onclick="setScheduleView('monthly',this)">월별 상세</button>
+        </div>
+      </div>
+      <div class="schedule-wrap" id="schedule-wrap">
+        <table><thead id="schedule-thead"></thead><tbody id="schedule-tbody"></tbody></table>
+      </div>
+    </div>
   <div class="guide-section">
     <div class="guide-card">
       <h2>대출 상환 방식, 어떤 것이 유리할까?</h2>
@@ -280,17 +308,84 @@
 </footer>
 <script>
 
-let loanPeriod=30, loanType='equal';
+let loanPeriod=30, loanType='equal', scheduleView='yearly', scheduleData=[];
 function Ww(w){return Math.round(w).toLocaleString()+'원';}
 function setLoanPeriod(y,btn){loanPeriod=y;document.querySelectorAll('#loan-period-group .seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');calc();}
 function setLoanType(t,btn){loanType=t;document.querySelectorAll('#loan-type-group .seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');calc();}
+function setScheduleView(v,btn){scheduleView=v;document.querySelectorAll('#schedule-toggle .seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderSchedule();}
 function showConverted(inputEl,dispEl){const v=parseFloat(inputEl.value);if(!v||v<=0){dispEl.textContent='';return;}dispEl.textContent=v>=10000?'= '+(v/10000).toFixed(2)+'억원':'= '+v.toLocaleString()+'만원';}
+
+function buildSchedule(principal,mr,n){
+  var data=[];
+  if(loanType==='equal'){
+    var mp=principal*mr*Math.pow(1+mr,n)/(Math.pow(1+mr,n)-1);
+    var bal=principal;
+    for(var i=1;i<=n;i++){
+      var interest=bal*mr;
+      var princ=mp-interest;
+      bal-=princ;
+      if(bal<0)bal=0;
+      data.push({m:i,pay:mp,princ:princ,interest:interest,bal:bal});
+    }
+  } else if(loanType==='principal'){
+    var mp0=principal/n;
+    var bal=principal;
+    for(var i=1;i<=n;i++){
+      var interest=bal*mr;
+      var pay=mp0+interest;
+      bal-=mp0;
+      if(bal<0)bal=0;
+      data.push({m:i,pay:pay,princ:mp0,interest:interest,bal:bal});
+    }
+  } else {
+    var interest=principal*mr;
+    for(var i=1;i<=n;i++){
+      var isLast=(i===n);
+      data.push({m:i,pay:isLast?interest+principal:interest,princ:isLast?principal:0,interest:interest,bal:isLast?0:principal});
+    }
+  }
+  return data;
+}
+
+function renderSchedule(){
+  var thead=document.getElementById('schedule-thead');
+  var tbody=document.getElementById('schedule-tbody');
+  if(!scheduleData.length){thead.innerHTML='';tbody.innerHTML='';return;}
+
+  if(scheduleView==='monthly'){
+    thead.innerHTML='<tr><th>회차</th><th>월상환액</th><th>원금</th><th>이자</th><th>잔여원금</th></tr>';
+    var html='';
+    for(var i=0;i<scheduleData.length;i++){
+      var d=scheduleData[i];
+      html+='<tr><td>'+d.m+'</td><td>'+Ww(d.pay)+'</td><td>'+Ww(d.princ)+'</td><td>'+Ww(d.interest)+'</td><td>'+Ww(d.bal)+'</td></tr>';
+    }
+    tbody.innerHTML=html;
+  } else {
+    thead.innerHTML='<tr><th>연차</th><th>연 상환액</th><th>원금 합계</th><th>이자 합계</th><th>연말 잔액</th></tr>';
+    var years=Math.ceil(scheduleData.length/12);
+    var html='';
+    for(var y=0;y<years;y++){
+      var start=y*12, end=Math.min(start+12,scheduleData.length);
+      var sumPay=0,sumPrinc=0,sumInt=0;
+      for(var i=start;i<end;i++){
+        sumPay+=scheduleData[i].pay;
+        sumPrinc+=scheduleData[i].princ;
+        sumInt+=scheduleData[i].interest;
+      }
+      var endBal=scheduleData[end-1].bal;
+      html+='<tr><td>'+(y+1)+'년차</td><td>'+Ww(sumPay)+'</td><td>'+Ww(sumPrinc)+'</td><td>'+Ww(sumInt)+'</td><td>'+Ww(endBal)+'</td></tr>';
+    }
+    tbody.innerHTML=html;
+  }
+}
+
 function calc(){
   const P=parseFloat(document.getElementById('loan-amount').value)||0;
   const r=parseFloat(document.getElementById('loan-rate').value)||0;
   showConverted(document.getElementById('loan-amount'),document.getElementById('loan-display'));
   const res=document.getElementById('result');
-  if(!P||!r){res.classList.remove('show');return;}
+  const scard=document.getElementById('schedule-card');
+  if(!P||!r){res.classList.remove('show');scard.classList.remove('show');scheduleData=[];return;}
   res.classList.add('show');
   const principal=P*10000;
   const n=loanPeriod*12;
@@ -314,6 +409,9 @@ function calc(){
   document.getElementById('loan-r-principal').textContent=Ww(principal);
   document.getElementById('loan-r-interest').textContent=Ww(totalInterest);
   document.getElementById('loan-r-total').textContent=Ww(totalPay);
+  scheduleData=buildSchedule(principal,mr,n);
+  scard.classList.add('show');
+  renderSchedule();
 }
 </script>
 
