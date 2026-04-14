@@ -29,6 +29,9 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - pet-senior-care-guide.html
 - unemployment-benefit-guide.html
 - withholding-tax-guide.html
+- bmr-calories.html
+- capital-gains-tax.html
+- compound-interest.html
 
 ## 작업 순서
 

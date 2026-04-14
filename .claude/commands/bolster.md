@@ -11,15 +11,15 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 
 ## 보강 완료된 글 (건너뛴다)
 
+- chatgpt-api-cost.html (16,597자) - 이미 15,000자 초과
+- bmr-calories.html (17,084자) - 이미 15,000자 초과
+- korean-age-system.html (17,741자) - 2026-04-14 보강
+- salary-raise-guide.html (16,936자) - 2026-04-14 보강
 
 ## 대상 글 (얇은 순서대로 작업)
 
 아래 순서대로 작업한다. 매일 2편씩.
 ```
- 1. chatgpt-api-cost.html        (11,562자)
- 2. bmr-calories.html            (11,609자)
- 3. korean-age-system.html       (11,807자)
- 4. salary-raise-guide.html      (11,908자)
  5. dday-counter.html            (11,909자)
  6. date-add-guide.html          (11,924자)
  7. diet-calorie-guide.html      (12,067자)
@@ -37,6 +37,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 19. savings-vs-deposit.html      (12,728자)
 20. realestate-agent-fee.html    (12,770자)
 21. pet-medical-cost.html        (12,957자)
+22. ai-saas-cost-guide.html      (12,985자)
 22. ai-saas-cost-guide.html      (12,985자)
 ```
 
