@@ -32,7 +32,7 @@
     {"@type":"ListItem","position":3,"name":"펫보험 비교 계산기","item":"https://www.jptcalc.kr/calc/pet/insurance/"}
   ]}
   </script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"펫보험 보장률 70%면 병원비 전액의 70%를 돌려받나요?","acceptedAnswer":{"@type":"Answer","text":"보장률 70%는 보장 대상 항목에 한해 적용됩니다. 자기부담금, 면책항목, 보장한도가 있으므로 실제 환급액은 달라질 수 있습니다."}},{"@type":"Question","name":"펫보험 보험료는 나이에 따라 올라가나요?","acceptedAnswer":{"@type":"Answer","text":"대부분 갱신형 상품으로, 반려동물 나이가 많아질수록 보험료가 인상됩니다. 가입 시 나이 제한(보통 8~10세)도 있습니다."}},{"@type":"Question","name":"펫보험 없이 의료비를 직접 적립하는 것이 더 나을 수도 있나요?","acceptedAnswer":{"@type":"Answer","text":"건강한 반려동물이라면 월 보험료만큼 적립하는 것이 유리할 수 있지만, 큰 수술이나 만성질환 시 보험이 훨씬 유리합니다."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"펫보험 보장률 70%면 병원비 전액의 70%를 돌려받나요?","acceptedAnswer":{"@type":"Answer","text":"보장률 70%는 보장 대상 항목에 한해 적용됩니다. 자기부담금, 면책항목, 보장한도가 있으므로 실제 환급액은 달라질 수 있습니다."}},{"@type":"Question","name":"펫보험 보험료는 나이에 따라 올라가나요?","acceptedAnswer":{"@type":"Answer","text":"대부분 갱신형 상품으로, 반려동물 나이가 많아질수록 보험료가 인상됩니다. 가입 시 나이 제한(보통 8~10세)도 있습니다."}},{"@type":"Question","name":"펫보험 없이 의료비를 직접 적립하는 것이 더 나을 수도 있나요?","acceptedAnswer":{"@type":"Answer","text":"건강한 반려동물이라면 월 보험료만큼 적립하는 것이 유리할 수 있지만, 큰 수술이나 만성질환 시 보험이 훨씬 유리합니다."}},{"@type":"Question","name":"펫보험은 몇 살까지 가입할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"대부분 생후 91일~8세(일부 10세)까지 가입 가능합니다. 나이가 많을수록 가입 가능한 상품이 줄어들고 보험료도 높아지므로, 어릴 때 가입하는 것이 선택지가 넓습니다."}},{"@type":"Question","name":"기존 질환이 있어도 펫보험에 가입되나요?","acceptedAnswer":{"@type":"Answer","text":"이미 진단받은 질환은 보장 제외 조건으로 처리되는 경우가 대부분입니다. 일부 보험사는 고지의무 위반 시 계약 해지까지 가능하므로, 가입 시 기존 병력을 정확히 알려야 합니다."}}]}</script>
   <style>
     /* insurance 고유 스타일 - 공통 스타일은 /assets/pet-common.css 참조 */
     .input-wrap{position:relative}
@@ -99,12 +99,46 @@
         <div class="guide-box"><strong>약관 핵심 체크</strong><span>면책기간, 보장한도, 갱신형 여부 등 약관 조건을 꼭 확인하세요</span></div>
       </div>
     </div>
+    <div class="guide-card">
+      <h2>보험 가입이 유리해지는 손익분기점</h2>
+      <p>펫보험이 실제로 이득인지는 연간 병원비에 달려 있습니다. 월 보험료 3만원, 보장률 70% 기준으로 연간 병원비에 따른 실제 절감액을 정리하면 다음과 같습니다.</p>
+      <div class="guide-table-wrap">
+        <table style="width:100%;border-collapse:collapse;font-size:13px;margin:12px 0">
+          <thead><tr style="background:rgba(244,114,182,0.08)">
+            <th style="padding:10px 12px;text-align:left;border-bottom:1px solid rgba(0,0,0,0.1)">연간 병원비</th>
+            <th style="padding:10px 12px;text-align:right;border-bottom:1px solid rgba(0,0,0,0.1)">보험 가입 시 총 지출</th>
+            <th style="padding:10px 12px;text-align:right;border-bottom:1px solid rgba(0,0,0,0.1)">미가입 시 총 지출</th>
+            <th style="padding:10px 12px;text-align:right;border-bottom:1px solid rgba(0,0,0,0.1)">절감 효과</th>
+          </tr></thead>
+          <tbody>
+            <tr><td style="padding:8px 12px">50만원</td><td style="padding:8px 12px;text-align:right">51만원</td><td style="padding:8px 12px;text-align:right">50만원</td><td style="padding:8px 12px;text-align:right;color:#EF4444">-1만원 (손해)</td></tr>
+            <tr style="background:rgba(0,0,0,0.02)"><td style="padding:8px 12px">100만원</td><td style="padding:8px 12px;text-align:right">66만원</td><td style="padding:8px 12px;text-align:right">100만원</td><td style="padding:8px 12px;text-align:right;color:#10B981">+34만원</td></tr>
+            <tr><td style="padding:8px 12px">200만원</td><td style="padding:8px 12px;text-align:right">96만원</td><td style="padding:8px 12px;text-align:right">200만원</td><td style="padding:8px 12px;text-align:right;color:#10B981">+104만원</td></tr>
+            <tr style="background:rgba(0,0,0,0.02)"><td style="padding:8px 12px">300만원</td><td style="padding:8px 12px;text-align:right">126만원</td><td style="padding:8px 12px;text-align:right">300만원</td><td style="padding:8px 12px;text-align:right;color:#10B981">+174만원</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>월 3만원 기준 연간 보험료는 36만원입니다. 병원비가 연 52만원을 넘으면 보험이 유리해지고, 수술이 필요한 해에는 100만원 이상 차이가 날 수 있습니다. 반대로 건강한 해에는 보험료만큼 손해를 보게 되므로, 품종별 질병 발생률과 나이를 함께 고려해야 합니다.</p>
+    </div>
+    <div class="guide-card">
+      <h2>펫보험 가입 전 확인할 약관 핵심 5가지</h2>
+      <p>같은 보장률이라도 약관 조건에 따라 실제 보장 금액은 크게 달라집니다. 가입 전에 반드시 아래 5가지를 확인하세요.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>1. 면책기간</strong><span>가입 후 30~90일간은 보장이 안 됩니다. 이 기간에 발생한 질병은 보험금 청구가 불가능합니다</span></div>
+        <div class="guide-box"><strong>2. 1일/1사고 보장한도</strong><span>보장률 70%라도 1회 최대 50만원 같은 한도가 있으면 수술비 200만원 중 50만원만 돌려받습니다</span></div>
+        <div class="guide-box"><strong>3. 선천성·유전성 질환 제외</strong><span>품종 특유 질환(슬개골 탈구, 고관절 이형성 등)을 제외하는 상품이 많습니다. 품종에 맞춰 약관을 확인하세요</span></div>
+        <div class="guide-box"><strong>4. 갱신 거절·보험료 인상폭</strong><span>갱신형은 매년 보험료가 오르며, 8세 이후 갱신 거절 가능성도 있습니다. 비갱신형은 초기 보험료가 높지만 인상이 없습니다</span></div>
+        <div class="guide-box"><strong>5. 통원·입원·수술 구분</strong><span>통원만 보장, 수술만 보장 등 상품 유형이 다릅니다. 종합형이 보험료는 높지만 보장 범위가 넓습니다</span></div>
+      </div>
+    </div>
     <div class="guide-card faq-card">
       <h2>자주 묻는 질문</h2>
       <div class="faq-item"><h3>펫보험 보장률 70%면 병원비 전액의 70%를 돌려받나요?</h3><p>보장률 70%는 보장 대상 항목에 한해 적용됩니다. 자기부담금, 면책항목, 보장한도가 있으므로 실제 환급액은 달라질 수 있습니다.</p></div>
       <div class="faq-item"><h3>보험료는 나이에 따라 올라가나요?</h3><p>대부분 갱신형 상품으로, 반려동물 나이가 많아질수록 보험료가 인상됩니다. 가입 시 나이 제한(보통 8~10세)도 있습니다.</p></div>
       <div class="faq-item"><h3>보험 없이 의료비 적립이 더 나을 수도 있나요?</h3><p>건강한 반려동물이라면 월 보험료만큼 적립하는 것이 유리할 수 있지만, 큰 수술이나 만성질환 시 보험이 훨씬 유리합니다.</p></div>
-      <div class="update-note">최종 검토: 2026.03.25 · 계산 결과는 참고용입니다.</div>
+      <div class="faq-item"><h3>펫보험은 몇 살까지 가입할 수 있나요?</h3><p>대부분 생후 91일~8세(일부 10세)까지 가입 가능합니다. 나이가 많을수록 가입 가능한 상품이 줄어들고 보험료도 높아지므로, 어릴 때 가입하는 것이 선택지가 넓습니다.</p></div>
+      <div class="faq-item"><h3>기존 질환이 있어도 가입되나요?</h3><p>이미 진단받은 질환은 보장 제외 조건으로 처리되는 경우가 대부분입니다. 일부 보험사는 고지의무 위반 시 계약 해지까지 가능하므로, 가입 시 기존 병력을 정확히 알려야 합니다.</p></div>
+      <div class="update-note">최종 검토: 2026.04.15 · 계산 결과는 참고용입니다.</div>
     </div>
   </div>
   <div class="sibling-section">
@@ -158,7 +192,7 @@ window.ARTICLE_INFO_CONFIG = {
   reviewBasis: '2026년 시장 조사·동물병원 평균 비용 기준',
   basisDate: '2026년 기준',
   referenceOrg: '농림축산식품부·한국반려동물산업협회',
-  lastReviewed: '2026.04.13',
+  lastReviewed: '2026.04.15',
   category: 'pet'
 };
 </script>

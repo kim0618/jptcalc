@@ -32,7 +32,7 @@
     {"@type":"ListItem","position":3,"name":"반려동물 의료비 예산 계산기","item":"https://www.jptcalc.kr/calc/pet/medical/"}
   ]}
   </script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"노령견은 의료비가 얼마나 더 드나요?","acceptedAnswer":{"@type":"Answer","text":"7세 이상 노령견은 정기검진 횟수 증가, 만성질환 관리 등으로 성견 대비 의료비가 2~3배 늘어날 수 있습니다."}},{"@type":"Question","name":"반려동물 치과 스케일링은 꼭 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"치석이 방치되면 치주질환으로 발전해 발치 등 큰 비용이 발생합니다. 2~3세부터 연 1회 스케일링을 권장합니다."}},{"@type":"Question","name":"심장사상충 예방비는 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"월 1회 예방약 기준 연간 약 6~12만원이며, 주사형은 1회 5~8만원으로 연 1~2회 접종합니다."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"노령견은 의료비가 얼마나 더 드나요?","acceptedAnswer":{"@type":"Answer","text":"7세 이상 노령견은 정기검진 횟수 증가, 만성질환 관리 등으로 성견 대비 의료비가 2~3배 늘어날 수 있습니다."}},{"@type":"Question","name":"반려동물 치과 스케일링은 꼭 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"치석이 방치되면 치주질환으로 발전해 발치 등 큰 비용이 발생합니다. 2~3세부터 연 1회 스케일링을 권장합니다."}},{"@type":"Question","name":"심장사상충 예방비는 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"월 1회 예방약 기준 연간 약 6~12만원이며, 주사형은 1회 5~8만원으로 연 1~2회 접종합니다."}},{"@type":"Question","name":"고양이도 같은 수준의 의료비가 드나요?","acceptedAnswer":{"@type":"Answer","text":"고양이는 예방접종 횟수가 적고 스케일링 빈도도 낮아 강아지보다 연간 10~20만원 정도 적게 듭니다. 단, 비뇨기 질환(요로결석 등)이 잦아 해당 치료비는 더 높을 수 있습니다."}},{"@type":"Question","name":"동물병원 진료비는 왜 병원마다 다른가요?","acceptedAnswer":{"@type":"Answer","text":"동물병원은 진료비 자율 책정이 원칙이어서 지역·시설·장비에 따라 차이가 큽니다. 2023년부터 동물병원 진료비 공개가 의무화되어 사전 비교가 가능합니다."}}]}</script>
   <style>
     /* medical 고유 스타일 - 공통 스타일은 /assets/pet-common.css 참조 */
     .input-wrap{position:relative}
@@ -107,12 +107,47 @@
         <div class="guide-box"><strong>비상 의료비 적립</strong><span>응급 수술·입원에 대비해 연간 20~50만원을 별도로 적립하세요</span></div>
       </div>
     </div>
+    <div class="guide-card">
+      <h2>나이별 의료비, 구체적으로 얼마나 차이날까?</h2>
+      <p>같은 품종이라도 나이에 따라 의료비 구성이 완전히 달라집니다. 아래는 소형견 기준 연간 평균 의료비를 나이대별로 정리한 표입니다.</p>
+      <div class="guide-table-wrap">
+        <table style="width:100%;border-collapse:collapse;font-size:13px;margin:12px 0">
+          <thead><tr style="background:rgba(244,114,182,0.08)">
+            <th style="padding:10px 12px;text-align:left;border-bottom:1px solid rgba(0,0,0,0.1)">항목</th>
+            <th style="padding:10px 12px;text-align:right;border-bottom:1px solid rgba(0,0,0,0.1)">1세 이하</th>
+            <th style="padding:10px 12px;text-align:right;border-bottom:1px solid rgba(0,0,0,0.1)">1~7세</th>
+            <th style="padding:10px 12px;text-align:right;border-bottom:1px solid rgba(0,0,0,0.1)">7세 이상</th>
+          </tr></thead>
+          <tbody>
+            <tr><td style="padding:8px 12px">정기검진</td><td style="padding:8px 12px;text-align:right">10만원</td><td style="padding:8px 12px;text-align:right">10만원</td><td style="padding:8px 12px;text-align:right">20~30만원</td></tr>
+            <tr style="background:rgba(0,0,0,0.02)"><td style="padding:8px 12px">예방접종</td><td style="padding:8px 12px;text-align:right">15~20만원</td><td style="padding:8px 12px;text-align:right">5~10만원</td><td style="padding:8px 12px;text-align:right">5~10만원</td></tr>
+            <tr><td style="padding:8px 12px">치과 스케일링</td><td style="padding:8px 12px;text-align:right">불필요</td><td style="padding:8px 12px;text-align:right">15~25만원</td><td style="padding:8px 12px;text-align:right">20~35만원</td></tr>
+            <tr style="background:rgba(0,0,0,0.02)"><td style="padding:8px 12px">응급·치료비</td><td style="padding:8px 12px;text-align:right">10~20만원</td><td style="padding:8px 12px;text-align:right">20~30만원</td><td style="padding:8px 12px;text-align:right">50~100만원</td></tr>
+            <tr><td style="padding:8px 12px">수술비 적립</td><td style="padding:8px 12px;text-align:right">10만원</td><td style="padding:8px 12px;text-align:right">20만원</td><td style="padding:8px 12px;text-align:right">50만원 이상</td></tr>
+            <tr style="background:rgba(244,114,182,0.06);font-weight:700"><td style="padding:10px 12px">연간 합계</td><td style="padding:10px 12px;text-align:right">45~60만원</td><td style="padding:10px 12px;text-align:right">70~95만원</td><td style="padding:10px 12px;text-align:right">145~225만원</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>노령기(7세 이상)에 접어들면 검진 주기가 연 2회로 늘어나고, 관절·심장·신장 등 만성질환 관리비가 추가됩니다. 특히 수술이 필요한 질환(슬개골 탈구, 종양 제거 등)은 1회에 100~300만원이 들 수 있어, 미리 적립해두지 않으면 부담이 큽니다.</p>
+    </div>
+    <div class="guide-card">
+      <h2>의료비를 줄이는 실전 방법</h2>
+      <p>반려동물 의료비는 예방과 시기 선택에 따라 크게 달라집니다. 아래 방법으로 불필요한 지출을 줄일 수 있습니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>정기검진으로 조기 발견</strong><span>연 1~2회 혈액검사 포함 건강검진(8~15만원)을 받으면, 초기에 발견해 치료비를 절반 이하로 줄일 수 있습니다</span></div>
+        <div class="guide-box"><strong>예방약 일괄 구매</strong><span>심장사상충·외부기생충 예방약을 6개월치 일괄 구매하면 개별 구매 대비 15~20% 저렴합니다</span></div>
+        <div class="guide-box"><strong>동물병원 비교</strong><span>같은 스케일링이라도 병원마다 10~20만원 차이가 납니다. 동물병원 진료비 공개 사이트에서 내 지역 가격을 비교하세요</span></div>
+        <div class="guide-box"><strong>치아 관리 습관</strong><span>매일 양치질을 하면 스케일링 주기를 2~3년에 1회로 늘릴 수 있어, 연간 15~25만원을 아낄 수 있습니다</span></div>
+      </div>
+    </div>
     <div class="guide-card faq-card">
       <h2>자주 묻는 질문</h2>
       <div class="faq-item"><h3>노령견은 의료비가 얼마나 더 드나요?</h3><p>7세 이상 노령견은 정기검진 횟수 증가, 만성질환 관리 등으로 성견 대비 의료비가 2~3배 늘어날 수 있습니다.</p></div>
       <div class="faq-item"><h3>치과 스케일링은 꼭 해야 하나요?</h3><p>치석이 방치되면 치주질환으로 발전해 발치 등 큰 비용이 발생합니다. 2~3세부터 연 1회 스케일링을 권장합니다.</p></div>
       <div class="faq-item"><h3>심장사상충 예방비는 얼마인가요?</h3><p>월 1회 예방약 기준 연간 약 6~12만원이며, 주사형은 1회 5~8만원으로 연 1~2회 접종합니다.</p></div>
-      <div class="update-note">최종 검토: 2026.03.25 · 계산 결과는 참고용입니다.</div>
+      <div class="faq-item"><h3>고양이도 같은 수준의 의료비가 드나요?</h3><p>고양이는 예방접종 횟수가 적고 스케일링 빈도도 낮아 강아지보다 연간 10~20만원 정도 적게 듭니다. 단, 비뇨기 질환(요로결석 등)이 잦아 해당 치료비는 더 높을 수 있습니다.</p></div>
+      <div class="faq-item"><h3>동물병원 진료비는 왜 병원마다 다른가요?</h3><p>동물병원은 진료비 자율 책정이 원칙이어서 지역·시설·장비에 따라 차이가 큽니다. 2023년부터 동물병원 진료비 공개가 의무화되어 사전 비교가 가능합니다.</p></div>
+      <div class="update-note">최종 검토: 2026.04.15 · 계산 결과는 참고용입니다.</div>
     </div>
   </div>
   <div class="sibling-section">
@@ -159,7 +194,7 @@ window.ARTICLE_INFO_CONFIG = {
   reviewBasis: '2026년 시장 조사·동물병원 평균 비용 기준',
   basisDate: '2026년 기준',
   referenceOrg: '농림축산식품부·한국반려동물산업협회',
-  lastReviewed: '2026.04.13',
+  lastReviewed: '2026.04.15',
   category: 'pet'
 };
 </script>

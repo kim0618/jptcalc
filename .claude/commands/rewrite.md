@@ -1,11 +1,11 @@
 ---
-description: 제이퍼 계산기 블로그 기존 글 문체 수정 (AI 톤 제거, 매일 3편씩)
+description: 제이퍼 계산기 블로그 기존 글 문체 수정 (AI 톤 제거, 매일 4편씩)
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 ---
 
 # 기존 블로그 글 문체 수정
 
-매일 3편씩 기존 블로그 글의 문체를 자연스럽게 수정한다.
+매일 4편씩 기존 블로그 글의 문체를 자연스럽게 수정한다.
 모든 글 수정이 완료되면 이 스킬 파일을 삭제한다.
 
 ## 수정 완료된 글 (건너뛴다)
@@ -32,13 +32,17 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - bmr-calories.html
 - capital-gains-tax.html
 - compound-interest.html
+- comprehensive-income-tax.html
+- hourly-wage-guide.html
+- jeonse-vs-wolse.html
+- dog-vs-cat-cost.html
 
 ## 작업 순서
 
 1. `/home/tjd618/jptcalc/blog/posts/` 에서 전체 파일 목록 확인
 2. 위 "수정 완료된 글" 목록과 대조해서 아직 수정 안 된 글 파악
-3. 미수정 글 중 **3편** 선택 (아래 우선순위 기준)
-4. 3편 수정 진행
+3. 미수정 글 중 **4편** 선택 (아래 우선순위 기준)
+4. 4편 수정 진행
 5. 수정 완료 후 이 파일의 "수정 완료된 글" 목록에 파일명 추가
 6. 결과 요약 출력
 
@@ -65,6 +69,8 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 3. 상황 묘사: "계약서에 사인하기 직전, 갑자기 ~"
 4. 통계/팩트: "2026년 기준 ~는 00만원입니다."
 5. 반전: "~라고 생각하기 쉽지만, 실제로는 ~"
+6. 공감형: "~때문에 고민이 많으시죠."
+7. 비교형: "A와 B 중 어떤 게 더 유리할까요?"
 
 **h2 제목:**
 - "~완벽 정리", "~총정리", "~한눈에 보기" 같은 AI 패턴 제거

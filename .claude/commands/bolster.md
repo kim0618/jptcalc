@@ -15,6 +15,8 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - bmr-calories.html (17,084자) - 이미 15,000자 초과
 - korean-age-system.html (17,741자) - 2026-04-14 보강
 - salary-raise-guide.html (16,936자) - 2026-04-14 보강
+- dday-counter.html (15,135자) - 2026-04-15 보강
+- date-add-guide.html (15,763자) - 2026-04-15 보강
 
 ## 대상 글 (얇은 순서대로 작업)
 

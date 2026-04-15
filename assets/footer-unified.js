@@ -106,4 +106,10 @@
   } else {
     applyUnifiedFooter();
   }
+
+  // 쿠키 동의 배너 로드
+  var cc = document.createElement('script');
+  cc.src = '/assets/cookie-consent.js';
+  cc.defer = true;
+  document.body.appendChild(cc);
 })();
