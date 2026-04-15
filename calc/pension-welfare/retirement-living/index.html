@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>노후 생활비 계산기 - 은퇴 후 필요 자금 시뮬레이션 | 제이퍼 계산기</title>
+  <meta name="description" content="현재 나이, 은퇴 나이, 희망 월 생활비를 입력하면 노후에 필요한 총 자금을 자동 계산합니다. 물가상승률과 연금 수령액을 반영한 현실적인 노후 준비 금액을 확인하세요." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/pension-welfare/retirement-living/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="노후 생활비 계산기 - 은퇴 후 필요 자금 시뮬레이션 | 제이퍼 계산기" />
+  <meta property="og:description" content="노후에 필요한 총 자금을 물가상승률과 연금 수령액을 반영해 자동 계산합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/pension-welfare/retirement-living/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="노후 생활비 계산기 | 제이퍼 계산기" />
+  <meta name="twitter:description" content="노후에 필요한 총 자금을 물가상승률과 연금을 반영해 계산합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"노후 생활비 계산기",
+    "url":"https://www.jptcalc.kr/calc/pension-welfare/retirement-living/",
+    "applicationCategory":"FinanceApplication",
+    "operatingSystem":"All",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+      {"@type":"ListItem","position":2,"name":"연금·복지 계산기","item":"https://www.jptcalc.kr/calc/pension-welfare/"},
+      {"@type":"ListItem","position":3,"name":"노후 생활비 계산기","item":"https://www.jptcalc.kr/calc/pension-welfare/retirement-living/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"노후에 필요한 월 생활비는 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"통계청 가계동향조사 기준 2023년 60세 이상 가구의 평균 월 생활비는 약 230만원입니다. 일반적으로 은퇴 후 생활비는 현재 생활비의 70~80% 수준으로 계획합니다."}},
+    {"@type":"Question","name":"노후 준비에 물가상승률을 반영해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"반드시 반영해야 합니다. 연 2.5% 물가상승률을 가정하면 20년 후 동일한 생활을 유지하는 데 지금보다 약 1.64배 비용이 필요합니다. 현재 화폐 가치로만 계획하면 실제 필요 자금이 크게 부족할 수 있습니다."}},
+    {"@type":"Question","name":"국민연금을 받으면 노후 준비가 충분한가요?","acceptedAnswer":{"@type":"Answer","text":"국민연금 평균 수령액은 월 65만원 수준(2024년)으로, 생활비 전체를 충당하기 어렵습니다. 퇴직연금(IRP), 개인연금, 부동산 수입 등을 추가로 준비하는 것이 필요합니다."}}
+  ]}
+  </script>
+  <link rel="stylesheet" href="/assets/pension-welfare-common.css" />
+  <style>
+    /* retirement-living 고유 스타일 */
+    input[type=number]{width:100%;border:1.5px solid var(--gray-200);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:var(--gray-50);outline:none;transition:border-color .18s;-moz-appearance:textfield}
+    input[type=number]::placeholder{color:var(--gray-400);font-weight:400}
+    input[type=number]:focus{border-color:var(--primary);background:#fff}
+    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
+    .input-wrap{position:relative;display:flex;align-items:center;overflow:visible;}
+    .input-wrap input{padding-right:48px;}
+    .input-wrap .unit{position:absolute;right:14px;font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none;}
+    .converted{font-size:12px;color:var(--primary);margin-top:4px;font-weight:600;}
+    .seg-group{display:flex;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:14px;}
+    .seg-btn{flex:1;border:none;border-radius:7px;background:transparent;padding:9px 6px;font-size:13px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap;}
+    .seg-btn:hover{color:var(--gray-700);}
+    .seg-btn.active{background:var(--primary);color:#fff;font-weight:700;}
+    .result-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--gray-100);font-size:14px;}
+    .result-row:last-child{border-bottom:none;}
+    .result-label{color:var(--gray-600);font-weight:500;}
+    .result-value{font-weight:700;color:var(--gray-900);}
+    .result-total-row{margin-top:4px;padding-top:14px;border-top:2px solid rgba(14,165,233,0.3)!important;border-bottom:none!important;}
+    .result-total-label{font-size:15px;font-weight:800;color:var(--gray-800);}
+    .result-total-value{font-size:20px;font-weight:900;color:var(--primary);}
+    .result-card{background:#fff;border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:var(--shadow-md);border:2px solid rgba(14,165,233,0.3);display:none;}
+    .result-card.show{display:block;}
+    .result-section-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin:14px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--gray-100);}
+    .highlight-box{background:rgba(14,165,233,0.06);border:1px solid rgba(14,165,233,0.2);border-radius:12px;padding:16px;text-align:center;margin-bottom:14px;}
+    .hb-label{font-size:12px;font-weight:700;color:var(--gray-500);margin-bottom:4px;}
+    .hb-value{font-size:28px;font-weight:900;color:var(--primary);}
+    .hb-sub{font-size:12px;color:var(--gray-500);margin-top:4px;}
+    .sim-note{font-size:11px;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.25);border-radius:8px;padding:10px 12px;color:#92400E;line-height:1.7;}
+    .trust-block{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:10px;padding:12px 14px;margin-top:4px;}
+    .trust-block p{font-size:11px;color:var(--gray-500);line-height:1.7;}
+    .trust-block strong{color:var(--gray-700);}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/pension-welfare/" class="nav-item active"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/pension-welfare/">연금·복지 계산기</a><span class="breadcrumb-sep">›</span><span>노후 생활비 계산기</span></div>
+    <div class="page-header-badge">&#127968; 노후 준비 시뮬레이션</div>
+    <h1>노후 생활비 계산기</h1>
+    <p>은퇴 나이와 희망 생활비를 입력하면 물가상승률을 반영한 필요 총 자금을 계산합니다</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">노후 생활비 시뮬레이션</div>
+
+    <div class="info-box">
+      <span class="info-icon">&#128161;</span>
+      <p>입력하신 값을 기반으로 시뮬레이션합니다. 실제 필요 금액은 개인 생활 수준과 건강 상태에 따라 다를 수 있습니다.</p>
+    </div>
+
+    <!-- 나이 입력 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <div class="field">
+        <div class="field-label">현재 나이</div>
+        <div class="input-wrap">
+          <input type="number" id="currentAge" placeholder="40" value="40" oninput="onInput()" />
+          <span class="unit">세</span>
+        </div>
+      </div>
+      <div class="field">
+        <div class="field-label">은퇴 나이</div>
+        <div class="input-wrap">
+          <input type="number" id="retireAge" placeholder="65" value="65" oninput="onInput()" />
+          <span class="unit">세</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <div class="field">
+        <div class="field-label">기대 수명 <span class="label-hint">(기본 85세)</span></div>
+        <div class="input-wrap">
+          <input type="number" id="lifeExpect" placeholder="85" value="85" oninput="onInput()" />
+          <span class="unit">세</span>
+        </div>
+      </div>
+      <div class="field">
+        <div class="field-label">물가상승률 <span class="label-hint">(기본 2.5%)</span></div>
+        <div class="input-wrap">
+          <input type="number" id="inflation" placeholder="2.5" value="2.5" step="0.1" oninput="onInput()" />
+          <span class="unit">%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 희망 월 생활비 -->
+    <div class="field">
+      <div class="field-label">희망 월 생활비 <span class="label-hint">(현재 가치 기준)</span></div>
+      <div class="input-wrap">
+        <input type="number" id="monthlyExpense" placeholder="예: 2500000" oninput="onInput()" />
+        <span class="unit">원</span>
+      </div>
+      <div class="converted" id="monthlyExpenseConverted"></div>
+    </div>
+
+    <!-- 보유 자산 -->
+    <div class="field">
+      <div class="field-label">현재 보유 자산 <span class="label-hint">(은퇴 시 사용 가능 자산)</span></div>
+      <div class="input-wrap">
+        <input type="number" id="currentAssets" placeholder="0" oninput="onInput()" />
+        <span class="unit">원</span>
+      </div>
+      <div class="converted" id="currentAssetsConverted"></div>
+      <div class="field-hint">부동산 제외 금융자산 기준 권장</div>
+    </div>
+
+    <!-- 예상 월 연금 -->
+    <div class="field">
+      <div class="field-label">예상 월 연금 수령액 <span class="label-hint">(국민연금 + 퇴직연금 합산)</span></div>
+      <div class="input-wrap">
+        <input type="number" id="monthlyPension" placeholder="0" oninput="onInput()" />
+        <span class="unit">원</span>
+      </div>
+      <div class="converted" id="monthlyPensionConverted"></div>
+    </div>
+
+    <!-- 기타 월 수입 -->
+    <div class="field">
+      <div class="field-label">기타 월 수입 <span class="label-hint">(임대소득, 부업 등)</span></div>
+      <div class="input-wrap">
+        <input type="number" id="otherIncome" placeholder="0" oninput="onInput()" />
+        <span class="unit">원</span>
+      </div>
+    </div>
+
+    <button onclick="calculate()" style="width:100%;padding:14px;background:var(--primary);color:#fff;border:none;border-radius:12px;font-size:16px;font-weight:800;cursor:pointer;font-family:inherit;margin-top:4px;">노후 자금 계산하기</button>
+  </div>
+
+  <!-- 결과 카드 -->
+  <div class="result-card" id="resultCard">
+
+    <div class="highlight-box">
+      <div class="hb-label">추가로 준비해야 할 금액</div>
+      <div class="hb-value" id="rShortfall">-</div>
+      <div class="hb-sub" id="rShortfallSub"></div>
+    </div>
+
+    <div class="result-section-title">기본 정보</div>
+    <div class="result-row">
+      <span class="result-label">은퇴 후 생존 기간</span>
+      <span class="result-value" id="rRetirePeriod">-</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">은퇴 시점 희망 월 생활비</span>
+      <span class="result-value" id="rMonthlyAtRetire">-</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">은퇴 시점 월 연금+기타 수입</span>
+      <span class="result-value" id="rMonthlyIncome">-</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">월 부족액 (은퇴 시점 기준)</span>
+      <span class="result-value" id="rMonthlyGap">-</span>
+    </div>
+
+    <div class="result-section-title" style="margin-top:16px;">자금 계획</div>
+    <div class="result-row">
+      <span class="result-label">물가 반영 총 필요 자금</span>
+      <span class="result-value" id="rTotalNeeded">-</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">연금·수입으로 충당 가능 금액</span>
+      <span class="result-value" id="rPensionTotal">-</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">현재 보유 자산</span>
+      <span class="result-value" id="rCurrentAssets">-</span>
+    </div>
+    <div class="result-row result-total-row">
+      <span class="result-total-label">추가 준비 필요액</span>
+      <span class="result-total-value" id="rTotalShortfall">-</span>
+    </div>
+
+    <div class="sim-note" style="margin-top:14px;">
+      &#9888;&#65039; 이 계산기는 <strong>입력값 기반 시뮬레이션</strong>입니다. 실제 필요 금액은 건강 상태, 의료비, 가족 상황에 따라 달라집니다. 노후 준비는 전문 재무설계사와 상담을 권장합니다.
+    </div>
+  </div>
+
+  <!-- trust-block -->
+  <div class="trust-block">
+    <p><strong>참고 자료 출처</strong><br>
+    통계청 가계동향조사 - 60세 이상 월 평균 생활비 기준<br>
+    통계청 생명표 - 기대수명 참고 (남성 80.6세, 여성 86.6세, 2023년 기준)<br>
+    본 계산기는 사용자 입력값 기반 시뮬레이션으로, 공식적인 재무 상담을 대체하지 않습니다.</p>
+  </div>
+
+  <!-- 설명 섹션 -->
+  <div class="explain-section">
+    <button class="explain-toggle" onclick="toggleExplain(this)">
+      노후 생활비 계산 방법 <span class="etarrow">&#9660;</span>
+    </button>
+    <div class="explain-body">
+      <h3>물가상승률 반영 방법</h3>
+      <p>은퇴 시점의 월 생활비 = 현재 희망 생활비 × (1 + 물가상승률)^은퇴까지 남은 연수</p>
+      <p>연 2.5% 물가상승률 기준, 25년 후 월 생활비는 현재의 약 1.85배가 됩니다.</p>
+      <h3>총 필요 자금 계산</h3>
+      <p>은퇴 후 매년 필요한 생활비(물가 반영)를 기대수명까지 합산합니다. 연 단위로 물가가 누적 반영되어 후반부로 갈수록 필요 금액이 커집니다.</p>
+      <h3>추가 준비 필요액</h3>
+      <p>총 필요 자금 - 연금·기타수입으로 충당 가능 금액 - 현재 보유 자산 = 추가 준비 필요액</p>
+    </div>
+  </div>
+
+</main>
+
+<div class="guide-section">
+  <div class="guide-card faq-card">
+    <h2>노후 준비 자주 묻는 질문</h2>
+    <div class="faq-item">
+      <h3>노후 준비는 몇 살부터 시작해야 하나요?</h3>
+      <p>빠를수록 유리합니다. 30대에 시작하면 복리 효과를 최대한 누릴 수 있습니다. 늦게 시작할수록 같은 목표 금액을 달성하기 위한 월 저축액이 급격히 늘어납니다. 40대에 시작하면 30대 대비 2배 이상의 월 저축이 필요할 수 있습니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>국민연금으로 노후 생활이 가능한가요?</h3>
+      <p>2024년 기준 국민연금 평균 수령액은 월 65만원 수준으로, 생활비 전체를 충당하기 어렵습니다. 국민연금은 노후 소득의 기반으로 활용하되, 퇴직연금(IRP)·개인연금·부동산 수입 등을 추가로 준비해야 안정적인 노후가 가능합니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>IRP(개인형 퇴직연금)는 노후 준비에 얼마나 도움이 되나요?</h3>
+      <p>IRP는 연간 최대 900만원까지 세액공제(최대 148만5천원)를 받을 수 있어 절세 효과가 뛰어납니다. 장기 투자를 통한 복리 효과와 함께 노후 자금 마련의 핵심 수단으로 활용됩니다.</p>
+    </div>
+    <div class="update-note">통계청 가계동향조사(2023) 기준입니다. 개인 상황에 따라 필요 금액이 달라질 수 있습니다.</div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/">홈</a>
+      <a href="/about.html">소개</a>
+      <a href="/privacy.html">개인정보처리방침</a>
+      <a href="/terms.html">이용약관</a>
+      <a href="/contact.html">문의하기</a>
+      <a href="/disclaimer.html">면책조항</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용 시뮬레이션이며 실제 금융 상담을 대체하지 않습니다.</p>
+  </div>
+</footer>
+
+<script>
+function fmt(n) {
+  if (n === null || n === undefined) return '-';
+  return Math.round(n).toLocaleString('ko-KR') + '원';
+}
+function fmtShort(n) {
+  if (!n) return '';
+  if (n >= 100000000) return (n / 100000000).toFixed(1).replace(/\.0$/, '') + '억원';
+  if (n >= 10000) return Math.round(n / 10000) + '만원';
+  return n.toLocaleString('ko-KR') + '원';
+}
+function getVal(id) { return parseFloat(document.getElementById(id).value) || 0; }
+
+function onInput() {
+  const convIds = ['monthlyExpense','currentAssets','monthlyPension','otherIncome'];
+  convIds.forEach(id => {
+    const v = getVal(id);
+    const el = document.getElementById(id + 'Converted');
+    if (el) el.textContent = v > 0 ? fmtShort(v) : '';
+  });
+}
+
+function calculate() {
+  const currentAge = getVal('currentAge');
+  const retireAge = getVal('retireAge');
+  const lifeExpect = getVal('lifeExpect') || 85;
+  const inflation = (getVal('inflation') || 2.5) / 100;
+  const monthlyExpense = getVal('monthlyExpense');
+  const currentAssets = getVal('currentAssets');
+  const monthlyPension = getVal('monthlyPension');
+  const otherIncome = getVal('otherIncome');
+
+  if (!currentAge || !retireAge || !monthlyExpense) {
+    alert('현재 나이, 은퇴 나이, 희망 월 생활비를 모두 입력해주세요.');
+    return;
+  }
+  if (retireAge <= currentAge) {
+    alert('은퇴 나이는 현재 나이보다 커야 합니다.');
+    return;
+  }
+  if (lifeExpect <= retireAge) {
+    alert('기대수명은 은퇴 나이보다 커야 합니다.');
+    return;
+  }
+
+  const yearsToRetire = retireAge - currentAge;
+  const retirePeriod = lifeExpect - retireAge;
+
+  // 은퇴 시점 기준 월 생활비 (물가 반영)
+  const monthlyAtRetire = monthlyExpense * Math.pow(1 + inflation, yearsToRetire);
+
+  // 월 연금+기타 수입 (현재 가치, 은퇴 시점 물가 미반영으로 단순화)
+  const monthlyIncome = monthlyPension + otherIncome;
+  const monthlyGap = Math.max(0, monthlyAtRetire - monthlyIncome);
+
+  // 은퇴 후 연도별 총 필요 자금 계산 (물가 반영)
+  let totalNeeded = 0;
+  let totalPensionIncome = 0;
+  for (let y = 0; y < retirePeriod; y++) {
+    // 은퇴 후 y년째 연간 생활비
+    const annualExpense = monthlyAtRetire * 12 * Math.pow(1 + inflation, y);
+    totalNeeded += annualExpense;
+    // 연금 수입은 현재 금액 기준 연간 합산 (단순화)
+    totalPensionIncome += monthlyIncome * 12;
+  }
+
+  const totalShortfall = Math.max(0, totalNeeded - totalPensionIncome - currentAssets);
+
+  // Display
+  document.getElementById('rRetirePeriod').textContent = retirePeriod + '년';
+  document.getElementById('rMonthlyAtRetire').textContent = fmt(monthlyAtRetire) + ' / 월';
+  document.getElementById('rMonthlyIncome').textContent = fmt(monthlyIncome) + ' / 월';
+  document.getElementById('rMonthlyGap').textContent = monthlyGap > 0 ? fmt(monthlyGap) + ' / 월' : '부족 없음';
+  document.getElementById('rTotalNeeded').textContent = fmt(totalNeeded);
+  document.getElementById('rPensionTotal').textContent = fmt(totalPensionIncome);
+  document.getElementById('rCurrentAssets').textContent = fmt(currentAssets);
+  document.getElementById('rTotalShortfall').textContent = fmt(totalShortfall);
+  document.getElementById('rShortfall').textContent = fmt(totalShortfall);
+  document.getElementById('rShortfallSub').textContent =
+    totalShortfall > 0
+      ? '지금부터 ' + yearsToRetire + '년간 월 ' + fmtShort(totalShortfall / (yearsToRetire * 12)) + '씩 추가 저축 필요'
+      : '현재 계획으로 노후 자금이 충분합니다';
+
+  document.getElementById('resultCard').classList.add('show');
+  document.getElementById('resultCard').scrollIntoView({ behavior:'smooth', block:'nearest' });
+}
+
+function toggleExplain(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('show');
+}
+</script>
+<script src="/assets/pension-welfare-detail-shell.js" defer></script>
+<script src="/assets/footer-unified.js" defer></script>
+</body>
+</html>

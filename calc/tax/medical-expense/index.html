@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>의료비 세액공제 계산기 - 2026년 연말정산 의료비 공제 계산 | 제이퍼 계산기</title>
+  <meta name="description" content="의료비 세액공제를 자동으로 계산합니다. 총급여, 난임시술비, 본인·장애인, 기타 부양가족 의료비를 입력하면 공제 가능액과 환급 예상액을 확인할 수 있습니다." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/tax/medical-expense/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="의료비 세액공제 계산기 - 2026년 연말정산 | 제이퍼 계산기" />
+  <meta property="og:description" content="의료비 세액공제를 자동으로 계산합니다. 총급여, 난임시술비, 본인·장애인, 기타 부양가족 의료비를 입력하면 공제 가능액과 환급 예상액을 확인할 수 있습니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/tax/medical-expense/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="의료비 세액공제 계산기 | 제이퍼 계산기" />
+  <meta name="twitter:description" content="연말정산 의료비 세액공제를 자동 계산합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"의료비 세액공제 계산기",
+    "url":"https://www.jptcalc.kr/calc/tax/medical-expense/",
+    "applicationCategory":"FinanceApplication",
+    "operatingSystem":"All",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+      {"@type":"ListItem","position":2,"name":"프리랜서 세금 계산기","item":"https://www.jptcalc.kr/calc/tax/"},
+      {"@type":"ListItem","position":3,"name":"의료비 세액공제 계산기","item":"https://www.jptcalc.kr/calc/tax/medical-expense/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"의료비 세액공제는 언제 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"연말정산(근로소득자) 또는 종합소득세 신고(사업소득자) 시 공제 가능합니다. 총급여의 3%를 초과한 의료비에 대해 15~30% 세액공제를 받을 수 있습니다."}},
+    {"@type":"Question","name":"난임시술비는 몇 % 공제를 받나요?","acceptedAnswer":{"@type":"Answer","text":"난임시술비는 30% 세액공제가 적용됩니다. 체외수정, 인공수정 등 의사에게 처방받은 난임시술 관련 비용이 해당됩니다."}},
+    {"@type":"Question","name":"기타 부양가족 의료비 한도는 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"기타 부양가족 의료비는 연 700만원 한도 내에서만 세액공제를 받을 수 있습니다. 본인, 65세 이상, 장애인 의료비는 한도 없이 전액 공제 대상입니다."}}
+  ]}
+  </script>
+  <link rel="stylesheet" href="/assets/tax-common.css" />
+  <style>
+    /* medical-expense 고유 스타일 */
+    input[type=number],input[type=text]{width:100%;border:1.5px solid var(--gray-200);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:var(--gray-50);outline:none;transition:border-color .18s;-moz-appearance:textfield}
+    input[type=number]::placeholder{color:var(--gray-400);font-weight:400}
+    input[type=number]:focus{border-color:var(--primary);background:#fff}
+    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
+    .input-wrap{position:relative;display:flex;align-items:center;}
+    .input-wrap input{padding-right:48px;}
+    .input-wrap .unit{position:absolute;right:14px;font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none;}
+    .converted{font-size:12px;color:var(--primary);margin-top:4px;font-weight:600;}
+    .rate-badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:700;margin-left:8px;}
+    .rate-30{background:rgba(239,68,68,0.1);color:#DC2626;}
+    .rate-20{background:rgba(245,158,11,0.1);color:#D97706;}
+    .rate-15{background:rgba(16,185,129,0.1);color:#047857;}
+    .result-section-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin:14px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--gray-100);}
+    .result-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid rgba(0,0,0,0.04);font-size:13.5px;}
+    .result-row:last-child{border-bottom:none;}
+    .result-label{color:var(--gray-600);font-weight:500;}
+    .result-value{font-weight:700;color:var(--gray-900);}
+    .result-value.highlight{color:var(--primary);}
+    .result-card{background:#fff;border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 4px 16px rgba(0,0,0,0.08);border:2px solid rgba(16,185,129,0.25);display:none;}
+    .result-card.show{display:block;}
+    .result-total-row{margin-top:8px;padding-top:12px;border-top:2px solid rgba(16,185,129,0.2)!important;border-bottom:none!important;}
+    .result-total-label{font-size:15px;font-weight:800;color:var(--gray-800);}
+    .result-total-value{font-size:22px;font-weight:900;color:var(--primary);}
+    .no-deduction{background:rgba(239,68,68,0.05);border:1px solid rgba(239,68,68,0.2);border-radius:12px;padding:14px 16px;font-size:13px;color:var(--gray-600);line-height:1.7;display:none;}
+    .no-deduction.show{display:block;}
+    .threshold-bar{height:8px;background:var(--gray-100);border-radius:4px;margin:8px 0 4px;overflow:hidden;}
+    .threshold-fill{height:100%;background:var(--primary);border-radius:4px;transition:width 0.4s;}
+    .threshold-labels{display:flex;justify-content:space-between;font-size:10px;color:var(--gray-400);margin-bottom:12px;}
+    .trust-block{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:10px;padding:12px 14px;margin-top:4px;}
+    .trust-block p{font-size:11px;color:var(--gray-500);line-height:1.7;}
+    .trust-block strong{color:var(--gray-700);}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item active"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/tax/">프리랜서 세금 계산기</a><span class="breadcrumb-sep">›</span><span>의료비 세액공제 계산기</span></div>
+    <div class="page-header-badge">&#127973; 2026년 연말정산 기준</div>
+    <h1>의료비 세액공제 계산기</h1>
+    <p>총급여와 의료비 항목을 입력하면 세액공제액과 예상 환급액을 자동으로 계산합니다</p>
+  </div>
+
+  <!-- 계산기 카드 -->
+  <div class="card">
+    <div class="card-title">의료비 세액공제 계산</div>
+
+    <div class="info-box">
+      <span class="info-icon">&#128161;</span>
+      <p>총급여의 <strong>3%를 초과</strong>한 의료비에 대해 세액공제가 적용됩니다. 항목에 따라 공제율(15%·20%·30%)이 다르게 적용됩니다.</p>
+    </div>
+
+    <!-- 총급여 -->
+    <div class="field">
+      <div class="field-label">총급여액 <span class="label-hint">(연간 세전 급여, 비과세 제외)</span></div>
+      <div class="input-wrap">
+        <input type="number" id="salary" placeholder="예: 50000000" oninput="onInput()" />
+        <span class="unit">원</span>
+      </div>
+      <div class="converted" id="salaryConverted"></div>
+    </div>
+
+    <!-- 구분선 -->
+    <div style="height:1px;background:var(--gray-100);margin:4px 0 16px;"></div>
+
+    <!-- 난임시술비 -->
+    <div class="field">
+      <div class="field-label">
+        난임시술비
+        <span class="rate-badge rate-30">30% 공제</span>
+      </div>
+      <div class="field-hint">체외수정, 인공수정 등 의사 처방 난임시술 비용</div>
+      <div class="input-wrap" style="margin-top:6px;">
+        <input type="number" id="infertility" placeholder="0" oninput="onInput()" />
+        <span class="unit">원</span>
+      </div>
+      <div class="converted" id="infertilityConverted"></div>
+    </div>
+
+    <!-- 미숙아/선천성이상아 -->
+    <div class="field">
+      <div class="field-label">
+        미숙아·선천성이상아 의료비
+        <span class="rate-badge rate-20">20% 공제</span>
+      </div>
+      <div class="field-hint">미숙아 또는 선천성이상아에 대해 지출한 의료비</div>
+      <div class="input-wrap" style="margin-top:6px;">
+        <input type="number" id="premature" placeholder="0" oninput="onInput()" />
+        <span class="unit">원</span>
+      </div>
+      <div class="converted" id="prematureConverted"></div>
+    </div>
+
+    <!-- 본인/65세이상/장애인 -->
+    <div class="field">
+      <div class="field-label">
+        본인·65세 이상·장애인 의료비
+        <span class="rate-badge rate-15">15% 공제 · 한도 없음</span>
+      </div>
+      <div class="field-hint">본인, 65세 이상 부모·조부모, 장애인 부양가족 의료비</div>
+      <div class="input-wrap" style="margin-top:6px;">
+        <input type="number" id="selfDisabled" placeholder="0" oninput="onInput()" />
+        <span class="unit">원</span>
+      </div>
+      <div class="converted" id="selfDisabledConverted"></div>
+    </div>
+
+    <!-- 기타 부양가족 -->
+    <div class="field">
+      <div class="field-label">
+        기타 부양가족 의료비
+        <span class="rate-badge rate-15">15% 공제 · 700만원 한도</span>
+      </div>
+      <div class="field-hint">위 항목 외 배우자·자녀·형제자매 등 부양가족 의료비</div>
+      <div class="input-wrap" style="margin-top:6px;">
+        <input type="number" id="other" placeholder="0" oninput="onInput()" />
+        <span class="unit">원</span>
+      </div>
+      <div class="converted" id="otherConverted"></div>
+    </div>
+
+    <!-- 공제 가능 여부 표시 -->
+    <div id="thresholdInfo" style="display:none;margin-top:4px;margin-bottom:4px;">
+      <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--gray-500);margin-bottom:4px;">
+        <span>의료비 합계</span>
+        <span id="thresholdInfoText"></span>
+      </div>
+      <div class="threshold-bar">
+        <div class="threshold-fill" id="thresholdFill" style="width:0%"></div>
+      </div>
+      <div class="threshold-labels">
+        <span>0원</span>
+        <span id="thresholdLabel">문턱: 0원 (총급여 × 3%)</span>
+      </div>
+    </div>
+
+    <button onclick="calculate()" style="width:100%;padding:14px;background:var(--primary);color:#fff;border:none;border-radius:12px;font-size:16px;font-weight:800;cursor:pointer;font-family:inherit;margin-top:4px;">세액공제 계산하기</button>
+  </div>
+
+  <!-- 공제 불가 안내 -->
+  <div class="no-deduction" id="noDeduction">
+    <strong>&#9888;&#65039; 의료비 세액공제 해당 없음</strong><br>
+    의료비 합계(<span id="ndTotalMedical"></span>원)가 총급여 × 3%(<span id="ndThreshold"></span>원)에 미치지 않아 세액공제를 받을 수 없습니다.<br>
+    총급여 3% 초과분부터 공제가 적용됩니다.
+  </div>
+
+  <!-- 결과 카드 -->
+  <div class="result-card" id="resultCard">
+    <div class="result-section-title">계산 요약</div>
+
+    <div class="result-row">
+      <span class="result-label">총급여</span>
+      <span class="result-value" id="rSalary">-</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">공제 문턱 (총급여 × 3%)</span>
+      <span class="result-value" id="rThreshold">-</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">의료비 합계</span>
+      <span class="result-value" id="rTotalMedical">-</span>
+    </div>
+
+    <div class="result-section-title" style="margin-top:16px;">항목별 세액공제액</div>
+
+    <div class="result-row" id="rowInfertility" style="display:none;">
+      <span class="result-label">난임시술비 공제 (30%)</span>
+      <span class="result-value highlight" id="rInfertilityCredit">-</span>
+    </div>
+    <div class="result-row" id="rowPremature" style="display:none;">
+      <span class="result-label">미숙아·선천성이상아 공제 (20%)</span>
+      <span class="result-value highlight" id="rPrematureCredit">-</span>
+    </div>
+    <div class="result-row" id="rowSelf" style="display:none;">
+      <span class="result-label">본인·65세이상·장애인 공제 (15%)</span>
+      <span class="result-value highlight" id="rSelfCredit">-</span>
+    </div>
+    <div class="result-row" id="rowOther" style="display:none;">
+      <span class="result-label">기타 부양가족 공제 (15%)</span>
+      <span class="result-value highlight" id="rOtherCredit">-</span>
+    </div>
+
+    <div class="result-row result-total-row">
+      <span class="result-total-label">총 세액공제액</span>
+      <span class="result-total-value" id="rTotalCredit">-</span>
+    </div>
+
+    <div class="result-note" id="rNote"></div>
+  </div>
+
+  <!-- trust-block -->
+  <div class="trust-block">
+    <p><strong>근거 법령 및 출처</strong><br>
+    소득세법 제59조의4(의료비 세액공제) · 소득세법 시행령 제118조의5<br>
+    난임시술비 30% 공제(2021년~), 미숙아·선천성이상아 20% 공제(2022년~) 적용<br>
+    출처: 국세청(nts.go.kr) 연말정산 안내 / 2024년 귀속 소득 기준<br>
+    본 계산기는 참고용으로, 실제 공제액은 개인 상황에 따라 다를 수 있습니다.</p>
+  </div>
+
+  <!-- 설명 섹션 -->
+  <div class="explain-section">
+    <button class="explain-toggle" onclick="toggleExplain(this)">
+      의료비 세액공제 계산 방식 <span class="etarrow">&#9660;</span>
+    </button>
+    <div class="explain-body">
+      <h3>공제 요건</h3>
+      <p>의료비 합계가 총급여의 3%를 초과해야 세액공제를 받을 수 있습니다. 3% 미만이면 공제액이 없습니다.</p>
+      <h3>항목별 공제율</h3>
+      <ul>
+        <li><strong>난임시술비 30%:</strong> 체외수정, 인공수정 등 의사 처방 난임 치료 비용</li>
+        <li><strong>미숙아·선천성이상아 20%:</strong> 미숙아 또는 선천성이상아에 지출한 의료비</li>
+        <li><strong>본인·65세이상·장애인 15%:</strong> 한도 없이 전액 공제 대상</li>
+        <li><strong>기타 부양가족 15%:</strong> 연 700만원 한도</li>
+      </ul>
+      <h3>문턱 차감 순서</h3>
+      <p>총급여의 3% 문턱은 기타 부양가족 의료비에서 먼저 차감되고, 이후 본인등, 미숙아, 난임시술비 순으로 차감됩니다. 고율 공제 항목이 문턱에 의해 줄어들지 않도록 우선 보호합니다.</p>
+    </div>
+  </div>
+
+</main>
+
+<div style="display:none" class="guide-section">
+  <div class="guide-card faq-card">
+    <h2>의료비 세액공제 자주 묻는 질문</h2>
+    <div class="faq-item">
+      <h3>안경·콘택트렌즈도 의료비 공제가 되나요?</h3>
+      <p>시력 교정용 안경·콘택트렌즈는 1인당 연 50만원 한도 내에서 의료비 공제 대상입니다. 안경점 영수증(시력교정용 확인 포함)을 갖춰야 합니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>성형수술, 미용 시술도 공제 대상인가요?</h3>
+      <p>미용·성형수술, 건강 증진 의약품 구입비는 공제 대상에서 제외됩니다. 질병 치료 목적의 의료비만 공제받을 수 있습니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>실손보험 수령액은 공제에서 빼야 하나요?</h3>
+      <p>실손의료보험에서 보전받은 금액은 의료비 공제 대상에서 제외됩니다. 실제 본인이 부담한 금액만 공제 대상입니다.</p>
+    </div>
+  </div>
+  <div class="guide-card">
+    <h2>의료비 세액공제 계산 예시</h2>
+    <p>총급여 5,000만원, 기타 부양가족 의료비 200만원, 본인 의료비 100만원인 경우:</p>
+    <ul>
+      <li>공제 문턱 = 5,000만원 × 3% = 150만원</li>
+      <li>의료비 합계 = 300만원 &gt; 150만원 → 공제 대상</li>
+      <li>기타 공제 = 200만원 - 150만원 = 50만원 × 15% = <strong>75,000원</strong></li>
+      <li>본인 공제 = 100만원 × 15% = <strong>150,000원</strong> (문턱이 기타에서 이미 소진)</li>
+      <li>총 세액공제액 = <strong>225,000원</strong></li>
+    </ul>
+    <p class="ref-links">참고: <a href="https://www.nts.go.kr" target="_blank" rel="noopener">국세청 홈택스</a> · <a href="https://www.hometax.go.kr" target="_blank" rel="noopener">연말정산 간소화 서비스</a></p>
+    <div class="update-note">2024년 귀속 소득분(2025년 신고) 기준입니다. 세법 개정에 따라 공제율과 한도가 변경될 수 있습니다.</div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/">홈</a>
+      <a href="/about.html">소개</a>
+      <a href="/privacy.html">개인정보처리방침</a>
+      <a href="/terms.html">이용약관</a>
+      <a href="/contact.html">문의하기</a>
+      <a href="/disclaimer.html">면책조항</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 실제 세금은 세무사에게 문의하세요.</p>
+  </div>
+</footer>
+
+<script>
+function fmt(n) {
+  if (!n && n !== 0) return '-';
+  return Math.round(n).toLocaleString('ko-KR') + '원';
+}
+function fmtShort(n) {
+  if (!n) return '';
+  if (n >= 100000000) return (n / 100000000).toFixed(1).replace('.0','') + '억원';
+  if (n >= 10000) return (n / 10000).toFixed(0) + '만원';
+  return n.toLocaleString('ko-KR') + '원';
+}
+function getVal(id) { return parseFloat(document.getElementById(id).value) || 0; }
+
+function onInput() {
+  const ids = ['salary','infertility','premature','selfDisabled','other'];
+  ids.forEach(id => {
+    const v = getVal(id);
+    const el = document.getElementById(id + 'Converted');
+    if (el) el.textContent = v > 0 ? fmtShort(v) : '';
+  });
+
+  const salary = getVal('salary');
+  const infertility = getVal('infertility');
+  const premature = getVal('premature');
+  const selfDisabled = getVal('selfDisabled');
+  const otherRaw = getVal('other');
+  const otherCapped = Math.min(otherRaw, 7000000);
+  const totalMedical = infertility + premature + selfDisabled + otherCapped;
+  const threshold = salary * 0.03;
+
+  const info = document.getElementById('thresholdInfo');
+  if (salary > 0 && totalMedical > 0) {
+    info.style.display = 'block';
+    const pct = Math.min(totalMedical / threshold, 2);
+    document.getElementById('thresholdFill').style.width = Math.min(pct * 50, 100) + '%';
+    document.getElementById('thresholdInfoText').textContent =
+      fmt(totalMedical) + ' / 문턱 ' + fmt(threshold);
+    document.getElementById('thresholdLabel').textContent =
+      '문턱: ' + fmt(threshold) + ' (총급여 × 3%)';
+  } else {
+    info.style.display = 'none';
+  }
+}
+
+function calculate() {
+  const salary = getVal('salary');
+  const infertility = getVal('infertility');
+  const premature = getVal('premature');
+  const selfDisabled = getVal('selfDisabled');
+  const otherRaw = getVal('other');
+
+  if (!salary) { alert('총급여액을 입력해주세요.'); return; }
+
+  const otherCapped = Math.min(otherRaw, 7000000);
+  const totalMedical = infertility + premature + selfDisabled + otherCapped;
+  const threshold = salary * 0.03;
+
+  const noDeduct = document.getElementById('noDeduction');
+  const resultCard = document.getElementById('resultCard');
+
+  if (totalMedical <= threshold) {
+    noDeduct.classList.add('show');
+    resultCard.classList.remove('show');
+    document.getElementById('ndTotalMedical').textContent = fmt(totalMedical).replace('원','');
+    document.getElementById('ndThreshold').textContent = fmt(threshold).replace('원','');
+    return;
+  }
+
+  noDeduct.classList.remove('show');
+
+  // 문턱 차감 순서: 기타 -> 본인등 -> 미숙아 -> 난임 (고율 보호)
+  let rem = threshold;
+
+  const otherUsed = Math.min(otherCapped, rem);
+  rem -= otherUsed;
+  const otherDeductible = otherCapped - otherUsed;
+
+  const selfUsed = Math.min(selfDisabled, rem);
+  rem -= selfUsed;
+  const selfDeductible = selfDisabled - selfUsed;
+
+  const prematureUsed = Math.min(premature, rem);
+  rem -= prematureUsed;
+  const prematureDeductible = premature - prematureUsed;
+
+  const infertilityDeductible = Math.max(0, infertility - rem);
+
+  const otherCredit = otherDeductible * 0.15;
+  const selfCredit = selfDeductible * 0.15;
+  const prematureCredit = prematureDeductible * 0.20;
+  const infertilityCredit = infertilityDeductible * 0.30;
+  const totalCredit = otherCredit + selfCredit + prematureCredit + infertilityCredit;
+
+  // Display
+  document.getElementById('rSalary').textContent = fmt(salary);
+  document.getElementById('rThreshold').textContent = fmt(threshold);
+  document.getElementById('rTotalMedical').textContent = fmt(totalMedical);
+  document.getElementById('rTotalCredit').textContent = fmt(totalCredit);
+
+  const showRow = (rowId, creditId, amount) => {
+    const row = document.getElementById(rowId);
+    if (amount > 0) {
+      row.style.display = 'flex';
+      document.getElementById(creditId).textContent = fmt(amount);
+    } else {
+      row.style.display = 'none';
+    }
+  };
+
+  showRow('rowInfertility','rInfertilityCredit', infertilityCredit);
+  showRow('rowPremature','rPrematureCredit', prematureCredit);
+  showRow('rowSelf','rSelfCredit', selfCredit);
+  showRow('rowOther','rOtherCredit', otherCredit);
+
+  // Note
+  let notes = [];
+  if (otherRaw > 7000000) {
+    notes.push('기타 부양가족 의료비는 700만원 한도 초과분(' + fmt(otherRaw - 7000000) + ')은 제외됩니다.');
+  }
+  notes.push('실손보험 수령액은 의료비에서 차감 후 입력하세요.');
+  document.getElementById('rNote').textContent = notes.join(' ');
+
+  resultCard.classList.add('show');
+  resultCard.scrollIntoView({ behavior:'smooth', block:'nearest' });
+}
+
+function toggleExplain(btn) {
+  btn.classList.toggle('open');
+  const body = btn.nextElementSibling;
+  body.classList.toggle('show');
+}
+</script>
+<script src="/assets/tax-detail-shell.js" defer></script>
+<script src="/assets/footer-unified.js" defer></script>
+</body>
+</html>

@@ -31,6 +31,12 @@
       quick:['3.3% 원천징수, 종합소득세, 국민연금, 건강보험을 모두 반영합니다.','경비율에 따라 실제 순수입이 크게 달라질 수 있습니다.','월 순수입은 세금·보험료를 모두 차감한 실제 가처분 소득입니다.','소득 변동이 클 때는 연 단위로도 함께 확인하면 도움이 됩니다.'],
       related:[['/calc/tax/withholding/','3.3% 원천징수 계산기','💲'],['/calc/tax/income-tax/','종합소득세 계산기','📈'],['/calc/tax/insurance-comparison/','4대보험 비교 계산기','👥']],
       guides:[['/blog/posts/freelancer-tax-refund.html','프리랜서 3.3%, 5월에 환급받는 방법'],['/blog/posts/withholding-tax-guide.html','3.3% 원천징수 - 실수령액과 환급 완전 정리']]
+    },
+    '/calc/tax/medical-expense/': {
+      key:'medical-expense',
+      quick:['총급여의 3%를 초과한 의료비만 세액공제 대상이 됩니다.','난임시술비는 30%, 미숙아·선천성이상아는 20%, 그 외는 15% 공제율이 적용됩니다.','기타 부양가족 의료비는 700만원 한도 내에서만 공제됩니다.','본인·65세 이상·장애인 의료비는 한도 없이 전액 공제 대상입니다.'],
+      related:[['/calc/tax/income-tax/','종합소득세 계산기','📈'],['/calc/tax/withholding/','3.3% 원천징수 계산기','💲'],['/calc/tax/freelancer-income/','월 순수입 계산기','💰']],
+      guides:[['/blog/posts/medical-expense-deduction.html','의료비 세액공제 완벽 가이드 - 항목별 공제율과 한도'],['/blog/posts/year-end-tax-settlement.html','연말정산 세액공제 총정리 - 놓치면 손해']]
     }
   };
   const cfg=pages[path];
@@ -141,7 +147,8 @@
     ['income-tax','종합소득세','/calc/tax/income-tax/'],
     ['vat','부가가치세','/calc/tax/vat/'],
     ['insurance-comparison','4대보험 비교','/calc/tax/insurance-comparison/'],
-    ['freelancer-income','월 순수입','/calc/tax/freelancer-income/']
+    ['freelancer-income','월 순수입','/calc/tax/freelancer-income/'],
+    ['medical-expense','의료비 세액공제','/calc/tax/medical-expense/']
   ];
   const left=document.createElement('aside');
   left.className='mega-sidebar-left';
@@ -152,10 +159,11 @@
       <nav class="msl-nav">
         <a href="/" class="msl-link"><span class="msl-icon">🧮</span>전체 보기</a>
         <a href="/calc/realestate/" class="msl-link"><span class="msl-icon">🏠</span>부동산<span class="msl-badge">15</span></a>
-        <a href="/calc/tax/" class="msl-link msl-active"><span class="msl-icon">💰</span>프리랜서 세금<span class="msl-badge">5</span></a>
+        <a href="/calc/tax/" class="msl-link msl-active"><span class="msl-icon">💰</span>프리랜서 세금<span class="msl-badge">6</span></a>
         <a href="/calc/salary/" class="msl-link"><span class="msl-icon">📈</span>이직 / 연봉<span class="msl-badge">7</span></a>
         <a href="/calc/finance/" class="msl-link"><span class="msl-icon">🏦</span>금융 · 이자<span class="msl-badge">5</span></a>
         <a href="/calc/health/" class="msl-link"><span class="msl-icon">🏃</span>건강<span class="msl-badge">5</span></a>
+        <a href="/calc/pension-welfare/" class="msl-link"><span class="msl-icon">🏛</span>연금·복지<span class="msl-badge">3</span></a>
         <a href="/calc/date/" class="msl-link"><span class="msl-icon">📅</span>날짜 · D-day<span class="msl-badge">5</span></a>
         <a href="/calc/ai/" class="msl-link"><span class="msl-icon">🤖</span>AI / 테크<span class="msl-badge">5</span></a>
         <a href="/calc/pet/" class="msl-link"><span class="msl-icon">🐾</span>반려동물<span class="msl-badge">5</span></a>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>장기요양 본인부담금 계산기 - 등급별 노인장기요양보험 비용 | 제이퍼 계산기</title>
+  <meta name="description" content="장기요양 등급과 이용 형태(재가/시설)를 선택하면 월 한도액, 본인부담금, 공단 부담금을 자동 계산합니다. 감경 대상 여부도 반영됩니다." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/pension-welfare/long-term-care/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="장기요양 본인부담금 계산기 - 등급별 노인장기요양보험 비용 | 제이퍼 계산기" />
+  <meta property="og:description" content="장기요양 등급과 이용 형태를 선택하면 월 한도액과 본인부담금을 자동 계산합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/pension-welfare/long-term-care/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="장기요양 본인부담금 계산기 | 제이퍼 계산기" />
+  <meta name="twitter:description" content="등급별 장기요양 본인부담금과 공단 부담금을 계산합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"장기요양 본인부담금 계산기",
+    "url":"https://www.jptcalc.kr/calc/pension-welfare/long-term-care/",
+    "applicationCategory":"FinanceApplication",
+    "operatingSystem":"All",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+      {"@type":"ListItem","position":2,"name":"연금·복지 계산기","item":"https://www.jptcalc.kr/calc/pension-welfare/"},
+      {"@type":"ListItem","position":3,"name":"장기요양 본인부담금 계산기","item":"https://www.jptcalc.kr/calc/pension-welfare/long-term-care/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"장기요양 등급별 본인부담률은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"재가급여는 월 한도액의 15%, 시설급여는 20%를 본인이 부담합니다. 감경 대상자(의료급여수급자, 저소득층)는 각각 7.5%, 10%로 절반 수준입니다."}},
+    {"@type":"Question","name":"인지지원등급은 시설을 이용할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"인지지원등급은 재가급여만 이용 가능합니다. 시설 입소는 1~5등급 판정을 받아야 합니다."}},
+    {"@type":"Question","name":"장기요양 감경 대상은 누구인가요?","acceptedAnswer":{"@type":"Answer","text":"의료급여수급자, 「국민기초생활보장법」에 따른 수급자 중 의료급여 수급자, 소득·재산이 일정 기준 이하인 저소득층이 감경 대상입니다. 감경 시 재가 7.5%, 시설 10%가 적용됩니다."}}
+  ]}
+  </script>
+  <link rel="stylesheet" href="/assets/pension-welfare-common.css" />
+  <style>
+    .seg-group{display:flex;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:14px;}
+    .seg-btn{flex:1;border:none;border-radius:7px;background:transparent;padding:9px 6px;font-size:13px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap;}
+    .seg-btn:hover{color:var(--gray-700);}
+    .seg-btn.active{background:var(--primary);color:#fff;font-weight:700;}
+    .result-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--gray-100);font-size:14px;}
+    .result-row:last-child{border-bottom:none;}
+    .result-label{color:var(--gray-600);font-weight:500;}
+    .result-value{font-weight:700;color:var(--gray-900);}
+    .result-total-row{margin-top:4px;padding-top:14px;border-top:2px solid rgba(14,165,233,0.3)!important;border-bottom:none!important;}
+    .result-total-label{font-size:15px;font-weight:800;color:var(--gray-800);}
+    .result-total-value{font-size:20px;font-weight:900;color:var(--primary);}
+    .result-card{background:#fff;border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:var(--shadow-md);border:2px solid rgba(14,165,233,0.3);}
+    .result-section-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin:14px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--gray-100);}
+    .highlight-box{background:rgba(14,165,233,0.06);border:1px solid rgba(14,165,233,0.2);border-radius:12px;padding:16px;text-align:center;margin-bottom:14px;}
+    .hb-label{font-size:12px;font-weight:700;color:var(--gray-500);margin-bottom:4px;}
+    .hb-value{font-size:28px;font-weight:900;color:var(--primary);}
+    .hb-sub{font-size:12px;color:var(--gray-500);margin-top:4px;}
+    .unavail-box{background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.25);border-radius:12px;padding:16px;text-align:center;display:none;}
+    .unavail-box.show{display:block;}
+    .unavail-box p{font-size:13px;color:#92400E;font-weight:600;margin:0;}
+    .rate-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+    .rate-table th{background:rgba(14,165,233,0.08);padding:8px 10px;text-align:center;font-weight:700;color:var(--gray-700);border:1px solid rgba(14,165,233,0.15);}
+    .rate-table td{padding:8px 10px;text-align:center;border:1px solid var(--gray-100);color:var(--gray-700);}
+    .rate-table tr.highlight-row td{background:rgba(14,165,233,0.05);font-weight:700;color:var(--primary);}
+    .trust-block{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:10px;padding:12px 14px;margin-top:4px;}
+    .trust-block p{font-size:11px;color:var(--gray-500);line-height:1.7;}
+    .trust-block strong{color:var(--gray-700);}
+    .field-label-sub{font-size:11px;color:var(--gray-500);margin-top:4px;margin-bottom:6px;line-height:1.5;}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/pension-welfare/" class="nav-item active"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/pension-welfare/">연금·복지 계산기</a><span class="breadcrumb-sep">›</span><span>장기요양 본인부담금 계산기</span></div>
+    <div class="page-header-badge">&#127978; 노인장기요양보험</div>
+    <h1>장기요양 본인부담금 계산기</h1>
+    <p>등급과 이용 형태를 선택하면 월 한도액, 본인부담금, 공단 부담금을 바로 확인할 수 있습니다</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">장기요양 비용 계산</div>
+
+    <div class="info-box">
+      <span class="info-icon">&#128161;</span>
+      <p>2024년 고시 기준 급여 한도액으로 계산됩니다. 실제 이용 금액은 선택하는 서비스 종류와 이용 시간에 따라 달라질 수 있습니다.</p>
+    </div>
+
+    <!-- 장기요양 등급 -->
+    <div class="field">
+      <div class="field-label">장기요양 등급</div>
+      <div class="seg-group" id="gradeGroup">
+        <button class="seg-btn active" data-grade="1" onclick="setGrade(this)">1등급</button>
+        <button class="seg-btn" data-grade="2" onclick="setGrade(this)">2등급</button>
+        <button class="seg-btn" data-grade="3" onclick="setGrade(this)">3등급</button>
+        <button class="seg-btn" data-grade="4" onclick="setGrade(this)">4등급</button>
+        <button class="seg-btn" data-grade="5" onclick="setGrade(this)">5등급</button>
+        <button class="seg-btn" data-grade="cog" onclick="setGrade(this)">인지지원</button>
+      </div>
+      <div class="field-label-sub" id="gradeDesc">신체 기능이 매우 저하된 최중증 상태로, 일상생활 전반에 걸쳐 도움이 필요합니다.</div>
+    </div>
+
+    <!-- 이용 형태 -->
+    <div class="field" id="careTypeField">
+      <div class="field-label">이용 형태</div>
+      <div class="seg-group">
+        <button class="seg-btn active" id="btnHome" onclick="setCareType('home')">재가급여 (방문요양·주야간보호 등)</button>
+        <button class="seg-btn" id="btnFacility" onclick="setCareType('facility')">시설급여 (요양원 입소)</button>
+      </div>
+    </div>
+
+    <!-- 인지지원등급 시설 불가 안내 -->
+    <div class="unavail-box" id="unavailBox">
+      <p>&#9888;&#65039; 인지지원등급은 시설급여 이용이 불가합니다.<br>재가급여만 신청할 수 있습니다.</p>
+    </div>
+
+    <!-- 감경 대상 여부 -->
+    <div class="field">
+      <div class="field-label">감경 대상 여부</div>
+      <div class="seg-group">
+        <button class="seg-btn active" id="btnGeneral" onclick="setReduction(false)">일반 (재가 15% / 시설 20%)</button>
+        <button class="seg-btn" id="btnReduced" onclick="setReduction(true)">감경 대상 (재가 7.5% / 시설 10%)</button>
+      </div>
+      <div class="field-label-sub">의료급여수급자, 국민기초생활보장 수급자 중 저소득층이 감경 대상입니다.</div>
+    </div>
+  </div>
+
+  <!-- 결과 카드 (항상 표시) -->
+  <div class="result-card" id="resultCard">
+    <div class="highlight-box">
+      <div class="hb-label">월 본인부담금 (예상)</div>
+      <div class="hb-value" id="rSelfPay">-</div>
+      <div class="hb-sub" id="rSelfPaySub"></div>
+    </div>
+
+    <div class="result-section-title">급여 상세</div>
+    <div class="result-row">
+      <span class="result-label">월 급여 한도액</span>
+      <span class="result-value" id="rLimit">-</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">공단 부담금</span>
+      <span class="result-value" id="rPublic">-</span>
+    </div>
+    <div class="result-row result-total-row">
+      <span class="result-total-label">본인부담금</span>
+      <span class="result-total-value" id="rSelfPayTotal">-</span>
+    </div>
+
+    <div class="result-section-title" style="margin-top:16px;">적용 기준</div>
+    <div class="result-row">
+      <span class="result-label">등급</span>
+      <span class="result-value" id="rGrade">-</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">이용 형태</span>
+      <span class="result-value" id="rCareType">-</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">본인부담률</span>
+      <span class="result-value" id="rRate">-</span>
+    </div>
+  </div>
+
+  <!-- 등급별 한도액 표 -->
+  <div class="card" style="margin-top:0;">
+    <div class="card-title">2024년 등급별 월 급여 한도액</div>
+    <div style="overflow-x:auto;">
+      <table class="rate-table" id="limitTable">
+        <thead>
+          <tr>
+            <th>등급</th>
+            <th>재가급여 한도액</th>
+            <th>시설급여 한도액</th>
+            <th>본인부담 (재가)</th>
+            <th>본인부담 (시설)</th>
+          </tr>
+        </thead>
+        <tbody id="limitTableBody"></tbody>
+      </table>
+    </div>
+    <p style="font-size:11px;color:var(--gray-500);margin-top:8px;line-height:1.6;">
+      * 시설급여는 노인요양시설(장기입소) 기준. 노인요양공동생활가정은 별도 요율 적용.<br>
+      * 인지지원등급은 재가급여만 이용 가능.<br>
+      * 감경 대상 시 본인부담률 50% 경감(재가 7.5%, 시설 10%).<br>
+      * 출처: 국민건강보험공단 2024년 장기요양 급여 한도액 고시
+    </p>
+  </div>
+
+  <!-- trust-block -->
+  <div class="trust-block">
+    <p><strong>법적 근거 및 출처</strong><br>
+    노인장기요양보험법 제39조 (본인일부부담금) - 재가급여 15%, 시설급여 20%<br>
+    노인장기요양보험법 제40조 (본인일부부담금의 감경) - 감경 대상자 기준<br>
+    국민건강보험공단 2024년 장기요양 급여 한도액 고시 기준<br>
+    본 계산기는 참고용이며, 실제 급여액은 공단에서 결정한 인정 내용에 따라 달라질 수 있습니다.</p>
+  </div>
+
+  <!-- 설명 섹션 -->
+  <div class="explain-section">
+    <button class="explain-toggle" onclick="toggleExplain(this)">
+      장기요양보험 이용 방법 <span class="etarrow">&#9660;</span>
+    </button>
+    <div class="explain-body">
+      <h3>장기요양 급여 신청 절차</h3>
+      <p>국민건강보험공단에 장기요양 인정 신청 → 방문 조사 및 등급 판정 → 등급 통보 → 장기요양 기관 선택 후 서비스 이용</p>
+      <h3>재가급여 vs 시설급여</h3>
+      <p>재가급여는 집에서 방문요양, 방문목욕, 방문간호, 주야간보호, 단기보호 등을 이용하는 형태입니다. 시설급여는 노인요양시설에 입소하는 형태로, 1~5등급만 이용 가능합니다.</p>
+      <h3>본인부담금 계산 방법</h3>
+      <p>월 급여 한도액 × 본인부담률 = 본인부담금. 실제 이용 금액이 한도액보다 적을 경우 이용 금액에 부담률을 적용합니다. 한도액 초과분은 전액 본인 부담입니다.</p>
+    </div>
+  </div>
+
+</main>
+
+<div class="guide-section">
+  <div class="guide-card faq-card">
+    <h2>장기요양보험 자주 묻는 질문</h2>
+    <div class="faq-item">
+      <h3>장기요양 등급 판정은 어떻게 받나요?</h3>
+      <p>국민건강보험공단(☎1577-1000)에 장기요양 인정 신청서를 제출하면, 공단 직원이 가정을 방문해 심신 기능 상태를 조사합니다. 이후 등급 판정 위원회에서 1~5등급 또는 인지지원등급으로 판정하며, 신청일로부터 약 30일 내에 결과를 통보합니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>등급 외 판정을 받으면 아무 혜택도 없나요?</h3>
+      <p>등급 외 판정을 받더라도 지자체에서 운영하는 노인 돌봄 서비스, 재가 지원 서비스 등을 이용할 수 있습니다. 상태가 악화되면 재신청이 가능하므로 주기적으로 상태를 확인하는 것이 좋습니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>본인부담금을 더 줄이는 방법이 있나요?</h3>
+      <p>기초생활수급자나 의료급여수급자에 해당하면 본인부담금이 50% 감경됩니다. 또한 천재지변, 재난 등으로 경제적으로 곤란한 경우 추가 감경을 신청할 수 있습니다. 국민건강보험공단 지사에 감경 신청서를 제출하면 됩니다.</p>
+    </div>
+    <div class="update-note">국민건강보험공단 2024년 장기요양 급여 한도액 고시 기준입니다.</div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/">홈</a>
+      <a href="/about.html">소개</a>
+      <a href="/privacy.html">개인정보처리방침</a>
+      <a href="/terms.html">이용약관</a>
+      <a href="/contact.html">문의하기</a>
+      <a href="/disclaimer.html">면책조항</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 실제 급여액은 국민건강보험공단의 결정에 따릅니다.</p>
+  </div>
+</footer>
+
+<script>
+// 2024년 장기요양 급여 한도액 (원)
+const LIMITS = {
+  '1': { home: 2069900, facility: 2306400 },
+  '2': { home: 1869600, facility: 2131900 },
+  '3': { home: 1455800, facility: 1975600 },
+  '4': { home: 1341800, facility: 1975600 },
+  '5': { home: 1151800, facility: 1975600 },
+  'cog': { home: 643400, facility: null }
+};
+
+const GRADE_DESC = {
+  '1': '신체 기능이 매우 저하된 최중증 상태로, 일상생활 전반에 걸쳐 도움이 필요합니다.',
+  '2': '신체 기능이 상당히 저하된 중증 상태로, 일상생활 대부분에 도움이 필요합니다.',
+  '3': '신체·인지 기능이 저하되어 일상생활 일부에 도움이 필요한 중등증 상태입니다.',
+  '4': '신체·인지 기능 저하로 일상생활 일부에 도움이 필요한 경증 상태입니다.',
+  '5': '치매가 있으나 신체 기능이 비교적 유지된 경증 치매 상태입니다.',
+  'cog': '치매 초기로 인지 기능에 제한이 있으나 신체 기능은 유지된 상태. 재가급여만 이용 가능합니다.'
+};
+
+let currentGrade = '1';
+let currentCareType = 'home';
+let isReduced = false;
+
+function fmt(n) {
+  if (n === null || n === undefined) return '-';
+  return Math.round(n).toLocaleString('ko-KR') + '원';
+}
+
+function setGrade(btn) {
+  document.querySelectorAll('#gradeGroup .seg-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentGrade = btn.dataset.grade;
+  document.getElementById('gradeDesc').textContent = GRADE_DESC[currentGrade];
+
+  if (currentGrade === 'cog') {
+    currentCareType = 'home';
+    document.getElementById('btnHome').classList.add('active');
+    document.getElementById('btnFacility').classList.remove('active');
+    document.getElementById('unavailBox').classList.remove('show');
+    if (document.getElementById('lastCareClick') === 'facility') {
+      document.getElementById('unavailBox').classList.add('show');
+    }
+    document.getElementById('btnFacility').disabled = false;
+  } else {
+    document.getElementById('unavailBox').classList.remove('show');
+    document.getElementById('btnFacility').disabled = false;
+  }
+  calculate();
+}
+
+function setCareType(type) {
+  if (currentGrade === 'cog' && type === 'facility') {
+    document.getElementById('unavailBox').classList.add('show');
+    document.getElementById('btnHome').classList.add('active');
+    document.getElementById('btnFacility').classList.remove('active');
+    currentCareType = 'home';
+    calculate();
+    return;
+  }
+  document.getElementById('unavailBox').classList.remove('show');
+  currentCareType = type;
+  document.getElementById('btnHome').classList.toggle('active', type === 'home');
+  document.getElementById('btnFacility').classList.toggle('active', type === 'facility');
+  calculate();
+}
+
+function setReduction(reduced) {
+  isReduced = reduced;
+  document.getElementById('btnGeneral').classList.toggle('active', !reduced);
+  document.getElementById('btnReduced').classList.toggle('active', reduced);
+  calculate();
+}
+
+function buildTable() {
+  const grades = [
+    ['1등급', '1'],
+    ['2등급', '2'],
+    ['3등급', '3'],
+    ['4등급', '4'],
+    ['5등급', '5'],
+    ['인지지원등급', 'cog']
+  ];
+  const body = document.getElementById('limitTableBody');
+  body.innerHTML = grades.map(([label, g]) => {
+    const l = LIMITS[g];
+    const homeRate = isReduced ? 0.075 : 0.15;
+    const facRate = isReduced ? 0.10 : 0.20;
+    const homeSelf = Math.round(l.home * homeRate);
+    const facSelf = l.facility ? Math.round(l.facility * facRate) : null;
+    const isActive = g === currentGrade;
+    return `<tr${isActive ? ' class="highlight-row"' : ''}>
+      <td>${label}</td>
+      <td>${l.home.toLocaleString('ko-KR')}원</td>
+      <td>${l.facility ? l.facility.toLocaleString('ko-KR') + '원' : '이용불가'}</td>
+      <td>${homeSelf.toLocaleString('ko-KR')}원</td>
+      <td>${facSelf !== null ? facSelf.toLocaleString('ko-KR') + '원' : '-'}</td>
+    </tr>`;
+  }).join('');
+}
+
+function calculate() {
+  const limits = LIMITS[currentGrade];
+  const limitAmt = currentCareType === 'home' ? limits.home : limits.facility;
+
+  if (limitAmt === null) {
+    document.getElementById('rSelfPay').textContent = '이용 불가';
+    document.getElementById('rSelfPaySub').textContent = '인지지원등급은 시설 이용 불가';
+    document.getElementById('rLimit').textContent = '-';
+    document.getElementById('rPublic').textContent = '-';
+    document.getElementById('rSelfPayTotal').textContent = '-';
+    buildTable();
+    return;
+  }
+
+  const baseRate = currentCareType === 'home' ? 0.15 : 0.20;
+  const rate = isReduced ? baseRate * 0.5 : baseRate;
+
+  const selfPay = Math.round(limitAmt * rate);
+  const publicPay = limitAmt - selfPay;
+  const rateDisplay = (rate * 100).toFixed(1) + '%';
+
+  const gradeLabel = currentGrade === 'cog' ? '인지지원등급' : currentGrade + '등급';
+  const careLabel = currentCareType === 'home' ? '재가급여' : '시설급여 (노인요양시설)';
+
+  document.getElementById('rSelfPay').textContent = fmt(selfPay);
+  document.getElementById('rSelfPaySub').textContent =
+    '공단 부담 ' + fmt(publicPay) + ' · 본인 부담 ' + rateDisplay;
+  document.getElementById('rLimit').textContent = fmt(limitAmt);
+  document.getElementById('rPublic').textContent = fmt(publicPay);
+  document.getElementById('rSelfPayTotal').textContent = fmt(selfPay);
+  document.getElementById('rGrade').textContent = gradeLabel;
+  document.getElementById('rCareType').textContent = careLabel;
+  document.getElementById('rRate').textContent = rateDisplay + (isReduced ? ' (감경 적용)' : '');
+
+  buildTable();
+}
+
+// 초기 실행
+calculate();
+
+function toggleExplain(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('show');
+}
+</script>
+<script src="/assets/pension-welfare-detail-shell.js" defer></script>
+<script src="/assets/footer-unified.js" defer></script>
+</body>
+</html>

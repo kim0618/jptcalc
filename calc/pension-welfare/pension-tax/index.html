@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>연금소득세 계산기 - 사적연금 세금 및 실수령액 계산 | 제이퍼 계산기</title>
+  <meta name="description" content="사적연금 수령액과 수령 나이를 입력하면 연금소득세(분리과세/종합과세)와 실수령액을 자동 계산합니다. 1,500만원 초과 시 분리과세 vs 종합과세 비교도 제공합니다." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/pension-welfare/pension-tax/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="연금소득세 계산기 - 사적연금 세금 및 실수령액 | 제이퍼 계산기" />
+  <meta property="og:description" content="사적연금 수령액과 나이를 입력하면 연금소득세와 실수령액을 자동 계산합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/pension-welfare/pension-tax/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="연금소득세 계산기 | 제이퍼 계산기" />
+  <meta name="twitter:description" content="사적연금 세금과 실수령액을 자동 계산합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"연금소득세 계산기",
+    "url":"https://www.jptcalc.kr/calc/pension-welfare/pension-tax/",
+    "applicationCategory":"FinanceApplication",
+    "operatingSystem":"All",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+      {"@type":"ListItem","position":2,"name":"연금·복지 계산기","item":"https://www.jptcalc.kr/calc/pension-welfare/"},
+      {"@type":"ListItem","position":3,"name":"연금소득세 계산기","item":"https://www.jptcalc.kr/calc/pension-welfare/pension-tax/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"사적연금 세금은 언제 내나요?","acceptedAnswer":{"@type":"Answer","text":"사적연금(IRP, 연금저축펀드 등) 수령 시 연금소득세가 원천징수됩니다. 연간 수령액이 1,500만원 이하이면 연령별 세율(3.3~5.5%)로 분리과세되며, 연금저축 계좌에서 자동 납부됩니다."}},
+    {"@type":"Question","name":"55세 미만에 연금을 수령하면 세금이 더 높나요?","acceptedAnswer":{"@type":"Answer","text":"네, 그렇습니다. 연금 수령 나이에 따라 세율이 달라집니다. 55세 미만 5.5%, 55~69세 4.4%, 70세 이상 3.3%입니다(지방소득세 포함). 늦게 받을수록 세율이 낮아집니다."}},
+    {"@type":"Question","name":"연간 1,500만원 초과 시 분리과세와 종합과세 중 어느 것이 유리한가요?","acceptedAnswer":{"@type":"Answer","text":"분리과세는 16.5% 세율이 확정 적용됩니다. 종합과세는 다른 소득(근로·사업 등)과 합산하여 누진세율(6~45%)이 적용됩니다. 다른 소득이 없거나 적다면 종합과세가 유리할 수 있고, 다른 소득이 많으면 분리과세가 유리할 수 있습니다."}}
+  ]}
+  </script>
+  <link rel="stylesheet" href="/assets/pension-welfare-common.css" />
+  <style>
+    /* pension-tax 고유 스타일 */
+    input[type=number]{width:100%;border:1.5px solid var(--gray-200);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:var(--gray-50);outline:none;transition:border-color .18s;-moz-appearance:textfield}
+    input[type=number]::placeholder{color:var(--gray-400);font-weight:400}
+    input[type=number]:focus{border-color:var(--primary);background:#fff}
+    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
+    .input-wrap{position:relative;display:flex;align-items:center;overflow:visible;}
+    .input-wrap input{padding-right:48px;}
+    .input-wrap .unit{position:absolute;right:14px;font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none;}
+    .converted{font-size:12px;color:var(--primary);margin-top:4px;font-weight:600;}
+    .seg-group{display:flex;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:14px;}
+    .seg-btn{flex:1;border:none;border-radius:7px;background:transparent;padding:9px 6px;font-size:13px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap;}
+    .seg-btn:hover{color:var(--gray-700);}
+    .seg-btn.active{background:var(--primary);color:#fff;font-weight:700;}
+    .result-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--gray-100);font-size:14px;}
+    .result-row:last-child{border-bottom:none;}
+    .result-label{color:var(--gray-600);font-weight:500;}
+    .result-value{font-weight:700;color:var(--gray-900);}
+    .result-card{background:#fff;border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:var(--shadow-md);border:2px solid rgba(14,165,233,0.3);display:none;}
+    .result-card.show{display:block;}
+    .result-section-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin:14px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--gray-100);}
+    .rh-box{text-align:center;padding:14px 0 12px;margin-bottom:14px;border-bottom:1px solid rgba(0,0,0,0.06);}
+    .rh-label{font-size:13px;font-weight:700;color:var(--gray-500);margin-bottom:4px;}
+    .rh-value{font-size:28px;font-weight:900;color:var(--primary);}
+    .rh-sub{font-size:12px;color:var(--gray-500);margin-top:4px;}
+    .compare-cols{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px;}
+    .compare-col{background:rgba(0,0,0,0.02);border:1px solid var(--dark-border);border-radius:12px;padding:14px;}
+    .compare-col.highlight{border-color:rgba(14,165,233,0.4);background:rgba(14,165,233,0.05);}
+    .compare-col-title{font-size:11px;font-weight:800;color:var(--gray-400);margin-bottom:10px;}
+    .compare-col.highlight .compare-col-title{color:var(--primary);}
+    .compare-row{display:flex;justify-content:space-between;padding:5px 0;}
+    .compare-row+.compare-row{border-top:1px solid rgba(0,0,0,0.04);}
+    .compare-key{font-size:12px;color:var(--gray-500);}
+    .compare-val{font-size:12px;font-weight:700;color:var(--gray-700);}
+    .compare-total{margin-top:8px;padding-top:8px;border-top:1px solid rgba(0,0,0,0.08);}
+    .compare-total .compare-val{font-size:16px;font-weight:900;color:var(--gray-900);}
+    .public-notice{background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.25);border-radius:10px;padding:14px 16px;font-size:13px;color:#92400E;line-height:1.7;margin-bottom:16px;}
+    .trust-block{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:10px;padding:12px 14px;margin-top:4px;}
+    .trust-block p{font-size:11px;color:var(--gray-500);line-height:1.7;}
+    .trust-block strong{color:var(--gray-700);}
+    .rate-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+    .rate-table th{padding:8px 10px;text-align:left;font-size:11px;font-weight:700;color:var(--gray-500);background:var(--gray-50);border-bottom:1px solid var(--gray-200);}
+    .rate-table td{padding:9px 10px;border-bottom:1px solid var(--gray-100);color:var(--gray-700);}
+    .rate-table tbody tr:last-child td{border-bottom:none;}
+    .rate-table td:first-child{font-weight:600;color:var(--gray-800);}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/pension-welfare/" class="nav-item active"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/pension-welfare/">연금·복지 계산기</a><span class="breadcrumb-sep">›</span><span>연금소득세 계산기</span></div>
+    <div class="page-header-badge">&#128176; 소득세법 기준</div>
+    <h1>연금소득세 계산기</h1>
+    <p>사적연금 수령액과 나이에 따른 세금·실수령액을 계산합니다. 1,500만원 초과 시 분리·종합 비교도 제공합니다.</p>
+  </div>
+
+  <!-- 연금 종류 선택 -->
+  <div class="card">
+    <div class="card-title">연금 종류 선택</div>
+    <div class="seg-group" id="typeGroup">
+      <button class="seg-btn active" onclick="selectType('private', this)">사적연금 (IRP·연금저축)</button>
+      <button class="seg-btn" onclick="selectType('public', this)">공적연금 (국민연금·공무원연금)</button>
+    </div>
+
+    <!-- 사적연금 입력 -->
+    <div id="privateSection">
+      <div class="info-box">
+        <span class="info-icon">&#128161;</span>
+        <p>사적연금은 세액공제 받은 납입금과 운용수익에 대해 인출 시 연금소득세가 부과됩니다.</p>
+      </div>
+
+      <div class="field">
+        <div class="field-label">연간 사적연금 수령액</div>
+        <div class="input-wrap">
+          <input type="number" id="annualPension" placeholder="예: 12000000" oninput="onInput()" />
+          <span class="unit">원</span>
+        </div>
+        <div class="converted" id="annualPensionConverted"></div>
+      </div>
+
+      <div class="field">
+        <div class="field-label">연금 수령 나이</div>
+        <div class="seg-group" id="ageGroup" style="margin-bottom:0">
+          <button class="seg-btn active" onclick="selectAge('under55', this)">55세 미만</button>
+          <button class="seg-btn" onclick="selectAge('55to69', this)">55~69세</button>
+          <button class="seg-btn" onclick="selectAge('over70', this)">70세 이상</button>
+        </div>
+      </div>
+
+      <div class="field" id="comprehensiveField" style="display:none;">
+        <div class="field-label">다른 소득 과세표준 <span class="label-hint">(1,500만원 초과 시 종합과세 비교용)</span></div>
+        <div class="input-wrap">
+          <input type="number" id="otherTaxBase" placeholder="예: 30000000" oninput="onInput()" />
+          <span class="unit">원</span>
+        </div>
+        <div class="field-hint">근로·사업 등 다른 소득의 과세표준(공제 후 금액). 0원 입력 시 연금소득만으로 계산.</div>
+      </div>
+
+      <button onclick="calculatePrivate()" style="width:100%;padding:14px;background:var(--primary);color:#fff;border:none;border-radius:12px;font-size:16px;font-weight:800;cursor:pointer;font-family:inherit;">연금세 계산하기</button>
+    </div>
+
+    <!-- 공적연금 안내 -->
+    <div id="publicSection" style="display:none;">
+      <div class="public-notice">
+        <strong>&#127981; 공적연금(국민연금·공무원연금·군인연금·사학연금)은 종합소득세 과세 대상입니다.</strong><br><br>
+        공적연금은 사적연금과 달리 별도 세율이 없으며, 연금소득공제(최대 900만원)를 적용한 후 <strong>다른 소득과 합산하여 종합소득세 신고</strong>를 해야 합니다.<br><br>
+        예상 세금은 <strong>홈택스 간이세액표 조회</strong>를 이용하거나, 종합소득세 계산기를 활용하세요.
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a href="https://www.hometax.go.kr" target="_blank" rel="noopener"
+           style="flex:1;min-width:160px;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;background:rgba(14,165,233,0.08);border:1px solid rgba(14,165,233,0.3);border-radius:10px;text-decoration:none;font-size:13px;font-weight:700;color:var(--primary);">
+          &#127981; 홈택스 간이세액표 조회 ↗
+        </a>
+        <a href="/calc/tax/income-tax/"
+           style="flex:1;min-width:160px;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.3);border-radius:10px;text-decoration:none;font-size:13px;font-weight:700;color:#047857;">
+          &#128200; 종합소득세 계산기 →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 결과 카드 -->
+  <div class="result-card" id="resultCard">
+    <div class="rh-box">
+      <div class="rh-label">연간 실수령액 (세후)</div>
+      <div class="rh-value" id="rNetAnnual">-</div>
+      <div class="rh-sub" id="rNetMonthly"></div>
+    </div>
+
+    <div class="result-section-title">세금 상세</div>
+    <div class="result-row">
+      <span class="result-label">연간 수령액</span>
+      <span class="result-value" id="rAnnual">-</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">적용 세율</span>
+      <span class="result-value" id="rRate">-</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">연금소득세 (지방세 포함)</span>
+      <span class="result-value" id="rTax">-</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">월 실수령액</span>
+      <span class="result-value" id="rMonthly">-</span>
+    </div>
+
+    <!-- 1,500만원 초과 비교 (조건부 표시) -->
+    <div id="compareSection" style="display:none;">
+      <div class="result-section-title" style="margin-top:16px;">분리과세 vs 종합과세 비교</div>
+      <div class="compare-cols">
+        <div class="compare-col" id="colSep">
+          <div class="compare-col-title">분리과세 (16.5%)</div>
+          <div class="compare-row"><span class="compare-key">세율</span><span class="compare-val">16.5%</span></div>
+          <div class="compare-row"><span class="compare-key">세액</span><span class="compare-val" id="cSepTax">-</span></div>
+          <div class="compare-total"><div class="compare-row"><span class="compare-key">실수령</span><span class="compare-val" id="cSepNet">-</span></div></div>
+        </div>
+        <div class="compare-col" id="colComp">
+          <div class="compare-col-title">종합과세</div>
+          <div class="compare-row"><span class="compare-key">합산 과표</span><span class="compare-val" id="cCompBase">-</span></div>
+          <div class="compare-row"><span class="compare-key">세액</span><span class="compare-val" id="cCompTax">-</span></div>
+          <div class="compare-total"><div class="compare-row"><span class="compare-key">실수령</span><span class="compare-val" id="cCompNet">-</span></div></div>
+        </div>
+      </div>
+      <div style="margin-top:10px;font-size:12px;color:var(--gray-500);background:var(--gray-50);padding:10px 12px;border-radius:8px;" id="compareAdvice"></div>
+    </div>
+  </div>
+
+  <!-- 세율표 -->
+  <div class="card" style="margin-top:0;">
+    <div class="card-title">사적연금 세율표</div>
+    <table class="rate-table">
+      <thead>
+        <tr>
+          <th>연간 수령액</th>
+          <th>수령 나이</th>
+          <th>세율 (지방세 포함)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td rowspan="3">1,500만원 이하</td><td>55세 미만</td><td>5.5%</td></tr>
+        <tr><td>55~69세</td><td>4.4%</td></tr>
+        <tr><td>70세 이상</td><td>3.3%</td></tr>
+        <tr><td>1,500만원 초과</td><td>연령 무관</td><td>16.5% (분리과세) 또는 종합과세 선택</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- trust-block -->
+  <div class="trust-block">
+    <p><strong>근거 법령 및 출처</strong><br>
+    소득세법 제20조의3(연금소득) · 소득세법 시행령 제40조의2<br>
+    세율 기준: 소득세법 제129조(원천징수세율) - 지방소득세 포함<br>
+    출처: 국세청(nts.go.kr) / 2024년 귀속 기준<br>
+    공적연금은 종합소득세 신고 대상으로, 홈택스 간이세액표를 참고하세요.</p>
+  </div>
+
+  <!-- 설명 섹션 -->
+  <div class="explain-section">
+    <button class="explain-toggle" onclick="toggleExplain(this)">
+      연금소득세 계산 방식 <span class="etarrow">&#9660;</span>
+    </button>
+    <div class="explain-body">
+      <h3>사적연금 분리과세</h3>
+      <p>연간 1,500만원 이하: 연령별 세율(5.5%·4.4%·3.3%)로 원천징수 분리과세. 종합소득세 신고 불필요.</p>
+      <h3>사적연금 1,500만원 초과</h3>
+      <p>16.5% 분리과세 또는 종합소득세 신고 중 선택 가능. 다른 소득이 적으면 종합과세가 유리할 수 있음.</p>
+      <h3>공적연금 (국민연금 등)</h3>
+      <p>연금소득공제(최대 900만원) 적용 후 종합소득세 과세표준 산입. 매년 5월 종합소득세 신고 또는 홈택스 간이세액표 원천징수 방식으로 납부.</p>
+    </div>
+  </div>
+
+</main>
+
+<div class="guide-section">
+  <div class="guide-card faq-card">
+    <h2>연금소득세 자주 묻는 질문</h2>
+    <div class="faq-item">
+      <h3>IRP와 연금저축의 연금소득세는 같나요?</h3>
+      <p>네, 동일합니다. IRP(개인형 퇴직연금)와 연금저축펀드·연금저축보험 모두 세액공제 받은 납입금과 운용수익 인출 시 동일한 연금소득세율(3.3~5.5%)이 적용됩니다. 단, 세액공제 받지 않은 납입금(추가 납입분)은 비과세입니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>연금 수령 기간이 짧을수록 세금이 더 많나요?</h3>
+      <p>아닙니다. 연금소득세는 수령 기간과 무관하게 연간 수령액과 나이에 따라 결정됩니다. 다만 10년 미만 수령 시 1.1배 가산세율이 적용될 수 있으므로 최소 10년 이상 수령을 권장합니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>퇴직금을 IRP에 넣으면 연금소득세가 절약되나요?</h3>
+      <p>네. 퇴직소득세를 IRP로 이전하면 연금 수령 시 퇴직소득세의 70%(10년 미만) 또는 60%(10년 이상)만 납부하면 됩니다. 퇴직금을 즉시 수령하는 것보다 세금을 최대 40%까지 절약할 수 있습니다.</p>
+    </div>
+    <div class="update-note">2024년 귀속 소득 기준(2025년 신고)입니다. 세법 개정에 따라 세율이 변경될 수 있습니다.</div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/">홈</a>
+      <a href="/about.html">소개</a>
+      <a href="/privacy.html">개인정보처리방침</a>
+      <a href="/terms.html">이용약관</a>
+      <a href="/contact.html">문의하기</a>
+      <a href="/disclaimer.html">면책조항</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 실제 세금은 세무사에게 문의하세요.</p>
+  </div>
+</footer>
+
+<script>
+let pensionType = 'private';
+let ageGroup = 'under55';
+
+function fmt(n) {
+  if (n === null || n === undefined) return '-';
+  return Math.round(n).toLocaleString('ko-KR') + '원';
+}
+function fmtShort(n) {
+  if (!n) return '';
+  if (n >= 100000000) return (n / 100000000).toFixed(1).replace(/\.0$/, '') + '억원';
+  if (n >= 10000) return Math.round(n / 10000) + '만원';
+  return n.toLocaleString('ko-KR') + '원';
+}
+function getVal(id) { return parseFloat(document.getElementById(id).value) || 0; }
+
+function selectType(type, btn) {
+  pensionType = type;
+  document.querySelectorAll('#typeGroup .seg-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('privateSection').style.display = type === 'private' ? 'block' : 'none';
+  document.getElementById('publicSection').style.display = type === 'public' ? 'block' : 'none';
+  document.getElementById('resultCard').classList.remove('show');
+}
+
+function selectAge(group, btn) {
+  ageGroup = group;
+  document.querySelectorAll('#ageGroup .seg-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+function onInput() {
+  const v = getVal('annualPension');
+  document.getElementById('annualPensionConverted').textContent = v > 0 ? fmtShort(v) : '';
+  // 1500만원 초과 시 종합과세 비교 입력 표시
+  document.getElementById('comprehensiveField').style.display = v > 15000000 ? 'block' : 'none';
+}
+
+// 종합소득세 누진세 계산 (소득세만, 지방세 10% 별도 가산)
+function calcIncomeTax(taxBase) {
+  const brackets = [
+    [14000000, 0.06, 0],
+    [50000000, 0.15, 1260000],
+    [88000000, 0.24, 5760000],
+    [150000000, 0.35, 15440000],
+    [300000000, 0.38, 19940000],
+    [500000000, 0.40, 25940000],
+    [1000000000, 0.42, 35940000],
+    [Infinity, 0.45, 65940000]
+  ];
+  for (const [limit, rate, deduct] of brackets) {
+    if (taxBase <= limit) {
+      const incomeTax = taxBase * rate - deduct;
+      return incomeTax * 1.1; // 지방소득세 10% 포함
+    }
+  }
+  return 0;
+}
+
+function calculatePrivate() {
+  const annual = getVal('annualPension');
+  if (!annual) { alert('연간 연금 수령액을 입력해주세요.'); return; }
+
+  const rateMap = { under55: 0.055, '55to69': 0.044, over70: 0.033 };
+  const rateNameMap = { under55: '5.5% (55세 미만)', '55to69': '4.4% (55~69세)', over70: '3.3% (70세 이상)' };
+
+  const resultCard = document.getElementById('resultCard');
+
+  if (annual <= 15000000) {
+    // 분리과세 (저율)
+    const rate = rateMap[ageGroup];
+    const tax = annual * rate;
+    const net = annual - tax;
+
+    document.getElementById('rAnnual').textContent = fmt(annual);
+    document.getElementById('rRate').textContent = rateNameMap[ageGroup];
+    document.getElementById('rTax').textContent = fmt(tax);
+    document.getElementById('rNetAnnual').textContent = fmt(net);
+    document.getElementById('rNetMonthly').textContent = '월 실수령 ' + fmt(net / 12);
+    document.getElementById('rMonthly').textContent = fmt(net / 12);
+    document.getElementById('compareSection').style.display = 'none';
+
+  } else {
+    // 1,500만원 초과 - 분리과세 vs 종합과세 비교
+    const otherBase = getVal('otherTaxBase');
+
+    // 분리과세: 16.5%
+    const sepTax = annual * 0.165;
+    const sepNet = annual - sepTax;
+
+    // 종합과세: 연금소득공제 후 과표 산정
+    // 연금소득공제 = min(900만원, 700만원 + (연금소득 - 700만원) × 50%) 단순화
+    const pensionDeduct = Math.min(9000000, 7000000 + (annual - 7000000) * 0.5);
+    const pensionBase = Math.max(0, annual - pensionDeduct);
+    const totalBase = otherBase + pensionBase;
+    const totalTax = calcIncomeTax(totalBase);
+    const baseTaxOnly = calcIncomeTax(otherBase); // 기존 소득만의 세금
+    const marginalTax = Math.max(0, totalTax - baseTaxOnly); // 연금에 귀속되는 증가분 세금
+    const compNet = annual - marginalTax;
+
+    // 유리한 선택 안내
+    const advice = sepTax < marginalTax
+      ? `분리과세(${fmt(sepTax)})가 종합과세(${fmt(marginalTax)})보다 유리합니다.`
+      : `종합과세(${fmt(marginalTax)})가 분리과세(${fmt(sepTax)})보다 유리합니다. 다른 소득이 적을수록 종합과세가 유리합니다.`;
+
+    // 결과 표시 (분리과세 기준)
+    document.getElementById('rAnnual').textContent = fmt(annual);
+    document.getElementById('rRate').textContent = '1,500만원 초과 - 아래 비교 참고';
+    document.getElementById('rTax').textContent = '-';
+    document.getElementById('rNetAnnual').textContent = fmt(sepNet);
+    document.getElementById('rNetMonthly').textContent = '분리과세 기준 월 실수령 ' + fmt(sepNet / 12);
+    document.getElementById('rMonthly').textContent = fmt(sepNet / 12);
+
+    document.getElementById('cSepTax').textContent = fmt(sepTax);
+    document.getElementById('cSepNet').textContent = fmt(sepNet);
+    document.getElementById('cCompBase').textContent = fmt(totalBase);
+    document.getElementById('cCompTax').textContent = fmt(marginalTax);
+    document.getElementById('cCompNet').textContent = fmt(compNet);
+    document.getElementById('compareAdvice').textContent = advice;
+
+    // 유리한 컬럼 강조
+    const colSep = document.getElementById('colSep');
+    const colComp = document.getElementById('colComp');
+    colSep.classList.toggle('highlight', sepTax <= marginalTax);
+    colComp.classList.toggle('highlight', marginalTax < sepTax);
+
+    document.getElementById('compareSection').style.display = 'block';
+  }
+
+  resultCard.classList.add('show');
+  resultCard.scrollIntoView({ behavior:'smooth', block:'nearest' });
+}
+
+function toggleExplain(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('show');
+}
+</script>
+<script src="/assets/pension-welfare-detail-shell.js" defer></script>
+<script src="/assets/footer-unified.js" defer></script>
+</body>
+</html>

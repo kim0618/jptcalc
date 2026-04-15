@@ -74,6 +74,21 @@
         ['/calc/tax/income-tax/','📈','종합소득세 계산기'],
         ['/calc/tax/insurance-comparison/','👥','4대보험 비교 계산기']
       ]
+    },
+    'medical-expense': {
+      title: '의료비 세액공제',
+      emoji: '🏥',
+      tips: [
+        '총급여의 3%를 초과한 의료비만 세액공제 대상이 됩니다.',
+        '난임시술비는 30%, 미숙아·선천성이상아는 20%, 그 외는 15% 공제율이 적용됩니다.',
+        '기타 부양가족 의료비는 700만원 한도 내에서만 공제됩니다.',
+        '본인·65세 이상·장애인 의료비는 한도 없이 전액 공제 대상입니다.'
+      ],
+      related: [
+        ['/calc/tax/income-tax/','📈','종합소득세 계산기'],
+        ['/calc/tax/withholding/','💲','3.3% 원천징수 계산기'],
+        ['/calc/tax/freelancer-income/','💰','월 순수입 계산기']
+      ]
     }
   };
 
@@ -82,7 +97,8 @@
     ['/calc/tax/income-tax/','📈','종합소득세','income-tax'],
     ['/calc/tax/vat/','📄','부가가치세','vat'],
     ['/calc/tax/insurance-comparison/','👥','4대보험 비교','insurance-comparison'],
-    ['/calc/tax/freelancer-income/','💰','월 순수입','freelancer-income']
+    ['/calc/tax/freelancer-income/','💰','월 순수입','freelancer-income'],
+    ['/calc/tax/medical-expense/','🏥','의료비 세액공제','medical-expense']
   ];
 
   function getSlug() {
@@ -147,10 +163,11 @@
           <div class="msl-nav">
             <a class="msl-link" href="/"><span class="msl-icon">🧮</span><span>전체 보기</span></a>
             <a class="msl-link" href="/calc/realestate/"><span class="msl-icon">🏠</span><span>부동산</span><span class="msl-badge">15</span></a>
-            <a class="msl-link msl-active" href="/calc/tax/"><span class="msl-icon">💰</span><span>프리랜서 세금</span><span class="msl-badge">5</span></a>
+            <a class="msl-link msl-active" href="/calc/tax/"><span class="msl-icon">💰</span><span>프리랜서 세금</span><span class="msl-badge">6</span></a>
             <a class="msl-link" href="/calc/salary/"><span class="msl-icon">📈</span><span>이직 / 연봉</span><span class="msl-badge">7</span></a>
             <a class="msl-link" href="/calc/finance/"><span class="msl-icon">🏦</span><span>금융 · 이자</span><span class="msl-badge">5</span></a>
             <a class="msl-link" href="/calc/health/"><span class="msl-icon">🏃</span><span>건강</span><span class="msl-badge">5</span></a>
+            <a class="msl-link" href="/calc/pension-welfare/"><span class="msl-icon">🏛</span><span>연금·복지</span><span class="msl-badge">3</span></a>
             <a class="msl-link" href="/calc/date/"><span class="msl-icon">📅</span><span>날짜 · D-day</span><span class="msl-badge">5</span></a>
             <a class="msl-link" href="/calc/ai/"><span class="msl-icon">🤖</span><span>AI / 테크</span><span class="msl-badge">5</span></a>
             <a class="msl-link" href="/calc/pet/"><span class="msl-icon">🐾</span><span>반려동물</span><span class="msl-badge">5</span></a>
