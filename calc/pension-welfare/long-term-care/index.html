@@ -48,9 +48,11 @@
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"장기요양 등급별 본인부담률은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"재가급여는 월 한도액의 15%, 시설급여는 20%를 본인이 부담합니다. 감경 대상자(의료급여수급자, 저소득층)는 각각 7.5%, 10%로 절반 수준입니다."}},
-    {"@type":"Question","name":"인지지원등급은 시설을 이용할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"인지지원등급은 재가급여만 이용 가능합니다. 시설 입소는 1~5등급 판정을 받아야 합니다."}},
-    {"@type":"Question","name":"장기요양 감경 대상은 누구인가요?","acceptedAnswer":{"@type":"Answer","text":"의료급여수급자, 「국민기초생활보장법」에 따른 수급자 중 의료급여 수급자, 소득·재산이 일정 기준 이하인 저소득층이 감경 대상입니다. 감경 시 재가 7.5%, 시설 10%가 적용됩니다."}}
+    {"@type":"Question","name":"장기요양 등급 판정은 어떻게 받나요?","acceptedAnswer":{"@type":"Answer","text":"국민건강보험공단(1577-1000)에 장기요양 인정 신청서를 제출하면, 공단 직원이 가정을 방문해 심신 기능 상태를 조사합니다. 이후 등급 판정 위원회에서 1~5등급 또는 인지지원등급으로 판정하며, 신청일로부터 약 30일 내에 결과를 통보합니다."}},
+    {"@type":"Question","name":"등급 외 판정을 받으면 아무 혜택도 없나요?","acceptedAnswer":{"@type":"Answer","text":"등급 외 판정을 받더라도 지자체에서 운영하는 노인 돌봄 서비스, 재가 지원 서비스 등을 이용할 수 있습니다. 상태가 악화되면 재신청이 가능하므로 주기적으로 상태를 확인하는 것이 좋습니다."}},
+    {"@type":"Question","name":"본인부담금을 더 줄이는 방법이 있나요?","acceptedAnswer":{"@type":"Answer","text":"기초생활수급자나 의료급여수급자에 해당하면 본인부담금이 50% 감경됩니다. 천재지변·재난 등으로 경제적으로 곤란한 경우 추가 감경을 신청할 수 있으며, 국민건강보험공단 지사에 감경 신청서를 제출하면 됩니다."}},
+    {"@type":"Question","name":"재가급여와 시설급여를 동시에 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"원칙적으로 동시에 이용할 수 없습니다. 시설에 입소하면 재가급여는 중단됩니다. 다만 단기보호(재가급여)를 이용해 일시적으로 시설 서비스를 받는 것은 가능합니다. 상황에 따라 케어 매니저와 상의하세요."}},
+    {"@type":"Question","name":"장기요양 등급이 변경될 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네. 유효기간 내에도 상태가 변화하면 등급 변경 신청이 가능합니다. 상태가 호전되면 등급이 하향될 수 있고, 악화되면 상향될 수 있습니다. 유효기간 만료 전에 갱신 신청을 하면 등급이 재판정됩니다."}}
   ]}
   </script>
   <link rel="stylesheet" href="/assets/pension-welfare-common.css" />
@@ -221,50 +223,98 @@
     </p>
   </div>
 
-  <!-- trust-block -->
-  <div class="trust-block">
-    <p><strong>법적 근거 및 출처</strong><br>
-    노인장기요양보험법 제39조 (본인일부부담금) - 재가급여 15%, 시설급여 20%<br>
-    노인장기요양보험법 제40조 (본인일부부담금의 감경) - 감경 대상자 기준<br>
-    국민건강보험공단 2024년 장기요양 급여 한도액 고시 기준<br>
-    본 계산기는 참고용이며, 실제 급여액은 공단에서 결정한 인정 내용에 따라 달라질 수 있습니다.</p>
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>장기요양보험 비용, 이것만 알면 됩니다</h2>
+      <p>장기요양보험은 고령이나 노인성 질환으로 일상생활이 어려운 분에게 신체활동·가사 지원 등을 제공하는 사회보험입니다. 등급에 따라 월 급여 한도액이 정해지며, 본인은 일부만 부담합니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>재가급여 본인부담 15%</strong><span>집에서 방문요양·방문목욕·주야간보호 등을 이용하는 형태</span></div>
+        <div class="guide-box"><strong>시설급여 본인부담 20%</strong><span>노인요양시설에 입소하는 형태, 1~5등급만 이용 가능</span></div>
+        <div class="guide-box"><strong>감경 대상 50% 할인</strong><span>기초수급자·차상위계층은 본인부담금이 절반으로 감경</span></div>
+      </div>
+    </div>
+    <div class="guide-card">
+      <h2>등급별 월 급여 한도액 상세표</h2>
+      <p>2024년 국민건강보험공단 고시 기준 등급별 월 한도액과 일반 본인부담금입니다.</p>
+      <div class="guide-table-wrap">
+        <table>
+          <thead><tr><th>등급</th><th>재가급여 한도</th><th>시설급여 한도</th><th>재가 본인부담(15%)</th><th>시설 본인부담(20%)</th></tr></thead>
+          <tbody>
+            <tr><td>1등급</td><td>2,069,900원</td><td>2,306,400원</td><td>310,485원</td><td>461,280원</td></tr>
+            <tr><td>2등급</td><td>1,869,600원</td><td>2,131,900원</td><td>280,440원</td><td>426,380원</td></tr>
+            <tr><td>3등급</td><td>1,455,800원</td><td>1,975,600원</td><td>218,370원</td><td>395,120원</td></tr>
+            <tr><td>4등급</td><td>1,341,800원</td><td>1,975,600원</td><td>201,270원</td><td>395,120원</td></tr>
+            <tr><td>5등급</td><td>1,151,800원</td><td>1,975,600원</td><td>172,770원</td><td>395,120원</td></tr>
+            <tr><td>인지지원등급</td><td>643,400원</td><td>이용 불가</td><td>96,510원</td><td>-</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:12px;color:var(--gray-500);margin-top:8px">※ 감경 대상자는 위 본인부담금의 50%만 납부합니다. 한도 초과 이용분은 전액 본인 부담입니다.</p>
+    </div>
+    <div class="guide-card">
+      <h2>입력값과 결과 해석</h2>
+      <h3>입력 시 확인 포인트</h3>
+      <ul>
+        <li><strong>장기요양 등급</strong>은 국민건강보험공단의 등급 판정 결과를 기준으로 선택합니다. 아직 판정 전이라면 예상 등급을 선택해 비용을 미리 확인할 수 있습니다.</li>
+        <li><strong>급여 유형</strong>에서 재가급여는 집에서 서비스를 받는 경우, 시설급여는 요양시설에 입소하는 경우입니다. 인지지원등급은 재가급여만 가능합니다.</li>
+        <li><strong>감경 여부</strong>는 기초생활수급자·차상위계층에 해당하면 '감경 대상'을 선택하세요. 본인부담금이 50% 줄어듭니다.</li>
+        <li>실제 이용 금액이 한도액보다 적으면 이용한 만큼만 본인부담률이 적용됩니다.</li>
+      </ul>
+      <h3>결과 해석 방법</h3>
+      <p>본인부담금 = 월 급여 한도액 x 본인부담률(재가 15%, 시설 20%). 감경 대상자는 부담률이 절반으로 줄어듭니다. 한도액을 초과하는 서비스 비용은 전액 본인이 부담하므로, 실제 이용 시 케어 매니저와 상의해 한도 내에서 서비스를 설계하는 것이 중요합니다.</p>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item">
+        <h3>장기요양 등급 판정은 어떻게 받나요?</h3>
+        <p>국민건강보험공단(1577-1000)에 장기요양 인정 신청서를 제출하면, 공단 직원이 가정을 방문해 심신 기능 상태를 조사합니다. 이후 등급 판정 위원회에서 1~5등급 또는 인지지원등급으로 판정하며, 신청일로부터 약 30일 내에 결과를 통보합니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>등급 외 판정을 받으면 아무 혜택도 없나요?</h3>
+        <p>등급 외 판정을 받더라도 지자체에서 운영하는 노인 돌봄 서비스, 재가 지원 서비스 등을 이용할 수 있습니다. 상태가 악화되면 재신청이 가능하므로 주기적으로 상태를 확인하는 것이 좋습니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>본인부담금을 더 줄이는 방법이 있나요?</h3>
+        <p>기초생활수급자나 의료급여수급자에 해당하면 본인부담금이 50% 감경됩니다. 천재지변·재난 등으로 경제적으로 곤란한 경우 추가 감경을 신청할 수 있으며, 국민건강보험공단 지사에 감경 신청서를 제출하면 됩니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>재가급여와 시설급여를 동시에 받을 수 있나요?</h3>
+        <p>원칙적으로 동시에 이용할 수 없습니다. 시설에 입소하면 재가급여는 중단됩니다. 다만 단기보호(재가급여)를 이용해 일시적으로 시설 서비스를 받는 것은 가능합니다. 상황에 따라 케어 매니저와 상의하세요.</p>
+      </div>
+      <div class="faq-item">
+        <h3>장기요양 등급이 변경될 수 있나요?</h3>
+        <p>네. 유효기간 내에도 상태가 변화하면 등급 변경 신청이 가능합니다. 상태가 호전되면 등급이 하향될 수 있고, 악화되면 상향될 수 있습니다. 유효기간 만료 전에 갱신 신청을 하면 등급이 재판정됩니다.</p>
+      </div>
+      <div class="update-note">국민건강보험공단 2024년 장기요양 급여 한도액 고시 기준입니다. 실제 급여액은 공단의 인정 결과에 따라 달라질 수 있습니다.</div>
+    </div>
   </div>
-
-  <!-- 설명 섹션 -->
-  <div class="explain-section">
-    <button class="explain-toggle" onclick="toggleExplain(this)">
-      장기요양보험 이용 방법 <span class="etarrow">&#9660;</span>
-    </button>
-    <div class="explain-body">
-      <h3>장기요양 급여 신청 절차</h3>
-      <p>국민건강보험공단에 장기요양 인정 신청 → 방문 조사 및 등급 판정 → 등급 통보 → 장기요양 기관 선택 후 서비스 이용</p>
-      <h3>재가급여 vs 시설급여</h3>
-      <p>재가급여는 집에서 방문요양, 방문목욕, 방문간호, 주야간보호, 단기보호 등을 이용하는 형태입니다. 시설급여는 노인요양시설에 입소하는 형태로, 1~5등급만 이용 가능합니다.</p>
-      <h3>본인부담금 계산 방법</h3>
-      <p>월 급여 한도액 × 본인부담률 = 본인부담금. 실제 이용 금액이 한도액보다 적을 경우 이용 금액에 부담률을 적용합니다. 한도액 초과분은 전액 본인 부담입니다.</p>
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '노인장기요양보험법 제28조(급여 종류)·제40조(본인부담금 감경), 2024년 고시 기준',
+    appliedFrom: '2024년 1월 1일',
+    exceptions: [
+      '월 급여 한도액을 초과하는 서비스 비용은 전액 본인이 부담합니다',
+      '기초수급자·차상위계층은 본인부담금이 50% 감경됩니다',
+      '인지지원등급은 재가급여만 이용 가능하며, 시설급여는 이용할 수 없습니다',
+    ],
+    references: [
+      { name: '국민건강보험공단(nhis.or.kr)', url: 'https://www.nhis.or.kr' },
+      { name: '장기요양 등급 신청(longtermcare.or.kr)', url: 'https://www.longtermcare.or.kr' },
+    ],
+    lastReviewed: '2026.04',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 연금·복지 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/pension-welfare/retirement-living/" class="sibling-link">🏡 노후 생활비</a>
+      <a href="/calc/pension-welfare/pension-tax/" class="sibling-link">💰 연금소득세</a>
+      <a href="/calc/pension-welfare/long-term-care/" class="sibling-link current">🏥 장기요양 비용</a>
     </div>
   </div>
 
 </main>
-
-<div class="guide-section">
-  <div class="guide-card faq-card">
-    <h2>장기요양보험 자주 묻는 질문</h2>
-    <div class="faq-item">
-      <h3>장기요양 등급 판정은 어떻게 받나요?</h3>
-      <p>국민건강보험공단(☎1577-1000)에 장기요양 인정 신청서를 제출하면, 공단 직원이 가정을 방문해 심신 기능 상태를 조사합니다. 이후 등급 판정 위원회에서 1~5등급 또는 인지지원등급으로 판정하며, 신청일로부터 약 30일 내에 결과를 통보합니다.</p>
-    </div>
-    <div class="faq-item">
-      <h3>등급 외 판정을 받으면 아무 혜택도 없나요?</h3>
-      <p>등급 외 판정을 받더라도 지자체에서 운영하는 노인 돌봄 서비스, 재가 지원 서비스 등을 이용할 수 있습니다. 상태가 악화되면 재신청이 가능하므로 주기적으로 상태를 확인하는 것이 좋습니다.</p>
-    </div>
-    <div class="faq-item">
-      <h3>본인부담금을 더 줄이는 방법이 있나요?</h3>
-      <p>기초생활수급자나 의료급여수급자에 해당하면 본인부담금이 50% 감경됩니다. 또한 천재지변, 재난 등으로 경제적으로 곤란한 경우 추가 감경을 신청할 수 있습니다. 국민건강보험공단 지사에 감경 신청서를 제출하면 됩니다.</p>
-    </div>
-    <div class="update-note">국민건강보험공단 2024년 장기요양 급여 한도액 고시 기준입니다.</div>
-  </div>
-</div>
 
 <footer class="site-footer">
   <div class="footer-inner">
@@ -428,5 +478,19 @@ function toggleExplain(btn) {
 </script>
 <script src="/assets/pension-welfare-detail-shell.js" defer></script>
 <script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '장기요양보험법·급여 한도액 고시 2024년 기준',
+  basisDate: '2026년 기준',
+  referenceOrg: '국민건강보험공단',
+  lastReviewed: '2026.04.13',
+  category: 'pension-welfare'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/blog-review-footer.js"></script>
 </body>
 </html>

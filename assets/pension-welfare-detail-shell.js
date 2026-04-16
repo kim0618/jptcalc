@@ -6,19 +6,19 @@
       key:'retirement-living',
       quick:['은퇴 후 필요한 월 생활비는 현재 생활비의 70~80% 수준으로 추정합니다.','물가상승률을 반드시 반영해야 실질적인 노후 준비 금액을 알 수 있습니다.','국민연금·퇴직연금 수령액을 차감한 순수 부족분을 준비하는 것이 핵심입니다.','통계청 기준 한국인 기대수명은 남성 80.6세, 여성 86.6세입니다(2023년 기준).'],
       related:[['/calc/pension-welfare/pension-tax/','연금소득세','💰'],['/calc/pension-welfare/long-term-care/','장기요양 비용','🏥'],['/calc/tax/income-tax/','종합소득세','📊']],
-      guides:[['/blog/posts/retirement-planning.html','노후 준비 완벽 가이드 - 은퇴 후 필요한 자산 계산법'],['/blog/posts/national-pension-guide.html','국민연금 수령액 계산과 노후 소득 전략']]
+      guides:[]
     },
     '/calc/pension-welfare/pension-tax/': {
       key:'pension-tax',
       quick:['사적연금 연간 수령액이 1,500만원 이하이면 연령별 저율 분리과세(3.3~5.5%)가 적용됩니다.','1,500만원 초과 시 16.5% 분리과세 또는 종합과세 중 유리한 방법을 선택할 수 있습니다.','공적연금(국민연금 등)은 종합소득세 과세 대상으로, 홈택스 간이세액표를 참고하세요.','연금 수령 나이가 높을수록 낮은 세율이 적용됩니다(55세 미만 5.5%, 70세 이상 3.3%).'],
       related:[['/calc/pension-welfare/retirement-living/','노후 생활비','🏡'],['/calc/pension-welfare/long-term-care/','장기요양 비용','🏥'],['/calc/tax/income-tax/','종합소득세','📊']],
-      guides:[['/blog/posts/pension-tax-guide.html','연금소득세 완전 정복 - 분리과세 vs 종합과세 비교'],['/blog/posts/retirement-pension-guide.html','퇴직연금 IRP 세금 혜택과 수령 전략']]
+      guides:[]
     },
     '/calc/pension-welfare/long-term-care/': {
       key:'long-term-care',
       quick:['장기요양보험 등급은 1~5등급과 인지지원등급(6등급)으로 구분됩니다.','재가급여 본인부담률은 15%, 시설급여 본인부담률은 20%입니다.','기초수급자와 차상위계층은 본인부담금이 감경 또는 면제됩니다.','월 한도액을 초과하는 서비스 비용은 전액 본인이 부담합니다.'],
       related:[['/calc/pension-welfare/retirement-living/','노후 생활비','🏡'],['/calc/pension-welfare/pension-tax/','연금소득세','💰'],['/calc/health/bmi/','BMI','📏']],
-      guides:[['/blog/posts/long-term-care-guide.html','장기요양보험 등급 신청과 서비스 이용 가이드'],['/blog/posts/elderly-care-cost.html','부모님 요양 비용 현실적으로 계산하기']]
+      guides:[]
     }
   };
   const cfg=pages[path];
