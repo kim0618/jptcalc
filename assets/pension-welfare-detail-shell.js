@@ -6,7 +6,7 @@
       key:'retirement-living',
       quick:['은퇴 후 필요한 월 생활비는 현재 생활비의 70~80% 수준으로 추정합니다.','물가상승률을 반드시 반영해야 실질적인 노후 준비 금액을 알 수 있습니다.','국민연금·퇴직연금 수령액을 차감한 순수 부족분을 준비하는 것이 핵심입니다.','통계청 기준 한국인 기대수명은 남성 80.6세, 여성 86.6세입니다(2023년 기준).'],
       related:[['/calc/pension-welfare/pension-tax/','연금소득세','💰'],['/calc/pension-welfare/long-term-care/','장기요양 비용','🏥'],['/calc/tax/income-tax/','종합소득세','📊']],
-      guides:[]
+      guides:[['/blog/posts/retirement-living-cost.html','노후 생활비 얼마면 될까 - 30년 준비 자금 계산법']]
     },
     '/calc/pension-welfare/pension-tax/': {
       key:'pension-tax',
