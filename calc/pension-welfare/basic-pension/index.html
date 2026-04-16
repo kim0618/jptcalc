@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>기초연금 수급 판정 계산기 - 소득인정액 간이 계산 | 제이퍼 계산기</title>
+  <meta name="description" content="소득과 재산을 입력하면 기초연금 수급 가능 여부를 간이 판정합니다. 소득인정액 산출, 선정기준액 비교, 예상 지급액 제공. 2025년 기준." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/pension-welfare/basic-pension/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="기초연금 수급 판정 계산기 - 소득인정액 간이 계산 | 제이퍼 계산기" />
+  <meta property="og:description" content="소득과 재산을 입력하면 기초연금 수급 가능 여부를 간이 판정합니다. 2025년 기준." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/pension-welfare/basic-pension/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="기초연금 수급 판정 계산기 | 제이퍼 계산기" />
+  <meta name="twitter:description" content="소득과 재산으로 기초연금 수급 가능 여부를 간이 판정합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"기초연금 수급 판정 계산기",
+    "url":"https://www.jptcalc.kr/calc/pension-welfare/basic-pension/",
+    "applicationCategory":"FinanceApplication",
+    "operatingSystem":"All",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+      {"@type":"ListItem","position":2,"name":"연금·복지 계산기","item":"https://www.jptcalc.kr/calc/pension-welfare/"},
+      {"@type":"ListItem","position":3,"name":"기초연금 수급 판정 계산기","item":"https://www.jptcalc.kr/calc/pension-welfare/basic-pension/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"기초연금 수급 자격은 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"만 65세 이상 대한민국 국적자로 국내에 거주하며, 소득인정액이 선정기준액 이하인 분이 받을 수 있습니다. 2025년 기준 선정기준액은 단독가구 228만원, 부부가구 364.8만원입니다. 소득인정액은 실제 소득과 재산을 소득으로 환산한 금액의 합계입니다."}},
+    {"@type":"Question","name":"소득인정액은 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"소득인정액 = 소득평가액 + 재산의 소득환산액입니다. 소득평가액은 근로소득에서 108만원을 공제한 후 70%를 반영하고 기타소득을 합산합니다. 재산의 소득환산액은 (일반재산 + 금융재산 - 금융재산 기본공제 2,000만원 - 지역별 기본재산액) × 4% ÷ 12로 계산합니다."}},
+    {"@type":"Question","name":"기초연금 최대 지급액은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"2025년 기준 단독가구 최대 342,510원, 부부가구는 각각 274,008원(20% 감액)입니다. 소득이 낮을수록 더 많이 받으며, 국민연금 수령액이 기준연금액의 150%를 초과하면 연계 감액이 적용됩니다."}},
+    {"@type":"Question","name":"국민연금을 받으면 기초연금을 못 받나요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 국민연금을 받더라도 소득인정액이 선정기준액 이하라면 기초연금을 받을 수 있습니다. 단, 국민연금 수령액이 기준연금액(342,510원)의 150%(약 513,765원)를 초과하면 기초연금이 최대 50%까지 감액될 수 있습니다."}},
+    {"@type":"Question","name":"이 계산기 결과로 수급 여부가 확정되나요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 이 계산기는 간이 추정으로, 실제 심사에서는 부채 차감, 임차보증금 환산, 고급 자동차 등 다양한 요소가 추가로 반영됩니다. 정확한 수급 여부는 주민센터 방문 또는 복지로(bokjiro.go.kr)에서 확인하세요."}}
+  ]}
+  </script>
+
+  <link rel="stylesheet" href="/assets/pension-welfare-common.css" />
+  <style>
+    input[type=number]{width:100%;border:1.5px solid var(--gray-200);border-radius:10px;padding:12px 56px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:var(--gray-50);outline:none;transition:border-color .18s;-moz-appearance:textfield}
+    input[type=number]::placeholder{color:var(--gray-400);font-weight:400}
+    input[type=number]:focus{border-color:var(--primary);background:#fff}
+    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
+    .input-wrap{position:relative;display:flex;align-items:center;}
+    .input-wrap input{padding-right:50px;}
+    .input-wrap .unit{position:absolute;right:14px;font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none;}
+    .converted{font-size:12px;color:var(--primary);margin-top:4px;font-weight:600;min-height:18px;}
+    .seg-group{display:flex;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:14px;}
+    .seg-btn{flex:1;border:none;border-radius:7px;background:transparent;padding:9px 6px;font-size:13px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap;}
+    .seg-btn:hover{color:var(--gray-700);}
+    .seg-btn.active{background:var(--primary);color:#fff;font-weight:700;}
+    .calc-btn{width:100%;padding:14px;background:var(--primary);color:#fff;border:none;border-radius:12px;font-size:16px;font-weight:800;cursor:pointer;font-family:inherit;transition:opacity .15s;margin-top:4px;}
+    .calc-btn:hover{opacity:0.9;}
+    .result-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--gray-100);font-size:14px;}
+    .result-row:last-child{border-bottom:none;}
+    .result-label{color:var(--gray-600);font-weight:500;}
+    .result-value{font-weight:700;color:var(--gray-900);}
+    .result-section-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin:16px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--gray-100);}
+    .verdict-box{text-align:center;padding:20px;margin-bottom:16px;border-radius:14px;}
+    .verdict-box.pass{background:rgba(16,185,129,0.08);border:2px solid rgba(16,185,129,0.3);}
+    .verdict-box.warn{background:rgba(245,158,11,0.08);border:2px solid rgba(245,158,11,0.3);}
+    .verdict-box.fail{background:rgba(239,68,68,0.06);border:2px solid rgba(239,68,68,0.2);}
+    .verdict-label{font-size:13px;font-weight:700;margin-bottom:6px;}
+    .verdict-label.pass{color:#065F46;}
+    .verdict-label.warn{color:#92400E;}
+    .verdict-label.fail{color:#991B1B;}
+    .verdict-amount{font-size:28px;font-weight:900;margin-bottom:4px;}
+    .verdict-amount.pass{color:#10B981;}
+    .verdict-amount.warn{color:#F59E0B;}
+    .verdict-amount.fail{color:#EF4444;}
+    .verdict-sub{font-size:12px;color:var(--gray-500);}
+    .progress-bar-wrap{margin:14px 0 8px;}
+    .progress-bar-label{display:flex;justify-content:space-between;font-size:11px;color:var(--gray-500);margin-bottom:6px;}
+    .progress-bar-bg{height:10px;background:var(--gray-100);border-radius:99px;overflow:hidden;}
+    .progress-bar-fill{height:100%;border-radius:99px;transition:width .4s ease;}
+    .progress-bar-fill.pass{background:#10B981;}
+    .progress-bar-fill.warn{background:#F59E0B;}
+    .progress-bar-fill.fail{background:#EF4444;}
+    .warning-box{background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.3);border-radius:10px;padding:13px 15px;font-size:12px;color:#92400E;line-height:1.7;margin-top:12px;}
+    .official-link-box{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;}
+    .official-link{flex:1;min-width:140px;display:flex;align-items:center;justify-content:center;gap:8px;padding:11px 14px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:700;transition:opacity .15s;}
+    .official-link:hover{opacity:0.85;}
+    .official-link.primary{background:rgba(14,165,233,0.1);border:1px solid rgba(14,165,233,0.3);color:var(--primary);}
+    .official-link.secondary{background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.3);color:#047857;}
+    .rate-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+    .rate-table th{padding:8px 10px;text-align:left;font-size:11px;font-weight:700;color:var(--gray-500);background:var(--gray-50);border-bottom:1px solid var(--gray-200);}
+    .rate-table td{padding:9px 10px;border-bottom:1px solid var(--gray-100);color:var(--gray-700);}
+    .rate-table tbody tr:last-child td{border-bottom:none;}
+    .rate-table td:first-child{font-weight:600;color:var(--gray-800);}
+    .badge-year{display:inline-block;background:rgba(14,165,233,0.12);color:var(--primary);font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:6px;vertical-align:middle;}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/pension-welfare/" class="nav-item active"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/pension-welfare/">연금·복지 계산기</a><span class="breadcrumb-sep">›</span><span>기초연금 수급 판정 계산기</span></div>
+    <div class="page-header-badge">&#128176; 간이 판정 · 2025년 기준</div>
+    <h1>기초연금 수급 판정 계산기</h1>
+    <p>소득과 재산을 입력하면 소득인정액을 산출하고 기초연금 수급 가능성을 간이 판정합니다.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">기본 정보</div>
+    <div class="info-box">
+      <span class="info-icon">&#128161;</span>
+      <p>기초연금은 만 65세 이상 소득 하위 70% 어르신에게 지급됩니다. 소득과 재산을 소득인정액으로 환산해 선정기준액과 비교합니다.</p>
+    </div>
+
+    <div class="field">
+      <div class="field-label">가구 유형</div>
+      <div class="seg-group" id="householdGroup" style="margin-bottom:0;">
+        <button class="seg-btn active" onclick="selectHousehold('single',this)">단독가구</button>
+        <button class="seg-btn" onclick="selectHousehold('couple',this)">부부가구</button>
+      </div>
+    </div>
+
+    <div class="field" style="margin-top:14px;">
+      <div class="field-label">거주 지역</div>
+      <div class="seg-group" id="regionGroup" style="margin-bottom:0;">
+        <button class="seg-btn active" onclick="selectRegion('metro',this)">대도시</button>
+        <button class="seg-btn" onclick="selectRegion('urban',this)">중소도시</button>
+        <button class="seg-btn" onclick="selectRegion('rural',this)">농어촌</button>
+      </div>
+      <div class="field-hint">대도시: 특별시·광역시 구(區) | 중소도시: 도(道)의 시(市) | 농어촌: 군(郡) 지역</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">소득 정보</div>
+
+    <div class="field">
+      <div class="field-label">월 근로소득 <span class="label-hint">(급여, 아르바이트 등)</span></div>
+      <div class="input-wrap">
+        <input type="number" id="inpWorkIncome" placeholder="없으면 0" oninput="onNumInput(this,'workIncConverted')" />
+        <span class="unit">만원</span>
+      </div>
+      <div class="converted" id="workIncConverted"></div>
+      <div class="field-hint">108만원까지 공제 후 나머지의 70%만 소득평가액에 반영됩니다.</div>
+    </div>
+
+    <div class="field">
+      <div class="field-label">월 기타소득 <span class="label-hint">(사업·임대·이자·배당·연금 등)</span></div>
+      <div class="input-wrap">
+        <input type="number" id="inpOtherIncome" placeholder="없으면 0" oninput="onNumInput(this,'otherIncConverted')" />
+        <span class="unit">만원</span>
+      </div>
+      <div class="converted" id="otherIncConverted"></div>
+      <div class="field-hint">국민연금 수령액, 사업소득, 재산소득 등을 합산해 입력하세요.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">재산 정보</div>
+
+    <div class="field">
+      <div class="field-label">일반재산 <span class="label-hint">(부동산 시가, 자동차 등)</span></div>
+      <div class="input-wrap">
+        <input type="number" id="inpProperty" placeholder="없으면 0" oninput="onNumInput(this,'propertyConverted')" />
+        <span class="unit">만원</span>
+      </div>
+      <div class="converted" id="propertyConverted"></div>
+      <div class="field-hint">주택·토지는 공시가격, 자동차는 일반재산에 포함. 고가 자동차(4,000만원 이상)는 별도 가산됩니다.</div>
+    </div>
+
+    <div class="field">
+      <div class="field-label">금융재산 <span class="label-hint">(예금·적금·주식·보험 등)</span></div>
+      <div class="input-wrap">
+        <input type="number" id="inpFinancial" placeholder="없으면 0" oninput="onNumInput(this,'financialConverted')" />
+        <span class="unit">만원</span>
+      </div>
+      <div class="converted" id="financialConverted"></div>
+      <div class="field-hint">금융재산에서 2,000만원을 기본 공제한 후 환산합니다.</div>
+    </div>
+
+  </div>
+
+  <!-- 결과 카드 -->
+  <div class="result-card" id="resultCard">
+
+    <div id="verdictBox" class="verdict-box">
+      <div class="verdict-label" id="vLabel"></div>
+      <div class="verdict-amount" id="vAmount"></div>
+      <div class="verdict-sub" id="vSub"></div>
+    </div>
+
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-label">
+        <span>소득인정액 <strong id="pbIncome">-</strong></span>
+        <span>선정기준액 <strong id="pbThreshold">-</strong></span>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progressFill" style="width:0%"></div>
+      </div>
+    </div>
+
+    <div class="result-section-title">소득인정액 산출 내역</div>
+    <div class="result-row">
+      <span class="result-label">근로소득 평가액</span>
+      <span class="result-value" id="rWorkEval">-</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">기타소득</span>
+      <span class="result-value" id="rOtherInc">-</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">소득평가액 합계</span>
+      <span class="result-value" id="rIncomeEval">-</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">일반재산 - 지역 기본공제</span>
+      <span class="result-value" id="rPropertyNet">-</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">금융재산 - 2,000만원 공제</span>
+      <span class="result-value" id="rFinancialNet">-</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">재산 소득환산액 (×4%÷12)</span>
+      <span class="result-value" id="rPropertyEval">-</span>
+    </div>
+    <div class="result-row" style="border-top:2px solid rgba(14,165,233,0.3);margin-top:4px;padding-top:12px;">
+      <span class="result-label" style="font-weight:700;color:var(--gray-800);font-size:15px;">소득인정액 합계</span>
+      <span class="result-value" style="font-size:18px;color:var(--primary);" id="rTotal">-</span>
+    </div>
+
+    <div class="result-section-title" style="margin-top:16px;">기준 정보 <span class="badge-year">2025년</span></div>
+    <div class="result-row">
+      <span class="result-label">선정기준액</span>
+      <span class="result-value" id="rThreshold">-</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">기준연금액 (최대 지급액)</span>
+      <span class="result-value" id="rMaxPension">-</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">지역 기본재산액 공제</span>
+      <span class="result-value" id="rBasicProperty">-</span>
+    </div>
+
+    <div class="warning-box">
+      &#9888; 이 결과는 2025년 기준 <strong>간이 판정</strong>입니다. 실제 심사에서는 부채 차감, 임차보증금 환산, 고급 자동차 가산, 국민연금 연계 감액 등이 추가로 반영되어 결과가 달라질 수 있습니다. 정확한 수급 여부는 아래 공식 링크에서 확인하세요.
+    </div>
+
+    <div class="official-link-box">
+      <a href="https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004627" target="_blank" rel="noopener" class="official-link primary">&#127981; 복지로 기초연금 모의계산 ↗</a>
+      <a href="/calc/pension-welfare/national-pension/" class="official-link secondary">&#127981; 국민연금 수령액 계산 →</a>
+    </div>
+  </div>
+
+  <!-- 선정기준액 및 지급액 표 -->
+  <div class="card" style="margin-top:0;">
+    <div class="card-title">2025년 기초연금 기준 정보</div>
+    <table class="rate-table">
+      <thead>
+        <tr>
+          <th>구분</th>
+          <th>단독가구</th>
+          <th>부부가구 (각자)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>선정기준액</td><td>2,280,000원/월</td><td>3,648,000원/월</td></tr>
+        <tr><td>기준연금액 (최대)</td><td>342,510원/월</td><td>274,008원/월</td></tr>
+        <tr><td>금융재산 기본공제</td><td colspan="2" style="text-align:center">2,000만원</td></tr>
+        <tr><td>근로소득 기본공제</td><td colspan="2" style="text-align:center">108만원 + 나머지 30% 추가 공제</td></tr>
+        <tr><td>재산 소득환산율</td><td colspan="2" style="text-align:center">연 4% (= 월 0.333%)</td></tr>
+      </tbody>
+    </table>
+    <table class="rate-table" style="margin-top:14px;">
+      <thead>
+        <tr>
+          <th>지역 구분</th>
+          <th>기본재산액 공제</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>대도시 (특별시·광역시 구)</td><td>1억 3,500만원</td></tr>
+        <tr><td>중소도시 (도의 시)</td><td>8,500만원</td></tr>
+        <tr><td>농어촌 (군)</td><td>7,250만원</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>기초연금, 이것만 알면 됩니다</h2>
+      <p>기초연금은 만 65세 이상 소득 하위 70% 어르신에게 지급됩니다. 소득과 재산을 소득인정액으로 환산해 선정기준액과 비교하는 방식으로 수급 여부를 결정합니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>수급 자격 조건</strong><span>만 65세 이상, 국내 거주, 소득인정액이 선정기준액 이하이면 신청 가능합니다</span></div>
+        <div class="guide-box"><strong>재산도 소득으로 환산</strong><span>부동산·금융자산은 연 4%로 환산해 월 소득인정액에 합산됩니다. 지역별 기본공제가 있습니다</span></div>
+        <div class="guide-box"><strong>국민연금 연계 감액</strong><span>국민연금 수령액이 기준연금액의 150%를 초과하면 기초연금이 최대 50%까지 감액될 수 있습니다</span></div>
+      </div>
+    </div>
+    <div class="guide-card">
+      <h2>소득인정액 계산 방법</h2>
+      <p>소득인정액은 실제 소득과 재산을 소득으로 환산한 금액의 합계입니다. 복잡해 보이지만 핵심 구조는 단순합니다.</p>
+      <div class="guide-table-wrap">
+        <table>
+          <thead><tr><th>구성 요소</th><th>계산 방법</th></tr></thead>
+          <tbody>
+            <tr><td>근로소득 평가액</td><td>0.7 × max(0, 근로소득 - 108만원)</td></tr>
+            <tr><td>기타소득</td><td>사업·임대·이자·배당·공적이전소득 전액</td></tr>
+            <tr><td>재산 환산액</td><td>(일반재산 + 금융재산 - 금융공제 2천만원 - 지역기본공제) × 4% ÷ 12</td></tr>
+            <tr><td>소득인정액 합계</td><td>근로소득 평가액 + 기타소득 + 재산 환산액</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:12px;color:var(--gray-500);margin-top:8px">※ 이 계산기는 부채 차감, 임차보증금 환산, 고급 자동차 가산은 반영하지 않습니다.</p>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item">
+        <h3>기초연금 수급 자격은 어떻게 되나요?</h3>
+        <p>만 65세 이상 대한민국 국적자로 국내에 거주하며, 소득인정액이 선정기준액(2025년: 단독 228만원, 부부 364.8만원) 이하인 분이 받을 수 있습니다. 별도 신청이 필요합니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>국민연금을 받으면 기초연금을 못 받나요?</h3>
+        <p>아닙니다. 소득인정액이 선정기준액 이하라면 국민연금과 기초연금을 동시에 받을 수 있습니다. 단, 국민연금 수령액이 기준연금액(342,510원)의 150%(약 513,765원)를 초과하면 기초연금이 최대 50%까지 감액됩니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>집 한 채만 있어도 수급이 가능한가요?</h3>
+        <p>가능합니다. 주택 공시가격에서 지역별 기본재산액을 공제한 후 연 4%로 환산하므로, 대도시 공시가격 1억 3,500만원 이하 주택은 재산 소득환산액이 0원입니다. 소득이 없다면 수급 가능성이 높습니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>이 계산기 결과로 수급 여부가 확정되나요?</h3>
+        <p>아닙니다. 이 계산기는 간이 추정이며, 실제 심사에서는 부채 차감, 임차보증금 환산, 고급 자동차 가산 등이 추가로 반영됩니다. 정확한 수급 여부는 주민센터 방문 또는 복지로(bokjiro.go.kr)에서 확인하세요.</p>
+      </div>
+      <div class="faq-item">
+        <h3>기초연금은 언제 신청하나요?</h3>
+        <p>만 65세 생일이 속한 달의 1개월 전부터 신청 가능합니다. 주민센터, 국민연금공단 지사, 복지로(온라인)에서 신청할 수 있습니다. 신청 시기를 놓치면 이전 기간은 소급 지급되지 않으므로 미리 신청하는 것이 좋습니다.</p>
+      </div>
+      <div class="update-note">기초연금법 및 보건복지부 고시, 2025년 선정기준액 기준 간이 계산기입니다. 선정기준액은 매년 변경되며, 정확한 수급 여부는 복지로(bokjiro.go.kr) 또는 주민센터에서 확인하세요.</div>
+    </div>
+  </div>
+
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '기초연금법 제3조·제8조, 2025년 선정기준액(단독 228만원·부부 364.8만원) 기준',
+    appliedFrom: '2025년 기준 간이 계산',
+    exceptions: [
+      '이 계산기는 간이 추정이며 실제 수급 결정과 다를 수 있습니다',
+      '부채 차감, 임차보증금 환산, 고급 자동차 가산은 반영되지 않습니다',
+      '국민연금 연계 감액(기준연금액의 150% 초과 시) 로직은 포함되지 않습니다',
+      '선정기준액은 매년 변경됩니다 (이 계산기는 2025년 기준)',
+    ],
+    references: [
+      { name: '복지로 기초연금 모의계산(bokjiro.go.kr)', url: 'https://www.bokjiro.go.kr' },
+      { name: '국민연금공단 기초연금(nps.or.kr)', url: 'https://www.nps.or.kr' },
+    ],
+    lastReviewed: '2026.04',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
+
+  <div class="sibling-section">
+    <div class="sibling-title">다른 연금·복지 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/pension-welfare/national-pension/" class="sibling-link">&#127981; 국민연금 수령액</a>
+      <a href="/calc/pension-welfare/basic-pension/" class="sibling-link current">&#128176; 기초연금 수급 판정</a>
+      <a href="/calc/pension-welfare/retirement-living/" class="sibling-link">&#127968; 노후 생활비</a>
+      <a href="/calc/pension-welfare/pension-tax/" class="sibling-link">&#128200; 연금소득세</a>
+      <a href="/calc/pension-welfare/long-term-care/" class="sibling-link">&#127973; 장기요양 비용</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/">홈</a>
+      <a href="/about.html">소개</a>
+      <a href="/privacy.html">개인정보처리방침</a>
+      <a href="/terms.html">이용약관</a>
+      <a href="/contact.html">문의하기</a>
+      <a href="/disclaimer.html">면책조항</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 수급 여부는 복지로 또는 주민센터에서 확인하세요.</p>
+  </div>
+</footer>
+
+<script>
+// 2025년 기준값
+const THRESHOLD = { single: 2280000, couple: 3648000 };
+const MAX_PENSION = { single: 342510, couple_each: 274008 };
+const BASIC_PROPERTY = { metro: 135000000, urban: 85000000, rural: 72500000 };
+const BASIC_PROPERTY_LABEL = { metro: '대도시 1억 3,500만원', urban: '중소도시 8,500만원', rural: '농어촌 7,250만원' };
+const FINANCIAL_DEDUCTION = 20000000;
+const WORK_DEDUCTION = 1080000;
+const PROPERTY_RATE = 0.04 / 12;
+
+let householdType = 'single';
+let regionType = 'metro';
+
+function selectHousehold(type, btn) {
+  householdType = type;
+  document.querySelectorAll('#householdGroup .seg-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  calculate();
+}
+function selectRegion(type, btn) {
+  regionType = type;
+  document.querySelectorAll('#regionGroup .seg-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  calculate();
+}
+
+function onNumInput(el, convertedId) {
+  const val = parseInt(el.value) || 0;
+  const cvt = document.getElementById(convertedId);
+  cvt.textContent = val > 0 ? fmtShort(val * 10000) : '';
+  calculate();
+}
+
+function fmt(n) {
+  if (n === null || n === undefined || isNaN(n)) return '-';
+  return Math.round(n).toLocaleString('ko-KR') + '원';
+}
+function fmtShort(n) {
+  if (!n) return '';
+  if (n >= 100000000) return (n / 100000000).toFixed(1).replace(/\.0$/, '') + '억원';
+  if (n >= 10000) return (n / 10000).toFixed(0) + '만원';
+  return n.toLocaleString('ko-KR') + '원';
+}
+
+function calculate() {
+  const workIncome = (parseInt(document.getElementById('inpWorkIncome').value) || 0) * 10000;
+  const otherIncome = (parseInt(document.getElementById('inpOtherIncome').value) || 0) * 10000;
+  const property = (parseInt(document.getElementById('inpProperty').value) || 0) * 10000;
+  const financial = (parseInt(document.getElementById('inpFinancial').value) || 0) * 10000;
+
+  // 소득평가액
+  const workEval = 0.7 * Math.max(0, workIncome - WORK_DEDUCTION);
+  const incomeEval = workEval + otherIncome;
+
+  // 재산 소득환산액
+  const basicProp = BASIC_PROPERTY[regionType];
+  const financialNet = Math.max(0, financial - FINANCIAL_DEDUCTION);
+  const propertyNet = Math.max(0, property + financialNet - basicProp);
+  const propertyEval = propertyNet * PROPERTY_RATE;
+
+  // 소득인정액
+  const totalIncome = incomeEval + propertyEval;
+
+  // 선정기준액
+  const threshold = THRESHOLD[householdType];
+  const maxPension = householdType === 'single' ? MAX_PENSION.single : MAX_PENSION.couple_each;
+
+  // 결과 표시
+  const pct = Math.min(totalIncome / threshold * 100, 150);
+  const verdictBox = document.getElementById('verdictBox');
+  const vLabel = document.getElementById('vLabel');
+  const vAmount = document.getElementById('vAmount');
+  const vSub = document.getElementById('vSub');
+  const fill = document.getElementById('progressFill');
+
+  let verdictClass, labelClass, amountClass;
+  if (totalIncome <= threshold * 0.7) {
+    verdictClass = 'pass'; labelClass = 'pass'; amountClass = 'pass';
+    vLabel.textContent = '수급 가능성 높음';
+    vAmount.textContent = fmt(maxPension);
+    vSub.textContent = '예상 월 수령액 (최대 기준, 실제와 다를 수 있음)';
+  } else if (totalIncome <= threshold) {
+    verdictClass = 'warn'; labelClass = 'warn'; amountClass = 'warn';
+    vLabel.textContent = '수급 가능성 있음 (확인 필요)';
+    vAmount.textContent = fmt(maxPension);
+    vSub.textContent = '선정기준액 근접 - 정확한 판정은 공단/주민센터에서 확인하세요';
+  } else {
+    verdictClass = 'fail'; labelClass = 'fail'; amountClass = 'fail';
+    vLabel.textContent = '수급 어려울 가능성 높음';
+    vAmount.textContent = fmt(totalIncome - threshold) + ' 초과';
+    vSub.textContent = '소득인정액이 선정기준액을 초과합니다 (간이 판정)';
+  }
+
+  verdictBox.className = 'verdict-box ' + verdictClass;
+  vLabel.className = 'verdict-label ' + labelClass;
+  vAmount.className = 'verdict-amount ' + amountClass;
+  fill.className = 'progress-bar-fill ' + verdictClass;
+  fill.style.width = Math.min(pct, 100) + '%';
+
+  document.getElementById('pbIncome').textContent = fmt(totalIncome);
+  document.getElementById('pbThreshold').textContent = fmt(threshold);
+  document.getElementById('rWorkEval').textContent = fmt(workEval);
+  document.getElementById('rOtherInc').textContent = fmt(otherIncome);
+  document.getElementById('rIncomeEval').textContent = fmt(incomeEval);
+  document.getElementById('rPropertyNet').textContent = property > 0 ? fmt(Math.max(0, property - basicProp)) : '0원';
+  document.getElementById('rFinancialNet').textContent = financial > 0 ? fmt(financialNet) : '0원';
+  document.getElementById('rPropertyEval').textContent = fmt(propertyEval);
+  document.getElementById('rTotal').textContent = fmt(totalIncome);
+  document.getElementById('rThreshold').textContent = fmt(threshold) + (householdType === 'couple' ? ' (부부 합산)' : '');
+  document.getElementById('rMaxPension').textContent = fmt(maxPension) + (householdType === 'couple' ? '/월 (각자)' : '/월');
+  document.getElementById('rBasicProperty').textContent = BASIC_PROPERTY_LABEL[regionType];
+
+  document.getElementById('resultCard').classList.add('show');
+}
+</script>
+<script src="/assets/pension-welfare-detail-shell.js" defer></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '기초연금법 제3조·제8조, 2025년 선정기준액(단독 228만원·부부 364.8만원) 기준',
+  basisDate: '2025년 기준',
+  referenceOrg: '보건복지부·국민연금공단',
+  lastReviewed: '2026.04.16',
+  category: 'pension-welfare'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/blog-review-footer.js"></script>
+</body>
+</html>

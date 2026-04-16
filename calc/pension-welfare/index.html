@@ -291,7 +291,7 @@
       <a href="/calc/salary/" class="msl-link"><span class="msl-icon">📈</span>이직 / 연봉<span class="msl-badge">7</span></a>
       <a href="/calc/finance/" class="msl-link"><span class="msl-icon">🏦</span>금융 · 이자<span class="msl-badge">5</span></a>
       <a href="/calc/health/" class="msl-link"><span class="msl-icon">🏃</span>건강<span class="msl-badge">5</span></a>
-      <a href="/calc/pension-welfare/" class="msl-link msl-active"><span class="msl-icon">🏛</span>연금·복지<span class="msl-badge">3</span></a>
+      <a href="/calc/pension-welfare/" class="msl-link msl-active"><span class="msl-icon">🏛</span>연금·복지<span class="msl-badge">5</span></a>
       <a href="/calc/date/" class="msl-link"><span class="msl-icon">📅</span>날짜 · D-day<span class="msl-badge">5</span></a>
       <a href="/calc/ai/" class="msl-link"><span class="msl-icon">🤖</span>AI / 테크<span class="msl-badge">5</span></a>
       <a href="/calc/pet/" class="msl-link"><span class="msl-icon">🐾</span>반려동물<span class="msl-badge">5</span></a>
@@ -301,6 +301,8 @@
   <div class="msl-section">
     <div class="msl-title">연금·복지 계산기</div>
     <div class="msl-calc-list">
+      <a class="msl-calc-btn" href="/calc/pension-welfare/national-pension/"><span class="msl-calc-dot"></span>국민연금 수령액</a>
+      <a class="msl-calc-btn" href="/calc/pension-welfare/basic-pension/"><span class="msl-calc-dot"></span>기초연금 수급 판정</a>
       <a class="msl-calc-btn" href="/calc/pension-welfare/retirement-living/"><span class="msl-calc-dot"></span>노후 생활비</a>
       <a class="msl-calc-btn" href="/calc/pension-welfare/pension-tax/"><span class="msl-calc-dot"></span>연금소득세</a>
       <a class="msl-calc-btn" href="/calc/pension-welfare/long-term-care/"><span class="msl-calc-dot"></span>장기요양 비용</a>
@@ -315,34 +317,34 @@
     <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><span>연금·복지 계산기</span></div>
     <div class="page-header-badge">🏛 노후 준비 필수 계산기</div>
     <h1>연금·복지 계산기</h1>
-    <p>노후 생활비 · 연금소득세 · 장기요양 비용</p>
+    <p>국민연금 · 기초연금 · 노후 생활비 · 연금소득세 · 장기요양 비용</p>
   </div>
 
   <!-- 자주 찾는 계산기 -->
   <div class="hub-popular">
     <div class="hub-section-label">자주 찾는 계산기</div>
     <div class="hub-popular-grid">
+      <a class="hub-popular-card" href="/calc/pension-welfare/national-pension/">
+        <div class="hub-popular-icon">🏛</div>
+        <div class="hub-popular-info">
+          <div class="hub-popular-name">국민연금 수령액</div>
+          <div class="hub-popular-desc">가입기간·소득별 예상 연금 간이 계산</div>
+        </div>
+        <div class="hub-popular-arrow">→</div>
+      </a>
+      <a class="hub-popular-card" href="/calc/pension-welfare/basic-pension/">
+        <div class="hub-popular-icon">💰</div>
+        <div class="hub-popular-info">
+          <div class="hub-popular-name">기초연금 수급 판정</div>
+          <div class="hub-popular-desc">소득인정액 산출 · 수급 가능성 판정</div>
+        </div>
+        <div class="hub-popular-arrow">→</div>
+      </a>
       <a class="hub-popular-card" href="/calc/pension-welfare/retirement-living/">
         <div class="hub-popular-icon">🏡</div>
         <div class="hub-popular-info">
           <div class="hub-popular-name">노후 생활비</div>
           <div class="hub-popular-desc">은퇴 후 필요 자금 시뮬레이션</div>
-        </div>
-        <div class="hub-popular-arrow">→</div>
-      </a>
-      <a class="hub-popular-card" href="/calc/pension-welfare/pension-tax/">
-        <div class="hub-popular-icon">💰</div>
-        <div class="hub-popular-info">
-          <div class="hub-popular-name">연금소득세</div>
-          <div class="hub-popular-desc">사적·공적연금 세금 계산</div>
-        </div>
-        <div class="hub-popular-arrow">→</div>
-      </a>
-      <a class="hub-popular-card" href="/calc/pension-welfare/long-term-care/">
-        <div class="hub-popular-icon">🏥</div>
-        <div class="hub-popular-info">
-          <div class="hub-popular-name">장기요양 비용</div>
-          <div class="hub-popular-desc">등급별 본인부담금 계산</div>
         </div>
         <div class="hub-popular-arrow">→</div>
       </a>
@@ -353,16 +355,22 @@
   <div class="calc-hub">
 
     <div class="calc-hub-group">
-      <div class="calc-hub-group-title">노후 준비</div>
+      <div class="calc-hub-group-title">연금 수령</div>
       <div class="calc-hub-grid">
-        <a class="calc-hub-card" href="/calc/pension-welfare/retirement-living/">
-          <div class="calc-hub-icon">🏡</div>
-          <div class="calc-hub-name">노후 생활비</div>
-          <div class="calc-hub-desc">은퇴 후 필요 총자금 시뮬레이션</div>
+        <a class="calc-hub-card" href="/calc/pension-welfare/national-pension/">
+          <div class="calc-hub-icon">🏛</div>
+          <div class="calc-hub-name">국민연금 수령액</div>
+          <div class="calc-hub-desc">가입기간·소득별 예상 연금 간이 계산</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
+        <a class="calc-hub-card" href="/calc/pension-welfare/basic-pension/">
+          <div class="calc-hub-icon">💰</div>
+          <div class="calc-hub-name">기초연금 수급 판정</div>
+          <div class="calc-hub-desc">소득인정액 산출 · 수급 가능성 판정</div>
           <div class="calc-hub-arrow">계산하기 →</div>
         </a>
         <a class="calc-hub-card" href="/calc/pension-welfare/pension-tax/">
-          <div class="calc-hub-icon">💰</div>
+          <div class="calc-hub-icon">💼</div>
           <div class="calc-hub-name">연금소득세</div>
           <div class="calc-hub-desc">사적·공적연금 세금 및 실수령 계산</div>
           <div class="calc-hub-arrow">계산하기 →</div>
@@ -371,8 +379,14 @@
     </div>
 
     <div class="calc-hub-group">
-      <div class="calc-hub-group-title">복지 비용</div>
+      <div class="calc-hub-group-title">노후 준비 · 복지</div>
       <div class="calc-hub-grid">
+        <a class="calc-hub-card" href="/calc/pension-welfare/retirement-living/">
+          <div class="calc-hub-icon">🏡</div>
+          <div class="calc-hub-name">노후 생활비</div>
+          <div class="calc-hub-desc">은퇴 후 필요 총자금 시뮬레이션</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
         <a class="calc-hub-card" href="/calc/pension-welfare/long-term-care/">
           <div class="calc-hub-icon">🏥</div>
           <div class="calc-hub-name">장기요양 비용</div>

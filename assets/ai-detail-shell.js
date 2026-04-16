@@ -161,7 +161,7 @@
         <a href="/calc/salary/" class="msl-link"><span class="msl-icon">📈</span>이직 / 연봉<span class="msl-badge">7</span></a>
         <a href="/calc/finance/" class="msl-link"><span class="msl-icon">🏦</span>금융 · 이자<span class="msl-badge">5</span></a>
         <a href="/calc/health/" class="msl-link"><span class="msl-icon">🏃</span>건강<span class="msl-badge">5</span></a>
-        <a href="/calc/pension-welfare/" class="msl-link"><span class="msl-icon">🏛</span>연금·복지<span class="msl-badge">3</span></a>
+        <a href="/calc/pension-welfare/" class="msl-link"><span class="msl-icon">🏛</span>연금·복지<span class="msl-badge">5</span></a>
         <a href="/calc/date/" class="msl-link"><span class="msl-icon">📅</span>날짜 · D-day<span class="msl-badge">5</span></a>
         <a href="/calc/ai/" class="msl-link msl-active"><span class="msl-icon">🤖</span>AI / 테크<span class="msl-badge">5</span></a>
         <a href="/calc/pet/" class="msl-link"><span class="msl-icon">🐾</span>반려동물<span class="msl-badge">5</span></a>
@@ -175,8 +175,8 @@
 
   const guidesWidget = (cfg.guides && cfg.guides.length)
     ? `<div class="msr-widget">
-        <div class="msr-widget-title">관련 가이드</div>
-        <div class="msr-widget-list">${cfg.guides.map(g=>`<a href="${g[0]}" class="msr-widget-link"><span class="msr-widget-icon">📖</span><span class="msr-widget-text">${g[1]}</span></a>`).join('')}</div>
+        <div class="msr-widget-title">관련 블로그</div>
+        <div class="msr-widget-list">${cfg.guides.slice(0,3).map(g=>`<a href="${g[0]}" class="msr-widget-link"><span class="msr-widget-icon">📖</span><span class="msr-widget-text">${g[1]}</span></a>`).join('')}</div>
       </div>`
     : '';
   const right=document.createElement('aside');
@@ -192,9 +192,9 @@
     const mobileGuides = document.createElement('div');
     mobileGuides.className = 'mobile-guides';
     mobileGuides.innerHTML =
-      '<div class="mobile-guides__title">관련 가이드</div>' +
+      '<div class="mobile-guides__title">관련 블로그</div>' +
       '<div class="mobile-guides__list">' +
-      cfg.guides.map(g =>
+      cfg.guides.slice(0,3).map(g =>
         `<a class="mobile-guides__link" href="${g[0]}"><span class="mobile-guides__icon">📖</span><span class="mobile-guides__text">${g[1]}</span></a>`
       ).join('') +
       '</div>';

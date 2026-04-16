@@ -375,7 +375,7 @@
             <a class="msl-link" href="/calc/salary/"><span class="msl-icon">📈</span><span>이직 / 연봉</span><span class="msl-badge">7</span></a>
             <a class="msl-link" href="/calc/finance/"><span class="msl-icon">🏦</span><span>금융 · 이자</span><span class="msl-badge">5</span></a>
             <a class="msl-link" href="/calc/health/"><span class="msl-icon">🏃</span><span>건강</span><span class="msl-badge">5</span></a>
-            <a class="msl-link" href="/calc/pension-welfare/"><span class="msl-icon">🏛</span><span>연금·복지</span><span class="msl-badge">3</span></a>
+            <a class="msl-link" href="/calc/pension-welfare/"><span class="msl-icon">🏛</span><span>연금·복지</span><span class="msl-badge">5</span></a>
             <a class="msl-link" href="/calc/date/"><span class="msl-icon">📅</span><span>날짜 · D-day</span><span class="msl-badge">5</span></a>
             <a class="msl-link" href="/calc/ai/"><span class="msl-icon">🤖</span><span>AI / 테크</span><span class="msl-badge">5</span></a>
             <a class="msl-link" href="/calc/pet/"><span class="msl-icon">🐾</span><span>반려동물</span><span class="msl-badge">5</span></a>
@@ -396,8 +396,8 @@
     const related = conf.related.map(([href, icon, label]) => `<a class="msr-widget-link" href="${href}"><span class="msr-widget-icon">${icon}</span><span class="msr-widget-text">${label}</span></a>`).join('');
     const guidesHtml = (conf.guides && conf.guides.length)
       ? `<div class="msr-widget">
-          <div class="msr-widget-title">관련 가이드</div>
-          <div class="msr-widget-list">${conf.guides.map(([href, label]) => `<a class="msr-widget-link" href="${href}"><span class="msr-widget-icon">📖</span><span class="msr-widget-text">${label}</span></a>`).join('')}</div>
+          <div class="msr-widget-title">관련 블로그</div>
+          <div class="msr-widget-list">${conf.guides.slice(0,3).map(([href, label]) => `<a class="msr-widget-link" href="${href}"><span class="msr-widget-icon">📖</span><span class="msr-widget-text">${label}</span></a>`).join('')}</div>
         </div>`
       : '';
     return `
@@ -436,9 +436,9 @@
       const mobileGuides = document.createElement('div');
       mobileGuides.className = 'mobile-guides';
       mobileGuides.innerHTML =
-        '<div class="mobile-guides__title">관련 가이드</div>' +
+        '<div class="mobile-guides__title">관련 블로그</div>' +
         '<div class="mobile-guides__list">' +
-        conf.guides.map(([href, label]) =>
+        conf.guides.slice(0,3).map(([href, label]) =>
           `<a class="mobile-guides__link" href="${href}"><span class="mobile-guides__icon">📖</span><span class="mobile-guides__text">${label}</span></a>`
         ).join('') +
         '</div>';

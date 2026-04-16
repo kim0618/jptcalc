@@ -1,5 +1,35 @@
 (function(){
   const slugMap = {
+    'national-pension': {
+      title: '국민연금 수령액',
+      emoji: '🏛',
+      tips: [
+        '국민연금은 최소 10년(120개월) 이상 납부해야 수령할 수 있습니다.',
+        '조기수령(60세)은 1년당 6% 감액, 연기수령(70세)은 1년당 7.2% 증액됩니다.',
+        '2026년 소득대체율은 41.5%로, 40년 가입 기준 평균소득의 41.5%가 목표 연금액입니다.',
+        '정확한 예상 연금액은 국민연금공단(nps.or.kr)에서 공인인증서 없이 조회 가능합니다.'
+      ],
+      related: [
+        ['/calc/pension-welfare/basic-pension/','💰','기초연금 수급 판정'],
+        ['/calc/pension-welfare/retirement-living/','🏡','노후 생활비'],
+        ['/calc/pension-welfare/pension-tax/','📊','연금소득세']
+      ]
+    },
+    'basic-pension': {
+      title: '기초연금 수급 판정',
+      emoji: '💰',
+      tips: [
+        '기초연금은 만 65세 이상 소득 하위 70% 어르신에게 지급됩니다.',
+        '2025년 기준 선정기준액은 단독가구 228만원, 부부가구 364.8만원입니다.',
+        '부동산·금융자산은 연 4%로 환산해 소득인정액에 합산됩니다.',
+        '정확한 수급 여부는 복지로(bokjiro.go.kr) 모의계산 또는 주민센터에서 확인하세요.'
+      ],
+      related: [
+        ['/calc/pension-welfare/national-pension/','🏛','국민연금 수령액'],
+        ['/calc/pension-welfare/retirement-living/','🏡','노후 생활비'],
+        ['/calc/pension-welfare/long-term-care/','🏥','장기요양 비용']
+      ]
+    },
     'retirement-living': {
       title: '노후 생활비',
       emoji: '🏡',
@@ -10,9 +40,9 @@
         '통계청 기준 한국인 기대수명은 남성 80.6세, 여성 86.6세입니다(2023년 기준).'
       ],
       related: [
+        ['/calc/pension-welfare/national-pension/','🏛','국민연금 수령액'],
         ['/calc/pension-welfare/pension-tax/','💰','연금소득세'],
-        ['/calc/pension-welfare/long-term-care/','🏥','장기요양 비용'],
-        ['/calc/tax/income-tax/','📊','종합소득세']
+        ['/calc/pension-welfare/long-term-care/','🏥','장기요양 비용']
       ]
     },
     'pension-tax': {
@@ -25,9 +55,9 @@
         '연금 수령 나이가 높을수록 낮은 세율이 적용됩니다(55세 미만 5.5%, 70세 이상 3.3%).'
       ],
       related: [
+        ['/calc/pension-welfare/national-pension/','🏛','국민연금 수령액'],
         ['/calc/pension-welfare/retirement-living/','🏡','노후 생활비'],
-        ['/calc/pension-welfare/long-term-care/','🏥','장기요양 비용'],
-        ['/calc/tax/income-tax/','📊','종합소득세']
+        ['/calc/pension-welfare/long-term-care/','🏥','장기요양 비용']
       ]
     },
     'long-term-care': {
@@ -40,14 +70,16 @@
         '월 한도액을 초과하는 서비스 비용은 전액 본인이 부담합니다.'
       ],
       related: [
+        ['/calc/pension-welfare/national-pension/','🏛','국민연금 수령액'],
         ['/calc/pension-welfare/retirement-living/','🏡','노후 생활비'],
-        ['/calc/pension-welfare/pension-tax/','💰','연금소득세'],
-        ['/calc/health/bmi/','📏','BMI']
+        ['/calc/pension-welfare/pension-tax/','💰','연금소득세']
       ]
     }
   };
 
   const calcLinks = [
+    ['/calc/pension-welfare/national-pension/','🏛','국민연금 수령액','national-pension'],
+    ['/calc/pension-welfare/basic-pension/','💰','기초연금 수급 판정','basic-pension'],
     ['/calc/pension-welfare/retirement-living/','🏡','노후 생활비','retirement-living'],
     ['/calc/pension-welfare/pension-tax/','💰','연금소득세','pension-tax'],
     ['/calc/pension-welfare/long-term-care/','🏥','장기요양 비용','long-term-care']
@@ -119,7 +151,7 @@
             <a class="msl-link" href="/calc/salary/"><span class="msl-icon">📈</span><span>이직 / 연봉</span><span class="msl-badge">7</span></a>
             <a class="msl-link" href="/calc/finance/"><span class="msl-icon">🏦</span><span>금융 · 이자</span><span class="msl-badge">5</span></a>
             <a class="msl-link" href="/calc/health/"><span class="msl-icon">🏃</span><span>건강</span><span class="msl-badge">5</span></a>
-            <a class="msl-link msl-active" href="/calc/pension-welfare/"><span class="msl-icon">🏛</span><span>연금·복지</span><span class="msl-badge">3</span></a>
+            <a class="msl-link msl-active" href="/calc/pension-welfare/"><span class="msl-icon">🏛</span><span>연금·복지</span><span class="msl-badge">5</span></a>
             <a class="msl-link" href="/calc/date/"><span class="msl-icon">📅</span><span>날짜 · D-day</span><span class="msl-badge">5</span></a>
             <a class="msl-link" href="/calc/ai/"><span class="msl-icon">🤖</span><span>AI / 테크</span><span class="msl-badge">5</span></a>
             <a class="msl-link" href="/calc/pet/"><span class="msl-icon">🐾</span><span>반려동물</span><span class="msl-badge">5</span></a>

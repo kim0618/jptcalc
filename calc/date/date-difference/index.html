@@ -87,6 +87,21 @@
       <div class="faq-item"><h3>윤년은 자동으로 반영되나요?</h3><p>네, 윤년(2월 29일)이 포함된 구간은 자동으로 반영됩니다.</p></div>
     </div>
   </div>
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '그레고리력(양력) 기반 날짜 계산',
+    appliedFrom: '상시',
+    exceptions: [
+      '윤년(366일)이 포함된 경우 자동 반영됩니다',
+      '시간대(타임존) 차이는 반영되지 않습니다',
+    ],
+    references: [
+      { name: '한국천문연구원(kasi.re.kr)', url: 'https://www.kasi.re.kr' },
+    ],
+    lastReviewed: '2026.04',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
 
   <div class="sibling-section"><div class="sibling-title">다른 날짜 계산기</div><div class="sibling-grid"><a href="/calc/date/dday/" class="sibling-link"><span class="sibling-icon">⏳</span><span class="sibling-text">D-day 계산기</span></a><a href="/calc/date/date-difference/" class="sibling-link current"><span class="sibling-icon">📐</span><span class="sibling-text">날짜 차이 계산기</span></a><a href="/calc/date/age/" class="sibling-link"><span class="sibling-icon">🎂</span><span class="sibling-text">만 나이 계산기</span></a><a href="/calc/date/weekday/" class="sibling-link"><span class="sibling-icon">📆</span><span class="sibling-text">요일 계산기</span></a><a href="/calc/date/date-add/" class="sibling-link"><span class="sibling-icon">➕</span><span class="sibling-text">날짜 더하기/빼기</span></a></div></div>
 </main>

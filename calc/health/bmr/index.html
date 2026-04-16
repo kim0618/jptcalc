@@ -80,6 +80,22 @@
   </section>
 
   <div class="update-note" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:10px 14px;margin-bottom:16px;font-size:12px;color:#6B7280">이 계산기는 건강 참고용이며 의료 진단을 대체하지 않습니다. 식단 조절이나 운동 계획은 의료 전문가와 상담하세요.</div>
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: 'Harris-Benedict 공식·Mifflin-St Jeor 공식 기반',
+    appliedFrom: '참고용 계산',
+    exceptions: [
+      '기초대사량은 연령·건강 상태·호르몬에 따라 개인차가 있습니다',
+      '의료적 진단을 대체하지 않으며 전문의 상담을 권장합니다',
+    ],
+    references: [
+      { name: '보건복지부(mohw.go.kr)', url: 'https://www.mohw.go.kr' },
+      { name: '한국영양학회(kns.or.kr)', url: 'https://www.kns.or.kr' },
+    ],
+    lastReviewed: '2026.04',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
   <div class="sibling-section"><div class="sibling-title">다른 건강 계산기</div><div class="sibling-grid"><a href="/calc/health/bmi/" class="sibling-link"><span class="sibling-icon">⚖️</span><span class="sibling-text">BMI 계산기</span></a><a href="/calc/health/bmr/" class="sibling-link current"><span class="sibling-icon">🔥</span><span class="sibling-text">기초대사량 계산기</span></a><a href="/calc/health/ideal-weight/" class="sibling-link"><span class="sibling-icon">🎯</span><span class="sibling-text">적정체중 계산기</span></a><a href="/calc/health/body-fat/" class="sibling-link"><span class="sibling-icon">💪</span><span class="sibling-text">체지방률 계산기</span></a><a href="/calc/health/calories/" class="sibling-link"><span class="sibling-icon">🏃</span><span class="sibling-text">칼로리 소모 계산기</span></a></div></div>
 
 </main>

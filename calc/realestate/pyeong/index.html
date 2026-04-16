@@ -147,7 +147,50 @@
       <div class="update-note">최종 검토: 2026.04.16 · 계산 결과는 참고용입니다.</div>
     </div>
   </div>
+
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '건축법 시행령 별표 1, 주택법 기준',
+    appliedFrom: '2026년 기준',
+    exceptions: [
+      '1평 = 3.30579㎡ 기준으로 계산됩니다',
+      '공급면적·계약면적은 단지마다 다르므로 분양계약서를 확인하세요',
+    ],
+    references: [
+      { name: '국토교통부(molit.go.kr)', url: 'https://www.molit.go.kr' },
+    ],
+    lastReviewed: '2026.04',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>    <div class="siblings-grid">
+      <a href="/calc/realestate/brokerage/" class="sibling-link">중개수수료</a>
+      <a href="/calc/realestate/acquisition/" class="sibling-link">취득세</a>
+      <a href="/calc/realestate/conversion/" class="sibling-link">전월세전환</a>
+      <a href="/calc/realestate/loan/" class="sibling-link">대출이자</a>
+      <a href="/calc/realestate/rental/" class="sibling-link">임대수익률</a>
+      <a href="/calc/realestate/capital-gains/" class="sibling-link">양도소득세</a>
+      <a href="/calc/realestate/dsr/" class="sibling-link">대출한도(DSR)</a>
+      <a href="/calc/realestate/gift/" class="sibling-link">증여세</a>
+      <a href="/calc/realestate/inheritance/" class="sibling-link">상속세</a>
+      <a href="/calc/realestate/joint/" class="sibling-link">공동명의비교</a>
+      <a href="/calc/realestate/jongbu/" class="sibling-link">종합부동산세</a>
+      <a href="/calc/realestate/propertytax/" class="sibling-link">재산세</a>
+      <a href="/calc/realestate/pyeong/" class="sibling-link current">평수 변환</a>
+      <a href="/calc/realestate/registry/" class="sibling-link">등기비용</a>
+      <a href="/calc/realestate/property-tax-comprehensive/" class="sibling-link">재산세 종합</a>
+    </div>
+  </div>
 </main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+      <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
+  </div>
+</footer>
 
 <script>
 const PY_RATE = 3.30579;
@@ -183,7 +226,7 @@ function toggleExplain(btn) {
   btn.nextElementSibling.classList.toggle('show');
 }
 </script>
-<script src="/assets/realestate-shell.js"></script>
+<script src="/assets/realestate-detail-shell.js"></script>
 <script src="/assets/footer-unified.js" defer></script>
 <script src="/assets/calc-validate.js"></script>
 <script>

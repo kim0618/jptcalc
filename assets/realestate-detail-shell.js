@@ -30,7 +30,52 @@
     '/calc/realestate/capital-gains/': {
       key:'capital-gains',
       quick:['보유 기간과 거주 요건에 따라 양도세 결과가 크게 달라질 수 있습니다.','필요경비를 얼마나 반영하느냐에 따라 과세표준 차이가 큽니다.','1세대 1주택 비과세 여부는 예외 조건까지 함께 확인하세요.','예상 세액은 참고용이고, 실제 신고 전 세무 전문가 확인이 안전합니다.'],
-      related:[['/calc/realestate/acquisition/','취득세 계산기','📄'],['/calc/realestate/brokerage/','중개수수료 계산기','🏠'],['/calc/realestate/#tab-propertytax','재산세 계산기','🏛️']]
+      related:[['/calc/realestate/acquisition/','취득세 계산기','📄'],['/calc/realestate/brokerage/','중개수수료 계산기','🏠'],['/calc/realestate/propertytax/','재산세 계산기','🏛️']]
+    },
+    '/calc/realestate/dsr/': {
+      key:'dsr',
+      quick:['DSR 40% 규제는 은행권 기준이며, 비은행권은 50% 이하입니다.','전세자금보증대출(HUG·HF·SGI)은 DSR 산정에서 제외됩니다.','마이너스통장은 실제 사용액이 아닌 한도 전체가 원리금 기준입니다.','소득 산정 방식은 금융기관마다 다를 수 있어 사전 확인이 필요합니다.'],
+      related:[['/calc/realestate/loan/','대출이자 계산기','💰'],['/calc/realestate/acquisition/','취득세 계산기','📄'],['/calc/realestate/rental/','임대수익률 계산기','📊']]
+    },
+    '/calc/realestate/gift/': {
+      key:'gift',
+      quick:['배우자 증여공제는 6억원, 성인 자녀는 5,000만원, 미성년 자녀는 2,000만원입니다.','10년 이내 동일인에게 증여한 재산은 합산과세됩니다.','자금출처조사를 대비해 증여계약서와 이체 내역을 보관하세요.','부담부증여 시 채무 인수 부분은 양도로 보아 양도세가 부과될 수 있습니다.'],
+      related:[['/calc/realestate/inheritance/','상속세 계산기','🏛️'],['/calc/realestate/acquisition/','취득세 계산기','📄'],['/calc/realestate/capital-gains/','양도소득세 계산기','📈']]
+    },
+    '/calc/realestate/inheritance/': {
+      key:'inheritance',
+      quick:['상속세 신고 기한은 상속 개시일(사망일)로부터 6개월입니다.','배우자공제는 실제 상속금액 기준으로 최소 5억원, 최대 30억원입니다.','사전 증여 재산은 10년 이내 분은 상속재산에 합산됩니다.','상속 재산 평가는 시가를 원칙으로 하며 부동산은 공시가격을 준용합니다.'],
+      related:[['/calc/realestate/gift/','증여세 계산기','🎁'],['/calc/realestate/acquisition/','취득세 계산기','📄'],['/calc/realestate/capital-gains/','양도소득세 계산기','📈']]
+    },
+    '/calc/realestate/joint/': {
+      key:'joint',
+      quick:['공동명의는 양도세 기본공제(250만원)가 지분별로 각각 적용됩니다.','부부 공동명의는 종합부동산세 세액공제(1주택) 혜택을 선택할 수 있습니다.','취득세는 각자 지분만큼 납부하므로 취득 시 부담 차이는 없습니다.','실제 절세 효과는 보유 기간·소득 수준·주택 수에 따라 달라집니다.'],
+      related:[['/calc/realestate/acquisition/','취득세 계산기','📄'],['/calc/realestate/capital-gains/','양도소득세 계산기','📈'],['/calc/realestate/jongbu/','종합부동산세 계산기','🏛️']]
+    },
+    '/calc/realestate/jongbu/': {
+      key:'jongbu',
+      quick:['종부세는 매년 6월 1일 소유자를 기준으로 과세합니다.','1세대 1주택자는 공시가격 12억원까지 공제됩니다.','공동명의 1주택은 인별 6억 공제와 단독명의 12억 공제를 선택할 수 있습니다.','다주택자 중과세율은 조정대상지역 여부에 따라 달라집니다.'],
+      related:[['/calc/realestate/propertytax/','재산세 계산기','🏛️'],['/calc/realestate/joint/','공동명의비교','👥'],['/calc/realestate/acquisition/','취득세 계산기','📄']]
+    },
+    '/calc/realestate/property-tax-comprehensive/': {
+      key:'property-tax-comprehensive',
+      quick:['재산세는 매년 6월 1일 소유자를 기준으로 과세합니다.','주택분 재산세는 7월(1/2)과 9월(1/2) 두 번에 나눠 납부합니다.','공시가격 9억원 초과 주택은 종합부동산세도 별도 부과됩니다.','실제 세액은 지자체 조례에 따라 일부 감면될 수 있습니다.'],
+      related:[['/calc/realestate/jongbu/','종합부동산세 계산기','🏛️'],['/calc/realestate/acquisition/','취득세 계산기','📄'],['/calc/realestate/propertytax/','재산세 계산기','🏦']]
+    },
+    '/calc/realestate/propertytax/': {
+      key:'propertytax',
+      quick:['재산세는 매년 6월 1일 소유자를 기준으로 과세합니다.','주택분 재산세는 7월(1/2)과 9월(1/2) 두 번에 나눠 납부합니다.','공시가격 9억원 초과 주택은 종합부동산세도 별도 부과됩니다.','실제 세액은 지자체 조례에 따라 일부 감면될 수 있습니다.'],
+      related:[['/calc/realestate/jongbu/','종합부동산세 계산기','🏛️'],['/calc/realestate/acquisition/','취득세 계산기','📄'],['/calc/realestate/property-tax-comprehensive/','재산세 종합 계산기','🏦']]
+    },
+    '/calc/realestate/pyeong/': {
+      key:'pyeong',
+      quick:['1평 = 3.30579㎡이며, 아파트 분양 시 전용·공급·계약면적을 구분해야 합니다.','국민주택 규모 기준은 전용면적 85㎡(약 25.7평) 이하입니다.','실거주 느낌은 전용면적 기준이며, 분양가는 보통 공급면적 기준입니다.','발코니 확장 면적은 전용면적에 포함되지 않지만 실사용 공간이 늘어납니다.'],
+      related:[['/calc/realestate/acquisition/','취득세 계산기','📄'],['/calc/realestate/brokerage/','중개수수료 계산기','🏠'],['/calc/realestate/rental/','임대수익률 계산기','📊']]
+    },
+    '/calc/realestate/registry/': {
+      key:'registry',
+      quick:['등기비용은 등록면허세·교육세·채권매입비용·법무사 수수료로 구성됩니다.','채권 매입 후 즉시 매도(시장매도) 시 할인율에 따른 차액이 실비용입니다.','소유권 이전 등기 신청은 잔금일로부터 60일 이내에 해야 합니다.','법무사 수수료는 법정 기준이 있으나 실제로는 협의 가능합니다.'],
+      related:[['/calc/realestate/acquisition/','취득세 계산기','📄'],['/calc/realestate/brokerage/','중개수수료 계산기','🏠'],['/calc/realestate/loan/','대출이자 계산기','💰']]
     }
   };
   const cfg=pages[path];
@@ -136,14 +181,15 @@
     ['loan','대출이자','/calc/realestate/loan/'],
     ['rental','임대수익률','/calc/realestate/rental/'],
     ['capital-gains','양도소득세','/calc/realestate/capital-gains/'],
-    ['jongbu','종합부동산세','/calc/realestate/#tab-jongbu'],
-    ['gift','증여세','/calc/realestate/#tab-gift'],
-    ['pyeong','평수 변환','/calc/realestate/#tab-pyeong'],
-    ['propertytax','재산세','/calc/realestate/#tab-propertytax'],
-    ['inheritance','상속세','/calc/realestate/#tab-inheritance'],
-    ['dsr','대출한도 (DSR)','/calc/realestate/#tab-dsr'],
-    ['registry','등기비용','/calc/realestate/#tab-registry'],
-    ['joint','공동명의비교','/calc/realestate/#tab-joint']
+    ['dsr','대출한도 (DSR)','/calc/realestate/dsr/'],
+    ['gift','증여세','/calc/realestate/gift/'],
+    ['inheritance','상속세','/calc/realestate/inheritance/'],
+    ['joint','공동명의비교','/calc/realestate/joint/'],
+    ['jongbu','종합부동산세','/calc/realestate/jongbu/'],
+    ['property-tax-comprehensive','재산세 종합','/calc/realestate/property-tax-comprehensive/'],
+    ['propertytax','재산세','/calc/realestate/propertytax/'],
+    ['pyeong','평수 변환','/calc/realestate/pyeong/'],
+    ['registry','등기비용','/calc/realestate/registry/']
   ];
   const left=document.createElement('aside');
   left.className='mega-sidebar-left';
@@ -158,7 +204,7 @@
         <a href="/calc/salary/" class="msl-link"><span class="msl-icon">📈</span>이직 / 연봉<span class="msl-badge">7</span></a>
         <a href="/calc/finance/" class="msl-link"><span class="msl-icon">🏦</span>금융 · 이자<span class="msl-badge">5</span></a>
         <a href="/calc/health/" class="msl-link"><span class="msl-icon">🏃</span>건강<span class="msl-badge">5</span></a>
-        <a href="/calc/pension-welfare/" class="msl-link"><span class="msl-icon">🏛</span>연금·복지<span class="msl-badge">3</span></a>
+        <a href="/calc/pension-welfare/" class="msl-link"><span class="msl-icon">🏛</span>연금·복지<span class="msl-badge">5</span></a>
         <a href="/calc/date/" class="msl-link"><span class="msl-icon">📅</span>날짜 · D-day<span class="msl-badge">5</span></a>
         <a href="/calc/ai/" class="msl-link"><span class="msl-icon">🤖</span>AI / 테크<span class="msl-badge">5</span></a>
         <a href="/calc/pet/" class="msl-link"><span class="msl-icon">🐾</span>반려동물<span class="msl-badge">5</span></a>
@@ -174,12 +220,12 @@
   right.className='mega-sidebar-right';
   right.innerHTML=`
     <div class="msr-widget">
-      <div class="msr-widget-title">빠른 안내</div>
-      <div class="msr-widget-list">${cfg.quick.map(text=>`<div class="msr-widget-link"><span class="msr-widget-icon">📄</span><span class="msr-widget-text">${text}</span></div>`).join('')}</div>
-    </div>
-    <div class="msr-widget">
       <div class="msr-widget-title">관련 계산기</div>
       <div class="msr-widget-list">${cfg.related.map(item=>`<a href="${item[0]}" class="msr-widget-link"><span class="msr-widget-icon">${item[2]}</span><span class="msr-widget-text">${item[1]}</span></a>`).join('')}</div>
+    </div>
+    <div class="msr-widget">
+      <div class="msr-widget-title">관련 블로그</div>
+      <div class="msr-widget-list">${cfg.quick.slice(0,3).map(text=>`<div class="msr-widget-link"><span class="msr-widget-icon">📄</span><span class="msr-widget-text">${text}</span></div>`).join('')}</div>
     </div>`;
 
   main.parentNode.insertBefore(overlay, main);

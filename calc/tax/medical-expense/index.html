@@ -131,8 +131,8 @@
     <div class="field">
       <div class="field-label">총급여액 <span class="label-hint">(연간 세전 급여, 비과세 제외)</span></div>
       <div class="input-wrap">
-        <input type="number" id="salary" placeholder="예: 50000000" oninput="onInput()" />
-        <span class="unit">원</span>
+        <input type="number" id="salary" placeholder="예: 5000" oninput="onInput()" />
+        <span class="unit">만원</span>
       </div>
       <div class="converted" id="salaryConverted"></div>
     </div>
@@ -149,7 +149,7 @@
       <div class="field-hint">체외수정, 인공수정 등 의사 처방 난임시술 비용</div>
       <div class="input-wrap" style="margin-top:6px;">
         <input type="number" id="infertility" placeholder="0" oninput="onInput()" />
-        <span class="unit">원</span>
+        <span class="unit">만원</span>
       </div>
       <div class="converted" id="infertilityConverted"></div>
     </div>
@@ -163,7 +163,7 @@
       <div class="field-hint">미숙아 또는 선천성이상아에 대해 지출한 의료비</div>
       <div class="input-wrap" style="margin-top:6px;">
         <input type="number" id="premature" placeholder="0" oninput="onInput()" />
-        <span class="unit">원</span>
+        <span class="unit">만원</span>
       </div>
       <div class="converted" id="prematureConverted"></div>
     </div>
@@ -177,7 +177,7 @@
       <div class="field-hint">본인, 65세 이상 부모·조부모, 장애인 부양가족 의료비</div>
       <div class="input-wrap" style="margin-top:6px;">
         <input type="number" id="selfDisabled" placeholder="0" oninput="onInput()" />
-        <span class="unit">원</span>
+        <span class="unit">만원</span>
       </div>
       <div class="converted" id="selfDisabledConverted"></div>
     </div>
@@ -191,7 +191,7 @@
       <div class="field-hint">위 항목 외 배우자·자녀·형제자매 등 부양가족 의료비</div>
       <div class="input-wrap" style="margin-top:6px;">
         <input type="number" id="other" placeholder="0" oninput="onInput()" />
-        <span class="unit">원</span>
+        <span class="unit">만원</span>
       </div>
       <div class="converted" id="otherConverted"></div>
     </div>
@@ -390,7 +390,7 @@ function onInput() {
   ids.forEach(id => {
     const v = getVal(id);
     const el = document.getElementById(id + 'Converted');
-    if (el) el.textContent = v > 0 ? fmtShort(v) : '';
+    if (el) el.textContent = v > 0 ? fmtShort(v * 10000) : '';
   });
 
   const salary = getVal('salary');
@@ -398,7 +398,7 @@ function onInput() {
   const premature = getVal('premature');
   const selfDisabled = getVal('selfDisabled');
   const otherRaw = getVal('other');
-  const otherCapped = Math.min(otherRaw, 7000000);
+  const otherCapped = Math.min(otherRaw, 700);
   const totalMedical = infertility + premature + selfDisabled + otherCapped;
   const threshold = salary * 0.03;
 
@@ -408,9 +408,9 @@ function onInput() {
     const pct = Math.min(totalMedical / threshold, 2);
     document.getElementById('thresholdFill').style.width = Math.min(pct * 50, 100) + '%';
     document.getElementById('thresholdInfoText').textContent =
-      fmt(totalMedical) + ' / 문턱 ' + fmt(threshold);
+      fmt(totalMedical * 10000) + ' / 문턱 ' + fmt(threshold * 10000);
     document.getElementById('thresholdLabel').textContent =
-      '문턱: ' + fmt(threshold) + ' (총급여 × 3%)';
+      '문턱: ' + fmt(threshold * 10000) + ' (총급여 × 3%)';
   } else {
     info.style.display = 'none';
   }
@@ -418,11 +418,11 @@ function onInput() {
 }
 
 function calculate() {
-  const salary = getVal('salary');
-  const infertility = getVal('infertility');
-  const premature = getVal('premature');
-  const selfDisabled = getVal('selfDisabled');
-  const otherRaw = getVal('other');
+  const salary = getVal('salary') * 10000;
+  const infertility = getVal('infertility') * 10000;
+  const premature = getVal('premature') * 10000;
+  const selfDisabled = getVal('selfDisabled') * 10000;
+  const otherRaw = getVal('other') * 10000;
 
   const noDeductEl = document.getElementById('noDeduction');
   const resultCardEl = document.getElementById('resultCard');

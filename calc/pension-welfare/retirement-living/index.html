@@ -164,8 +164,8 @@
     <div class="field">
       <div class="field-label">희망 월 생활비 <span class="label-hint">(현재 가치 기준)</span></div>
       <div class="input-wrap">
-        <input type="number" id="monthlyExpense" placeholder="예) 2500000" oninput="onInput()" />
-        <span class="unit">원</span>
+        <input type="number" id="monthlyExpense" placeholder="예) 250" oninput="onInput()" />
+        <span class="unit">만원</span>
       </div>
       <div class="converted" id="monthlyExpenseConverted"></div>
     </div>
@@ -175,7 +175,7 @@
       <div class="field-label">현재 보유 자산 <span class="label-hint">(은퇴 시 사용 가능 자산)</span></div>
       <div class="input-wrap">
         <input type="number" id="currentAssets" placeholder="0" oninput="onInput()" />
-        <span class="unit">원</span>
+        <span class="unit">만원</span>
       </div>
       <div class="converted" id="currentAssetsConverted"></div>
       <div class="field-hint">부동산 제외 금융자산 기준 권장</div>
@@ -186,7 +186,7 @@
       <div class="field-label">예상 월 연금 수령액 <span class="label-hint">(국민연금 + 퇴직연금 합산)</span></div>
       <div class="input-wrap">
         <input type="number" id="monthlyPension" placeholder="0" oninput="onInput()" />
-        <span class="unit">원</span>
+        <span class="unit">만원</span>
       </div>
       <div class="converted" id="monthlyPensionConverted"></div>
     </div>
@@ -196,7 +196,7 @@
       <div class="field-label">기타 월 수입 <span class="label-hint">(임대소득, 부업 등)</span></div>
       <div class="input-wrap">
         <input type="number" id="otherIncome" placeholder="0" oninput="onInput()" />
-        <span class="unit">원</span>
+        <span class="unit">만원</span>
       </div>
     </div>
 
@@ -335,6 +335,8 @@
   <div class="sibling-section">
     <div class="sibling-title">다른 연금·복지 계산기</div>
     <div class="sibling-list">
+      <a href="/calc/pension-welfare/national-pension/" class="sibling-link">&#127981; 국민연금 수령액</a>
+      <a href="/calc/pension-welfare/basic-pension/" class="sibling-link">&#128176; 기초연금 수급 판정</a>
       <a href="/calc/pension-welfare/retirement-living/" class="sibling-link current">🏡 노후 생활비</a>
       <a href="/calc/pension-welfare/pension-tax/" class="sibling-link">💰 연금소득세</a>
       <a href="/calc/pension-welfare/long-term-care/" class="sibling-link">🏥 장기요양 비용</a>
@@ -371,11 +373,11 @@ function fmtShort(n) {
 function getVal(id) { return parseFloat(document.getElementById(id).value) || 0; }
 
 function onInput() {
-  const convIds = ['monthlyExpense','currentAssets','monthlyPension','otherIncome'];
+  const convIds = ['monthlyExpense','currentAssets','monthlyPension'];
   convIds.forEach(id => {
     const v = getVal(id);
     const el = document.getElementById(id + 'Converted');
-    if (el) el.textContent = v > 0 ? fmtShort(v) : '';
+    if (el) el.textContent = v > 0 ? fmtShort(v * 10000) : '';
   });
   calculate();
 }
@@ -385,10 +387,10 @@ function calculate() {
   const retireAge = getVal('retireAge');
   const lifeExpect = getVal('lifeExpect') || 85;
   const inflation = (getVal('inflation') || 2.5) / 100;
-  const monthlyExpense = getVal('monthlyExpense');
-  const currentAssets = getVal('currentAssets');
-  const monthlyPension = getVal('monthlyPension');
-  const otherIncome = getVal('otherIncome');
+  const monthlyExpense = getVal('monthlyExpense') * 10000;
+  const currentAssets = getVal('currentAssets') * 10000;
+  const monthlyPension = getVal('monthlyPension') * 10000;
+  const otherIncome = getVal('otherIncome') * 10000;
 
   const resultCard = document.getElementById('resultCard');
   if (!currentAge || !retireAge || !monthlyExpense || retireAge <= currentAge || lifeExpect <= retireAge) {

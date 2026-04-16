@@ -2,6 +2,18 @@
 (function(){
   const path=(location.pathname||'').replace(/index\.html$/,'').replace(/\/+$/,'/') || '/';
   const pages={
+    '/calc/pension-welfare/national-pension/': {
+      key:'national-pension',
+      quick:['국민연금은 최소 10년(120개월) 이상 납부해야 수령할 수 있습니다.','조기수령(60세)은 1년당 6% 감액, 연기수령(70세)은 1년당 7.2% 증액됩니다.','2026년 소득대체율은 41.5%로, 40년 가입 기준 평균소득의 41.5%가 목표 연금액입니다.','정확한 예상 연금액은 국민연금공단(nps.or.kr)에서 공인인증서 없이 조회 가능합니다.'],
+      related:[['/calc/pension-welfare/basic-pension/','기초연금 수급 판정','💰'],['/calc/pension-welfare/retirement-living/','노후 생활비','🏡'],['/calc/pension-welfare/pension-tax/','연금소득세','💼']],
+      guides:[]
+    },
+    '/calc/pension-welfare/basic-pension/': {
+      key:'basic-pension',
+      quick:['기초연금은 만 65세 이상 소득 하위 70% 어르신에게 지급됩니다.','2025년 기준 선정기준액은 단독가구 228만원, 부부가구 364.8만원입니다.','부동산·금융자산은 연 4%로 환산해 소득인정액에 합산됩니다.','정확한 수급 여부는 복지로(bokjiro.go.kr) 또는 주민센터에서 확인하세요.'],
+      related:[['/calc/pension-welfare/national-pension/','국민연금 수령액','🏛'],['/calc/pension-welfare/retirement-living/','노후 생활비','🏡'],['/calc/pension-welfare/long-term-care/','장기요양 비용','🏥']],
+      guides:[]
+    },
     '/calc/pension-welfare/retirement-living/': {
       key:'retirement-living',
       quick:['은퇴 후 필요한 월 생활비는 현재 생활비의 70~80% 수준으로 추정합니다.','물가상승률을 반드시 반영해야 실질적인 노후 준비 금액을 알 수 있습니다.','국민연금·퇴직연금 수령액을 차감한 순수 부족분을 준비하는 것이 핵심입니다.','통계청 기준 한국인 기대수명은 남성 80.6세, 여성 86.6세입니다(2023년 기준).'],
@@ -130,6 +142,8 @@
   layout.className='mega-layout';
 
   const calcItems=[
+    ['national-pension','국민연금 수령액','/calc/pension-welfare/national-pension/'],
+    ['basic-pension','기초연금 수급 판정','/calc/pension-welfare/basic-pension/'],
     ['retirement-living','노후 생활비','/calc/pension-welfare/retirement-living/'],
     ['pension-tax','연금소득세','/calc/pension-welfare/pension-tax/'],
     ['long-term-care','장기요양 비용','/calc/pension-welfare/long-term-care/']
@@ -147,7 +161,7 @@
         <a href="/calc/salary/" class="msl-link"><span class="msl-icon">📈</span>이직 / 연봉<span class="msl-badge">7</span></a>
         <a href="/calc/finance/" class="msl-link"><span class="msl-icon">🏦</span>금융 · 이자<span class="msl-badge">5</span></a>
         <a href="/calc/health/" class="msl-link"><span class="msl-icon">🏃</span>건강<span class="msl-badge">5</span></a>
-        <a href="/calc/pension-welfare/" class="msl-link msl-active"><span class="msl-icon">🏛</span>연금·복지<span class="msl-badge">3</span></a>
+        <a href="/calc/pension-welfare/" class="msl-link msl-active"><span class="msl-icon">🏛</span>연금·복지<span class="msl-badge">5</span></a>
         <a href="/calc/date/" class="msl-link"><span class="msl-icon">📅</span>날짜 · D-day<span class="msl-badge">5</span></a>
         <a href="/calc/ai/" class="msl-link"><span class="msl-icon">🤖</span>AI / 테크<span class="msl-badge">5</span></a>
         <a href="/calc/pet/" class="msl-link"><span class="msl-icon">🐾</span>반려동물<span class="msl-badge">5</span></a>
@@ -161,8 +175,8 @@
 
   const guidesWidget = (cfg.guides && cfg.guides.length)
     ? `<div class="msr-widget">
-        <div class="msr-widget-title">관련 가이드</div>
-        <div class="msr-widget-list">${cfg.guides.map(g=>`<a href="${g[0]}" class="msr-widget-link"><span class="msr-widget-icon">📖</span><span class="msr-widget-text">${g[1]}</span></a>`).join('')}</div>
+        <div class="msr-widget-title">관련 블로그</div>
+        <div class="msr-widget-list">${cfg.guides.slice(0,3).map(g=>`<a href="${g[0]}" class="msr-widget-link"><span class="msr-widget-icon">📖</span><span class="msr-widget-text">${g[1]}</span></a>`).join('')}</div>
       </div>`
     : '';
   const right=document.createElement('aside');
@@ -178,9 +192,9 @@
     const mobileGuides = document.createElement('div');
     mobileGuides.className = 'mobile-guides';
     mobileGuides.innerHTML =
-      '<div class="mobile-guides__title">관련 가이드</div>' +
+      '<div class="mobile-guides__title">관련 블로그</div>' +
       '<div class="mobile-guides__list">' +
-      cfg.guides.map(g =>
+      cfg.guides.slice(0,3).map(g =>
         `<a class="mobile-guides__link" href="${g[0]}"><span class="mobile-guides__icon">📖</span><span class="mobile-guides__text">${g[1]}</span></a>`
       ).join('') +
       '</div>';
