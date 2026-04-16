@@ -36,6 +36,10 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - hourly-wage-guide.html
 - jeonse-vs-wolse.html
 - dog-vs-cat-cost.html
+- dday-counter.html
+- deposit-interest-guide.html
+- claude-vs-gpt.html
+- freelancer-insurance-guide.html
 
 ## 작업 순서
 
