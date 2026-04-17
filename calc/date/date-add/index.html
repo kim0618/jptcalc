@@ -121,8 +121,8 @@ function calcAdd(){
   var months=parseInt(document.getElementById('add-months').value)||0;
   var days=parseInt(document.getElementById('add-days').value)||0;
   var result=new Date(start);var sign=addOp==='+'?1:-1;
-  result.setFullYear(result.getFullYear()+sign*years);
-  if(months){var targetMonth=result.getMonth()+sign*months;var dayOfMonth=result.getDate();result.setDate(1);result.setMonth(targetMonth);var lastDay=new Date(result.getFullYear(),result.getMonth()+1,0).getDate();result.setDate(Math.min(dayOfMonth,lastDay))}
+  var totalMonths=sign*years*12+sign*months;
+  if(totalMonths!==0){var dayOfMonth=result.getDate();result.setDate(1);result.setMonth(result.getMonth()+totalMonths);var lastDay=new Date(result.getFullYear(),result.getMonth()+1,0).getDate();result.setDate(Math.min(dayOfMonth,lastDay))}
   result.setDate(result.getDate()+sign*days);
   var opLabel=addOp==='+'?'더한':'뺀';var totalDays=Math.abs(diffDays(start,result));var dow=result.getDay();var weekdayColor=WEEK_COLORS[dow];
   document.getElementById('add-op-label').textContent=opLabel+' 결과';

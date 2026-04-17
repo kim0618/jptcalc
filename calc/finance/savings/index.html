@@ -89,12 +89,12 @@
       <div class="card-title">적금 정보</div>
       <div class="field">
         <div class="field-label">월 납입액 <span class="label-hint">만원 단위</span></div>
-        <div class="input-wrap"><input type="number" id="sav-monthly" placeholder="예) 30" oninput="calc()" /><span class="unit">만원</span></div>
+        <div class="input-wrap"><input type="number" id="sav-monthly" min="0" placeholder="예) 30" oninput="calc()" /><span class="unit">만원</span></div>
         <div class="converted" id="sav-display"></div>
       </div>
       <div class="field">
         <div class="field-label">연 금리</div>
-        <div class="input-wrap"><input type="number" id="sav-rate" placeholder="예) 4.0" step="0.1" oninput="calc()" /><span class="unit">%</span></div>
+        <div class="input-wrap"><input type="number" id="sav-rate" min="0" placeholder="예) 4.0" step="0.1" oninput="calc()" /><span class="unit">%</span></div>
       </div>
       <div class="field">
         <div class="field-label">납입 기간</div>
@@ -220,7 +220,7 @@ function calc(){
   const r=parseFloat(document.getElementById('sav-rate').value)||0;
   showConverted(document.getElementById('sav-monthly'),document.getElementById('sav-display'));
   const res=document.getElementById('result');
-  if(!m||!r){res.classList.remove('show');return;}
+  if(m<=0||r<=0){res.classList.remove('show');return;}
   res.classList.add('show');
   const monthRate=r/100/12;
   let grossInt=0;

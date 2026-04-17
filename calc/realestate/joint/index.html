@@ -143,23 +143,38 @@
     lastReviewed: '2026.04',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>    <div class="siblings-grid">
-      <a href="/calc/realestate/brokerage/" class="sibling-link">중개수수료</a>
-      <a href="/calc/realestate/acquisition/" class="sibling-link">취득세</a>
-      <a href="/calc/realestate/conversion/" class="sibling-link">전월세전환</a>
-      <a href="/calc/realestate/loan/" class="sibling-link">대출이자</a>
-      <a href="/calc/realestate/rental/" class="sibling-link">임대수익률</a>
-      <a href="/calc/realestate/capital-gains/" class="sibling-link">양도소득세</a>
-      <a href="/calc/realestate/dsr/" class="sibling-link">대출한도(DSR)</a>
-      <a href="/calc/realestate/gift/" class="sibling-link">증여세</a>
-      <a href="/calc/realestate/inheritance/" class="sibling-link">상속세</a>
-      <a href="/calc/realestate/joint/" class="sibling-link current">공동명의비교</a>
-      <a href="/calc/realestate/jongbu/" class="sibling-link">종합부동산세</a>
-      <a href="/calc/realestate/propertytax/" class="sibling-link">재산세</a>
-      <a href="/calc/realestate/pyeong/" class="sibling-link">평수 변환</a>
-      <a href="/calc/realestate/registry/" class="sibling-link">등기비용</a>
-      <a href="/calc/realestate/property-tax-comprehensive/" class="sibling-link">재산세 종합</a>
+  <script src="/assets/trust-block.js"></script>
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>공동명의 계산기는 언제 쓰나요?</h2>
+      <p>보유 주택의 단독명의 vs 공동명의 세금을 비교하고 싶을 때 씁니다. 종부세·양도세 측면에서 어느 쪽이 유리한지 공시가격만 입력하면 즉시 확인할 수 있습니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>종부세 절세 계산</strong><span>단독명의 9억 공제 vs 공동명의 각자 9억 공제, 총 18억 효과를 비교합니다.</span></div>
+        <div class="guide-box"><strong>배우자 지분 분산</strong><span>지분 비율을 달리할 때 세금이 어떻게 달라지는지 시뮬레이션합니다.</span></div>
+        <div class="guide-box"><strong>취득 전 의사결정</strong><span>새 주택 매수 전 공동명의 선택 여부를 세금 기준으로 판단하는 근거 자료로 활용합니다.</span></div>
+      </div>
     </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item">
+        <h3>공동명의란 무엇인가요?</h3>
+        <p>부동산을 두 명 이상이 공동으로 소유하는 방식입니다. 배우자, 가족, 제3자와 지분을 나눠 등기할 수 있으며, 종합부동산세와 양도소득세 측면에서 절세 효과가 생길 수 있습니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>종합부동산세 절세 효과는 얼마나 되나요?</h3>
+        <p>단독명의는 9억원(일반) 또는 12억원(1세대1주택) 기본공제를 1회 적용받지만, 공동명의는 각자 9억원 공제를 받아 총 18억원 공제 효과가 생깁니다. 공시가격 9억~20억대 구간에서 효과가 가장 큽니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>공동명의로 전환할 때 주의사항은?</h3>
+        <p>증여로 공동명의 전환 시 증여세 과세 대상이 됩니다. 양도 시 각자 양도소득세를 별도 신고해야 하며, 취득세·등록세가 추가 발생할 수 있습니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>공동명의가 불리한 경우는?</h3>
+        <p>공시가격 9억원 이하인 경우 절세 효과가 없습니다. 공동명의자 중 한 명이 다주택자라면 오히려 불리할 수 있고, 1세대 1주택 비과세 요건도 일부 변경될 수 있습니다.</p>
+      </div>
+      <div class="update-note">최종 검토: 2026.04.15 · 계산 결과는 참고용입니다.</div>
+    </div>
+  </div>
   </div>
 </main>
 <footer class="site-footer">
@@ -231,10 +246,10 @@ function getJbTax(b) {
   if (b <= 30000)  return b * 0.005;
   if (b <= 60000)  return b * 0.007 - 60;
   if (b <= 120000) return b * 0.010 - 240;
-  if (b <= 250000) return b * 0.014 - 720;
-  if (b <= 500000) return b * 0.020 - 2220;
-  if (b <= 940000) return b * 0.027 - 5720;
-  return b * 0.050 - 27340;
+  if (b <= 250000) return b * 0.013 - 600;
+  if (b <= 500000) return b * 0.015 - 1100;
+  if (b <= 940000) return b * 0.020 - 3600;
+  return b * 0.027 - 10180;
 }
 
 function calcJoint() {
@@ -337,7 +352,7 @@ window.ARTICLE_INFO_CONFIG = {
   reviewBasis: '부동산 관련 법령 2026년 기준',
   basisDate: '2026년 기준',
   referenceOrg: '국토교통부·대법원',
-  lastReviewed: '2026.04.13',
+  lastReviewed: '2026.04.15',
   category: 'realestate'
 };
 </script>

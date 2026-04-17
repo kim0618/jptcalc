@@ -50,7 +50,7 @@
   <div class="page-header"><div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/health/">건강 계산기</a><span class="breadcrumb-sep">›</span><span>체지방률 계산기</span></div><div class="page-header-badge">💪 무료 온라인 계산기</div><h1>체지방률 계산기</h1><p>미 해군 공식으로 체지방률을 추정하고 제지방량을 추정합니다</p></div>
 
   <div class="card"><div class="card-title">기본 정보 (해군 공식)</div><div class="seg-group" id="bf-sex-group"><button class="seg-btn active" onclick="setBfSex('male',this)">남성</button><button class="seg-btn" onclick="setBfSex('female',this)">여성</button></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div class="field" style="margin-bottom:0"><div class="field-label">키</div><div class="input-wrap"><input type="number" id="bf-height" placeholder="예) 170" oninput="calcBodyFat()" /><span class="unit">cm</span></div></div><div class="field" style="margin-bottom:0"><div class="field-label">몸무게</div><div class="input-wrap"><input type="number" id="bf-weight" placeholder="예) 65" oninput="calcBodyFat()" /><span class="unit">kg</span></div></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px"><div class="field" style="margin-bottom:0"><div class="field-label">허리둘레 <span style="font-size:10px;color:var(--gray-400)">배꼽 높이 줄자 측정</span></div><div class="input-wrap"><input type="number" id="bf-waist" placeholder="예) 80" oninput="calcBodyFat()" /><span class="unit">cm</span></div><div style="font-size:11px;color:var(--gray-500);margin-top:4px">바지 사이즈 참고: 28인치≈71cm / 30≈76cm / 32≈81cm / 34≈86cm</div></div><div class="field" style="margin-bottom:0"><div class="field-label">목둘레 <span style="font-size:10px;color:var(--gray-400)">목의 가장 좁은 부분</span></div><div class="input-wrap"><input type="number" id="bf-neck" placeholder="예) 38" oninput="calcBodyFat()" /><span class="unit">cm</span></div><div style="font-size:11px;color:var(--gray-500);margin-top:4px">남성 평균 37~40cm / 여성 평균 32~35cm</div></div></div><div style="margin-top:12px"><div class="field" id="bf-hip-field" style="margin-bottom:0;display:none"><div class="field-label">엉덩이둘레 <span style="font-size:10px;color:var(--primary)">(여성)</span></div><div class="input-wrap"><input type="number" id="bf-hip" placeholder="예) 95" oninput="calcBodyFat()" /><span class="unit">cm</span></div></div></div></div>
-  <div class="result-card" id="s3-result"><div class="result-highlight"><div class="rh-label">체지방률</div><div class="rh-value" id="bf-value">-</div><div><span class="bmi-status" id="bf-status">-</span></div></div><div class="result-row"><span class="result-label">체지방량 / 제지방량</span><span class="result-value" id="bf-mass">체중 미입력</span></div><div class="result-row"><span class="result-label">남성 정상 범위</span><span class="result-value">10~20%</span></div><div class="result-row"><span class="result-label">여성 정상 범위</span><span class="result-value">18~28%</span></div><div class="result-row result-total-row"><span class="result-total-label">평가</span><span class="result-total-value" id="bf-eval">-</span></div><p class="result-note">※ 미 해군 공식 기반 추정값. 정확한 측정은 DEXA 또는 InBody 기기 사용을 권장합니다.</p></div>
+  <div class="result-card" id="s3-result"><div class="result-highlight"><div class="rh-label">체지방률</div><div class="rh-value" id="bf-value">-</div><div><span class="bmi-status" id="bf-status">-</span></div></div><div class="result-row"><span class="result-label">체지방량 / 제지방량</span><span class="result-value" id="bf-mass">체중 미입력</span></div><div class="result-row"><span class="result-label">남성 정상 범위</span><span class="result-value">10~20% (최적 14~17%)</span></div><div class="result-row"><span class="result-label">여성 정상 범위</span><span class="result-value">18~28% (최적 21~24%)</span></div><div class="result-row result-total-row"><span class="result-total-label">평가</span><span class="result-total-value" id="bf-eval">-</span></div><p class="result-note">※ 미 해군 공식 기반 추정값. 정확한 측정은 DEXA 또는 InBody 기기 사용을 권장합니다.</p></div>
   <div class="seo-card"><h2>체지방률 계산기 이용 안내</h2><h3>체지방률 정상 범위</h3><ul><li>남성: 필수지방 3~5%, 건강 10~20%, 비만 25%+</li><li>여성: 필수지방 10~13%, 건강 18~28%, 비만 32%+</li></ul></div>
 
   <section class="guide-section seo-card">
@@ -72,20 +72,27 @@
     <p>미 해군(US Navy) 공식은 목둘레, 허리둘레(여성은 엉덩이둘레 추가)와 키를 이용하여 체지방률을 추정합니다. 별도의 장비 없이 줄자만으로 측정할 수 있어 간편하지만, DEXA나 InBody보다는 정확도가 낮을 수 있습니다.</p>
   </section>
 
-  <section class="guide-section seo-card">
-    <h2>자주 묻는 질문 (FAQ)</h2>
-    <h3>Q. 체지방률과 BMI 중 어떤 것이 더 중요한가요?</h3>
-    <p>체지방률이 실제 체성분을 더 정확하게 반영합니다. BMI가 정상이어도 체지방률이 높으면 대사 질환 위험이 증가하며, 반대로 근육량이 많아 BMI가 높아도 체지방률이 정상이면 건강한 상태입니다.</p>
-    <h3>Q. 체지방률을 낮추려면 어떻게 해야 하나요?</h3>
-    <p>유산소 운동과 근력 운동을 병행하고, 단백질 섭취를 늘리며, 전체 칼로리를 적절히 조절하는 것이 효과적입니다. 급격한 다이어트는 근육 손실을 유발하므로 주 0.5~1kg 감량이 권장됩니다.</p>
-    <h3>Q. 줄자 측정 시 주의사항은?</h3>
-    <p>허리둘레는 배꼽 높이에서, 목둘레는 목의 가장 좁은 부분에서, 엉덩이둘레는 엉덩이의 가장 넓은 부분에서 측정합니다. 줄자가 수평이 되도록 하고, 숨을 편하게 내쉰 상태에서 측정합니다.</p>
+  <section class="guide-section seo-card faq-card">
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-item">
+      <h3>체지방률과 BMI 중 어떤 것이 더 중요한가요?</h3>
+      <p>체지방률이 실제 체성분을 더 정확하게 반영합니다. BMI가 정상이어도 체지방률이 높으면 대사 질환 위험이 증가하며, 근육량이 많아 BMI가 높더라도 체지방률이 정상이면 건강한 상태로 볼 수 있습니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>체지방률을 낮추려면 어떻게 해야 하나요?</h3>
+      <p>유산소 운동과 근력 운동을 병행하고, 단백질 섭취를 늘리며, 전체 칼로리를 조절하는 것이 효과적입니다. 급격한 다이어트는 근육 손실을 유발하므로 주 0.5~1kg 감량이 권장됩니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>줄자 측정 시 주의사항은?</h3>
+      <p>허리둘레는 배꼽 높이에서, 목둘레는 목의 가장 좁은 부분에서, 엉덩이둘레는 엉덩이의 가장 넓은 부분에서 측정합니다. 줄자가 수평이 되도록 하고, 숨을 편하게 내쉰 상태에서 측정합니다.</p>
+    </div>
+    <div class="update-note" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:10px 14px;margin-top:14px;font-size:12px;color:#6B7280">최종 검토: 2026.04.15 · 이 계산기는 건강 참고용이며 의료 진단을 대체하지 않습니다. 체성분 분석이나 건강 관리는 의료 전문가와 상담하세요.</div>
   </section>
 
   <div class="update-note" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:10px 14px;margin-bottom:16px;font-size:12px;color:#6B7280">이 계산기는 건강 참고용이며 의료 진단을 대체하지 않습니다. 체성분 분석이나 건강 관리는 의료 전문가와 상담하세요.</div>
   <script>
   window.TRUST_BLOCK_CONFIG = {
-    standard: 'YMCA 공식·잭슨-폴록(Jackson-Pollock) 공식 기반',
+    standard: '미 해군(US Navy) 공식 기반',
     appliedFrom: '참고용 계산',
     exceptions: [
       '체지방률은 측정 방법(DEXA, BIA, 피부주름)에 따라 수치 차이가 있습니다',

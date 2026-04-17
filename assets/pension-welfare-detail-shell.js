@@ -6,31 +6,31 @@
       key:'national-pension',
       quick:['국민연금은 최소 10년(120개월) 이상 납부해야 수령할 수 있습니다.','조기수령(60세)은 1년당 6% 감액, 연기수령(70세)은 1년당 7.2% 증액됩니다.','2026년 소득대체율은 41.5%로, 40년 가입 기준 평균소득의 41.5%가 목표 연금액입니다.','정확한 예상 연금액은 국민연금공단(nps.or.kr)에서 공인인증서 없이 조회 가능합니다.'],
       related:[['/calc/pension-welfare/basic-pension/','기초연금 수급 판정','💰'],['/calc/pension-welfare/retirement-living/','노후 생활비','🏡'],['/calc/pension-welfare/pension-tax/','연금소득세','💼']],
-      guides:[]
+      guides:[['/blog/posts/pension-tax-guide.html','연금소득세 완전 정리 - IRP·연금저축 세율·실수령액·절세 전략'],['/blog/posts/retirement-living-cost.html','노후 생활비 얼마면 될까 - 30년 준비 자금 계산법']]
     },
     '/calc/pension-welfare/basic-pension/': {
       key:'basic-pension',
       quick:['기초연금은 만 65세 이상 소득 하위 70% 어르신에게 지급됩니다.','2025년 기준 선정기준액은 단독가구 228만원, 부부가구 364.8만원입니다.','부동산·금융자산은 연 4%로 환산해 소득인정액에 합산됩니다.','정확한 수급 여부는 복지로(bokjiro.go.kr) 또는 주민센터에서 확인하세요.'],
       related:[['/calc/pension-welfare/national-pension/','국민연금 수령액','🏛'],['/calc/pension-welfare/retirement-living/','노후 생활비','🏡'],['/calc/pension-welfare/long-term-care/','장기요양 비용','🏥']],
-      guides:[]
+      guides:[['/blog/posts/retirement-living-cost.html','노후 생활비 얼마면 될까 - 30년 준비 자금 계산법']]
     },
     '/calc/pension-welfare/retirement-living/': {
       key:'retirement-living',
       quick:['은퇴 후 필요한 월 생활비는 현재 생활비의 70~80% 수준으로 추정합니다.','물가상승률을 반드시 반영해야 실질적인 노후 준비 금액을 알 수 있습니다.','국민연금·퇴직연금 수령액을 차감한 순수 부족분을 준비하는 것이 핵심입니다.','통계청 기준 한국인 기대수명은 남성 80.6세, 여성 86.6세입니다(2023년 기준).'],
       related:[['/calc/pension-welfare/pension-tax/','연금소득세','💰'],['/calc/pension-welfare/long-term-care/','장기요양 비용','🏥'],['/calc/tax/income-tax/','종합소득세','📊']],
-      guides:[['/blog/posts/retirement-living-cost.html','노후 생활비 얼마면 될까 - 30년 준비 자금 계산법']]
+      guides:[['/blog/posts/retirement-living-cost.html','노후 생활비 얼마면 될까 - 30년 준비 자금 계산법'],['/blog/posts/pension-tax-guide.html','연금소득세 완전 정리 - IRP·연금저축 세율·실수령액·절세 전략']]
     },
     '/calc/pension-welfare/pension-tax/': {
       key:'pension-tax',
       quick:['사적연금 연간 수령액이 1,500만원 이하이면 연령별 저율 분리과세(3.3~5.5%)가 적용됩니다.','1,500만원 초과 시 16.5% 분리과세 또는 종합과세 중 유리한 방법을 선택할 수 있습니다.','공적연금(국민연금 등)은 종합소득세 과세 대상으로, 홈택스 간이세액표를 참고하세요.','연금 수령 나이가 높을수록 낮은 세율이 적용됩니다(55세 미만 5.5%, 70세 이상 3.3%).'],
       related:[['/calc/pension-welfare/retirement-living/','노후 생활비','🏡'],['/calc/pension-welfare/long-term-care/','장기요양 비용','🏥'],['/calc/tax/income-tax/','종합소득세','📊']],
-      guides:[]
+      guides:[['/blog/posts/pension-tax-guide.html','연금소득세 완전 정리 - IRP·연금저축 세율·실수령액·절세 전략'],['/blog/posts/retirement-living-cost.html','노후 생활비 얼마면 될까 - 30년 준비 자금 계산법']]
     },
     '/calc/pension-welfare/long-term-care/': {
       key:'long-term-care',
       quick:['장기요양보험 등급은 1~5등급과 인지지원등급(6등급)으로 구분됩니다.','재가급여 본인부담률은 15%, 시설급여 본인부담률은 20%입니다.','기초수급자와 차상위계층은 본인부담금이 감경 또는 면제됩니다.','월 한도액을 초과하는 서비스 비용은 전액 본인이 부담합니다.'],
       related:[['/calc/pension-welfare/retirement-living/','노후 생활비','🏡'],['/calc/pension-welfare/pension-tax/','연금소득세','💰'],['/calc/health/bmi/','BMI','📏']],
-      guides:[]
+      guides:[['/blog/posts/retirement-living-cost.html','노후 생활비 얼마면 될까 - 30년 준비 자금 계산법']]
     }
   };
   const cfg=pages[path];

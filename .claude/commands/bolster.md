@@ -19,6 +19,8 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - date-add-guide.html (15,763자) - 2026-04-15 보강
 - diet-calorie-guide.html (17,247자) - 2026-04-16 보강
 - compound-interest.html (16,570자) - 2026-04-16 보강
+- saas-vs-self-build.html (16,024자) - 2026-04-17 보강
+- cagr-guide.html (16,081자) - 2026-04-17 보강
 
 ## 대상 글 (얇은 순서대로 작업)
 

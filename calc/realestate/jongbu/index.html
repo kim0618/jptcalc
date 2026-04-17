@@ -134,23 +134,38 @@
     lastReviewed: '2026.04',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>    <div class="siblings-grid">
-      <a href="/calc/realestate/brokerage/" class="sibling-link">중개수수료</a>
-      <a href="/calc/realestate/acquisition/" class="sibling-link">취득세</a>
-      <a href="/calc/realestate/conversion/" class="sibling-link">전월세전환</a>
-      <a href="/calc/realestate/loan/" class="sibling-link">대출이자</a>
-      <a href="/calc/realestate/rental/" class="sibling-link">임대수익률</a>
-      <a href="/calc/realestate/capital-gains/" class="sibling-link">양도소득세</a>
-      <a href="/calc/realestate/dsr/" class="sibling-link">대출한도(DSR)</a>
-      <a href="/calc/realestate/gift/" class="sibling-link">증여세</a>
-      <a href="/calc/realestate/inheritance/" class="sibling-link">상속세</a>
-      <a href="/calc/realestate/joint/" class="sibling-link">공동명의비교</a>
-      <a href="/calc/realestate/jongbu/" class="sibling-link current">종합부동산세</a>
-      <a href="/calc/realestate/propertytax/" class="sibling-link">재산세</a>
-      <a href="/calc/realestate/pyeong/" class="sibling-link">평수 변환</a>
-      <a href="/calc/realestate/registry/" class="sibling-link">등기비용</a>
-      <a href="/calc/realestate/property-tax-comprehensive/" class="sibling-link">재산세 종합</a>
+  <script src="/assets/trust-block.js"></script>
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>종합부동산세 계산기는 언제 쓰나요?</h2>
+      <p>공시가격이 과세 기준을 넘는지 확인하거나, 납부 예정 세액을 미리 파악할 때 씁니다. 일반·1세대1주택·다주택 중 보유 유형에 맞게 세율이 자동 적용됩니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>연말 납부 세액 확인</strong><span>12월 고지서 발송 전 예상 세액을 미리 파악해 자금 준비에 활용합니다.</span></div>
+        <div class="guide-box"><strong>보유세 시뮬레이션</strong><span>공시가격 상승 시 종부세가 얼마나 늘어나는지 직접 입력해 확인합니다.</span></div>
+        <div class="guide-box"><strong>절세 전략 비교</strong><span>1세대1주택 인정 여부, 공동명의 전환 효과를 수치로 비교하는 기초 자료로 씁니다.</span></div>
+      </div>
     </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item">
+        <h3>종합부동산세란 무엇인가요?</h3>
+        <p>일정 기준 이상의 부동산을 보유한 사람에게 부과하는 국세입니다. 매년 6월 1일 기준 보유자에게 12월에 부과되며, 일반 보유자는 공시가격 합산 9억원 초과, 1세대 1주택자는 12억원 초과 시 과세됩니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>종합부동산세 계산 구조는 어떻게 되나요?</h3>
+        <p>과세표준은 (공시가격 합산 - 기본공제) × 공정시장가액비율(60%)로 산정합니다. 여기에 세율과 누진공제를 적용한 뒤 농어촌특별세(종부세 × 20%)를 더하면 최종 납부액이 됩니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>과세 기준은 어떻게 되나요?</h3>
+        <p>일반 보유자는 공시가격 합산 9억원 초과 시 과세되고, 1세대 1주택자는 12억원 초과부터 부과됩니다. 법인은 기본공제 없이 전액 과세됩니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>종합부동산세 절세 방법은?</h3>
+        <p>공동명의 등기 시 각각 기본공제를 받아 합산 18억원 공제 효과가 생깁니다. 1세대 1주택자는 고령자·장기보유 공제를 최대 80%까지 받을 수 있습니다.</p>
+      </div>
+      <div class="update-note">최종 검토: 2026.04.15 · 계산 결과는 참고용입니다.</div>
+    </div>
+  </div>
   </div>
 </main>
 <footer class="site-footer">
@@ -249,8 +264,9 @@ function calcJongbu() {
     if (b <= 60000)  return b * 0.007 - 60;
     if (b <= 120000) return b * 0.010 - 240;
     if (b <= 250000) return b * 0.013 - 600;
-    if (b <= 940000) return b * 0.020 - 2350;
-    return b * 0.027 - 8930;
+    if (b <= 500000) return b * 0.015 - 1100;
+    if (b <= 940000) return b * 0.020 - 3600;
+    return b * 0.027 - 10180;
   }
   // 3주택 이상 세율 (2026년 기준, 국세청)
   function getJbTaxMulti(b) {
@@ -292,7 +308,7 @@ window.ARTICLE_INFO_CONFIG = {
   reviewBasis: '부동산 관련 법령 2026년 기준',
   basisDate: '2026년 기준',
   referenceOrg: '국토교통부·대법원',
-  lastReviewed: '2026.04.13',
+  lastReviewed: '2026.04.15',
   category: 'realestate'
 };
 </script>

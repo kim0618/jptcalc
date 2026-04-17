@@ -144,9 +144,9 @@
     </div>
     <div class="result-card" id="s2-result">
       <div class="result-row"><span class="result-label">시급</span><span class="result-value" id="s2-r-hourly">-</span></div>
-      <div class="result-row"><span class="result-label">일급 (8시간 기준)</span><span class="result-value" id="s2-r-daily">-</span></div>
-      <div class="result-row"><span class="result-label">주급 (주 40시간)</span><span class="result-value" id="s2-r-weekly">-</span></div>
-      <div class="result-row"><span class="result-label">월급 (월 209시간)</span><span class="result-value" id="s2-r-monthly">-</span></div>
+      <div class="result-row"><span class="result-label" id="s2-r-daily-label">일급 (8시간 기준)</span><span class="result-value" id="s2-r-daily">-</span></div>
+      <div class="result-row"><span class="result-label" id="s2-r-weekly-label">주급 (주 40시간)</span><span class="result-value" id="s2-r-weekly">-</span></div>
+      <div class="result-row"><span class="result-label" id="s2-r-monthly-label">월급 (월 209시간)</span><span class="result-value" id="s2-r-monthly">-</span></div>
       <div class="result-row result-total-row">
         <span class="result-total-label">연봉</span>
         <span class="result-total-value" id="s2-r-annual">-</span>
@@ -166,6 +166,7 @@
     <div class="guide-card faq-card">
       <h2>자주 묻는 질문</h2>
       <div class="faq-item"><h3>월 209시간은 어떻게 계산되나요?</h3><p>주 40시간 × 52주 ÷ 12개월 + 유급 주휴시간을 포함한 법정 기준입니다.</p></div>
+      <div class="faq-item"><h3>주 44시간·52시간 근무는 월 몇 시간인가요?</h3><p>주 44시간은 월 226시간(주휴 포함), 주 52시간은 월 260시간((52+8주휴)×52÷12)으로 환산됩니다. 사업장 취업규칙에 따라 다를 수 있으니 실제 근로계약서를 확인하세요.</p></div>
       <div class="faq-item"><h3>연봉 3,000만원이면 시급이 얼마인가요?</h3><p>월 209시간 기준 약 11,960원입니다. 실제로는 초과근무·수당 포함 여부에 따라 달라집니다.</p></div>
       <div class="faq-item"><h3>2026년 최저시급은 얼마인가요?</h3><p>10,320원이며, 월 209시간 기준 최저월급은 약 2,156,880원입니다.</p></div>
       <div class="update-note">최종 검토: 2026.03.24 · 계산 결과는 참고용입니다.</div>
@@ -173,10 +174,10 @@
   </div>
   <script>
   window.TRUST_BLOCK_CONFIG = {
-    standard: '최저임금법·근로기준법 2026년 최저시급 10,030원 기준',
+    standard: '최저임금법·근로기준법 2026년 최저시급 10,320원 기준',
     appliedFrom: '2026년 기준',
     exceptions: [
-      '2026년 최저시급은 10,030원이며 사업장별로 다를 수 있습니다',
+      '2026년 최저시급은 10,320원이며 사업장별로 다를 수 있습니다',
       '주휴수당은 주 15시간 이상 근무자에게 적용됩니다',
     ],
     references: [
@@ -266,7 +267,7 @@ function calcHourly() {
   res.classList.add('show');
   const annual = v * 10000;
   const monthlyPay = annual / 12;
-  const monthlyHours = weekHours === 40 ? 209 : weekHours === 44 ? 226 : 252;
+  const monthlyHours = weekHours === 40 ? 209 : weekHours === 44 ? 226 : 260;
   const hourly = monthlyPay / monthlyHours;
   const daily = hourly * 8;
   const weekly = hourly * weekHours;
@@ -293,14 +294,18 @@ function calcFromHourly() {
   if (!h || h <= 0) { res.classList.remove('show'); return; }
   res.classList.add('show');
   const daily = h * dayHours;
-  const weekly = h * 40;
-  const monthlyHours = 209;
+  const weeklyHours = dayHours * 5;
+  const weekly = h * weeklyHours;
+  const monthlyHours = dayHours === 8 ? 209 : dayHours === 9 ? 230 : 252;
   const monthly = h * monthlyHours;
   const annual = monthly * 12;
   document.getElementById('s2-r-hourly').textContent = comma(h);
   document.getElementById('s2-r-daily').textContent = comma(daily);
   document.getElementById('s2-r-weekly').textContent = comma(weekly);
   document.getElementById('s2-r-monthly').textContent = comma(monthly);
+  document.getElementById('s2-r-daily-label').textContent = `일급 (${dayHours}시간 기준)`;
+  document.getElementById('s2-r-weekly-label').textContent = `주급 (주 ${weeklyHours}시간)`;
+  document.getElementById('s2-r-monthly-label').textContent = `월급 (월 ${monthlyHours}시간)`;
   document.getElementById('s2-r-annual').textContent = fmtW(annual);
   const minWage = 10320;
   const cmp = document.getElementById('s2-min-compare');

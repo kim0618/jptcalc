@@ -52,7 +52,7 @@
     {"@type":"Question","name":"국민연금 조기수령하면 얼마나 줄어드나요?","acceptedAnswer":{"@type":"Answer","text":"조기노령연금은 60세부터 신청 가능하며, 1년 일찍 받을 때마다 연금액이 6%씩 감액됩니다. 5년 일찍(60세) 수령하면 30% 감액된 금액을 평생 받습니다. 반대로 최대 5년 연기하면 1년당 7.2%, 최대 36% 증액됩니다."}},
     {"@type":"Question","name":"국민연금 A값이란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"A값은 연금 수급 전 3년간 전체 국민연금 가입자의 평균 기준소득월액입니다. 2025년 기준 약 308만 9천원입니다. 균등 부분(A값 기반)은 저소득 가입자에게 유리하도록 설계된 재분배 요소입니다."}},
     {"@type":"Question","name":"이 계산기 결과가 실제 수령액과 같나요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 이 계산기는 2025년 기준 A값과 2026년 소득대체율(41.5%)을 적용한 간이 추정치입니다. 실제 수령액은 매년 변하는 A값, 가입 연도별 소득 재평가율, 부양가족 연금 여부 등에 따라 달라집니다. 정확한 예상 연금액은 국민연금공단 홈페이지(nps.or.kr)에서 조회 가능합니다."}},
-    {"@type":"Question","name":"국민연금과 기초연금을 동시에 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"원칙적으로 동시 수령 가능합니다. 다만 국민연금 수령액이 기준연금액(2025년 기준 342,510원)의 150%를 초과하면 기초연금이 일부 감액될 수 있습니다."}}
+    {"@type":"Question","name":"국민연금과 기초연금을 동시에 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"원칙적으로 동시 수령 가능합니다. 다만 국민연금 수령액이 기준연금액(2026년 기준 349,700원)의 150%를 초과하면 기초연금이 일부 감액될 수 있습니다."}}
   ]}
   </script>
   <link rel="stylesheet" href="/assets/pension-welfare-common.css" />
@@ -126,7 +126,7 @@
 <main class="page-wrap">
   <div class="page-header">
     <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/pension-welfare/">연금·복지 계산기</a><span class="breadcrumb-sep">›</span><span>국민연금 수령액 계산기</span></div>
-    <div class="page-header-badge">&#127981; 간이 계산 · 2025년 기준</div>
+    <div class="page-header-badge">&#127981; 간이 계산 · 2026년 기준</div>
     <h1>국민연금 수령액 계산기</h1>
     <p>가입기간과 평균 소득으로 예상 월 수령액을 간이 계산합니다. 정확한 금액은 공단 조회를 이용하세요.</p>
   </div>
@@ -165,7 +165,7 @@
         <span class="unit">만원</span>
       </div>
       <div class="converted" id="incomeConverted"></div>
-      <div class="field-hint">건강보험·국민연금 납부 기준 소득. 상한 617만원, 하한 37만원(2025년 기준).</div>
+      <div class="field-hint">건강보험·국민연금 납부 기준 소득. 상한 637만원, 하한 40만원(2025.7~2026.6 기준).</div>
     </div>
 
     <div class="field">
@@ -252,7 +252,7 @@
     </div>
 
     <div class="warning-box">
-      &#9888; 이 결과는 2025년 A값 · 2026년 소득대체율(41.5%)을 적용한 <strong>참고용 간이 추정치</strong>입니다. 실제 수령액은 가입 연도별 소득 재평가율, 부양가족 연금 등에 따라 달라집니다.
+      &#9888; 이 결과는 2025년 A값(3,089,062원) · 2026년 소득대체율(41.5%) · 2025.7~2026.6 소득 상하한(637만/40만)을 적용한 <strong>참고용 간이 추정치</strong>입니다. 실제 수령액은 가입 연도별 소득 재평가율, 부양가족 연금 등에 따라 달라집니다.
     </div>
     <div class="official-link-box">
       <a href="https://www.nps.or.kr/jsppage/etc/pension_est/pension_est.jsp" target="_blank" rel="noopener" class="official-link primary">&#127981; 국민연금공단 예상연금 조회 ↗</a>
@@ -319,7 +319,7 @@
       <h3>월 평균 기준소득월액</h3>
       <ul>
         <li>국민연금 보험료 납부 기준이 되는 소득으로, 실수령액과 다를 수 있습니다.</li>
-        <li>2025년 기준 상한액은 617만원, 하한액은 37만원입니다.</li>
+        <li>2025.7~2026.6 기준 상한액은 637만원, 하한액은 40만원입니다 (2026.7부터 659만원·41만원 예정).</li>
         <li>가입 기간 전체 평균을 입력하면 더 정확한 추정이 가능합니다.</li>
       </ul>
     </div>
@@ -335,7 +335,7 @@
       </div>
       <div class="faq-item">
         <h3>국민연금과 기초연금을 동시에 받을 수 있나요?</h3>
-        <p>원칙적으로 동시 수령 가능합니다. 단, 국민연금 수령액이 기준연금액(2025년 342,510원)의 150%를 초과하면 기초연금이 일부 감액될 수 있습니다.</p>
+        <p>원칙적으로 동시 수령 가능합니다. 단, 국민연금 수령액이 기준연금액(2026년 349,700원)의 150%를 초과하면 기초연금이 일부 감액될 수 있습니다.</p>
       </div>
       <div class="faq-item">
         <h3>이 계산기 결과가 실제 수령액과 같나요?</h3>
@@ -395,6 +395,8 @@
 <script>
 const A_VALUE = 3089062;
 const REPLACE_RATE = 0.415;
+const INCOME_MIN = 400000;
+const INCOME_MAX = 6370000;
 
 let receiptType = 'normal';
 let earlyYears = 1;
@@ -458,15 +460,19 @@ function calcBase(months, income) {
 }
 
 function calculate() {
-  const years = parseInt(document.getElementById('inpYears').value) || 0;
-  const months = parseInt(document.getElementById('inpMonths').value) || 0;
+  const years = Math.max(0, parseInt(document.getElementById('inpYears').value) || 0);
+  const months = Math.max(0, parseInt(document.getElementById('inpMonths').value) || 0);
   const totalMonths = years * 12 + months;
-  const income = (parseInt(document.getElementById('inpIncome').value) || 0) * 10000;
+  const rawIncome = Math.max(0, (parseInt(document.getElementById('inpIncome').value) || 0) * 10000);
 
-  if (totalMonths < 120 || income <= 0) {
+  if (totalMonths < 120 || rawIncome <= 0) {
     document.getElementById('resultCard').classList.remove('show');
     return;
   }
+
+  const income = Math.max(INCOME_MIN, Math.min(INCOME_MAX, rawIncome));
+  const capNote = rawIncome > INCOME_MAX ? ' (상한 637만원 적용)'
+                : rawIncome < INCOME_MIN ? ' (하한 40만원 적용)' : '';
 
   const base = calcBase(totalMonths, income);
   const earlyBase = Math.round(base * (1 - 0.06 * 5));
@@ -487,7 +493,7 @@ function calculate() {
   document.getElementById('rMonthly').textContent = fmt(displayVal);
   document.getElementById('rYearly').textContent = '연간 ' + fmtShort(displayVal * 12);
   document.getElementById('rPeriod').textContent = years + '년 ' + months + '개월 (' + totalMonths + '개월)';
-  document.getElementById('rIncome').textContent = fmt(income);
+  document.getElementById('rIncome').textContent = fmt(income) + capNote;
   document.getElementById('rType').textContent = typeLabel;
   document.getElementById('cEarly').textContent = fmt(earlyBase);
   document.getElementById('cNormal').textContent = fmt(base);

@@ -9,37 +9,41 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 모든 글 수정이 완료되면 이 스킬 파일을 삭제한다.
 
 ## 수정 완료된 글 (건너뛴다)
-- four-insurance-vs-33-comparison.html
-- realestate-agent-fee.html
-- subscription-score-guide.html
-- bmi-guide.html
-- freelancer-tax-refund.html
-- cat-lifetime-cost.html
-- savings-maturity-guide.html
-- salary-comparison-guide.html
-- ai-saas-cost-guide.html
-- annual-leave-guide.html
-- acquisition-tax-2026.html
-- visceral-fat-guide.html
-- gift-tax-guide.html
-- social-insurance-guide.html
-- military-discharge-date.html
-- pet-cost-saving-tips.html
-- blood-pressure-guide.html
-- pet-senior-care-guide.html
-- unemployment-benefit-guide.html
-- withholding-tax-guide.html
-- bmr-calories.html
-- capital-gains-tax.html
-- compound-interest.html
-- comprehensive-income-tax.html
-- hourly-wage-guide.html
-- jeonse-vs-wolse.html
-- dog-vs-cat-cost.html
-- dday-counter.html
-- deposit-interest-guide.html
-- claude-vs-gpt.html
-- freelancer-insurance-guide.html
+- four-insurance-vs-33-comparison.html - 2026-04-09 수정
+- realestate-agent-fee.html - 2026-04-09 수정
+- subscription-score-guide.html - 2026-04-09 수정
+- bmi-guide.html - 2026-04-09 수정
+- freelancer-tax-refund.html - 2026-04-10 수정
+- cat-lifetime-cost.html - 2026-04-10 수정
+- savings-maturity-guide.html - 2026-04-10 수정
+- salary-comparison-guide.html - 2026-04-10 수정
+- ai-saas-cost-guide.html - 2026-04-11 수정
+- annual-leave-guide.html - 2026-04-11 수정
+- acquisition-tax-2026.html - 2026-04-11 수정
+- visceral-fat-guide.html - 2026-04-11 수정
+- gift-tax-guide.html - 2026-04-12 수정
+- social-insurance-guide.html - 2026-04-12 수정
+- military-discharge-date.html - 2026-04-12 수정
+- pet-cost-saving-tips.html - 2026-04-12 수정
+- blood-pressure-guide.html - 2026-04-13 수정
+- pet-senior-care-guide.html - 2026-04-13 수정
+- unemployment-benefit-guide.html - 2026-04-13 수정
+- withholding-tax-guide.html - 2026-04-13 수정
+- bmr-calories.html - 2026-04-14 수정
+- capital-gains-tax.html - 2026-04-14 수정
+- compound-interest.html - 2026-04-14 수정
+- comprehensive-income-tax.html - 2026-04-14 수정
+- hourly-wage-guide.html - 2026-04-15 수정
+- jeonse-vs-wolse.html - 2026-04-15 수정
+- dog-vs-cat-cost.html - 2026-04-15 수정
+- dday-counter.html - 2026-04-15 수정
+- deposit-interest-guide.html - 2026-04-16 수정
+- claude-vs-gpt.html - 2026-04-16 수정
+- freelancer-insurance-guide.html - 2026-04-16 수정
+- salary-negotiation.html - 2026-04-16 수정
+- mortgage-dsr-guide.html - 2026-04-17 수정
+- income-tax-deduction.html - 2026-04-17 수정
+- pet-adoption-cost-guide.html - 2026-04-17 수정
 
 ## 작업 순서
 

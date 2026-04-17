@@ -89,12 +89,12 @@
       <div class="card-title">예금 정보</div>
       <div class="field">
         <div class="field-label">예치금액 <span class="label-hint">만원 단위</span></div>
-        <div class="input-wrap"><input type="number" id="dep-amount" placeholder="예) 1000" oninput="calc()" /><span class="unit">만원</span></div>
+        <div class="input-wrap"><input type="number" id="dep-amount" min="0" placeholder="예) 1000" oninput="calc()" /><span class="unit">만원</span></div>
         <div class="converted" id="dep-display"></div>
       </div>
       <div class="field">
         <div class="field-label">연 금리</div>
-        <div class="input-wrap"><input type="number" id="dep-rate" placeholder="예) 3.5" step="0.1" oninput="calc()" /><span class="unit">%</span></div>
+        <div class="input-wrap"><input type="number" id="dep-rate" min="0" placeholder="예) 3.5" step="0.1" oninput="calc()" /><span class="unit">%</span></div>
       </div>
       <div class="field">
         <div class="field-label">예치 기간</div>
@@ -221,7 +221,7 @@ function calc(){
   const r=parseFloat(document.getElementById('dep-rate').value)||0;
   showConverted(document.getElementById('dep-amount'),document.getElementById('dep-display'));
   const res=document.getElementById('result');
-  if(!a||!r){res.classList.remove('show');return;}
+  if(a<=0||r<=0){res.classList.remove('show');return;}
   res.classList.add('show');
   const gross=a*10000*(r/100)*(period/12);
   const tax=gross*0.154;

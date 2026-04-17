@@ -50,7 +50,7 @@
   <div class="page-header"><div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/health/">건강 계산기</a><span class="breadcrumb-sep">›</span><span>적정체중 계산기</span></div><div class="page-header-badge">🎯 무료 온라인 계산기</div><h1>적정체중 계산기</h1><p>BMI 22 기준과 브로카 공식으로 키에 맞는 적정 체중을 계산합니다</p></div>
 
   <div class="card"><div class="card-title">키 입력</div><div class="field"><div class="field-label">키</div><div class="input-wrap"><input type="number" id="iw-height" placeholder="예) 170" oninput="calcIdealWeight()" /><span class="unit">cm</span></div></div><div class="seg-group" id="iw-sex-group"><button class="seg-btn active" onclick="setIwSex('male',this)">남성</button><button class="seg-btn" onclick="setIwSex('female',this)">여성</button></div></div>
-  <div class="result-card" id="s2-result"><div class="result-highlight"><div class="rh-label">적정 체중 (BMI 22 기준)</div><div class="rh-value" id="iw-ideal">-</div><div class="rh-sub" id="iw-range">정상 범위: -</div></div><div class="result-row"><span class="result-label">저체중 기준 이하</span><span class="result-value" id="iw-under">-</span></div><div class="result-row"><span class="result-label">정상 범위</span><span class="result-value" id="iw-normal">-</span></div><div class="result-row"><span class="result-label">과체중 시작</span><span class="result-value" id="iw-over">-</span></div><div class="result-row"><span class="result-label">비만 시작</span><span class="result-value" id="iw-obese">-</span></div><div class="result-row result-total-row"><span class="result-total-label">브로카 공식 적정체중</span><span class="result-total-value" id="iw-broca">-</span></div><p class="result-note">※ BMI 22 기준 = 키(m)² × 22. 브로카 공식(남)= (키-100)×0.9, (여)= (키-100)×0.85</p></div>
+  <div class="result-card" id="s2-result"><div class="result-highlight"><div class="rh-label">적정 체중 (BMI 22 기준)</div><div class="rh-value" id="iw-ideal">-</div><div class="rh-sub" id="iw-range">정상 범위: -</div></div><div class="result-row"><span class="result-label">저체중 경계 (BMI 18.5)</span><span class="result-value" id="iw-under">-</span></div><div class="result-row"><span class="result-label">정상 범위</span><span class="result-value" id="iw-normal">-</span></div><div class="result-row"><span class="result-label">과체중 시작</span><span class="result-value" id="iw-over">-</span></div><div class="result-row"><span class="result-label">비만 시작</span><span class="result-value" id="iw-obese">-</span></div><div class="result-row result-total-row"><span class="result-total-label">브로카 공식 적정체중</span><span class="result-total-value" id="iw-broca">-</span></div><p class="result-note">※ BMI 22 기준 = 키(m)² × 22. 브로카 공식(남)= (키-100)×0.9, (여)= (키-100)×0.85</p></div>
   <div class="seo-card"><h2>적정체중 계산기 이용 안내</h2><h3>적정체중 계산법</h3><p>가장 일반적인 방법은 BMI 22 기준입니다. 적정체중 = 키(m)² × 22. 브로카 공식은 남성 (키-100)×0.9, 여성 (키-100)×0.85입니다.</p></div>
 
   <section class="guide-section seo-card">
@@ -69,14 +69,21 @@
     <p>적정체중은 단일 수치보다 범위로 이해하는 것이 좋습니다. BMI 18.5~23 사이가 한국인의 정상 체중 범위이며, 개인의 근육량, 골격 크기, 체형에 따라 적정 범위가 달라질 수 있습니다.</p>
   </section>
 
-  <section class="guide-section seo-card">
-    <h2>자주 묻는 질문 (FAQ)</h2>
-    <h3>Q. BMI 22 기준과 브로카 공식 중 어떤 것이 더 정확한가요?</h3>
-    <p>BMI 22 기준이 통계적으로 더 신뢰할 수 있는 방법입니다. 브로카 공식은 간편하지만 키가 매우 크거나 작은 경우 오차가 커질 수 있습니다. 두 공식의 결과를 참고하되, 체지방률과 함께 종합적으로 판단하세요.</p>
-    <h3>Q. 적정체중과 미용체중은 다른 건가요?</h3>
-    <p>네, 다릅니다. 적정체중은 건강 기준(BMI 22)이고, 미용체중은 BMI 20 기준으로 더 낮습니다. 건강을 위해서는 적정체중을 목표로 하는 것이 바람직합니다.</p>
-    <h3>Q. 근육량이 많은 사람도 같은 기준을 적용하나요?</h3>
-    <p>근육량이 많은 사람은 체중이 적정체중보다 높아도 건강할 수 있습니다. 이 경우 체지방률을 함께 확인하는 것이 정확한 건강 상태 파악에 도움이 됩니다.</p>
+  <section class="guide-section seo-card faq-card">
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-item">
+      <h3>BMI 22 기준과 브로카 공식 중 어떤 것이 더 정확한가요?</h3>
+      <p>BMI 22 기준이 통계적으로 더 신뢰할 수 있습니다. 브로카 공식은 간편하지만 키가 매우 크거나 작은 경우 오차가 커집니다. 두 공식 결과를 참고하고, 체지방률과 함께 종합적으로 판단하는 것이 좋습니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>적정체중과 미용체중은 다른 건가요?</h3>
+      <p>네, 다릅니다. 적정체중은 건강 기준(BMI 22)이고, 미용체중은 BMI 20 기준으로 더 낮습니다. 건강을 위해서는 적정체중을 목표로 하는 것이 바람직하며, 미용체중을 무리하게 추구하면 건강에 해로울 수 있습니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>근육량이 많은 사람도 같은 기준을 적용하나요?</h3>
+      <p>근육량이 많은 사람은 체중이 적정체중보다 높아도 건강할 수 있습니다. 단일 수치보다 BMI 18.5~23 범위로 이해하고, 체지방률을 함께 확인하는 것이 정확한 건강 상태 파악에 도움이 됩니다.</p>
+    </div>
+    <div class="update-note" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:10px 14px;margin-top:14px;font-size:12px;color:#6B7280">최종 검토: 2026.04.15 · 이 계산기는 건강 참고용이며 의료 진단을 대체하지 않습니다. 체중 관리나 건강 상담은 의료 전문가와 상담하세요.</div>
   </section>
 
   <div class="update-note" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:10px 14px;margin-bottom:16px;font-size:12px;color:#6B7280">이 계산기는 건강 참고용이며 의료 진단을 대체하지 않습니다. 체중 관리나 건강 상담은 의료 전문가와 상담하세요.</div>

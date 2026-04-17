@@ -4,14 +4,14 @@
  *   - /calc/ai/api-token/   (API 토큰 비용 계산기 드롭다운 + 계산 로직)
  *   - /calc/ai/llm-comparison/  (LLM 성능·가격 비교표)
  *
- * 최종 확인: 2026-03-25
+ * 최종 확인: 2026-04-14
  * 가격 변경 시 각 벤더 공식 사이트에서 확인 후 이 파일의 input/output 값만 업데이트하세요.
  */
 
 window.AI_MODELS = {
   gpt4o:         { name: 'GPT-4o',            input: 2.50,  output: 10.00, ctx: '128K', coding: 88, reasoning: 88 },
   gpt4omini:     { name: 'GPT-4o-mini',        input: 0.15,  output:  0.60, ctx: '128K', coding: 78, reasoning: 75 },
-  claude4opus:   { name: 'Claude Opus 4.6',    input: 15.00, output: 75.00, ctx: '200K', coding: 95, reasoning: 96 },
+  claude4opus:   { name: 'Claude Opus 4.7',    input: 15.00, output: 75.00, ctx: '200K', coding: 95, reasoning: 96 },
   claude4sonnet: { name: 'Claude Sonnet 4.6',  input:  3.00, output: 15.00, ctx: '200K', coding: 92, reasoning: 90 },
   claude4haiku:  { name: 'Claude Haiku 4.5',   input:  0.80, output:  4.00, ctx: '200K', coding: 82, reasoning: 80 },
   gemini2pro:    { name: 'Gemini 2.5 Pro',     input: 1.25,  output: 10.00, ctx: '1M',   coding: 87, reasoning: 92 },

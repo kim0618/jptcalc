@@ -118,7 +118,8 @@ function calcDiff(){
   if(!start||!end){alert('시작 날짜와 종료 날짜를 모두 입력해주세요.');return}
   const totalDays=Math.abs(diffDays(start,end));const weeks=Math.floor(totalDays/7);const remDays=totalDays%7;const totalMonths=(totalDays/30.4375).toFixed(1);const totalYears=(totalDays/365.25).toFixed(2);
   let bizDays=0;const minD=start<end?start:end;const maxD=start<end?end:start;
-  for(let d=new Date(minD);d<maxD;d.setDate(d.getDate()+1)){const dow=d.getDay();if(dow!==0&&dow!==6)bizDays++}
+  const iter=new Date(minD);iter.setDate(iter.getDate()+1);
+  while(iter<=maxD){const dow=iter.getDay();if(dow!==0&&dow!==6)bizDays++;iter.setDate(iter.getDate()+1)}
   document.getElementById('diff-grid').innerHTML='<div class="date-result-box"><div class="drb-label">총 일수</div><div class="drb-value">'+totalDays.toLocaleString()+'<span class="drb-unit">일</span></div></div><div class="date-result-box"><div class="drb-label">업무일</div><div class="drb-value">'+bizDays.toLocaleString()+'<span class="drb-unit">일</span></div></div><div class="date-result-box"><div class="drb-label">주수</div><div class="drb-value">'+weeks+'<span class="drb-unit">주</span> '+remDays+'<span class="drb-unit">일</span></div></div><div class="date-result-box"><div class="drb-label">개월 수</div><div class="drb-value">'+totalMonths+'<span class="drb-unit">개월</span></div></div>';
   const earlier=start<end?start:end;const later=start<end?end:start;
   document.getElementById('diff-detail').innerHTML='<div class="result-row"><span class="result-label">시작 날짜</span><span class="result-value">'+koDateStr(earlier)+' ('+KO_DAYS[earlier.getDay()]+')</span></div><div class="result-row"><span class="result-label">종료 날짜</span><span class="result-value">'+koDateStr(later)+' ('+KO_DAYS[later.getDay()]+')</span></div><div class="result-row result-total-row"><span class="result-total-label">총 기간</span><span class="result-total-value">'+totalDays.toLocaleString()+'일 (약 '+totalYears+'년)</span></div>';

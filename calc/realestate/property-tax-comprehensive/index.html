@@ -251,23 +251,7 @@
     lastReviewed: '2026.03',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>    <div class="siblings-grid">
-      <a href="/calc/realestate/brokerage/" class="sibling-link">중개수수료</a>
-      <a href="/calc/realestate/acquisition/" class="sibling-link">취득세</a>
-      <a href="/calc/realestate/conversion/" class="sibling-link">전월세전환</a>
-      <a href="/calc/realestate/loan/" class="sibling-link">대출이자</a>
-      <a href="/calc/realestate/rental/" class="sibling-link">임대수익률</a>
-      <a href="/calc/realestate/capital-gains/" class="sibling-link">양도소득세</a>
-      <a href="/calc/realestate/dsr/" class="sibling-link">대출한도(DSR)</a>
-      <a href="/calc/realestate/gift/" class="sibling-link">증여세</a>
-      <a href="/calc/realestate/inheritance/" class="sibling-link">상속세</a>
-      <a href="/calc/realestate/joint/" class="sibling-link">공동명의비교</a>
-      <a href="/calc/realestate/jongbu/" class="sibling-link">종합부동산세</a>
-      <a href="/calc/realestate/propertytax/" class="sibling-link">재산세</a>
-      <a href="/calc/realestate/pyeong/" class="sibling-link">평수 변환</a>
-      <a href="/calc/realestate/registry/" class="sibling-link">등기비용</a>
-      <a href="/calc/realestate/property-tax-comprehensive/" class="sibling-link current">재산세 종합</a>
-    </div>
+  <script src="/assets/trust-block.js"></script>
   </div>
 </main>
 
@@ -344,16 +328,27 @@ function getPropertyTax(baseMan) {
   return 57 + (baseMan - 30000) * 0.004;                                 // 57만원 + 초과분 0.4%
 }
 
-// 종부세 세율 (만원 단위 과세표준)
+// 종부세 세율 (만원 단위 과세표준) - 일반/2주택 이하
 function getJbTax(b) {
   if (b <= 0)      return 0;
   if (b <= 30000)  return b * 0.005;
   if (b <= 60000)  return b * 0.007 - 60;
   if (b <= 120000) return b * 0.010 - 240;
-  if (b <= 250000) return b * 0.014 - 720;
-  if (b <= 500000) return b * 0.020 - 2220;
-  if (b <= 940000) return b * 0.027 - 5720;
-  return b * 0.050 - 27340;
+  if (b <= 250000) return b * 0.013 - 600;
+  if (b <= 500000) return b * 0.015 - 1100;
+  if (b <= 940000) return b * 0.020 - 3600;
+  return b * 0.027 - 10180;
+}
+// 종부세 세율 - 3주택 이상
+function getJbTaxMulti(b) {
+  if (b <= 0)      return 0;
+  if (b <= 30000)  return b * 0.005;
+  if (b <= 60000)  return b * 0.007 - 60;
+  if (b <= 120000) return b * 0.010 - 240;
+  if (b <= 250000) return b * 0.020 - 1440;
+  if (b <= 500000) return b * 0.030 - 3940;
+  if (b <= 940000) return b * 0.040 - 8940;
+  return b * 0.050 - 18340;
 }
 
 function calcPtcComprehensive() {
@@ -366,7 +361,7 @@ function calcPtcComprehensive() {
   // ── 재산세 계산 ──
   const ptBaseMan    = priceMan * 0.60;                 // 공정시장가액비율 60%
   const ptTaxMan     = getPropertyTax(ptBaseMan);       // 재산세 본세
-  const urbanTaxMan  = ptTaxMan * 0.14;                 // 도시지역분 (14% 개략)
+  const urbanTaxMan  = ptBaseMan * 0.0014;               // 도시지역분 (과세표준 × 0.14%)
   const eduTaxMan    = ptTaxMan * 0.20;                 // 지방교육세 20%
 
   // ── 종합부동산세 계산 ──
@@ -376,8 +371,7 @@ function calcPtcComprehensive() {
 
   const jbTaxableMan = Math.max(priceMan - jbDeductMan, 0);
   const jbBaseMan    = jbTaxableMan * 0.60;
-  let   jbTaxMan     = getJbTax(jbBaseMan);
-  if (ptcType === '다주택·법인') jbTaxMan *= 1.5;
+  let   jbTaxMan     = ptcType === '다주택·법인' ? getJbTaxMulti(jbBaseMan) : getJbTax(jbBaseMan);
   const ruralTaxMan  = jbTaxMan * 0.20;
 
   // ── 합계 ──

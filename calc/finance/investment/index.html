@@ -88,19 +88,19 @@
       <div class="card-title">투자 정보</div>
       <div class="field">
         <div class="field-label">매입 금액 <span class="label-hint">만원 단위</span></div>
-        <div class="input-wrap"><input type="number" id="inv-buy" placeholder="예) 1000" oninput="calc()" /><span class="unit">만원</span></div>
+        <div class="input-wrap"><input type="number" id="inv-buy" min="0" placeholder="예) 1000" oninput="calc()" /><span class="unit">만원</span></div>
       </div>
       <div class="field">
         <div class="field-label">현재 (매도) 금액 <span class="label-hint">만원 단위</span></div>
-        <div class="input-wrap"><input type="number" id="inv-sell" placeholder="예) 1350" oninput="calc()" /><span class="unit">만원</span></div>
+        <div class="input-wrap"><input type="number" id="inv-sell" min="0" placeholder="예) 1350" oninput="calc()" /><span class="unit">만원</span></div>
       </div>
       <div class="field">
         <div class="field-label">보유 기간</div>
-        <div class="input-wrap"><input type="number" id="inv-years" placeholder="예) 3" step="0.5" oninput="calc()" /><span class="unit">년</span></div>
+        <div class="input-wrap"><input type="number" id="inv-years" min="0" placeholder="예) 3" step="0.5" oninput="calc()" /><span class="unit">년</span></div>
       </div>
       <div class="field">
         <div class="field-label">배당·이자 수익 <span class="label-hint">만원 단위</span></div>
-        <div class="input-wrap"><input type="number" id="inv-dividend" placeholder="예) 50" oninput="calc()" /><span class="unit">만원</span></div>
+        <div class="input-wrap"><input type="number" id="inv-dividend" min="0" placeholder="예) 50" oninput="calc()" /><span class="unit">만원</span></div>
         <div class="field-hint">보유 기간 전체 합산</div>
       </div>
     </div>
@@ -118,7 +118,7 @@
         <span class="result-total-label">연평균 수익률 (CAGR)</span>
         <span class="result-total-value" id="inv-r-cagr">-</span>
       </div>
-      <p class="result-note">※ CAGR(연평균복합성장률) = (최종가치/초기가치)^(1/기간) - 1. 세금 미반영 수익률입니다.</p>
+      <p class="result-note">※ CAGR(연평균복합성장률) = ((매도가+배당)/매입가)^(1/기간) - 1. 배당 재투자를 가정하며 세금은 미반영입니다.</p>
     </div>
   <div class="guide-section">
     <div class="guide-card">
@@ -180,18 +180,20 @@ function calc(){
   const years=parseFloat(document.getElementById('inv-years').value)||0;
   const div=parseFloat(document.getElementById('inv-dividend').value)||0;
   const res=document.getElementById('result');
-  if(!buy||!sell){res.classList.remove('show');return;}
+  if(buy<=0||sell<0||years<0||div<0){res.classList.remove('show');return;}
   res.classList.add('show');
   const gain=sell-buy, profit=gain+div;
   const totalRate=(profit/buy*100).toFixed(2);
-  const cagr=years>0?(Math.pow((sell+div)/buy,1/years)-1)*100:0;
+  const endValue=sell+div;
+  const cagrValid=years>0&&endValue>0;
+  const cagr=cagrValid?(Math.pow(endValue/buy,1/years)-1)*100:0;
   document.getElementById('inv-total-rate').textContent=(totalRate>=0?'+':'')+totalRate+'%';
-  document.getElementById('inv-cagr-sub').textContent='연평균 수익률 (CAGR) '+(years>0?(cagr>=0?'+':'')+cagr.toFixed(2)+'%':'기간 입력 필요');
+  document.getElementById('inv-cagr-sub').textContent='연평균 수익률 (CAGR) '+(cagrValid?(cagr>=0?'+':'')+cagr.toFixed(2)+'%':years>0?'계산 불가':'기간 입력 필요');
   document.getElementById('inv-r-buy').textContent=Wm(buy);
   document.getElementById('inv-r-gain').textContent=(gain>=0?'+':'')+Wm(gain);
   document.getElementById('inv-r-div').textContent='+'+Wm(div);
   document.getElementById('inv-r-profit').textContent=(profit>=0?'+':'')+Wm(profit);
-  document.getElementById('inv-r-cagr').textContent=years>0?(cagr>=0?'+':'')+cagr.toFixed(2)+'%':'-';
+  document.getElementById('inv-r-cagr').textContent=cagrValid?(cagr>=0?'+':'')+cagr.toFixed(2)+'%':'-';
 }
 </script>
 

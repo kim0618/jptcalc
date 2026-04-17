@@ -80,7 +80,7 @@
 <main class="page-wrap">
   <div class="page-header">
     <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/ai/">AI / 테크 비용 계산기</a><span class="breadcrumb-sep">›</span><span>GPU 클라우드 비용 비교 계산기</span></div>
-    <div class="page-header-badge">💻 2026년 3월 확인 기준 · 온디맨드 가격</div>
+    <div class="page-header-badge">💻 2026년 4월 확인 기준 · 온디맨드 가격</div>
     <h1>GPU 클라우드 비용 비교 계산기</h1>
     <p>AWS·GCP·Azure GPU 클라우드 비용을 한눈에 비교하세요</p>
   </div>
@@ -120,7 +120,7 @@
       <div class="faq-item"><h3>스팟 인스턴스는 얼마나 저렴한가요?</h3><p>온디맨드 대비 50~70% 저렴하지만, 수요에 따라 중단될 수 있어 학습보다는 추론이나 배치 작업에 적합합니다.</p></div>
       <div class="faq-item"><h3>A100과 H100 중 어느 것을 선택해야 하나요?</h3><p>H100은 A100 대비 2~3배 빠른 학습 성능을 제공하지만 시간당 비용도 높습니다. 총 비용은 작업 시간까지 고려해야 합니다.</p></div>
       <div class="faq-item"><h3>예약 인스턴스는 얼마나 할인되나요?</h3><p>1년 약정 시 약 30~40%, 3년 약정 시 최대 60%까지 할인됩니다. 장기 운영이 확실한 경우 유리합니다.</p></div>
-      <div class="update-note">최종 검토: 2026.03.25 · 가격은 각 벤더 공식 사이트 기준이며 변동될 수 있습니다.</div>
+      <div class="update-note">최종 검토: 2026.04.14 · 가격은 각 벤더 공식 사이트 기준이며 변동될 수 있습니다.</div>
     </div>
   </div>
   <script>
@@ -169,7 +169,7 @@ function calc(){
   const h=parseFloat(hv)||0,cnt=parseInt(cv)||1,ex=parseFloat(ev)||1450;
   if(!h){document.getElementById('result').classList.remove('show');return;}
   const g=GPU[gpuType],ps=[{name:'AWS',hr:g.aws},{name:'GCP',hr:g.gcp},{name:'Azure',hr:g.azure}],mn=Math.min(...ps.map(p=>p.hr));
-  let tbl=`<div style="overflow-x:auto;-webkit-overflow-scrolling:touch"><table class="gpu-table"><thead><tr><th>클라우드</th><th>시간당</th><th>일 비용</th><th>월 비용</th><th>월(원화)</th></tr></thead><tbody>`;
+  let tbl=`<div style="overflow-x:auto;-webkit-overflow-scrolling:touch"><table class="gpu-table"><thead><tr><th>클라우드</th><th>시간당<br>(전체)</th><th>일 비용</th><th>월 비용</th><th>월(원화)</th></tr></thead><tbody>`;
   ps.forEach(p=>{const d=p.hr*h*cnt,m=d*30,isBest=p.hr===mn;tbl+=`<tr class="${isBest?'best-row':''}"><td>${p.name}${isBest?'<span class="best-badge">최저가</span>':''}</td><td>${fmtUsd(p.hr*cnt)}</td><td>${fmtUsd(d)}</td><td>${fmtUsd(m)}</td><td class="krw-cell">${fmtKrw(m*ex)}</td></tr>`;});
   tbl+='</tbody></table></div>';
   document.getElementById('result-content').innerHTML=`<div class="result-summary"><div class="summary-chip"><div class="chip-label">GPU</div><div class="chip-value">${g.name} × ${cnt}개</div></div><div class="summary-chip"><div class="chip-label">일 사용</div><div class="chip-value">${h}시간</div></div><div class="summary-chip"><div class="chip-label">환율</div><div class="chip-value">${ex.toLocaleString()}원/$</div></div></div>${tbl}<div class="result-note">* 온디맨드 가격 기준 · 스팟 인스턴스 사용 시 50~70% 절감 가능 · 1년 예약 시 약 30~40% 할인</div>`;

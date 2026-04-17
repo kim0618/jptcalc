@@ -46,7 +46,7 @@
     ]
   }
   </script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"3.3% 프리랜서도 부가가치세를 내야 하나요?","acceptedAnswer":{"@type":"Answer","text":"사업자등록 없이 3.3% 원천징수만 받는 경우에는 부가세 대상이 아닙니다. 사업자등록을 하고 세금계산서를 발행하면 부가세 신고 대상이 됩니다."}},{"@type":"Question","name":"간이과세자와 일반과세자는 어떻게 구분하나요?","acceptedAnswer":{"@type":"Answer","text":"직전 연도 매출이 1억 400만원 미만이면 간이과세자, 이상이면 일반과세자입니다. 일부 업종은 간이과세가 적용되지 않을 수 있으며, 연 4,800만원 미만 간이과세자는 부가세 납부가 면제될 수 있습니다."}},{"@type":"Question","name":"매입세액 공제는 어떤 경우에 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"사업과 관련된 지출에 대해 세금계산서를 받은 경우 매입세액을 공제받을 수 있습니다. 간이과세자는 매입액의 0.5%만 공제되며, 일반과세자는 매입세액 전액을 공제받습니다."}},{"@type":"Question","name":"일반과세자와 간이과세자의 부가세 계산 방식이 어떻게 다른가요?","acceptedAnswer":{"@type":"Answer","text":"일반과세자는 매출세액(매출의 10%)에서 매입세액을 차감한 금액을 납부합니다. 간이과세자는 업종별 부가가치율(15~50%)을 적용한 부가가치액에 10%를 곱해 세액을 산출합니다."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"3.3% 프리랜서도 부가가치세를 내야 하나요?","acceptedAnswer":{"@type":"Answer","text":"사업자등록 없이 3.3% 원천징수만 받는 경우에는 부가세 대상이 아닙니다. 사업자등록을 하고 세금계산서를 발행하면 부가세 신고 대상이 됩니다."}},{"@type":"Question","name":"간이과세자와 일반과세자는 어떻게 구분하나요?","acceptedAnswer":{"@type":"Answer","text":"직전 연도 매출이 1억 400만원 미만이면 간이과세자, 이상이면 일반과세자입니다. 일부 업종은 간이과세가 적용되지 않을 수 있으며, 연 4,800만원 미만 간이과세자는 부가세 납부가 면제될 수 있습니다."}},{"@type":"Question","name":"매입세액 공제는 어떤 경우에 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"사업과 관련된 지출에 대해 세금계산서를 받은 경우 매입세액을 공제받을 수 있습니다. 간이과세자는 매입액의 0.5%만 공제되며, 일반과세자는 매입세액 전액을 공제받습니다."}},{"@type":"Question","name":"일반과세자와 간이과세자의 부가세 계산 방식이 어떻게 다른가요?","acceptedAnswer":{"@type":"Answer","text":"일반과세자는 매출세액(매출의 10%)에서 매입세액을 차감한 금액을 납부합니다. 간이과세자는 업종별 부가가치율(15~40%)을 적용한 부가가치액에 10%를 곱해 세액을 산출합니다."}}]}</script>
   <link rel="stylesheet" href="/assets/tax-common.css" />
   <style>
     /* vat 고유 스타일 - 공통 스타일은 /assets/tax-common.css 참조 */
@@ -127,12 +127,13 @@
     <div id="vat-simple-rate" class="field">
       <div class="field-label"><span>업종별 부가가치율</span></div>
       <div class="seg-group" style="flex-wrap:wrap;">
-        <button class="seg-btn active" onclick="setSimpleRate(0.30,this)" style="flex:0 0 calc(33% - 2px)">서비스 30%</button>
-        <button class="seg-btn" onclick="setSimpleRate(0.40,this)" style="flex:0 0 calc(33% - 2px)">음식·숙박 40%</button>
-        <button class="seg-btn" onclick="setSimpleRate(0.20,this)" style="flex:0 0 calc(33% - 2px)">제조 20%</button>
-        <button class="seg-btn" onclick="setSimpleRate(0.15,this)" style="flex:0 0 calc(33% - 2px)">소매 15%</button>
-        <button class="seg-btn" onclick="setSimpleRate(0.50,this)" style="flex:0 0 calc(33% - 2px)">부동산 50%</button>
+        <button class="seg-btn" onclick="setSimpleRate(0.15,this)" style="flex:0 0 calc(33% - 2px)">소매·음식 15%</button>
+        <button class="seg-btn" onclick="setSimpleRate(0.20,this)" style="flex:0 0 calc(33% - 2px)">제조·농어업 20%</button>
+        <button class="seg-btn" onclick="setSimpleRate(0.25,this)" style="flex:0 0 calc(33% - 2px)">숙박·운수 25%</button>
+        <button class="seg-btn active" onclick="setSimpleRate(0.30,this)" style="flex:0 0 calc(33% - 2px)">건설·전문서비스 30%</button>
+        <button class="seg-btn" onclick="setSimpleRate(0.40,this)" style="flex:0 0 calc(33% - 2px)">금융·부동산임대 40%</button>
       </div>
+      <div style="font-size:11px;color:var(--gray-500);margin-top:4px;">※ 2021년 이후 간이과세 업종별 부가가치율(15~40%) 기준. 정확한 업종 분류는 홈택스 업종코드 확인이 필요합니다.</div>
     </div>
     <div class="result-card" id="vat-result"><div id="vat-result-content"></div></div>
   </div>
@@ -178,6 +179,7 @@
       <a href="/calc/tax/vat/" class="sibling-link current">&#128196; 부가가치세</a>
       <a href="/calc/tax/insurance-comparison/" class="sibling-link">&#128101; 4대보험 비교</a>
       <a href="/calc/tax/freelancer-income/" class="sibling-link">&#128179; 월 순수입</a>
+      <a href="/calc/tax/medical-expense/" class="sibling-link">&#127973; 의료비 세액공제</a>
     </div>
   </div>
 </main>

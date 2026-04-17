@@ -105,12 +105,12 @@
       <div class="card-title">대출 정보</div>
       <div class="field">
         <div class="field-label">대출 원금 <span class="label-hint">만원 단위</span></div>
-        <div class="input-wrap"><input type="number" id="loan-amount" placeholder="예) 30000" oninput="calc()" /><span class="unit">만원</span></div>
+        <div class="input-wrap"><input type="number" id="loan-amount" min="0" placeholder="예) 30000" oninput="calc()" /><span class="unit">만원</span></div>
         <div class="converted" id="loan-display"></div>
       </div>
       <div class="field">
         <div class="field-label">연 금리</div>
-        <div class="input-wrap"><input type="number" id="loan-rate" placeholder="예) 4.5" step="0.1" oninput="calc()" /><span class="unit">%</span></div>
+        <div class="input-wrap"><input type="number" id="loan-rate" min="0" placeholder="예) 4.5" step="0.1" oninput="calc()" /><span class="unit">%</span></div>
       </div>
       <div class="field">
         <div class="field-label">대출 기간</div>
@@ -319,7 +319,7 @@ function showConverted(inputEl,dispEl){const v=parseFloat(inputEl.value);if(!v||
 function buildSchedule(principal,mr,n){
   var data=[];
   if(loanType==='equal'){
-    var mp=principal*mr*Math.pow(1+mr,n)/(Math.pow(1+mr,n)-1);
+    var mp=mr>0?principal*mr*Math.pow(1+mr,n)/(Math.pow(1+mr,n)-1):principal/n;
     var bal=principal;
     for(var i=1;i<=n;i++){
       var interest=bal*mr;
@@ -386,14 +386,14 @@ function calc(){
   showConverted(document.getElementById('loan-amount'),document.getElementById('loan-display'));
   const res=document.getElementById('result');
   const scard=document.getElementById('schedule-card');
-  if(!P||!r){res.classList.remove('show');scard.classList.remove('show');scheduleData=[];return;}
+  if(P<=0||r<0){res.classList.remove('show');scard.classList.remove('show');scheduleData=[];return;}
   res.classList.add('show');
   const principal=P*10000;
   const n=loanPeriod*12;
   const mr=r/100/12;
   let monthly=0, totalInterest=0, totalPay=0;
   if(loanType==='equal'){
-    monthly=principal*mr*Math.pow(1+mr,n)/(Math.pow(1+mr,n)-1);
+    monthly=mr>0?principal*mr*Math.pow(1+mr,n)/(Math.pow(1+mr,n)-1):principal/n;
     totalPay=monthly*n; totalInterest=totalPay-principal;
   } else if(loanType==='principal'){
     monthly=principal/n+principal*mr;
@@ -404,7 +404,7 @@ function calc(){
     totalInterest=monthly*n;
     totalPay=principal+totalInterest;
   }
-  const labels={equal:'원리금균등',principal:'원금균등 (첫 달)',bullet:'만기일시 (월 이자)'};
+  const labels={equal:'원리금균등',principal:'원금균등 (첫 달)',bullet:'만기일시 (월 이자만, 원금 만기 일시 상환)'};
   document.getElementById('loan-monthly').textContent=Ww(monthly);
   document.getElementById('loan-type-label').textContent=labels[loanType]+' 기준';
   document.getElementById('loan-r-principal').textContent=Ww(principal);

@@ -172,6 +172,7 @@
       <a href="/calc/tax/vat/" class="sibling-link">&#128196; 부가가치세</a>
       <a href="/calc/tax/insurance-comparison/" class="sibling-link current">&#128101; 4대보험 비교</a>
       <a href="/calc/tax/freelancer-income/" class="sibling-link">&#128179; 월 순수입</a>
+      <a href="/calc/tax/medical-expense/" class="sibling-link">&#127973; 의료비 세액공제</a>
     </div>
   </div>
 </main>
@@ -226,7 +227,7 @@ function calcCompare() {
   const family=parseInt(document.getElementById('cmp-family').value)||1;
   showConverted(document.getElementById('cmp-salary'), document.getElementById('cmp-salary-display'));
   if (!salary) { document.getElementById('cmp-result').classList.remove('show'); return; }
-  const pension=salary*0.0475, health=salary*0.03595, ltc=health*0.1314, employ=salary*0.009;
+  const pension=salary*0.0475, health=salary*0.03545, ltc=health*0.1295, employ=salary*0.009;
   const totalIns=pension+health+ltc+employ;
   const annual=salary*12;
   const earnDed=annual<=500?annual*0.70:annual<=1500?350+(annual-500)*0.40:annual<=4500?750+(annual-1500)*0.15:annual<=10000?1200+(annual-4500)*0.05:Math.min(1475+(annual-10000)*0.02,2000);
@@ -234,7 +235,7 @@ function calcCompare() {
   const mIncomeTax=Math.max(Math.round(annTax/12*100)/100,0), mLocalTax=mIncomeTax*0.10;
   const empNet=salary-totalIns-mIncomeTax-mLocalTax;
   const flTax=salary*0.033, flNet=salary-flTax;
-  const {tax:flAnnTax}=getIncomeTax(Math.max(annual*0.40-150,0));
+  const {tax:flAnnTax}=getIncomeTax(Math.max(annual*0.40-150*family,0));
   const flAddMonth=(Math.max(flAnnTax,0)*1.10-annual*0.033)/12;
   const diff=flNet-empNet;
   document.getElementById('cmp-result-content').innerHTML = `

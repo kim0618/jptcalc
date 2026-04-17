@@ -88,16 +88,16 @@
       <div class="card-title">복리 계산</div>
       <div class="field">
         <div class="field-label">원금 <span class="label-hint">만원 단위</span></div>
-        <div class="input-wrap"><input type="number" id="comp-principal" placeholder="예) 1000" oninput="calc()" /><span class="unit">만원</span></div>
+        <div class="input-wrap"><input type="number" id="comp-principal" min="0" placeholder="예) 1000" oninput="calc()" /><span class="unit">만원</span></div>
         <div class="converted" id="comp-display"></div>
       </div>
       <div class="field">
         <div class="field-label">연 수익률</div>
-        <div class="input-wrap"><input type="number" id="comp-rate" placeholder="예) 7" step="0.1" oninput="calc()" /><span class="unit">%</span></div>
+        <div class="input-wrap"><input type="number" id="comp-rate" min="0" placeholder="예) 7" step="0.1" oninput="calc()" /><span class="unit">%</span></div>
       </div>
       <div class="field">
         <div class="field-label">투자 기간</div>
-        <div class="input-wrap"><input type="number" id="comp-years" placeholder="예) 10" oninput="calc()" /><span class="unit">년</span></div>
+        <div class="input-wrap"><input type="number" id="comp-years" min="0" placeholder="예) 10" oninput="calc()" /><span class="unit">년</span></div>
       </div>
       <div class="field">
         <div class="field-label">복리 주기</div>
@@ -186,9 +186,10 @@ function calc(){
   const y=parseFloat(document.getElementById('comp-years').value)||0;
   showConverted(document.getElementById('comp-principal'),document.getElementById('comp-display'));
   const res=document.getElementById('result');
-  if(!p||!r||!y){res.classList.remove('show');return;}
-  res.classList.add('show');
+  if(p<=0||r<=0||y<=0){res.classList.remove('show');return;}
   const total=p*Math.pow(1+r/100/freq,freq*y);
+  if(!isFinite(total)){res.classList.remove('show');return;}
+  res.classList.add('show');
   const profit=total-p;
   const rule72=(72/r).toFixed(1);
   document.getElementById('comp-total').textContent=Wm(total);
