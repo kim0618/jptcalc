@@ -1,1 +1,0 @@
-/home/tjd618/bumohyetaek/.claude/commands/disclaimer.md

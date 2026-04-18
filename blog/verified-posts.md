@@ -12,3 +12,6 @@
 - pet-cost-saving-tips.html (2026-04-17 검증, JSON-LD FAQ ↔ HTML 5건 불일치 수정 | 글자수 9,136자 보강 권고)
 - pet-senior-care-guide.html (2026-04-17 검증, 이상 없음 | 본문 SVG 0개 추가 권고)
 - pet-adoption-cost-guide.html (2026-04-17 검증, 이상 없음 | 글자수 2,263자 매우 부족, 단정적 의료 조언 톤 다듬기 권고)
+- hourly-wage-guide.html (2026-04-18 검증, 오류 1개 수정 | meta description 시급 14,400→12,000원 수정, index.html 동기화 | 글자수 ~4,000자 보강 권고)
+- jongbu-tax-guide.html (2026-04-18 검증, 이상 없음 | 계산 4시나리오 모두 정확 | 글자수 ~4,300자 보강 권고)
+- four-insurance-vs-33-comparison.html (2026-04-18 검증, 오류 2개 수정 | FAQ 1·4번 JSON-LD↔HTML 불일치 동기화 | 글자수 ~3,700자 보강 권고)
