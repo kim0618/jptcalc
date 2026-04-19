@@ -15,3 +15,6 @@
 - hourly-wage-guide.html (2026-04-18 검증, 오류 1개 수정 | meta description 시급 14,400→12,000원 수정, index.html 동기화 | 글자수 ~4,000자 보강 권고)
 - jongbu-tax-guide.html (2026-04-18 검증, 이상 없음 | 계산 4시나리오 모두 정확 | 글자수 ~4,300자 보강 권고)
 - four-insurance-vs-33-comparison.html (2026-04-18 검증, 오류 2개 수정 | FAQ 1·4번 JSON-LD↔HTML 불일치 동기화 | 글자수 ~3,700자 보강 권고)
+- social-insurance-guide.html (2026-04-19 검증, 이상 없음 | 4대 보험 계산·요율 정확 | 글자수 ~3,800자 보강 권고, SVG 0개)
+- salary-comparison-guide.html (2026-04-19 검증, 이상 없음 | 인상률 테이블 5년차=4번 인상 관례로 정확 | 글자수 ~2,300자 매우 부족, SVG 0개 보강 권고)
+- withholding-tax-guide.html (2026-04-19 검증, 이상 없음 | 3.3% 원천징수·결정세액 추정치 경비율 가정 내 합리적 | 글자수 ~2,200자 매우 부족, SVG 0개 보강 권고)
