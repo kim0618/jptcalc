@@ -299,6 +299,15 @@
     .hub-related-name { font-size:12.5px; font-weight:700; color:var(--gray-900); }
     .hub-related-desc { font-size:11px; color:var(--gray-500); line-height:1.5; margin-top:2px; }
     @media (max-width:767px) { .hub-related-grid { grid-template-columns:1fr; } }
+  
+    /* TOC (우측 목차) */
+    .msr-toc { padding: 18px 14px; }
+    .msr-toc-title { font-size: 11px; font-weight: 800; color: var(--gray-500); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 12px; padding: 0 8px; }
+    .msr-toc-list { display: flex; flex-direction: column; gap: 2px; }
+    .msr-toc-link { display: block; padding: 9px 12px; border-radius: 8px; text-decoration: none; font-size: 12.5px; font-weight: 600; color: var(--gray-500); transition: all 0.15s; border-left: 2px solid transparent; }
+    .msr-toc-link:hover { background: var(--primary-light); color: var(--primary); border-left-color: var(--primary); }
+    .msr-toc-link.active { background: var(--primary-light); color: var(--primary); border-left-color: var(--primary); }
+
   </style>
 </head>
 <body>
@@ -382,7 +391,7 @@
   </div>
 
   <!-- 자주 찾는 계산기 -->
-  <div class="hub-popular">
+  <div class="hub-popular" id="sec-popular">
     <div class="hub-section-label">자주 찾는 계산기</div>
     <div class="hub-popular-grid">
       <a class="hub-popular-card" href="/calc/salary/take-home-pay/">
@@ -413,7 +422,7 @@
   </div>
 
   <!-- 상황별 안내 -->
-  <div class="hub-guide">
+  <div class="hub-guide" id="sec-guide">
     <div class="hub-section-label">상황별 추천 계산기</div>
     <div class="hub-guide-grid">
       <a class="hub-guide-item" href="/calc/salary/take-home-pay/">
@@ -462,7 +471,7 @@
   </div>
 
   <!-- 전체 계산기 -->
-  <div class="calc-hub">
+  <div class="calc-hub" id="sec-calcs">
 
     <div class="calc-hub-group">
       <div class="calc-hub-group-title">실수령·비교</div>
@@ -521,7 +530,7 @@
   </div>
 
   <!-- 배경 지식 -->
-  <section class="hub-knowledge">
+  <section class="hub-knowledge" id="sec-knowledge">
     <h2>연봉·실수령액 계산 전 알아둘 것</h2>
     <p>실수령액은 '세전 연봉 - 4대보험 근로자 부담분 - 근로소득세 - 지방소득세'로 결정됩니다. 각 항목은 법정 요율과 간이세액표에 따라 산정되며, 부양가족 수·비과세 식대(월 20만원)·자녀세액공제 같은 조건에 따라 같은 연봉이라도 실수령이 수만 원 단위로 달라집니다. 연봉 협상이나 이직 의사결정 전에 아래 기준치를 한 번 훑어두면 계산기가 뱉어내는 숫자를 해석하기 훨씬 수월합니다.</p>
 
@@ -651,7 +660,7 @@
   </section>
 
   <!-- FAQ -->
-  <div class="hub-faq">
+  <div class="hub-faq" id="sec-faq">
     <div class="hub-section-label">자주 묻는 질문</div>
     <div class="hub-faq-list">
       <div class="hub-faq-item">
@@ -686,7 +695,7 @@
   </div>
 
   <!-- 관련 블로그 -->
-  <div class="hub-blogs">
+  <div class="hub-blogs" id="sec-blogs">
     <div class="hub-section-label">함께 보면 좋은 블로그</div>
     <div class="hub-blogs-grid">
       <a class="hub-blogs-item" href="/blog/posts/salary-5000-takehome.html">
@@ -754,21 +763,16 @@
 
 <!-- 우측 사이드바 -->
 <aside class="mega-sidebar-right">
-  <div class="msr-widget">
-    <div class="msr-widget-title">관련 카테고리</div>
-    <div class="msr-widget-list">
-      <a href="/calc/tax/" class="msr-widget-link"><span class="msr-widget-icon">💰</span><span class="msr-widget-text">프리랜서 세금 계산기</span></a>
-      <a href="/calc/ai/" class="msr-widget-link"><span class="msr-widget-icon">🤖</span><span class="msr-widget-text">AI / 테크 계산기</span></a>
-      <a href="/calc/finance/" class="msr-widget-link"><span class="msr-widget-icon">🏦</span><span class="msr-widget-text">금융·이자 계산기</span></a>
-    </div>
-  </div>
-  <div class="msr-widget">
-    <div class="msr-widget-title">관련 블로그</div>
-    <div class="msr-widget-list">
-      <a href="/blog/posts/salary-negotiation.html" class="msr-widget-link"><span class="msr-widget-icon">📝</span><span class="msr-widget-text">이직 연봉 협상 전략</span></a>
-      <a href="/blog/posts/salary-5000-takehome.html" class="msr-widget-link"><span class="msr-widget-icon">📝</span><span class="msr-widget-text">연봉 5,000만원 실수령액은?</span></a>
-      <a href="/blog/posts/minimum-wage-2026.html" class="msr-widget-link"><span class="msr-widget-icon">📝</span><span class="msr-widget-text">2026년 최저임금 총정리</span></a>
-    </div>
+  <div class="msr-widget msr-toc">
+    <div class="msr-toc-title">이 페이지에서</div>
+    <nav class="msr-toc-list">
+      <a href="#sec-popular" class="msr-toc-link">자주 찾는 계산기</a>
+      <a href="#sec-guide" class="msr-toc-link">상황별 추천</a>
+      <a href="#sec-calcs" class="msr-toc-link">전체 계산기</a>
+      <a href="#sec-knowledge" class="msr-toc-link">배경 지식</a>
+      <a href="#sec-faq" class="msr-toc-link">자주 묻는 질문</a>
+      <a href="#sec-blogs" class="msr-toc-link">함께 보면 좋은 블로그</a>
+    </nav>
   </div>
 </aside>
 
@@ -795,6 +799,32 @@ function toggleMegaMenu() {
   document.getElementById('mega-overlay').classList.toggle('open');
 }
 </script>
-  <script src="/assets/footer-unified.js" defer></script>
+  
+<script>
+(function(){
+  const links = document.querySelectorAll('.msr-toc-link');
+  const sections = Array.from(links).map(a => {
+    const id = a.getAttribute('href').replace('#', '');
+    return { link: a, el: document.getElementById(id) };
+  }).filter(x => x.el);
+  if (!sections.length) return;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const match = sections.find(s => s.el === e.target);
+        if (match) match.link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
+  sections.forEach(s => io.observe(s.el));
+  links.forEach(l => l.addEventListener('click', (e) => {
+    const id = l.getAttribute('href').replace('#', '');
+    const el = document.getElementById(id);
+    if (el) { e.preventDefault(); window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - 80, behavior: 'smooth' }); history.replaceState(null, '', '#' + id); }
+  }));
+})();
+</script>
+<script src="/assets/footer-unified.js" defer></script>
 </body>
 </html>
