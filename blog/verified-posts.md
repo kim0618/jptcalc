@@ -18,3 +18,6 @@
 - social-insurance-guide.html (2026-04-19 검증, 이상 없음 | 4대 보험 계산·요율 정확 | 글자수 ~3,800자 보강 권고, SVG 0개)
 - salary-comparison-guide.html (2026-04-19 검증, 이상 없음 | 인상률 테이블 5년차=4번 인상 관례로 정확 | 글자수 ~2,300자 매우 부족, SVG 0개 보강 권고)
 - withholding-tax-guide.html (2026-04-19 검증, 이상 없음 | 3.3% 원천징수·결정세액 추정치 경비율 가정 내 합리적 | 글자수 ~2,200자 매우 부족, SVG 0개 보강 권고)
+- gift-tax-guide.html (2026-04-20 검증, 오류 1개 수정 | BreadcrumbList position 3 calc/realestate → blog/?cat=세금 수정)
+- annual-leave-guide.html (2026-04-20 검증, 오류 8개 수정 | 10년→11년 연차일수 법정 오류, 절사 계산 250/300/350/500만원 일급·수당 7개 수정)
+- unemployment-benefit-guide.html (2026-04-20 검증, 오류 1개 수정 | h1과 JSON-LD headline 불일치 수정)

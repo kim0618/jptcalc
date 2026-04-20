@@ -44,6 +44,10 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - mortgage-dsr-guide.html - 2026-04-17 수정
 - income-tax-deduction.html - 2026-04-17 수정
 - pet-adoption-cost-guide.html - 2026-04-17 수정
+- salary-5000-takehome.html - 2026-04-20 수정
+- property-tax-guide.html - 2026-04-20 수정
+- loan-repayment.html - 2026-04-20 수정
+- body-fat-guide.html - 2026-04-20 수정
 
 ## 작업 순서
 

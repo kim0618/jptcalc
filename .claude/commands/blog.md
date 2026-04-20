@@ -31,10 +31,9 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 각 계산기당 **블로그 글 2편**을 작성해야 목록에서 제거한다. 1편 작성 후에는 완료 횟수를 괄호로 표시하고, 2편째 완료 후 삭제한다.
 목록이 모두 소화되면 이 섹션을 삭제한다.
 
-1. `/calc/pension-welfare/retirement-living/` - 노후 생활비 계산기 (연금·복지) **(1/2 완료 - retirement-living-cost.html)**
-2. `/calc/pension-welfare/pension-tax/` - 연금소득세 계산기 (연금·복지)
-3. `/calc/pension-welfare/long-term-care/` - 장기요양 비용 계산기 (연금·복지)
-4. `/calc/tax/medical-expense/` - 의료비 세액공제 계산기 (세금)
+1. `/calc/pension-welfare/pension-tax/` - 연금소득세 계산기 (연금·복지)
+2. `/calc/pension-welfare/long-term-care/` - 장기요양 비용 계산기 (연금·복지)
+3. `/calc/tax/medical-expense/` - 의료비 세액공제 계산기 (세금)
 
 글 작성 후 해당 계산기의 detail-shell.js guides 배열에 블로그 URL을 추가한다. 2편 모두 완료된 계산기만 이 목록에서 제거한다.
 
