@@ -21,3 +21,6 @@
 - gift-tax-guide.html (2026-04-20 검증, 오류 1개 수정 | BreadcrumbList position 3 calc/realestate → blog/?cat=세금 수정)
 - annual-leave-guide.html (2026-04-20 검증, 오류 8개 수정 | 10년→11년 연차일수 법정 오류, 절사 계산 250/300/350/500만원 일급·수당 7개 수정)
 - unemployment-benefit-guide.html (2026-04-20 검증, 오류 1개 수정 | h1과 JSON-LD headline 불일치 수정)
+- retirement-living-late-start.html (2026-04-21 검증, 오류 3개 수정 | 시나리오 1 추가적립 4.28억→5.955억 복리 재계산, 합계 7.89억→10.18억, 결론 초과 1.9억→4.3억, 시나리오 2 세액공제 13.2%/16.5% 표기 혼선 수정)
+- loan-repayment.html (2026-04-21 검증, 오류 2개 수정 | 중도상환 이자 절감 3,200만→4,468만, 기간 단축 5년 8개월→4년 4개월)
+- salary-5000-takehome.html (2026-04-21 검증, 오류 6개 수정 | 월 소득세 245,910→285,540, 지방소득세 24,591→28,550, 월 실수령 3,491,275→3,447,686, 비교표 5천만 행, FAQ Q1 문구 349→345 및 JSON-LD 동기화, 핵심 요약)

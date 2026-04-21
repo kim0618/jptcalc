@@ -30,7 +30,7 @@
       key:'long-term-care',
       quick:['장기요양보험 등급은 1~5등급과 인지지원등급(6등급)으로 구분됩니다.','재가급여 본인부담률은 15%, 시설급여 본인부담률은 20%입니다.','기초수급자와 차상위계층은 본인부담금이 감경 또는 면제됩니다.','월 한도액을 초과하는 서비스 비용은 전액 본인이 부담합니다.'],
       related:[['/calc/pension-welfare/retirement-living/','노후 생활비','🏡'],['/calc/pension-welfare/pension-tax/','연금소득세','💰'],['/calc/health/bmi/','BMI','📏']],
-      guides:[['/blog/posts/retirement-living-cost.html','노후 생활비 얼마면 될까 - 30년 준비 자금 계산법'],['/blog/posts/retirement-living-late-start.html','40대·50대 노후 준비 늦었을까 - 시작 나이별 월 저축 목표와 3가지 시나리오']]
+      guides:[['/blog/posts/long-term-care-cost-guide.html','장기요양보험 비용 완전 정리 - 2026년 등급별 본인부담금과 재가·요양원 선택 기준'],['/blog/posts/retirement-living-cost.html','노후 생활비 얼마면 될까 - 30년 준비 자금 계산법'],['/blog/posts/retirement-living-late-start.html','40대·50대 노후 준비 늦었을까 - 시작 나이별 월 저축 목표와 3가지 시나리오']]
     }
   };
   const cfg=pages[path];

@@ -29,6 +29,8 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - mortgage-dsr-guide.html (15,522자) - 2026-04-20 보강
 - date-difference.html (16,050자) - 2026-04-20 보강
 - savings-vs-deposit.html (15,498자) - 2026-04-20 보강
+- freelancer-insurance-guide.html (16,023자) - 2026-04-21 보강
+- realestate-agent-fee.html (15,886자) - 2026-04-21 보강
 
 ## 대상 글 (얇은 순서대로 작업)
 
@@ -174,5 +176,14 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 ```
 2. 이 스킬 파일(`/home/tjd618/.claude/commands/bolster.md`)을 삭제
 3. 일일 루틴 메모리에서 /bolster 항목 제거 알림
+
+
+## 완료 후 로그 기록
+
+스킬 실행이 완료되면 반드시 아래 명령으로 `skill-log.json`에 기록한다:
+
+```bash
+python3 -c "import json,datetime; logs=json.load(open('/home/tjd618/skill-log.json')); now=datetime.datetime.now(); logs.insert(0,{'date':now.strftime('%Y-%m-%d'),'time':now.strftime('%H:%M'),'project':'jptcalc','skill':'bolster'}); open('/home/tjd618/skill-log.json','w').write(json.dumps(logs,ensure_ascii=False,indent=2))"
+```
 
 $ARGUMENTS

@@ -107,3 +107,11 @@
 - `/rewrite`·`/bolster` 스킬로 글이 수정되면 재검증 대상이 될 수 있으나, 1차 패스 완료까지는 무시
 - 검증 중 HTML 구조·스타일 개선은 하지 말 것. 사실·수치·링크 오류만 수정
 - 글 한 편 수정으로 index.html·sitemap.xml이 영향받으면 안 되지만, 제목·desc 변경 시에는 index.html 카드 텍스트도 동기화
+
+## 완료 후 로그 기록
+
+스킬 실행이 완료되면 반드시 아래 명령으로 `skill-log.json`에 기록한다:
+
+```bash
+python3 -c "import json,datetime; logs=json.load(open('/home/tjd618/skill-log.json')); now=datetime.datetime.now(); logs.insert(0,{'date':now.strftime('%Y-%m-%d'),'time':now.strftime('%H:%M'),'project':'jptcalc','skill':'verify'}); open('/home/tjd618/skill-log.json','w').write(json.dumps(logs,ensure_ascii=False,indent=2))"
+```

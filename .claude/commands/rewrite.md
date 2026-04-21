@@ -48,6 +48,10 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - property-tax-guide.html - 2026-04-20 수정
 - loan-repayment.html - 2026-04-20 수정
 - body-fat-guide.html - 2026-04-20 수정
+- savings-vs-deposit.html - 2026-04-21 수정
+- inheritance-tax-guide.html - 2026-04-21 수정
+- parental-leave-pay.html - 2026-04-21 수정
+- sarcopenia-guide.html - 2026-04-21 수정
 
 ## 작업 순서
 
@@ -126,5 +130,14 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 전체 63편이 수정 완료 목록에 포함되면:
 1. 사용자에게 "전체 문체 수정 완료" 알림
 2. 이 스킬 파일(`/home/tjd618/.claude/commands/rewrite.md`)을 삭제
+
+
+## 완료 후 로그 기록
+
+스킬 실행이 완료되면 반드시 아래 명령으로 `skill-log.json`에 기록한다:
+
+```bash
+python3 -c "import json,datetime; logs=json.load(open('/home/tjd618/skill-log.json')); now=datetime.datetime.now(); logs.insert(0,{'date':now.strftime('%Y-%m-%d'),'time':now.strftime('%H:%M'),'project':'jptcalc','skill':'rewrite'}); open('/home/tjd618/skill-log.json','w').write(json.dumps(logs,ensure_ascii=False,indent=2))"
+```
 
 $ARGUMENTS
