@@ -166,7 +166,7 @@
     <div class="guide-card faq-card">
       <h2>자주 묻는 질문</h2>
       <div class="faq-item"><h3>월 209시간은 어떻게 계산되나요?</h3><p>주 40시간 × 52주 ÷ 12개월 + 유급 주휴시간을 포함한 법정 기준입니다.</p></div>
-      <div class="faq-item"><h3>주 44시간·52시간 근무는 월 몇 시간인가요?</h3><p>주 44시간은 월 226시간(주휴 포함), 주 52시간은 월 260시간((52+8주휴)×52÷12)으로 환산됩니다. 사업장 취업규칙에 따라 다를 수 있으니 실제 근로계약서를 확인하세요.</p></div>
+      <div class="faq-item"><h3>주 44시간·52시간 근무는 월 몇 시간인가요?</h3><p>주 44시간은 월 226시간(주휴 포함), 주 52시간은 월 260시간으로 환산됩니다. 단, 주 40시간 초과분은 법정 연장근로에 해당하여 <strong>1.5배 가산수당</strong> 지급 대상입니다. 본 계산기는 가산수당 미반영 단순 환산값이므로, 연장근로가 있는 경우 실제 임금은 기본시간(주 40시간) × 시급 + 연장시간 × 시급 × 1.5로 별도 계산해야 합니다.</p></div>
       <div class="faq-item"><h3>연봉 3,000만원이면 시급이 얼마인가요?</h3><p>월 209시간 기준 약 11,960원입니다. 실제로는 초과근무·수당 포함 여부에 따라 달라집니다.</p></div>
       <div class="faq-item"><h3>2026년 최저시급은 얼마인가요?</h3><p>10,320원이며, 월 209시간 기준 최저월급은 약 2,156,880원입니다.</p></div>
       <div class="update-note">최종 검토: 2026.03.24 · 계산 결과는 참고용입니다.</div>
@@ -276,13 +276,18 @@ function calcHourly() {
   document.getElementById('s2-r-weekly').textContent = comma(weekly);
   document.getElementById('s2-r-monthly').textContent = comma(monthlyPay);
   document.getElementById('s2-r-annual').textContent = fmtM(v);
+  document.getElementById('s2-r-daily-label').textContent = `일급 (8시간 기준)`;
+  document.getElementById('s2-r-weekly-label').textContent = `주급 (주 ${weekHours}시간)`;
+  document.getElementById('s2-r-monthly-label').textContent = `월급 (월 ${monthlyHours}시간)`;
   const minWage = 10320;
   const cmp = document.getElementById('s2-min-compare');
+  let notice = '';
+  if (weekHours > 40) notice = `<br><span style="font-size:11px;color:var(--gray-500)">※ 주 ${weekHours}시간은 법정 기본 40시간 + 연장근로 ${weekHours-40}시간 포함. 위 시급은 연장근로 1.5배 가산 미적용 단순 환산값입니다.</span>`;
   if (hourly < minWage) {
-    cmp.innerHTML = `⚠️ 시급이 2026년 최저시급(10,320원)보다 낮습니다.`;
+    cmp.innerHTML = `⚠️ 시급이 2026년 최저시급(10,320원)보다 낮습니다.${notice}`;
     cmp.style.color = '#EF4444';
   } else {
-    cmp.innerHTML = `✅ 최저시급(10,320원) 대비 <strong>${((hourly/minWage-1)*100).toFixed(0)}%</strong> 높은 시급입니다.`;
+    cmp.innerHTML = `✅ 최저시급(10,320원) 대비 <strong>${((hourly/minWage-1)*100).toFixed(0)}%</strong> 높은 시급입니다.${notice}`;
     cmp.style.color = '';
   }
 }
@@ -309,11 +314,13 @@ function calcFromHourly() {
   document.getElementById('s2-r-annual').textContent = fmtW(annual);
   const minWage = 10320;
   const cmp = document.getElementById('s2-min-compare');
+  let notice = '';
+  if (dayHours > 8) notice = `<br><span style="font-size:11px;color:var(--gray-500)">※ 일 ${dayHours}시간은 법정 기본 8시간 + 연장근로 ${dayHours-8}시간 포함. 위 금액은 연장근로 1.5배 가산 미적용 단순 환산값입니다.</span>`;
   if (h < minWage) {
-    cmp.innerHTML = `⚠️ 입력한 시급이 2026년 최저시급(10,320원)보다 낮습니다.`;
+    cmp.innerHTML = `⚠️ 입력한 시급이 2026년 최저시급(10,320원)보다 낮습니다.${notice}`;
     cmp.style.color = '#EF4444';
   } else {
-    cmp.innerHTML = `✅ 최저시급(10,320원) 대비 <strong>${((h/minWage-1)*100).toFixed(0)}%</strong> 높은 시급입니다.`;
+    cmp.innerHTML = `✅ 최저시급(10,320원) 대비 <strong>${((h/minWage-1)*100).toFixed(0)}%</strong> 높은 시급입니다.${notice}`;
     cmp.style.color = '';
   }
 }

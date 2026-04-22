@@ -127,7 +127,7 @@
         <span class="result-total-label">월 추가 실수령 (예상)</span>
         <span class="result-total-value" id="s3-monthly-diff">-</span>
       </div>
-      <p class="result-note">※ 월 추가 실수령액은 세금·4대보험 공제 후 예상값입니다.</p>
+      <p class="result-note">※ 부양가족 1명(본인)·비과세 0원 기준. 월 추가 실수령액은 2026년 세금·4대보험 공제 후 예상값입니다. 누진세 구조로 인해 고연봉 구간일수록 세전 인상률 대비 실수령 증가폭이 작아집니다.</p>
     </div>
   <div class="guide-section">
     <div class="guide-card">
@@ -225,17 +225,20 @@ function calcAnnualTax(annual_man, dep_count) {
   let taxCredit = 0;
   if (tax <= 1300000) taxCredit = tax * 0.55;
   else taxCredit = 715000 + (tax - 1300000) * 0.30;
-  taxCredit = Math.min(taxCredit, 740000);
-  if (annual <= 33000000) taxCredit = Math.min(taxCredit, 740000);
-  else if (annual <= 70000000) taxCredit = Math.min(taxCredit, 681000);
-  else taxCredit = Math.min(taxCredit, 500000);
+  let taxCreditLimit;
+  if (annual <= 33000000) taxCreditLimit = 740000;
+  else if (annual <= 70000000) taxCreditLimit = Math.max(660000, 740000 - (annual - 33000000) * 0.008);
+  else if (annual <= 120000000) taxCreditLimit = Math.max(500000, 660000 - (annual - 70000000) * 0.005);
+  else taxCreditLimit = Math.max(200000, 500000 - (annual - 120000000) * 0.005);
+  taxCredit = Math.min(taxCredit, taxCreditLimit);
   tax = Math.max(tax - taxCredit - 70000, 0);
   return tax;
 }
 
 function calcMonthly(annual_man, dep_count) {
   const monthly = annual_man * 10000 / 12;
-  const pension = Math.min(monthly, 6370000) * 0.0475;
+  const pensionBase = monthly > 0 ? Math.min(Math.max(monthly, 390000), 6370000) : 0;
+  const pension = pensionBase * 0.0475;
   const health = monthly * 0.03595;
   const ltc = health * 0.1314;
   const emp = monthly * 0.009;

@@ -144,7 +144,7 @@
         <span class="result-total-label">월 공제 합계</span>
         <span class="result-total-value" id="s0-deduction">-</span>
       </div>
-      <p class="result-note">※ 2026년 기준. 국민연금 상한 월 637만원(2026년 6월까지 적용). 월 비과세 금액 입력 시 4대보험·소득세 산정 기준에서 제외됩니다. 부양가족 외 자녀세액공제·추가 공제는 미반영 - 실제 세액은 연말정산 시 정산됩니다. 이 결과는 참고용이며, 정확한 금액은 급여명세서를 기준으로 확인하세요.</p>
+      <p class="result-note">※ 2026년 기준. 국민연금 기준소득월액 상한 637만원·하한 39만원(2026년 6월까지 적용). 월 비과세 금액 입력 시 4대보험·소득세 산정 기준에서 제외됩니다. 근로소득세는 연간 세액을 12개월로 균등 분할한 값으로, 국세청 간이세액표 기준 매월 원천징수액과 월 2~5만원 수준의 차이가 발생할 수 있습니다(연말정산 시 정산). 자녀세액공제·추가 공제는 미반영입니다. 정확한 금액은 급여명세서를 기준으로 확인하세요.</p>
 </div>
   <div class="guide-section">
     <div class="guide-card">
@@ -187,32 +187,32 @@
             <tr>
               <td>3,000만원</td>
               <td>250만원</td>
-              <td>약 27만원</td>
-              <td>약 223만원</td>
+              <td>약 31만원</td>
+              <td>약 219만원</td>
             </tr>
             <tr>
               <td>4,000만원</td>
               <td>333만원</td>
-              <td>약 38만원</td>
-              <td>약 295만원</td>
+              <td>약 51만원</td>
+              <td>약 282만원</td>
             </tr>
             <tr>
               <td>5,000만원</td>
               <td>417만원</td>
-              <td>약 51만원</td>
-              <td>약 366만원</td>
+              <td>약 72만원</td>
+              <td>약 345만원</td>
             </tr>
             <tr>
               <td>6,000만원</td>
               <td>500만원</td>
-              <td>약 66만원</td>
-              <td>약 434만원</td>
+              <td>약 93만원</td>
+              <td>약 407만원</td>
             </tr>
             <tr>
               <td>8,000만원</td>
               <td>667만원</td>
-              <td>약 100만원</td>
-              <td>약 567만원</td>
+              <td>약 147만원</td>
+              <td>약 520만원</td>
             </tr>
           </tbody>
         </table>
@@ -243,7 +243,7 @@
       </div>
       <div class="faq-item">
         <h3>부양가족 수가 많을수록 세금이 줄어드는 이유는 무엇인가요?</h3>
-        <p>부양가족은 소득세 간이세액표 상 인적공제 대상입니다. 배우자 및 자녀 수가 늘어날수록 매월 납부하는 소득세가 줄어듭니다. 예를 들어 연봉 5,000만원 기준으로 부양가족이 0명이면 월 약 18만원, 3명이면 월 약 8만원 수준으로 소득세 차이가 납니다. 연말정산 시 최종 정산됩니다.</p>
+        <p>부양가족은 소득세 간이세액표 상 인적공제 대상입니다. 기본공제 대상자 1인당 연 150만원이 소득금액에서 차감되므로 매월 납부하는 소득세가 줄어듭니다. 예를 들어 연봉 5,000만원(부양가족 공제 기준 15% 구간) 기준으로 본인 1명만이면 월 소득세 약 29만원, 배우자·자녀 포함 3명이면 월 약 25만원으로 약 4만원 차이가 발생합니다. 8세 이상 자녀 세액공제(첫째 15만, 둘째 20만, 셋째부터 30만원)는 별도로 연말정산 시 추가 반영됩니다.</p>
       </div>
       <div class="faq-item">
         <h3>실제 급여명세서와 계산 결과가 다른 이유는 무엇인가요?</h3>
@@ -347,10 +347,12 @@ function calcAnnualTax(annual_man, dep_count) {
   let taxCredit = 0;
   if (tax <= 1300000) taxCredit = tax * 0.55;
   else taxCredit = 715000 + (tax - 1300000) * 0.30;
-  taxCredit = Math.min(taxCredit, 740000);
-  if (annual <= 33000000) taxCredit = Math.min(taxCredit, 740000);
-  else if (annual <= 70000000) taxCredit = Math.min(taxCredit, 681000);
-  else taxCredit = Math.min(taxCredit, 500000);
+  let taxCreditLimit;
+  if (annual <= 33000000) taxCreditLimit = 740000;
+  else if (annual <= 70000000) taxCreditLimit = Math.max(660000, 740000 - (annual - 33000000) * 0.008);
+  else if (annual <= 120000000) taxCreditLimit = Math.max(500000, 660000 - (annual - 70000000) * 0.005);
+  else taxCreditLimit = Math.max(200000, 500000 - (annual - 120000000) * 0.005);
+  taxCredit = Math.min(taxCredit, taxCreditLimit);
   tax = Math.max(tax - taxCredit - 70000, 0);
   return tax;
 }
@@ -360,7 +362,8 @@ function calcMonthly(annual_man, dep_count, nontax_man) {
   const nontax = (nontax_man || 0) * 10000;
   const taxableMonthly = Math.max(monthly - nontax, 0);
   const taxableAnnual_man = Math.max(annual_man - (nontax_man || 0) * 12, 0);
-  const pension = Math.min(taxableMonthly, 6370000) * 0.0475;
+  const pensionBase = taxableMonthly > 0 ? Math.min(Math.max(taxableMonthly, 390000), 6370000) : 0;
+  const pension = pensionBase * 0.0475;
   const health = taxableMonthly * 0.03595;
   const ltc = health * 0.1314;
   const emp = taxableMonthly * 0.009;
@@ -393,7 +396,7 @@ function calcTakehome() {
   document.getElementById('s0-net').textContent = comma(r.net);
   document.getElementById('s0-net-annual').textContent = `연 실수령액 ${fmtW(r.net * 12)}`;
   document.getElementById('s0-gross').textContent = comma(r.monthly);
-  document.getElementById('s0-taxable').textContent = nt > 0 ? comma(r.taxableMonthly) : '-';
+  document.getElementById('s0-taxable').textContent = comma(r.taxableMonthly);
   document.getElementById('s0-pension').textContent = `−${comma(r.pension)}`;
   document.getElementById('s0-health').textContent = `−${comma(r.health)}`;
   document.getElementById('s0-ltc').textContent = `−${comma(r.ltc)}`;
@@ -404,7 +407,7 @@ function calcTakehome() {
 }
 
 function clearResult(prefix) {
-  const ids = ['net','net-annual','gross','pension','health','ltc','emp','tax','local','deduction'];
+  const ids = ['net','net-annual','gross','taxable','pension','health','ltc','emp','tax','local','deduction'];
   ids.forEach(id => { const el = document.getElementById(prefix+'-'+id); if(el) el.textContent = '-'; });
 }
 
