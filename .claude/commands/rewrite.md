@@ -52,6 +52,10 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - inheritance-tax-guide.html - 2026-04-21 수정
 - parental-leave-pay.html - 2026-04-21 수정
 - sarcopenia-guide.html - 2026-04-21 수정
+- long-term-care-cost-guide.html - 2026-04-22 수정
+- loan-refinance-guide.html - 2026-04-22 수정
+- vat-guide.html - 2026-04-22 수정
+- severance-pay-guide.html - 2026-04-22 수정
 
 ## 작업 순서
 
