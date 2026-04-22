@@ -95,7 +95,7 @@
       </div>
     </div>
     <div class="field" id="inh-spouse-amount-field">
-      <div class="field-label">배우자 실제 상속금액 <span class="label-hint">미입력 시 최소공제(5억) 적용</span></div>
+      <div class="field-label">배우자 실제 상속금액 <span class="label-hint">미입력 시 최소공제 5억, 입력 시 법정지분 상한 적용</span></div>
       <div class="input-wrap">
         <input type="number" id="inh-spouse-amount" placeholder="예) 100000" oninput="calcInheritance()" />
         <span class="unit">만원</span>
@@ -264,27 +264,42 @@ function calcInheritance() {
   showConverted(document.getElementById('inh-total'), document.getElementById('inh-total-display'));
   if (!totalMan) { document.getElementById('inh-result').classList.remove('show'); return; }
   const netMan = Math.max(totalMan - debtMan, 0);
-  const basicDeduct    = 20000;
-  const childDeduct    = childrenCnt * 5000;
-  const lumpDeduct     = Math.max(basicDeduct + childDeduct, 50000);
+  const basicDeduct = 20000;
+  const childDeduct = childrenCnt * 5000;
+  const lumpDeduct  = Math.max(basicDeduct + childDeduct, 50000);
+  // 배우자공제 = min(실제 상속액, 법정상속지분, 30억), 최소 5억 보장 (상증세법 제19조)
   let spouseDeduct = 0;
+  let spouseShareMan = 0;
   if (inhHasSpouse) {
-    const actualSpouse = spouseAmt > 0 ? spouseAmt : 50000;
-    spouseDeduct = Math.min(Math.max(actualSpouse, 50000), 300000);
+    spouseShareMan = netMan * 1.5 / (1.5 + childrenCnt);
+    if (spouseAmt > 0) {
+      spouseDeduct = Math.max(Math.min(spouseAmt, spouseShareMan, 300000), 50000);
+    } else {
+      spouseDeduct = 50000;
+    }
   }
-  const totalDeduct  = lumpDeduct + spouseDeduct;
-  const baseMan      = Math.max(netMan - totalDeduct, 0);
-  const taxMan       = baseMan > 0 ? getInheritanceTax(baseMan) : 0;
+  const totalDeduct = lumpDeduct + spouseDeduct;
+  const baseMan     = Math.max(netMan - totalDeduct, 0);
+  const rawTaxMan   = baseMan > 0 ? getInheritanceTax(baseMan) : 0;
+  // 신고세액공제 3% (상증세법 제69조)
+  const reportDiscountMan = Math.round(rawTaxMan * 0.03);
+  const finalTaxMan = rawTaxMan - reportDiscountMan;
+
   const deductLabel = lumpDeduct === 50000 ? '일괄공제 (5억)' : `일괄공제 (기초2억+자녀${childrenCnt}명)`;
+  const spouseRow = inhHasSpouse
+    ? `<div class="result-row"><span class="result-label">배우자공제${spouseAmt > 0 ? ` (법정지분 ${fmt(Math.round(spouseShareMan))} 상한)` : ''}</span><span class="result-value">- ${fmt(Math.round(spouseDeduct))}</span></div>`
+    : '';
   document.getElementById('inh-result-content').innerHTML = `
     <div class="result-row"><span class="result-label">총 상속재산</span><span class="result-value">${fmt(totalMan)}</span></div>
     <div class="result-row"><span class="result-label">채무·장례비 공제</span><span class="result-value">- ${fmt(debtMan)}</span></div>
     <div class="result-row"><span class="result-label">순 상속재산</span><span class="result-value">${fmt(netMan)}</span></div>
     <div class="result-row"><span class="result-label">${deductLabel}</span><span class="result-value">- ${fmt(lumpDeduct)}</span></div>
-    ${inhHasSpouse ? `<div class="result-row"><span class="result-label">배우자공제</span><span class="result-value">- ${fmt(spouseDeduct)}</span></div>` : ''}
+    ${spouseRow}
     <div class="result-row"><span class="result-label">과세표준</span><span class="result-value">${fmt(Math.round(baseMan))}</span></div>
-    <div class="result-row result-total-row"><span class="result-total-label">납부할 상속세</span><span class="result-total-value">${fmt(Math.round(taxMan))}</span></div>
-    <div class="result-note">* 상속 개시일(사망일)로부터 6개월 이내 신고<br>* 배우자공제는 실제 상속금액 기준 (미입력 시 법정 최소 5억 적용)<br>* 실제 세액은 세무사 확인 필요</div>`;
+    <div class="result-row"><span class="result-label">산출세액</span><span class="result-value">${fmt(Math.round(rawTaxMan))}</span></div>
+    <div class="result-row"><span class="result-label">신고세액공제 (3%)</span><span class="result-value">- ${fmt(reportDiscountMan)}</span></div>
+    <div class="result-row result-total-row"><span class="result-total-label">납부할 상속세</span><span class="result-total-value">${fmt(Math.round(finalTaxMan))}</span></div>
+    <div class="result-note">* 상속 개시일(사망일)로부터 6개월 이내 신고 시 산출세액의 3% 공제 (상증세법 제69조)<br>* 배우자공제 = min(실제 상속액, 법정상속지분, 30억), 최소 5억 보장 (상증세법 제19조)<br>* 실제 세액은 세무사 확인 필요</div>`;
   document.getElementById('inh-result').classList.add('show');
 }
 </script>

@@ -297,6 +297,11 @@ function calcJoint() {
     ? `▲ ${fmt(Math.round(Math.abs(saving)))} 불리`
     : '동일';
 
+  // 1세대1주택 단독명의 세액공제 및 공동명의 특례 안내
+  const oneHouseNote = jointType === '1세대 1주택'
+    ? '<div class="result-note" style="color:#92400E;background:#FEF3C7;padding:8px 10px;border-radius:6px;margin-top:8px;font-weight:600">💡 1세대1주택 단독명의는 <strong>연령(60세+)·장기보유(5년+) 최대 80% 세액공제</strong>가 별도 적용되어 실제 세액이 더 낮을 수 있습니다. 부부 공동명의자는 "단독명의 과세특례"를 신청해 12억 공제+세액공제를 받는 방식도 선택 가능합니다 (종부세법 제10조의2).</div>'
+    : '';
+
   document.getElementById('joint-result-content').innerHTML = `
     <div class="result-row">
       <span class="result-label">공시가격</span>
@@ -337,7 +342,8 @@ function calcJoint() {
       <span class="result-total-value" style="color:${savingColor}">${savingText}</span>
     </div>
     <div class="result-note">* 공동명의 시 양도소득세도 각자 지분 비율로 분산되어 누진세율 구간 절감 효과가 있습니다</div>
-    <div class="result-note">* 농어촌특별세(종부세 × 20%) 미포함 / 2026년 기준 / 실제 세액은 관할 세무서 확인</div>`;
+    <div class="result-note">* 농어촌특별세(종부세 × 20%) 미포함 / 2026년 기준 / 실제 세액은 관할 세무서 확인</div>
+    ${oneHouseNote}`;
 
   resultEl.classList.add('show');
 }

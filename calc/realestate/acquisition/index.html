@@ -129,12 +129,12 @@
         <button class="seg-btn" onclick="selectHouseCnt(3, this)">3주택</button>
         <button class="seg-btn" onclick="selectHouseCnt(4, this)">법인</button>
       </div>
-      <div id="adjust-field">
-        <div class="card-title">지역 구분</div>
-        <div class="seg-group" style="margin-bottom:0">
-          <button class="seg-btn active" onclick="selectAdjust(false, this)">비조정지역</button>
-          <button class="seg-btn" onclick="selectAdjust(true, this)">조정대상지역</button>
-        </div>
+    </div>
+    <div id="adjust-field">
+      <div class="card-title">지역 구분</div>
+      <div class="seg-group" style="margin-bottom:0">
+        <button class="seg-btn active" onclick="selectAdjust(false, this)">비조정지역</button>
+        <button class="seg-btn" onclick="selectAdjust(true, this)">조정대상지역</button>
       </div>
     </div>
     <div id="acq-method-info" class="hidden">
@@ -209,8 +209,8 @@
             </tr>
             <tr>
               <td>2주택 10억 매수 (조정)</td>
-              <td>조정대상지역 / 취득세 8% + 교육세 3.2% + 농특세 1%</td>
-              <td class="text-danger">약 1억 2,200만원</td>
+              <td>조정대상지역 85㎡ 초과 / 취득세 8% + 교육세 0.4% + 농특세 0.6%</td>
+              <td class="text-danger">약 9,000만원</td>
             </tr>
           </tbody>
         </table>
@@ -354,16 +354,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 let propType = '주택', acqMethod = '매수', houseCnt = 1, isAdjust = false;
+function updateFieldVisibility() {
+  const showHouseCnt = propType === '주택' && acqMethod === '매수';
+  const showAdjust = propType === '주택' && (
+    (acqMethod === '매수' && houseCnt !== 4) || acqMethod === '증여'
+  );
+  document.getElementById('house-cnt-field').classList.toggle('hidden', !showHouseCnt);
+  document.getElementById('adjust-field').classList.toggle('hidden', !showAdjust);
+}
 function selectPropType(type, btn) {
   propType = type;
   setActive('.seg-btn[onclick^="selectPropType"]', btn);
-  document.getElementById('house-cnt-field').classList.toggle('hidden', type !== '주택' || acqMethod !== '매수');
+  updateFieldVisibility();
   updateAcqMethodInfo(); calcAcquisition();
 }
 function selectAcqMethod(method, btn) {
   acqMethod = method;
   setActive('.seg-btn[onclick^="selectAcqMethod"]', btn);
-  document.getElementById('house-cnt-field').classList.toggle('hidden', !(propType === '주택' && method === '매수'));
+  updateFieldVisibility();
   updateAcqMethodInfo(); calcAcquisition();
 }
 function updateAcqMethodInfo() {
@@ -382,7 +390,7 @@ function updateAcqMethodInfo() {
 function selectHouseCnt(n, btn) {
   houseCnt = n;
   setActive('.seg-btn[onclick^="selectHouseCnt"]', btn);
-  document.getElementById('adjust-field').classList.toggle('hidden', n === 4);
+  updateFieldVisibility();
   calcAcquisition();
 }
 function selectAdjust(v, btn) {
@@ -417,8 +425,11 @@ function calcAcquisition() {
   const rate = getAcqRate(priceMan, houseCnt, isAdjust);
   const price = priceMan * 10000;
   const acqTax = price * rate;
-  // 지방교육세: 중과(8%+) 0.4% 고정, 일반 취득세×10%
-  const eduTax = rate >= 0.08 ? price * 0.004 : acqTax * 0.1;
+  // 지방교육세: 중과(8%+) 과표 × 0.4% 고정 / 주택 유상거래 일반(1~3%) 취득세×10% (지방세법 제151조 주택특례) / 기타(증여·상속·비주택 매수) (세율-2%)×20%
+  let eduTax;
+  if (rate >= 0.08) eduTax = price * 0.004;
+  else if (propType === '주택' && acqMethod === '매수') eduTax = acqTax * 0.1;
+  else eduTax = price * Math.max(rate - 0.02, 0) * 0.2;
   // 농어촌특별세(85㎡ 초과 기준): 중과 (적용세율-2%)×10%, 일반 0.2%
   const ruralTax = rate >= 0.08 ? price * (rate - 0.02) * 0.1 : price * 0.002;
   const total = acqTax + eduTax + ruralTax;

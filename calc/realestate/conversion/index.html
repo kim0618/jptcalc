@@ -14,7 +14,7 @@
   <meta name="twitter:description" content="전세를 월세로, 월세를 전세로 전환하는 금액을 무료로 계산하세요. 법정 전월세 전환율 기준으로 정확하게 계산합니다." />
   <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"전월세전환 계산기","url":"https://www.jptcalc.kr/calc/realestate/conversion/","description":"전세를 월세로, 월세를 전세로 전환하는 금액을 무료로 계산하세요. 법정 전월세 전환율 기준으로 정확하게 계산합니다.","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"inLanguage":"ko-KR"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},{"@type":"ListItem","position":2,"name":"부동산 계산기","item":"https://www.jptcalc.kr/calc/realestate/"},{"@type":"ListItem","position":3,"name":"전월세전환 계산기","item":"https://www.jptcalc.kr/calc/realestate/conversion/"}]}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"전월세 전환이란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"전세보증금을 월세로 바꾸거나, 반대로 월세를 전세로 환산하는 계산입니다. 보증금 차액에 전환율을 곱해 월 임대료를 산정하거나, 반대로 월세를 전세금으로 환산할 때 사용합니다."}},{"@type":"Question","name":"법정 전월세 전환율 상한은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"법정 상한은 기준금리 + 2%입니다. 법정 상한을 초과하는 전환율은 무효이며, 주택임대차보호법 제7조의2에 따라 임대인이 보증금을 월세로 전환할 때 적용됩니다."}},{"@type":"Question","name":"전월세 전환 계산 공식은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"전세→월세 전환 시: 월세 = (전세금 - 보증금) × 전환율 ÷ 12입니다. 월세→전세 전환 시: 전세환산금 = 현재보증금 + (월세 × 12 ÷ 전환율)입니다."}},{"@type":"Question","name":"시장 전환율과 법정 기준이 다를 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네. 계약 협의에서는 체감 시장 조건이 반영되지만, 분쟁이나 기준 검토에서는 법정 기준을 별도로 확인해야 합니다. 관리비, 주차비, 옵션 등 실질 비용도 함께 비교해야 합니다."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"전월세 전환이란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"전세보증금을 월세로 바꾸거나, 반대로 월세를 전세로 환산하는 계산입니다. 보증금 차액에 전환율을 곱해 월 임대료를 산정하거나, 반대로 월세를 전세금으로 환산할 때 사용합니다."}},{"@type":"Question","name":"법정 전월세 전환율 상한은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"법정 상한은 '기준금리 + 2%'와 '연 10%' 중 낮은 값입니다(주택임대차보호법 시행령 제9조). 법정 상한을 초과하는 전환율은 무효이며, 주택임대차보호법 제7조의2에 따라 임대인이 보증금을 월세로 전환할 때 적용됩니다."}},{"@type":"Question","name":"전월세 전환 계산 공식은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"전세→월세 전환 시: 월세 = (전세금 - 보증금) × 전환율 ÷ 12입니다. 월세→전세 전환 시: 전세환산금 = 현재보증금 + (월세 × 12 ÷ 전환율)입니다."}},{"@type":"Question","name":"시장 전환율과 법정 기준이 다를 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네. 계약 협의에서는 체감 시장 조건이 반영되지만, 분쟁이나 기준 검토에서는 법정 기준을 별도로 확인해야 합니다. 관리비, 주차비, 옵션 등 실질 비용도 함께 비교해야 합니다."}}]}</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
@@ -82,7 +82,7 @@
     <div class="field" style="margin-top:4px">
       <div class="field-label">전월세 전환율</div>
       <div class="input-wrap"><input type="number" id="conv-rate" placeholder="예) 4.5" step="0.1" oninput="calcConversion()" /><span class="unit">%</span></div>
-      <div class="field-hint">법정 상한: 기준금리 + 2% (기준금리는 변동될 수 있으니 한국은행 공시 기준으로 확인하세요)</div>
+      <div class="field-hint">법정 상한: min(기준금리 + 2%, 연 10%) - 한국은행 공시 기준금리로 확인하세요</div>
     </div>
   </div>
   <div class="result-card" id="conv-result"><div id="conv-result-content"></div></div>
@@ -90,7 +90,7 @@
     <button class="explain-toggle" onclick="toggleExplain(this)">전월세전환 완벽 가이드 <span class="etarrow">▼</span></button>
     <div class="explain-body">
       <h3>전월세 전환이란?</h3><p>전세보증금을 월세로 바꾸거나, 반대로 월세를 전세로 환산하는 계산입니다.</p>
-      <h3>법정 전환율 상한</h3><ul><li>법정 상한 = <strong>기준금리 + 2%</strong></li><li>법정 상한 초과 전환율은 무효</li></ul>
+      <h3>법정 전환율 상한</h3><ul><li>법정 상한 = <strong>min(기준금리 + 2%, 연 10%)</strong> (주임법 시행령 제9조)</li><li>법정 상한 초과 전환율은 무효</li></ul>
       <h3>계산 공식</h3><ul><li>월세 = (전세금 - 보증금) × 전환율 ÷ 12</li><li>전세환산 = 현재보증금 + (월세 × 12 ÷ 전환율)</li></ul>
     </div>
   </div>
@@ -175,27 +175,32 @@ function selectConvDir(dir, btn) {
   document.getElementById('conv-result').classList.remove('show');
 }
 function calcConversion() {
-  const rate = parseFloat(document.getElementById('conv-rate').value) / 100;
-  if (!rate) return;
+  const resultEl = document.getElementById('conv-result');
+  const rateInput = parseFloat(document.getElementById('conv-rate').value);
+  const rate = rateInput / 100;
+  if (!rate || rate < 0) { resultEl.classList.remove('show'); return; }
+  const warn = rateInput > 10
+    ? '<div class="result-note" style="color:#DC2626;font-weight:600;background:rgba(220,38,38,0.08);padding:8px 10px;border-radius:6px;margin-top:8px">⚠ 법정 상한(연 10%)을 초과한 전환율입니다. 주택임대차보호법상 무효가 될 수 있습니다.</div>'
+    : '';
   let html = '';
   if (convDir === 'to-monthly') {
     const jeonse = parseFloat(document.getElementById('jeonse-amount').value) || 0;
     const newDep = parseFloat(document.getElementById('new-deposit').value) || 0;
-    if (!jeonse) { document.getElementById('conv-result').classList.remove('show'); return; }
+    if (!jeonse) { resultEl.classList.remove('show'); return; }
     const diff = jeonse - newDep;
-    if (diff <= 0) { document.getElementById('conv-result').classList.remove('show'); return; }
-    const monthly = Math.round(diff * rate / 12);
-    html = '<div class="result-row"><span class="result-label">보증금 차액</span><span class="result-value">'+fmt(diff)+'</span></div><div class="result-row result-total-row"><span class="result-total-label">월세</span><span class="result-total-value">'+fmt(monthly)+'<span style="font-size:14px;font-weight:600;opacity:.7">/월</span></span></div><div class="result-note">보증금 '+fmt(newDep)+' + 월 '+fmt(monthly)+'</div>';
+    if (diff <= 0) { resultEl.classList.remove('show'); return; }
+    const monthlyWon = diff * 10000 * rate / 12;
+    html = '<div class="result-row"><span class="result-label">보증금 차액</span><span class="result-value">'+fmt(diff)+'</span></div><div class="result-row result-total-row"><span class="result-total-label">월세</span><span class="result-total-value">'+fmtWon(monthlyWon)+'<span style="font-size:14px;font-weight:600;opacity:.7">/월</span></span></div><div class="result-note">보증금 '+fmt(newDep)+' + 월 '+fmtWon(monthlyWon)+'</div>'+warn;
   } else {
     const dep = parseFloat(document.getElementById('curr-deposit').value) || 0;
     const monthly = parseFloat(document.getElementById('curr-monthly').value) || 0;
-    if (!monthly) { document.getElementById('conv-result').classList.remove('show'); return; }
-    const added = Math.round(monthly * 12 / rate);
-    const total = dep + added;
-    html = '<div class="result-row"><span class="result-label">월세 환산 전세금</span><span class="result-value">'+fmt(added)+'</span></div><div class="result-row result-total-row"><span class="result-total-label">전세 환산금액</span><span class="result-total-value">'+fmt(total)+'</span></div>';
+    if (!monthly) { resultEl.classList.remove('show'); return; }
+    const addedWon = monthly * 10000 * 12 / rate;
+    const totalWon = dep * 10000 + addedWon;
+    html = '<div class="result-row"><span class="result-label">월세 환산 전세금</span><span class="result-value">'+fmtWon(addedWon)+'</span></div><div class="result-row result-total-row"><span class="result-total-label">전세 환산금액</span><span class="result-total-value">'+fmtWon(totalWon)+'</span></div>'+warn;
   }
   document.getElementById('conv-result-content').innerHTML = html;
-  document.getElementById('conv-result').classList.add('show');
+  resultEl.classList.add('show');
 }
 </script>
 

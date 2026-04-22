@@ -322,7 +322,7 @@
           <tr><td>1억~6억 미만</td><td>0.3%</td><td>없음</td><td>3억 → 최대 90만원</td></tr>
           <tr><td>6억~12억 미만</td><td>0.4%</td><td>없음</td><td>8억 → 최대 320만원</td></tr>
           <tr><td>12억~15억 미만</td><td>0.5%</td><td>없음</td><td>13억 → 최대 650만원</td></tr>
-          <tr><td>15억 이상</td><td>0.8%</td><td>없음</td><td>20억 → 최대 1,600만원</td></tr>
+          <tr><td>15억 이상</td><td>0.6%</td><td>없음</td><td>20억 → 최대 1,200만원</td></tr>
         </table>
         <div class="rate-tbl-title">오피스텔 (주거용, 전용 85㎡ 이하)</div>
         <table class="rate-tbl">
@@ -611,7 +611,7 @@ function getBrokerageRate(priceMan, type) {
     if (p < 600000000) return { rate: 0.003, limit: null };
     if (p < 1200000000) return { rate: 0.004, limit: null };
     if (p < 1500000000) return { rate: 0.005, limit: null };
-    return { rate: 0.008, limit: null };
+    return { rate: 0.006, limit: null };
   }
 }
 
@@ -631,10 +631,11 @@ function calcBrokerage() {
   }
   const rateType = (tradeType === '월세' || tradeType === '반전세') ? '전세' : tradeType;
   const { rate, limit } = getBrokerageRate(priceMan, rateType);
-  let legalFee = priceMan * 10000 * rate;
-  if (limit) legalFee = Math.min(legalFee, limit);
+  const rawFee = priceMan * 10000 * rate;
+  const isLimited = limit && rawFee > limit;
+  const legalFee = isLimited ? limit : rawFee;
   document.getElementById('b-rate').textContent = (rate * 100).toFixed(2) + '%';
-  document.getElementById('b-max').textContent = limit ? `${fmtWon(limit)} (한도)` : fmtWon(legalFee);
+  document.getElementById('b-max').textContent = isLimited ? `${fmtWon(legalFee)} (한도 적용)` : fmtWon(legalFee);
   const customRow = document.getElementById('b-custom-row');
   let finalFee = legalFee;
   if (rateMode === 'custom') {

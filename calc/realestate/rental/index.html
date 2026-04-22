@@ -177,13 +177,21 @@ function calcRental() {
   const realInvest = buyPrice - deposit - loanAmt;
   const grossYield = buyPrice > deposit ? (annualRent / (buyPrice - deposit)) * 100 : 0;
   const netYield = realInvest > 0 ? (annualNet / realInvest) * 100 : 0;
+  const loanIntRow = loanAmt > 0
+    ? '<div class="result-row"><span class="result-label">연 대출이자</span><span class="result-value" style="color:#DC2626">-'+fmt(Math.round(annualLoanInt))+'</span></div>'
+    : '';
+  const warn = realInvest <= 0
+    ? '<div class="result-note" style="color:#DC2626;font-weight:600;background:rgba(220,38,38,0.08);padding:8px 10px;border-radius:6px;margin-top:8px">⚠ 실투자금이 0 이하입니다 (대출+보증금이 매입가 이상). 순수익률 산정이 불가합니다.</div>'
+    : '';
   document.getElementById('rental-result-content').innerHTML =
     '<div class="result-row"><span class="result-label">실투자금</span><span class="result-value">'+fmt(realInvest)+'</span></div>'+
     '<div class="result-row"><span class="result-label">연 임대수입</span><span class="result-value">'+fmt(annualRent)+'</span></div>'+
+    loanIntRow+
     '<div class="result-row"><span class="result-label">연 순수익</span><span class="result-value">'+fmt(Math.round(annualNet))+'</span></div>'+
     '<div class="result-row"><span class="result-label">총수익률 (세전)</span><span class="result-value">'+grossYield.toFixed(2)+'%</span></div>'+
     '<div class="result-row result-total-row"><span class="result-total-label">순수익률</span><span class="result-total-value">'+netYield.toFixed(2)+'%</span></div>'+
-    '<div class="result-note">* 총수익률 = 연임대수입 ÷ (매입가-보증금) / 순수익률 = 연순수익 ÷ 실투자금</div>';
+    '<div class="result-note">* 총수익률 = 연임대수입 ÷ (매입가−보증금) / 순수익률 = 연순수익 ÷ 실투자금</div>'+
+    warn;
   document.getElementById('rental-result').classList.add('show');
 }
 </script>

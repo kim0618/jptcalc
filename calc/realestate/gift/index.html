@@ -90,7 +90,7 @@
       배우자 공제: 6억원 (10년 합산)
     </div>
     <div class="field" style="margin-bottom:0">
-      <div class="field-label">이미 사용한 증여공제 <span class="label-hint">10년 내 기증여액</span></div>
+      <div class="field-label">10년 내 기증여액 <span class="label-hint">같은 증여자로부터 이미 받은 금액</span></div>
       <div class="input-wrap">
         <input type="number" id="gift-used" placeholder="예) 0" oninput="calcGift()" />
         <span class="unit">만원</span>
@@ -168,17 +168,17 @@
             <tr>
               <td>부모→성인자녀 현금</td>
               <td>7,000만원 증여 / 10년 내 최초 / 공제 5,000만원</td>
-              <td>200만원</td>
+              <td>194만원</td>
             </tr>
             <tr>
               <td>배우자에게 아파트</td>
               <td>시가 10억원 증여 / 배우자 공제 6억원 → 과세 4억</td>
-              <td>약 7,000만원</td>
+              <td>약 6,790만원</td>
             </tr>
             <tr>
               <td>조부모→미성년 손자</td>
               <td>3,000만원 증여 / 미성년 공제 2,000만원 → 과세 1,000만원</td>
-              <td>100만원</td>
+              <td>97만원</td>
             </tr>
           </tbody>
         </table>
@@ -323,10 +323,6 @@ function calcGift() {
   showConverted(document.getElementById('gift-amount'), document.getElementById('gift-amount-display'));
   if (!amountMan) { document.getElementById('gift-result').classList.remove('show'); return; }
 
-  const maxDeduct    = GIFT_DEDUCT[giftRel];
-  const remainDeduct = Math.max(maxDeduct - usedMan, 0);
-  const baseMan      = Math.max(amountMan - remainDeduct, 0);
-
   function getGiftTax(b) {
     if (b <= 10000)  return b * 0.10;
     if (b <= 50000)  return b * 0.20 - 1000;
@@ -335,21 +331,44 @@ function calcGift() {
     return b * 0.50 - 46000;
   }
 
-  const rawTaxMan         = baseMan > 0 ? getGiftTax(baseMan) : 0;
+  const maxDeduct = GIFT_DEDUCT[giftRel];
+  // 상증세법 제47조 제2항: 10년 내 동일인 증여재산 합산 과세
+  const totalGiftMan = amountMan + usedMan;
+  const totalBaseMan = Math.max(totalGiftMan - maxDeduct, 0);
+  const totalTaxMan  = totalBaseMan > 0 ? getGiftTax(totalBaseMan) : 0;
+  // 기증여분 산출세액 = 기납부세액 공제 (상증세법 제58조)
+  const prevBaseMan  = Math.max(usedMan - maxDeduct, 0);
+  const prevTaxMan   = prevBaseMan > 0 ? getGiftTax(prevBaseMan) : 0;
+  // 이번 증여 산출세액 = 합산 산출세액 - 기납부세액
+  const rawTaxMan    = Math.max(totalTaxMan - prevTaxMan, 0);
   const reportDiscountMan = Math.round(rawTaxMan * 0.03);
-  const finalTaxMan       = rawTaxMan - reportDiscountMan;
+  const finalTaxMan  = rawTaxMan - reportDiscountMan;
+
+  const remainDeduct = Math.max(maxDeduct - usedMan, 0);
+  const hasUsed = usedMan > 0;
+  const sumRow = hasUsed
+    ? `<div class="result-row"><span class="result-label">10년 합산 증여재산</span><span class="result-value">${fmt(Math.round(totalGiftMan))}</span></div>`
+    : '';
+  const baseLabel = hasUsed ? '합산 과세표준' : '과세표준';
+  const taxLabel = hasUsed ? '합산 산출세액' : '산출세액';
+  const prevTaxRow = (hasUsed && prevTaxMan > 0)
+    ? `<div class="result-row"><span class="result-label">기납부세액 공제</span><span class="result-value">- ${fmt(Math.round(prevTaxMan))}</span></div>
+    <div class="result-row"><span class="result-label">이번 산출세액</span><span class="result-value">${fmt(Math.round(rawTaxMan))}</span></div>`
+    : '';
 
   document.getElementById('gift-result-content').innerHTML = `
     <div class="result-row"><span class="result-label">증여재산가액</span><span class="result-value">${fmt(amountMan)}</span></div>
+    ${sumRow}
     <div class="result-row"><span class="result-label">증여재산 공제 (${GIFT_DEDUCT_LABEL[giftRel]})</span><span class="result-value">- ${fmt(remainDeduct)}</span></div>
-    <div class="result-row"><span class="result-label">과세표준</span><span class="result-value">${fmt(Math.round(baseMan))}</span></div>
-    <div class="result-row"><span class="result-label">산출세액</span><span class="result-value">${fmt(Math.round(rawTaxMan))}</span></div>
+    <div class="result-row"><span class="result-label">${baseLabel}</span><span class="result-value">${fmt(Math.round(totalBaseMan))}</span></div>
+    <div class="result-row"><span class="result-label">${taxLabel}</span><span class="result-value">${fmt(Math.round(totalTaxMan))}</span></div>
+    ${prevTaxRow}
     <div class="result-row"><span class="result-label">신고세액공제 (3%)</span><span class="result-value">- ${fmt(reportDiscountMan)}</span></div>
     <div class="result-row result-total-row">
       <span class="result-total-label">납부할 증여세</span>
       <span class="result-total-value">${fmt(Math.round(finalTaxMan))}</span>
     </div>
-    <div class="result-note">* 증여일 속하는 달 말일로부터 3개월 이내 신고 시 3% 공제 적용<br>* 10년 내 동일인 증여액은 합산 과세됩니다</div>`;
+    <div class="result-note">* 증여일 속하는 달 말일로부터 3개월 이내 신고 시 3% 공제 적용<br>* 10년 내 동일인 증여액은 합산 과세됩니다 (상증세법 제47조)</div>`;
   document.getElementById('gift-result').classList.add('show');
 }
 </script>

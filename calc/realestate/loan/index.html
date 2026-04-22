@@ -177,17 +177,17 @@ function calcLoan() {
     const payment = principal * monthlyRate * Math.pow(1+monthlyRate, months) / (Math.pow(1+monthlyRate, months)-1);
     const totalPay = payment * months;
     const totalInterest = totalPay - principal;
-    html = '<div class="result-row"><span class="result-label">총 납입금액</span><span class="result-value">'+fmt(Math.round(totalPay/10000))+'</span></div><div class="result-row"><span class="result-label">총 이자</span><span class="result-value">'+fmt(Math.round(totalInterest/10000))+'</span></div><div class="result-row result-total-row"><span class="result-total-label">월 납입금</span><span class="result-total-value">'+fmt(Math.round(payment/10000))+'<span style="font-size:14px;font-weight:600;opacity:.7">/월</span></span></div>';
+    html = '<div class="result-row"><span class="result-label">총 납입금액</span><span class="result-value">'+fmtWon(totalPay)+'</span></div><div class="result-row"><span class="result-label">총 이자</span><span class="result-value">'+fmtWon(totalInterest)+'</span></div><div class="result-row result-total-row"><span class="result-total-label">월 납입금</span><span class="result-total-value">'+fmtWon(payment)+'<span style="font-size:14px;font-weight:600;opacity:.7">/월</span></span></div>';
   } else if (repayType === 'equal-principal') {
     const mp = principal / months;
     const firstPayment = mp + principal * monthlyRate;
     const lastPayment = mp + mp * monthlyRate;
     const totalInterest = monthlyRate * principal * (months+1) / 2;
-    html = '<div class="result-row"><span class="result-label">첫 달 납입금</span><span class="result-value">'+fmt(Math.round(firstPayment/10000))+'</span></div><div class="result-row"><span class="result-label">마지막 달 납입금</span><span class="result-value">'+fmt(Math.round(lastPayment/10000))+'</span></div><div class="result-row result-total-row"><span class="result-total-label">총 이자</span><span class="result-total-value">'+fmt(Math.round(totalInterest/10000))+'</span></div>';
+    html = '<div class="result-row"><span class="result-label">첫 달 납입금</span><span class="result-value">'+fmtWon(firstPayment)+'</span></div><div class="result-row"><span class="result-label">마지막 달 납입금</span><span class="result-value">'+fmtWon(lastPayment)+'</span></div><div class="result-row result-total-row"><span class="result-total-label">총 이자</span><span class="result-total-value">'+fmtWon(totalInterest)+'</span></div>';
   } else {
     const monthlyInterest = principal * monthlyRate;
     const totalInterest = monthlyInterest * months;
-    html = '<div class="result-row"><span class="result-label">만기 상환 원금</span><span class="result-value">'+fmt(amountMan)+'</span></div><div class="result-row"><span class="result-label">총 이자</span><span class="result-value">'+fmt(Math.round(totalInterest/10000))+'</span></div><div class="result-row result-total-row"><span class="result-total-label">월 이자</span><span class="result-total-value">'+fmt(Math.round(monthlyInterest/10000))+'<span style="font-size:14px;font-weight:600;opacity:.7">/월</span></span></div>';
+    html = '<div class="result-row"><span class="result-label">만기 상환 원금</span><span class="result-value">'+fmt(amountMan)+'</span></div><div class="result-row"><span class="result-label">총 이자</span><span class="result-value">'+fmtWon(totalInterest)+'</span></div><div class="result-row result-total-row"><span class="result-total-label">월 이자</span><span class="result-total-value">'+fmtWon(monthlyInterest)+'<span style="font-size:14px;font-weight:600;opacity:.7">/월</span></span></div>';
   }
   document.getElementById('loan-result-content').innerHTML = html;
   document.getElementById('loan-result').classList.add('show');

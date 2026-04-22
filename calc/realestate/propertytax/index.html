@@ -18,7 +18,7 @@
   <meta name="twitter:description" content="2026년 기준 재산세를 무료로 계산하세요. 일반주택·1세대1주택·토지·건축물 유형별 공정시장가액비율 및 세율 자동 적용." />
   <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"재산세 계산기","url":"https://www.jptcalc.kr/calc/realestate/propertytax/","description":"2026년 기준 재산세를 무료로 계산합니다. 일반주택·1세대1주택·토지·건축물 유형별 공정시장가액비율 및 세율 자동 적용.","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"inLanguage":"ko-KR"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},{"@type":"ListItem","position":2,"name":"부동산 계산기","item":"https://www.jptcalc.kr/calc/realestate/"},{"@type":"ListItem","position":3,"name":"재산세 계산기","item":"https://www.jptcalc.kr/calc/realestate/propertytax/"}]}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"재산세란 무엇이며 언제 납부하나요?","acceptedAnswer":{"@type":"Answer","text":"매년 6월 1일 기준 부동산을 보유한 사람에게 부과하는 지방세입니다. 주택은 7월(1/2)과 9월(1/2) 두 번 나눠 납부합니다."}},{"@type":"Question","name":"재산세 공정시장가액비율은 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"일반 주택은 공시가격의 43%, 1세대 1주택(9억 이하)은 45%, 토지·건축물은 70%를 적용합니다. 공정시장가액비율을 곱한 금액이 과세표준이 됩니다."}},{"@type":"Question","name":"주택 재산세 세율은 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"과세표준 6천만원 이하 0.1%, 6천만~1.5억 0.15%, 1.5억~3억 0.25%, 3억 초과 0.4%의 누진세율이 적용됩니다. 도시지역 내 부동산은 과세표준의 0.14%가 추가됩니다."}},{"@type":"Question","name":"재산세를 절세하는 방법은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"공시가격 9억 이하 1세대 1주택자는 특례 세율이 적용되어 약 50% 감면 혜택을 받습니다. 6월 1일 이전에 매도하면 해당 연도 재산세가 부과되지 않습니다."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"재산세란 무엇이며 언제 납부하나요?","acceptedAnswer":{"@type":"Answer","text":"매년 6월 1일 기준 부동산을 보유한 사람에게 부과하는 지방세입니다. 주택은 7월(1/2)과 9월(1/2) 두 번 나눠 납부합니다."}},{"@type":"Question","name":"재산세 공정시장가액비율은 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"일반 주택은 공시가격의 60%, 1세대 1주택(공시가 9억 이하)은 3억 이하 43%·3억~6억 44%·6억~9억 45%의 구간별 비율이 적용됩니다. 토지·건축물은 70%입니다. 공정시장가액비율을 곱한 금액이 과세표준이 됩니다."}},{"@type":"Question","name":"주택 재산세 세율은 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"과세표준 6천만원 이하 0.1%, 6천만~1.5억 0.15%, 1.5억~3억 0.25%, 3억 초과 0.4%의 누진세율이 적용됩니다. 도시지역 내 부동산은 과세표준의 0.14%가 추가됩니다."}},{"@type":"Question","name":"재산세를 절세하는 방법은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"공시가격 9억 이하 1세대 1주택자는 특례 세율이 적용되어 약 50% 감면 혜택을 받습니다. 6월 1일 이전에 매도하면 해당 연도 재산세가 부과되지 않습니다."}}]}</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
@@ -84,7 +84,7 @@
       <button class="seg-btn" onclick="ptSelectType('건축물', this)">건축물</button>
     </div>
     <div id="pt-1house-hint" class="hidden" style="font-size:12px;color:var(--primary);background:var(--primary-light);border-radius:8px;padding:10px 12px;margin-top:-4px">
-      1세대 1주택 특례: 공시가 9억원 이하 시 낮은 세율 적용 (공정시장가액비율 45%)
+      1세대 1주택 특례: 공시가 9억원 이하만 적용 (비율 43~45% + 세율 약 50% 감경). 9억 초과 시 일반 주택으로 계산됩니다.
     </div>
   </div>
 
@@ -101,8 +101,8 @@
       <p>매년 <strong>6월 1일 기준</strong> 부동산을 보유한 사람에게 부과하는 지방세입니다. 주택은 7월(1/2)·9월(1/2) 두 번 나눠 납부합니다.</p>
       <h3>공정시장가액비율 (과세표준 산정)</h3>
       <ul>
-        <li>일반 주택: 공시가격 × <strong>43%</strong></li>
-        <li>1세대 1주택 (9억 이하): 공시가격 × <strong>45%</strong></li>
+        <li>일반 주택: 공시가격 × <strong>60%</strong></li>
+        <li>1세대 1주택 (9억 이하): 3억 이하 <strong>43%</strong> / 3억~6억 <strong>44%</strong> / 6억~9억 <strong>45%</strong></li>
         <li>토지·건축물: 공시가격 × <strong>70%</strong></li>
       </ul>
       <h3>주택 재산세 세율</h3>
@@ -135,7 +135,7 @@
     <div class="guide-card faq-card">
       <h2>자주 묻는 질문</h2>
       <div class="faq-item"><h3>재산세란 무엇이며 언제 납부하나요?</h3><p>매년 6월 1일 기준 부동산을 보유한 사람에게 부과하는 지방세입니다. 주택은 7월(1/2)과 9월(1/2) 두 번 나눠 납부하며, 토지·건축물은 9월 한 번에 납부합니다.</p></div>
-      <div class="faq-item"><h3>재산세 공정시장가액비율은 어떻게 되나요?</h3><p>일반 주택은 공시가격의 43%, 1세대 1주택(9억 이하)은 45%, 토지·건축물은 70%를 적용합니다. 이 비율을 곱한 금액이 과세표준이 되므로 공시가격과 실제 세금 사이에 차이가 납니다.</p></div>
+      <div class="faq-item"><h3>재산세 공정시장가액비율은 어떻게 되나요?</h3><p>일반 주택은 공시가격의 60%, 1세대 1주택(공시가 9억 이하)은 구간별로 3억 이하 43%·3억~6억 44%·6억~9억 45%가 적용됩니다. 토지·건축물은 70%입니다. 이 비율을 곱한 금액이 과세표준이 되므로 공시가격과 실제 세금 사이에 차이가 납니다.</p></div>
       <div class="faq-item"><h3>주택 재산세 세율은 어떻게 되나요?</h3><p>과세표준 6천만원 이하 0.1%, 6천만~1.5억 0.15%, 1.5억~3억 0.25%, 3억 초과 0.4%의 누진세율이 적용됩니다. 도시지역 내 주택은 과세표준의 0.14%가 추가됩니다.</p></div>
       <div class="faq-item"><h3>재산세를 절세하는 방법은 무엇인가요?</h3><p>공시가격 9억 이하 1세대 1주택자는 특례 세율이 적용되어 일반 주택 대비 약 50% 감면 혜택을 받습니다. 6월 1일 이전에 매도하면 해당 연도 재산세가 부과되지 않습니다.</p></div>
       <div class="update-note">최종 검토: 2026.04.16 · 계산 결과는 참고용입니다.</div>
@@ -252,13 +252,16 @@ function calcPropertyTax() {
   if (!priceMan) { document.getElementById('pt-result').classList.remove('show'); return; }
   const isLand  = ptType === '토지';
   const isBldg  = ptType === '건축물';
-  const is1H    = ptType === '1세대1주택';
-  // 공정시장가액비율 (2026년 기준)
+  // 1세대1주택 특례는 공시가 9억원 이하에만 적용 (지방세법 제111조의2)
+  const is1HOver9 = ptType === '1세대1주택' && priceMan > 90000;
+  const effectiveType = is1HOver9 ? '일반주택' : ptType;
+  const is1H = effectiveType === '1세대1주택';
+  // 공정시장가액비율 (2026년 기준, 시행령 제109조)
   let ratio;
   if (isLand || isBldg) {
     ratio = 0.70;
   } else if (is1H) {
-    // 1세대1주택 특례 (2026년까지 연장)
+    // 1세대1주택 특례 공정시장가액비율 (9억 이하)
     if (priceMan <= 30000) ratio = 0.43;
     else if (priceMan <= 60000) ratio = 0.44;
     else ratio = 0.45;
@@ -266,11 +269,12 @@ function calcPropertyTax() {
     ratio = 0.60;
   }
   const baseMan   = priceMan * ratio;
-  const taxMan    = getPropertyTaxMan(baseMan, ptType);
+  const taxMan    = getPropertyTaxMan(baseMan, effectiveType);
   const eduMan    = taxMan * 0.20;
   const urbanMan  = (isLand || isBldg) ? 0 : baseMan * 0.0014;
   const totalMan  = taxMan + eduMan + urbanMan;
   const scheduleNote = (isLand || isBldg) ? '* 토지·건축물: 9월 한 번에 납부' : '* 주택: 7월(1/2) · 9월(1/2) 분할 납부';
+  const over9Note = is1HOver9 ? '<div class="result-note" style="color:#DC2626;font-weight:600;background:rgba(220,38,38,0.08);padding:8px 10px;border-radius:6px;margin-top:8px">⚠ 공시가 9억원 초과로 1세대1주택 특례가 적용되지 않아 일반 주택 세율·비율(60%)로 계산되었습니다.</div>' : '';
   document.getElementById('pt-result-content').innerHTML = `
     <div class="result-row"><span class="result-label">공시가격</span><span class="result-value">${fmt(priceMan)}</span></div>
     <div class="result-row"><span class="result-label">공정시장가액비율</span><span class="result-value">${(ratio * 100).toFixed(0)}%</span></div>
@@ -280,7 +284,7 @@ function calcPropertyTax() {
     ${!isLand && !isBldg ? `<div class="result-row"><span class="result-label">도시지역분 (0.14%)</span><span class="result-value">${fmt(Math.round(urbanMan))}</span></div>` : ''}
     <div class="result-row result-total-row"><span class="result-total-label">총 납부세액</span><span class="result-total-value">${fmt(Math.round(totalMan))}</span></div>
     ${!isLand && !isBldg ? `<div class="result-row"><span class="result-label">7월 납부 (1/2)</span><span class="result-value">${fmt(Math.round(totalMan / 2))}</span></div><div class="result-row"><span class="result-label">9월 납부 (1/2)</span><span class="result-value">${fmt(Math.round(totalMan / 2))}</span></div>` : ''}
-    <div class="result-note">${scheduleNote}<br>* 2026년 기준 / 실제 세액은 관할 지자체 확인</div>`;
+    <div class="result-note">${scheduleNote}<br>* 2026년 기준 / 실제 세액은 관할 지자체 확인</div>${over9Note}`;
   document.getElementById('pt-result').classList.add('show');
 }
 </script>
