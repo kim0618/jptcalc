@@ -27,3 +27,6 @@
 - long-term-care-cost-guide.html (2026-04-22 검증, 이상 없음 | 등급별 본인부담금·감경혜택 계산 전부 정확, 564만원 연간절약 정확(47만×12), bumohyetaek 링크 실존)
 - deposit-interest-guide.html (2026-04-22 검증, 이상 없음 | 월복리 5,203.7만원 정확, 세금우대 12만원 정확 | 예금자보호 5,000만원→1억원 개정 여부 사용자 확인 권고)
 - loan-refinance-guide.html (2026-04-22 검증, 이상 없음 | PMT 계산 오차 모두 1% 이내, JSON-LD·링크 정상)
+- national-pension-guide.html (2026-04-23 검증, 이상 없음 | 81.9세 손익분기 계산 정확, FAQ 4개·링크 정상 | 1969년생 이후 65세 수급 정보 보강 권고)
+- savings-maturity-guide.html (2026-04-23 검증, 세금우대 9.5% 표기 의심 | 조합 예탁금 현행 비과세+농특세1.4% 제도와 불일치 가능 - 사용자 확인 권고 | 수치 계산 이상 없음)
+- property-tax-guide.html (2026-04-23 검증, 오류 1개 수정 | BreadcrumbList position 3 /calc/realestate/ → /blog/?cat=부동산 수정)

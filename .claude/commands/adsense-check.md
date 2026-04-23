@@ -194,4 +194,13 @@ ls /home/tjd618/jptcalc/{about,privacy,terms,contact}/index.html 2>&1
 - 사용자 동의 없이 페이지 **삭제 금지** (플래그만 올림)
 - 재신청 자체는 자동 수행하지 않음 (사용자가 Google AdSense 콘솔에서 직접 신청)
 
+
+## 완료 후 로그 기록
+
+스킬 실행이 완료되면 반드시 아래 명령으로 `skill-log.json`에 기록한다:
+
+```bash
+python3 -c "import json,datetime; logs=json.load(open('/home/tjd618/skill-log.json')); now=datetime.datetime.now(); logs.insert(0,{'date':now.strftime('%Y-%m-%d'),'time':now.strftime('%H:%M'),'project':'jptcalc','skill':'adsense-check'}); open('/home/tjd618/skill-log.json','w').write(json.dumps(logs,ensure_ascii=False,indent=2))"
+```
+
 $ARGUMENTS

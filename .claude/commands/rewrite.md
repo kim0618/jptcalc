@@ -56,6 +56,10 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - loan-refinance-guide.html - 2026-04-22 수정
 - vat-guide.html - 2026-04-22 수정
 - severance-pay-guide.html - 2026-04-22 수정
+- emergency-fund-guide.html - 2026-04-23 수정
+- income-tax-may-guide.html - 2026-04-23 수정
+- national-pension-guide.html - 2026-04-23 수정
+- minimum-wage-2026.html - 2026-04-23 수정
 
 ## 작업 순서
 

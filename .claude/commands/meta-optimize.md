@@ -8,8 +8,8 @@ description: jptcalc 블로그/카테고리 meta title·description 최적화 (C
 콘텐츠 자체는 건드리지 않으므로 **애드센스 거절 위험 제로**.
 
 ## 실행 일정
-- **시작일**: 2026-04-23 (목) — `/bolster` 완료 후 진입
-- **집중 기간**: 2026-04-23 ~ 2026-04-25 (3일), 하루 6-7개 × 3일 = 약 20페이지
+- **시작일**: 2026-04-22 (수) — `/bolster` 완료 후 진입
+- **집중 기간**: 2026-04-22 ~ 2026-04-24 (3일), 하루 6-7개 × 3일 = 약 20페이지
 - **이후**: 재측정 7일 간격으로 지속 (계속 필요)
 - **애드센스 재신청일(4/28) 전까지 20페이지 이상** 처리 목표
 - 이 스킬은 **자동 삭제하지 않음** (CTR 개선은 상시 작업)
@@ -18,10 +18,10 @@ description: jptcalc 블로그/카테고리 meta title·description 최적화 (C
 
 | 라운드 | 기간 | 대상 수 | 완료 | 재측정 예정 |
 |---|---|---|---|---|
-| 1차 | 2026-04-23 ~ 2026-04-25 | 20페이지 | 0 | 2026-05-02 |
-| 2차 | 2026-05-02 ~ 2026-05-04 | 개선 안 된 페이지 재교정 | - | - |
+| 1차 | 2026-04-22 ~ 2026-04-24 | 20페이지 | 13 | 2026-05-01 |
+| 2차 | 2026-05-01 ~ 2026-05-03 | 개선 안 된 페이지 재교정 | - | - |
 
-**누적 진행: 0페이지 / 목표 20페이지**
+**누적 진행: 13페이지 / 목표 20페이지**
 
 작업 완료 시 이 표를 즉시 갱신할 것.
 
@@ -88,6 +88,20 @@ node /home/tjd618/.claude/analytics/report.mjs --period=28d --site=jptcalc --low
 
 **canonical, og:url은 건드리지 않는다.**
 
+### JSON-LD 동기화 (필수, 2025-04-23 추가)
+
+title/description 변경 시 다음 JSON-LD 필드도 **반드시 같은 내용으로** 동기화:
+
+- `Article` JSON-LD의 `"headline"` ← title (브랜드 ` | 제이퍼 계산기 블로그` 부분 제거한 본문)
+- `Article` JSON-LD의 `"description"` ← meta description
+- `BreadcrumbList` JSON-LD의 `"position": 4`의 `"name"` ← title (브랜드 부분 제거한 본문)
+
+**이유**: `/verify` 스킬 D항목(JSON-LD ↔ HTML 정합성)에 위배되지 않도록 함. title만 변경하고 JSON-LD를 그대로 두면 Google Rich Results에서 일관성 깨짐.
+
+### h1 동기화 (필수)
+
+`<h1>` 태그도 새 title의 본문(브랜드 제거)과 동일하게 변경. h1과 title이 다르면 SEO·UX 모두 손해.
+
 ## 작업 순서
 
 ### 1) 대상 페이지 확보
@@ -140,9 +154,9 @@ grep -E '<title>|name="description"|og:title|og:description|twitter:title|twitte
 
 `/home/tjd618/jptcalc/meta-optimize-log.md`에 누적 기록:
 ```
-## 2026-04-23
-- posts/salary-5000-takehome.html: CTR 1.2% → (재측정 4/30 예정)
-- posts/pension-tax.html: CTR 0.8% → (재측정 4/30 예정)
+## 2026-04-22
+- posts/salary-5000-takehome.html: CTR 1.2% → (재측정 4/29 예정)
+- posts/pension-tax.html: CTR 0.8% → (재측정 4/29 예정)
 ```
 
 ## 재측정 규칙
@@ -152,9 +166,18 @@ grep -E '<title>|name="description"|og:title|og:description|twitter:title|twitte
 
 ## 금지
 
-- 본문 HTML 콘텐츠 변경 금지 (이 스킬은 **메타 전용**)
-- JSON-LD 변경 금지 (title 필드 있어도 건드리지 않음 - 별도 /verify 대상)
+- 본문 HTML 콘텐츠 변경 금지 (이 스킬은 **메타 전용** - h1, title, description, JSON-LD headline·description·BreadcrumbList p4까지만 허용)
+- 본문 단락(`<p>`), 표(`<table>`), FAQ 답변, CTA 박스 등은 변경 금지
 - em dash(—) 금지
 - sitemap.xml 갱신 불필요 (`<lastmod>` 업데이트는 선택)
+
+
+## 완료 후 로그 기록
+
+스킬 실행이 완료되면 반드시 아래 명령으로 `skill-log.json`에 기록한다:
+
+```bash
+python3 -c "import json,datetime; logs=json.load(open('/home/tjd618/skill-log.json')); now=datetime.datetime.now(); logs.insert(0,{'date':now.strftime('%Y-%m-%d'),'time':now.strftime('%H:%M'),'project':'jptcalc','skill':'meta-optimize'}); open('/home/tjd618/skill-log.json','w').write(json.dumps(logs,ensure_ascii=False,indent=2))"
+```
 
 $ARGUMENTS
