@@ -15,3 +15,12 @@
 - posts/holiday-2026.html: "총정리" 제거, 17일 수치와 황금연휴 키워드 삽입 (재측정 2026-05-01 예정)
 - posts/four-insurance-vs-33-comparison.html: "완전 비교" 제거, 27만원 차이 수치 title 삽입 (재측정 2026-05-01 예정)
 - posts/bmi-guide.html: 한국인 기준 18.5~22.9 수치 title 삽입, desc 결론먼저 구조로 교체 (재측정 2026-05-01 예정)
+
+## 2026-04-24
+- posts/realestate-agent-fee.html: "완벽 정리" 제거, 중개보수 요율표·상한요율 0.5%/0.4% 수치 삽입, h1+JSON-LD 동기화 (재측정 2026-05-01 예정)
+- posts/military-discharge-date.html: 입대일→전역일 계산 직접 표현, 군별 복무기간 수치(18·20·21개월) title 삽입 (재측정 2026-05-01 예정)
+- posts/subscription-score-guide.html: "가점제 점수 계산" → "가점 점수표", 84점 만점 구조 명시 (재측정 2026-05-01 예정)
+- posts/savings-maturity-guide.html: "총정리" 제거, 이자 세금 15.4% 수치 title 삽입, 결론먼저 desc 구조로 교체 (재측정 2026-05-01 예정)
+- posts/pension-tax-guide.html: "완전 정리" 제거, 55세5.5%/70세4.4%/80세3.3% 세율 수치 title 직접 노출 (재측정 2026-05-01 예정)
+- posts/freelancer-tax-refund.html: "환급받는 방법" → "돌려받는 법", 3%+0.3% 구성 설명 desc 삽입 (재측정 2026-05-01 예정)
+- posts/hourly-wage-guide.html: "환산하면 얼마?" → "환산표", 3000만원=12000원 수치 title 직접 삽입 (재측정 2026-05-01 예정)

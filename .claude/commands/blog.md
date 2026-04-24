@@ -33,7 +33,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 
 1. `/calc/pension-welfare/pension-tax/` - 연금소득세 계산기 (연금·복지) (1/2 완료 - pension-tax-guide.html)
 2. `/calc/pension-welfare/long-term-care/` - 장기요양 비용 계산기 (연금·복지) (1/2 완료 - long-term-care-cost-guide.html)
-3. `/calc/tax/medical-expense/` - 의료비 세액공제 계산기 (세금)
+3. `/calc/tax/medical-expense/` - 의료비 세액공제 계산기 (세금) (1/2 완료 - medical-expense-deduction-guide.html)
 4. `/calc/pension-welfare/national-pension/` - 국민연금 수령액 계산기 (연금·복지) (1/2 완료 - national-pension-guide.html)
 
 글 작성 후 해당 계산기의 detail-shell.js guides 배열에 블로그 URL을 추가한다. 2편 모두 완료된 계산기만 이 목록에서 제거한다.

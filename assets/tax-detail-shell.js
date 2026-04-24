@@ -35,7 +35,8 @@
     '/calc/tax/medical-expense/': {
       key:'medical-expense',
       quick:['총급여의 3%를 초과한 의료비만 세액공제 대상이 됩니다.','난임시술비는 30%, 미숙아·선천성이상아는 20%, 그 외는 15% 공제율이 적용됩니다.','기타 부양가족 의료비는 700만원 한도 내에서만 공제됩니다.','본인·65세 이상·장애인 의료비는 한도 없이 전액 공제 대상입니다.'],
-      related:[['/calc/tax/income-tax/','종합소득세 계산기','📈'],['/calc/tax/withholding/','3.3% 원천징수 계산기','💲'],['/calc/tax/freelancer-income/','월 순수입 계산기','💰']]
+      related:[['/calc/tax/income-tax/','종합소득세 계산기','📈'],['/calc/tax/withholding/','3.3% 원천징수 계산기','💲'],['/calc/tax/freelancer-income/','월 순수입 계산기','💰']],
+      guides:[['/blog/posts/medical-expense-deduction-guide.html','의료비 세액공제 - 본인·부모·자녀 지출로 얼마나 돌려받나 2026']]
     }
   };
   const cfg=pages[path];

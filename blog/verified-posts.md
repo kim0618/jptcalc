@@ -30,3 +30,6 @@
 - national-pension-guide.html (2026-04-23 검증, 이상 없음 | 81.9세 손익분기 계산 정확, FAQ 4개·링크 정상 | 1969년생 이후 65세 수급 정보 보강 권고)
 - savings-maturity-guide.html (2026-04-23 검증, 세금우대 9.5% 표기 의심 | 조합 예탁금 현행 비과세+농특세1.4% 제도와 불일치 가능 - 사용자 확인 권고 | 수치 계산 이상 없음)
 - property-tax-guide.html (2026-04-23 검증, 오류 1개 수정 | BreadcrumbList position 3 /calc/realestate/ → /blog/?cat=부동산 수정)
+- comprehensive-income-tax.html (2026-04-24 검증, 오류 1개 수정 | BreadcrumbList position 3 /calc/tax/ → /blog/?cat=세금 수정 | 계산 이상 없음)
+- severance-pay-guide.html (2026-04-24 검증, 오류 2개 수정 | BreadcrumbList position 3 /calc/salary/ → /blog/?cat=연봉, 감면→절감 표현 수정 | 퇴직금 계산·IRP 수치 정확)
+- parental-leave-pay.html (2026-04-24 검증, 오류 1개 수정 | BreadcrumbList position 3 /calc/salary/ → /blog/?cat=연봉 | 6+6 월별 상한액 정확 | FAQ 3개로 권고 미달 - 구조 보강 권고)
