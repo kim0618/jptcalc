@@ -135,7 +135,8 @@
       <div class="faq-item"><h3>CAGR이란 무엇인가요?</h3><p>CAGR(Compound Annual Growth Rate)은 연평균 복합성장률로, 투자 기간 동안 매년 일정하게 성장했다고 가정할 때의 연간 수익률입니다. 서로 다른 기간의 투자 성과를 비교할 때 유용합니다.</p></div>
       <div class="faq-item"><h3>배당 수익도 수익률에 포함해야 하나요?</h3><p>네, 총 투자 수익률(Total Return)은 시세 차익뿐 아니라 배당금·이자 등 모든 수익을 포함해야 정확한 투자 성과를 평가할 수 있습니다.</p></div>
       <div class="faq-item"><h3>과거 수익률로 미래를 예측할 수 있나요?</h3><p>과거 수익률은 참고 지표일 뿐 미래 수익을 보장하지 않습니다. 시장 환경, 경제 상황 등에 따라 실제 수익은 크게 달라질 수 있습니다.</p></div>
-      <div class="update-note">최종 검토: 2026.03.25 · 계산 결과는 참고용입니다.</div>
+      <div class="faq-item"><h3>총 수익률과 연평균 수익률(CAGR)은 어떻게 다른가요?</h3><p>총 수익률은 투자 기간 전체에 걸쳐 얼마나 수익이 발생했는지를 나타내는 누적 지표이고, CAGR은 이를 연 단위로 환산한 평균 성장률입니다. 투자 기간이 다른 상품들을 공정하게 비교하려면 CAGR을 기준으로 삼는 것이 정확합니다.</p></div>
+      <div class="update-note">최종 검토: 2026.04.13 · 계산 결과는 참고용입니다.</div>
     </div>
   </div>
   <script>
@@ -150,7 +151,7 @@
       { name: '금융감독원(fss.or.kr)', url: 'https://www.fss.or.kr' },
       { name: '한국투자자보호재단(kifin.or.kr)', url: 'https://www.kifin.or.kr' },
     ],
-    lastReviewed: '2026.04',
+    lastReviewed: '2026.04.13',
   };
   </script>
   <script src="/assets/trust-block.js"></script>
@@ -173,7 +174,7 @@
 </footer>
 <script>
 
-function Wm(man){if(man>=10000)return(man/10000).toFixed(2)+'억원';return man.toLocaleString()+'만원';}
+function Wm(man){if(Math.abs(man)>=10000)return(man/10000).toFixed(2)+'억원';return Math.round(man).toLocaleString()+'만원';}
 function calc(){
   const buy=parseFloat(document.getElementById('inv-buy').value)||0;
   const sell=parseFloat(document.getElementById('inv-sell').value)||0;
@@ -199,12 +200,12 @@ function calc(){
 
 <script src="/assets/calc-validate.js"></script>
 <script src="/assets/calc-result-tools.js"></script>
-  <script src="/assets/footer-unified.js" defer></script>
+  <script src="/assets/footer-unified.js"></script>
 <script src="/assets/finance-detail-shell.js"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
-  reviewBasis: '여신전문금융업법·금융기관 공시 기준',
+  reviewBasis: '자본시장법·투자 수익률 계산 일반 원칙',
   basisDate: '2026년 기준',
   referenceOrg: '금융감독원',
   lastReviewed: '2026.04.13',

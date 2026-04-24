@@ -138,7 +138,8 @@
       <div class="faq-item"><h3>72의 법칙이란 무엇인가요?</h3><p>72를 연 수익률(%)로 나누면 원금이 2배가 되는 대략적인 기간(년)을 구할 수 있는 간편 공식입니다. 예를 들어 연 6% 수익률이면 약 12년(72÷6)이 걸립니다.</p></div>
       <div class="faq-item"><h3>연복리와 월복리 차이가 얼마나 되나요?</h3><p>같은 연 수익률이라도 복리 주기가 짧을수록 최종 금액이 커집니다. 다만 일반적인 금리 수준에서는 그 차이가 크지 않으며, 장기 투자 시 차이가 누적됩니다.</p></div>
       <div class="faq-item"><h3>인플레이션을 감안해야 하나요?</h3><p>네, 명목 수익률에서 인플레이션을 차감한 실질 수익률로 계산해야 실제 구매력 기준의 자산 증가를 파악할 수 있습니다.</p></div>
-      <div class="update-note">최종 검토: 2026.03.25 · 계산 결과는 참고용입니다.</div>
+      <div class="faq-item"><h3>복리와 단리의 차이는 무엇인가요?</h3><p>단리는 원금에만 이자가 붙지만, 복리는 원금과 이전에 발생한 이자 모두에 이자가 붙습니다. 투자 기간이 길어질수록 복리와 단리의 차이가 급격히 벌어지며, 장기 투자에서 복리 효과는 기하급수적으로 커집니다.</p></div>
+      <div class="update-note">최종 검토: 2026.04.13 · 계산 결과는 참고용입니다.</div>
     </div>
   </div>
   <script>
@@ -153,7 +154,7 @@
       { name: '금융감독원(fss.or.kr)', url: 'https://www.fss.or.kr' },
       { name: '한국은행(bok.or.kr)', url: 'https://www.bok.or.kr' },
     ],
-    lastReviewed: '2026.04',
+    lastReviewed: '2026.04.13',
   };
   </script>
   <script src="/assets/trust-block.js"></script>
@@ -177,7 +178,7 @@
 <script>
 
 let freq=1;
-function Wm(man){if(man>=10000)return(man/10000).toFixed(2)+'억원';return man.toLocaleString()+'만원';}
+function Wm(man){if(man>=10000)return(man/10000).toFixed(2)+'억원';return Math.round(man).toLocaleString()+'만원';}
 function setFreq(f,btn){freq=f;document.querySelectorAll('#comp-freq-group .seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');calc();}
 function showConverted(inputEl,dispEl){const v=parseFloat(inputEl.value);if(!v||v<=0){dispEl.textContent='';return;}dispEl.textContent=v>=10000?'= '+(v/10000).toFixed(2)+'억원':'= '+v.toLocaleString()+'만원';}
 function calc(){
@@ -203,12 +204,12 @@ function calc(){
 
 <script src="/assets/calc-validate.js"></script>
 <script src="/assets/calc-result-tools.js"></script>
-  <script src="/assets/footer-unified.js" defer></script>
+  <script src="/assets/footer-unified.js"></script>
 <script src="/assets/finance-detail-shell.js"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
-  reviewBasis: '여신전문금융업법·금융기관 공시 기준',
+  reviewBasis: '복리 수익률 계산 일반 원칙·금융감독원 기준',
   basisDate: '2026년 기준',
   referenceOrg: '금융감독원',
   lastReviewed: '2026.04.13',
