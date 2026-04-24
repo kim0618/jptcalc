@@ -66,7 +66,7 @@
   <div class="page-header"><div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/date/">날짜·D-day 계산기</a><span class="breadcrumb-sep">›</span><span>날짜 더하기/빼기</span></div>
     <div class="page-header-badge">➕ 무료 온라인 계산기</div><h1>날짜 더하기/빼기 계산기</h1><p>특정 날짜에서 년, 월, 일을 더하거나 빼서 결과 날짜를 계산합니다</p></div>
   <div class="card"><div class="card-title">날짜 더하기 / 빼기</div><div class="field"><div class="field-label">시작 날짜</div><input type="date" id="add-start" /></div><div class="field"><div class="field-label">연산</div><div class="seg-group"><button class="seg-btn active" id="add-op-plus" onclick="setAddOp('+',this)">+ 더하기</button><button class="seg-btn" id="add-op-minus" onclick="setAddOp('-',this)">- 빼기</button></div></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:16px"><div><div class="field-label" style="margin-bottom:6px">년</div><div class="input-wrap"><input type="number" id="add-years" value="0" min="0" /><span class="unit">년</span></div></div><div><div class="field-label" style="margin-bottom:6px">월</div><div class="input-wrap"><input type="number" id="add-months" value="0" min="0" /><span class="unit">월</span></div></div><div><div class="field-label" style="margin-bottom:6px">일</div><div class="input-wrap"><input type="number" id="add-days" value="0" min="0" /><span class="unit">일</span></div></div></div><button class="calc-btn" onclick="calcAdd()">결과 날짜 계산하기</button></div>
-  <div class="result-card" id="add-result"><div class="result-highlight"><div class="rh-label" id="add-op-label">더한 결과</div><div class="rh-value" id="add-result-date"></div><div class="rh-sub" id="add-result-weekday"></div></div><div id="add-detail"></div></div>
+  <div class="result-card" id="add-result" aria-live="polite"><div class="result-highlight"><div class="rh-label" id="add-op-label">더한 결과</div><div class="rh-value" id="add-result-date"></div><div class="rh-sub" id="add-result-weekday"></div></div><div id="add-detail"></div><div class="result-note">※ 월 단위 계산 시 해당 월에 날짜가 없으면 그 달의 마지막 날로 자동 조정됩니다 (예: 1월 31일 +1개월 = 2월 28일). 년 → 월 → 일 순서로 계산됩니다.</div></div>
 
   <div class="guide-section">
     <div class="guide-card">
@@ -80,9 +80,10 @@
     </div>
     <div class="guide-card faq-card">
       <h2>자주 묻는 질문</h2>
-      <div class="faq-item"><h3>월 단위 계산 시 말일은 어떻게 처리되나요?</h3><p>1월 31일에 1개월을 더하면 2월 28일(또는 29일)로 계산됩니다. 해당 월의 마지막 날로 자동 조정됩니다.</p></div>
-      <div class="faq-item"><h3>년, 월, 일을 동시에 더할 수 있나요?</h3><p>네, 세 가지를 동시에 입력하면 년 → 월 → 일 순서로 순차 계산됩니다.</p></div>
-      <div class="faq-item"><h3>빼기 계산도 가능한가요?</h3><p>네, 연산을 '빼기'로 전환하면 입력한 기간만큼 과거 날짜를 계산합니다.</p></div>
+      <div class="faq-item"><h3>날짜 더하기/빼기 계산기는 어떤 상황에 유용한가요?</h3><p>계약 만료일, 군 복무 전역 예정일, 세금 신고·납부 기한 등을 계산할 때 유용합니다. 시작일에서 계약 기간만큼 더하거나, 기준일에서 법정 기한을 더해 정확한 마감일을 산출할 수 있습니다.</p></div>
+      <div class="faq-item"><h3>월 단위 계산 시 말일은 어떻게 처리되나요?</h3><p>1월 31일에 1개월을 더하면 2월 28일(또는 윤년의 경우 29일)로 계산됩니다. 해당 월에 그 날짜가 존재하지 않으면 자동으로 그 달의 마지막 날로 조정됩니다.</p></div>
+      <div class="faq-item"><h3>년, 월, 일을 동시에 더할 수 있나요?</h3><p>네, 세 가지를 동시에 입력하면 년 → 월 → 일 순서로 순차 계산됩니다. 각 단위를 0으로 두면 해당 단위는 계산에서 제외됩니다.</p></div>
+      <div class="faq-item"><h3>빼기 계산도 가능한가요?</h3><p>네, 연산을 '빼기'로 전환하면 입력한 기간만큼 과거 날짜를 계산합니다. 예를 들어 오늘에서 100일을 빼면 100일 전 날짜를 확인할 수 있습니다.</p></div>
     </div>
   </div>
   <script>
@@ -117,23 +118,40 @@ function setAddOp(op,btn){addOp=op;btn.parentElement.querySelectorAll('.seg-btn'
 function calcAdd(){
   var start=parseDate(document.getElementById('add-start').value);
   if(!start){alert('시작 날짜를 입력해주세요.');return}
-  var years=parseInt(document.getElementById('add-years').value)||0;
-  var months=parseInt(document.getElementById('add-months').value)||0;
-  var days=parseInt(document.getElementById('add-days').value)||0;
+  var sy=start.getFullYear();
+  if(sy<1900||sy>2200){alert('1900년~2200년 사이의 날짜를 입력해주세요.');return}
+  var years=Math.max(0,parseInt(document.getElementById('add-years').value)||0);
+  var months=Math.max(0,parseInt(document.getElementById('add-months').value)||0);
+  var days=Math.max(0,parseInt(document.getElementById('add-days').value)||0);
+  if(years===0&&months===0&&days===0){alert('년, 월, 일 중 하나 이상 입력해주세요.');return}
   var result=new Date(start);var sign=addOp==='+'?1:-1;
   var totalMonths=sign*years*12+sign*months;
   if(totalMonths!==0){var dayOfMonth=result.getDate();result.setDate(1);result.setMonth(result.getMonth()+totalMonths);var lastDay=new Date(result.getFullYear(),result.getMonth()+1,0).getDate();result.setDate(Math.min(dayOfMonth,lastDay))}
   result.setDate(result.getDate()+sign*days);
-  var opLabel=addOp==='+'?'더한':'뺀';var totalDays=Math.abs(diffDays(start,result));var dow=result.getDay();var weekdayColor=WEEK_COLORS[dow];
+  var ry=result.getFullYear();
+  if(ry<1900||ry>2200){alert('결과 날짜가 유효 범위(1900~2200년)를 벗어납니다. 입력값을 줄여주세요.');return}
+  var opLabel=addOp==='+'?'더한':'뺀';
+  var totalDays=Math.abs(diffDays(start,result));var dow=result.getDay();var weekdayColor=WEEK_COLORS[dow];
+  var tod=today();var diffFromToday=diffDays(tod,result);
+  var todayDiffStr=diffFromToday===0?'오늘':diffFromToday>0?'오늘로부터 '+diffFromToday+'일 후':'오늘로부터 '+Math.abs(diffFromToday)+'일 전';
   document.getElementById('add-op-label').textContent=opLabel+' 결과';
   document.getElementById('add-result-date').textContent=koDateStr(result);
-  var sub=document.getElementById('add-result-weekday');sub.textContent=KO_DAYS[dow];sub.style.color=weekdayColor;
+  var sub=document.getElementById('add-result-weekday');sub.textContent=KO_DAYS[dow]+' · '+todayDiffStr;sub.style.color=weekdayColor;
   var addedParts=[];if(years)addedParts.push(years+'년');if(months)addedParts.push(months+'개월');if(days)addedParts.push(days+'일');
-  var addedStr=addedParts.join(' ')||'0일';
-  document.getElementById('add-detail').innerHTML='<div class="result-row"><span class="result-label">시작 날짜</span><span class="result-value">'+koDateStr(start)+' ('+KO_DAYS[start.getDay()]+')</span></div><div class="result-row"><span class="result-label">'+(addOp==='+'?'더하기':'빼기')+'</span><span class="result-value">'+addedStr+'</span></div><div class="result-row result-total-row"><span class="result-total-label">결과 날짜</span><span class="result-total-value">'+koDateStr(result)+' ('+KO_DAYS[dow]+')</span></div><div class="result-row"><span class="result-label">총 차이</span><span class="result-value">'+totalDays.toLocaleString()+'일</span></div>';
+  var addedStr=addedParts.join(' ');
+  document.getElementById('add-detail').innerHTML=
+    '<div class="result-row"><span class="result-label">시작 날짜</span><span class="result-value">'+koDateStr(start)+' ('+KO_DAYS[start.getDay()]+')</span></div>'+
+    '<div class="result-row"><span class="result-label">'+(addOp==='+'?'더하기':'빼기')+'</span><span class="result-value">'+addedStr+'</span></div>'+
+    '<div class="result-row result-total-row"><span class="result-total-label">결과 날짜</span><span class="result-total-value">'+koDateStr(result)+' ('+KO_DAYS[dow]+')</span></div>'+
+    '<div class="result-row"><span class="result-label">시작일~결과일 총 차이</span><span class="result-value">'+totalDays.toLocaleString()+'일</span></div>'+
+    '<div class="result-row"><span class="result-label">오늘 기준</span><span class="result-value">'+todayDiffStr+'</span></div>';
   document.getElementById('add-result').classList.add('show');
 }
-(function(){document.getElementById('add-start').value=toDateStr(today())})();
+(function(){
+  document.getElementById('add-start').value=toDateStr(today());
+  var ids=['add-start','add-years','add-months','add-days'];
+  ids.forEach(function(id){var el=document.getElementById(id);if(el)el.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();calcAdd()}})});
+})();
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>

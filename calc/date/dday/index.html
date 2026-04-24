@@ -104,10 +104,10 @@
     </div>
     <button class="calc-btn" onclick="calcDday()">D-day 계산하기</button>
   </div>
-  <div class="result-card" id="dday-result">
+  <div class="result-card" id="dday-result" aria-live="polite">
     <div id="dday-display-wrap"></div>
     <div class="anniversary-list" id="anniversary-list"></div>
-    <div class="result-note">※ 오늘 날짜 기준으로 계산됩니다. D-0은 당일, 양수는 앞으로 남은 날, 음수는 지난 날수입니다.</div>
+    <div class="result-note">※ 오늘 날짜 기준으로 계산됩니다. D-0은 당일, D-숫자는 앞으로 남은 날, D+숫자는 목표일 이후 경과 일수입니다.</div>
   </div>
 
   <div class="seo-card">
@@ -115,7 +115,9 @@
     <h3>D-day란?</h3>
     <p>D-day(디데이)는 특정 목표일까지 남은 날수를 표시하는 방식입니다. D-0은 당일, D-1은 하루 전, D+1은 목표일이 하루 지난 것을 의미합니다. 수능, 결혼기념일, 프로젝트 마감일 등에 활용됩니다.</p>
     <h3>기념일 D-day는 어떻게 계산하나요?</h3>
-    <p>한국 관습에 따라 만남 첫날을 1일째로 계산합니다. 100일은 첫날 +99일째가 되는 날이며, 1주년·2주년은 같은 월/일의 +1년/+2년 날짜입니다. 주요 기념일(100일, 200일, 1주년, 2주년)을 자동으로 표시해드립니다.</p>
+    <p>한국 관습에 따라 만남 첫날을 1일째로 계산합니다. 100일은 첫날 +99일째가 되는 날이며, 1주년·2주년은 같은 월/일의 +1년/+2년 날짜입니다. 과거 날짜(만남일·생일 등)를 입력하면 50일·100일·200일·300일·500일·1000일, 1·2·3·5·10주년을 자동으로 확인할 수 있습니다.</p>
+    <h3>수능·시험 D-day에는 무엇이 표시되나요?</h3>
+    <p>미래 날짜(목표일)를 입력하면 목표일까지 남은 일수와 함께 D-1000, D-500, D-365, D-300, D-200, D-100, D-50, D-30, D-14, D-7, D-3, D-1 중 아직 도래하지 않은 체크포인트 6개를 표시합니다. 학습·프로젝트 단계별 일정 관리에 활용하세요.</p>
   </div>
 
   <div class="guide-section">
@@ -131,6 +133,7 @@
     <div class="guide-card faq-card">
       <h2>자주 묻는 질문</h2>
       <div class="faq-item"><h3>D-day에서 D-0은 무엇인가요?</h3><p>D-0은 목표일 당일을 의미합니다. 목표일이 오늘이면 D-0, 내일이면 D-1로 표시됩니다.</p></div>
+      <div class="faq-item"><h3>기념일 100일·200일 계산은 어떻게 하나요?</h3><p>만남 첫날을 1일째로 계산하여, 100일 기념일은 첫날 +99일이 되는 날입니다(한국 관습). 1주년·2주년은 같은 월/일의 +1년/+2년 날짜로 계산됩니다.</p></div>
       <div class="faq-item"><h3>D-day 계산에서 시작일은 포함되나요?</h3><p>기념일(100일·200일 등)은 시작일을 1일째로 포함하여 계산합니다. 예를 들어 100일은 시작일로부터 99일 뒤입니다. 1주년·2주년은 같은 월/일의 1년·2년 뒤 날짜입니다.</p></div>
       <div class="faq-item"><h3>음력 기념일도 계산할 수 있나요?</h3><p>현재는 양력 기준으로만 계산됩니다. 음력 기념일은 매년 양력 날짜가 달라지므로 별도 변환이 필요합니다.</p></div>
     </div>
@@ -181,6 +184,8 @@ function diffDays(a,b){return Math.round((b-a)/86400000)}
 function calcDday(){
   const target=parseDate(document.getElementById('dday-target').value);
   if(!target){alert('목표 날짜를 입력해주세요.');return}
+  const ty=target.getFullYear();
+  if(ty<1900||ty>2200){alert('1900년~2200년 사이의 날짜를 입력해주세요.');return}
   const title=document.getElementById('dday-title').value||'목표일';
   const tod=today();
   const diff=diffDays(tod,target);
@@ -188,24 +193,41 @@ function calcDday(){
   if(diff===0){dLabel='오늘이 바로!';dNum='D-0'}
   else if(diff>0){dLabel='목표일까지';dNum=`D-${diff}`}
   else{dLabel='목표일로부터';dNum=`D+${Math.abs(diff)}`}
-  document.getElementById('dday-display-wrap').innerHTML=`<div class="dday-display"><div class="dday-label">${dLabel}</div><div class="dday-number">${dNum}</div><div class="dday-title">${title} · ${koDateStr(target)}</div></div>`;
+  const targetDow=KO_DAYS_SHORT[target.getDay()];
+  document.getElementById('dday-display-wrap').innerHTML=`<div class="dday-display"><div class="dday-label">${dLabel}</div><div class="dday-number">${dNum}</div><div class="dday-title">${title} · ${koDateStr(target)} (${targetDow})</div></div>`;
   const annList=document.getElementById('anniversary-list');
   const addDaysFromFirst=(base,n)=>new Date(base.getTime()+(n-1)*86400000);
+  const addDays=(base,n)=>new Date(base.getTime()+n*86400000);
   const addYears=(base,n)=>{const d=new Date(base.getFullYear()+n,base.getMonth(),base.getDate());if(d.getMonth()!==base.getMonth())d.setDate(0);return d};
+  const sectionTitle=t=>`<div style="font-size:12px;font-weight:700;color:var(--gray-500);margin:12px 0 8px">${t}</div>`;
+  const item=(left,right)=>`<div class="anniversary-item"><span class="ann-left">${left}</span><span class="ann-right">${right}</span></div>`;
+  let html='';
   if(diff>0){
-    const milestones=[{label:'100일',type:'d',n:100},{label:'200일',type:'d',n:200},{label:'1주년',type:'y',n:1},{label:'2주년',type:'y',n:2}];
-    let html='<div style="font-size:12px;font-weight:700;color:var(--gray-500);margin-bottom:8px">목표일 이후 기념일</div>';
-    milestones.forEach(m=>{const d2=m.type==='d'?addDaysFromFirst(target,m.n):addYears(target,m.n);html+=`<div class="anniversary-item"><span class="ann-left">${m.label} (${koDateStr(d2)})</span><span class="ann-right">${KO_DAYS_SHORT[d2.getDay()]}요일</span></div>`});
-    annList.innerHTML=html;
+    const checkpoints=[1000,500,365,300,200,100,50,30,14,7,3,1].filter(n=>n<=diff).slice(0,6).sort((a,b)=>b-a);
+    if(checkpoints.length){
+      html+=sectionTitle('📌 카운트다운 체크포인트');
+      checkpoints.forEach(n=>{const d2=addDays(target,-n);const fromNow=diffDays(tod,d2);const suffix=fromNow===0?'오늘':fromNow>0?`${fromNow}일 후`:`${Math.abs(fromNow)}일 전`;html+=item(`D-${n} · ${koDateStr(d2)} (${KO_DAYS_SHORT[d2.getDay()]})`,suffix)});
+    }
+    const annMilestones=[{label:'100일',type:'d',n:100},{label:'200일',type:'d',n:200},{label:'1주년',type:'y',n:1},{label:'2주년',type:'y',n:2},{label:'3주년',type:'y',n:3}];
+    html+=sectionTitle('🎉 목표일 이후 기념일 (목표일=1일째 기준)');
+    annMilestones.forEach(m=>{const d2=m.type==='d'?addDaysFromFirst(target,m.n):addYears(target,m.n);html+=item(`${m.label} · ${koDateStr(d2)}`,`${KO_DAYS_SHORT[d2.getDay()]}요일`)});
+  }else if(diff===0){
+    html+=sectionTitle('🎉 오늘부터 시작되는 기념일');
+    const list=[{label:'50일',type:'d',n:50},{label:'100일',type:'d',n:100},{label:'200일',type:'d',n:200},{label:'1주년',type:'y',n:1},{label:'2주년',type:'y',n:2}];
+    list.forEach(m=>{const d2=m.type==='d'?addDaysFromFirst(target,m.n):addYears(target,m.n);const after=diffDays(tod,d2);html+=item(`${m.label} · ${koDateStr(d2)} (${KO_DAYS_SHORT[d2.getDay()]})`,`${after}일 후`)});
   }else{
-    const base=target;const milestones=[{label:'100일',type:'d',n:100},{label:'200일',type:'d',n:200},{label:'1주년',type:'y',n:1},{label:'500일',type:'d',n:500},{label:'2주년',type:'y',n:2},{label:'1000일',type:'d',n:1000}];
-    let html='<div style="font-size:12px;font-weight:700;color:var(--gray-500);margin-bottom:8px">경과 기념일 (시작일 기준)</div>';
-    milestones.forEach(m=>{const d2=m.type==='d'?addDaysFromFirst(base,m.n):addYears(base,m.n);const passed=diffDays(d2,tod);const status=passed>=0?`(${passed}일 전)`:`(${Math.abs(passed)}일 후)`;html+=`<div class="anniversary-item"><span class="ann-left">${m.label} · ${koDateStr(d2)}</span><span class="ann-right">${status}</span></div>`});
-    annList.innerHTML=html;
+    const base=target;
+    const milestones=[{label:'50일',type:'d',n:50},{label:'100일',type:'d',n:100},{label:'200일',type:'d',n:200},{label:'300일',type:'d',n:300},{label:'500일',type:'d',n:500},{label:'1주년',type:'y',n:1},{label:'1000일',type:'d',n:1000},{label:'2주년',type:'y',n:2},{label:'3주년',type:'y',n:3},{label:'5주년',type:'y',n:5},{label:'10주년',type:'y',n:10}];
+    html+=sectionTitle('🎉 기념일 (목표일=1일째 기준)');
+    milestones.forEach(m=>{const d2=m.type==='d'?addDaysFromFirst(base,m.n):addYears(base,m.n);const passed=diffDays(d2,tod);const status=passed===0?'오늘':passed>0?`${passed}일 전`:`${Math.abs(passed)}일 후`;html+=item(`${m.label} · ${koDateStr(d2)} (${KO_DAYS_SHORT[d2.getDay()]})`,status)});
   }
+  annList.innerHTML=html;
   document.getElementById('dday-result').classList.add('show');
 }
-(function(){document.getElementById('dday-target').value=toDateStr(today())})();
+(function(){
+  document.getElementById('dday-target').value=toDateStr(today());
+  ['dday-title','dday-target'].forEach(id=>{const el=document.getElementById(id);if(el)el.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();calcDday()}})});
+})();
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>

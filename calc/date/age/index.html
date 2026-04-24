@@ -64,7 +64,7 @@
   <div class="page-header"><div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/date/">날짜·D-day 계산기</a><span class="breadcrumb-sep">›</span><span>만 나이 계산기</span></div>
     <div class="page-header-badge">🎂 2023년 6월 만 나이 법 기준</div><h1>만 나이 계산기</h1><p>만 나이 통일법(2023.06.28) 기준으로 정확한 만 나이를 계산합니다</p></div>
   <div class="card"><div class="card-title">만 나이 계산 (2023년 6월 법 기준)</div><div class="field"><div class="field-label">생년월일</div><input type="date" id="age-birth" /></div><div class="field"><div class="field-label">기준 날짜 <span style="font-weight:500;font-size:12px;color:var(--gray-400)">(비워두면 오늘)</span></div><input type="date" id="age-base" /></div><button class="calc-btn" onclick="calcAge()">나이 계산하기</button></div>
-  <div class="result-card" id="age-result"><div class="result-highlight"><div class="rh-label">만 나이</div><div class="rh-value" id="age-man">-</div><div class="rh-sub" id="age-man-sub"></div></div><div id="age-detail"></div><div class="result-note">※ 2023년 6월 28일부터 한국 민법상 나이 기준이 만 나이로 통일되었습니다.</div></div>
+  <div class="result-card" id="age-result" aria-live="polite"><div class="result-highlight"><div class="rh-label">만 나이</div><div class="rh-value" id="age-man">-</div><div class="rh-sub" id="age-man-sub"></div></div><div id="age-detail"></div><div class="result-note">※ 2023년 6월 28일부터 한국 민법상 나이 기준이 만 나이로 통일되었습니다. 윤년 2월 29일생은 평년에 2월 28일이 생일입니다(법제처 기준).</div></div>
   <div class="seo-card"><h2>만 나이 계산기 이용 안내</h2><h3>만 나이 계산 방법</h3><p>2023년 6월 28일부터 한국 민법·행정기본법 개정으로 만 나이가 공식 기준이 되었습니다. 만 나이는 생일이 지났으면 올해 연도 - 출생 연도, 생일이 지나지 않았으면 올해 연도 - 출생 연도 - 1로 계산합니다.</p><h3>만 나이 vs 세는 나이 vs 연 나이</h3><p><strong>만 나이</strong>: 생일을 기준으로 매년 한 살씩 추가. 법적·행정적 공식 기준. <strong>세는 나이</strong>: 태어나면 1살, 매년 1월 1일마다 한 살 추가. 생일 전에는 만 나이보다 2살, 생일 후에는 1살 많음. <strong>연 나이</strong>: 올해 연도 - 출생 연도. 생일과 무관하게 연도만으로 계산.</p></div>
 
   <div class="guide-section">
@@ -152,25 +152,46 @@ function parseDate(str){if(!str)return null;var p=str.split('-');return new Date
 function koDateStr(d){return d.getFullYear()+'년 '+(d.getMonth()+1)+'월 '+d.getDate()+'일'}
 function today(){var n=new Date();return new Date(n.getFullYear(),n.getMonth(),n.getDate())}
 function diffDays(a,b){return Math.round((b-a)/86400000)}
+function effBday(bM,bD,y){
+  // 윤년 2월 29일생: 평년에는 2월 28일이 법적 생일 (법제처 기준)
+  if(bM===1&&bD===29&&new Date(y,1,29).getMonth()!==1)return{m:1,d:28};
+  return{m:bM,d:bD};
+}
 function calcAge(){
   var birth=parseDate(document.getElementById('age-birth').value);
   if(!birth){alert('생년월일을 입력해주세요.');return}
-  var base=parseDate(document.getElementById('age-base').value)||today();
+  var tod=today();
+  var by=birth.getFullYear();
+  if(by<1900||birth>tod){alert('1900년 이후 오늘 이전의 생년월일을 입력해주세요.');return}
+  var base=parseDate(document.getElementById('age-base').value)||tod;
+  var basy=base.getFullYear();
+  if(basy<1900||basy>2200){alert('기준 날짜는 1900년~2200년 사이로 입력해주세요.');return}
   var birthY=birth.getFullYear(),birthM=birth.getMonth(),birthD=birth.getDate();
   var baseY=base.getFullYear(),baseM=base.getMonth(),baseD=base.getDate();
-  var manAge=baseY-birthY;
-  var hadBirthday=(baseM>birthM)||(baseM===birthM&&baseD>=birthD);
-  if(!hadBirthday)manAge--;
+  var eff=effBday(birthM,birthD,baseY);
+  var isBirthday=(baseM===eff.m&&baseD===eff.d);
+  var hadBirthday=(baseM>eff.m)||(baseM===eff.m&&baseD>=eff.d);
+  var manAge=baseY-birthY;if(!hadBirthday)manAge--;
   if(manAge<0){alert('기준 날짜가 생년월일보다 이전입니다.');return}
   var korAge=baseY-birthY+1;var yearAge=baseY-birthY;
-  var nextBirthday=new Date(baseY,birthM,birthD);
-  if(nextBirthday<=base)nextBirthday=new Date(baseY+1,birthM,birthD);
+  // 다음 생일 (윤년 처리)
+  var thisEff=effBday(birthM,birthD,baseY);
+  var thisBday=new Date(baseY,thisEff.m,thisEff.d);
+  var nextBirthday;
+  if(thisBday>base){nextBirthday=thisBday;}
+  else{var ny=baseY+1;var nextEff=effBday(birthM,birthD,ny);nextBirthday=new Date(ny,nextEff.m,nextEff.d);}
   var daysToNext=diffDays(base,nextBirthday);var livedDays=diffDays(birth,base);
+  var isLeapBirth=(birthM===1&&birthD===29);
+  var nextBdayLabel=koDateStr(nextBirthday)+(isLeapBirth&&nextBirthday.getDate()===28?' (평년 대체)':'');
+  var bdaySub=isBirthday?'오늘이 생일입니다! 🎂':hadBirthday?'(올해 생일 지남)':'(올해 생일 전)';
   document.getElementById('age-man').textContent=manAge+'세';
-  document.getElementById('age-man-sub').textContent=hadBirthday?'(올해 생일 지남)':'(올해 생일 전)';
-  document.getElementById('age-detail').innerHTML='<div class="result-row"><span class="result-label">만 나이 (법적 기준)</span><span class="result-value">'+manAge+'세</span></div><div class="result-row"><span class="result-label">세는 나이 (한국식)</span><span class="result-value">'+korAge+'세</span></div><div class="result-row"><span class="result-label">연 나이</span><span class="result-value">'+yearAge+'세</span></div><div class="result-row"><span class="result-label">생년월일</span><span class="result-value">'+koDateStr(birth)+' ('+KO_DAYS[birth.getDay()]+'요일)</span></div><div class="result-row"><span class="result-label">다음 생일까지</span><span class="result-value">'+daysToNext+'일 남음 ('+koDateStr(nextBirthday)+')</span></div><div class="result-row result-total-row"><span class="result-total-label">총 살아온 날수</span><span class="result-total-value">'+livedDays.toLocaleString()+'일</span></div>';
+  document.getElementById('age-man-sub').textContent=bdaySub;
+  document.getElementById('age-detail').innerHTML='<div class="result-row"><span class="result-label">만 나이 (법적 기준)</span><span class="result-value">'+manAge+'세</span></div><div class="result-row"><span class="result-label">세는 나이 (한국식)</span><span class="result-value">'+korAge+'세</span></div><div class="result-row"><span class="result-label">연 나이</span><span class="result-value">'+yearAge+'세</span></div><div class="result-row"><span class="result-label">생년월일</span><span class="result-value">'+koDateStr(birth)+' ('+KO_DAYS[birth.getDay()]+'요일)</span></div><div class="result-row"><span class="result-label">다음 생일까지</span><span class="result-value">'+daysToNext+'일 남음 ('+nextBdayLabel+')</span></div><div class="result-row result-total-row"><span class="result-total-label">총 살아온 날수</span><span class="result-total-value">'+livedDays.toLocaleString()+'일</span></div>';
   document.getElementById('age-result').classList.add('show');
 }
+(function(){
+  ['age-birth','age-base'].forEach(function(id){var el=document.getElementById(id);if(el)el.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();calcAge()}})});
+})();
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>

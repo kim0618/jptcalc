@@ -57,7 +57,7 @@
   <div class="page-header"><div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/date/">날짜·D-day 계산기</a><span class="breadcrumb-sep">›</span><span>요일 계산기</span></div>
     <div class="page-header-badge">📆 무료 온라인 계산기</div><h1>요일 계산기</h1><p>과거·미래 어떤 날짜든 요일을 정확하게 확인합니다</p></div>
   <div class="card"><div class="card-title">특정 날짜의 요일</div><div class="field"><div class="field-label">날짜 선택</div><input type="date" id="weekday-date" /></div><button class="calc-btn" onclick="calcWeekday()">요일 확인하기</button></div>
-  <div class="result-card" id="weekday-result"><div class="weekday-display"><div class="weekday-date" id="weekday-date-str"></div><div class="weekday-name" id="weekday-name"></div><div class="weekday-full" id="weekday-full"></div></div><div id="weekday-info" style="margin-top:8px"></div></div>
+  <div class="result-card" id="weekday-result" aria-live="polite"><div class="weekday-display"><div class="weekday-date" id="weekday-date-str"></div><div class="weekday-name" id="weekday-name"></div><div class="weekday-full" id="weekday-full"></div></div><div id="weekday-info" style="margin-top:8px"></div><div class="result-note">※ 그레고리력(양력) 기준으로 계산됩니다. 1582년 이전 역사적 날짜는 실제 달력과 다를 수 있습니다.</div></div>
 
   <div class="guide-section">
     <div class="guide-card">
@@ -71,9 +71,10 @@
     </div>
     <div class="guide-card faq-card">
       <h2>자주 묻는 질문</h2>
-      <div class="faq-item"><h3>과거 날짜의 요일도 계산할 수 있나요?</h3><p>네, 과거와 미래 어떤 날짜든 정확하게 요일을 계산할 수 있습니다.</p></div>
-      <div class="faq-item"><h3>같은 달의 동일 요일 목록은 무엇인가요?</h3><p>선택한 날짜가 속한 달에서 같은 요일에 해당하는 모든 날짜를 표시합니다. 예를 들어 수요일을 선택하면 그 달의 모든 수요일 날짜를 보여줍니다.</p></div>
-      <div class="faq-item"><h3>윤년 2월 29일도 정확히 계산되나요?</h3><p>네, 윤년 여부를 자동으로 판별하여 2월 29일의 요일도 정확하게 계산합니다.</p></div>
+      <div class="faq-item"><h3>과거 날짜의 요일도 계산할 수 있나요?</h3><p>네, 과거와 미래 어떤 날짜든 정확하게 요일을 계산할 수 있습니다. 그레고리력(양력) 기준이며, 1582년 이전 역사적 날짜는 실제 달력과 다를 수 있습니다.</p></div>
+      <div class="faq-item"><h3>같은 달의 동일 요일 목록은 무엇인가요?</h3><p>선택한 날짜가 속한 달에서 같은 요일에 해당하는 모든 날짜를 표시합니다. 예를 들어 수요일을 선택하면 그 달의 모든 수요일 날짜와 함께 몇 번째 수요일인지도 확인할 수 있습니다.</p></div>
+      <div class="faq-item"><h3>윤년 2월 29일도 정확히 계산되나요?</h3><p>네, 윤년 여부를 자동으로 판별하여 2월 29일의 요일도 정확하게 계산합니다. 4년마다 돌아오는 윤년 날짜도 정상 처리됩니다.</p></div>
+      <div class="faq-item"><h3>ISO 주차란 무엇인가요?</h3><p>ISO 8601 기준 주차로, 그 해의 첫 번째 목요일이 포함된 주를 1주차로 정의합니다. 12월 말 날짜가 다음 해 1주차에 해당하거나, 1월 초 날짜가 전년도 주차에 속하는 경우 연도를 구분해 표시합니다.</p></div>
     </div>
   </div>
   <script>
@@ -103,20 +104,45 @@ function koDateStr(d){return d.getFullYear()+'년 '+(d.getMonth()+1)+'월 '+d.ge
 function today(){var n=new Date();return new Date(n.getFullYear(),n.getMonth(),n.getDate())}
 function toDateStr(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
 function diffDays(a,b){return Math.round((b-a)/86400000)}
+function isoWeek(d){
+  var tmp=new Date(d.getTime());
+  tmp.setDate(tmp.getDate()+3-((tmp.getDay()+6)%7));
+  var ys=new Date(tmp.getFullYear(),0,1);
+  return{week:Math.floor((tmp-ys)/604800000)+1,year:tmp.getFullYear()};
+}
 function calcWeekday(){
   var d=parseDate(document.getElementById('weekday-date').value);
   if(!d){alert('날짜를 입력해주세요.');return}
+  var dy=d.getFullYear();
+  if(dy<1900||dy>2200){alert('1900년~2200년 사이의 날짜를 입력해주세요.');return}
   var dow=d.getDay();var color=WEEK_COLORS[dow];var tod=today();var diff=diffDays(tod,d);
   var diffStr='';if(diff===0)diffStr='(오늘)';else if(diff>0)diffStr='(오늘로부터 '+diff+'일 후)';else diffStr='(오늘로부터 '+Math.abs(diff)+'일 전)';
   document.getElementById('weekday-date-str').textContent=koDateStr(d)+' '+diffStr;
   var nameEl=document.getElementById('weekday-name');nameEl.textContent=KO_DAYS_SHORT[dow]+'요일';nameEl.style.color=color;
   document.getElementById('weekday-full').textContent=KO_DAYS[dow];
-  var year=d.getFullYear(),month=d.getMonth();var sameList=[];
+  var year=d.getFullYear(),month=d.getMonth();
+  var sameList=[];
   for(var day=1;day<=31;day++){var t=new Date(year,month,day);if(t.getMonth()!==month)break;if(t.getDay()===dow)sameList.push(t.getDate())}
-  document.getElementById('weekday-info').innerHTML='<div class="result-row"><span class="result-label">'+d.getFullYear()+'년 '+(d.getMonth()+1)+'월의 '+KO_DAYS[dow]+'</span><span class="result-value">'+sameList.map(function(x){return x+'일'}).join(', ')+'</span></div><div class="result-row"><span class="result-label">이 달의 '+KO_DAYS[dow]+' 수</span><span class="result-value">'+sameList.length+'회</span></div>';
+  var nthInMonth=sameList.indexOf(d.getDate())+1;
+  var isLeap=new Date(year,1,29).getMonth()===1;
+  var yearStart=new Date(year,0,1);
+  var dayOfYear=Math.round((d-yearStart)/86400000)+1;
+  var totalDays=isLeap?366:365;
+  var iso=isoWeek(d);
+  var isoLabel=iso.year===year?iso.year+'년 '+iso.week+'주차':iso.year+'년 '+iso.week+'주차 ('+iso.year+'년 기준)';
+  document.getElementById('weekday-info').innerHTML=
+    '<div class="result-row"><span class="result-label">월의 순서</span><span class="result-value">'+year+'년 '+(month+1)+'월의 '+nthInMonth+'번째 '+KO_DAYS[dow]+'</span></div>'+
+    '<div class="result-row"><span class="result-label">이 달의 '+KO_DAYS[dow]+' 목록</span><span class="result-value">'+sameList.map(function(x){return x+'일'+(x===d.getDate()?'(선택)':'')}).join(', ')+'</span></div>'+
+    '<div class="result-row"><span class="result-label">이 달의 '+KO_DAYS[dow]+' 수</span><span class="result-value">'+sameList.length+'회</span></div>'+
+    '<div class="result-row"><span class="result-label">연중 일수</span><span class="result-value">'+year+'년의 '+dayOfYear+'번째 날 (전체 '+totalDays+'일 중)</span></div>'+
+    '<div class="result-row result-total-row"><span class="result-total-label">ISO 주차</span><span class="result-total-value">'+isoLabel+'</span></div>';
   document.getElementById('weekday-result').classList.add('show');
 }
-(function(){document.getElementById('weekday-date').value=toDateStr(today())})();
+(function(){
+  document.getElementById('weekday-date').value=toDateStr(today());
+  var el=document.getElementById('weekday-date');
+  if(el)el.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();calcWeekday()}});
+})();
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>

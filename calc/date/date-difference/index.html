@@ -53,6 +53,12 @@
     .drb-label{font-size:11px;color:var(--gray-400);font-weight:600;margin-bottom:4px}
     .drb-value{font-size:22px;font-weight:900;color:var(--gray-900)}
     .drb-unit{font-size:12px;font-weight:600;color:var(--gray-500)}
+    .ymd-highlight{background:linear-gradient(135deg,var(--primary) 0%,#EA580C 100%);border-radius:16px;padding:22px 20px;text-align:center;margin-bottom:12px}
+    .ymd-label{font-size:12px;font-weight:700;color:rgba(255,255,255,0.75);margin-bottom:6px}
+    .ymd-value{font-size:28px;font-weight:900;color:#fff;letter-spacing:-1px;line-height:1.15}
+    .ymd-sub{font-size:12px;color:rgba(255,255,255,0.8);margin-top:6px}
+    .option-row{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:13px;color:var(--gray-700)}
+    .option-row input{width:auto;margin:0}
     .seo-card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:28px;margin-top:14px}
     .seo-card h2{font-size:16px;font-weight:800;color:var(--gray-900);margin-bottom:12px}
     .seo-card h3{font-size:13px;font-weight:700;color:var(--gray-700);margin:16px 0 6px}
@@ -66,8 +72,8 @@
 <main class="page-wrap">
   <div class="page-header"><div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/date/">날짜·D-day 계산기</a><span class="breadcrumb-sep">›</span><span>날짜 차이 계산기</span></div>
     <div class="page-header-badge">📐 무료 온라인 계산기</div><h1>날짜 차이 계산기</h1><p>두 날짜 사이의 일수, 주수, 개월 수, 업무일을 정확하게 계산합니다</p></div>
-  <div class="card"><div class="card-title">두 날짜 사이의 기간 계산</div><div class="field"><div class="field-label">시작 날짜</div><input type="date" id="diff-start" /></div><div class="field"><div class="field-label">종료 날짜</div><input type="date" id="diff-end" /></div><button class="calc-btn" onclick="calcDiff()">날짜 차이 계산하기</button></div>
-  <div class="result-card" id="diff-result"><div class="date-result-grid" id="diff-grid"></div><div id="diff-detail" style="margin-top:16px"></div><div class="result-note" id="diff-note"></div></div>
+  <div class="card"><div class="card-title">두 날짜 사이의 기간 계산</div><div class="field"><div class="field-label">시작 날짜</div><input type="date" id="diff-start" /></div><div class="field"><div class="field-label">종료 날짜</div><input type="date" id="diff-end" /></div><label class="option-row"><input type="checkbox" id="diff-include-start" /> 시작일 포함 계산 (근무일·입원일 등)</label><button class="calc-btn" onclick="calcDiff()">날짜 차이 계산하기</button></div>
+  <div class="result-card" id="diff-result" aria-live="polite"><div id="diff-ymd"></div><div class="date-result-grid" id="diff-grid"></div><div id="diff-detail" style="margin-top:16px"></div><div class="result-note" id="diff-note"></div></div>
   <div class="seo-card"><h2>날짜 차이 계산기 이용 안내</h2><h3>날짜 차이 계산 방법</h3><ul><li>두 날짜 사이의 총 일수를 계산합니다</li><li>주수, 개월 수, 연수로도 환산합니다</li><li>업무일(평일) 기준 계산도 참고로 제공합니다</li></ul><h3>업무일 계산이란?</h3><p>업무일은 토요일과 일요일을 제외한 평일만 계산한 일수입니다. 공휴일은 포함되니 참고하세요.</p></div>
 
   <div class="guide-section">
@@ -82,7 +88,8 @@
     </div>
     <div class="guide-card faq-card">
       <h2>자주 묻는 질문</h2>
-      <div class="faq-item"><h3>시작일은 계산에 포함되나요?</h3><p>시작일은 포함하지 않고 종료일까지 계산합니다. 예를 들어 1월 1일부터 1월 3일까지는 2일입니다.</p></div>
+      <div class="faq-item"><h3>날짜 차이 계산기는 어떤 상황에 활용하나요?</h3><p>근무 기간, 계약 기간, 여행 일수 등을 계산할 때 활용합니다. 총 일수뿐 아니라 주수·개월 수·연수·연월일 분해·업무일을 함께 제공합니다.</p></div>
+      <div class="faq-item"><h3>시작일은 계산에 포함되나요?</h3><p>기본값은 시작일을 포함하지 않고 종료일까지 계산합니다 (예: 1월 1일 → 1월 3일 = 2일). 근무일수·입원일수처럼 시작일도 하루로 세야 한다면 "시작일 포함 계산" 옵션을 체크하세요.</p></div>
       <div class="faq-item"><h3>업무일(평일) 계산은 정확한가요?</h3><p>토요일과 일요일을 제외한 평일만 계산합니다. 공휴일은 자동 제외되지 않으므로 참고용으로 활용하세요.</p></div>
       <div class="faq-item"><h3>윤년은 자동으로 반영되나요?</h3><p>네, 윤년(2월 29일)이 포함된 구간은 자동으로 반영됩니다.</p></div>
     </div>
@@ -113,20 +120,43 @@ function koDateStr(d){return d.getFullYear()+'년 '+(d.getMonth()+1)+'월 '+d.ge
 function today(){const n=new Date();return new Date(n.getFullYear(),n.getMonth(),n.getDate())}
 function toDateStr(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
 function diffDays(a,b){return Math.round((b-a)/86400000)}
+function diffYMD(start,end){
+  if(start>end){var t=start;start=end;end=t}
+  var y=0,tmp=new Date(start);
+  while(true){var nx=new Date(tmp.getFullYear()+1,tmp.getMonth(),tmp.getDate());if(nx.getMonth()!==tmp.getMonth())nx.setDate(0);if(nx>end)break;tmp=nx;y++}
+  var m=0;
+  while(true){var nx2=new Date(tmp.getFullYear(),tmp.getMonth()+1,tmp.getDate());if(nx2.getMonth()!==(tmp.getMonth()+1)%12)nx2.setDate(0);if(nx2>end)break;tmp=nx2;m++}
+  var d=Math.round((end-tmp)/86400000);
+  return {y:y,m:m,d:d};
+}
 function calcDiff(){
   const start=parseDate(document.getElementById('diff-start').value);const end=parseDate(document.getElementById('diff-end').value);
   if(!start||!end){alert('시작 날짜와 종료 날짜를 모두 입력해주세요.');return}
-  const totalDays=Math.abs(diffDays(start,end));const weeks=Math.floor(totalDays/7);const remDays=totalDays%7;const totalMonths=(totalDays/30.4375).toFixed(1);const totalYears=(totalDays/365.25).toFixed(2);
+  const sy=start.getFullYear(),ey=end.getFullYear();
+  if(sy<1900||sy>2200||ey<1900||ey>2200){alert('1900년~2200년 사이의 날짜를 입력해주세요.');return}
+  const includeStart=document.getElementById('diff-include-start').checked;
+  const rawDays=Math.abs(diffDays(start,end));
+  const totalDays=rawDays+(includeStart?1:0);
+  const weeks=Math.floor(totalDays/7);const remDays=totalDays%7;
+  const totalMonths=(totalDays/30.4375).toFixed(1);const totalYears=(totalDays/365.25).toFixed(2);
   let bizDays=0;const minD=start<end?start:end;const maxD=start<end?end:start;
-  const iter=new Date(minD);iter.setDate(iter.getDate()+1);
+  const iter=new Date(minD);if(!includeStart)iter.setDate(iter.getDate()+1);
   while(iter<=maxD){const dow=iter.getDay();if(dow!==0&&dow!==6)bizDays++;iter.setDate(iter.getDate()+1)}
-  document.getElementById('diff-grid').innerHTML='<div class="date-result-box"><div class="drb-label">총 일수</div><div class="drb-value">'+totalDays.toLocaleString()+'<span class="drb-unit">일</span></div></div><div class="date-result-box"><div class="drb-label">업무일</div><div class="drb-value">'+bizDays.toLocaleString()+'<span class="drb-unit">일</span></div></div><div class="date-result-box"><div class="drb-label">주수</div><div class="drb-value">'+weeks+'<span class="drb-unit">주</span> '+remDays+'<span class="drb-unit">일</span></div></div><div class="date-result-box"><div class="drb-label">개월 수</div><div class="drb-value">'+totalMonths+'<span class="drb-unit">개월</span></div></div>';
-  const earlier=start<end?start:end;const later=start<end?end:start;
-  document.getElementById('diff-detail').innerHTML='<div class="result-row"><span class="result-label">시작 날짜</span><span class="result-value">'+koDateStr(earlier)+' ('+KO_DAYS[earlier.getDay()]+')</span></div><div class="result-row"><span class="result-label">종료 날짜</span><span class="result-value">'+koDateStr(later)+' ('+KO_DAYS[later.getDay()]+')</span></div><div class="result-row result-total-row"><span class="result-total-label">총 기간</span><span class="result-total-value">'+totalDays.toLocaleString()+'일 (약 '+totalYears+'년)</span></div>';
-  document.getElementById('diff-note').textContent='※ 시작일은 포함하지 않고 종료일까지 계산합니다 (예: 1월 1일 → 1월 3일 = 2일). 업무일은 토·일요일을 제외한 평일 기준이며 공휴일은 포함됩니다.';
+  const ymd=diffYMD(minD,maxD);
+  const ymdParts=[];if(ymd.y>0)ymdParts.push(ymd.y+'년');if(ymd.m>0)ymdParts.push(ymd.m+'개월');if(ymd.d>0||ymdParts.length===0)ymdParts.push(ymd.d+'일');
+  document.getElementById('diff-ymd').innerHTML='<div class="ymd-highlight"><div class="ymd-label">총 기간</div><div class="ymd-value">'+ymdParts.join(' ')+'</div><div class="ymd-sub">총 '+totalDays.toLocaleString()+'일 · 약 '+totalYears+'년'+(includeStart?' · 시작일 포함':'')+'</div></div>';
+  const weeksHTML=weeks>0?weeks+'<span class="drb-unit">주</span> '+remDays+'<span class="drb-unit">일</span>':remDays+'<span class="drb-unit">일</span>';
+  document.getElementById('diff-grid').innerHTML='<div class="date-result-box"><div class="drb-label">총 일수</div><div class="drb-value">'+totalDays.toLocaleString()+'<span class="drb-unit">일</span></div></div><div class="date-result-box"><div class="drb-label">업무일 (평일)</div><div class="drb-value">'+bizDays.toLocaleString()+'<span class="drb-unit">일</span></div></div><div class="date-result-box"><div class="drb-label">주 환산</div><div class="drb-value">'+weeksHTML+'</div></div><div class="date-result-box"><div class="drb-label">개월 환산</div><div class="drb-value">'+totalMonths+'<span class="drb-unit">개월</span></div></div>';
+  const earlier=minD;const later=maxD;
+  document.getElementById('diff-detail').innerHTML='<div class="result-row"><span class="result-label">시작 날짜</span><span class="result-value">'+koDateStr(earlier)+' ('+KO_DAYS[earlier.getDay()]+')</span></div><div class="result-row"><span class="result-label">종료 날짜</span><span class="result-value">'+koDateStr(later)+' ('+KO_DAYS[later.getDay()]+')</span></div><div class="result-row result-total-row"><span class="result-total-label">총 기간</span><span class="result-total-value">'+ymdParts.join(' ')+'</span></div>';
+  const noteBase=includeStart?'시작일과 종료일을 모두 포함하여 계산합니다 (예: 1월 1일 → 1월 3일 = 3일)':'시작일은 포함하지 않고 종료일까지 계산합니다 (예: 1월 1일 → 1월 3일 = 2일)';
+  document.getElementById('diff-note').textContent='※ '+noteBase+'. 업무일은 토·일요일을 제외한 평일 기준이며 공휴일은 포함됩니다.';
   document.getElementById('diff-result').classList.add('show');
 }
-(function(){var t=toDateStr(today());document.getElementById('diff-start').value=t;document.getElementById('diff-end').value=t})();
+(function(){
+  var t=toDateStr(today());document.getElementById('diff-start').value=t;document.getElementById('diff-end').value=t;
+  ['diff-start','diff-end'].forEach(function(id){var el=document.getElementById(id);if(el)el.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();calcDiff()}})});
+})();
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
