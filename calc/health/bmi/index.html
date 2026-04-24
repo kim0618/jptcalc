@@ -34,7 +34,8 @@
 <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   <link rel="stylesheet" href="/assets/health-common.css" />
   <style>
-    input[type=number]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(16,185,129,0.15)}.result-card{background:linear-gradient(135deg,#ECFDF5 0%,#D1FAE5 100%);border:1px solid rgba(16,185,129,0.25)}.bmi-status.저체중{background:rgba(59,130,246,0.15);color:#3B82F6}.bmi-status.정상{background:rgba(16,185,129,0.15);color:#10B981}.bmi-status.과체중{background:rgba(245,158,11,0.15);color:#F59E0B}.bmi-status.비만{background:rgba(239,68,68,0.15);color:#EF4444}.bmi-status.고도비만{background:rgba(239,68,68,0.15);color:#EF4444}
+    input[type=number]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(16,185,129,0.15)}.result-card{background:linear-gradient(135deg,#ECFDF5 0%,#D1FAE5 100%);border:1px solid rgba(16,185,129,0.25)}.bmi-status.저체중{background:rgba(59,130,246,0.15);color:#3B82F6}.bmi-status.정상{background:rgba(16,185,129,0.15);color:#10B981}.bmi-status.과체중{background:rgba(245,158,11,0.15);color:#F59E0B}.bmi-status.비만{background:rgba(249,115,22,0.18);color:#EA580C}.bmi-status.고도비만{background:rgba(220,38,38,0.18);color:#DC2626}
+.bmi-gauge{background:linear-gradient(to right,#3B82F6 0% 20%,#10B981 20% 40%,#F59E0B 40% 60%,#F97316 60% 80%,#DC2626 80% 100%) !important}
 .seo-card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:16px}
 .seo-card h2{font-size:18px;font-weight:900;color:var(--gray-900);margin-bottom:12px}
 .seo-card h3{font-size:14px;font-weight:700;color:var(--gray-700);margin:16px 0 8px}
@@ -49,8 +50,8 @@
 <main class="page-wrap">
   <div class="page-header"><div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/health/">건강 계산기</a><span class="breadcrumb-sep">›</span><span>BMI 계산기</span></div><div class="page-header-badge">⚖️ 무료 온라인 계산기</div><h1>BMI 계산기</h1><p>키와 체중으로 체질량지수(BMI)를 계산하고 비만도를 확인합니다</p></div>
 
-  <div class="card"><div class="card-title">BMI 계산</div><div class="field"><div class="field-label">키</div><div class="input-wrap"><input type="number" id="bmi-height" placeholder="예) 170" oninput="calcBmi()" /><span class="unit">cm</span></div></div><div class="field"><div class="field-label">체중</div><div class="input-wrap"><input type="number" id="bmi-weight" placeholder="예) 65" oninput="calcBmi()" /><span class="unit">kg</span></div></div></div>
-  <div class="result-card" id="s0-result"><div class="result-highlight"><div class="rh-label">BMI 지수</div><div class="rh-value" id="bmi-value">-</div><div><span class="bmi-status" id="bmi-status-badge">-</span></div></div><div class="bmi-gauge"><div class="bmi-track"><div class="bmi-needle" id="bmi-needle" style="left:0%"></div></div><div class="bmi-labels"><span>저체중<br>&lt;18.5</span><span>정상<br>18.5~23</span><span>과체중<br>23~25</span><span>비만<br>25~30</span><span>고도비만<br>30+</span></div></div><div class="result-row"><span class="result-label">현재 체중</span><span class="result-value" id="bmi-cur-weight">-</span></div><div class="result-row"><span class="result-label">정상 체중 범위 (BMI 18.5~23)</span><span class="result-value" id="bmi-normal-range">-</span></div><div class="result-row"><span class="result-label">적정 체중 (BMI 22)</span><span class="result-value" id="bmi-ideal">-</span></div><div class="result-row result-total-row"><span class="result-total-label">체중 차이</span><span class="result-total-value" id="bmi-diff">-</span></div><p class="result-note">※ 한국·아시아태평양 기준: BMI 18.5 미만=저체중, 18.5~23=정상, 23~25=과체중, 25~30=비만, 30+=고도비만</p></div>
+  <div class="card"><div class="card-title">BMI 계산</div><div class="field"><div class="field-label">키</div><div class="input-wrap"><input type="number" id="bmi-height" placeholder="예) 170" min="50" max="250" step="0.1" inputmode="decimal" oninput="calcBmi()" /><span class="unit">cm</span></div></div><div class="field"><div class="field-label">체중</div><div class="input-wrap"><input type="number" id="bmi-weight" placeholder="예) 65" min="10" max="500" step="0.1" inputmode="decimal" oninput="calcBmi()" /><span class="unit">kg</span></div></div><div id="bmi-input-warn" style="display:none;font-size:12px;color:#EF4444;margin-top:4px"></div></div>
+  <div class="result-card" id="s0-result"><div class="result-highlight"><div class="rh-label">BMI 지수</div><div class="rh-value" id="bmi-value">-</div><div><span class="bmi-status" id="bmi-status-badge">-</span></div></div><div class="bmi-gauge"><div class="bmi-track"><div class="bmi-needle" id="bmi-needle" style="left:0%"></div></div><div class="bmi-labels"><span>저체중<br>&lt;18.5</span><span>정상<br>18.5~23</span><span>과체중<br>23~25</span><span>비만<br>25~30</span><span>고도비만<br>30+</span></div></div><div class="result-row"><span class="result-label">현재 체중</span><span class="result-value" id="bmi-cur-weight">-</span></div><div class="result-row"><span class="result-label">정상 체중 범위 (BMI 18.5~23)</span><span class="result-value" id="bmi-normal-range">-</span></div><div class="result-row"><span class="result-label">적정 체중 (BMI 22)</span><span class="result-value" id="bmi-ideal">-</span></div><div class="result-row result-total-row"><span class="result-total-label">적정 체중과의 차이</span><span class="result-total-value" id="bmi-diff">-</span></div><p class="result-note">※ 한국·아시아태평양 기준(대한비만학회): BMI 18.5 미만=저체중, 18.5~22.9=정상, 23~24.9=과체중, 25~29.9=비만, 30 이상=고도비만</p></div>
   <div class="guide-section">
     <div class="seo-card">
       <h2>BMI 계산기, 이런 분에게 필요합니다</h2>
@@ -128,7 +129,47 @@
 <footer class="site-footer"><div class="footer-inner"><div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div><span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span></div></footer>
 
 <script>
-function calcBmi(){var h=parseFloat(document.getElementById('bmi-height').value);var w=parseFloat(document.getElementById('bmi-weight').value);var res=document.getElementById('s0-result');if(!h||!w){res.classList.remove('show');return}res.classList.add('show');var hm=h/100,bmi=w/(hm*hm);document.getElementById('bmi-value').textContent=bmi.toFixed(1);var status='정상';if(bmi<18.5)status='저체중';else if(bmi<23)status='정상';else if(bmi<25)status='과체중';else if(bmi<30)status='비만';else status='고도비만';var badge=document.getElementById('bmi-status-badge');badge.textContent=status;badge.className='bmi-status '+status;var pct=Math.min(Math.max((bmi-15)/25*100,0),100);document.getElementById('bmi-needle').style.left=pct+'%';var ideal=hm*hm*22,normalMin=hm*hm*18.5,normalMax=hm*hm*23;var diff=w-ideal;document.getElementById('bmi-cur-weight').textContent=w+'kg';document.getElementById('bmi-normal-range').textContent=normalMin.toFixed(1)+'~'+normalMax.toFixed(1)+'kg';document.getElementById('bmi-ideal').textContent=ideal.toFixed(1)+'kg';document.getElementById('bmi-diff').textContent=(diff>=0?'+':'')+diff.toFixed(1)+'kg';document.getElementById('bmi-diff').style.color=Math.abs(diff)<2?'#10B981':diff>0?'#EF4444':'#3B82F6'}
+function bmiNeedlePct(bmi){
+  var pct;
+  if(bmi<18.5)pct=Math.max((bmi/18.5),0)*20;
+  else if(bmi<23)pct=20+((bmi-18.5)/4.5)*20;
+  else if(bmi<25)pct=40+((bmi-23)/2)*20;
+  else if(bmi<30)pct=60+((bmi-25)/5)*20;
+  else pct=80+Math.min((bmi-30)/10,1)*20;
+  return Math.min(Math.max(pct,0),100);
+}
+function calcBmi(){
+  var hEl=document.getElementById('bmi-height'),wEl=document.getElementById('bmi-weight');
+  var h=parseFloat(hEl.value),w=parseFloat(wEl.value);
+  var res=document.getElementById('s0-result'),warn=document.getElementById('bmi-input-warn');
+  warn.style.display='none';warn.textContent='';
+  if(!isFinite(h)||!isFinite(w)||h<=0||w<=0){res.classList.remove('show');return}
+  if(h<50||h>250){warn.textContent='키는 50~250cm 범위로 입력하세요.';warn.style.display='block';res.classList.remove('show');return}
+  if(w<10||w>500){warn.textContent='체중은 10~500kg 범위로 입력하세요.';warn.style.display='block';res.classList.remove('show');return}
+  res.classList.add('show');
+  var hm=h/100,bmi=w/(hm*hm);
+  document.getElementById('bmi-value').textContent=bmi.toFixed(1);
+  var status='정상';
+  if(bmi<18.5)status='저체중';
+  else if(bmi<23)status='정상';
+  else if(bmi<25)status='과체중';
+  else if(bmi<30)status='비만';
+  else status='고도비만';
+  var badge=document.getElementById('bmi-status-badge');
+  badge.textContent=status;badge.className='bmi-status '+status;
+  document.getElementById('bmi-needle').style.left=bmiNeedlePct(bmi)+'%';
+  var ideal=hm*hm*22,normalMin=hm*hm*18.5,normalMax=hm*hm*23;
+  var diff=w-ideal;
+  var fmt=function(v){return (Math.round(v*10)/10).toFixed(1)};
+  document.getElementById('bmi-cur-weight').textContent=fmt(w)+'kg';
+  document.getElementById('bmi-normal-range').textContent=fmt(normalMin)+'~'+fmt(normalMax)+'kg';
+  document.getElementById('bmi-ideal').textContent=fmt(ideal)+'kg';
+  var diffEl=document.getElementById('bmi-diff');
+  var sign=diff>0?'+':'';
+  var hint=Math.abs(diff)<0.5?' (적정)':(diff>0?' (감량 권장)':' (증량 권장)');
+  diffEl.textContent=sign+fmt(diff)+'kg'+hint;
+  diffEl.style.color=Math.abs(diff)<2?'#10B981':diff>0?'#EF4444':'#3B82F6';
+}
 </script>
 
 

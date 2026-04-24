@@ -49,8 +49,8 @@
 <main class="page-wrap">
   <div class="page-header"><div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/health/">건강 계산기</a><span class="breadcrumb-sep">›</span><span>체지방률 계산기</span></div><div class="page-header-badge">💪 무료 온라인 계산기</div><h1>체지방률 계산기</h1><p>미 해군 공식으로 체지방률을 추정하고 제지방량을 추정합니다</p></div>
 
-  <div class="card"><div class="card-title">기본 정보 (해군 공식)</div><div class="seg-group" id="bf-sex-group"><button class="seg-btn active" onclick="setBfSex('male',this)">남성</button><button class="seg-btn" onclick="setBfSex('female',this)">여성</button></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div class="field" style="margin-bottom:0"><div class="field-label">키</div><div class="input-wrap"><input type="number" id="bf-height" placeholder="예) 170" oninput="calcBodyFat()" /><span class="unit">cm</span></div></div><div class="field" style="margin-bottom:0"><div class="field-label">몸무게</div><div class="input-wrap"><input type="number" id="bf-weight" placeholder="예) 65" oninput="calcBodyFat()" /><span class="unit">kg</span></div></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px"><div class="field" style="margin-bottom:0"><div class="field-label">허리둘레 <span style="font-size:10px;color:var(--gray-400)">배꼽 높이 줄자 측정</span></div><div class="input-wrap"><input type="number" id="bf-waist" placeholder="예) 80" oninput="calcBodyFat()" /><span class="unit">cm</span></div><div style="font-size:11px;color:var(--gray-500);margin-top:4px">바지 사이즈 참고: 28인치≈71cm / 30≈76cm / 32≈81cm / 34≈86cm</div></div><div class="field" style="margin-bottom:0"><div class="field-label">목둘레 <span style="font-size:10px;color:var(--gray-400)">목의 가장 좁은 부분</span></div><div class="input-wrap"><input type="number" id="bf-neck" placeholder="예) 38" oninput="calcBodyFat()" /><span class="unit">cm</span></div><div style="font-size:11px;color:var(--gray-500);margin-top:4px">남성 평균 37~40cm / 여성 평균 32~35cm</div></div></div><div style="margin-top:12px"><div class="field" id="bf-hip-field" style="margin-bottom:0;display:none"><div class="field-label">엉덩이둘레 <span style="font-size:10px;color:var(--primary)">(여성)</span></div><div class="input-wrap"><input type="number" id="bf-hip" placeholder="예) 95" oninput="calcBodyFat()" /><span class="unit">cm</span></div></div></div></div>
-  <div class="result-card" id="s3-result"><div class="result-highlight"><div class="rh-label">체지방률</div><div class="rh-value" id="bf-value">-</div><div><span class="bmi-status" id="bf-status">-</span></div></div><div class="result-row"><span class="result-label">체지방량 / 제지방량</span><span class="result-value" id="bf-mass">체중 미입력</span></div><div class="result-row"><span class="result-label">남성 정상 범위</span><span class="result-value">10~20% (최적 14~17%)</span></div><div class="result-row"><span class="result-label">여성 정상 범위</span><span class="result-value">18~28% (최적 21~24%)</span></div><div class="result-row result-total-row"><span class="result-total-label">평가</span><span class="result-total-value" id="bf-eval">-</span></div><p class="result-note">※ 미 해군 공식 기반 추정값. 정확한 측정은 DEXA 또는 InBody 기기 사용을 권장합니다.</p></div>
+  <div class="card"><div class="card-title">기본 정보 (해군 공식)</div><div class="seg-group" id="bf-sex-group"><button class="seg-btn active" onclick="setBfSex('male',this)">남성</button><button class="seg-btn" onclick="setBfSex('female',this)">여성</button></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div class="field" style="margin-bottom:0"><div class="field-label">키</div><div class="input-wrap"><input type="number" id="bf-height" placeholder="예) 170" min="50" max="250" step="0.1" inputmode="decimal" oninput="calcBodyFat()" /><span class="unit">cm</span></div></div><div class="field" style="margin-bottom:0"><div class="field-label">몸무게</div><div class="input-wrap"><input type="number" id="bf-weight" placeholder="예) 65" min="10" max="500" step="0.1" inputmode="decimal" oninput="calcBodyFat()" /><span class="unit">kg</span></div></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px"><div class="field" style="margin-bottom:0"><div class="field-label">허리둘레 <span style="font-size:10px;color:var(--gray-400)">배꼽 높이 줄자 측정</span></div><div class="input-wrap"><input type="number" id="bf-waist" placeholder="예) 80" min="30" max="200" step="0.1" inputmode="decimal" oninput="calcBodyFat()" /><span class="unit">cm</span></div><div style="font-size:11px;color:var(--gray-500);margin-top:4px">바지 사이즈 참고: 28인치≈71cm / 30≈76cm / 32≈81cm / 34≈86cm</div></div><div class="field" style="margin-bottom:0"><div class="field-label">목둘레 <span style="font-size:10px;color:var(--gray-400)">목의 가장 좁은 부분</span></div><div class="input-wrap"><input type="number" id="bf-neck" placeholder="예) 38" min="20" max="80" step="0.1" inputmode="decimal" oninput="calcBodyFat()" /><span class="unit">cm</span></div><div style="font-size:11px;color:var(--gray-500);margin-top:4px">남성 평균 37~40cm / 여성 평균 32~35cm</div></div></div><div style="margin-top:12px"><div class="field" id="bf-hip-field" style="margin-bottom:0;display:none"><div class="field-label">엉덩이둘레 <span style="font-size:10px;color:var(--primary)">(여성)</span></div><div class="input-wrap"><input type="number" id="bf-hip" placeholder="예) 95" min="40" max="200" step="0.1" inputmode="decimal" oninput="calcBodyFat()" /><span class="unit">cm</span></div></div></div><div id="bf-input-warn" style="display:none;font-size:12px;color:#EF4444;margin-top:8px"></div></div>
+  <div class="result-card" id="s3-result"><div class="result-highlight"><div class="rh-label">체지방률</div><div class="rh-value" id="bf-value">-</div><div><span class="bmi-status" id="bf-status">-</span></div></div><div class="result-row"><span class="result-label">체지방량</span><span class="result-value" id="bf-fat-mass">체중 미입력</span></div><div class="result-row"><span class="result-label">제지방량 (근육·뼈·장기)</span><span class="result-value" id="bf-lean-mass">체중 미입력</span></div><div class="result-row"><span class="result-label" id="bf-range-label">정상 범위</span><span class="result-value" id="bf-range-value">-</span></div><div class="result-row result-total-row"><span class="result-total-label" id="bf-goal-label">건강 상한선까지 감량 필요량</span><span class="result-total-value" id="bf-goal-value">-</span></div><p class="result-note">※ 미 해군 공식 기반 추정값(±3% 오차). 정확한 측정은 DEXA 또는 InBody 기기 사용을 권장합니다.</p></div>
   <div class="seo-card"><h2>체지방률 계산기 이용 안내</h2><h3>체지방률 정상 범위</h3><ul><li>남성: 필수지방 3~5%, 건강 10~20%, 비만 25%+</li><li>여성: 필수지방 10~13%, 건강 18~28%, 비만 32%+</li></ul></div>
 
   <section class="guide-section seo-card">
@@ -69,7 +69,9 @@
       <li>여성 평균: 25~31%</li>
     </ul>
     <h3>미 해군 공식의 원리</h3>
-    <p>미 해군(US Navy) 공식은 목둘레, 허리둘레(여성은 엉덩이둘레 추가)와 키를 이용하여 체지방률을 추정합니다. 별도의 장비 없이 줄자만으로 측정할 수 있어 간편하지만, DEXA나 InBody보다는 정확도가 낮을 수 있습니다.</p>
+    <p>미 해군(US Navy) 공식은 목둘레, 허리둘레(여성은 엉덩이둘레 추가)와 키를 이용하여 체지방률을 추정합니다. 별도의 장비 없이 줄자만으로 측정할 수 있어 간편하지만, DEXA나 InBody 대비 약 ±3% 오차가 발생할 수 있습니다. 측정값 신뢰성을 높이려면 같은 시간대(아침 공복, 가벼운 옷차림)에 일관되게 측정하세요.</p>
+    <h3>건강 상한선 도달까지 필요한 체지방 감량량</h3>
+    <p>본 계산기는 ACE/ACSM 기준의 건강 상한선(남성 17%, 여성 24%)을 목표치로 하여, 현재 체지방률과의 차이에 체중을 곱해 감량 필요 체지방량을 추정합니다. 예) 체중 75kg, 체지방률 22%(남성) → 감량 필요 체지방 = 75 × (22-17) / 100 = 약 3.75kg. 단, 체지방만 정확히 줄이려면 단백질 섭취와 근력 운동 병행이 필수입니다.</p>
   </section>
 
   <section class="guide-section seo-card faq-card">
@@ -114,7 +116,90 @@
 <script>
 var bfSex='male';
 function setBfSex(s,btn){bfSex=s;btn.parentElement.querySelectorAll('.seg-btn').forEach(function(b){b.classList.remove('active')});btn.classList.add('active');document.getElementById('bf-hip-field').style.display=s==='female'?'block':'none';calcBodyFat()}
-function calcBodyFat(){var h=parseFloat(document.getElementById('bf-height').value);var w=parseFloat(document.getElementById('bf-weight').value);var waist=parseFloat(document.getElementById('bf-waist').value);var neck=parseFloat(document.getElementById('bf-neck').value);var hip=parseFloat(document.getElementById('bf-hip').value)||0;var res=document.getElementById('s3-result');if(!h||!waist||!neck){res.classList.remove('show');return}if(bfSex==='female'&&!hip){res.classList.remove('show');return}res.classList.add('show');var bf;if(bfSex==='male'){bf=495/(1.0324-0.19077*Math.log10(waist-neck)+0.15456*Math.log10(h))-450}else{bf=495/(1.29579-0.35004*Math.log10(waist+hip-neck)+0.22100*Math.log10(h))-450}bf=Math.max(bf,0);document.getElementById('bf-value').textContent=bf.toFixed(1)+'%';if(w){document.getElementById('bf-mass').textContent=(w*bf/100).toFixed(1)+'kg (제지방 '+(w*(1-bf/100)).toFixed(1)+'kg)'}else{document.getElementById('bf-mass').textContent='체중 미입력'}var status,color;if(bfSex==='male'){if(bf<10){status='저체지방';color='#3B82F6'}else if(bf<20){status='정상';color='#10B981'}else if(bf<25){status='과체지방';color='#F59E0B'}else{status='비만';color='#EF4444'}}else{if(bf<18){status='저체지방';color='#3B82F6'}else if(bf<28){status='정상';color='#10B981'}else if(bf<32){status='과체지방';color='#F59E0B'}else{status='비만';color='#EF4444'}}var badge=document.getElementById('bf-status');badge.textContent=status;document.getElementById('bf-eval').textContent=status;document.getElementById('bf-eval').style.color=color}
+function bfClassify(bf,sex){
+  // ACE/ACSM 5단계 분류
+  if(sex==='male'){
+    if(bf<6) return {label:'필수지방 미만',color:'#3B82F6'};
+    if(bf<14) return {label:'운동선수 수준',color:'#0EA5E9'};
+    if(bf<18) return {label:'건강 범위',color:'#10B981'};
+    if(bf<25) return {label:'평균 (개선 권장)',color:'#F59E0B'};
+    return {label:'비만',color:'#EF4444'};
+  }else{
+    if(bf<14) return {label:'필수지방 미만',color:'#3B82F6'};
+    if(bf<21) return {label:'운동선수 수준',color:'#0EA5E9'};
+    if(bf<25) return {label:'건강 범위',color:'#10B981'};
+    if(bf<32) return {label:'평균 (개선 권장)',color:'#F59E0B'};
+    return {label:'비만',color:'#EF4444'};
+  }
+}
+function calcBodyFat(){
+  var h=parseFloat(document.getElementById('bf-height').value);
+  var w=parseFloat(document.getElementById('bf-weight').value);
+  var waist=parseFloat(document.getElementById('bf-waist').value);
+  var neck=parseFloat(document.getElementById('bf-neck').value);
+  var hip=parseFloat(document.getElementById('bf-hip').value)||0;
+  var res=document.getElementById('s3-result');
+  var warn=document.getElementById('bf-input-warn');
+  warn.style.display='none';warn.textContent='';
+  if(!isFinite(h)||!isFinite(waist)||!isFinite(neck)||h<=0||waist<=0||neck<=0){res.classList.remove('show');return}
+  if(bfSex==='female'&&(!isFinite(hip)||hip<=0)){res.classList.remove('show');return}
+  if(h<50||h>250){warn.textContent='키는 50~250cm 범위로 입력하세요.';warn.style.display='block';res.classList.remove('show');return}
+  // 미 해군 공식의 log10 인자 양수 가드
+  var diff = bfSex==='male' ? (waist-neck) : (waist+hip-neck);
+  if(diff<=0){warn.textContent=bfSex==='male'?'허리둘레는 목둘레보다 커야 합니다. 측정값을 다시 확인하세요.':'허리+엉덩이 둘레의 합이 목둘레보다 커야 합니다. 측정값을 다시 확인하세요.';warn.style.display='block';res.classList.remove('show');return}
+  res.classList.add('show');
+  var bf;
+  if(bfSex==='male'){
+    bf=495/(1.0324-0.19077*Math.log10(diff)+0.15456*Math.log10(h))-450;
+  }else{
+    bf=495/(1.29579-0.35004*Math.log10(diff)+0.22100*Math.log10(h))-450;
+  }
+  bf=Math.min(Math.max(bf,0),60);
+  document.getElementById('bf-value').textContent=bf.toFixed(1)+'%';
+  // 체지방량/제지방량
+  var fmtKg=function(v){return (Math.round(v*10)/10).toFixed(1)+'kg'};
+  if(isFinite(w)&&w>0){
+    document.getElementById('bf-fat-mass').textContent=fmtKg(w*bf/100);
+    document.getElementById('bf-lean-mass').textContent=fmtKg(w*(1-bf/100));
+  }else{
+    document.getElementById('bf-fat-mass').textContent='체중 미입력';
+    document.getElementById('bf-lean-mass').textContent='체중 미입력';
+  }
+  // 상태 분류
+  var cls=bfClassify(bf,bfSex);
+  var badge=document.getElementById('bf-status');
+  badge.textContent=cls.label;
+  badge.style.background=cls.color+'26';
+  badge.style.color=cls.color;
+  // 성별별 정상 범위 동적 표시
+  var rangeText=bfSex==='male'?'14~17% (건강 상한선 17%)':'21~24% (건강 상한선 24%)';
+  document.getElementById('bf-range-label').textContent=(bfSex==='male'?'남성':'여성')+' 정상 범위';
+  document.getElementById('bf-range-value').textContent=rangeText;
+  // 권장 감량/증량 (건강 상한선 기준)
+  var goalBf=bfSex==='male'?17:24;
+  var goalEl=document.getElementById('bf-goal-value');
+  var goalLabel=document.getElementById('bf-goal-label');
+  if(isFinite(w)&&w>0){
+    if(bf>goalBf){
+      var fatToLose=w*(bf-goalBf)/100;
+      goalLabel.textContent='건강 상한선('+goalBf+'%) 도달까지';
+      goalEl.textContent='체지방 약 '+fmtKg(fatToLose)+' 감량 필요';
+      goalEl.style.color='#EF4444';
+    }else if(bf<(bfSex==='male'?6:14)){
+      goalLabel.textContent='평가';
+      goalEl.textContent='필수지방 미만 - 건강상 위험';
+      goalEl.style.color='#3B82F6';
+    }else{
+      goalLabel.textContent='평가';
+      goalEl.textContent='건강 범위 - 현재 상태 유지 권장';
+      goalEl.style.color='#10B981';
+    }
+  }else{
+    goalLabel.textContent='평가';
+    goalEl.textContent=cls.label;
+    goalEl.style.color=cls.color;
+  }
+}
 </script>
 
 

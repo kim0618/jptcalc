@@ -49,8 +49,11 @@
 <main class="page-wrap">
   <div class="page-header"><div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/health/">건강 계산기</a><span class="breadcrumb-sep">›</span><span>칼로리 소모 계산기</span></div><div class="page-header-badge">🏃 무료 온라인 계산기</div><h1>칼로리 소모 계산기</h1><p>활동량에 따른 하루 총 에너지 소모량(TDEE)을 계산합니다</p></div>
 
-  <div class="card"><div class="card-title">기본 정보</div><div class="seg-group" id="cal-sex-group"><button class="seg-btn active" onclick="setCalSex('male',this)">남성</button><button class="seg-btn" onclick="setCalSex('female',this)">여성</button></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px"><div class="field" style="margin-bottom:0"><div class="field-label">나이</div><div class="input-wrap"><input type="number" id="cal-age" placeholder="예) 25" oninput="calcCalorie()" /><span class="unit">세</span></div></div><div class="field" style="margin-bottom:0"><div class="field-label">키</div><div class="input-wrap"><input type="number" id="cal-height" placeholder="예) 170" oninput="calcCalorie()" /><span class="unit">cm</span></div></div><div class="field" style="margin-bottom:0"><div class="field-label">체중</div><div class="input-wrap"><input type="number" id="cal-weight" placeholder="예) 65" oninput="calcCalorie()" /><span class="unit">kg</span></div></div></div></div><div class="card"><div class="card-title">활동 수준</div><div class="activity-grid" id="activity-grid"><button class="activity-btn active" onclick="setActivity(1.2,this)"><div class="ab-icon">🛋️</div><div class="ab-label">거의 안함</div><div class="ab-desc">사무직, 운동 없음</div></button><button class="activity-btn" onclick="setActivity(1.375,this)"><div class="ab-icon">🚶</div><div class="ab-label">가벼운 운동</div><div class="ab-desc">주 1~3회</div></button><button class="activity-btn" onclick="setActivity(1.55,this)"><div class="ab-icon">🏊</div><div class="ab-label">보통 운동</div><div class="ab-desc">주 3~5회</div></button><button class="activity-btn" onclick="setActivity(1.725,this)"><div class="ab-icon">🏋️</div><div class="ab-label">격렬한 운동</div><div class="ab-desc">주 6~7회</div></button><button class="activity-btn" onclick="setActivity(1.9,this)"><div class="ab-icon">⚡</div><div class="ab-label">매우 격렬</div><div class="ab-desc">육체노동 / 하루 2회</div></button></div></div>
-  <div class="result-card" id="s4-result"><div class="result-highlight"><div class="rh-label">하루 유지 칼로리 (TDEE)</div><div class="rh-value" id="cal-tdee">-</div><div class="rh-sub" id="cal-bmr-sub">기초대사량: -</div></div><div class="result-row"><span class="result-label">다이어트 (−500kcal)</span><span class="result-value" id="cal-diet">-</span></div><div class="result-row"><span class="result-label">체중 유지</span><span class="result-value" id="cal-maintain">-</span></div><div class="result-row result-total-row"><span class="result-total-label">벌크업 (+500kcal)</span><span class="result-total-value" id="cal-bulk">-</span></div><p class="result-note">※ 다이어트 시 하루 500kcal 적게 섭취하면 주 0.5kg 감량 가능.</p></div>
+  <div class="card"><div class="card-title">기본 정보</div><div class="seg-group" id="cal-sex-group"><button class="seg-btn active" onclick="setCalSex('male',this)">남성</button><button class="seg-btn" onclick="setCalSex('female',this)">여성</button></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px"><div class="field" style="margin-bottom:0"><div class="field-label">나이</div><div class="input-wrap"><input type="number" id="cal-age" placeholder="예) 25" min="1" max="120" step="1" inputmode="numeric" oninput="calcCalorie()" /><span class="unit">세</span></div></div><div class="field" style="margin-bottom:0"><div class="field-label">키</div><div class="input-wrap"><input type="number" id="cal-height" placeholder="예) 170" min="50" max="250" step="0.1" inputmode="decimal" oninput="calcCalorie()" /><span class="unit">cm</span></div></div><div class="field" style="margin-bottom:0"><div class="field-label">체중</div><div class="input-wrap"><input type="number" id="cal-weight" placeholder="예) 65" min="10" max="500" step="0.1" inputmode="decimal" oninput="calcCalorie()" /><span class="unit">kg</span></div></div></div><div id="cal-input-warn" style="display:none;font-size:12px;color:#EF4444;margin-top:8px"></div></div><div class="card"><div class="card-title">활동 수준</div><div class="activity-grid" id="activity-grid"><button class="activity-btn active" onclick="setActivity(1.2,this)"><div class="ab-icon">🛋️</div><div class="ab-label">거의 안함</div><div class="ab-desc">사무직, 운동 없음</div></button><button class="activity-btn" onclick="setActivity(1.375,this)"><div class="ab-icon">🚶</div><div class="ab-label">가벼운 운동</div><div class="ab-desc">주 1~3회</div></button><button class="activity-btn" onclick="setActivity(1.55,this)"><div class="ab-icon">🏊</div><div class="ab-label">보통 운동</div><div class="ab-desc">주 3~5회</div></button><button class="activity-btn" onclick="setActivity(1.725,this)"><div class="ab-icon">🏋️</div><div class="ab-label">격렬한 운동</div><div class="ab-desc">주 6~7회</div></button><button class="activity-btn" onclick="setActivity(1.9,this)"><div class="ab-icon">⚡</div><div class="ab-label">매우 격렬</div><div class="ab-desc">육체노동 / 하루 2회</div></button></div></div>
+  <div class="result-card" id="s4-result"><div class="result-highlight"><div class="rh-label">하루 유지 칼로리 (TDEE)</div><div class="rh-value" id="cal-tdee">-</div><div class="rh-sub" id="cal-bmr-sub">기초대사량: -</div></div><div style="font-size:12px;color:var(--gray-500);margin:8px 0 4px;font-weight:600">다이어트 (체중 감량)</div><div class="result-row"><span class="result-label">완만한 감량 (−300kcal) <span style="font-size:11px;color:var(--gray-400)">주 약 0.3kg ↓</span></span><span class="result-value" id="cal-diet300">-</span></div><div class="result-row"><span class="result-label">표준 감량 (−500kcal) <span style="font-size:11px;color:var(--gray-400)">주 약 0.5kg ↓</span></span><span class="result-value" id="cal-diet500">-</span></div><div style="font-size:12px;color:var(--gray-500);margin:14px 0 4px;font-weight:600">체중 유지</div><div class="result-row"><span class="result-label">유지 칼로리</span><span class="result-value" id="cal-maintain" style="font-weight:700;color:#10B981">-</span></div><div style="font-size:12px;color:var(--gray-500);margin:14px 0 4px;font-weight:600">벌크업 (체중 증량)</div><div class="result-row"><span class="result-label">린벌크 (+300kcal) <span style="font-size:11px;color:var(--gray-400)">주 약 0.3kg ↑</span></span><span class="result-value" id="cal-bulk300">-</span></div><div class="result-row result-total-row"><span class="result-total-label">표준 벌크업 (+500kcal) <span style="font-size:11px;font-weight:400;opacity:0.7">주 약 0.5kg ↑</span></span><span class="result-total-value" id="cal-bulk500">-</span></div><p class="result-note">※ 지방 1kg ≈ 7,700kcal. 다이어트 칼로리는 기초대사량(BMR) 미만으로 떨어지지 않도록 자동 보정합니다.</p></div>
+
+  <div class="card"><div class="card-title">운동별 칼로리 소모량 (참고)</div><div style="font-size:12px;color:var(--gray-500);margin-bottom:10px">위에 입력한 체중 기준. MET(대사당량) × 체중 × 시간 공식 사용.</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div class="field" style="margin-bottom:0"><div class="field-label">운동 종목</div><select id="ex-type" onchange="calcExercise()" style="width:100%;padding:12px;border:1px solid var(--gray-200);border-radius:10px;font-size:14px;background:#fff"><option value="3.5">걷기 (보통 4.8km/h)</option><option value="4.3">빠른 걷기 (5.6km/h)</option><option value="7.0" selected>조깅 (8km/h)</option><option value="9.8">달리기 (10km/h)</option><option value="6.8">자전거 (보통 16~19km/h)</option><option value="6.0">수영 (자유형 보통)</option><option value="5.0">헬스 (웨이트 트레이닝)</option><option value="7.0">등산 (배낭 4.5kg 미만)</option><option value="11.0">줄넘기 (보통 속도)</option><option value="2.5">요가 (하타·기본)</option><option value="3.0">필라테스</option><option value="4.5">댄스 (사교·보통)</option><option value="7.3">테니스 (단식)</option><option value="5.5">배드민턴 (사교)</option><option value="6.5">농구 (시합)</option><option value="7.0">축구 (시합)</option><option value="4.3">골프 (걷기, 본인 카트)</option><option value="3.8">청소·집안일 (보통)</option></select></div><div class="field" style="margin-bottom:0"><div class="field-label">운동 시간</div><div class="input-wrap"><input type="number" id="ex-min" placeholder="예) 30" min="1" max="600" step="1" inputmode="numeric" oninput="calcExercise()" value="30" /><span class="unit">분</span></div></div></div></div>
+  <div class="result-card" id="ex-result"><div class="result-highlight"><div class="rh-label">예상 소모 칼로리</div><div class="rh-value" id="ex-kcal">-</div><div class="rh-sub" id="ex-sub">체중 미입력</div></div><div class="result-row"><span class="result-label">백미밥 환산 (1공기 ≈ 300kcal)</span><span class="result-value" id="ex-rice">-</span></div><div class="result-row"><span class="result-label">지방 감량 환산 (1kg ≈ 7,700kcal)</span><span class="result-value" id="ex-fat">-</span></div><div class="result-row result-total-row"><span class="result-total-label">월간 누적 (주 5회 기준)</span><span class="result-total-value" id="ex-month">-</span></div><p class="result-note">※ MET 값은 ACSM Compendium of Physical Activities 기준. 개인차에 따라 ±20% 오차 가능.</p></div>
   <div class="seo-card"><h2>칼로리 소모 계산기 이용 안내</h2><h3>TDEE란?</h3><p>TDEE(Total Daily Energy Expenditure)는 하루 총 에너지 소모량으로, 기초대사량(BMR)에 활동계수를 곱하여 계산합니다. 다이어트·벌크업 칼로리 설계에 활용합니다.</p></div>
 
   <section class="guide-section seo-card">
@@ -66,7 +69,9 @@
       <li>매우 격렬 (x1.9): 육체노동 또는 하루 2회 이상 운동</li>
     </ul>
     <h3>다이어트·벌크업 칼로리 설계</h3>
-    <p>체중 감량을 위해서는 TDEE보다 300~500kcal 적게, 근육 증가를 위해서는 300~500kcal 많이 섭취합니다. 하루 500kcal 적자를 유지하면 주당 약 0.5kg 감량이 가능합니다.</p>
+    <p>체중 감량을 위해서는 TDEE보다 300~500kcal 적게, 근육 증가를 위해서는 300~500kcal 많이 섭취합니다. 하루 500kcal 적자를 유지하면 주당 약 0.5kg 감량(지방 1kg ≈ 7,700kcal 기준)이 가능합니다. 단, 다이어트 칼로리가 기초대사량(BMR) 미만으로 떨어지면 근육 손실과 요요 위험이 커지므로 본 계산기는 다이어트 칼로리를 BMR 이상으로 자동 보정합니다.</p>
+    <h3>운동별 칼로리 소모 계산법 (MET 공식)</h3>
+    <p>운동 중 소모 칼로리는 MET(대사당량) × 체중(kg) × 시간(h) 공식으로 추정합니다. MET은 안정 시 산소 소비량 대비 운동 강도를 나타내는 지표로, ACSM Compendium of Physical Activities에서 표준화되어 있습니다. 예) 70kg 성인이 30분 조깅(MET 7.0) 시 7.0 × 70 × 0.5 = 245kcal 소모. 본 계산기는 18가지 주요 운동의 MET 값을 사용하며 개인차에 따라 ±20% 오차가 발생할 수 있습니다.</p>
   </section>
 
   <section class="guide-section seo-card faq-card">
@@ -112,7 +117,62 @@
 var calSex='male',activityFactor=1.2;
 function setCalSex(s,btn){calSex=s;btn.parentElement.querySelectorAll('.seg-btn').forEach(function(b){b.classList.remove('active')});btn.classList.add('active');calcCalorie()}
 function setActivity(f,btn){activityFactor=f;document.querySelectorAll('#activity-grid .activity-btn').forEach(function(b){b.classList.remove('active')});btn.classList.add('active');calcCalorie()}
-function calcCalorie(){var age=parseFloat(document.getElementById('cal-age').value);var h=parseFloat(document.getElementById('cal-height').value);var w=parseFloat(document.getElementById('cal-weight').value);var res=document.getElementById('s4-result');if(!age||!h||!w){res.classList.remove('show');return}res.classList.add('show');var bmr=10*w+6.25*h-5*age+(calSex==='male'?5:-161);var tdee=Math.round(bmr*activityFactor);document.getElementById('cal-tdee').textContent=tdee.toLocaleString()+' kcal';document.getElementById('cal-bmr-sub').textContent='기초대사량: '+Math.round(bmr).toLocaleString()+' kcal';document.getElementById('cal-diet').textContent=(tdee-500).toLocaleString()+' kcal';document.getElementById('cal-maintain').textContent=tdee.toLocaleString()+' kcal';document.getElementById('cal-bulk').textContent=(tdee+500).toLocaleString()+' kcal'}
+function calcCalorie(){
+  var age=parseFloat(document.getElementById('cal-age').value);
+  var h=parseFloat(document.getElementById('cal-height').value);
+  var w=parseFloat(document.getElementById('cal-weight').value);
+  var res=document.getElementById('s4-result');
+  var warn=document.getElementById('cal-input-warn');
+  warn.style.display='none';warn.textContent='';
+  if(!isFinite(age)||!isFinite(h)||!isFinite(w)||age<=0||h<=0||w<=0){res.classList.remove('show');calcExercise();return}
+  if(age<1||age>120){warn.textContent='나이는 1~120세 범위로 입력하세요.';warn.style.display='block';res.classList.remove('show');calcExercise();return}
+  if(h<50||h>250){warn.textContent='키는 50~250cm 범위로 입력하세요.';warn.style.display='block';res.classList.remove('show');calcExercise();return}
+  if(w<10||w>500){warn.textContent='체중은 10~500kg 범위로 입력하세요.';warn.style.display='block';res.classList.remove('show');calcExercise();return}
+  res.classList.add('show');
+  var bmr=10*w+6.25*h-5*age+(calSex==='male'?5:-161);
+  var tdee=bmr*activityFactor;
+  var fmt=function(v){return Math.round(v).toLocaleString()+' kcal'};
+  // 다이어트 칼로리는 BMR 미만으로 떨어지지 않도록 가드
+  var diet300=Math.max(tdee-300, bmr);
+  var diet500=Math.max(tdee-500, bmr);
+  document.getElementById('cal-tdee').textContent=fmt(tdee);
+  document.getElementById('cal-bmr-sub').textContent='기초대사량: '+fmt(bmr);
+  document.getElementById('cal-diet300').textContent=fmt(diet300);
+  document.getElementById('cal-diet500').textContent=fmt(diet500);
+  document.getElementById('cal-maintain').textContent=fmt(tdee);
+  document.getElementById('cal-bulk300').textContent=fmt(tdee+300);
+  document.getElementById('cal-bulk500').textContent=fmt(tdee+500);
+  calcExercise();
+}
+function calcExercise(){
+  var met=parseFloat(document.getElementById('ex-type').value);
+  var min=parseFloat(document.getElementById('ex-min').value);
+  var w=parseFloat(document.getElementById('cal-weight').value);
+  var res=document.getElementById('ex-result');
+  if(!isFinite(met)||!isFinite(min)||min<=0){res.classList.remove('show');return}
+  if(min>600){res.classList.remove('show');return}
+  res.classList.add('show');
+  var sub=document.getElementById('ex-sub');
+  if(!isFinite(w)||w<=0){
+    sub.textContent='상단 체중을 입력하면 예상 소모 칼로리가 표시됩니다';
+    document.getElementById('ex-kcal').textContent='-';
+    document.getElementById('ex-rice').textContent='-';
+    document.getElementById('ex-fat').textContent='-';
+    document.getElementById('ex-month').textContent='-';
+    return;
+  }
+  var kcal=met*w*(min/60);
+  var fmt=function(v){return Math.round(v).toLocaleString()+' kcal'};
+  document.getElementById('ex-kcal').textContent=fmt(kcal);
+  sub.textContent='체중 '+w+'kg · '+min+'분 운동 기준 (MET '+met+')';
+  var rice=kcal/300;
+  document.getElementById('ex-rice').textContent='약 '+(Math.round(rice*10)/10).toFixed(1)+'공기';
+  var fatGram=kcal/7.7;
+  document.getElementById('ex-fat').textContent=Math.round(fatGram).toLocaleString()+' g';
+  var monthly=kcal*5*4.345;
+  document.getElementById('ex-month').textContent=fmt(monthly)+' (지방 약 '+(Math.round(monthly/7700*10)/10).toFixed(1)+'kg)';
+}
+document.addEventListener('DOMContentLoaded',function(){calcExercise()});
 </script>
 
 

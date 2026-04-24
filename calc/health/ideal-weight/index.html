@@ -49,8 +49,8 @@
 <main class="page-wrap">
   <div class="page-header"><div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/health/">건강 계산기</a><span class="breadcrumb-sep">›</span><span>적정체중 계산기</span></div><div class="page-header-badge">🎯 무료 온라인 계산기</div><h1>적정체중 계산기</h1><p>BMI 22 기준과 브로카 공식으로 키에 맞는 적정 체중을 계산합니다</p></div>
 
-  <div class="card"><div class="card-title">키 입력</div><div class="field"><div class="field-label">키</div><div class="input-wrap"><input type="number" id="iw-height" placeholder="예) 170" oninput="calcIdealWeight()" /><span class="unit">cm</span></div></div><div class="seg-group" id="iw-sex-group"><button class="seg-btn active" onclick="setIwSex('male',this)">남성</button><button class="seg-btn" onclick="setIwSex('female',this)">여성</button></div></div>
-  <div class="result-card" id="s2-result"><div class="result-highlight"><div class="rh-label">적정 체중 (BMI 22 기준)</div><div class="rh-value" id="iw-ideal">-</div><div class="rh-sub" id="iw-range">정상 범위: -</div></div><div class="result-row"><span class="result-label">저체중 경계 (BMI 18.5)</span><span class="result-value" id="iw-under">-</span></div><div class="result-row"><span class="result-label">정상 범위</span><span class="result-value" id="iw-normal">-</span></div><div class="result-row"><span class="result-label">과체중 시작</span><span class="result-value" id="iw-over">-</span></div><div class="result-row"><span class="result-label">비만 시작</span><span class="result-value" id="iw-obese">-</span></div><div class="result-row result-total-row"><span class="result-total-label">브로카 공식 적정체중</span><span class="result-total-value" id="iw-broca">-</span></div><p class="result-note">※ BMI 22 기준 = 키(m)² × 22. 브로카 공식(남)= (키-100)×0.9, (여)= (키-100)×0.85</p></div>
+  <div class="card"><div class="card-title">기본 정보</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div class="field" style="margin-bottom:0"><div class="field-label">키</div><div class="input-wrap"><input type="number" id="iw-height" placeholder="예) 170" min="50" max="250" step="0.1" inputmode="decimal" oninput="calcIdealWeight()" /><span class="unit">cm</span></div></div><div class="field" style="margin-bottom:0"><div class="field-label">현재 체중 <span style="font-size:10px;color:var(--gray-400)">(선택, 차이 표시용)</span></div><div class="input-wrap"><input type="number" id="iw-weight" placeholder="예) 65" min="10" max="500" step="0.1" inputmode="decimal" oninput="calcIdealWeight()" /><span class="unit">kg</span></div></div></div><div class="seg-group" id="iw-sex-group" style="margin-top:12px"><button class="seg-btn active" onclick="setIwSex('male',this)">남성</button><button class="seg-btn" onclick="setIwSex('female',this)">여성</button></div><div id="iw-input-warn" style="display:none;font-size:12px;color:#EF4444;margin-top:8px"></div></div>
+  <div class="result-card" id="s2-result"><div class="result-highlight"><div class="rh-label">적정 체중 (BMI 22 기준)</div><div class="rh-value" id="iw-ideal">-</div><div class="rh-sub" id="iw-range">정상 범위: -</div></div><div class="result-row" id="iw-diff-row" style="display:none;background:rgba(16,185,129,0.08);border-radius:8px;padding:10px 12px;margin:8px 0"><span class="result-label" style="font-weight:700">현재 체중과의 차이</span><span class="result-value" id="iw-diff" style="font-weight:900">-</span></div><div style="font-size:12px;color:var(--gray-500);margin:14px 0 4px;font-weight:600">BMI 구간별 체중 범위</div><div class="result-row"><span class="result-label" style="color:#3B82F6">저체중 (BMI &lt;18.5)</span><span class="result-value" id="iw-under">-</span></div><div class="result-row"><span class="result-label" style="color:#10B981">정상 (BMI 18.5~23)</span><span class="result-value" id="iw-normal">-</span></div><div class="result-row"><span class="result-label" style="color:#F59E0B">과체중 (BMI 23~25)</span><span class="result-value" id="iw-over">-</span></div><div class="result-row"><span class="result-label" style="color:#EA580C">비만 (BMI 25~30)</span><span class="result-value" id="iw-obese">-</span></div><div class="result-row"><span class="result-label" style="color:#DC2626">고도비만 (BMI ≥30)</span><span class="result-value" id="iw-hiobese">-</span></div><div style="font-size:12px;color:var(--gray-500);margin:14px 0 4px;font-weight:600">공식별 적정 체중 비교</div><div class="result-row"><span class="result-label">BMI 22 기준 (한국·아시아 표준)</span><span class="result-value" id="iw-bmi22">-</span></div><div class="result-row"><span class="result-label">미용체중 (BMI 20)</span><span class="result-value" id="iw-beauty">-</span></div><div class="result-row"><span class="result-label">브로카 공식</span><span class="result-value" id="iw-broca">-</span></div><div class="result-row result-total-row"><span class="result-total-label">로렌츠 공식</span><span class="result-total-value" id="iw-lorentz">-</span></div><p class="result-note">※ BMI 22 = 키(m)² × 22 (한국 표준). 브로카·로렌츠는 보조 참고 공식입니다. 체질·근육량에 따라 적정 범위는 달라질 수 있습니다.</p></div>
   <div class="seo-card"><h2>적정체중 계산기 이용 안내</h2><h3>적정체중 계산법</h3><p>가장 일반적인 방법은 BMI 22 기준입니다. 적정체중 = 키(m)² × 22. 브로카 공식은 남성 (키-100)×0.9, 여성 (키-100)×0.85입니다.</p></div>
 
   <section class="guide-section seo-card">
@@ -67,6 +67,14 @@
     </ul>
     <h3>적정체중 범위</h3>
     <p>적정체중은 단일 수치보다 범위로 이해하는 것이 좋습니다. BMI 18.5~23 사이가 한국인의 정상 체중 범위이며, 개인의 근육량, 골격 크기, 체형에 따라 적정 범위가 달라질 수 있습니다.</p>
+    <h3>공식별 차이와 권장 적용</h3>
+    <ul>
+      <li><strong>BMI 22 기준</strong>: 한국·아시아 표준. 통계적으로 사망률·질병 위험이 가장 낮은 BMI 값. 1순위 참고</li>
+      <li><strong>미용체중 (BMI 20)</strong>: 마른 체형 선호 시 참고. 무리한 추구는 영양 부족·면역력 저하 위험</li>
+      <li><strong>브로카 공식</strong>: 1871년 프랑스 인류학자가 제안한 간편식. 키 160~180cm 범위에서 BMI 22 기준과 비교적 잘 일치</li>
+      <li><strong>로렌츠 공식</strong>: 브로카 공식의 보완식. 키가 매우 크거나 작을 때 오차를 줄이기 위해 보정항 추가</li>
+    </ul>
+    <p>4가지 결과가 모두 다르게 나오는 것은 정상이며, 가장 신뢰도 높은 값은 BMI 22 기준입니다. 다른 공식은 참고용으로 활용하세요.</p>
   </section>
 
   <section class="guide-section seo-card faq-card">
@@ -111,7 +119,51 @@
 <script>
 var iwSex='male';
 function setIwSex(s,btn){iwSex=s;btn.parentElement.querySelectorAll('.seg-btn').forEach(function(b){b.classList.remove('active')});btn.classList.add('active');calcIdealWeight()}
-function calcIdealWeight(){var h=parseFloat(document.getElementById('iw-height').value);var res=document.getElementById('s2-result');if(!h){res.classList.remove('show');return}res.classList.add('show');var hm=h/100;var ideal=hm*hm*22;var normalMin=hm*hm*18.5,normalMax=hm*hm*23;var overStart=hm*hm*25,obeseStart=hm*hm*30;var broca=iwSex==='male'?(h-100)*0.9:(h-100)*0.85;document.getElementById('iw-ideal').textContent=ideal.toFixed(1)+'kg';document.getElementById('iw-range').textContent='정상 범위: '+normalMin.toFixed(1)+'~'+normalMax.toFixed(1)+'kg';document.getElementById('iw-under').textContent=normalMin.toFixed(1)+'kg 미만';document.getElementById('iw-normal').textContent=normalMin.toFixed(1)+'~'+normalMax.toFixed(1)+'kg';document.getElementById('iw-over').textContent=normalMax.toFixed(1)+'kg~';document.getElementById('iw-obese').textContent=overStart.toFixed(1)+'kg~';document.getElementById('iw-broca').textContent=broca.toFixed(1)+'kg'}
+function calcIdealWeight(){
+  var h=parseFloat(document.getElementById('iw-height').value);
+  var w=parseFloat(document.getElementById('iw-weight').value);
+  var res=document.getElementById('s2-result');
+  var warn=document.getElementById('iw-input-warn');
+  warn.style.display='none';warn.textContent='';
+  if(!isFinite(h)||h<=0){res.classList.remove('show');return}
+  if(h<50||h>250){warn.textContent='키는 50~250cm 범위로 입력하세요.';warn.style.display='block';res.classList.remove('show');return}
+  if(isFinite(w)&&w>0&&(w<10||w>500)){warn.textContent='체중은 10~500kg 범위로 입력하세요.';warn.style.display='block';res.classList.remove('show');return}
+  res.classList.add('show');
+  var hm=h/100;
+  var bmi22=hm*hm*22;
+  var beauty=hm*hm*20;
+  var nMin=hm*hm*18.5, nMax=hm*hm*23;
+  var overStart=hm*hm*25, obeseStart=hm*hm*30;
+  var broca=iwSex==='male'?(h-100)*0.9:(h-100)*0.85;
+  var lorentz=iwSex==='male'?(h-100)-((h-150)/4):(h-100)-((h-150)/2.5);
+  var fmt=function(v){return (Math.round(v*10)/10).toFixed(1)+'kg'};
+  document.getElementById('iw-ideal').textContent=fmt(bmi22);
+  document.getElementById('iw-range').textContent='정상 범위: '+fmt(nMin)+' ~ '+fmt(nMax);
+  // BMI 구간별 체중 범위
+  document.getElementById('iw-under').textContent=fmt(nMin)+' 미만';
+  document.getElementById('iw-normal').textContent=fmt(nMin)+' ~ '+fmt(nMax);
+  document.getElementById('iw-over').textContent=fmt(nMax)+' ~ '+fmt(overStart);
+  document.getElementById('iw-obese').textContent=fmt(overStart)+' ~ '+fmt(obeseStart);
+  document.getElementById('iw-hiobese').textContent=fmt(obeseStart)+' 이상';
+  // 공식 비교
+  document.getElementById('iw-bmi22').textContent=fmt(bmi22);
+  document.getElementById('iw-beauty').textContent=fmt(beauty);
+  document.getElementById('iw-broca').textContent=fmt(broca);
+  document.getElementById('iw-lorentz').textContent=fmt(lorentz);
+  // 현재 체중과의 차이
+  var diffRow=document.getElementById('iw-diff-row');
+  var diffEl=document.getElementById('iw-diff');
+  if(isFinite(w)&&w>0){
+    var diff=w-bmi22;
+    diffRow.style.display='flex';
+    var sign=diff>0?'+':'';
+    var hint=Math.abs(diff)<0.5?' (적정)':(diff>0?' (감량 권장)':' (증량 권장)');
+    diffEl.textContent=sign+fmt(diff)+hint;
+    diffEl.style.color=Math.abs(diff)<2?'#10B981':diff>0?'#EF4444':'#3B82F6';
+  }else{
+    diffRow.style.display='none';
+  }
+}
 </script>
 
 

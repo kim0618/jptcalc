@@ -49,8 +49,8 @@
 <main class="page-wrap">
   <div class="page-header"><div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/health/">건강 계산기</a><span class="breadcrumb-sep">›</span><span>기초대사량 계산기</span></div><div class="page-header-badge">🔥 무료 온라인 계산기</div><h1>기초대사량 계산기</h1><p>Mifflin-St Jeor 공식으로 하루 최소 필요 열량을 계산합니다</p></div>
 
-  <div class="card"><div class="card-title">기본 정보</div><div class="seg-group" id="bmr-sex"><button class="seg-btn active" onclick="setBmrSex('male',this)">남성</button><button class="seg-btn" onclick="setBmrSex('female',this)">여성</button></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px"><div class="field" style="margin-bottom:0"><div class="field-label">나이</div><div class="input-wrap"><input type="number" id="bmr-age" placeholder="예) 25" oninput="calcBmr()" /><span class="unit">세</span></div></div><div class="field" style="margin-bottom:0"><div class="field-label">키</div><div class="input-wrap"><input type="number" id="bmr-height" placeholder="예) 170" oninput="calcBmr()" /><span class="unit">cm</span></div></div><div class="field" style="margin-bottom:0"><div class="field-label">체중</div><div class="input-wrap"><input type="number" id="bmr-weight" placeholder="예) 65" oninput="calcBmr()" /><span class="unit">kg</span></div></div></div></div>
-  <div class="result-card" id="s1-result"><div class="result-highlight"><div class="rh-label">기초대사량 (BMR)</div><div class="rh-value" id="bmr-value">-</div><div class="rh-sub">하루 최소 필요 열량</div></div><div class="result-row"><span class="result-label">활동 거의 없음 (×1.2)</span><span class="result-value" id="bmr-sed">-</span></div><div class="result-row"><span class="result-label">가벼운 운동 (×1.375)</span><span class="result-value" id="bmr-light">-</span></div><div class="result-row"><span class="result-label">보통 운동 (×1.55)</span><span class="result-value" id="bmr-mod">-</span></div><div class="result-row"><span class="result-label">격렬한 운동 (×1.725)</span><span class="result-value" id="bmr-active">-</span></div><div class="result-row result-total-row"><span class="result-total-label">매우 격렬한 운동 (×1.9)</span><span class="result-total-value" id="bmr-very">-</span></div><p class="result-note">※ Mifflin-St Jeor 공식 기준.</p></div>
+  <div class="card"><div class="card-title">기본 정보</div><div class="seg-group" id="bmr-sex"><button class="seg-btn active" onclick="setBmrSex('male',this)">남성</button><button class="seg-btn" onclick="setBmrSex('female',this)">여성</button></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px"><div class="field" style="margin-bottom:0"><div class="field-label">나이</div><div class="input-wrap"><input type="number" id="bmr-age" placeholder="예) 25" min="1" max="120" step="1" inputmode="numeric" oninput="calcBmr()" /><span class="unit">세</span></div></div><div class="field" style="margin-bottom:0"><div class="field-label">키</div><div class="input-wrap"><input type="number" id="bmr-height" placeholder="예) 170" min="50" max="250" step="0.1" inputmode="decimal" oninput="calcBmr()" /><span class="unit">cm</span></div></div><div class="field" style="margin-bottom:0"><div class="field-label">체중</div><div class="input-wrap"><input type="number" id="bmr-weight" placeholder="예) 65" min="10" max="500" step="0.1" inputmode="decimal" oninput="calcBmr()" /><span class="unit">kg</span></div></div></div><div class="field" style="margin-top:12px;margin-bottom:0"><div class="field-label">활동 수준</div><select id="bmr-activity" onchange="calcBmr()" style="width:100%;padding:12px;border:1px solid var(--gray-200);border-radius:10px;font-size:14px;background:#fff"><option value="1.2">활동 거의 없음 (좌식 생활, 운동 안 함)</option><option value="1.375">가벼운 활동 (주 1~3회 가벼운 운동)</option><option value="1.55" selected>보통 활동 (주 3~5회 운동)</option><option value="1.725">활발한 활동 (주 6~7회 운동)</option><option value="1.9">매우 활발 (매일 격렬+신체노동)</option></select></div><div id="bmr-input-warn" style="display:none;font-size:12px;color:#EF4444;margin-top:8px"></div></div>
+  <div class="result-card" id="s1-result"><div class="result-highlight"><div class="rh-label">기초대사량 (BMR)</div><div class="rh-value" id="bmr-value">-</div><div class="rh-sub">하루 최소 필요 열량</div></div><div class="result-row" style="background:rgba(16,185,129,0.08);border-radius:8px;padding:10px 12px;margin:8px 0"><span class="result-label" style="font-weight:700">선택한 활동 수준 TDEE</span><span class="result-value" id="bmr-tdee" style="font-weight:900;color:#10B981">-</span></div><div style="font-size:12px;color:var(--gray-500);margin:8px 0 4px;font-weight:600">활동 수준별 비교</div><div class="result-row"><span class="result-label">활동 거의 없음 (×1.2)</span><span class="result-value" id="bmr-sed">-</span></div><div class="result-row"><span class="result-label">가벼운 활동 (×1.375)</span><span class="result-value" id="bmr-light">-</span></div><div class="result-row"><span class="result-label">보통 활동 (×1.55)</span><span class="result-value" id="bmr-mod">-</span></div><div class="result-row"><span class="result-label">활발한 활동 (×1.725)</span><span class="result-value" id="bmr-active">-</span></div><div class="result-row"><span class="result-label">매우 활발 (×1.9)</span><span class="result-value" id="bmr-very">-</span></div><div style="font-size:12px;color:var(--gray-500);margin:14px 0 4px;font-weight:600">선택한 활동 수준 기준 권장 칼로리</div><div class="result-row"><span class="result-label" style="color:#3B82F6">체중 감량 (-500 kcal)</span><span class="result-value" id="bmr-cut">-</span></div><div class="result-row"><span class="result-label" style="color:#10B981">현재 체중 유지</span><span class="result-value" id="bmr-maint">-</span></div><div class="result-row result-total-row"><span class="result-total-label" style="color:#F59E0B">체중 증량 (+300 kcal)</span><span class="result-total-value" id="bmr-bulk">-</span></div><p class="result-note">※ Mifflin-St Jeor 공식 기준. 권장 칼로리는 일반적인 기준이며 의료 전문가 상담 후 적용하세요.</p></div>
   <div class="seo-card"><h2>기초대사량 계산기 이용 안내</h2><h3>기초대사량(BMR)이란?</h3><p>기초대사량은 아무것도 하지 않고 가만히 있을 때 생명 유지에 필요한 최소 에너지량입니다. Mifflin-St Jeor 공식이 현재 가장 정확한 BMR 계산법입니다.</p></div>
 
   <section class="guide-section seo-card">
@@ -67,6 +67,16 @@
     </ul>
     <h3>Mifflin-St Jeor 공식</h3>
     <p>본 계산기는 현재 가장 정확하다고 평가받는 Mifflin-St Jeor 공식을 사용합니다. 남성: 10 x 체중(kg) + 6.25 x 키(cm) - 5 x 나이 + 5, 여성: 10 x 체중(kg) + 6.25 x 키(cm) - 5 x 나이 - 161.</p>
+    <h3>TDEE(총 에너지 소비량)와 권장 칼로리</h3>
+    <p>TDEE는 BMR에 활동 계수를 곱한 값으로 하루 실제 소모 열량을 의미합니다. 체중 감량은 TDEE 대비 약 500kcal 적게(주당 약 0.45kg 감량 목표), 체중 증량은 TDEE 대비 약 300kcal 많게 섭취하는 것이 일반적 기준입니다. 단, 감량 시에도 BMR 미만으로는 떨어지지 않도록 본 계산기는 자동 보정합니다.</p>
+    <h3>활동 계수 선택 가이드</h3>
+    <ul>
+      <li>1.2 - 사무직 좌식 생활, 운동 거의 없음</li>
+      <li>1.375 - 주 1~3회 가벼운 운동(산책, 가벼운 조깅)</li>
+      <li>1.55 - 주 3~5회 중강도 운동(러닝, 헬스 등)</li>
+      <li>1.725 - 주 6~7회 운동, 직업적 신체 활동 동반</li>
+      <li>1.9 - 매일 격렬한 운동 + 신체 노동(현장직, 운동선수)</li>
+    </ul>
   </section>
 
   <section class="guide-section seo-card faq-card">
@@ -111,7 +121,35 @@
 <script>
 var bmrSex='male';
 function setBmrSex(s,btn){bmrSex=s;btn.parentElement.querySelectorAll('.seg-btn').forEach(function(b){b.classList.remove('active')});btn.classList.add('active');calcBmr()}
-function calcBmr(){var age=parseFloat(document.getElementById('bmr-age').value);var h=parseFloat(document.getElementById('bmr-height').value);var w=parseFloat(document.getElementById('bmr-weight').value);var res=document.getElementById('s1-result');if(!age||!h||!w){res.classList.remove('show');return}res.classList.add('show');var bmr=10*w+6.25*h-5*age+(bmrSex==='male'?5:-161);document.getElementById('bmr-value').textContent=Math.round(bmr)+' kcal';document.getElementById('bmr-sed').textContent=Math.round(bmr*1.2).toLocaleString()+' kcal';document.getElementById('bmr-light').textContent=Math.round(bmr*1.375).toLocaleString()+' kcal';document.getElementById('bmr-mod').textContent=Math.round(bmr*1.55).toLocaleString()+' kcal';document.getElementById('bmr-active').textContent=Math.round(bmr*1.725).toLocaleString()+' kcal';document.getElementById('bmr-very').textContent=Math.round(bmr*1.9).toLocaleString()+' kcal'}
+function calcBmr(){
+  var age=parseFloat(document.getElementById('bmr-age').value);
+  var h=parseFloat(document.getElementById('bmr-height').value);
+  var w=parseFloat(document.getElementById('bmr-weight').value);
+  var act=parseFloat(document.getElementById('bmr-activity').value)||1.55;
+  var res=document.getElementById('s1-result');
+  var warn=document.getElementById('bmr-input-warn');
+  warn.style.display='none';warn.textContent='';
+  if(!isFinite(age)||!isFinite(h)||!isFinite(w)||age<=0||h<=0||w<=0){res.classList.remove('show');return}
+  if(age<1||age>120){warn.textContent='나이는 1~120세 범위로 입력하세요.';warn.style.display='block';res.classList.remove('show');return}
+  if(h<50||h>250){warn.textContent='키는 50~250cm 범위로 입력하세요.';warn.style.display='block';res.classList.remove('show');return}
+  if(w<10||w>500){warn.textContent='체중은 10~500kg 범위로 입력하세요.';warn.style.display='block';res.classList.remove('show');return}
+  res.classList.add('show');
+  var bmr=10*w+6.25*h-5*age+(bmrSex==='male'?5:-161);
+  var fmt=function(v){return Math.round(v).toLocaleString()+' kcal'};
+  document.getElementById('bmr-value').textContent=fmt(bmr);
+  document.getElementById('bmr-sed').textContent=fmt(bmr*1.2);
+  document.getElementById('bmr-light').textContent=fmt(bmr*1.375);
+  document.getElementById('bmr-mod').textContent=fmt(bmr*1.55);
+  document.getElementById('bmr-active').textContent=fmt(bmr*1.725);
+  document.getElementById('bmr-very').textContent=fmt(bmr*1.9);
+  var tdee=bmr*act;
+  document.getElementById('bmr-tdee').textContent=fmt(tdee);
+  // 권장 칼로리: 감량은 BMR 이하로 떨어지지 않도록 가드
+  var cut=Math.max(tdee-500, bmr);
+  document.getElementById('bmr-cut').textContent=fmt(cut);
+  document.getElementById('bmr-maint').textContent=fmt(tdee);
+  document.getElementById('bmr-bulk').textContent=fmt(tdee+300);
+}
 </script>
 
 
