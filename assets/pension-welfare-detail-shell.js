@@ -24,7 +24,7 @@
       key:'pension-tax',
       quick:['사적연금 연간 수령액이 1,500만원 이하이면 연령별 저율 분리과세(3.3~5.5%)가 적용됩니다.','1,500만원 초과 시 16.5% 분리과세 또는 종합과세 중 유리한 방법을 선택할 수 있습니다.','공적연금(국민연금 등)은 종합소득세 과세 대상으로, 홈택스 간이세액표를 참고하세요.','연금 수령 나이가 높을수록 낮은 세율이 적용됩니다(55세 미만 5.5%, 70세 이상 3.3%).'],
       related:[['/calc/pension-welfare/retirement-living/','노후 생활비','🏡'],['/calc/pension-welfare/long-term-care/','장기요양 비용','🏥'],['/calc/tax/income-tax/','종합소득세','📊']],
-      guides:[['/blog/posts/pension-tax-guide.html','연금소득세 완전 정리 - IRP·연금저축 세율·실수령액·절세 전략'],['/blog/posts/retirement-living-cost.html','노후 생활비 얼마면 될까 - 30년 준비 자금 계산법'],['/blog/posts/retirement-living-late-start.html','40대·50대 노후 준비 늦었을까 - 시작 나이별 월 저축 목표와 3가지 시나리오']]
+      guides:[['/blog/posts/pension-tax-guide.html','연금소득세 완전 정리 - IRP·연금저축 세율·실수령액·절세 전략'],['/blog/posts/irp-vs-pension-savings.html','IRP vs 연금저축 차이 - 세액공제·인출·수령 세금 완전 비교 2026'],['/blog/posts/retirement-living-cost.html','노후 생활비 얼마면 될까 - 30년 준비 자금 계산법']]
     },
     '/calc/pension-welfare/long-term-care/': {
       key:'long-term-care',

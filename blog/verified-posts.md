@@ -33,3 +33,6 @@
 - comprehensive-income-tax.html (2026-04-24 검증, 오류 1개 수정 | BreadcrumbList position 3 /calc/tax/ → /blog/?cat=세금 수정 | 계산 이상 없음)
 - severance-pay-guide.html (2026-04-24 검증, 오류 2개 수정 | BreadcrumbList position 3 /calc/salary/ → /blog/?cat=연봉, 감면→절감 표현 수정 | 퇴직금 계산·IRP 수치 정확)
 - parental-leave-pay.html (2026-04-24 검증, 오류 1개 수정 | BreadcrumbList position 3 /calc/salary/ → /blog/?cat=연봉 | 6+6 월별 상한액 정확 | FAQ 3개로 권고 미달 - 구조 보강 권고)
+- medical-expense-deduction-guide.html (2026-04-25 검증, 이상 없음 | 의료비 3% 공제기준·세액공제 계산 전부 정확 | JSON-LD·링크 정상)
+- vat-guide.html (2026-04-25 검증, 오류 1개 수정 | BreadcrumbList position 3 /calc/tax/ → /blog/?cat=세금 수정 | 간이과세 기준 1억400만원·납부세액 계산 정확)
+- subscription-score-guide.html (2026-04-25 검증, 이상 없음 | 가점 84점 만점·무주택·부양가족·통장 기간 계산 정확 | FAQ 3개(권고 4-5개) · SVG 없음 - 구조 보강 권고 | blog-review-footer.js 로드 확인)

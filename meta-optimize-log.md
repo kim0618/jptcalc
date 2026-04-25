@@ -24,3 +24,12 @@
 - posts/pension-tax-guide.html: "완전 정리" 제거, 55세5.5%/70세4.4%/80세3.3% 세율 수치 title 직접 노출 (재측정 2026-05-01 예정)
 - posts/freelancer-tax-refund.html: "환급받는 방법" → "돌려받는 법", 3%+0.3% 구성 설명 desc 삽입 (재측정 2026-05-01 예정)
 - posts/hourly-wage-guide.html: "환산하면 얼마?" → "환산표", 3000만원=12000원 수치 title 직접 삽입 (재측정 2026-05-01 예정)
+
+## 2026-04-25 (1차 라운드)
+- posts/realestate-agent-fee.html: CTR 0.1%, 노출 6,919 - 수수료 구체적 수치 추가, 질문형 유도
+- posts/bmi-guide.html: CTR 0.1%, 노출 1,707 - "한국인 BMI 기준" 키워드 강화, 계산 유도
+- posts/military-discharge-date.html: CTR 0.8%, 노출 943 - "전역일 계산기"로 title 재작성, 실제 예시 추가
+- posts/subscription-score-guide.html: CTR 1.4%, 노출 579 - title 정리, 당첨선 수치 추가
+- calc/realestate/acquisition/: CTR 0.5%, 노출 661 - "위택스 취득세율 6억·9억" 쿼리 반영
+- calc/finance/savings/: CTR 0.4%, 노출 455 - 구체적 계산 예시(365만원) description 추가
+- calc/realestate/conversion/: CTR 0.7%, 노출 299 - "전월세 전환율 4.0%" + 계산 예시 추가
