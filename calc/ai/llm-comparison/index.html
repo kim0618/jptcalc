@@ -94,6 +94,7 @@
           <th>모델</th>
           <th>입력<br>($/1M)</th>
           <th>출력<br>($/1M)</th>
+          <th>블렌드<br>($/1M, 1:3)</th>
           <th>컨텍스트</th>
           <th>코딩</th>
           <th>추론</th>
@@ -101,7 +102,12 @@
         <tbody id="llm-tbody"></tbody>
       </table>
       </div>
-      <div style="font-size:11px;color:var(--gray-500);margin-top:12px;">* 코딩/추론 점수는 HumanEval, MMLU 등 공개 벤치마크 기반 <strong>상대 비교용 점수</strong>로, 절대값이 아닌 모델 간 비교에 참고하세요. 가격은 2026년 4월 기준이며 변동될 수 있습니다.</div>
+      <div style="font-size:11px;color:var(--gray-500);margin-top:12px;line-height:1.7">
+        * <strong style="color:var(--primary)">보라색</strong> = 해당 항목의 최저가 또는 최고 점수<br>
+        * 블렌드 단가 = (입력 × 1 + 출력 × 3) / 4 — 출력 토큰 비중이 더 큰 일반적 사용 패턴 가정<br>
+        * 코딩/추론 점수는 HumanEval, MMLU 등 공개 벤치마크 기반 <strong>상대 비교용 점수</strong>로, 절대값이 아닌 모델 간 비교에 참고하세요<br>
+        * 가격·스펙 데이터 기준일: <span id="llm-updated">2026-04</span>
+      </div>
     </div>
   <div class="guide-section">
     <div class="guide-card">
@@ -159,8 +165,26 @@
 // 테이블은 /assets/ai-models-config.js 데이터에서 자동 생성됩니다
 (function(){
   var d=window.AI_MODELS,order=window.AI_MODELS_TABLE_ORDER;
+  function vendorOf(name){
+    if(name.indexOf('GPT')===0)return 'OpenAI';
+    if(name.indexOf('Claude')===0)return 'Anthropic';
+    if(name.indexOf('Gemini')===0)return 'Google';
+    return '';
+  }
+  function ctxToNum(s){
+    if(!s)return 0;
+    var n=parseFloat(s);
+    if(/M$/i.test(s))return n*1e6;
+    if(/K$/i.test(s))return n*1e3;
+    return n;
+  }
+  function blended(m){return (m.input + m.output*3)/4;}
+  var blendedVals=order.map(function(id){return blended(d[id]);});
+  var ctxVals=order.map(function(id){return ctxToNum(d[id].ctx);});
   var minIn=Math.min.apply(null,order.map(function(id){return d[id].input;}));
   var minOut=Math.min.apply(null,order.map(function(id){return d[id].output;}));
+  var minBlend=Math.min.apply(null,blendedVals);
+  var maxCtx=Math.max.apply(null,ctxVals);
   var maxCode=Math.max.apply(null,order.map(function(id){return d[id].coding;}));
   var maxReas=Math.max.apply(null,order.map(function(id){return d[id].reasoning;}));
   var s='text-align:center';
@@ -168,17 +192,25 @@
   var tbody=document.getElementById('llm-tbody');
   tbody.innerHTML=order.map(function(id){
     var m=d[id];
-    var isMinIn=m.input===minIn, isMinOut=m.output===minOut;
+    var b=blended(m);
+    var isMinIn=m.input===minIn, isMinOut=m.output===minOut, isMinBlend=b===minBlend;
+    var isMaxCtx=ctxToNum(m.ctx)===maxCtx;
     var isMaxCode=m.coding===maxCode, isMaxReas=m.reasoning===maxReas;
+    var v=vendorOf(m.name);
     return '<tr>'+
-      '<td>'+m.name+'</td>'+
+      '<td>'+m.name+(v?'<div style="font-size:10px;color:var(--gray-500);font-weight:500;margin-top:2px">'+v+'</div>':'')+'</td>'+
       '<td style="'+(isMinIn?sBest:s)+'">$'+m.input.toFixed(2)+'</td>'+
       '<td style="'+(isMinOut?sBest:s)+'">$'+m.output.toFixed(2)+'</td>'+
-      '<td style="'+s+'">'+m.ctx+'</td>'+
+      '<td style="'+(isMinBlend?sBest:s)+'">$'+b.toFixed(2)+'</td>'+
+      '<td style="'+(isMaxCtx?sBest:s)+'">'+m.ctx+'</td>'+
       '<td style="'+(isMaxCode?sBest:s)+'">'+m.coding+'</td>'+
       '<td style="'+(isMaxReas?sBest:s)+'">'+m.reasoning+'</td>'+
     '</tr>';
   }).join('');
+  if(window.AI_MODELS_UPDATED){
+    var el=document.getElementById('llm-updated');
+    if(el)el.textContent=window.AI_MODELS_UPDATED;
+  }
 })();
 </script>
 

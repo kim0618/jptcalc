@@ -83,13 +83,13 @@
     <div class="card">
       <div class="card-title">AI 스타트업 인프라 월비용 예측</div>
       <div class="info-box"><span class="info-icon">💡</span><p>AI 서비스 운영에 필요한 주요 인프라 항목별 예상 비용을 합산합니다.</p></div>
-      <div class="field"><div class="field-label"><span>LLM API 비용</span></div><div class="input-wrap"><input type="number" id="infra-api" placeholder="예)500" oninput="calc()"><span class="unit">USD/월</span></div></div>
-      <div class="field"><div class="field-label"><span>클라우드 서버 (컴퓨팅)</span></div><div class="input-wrap"><input type="number" id="infra-compute" placeholder="예)200" oninput="calc()"><span class="unit">USD/월</span></div></div>
-      <div class="field"><div class="field-label"><span>데이터베이스</span></div><div class="input-wrap"><input type="number" id="infra-db" placeholder="예)100" oninput="calc()"><span class="unit">USD/월</span></div></div>
-      <div class="field"><div class="field-label"><span>스토리지 (S3/GCS)</span></div><div class="input-wrap"><input type="number" id="infra-storage" placeholder="예)50" oninput="calc()"><span class="unit">USD/월</span></div></div>
-      <div class="field"><div class="field-label"><span>CDN / 네트워크</span></div><div class="input-wrap"><input type="number" id="infra-cdn" placeholder="예)30" oninput="calc()"><span class="unit">USD/월</span></div></div>
-      <div class="field"><div class="field-label"><span>모니터링</span></div><div class="input-wrap"><input type="number" id="infra-monitor" placeholder="예)50" oninput="calc()"><span class="unit">USD/월</span></div></div>
-      <div class="field"><div class="field-label"><span>기타 SaaS</span></div><div class="input-wrap"><input type="number" id="infra-misc" placeholder="예)100" oninput="calc()"><span class="unit">USD/월</span></div></div>
+      <div class="field"><div class="field-label"><span>LLM API 비용</span></div><div class="input-wrap"><input type="number" id="infra-api" placeholder="예) 500" oninput="calc()"><span class="unit">USD/월</span></div></div>
+      <div class="field"><div class="field-label"><span>클라우드 서버 (컴퓨팅)</span></div><div class="input-wrap"><input type="number" id="infra-compute" placeholder="예) 200" oninput="calc()"><span class="unit">USD/월</span></div></div>
+      <div class="field"><div class="field-label"><span>데이터베이스</span></div><div class="input-wrap"><input type="number" id="infra-db" placeholder="예) 100" oninput="calc()"><span class="unit">USD/월</span></div></div>
+      <div class="field"><div class="field-label"><span>스토리지 (S3/GCS)</span></div><div class="input-wrap"><input type="number" id="infra-storage" placeholder="예) 50" oninput="calc()"><span class="unit">USD/월</span></div></div>
+      <div class="field"><div class="field-label"><span>CDN / 네트워크</span></div><div class="input-wrap"><input type="number" id="infra-cdn" placeholder="예) 30" oninput="calc()"><span class="unit">USD/월</span></div></div>
+      <div class="field"><div class="field-label"><span>모니터링</span></div><div class="input-wrap"><input type="number" id="infra-monitor" placeholder="예) 50" oninput="calc()"><span class="unit">USD/월</span></div></div>
+      <div class="field"><div class="field-label"><span>기타 SaaS</span></div><div class="input-wrap"><input type="number" id="infra-misc" placeholder="예) 100" oninput="calc()"><span class="unit">USD/월</span></div></div>
       <div class="field"><div class="field-label"><span>환율</span></div><div class="input-wrap"><input type="number" id="infra-exchange" placeholder="예) 1450" oninput="calc()"><span class="unit">원/달러</span></div></div>
       <div class="result-card" id="result"><div id="result-content"></div></div>
     </div>
@@ -155,11 +155,23 @@ function calc(){
   let total=0;const items=[];
   ids.forEach((id,i)=>{const v=parseFloat(document.getElementById(id).value)||0;total+=v;if(v>0)items.push({name:names[i],val:v});});
   if(!total){document.getElementById('result').classList.remove('show');return;}
-  let html=items.map(i=>`<div class="result-row"><span class="result-label">${i.name}</span><span class="result-value">${fmtUsd(i.val)} (${(i.val/total*100).toFixed(0)}%)</span></div>`).join('');
+  const maxVal=Math.max.apply(null,items.map(it=>it.val));
+  // 비중 계산 (소수점 1자리) + 합계 100 보정: 잔차를 가장 큰 항목에 더함
+  const pcts=items.map(it=>Math.round(it.val/total*1000)/10);
+  let maxIdx=0;
+  for(let i=1;i<pcts.length;i++)if(pcts[i]>pcts[maxIdx])maxIdx=i;
+  const sumP=pcts.reduce((a,b)=>a+b,0);
+  pcts[maxIdx]=Math.round((pcts[maxIdx]+(100-sumP))*10)/10;
+  let html=items.map((it,i)=>{
+    const isMax=it.val===maxVal && items.length>1;
+    return `<div class="result-row"><span class="result-label" style="${isMax?'color:var(--primary);font-weight:800':''}">${it.name}</span><span class="result-value">${fmtUsd(it.val)} <span style="color:var(--gray-500);font-weight:600;font-size:12px">(${pcts[i].toFixed(1)}%)</span></span></div>`;
+  }).join('');
+  const buffer=total*0.15;
   html+=`<div class="result-row result-total-row"><span class="result-total-label">월 총 인프라 비용</span><span class="result-total-value">${fmtUsd(total)}</span></div>
     <div class="result-row"><span class="result-label">월 비용 (원화)</span><span class="result-value" style="color:var(--primary);font-size:17px;font-weight:800;">${fmtKrw(total*ex)}</span></div>
     <div class="result-row"><span class="result-label">연간 추정 비용</span><span class="result-value">${fmtUsd(total*12)} (${fmtKrw(total*12*ex)})</span></div>
-    <div class="result-note">* 트래픽 증가에 따라 비용이 비선형적으로 증가할 수 있습니다</div>`;
+    <div class="result-row"><span class="result-label">권장 예비비 (15% 버퍼)</span><span class="result-value">${fmtUsd(buffer)}/월 (${fmtKrw(buffer*ex)})</span></div>
+    <div class="result-note">* 비중이 가장 큰 항목은 보라색으로 강조 · 트래픽 증가에 따라 비용이 비선형적으로 증가할 수 있음<br>* 실제 운영 예산 책정 시 트래픽·요금 변동 대비 10~20% 예비비 확보 권장</div>`;
   document.getElementById('result-content').innerHTML=html;
   document.getElementById('result').classList.add('show');
 }

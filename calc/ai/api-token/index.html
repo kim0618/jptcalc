@@ -89,7 +89,7 @@
       </div>
       <div class="field">
         <div class="field-label"><span>일 평균 요청 횟수</span></div>
-        <div class="input-wrap"><input type="number" id="api-requests" placeholder="예)1000" oninput="calc()"><span class="unit">회/일</span></div>
+        <div class="input-wrap"><input type="number" id="api-requests" placeholder="예) 1000" oninput="calc()"><span class="unit">회/일</span></div>
       </div>
       <div class="field">
         <div class="field-label"><span>요청당 평균 입력 토큰</span></div>
@@ -172,23 +172,35 @@
   });
 })();
 function fmtUsd(v){return '$'+v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function fmtUsdSmall(v){return '$'+v.toLocaleString('en-US',{minimumFractionDigits:4,maximumFractionDigits:6});}
 function fmtKrw(v){v=Math.round(v);if(v>=100000000)return Math.floor(v/100000000).toLocaleString()+'억 '+Math.floor((v%100000000)/10000).toLocaleString()+'만원';if(v>=10000)return Math.floor(v/10000).toLocaleString()+'만 '+(v%10000).toLocaleString()+'원';return v.toLocaleString()+'원';}
+function parseCtx(s){if(!s)return 0;var n=parseFloat(s);if(/M$/i.test(s))return n*1e6;if(/K$/i.test(s))return n*1e3;return n;}
+function fmtUsdAuto(v){return v<0.01?fmtUsdSmall(v):fmtUsd(v);}
 function calc(){
   const mk=document.getElementById('api-model').value,m=window.AI_MODELS[mk];
   const reqs=parseFloat(document.getElementById('api-requests').value)||0;
   const inTok=parseFloat(document.getElementById('api-input-tokens').value)||0;
   const outTok=parseFloat(document.getElementById('api-output-tokens').value)||0;
   const ex=parseFloat(document.getElementById('api-exchange').value)||1450;
-  if(!reqs){document.getElementById('result').classList.remove('show');return;}
+  if(!reqs||(!inTok&&!outTok)){document.getElementById('result').classList.remove('show');return;}
   const dIn=(reqs*inTok/1e6)*m.input,dOut=(reqs*outTok/1e6)*m.output,dT=dIn+dOut,mT=dT*30,yT=dT*365;
+  const perReq=dT/reqs;
+  const totalDailyTok=reqs*(inTok+outTok);
+  const ctxLimit=parseCtx(m.ctx);
+  const ctxWarn=(ctxLimit&&(inTok+outTok)>ctxLimit)?`<div class="result-note" style="color:#DC2626;font-weight:700;margin-bottom:10px">⚠ 입력+출력 합계(${(inTok+outTok).toLocaleString()} 토큰)가 ${m.name}의 컨텍스트 한도(${m.ctx})를 초과합니다. 실제 호출은 실패하거나 잘릴 수 있습니다.</div>`:'';
+  const inP=dT>0?Math.round(dIn/dT*100):0;
+  const outP=100-inP;
   document.getElementById('result-content').innerHTML=`
-    <div class="result-row"><span class="result-label">모델</span><span class="result-value">${m.name}</span></div>
-    <div class="result-row"><span class="result-label">일 총 토큰</span><span class="result-value">입력 ${(reqs*inTok).toLocaleString()} + 출력 ${(reqs*outTok).toLocaleString()}</span></div>
-    <div class="result-row"><span class="result-label">일 비용</span><span class="result-value">${fmtUsd(dT)} (${fmtKrw(dT*ex)})</span></div>
+    ${ctxWarn}
+    <div class="result-row"><span class="result-label">모델</span><span class="result-value">${m.name} <span style="color:var(--gray-500);font-weight:600;font-size:12px">(컨텍스트 ${m.ctx})</span></span></div>
+    <div class="result-row"><span class="result-label">요청당 비용</span><span class="result-value">${fmtUsdAuto(perReq)} (${fmtKrw(perReq*ex)})</span></div>
+    <div class="result-row"><span class="result-label">일 총 토큰</span><span class="result-value">${totalDailyTok.toLocaleString()} (입력 ${(reqs*inTok).toLocaleString()} + 출력 ${(reqs*outTok).toLocaleString()})</span></div>
+    <div class="result-row"><span class="result-label">일 비용 분포</span><span class="result-value">입력 ${fmtUsd(dIn)} (${inP}%) + 출력 ${fmtUsd(dOut)} (${outP}%)</span></div>
+    <div class="result-row"><span class="result-label">일 비용 합계</span><span class="result-value">${fmtUsd(dT)} (${fmtKrw(dT*ex)})</span></div>
     <div class="result-row result-total-row"><span class="result-total-label">월 비용 (30일)</span><span class="result-total-value">${fmtUsd(mT)}</span></div>
     <div class="result-row"><span class="result-label">월 비용 (원화)</span><span class="result-value" style="color:var(--primary);font-size:17px;font-weight:800;">${fmtKrw(mT*ex)}</span></div>
-    <div class="result-row"><span class="result-label">연 비용 추정</span><span class="result-value">${fmtUsd(yT)} (${fmtKrw(yT*ex)})</span></div>
-    <div class="result-note">* 가격: 입력 $${m.input}/1M, 출력 $${m.output}/1M 토큰 기준<br>* 프롬프트 캐싱, 배치 API 할인 미반영</div>`;
+    <div class="result-row"><span class="result-label">연 비용 추정 (365일)</span><span class="result-value">${fmtUsd(yT)} (${fmtKrw(yT*ex)})</span></div>
+    <div class="result-note">* 가격: 입력 $${m.input.toFixed(2)}/1M, 출력 $${m.output.toFixed(2)}/1M 토큰 · 컨텍스트 한도 ${m.ctx}<br>* 월=30일·연=365일 가정 · 프롬프트 캐싱, 배치 API 할인 미반영</div>`;
   document.getElementById('result').classList.add('show');
 }
 </script>

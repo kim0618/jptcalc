@@ -83,7 +83,7 @@
     <div class="card">
       <div class="card-title">AI SaaS vs 자체구축 비용 비교</div>
       <div class="info-box"><span class="info-icon">💡</span><p>API 기반 SaaS와 자체 GPU 서버 구축 시 월 비용·손익분기점을 비교합니다.</p></div>
-      <div class="field"><div class="field-label"><span>월 API 호출 수</span></div><div class="input-wrap"><input type="number" id="saas-calls" placeholder="예)100000" oninput="calc()"><span class="unit">회/월</span></div></div>
+      <div class="field"><div class="field-label"><span>월 API 호출 수</span></div><div class="input-wrap"><input type="number" id="saas-calls" placeholder="예) 100000" oninput="calc()"><span class="unit">회/월</span></div></div>
       <div class="field"><div class="field-label"><span>호출당 평균 비용 (SaaS)</span></div><div class="input-wrap"><input type="number" id="saas-cost-per" placeholder="예) 0.01" step="0.001" oninput="calc()"><span class="unit">USD/회</span></div></div>
       <div class="field"><div class="field-label"><span>자체구축 월 서버 비용</span></div><div class="input-wrap"><input type="number" id="saas-server" placeholder="예) 3000" oninput="calc()"><span class="unit">USD/월</span></div></div>
       <div class="field"><div class="field-label"><span>자체구축 인건비 (DevOps)</span></div><div class="input-wrap"><input type="number" id="saas-labor" placeholder="예) 2000" oninput="calc()"><span class="unit">USD/월</span></div></div>
@@ -145,16 +145,46 @@
 function fmtUsd(v){return '$'+v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
 function fmtKrw(v){v=Math.round(v);if(v>=100000000)return Math.floor(v/100000000).toLocaleString()+'억 '+Math.floor((v%100000000)/10000).toLocaleString()+'만원';if(v>=10000)return Math.floor(v/10000).toLocaleString()+'만 '+(v%10000).toLocaleString()+'원';return v.toLocaleString()+'원';}
 function calc(){
-  const calls=parseFloat(document.getElementById('saas-calls').value)||0,costPer=parseFloat(document.getElementById('saas-cost-per').value)||0,server=parseFloat(document.getElementById('saas-server').value)||0,labor=parseFloat(document.getElementById('saas-labor').value)||0,ex=parseFloat(document.getElementById('saas-exchange').value)||1450;
-  if(!calls){document.getElementById('result').classList.remove('show');return;}
-  const saasCost=calls*costPer,selfCost=server+labor,cheaper=saasCost<selfCost?'SaaS':'자체구축',diff=Math.abs(saasCost-selfCost),breakeven=costPer>0?Math.ceil(selfCost/costPer):0;
+  const calls=parseFloat(document.getElementById('saas-calls').value)||0;
+  const costPer=parseFloat(document.getElementById('saas-cost-per').value)||0;
+  const server=parseFloat(document.getElementById('saas-server').value)||0;
+  const labor=parseFloat(document.getElementById('saas-labor').value)||0;
+  const ex=parseFloat(document.getElementById('saas-exchange').value)||1450;
+  const selfCost=server+labor;
+  if(!calls||(!costPer&&!selfCost)){document.getElementById('result').classList.remove('show');return;}
+  const saasCost=calls*costPer;
+  const diff=Math.abs(saasCost-selfCost);
+  const isEqual=diff<0.01;
+  const cheaper=isEqual?null:(saasCost<selfCost?'SaaS':'자체구축');
+  const breakeven=costPer>0?Math.ceil(selfCost/costPer):0;
+  let conclusionRow;
+  if(isEqual){
+    conclusionRow=`<div class="result-row result-total-row"><span class="result-total-label">두 옵션 비용 동등</span><span class="result-total-value">월 차이 $0.00</span></div>`;
+  } else {
+    conclusionRow=`<div class="result-row result-total-row"><span class="result-total-label">${cheaper}가 유리</span><span class="result-total-value">월 ${fmtUsd(diff)} 절감</span></div>`;
+  }
+  let breakevenRow, hintNote;
+  if(breakeven>0){
+    const positionHint=calls>breakeven
+      ?`현재 호출량(${calls.toLocaleString()})이 손익분기점을 초과 → 자체구축이 유리한 구간`
+      :calls<breakeven
+        ?`현재 호출량(${calls.toLocaleString()})이 손익분기점 이하 → SaaS가 유리한 구간`
+        :`현재 호출량이 정확히 손익분기점에 위치`;
+    breakevenRow=`<div class="result-row"><span class="result-label">손익분기점</span><span class="result-value" style="color:var(--primary);">월 ${breakeven.toLocaleString()}회</span></div>`;
+    hintNote=`* ${positionHint}`;
+  } else {
+    breakevenRow=`<div class="result-row"><span class="result-label">손익분기점</span><span class="result-value" style="color:var(--gray-500);">계산 불가 (호출당 비용 입력 필요)</span></div>`;
+    hintNote=`* 손익분기점 계산을 위해 SaaS 호출당 비용을 입력하세요`;
+  }
   document.getElementById('result-content').innerHTML=`
-    <div class="result-row"><span class="result-label">SaaS 월 비용</span><span class="result-value" style="${saasCost<=selfCost?'color:var(--primary);font-weight:800':''}">${fmtUsd(saasCost)} (${fmtKrw(saasCost*ex)})</span></div>
-    <div class="result-row"><span class="result-label">자체구축 월 비용</span><span class="result-value" style="${selfCost<=saasCost?'color:var(--primary);font-weight:800':''}">${fmtUsd(selfCost)} (${fmtKrw(selfCost*ex)})</span></div>
-    <div class="result-row result-total-row"><span class="result-total-label">${cheaper}가 유리</span><span class="result-total-value">월 ${fmtUsd(diff)} 절감</span></div>
-    <div class="result-row"><span class="result-label">손익분기점</span><span class="result-value" style="color:var(--primary);">월 ${breakeven.toLocaleString()}회</span></div>
+    <div class="result-row"><span class="result-label">SaaS 월 비용</span><span class="result-value" style="${!isEqual&&saasCost<selfCost?'color:var(--primary);font-weight:800':''}">${fmtUsd(saasCost)} (${fmtKrw(saasCost*ex)})</span></div>
+    <div class="result-row"><span class="result-label">자체구축 월 비용</span><span class="result-value" style="${!isEqual&&selfCost<saasCost?'color:var(--primary);font-weight:800':''}">${fmtUsd(selfCost)} (${fmtKrw(selfCost*ex)})</span></div>
+    ${conclusionRow}
+    ${breakevenRow}
+    <div class="result-row"><span class="result-label">SaaS 연 비용</span><span class="result-value">${fmtUsd(saasCost*12)} (${fmtKrw(saasCost*12*ex)})</span></div>
+    <div class="result-row"><span class="result-label">자체구축 연 비용</span><span class="result-value">${fmtUsd(selfCost*12)} (${fmtKrw(selfCost*12*ex)})</span></div>
     <div class="result-row"><span class="result-label">연간 차이</span><span class="result-value">${fmtUsd(diff*12)} (${fmtKrw(diff*12*ex)})</span></div>
-    <div class="result-note">* 자체구축은 초기 세팅 비용 별도 / DevOps 인건비 포함 기준<br>* ${breakeven.toLocaleString()}회/월 이상이면 자체구축이 유리해지기 시작</div>`;
+    <div class="result-note">* 자체구축은 초기 세팅 비용 별도 · DevOps 인건비 포함 기준<br>${hintNote}</div>`;
   document.getElementById('result').classList.add('show');
 }
 </script>

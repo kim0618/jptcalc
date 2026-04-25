@@ -164,15 +164,25 @@ function fmtUsd(v){return '$'+v.toLocaleString('en-US',{minimumFractionDigits:2,
 function fmtKrw(v){v=Math.round(v);if(v>=100000000)return Math.floor(v/100000000).toLocaleString()+'억 '+Math.floor((v%100000000)/10000).toLocaleString()+'만원';if(v>=10000)return Math.floor(v/10000).toLocaleString()+'만 '+(v%10000).toLocaleString()+'원';return v.toLocaleString()+'원';}
 function setGpu(t,btn){gpuType=t;btn.parentElement.querySelectorAll('.seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');calc();}
 function calc(){
-  const hv=document.getElementById('gpu-hours').value,cv=document.getElementById('gpu-count').value,ev=document.getElementById('gpu-exchange').value;
-  if(!hv&&!cv&&!ev){document.getElementById('result').classList.remove('show');return;}
-  const h=parseFloat(hv)||0,cnt=parseInt(cv)||1,ex=parseFloat(ev)||1450;
+  const h=parseFloat(document.getElementById('gpu-hours').value)||0;
+  const cnt=parseInt(document.getElementById('gpu-count').value)||1;
+  const ex=parseFloat(document.getElementById('gpu-exchange').value)||1450;
   if(!h){document.getElementById('result').classList.remove('show');return;}
-  const g=GPU[gpuType],ps=[{name:'AWS',hr:g.aws},{name:'GCP',hr:g.gcp},{name:'Azure',hr:g.azure}],mn=Math.min(...ps.map(p=>p.hr));
-  let tbl=`<div style="overflow-x:auto;-webkit-overflow-scrolling:touch"><table class="gpu-table"><thead><tr><th>클라우드</th><th>시간당<br>(전체)</th><th>일 비용</th><th>월 비용</th><th>월(원화)</th></tr></thead><tbody>`;
-  ps.forEach(p=>{const d=p.hr*h*cnt,m=d*30,isBest=p.hr===mn;tbl+=`<tr class="${isBest?'best-row':''}"><td>${p.name}${isBest?'<span class="best-badge">최저가</span>':''}</td><td>${fmtUsd(p.hr*cnt)}</td><td>${fmtUsd(d)}</td><td>${fmtUsd(m)}</td><td class="krw-cell">${fmtKrw(m*ex)}</td></tr>`;});
+  const g=GPU[gpuType];
+  const ps=[{name:'AWS',hr:g.aws},{name:'GCP',hr:g.gcp},{name:'Azure',hr:g.azure}];
+  const mn=Math.min(...ps.map(p=>p.hr));
+  const mx=Math.max(...ps.map(p=>p.hr));
+  const hourWarn=(h>24)?`<div class="result-note" style="color:#DC2626;font-weight:700;margin-bottom:8px">⚠ 일일 사용 시간이 24시간을 초과합니다. 입력값을 확인해 주세요.</div>`:'';
+  let tbl=`<div style="overflow-x:auto;-webkit-overflow-scrolling:touch"><table class="gpu-table"><thead><tr><th>클라우드</th><th>시간당<br>합계</th><th>일 비용</th><th>월 비용</th><th>월(원화)</th><th>연 비용</th></tr></thead><tbody>`;
+  ps.forEach(p=>{
+    const hrTotal=p.hr*cnt, d=hrTotal*h, m=d*30, y=d*365, isBest=p.hr===mn;
+    tbl+=`<tr class="${isBest?'best-row':''}"><td>${p.name}${isBest?'<span class="best-badge">최저가</span>':''}</td><td>${fmtUsd(hrTotal)}</td><td>${fmtUsd(d)}</td><td>${fmtUsd(m)}</td><td class="krw-cell">${fmtKrw(m*ex)}</td><td>${fmtUsd(y)}</td></tr>`;
+  });
   tbl+='</tbody></table></div>';
-  document.getElementById('result-content').innerHTML=`<div class="result-summary"><div class="summary-chip"><div class="chip-label">GPU</div><div class="chip-value">${g.name} × ${cnt}개</div></div><div class="summary-chip"><div class="chip-label">일 사용</div><div class="chip-value">${h}시간</div></div><div class="summary-chip"><div class="chip-label">환율</div><div class="chip-value">${ex.toLocaleString()}원/$</div></div></div>${tbl}<div class="result-note">* 온디맨드 가격 기준 · 스팟 인스턴스 사용 시 50~70% 절감 가능 · 1년 예약 시 약 30~40% 할인</div>`;
+  const monthDiff=(mx-mn)*h*cnt*30;
+  const yearDiff=monthDiff*365/30;
+  const savingNote=(mx>mn)?`<div class="result-note" style="margin-top:10px"><strong>💰 최저가 선택 시 절감액</strong> · 최고가 대비 월 ${fmtUsd(monthDiff)} (${fmtKrw(monthDiff*ex)}) / 연 ${fmtUsd(yearDiff)} (${fmtKrw(yearDiff*ex)})</div>`:'';
+  document.getElementById('result-content').innerHTML=`${hourWarn}<div class="result-summary"><div class="summary-chip"><div class="chip-label">GPU</div><div class="chip-value">${g.name} × ${cnt}개</div></div><div class="summary-chip"><div class="chip-label">일 사용</div><div class="chip-value">${h}시간</div></div><div class="summary-chip"><div class="chip-label">환율</div><div class="chip-value">${ex.toLocaleString()}원/$</div></div></div>${tbl}${savingNote}<div class="result-note">* 온디맨드 가격 기준 · 시간당 단가는 GPU 1개 기준 AWS $${g.aws.toFixed(2)} / GCP $${g.gcp.toFixed(2)} / Azure $${g.azure.toFixed(2)}<br>* 스팟 인스턴스 사용 시 50~70% 절감 가능 · 1년 예약 시 약 30~40% 할인 · 월=30일·연=365일 가정</div>`;
   document.getElementById('result').classList.add('show');
 }
 </script>
