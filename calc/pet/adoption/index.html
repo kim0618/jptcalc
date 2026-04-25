@@ -32,7 +32,7 @@
     {"@type":"ListItem","position":3,"name":"반려동물 입양 초기비용 계산기","item":"https://www.jptcalc.kr/calc/pet/adoption/"}
   ]}
   </script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"유기견 입양 시 비용이 전혀 없나요?","acceptedAnswer":{"@type":"Answer","text":"분양비는 무료이지만 중성화 수술비, 예방접종비, 기본 용품비 등은 동일하게 필요합니다. 보통 30~50만원 정도가 소요됩니다."}},{"@type":"Question","name":"강아지와 고양이 초기비용 차이가 있나요?","acceptedAnswer":{"@type":"Answer","text":"고양이는 목줄·하네스가 불필요하고 중성화 비용도 다소 저렴해, 강아지보다 초기비용이 10~20만원 정도 적습니다."}},{"@type":"Question","name":"예방접종은 몇 회 맞아야 하나요?","acceptedAnswer":{"@type":"Answer","text":"강아지는 종합백신 5차+광견병, 고양이는 종합백신 3차가 기본이며, 전체 접종 완료까지 약 10~20만원이 소요됩니다."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"유기견 입양 시 비용이 전혀 없나요?","acceptedAnswer":{"@type":"Answer","text":"분양비는 0~10만원으로 매우 저렴하지만 중성화 수술비, 예방접종비, 기본 용품비는 동일하게 필요합니다. 합산 시 보통 70~90만원 수준이며, 일부 보호소 의료 지원을 받으면 30~50만원으로 줄어들 수 있습니다."}},{"@type":"Question","name":"강아지와 고양이 초기비용 차이가 있나요?","acceptedAnswer":{"@type":"Answer","text":"기본값 기준 강아지(소형견 약 179만원)가 고양이(약 166만원)보다 13만원 정도 더 들며, 목줄·하네스 불필요와 중성화 비용 차이가 주된 원인입니다."}},{"@type":"Question","name":"예방접종은 몇 회 맞아야 하나요?","acceptedAnswer":{"@type":"Answer","text":"강아지는 종합백신 5차+광견병, 고양이는 종합백신 3차가 기본이며, 전체 접종 완료까지 약 15~25만원이 소요됩니다."}},{"@type":"Question","name":"입양 초기비용 외에 매달 들어가는 비용은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"소형견 기준 월 약 17만원(연 204만원), 대형견 약 26만원(연 312만원), 고양이 약 12만원(연 144만원)이 평균이며, 자세한 항목별 계산은 월 생활비 계산기에서 확인할 수 있습니다."}}]}</script>
   <style>
     /* adoption 고유 스타일 - 공통 스타일은 /assets/pet-common.css 참조 */
     .input-wrap{position:relative}
@@ -102,11 +102,18 @@
       <div class="cost-item"><span class="cost-label">중성화 수술</span><div class="input-wrap"><input type="number" id="c-neuter" placeholder="예) 30" oninput="calc()" /><span class="unit">만원</span></div></div>
     </div>
     <div class="result-card" id="result">
-      <div class="result-highlight"><div class="rh-label">입양 첫 달 총 비용</div><div class="rh-value" id="r-total">-</div><div class="rh-sub" id="r-sub">용품비 -</div></div>
+      <div class="result-highlight"><div class="rh-label" id="r-type-label">입양 첫 달 총 비용</div><div class="rh-value" id="r-total">-</div><div class="rh-sub" id="r-sub">용품+의료 -</div></div>
       <div class="result-row"><span class="result-label">분양/입양비</span><span class="result-value" id="r-adopt">-</span></div>
-      <div class="result-row"><span class="result-label">초기 용품+의료</span><span class="result-value" id="r-items">-</span></div>
+      <div class="result-row"><span class="result-label">사료·간식</span><span class="result-value" id="r-food">-</span></div>
+      <div class="result-row"><span class="result-label">침대·하우스</span><span class="result-value" id="r-bed">-</span></div>
+      <div class="result-row"><span class="result-label">화장실·패드</span><span class="result-value" id="r-toilet">-</span></div>
+      <div class="result-row"><span class="result-label">목줄·하네스</span><span class="result-value" id="r-leash">-</span></div>
+      <div class="result-row"><span class="result-label">장난감·용품</span><span class="result-value" id="r-toys">-</span></div>
+      <div class="result-row"><span class="result-label">초기 건강검진</span><span class="result-value" id="r-vet">-</span></div>
+      <div class="result-row"><span class="result-label">예방접종</span><span class="result-value" id="r-vaccine">-</span></div>
+      <div class="result-row"><span class="result-label">중성화 수술</span><span class="result-value" id="r-neuter">-</span></div>
       <div class="result-row result-total-row"><span class="result-total-label">첫 달 총 예산</span><span class="result-total-value" id="r-grand">-</span></div>
-      <p class="result-note">※ 지역·병원·브랜드에 따라 실제 비용은 달라질 수 있습니다.</p>
+      <p class="result-note">※ 지역·병원·브랜드에 따라 실제 비용은 크게 달라질 수 있습니다. 중성화 수술은 생후 5~6개월 이후 시행하므로 첫 달이 아닌 별도 시점에 발생할 수 있습니다. 이 결과는 확정 비용이 아닌 예산 계획 참고용입니다.</p>
     </div>
   <div class="guide-section">
     <div class="guide-card">
@@ -120,10 +127,11 @@
     </div>
     <div class="guide-card faq-card">
       <h2>자주 묻는 질문</h2>
-      <div class="faq-item"><h3>유기견 입양 시 비용이 전혀 없나요?</h3><p>분양비는 무료이지만 중성화 수술비, 예방접종비, 기본 용품비 등은 동일하게 필요합니다. 보통 30~50만원 정도가 소요됩니다.</p></div>
-      <div class="faq-item"><h3>강아지와 고양이 초기비용 차이가 있나요?</h3><p>고양이는 목줄·하네스가 불필요하고 중성화 비용도 다소 저렴해, 강아지보다 초기비용이 10~20만원 정도 적습니다.</p></div>
-      <div class="faq-item"><h3>예방접종은 몇 회 맞아야 하나요?</h3><p>강아지는 종합백신 5차+광견병, 고양이는 종합백신 3차가 기본이며, 전체 접종 완료까지 약 10~20만원이 소요됩니다.</p></div>
-      <div class="update-note">최종 검토: 2026.03.25 · 계산 결과는 참고용입니다.</div>
+      <div class="faq-item"><h3>유기견 입양 시 비용이 전혀 없나요?</h3><p>분양비는 0~10만원으로 매우 저렴하지만 중성화 수술비, 예방접종비, 기본 용품비는 동일하게 필요합니다. 합산 시 보통 70~90만원 수준이며, 일부 보호소 의료 지원을 받으면 30~50만원으로 줄어들 수 있습니다.</p></div>
+      <div class="faq-item"><h3>강아지와 고양이 초기비용 차이가 있나요?</h3><p>기본값 기준 강아지(소형견 약 179만원)가 고양이(약 166만원)보다 13만원 정도 더 들며, 목줄·하네스 불필요와 중성화 비용 차이가 주된 원인입니다.</p></div>
+      <div class="faq-item"><h3>예방접종은 몇 회 맞아야 하나요?</h3><p>강아지는 종합백신 5차+광견병, 고양이는 종합백신 3차가 기본이며, 전체 접종 완료까지 약 15~25만원이 소요됩니다.</p></div>
+      <div class="faq-item"><h3>입양 초기비용 외에 매달 들어가는 비용은 얼마인가요?</h3><p>소형견 기준 월 약 17만원(연 204만원), 대형견 약 26만원(연 312만원), 고양이 약 12만원(연 144만원)이 평균이며, 자세한 항목별 계산은 <a href="/calc/pet/monthly-cost/">월 생활비 계산기</a>에서 확인할 수 있습니다.</p></div>
+      <div class="update-note">최종 검토: 2026.04.25 · 계산 결과는 참고용입니다.</div>
     </div>
   </div>
   <script>
@@ -160,22 +168,37 @@
 </footer>
 <script>
 
-function W(m){if(!m&&m!==0)return'-';m=Math.round(m);if(m>=10000)return Math.floor(m/10000).toLocaleString()+'억 '+(m%10000>0?(m%10000).toLocaleString()+'만원':'원');return m.toLocaleString()+'만원';}
+function W(m){if(m===null||m===undefined||isNaN(m))return'-';m=Math.round(m);if(m===0)return'0원';if(m>=10000){const eok=Math.floor(m/10000),rem=m%10000;return eok.toLocaleString()+'억'+(rem>0?' '+rem.toLocaleString()+'만원':'원');}return m.toLocaleString()+'만원';}
 function gv(id){return parseFloat(document.getElementById(id).value)||0;}
-function setAnimal(a,btn){btn.parentElement.querySelectorAll('.seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.getElementById('dog-size-group').style.display=a==='dog'?'flex':'none';if(a==='cat'){document.getElementById('c-leash').value=0;document.getElementById('c-neuter').value=20;}else{document.getElementById('c-leash').value=3;document.getElementById('c-neuter').value=30;}calc();}
-function setSize(s,btn){btn.parentElement.querySelectorAll('.seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');if(s==='large'){document.getElementById('c-food').value=8;document.getElementById('c-bed').value=12;}else if(s==='medium'){document.getElementById('c-food').value=6;document.getElementById('c-bed').value=10;}else{document.getElementById('c-food').value=5;document.getElementById('c-bed').value=8;}calc();}
-function setAdopt(m,btn){btn.parentElement.querySelectorAll('.seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const f=document.getElementById('adopt-fee');if(m==='breeder')f.value=100;else if(m==='rescue')f.value=10;else f.value=0;calc();}
+let curAnimal='dog',curSize='small',curAdopt='breeder';
+const animalLabels={dog:'강아지',cat:'고양이'};
+const sizeLabels={small:'소형견',medium:'중형견',large:'대형견'};
+const adoptLabels={breeder:'브리더/펫샵',rescue:'유기견 입양',free:'무료 분양'};
+function ph(id,v){document.getElementById(id).placeholder='예) '+v;}
+function setAnimal(a,btn){curAnimal=a;btn.parentElement.querySelectorAll('.seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.getElementById('dog-size-group').style.display=a==='dog'?'flex':'none';if(a==='cat'){ph('c-leash',0);ph('c-neuter',20);}else{ph('c-leash',3);ph('c-neuter',30);}calc();}
+function setSize(s,btn){curSize=s;btn.parentElement.querySelectorAll('.seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');if(s==='large'){ph('c-food',8);ph('c-bed',12);}else if(s==='medium'){ph('c-food',6);ph('c-bed',10);}else{ph('c-food',5);ph('c-bed',8);}calc();}
+function setAdopt(m,btn){curAdopt=m;btn.parentElement.querySelectorAll('.seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');if(m==='breeder')ph('adopt-fee',100);else if(m==='rescue')ph('adopt-fee',10);else ph('adopt-fee',0);calc();}
 function calc(){
   const adopt=gv('adopt-fee'),ids=['c-food','c-bed','c-toilet','c-leash','c-toys','c-vet','c-vaccine','c-neuter'];
-  let items=0;let hasInput=adopt>0;ids.forEach(id=>{const v=gv(id);items+=v;if(v>0)hasInput=true;});
+  const vals={};let items=0;let hasInput=adopt>0;
+  ids.forEach(id=>{const v=gv(id);vals[id]=v;items+=v;if(v>0)hasInput=true;});
   const res=document.getElementById('result');
   if(!hasInput){res.classList.remove('show');return;}
   res.classList.add('show');
   const grand=adopt+items;
+  const typeStr=animalLabels[curAnimal]+(curAnimal==='dog'?'·'+sizeLabels[curSize]:'')+' · '+adoptLabels[curAdopt];
+  document.getElementById('r-type-label').textContent=typeStr+' 첫 달 총 비용';
   document.getElementById('r-total').textContent=W(grand);
   document.getElementById('r-sub').textContent='용품+의료 '+W(items);
   document.getElementById('r-adopt').textContent=W(adopt);
-  document.getElementById('r-items').textContent=W(items);
+  document.getElementById('r-food').textContent=W(vals['c-food']);
+  document.getElementById('r-bed').textContent=W(vals['c-bed']);
+  document.getElementById('r-toilet').textContent=W(vals['c-toilet']);
+  document.getElementById('r-leash').textContent=W(vals['c-leash']);
+  document.getElementById('r-toys').textContent=W(vals['c-toys']);
+  document.getElementById('r-vet').textContent=W(vals['c-vet']);
+  document.getElementById('r-vaccine').textContent=W(vals['c-vaccine']);
+  document.getElementById('r-neuter').textContent=W(vals['c-neuter']);
   document.getElementById('r-grand').textContent=W(grand);
 }
 </script>
@@ -190,7 +213,7 @@ window.ARTICLE_INFO_CONFIG = {
   reviewBasis: '2026년 시장 조사·동물병원 평균 비용 기준',
   basisDate: '2026년 기준',
   referenceOrg: '농림축산식품부·한국반려동물산업협회',
-  lastReviewed: '2026.04.13',
+  lastReviewed: '2026.04.25',
   category: 'pet'
 };
 </script>

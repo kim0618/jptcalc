@@ -94,9 +94,16 @@
       <div class="cost-item"><span class="cost-label">수술비 (적립)</span><div class="input-wrap"><input type="number" id="v-surgery" placeholder="예) 20" oninput="calc()" /><span class="unit">만원/년</span></div></div>
     </div>
     <div class="result-card" id="result">
-      <div class="result-highlight"><div class="rh-label">연간 의료비 예산</div><div class="rh-value" id="r-total">-</div><div class="rh-sub" id="r-monthly">월 평균 -</div></div>
+      <div class="result-highlight"><div class="rh-label" id="r-type-label">연간 의료비 예산</div><div class="rh-value" id="r-total">-</div><div class="rh-sub" id="r-monthly">월 평균 -</div></div>
+      <div class="result-row"><span class="result-label">정기검진</span><span class="result-value" id="r-checkup">-</span></div>
+      <div class="result-row"><span class="result-label">예방접종</span><span class="result-value" id="r-vaccine">-</span></div>
+      <div class="result-row"><span class="result-label">심장사상충 등</span><span class="result-value" id="r-parasite">-</span></div>
+      <div class="result-row"><span class="result-label">치과스케일링</span><span class="result-value" id="r-dental">-</span></div>
+      <div class="result-row"><span class="result-label">응급·치료비</span><span class="result-value" id="r-emergency">-</span></div>
+      <div class="result-row"><span class="result-label">수술비 (적립)</span><span class="result-value" id="r-surgery">-</span></div>
       <div class="result-row result-total-row"><span class="result-total-label">연간 합계</span><span class="result-total-value" id="r-grand">-</span></div>
-      <p class="result-note">※ 노령견(7세 이상)은 의료비가 2~3배 증가할 수 있습니다.</p>
+      <div class="result-row"><span class="result-label">5년 누적 (×5)</span><span class="result-value" id="r-5year">-</span></div>
+      <p class="result-note">※ 노령기(7세 이상)에 진입하면 의료비가 2~3배 증가할 수 있습니다. 응급·치료비와 수술비는 매년 발생하지 않더라도 적립 개념으로 준비하세요. 5년 누적은 현재 나이대를 5년간 유지한다는 단순 환산값이며, 실제로는 노령기 진입 시 의료비가 비선형적으로 증가합니다. 이 결과는 확정 비용이 아닌 예산 계획 참고용입니다.</p>
     </div>
   <div class="guide-section">
     <div class="guide-card">
@@ -122,10 +129,11 @@
           <tbody>
             <tr><td style="padding:8px 12px">정기검진</td><td style="padding:8px 12px;text-align:right">10만원</td><td style="padding:8px 12px;text-align:right">10만원</td><td style="padding:8px 12px;text-align:right">20~30만원</td></tr>
             <tr style="background:rgba(0,0,0,0.02)"><td style="padding:8px 12px">예방접종</td><td style="padding:8px 12px;text-align:right">15~20만원</td><td style="padding:8px 12px;text-align:right">5~10만원</td><td style="padding:8px 12px;text-align:right">5~10만원</td></tr>
-            <tr><td style="padding:8px 12px">치과 스케일링</td><td style="padding:8px 12px;text-align:right">불필요</td><td style="padding:8px 12px;text-align:right">15~25만원</td><td style="padding:8px 12px;text-align:right">20~35만원</td></tr>
-            <tr style="background:rgba(0,0,0,0.02)"><td style="padding:8px 12px">응급·치료비</td><td style="padding:8px 12px;text-align:right">10~20만원</td><td style="padding:8px 12px;text-align:right">20~30만원</td><td style="padding:8px 12px;text-align:right">50~100만원</td></tr>
-            <tr><td style="padding:8px 12px">수술비 적립</td><td style="padding:8px 12px;text-align:right">10만원</td><td style="padding:8px 12px;text-align:right">20만원</td><td style="padding:8px 12px;text-align:right">50만원 이상</td></tr>
-            <tr style="background:rgba(244,114,182,0.06);font-weight:700"><td style="padding:10px 12px">연간 합계</td><td style="padding:10px 12px;text-align:right">45~60만원</td><td style="padding:10px 12px;text-align:right">70~95만원</td><td style="padding:10px 12px;text-align:right">145~225만원</td></tr>
+            <tr><td style="padding:8px 12px">심장사상충 등</td><td style="padding:8px 12px;text-align:right">6~12만원</td><td style="padding:8px 12px;text-align:right">6~12만원</td><td style="padding:8px 12px;text-align:right">6~12만원</td></tr>
+            <tr style="background:rgba(0,0,0,0.02)"><td style="padding:8px 12px">치과 스케일링</td><td style="padding:8px 12px;text-align:right">불필요</td><td style="padding:8px 12px;text-align:right">15~25만원</td><td style="padding:8px 12px;text-align:right">20~35만원</td></tr>
+            <tr><td style="padding:8px 12px">응급·치료비</td><td style="padding:8px 12px;text-align:right">10~20만원</td><td style="padding:8px 12px;text-align:right">20~30만원</td><td style="padding:8px 12px;text-align:right">50~100만원</td></tr>
+            <tr style="background:rgba(0,0,0,0.02)"><td style="padding:8px 12px">수술비 적립</td><td style="padding:8px 12px;text-align:right">10만원</td><td style="padding:8px 12px;text-align:right">20만원</td><td style="padding:8px 12px;text-align:right">50만원 이상</td></tr>
+            <tr style="background:rgba(244,114,182,0.06);font-weight:700"><td style="padding:10px 12px">연간 합계</td><td style="padding:10px 12px;text-align:right">51~72만원</td><td style="padding:10px 12px;text-align:right">76~107만원</td><td style="padding:10px 12px;text-align:right">151~237만원</td></tr>
           </tbody>
         </table>
       </div>
@@ -148,7 +156,7 @@
       <div class="faq-item"><h3>심장사상충 예방비는 얼마인가요?</h3><p>월 1회 예방약 기준 연간 약 6~12만원이며, 주사형은 1회 5~8만원으로 연 1~2회 접종합니다.</p></div>
       <div class="faq-item"><h3>고양이도 같은 수준의 의료비가 드나요?</h3><p>고양이는 예방접종 횟수가 적고 스케일링 빈도도 낮아 강아지보다 연간 10~20만원 정도 적게 듭니다. 단, 비뇨기 질환(요로결석 등)이 잦아 해당 치료비는 더 높을 수 있습니다.</p></div>
       <div class="faq-item"><h3>동물병원 진료비는 왜 병원마다 다른가요?</h3><p>동물병원은 진료비 자율 책정이 원칙이어서 지역·시설·장비에 따라 차이가 큽니다. 2023년부터 동물병원 진료비 공개가 의무화되어 사전 비교가 가능합니다.</p></div>
-      <div class="update-note">최종 검토: 2026.04.15 · 계산 결과는 참고용입니다.</div>
+      <div class="update-note">최종 검토: 2026.04.25 · 계산 결과는 참고용입니다.</div>
     </div>
   </div>
   <script>
@@ -185,18 +193,25 @@
 </footer>
 <script>
 
-function W(m){if(!m&&m!==0)return'-';m=Math.round(m);return m.toLocaleString()+'만원';}
+function W(m){if(m===null||m===undefined||isNaN(m))return'-';m=Math.round(m);if(m===0)return'0원';if(m>=10000){const eok=Math.floor(m/10000),rem=m%10000;return eok.toLocaleString()+'억'+(rem>0?' '+rem.toLocaleString()+'만원':'원');}return m.toLocaleString()+'만원';}
 function gv(id){return parseFloat(document.getElementById(id).value)||0;}
-const defs={puppy:{checkup:10,vaccine:20,parasite:6,dental:0,emergency:20,surgery:10},adult:{checkup:10,vaccine:10,parasite:6,dental:15,emergency:30,surgery:20},senior:{checkup:20,vaccine:10,parasite:6,dental:20,emergency:80,surgery:50}};
-function setAge(a,btn){btn.parentElement.querySelectorAll('.seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const d=defs[a];['checkup','vaccine','parasite','dental','emergency','surgery'].forEach(k=>{document.getElementById('v-'+k).value=d[k];});calc();}
+const defs={puppy:{checkup:10,vaccine:20,parasite:6,dental:0,emergency:15,surgery:10},adult:{checkup:10,vaccine:10,parasite:6,dental:15,emergency:30,surgery:20},senior:{checkup:20,vaccine:10,parasite:6,dental:20,emergency:80,surgery:50}};
+const ageLabels={puppy:'1세 이하',adult:'1~7세',senior:'7세 이상'};
+let curAge='puppy';
+function setAge(a,btn){curAge=a;btn.parentElement.querySelectorAll('.seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const d=defs[a];['checkup','vaccine','parasite','dental','emergency','surgery'].forEach(k=>{document.getElementById('v-'+k).placeholder='예) '+d[k];});calc();}
 function calc(){
-  const keys=['checkup','vaccine','parasite','dental','emergency','surgery'];let total=0;let hasInput=false;keys.forEach(k=>{const v=gv('v-'+k);total+=v;if(v>0)hasInput=true;});
+  const keys=['checkup','vaccine','parasite','dental','emergency','surgery'];
+  const vals={};let total=0;let hasInput=false;
+  keys.forEach(k=>{const v=gv('v-'+k);vals[k]=v;total+=v;if(v>0)hasInput=true;});
   const res=document.getElementById('result');
   if(!hasInput){res.classList.remove('show');return;}
   res.classList.add('show');
+  document.getElementById('r-type-label').textContent=(ageLabels[curAge]||'')+' 연간 의료비 예산';
   document.getElementById('r-total').textContent=W(total);
-  document.getElementById('r-monthly').textContent='월 평균 '+W(Math.round(total/12*10)/10);
+  document.getElementById('r-monthly').textContent='월 평균 '+W(Math.round(total/12));
+  keys.forEach(k=>{const el=document.getElementById('r-'+k);if(el)el.textContent=W(vals[k]);});
   document.getElementById('r-grand').textContent=W(total);
+  document.getElementById('r-5year').textContent=W(total*5);
 }
 </script>
 
@@ -210,7 +225,7 @@ window.ARTICLE_INFO_CONFIG = {
   reviewBasis: '2026년 시장 조사·동물병원 평균 비용 기준',
   basisDate: '2026년 기준',
   referenceOrg: '농림축산식품부·한국반려동물산업협회',
-  lastReviewed: '2026.04.15',
+  lastReviewed: '2026.04.25',
   category: 'pet'
 };
 </script>

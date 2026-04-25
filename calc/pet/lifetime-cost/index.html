@@ -82,7 +82,7 @@
   </div>
     <div class="card">
       <div class="card-title">기본 정보</div>
-      <div class="field"><div class="field-label">현재 나이</div><div class="input-wrap"><input type="number" id="lt-age" placeholder="예) 3" oninput="calc()" min="0" max="200" /><span class="unit">개월</span></div></div>
+      <div class="field"><div class="field-label">현재 나이</div><div class="input-wrap"><input type="number" id="lt-age" placeholder="예) 3" oninput="calc()" min="0" max="300" /><span class="unit">개월</span></div></div>
       <div class="field"><div class="field-label">예상 수명</div><div class="seg-group" style="margin-bottom:0"><button class="seg-btn" onclick="setLife(12,this)">12년</button><button class="seg-btn active" onclick="setLife(15,this)">15년</button><button class="seg-btn" onclick="setLife(18,this)">18년</button><button class="seg-btn" onclick="setLife(20,this)">20년</button></div></div>
     </div>
     <div class="card">
@@ -93,13 +93,14 @@
       <div class="cost-item"><span class="cost-label">입양 초기비용</span><div class="input-wrap"><input type="number" id="lt-initial" placeholder="예) 100" oninput="calc()" /><span class="unit">만원</span></div></div>
     </div>
     <div class="result-card" id="result">
-      <div class="result-highlight"><div class="rh-label">평생 총 양육 예상 비용</div><div class="rh-value" id="r-total">-</div><div class="rh-sub" id="r-remain">남은 양육기간 -</div></div>
+      <div class="result-highlight"><div class="rh-label" id="r-type-label">평생 총 양육 예상 비용</div><div class="rh-value" id="r-total">-</div><div class="rh-sub" id="r-remain">남은 예상비용 -</div></div>
       <div class="result-row"><span class="result-label">입양 초기비용</span><span class="result-value" id="r-initial">-</span></div>
-      <div class="result-row"><span class="result-label">청소년기 (0~2세)</span><span class="result-value" id="r-young">-</span></div>
-      <div class="result-row"><span class="result-label">성체기 (2~7세)</span><span class="result-value" id="r-adult">-</span></div>
-      <div class="result-row"><span class="result-label">노령기 (7세~)</span><span class="result-value" id="r-senior">-</span></div>
+      <div class="result-row"><span class="result-label">청소년기 (0~2세, 24개월)</span><span class="result-value" id="r-young">-</span></div>
+      <div class="result-row"><span class="result-label">성체기 (2~7세, 60개월)</span><span class="result-value" id="r-adult">-</span></div>
+      <div class="result-row"><span class="result-label">노령기 (7세~, 가변)</span><span class="result-value" id="r-senior">-</span></div>
       <div class="result-row result-total-row"><span class="result-total-label">평생 합계</span><span class="result-total-value" id="r-grand">-</span></div>
-      <p class="result-note">※ 이 결과는 평균 시장가 기반 추정치입니다. 품종·지역·생활 환경에 따라 실제 비용은 크게 달라질 수 있습니다. 물가 상승·예상치 못한 의료비를 감안해 10~20% 여유를 준비하세요. 확정 비용이 아닌 예산 계획 참고용으로 활용하세요.</p>
+      <div class="result-row"><span class="result-label">평균 월비용 (환산)</span><span class="result-value" id="r-avg">-</span></div>
+      <p class="result-note">※ 이 결과는 평균 시장가 기반 추정치입니다. 품종·지역·생활 환경에 따라 실제 비용은 크게 달라질 수 있습니다. 물가 상승·예상치 못한 의료비를 감안해 10~20% 여유를 준비하세요. 입양 초기비용은 일회성 비용이므로 현재 나이가 0개월이 아니라면 '남은 예상비용'에서 제외됩니다. 확정 비용이 아닌 예산 계획 참고용으로 활용하세요.</p>
     </div>
   <div class="guide-section">
     <div class="guide-card">
@@ -116,7 +117,7 @@
       <div class="faq-item"><h3>강아지 평생 양육비는 평균 얼마인가요?</h3><p>소형견 기준 15년 양육 시 약 3,000~5,000만원, 대형견은 5,000~8,000만원 이상이 소요되는 것으로 추정됩니다.</p></div>
       <div class="faq-item"><h3>고양이가 강아지보다 평생 비용이 적게 드나요?</h3><p>미용비가 거의 없고 사료 소비량이 적어 고양이가 다소 저렴하지만, 수명이 길어(15~20년) 총 비용은 비슷할 수 있습니다.</p></div>
       <div class="faq-item"><h3>노령기 비용이 급증하는 이유는 무엇인가요?</h3><p>7세 이상부터 만성질환, 정밀검사, 약물 치료 등 의료비가 크게 늘어나고, 특수 사료·영양제 비용도 추가됩니다.</p></div>
-      <div class="update-note">최종 검토: 2026.03.25 · 계산 결과는 참고용입니다.</div>
+      <div class="update-note">최종 검토: 2026.04.25 · 계산 결과는 참고용입니다.</div>
     </div>
   </div>
   <script>
@@ -153,7 +154,7 @@
 </footer>
 <script>
 
-function W(m){if(!m&&m!==0)return'-';m=Math.round(m);if(m>=10000)return Math.floor(m/10000).toLocaleString()+'억 '+(m%10000>0?(m%10000).toLocaleString()+'만원':'원');return m.toLocaleString()+'만원';}
+function W(m){if(m===null||m===undefined||isNaN(m))return'-';m=Math.round(m);if(m===0)return'0원';if(m>=10000){const eok=Math.floor(m/10000),rem=m%10000;return eok.toLocaleString()+'억'+(rem>0?' '+rem.toLocaleString()+'만원':'원');}return m.toLocaleString()+'만원';}
 function gv(id){return parseFloat(document.getElementById(id).value)||0;}
 let lifespan=15;
 function setLife(y,btn){lifespan=y;btn.parentElement.querySelectorAll('.seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');calc();}
@@ -167,6 +168,8 @@ function calc(){
   const yt=yc*Math.min(ye,lm),at_=ac*Math.max(Math.min(ae,lm)-ye,0),st=sc*Math.max(lm-ae,0);
   const grand=init+yt+at_+st;
   const yf=yc*Math.max(Math.min(ye,lm)-cur,0),af=ac*Math.max(Math.min(ae,lm)-Math.max(cur,ye),0),sf=sc*Math.max(lm-Math.max(cur,ae),0);
+  const avgMonthly=lm>0?(grand-init)/lm:0;
+  document.getElementById('r-type-label').textContent=lifespan+'년 양육 시 평생 총 비용';
   document.getElementById('r-total').textContent=W(grand);
   document.getElementById('r-remain').textContent='남은 예상비용 '+W(yf+af+sf)+' ('+remain+'개월)';
   document.getElementById('r-initial').textContent=W(init);
@@ -174,6 +177,7 @@ function calc(){
   document.getElementById('r-adult').textContent=W(at_);
   document.getElementById('r-senior').textContent=W(st);
   document.getElementById('r-grand').textContent=W(grand);
+  document.getElementById('r-avg').textContent=W(Math.round(avgMonthly))+'/월 (초기비용 제외)';
 }
 </script>
 
@@ -187,7 +191,7 @@ window.ARTICLE_INFO_CONFIG = {
   reviewBasis: '2026년 시장 조사·동물병원 평균 비용 기준',
   basisDate: '2026년 기준',
   referenceOrg: '농림축산식품부·한국반려동물산업협회',
-  lastReviewed: '2026.04.13',
+  lastReviewed: '2026.04.25',
   category: 'pet'
 };
 </script>

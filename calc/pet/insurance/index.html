@@ -87,8 +87,16 @@
       <div class="field"><div class="field-label">연간 예상 병원비 (미보험)</div><div class="input-wrap"><input type="number" id="ins-annual" placeholder="예) 100" oninput="calc()" /><span class="unit">만원</span></div></div>
     </div>
     <div class="result-card" id="result">
-      <div id="result-content"></div>
-      <p class="result-note">※ 자기부담금, 면책기간, 보장 한도 등 약관마다 다릅니다. 보험료는 나이·품종·보험사별로 크게 차이가 납니다. 이 계산기의 결과는 평균 시장가 기반 추정치이며, 실제 보험료는 보험사 공식 채널에서 확인하세요.</p>
+      <div class="result-highlight"><div class="rh-label" id="r-type-label">보험 가입 vs 미가입 비교</div><div class="rh-value" id="r-verdict">-</div><div class="rh-sub" id="r-verdict-sub">-</div></div>
+      <div class="result-row"><span class="result-label">연간 보험료</span><span class="result-value" id="r-premium">-</span></div>
+      <div class="result-row"><span class="result-label">보험사 지급액 (보장률 적용)</span><span class="result-value" id="r-covered">-</span></div>
+      <div class="result-row"><span class="result-label">본인부담 (보험 가입 시)</span><span class="result-value" id="r-copay">-</span></div>
+      <div class="result-row"><span class="result-label">보험 가입 시 총 지출 (연)</span><span class="result-value" id="r-total-ins" style="color:var(--primary);font-weight:800">-</span></div>
+      <div class="result-row"><span class="result-label">미가입 시 총 지출 (연)</span><span class="result-value" id="r-total-no">-</span></div>
+      <div class="result-row result-total-row"><span class="result-total-label" id="r-diff-label">연간 절감액</span><span class="result-total-value" id="r-diff">-</span></div>
+      <div class="result-row"><span class="result-label">5년 누적 차이 (단순 환산)</span><span class="result-value" id="r-5diff">-</span></div>
+      <div class="result-row"><span class="result-label">손익분기 연간 병원비</span><span class="result-value" id="r-breakeven">-</span></div>
+      <p class="result-note">※ 자기부담금, 면책기간, 1회/연간 보장한도, 선천성 질환 제외 등 약관 조건은 결과에 반영되지 않습니다. 보장률은 보장 대상 항목에만 적용되므로 실제 환급액은 더 낮을 수 있습니다. 5년 누적 차이는 단순 환산값이며, 갱신형 보험은 매년 보험료가 인상됩니다. 정확한 보험료·약관은 보험사 공식 채널에서 확인하세요.</p>
     </div>
   <div class="guide-section">
     <div class="guide-card">
@@ -119,7 +127,7 @@
           </tbody>
         </table>
       </div>
-      <p>월 3만원 기준 연간 보험료는 36만원입니다. 병원비가 연 52만원을 넘으면 보험이 유리해지고, 수술이 필요한 해에는 100만원 이상 차이가 날 수 있습니다. 반대로 건강한 해에는 보험료만큼 손해를 보게 되므로, 품종별 질병 발생률과 나이를 함께 고려해야 합니다.</p>
+      <p>월 3만원 기준 연간 보험료는 36만원입니다. 손익분기 = 연 보험료 ÷ 보장률 = 36 ÷ 0.7 ≈ <strong>약 51만원</strong>으로, 병원비가 이 금액을 넘으면 보험이 유리해지고, 수술이 필요한 해에는 100만원 이상 차이가 날 수 있습니다. 반대로 건강한 해에는 보험료만큼 손해를 보게 되므로, 품종별 질병 발생률과 나이를 함께 고려해야 합니다.</p>
     </div>
     <div class="guide-card">
       <h2>펫보험 가입 전 확인할 약관 핵심 5가지</h2>
@@ -135,11 +143,11 @@
     <div class="guide-card faq-card">
       <h2>자주 묻는 질문</h2>
       <div class="faq-item"><h3>펫보험 보장률 70%면 병원비 전액의 70%를 돌려받나요?</h3><p>보장률 70%는 보장 대상 항목에 한해 적용됩니다. 자기부담금, 면책항목, 보장한도가 있으므로 실제 환급액은 달라질 수 있습니다.</p></div>
-      <div class="faq-item"><h3>보험료는 나이에 따라 올라가나요?</h3><p>대부분 갱신형 상품으로, 반려동물 나이가 많아질수록 보험료가 인상됩니다. 가입 시 나이 제한(보통 8~10세)도 있습니다.</p></div>
-      <div class="faq-item"><h3>보험 없이 의료비 적립이 더 나을 수도 있나요?</h3><p>건강한 반려동물이라면 월 보험료만큼 적립하는 것이 유리할 수 있지만, 큰 수술이나 만성질환 시 보험이 훨씬 유리합니다.</p></div>
+      <div class="faq-item"><h3>펫보험 보험료는 나이에 따라 올라가나요?</h3><p>대부분 갱신형 상품으로, 반려동물 나이가 많아질수록 보험료가 인상됩니다. 가입 시 나이 제한(보통 8~10세)도 있습니다.</p></div>
+      <div class="faq-item"><h3>펫보험 없이 의료비를 직접 적립하는 것이 더 나을 수도 있나요?</h3><p>건강한 반려동물이라면 월 보험료만큼 적립하는 것이 유리할 수 있지만, 큰 수술이나 만성질환 시 보험이 훨씬 유리합니다.</p></div>
       <div class="faq-item"><h3>펫보험은 몇 살까지 가입할 수 있나요?</h3><p>대부분 생후 91일~8세(일부 10세)까지 가입 가능합니다. 나이가 많을수록 가입 가능한 상품이 줄어들고 보험료도 높아지므로, 어릴 때 가입하는 것이 선택지가 넓습니다.</p></div>
-      <div class="faq-item"><h3>기존 질환이 있어도 가입되나요?</h3><p>이미 진단받은 질환은 보장 제외 조건으로 처리되는 경우가 대부분입니다. 일부 보험사는 고지의무 위반 시 계약 해지까지 가능하므로, 가입 시 기존 병력을 정확히 알려야 합니다.</p></div>
-      <div class="update-note">최종 검토: 2026.04.15 · 계산 결과는 참고용입니다.</div>
+      <div class="faq-item"><h3>기존 질환이 있어도 펫보험에 가입되나요?</h3><p>이미 진단받은 질환은 보장 제외 조건으로 처리되는 경우가 대부분입니다. 일부 보험사는 고지의무 위반 시 계약 해지까지 가능하므로, 가입 시 기존 병력을 정확히 알려야 합니다.</p></div>
+      <div class="update-note">최종 검토: 2026.04.25 · 계산 결과는 참고용입니다.</div>
     </div>
   </div>
   <script>
@@ -177,7 +185,7 @@
 </footer>
 <script>
 
-function W(m){if(!m&&m!==0)return'-';m=Math.round(m);return m.toLocaleString()+'만원';}
+function W(m){if(m===null||m===undefined||isNaN(m))return'-';m=Math.round(m);if(m===0)return'0원';if(m>=10000){const eok=Math.floor(m/10000),rem=m%10000;return eok.toLocaleString()+'억'+(rem>0?' '+rem.toLocaleString()+'만원':'원');}return m.toLocaleString()+'만원';}
 let insRate=70;
 function setRate(r,btn){insRate=r;btn.parentElement.querySelectorAll('.seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');calc();}
 function calc(){
@@ -186,16 +194,26 @@ function calc(){
   if(!premium||!annualVet){document.getElementById('result').classList.remove('show');return;}
   document.getElementById('result').classList.add('show');
   const ap=premium*12,covered=annualVet*insRate/100,copay=annualVet-covered,totalIns=ap+copay,totalNo=annualVet;
-  let verdict='';
-  if(totalIns<totalNo){verdict=`✅ <strong>보험 가입이 유리</strong>합니다. 연간 <strong>${W(totalNo-totalIns)}</strong> 절감.`;}
-  else{verdict=`⚠️ 예상 병원비 기준 <strong>미가입이 ${W(totalIns-totalNo)} 저렴</strong>합니다. 단, 큰 수술 시 보험이 유리할 수 있습니다.`;}
-  document.getElementById('result-content').innerHTML=`
-    <div class="result-row"><span class="result-label">연간 보험료</span><span class="result-value">${W(ap)}</span></div>
-    <div class="result-row"><span class="result-label">보험사 지급액</span><span class="result-value">${W(covered)}</span></div>
-    <div class="result-row"><span class="result-label">본인부담 (보험)</span><span class="result-value">${W(copay)}</span></div>
-    <div class="result-row"><span class="result-label">보험 가입 시 총 지출</span><span class="result-value" style="color:var(--primary);font-weight:800">${W(totalIns)}</span></div>
-    <div class="result-row"><span class="result-label">미가입 시 총 지출</span><span class="result-value">${W(totalNo)}</span></div>
-    <div style="margin-top:14px;padding:12px;background:rgba(244,114,182,0.08);border-radius:10px;font-size:12px;line-height:1.6">${verdict}</div>`;
+  const diff=totalNo-totalIns;
+  const breakeven=ap/(insRate/100);
+  document.getElementById('r-type-label').textContent='월 '+premium+'만원 / '+insRate+'% 보장 기준';
+  if(diff>=0){
+    document.getElementById('r-verdict').textContent='✅ 보험 가입 유리';
+    document.getElementById('r-verdict-sub').textContent='연간 '+W(diff)+' 절감';
+    document.getElementById('r-diff-label').textContent='연간 절감액';
+  }else{
+    document.getElementById('r-verdict').textContent='⚠️ 미가입이 저렴';
+    document.getElementById('r-verdict-sub').textContent='큰 수술 발생 시에는 보험이 유리할 수 있습니다';
+    document.getElementById('r-diff-label').textContent='연간 추가 지출';
+  }
+  document.getElementById('r-premium').textContent=W(ap);
+  document.getElementById('r-covered').textContent=W(covered);
+  document.getElementById('r-copay').textContent=W(copay);
+  document.getElementById('r-total-ins').textContent=W(totalIns);
+  document.getElementById('r-total-no').textContent=W(totalNo);
+  document.getElementById('r-diff').textContent=W(Math.abs(diff));
+  document.getElementById('r-5diff').textContent=(diff>=0?'절감 ':'추가 지출 ')+W(Math.abs(diff)*5);
+  document.getElementById('r-breakeven').textContent=W(Math.round(breakeven))+' 이상';
 }
 </script>
 
@@ -209,7 +227,7 @@ window.ARTICLE_INFO_CONFIG = {
   reviewBasis: '2026년 시장 조사·동물병원 평균 비용 기준',
   basisDate: '2026년 기준',
   referenceOrg: '농림축산식품부·한국반려동물산업협회',
-  lastReviewed: '2026.04.15',
+  lastReviewed: '2026.04.25',
   category: 'pet'
 };
 </script>
