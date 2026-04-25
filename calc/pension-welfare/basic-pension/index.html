@@ -51,11 +51,11 @@
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"기초연금 수급 자격은 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"만 65세 이상 대한민국 국적자로 국내에 거주하며, 소득인정액이 선정기준액 이하인 분이 받을 수 있습니다. 2026년 기준 선정기준액은 단독가구 247만원, 부부가구 395.2만원입니다. 소득인정액은 실제 소득과 재산을 소득으로 환산한 금액의 합계입니다."}},
-    {"@type":"Question","name":"소득인정액은 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"소득인정액 = 소득평가액 + 재산의 소득환산액입니다. 소득평가액은 근로소득에서 108만원을 공제한 후 70%를 반영하고 기타소득을 합산합니다. 재산의 소득환산액은 (일반재산 + 금융재산 - 금융재산 기본공제 2,000만원 - 지역별 기본재산액) × 4% ÷ 12로 계산합니다."}},
-    {"@type":"Question","name":"기초연금 최대 지급액은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"2026년 기준 단독가구 최대 349,700원, 부부가구는 각각 279,760원(20% 감액)입니다. 소득이 낮을수록 더 많이 받으며, 국민연금 수령액이 기준연금액의 150%를 초과하면 연계 감액이 적용됩니다."}},
-    {"@type":"Question","name":"국민연금을 받으면 기초연금을 못 받나요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 국민연금을 받더라도 소득인정액이 선정기준액 이하라면 기초연금을 받을 수 있습니다. 단, 국민연금 수령액이 기준연금액(349,700원)의 150%(약 524,550원)를 초과하면 기초연금이 최대 50%까지 감액될 수 있습니다."}},
-    {"@type":"Question","name":"이 계산기 결과로 수급 여부가 확정되나요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 이 계산기는 간이 추정으로, 실제 심사에서는 부채 차감, 임차보증금 환산, 고급 자동차 등 다양한 요소가 추가로 반영됩니다. 정확한 수급 여부는 주민센터 방문 또는 복지로(bokjiro.go.kr)에서 확인하세요."}}
+    {"@type":"Question","name":"기초연금 수급 자격은 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"만 65세 이상 대한민국 국적자로 국내에 거주하며, 소득인정액이 선정기준액(2026년: 단독 247만원, 부부 395.2만원) 이하인 분이 받을 수 있습니다. 별도 신청이 필요합니다."}},
+    {"@type":"Question","name":"국민연금을 받으면 기초연금을 못 받나요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 소득인정액이 선정기준액 이하라면 국민연금과 기초연금을 동시에 받을 수 있습니다. 단, 국민연금 수령액이 기준연금액(349,700원)의 150%(약 524,550원)를 초과하면 기초연금이 최대 50%까지 감액됩니다."}},
+    {"@type":"Question","name":"집 한 채만 있어도 수급이 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"가능합니다. 주택 공시가격에서 지역별 기본재산액을 공제한 후 연 4%로 환산하므로, 대도시 공시가격 1억 3,500만원 이하 주택은 재산 소득환산액이 0원입니다. 소득이 없다면 수급 가능성이 높습니다."}},
+    {"@type":"Question","name":"이 계산기 결과로 수급 여부가 확정되나요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 이 계산기는 간이 추정이며, 실제 심사에서는 부채 차감, 임차보증금 환산, 고급 자동차 가산 등이 추가로 반영됩니다. 정확한 수급 여부는 주민센터 방문 또는 복지로(bokjiro.go.kr)에서 확인하세요."}},
+    {"@type":"Question","name":"기초연금은 언제 신청하나요?","acceptedAnswer":{"@type":"Answer","text":"만 65세 생일이 속한 달의 1개월 전부터 신청 가능합니다. 주민센터, 국민연금공단 지사, 복지로(온라인)에서 신청할 수 있습니다. 신청 시기를 놓치면 이전 기간은 소급 지급되지 않으므로 미리 신청하는 것이 좋습니다."}}
   ]}
   </script>
 
@@ -178,7 +178,7 @@
         <span class="unit">만원</span>
       </div>
       <div class="converted" id="workIncConverted"></div>
-      <div class="field-hint">108만원까지 공제 후 나머지의 70%만 소득평가액에 반영됩니다.</div>
+      <div class="field-hint">116만원까지 공제 후 나머지의 70%만 소득평가액에 반영됩니다 (2026년 기준).</div>
     </div>
 
     <div class="field">
@@ -250,12 +250,16 @@
       <span class="result-value" id="rIncomeEval">-</span>
     </div>
     <div class="result-row">
-      <span class="result-label">일반재산 - 지역 기본공제</span>
+      <span class="result-label">일반재산</span>
       <span class="result-value" id="rPropertyNet">-</span>
     </div>
     <div class="result-row">
       <span class="result-label">금융재산 - 2,000만원 공제</span>
       <span class="result-value" id="rFinancialNet">-</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">환산대상 재산 (지역공제 차감 후)</span>
+      <span class="result-value" id="rPropertyTaxable">-</span>
     </div>
     <div class="result-row">
       <span class="result-label">재산 소득환산액 (×4%÷12)</span>
@@ -305,7 +309,7 @@
         <tr><td>선정기준액</td><td>2,470,000원/월</td><td>3,952,000원/월</td></tr>
         <tr><td>기준연금액 (최대)</td><td>349,700원/월</td><td>279,760원/월</td></tr>
         <tr><td>금융재산 기본공제</td><td colspan="2" style="text-align:center">2,000만원</td></tr>
-        <tr><td>근로소득 기본공제</td><td colspan="2" style="text-align:center">108만원 + 나머지 30% 추가 공제</td></tr>
+        <tr><td>근로소득 기본공제</td><td colspan="2" style="text-align:center">116만원 + 나머지 30% 추가 공제 (= 평가액 70%)</td></tr>
         <tr><td>재산 소득환산율</td><td colspan="2" style="text-align:center">연 4% (= 월 0.333%)</td></tr>
       </tbody>
     </table>
@@ -341,7 +345,7 @@
         <table>
           <thead><tr><th>구성 요소</th><th>계산 방법</th></tr></thead>
           <tbody>
-            <tr><td>근로소득 평가액</td><td>0.7 × max(0, 근로소득 - 108만원)</td></tr>
+            <tr><td>근로소득 평가액</td><td>0.7 × max(0, 근로소득 - 116만원)</td></tr>
             <tr><td>기타소득</td><td>사업·임대·이자·배당·공적이전소득 전액</td></tr>
             <tr><td>재산 환산액</td><td>(일반재산 + 금융재산 - 금융공제 2천만원 - 지역기본공제) × 4% ÷ 12</td></tr>
             <tr><td>소득인정액 합계</td><td>근로소득 평가액 + 기타소득 + 재산 환산액</td></tr>
@@ -390,7 +394,7 @@
       { name: '복지로 기초연금 모의계산(bokjiro.go.kr)', url: 'https://www.bokjiro.go.kr' },
       { name: '국민연금공단 기초연금(nps.or.kr)', url: 'https://www.nps.or.kr' },
     ],
-    lastReviewed: '2026.04',
+    lastReviewed: '2026.04.25',
   };
   </script>
   <script src="/assets/trust-block.js"></script>
@@ -428,7 +432,7 @@ const MAX_PENSION = { single: 349700, couple_each: 279760 };
 const BASIC_PROPERTY = { metro: 135000000, urban: 85000000, rural: 72500000 };
 const BASIC_PROPERTY_LABEL = { metro: '대도시 1억 3,500만원', urban: '중소도시 8,500만원', rural: '농어촌 7,250만원' };
 const FINANCIAL_DEDUCTION = 20000000;
-const WORK_DEDUCTION = 1080000;
+const WORK_DEDUCTION = 1160000;
 const PROPERTY_RATE = 0.04 / 12;
 
 let householdType = 'single';
@@ -525,8 +529,9 @@ function calculate() {
   document.getElementById('rWorkEval').textContent = fmt(workEval);
   document.getElementById('rOtherInc').textContent = fmt(otherIncome);
   document.getElementById('rIncomeEval').textContent = fmt(incomeEval);
-  document.getElementById('rPropertyNet').textContent = property > 0 ? fmt(Math.max(0, property - basicProp)) : '0원';
-  document.getElementById('rFinancialNet').textContent = financial > 0 ? fmt(financialNet) : '0원';
+  document.getElementById('rPropertyNet').textContent = fmt(property);
+  document.getElementById('rFinancialNet').textContent = fmt(financialNet);
+  document.getElementById('rPropertyTaxable').textContent = fmt(propertyNet);
   document.getElementById('rPropertyEval').textContent = fmt(propertyEval);
   document.getElementById('rTotal').textContent = fmt(totalIncome);
   document.getElementById('rThreshold').textContent = fmt(threshold) + (householdType === 'couple' ? ' (부부 합산)' : '');
@@ -546,7 +551,7 @@ window.ARTICLE_INFO_CONFIG = {
   reviewBasis: '기초연금법 제3조·제8조, 2026년 선정기준액(단독 247만원·부부 395.2만원) 기준',
   basisDate: '2026년 기준',
   referenceOrg: '보건복지부·국민연금공단',
-  lastReviewed: '2026.04.16',
+  lastReviewed: '2026.04.25',
   category: 'pension-welfare'
 };
 </script>
