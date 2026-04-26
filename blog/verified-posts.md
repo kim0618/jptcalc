@@ -36,3 +36,6 @@
 - medical-expense-deduction-guide.html (2026-04-25 검증, 이상 없음 | 의료비 3% 공제기준·세액공제 계산 전부 정확 | JSON-LD·링크 정상)
 - vat-guide.html (2026-04-25 검증, 오류 1개 수정 | BreadcrumbList position 3 /calc/tax/ → /blog/?cat=세금 수정 | 간이과세 기준 1억400만원·납부세액 계산 정확)
 - subscription-score-guide.html (2026-04-25 검증, 이상 없음 | 가점 84점 만점·무주택·부양가족·통장 기간 계산 정확 | FAQ 3개(권고 4-5개) · SVG 없음 - 구조 보강 권고 | blog-review-footer.js 로드 확인)
+- irp-vs-pension-savings.html (2026-04-26 검증, 이상 없음 | 세액공제율 16.5%/13.2%·합산 900만원 한도·연금소득세 나이별 세율·중도해지 16.5% 전부 정확 | FAQ 4개·링크 정상)
+- emergency-fund-guide.html (2026-04-26 검증, 이상 없음 | 비상금 계산·이자 계산·법률 팩트 정확 | FAQ 4개·링크 정상)
+- acquisition-tax-2026.html (2026-04-26 검증, 오류 3개 수정 | JSON-LD headline·description ≠ title·meta description 동기화, BreadcrumbList position 3 /calc/realestate/ → /blog/?cat=부동산 수정 | 취득세율 수치 계산 전부 정확)

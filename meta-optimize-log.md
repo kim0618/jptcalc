@@ -25,6 +25,14 @@
 - posts/freelancer-tax-refund.html: "환급받는 방법" → "돌려받는 법", 3%+0.3% 구성 설명 desc 삽입 (재측정 2026-05-01 예정)
 - posts/hourly-wage-guide.html: "환산하면 얼마?" → "환산표", 3000만원=12000원 수치 title 직접 삽입 (재측정 2026-05-01 예정)
 
+## 2026-04-26 (2차 라운드 - CTR 재교정)
+- posts/realestate-agent-fee.html: CTR 0.2%, 노출 4,345 - "국토교통부 고시" 권위 표현 + "상한요율 매매·임대" 구체화 (재측정 2026-05-03 예정)
+- posts/bmi-guide.html: CTR 0.1%, 노출 1,607 - "여성·남성 기준" 추가, pos 1.0 "bmi 계산 여자" 쿼리 대응 (재측정 2026-05-03 예정)
+- posts/military-discharge-date.html: CTR 0.8%, 노출 943 - "군대 언제 끝나?" 구어체 전환, "군대 끝나는 날" 쿼리 대응 (재측정 2026-05-03 예정)
+- posts/subscription-score-guide.html: CTR 0.9%, 노출 426 - 항목별 점수(32·35·17점) title 직접 노출 (재측정 2026-05-03 예정)
+- posts/pension-tax-guide.html: CTR 0.0%, 노출 266 - "지방소득세 포함" 추가, 핵심 쿼리 직접 대응 (재측정 2026-05-03 예정)
+- posts/acquisition-tax-2026.html: CTR 0.0%, 노출 253 - "생애최초 감면 포함" 추가, 고의도 쿼리 대응 (재측정 2026-05-03 예정)
+
 ## 2026-04-25 (1차 라운드)
 - posts/realestate-agent-fee.html: CTR 0.1%, 노출 6,919 - 수수료 구체적 수치 추가, 질문형 유도
 - posts/bmi-guide.html: CTR 0.1%, 노출 1,707 - "한국인 BMI 기준" 키워드 강화, 계산 유도
