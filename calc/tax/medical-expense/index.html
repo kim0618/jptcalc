@@ -423,7 +423,7 @@ function onInput() {
     document.getElementById('thresholdInfoText').textContent =
       fmt(totalMedical * 10000) + ' / 문턱 ' + fmt(threshold * 10000) + (pct >= 100 ? ' ✓ 공제 가능' : ' (미달)');
     document.getElementById('thresholdLabel').textContent =
-      '문턱: ' + fmt(threshold * 10000) + ' (총급여 × 3%) — 100% 도달 시 공제 시작';
+      '문턱: ' + fmt(threshold * 10000) + ' (총급여 × 3%) - 100% 도달 시 공제 시작';
   } else {
     info.style.display = 'none';
   }
