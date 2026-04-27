@@ -33,6 +33,15 @@
 - posts/pension-tax-guide.html: CTR 0.0%, 노출 266 - "지방소득세 포함" 추가, 핵심 쿼리 직접 대응 (재측정 2026-05-03 예정)
 - posts/acquisition-tax-2026.html: CTR 0.0%, 노출 253 - "생애최초 감면 포함" 추가, 고의도 쿼리 대응 (재측정 2026-05-03 예정)
 
+## 2026-04-27
+- calc/realestate/gift/: 노출 553, CTR 0.00% - "1억 증여세 485만원" 수치 title 직접 노출, 공제 한도 desc 명시 (재측정 2026-05-04 예정)
+- calc/realestate/brokerage/: 노출 320, CTR 0.00% - 매매 0.4~0.7%·전세 0.3~0.6% 거래가별 상한 요율 title 노출(초안 0.5%/0.4%는 본문 표와 불일치하여 검증 후 즉시 재교정), 브랜드 jptcalc→제이퍼 계산기 교체 (재측정 2026-05-04 예정)
+- calc/realestate/capital-gains/: 노출 251, CTR 0.00% - 분양권 세율(1년미만 70%, 이상 60%) desc 명시, "국세청 분양권 양도소득세 2026" 쿼리 대응 (재측정 2026-05-04 예정)
+- calc/date/date-difference/: 노출 173, CTR 0.00% - "계약 만료·임신 주수" 활용 사례 desc 삽입, 브랜드 jptcalc→제이퍼 계산기 교체 (재측정 2026-05-04 예정)
+- calc/realestate/propertytax/: 노출 89, CTR 0.00% - "공시가격 입력" 키워드 강화, "7·9월 분납" 납부일정 명시 (재측정 2026-05-04 예정)
+- calc/tax/income-tax/: 노출 58, CTR 0.00% - "5월 신고 전" 계절성 키워드 삽입, 브랜드 jptcalc→제이퍼 계산기 교체, WebApplication JSON-LD에 description 필드 신규 추가 (재측정 2026-05-04 예정)
+- (보완) WebApplication JSON-LD description 6개 페이지 모두 meta description과 동기화. 스킬 파일에 calc 페이지 예외 규칙(h1 변경 금지, WebApplication name 짧게 유지) 명시.
+
 ## 2026-04-25 (1차 라운드)
 - posts/realestate-agent-fee.html: CTR 0.1%, 노출 6,919 - 수수료 구체적 수치 추가, 질문형 유도
 - posts/bmi-guide.html: CTR 0.1%, 노출 1,707 - "한국인 BMI 기준" 키워드 강화, 계산 유도

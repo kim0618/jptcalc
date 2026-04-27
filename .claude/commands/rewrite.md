@@ -64,6 +64,10 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - isa-guide.html - 2026-04-24 수정
 - health-checkup-guide.html - 2026-04-24 수정
 - salary-raise-guide.html - 2026-04-24 수정
+- jongbu-tax-guide.html - 2026-04-27 수정
+- irp-vs-pension-savings.html - 2026-04-27 수정
+- cagr-guide.html - 2026-04-27 수정
+- chatgpt-api-cost.html - 2026-04-27 수정
 
 ## 작업 순서
 
