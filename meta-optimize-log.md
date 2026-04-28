@@ -50,3 +50,11 @@
 - calc/realestate/acquisition/: CTR 0.5%, 노출 661 - "위택스 취득세율 6억·9억" 쿼리 반영
 - calc/finance/savings/: CTR 0.4%, 노출 455 - 구체적 계산 예시(365만원) description 추가
 - calc/realestate/conversion/: CTR 0.7%, 노출 299 - "전월세 전환율 4.0%" + 계산 예시 추가
+
+## 2026-04-28
+- blog/posts/realestate-agent-fee.html: CTR 0.13% / 5,201 노출 - title에 "요율표" 추가, 서울·수도권 언급 삽입
+- blog/posts/bmi-guide.html: CTR 0.12% / 1,653 노출 - "한국인 BMI 기준" 쿼리 직접 반영, 수치 즉시 답변형으로 재작성
+- calc/realestate/acquisition/: CTR 0.41% / 734 노출 - "위택스" 키워드 추가, 계산 빠른 도구로 포지셔닝
+- calc/realestate/gift/: CTR 0.00% / 526 노출 - "6천만원 증여세" 쿼리 직접 반영, 결론형 수치 추가
+- blog/posts/pension-tax-guide.html: CTR 0.00% / 414 노출 - 세율 수치를 title 앞부분에 배치, 쿼리 패턴 일치
+- blog/posts/acquisition-tax-2026.html: CTR 0.00% / 284 노출 - "행정안전부 주택 취득세율" 쿼리 반영, "취득세율" 명시

@@ -42,3 +42,6 @@
 - freelancer-tax-refund.html (2026-04-27 검증, 이상 없음 | BreadcrumbList 정상, 프리랜서 3.3% 환급 계산 810만원 과세표준·49만원 세액·23만원 환급 정확 | 교육비 본인 전액 표현 법적 정확)
 - income-tax-deduction.html (2026-04-27 검증, 오류 1개 수정 | BreadcrumbList position 3 /calc/tax/ → /blog/?cat=세금 수정 | 계산 이상 없음)
 - salary-negotiation.html (2026-04-27 검증, 오류 1개 수정 | BreadcrumbList position 3 /calc/salary/ → /blog/?cat=연봉 수정 | 실수령액 시뮬레이션 누진세율 반영 정확 | SVG 0개·시나리오 1개 구조 보강 권고)
+- national-pension-voluntary.html (2026-04-28 검증, 오류 5개 수정 | 손익분기 "4년 4개월"→"2년 2개월" 도입부·목차·마무리·meta description·og:description 5곳 동기화)
+- income-tax-may-guide.html (2026-04-28 검증, 이상 없음 | 누진공제 1,544만원 재계산 정확, FAQ 3개(보강 권고), JSON-LD·링크 정상)
+- capital-gains-tax.html (2026-04-28 검증, 오류 1개 수정 | BreadcrumbList position 3 /calc/realestate/ → /blog/?cat=부동산 수정 | 양도세 계산 모두 정확)

@@ -68,6 +68,10 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - irp-vs-pension-savings.html - 2026-04-27 수정
 - cagr-guide.html - 2026-04-27 수정
 - chatgpt-api-cost.html - 2026-04-27 수정
+- dog-monthly-cost.html - 2026-04-28 수정
+- date-add-guide.html - 2026-04-28 수정
+- retirement-living-cost.html - 2026-04-28 수정
+- medical-expense-deduction-guide.html - 2026-04-28 수정
 
 ## 작업 순서
 
