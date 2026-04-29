@@ -72,6 +72,10 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - date-add-guide.html - 2026-04-28 수정
 - retirement-living-cost.html - 2026-04-28 수정
 - medical-expense-deduction-guide.html - 2026-04-28 수정
+- retirement-living-late-start.html - 2026-04-29 수정
+- diet-calorie-guide.html - 2026-04-29 수정
+- cursor-vs-copilot.html - 2026-04-29 수정
+- date-difference.html - 2026-04-29 수정
 
 ## 작업 순서
 

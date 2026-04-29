@@ -45,3 +45,7 @@
 - national-pension-voluntary.html (2026-04-28 검증, 오류 5개 수정 | 손익분기 "4년 4개월"→"2년 2개월" 도입부·목차·마무리·meta description·og:description 5곳 동기화)
 - income-tax-may-guide.html (2026-04-28 검증, 이상 없음 | 누진공제 1,544만원 재계산 정확, FAQ 3개(보강 권고), JSON-LD·링크 정상)
 - capital-gains-tax.html (2026-04-28 검증, 오류 1개 수정 | BreadcrumbList position 3 /calc/realestate/ → /blog/?cat=부동산 수정 | 양도세 계산 모두 정확)
+- national-pension-income-tax.html (2026-04-29 검증, 오류 1개 수정 | 부양가족 공제 기준 연 600만원→517만원, 월 50만원→월 43만원 계산식 오류 수정 | 계산 시나리오 5개·FAQPage·링크 이상 없음)
+- long-term-care-grade-application.html (2026-04-29 검증, 오류 1개 수정 | 목차 5등급 점수 범위 "45~50점 미만"→"45~51점" 수정 | 본문·표·SVG는 이미 45~51점으로 정확)
+- pension-tax-guide.html (2026-04-29 검증, 오류 3개 수정 | "283만원"→"284만원" 2곳(목차·마무리), FAQPage JSON-LD Q1 마지막 문장 누락 추가 | 세율·시나리오 계산 이상 없음)
+- (재검증 2026-04-29 추가 수정) national-pension-income-tax.html SVG 200만원 시나리오 102만원→약 105만원, diet-calorie-guide.html / cursor-vs-copilot.html / date-difference.html BreadcrumbList p3 /calc/ → /blog/?cat= 형식 보정 (4건)

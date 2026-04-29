@@ -58,3 +58,12 @@
 - calc/realestate/gift/: CTR 0.00% / 526 노출 - "6천만원 증여세" 쿼리 직접 반영, 결론형 수치 추가
 - blog/posts/pension-tax-guide.html: CTR 0.00% / 414 노출 - 세율 수치를 title 앞부분에 배치, 쿼리 패턴 일치
 - blog/posts/acquisition-tax-2026.html: CTR 0.00% / 284 노출 - "행정안전부 주택 취득세율" 쿼리 반영, "취득세율" 명시
+
+## 2026-04-29
+- posts/realestate-agent-fee.html: CTR 0.13% / imp 5,347 / pos 4.8 - title에 "국토교통부" 추가, 9억~12억 0.5% 구간 명시
+- posts/bmi-guide.html: CTR 0.12% / imp 1,608 / pos 6.7 - "내 BMI 뜻 즉시 확인" 클릭 유도형으로 변경
+- posts/military-discharge-date.html: CTR 0.61% / imp 1,310 / pos 8.0 - "8월 입대" 쿼리 반영, 2028년 2월 구체 날짜 명시
+- calc/realestate/acquisition/: CTR 0.38% / imp 783 / pos 8.0 - "위택스" 앞배치, 6억·9억 구체 세율 명시
+- calc/realestate/gift/: CTR 0.00% / imp 512 / pos 8.3 - 7천만원 증여세 쿼리 반영, ~200만원 수치 추가
+- posts/pension-tax-guide.html: CTR 0.00% / imp 466 / pos 8.0 - 클릭 유인 "284만원 절세" 추가, 세율 나열 대신 행동 유도
+- posts/subscription-score-guide.html: CTR 0.93% / imp 429 / pos 5.1 - "통장 가입기간별 점수 기준" 쿼리 직접 반영
