@@ -393,7 +393,7 @@ function calculate() {
   const otherIncome = getVal('otherIncome') * 10000;
 
   const resultCard = document.getElementById('resultCard');
-  if (!currentAge || !retireAge || !monthlyExpense || retireAge <= currentAge || lifeExpect <= retireAge) {
+  if (!currentAge || !retireAge || !monthlyExpense || retireAge < currentAge || lifeExpect <= retireAge) {
     resultCard.classList.remove('show');
     return;
   }
@@ -433,7 +433,9 @@ function calculate() {
   document.getElementById('rShortfall').textContent = fmt(totalShortfall);
   document.getElementById('rShortfallSub').textContent =
     totalShortfall > 0
-      ? '지금부터 ' + yearsToRetire + '년간 월 ' + fmtShort(totalShortfall / (yearsToRetire * 12)) + '씩 추가 저축 필요'
+      ? (yearsToRetire > 0
+          ? '지금부터 ' + yearsToRetire + '년간 월 ' + fmtShort(totalShortfall / (yearsToRetire * 12)) + '씩 추가 저축 필요'
+          : '은퇴 시점에 이 금액만큼 부족합니다')
       : '현재 계획으로 노후 자금이 충분합니다';
 
   resultCard.classList.add('show');
