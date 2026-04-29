@@ -42,13 +42,23 @@
 ## 2. 4대보험 요율
 
 ### 2.1 국민연금 요율
-- **현재 값**: 9.0% (근로자 4.5% + 사용자 4.5%)
-- **적용 시기**: 2026년
-- **공식 출처**: https://www.nps.or.kr/
-- **마지막 확인**: 2026-04-29 (시드 값, 미검증)
-- **변동 주기**: 법 개정 시 (개혁 논의 진행 중)
-- **검색 패턴**: `국민연금.*9%` / `4\.5%` / `국민연금료`
-- **영향 페이지**: -
+- **현재 값**: 9.5% (근로자 4.75% + 사용자 4.75%)
+- **적용 시기**: 2026년 1월 1일~ (연금개혁 1차 인상)
+- **공식 출처**: https://www.nps.or.kr/ + 보건복지부 보도자료
+- **마지막 확인**: 2026-04-29 (검증 완료, 9→9.5로 갱신)
+- **변동 주기**: 매년 0.5%p 인상 (2033년 13% 도달까지)
+- **검색 패턴**: `국민연금.*9\.5` / `4\.75` / `9\.5\s?%(\s|[가-힣])`
+- **영향 페이지** (구값에서 신값으로 갱신 완료):
+  - blog/posts/social-insurance-guide.html
+  - blog/posts/freelancer-insurance-guide.html
+  - blog/posts/four-insurance-vs-33-comparison.html
+  - blog/posts/retirement-living-late-start.html
+  - calc/salary/index.html
+  - calc/tax/index.html
+  - calc/tax/freelancer-income/index.html
+  - calc/tax/insurance-comparison/index.html (잘못된 5.0%/10% 정정 포함)
+- **시기 명시 박스 추가 페이지** (시나리오는 2025.7~12 기준 9%로 유지, 상단에 2026년 9.5% 인상 안내 박스 삽입):
+  - blog/posts/national-pension-voluntary.html
 
 ### 2.2 국민연금 A값 (전체 가입자 평균소득월액)
 - **현재 값**: 미확인 (2026년 7월 발표 예정)
@@ -59,22 +69,35 @@
 - **영향 페이지**: -
 
 ### 2.3 건강보험 요율
-- **현재 값**: 7.09% (근로자 3.545% + 사용자 3.545%)
-- **적용 시기**: 2026년
-- **공식 출처**: https://www.nhis.or.kr/
-- **마지막 확인**: 2026-04-29 (시드 값, 미검증)
+- **현재 값**: 7.19% (근로자 3.595% + 사용자 3.595%)
+- **적용 시기**: 2026년 1월 1일~
+- **공식 출처**: https://www.mohw.go.kr/ (보건복지부 보도자료)
+- **마지막 확인**: 2026-04-29 (검증 완료, 7.09→7.19로 갱신)
 - **변동 주기**: 연 1회 (12월 발표)
-- **검색 패턴**: `건강보험.*7\.09` / `3\.545` / `건보료`
-- **영향 페이지**: -
+- **검색 패턴**: `건강보험.*7\.19` / `3\.595` / `건보료`
+- **영향 페이지** (구값에서 신값으로 갱신 완료):
+  - blog/posts/social-insurance-guide.html
+  - blog/posts/freelancer-insurance-guide.html
+  - blog/posts/four-insurance-vs-33-comparison.html
+  - calc/salary/index.html
+  - calc/tax/freelancer-income/index.html
+  - calc/tax/insurance-comparison/index.html
 
 ### 2.4 장기요양보험 요율
-- **현재 값**: 건강보험료의 12.95%
-- **적용 시기**: 2026년
-- **공식 출처**: https://www.longtermcare.or.kr/
-- **마지막 확인**: 2026-04-29 (시드 값, 미검증)
+- **현재 값**: 건강보험료의 13.14% (소득 대비 0.9448%)
+- **적용 시기**: 2026년 1월 1일~
+- **공식 출처**: https://www.mohw.go.kr/ (보건복지부 보도자료)
+- **마지막 확인**: 2026-04-29 (검증 완료, 12.95→13.14로 갱신)
 - **변동 주기**: 연 1회 (12월 발표)
-- **검색 패턴**: `장기요양.*12\.95` / `장기요양보험료`
-- **영향 페이지**: -
+- **검색 패턴**: `장기요양.*13\.14` / `0\.1314` / `장기요양보험료`
+- **영향 페이지** (구값에서 신값으로 갱신 완료):
+  - blog/posts/social-insurance-guide.html (표 4행 + 계산예시 2개 + 핵심정리 모두 재계산)
+  - blog/posts/freelancer-insurance-guide.html (합계·차이 재계산)
+  - blog/posts/four-insurance-vs-33-comparison.html
+  - blog/posts/long-term-care-cost-guide.html
+  - calc/salary/index.html
+  - calc/tax/insurance-comparison/index.html (직장인 부담분 0.46→0.47% 정정 포함)
+  - calc/tax/freelancer-income/index.html (지역가입 표시 0.92→0.94% 정정 포함)
 
 ### 2.5 고용보험 요율
 - **현재 값**: 실업급여 1.8% (근로자 0.9% + 사용자 0.9%) + 고용안정·직업능력개발사업 사용자 부담분
@@ -99,11 +122,13 @@
   - 3억 ~ 5억: 40%
   - 5억 ~ 10억: 42%
   - 10억 초과: 45%
-- **공식 출처**: https://www.law.go.kr/ (소득세법 제55조)
-- **마지막 확인**: 2026-04-29 (시드 값, 미검증)
-- **변동 주기**: 세법 개정 시
+- **공식 출처**: https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7667&mi=2227 (국세청)
+- **마지막 확인**: 2026-04-29 (검증 완료 - 2023년부터 동결, 2026년 개정 없음)
+- **변동 주기**: 세법 개정 시 (현재 안정적)
 - **검색 패턴**: `1,400만` / `누진세율` / `45%`
-- **영향 페이지**: -
+- **영향 페이지** (값 일치, 변경 불필요):
+  - blog: capital-gains-tax, comprehensive-income-tax, deposit-interest-guide, gift-tax-guide, hourly-wage-guide, income-tax-may-guide, medical-expense-deduction-guide, national-pension-guide, national-pension-income-tax, pension-tax-guide, property-tax-guide, salary-5000-takehome, salary-negotiation
+  - calc: ai, realestate(brokerage/capital-gains/joint/jongbu/propertytax/index), salary, tax(freelancer-income/income-tax/insurance-comparison/index)
 
 ### 3.2 종합소득세 누진공제액
 - **현재 값**:
@@ -115,11 +140,11 @@
   - 40%: 2,594만 원
   - 42%: 3,594만 원
   - 45%: 6,594만 원
-- **공식 출처**: 소득세법 제55조
-- **마지막 확인**: 2026-04-29 (시드 값, 미검증)
+- **공식 출처**: https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7667&mi=2227 (국세청)
+- **마지막 확인**: 2026-04-29 (검증 완료 - 누진세율표와 함께 동결)
 - **변동 주기**: 세법 개정 시
 - **검색 패턴**: `누진공제` / `1,544만` / `2,594만`
-- **영향 페이지**: -
+- **영향 페이지** (값 일치, 변경 불필요): 누진세율표(3.1)와 동일 영향 페이지
 
 ### 3.3 인적공제·기본공제
 - **현재 값**: 본인·배우자·부양가족 각 150만 원, 경로우대 100만 원, 장애인 200만 원
@@ -174,12 +199,15 @@
 ## 5. 금리·금융
 
 ### 5.1 한국은행 기준금리
-- **현재 값**: 미확인 (수동 채워야 함)
-- **공식 출처**: https://www.bok.or.kr/
-- **마지막 확인**: -
-- **변동 주기**: 한은 금통위 결정 시 (수시)
+- **현재 값**: 2.50%
+- **적용 시기**: 2026-04-10 이후 (7연속 동결)
+- **공식 출처**: https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643
+- **마지막 확인**: 2026-04-29
+- **변동 주기**: 한은 금통위 결정 시 (수시, 연 8회)
 - **검색 패턴**: `기준금리` / `한국은행.*금리`
-- **영향 페이지**: -
+- **영향 페이지** (참고용 - 본문에 고정값 박지 않음):
+  - blog/posts/loan-refinance-guide.html, savings-vs-deposit.html, jeonse-vs-wolse.html
+  - calc/finance/loan-repayment, calc/finance, calc/realestate(loan/conversion/index)
 
 ### 5.2 정기예금 평균금리
 - **현재 값**: 미확인
@@ -215,4 +243,10 @@
 
 ### 2026-04-29
 - 마스터 파일 최초 생성 (시드 17개 항목 + 검색 패턴)
-- **검증 필요**: 위 시드 값들은 일반적 알려진 값으로 채운 것이므로, 첫 가동 시 공식 출처 WebFetch로 전수 검증 필수
+- **첫 가동 완료**: 핵심 7개 항목 검증 + 4개 항목 갱신 + 매핑 채움
+  - 변경 발견 4건: 건강보험(7.09→7.19%), 국민연금(9→9.5%), 장기요양(12.95→13.14%), 기준금리(미확인→2.50% 신규)
+  - 변경 없음 (검증 완료) 3건: 고용보험(1.8% 동결), 종합소득세 누진세율표·누진공제(2023년부터 동결)
+  - 부가 정정: insurance-comparison.html의 잘못된 국민연금 5.0%/10% 표기 정정, 기준소득월액 553만→637만/37만→39만 정정
+  - 안내 박스 추가: national-pension-voluntary.html (2025.7~12 기준 9% 시나리오 유지 + 2026.1부터 9.5% 인상 안내)
+- **수정 파일 약 15개, 수정 위치 약 75곳**
+- **다음 검증 필요**: 인적공제·기본공제(3.3), 부동산 세금 4.x 항목들, 6.1 퇴직소득세 누진공제
