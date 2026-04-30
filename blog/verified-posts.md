@@ -49,3 +49,6 @@
 - long-term-care-grade-application.html (2026-04-29 검증, 오류 1개 수정 | 목차 5등급 점수 범위 "45~50점 미만"→"45~51점" 수정 | 본문·표·SVG는 이미 45~51점으로 정확)
 - pension-tax-guide.html (2026-04-29 검증, 오류 3개 수정 | "283만원"→"284만원" 2곳(목차·마무리), FAQPage JSON-LD Q1 마지막 문장 누락 추가 | 세율·시나리오 계산 이상 없음)
 - (재검증 2026-04-29 추가 수정) national-pension-income-tax.html SVG 200만원 시나리오 102만원→약 105만원, diet-calorie-guide.html / cursor-vs-copilot.html / date-difference.html BreadcrumbList p3 /calc/ → /blog/?cat= 형식 보정 (4건)
+- pension-withdrawal-strategy.html (2026-04-30 검증, 이상 없음 | 퇴직소득세 3시나리오 전부 재계산 정확, 비교표 수치 558만원·335만원·223만원 등 일치, JSON-LD·링크 정상)
+- compound-interest.html (2026-04-30 검증, 오류 1개 수정 | BreadcrumbList position 3 /calc/finance/ → /blog/?cat=금융 수정 | 복리 계산 수치 이상 없음)
+- salary-raise-guide.html (2026-04-30 검증, 이상 없음 | "연간 약 210만원" = 10%×6개월 지연 기회비용으로 정확, JSON-LD FAQ 3개 HTML 일치, BreadcrumbList p3 /blog/?cat=연봉 정상)

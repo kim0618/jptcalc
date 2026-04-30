@@ -1,4 +1,13 @@
 
+## 2026-04-30 (3차 라운드)
+- posts/realestate-agent-fee.html: 노출 5,795 CTR 0.12% - "협의로 낮추는 법" 각도 추가, 전세 3~6억 0.4% desc 명시 (재측정 2026-05-07 예정)
+- posts/bmi-guide.html: 노출 1,576 CTR 0.13% - "BMI 17.6 저체중, 21은 정상" 수치 title 직접 노출, WHO vs 아시아 기준 차이 desc 삽입 (재측정 2026-05-07 예정)
+- posts/military-discharge-date.html: 노출 1,429 CTR 0.56% - "전역일 언제?" 구어체 전환, 8월 입대→2028년 2월 전역 실예시 desc로 이동 (재측정 2026-05-07 예정)
+- posts/pension-tax-guide.html: 노출 508 CTR 0.00% - "분리과세 vs 종합과세 어느 쪽이 유리한가" 질문형 전환, 지방소득세 포함 명시 (재측정 2026-05-07 예정)
+- posts/acquisition-tax-2026.html: 노출 311 CTR 0.00% - "행정안전부" 권위 키워드 title 삽입, 3주택 12% 중과 desc 추가 (재측정 2026-05-07 예정)
+- calc/realestate/acquisition/: 노출 821 CTR 0.37% - "위택스 없이" 차별화 문구, "농특세 포함 즉시" 속도 강조로 전환 (재측정 2026-05-07 예정)
+- calc/realestate/gift/: 노출 478 CTR 0.00% - "6천만원 100만원·7천만원 200만원" 수치 직접 title 노출, 6천만원 케이스 desc 추가 (재측정 2026-05-07 예정)
+
 ## 2026-04-22
 - posts/unemployment-benefit-guide.html: "완벽 가이드" 제거, 1일 상한 66,000원 수치 삽입 (재측정 2026-05-01 예정)
 - posts/social-insurance-guide.html: "완전 가이드" 제거, 월급 300만원→28만원 구체 수치 삽입 (재측정 2026-05-01 예정)

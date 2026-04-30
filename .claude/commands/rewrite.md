@@ -76,6 +76,10 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - diet-calorie-guide.html - 2026-04-29 수정
 - cursor-vs-copilot.html - 2026-04-29 수정
 - date-difference.html - 2026-04-29 수정
+- ideal-weight.html - 2026-04-30 수정
+- long-term-care-grade-application.html - 2026-04-30 수정
+- pet-insurance.html - 2026-04-30 수정
+- korean-age-system.html - 2026-04-30 수정
 
 ## 작업 순서
 
