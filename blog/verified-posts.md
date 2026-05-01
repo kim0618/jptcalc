@@ -52,3 +52,6 @@
 - pension-withdrawal-strategy.html (2026-04-30 검증, 이상 없음 | 퇴직소득세 3시나리오 전부 재계산 정확, 비교표 수치 558만원·335만원·223만원 등 일치, JSON-LD·링크 정상)
 - compound-interest.html (2026-04-30 검증, 오류 1개 수정 | BreadcrumbList position 3 /calc/finance/ → /blog/?cat=금융 수정 | 복리 계산 수치 이상 없음)
 - salary-raise-guide.html (2026-04-30 검증, 이상 없음 | "연간 약 210만원" = 10%×6개월 지연 기회비용으로 정확, JSON-LD FAQ 3개 HTML 일치, BreadcrumbList p3 /blog/?cat=연봉 정상)
+- medical-expense-items-guide.html (2026-05-01 검증, 이상 없음 | 계산 3시나리오·연봉별 공제표·법조문 인용 전부 정확, FAQ·링크 정상)
+- isa-guide.html (2026-05-01 검증, 오류 2곳 수정 | 비교표 1행 수익 90만원→120만원+세금 13.9→18.5만원, 4행 수익 900만원→840만원+세금 138.6→129.4+ISA 69.3→63.4+절세 69.3→66.0만원, h2 "최대 69만원"→"최대 66만원" | 나머지 수치·JSON-LD·링크 이상 없음)
+- savings-vs-deposit.html (2026-05-01 검증, 오류 1곳 수정 | meta description 수치가 본문 표와 불일치(1000만/3.5% vs 본문 1200만/3%) → 본문 수치로 통일(30.5만원 vs 16.5만원) | 예금자보호 5,000만원 - 2024년 이후 법 개정 여부 사용자 확인 권고 | 본문 수치·FAQ·링크 이상 없음)

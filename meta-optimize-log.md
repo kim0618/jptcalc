@@ -76,3 +76,12 @@
 - calc/realestate/gift/: CTR 0.00% / imp 512 / pos 8.3 - 7천만원 증여세 쿼리 반영, ~200만원 수치 추가
 - posts/pension-tax-guide.html: CTR 0.00% / imp 466 / pos 8.0 - 클릭 유인 "284만원 절세" 추가, 세율 나열 대신 행동 유도
 - posts/subscription-score-guide.html: CTR 0.93% / imp 429 / pos 5.1 - "통장 가입기간별 점수 기준" 쿼리 직접 반영
+
+## 2026-05-01 (3차 라운드 계속)
+- posts/property-tax-guide.html: 미최적화 - "가이드·정리" 제거, 공시가격 3억원=57만6천원 수치 title 직접 노출, 7월·9월 납부 구조 desc 명시 (재측정 2026-05-08 예정)
+- posts/jeonse-vs-wolse.html: 미최적화 - 손익분기 금리 3.84% 수치 title 삽입, 전세 3억·월세 80만원 조건 구체화 (재측정 2026-05-08 예정)
+- posts/savings-vs-deposit.html: 미최적화 - "어떤 게 더 유리할까?" 추상적 제거, 35만원 vs 19만원 이자 차이 수치 삽입 (재측정 2026-05-08 예정)
+- posts/loan-repayment.html: 미최적화 - 원리금균등 vs 원금균등 3,500만원 차이 수치 title 직접 노출 (재측정 2026-05-08 예정)
+- posts/deposit-interest-guide.html: 미최적화 - 1,000만원 연 3.5% 세후 29만6천원 결론형 수치 삽입 (재측정 2026-05-08 예정)
+- posts/blood-pressure-guide.html: "완벽 정리" 제거, 수축기 120/이완기 80 기준 수치형 title로 전환, 고혈압 1기·2기 desc 명시 (재측정 2026-05-08 예정)
+- posts/withholding-tax-guide.html: 미최적화 - 월 200만원→실수령 193만4천원 수치 삽입, "정리했습니다" desc 패턴 제거 (재측정 2026-05-08 예정)
