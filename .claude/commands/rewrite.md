@@ -52,34 +52,26 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - inheritance-tax-guide.html - 2026-04-21 수정
 - parental-leave-pay.html - 2026-04-21 수정
 - sarcopenia-guide.html - 2026-04-21 수정
-- long-term-care-cost-guide.html - 2026-04-22 수정
-- loan-refinance-guide.html - 2026-04-22 수정
-- vat-guide.html - 2026-04-22 수정
-- severance-pay-guide.html - 2026-04-22 수정
-- emergency-fund-guide.html - 2026-04-23 수정
-- income-tax-may-guide.html - 2026-04-23 수정
-- national-pension-guide.html - 2026-04-23 수정
-- minimum-wage-2026.html - 2026-04-23 수정
-- pension-tax-guide.html - 2026-04-24 수정
-- isa-guide.html - 2026-04-24 수정
-- health-checkup-guide.html - 2026-04-24 수정
-- salary-raise-guide.html - 2026-04-24 수정
-- jongbu-tax-guide.html - 2026-04-27 수정
-- irp-vs-pension-savings.html - 2026-04-27 수정
-- cagr-guide.html - 2026-04-27 수정
-- chatgpt-api-cost.html - 2026-04-27 수정
-- dog-monthly-cost.html - 2026-04-28 수정
-- date-add-guide.html - 2026-04-28 수정
-- retirement-living-cost.html - 2026-04-28 수정
-- medical-expense-deduction-guide.html - 2026-04-28 수정
-- retirement-living-late-start.html - 2026-04-29 수정
-- diet-calorie-guide.html - 2026-04-29 수정
-- cursor-vs-copilot.html - 2026-04-29 수정
-- date-difference.html - 2026-04-29 수정
-- ideal-weight.html - 2026-04-30 수정
-- long-term-care-grade-application.html - 2026-04-30 수정
-- pet-insurance.html - 2026-04-30 수정
-- korean-age-system.html - 2026-04-30 수정
+- vat-guide.html - 2026-04-25 수정
+- national-pension-guide.html - 2026-04-25 수정
+- isa-guide.html - 2026-04-25 수정
+- ideal-weight.html - 2026-04-25 수정
+- income-tax-may-guide.html - 2026-04-26 수정
+- minimum-wage-2026.html - 2026-04-26 수정
+- loan-refinance-guide.html - 2026-04-26 수정
+- health-checkup-guide.html - 2026-04-26 수정
+- jongbu-tax-guide.html - 2026-05-01 수정
+- severance-pay-guide.html - 2026-05-01 수정
+- emergency-fund-guide.html - 2026-05-01 수정
+- diet-calorie-guide.html - 2026-05-01 수정
+- medical-expense-items-guide.html - 2026-05-02 수정
+- pension-withdrawal-strategy.html - 2026-05-02 수정
+- national-pension-income-tax.html - 2026-05-02 수정
+- national-pension-voluntary.html - 2026-05-02 수정
+- long-term-care-grade-application.html - 2026-05-03 수정
+- irp-vs-pension-savings.html - 2026-05-03 수정
+- medical-expense-deduction-guide.html - 2026-05-03 수정
+- long-term-care-cost-guide.html - 2026-05-03 수정
 
 ## 작업 순서
 
@@ -104,10 +96,6 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - 내부 링크, CTA 버튼, FAQ 내용
 - JSON-LD, script 블록
 - SVG 인포그래픽
-- **`<h1>`, `<title>`, meta description, og:title, og:description** (SEO 식별자는 문체 수정 범위 밖 - 메타 변경은 `/meta-optimize` 스킬 전용)
-- **JSON-LD `headline`·`description`, BreadcrumbList position 4 `name`** (h1과 동기화되어야 하므로 함께 건드리지 않음)
-
-**Why 이 규칙이 중요한가:** 과거 작업에서 h1만 바꾸고 title/JSON-LD headline을 놓친 사례가 생겨 SEO 정합성이 깨진 적 있음. 문체 수정은 본문(h2 이하와 `<p>`)에서만 수행.
 
 ### 변경하는 것 (문체/톤만)
 

@@ -8,8 +8,8 @@ description: jptcalc 블로그/카테고리 meta title·description 최적화 (C
 콘텐츠 자체는 건드리지 않으므로 **애드센스 거절 위험 제로**.
 
 ## 실행 일정
-- **시작일**: 2026-04-22 (수) — `/bolster` 완료 후 진입
-- **집중 기간**: 2026-04-22 ~ 2026-04-24 (3일), 하루 6-7개 × 3일 = 약 20페이지
+- **시작일**: 2026-04-23 (목) — `/bolster` 완료 후 진입
+- **집중 기간**: 2026-04-23 ~ 2026-04-25 (3일), 하루 6-7개 × 3일 = 약 20페이지
 - **이후**: 재측정 7일 간격으로 지속 (계속 필요)
 - **애드센스 재신청일(4/28) 전까지 20페이지 이상** 처리 목표
 - 이 스킬은 **자동 삭제하지 않음** (CTR 개선은 상시 작업)
@@ -18,10 +18,12 @@ description: jptcalc 블로그/카테고리 meta title·description 최적화 (C
 
 | 라운드 | 기간 | 대상 수 | 완료 | 재측정 예정 |
 |---|---|---|---|---|
-| 1차 | 2026-04-22 ~ 2026-04-24 | 20페이지 | 20 | 2026-05-01 |
-| 2차 | 2026-05-01 ~ 2026-05-03 | 개선 안 된 페이지 재교정 | - | - |
+| 1차 | 2026-04-23 ~ 2026-04-25 | 20페이지 | 7 | 2026-05-02 |
+| 2차 (재교정) | 2026-04-26 | 6 | 6 | 2026-05-03 |
+| 3차 | 2026-04-27 ~ 2026-05-01 | 잔여 페이지 | 20+ | - |
+| 4차 (재교정) | 2026-05-08 ~ | - | - | - |
 
-**누적 진행: 20페이지 / 목표 20페이지 - 1차 완료**
+**누적 진행: 40+페이지 완료 (블로그 posts + calc 페이지 포함)**
 
 작업 완료 시 이 표를 즉시 갱신할 것.
 
@@ -39,25 +41,8 @@ description: jptcalc 블로그/카테고리 meta title·description 최적화 (C
 
 선정 커맨드:
 ```bash
-# GSC 페이지별 CTR 전체 조회 (실제 데이터 - 이 방법 우선 사용)
-node /tmp/gsc_pages.mjs  # 아래 스크립트를 /tmp에 생성 후 실행
-
-# /tmp/gsc_pages.mjs 내용:
-cat > /tmp/gsc_pages.mjs << 'EOF'
-import { google } from '/home/tjd618/.claude/analytics/node_modules/googleapis/build/src/index.js';
-import { readFileSync } from 'fs';
-const credentials = JSON.parse(readFileSync('/home/tjd618/.claude/analytics/credentials.json', 'utf8'));
-const auth = new google.auth.GoogleAuth({ credentials, scopes: ['https://www.googleapis.com/auth/webmasters.readonly'] });
-const sc = google.searchconsole({ version: 'v1', auth });
-const end = new Date(); end.setDate(end.getDate()-1);
-const start = new Date(end); start.setDate(end.getDate()-27);
-const fmt = d => d.toISOString().split('T')[0];
-const r = await sc.searchanalytics.query({ siteUrl: 'sc-domain:jptcalc.kr', requestBody: { startDate: fmt(start), endDate: fmt(end), dimensions: ['page'], rowLimit: 200 } });
-const rows = (r.data.rows || []).map(row => ({ page: row.keys[0].replace('https://www.jptcalc.kr',''), clicks: row.clicks, impressions: row.impressions, ctr: (row.ctr*100).toFixed(2), pos: row.position.toFixed(1) })).filter(r => r.impressions >= 5).sort((a,b) => b.impressions - a.impressions);
-console.log('  imp | CTR    | 순위  | 경로');
-rows.forEach(r => console.log(r.impressions.toString().padStart(6) + ' | CTR ' + r.ctr.toString().padStart(5) + '% | pos ' + r.pos.padStart(5) + ' | ' + r.page));
-EOF
-node /tmp/gsc_pages.mjs
+node /home/tjd618/.claude/analytics/report.mjs --period=28d --site=jptcalc --rank-11-20
+node /home/tjd618/.claude/analytics/report.mjs --period=28d --site=jptcalc --low-ctr
 ```
 
 ## 교정 규칙
@@ -90,53 +75,36 @@ node /tmp/gsc_pages.mjs
 
 ## 동시 갱신 대상 (한 페이지 건드릴 때 모두)
 
-페이지 1개 수정 시 다음 태그 전부 동기화:
+페이지 1개 수정 시 **8개 위치를 모두 동기화**해야 함. 누락 시 `/verify` 룰 위반:
 
+### head 메타 태그 (4-6개)
 ```html
 <title>...</title>
 <meta name="description" content="..." />
 <meta property="og:title" content="..." />
 <meta property="og:description" content="..." />
-<meta name="twitter:title" content="..." />
-<meta name="twitter:description" content="..." />
+<meta name="twitter:title" content="..." />     <!-- 있는 경우만 -->
+<meta name="twitter:description" content="..." /> <!-- 있는 경우만 -->
 ```
 
-`og:title`·`twitter:title`은 `<title>`과 동일하게, `og:description`·`twitter:description`은 `<meta description>`과 동일하게 유지.
+### JSON-LD 스키마 (필수 동기화 대상)
+```json
+// Article 스키마
+"headline": "{title에서 ' | 제이퍼 계산기 블로그' 접미 제거한 값}"
+"description": "{meta description과 완전 일치}"
 
-**canonical, og:url은 건드리지 않는다.**
+// BreadcrumbList 스키마
+"position": 4 "name": "{title에서 사이트 접미 제거한 값과 일치}"
+```
 
-### JSON-LD 동기화 (필수, 2025-04-23 추가)
+### 동기화 규칙 요약
+- `og:title`·`twitter:title` = `<title>` (완전 동일)
+- `og:description`·`twitter:description` = `<meta description>` (완전 동일)
+- **JSON-LD `headline`** = `<title>` (단, ` | 제이퍼 계산기 블로그` 접미는 제거)
+- **JSON-LD `description`** = `<meta description>` (완전 동일)
+- **BreadcrumbList position 4 `name`** = JSON-LD headline (= 접미 제거된 title)
 
-title/description 변경 시 다음 JSON-LD 필드도 **반드시 같은 내용으로** 동기화:
-
-**블로그 글(`/blog/posts/*.html`)**:
-- `Article` JSON-LD의 `"headline"` ← title (브랜드 ` | 제이퍼 계산기 블로그` 부분 제거한 본문)
-- `Article` JSON-LD의 `"description"` ← meta description
-- `BreadcrumbList` JSON-LD의 `"position": 4`의 `"name"` ← title (브랜드 부분 제거한 본문)
-
-**계산기 페이지(`/calc/**/index.html`)**:
-- `WebApplication` JSON-LD의 `"name"`은 **짧은 도구명 그대로 유지** (예: "증여세 계산기"). 긴 title을 그대로 넣지 않음.
-- `WebApplication` JSON-LD의 `"description"` ← meta description (필드 없으면 신규 추가)
-- `BreadcrumbList`는 calc 페이지에서 3-level 구조(홈 > 카테고리 > 도구명)이므로 position 4가 없음. position 3 도구명도 변경 불필요.
-
-**이유**: `/verify` 스킬 D항목(JSON-LD ↔ HTML 정합성)에 위배되지 않도록 함. title만 변경하고 JSON-LD를 그대로 두면 Google Rich Results에서 일관성 깨짐. 단 calc 페이지의 WebApplication "name"은 앱 식별자 역할이므로 짧게 유지.
-
-### BreadcrumbList position 3 보정 (필수, 2026-04-24 추가)
-
-메타 최적화 작업 중 `BreadcrumbList` JSON-LD의 `"position": 3` 이 `/calc/` 경로를 가리키면 반드시 `/blog/?cat=카테고리명` 형식으로 함께 교정한다.
-
-- **예:** `"item": "https://www.jptcalc.kr/calc/tax/"` → `"item": "https://www.jptcalc.kr/blog/?cat=세금"`
-- 이미 `/blog/?cat=` 형식이면 그대로 둔다.
-
-**Why:** 과거 /blog 스킬에서 잘못 생성된 `/calc/` 경로가 누적되어 있음. 페이지를 건드리는 김에 같이 고치면 /verify 스킬 반복 작업을 줄일 수 있다. position 3은 수치 최적화와 무관하지만 동일 JSON-LD 블록에 있어 한 번의 Edit로 같이 처리 가능.
-
-### h1 동기화
-
-**블로그 글(`/blog/posts/*.html`)**: `<h1>` 태그도 새 title의 본문(브랜드 제거)과 동일하게 변경. 블로그 h1은 글 제목이므로 title과 의미적으로 동일해야 함. h1과 title이 다르면 SEO·UX 모두 손해.
-
-**계산기 페이지(`/calc/**/index.html`)**: h1은 **변경하지 않는다**. calc 페이지의 h1은 `.page-title` 클래스로 페이지 헤더 디자인 요소이며 "{도구명}" 짧은 형태가 표준(예: `<h1 class="page-title">증여세 계산기</h1>`). 긴 SEO 키워드 문장을 넣으면 헤더 레이아웃이 깨지고 모바일 가독성이 떨어짐. SERP에 표시되는 것은 title이지 h1이 아니므로 SEO 영향도 미미.
-
-**Why 이 분리가 중요한가**: 2026-04-27 calc 페이지 6개를 작업할 때 스킬 규칙(h1 동기화 필수)을 그대로 적용하려다 디자인 영향이 커서 제외함. 두 페이지 유형의 본질이 다르다는 점을 스킬에 명시.
+**canonical, og:url, BreadcrumbList position 1-3은 건드리지 않는다.** (position 3 잘못 → `/verify`에서 처리)
 
 ## 작업 순서
 
@@ -146,10 +114,11 @@ title/description 변경 시 다음 JSON-LD 필드도 **반드시 같은 내용�
 node /home/tjd618/.claude/analytics/report.mjs --period=28d --site=jptcalc
 ```
 
-### 2) 페이지별 현재 메타 확인
+### 2) 페이지별 현재 메타 + JSON-LD 확인
 ```bash
-grep -E '<title>|name="description"|og:title|og:description|twitter:title|twitter:description' 파일.html
+grep -E '<title>|name="description"|og:title|og:description|twitter:title|twitter:description|"headline":|"description":|"position": 4' 파일.html
 ```
+JSON-LD `headline`·`description`·BreadcrumbList position 4 `name`까지 확인. 이 값들도 새 title·desc와 동기화 필요.
 
 ### 3) 핵심 검색 쿼리 매핑
 - 서치콘솔에서 해당 페이지가 실제 노출되는 **상위 3개 쿼리** 확인
@@ -157,8 +126,19 @@ grep -E '<title>|name="description"|og:title|og:description|twitter:title|twitte
 - 주력 쿼리가 이미 포함되어 있다면 클릭 유도 문구만 교체
 
 ### 4) 교정 실행 (Edit 도구)
-- 6개 meta 태그를 일괄 교체 (Edit 4-6회)
-- title 60자, description 155자 **반드시 세어서 초과 여부 확인**
+페이지 1개당 **최대 8개 위치**를 모두 동기화 (Edit 6-8회):
+
+**4-1. head 메타 (4-6 위치)**
+- `<title>` / `<meta name="description">` / `og:title` / `og:description` / (있다면) `twitter:title` / `twitter:description`
+
+**4-2. JSON-LD Article 스키마 (2 위치)**
+- `"headline"` ← title에서 ` | 제이퍼 계산기 블로그` 접미만 제거한 값
+- `"description"` ← meta description과 완전 동일
+
+**4-3. JSON-LD BreadcrumbList 스키마 (1 위치)**
+- `position: 4`의 `"name"` ← 새 headline과 동일
+
+title 60자, description 155자 **반드시 세어서 초과 여부 확인**.
 
 ### 5) 검증 (필수)
 ```
@@ -166,11 +146,28 @@ grep -E '<title>|name="description"|og:title|og:description|twitter:title|twitte
 □ description 155자 이내
 □ og:title = title (완전 동일)
 □ og:description = meta description (완전 동일)
-□ twitter:title = title (완전 동일)
-□ twitter:description = meta description (완전 동일)
+□ twitter:title = title (있는 경우 완전 동일)
+□ twitter:description = meta description (있는 경우 완전 동일)
+□ JSON-LD headline = title (사이트 접미 제거 후 완전 동일)  ← /verify 룰
+□ JSON-LD description = meta description (완전 동일)        ← /verify 룰
+□ BreadcrumbList position 4 name = headline (완전 동일)
 □ canonical/og:url 원본 유지 확인
+□ BreadcrumbList position 1-3 원본 유지 확인
 □ 본문 첫 h1 또는 첫 문단의 사실과 모순 없음
 □ "충격", "이것만", "모르면 손해" 같은 낚시 금지어 grep
+```
+
+### 검증 자동화 스크립트
+```bash
+# 8개 위치 일괄 비교
+for f in 파일1 파일2; do
+  title=$(grep -m1 -oP '(?<=<title>)[^<]+' /home/tjd618/jptcalc/blog/posts/${f}.html | sed 's/ | 제이퍼 계산기 블로그$//')
+  headline=$(grep -m1 -oP '"headline":\s*"[^"]+' /home/tjd618/jptcalc/blog/posts/${f}.html | sed 's/"headline":\s*"//')
+  meta_desc=$(grep -m1 -oP '(?<=name="description" content=")[^"]+' /home/tjd618/jptcalc/blog/posts/${f}.html)
+  jsonld_desc=$(grep -m1 -oP '"description":\s*"[^"]+' /home/tjd618/jptcalc/blog/posts/${f}.html | head -1 | sed 's/"description":\s*"//')
+  [[ "$title" == "$headline" ]] && echo "✓ $f headline" || echo "✗ $f headline 불일치"
+  [[ "$meta_desc" == "$jsonld_desc" ]] && echo "✓ $f desc" || echo "✗ $f desc 불일치"
+done
 ```
 
 ## 결과 요약 형식
@@ -190,9 +187,9 @@ grep -E '<title>|name="description"|og:title|og:description|twitter:title|twitte
 
 `/home/tjd618/jptcalc/meta-optimize-log.md`에 누적 기록:
 ```
-## 2026-04-22
-- posts/salary-5000-takehome.html: CTR 1.2% → (재측정 4/29 예정)
-- posts/pension-tax.html: CTR 0.8% → (재측정 4/29 예정)
+## 2026-04-23
+- posts/salary-5000-takehome.html: CTR 1.2% → (재측정 4/30 예정)
+- posts/pension-tax.html: CTR 0.8% → (재측정 4/30 예정)
 ```
 
 ## 재측정 규칙
@@ -202,18 +199,14 @@ grep -E '<title>|name="description"|og:title|og:description|twitter:title|twitte
 
 ## 금지
 
-- 본문 HTML 콘텐츠 변경 금지 (이 스킬은 **메타 전용** - h1, title, description, JSON-LD headline·description·BreadcrumbList p3 경로 보정·p4까지만 허용)
-- 본문 단락(`<p>`), 표(`<table>`), FAQ 답변, CTA 박스 등은 변경 금지
+- 본문 HTML 콘텐츠 변경 금지 (이 스킬은 **메타·스키마 동기화 전용**)
+- JSON-LD `headline`·`description`·BreadcrumbList position 4 `name`은 **반드시 동기화** (이전 버전 룰과 다름)
+- 단, JSON-LD의 다른 필드(`datePublished`, `articleSection`, FAQ Q&A, Author, Publisher 등)·BreadcrumbList position 1-3은 건드리지 않음
 - em dash(—) 금지
 - sitemap.xml 갱신 불필요 (`<lastmod>` 업데이트는 선택)
 
+## 변경 이력
 
-## 완료 후 로그 기록
-
-스킬 실행이 완료되면 반드시 아래 명령으로 `skill-log.json`에 기록한다:
-
-```bash
-python3 -c "import json,datetime; logs=json.load(open('/home/tjd618/skill-log.json')); now=datetime.datetime.now(); logs.insert(0,{'date':now.strftime('%Y-%m-%d'),'time':now.strftime('%H:%M'),'project':'jptcalc','skill':'meta-optimize'}); open('/home/tjd618/skill-log.json','w').write(json.dumps(logs,ensure_ascii=False,indent=2))"
-```
+- **2026-04-26**: meta-optimize로 title·desc만 바꾸고 JSON-LD 안 고치는 패턴이 `/verify` 룰을 위반시키는 문제 발견. JSON-LD `headline`·`description`·BreadcrumbList position 4를 의무 동기화 대상으로 추가.
 
 $ARGUMENTS
