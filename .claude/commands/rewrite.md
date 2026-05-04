@@ -72,6 +72,10 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - irp-vs-pension-savings.html - 2026-05-03 수정
 - medical-expense-deduction-guide.html - 2026-05-03 수정
 - long-term-care-cost-guide.html - 2026-05-03 수정
+- retirement-living-late-start.html - 2026-05-04 수정
+- pension-tax-guide.html - 2026-05-04 수정
+- retirement-living-cost.html - 2026-05-04 수정
+- llm-api-price-comparison.html - 2026-05-04 수정
 
 ## 작업 순서
 

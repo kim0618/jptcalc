@@ -61,3 +61,10 @@
 - health-checkup-guide.html (2026-05-03 검증, 이상 없음 | 암검진 연령·주기·비용 6종 전부 정확, 혈압·혈당·콜레스테롤·간기능 기준 정확, FAQ 4개 JSON-LD 정합성 정상, 링크·review-footer.js 이상 없음)
 - bmi-guide.html (2026-05-03 검증, 이상 없음 | BMI 공식·대한비만학회 기준 분류 정확, 시나리오 수치 직접 재계산 일치, JSON-LD·링크 이상 없음)
 - bmr-calories.html (2026-05-03 검증, 이상 없음 | Mifflin-St Jeor·Katch-McArdle 공식 재계산 1% 오차 이내, 활동계수 5종 정확, TDEE 계산 정상, FAQ 4개·JSON-LD·링크 이상 없음)
+
+## 2026-05
+
+- visceral-fat-guide.html (2026-05-04 검증, 오류 4개 수정 | BreadcrumbList p3 /calc/health/ → /blog/?cat=건강, JSON-LD FAQ Q2 마지막 문장 누락 추가, Q3 시나리오 언급 문장 누락 추가, Q4 인바디 활용 문장 누락 추가)
+- blood-pressure-guide.html (2026-05-04 검증, 오류 1개 수정 | BreadcrumbList p3 /calc/health/ → /blog/?cat=건강 | 혈압 분류 기준·생활습관 수치·FAQ 4개·링크 이상 없음)
+- body-fat-guide.html (2026-05-04 검증, 오류 1개 수정 | BreadcrumbList p3 /calc/health/ → /blog/?cat=건강 | 체지방률 공식·기준표·시나리오 계산 이상 없음)
+- (자체 검증 보완 2026-05-04) blog/index.html post-desc 3건 동기화 누락 수정: pension-tax-guide 283만원→284만원, retirement-living-cost 62만원→68만원, retirement-living-late-start "40세·50세·55세"→"40세·45세·50세·55세"
