@@ -31,7 +31,10 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 각 계산기당 **블로그 글 2편**을 작성해야 목록에서 제거한다. 1편 작성 후에는 완료 횟수를 괄호로 표시하고, 2편째 완료 후 삭제한다.
 목록이 모두 소화되면 이 섹션을 삭제한다.
 
-1. `/calc/tax/medical-expense/` - 의료비 세액공제 계산기 (세금) (1/2 완료 - medical-expense-deduction-guide.html)
+1. `/calc/realestate/rental/` - 임대수익률 계산기 (부동산) (1/2 완료 - rental-yield-guide.html)
+2. `/calc/realestate/joint/` - 공동명의 절세 계산기 (부동산)
+3. `/calc/realestate/property-tax-comprehensive/` - 보유세 계산기 (부동산)
+4. `/calc/realestate/pyeong/` - 평수 변환 계산기 (부동산)
 
 글 작성 후 해당 계산기의 detail-shell.js guides 배열에 블로그 URL을 추가한다. 2편 모두 완료된 계산기만 이 목록에서 제거한다.
 

@@ -76,6 +76,10 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - pension-tax-guide.html - 2026-05-04 수정
 - retirement-living-cost.html - 2026-05-04 수정
 - llm-api-price-comparison.html - 2026-05-04 수정
+- salary-raise-guide.html - 2026-05-05 수정
+- dog-monthly-cost.html - 2026-05-05 수정
+- cagr-guide.html - 2026-05-05 수정
+- korean-age-system.html - 2026-05-05 수정
 
 ## 작업 순서
 

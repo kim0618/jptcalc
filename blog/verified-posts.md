@@ -68,3 +68,6 @@
 - blood-pressure-guide.html (2026-05-04 검증, 오류 1개 수정 | BreadcrumbList p3 /calc/health/ → /blog/?cat=건강 | 혈압 분류 기준·생활습관 수치·FAQ 4개·링크 이상 없음)
 - body-fat-guide.html (2026-05-04 검증, 오류 1개 수정 | BreadcrumbList p3 /calc/health/ → /blog/?cat=건강 | 체지방률 공식·기준표·시나리오 계산 이상 없음)
 - (자체 검증 보완 2026-05-04) blog/index.html post-desc 3건 동기화 누락 수정: pension-tax-guide 283만원→284만원, retirement-living-cost 62만원→68만원, retirement-living-late-start "40세·50세·55세"→"40세·45세·50세·55세"
+- ideal-weight.html (2026-05-05 검증, 오류 1개 수정 | 본문 "월 1~2kg 감량" → "주당 0.5~1kg(월 2~4kg)" 대한비만학회 기준 FAQ와 동기화 | Broca 공식·BMI·시나리오 계산 이상 없음, FAQ 4개·링크·JSON-LD 이상 없음)
+- rental-yield-guide.html (2026-05-05 검증, 오류 1개 수정 | 임대소득세 공식박스 "임대수입×60%×14%×1.1" → "임대수입×40%×14%×1.1" (등록임대 필요경비60%→과세표준40%) | 시나리오 A·B·반전·레버리지표 계산 전부 재검산 정확, FAQ 4개·JSON-LD·링크 이상 없음)
+- mortgage-dsr-guide.html (2026-05-05 검증, 오류 2개 수정 | BreadcrumbList p3 /calc/realestate/ → /blog/?cat=부동산, ARTICLE_INFO_CONFIG basisDate·referenceOrg 누락 필드 추가 | DSR 계산 시나리오 오차 1% 이내 정확, FAQ 4개·링크 이상 없음)

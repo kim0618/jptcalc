@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>임대수익률 계산법 완전 정리 - 표면수익률 5%의 진실 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="임대수익률 계산, 표면수익률과 실질수익률의 차이를 직접 계산해 비교합니다. 5억 아파트·오피스텔 2억5천·빌라 2.5억 시나리오로 대출이자·취득세·임대소득세 포함 후 실질수익률이 어떻게 달라지는지 정리했습니다." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="임대수익률 계산법 완전 정리 - 표면수익률 5%의 진실 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="임대수익률 계산, 표면수익률과 실질수익률의 차이를 직접 계산해 비교합니다. 5억 아파트·오피스텔 2억5천·빌라 2.5억 시나리오로 대출이자·취득세·임대소득세 포함 후 실질수익률이 어떻게 달라지는지 정리했습니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/rental-yield-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/rental-yield-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#F59E0B;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(245,158,11,0.15);color:#F59E0B;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:24px 0 10px}
+    .post-body p{margin-bottom:14px}
+    .post-body ul,.post-body ol{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#F59E0B;text-decoration:none}
+    .post-body a:hover{text-decoration:underline}
+    .highlight-box{background:rgba(245,158,11,0.08);border-left:4px solid #F59E0B;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#92400E;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    tr:hover td{background:rgba(0,0,0,0.02)}
+    td.rate{color:#F59E0B;font-weight:700}
+    td.neg{color:#DC2626;font-weight:700}
+    td.center{text-align:center}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#F59E0B;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .cta-btn:hover{opacity:0.9}
+    .faq-item{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:12px;padding:20px;margin:16px 0}
+    .faq-q{font-weight:800;color:#111827;margin-bottom:8px;font-size:15px}
+    .faq-a{color:#374151;font-size:14px;line-height:1.7;margin:0}
+    .formula-box{background:#FFFBEB;border:1px solid rgba(245,158,11,0.3);border-radius:10px;padding:16px 20px;margin:16px 0;font-family:monospace;font-size:14px;color:#78350F}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "임대수익률 계산법 완전 정리 - 표면수익률 5%의 진실",
+  "description": "임대수익률 계산, 표면수익률과 실질수익률의 차이를 직접 계산해 비교합니다. 5억 아파트·오피스텔 2억5천·빌라 2.5억 시나리오로 대출이자·취득세·임대소득세 포함 후 실질수익률이 어떻게 달라지는지 정리했습니다.",
+  "author": {"@type": "Person", "name": "Jay Kim", "url": "https://www.jptcalc.kr/about.html", "jobTitle": "제이퍼 계산기 운영자"},
+  "publisher": {"@type": "Organization", "name": "제이퍼 계산기", "url": "https://www.jptcalc.kr", "logo": {"@type": "ImageObject", "url": "https://www.jptcalc.kr/assets/logo_161.png"}},
+  "datePublished": "2026-05-05",
+  "dateModified": "2026-05-05",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.jptcalc.kr/blog/posts/rental-yield-guide.html"},
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "부동산",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "임대소득세는 어떻게 계산하나요? 종합과세와 분리과세 중 어느 게 유리한가요?",
+      "acceptedAnswer": {"@type": "Answer", "text": "연간 임대소득이 2,000만원 이하이면 분리과세(14%)와 종합소득세 합산 중 선택할 수 있습니다. 2,000만원 이하는 보통 분리과세가 유리한데, 분리과세 방식은 수입금액 × 필요경비율(50%, 등록임대 60%) × 14%로 계산합니다. 예를 들어 연 임대수입 1,200만원이면 1,200만원 × 50% × 14% = 84만원(지방소득세 10% 포함 시 92.4만원)입니다. 2,000만원을 초과하면 반드시 종합소득세로 신고해야 하며, 다른 소득과 합산해 6~45% 누진세율이 적용됩니다. 임대사업자로 등록하면 필요경비율이 60%로 높아져 세금이 더 줄어들 수 있습니다. 정확한 세액은 홈택스(www.hometax.go.kr) 모의계산기로 확인하세요."}
+    },
+    {
+      "@type": "Question",
+      "name": "표면수익률 몇 %면 임대 투자로 합격점인가요?",
+      "acceptedAnswer": {"@type": "Answer", "text": "한국부동산원 임대차 통계에 따르면 서울·수도권 주거용 부동산의 표면수익률은 2.5~4.5% 수준입니다. 하지만 표면수익률만으로 합격·불합격을 판단하는 것은 위험합니다. 대출이자와 취득세, 재산세, 공실, 임대소득세를 모두 빼고 나면 실질수익률은 표면의 절반 이하로 줄어드는 경우가 많습니다. 실질수익률 기준으로는 3년 만기 정기예금 금리(2026년 기준 약 3.5%)를 넘기는 게 최소 기준이라고 볼 수 있습니다. 실질수익률이 2% 이하라면 임대 수익 목적보다 시세차익 기대가 더 큰 투자인 셈이니, 그 점을 명확히 하고 들어가야 합니다."}
+    },
+    {
+      "@type": "Question",
+      "name": "전세를 월세로 전환할 때 임대인이 받을 수 있는 금액은 어떻게 계산하나요?",
+      "acceptedAnswer": {"@type": "Answer", "text": "주택임대차보호법 시행령 제2조에 따라 전세보증금을 월세로 전환할 때 산정한 월차임은 기준금리+3.5%와 법정 상한율(현행 연 10%) 중 낮은 값을 초과할 수 없습니다. 2026년 기준 한국은행 기준금리 2.75%에 3.5%를 더하면 전환율 상한은 6.25%입니다. 전세 3억원을 보증금 5천만원 월세로 전환한다면, 차액 2억5천만원 × 6.25% ÷ 12개월 = 월 130,208원이 상한입니다. 시장에서는 전환율 4~6% 수준이 일반적이며, 전환율이 높을수록 임대인에게 유리하고 임차인에게 불리합니다. 전환 후 임대소득세 신고 의무가 새로 생기므로, 세후 수익률을 미리 계산해보는 것이 중요합니다."}
+    },
+    {
+      "@type": "Question",
+      "name": "공실이 6개월 이상 지속되면 실질수익률에 얼마나 영향을 주나요?",
+      "acceptedAnswer": {"@type": "Answer", "text": "6개월 공실이 발생하면 연 임대수입의 절반이 사라지므로 실질수익률에 큰 타격을 줍니다. 예를 들어 5억 아파트·대출 2억(월세 130만원) 투자에서 6개월 공실이 생기면 연 수입이 1,560만원에서 780만원으로 줄어들고, 대출이자·재산세 등 고정 비용은 그대로이므로 순수익이 +395만원에서 -194만원으로 뒤집힙니다. 서울 아파트의 평균 공실 기간은 1~2개월로 짧은 편이지만, 오피스텔과 빌라는 3~4개월 공실이 흔합니다. 임대수익률 계산 시 최소 1.5~2개월분의 공실 충당금을 비용으로 반드시 포함해야 합니다."}
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.jptcalc.kr/"},
+    {"@type": "ListItem", "position": 2, "name": "블로그", "item": "https://www.jptcalc.kr/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "부동산", "item": "https://www.jptcalc.kr/blog/?cat=부동산"},
+    {"@type": "ListItem", "position": 4, "name": "임대수익률 계산법 완전 정리 - 표면수익률 5%의 진실"}
+  ]
+}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <div class="logo-icon"><img src="../../assets/logo.svg" alt="제이퍼 계산기 로고" /></div>
+      <span class="logo-text">제이퍼<span>계산기</span></span>
+    </a>
+    <a href="/blog/" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+
+<div class="post-wrap">
+  <span class="post-tag">부동산</span>
+  <h1>임대수익률 계산법 완전 정리 - 표면수익률 5%의 진실</h1>
+  <div class="post-meta">📅 2026.05.05 · ⏱ 15분 읽기</div>
+
+  <div class="post-body">
+
+    <p>결론부터 말하면, 표면수익률 5%짜리 부동산이 대출이자와 세금을 빼고 나면 실질수익률이 마이너스가 될 수 있습니다. 이게 드문 사례가 아닙니다. 대출 비율이 80%를 넘고 공실이 1.5개월 이상 발생하면, 표면 5% 투자가 실질 -0.18%로 돌아서는 건 계산식 하나로 쉽게 확인됩니다.</p>
+    <p>많은 임대 투자자들이 "월세 수입 / 매입가 × 100" 공식 하나만으로 수익성을 판단합니다. 이 방식은 취득세, 대출이자, 재산세, 임대소득세, 공실 충당금을 모두 무시합니다. 실제로 돈이 얼마나 남는지는 이 비용들을 모두 뺀 다음에야 비로소 보입니다.</p>
+
+    <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+      <li>표면수익률·순수익률·실질수익률 3가지 공식과 계산 방법</li>
+      <li>오피스텔 2억5천(무대출) vs 서울 아파트 5억(대출 2억) 실제 수치 비교</li>
+      <li>대출 40%·60%·70% 비율별 실질수익률 변화 - 최대 5%p 차이</li>
+      <li>표면 5%짜리 빌라가 실질 -0.18%가 되는 구체적 계산 과정</li>
+      <li>임대소득세 분리과세 vs 종합과세 선택 기준과 세액 계산 예시</li>
+    </ul>
+
+    <h2>임대수익률 공식 3가지 - 어떤 숫자를 봐야 하는가</h2>
+    <p>임대수익률을 이야기할 때 실제로 3가지 개념이 혼용됩니다. 어떤 공식을 쓰느냐에 따라 같은 물건인데도 수익률이 크게 달라집니다.</p>
+
+    <div class="formula-box">
+      표면(총)수익률 = 연간 임대수입 ÷ 매입가격 × 100<br><br>
+      순수익률 = (연간 임대수입 - 운영비용) ÷ 매입가격 × 100<br><br>
+      실질수익률 = (연간 임대수입 - 운영비용) ÷ 실투자금 × 100
+    </div>
+
+    <p>세 공식의 차이는 분모(기준 금액)와 분자(순이익 여부)에 있습니다. 표면수익률은 가장 단순하지만 현실과 가장 멉니다. 순수익률은 운영비를 반영하지만, 레버리지(대출)에 따른 실제 수익성을 보여주지 못합니다. 실질수익률은 내가 실제로 투입한 현금 대비 순이익이므로, 세 가지 중에서 가장 현실적인 투자 판단 지표입니다.</p>
+
+    <h3>운영비용에 포함해야 하는 항목</h3>
+    <ul>
+      <li><strong>대출이자</strong> - 레버리지 투자에서 가장 큰 비용, 대출 2억 × 금리 4.2% = 연 840만원</li>
+      <li><strong>취득세</strong> - 아파트(1주택) 1.1%, 오피스텔 4.6%. 초기 일회성 비용이지만 투자 기간으로 나눠 반영해야 함</li>
+      <li><strong>재산세</strong> - 공시가격 기준으로 매년 납부. 아파트 3~4억 공시가 기준 30~50만원 수준</li>
+      <li><strong>임대소득세</strong> - 연 수입 2,000만원 이하 분리과세 시 수입 × 50% × 14%(+지방소득세 10%)</li>
+      <li><strong>공실 충당금</strong> - 연 1~2개월분의 월세를 비용으로 산정. 오피스텔은 2개월, 아파트는 1개월이 현실적</li>
+      <li><strong>수선·관리비</strong> - 노후 건물일수록 크고, 신축도 연 월세의 2~3% 수준은 잡아야 함</li>
+    </ul>
+
+    <h2>주요 임대 유형별 표면수익률 현황 (2026년 기준)</h2>
+    <p>한국부동산원 임대차 통계 및 국토교통부 실거래가 공개 자료(2026년 1분기 기준)를 바탕으로 주요 유형별 평균 표면수익률을 정리했습니다. 지역과 물건에 따라 편차가 크므로 참고 수치로만 활용하세요.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>유형</th>
+            <th>평균 매입가</th>
+            <th>평균 월세</th>
+            <th>표면수익률</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>서울 아파트 (전용 59㎡)</td>
+            <td>7억원</td>
+            <td>185만원</td>
+            <td class="rate">3.17%</td>
+            <td>강남 4구 제외 기준</td>
+          </tr>
+          <tr>
+            <td>수도권 오피스텔 (전용 20㎡)</td>
+            <td>2억원</td>
+            <td>65만원</td>
+            <td class="rate">3.90%</td>
+            <td>역세권 1km 이내</td>
+          </tr>
+          <tr>
+            <td>지방 아파트 (전용 84㎡)</td>
+            <td>2억5천만원</td>
+            <td>70만원</td>
+            <td class="rate">3.36%</td>
+            <td>광역시 외곽 기준</td>
+          </tr>
+          <tr>
+            <td>서울 빌라·다세대</td>
+            <td>2억원</td>
+            <td>80만원</td>
+            <td class="rate">4.80%</td>
+            <td>보증금 없는 순월세 기준</td>
+          </tr>
+          <tr>
+            <td>고시원·원룸 (1실)</td>
+            <td>5천만원</td>
+            <td>35만원</td>
+            <td class="rate">8.40%</td>
+            <td>공실률·관리비 높음</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>표에서 고시원·원룸의 표면수익률이 8.4%로 가장 높게 보입니다. 하지만 이 유형은 평균 공실률이 25~35%에 달하고 관리·수선비가 월세 대비 높기 때문에, 실질수익률로 환산하면 5%를 넘기기 어렵습니다. 표면수익률이 높다는 것은 대개 그만큼 위험 프리미엄이 포함되어 있다는 신호입니다.</p>
+
+    <div style="margin:24px 0;overflow-x:auto">
+    <svg role="img" width="100%" viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg">
+      <title>임대 유형별 표면수익률 vs 실질수익률 비교</title>
+      <rect width="680" height="320" rx="12" fill="#F9FAFB"/>
+      <text x="24" y="34" font-size="13" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">표면수익률 vs 실질수익률 비교 (대출·세금 반영 후)</text>
+      <rect x="24" y="44" width="12" height="12" rx="2" fill="#F59E0B"/>
+      <text x="40" y="55" font-size="11" fill="#6B7280" font-family="Pretendard,sans-serif">표면수익률</text>
+      <rect x="125" y="44" width="12" height="12" rx="2" fill="#6366F1"/>
+      <text x="141" y="55" font-size="11" fill="#6B7280" font-family="Pretendard,sans-serif">실질수익률</text>
+      <!-- Scale: 1% = 83px, from x=145 -->
+      <!-- Scenario A: 오피스텔 2억5천, 무대출 -->
+      <text x="24" y="88" font-size="12" font-weight="700" fill="#374151" font-family="Pretendard,sans-serif">A. 오피스텔 2억5천 (무대출)</text>
+      <text x="24" y="112" font-size="10" fill="#9CA3AF" font-family="Pretendard,sans-serif">표면</text>
+      <rect x="60" y="98" width="319" height="19" rx="3" fill="#F59E0B" opacity="0.85"/>
+      <text x="385" y="112" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">3.84%</text>
+      <text x="24" y="133" font-size="10" fill="#9CA3AF" font-family="Pretendard,sans-serif">실질</text>
+      <rect x="60" y="119" width="250" height="19" rx="3" fill="#6366F1" opacity="0.75"/>
+      <text x="316" y="133" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">3.01%</text>
+      <!-- Scenario B: 아파트 5억, 대출 40% -->
+      <text x="24" y="168" font-size="12" font-weight="700" fill="#374151" font-family="Pretendard,sans-serif">B. 서울 아파트 5억 (대출 40%)</text>
+      <text x="24" y="192" font-size="10" fill="#9CA3AF" font-family="Pretendard,sans-serif">표면</text>
+      <rect x="60" y="178" width="259" height="19" rx="3" fill="#F59E0B" opacity="0.85"/>
+      <text x="325" y="192" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">3.12%</text>
+      <text x="24" y="213" font-size="10" fill="#9CA3AF" font-family="Pretendard,sans-serif">실질</text>
+      <rect x="60" y="199" width="129" height="19" rx="3" fill="#6366F1" opacity="0.75"/>
+      <text x="195" y="213" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">1.55%</text>
+      <!-- Scenario C: 빌라 2.5억, 대출 80% -->
+      <text x="24" y="248" font-size="12" font-weight="700" fill="#374151" font-family="Pretendard,sans-serif">C. 빌라 2.5억 (대출 80%)</text>
+      <text x="24" y="272" font-size="10" fill="#9CA3AF" font-family="Pretendard,sans-serif">표면</text>
+      <rect x="60" y="258" width="419" height="19" rx="3" fill="#F59E0B" opacity="0.85"/>
+      <text x="485" y="272" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">5.04%</text>
+      <text x="24" y="293" font-size="10" fill="#9CA3AF" font-family="Pretendard,sans-serif">실질</text>
+      <rect x="60" y="279" width="8" height="19" rx="3" fill="#DC2626" opacity="0.7"/>
+      <text x="74" y="293" font-size="12" font-weight="700" fill="#DC2626" font-family="Pretendard,sans-serif">-0.18% ▼</text>
+      <text x="400" y="313" font-size="10" fill="#9CA3AF" font-family="Pretendard,sans-serif">*취득세·임대소득세·공실·수선비 포함 기준</text>
+    </svg>
+    </div>
+
+    <h2>시나리오 A - 오피스텔 2억5천만원, 대출 없이 운용할 때</h2>
+    <p>대출 없이 오피스텔에 투자하는 가장 보수적인 케이스입니다. 박지민씨(42세, 직장인)는 수도권 역세권 오피스텔 전용 21㎡를 2억5천만원에 매입했습니다. 보증금 1천만원에 월세 80만원을 받고 있으며, 대출은 없습니다.</p>
+
+    <div class="highlight-box">
+      <p><strong>시나리오 A 기본 조건</strong><br>
+      매입가 2억5천만원 | 취득세(오피스텔 4.6%) 1,150만원 | 보증금 1천만원 | 월세 80만원 | 대출 없음</p>
+    </div>
+
+    <h3>표면수익률 계산</h3>
+    <p>연 임대수입 = 80만원 × 12개월 = 960만원<br>
+    표면수익률 = 960만원 ÷ 25,000만원 × 100 = <strong>3.84%</strong></p>
+
+    <h3>실질수익률 계산 (비용 차감 후)</h3>
+    <p>운영비용을 항목별로 계산합니다.</p>
+    <ul>
+      <li>재산세: 공시가 약 1억5천만원 기준, 재산세·도시지역분 합산 약 25만원</li>
+      <li>공실 충당(1개월): 80만원 - 오피스텔 평균 공실 기간 반영</li>
+      <li>수선·관리비: 연 24만원 (월세의 2.5%)</li>
+      <li>임대소득세: 960만원 × 50% × 14% × 1.1(지방소득세) = 73.92만원</li>
+    </ul>
+    <p>총 운영비용 = 25 + 80 + 24 + 73.92 = <strong>202.92만원</strong></p>
+    <p>순수익 = 960 - 202.92 = <strong>757.08만원</strong></p>
+    <p>실투자금 = 25,000(매입가) + 1,150(취득세) - 1,000(보증금 수령) = <strong>25,150만원</strong></p>
+    <p>실질수익률 = 757.08 ÷ 25,150 × 100 = <strong>3.01%</strong></p>
+
+    <p>표면수익률 3.84%에서 실질수익률 3.01%로 내려왔습니다. 대출이 없어 이자 비용이 없는데도 0.83%p 하락합니다. 연 757만원의 순수익은 월로 환산하면 63만원으로, 표면에서 기대한 80만원보다 실수령액이 17만원 적습니다. 5년 보유 기간으로 단순 계산하면 이 차이가 1,020만원에 달합니다.</p>
+
+    <p>취득세를 초기 비용으로만 보고 수익률 계산에서 제외하는 경우가 많습니다. 하지만 오피스텔은 취득세율이 4.6%로 아파트의 4배 이상이므로, 5년 이상 보유를 전제로 하더라도 이를 반영하는 것이 정확한 비교입니다. 취득세 1,150만원을 5년 분할로 연간 비용에 포함하면 실질수익률은 2.55%까지 내려갑니다.</p>
+
+    <h2>시나리오 B - 서울 아파트 5억원, 대출 2억원 레버리지 투자</h2>
+    <p>대출을 활용한 일반적인 투자 케이스입니다. 이현우씨(48세, 자영업)는 서울 외곽 전용 59㎡ 아파트를 5억원에 매입했습니다. 보증금 5천만원에 월세 130만원을 받고, 주담대 2억원(금리 4.2%)을 이용 중입니다.</p>
+
+    <div class="highlight-box">
+      <p><strong>시나리오 B 기본 조건</strong><br>
+      매입가 5억원 | 취득세(1주택 1.1%) 550만원 | 보증금 5천만원 | 월세 130만원 | 대출 2억원(금리 4.2%)</p>
+    </div>
+
+    <h3>표면수익률 계산</h3>
+    <p>연 임대수입 = 130만원 × 12 = 1,560만원<br>
+    표면수익률 = 1,560만원 ÷ 50,000만원 × 100 = <strong>3.12%</strong></p>
+
+    <h3>실질수익률 계산 (비용 차감 후)</h3>
+    <ul>
+      <li>대출이자: 2억원 × 4.2% = 840만원</li>
+      <li>재산세: 공시가 약 3억5천만원 기준 약 38만원</li>
+      <li>공실 충당(1개월): 130만원</li>
+      <li>수선비: 36만원 (월세의 2.3%)</li>
+      <li>임대소득세: 1,560만원 × 50% × 14% × 1.1 = 120.12만원</li>
+    </ul>
+    <p>총 운영비용 = 840 + 38 + 130 + 36 + 120.12 = <strong>1,164.12만원</strong></p>
+    <p>순수익 = 1,560 - 1,164.12 = <strong>395.88만원</strong></p>
+    <p>내 실투자금 = 50,000 - 20,000(대출) - 5,000(보증금 수령) + 550(취득세) = <strong>25,550만원</strong></p>
+    <p>실질수익률 = 395.88 ÷ 25,550 × 100 = <strong>1.55%</strong></p>
+
+    <p>표면수익률 3.12%에서 실질 1.55%로, 정확히 절반으로 줄었습니다. 매달 손에 쥐는 금액은 130만원이 아니라 33만원(395.88만원 ÷ 12개월)입니다. 이 33만원이 과연 2억5천만원의 내 돈을 묶어두는 것에 합당한 보상인지 따져봐야 합니다.</p>
+
+    <p>비교 기준을 잡기 위해, 만약 2억5,550만원을 연 3.5% 정기예금에 넣어뒀다면 세전 연 895만원, 세후 약 756만원을 받습니다. 임대 실질수익률 1.55%로 벌어들이는 395만원의 두 배 가까이 됩니다. 물론 임대 투자에는 시세차익이라는 변수가 있으므로 단순 비교로만 판단할 수는 없지만, 임대소득만 놓고 보면 이 투자의 기회비용이 상당합니다.</p>
+
+    <p>취득세 관련: 이 시나리오에서 1주택 취득세는 1.1%(550만원)입니다. 만약 이미 주택을 보유한 상태에서 2주택자로 취득하면 세율이 8%로 뛰어 취득세만 4,000만원이 됩니다. 취득세가 달라지면 실투자금과 수익률 계산 전체가 바뀌므로, <a href="../posts/acquisition-tax-2026.html" style="color:#F59E0B;">취득세 계산은 반드시 주택 수 기준으로 별도 확인</a>이 필요합니다.</p>
+
+    <h2>여기서 함정이 있다 - 표면수익률 5%가 실질 마이너스가 되는 이유</h2>
+    <p>임대 투자 커뮤니티에서 "수익률 5%짜리 매물"이라는 말을 종종 봅니다. 대부분 이 수치는 표면수익률입니다. 숫자 하나를 바꾸면 완전히 다른 결과가 나옵니다.</p>
+
+    <h3>반전 시나리오: 빌라 2.5억원, 대출 80%</h3>
+    <p>최철수씨(39세, 투자자)는 서울 외곽 빌라를 2억5천만원에 매입했습니다. 대출 2억원(금리 4.8%), 보증금 없이 순수 월세 105만원을 받고 있습니다.</p>
+
+    <div class="highlight-box">
+      <p><strong>반전 시나리오 기본 조건</strong><br>
+      매입가 2억5천만원 | 취득세 275만원 | 대출 2억원(금리 4.8%) | 보증금 없음 | 월세 105만원</p>
+    </div>
+
+    <p>표면수익률 = 1,260만원(연 수입) ÷ 25,000만원 × 100 = <strong>5.04%</strong></p>
+    <p>"수익률 5%짜리 물건"처럼 보입니다. 이제 실제 비용을 차감합니다.</p>
+
+    <ul>
+      <li>대출이자: 2억원 × 4.8% = <strong>960만원</strong></li>
+      <li>재산세: 약 25만원</li>
+      <li>공실 충당(1.5개월, 빌라 평균): 157.5만원</li>
+      <li>수선비: 30만원</li>
+      <li>임대소득세: 1,260만원 × 50% × 14% × 1.1 = 97.02만원</li>
+    </ul>
+    <p>총 운영비용 = 960 + 25 + 157.5 + 30 + 97.02 = <strong>1,269.52만원</strong></p>
+    <p>순수익 = 1,260 - 1,269.52 = <strong>-9.52만원</strong></p>
+
+    <p>핵심은 이겁니다. 연간 수입 1,260만원을 받고도 9.52만원 적자입니다. 임대료가 월 105만원씩 들어오는데 실질적으로는 돈을 잃고 있습니다.</p>
+
+    <p>실투자금(내 현금) = 25,000 - 20,000 + 275 = <strong>5,275만원</strong><br>
+    실질수익률 = -9.52 ÷ 5,275 × 100 = <strong>-0.18%</strong></p>
+
+    <p>여기에 기회비용까지 더하면 더 심각합니다. 내 돈 5,275만원을 예금(연 3.5%)에 넣었다면 연 184.6만원을 받을 수 있습니다. 임대 투자의 실질손실 9.52만원과 기회비용 184.6만원을 합치면, 이 투자로 인한 연간 실질 손해는 194만원이 됩니다. 수익률로 환산하면 -3.68%입니다.</p>
+
+    <p>표면수익률 5.04%인 투자가 기회비용 포함 실질수익률 -3.68%라는 결과는 오직 레버리지 비율이 80%이기 때문에 발생합니다. 같은 물건을 대출 없이 매입했다면 실질수익률은 약 2.96%로 양수로 돌아섭니다. 대출 비율이 수익률의 방향 자체를 바꿉니다.</p>
+
+    <h2>대출 비율이 수익률을 어떻게 바꾸는가 - 숫자로 보는 레버리지 효과</h2>
+    <p>같은 5억 아파트(월세 130만원, 보증금 5천만원, 금리 4.2%)를 대출 비율만 다르게 해서 실질수익률이 어떻게 변하는지 계산했습니다. 고정 비용(재산세 38만원 + 공실 1개월 130만원 + 수선비 36만원 + 임대소득세 120.12만원 = 324.12만원)은 동일 조건입니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>대출 비율</th>
+            <th>대출금</th>
+            <th>연 이자(4.2%)</th>
+            <th>순수익</th>
+            <th>실투자금</th>
+            <th>실질수익률</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>무대출</td>
+            <td>0원</td>
+            <td>0원</td>
+            <td>1,235만원</td>
+            <td>4억5,550만원</td>
+            <td class="rate">2.71%</td>
+          </tr>
+          <tr>
+            <td>40% 대출</td>
+            <td>2억원</td>
+            <td>840만원</td>
+            <td>395만원</td>
+            <td>2억5,550만원</td>
+            <td class="rate">1.55%</td>
+          </tr>
+          <tr>
+            <td>60% 대출</td>
+            <td>3억원</td>
+            <td>1,260만원</td>
+            <td class="neg">-24만원</td>
+            <td>1억5,550만원</td>
+            <td class="neg">-0.16%</td>
+          </tr>
+          <tr>
+            <td>70% 대출</td>
+            <td>3.5억원</td>
+            <td>1,470만원</td>
+            <td class="neg">-234만원</td>
+            <td>1억550만원</td>
+            <td class="neg">-2.22%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>대출 비율이 60%를 넘는 순간 이 물건의 실질수익률은 마이너스로 전환됩니다. 금리 4.2% 기준으로 이 임계점(break-even LTV)은 정확히 대출 원금 이자가 순이익을 잠식하는 지점인데, 대략 5억 아파트에서 대출 2억9천만원 수준입니다. 그 이상 빌리면 임대소득으로 이자도 못 갚는 구조가 됩니다.</p>
+
+    <p>무대출 실질수익률 2.71%와 40% 대출 실질수익률 1.55%를 보면, 대출을 늘릴수록 수익률이 오히려 낮아집니다. 일반적으로 레버리지를 늘리면 자기자본 수익률(ROE)이 올라간다고 알려져 있지만, 이는 레버리지 비용(이자율)이 투자 수익률보다 낮을 때만 해당합니다. 임대수익률 3%짜리 물건을 4.2% 금리로 빌려 사면 레버리지가 수익률을 갉아먹는 역효과가 납니다.</p>
+
+    <h2>임대소득세 계산 - 분리과세와 종합과세 선택 기준</h2>
+    <p>임대소득세는 많은 투자자들이 운영비용 계산에서 빠뜨리는 항목입니다. 소득세법 제64조의2 및 소득세법 시행령 제122조의2에 따라 주택 임대소득은 연간 2,000만원을 기준으로 과세 방식이 다르게 적용됩니다.</p>
+
+    <h3>연 임대소득 2,000만원 이하: 분리과세 선택 가능</h3>
+    <p>분리과세를 선택하면 다른 소득과 합산하지 않고 별도 세율 14%로 계산합니다. 계산 공식은 다음과 같습니다.</p>
+    <div class="formula-box">
+      세액 = 임대수입 × 과세표준비율 × 14% × 1.1(지방소득세)<br>
+      미등록: 필요경비율 50% → 과세표준비율 50% (임대수입 × 50% × 14% × 1.1)<br>
+      임대사업자 등록: 필요경비율 60% → 과세표준비율 40% (임대수입 × 40% × 14% × 1.1)
+    </div>
+
+    <p><strong>계산 예시</strong>: 연 임대수입 1,560만원인 경우<br>
+    - 미등록: 1,560 × 50% × 14% × 1.1 = 120.12만원<br>
+    - 임대사업자 등록: 1,560 × 40% × 14% × 1.1 = 96.10만원</p>
+
+    <p>임대사업자로 등록하면 필요경비율이 50%에서 60%로 올라가(과세표준이 40%로 줄어) 세금이 24만원 줄어듭니다. 다만 임대사업자 등록에는 의무임대 기간, 임대료 증액 제한(연 5% 이내), 보증보험 가입 의무 등의 제약이 따릅니다. 수익률에 유리하더라도 이러한 의무 조건을 먼저 검토해야 합니다.</p>
+
+    <h3>연 임대소득 2,000만원 초과: 종합소득세 신고 의무</h3>
+    <p>임대소득이 2,000만원을 초과하면 반드시 다른 소득과 합산해 종합소득세로 신고해야 합니다. 종합소득 구간에 따라 6~45%의 누진세율이 적용됩니다. 직장인이 임대소득을 함께 신고하는 경우, 근로소득과 임대소득을 합산한 금액에 세율이 부과되므로 실효세율이 크게 높아질 수 있습니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>연 임대수입</th>
+            <th>분리과세 세액(미등록)</th>
+            <th>분리과세 세액(등록)</th>
+            <th>절세 효과</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>600만원</td>
+            <td>46.2만원</td>
+            <td>36.96만원</td>
+            <td>9.24만원</td>
+          </tr>
+          <tr>
+            <td>960만원</td>
+            <td>73.92만원</td>
+            <td>59.14만원</td>
+            <td>14.78만원</td>
+          </tr>
+          <tr>
+            <td>1,260만원</td>
+            <td>97.02만원</td>
+            <td>77.62만원</td>
+            <td>19.40만원</td>
+          </tr>
+          <tr>
+            <td>1,560만원</td>
+            <td>120.12만원</td>
+            <td>96.10만원</td>
+            <td>24.02만원</td>
+          </tr>
+          <tr>
+            <td>2,000만원</td>
+            <td>154.0만원</td>
+            <td>123.2만원</td>
+            <td>30.80만원</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>국세청은 2019년부터 임대소득 2,000만원 이하 분리과세를 전면 시행하고 있으며, 연 2,000만원 이하 임대소득자도 5월 종합소득세 신고 기간에 반드시 신고해야 합니다(신고하지 않으면 가산세 부과). 세금 신고 방법과 공제 항목에 대한 자세한 내용은 <a href="https://www.hometax.go.kr" target="_blank" rel="noopener" style="color:#F59E0B;">홈택스(www.hometax.go.kr)</a>의 모의계산 서비스에서 확인할 수 있습니다.</p>
+
+    <h2>임대수익률과 전세 전환 - 임대인 관점에서의 수익 비교</h2>
+    <p>전세와 월세는 임대인에게 서로 다른 방식의 수익 구조를 제공합니다. 전세는 임대소득이 없는 대신 전세금을 금융 상품에 투자해 수익을 올릴 수 있고, 월세는 임대소득이 직접 발생하지만 세금과 관리 부담이 따릅니다.</p>
+    <p>전세를 월세로 전환할지 고민 중이라면, <a href="../posts/jeonse-vs-wolse.html" style="color:#F59E0B;">전세 vs 월세 손익분기 금리 계산법</a>을 먼저 확인해보세요. 예금 금리와 비교해 어느 구조가 더 유리한지 손익분기점을 직접 계산할 수 있습니다.</p>
+
+    <h3>전세금을 월세로 전환하는 한도</h3>
+    <p>주택임대차보호법 시행령 제2조에 따라 전세금의 일부 또는 전부를 월세로 전환할 때, 월차임이 일정 금액을 초과할 수 없습니다. 전환 기준은 한국은행 기준금리(2026년 5월 기준 2.75%)에 3.5%를 더한 6.25%입니다. 전세 보증금 2억원을 전액 월세로 전환한다면, 월차임 상한은 2억원 × 6.25% ÷ 12 = 1,041,667원이 됩니다. 실제 시장에서는 전환율 5~6% 수준에서 협의가 이루어지는 경우가 많습니다.</p>
+
+    <div class="cta-box">
+      <p>내 매물의 임대수익률이 궁금하다면? 매입가, 대출, 보증금, 월세를 입력하면 표면수익률과 순수익률을 바로 계산해드립니다.</p>
+      <a href="../../calc/realestate/rental/" class="cta-btn">임대수익률 계산기 바로가기</a>
+      <p style="font-size:13px;color:#6B7280;margin-top:8px;">취득세 계산이 필요하다면 → <a href="../../calc/realestate/acquisition/" style="color:#F59E0B;">취득세 계산기</a></p>
+    </div>
+
+    <h2>자주 묻는 질문 (FAQ)</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">임대소득세는 어떻게 계산하나요? 종합과세와 분리과세 중 어느 게 유리한가요?</div>
+      <div class="faq-a">연간 임대소득이 2,000만원 이하이면 분리과세(14%)와 종합소득세 합산 중 선택할 수 있습니다. 2,000만원 이하는 보통 분리과세가 유리한데, 분리과세 방식은 수입금액 × 필요경비율(50%, 등록임대 60%) × 14%로 계산합니다. 예를 들어 연 임대수입 1,200만원이면 1,200만원 × 50% × 14% = 84만원(지방소득세 10% 포함 시 92.4만원)입니다. 2,000만원을 초과하면 반드시 종합소득세로 신고해야 하며, 다른 소득과 합산해 6~45% 누진세율이 적용됩니다. 임대사업자로 등록하면 필요경비율이 60%로 높아져 세금이 더 줄어들 수 있습니다. 정확한 세액은 홈택스(www.hometax.go.kr) 모의계산기로 확인하세요.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">표면수익률 몇 %면 임대 투자로 합격점인가요?</div>
+      <div class="faq-a">한국부동산원 임대차 통계에 따르면 서울·수도권 주거용 부동산의 표면수익률은 2.5~4.5% 수준입니다. 하지만 표면수익률만으로 합격·불합격을 판단하는 것은 위험합니다. 대출이자와 취득세, 재산세, 공실, 임대소득세를 모두 빼고 나면 실질수익률은 표면의 절반 이하로 줄어드는 경우가 많습니다. 실질수익률 기준으로는 3년 만기 정기예금 금리(2026년 기준 약 3.5%)를 넘기는 게 최소 기준이라고 볼 수 있습니다. 실질수익률이 2% 이하라면 임대 수익 목적보다 시세차익 기대가 더 큰 투자인 셈이니, 그 점을 명확히 하고 들어가야 합니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">전세를 월세로 전환할 때 임대인이 받을 수 있는 금액은 어떻게 계산하나요?</div>
+      <div class="faq-a">주택임대차보호법 시행령 제2조에 따라 전세보증금을 월세로 전환할 때 산정한 월차임은 기준금리+3.5%와 법정 상한율(현행 연 10%) 중 낮은 값을 초과할 수 없습니다. 2026년 기준 한국은행 기준금리 2.75%에 3.5%를 더하면 전환율 상한은 6.25%입니다. 전세 3억원을 보증금 5천만원 월세로 전환한다면, 차액 2억5천만원 × 6.25% ÷ 12개월 = 월 130,208원이 상한입니다. 시장에서는 전환율 4~6% 수준이 일반적이며, 전환율이 높을수록 임대인에게 유리하고 임차인에게 불리합니다. 전환 후 임대소득세 신고 의무가 새로 생기므로, 세후 수익률을 미리 계산해보는 것이 중요합니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">공실이 6개월 이상 지속되면 실질수익률에 얼마나 영향을 주나요?</div>
+      <div class="faq-a">6개월 공실이 발생하면 연 임대수입의 절반이 사라지므로 실질수익률에 큰 타격을 줍니다. 예를 들어 5억 아파트·대출 2억(월세 130만원) 투자에서 6개월 공실이 생기면 연 수입이 1,560만원에서 780만원으로 줄어들고, 대출이자·재산세 등 고정 비용은 그대로이므로 순수익이 +395만원에서 -194만원으로 뒤집힙니다. 서울 아파트의 평균 공실 기간은 1~2개월로 짧은 편이지만, 오피스텔과 빌라는 3~4개월 공실이 흔합니다. 임대수익률 계산 시 최소 1.5~2개월분의 공실 충당금을 비용으로 반드시 포함해야 합니다.</div>
+    </div>
+
+    <h2>투자 전에 계산해야 할 3가지</h2>
+    <p>임대수익률 계산의 핵심은 표면수익률이 아닌 실질수익률입니다. 이 글에서 살펴본 시나리오들을 정리하면 한 가지 패턴이 보입니다. 대출 비율이 높을수록, 취득세가 높은 유형일수록, 공실 위험이 클수록 표면수익률과 실질수익률의 격차가 벌어집니다.</p>
+    <p>5억 아파트에서 실질수익률 1.55%가 나온다는 사실 - 이것이 기준입니다. 대출을 더 늘리면 이 수치는 마이너스로 내려가고, 대출 없이 산다면 2.71%로 올라갑니다. 오피스텔 2억5천을 대출 없이 사면 3.01%입니다. 숫자가 전달하는 메시지는 명확합니다. 임대소득만으로는 예금 금리를 넘기 어렵습니다.</p>
+    <p>투자 판단 전에 반드시 계산해야 할 3가지를 꼽으라면 이렇습니다. 첫째, 실투자금 기준 실질수익률이 현재 예금 금리보다 높은가. 둘째, 대출 비율이 수익률을 마이너스로 만들지 않는가. 셋째, 공실 3개월이 발생해도 이자와 세금을 감당할 현금 여유가 있는가. 이 세 가지를 통과한 다음에 시세차익 기대를 덧붙이는 것이 순서입니다.</p>
+    <p>정확한 수치 계산은 <a href="../../calc/realestate/rental/" style="color:#F59E0B;">임대수익률 계산기</a>에서 본인의 조건을 입력해 직접 확인해보세요. 표면수익률과 순수익률을 한 번에 볼 수 있습니다.</p>
+
+  </div>
+</div>
+
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "주택임대차보호법 시행령, 소득세법, 한국부동산원 임대차 통계 2026년 기준",
+  basisDate: "2026년 기준",
+  referenceOrg: "국토교통부·한국부동산원·국세청",
+  lastReviewed: '2026.05.05',
+  disclaimer: "본 내용은 참고용이며, 세금 및 투자 관련 사항은 전문가와 상담하세요.",
+  relatedCalc: { name: '임대수익률 계산기', url: '/calc/realestate/rental/' },
+  category: 'realestate'
+};
+</script>
+<script src="/assets/footer-unified.js"></script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>
