@@ -167,6 +167,41 @@
 
     /* ══ 자주 찾는 계산기 ══ */
     .hub-section-label { font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--gray-400); margin-bottom: 10px; }
+
+    /* ══ 상황별 추천 ══ */
+    .hub-guide { margin-bottom: 24px; }
+    .hub-guide-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .hub-guide-item { display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px; background: #fff; border: 1px solid var(--gray-200); border-radius: 12px; text-decoration: none; transition: all 0.15s; }
+    .hub-guide-item:hover { border-color: var(--primary); box-shadow: 0 2px 8px var(--primary-light); }
+    .hub-guide-info { flex: 1; min-width: 0; }
+    .hub-guide-situation { font-size: 11px; color: var(--gray-500); margin-bottom: 2px; }
+    .hub-guide-calc { font-size: 13px; font-weight: 700; color: var(--gray-900); }
+    .hub-guide-arrow { margin-left: auto; font-size: 12px; color: var(--primary); font-weight: 700; flex-shrink: 0; padding-top: 2px; }
+    @media (max-width: 767px) {
+      .hub-guide-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ══ 함께 읽으면 좋은 글 / 관련 카테고리 ══ */
+    .hub-blogs { margin: 24px 0 8px; }
+    .hub-blogs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .hub-blogs-item { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; background: #fff; border: 1px solid var(--gray-200); border-radius: 12px; text-decoration: none; transition: all 0.15s; }
+    .hub-blogs-item:hover { border-color: var(--primary); box-shadow: 0 2px 8px var(--primary-light); }
+    .hub-blogs-label { font-size: 10px; font-weight: 800; color: var(--primary); letter-spacing: 0.5px; text-transform: uppercase; }
+    .hub-blogs-title { font-size: 13px; font-weight: 700; color: var(--gray-900); line-height: 1.4; }
+    .hub-blogs-desc { font-size: 11.5px; color: var(--gray-500); line-height: 1.55; }
+
+    .hub-related { margin: 24px 0 8px; }
+    .hub-related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .hub-related-item { display: flex; align-items: center; gap: 10px; padding: 12px 14px; background: #fff; border: 1px solid var(--gray-200); border-radius: 12px; text-decoration: none; transition: all 0.15s; }
+    .hub-related-item:hover { border-color: var(--primary); box-shadow: 0 2px 8px var(--primary-light); }
+    .hub-related-icon { font-size: 20px; flex-shrink: 0; }
+    .hub-related-info { flex: 1; min-width: 0; }
+    .hub-related-name { font-size: 12.5px; font-weight: 700; color: var(--gray-900); }
+    .hub-related-desc { font-size: 11px; color: var(--gray-500); line-height: 1.5; margin-top: 2px; }
+    @media (max-width: 767px) {
+      .hub-blogs-grid { grid-template-columns: 1fr; }
+      .hub-related-grid { grid-template-columns: 1fr; }
+    }
     .hub-popular { margin-bottom: 24px; }
     .hub-popular-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
     .hub-popular-card {
@@ -316,7 +351,7 @@
       <a href="/calc/salary/" class="msl-link"><span class="msl-icon">📈</span>이직 / 연봉<span class="msl-badge">7</span></a>
       <a href="/calc/finance/" class="msl-link"><span class="msl-icon">🏦</span>금융 · 이자<span class="msl-badge">5</span></a>
       <a href="/calc/health/" class="msl-link"><span class="msl-icon">🏃</span>건강<span class="msl-badge">5</span></a>
-      <a href="/calc/pension-welfare/" class="msl-link"><span class="msl-icon">🏛</span>연금·복지<span class="msl-badge">5</span></a>
+      <a href="/calc/pension-welfare/" class="msl-link"><span class="msl-icon">🧓</span>연금·복지<span class="msl-badge">5</span></a>
       <a href="/calc/date/" class="msl-link"><span class="msl-icon">📅</span>날짜 · D-day<span class="msl-badge">5</span></a>
       <a href="/calc/ai/" class="msl-link msl-active"><span class="msl-icon">🤖</span>AI / 테크<span class="msl-badge">5</span></a>
       <a href="/calc/pet/" class="msl-link"><span class="msl-icon">🐾</span>반려동물<span class="msl-badge">5</span></a>
@@ -347,6 +382,55 @@
 
   <div style="background:#fff;border:1px solid rgba(139,92,246,0.2);border-radius:14px;padding:18px 22px;margin-bottom:20px;font-size:14px;line-height:1.8;">
     AI 서비스를 도입하거나 개발할 때 가장 먼저 부딪히는 문제가 비용입니다. 같은 ChatGPT API라도 GPT-4o와 GPT-4o-mini는 토큰 단가가 약 15배 차이납니다. GPU 클라우드는 같은 A100이라도 온디맨드와 1년 예약의 월 비용이 30-40% 다릅니다. AI 비용을 체계적으로 파악하지 않으면 예산 초과나 비효율적인 모델 선택으로 이어질 수 있습니다. API 토큰 비용 · GPU 클라우드 · SaaS 비교 · LLM 비교 · 인프라 예측 5가지 계산기로 AI 도입 비용 전반을 한 곳에서 계산하세요.
+  </div>
+
+  <!-- 상황별 계산기 안내 -->
+  <div class="hub-guide" id="sec-guide">
+    <div class="hub-section-label">상황별 추천 계산기</div>
+    <div class="hub-guide-grid">
+      <a class="hub-guide-item" href="/calc/ai/api-token/">
+        <div class="hub-guide-info">
+          <div class="hub-guide-situation">챗봇·자동화 API 월 예산을 추정할 때</div>
+          <div class="hub-guide-calc">API 토큰 비용 계산기</div>
+        </div>
+        <div class="hub-guide-arrow">→</div>
+      </a>
+      <a class="hub-guide-item" href="/calc/ai/gpu-cloud/">
+        <div class="hub-guide-info">
+          <div class="hub-guide-situation">학습·추론용 GPU 인스턴스 비용을 비교할 때</div>
+          <div class="hub-guide-calc">GPU 클라우드 비교</div>
+        </div>
+        <div class="hub-guide-arrow">→</div>
+      </a>
+      <a class="hub-guide-item" href="/calc/ai/saas-comparison/">
+        <div class="hub-guide-info">
+          <div class="hub-guide-situation">SaaS 구독 vs 자체구축 손익분기를 알고 싶을 때</div>
+          <div class="hub-guide-calc">SaaS vs 자체구축 비교</div>
+        </div>
+        <div class="hub-guide-arrow">→</div>
+      </a>
+      <a class="hub-guide-item" href="/calc/ai/llm-comparison/">
+        <div class="hub-guide-info">
+          <div class="hub-guide-situation">작업 유형별 최적 LLM 모델을 고를 때</div>
+          <div class="hub-guide-calc">LLM 비교표</div>
+        </div>
+        <div class="hub-guide-arrow">→</div>
+      </a>
+      <a class="hub-guide-item" href="/calc/ai/infra-forecast/">
+        <div class="hub-guide-info">
+          <div class="hub-guide-situation">스타트업 월 인프라 비용을 예측할 때</div>
+          <div class="hub-guide-calc">인프라 비용 예측</div>
+        </div>
+        <div class="hub-guide-arrow">→</div>
+      </a>
+      <a class="hub-guide-item" href="/calc/ai/api-token/">
+        <div class="hub-guide-info">
+          <div class="hub-guide-situation">GPT-4o vs Claude vs Gemini 월 비용 비교</div>
+          <div class="hub-guide-calc">API 토큰 비용 계산기</div>
+        </div>
+        <div class="hub-guide-arrow">→</div>
+      </a>
+    </div>
   </div>
 
   <!-- 자주 찾는 계산기 -->
@@ -427,32 +511,6 @@
 
   </div>
 
-  <!-- 상황별 추천 계산기 -->
-  <div id="sec-guide" style="margin-bottom:24px;">
-    <div class="hub-section-label">상황별 추천 계산기</div>
-    <div style="display:flex;flex-direction:column;gap:10px;">
-      <div style="background:#fff;border:1px solid rgba(139,92,246,0.12);border-radius:12px;padding:16px 18px;">
-        <div style="font-size:13px;font-weight:800;color:#1F2937;margin-bottom:6px;">⚡ AI 챗봇·자동화 서비스 API 예산 수립</div>
-        <p style="font-size:12.5px;color:#4B5563;line-height:1.7;">월 API 호출 횟수와 평균 토큰 수를 알면 월 비용을 사전에 추정할 수 있습니다. GPT-4o는 입력 $2.50/백만 토큰, 출력 $10.00/백만 토큰, Claude 3.5 Sonnet은 입력 $3.00/출력 $15.00입니다. <a href="/calc/ai/api-token/" style="color:#8B5CF6;font-weight:700;">API 토큰 비용 계산기</a>에서 모델별로 비교해 예산 초과 없이 서비스를 기획하세요.</p>
-      </div>
-      <div style="background:#fff;border:1px solid rgba(139,92,246,0.12);border-radius:12px;padding:16px 18px;">
-        <div style="font-size:13px;font-weight:800;color:#1F2937;margin-bottom:6px;">💻 AI 모델 학습·파인튜닝 GPU 서버 선택</div>
-        <p style="font-size:12.5px;color:#4B5563;line-height:1.7;">대규모 모델 학습에는 A100 또는 H100 GPU가 필요하고, 추론 서비스에는 A10G나 T4도 충분할 수 있습니다. AWS p4d.24xlarge(A100x8) 온디맨드 월 비용은 약 2,200만 원, 1년 예약은 약 1,400만 원 수준입니다. <a href="/calc/ai/gpu-cloud/" style="color:#8B5CF6;font-weight:700;">GPU 클라우드 비교 계산기</a>에서 작업 규모와 예산에 맞는 인스턴스를 선택하세요.</p>
-      </div>
-      <div style="background:#fff;border:1px solid rgba(139,92,246,0.12);border-radius:12px;padding:16px 18px;">
-        <div style="font-size:13px;font-weight:800;color:#1F2937;margin-bottom:6px;">⚖️ SaaS AI 툴 vs 자체 AI 개발 결정</div>
-        <p style="font-size:12.5px;color:#4B5563;line-height:1.7;">10명 팀 기준 월 SaaS 구독료가 100만 원이라면, 자체구축 초기비용 2,000만 원을 회수하려면 20개월이 걸립니다. 하지만 자체구축은 커스터마이징 자유도와 데이터 보안 측면의 이점이 있습니다. <a href="/calc/ai/saas-comparison/" style="color:#8B5CF6;font-weight:700;">SaaS vs 자체구축 비교 계산기</a>로 팀 규모별 손익분기점을 직접 확인하세요.</p>
-      </div>
-      <div style="background:#fff;border:1px solid rgba(139,92,246,0.12);border-radius:12px;padding:16px 18px;">
-        <div style="font-size:13px;font-weight:800;color:#1F2937;margin-bottom:6px;">📊 서비스 적합 LLM 모델 선택</div>
-        <p style="font-size:12.5px;color:#4B5563;line-height:1.7;">같은 GPT-4 계열이라도 GPT-4o-mini는 GPT-4o보다 약 15배 저렴하지만 복잡한 추론에서 성능 차이가 있습니다. 코딩·글쓰기·데이터 분석 등 작업 유형에 따라 최적 모델이 다릅니다. <a href="/calc/ai/llm-comparison/" style="color:#8B5CF6;font-weight:700;">LLM 비교표</a>에서 성능 벤치마크와 비용을 함께 보고 선택하세요.</p>
-      </div>
-      <div style="background:#fff;border:1px solid rgba(139,92,246,0.12);border-radius:12px;padding:16px 18px;">
-        <div style="font-size:13px;font-weight:800;color:#1F2937;margin-bottom:6px;">🚀 스타트업 월 인프라 비용 예측</div>
-        <p style="font-size:12.5px;color:#4B5563;line-height:1.7;">초기 스타트업의 일반적인 클라우드 인프라 비용은 서버 30-50만 원, DB 10-20만 원, CDN 5-10만 원, 모니터링 5만 원 수준에서 시작합니다. <a href="/calc/ai/infra-forecast/" style="color:#8B5CF6;font-weight:700;">인프라 예측 계산기</a>에서 예상 사용자 수와 트래픽을 입력하면 월 비용 시뮬레이션이 가능합니다. 투자자나 팀에 제출할 인프라 예산안 작성에 활용하세요.</p>
-      </div>
-    </div>
-  </div>
 
   <!-- AI 비용 계산 배경 지식 -->
   <div id="sec-knowledge" style="background:#fff;border-radius:16px;padding:24px;margin-bottom:24px;">
@@ -514,37 +572,52 @@
     </div>
   </div>
 
-  <!-- 관련 블로그 가이드 글 -->
-  <div id="sec-blogs" style="margin-bottom:24px;margin-top:24px;">
-    <div class="hub-section-label">관련 가이드 글</div>
-    <div style="display:flex;flex-direction:column;gap:8px;">
-      <a href="/blog/posts/chatgpt-api-cost.html" style="background:#fff;border-radius:10px;padding:12px 14px;text-decoration:none;display:flex;align-items:center;gap:10px;border:1px solid #E5E7EB;transition:all 0.15s;">
-        <span style="font-size:16px;">📝</span>
-        <span style="font-size:12.5px;font-weight:600;color:#374151;">ChatGPT API 비용 계산법 - 모델별 토큰 단가와 월 비용 시뮬레이션</span>
+  <!-- 관련 블로그 교차 링크 -->
+  <div class="hub-blogs" id="sec-blogs">
+    <div class="hub-section-label">함께 읽으면 좋은 글</div>
+    <div class="hub-blogs-grid">
+      <a class="hub-blogs-item" href="/blog/posts/chatgpt-api-cost.html">
+        <div class="hub-blogs-label">API 비용</div>
+        <div class="hub-blogs-title">ChatGPT API 비용 계산법</div>
+        <div class="hub-blogs-desc">모델별 토큰 단가와 월 비용 시뮬레이션, 절약 팁 정리</div>
       </a>
-      <a href="/blog/posts/gpu-cloud-comparison.html" style="background:#fff;border-radius:10px;padding:12px 14px;text-decoration:none;display:flex;align-items:center;gap:10px;border:1px solid #E5E7EB;transition:all 0.15s;">
-        <span style="font-size:16px;">📝</span>
-        <span style="font-size:12.5px;font-weight:600;color:#374151;">GPU 클라우드 서버 비용 비교 - AWS vs GCP vs Azure vs Lambda</span>
+      <a class="hub-blogs-item" href="/blog/posts/gpu-cloud-comparison.html">
+        <div class="hub-blogs-label">GPU 클라우드</div>
+        <div class="hub-blogs-title">GPU 클라우드 서버 비용 비교</div>
+        <div class="hub-blogs-desc">AWS·GCP·Azure·Lambda 4사 시간당 단가와 선택 기준</div>
       </a>
-      <a href="/blog/posts/saas-vs-self-build.html" style="background:#fff;border-radius:10px;padding:12px 14px;text-decoration:none;display:flex;align-items:center;gap:10px;border:1px solid #E5E7EB;transition:all 0.15s;">
-        <span style="font-size:16px;">📝</span>
-        <span style="font-size:12.5px;font-weight:600;color:#374151;">SaaS vs 자체구축 비교 - 손익분기점 계산과 결정 기준</span>
+      <a class="hub-blogs-item" href="/blog/posts/saas-vs-self-build.html">
+        <div class="hub-blogs-label">SaaS vs 자체구축</div>
+        <div class="hub-blogs-title">SaaS vs 자체구축 비용 비교</div>
+        <div class="hub-blogs-desc">손익분기점 계산과 의사결정 기준, 운영비 시나리오</div>
       </a>
     </div>
   </div>
 
-  <!-- 함께 쓰는 계산기 -->
-  <div style="margin-bottom:16px;">
-    <div class="hub-section-label">함께 쓰는 계산기</div>
-    <div style="display:flex;flex-wrap:wrap;gap:8px;">
-      <a href="/calc/tax/" style="display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid #E5E7EB;border-radius:8px;padding:9px 14px;text-decoration:none;font-size:12px;font-weight:700;color:#374151;transition:all 0.15s;">
-        <span>💰</span> 프리랜서 세금 <span style="font-size:11px;color:#6B7280;font-weight:500;">(API 수익 세금 계산)</span>
+  <!-- 관련 카테고리 -->
+  <div class="hub-related">
+    <div class="hub-section-label">관련 카테고리</div>
+    <div class="hub-related-grid">
+      <a class="hub-related-item" href="/calc/tax/">
+        <div class="hub-related-icon">💰</div>
+        <div class="hub-related-info">
+          <div class="hub-related-name">프리랜서 세금</div>
+          <div class="hub-related-desc">API 수익 세금 계산</div>
+        </div>
       </a>
-      <a href="/calc/salary/" style="display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid #E5E7EB;border-radius:8px;padding:9px 14px;text-decoration:none;font-size:12px;font-weight:700;color:#374151;transition:all 0.15s;">
-        <span>📈</span> 이직/연봉 <span style="font-size:11px;color:#6B7280;font-weight:500;">(AI 개발자 연봉 계산)</span>
+      <a class="hub-related-item" href="/calc/salary/">
+        <div class="hub-related-icon">📈</div>
+        <div class="hub-related-info">
+          <div class="hub-related-name">이직/연봉</div>
+          <div class="hub-related-desc">AI 개발자 연봉 계산</div>
+        </div>
       </a>
-      <a href="/calc/finance/" style="display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid #E5E7EB;border-radius:8px;padding:9px 14px;text-decoration:none;font-size:12px;font-weight:700;color:#374151;transition:all 0.15s;">
-        <span>🏦</span> 금융·이자 <span style="font-size:11px;color:#6B7280;font-weight:500;">(인프라 투자 ROI 계산)</span>
+      <a class="hub-related-item" href="/calc/finance/">
+        <div class="hub-related-icon">🏦</div>
+        <div class="hub-related-info">
+          <div class="hub-related-name">금융·이자</div>
+          <div class="hub-related-desc">인프라 투자 ROI 계산</div>
+        </div>
       </a>
     </div>
   </div>
@@ -557,11 +630,11 @@
     <div class="msr-toc-title">이 페이지에서</div>
     <nav class="msr-toc-list">
       <a href="#sec-popular" class="msr-toc-link">자주 찾는 계산기</a>
-      <a href="#sec-calcs" class="msr-toc-link">전체 계산기</a>
       <a href="#sec-guide" class="msr-toc-link">상황별 추천</a>
+      <a href="#sec-calcs" class="msr-toc-link">전체 계산기</a>
       <a href="#sec-knowledge" class="msr-toc-link">배경 지식</a>
       <a href="#sec-faq" class="msr-toc-link">자주 묻는 질문</a>
-      <a href="#sec-blogs" class="msr-toc-link">관련 가이드 글</a>
+      <a href="#sec-blogs" class="msr-toc-link">함께 보면 좋은 블로그</a>
     </nav>
   </div>
 </aside>
