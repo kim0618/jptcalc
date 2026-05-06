@@ -80,6 +80,10 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - dog-monthly-cost.html - 2026-05-05 수정
 - cagr-guide.html - 2026-05-05 수정
 - korean-age-system.html - 2026-05-05 수정
+- jeonse-conversion-rate.html - 2026-05-06 수정
+- rental-yield-guide.html - 2026-05-06 수정
+- pet-insurance.html - 2026-05-06 수정
+- chatgpt-api-cost.html - 2026-05-06 수정
 
 ## 작업 순서
 

@@ -4,19 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>연봉 인상률 계산기 - 인상률·월실수령 차이 자동계산 | 제이퍼 계산기</title>
-  <meta name="description" content="인상 전후 연봉을 입력하면 인상률과 월 추가 실수령액을 자동 계산합니다." />
+  <meta name="description" content="인상 전후 연봉 입력으로 인상률(%), 연간 인상액, 세금·4대보험 공제 후 월 추가 실수령액을 자동 계산합니다. 2026년 세율 기준." />
   <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://www.jptcalc.kr/calc/salary/raise-rate/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="연봉 인상률 계산기 | 제이퍼 계산기" />
-  <meta property="og:description" content="인상 전후 연봉을 입력하면 인상률과 월 추가 실수령액을 자동 계산합니다." />
+  <meta property="og:description" content="인상 전후 연봉 입력으로 인상률(%), 연간 인상액, 세금·4대보험 공제 후 월 추가 실수령액을 자동 계산합니다. 2026년 세율 기준." />
   <meta property="og:url" content="https://www.jptcalc.kr/calc/salary/raise-rate/" />
   <meta property="og:site_name" content="제이퍼 계산기" />
   <meta property="og:locale" content="ko_KR" />
   <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="연봉 인상률 계산기 | 제이퍼 계산기" />
-  <meta name="twitter:description" content="인상 전후 연봉을 입력하면 인상률과 월 추가 실수령액을 자동 계산합니다." />
+  <meta name="twitter:description" content="인상 전후 연봉 입력으로 인상률(%), 연간 인상액, 세금·4대보험 공제 후 월 추가 실수령액을 자동 계산합니다. 2026년 세율 기준." />
   <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
@@ -47,7 +47,7 @@
     ]
   }
   </script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"연봉 5% 인상이면 실수령도 5% 늘어나나요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 소득세는 누진세 구조라 연봉이 높아질수록 세율이 올라 실수령 증가폭은 5%보다 작습니다. 고연봉 구간일수록 세금과 4대보험 부담이 비례적으로 더 늘어납니다."}},{"@type":"Question","name":"물가상승률보다 낮은 연봉 인상은 실질 삭감인가요?","acceptedAnswer":{"@type":"Answer","text":"네, 맞습니다. 예를 들어 물가상승률이 3%인데 연봉 인상률이 2%라면 같은 돈으로 살 수 있는 재화와 서비스의 양이 줄어 실질 구매력은 오히려 하락합니다. 연봉 협상 시 물가상승률과 비교해 실질 인상 여부를 확인하는 것이 중요합니다."}},{"@type":"Question","name":"이 계산기로 무엇을 확인할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"인상 전후 연봉을 입력하면 연봉 인상률(%), 연간 인상액, 그리고 세금과 4대보험 공제 후 예상 월 추가 실수령액을 자동으로 계산합니다. 협상 전에 미리 기대치를 설정하거나 인상 결과를 확인하는 데 활용할 수 있습니다."}},{"@type":"Question","name":"업계 평균 연봉 인상률은 어디서 확인할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"한국경영자총협회, 잡코리아, 사람인 등에서 매년 발표하는 임금인상률 조사 자료를 참고하면 됩니다. 업종별·규모별 평균 인상률이 달라질 수 있으므로 본인이 속한 업계 기준 자료를 확인하는 것이 좋습니다."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"연봉 5% 인상이면 실수령도 5% 늘어나나요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 소득세는 누진세 구조라 연봉이 높아질수록 세율이 올라 실수령 증가폭은 5%보다 작습니다. 고연봉 구간일수록 세금과 4대보험 부담이 비례적으로 더 늘어납니다."}},{"@type":"Question","name":"물가상승률보다 낮은 인상은 실질 삭감인가요?","acceptedAnswer":{"@type":"Answer","text":"맞습니다. 물가상승률이 3%인데 연봉 인상률이 2%라면 같은 돈으로 살 수 있는 재화와 서비스의 양이 줄어 실질 구매력은 하락합니다. 연봉 협상 시 통계청 소비자물가지수를 참고해 실질 인상 여부를 확인하는 것이 좋습니다."}},{"@type":"Question","name":"업계 평균 인상률은 어디서 확인하나요?","acceptedAnswer":{"@type":"Answer","text":"한국경영자총협회, 잡코리아, 사람인 등에서 매년 임금인상률 조사 결과를 발표합니다. 업종별·기업 규모별로 평균 인상률이 달라지므로 본인이 속한 업계 기준 자료를 확인하는 것이 좋습니다."}},{"@type":"Question","name":"연봉 협상 최적 시기는 언제인가요?","acceptedAnswer":{"@type":"Answer","text":"일반적으로 성과 평가 직후나 회계연도 시작 전이 가장 효과적입니다. 본인의 기여도가 수치로 드러난 직후에 협상하면 논거가 명확해집니다. 이직 제안을 보유한 상태에서 협상하는 것이 유리하지만, 시장 평균 인상률을 근거로 삼는 방식이 일반적으로 받아들여지기 쉽습니다."}},{"@type":"Question","name":"세전 인상률과 실수령 인상률은 왜 다른가요?","acceptedAnswer":{"@type":"Answer","text":"소득세는 누진세 구조로 연봉이 높아질수록 높은 세율이 적용됩니다. 연봉 5,000만원 이하 구간은 15% 세율이지만 8,800만원 초과분은 24%가 적용됩니다. 건강보험·국민연금·고용보험도 비례적으로 늘어나므로 세전 인상률보다 실수령 인상률이 항상 낮게 나타납니다."}}]}</script>
   <style>
     /* raise-rate 고유 스타일 - 공통 스타일은 /assets/salary-common.css 참조 */
     .input-wrap{position:relative}
@@ -139,11 +139,53 @@
         <div class="guide-box"><strong>물가 반영</strong><span>물가상승률 대비 실질 인상 여부 판단</span></div>
       </div>
     </div>
+    <div class="guide-card">
+      <h2>연봉 인상률 계산 방법</h2>
+      <p>연봉 인상률은 퍼센트만 확인하는 것으로 끝나지 않습니다. 소득세 누진세 구조로 세전 인상률과 실수령 인상률이 다르기 때문에, 아래 4단계로 확인하면 정확한 기대치를 세울 수 있습니다.</p>
+      <ul>
+        <li><strong>1단계.</strong> 세전 인상률 계산: (인상 후 연봉 - 인상 전 연봉) ÷ 인상 전 연봉 × 100으로 퍼센트를 산출합니다.</li>
+        <li><strong>2단계.</strong> 월 실수령 계산: 소득세법·4대보험 요율(2026년 기준)을 반영해 각 연봉의 월 실수령액을 계산합니다. 국민연금 4.75%, 건강보험 3.595%, 장기요양 0.4725%, 고용보험 0.9%가 공제됩니다.</li>
+        <li><strong>3단계.</strong> 월 추가 실수령 확인: 인상 후 월 실수령에서 인상 전 월 실수령을 빼면 실제 손에 쥐는 증가액이 나옵니다. 세전 5% 인상이라도 실수령 증가는 3~4%에 그치는 경우가 많습니다.</li>
+        <li><strong>4단계.</strong> 물가 대비 실질 인상률 판단: 통계청 소비자물가지수와 비교해 구매력이 실제로 늘었는지 확인합니다. 인상률이 물가상승률 이하라면 실질 임금은 감소한 것입니다.</li>
+      </ul>
+    </div>
+    <div class="guide-card">
+      <h2>실제 계산 예시</h2>
+      <h3>예시 1 - 김지수(27세, 중소 제조업 사원 2년차)</h3>
+      <p>생산관리팀에 재직 중인 김지수씨는 연봉 3,400만원에서 3,700만원으로 인상 제안을 받았습니다. 세전으로는 8.82% 인상이지만, 실제 월 실수령 변화가 얼마인지 확인합니다.</p>
+      <ul>
+        <li>인상 전 연봉: 3,400만원 (월 실수령 약 244만원)</li>
+        <li>인상 후 연봉: 3,700만원 (월 실수령 약 263만원)</li>
+        <li>연간 인상액: 300만원</li>
+        <li><strong>월 추가 실수령: 약 19만원 (세전 8.82% 인상, 실수령 증가율 약 7.8%)</strong></li>
+      </ul>
+      <p>세전 8.82% 인상이지만 세금·4대보험 공제 후 실수령 증가폭은 7.8%에 그칩니다. 3,000만원대 구간도 소득세 부담으로 실수령 인상률이 세전보다 낮게 나옵니다.</p>
+      <h3>예시 2 - 박준혁(34세, IT 회사 과장 7년차)</h3>
+      <p>소프트웨어 개발팀 과장인 박준혁씨는 연봉 5,200만원에서 5,800만원으로 인상됩니다. 세전 11.54% 인상이지만 실수령 증가가 얼마인지 확인합니다.</p>
+      <ul>
+        <li>인상 전 연봉: 5,200만원 (월 실수령 약 357만원)</li>
+        <li>인상 후 연봉: 5,800만원 (월 실수령 약 394만원)</li>
+        <li>연간 인상액: 600만원</li>
+        <li><strong>월 추가 실수령: 약 37만원 (세전 11.54% 인상, 실수령 증가율 약 10.4%)</strong></li>
+      </ul>
+      <p>5,000만원 이상 구간은 소득세 부담이 커, 세전 600만원 인상에도 연간 실수령 증가는 444만원 수준에 머뭅니다. 고연봉일수록 세전·실수령 인상률 격차가 커지는 이유입니다.</p>
+    </div>
+    <div class="guide-card">
+      <h2>이것만은 확인하세요</h2>
+      <p>연봉 인상 협상 전, 이 세 가지를 놓치면 기대치와 실제 실수령이 크게 다를 수 있습니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>비과세 항목 분리</strong><span>식대(월 최대 20만원)·교통비 등 비과세 수당은 연봉 계산 시 제외됩니다. 회사마다 비과세 규모가 달라 같은 연봉이라도 실수령이 달라질 수 있습니다.</span></div>
+        <div class="guide-box"><strong>4대보험 상한 기준</strong><span>국민연금 부과 상한선은 월 637만원(2026년)입니다. 이 이상 구간에서는 연봉이 올라도 연금 공제액이 늘지 않아, 고연봉자의 실수령 증가폭이 상대적으로 커집니다.</span></div>
+        <div class="guide-box"><strong>물가상승률 비교</strong><span>2025년 소비자물가 상승률은 약 2.3%였습니다. 인상률이 이보다 낮으면 실질 구매력이 줄어드는 것으로, 단순 인상 퍼센트만 보지 말고 물가와 비교하는 것이 중요합니다.</span></div>
+      </div>
+    </div>
     <div class="guide-card faq-card">
       <h2>자주 묻는 질문</h2>
       <div class="faq-item"><h3>연봉 5% 인상이면 실수령도 5% 늘어나나요?</h3><p>아닙니다. 소득세는 누진세라 연봉이 높아질수록 세율이 올라 실수령 증가폭은 5%보다 작습니다.</p></div>
-      <div class="faq-item"><h3>물가상승률보다 낮은 인상은 실질 삭감인가요?</h3><p>네. 물가상승률 3%에 인상률 2%라면 실질 구매력은 오히려 줄어듭니다.</p></div>
-      <div class="faq-item"><h3>업계 평균 인상률은 어디서 확인하나요?</h3><p>한국경영자총협회, 잡코리아 등에서 발표하는 연간 임금인상률 조사를 참고하세요.</p></div>
+      <div class="faq-item"><h3>물가상승률보다 낮은 인상은 실질 삭감인가요?</h3><p>맞습니다. 물가상승률이 3%인데 연봉 인상률이 2%라면, 같은 돈으로 살 수 있는 재화와 서비스의 양이 줄어 실질 구매력은 하락합니다. 연봉 협상 시 통계청 소비자물가지수를 참고해 실질 인상 여부를 확인하는 것이 좋습니다.</p></div>
+      <div class="faq-item"><h3>업계 평균 인상률은 어디서 확인하나요?</h3><p>한국경영자총협회, 잡코리아, 사람인 등에서 매년 임금인상률 조사 결과를 발표합니다. 업종별·기업 규모별로 평균 인상률이 달라지므로 본인이 속한 업계 기준 자료를 확인하는 것이 좋습니다.</p></div>
+      <div class="faq-item"><h3>연봉 협상 최적 시기는 언제인가요?</h3><p>일반적으로 성과 평가 직후나 회계연도 시작 전이 가장 효과적입니다. 본인의 기여도가 수치로 드러난 직후에 협상하면 논거가 명확해집니다. 이직 제안을 보유한 상태에서 협상하는 것이 유리하지만, 시장 평균 인상률을 근거로 삼는 방식이 일반적으로 받아들여지기 쉽습니다.</p></div>
+      <div class="faq-item"><h3>세전 인상률과 실수령 인상률은 왜 다른가요?</h3><p>소득세는 누진세 구조로 연봉이 높아질수록 높은 세율이 적용됩니다. 연봉 5,000만원 이하 구간은 15% 세율이지만 8,800만원 초과분은 24%가 적용됩니다. 여기에 건강보험·국민연금·고용보험도 비례적으로 늘어나므로, 세전 인상률보다 실수령 인상률이 항상 낮게 나타납니다.</p></div>
       <div class="update-note">최종 검토: 2026.03.24 · 계산 결과는 참고용입니다.</div>
     </div>
   </div>
@@ -159,7 +201,7 @@
       { name: '통계청 소비자물가지수(kostat.go.kr)', url: 'https://kostat.go.kr' },
       { name: '고용노동부(moel.go.kr)', url: 'https://www.moel.go.kr' },
     ],
-    lastReviewed: '2026.04',
+    lastReviewed: '2026.05',
   };
   </script>
   <script src="/assets/trust-block.js"></script>
@@ -282,7 +324,7 @@ window.ARTICLE_INFO_CONFIG = {
   reviewBasis: '근로기준법·최저임금법 2026년 기준',
   basisDate: '2026년 기준',
   referenceOrg: '고용노동부',
-  lastReviewed: '2026.04.13',
+  lastReviewed: '2026.05.06',
   category: 'salary'
 };
 </script>

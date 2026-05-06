@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>체지방률 계산기 - 미 해군 공식 기반 체지방 측정 | jptcalc</title>
-  <meta name="description" content="체지방률 계산기. 미 해군 공식으로 체지방률을 추정하고 체지방 무게, 제지방량을 추정합니다." />
+  <meta name="description" content="미 해군 공식으로 체지방률을 추정하고 체지방량·제지방량을 계산합니다. 줄자 측정만으로 성별별 건강 범위와 감량 목표를 확인할 수 있습니다." />
   <meta name="keywords" content="체지방률계산기,체지방측정,체지방계산,제지방량,해군공식" />
   <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://www.jptcalc.kr/calc/health/body-fat/" />
@@ -20,12 +20,12 @@
   <meta name="twitter:description" content="미 해군 공식으로 체지방률을 추정하고 체지방 무게를 계산합니다." />
   <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"체지방률 계산기","url":"https://www.jptcalc.kr/calc/health/body-fat/","description":"체지방률 계산기. 미 해군 공식으로 체지방률을 추정하고 체지방 무게, 제지방량을 추정합니다.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"inLanguage":"ko-KR"}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"체지방률 계산기","url":"https://www.jptcalc.kr/calc/health/body-fat/","description":"미 해군 공식으로 체지방률을 추정하고 체지방량·제지방량을 계산합니다. 줄자 측정만으로 성별별 건강 범위와 감량 목표를 확인할 수 있습니다.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"inLanguage":"ko-KR"}
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},{"@type":"ListItem","position":2,"name":"건강 계산기","item":"https://www.jptcalc.kr/calc/health/"},{"@type":"ListItem","position":3,"name":"체지방률 계산기"}]}
   </script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"체지방률과 BMI 중 어떤 것이 더 중요한가요?","acceptedAnswer":{"@type":"Answer","text":"체지방률이 실제 체성분을 더 정확하게 반영합니다. BMI가 정상이어도 체지방률이 높으면 대사 질환 위험이 증가하며, 반대로 근육량이 많아 BMI가 높아도 체지방률이 정상이면 건강한 상태입니다."}},{"@type":"Question","name":"미 해군 공식으로 체지방률을 계산하는 원리는 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"미 해군(US Navy) 공식은 목둘레, 허리둘레(여성은 엉덩이둘레 추가)와 키를 이용하여 체지방률을 추정합니다. 별도의 장비 없이 줄자만으로 측정할 수 있어 간편하지만, DEXA나 InBody보다는 정확도가 낮을 수 있습니다."}},{"@type":"Question","name":"체지방률 정상 범위는 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"남성의 건강 체지방률은 14~17%, 여성은 21~24%입니다. 남성 필수지방은 3~5%, 여성 필수지방은 10~13%이며, 남성 25% 이상, 여성 32% 이상은 비만으로 분류됩니다."}},{"@type":"Question","name":"줄자 측정 시 주의사항은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"허리둘레는 배꼽 높이에서, 목둘레는 목의 가장 좁은 부분에서, 엉덩이둘레는 엉덩이의 가장 넓은 부분에서 측정합니다. 줄자가 수평이 되도록 하고, 숨을 편하게 내쉰 상태에서 측정해야 정확한 값을 얻을 수 있습니다."}},{"@type":"Question","name":"체지방률을 낮추려면 어떻게 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"유산소 운동과 근력 운동을 병행하고, 단백질 섭취를 늘리며, 전체 칼로리를 적절히 조절하는 것이 효과적입니다. 급격한 다이어트는 근육 손실을 유발하므로 주 0.5~1kg 감량이 권장됩니다."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"체지방률과 BMI 중 어떤 것이 더 중요한가요?","acceptedAnswer":{"@type":"Answer","text":"체지방률이 실제 체성분을 더 정확하게 반영합니다. BMI가 정상이어도 체지방률이 높으면 대사 질환 위험이 증가하며, 근육량이 많아 BMI가 높더라도 체지방률이 정상이면 건강한 상태로 볼 수 있습니다."}},{"@type":"Question","name":"체지방률을 낮추려면 어떻게 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"유산소 운동과 근력 운동을 병행하고, 단백질 섭취를 늘리며, 전체 칼로리를 조절하는 것이 효과적입니다. 급격한 다이어트는 근육 손실을 유발하므로 주 0.5~1kg 감량이 권장됩니다."}},{"@type":"Question","name":"줄자 측정 시 주의사항은?","acceptedAnswer":{"@type":"Answer","text":"허리둘레는 배꼽 높이에서, 목둘레는 목의 가장 좁은 부분에서, 엉덩이둘레는 엉덩이의 가장 넓은 부분에서 측정합니다. 줄자가 수평이 되도록 하고, 숨을 편하게 내쉰 상태에서 측정해야 정확한 값을 얻을 수 있습니다."}},{"@type":"Question","name":"미 해군 공식의 정확도는 어느 정도인가요?","acceptedAnswer":{"@type":"Answer","text":"미 해군 공식은 줄자만으로 체지방률을 추정할 수 있어 편리하지만, DEXA나 InBody 대비 약 ±3% 오차가 발생할 수 있습니다. 경계선 수치(남성 16~18%, 여성 23~25%)라면 정밀 측정 장비를 통한 확인을 권장합니다."}},{"@type":"Question","name":"체지방률이 낮을수록 건강한 것인가요?","acceptedAnswer":{"@type":"Answer","text":"그렇지 않습니다. 남성 6% 미만, 여성 14% 미만은 필수지방 부족 구간으로 호르몬 불균형, 면역력 저하, 뼈 밀도 감소 등 건강 문제가 생길 수 있습니다. 참고 범위 안에서 관리하는 것이 좋으며, 과도한 감량은 전문의 상담 후 진행하는 것을 권장합니다."}}]}</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
@@ -74,6 +74,48 @@
     <p>본 계산기는 ACE/ACSM 기준의 건강 상한선(남성 17%, 여성 24%)을 목표치로 하여, 현재 체지방률과의 차이에 체중을 곱해 감량 필요 체지방량을 추정합니다. 예) 체중 75kg, 체지방률 22%(남성) → 감량 필요 체지방 = 75 × (22-17) / 100 = 약 3.75kg. 단, 체지방만 정확히 줄이려면 단백질 섭취와 근력 운동 병행이 필수입니다.</p>
   </section>
 
+  <section class="guide-section seo-card">
+    <h2>체지방률 계산의 핵심 요소</h2>
+    <p>미 해군 공식은 세 가지 신체 측정값과 키를 조합해 체지방률을 추정합니다. 각 측정 부위의 의미와 참고 기준을 이해하면 측정 정확도를 높일 수 있습니다.</p>
+    <div class="guide-grid">
+      <div class="guide-box"><strong>허리둘레</strong><span>내장지방을 간접 반영하는 핵심 지표입니다. 배꼽 높이에서 수평으로 측정합니다. 남성 평균 80~85cm, 여성 평균 70~75cm를 참고 범위로 활용하세요. 국내 대사증후군 기준은 남성 90cm, 여성 85cm 이상입니다.</span></div>
+      <div class="guide-box"><strong>목둘레</strong><span>상체 근육량과 관련이 있으며 체지방률 계산 공식에서 음의 상관관계를 가집니다. 목의 가장 좁은 부분에서 수평으로 측정합니다. 남성 평균 37~40cm, 여성 평균 32~35cm 범위가 일반적입니다.</span></div>
+      <div class="guide-box"><strong>엉덩이둘레(여성)</strong><span>여성은 엉덩이둘레가 추가로 필요합니다. 엉덩이의 가장 넓은 부분에서 줄자가 수평을 유지하도록 측정합니다. 여성 평균 90~95cm 범위를 참고하되, 체형에 따라 편차가 크니 수치보다 측정 방법의 일관성이 중요합니다.</span></div>
+    </div>
+  </section>
+
+  <section class="guide-section seo-card">
+    <h2>실제 계산 예시</h2>
+    <h3>예시 1 - 이동호(32세, 사무직 남성)</h3>
+    <p>키 175cm, 몸무게 80kg, 허리 89cm, 목 38cm로 측정합니다. 주 3회 가벼운 운동을 하지만 좌식 업무가 대부분입니다.</p>
+    <ul>
+      <li>입력값: 키 175cm, 허리 89cm, 목 38cm</li>
+      <li>미 해군 공식 계산 결과: 체지방률 약 19.9%</li>
+      <li>체지방량: 80kg × 19.9% = 약 15.9kg / 제지방량: 약 64.1kg</li>
+      <li><strong>판정: 평균 구간 (남성 건강 상한선 17% 초과, 약 2.3kg 감량 권장)</strong></li>
+    </ul>
+    <p>19.9%는 건강 범위(14~17%)를 초과하는 평균 구간입니다. 전문의 상담을 통해 목표 체지방량을 설정하고 식이 조절과 운동 계획을 세우는 것이 좋습니다.</p>
+    <h3>예시 2 - 박수진(28세, 여성)</h3>
+    <p>키 162cm, 몸무게 57kg, 허리 71cm, 목 32cm, 엉덩이 93cm로 측정합니다. 평소 주 5회 필라테스를 합니다.</p>
+    <ul>
+      <li>입력값: 키 162cm, 허리 71cm, 목 32cm, 엉덩이 93cm</li>
+      <li>미 해군 공식 계산 결과: 체지방률 약 25.1%</li>
+      <li>체지방량: 57kg × 25.1% = 약 14.3kg / 제지방량: 약 42.7kg</li>
+      <li><strong>판정: 평균 구간 (여성 건강 상한선 24% 초과, 약 0.6kg 감량 권장)</strong></li>
+    </ul>
+    <p>25.1%는 여성 건강 범위(21~24%)를 소폭 초과합니다. ±3% 오차 범위를 고려하면 건강 범위에 가까운 수치로, 현재 운동 습관을 유지하면서 경과를 지켜보는 것을 권장합니다.</p>
+  </section>
+
+  <section class="guide-section seo-card">
+    <h2>이것만은 확인하세요</h2>
+    <p>미 해군 공식 기반 체지방률은 편리하지만 다음 사항을 고려해야 결과를 올바르게 해석할 수 있습니다.</p>
+    <div class="guide-grid">
+      <div class="guide-box"><strong>측정 일관성</strong><span>매일 다른 시간대에 측정하면 수치가 다르게 나옵니다. 같은 조건(아침 공복, 가벼운 옷차림, 동일 장소)에서 주기적으로 측정해야 변화 추이를 신뢰할 수 있습니다.</span></div>
+      <div class="guide-box"><strong>공식 오차 범위</strong><span>미 해군 공식은 DEXA 대비 약 ±3% 오차가 발생할 수 있습니다. 경계선에 가까운 수치(예: 남성 16~18%, 여성 23~25%)라면 정밀 측정 장비(InBody, DEXA)를 통한 확인을 권장합니다.</span></div>
+      <div class="guide-box"><strong>체지방률만으로 판단 금지</strong><span>체지방률이 낮아도 근육량이 부족하면 건강 문제가 생길 수 있습니다. 체지방률, 근육량(제지방량), BMI를 함께 확인하고, 건강 상태 판정은 의료 전문가와 상담하세요.</span></div>
+    </div>
+  </section>
+
   <section class="guide-section seo-card faq-card">
     <h2>자주 묻는 질문</h2>
     <div class="faq-item">
@@ -86,7 +128,15 @@
     </div>
     <div class="faq-item">
       <h3>줄자 측정 시 주의사항은?</h3>
-      <p>허리둘레는 배꼽 높이에서, 목둘레는 목의 가장 좁은 부분에서, 엉덩이둘레는 엉덩이의 가장 넓은 부분에서 측정합니다. 줄자가 수평이 되도록 하고, 숨을 편하게 내쉰 상태에서 측정합니다.</p>
+      <p>허리둘레는 배꼽 높이에서, 목둘레는 목의 가장 좁은 부분에서, 엉덩이둘레는 엉덩이의 가장 넓은 부분에서 측정합니다. 줄자가 수평이 되도록 하고, 숨을 편하게 내쉰 상태에서 측정해야 정확한 값을 얻을 수 있습니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>미 해군 공식의 정확도는 어느 정도인가요?</h3>
+      <p>미 해군 공식은 별도 장비 없이 줄자만으로 체지방률을 추정할 수 있어 편리하지만, DEXA나 InBody 대비 약 ±3% 오차가 발생할 수 있습니다. 경계선 수치(남성 16~18%, 여성 23~25%)라면 정밀 측정 장비를 통한 확인을 권장합니다. 같은 조건에서 반복 측정해 추세를 파악하는 용도로 활용하면 가장 효과적입니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>체지방률이 낮을수록 건강한 것인가요?</h3>
+      <p>그렇지 않습니다. 남성 6% 미만, 여성 14% 미만은 필수지방 부족 구간으로 호르몬 불균형, 면역력 저하, 뼈 밀도 감소 등 건강 문제가 생길 수 있습니다. 체지방률은 참고 범위 안에서 관리하는 것이 좋으며, 과도한 감량은 전문의 상담 후 진행하는 것을 권장합니다.</p>
     </div>
     <div class="update-note" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:10px 14px;margin-top:14px;font-size:12px;color:#6B7280">최종 검토: 2026.04.15 · 이 계산기는 건강 참고용이며 의료 진단을 대체하지 않습니다. 체성분 분석이나 건강 관리는 의료 전문가와 상담하세요.</div>
   </section>
@@ -104,7 +154,7 @@
       { name: '보건복지부(mohw.go.kr)', url: 'https://www.mohw.go.kr' },
       { name: 'WHO(who.int)', url: 'https://www.who.int' },
     ],
-    lastReviewed: '2026.04',
+    lastReviewed: '2026.05',
   };
   </script>
   <script src="/assets/trust-block.js"></script>
@@ -213,7 +263,7 @@ window.ARTICLE_INFO_CONFIG = {
   reviewBasis: '건강 관련 공식 기준표·학술 자료',
   basisDate: '2026년 기준',
   referenceOrg: '질병관리청·보건복지부',
-  lastReviewed: '2026.04.13',
+  lastReviewed: '2026.05.06',
   category: 'health'
 };
 </script>

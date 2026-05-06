@@ -71,3 +71,6 @@
 - ideal-weight.html (2026-05-05 검증, 오류 1개 수정 | 본문 "월 1~2kg 감량" → "주당 0.5~1kg(월 2~4kg)" 대한비만학회 기준 FAQ와 동기화 | Broca 공식·BMI·시나리오 계산 이상 없음, FAQ 4개·링크·JSON-LD 이상 없음)
 - rental-yield-guide.html (2026-05-05 검증, 오류 1개 수정 | 임대소득세 공식박스 "임대수입×60%×14%×1.1" → "임대수입×40%×14%×1.1" (등록임대 필요경비60%→과세표준40%) | 시나리오 A·B·반전·레버리지표 계산 전부 재검산 정확, FAQ 4개·JSON-LD·링크 이상 없음)
 - mortgage-dsr-guide.html (2026-05-05 검증, 오류 2개 수정 | BreadcrumbList p3 /calc/realestate/ → /blog/?cat=부동산, ARTICLE_INFO_CONFIG basisDate·referenceOrg 누락 필드 추가 | DSR 계산 시나리오 오차 1% 이내 정확, FAQ 4개·링크 이상 없음)
+- jeonse-conversion-rate.html (2026-05-06 검증, 이상 없음 | 전환율 공식·시나리오 A·B·C·임대소득세표 계산 전부 정확, BreadcrumbList p3 /blog/?cat=부동산 정상, FAQ 4개·JSON-LD·링크 이상 없음)
+- jeonse-vs-wolse.html (2026-05-06 검증, 오류 2개 수정 | JSON-LD headline과 h1 불일치 동기화, BreadcrumbList p3 /calc/realestate/ → /blog/?cat=부동산 수정 | 손익분기 금리 계산·시나리오 수치 이상 없음)
+- llm-api-price-comparison.html (2026-05-06 검증, 오류 1개 수정 | BreadcrumbList p3 /calc/ai/ → /blog/?cat=AI·테크 수정 | 모델별 가격표·시나리오 비용 계산 재검산 정확, FAQ 5개·JSON-LD·링크 이상 없음)

@@ -26,7 +26,7 @@
       key:'rental',
       quick:['임대수익률은 매입가 외에 취득세·중개수수료·수선비를 포함해야 더 정확합니다.','보증금 운용 수익을 반영할지 여부에 따라 체감 수익률이 달라집니다.','공실 기간을 고려하지 않으면 수익률이 과대평가될 수 있습니다.','세전 수익률과 세후 수익률을 구분해서 판단하세요.'],
       related:[['/calc/realestate/loan/','대출이자 계산기','💰'],['/calc/realestate/conversion/','전월세전환 계산기','🔄'],['/calc/realestate/acquisition/','취득세 계산기','📄']],
-      guides:[['/blog/posts/rental-yield-guide.html','임대수익률 계산법 완전 정리 - 표면수익률 5%의 진실']]
+      guides:[['/blog/posts/rental-yield-guide.html','임대수익률 계산법 완전 정리 - 표면수익률 5%의 진실'],['/blog/posts/jeonse-conversion-rate.html','전월세 전환율 계산법 - 전세를 월세로 바꿀 때 적정 금액 구하기']]
     },
     '/calc/realestate/capital-gains/': {
       key:'capital-gains',

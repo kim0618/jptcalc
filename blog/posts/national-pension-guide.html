@@ -84,7 +84,7 @@
   h2 { font-size: clamp(18px, 3vw, 22px); font-weight: 700; margin: 40px 0 14px; color: #111827; }
   h3 { font-size: 16px; font-weight: 700; margin: 24px 0 10px; color: #1F2937; }
   p { margin-bottom: 14px; font-size: 15px; line-height: 1.8; color: #374151; }
-  .post-tag { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 14px; background: rgba(14,165,233,0.15); color: #0EA5E9; }
+  .post-tag { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; margin-bottom: 14px; background: rgba(14,165,233,0.15); color: #0EA5E9; }
   .post-meta { font-size: 13px; color: #9CA3AF; margin-bottom: 28px; }
   .highlight-box { background: rgba(14,165,233,0.08); border-left: 4px solid #0EA5E9; border-radius: 8px; padding: 16px 20px; margin: 20px 0; color: #0C4A6E; font-size: 14px; line-height: 1.7; }
   .table-wrap { overflow-x: auto; margin: 20px 0; }
@@ -106,9 +106,27 @@
   .faq-a { font-size: 14px; color: #374151; line-height: 1.75; }
   .faq-a::before { content: "A. "; font-weight: 700; color: #0EA5E9; }
   .warning-box { background: #FFF7ED; border-left: 4px solid #F97316; border-radius: 8px; padding: 14px 18px; margin: 16px 0; font-size: 14px; color: #7C2D12; }
-</style>
+    .site-header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .header-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; gap: 24px; }
+    .site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .logo-icon img { width: 32px; height: 32px; display: block; }
+    .logo-text { font-size: 18px; font-weight: 900; color: #111827; letter-spacing: -0.5px; }
+    .logo-text span { color: #818CF8; }
+    .header-back { margin-left: auto; font-size: 13px; font-weight: 600; color: #6B7280; text-decoration: none; }
+    .header-back:hover { color: #111827; }
+  </style>
 </head>
 <body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo">
+      <div class="logo-icon"><img src="../../assets/logo.svg" alt="로고" /></div>
+      <span class="logo-text">제이퍼<span>계산기</span></span>
+    </a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+
 <div class="container">
   <span class="post-tag">연금·복지</span>
   <h1>국민연금 예상 수령액 계산법 - 납입 기간·소득별 얼마나 받나</h1>

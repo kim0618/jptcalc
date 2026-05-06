@@ -35,7 +35,7 @@
     {"@type":"ListItem","position":3,"name":"AI API 토큰 비용 계산기","item":"https://www.jptcalc.kr/calc/ai/api-token/"}
   ]}
   </script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"한국어 서비스는 토큰이 더 많이 들 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"한국어는 영어보다 토큰 소비가 많습니다. 일반적으로 한국어 1글자는 약 2~3 토큰, 영어 1단어는 약 1.3 토큰으로 환산됩니다. 문장 구조와 응답 길이에 따라 다를 수 있으므로 실제 프롬프트와 평균 응답 길이로 샘플링해 보는 것이 가장 정확합니다."}},{"@type":"Question","name":"캐시, 배치 처리, 짧은 응답 유도는 얼마나 중요한가요?","acceptedAnswer":{"@type":"Answer","text":"이러한 최적화 방법은 운영비에 직접적인 영향을 줍니다. 특히 출력 토큰이 긴 서비스는 응답 길이 최적화 효과가 크며, 프롬프트 캐싱이나 배치 API를 활용하면 비용을 추가로 절감할 수 있습니다."}},{"@type":"Question","name":"실제 청구액과 계산 결과가 차이 날 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네, 차이가 날 수 있습니다. 환율, 벤더별 과금 시점, 추가 기능 사용 여부, 가격 정책 변경에 따라 실제 청구액이 달라질 수 있습니다. 최종 예산 수립 전에는 반드시 각 벤더의 공식 요금표를 확인하시기 바랍니다."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"한국어 서비스는 토큰이 더 많이 들 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"한국어는 영어보다 토큰 소비가 많습니다. 일반적으로 한국어 1글자는 약 2~3 토큰, 영어 1단어는 약 1.3 토큰으로 환산됩니다. 문장 구조와 응답 길이에 따라 다를 수 있으므로 실제 프롬프트와 평균 응답 길이로 샘플링해 보는 것이 가장 정확합니다."}},{"@type":"Question","name":"캐시, 배치 처리, 짧은 응답 유도는 얼마나 중요한가요?","acceptedAnswer":{"@type":"Answer","text":"이러한 최적화 방법은 운영비에 직접적인 영향을 줍니다. 특히 출력 토큰이 긴 서비스는 응답 길이 최적화 효과가 크며, 프롬프트 캐싱이나 배치 API를 활용하면 비용을 추가로 절감할 수 있습니다."}},{"@type":"Question","name":"실제 청구액과 차이가 날 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"환율, 벤더별 과금 시점, 추가 기능 사용 여부, 가격 정책 변경에 따라 차이가 날 수 있습니다. 최종 예산 수립 전에는 반드시 각 벤더의 공식 요금표를 확인하시기 바랍니다."}},{"@type":"Question","name":"프롬프트 캐싱은 비용에 얼마나 영향을 주나요?","acceptedAnswer":{"@type":"Answer","text":"반복적으로 사용하는 시스템 프롬프트를 캐싱하면 입력 토큰 비용을 최대 90%까지 절감할 수 있습니다. Anthropic Claude의 프롬프트 캐싱은 캐시 write 시 $3.75/1M(Sonnet 기준), 이후 read 시 $0.30/1M으로 대폭 낮아집니다. 긴 시스템 프롬프트를 반복 사용하는 서비스라면 캐싱 도입만으로 월 비용의 50% 이상 절감이 가능합니다."}},{"@type":"Question","name":"배치(Batch) API와 일반 API의 비용 차이는 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"OpenAI와 Anthropic 모두 배치 API에서 50% 할인을 제공합니다. 실시간 응답이 필요 없는 작업(분류, 요약, 데이터 처리 등)은 배치 API를 활용하면 동일 작업을 절반 비용으로 처리할 수 있습니다. 처리 시간은 수분~24시간까지 걸릴 수 있으므로 레이턴시 요구사항을 먼저 확인하세요."}}]}</script>
   <style>
     /* api-token 고유 스타일 - 공통 스타일은 /assets/ai-common.css 참조 */
     .input-wrap{position:relative}
@@ -116,11 +116,61 @@
         <div class="guide-box"><strong>의사결정</strong><span>모델 성능 대비 비용 효율 검토</span></div>
       </div>
     </div>
+    <div class="guide-card">
+      <h2>주요 LLM API 가격 기준표 (2026년 4월 기준)</h2>
+      <p>모델마다 입력·출력 토큰 가격이 다르므로, 서비스의 입출력 비중에 따라 최적 모델이 달라집니다. 출력 토큰이 많을수록 비용 차이가 커집니다. 아래는 각 벤더 공식 가격 기준입니다. 가격은 수시로 변경되므로 최신 요율은 각 벤더 공식 페이지에서 확인하세요.</p>
+      <div class="guide-table-wrap">
+        <table>
+          <thead><tr><th>모델</th><th>Input (1M 토큰)</th><th>Output (1M 토큰)</th><th>컨텍스트</th></tr></thead>
+          <tbody>
+            <tr><td>Claude Opus 4.7</td><td>$15.00</td><td>$75.00</td><td>200K</td></tr>
+            <tr><td>Claude Sonnet 4.6</td><td>$3.00</td><td>$15.00</td><td>200K</td></tr>
+            <tr><td>GPT-4o</td><td>$2.50</td><td>$10.00</td><td>128K</td></tr>
+            <tr><td>Gemini 2.5 Pro</td><td>$1.25</td><td>$10.00</td><td>1M</td></tr>
+            <tr><td>Claude Haiku 4.5</td><td>$0.80</td><td>$4.00</td><td>200K</td></tr>
+            <tr><td>GPT-4o mini</td><td>$0.15</td><td>$0.60</td><td>128K</td></tr>
+            <tr><td>Gemini 2.0 Flash</td><td>$0.10</td><td>$0.40</td><td>1M</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="guide-card">
+      <h2>실제 계산 예시</h2>
+      <h3>예시 1 - 소규모 고객 서비스 챗봇 운영 (스타트업 A사)</h3>
+      <p>일 500회 API 요청, 요청당 입력 400 토큰 + 출력 200 토큰 구성입니다. 비용 절감을 위해 GPT-4o mini를 선택했습니다. 환율 1,450원 기준으로 계산합니다.</p>
+      <ul>
+        <li>일 입력 비용: 500 × 400 / 1,000,000 × $0.15 = $0.030</li>
+        <li>일 출력 비용: 500 × 200 / 1,000,000 × $0.60 = $0.060</li>
+        <li>일 합계: $0.09 (약 131원)</li>
+        <li><strong>월 비용: 약 $2.70 (약 3,915원) / 연 비용: 약 $32.85 (약 4만 7천 원)</strong></li>
+      </ul>
+      <p>월 4,000원 미만으로 챗봇을 운영할 수 있습니다. 다만 호출량이 10배 늘어 일 5,000회가 되면 월 비용도 약 3만 9천 원으로 선형 증가합니다.</p>
+      <h3>예시 2 - 대규모 AI 작성 지원 서비스 (B사)</h3>
+      <p>일 5만 회 API 요청, 요청당 입력 1,000 토큰 + 출력 800 토큰 구성입니다. 고품질 응답이 필요해 Claude Sonnet 4.6을 선택했습니다.</p>
+      <ul>
+        <li>일 입력 비용: 50,000 × 1,000 / 1,000,000 × $3.00 = $150</li>
+        <li>일 출력 비용: 50,000 × 800 / 1,000,000 × $15.00 = $600</li>
+        <li>일 합계: $750 (약 108만 8천 원)</li>
+        <li><strong>월 비용: 약 $22,500 (약 3,263만원) / 연 비용: 약 $273,750 (약 3억 9,694만원)</strong></li>
+      </ul>
+      <p>이 규모에서는 출력 토큰(80%)이 비용의 대부분을 차지합니다. 응답 길이를 200 토큰 줄이면 월 약 450만원이 절감되므로, 프롬프트 최적화가 핵심 비용 관리 수단이 됩니다.</p>
+    </div>
+    <div class="guide-card">
+      <h2>이것만은 확인하세요</h2>
+      <p>AI API 비용 예측 시 실제 청구액과 차이가 생기는 주요 원인입니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>한국어 토큰 소비량</strong><span>한국어 1글자는 약 2~3 토큰으로 환산됩니다. 영어 서비스 대비 같은 문장 길이에 2배 이상 토큰이 소비될 수 있으므로, 실제 프롬프트로 샘플링 테스트를 먼저 진행하세요.</span></div>
+        <div class="guide-box"><strong>출력 토큰 비중 관리</strong><span>대부분의 모델에서 출력 토큰이 입력의 3~5배 비쌉니다. 응답 길이를 짧게 유도하거나, 구조화된 JSON 응답을 요청하면 출력 토큰을 줄여 전체 비용을 크게 낮출 수 있습니다.</span></div>
+        <div class="guide-box"><strong>가격 변경 주기</strong><span>AI API 가격은 수시로 변경됩니다. 장기 예산 계획 수립 시 여유분(10~20%)을 확보하고, 각 벤더 공식 가격 페이지를 정기적으로 모니터링하는 것을 권장합니다.</span></div>
+      </div>
+    </div>
     <div class="guide-card faq-card">
       <h2>자주 묻는 질문</h2>
       <div class="faq-item"><h3>한국어 서비스는 토큰이 더 많이 들 수 있나요?</h3><p>문장 구조와 응답 길이에 따라 다를 수 있습니다. 실제 프롬프트와 평균 응답 길이로 샘플링해 보는 것이 가장 정확합니다.</p></div>
       <div class="faq-item"><h3>캐시, 배치 처리, 짧은 응답 유도는 얼마나 중요하나요?</h3><p>운영비에 직접적인 영향을 줍니다. 특히 출력 토큰이 긴 서비스는 응답 길이 최적화 효과가 큽니다.</p></div>
-      <div class="faq-item"><h3>실제 청구액과 차이가 날 수 있나요?</h3><p>환율, 벤더별 과금 시점, 추가 기능 사용 여부, 가격 정책 변경에 따라 차이가 날 수 있습니다.</p></div>
+      <div class="faq-item"><h3>실제 청구액과 차이가 날 수 있나요?</h3><p>환율, 벤더별 과금 시점, 추가 기능 사용 여부, 가격 정책 변경에 따라 차이가 날 수 있습니다. 최종 예산 수립 전에는 반드시 각 벤더의 공식 요금표를 확인하시기 바랍니다.</p></div>
+      <div class="faq-item"><h3>프롬프트 캐싱은 비용에 얼마나 영향을 주나요?</h3><p>반복적으로 사용하는 시스템 프롬프트를 캐싱하면 입력 토큰 비용을 최대 90%까지 절감할 수 있습니다. Anthropic Claude의 프롬프트 캐싱은 캐시 write 시 $3.75/1M(Sonnet 기준), 이후 read 시 $0.30/1M으로 대폭 낮아집니다. 긴 시스템 프롬프트를 반복 사용하는 서비스라면 캐싱 도입만으로 월 비용의 50% 이상 절감이 가능합니다.</p></div>
+      <div class="faq-item"><h3>배치(Batch) API와 일반 API의 비용 차이는 얼마인가요?</h3><p>OpenAI와 Anthropic 모두 배치 API에서 50% 할인을 제공합니다. 실시간 응답이 필요 없는 작업(분류, 요약, 데이터 처리 등)은 배치 API를 활용하면 동일 작업을 절반 비용으로 처리할 수 있습니다. 처리 시간은 수분~24시간까지 걸릴 수 있으므로 레이턴시 요구사항을 먼저 확인하세요.</p></div>
       <div class="update-note">최종 검토: 2026.04.14 · 실제 과금 전 벤더 요금표를 다시 확인하세요.</div>
     </div>
   </div>
@@ -136,7 +186,7 @@
       { name: 'Anthropic 가격(anthropic.com/pricing)', url: 'https://www.anthropic.com/pricing' },
       { name: 'OpenAI 가격(openai.com/pricing)', url: 'https://openai.com/pricing' },
     ],
-    lastReviewed: '2026.04',
+    lastReviewed: '2026.05',
   };
   </script>
   <script src="/assets/trust-block.js"></script>
@@ -215,7 +265,7 @@ window.ARTICLE_INFO_CONFIG = {
   reviewBasis: '2026년 4월 기준 공식 가격·스펙',
   basisDate: '2026년 4월',
   referenceOrg: '각 서비스 공식 페이지',
-  lastReviewed: '2026.04.13',
+  lastReviewed: '2026.05.06',
   category: 'ai'
 };
 </script>
