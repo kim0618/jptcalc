@@ -139,21 +139,26 @@
   var defaultLabels = { reviewBasis: '검토 기준', basisDate: '적용 기준', referenceOrg: '참고 기관', lastReviewed: '최종 검토일' };
   var labels = (cfg.category && categoryLabels[cfg.category]) || defaultLabels;
 
-  /* ── 행(row) 조립 ─────────────────────────────────────────── */
+  /* ── 행(row) 조립: 검토 기준은 길이 편차가 커서 단독 행으로 분리 ──── */
+  /* Row 1: 작성 + 최종 검토일 (짧은 메타) */
   var row1Parts = [];
   if (cfg.author)       row1Parts.push(item('작성', cfg.author));
-  if (cfg.reviewBasis)  row1Parts.push(item(labels.reviewBasis, cfg.reviewBasis));
   if (cfg.lastReviewed) row1Parts.push(item(labels.lastReviewed, formatReviewDate(cfg.lastReviewed)));
 
   var row1Html = row1Parts.join(sep);
 
-  /* ── 보조 행(row2): 적용 기준일·참고 기관 (있을 때만) ──── */
-  var row2Parts = [];
-  if (cfg.basisDate)    row2Parts.push(item(labels.basisDate, cfg.basisDate));
-  if (cfg.referenceOrg) row2Parts.push(item(labels.referenceOrg, cfg.referenceOrg));
+  /* Row 2: 검토 기준 (단독, 길이 편차 큼) */
+  var row2Html = cfg.reviewBasis
+    ? '<div class="article-info__row">' + item(labels.reviewBasis, cfg.reviewBasis) + '</div>'
+    : '';
 
-  var row2Html = row2Parts.length
-    ? '<div class="article-info__row">' + row2Parts.join(sep) + '</div>'
+  /* Row 3: 적용 기준일 + 참고 기관 */
+  var row3Parts = [];
+  if (cfg.basisDate)    row3Parts.push(item(labels.basisDate, cfg.basisDate));
+  if (cfg.referenceOrg) row3Parts.push(item(labels.referenceOrg, cfg.referenceOrg));
+
+  var row3Html = row3Parts.length
+    ? '<div class="article-info__row">' + row3Parts.join(sep) + '</div>'
     : '';
 
   /* ── 관련 계산기 링크 ─────────────────────────────────────── */
@@ -177,6 +182,7 @@
     '<aside class="article-info" aria-label="글 작성 및 검토 정보">' +
       '<div class="article-info__row">' + row1Html + '</div>' +
       row2Html +
+      row3Html +
       calcHtml +
       '<p class="article-info__disclaimer">' + disclaimer + '</p>' +
     '</aside>';
