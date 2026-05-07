@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>아파트·오피스텔·빌라 임대수익률 비교 - 공실·수선비 포함한 실질 수익 계산 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="아파트·오피스텔·빌라 임대수익률을 공실률·수선비·임대소득세까지 포함해 비교합니다. 오피스텔 2억5천 투자 시 표면수익률 3.75%가 실질 2.1%로 떨어지는 이유, 유형별 실제 수익 계산 결과를 정리했습니다." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="아파트·오피스텔·빌라 임대수익률 비교 - 공실·수선비 포함한 실질 수익 계산 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="아파트·오피스텔·빌라 임대수익률을 공실률·수선비·임대소득세까지 포함해 비교합니다. 오피스텔 2억5천 투자 시 표면수익률 3.75%가 실질 2.1%로 떨어지는 이유, 유형별 실제 수익 계산 결과를 정리했습니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/apartment-officetel-rental-comparison.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/apartment-officetel-rental-comparison.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BRSX3F10MZ');
+  </script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "아파트·오피스텔·빌라 임대수익률 비교 - 공실·수선비 포함한 실질 수익 계산",
+  "description": "아파트·오피스텔·빌라 임대수익률을 공실률·수선비·임대소득세까지 포함해 비교합니다. 오피스텔 2억5천 투자 시 표면수익률 3.75%가 실질 2.1%로 떨어지는 이유, 유형별 실제 수익 계산 결과를 정리했습니다.",
+  "author": {"@type": "Person", "name": "Jay Kim", "url": "https://www.jptcalc.kr/about.html", "jobTitle": "제이퍼 계산기 운영자"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr",
+    "logo": {"@type": "ImageObject", "url": "https://www.jptcalc.kr/assets/logo_161.png"}
+  },
+  "datePublished": "2026-05-07",
+  "dateModified": "2026-05-07",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.jptcalc.kr/blog/posts/apartment-officetel-rental-comparison.html"},
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "부동산",
+  "inLanguage": "ko"
+}
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "오피스텔과 아파트 중 임대수익률이 더 높은 쪽은 어디인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "표면수익률만 놓고 보면 오피스텔이 3~6%로 아파트(2~4%)보다 높습니다. 하지만 공실률, 수선비, 재산세를 모두 포함한 실질수익률은 오피스텔이 1.8~2.5%, 아파트가 1.2~2.0% 수준으로 격차가 줄어듭니다. 서울 오피스텔 평균 공실기간이 연 1.2개월(한국부동산원 2025년 기준)에 달하는 점을 감안하면, 공실 리스크가 낮은 인기 지역 아파트가 실질적으로 더 안정적인 수익을 낼 수 있습니다. 여기에 아파트는 자본이득(시세차익) 기대가 높아 총 수익률 관점에서는 오피스텔보다 우위에 있는 경우가 많습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "임대소득세는 얼마나 내야 하나요? 종합과세와 분리과세 중 어느 쪽이 유리한가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "소득세법 제64조의2에 따라 주택 임대소득이 연 2,000만 원 이하인 경우 분리과세(14%)와 종합과세 중 선택할 수 있습니다. 분리과세 계산식은 (임대수입 × 필요경비율 60% 적용 후 잔액) × 14%입니다. 월 75만원, 연 900만원 임대수입이라면 (900만 × 0.4) × 14% = 50만4천원이 세금입니다. 다른 근로소득이 없거나 적은 경우에는 종합과세가 오히려 유리할 수 있습니다. 기타소득이 많은 직장인이라면 일반적으로 분리과세를 선택하는 편이 세 부담이 낮습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "공실 기간 동안 대출이자는 어떻게 처리해야 하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "공실 기간에도 대출이자는 그대로 납부해야 합니다. 이것이 레버리지 투자의 핵심 위험입니다. 예를 들어 2억5천만원 오피스텔에 대출 1억원(연 4.5%, 월 37만5천원)이 있다면, 공실 2개월 동안 이자만 75만원을 지출하게 됩니다. 이를 감안하면 실질 공실 비용은 기대임대료 150만원 + 대출이자 75만원 = 225만원입니다. 대출 비율이 높을수록 공실 1개월의 타격이 커지므로, 투자 전 공실률이 낮은 지역을 선택하거나 대출 비율을 낮추는 전략이 필요합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "빌라나 다가구주택 임대는 아파트·오피스텔보다 수익률이 높다고 하는데 실제로도 그런가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "표면수익률만 보면 빌라(5~9%)가 아파트(2~4%)보다 높습니다. 그러나 빌라는 직접 수선·관리가 필요하고, 세입자 교체 비용(도배·장판·청소 등)이 아파트보다 훨씬 높습니다. 한 세대당 세입자 교체 때 평균 150만~300만원의 수선비가 발생합니다. 또한 전세사기 위험, 공시지가 대비 보증금 비율 규제, 노후 건물의 경우 유지보수 부담이 커서 실질수익률은 4~5%대로 내려오는 경우가 많습니다. 임대 관리를 직접 할 여유와 역량이 있는 분께 적합한 투자 유형입니다."
+      }
+    }
+  ]
+}
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.jptcalc.kr/"},
+    {"@type": "ListItem", "position": 2, "name": "블로그", "item": "https://www.jptcalc.kr/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "부동산", "item": "https://www.jptcalc.kr/blog/?cat=부동산"},
+    {"@type": "ListItem", "position": 4, "name": "아파트·오피스텔·빌라 임대수익률 비교"}
+  ]
+}
+</script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #F59E0B;
+      --gray-400: #9CA3AF; --gray-500: #6B7280; --gray-600: #4B5563;
+      --dark-bg: #ffffff; --dark-card: #F9FAFB; --dark-border: rgba(0,0,0,0.08);
+    }
+    body { font-family: 'Pretendard', -apple-system, sans-serif; background: #ffffff; color: #111827; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+
+    .site-header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .header-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; gap: 24px; }
+    .site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .logo-icon { width: 32px; height: 32px; }
+    .logo-icon img { width: 32px; height: 32px; display: block; }
+    .logo-text { font-size: 18px; font-weight: 900; color: #111827; letter-spacing: -0.5px; }
+    .logo-text span { color: #818CF8; }
+    .header-back { margin-left: auto; font-size: 13px; font-weight: 600; color: #6B7280; text-decoration: none !important; }
+    .header-back:hover { color: #111827; }
+    .header-cta { margin-left: 8px; }
+    .btn-blog { font-size: 13px; font-weight: 700; color: #F59E0B; text-decoration: none; padding: 6px 14px; border: 1px solid rgba(245,158,11,0.3); border-radius: 8px; }
+
+    .post-wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+    .post-tag { display: inline-block; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; background: rgba(245,158,11,0.15); color: #F59E0B; margin-bottom: 16px; }
+    h1 { font-size: 26px; font-weight: 900; color: #111827; line-height: 1.35; margin-bottom: 12px; }
+    .post-meta { font-size: 13px; color: #4B5563; margin-bottom: 36px; display: flex; gap: 12px; }
+    .post-body { font-size: 15px; color: #111827; line-height: 1.8; }
+    .post-body h2 { font-size: 19px; font-weight: 800; color: #111827; margin: 40px 0 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .post-body h3 { font-size: 16px; font-weight: 700; color: #111827; margin: 24px 0 10px; }
+    .post-body p { margin-bottom: 14px; }
+    .post-body ul, .post-body ol { margin: 10px 0 14px 20px; }
+    .post-body li { margin-bottom: 8px; }
+    .post-body a { color: var(--primary); text-decoration: none !important; }
+    .post-body a:hover { text-decoration: underline; }
+    .highlight-box { background: rgba(245,158,11,0.08); border-left: 4px solid #F59E0B; border-radius: 0 10px 10px 0; padding: 16px 20px; margin: 20px 0; }
+    .highlight-box p { margin: 0; color: #92400E; font-size: 14px; }
+    .table-wrap { overflow-x: auto; margin: 20px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th { background: #F9FAFB; color: #111827; font-weight: 700; padding: 10px 14px; text-align: left; border: 1px solid rgba(0,0,0,0.08); word-break: keep-all; }
+    td { padding: 10px 14px; border: 1px solid rgba(0,0,0,0.08); color: #1F2937; word-break: keep-all; }
+    tr:hover td { background: rgba(0,0,0,0.02); }
+    td.rate { font-weight: 700; color: #F59E0B; }
+    td.center { text-align: center; }
+    td.warn { color: #DC2626; font-weight: 700; }
+    .cta-box { background: #F9FAFB; border: 1px solid rgba(0,0,0,0.08); border-radius: 14px; padding: 24px; margin: 40px 0; text-align: center; }
+    .cta-box p { color: #374151; font-size: 14px; margin-bottom: 14px; }
+    .cta-btn { display: inline-block; padding: 12px 28px; background: #F59E0B; color: #fff !important; font-size: 14px; font-weight: 800; border-radius: 10px; text-decoration: none !important; }
+    .cta-btn:hover { opacity: 0.9; }
+    .faq-item { background: #F9FAFB; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; padding: 20px; margin: 16px 0; }
+    .faq-q { font-weight: 800; color: #111827; margin-bottom: 8px; font-size: 15px; }
+    .faq-a { color: #374151; font-size: 14px; line-height: 1.7; margin: 0; }
+
+    .site-footer { border-top: 1px solid rgba(0,0,0,0.08); padding: 24px; text-align: center; }
+    .footer-copy { font-size: 10px; color: #374151; }
+    .scenario-box { background: rgba(245,158,11,0.06); border: 1px solid rgba(245,158,11,0.2); border-radius: 12px; padding: 20px 24px; margin: 20px 0; }
+    .scenario-box h3 { color: #92400E; margin-top: 0; margin-bottom: 12px; font-size: 15px; }
+    .scenario-box p { margin-bottom: 8px; font-size: 14px; color: #374151; }
+    .scenario-box p:last-child { margin-bottom: 0; }
+    .result-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+    .result-row:last-child { border-bottom: none; }
+    .result-label { color: #6B7280; }
+    .result-value { font-weight: 700; color: #111827; }
+    .result-value.highlight { color: #F59E0B; font-size: 16px; }
+    .result-value.warn { color: #DC2626; }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <div class="logo-icon"><img src="../../assets/logo.svg" alt="제이퍼" /></div>
+      <div class="logo-text">제이퍼 <span>계산기</span></div>
+    </a>
+    <a href="/blog/" class="header-back">← 블로그</a>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+  </div>
+</header>
+
+<div class="post-wrap">
+  <span class="post-tag">부동산</span>
+  <h1>아파트·오피스텔·빌라 임대수익률 비교 - 공실·수선비 포함한 실질 수익 계산</h1>
+  <div class="post-meta">
+    <span>📅 2026.05.07</span>
+    <span>⏱ 18분 읽기</span>
+  </div>
+
+  <div class="post-body">
+
+    <p>수익률 5%라고 계산했는데, 실제로는 2.1%였습니다. 오피스텔 2억5천만원에 투자해 월 75만원씩 받겠다고 설계한 임대인이 3년 뒤 장부를 열었을 때 마주한 숫자입니다. 공실 1.2개월, 도배장판 교체, 보일러 수리, 재산세, 임대소득세까지 더하면 손에 쥐는 금액이 절반에 가깝게 줄어듭니다.</p>
+
+    <p>이 글에서는 아파트, 오피스텔, 빌라(다가구) 세 유형의 임대수익률을 표면수익률이 아니라 공실·수선비·세금을 모두 포함한 실질수익률로 비교합니다. 투자 전에 반드시 알아야 할 숫자들을 직접 계산했습니다.</p>
+
+    <div class="highlight-box">
+      <p><strong>이 글이 필요한 분</strong><br>임대 물건 매입을 처음 고민 중인 분 / 수익률이 기대보다 낮은 이유를 모르는 현직 임대인 / 아파트·오피스텔·빌라 중 어디에 투자할지 결정 못 한 분 / 임대소득세 신고를 앞두고 세금 구조가 궁금한 분</p>
+    </div>
+
+    <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+      <li>아파트·오피스텔·빌라 표면수익률 vs 실질수익률 유형별 비교표</li>
+      <li>공실 0개월~4개월 시나리오별 연간 수익 손실 계산 (월세 75만원 기준)</li>
+      <li>임대인 A씨(아파트 5억), B씨(오피스텔 2.5억), C씨(빌라 1.8억) 실질 수익률 검산</li>
+      <li>임대 수선비 항목별 평균 비용 - 세입자 교체 때 실제로 나가는 돈</li>
+      <li>임대소득세 분리과세 vs 종합과세 유불리 계산 (연 소득 구간별)</li>
+      <li>수익률 5% 오피스텔이 아파트보다 손에 쥐는 돈이 적을 수 있는 이유</li>
+    </ul>
+
+    <h2>유형별 임대 물건 기본 특성 비교</h2>
+
+    <p>임대수익률을 이야기하기 전에, 각 유형의 기본 특성을 이해해야 합니다. 표면수익률만 보고 투자를 결정하는 것이 왜 위험한지를 이 표가 보여줍니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>아파트</th>
+            <th>오피스텔</th>
+            <th>빌라·다가구</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>표면수익률 (서울 기준)</td>
+            <td class="rate">2.0~4.0%</td>
+            <td class="rate">3.5~6.0%</td>
+            <td class="rate">5.0~9.0%</td>
+          </tr>
+          <tr>
+            <td>연평균 공실기간</td>
+            <td>0.3~0.8개월</td>
+            <td>0.8~1.5개월</td>
+            <td>0.5~2.0개월</td>
+          </tr>
+          <tr>
+            <td>세입자 교체 수선비</td>
+            <td>50~120만원</td>
+            <td>80~180만원</td>
+            <td>150~350만원</td>
+          </tr>
+          <tr>
+            <td>관리 부담</td>
+            <td>낮음 (관리비 자동)</td>
+            <td>중간 (관리비 일부 직접)</td>
+            <td>높음 (임대인 직접 처리)</td>
+          </tr>
+          <tr>
+            <td>자본이득 (시세차익)</td>
+            <td>높음</td>
+            <td>낮음~중간</td>
+            <td>중간</td>
+          </tr>
+          <tr>
+            <td>취득세율</td>
+            <td>1~12% (보유 주택 수)</td>
+            <td>4.6% (업무용 기준)</td>
+            <td>1~12% (주거용)</td>
+          </tr>
+          <tr>
+            <td>종합부동산세 합산</td>
+            <td>주택 합산 과세</td>
+            <td>업무용 제외 가능</td>
+            <td>주택 합산 과세</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>2025년 한국부동산원 수익형부동산 수익률 통계에 따르면 전국 오피스텔 평균 수익률은 5.1%, 서울은 4.6%입니다. 아파트는 임대수익률 통계를 별도로 집계하지 않지만, 서울 아파트 전세가율(매매가 대비 전세가 비율)이 55~65% 수준임을 감안하면 순수 임대수익률(월세 기준)은 2~4% 구간에 형성되어 있습니다.</p>
+
+    <div style="margin:24px 0;overflow-x:auto">
+    <svg role="img" width="100%" viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg">
+      <title>유형별 표면수익률 vs 실질수익률 비교</title>
+      <rect width="680" height="200" rx="12" fill="#F9FAFB"/>
+      <text x="24" y="32" font-size="13" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">유형별 임대수익률 비교 (표면 vs 실질)</text>
+      <!-- 아파트 -->
+      <text x="24" y="68" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">아파트 표면</text>
+      <rect x="110" y="56" width="140" height="18" rx="4" fill="#F59E0B" opacity="0.8"/>
+      <text x="258" y="70" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">3.0%</text>
+      <text x="24" y="92" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">아파트 실질</text>
+      <rect x="110" y="80" width="80" height="18" rx="4" fill="#F59E0B" opacity="0.35"/>
+      <text x="198" y="94" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">1.7%</text>
+      <!-- 오피스텔 -->
+      <text x="24" y="120" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">오피스텔 표면</text>
+      <rect x="110" y="108" width="200" height="18" rx="4" fill="#F59E0B" opacity="0.8"/>
+      <text x="318" y="122" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">4.3%</text>
+      <text x="24" y="144" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">오피스텔 실질</text>
+      <rect x="110" y="132" width="100" height="18" rx="4" fill="#F59E0B" opacity="0.35"/>
+      <text x="218" y="146" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">2.1%</text>
+      <!-- 빌라 -->
+      <text x="24" y="172" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">빌라 표면</text>
+      <rect x="110" y="160" width="280" height="18" rx="4" fill="#F59E0B" opacity="0.8"/>
+      <text x="398" y="174" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">6.0%</text>
+      <text x="24" y="196" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">빌라 실질</text>
+      <rect x="110" y="184" width="175" height="18" rx="4" fill="#F59E0B" opacity="0.35"/>
+      <text x="293" y="198" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">3.8%</text>
+      <text x="600" y="32" font-size="11" fill="#9CA3AF" font-family="Pretendard,sans-serif">서울 기준</text>
+    </svg>
+    </div>
+
+    <h2>시나리오 A - 아파트 5억원을 보증부 월세로 운영하면</h2>
+
+    <p>직장인 김재훈씨(42세)는 경기 성남 분당구 아파트(전용 59㎡)를 5억원에 매입했습니다. 1주택자이며, 기존 거주 아파트가 따로 있습니다. 보증금 5천만원에 월세 80만원으로 세를 놓았습니다.</p>
+
+    <div class="scenario-box">
+      <h3>시나리오 A 수익률 계산 (아파트 5억, 월세 80만원)</h3>
+      <div class="result-row"><span class="result-label">매입가</span><span class="result-value">5억원</span></div>
+      <div class="result-row"><span class="result-label">보증금</span><span class="result-value">5,000만원</span></div>
+      <div class="result-row"><span class="result-label">실투자금 (매입가 - 보증금)</span><span class="result-value">4억5,000만원</span></div>
+      <div class="result-row"><span class="result-label">연간 임대수입 (80만 × 12)</span><span class="result-value">960만원</span></div>
+      <div class="result-row"><span class="result-label">표면수익률</span><span class="result-value highlight">960만 ÷ 4.5억 = 2.13%</span></div>
+    </div>
+
+    <p>표면수익률 2.13%까지는 단순합니다. 문제는 여기서부터입니다. 실제 비용을 따져봅니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>비용 항목</th>
+            <th>연간 금액</th>
+            <th>산출 근거</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>취득세 안분 (5년 보유 기준)</td>
+            <td>110만원</td>
+            <td>1주택→2주택 취득세 1.1% = 550만원 ÷ 5년 (일반지역, 2026년 기준)</td>
+          </tr>
+          <tr>
+            <td>재산세</td>
+            <td>55만원</td>
+            <td>공시가격 3.5억 × 세율 0.16% 수준 (누진공제 포함)</td>
+          </tr>
+          <tr>
+            <td>공실 손실 (연평균 0.5개월)</td>
+            <td>40만원</td>
+            <td>80만원 × 0.5개월</td>
+          </tr>
+          <tr>
+            <td>수선비 (도배·장판·청소 등)</td>
+            <td>55만원</td>
+            <td>2년 주기 교체 시 110만원 ÷ 2 = 연 55만원</td>
+          </tr>
+          <tr>
+            <td>임대소득세 (분리과세)</td>
+            <td>26만원</td>
+            <td>(960만 × 0.4 - 200만) × 14% ≈ 26만원 (기본공제 200만 적용)</td>
+          </tr>
+          <tr>
+            <td><strong>총 비용 합계</strong></td>
+            <td><strong>286만원</strong></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="scenario-box">
+      <h3>시나리오 A 실질수익률 검산</h3>
+      <div class="result-row"><span class="result-label">연간 임대수입</span><span class="result-value">960만원</span></div>
+      <div class="result-row"><span class="result-label">총 비용 차감</span><span class="result-value warn">- 286만원</span></div>
+      <div class="result-row"><span class="result-label">실질 수익</span><span class="result-value">674만원</span></div>
+      <div class="result-row"><span class="result-label">실질수익률</span><span class="result-value highlight">674만 ÷ 4.5억 = 1.50%</span></div>
+    </div>
+
+    <p>표면수익률 2.13%에서 실질수익률 1.50%로 0.63%p 차이가 납니다. 금액으로 환산하면 연 286만원, 월 24만원이 비용으로 사라집니다. 아파트는 공실 기간이 짧고 수선비가 낮아 다른 유형보다 비용 손실이 적은 편이지만, 절대적인 수익률 자체가 낮다는 단점이 있습니다.</p>
+
+    <p>다만 김재훈씨 아파트의 경우 5년 보유 후 시세 5억5천으로 상승한다고 가정하면, 시세차익 5천만원 + 임대수익 5년 합계 3,370만원(674만 × 5년) = 총 8,370만원을 거둡니다. 이를 실투자금 4억5천만원 대비 연환산 수익률로 계산하면 약 3.7% 수준입니다. 자본이득이 임대수익을 훨씬 웃도는 구조입니다.</p>
+
+    <h2>시나리오 B - 오피스텔 2억5천만원의 실질 수익</h2>
+
+    <p>프리랜서 이수진씨(38세)는 서울 마포구 오피스텔(전용 24㎡)을 2억5천만원에 매입했습니다. 업무용 오피스텔로 등록해 취득세를 4.6%로 신고했습니다. 보증금 1천만원, 월세 75만원입니다.</p>
+
+    <div class="scenario-box">
+      <h3>시나리오 B 기본 수익률 계산 (오피스텔 2억5천, 월세 75만원)</h3>
+      <div class="result-row"><span class="result-label">매입가</span><span class="result-value">2억5,000만원</span></div>
+      <div class="result-row"><span class="result-label">보증금</span><span class="result-value">1,000만원</span></div>
+      <div class="result-row"><span class="result-label">실투자금</span><span class="result-value">2억4,000만원</span></div>
+      <div class="result-row"><span class="result-label">연간 임대수입 (75만 × 12)</span><span class="result-value">900만원</span></div>
+      <div class="result-row"><span class="result-label">표면수익률</span><span class="result-value highlight">900만 ÷ 2.4억 = 3.75%</span></div>
+    </div>
+
+    <p>아파트보다 1.62%p 높은 수익률입니다. 여기에 실제 비용을 적용합니다. 오피스텔의 핵심 변수는 공실입니다. 1인 가구 오피스텔은 세입자 교체가 아파트보다 잦고, 교체 시 공실기간이 길어지는 경향이 있습니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>비용 항목</th>
+            <th>연간 금액</th>
+            <th>산출 근거</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>취득세 안분 (5년 보유)</td>
+            <td>230만원</td>
+            <td>2.5억 × 4.6% = 1,150만원, 5년 안분 시 연 230만원 (업무용 오피스텔 기준)</td>
+          </tr>
+          <tr>
+            <td>재산세 + 건물분 종합부동산세</td>
+            <td>35만원</td>
+            <td>오피스텔은 업무용 등록 시 주택합산 제외 (재산세만)</td>
+          </tr>
+          <tr>
+            <td>공실 손실 (연평균 1.2개월)</td>
+            <td>90만원</td>
+            <td>75만원 × 1.2개월 (한국부동산원 2025년 서울 오피스텔 평균 공실률 8.7% 기준)</td>
+          </tr>
+          <tr>
+            <td>수선비 (도배·장판·청소·설비)</td>
+            <td>90만원</td>
+            <td>세입자 교체 시 평균 180만원, 2년 주기 기준 연 90만원</td>
+          </tr>
+          <tr>
+            <td>임대소득세 (분리과세)</td>
+            <td>50만원</td>
+            <td>(900만 × 0.4) × 14% = 360만 × 14% = 50만4천원</td>
+          </tr>
+          <tr>
+            <td><strong>총 비용 합계</strong></td>
+            <td><strong>495만원</strong></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="scenario-box">
+      <h3>시나리오 B 실질수익률 검산</h3>
+      <div class="result-row"><span class="result-label">연간 임대수입</span><span class="result-value">900만원</span></div>
+      <div class="result-row"><span class="result-label">총 비용 차감</span><span class="result-value warn">- 495만원</span></div>
+      <div class="result-row"><span class="result-label">실질 수익</span><span class="result-value">405만원</span></div>
+      <div class="result-row"><span class="result-label">실질수익률</span><span class="result-value highlight">405만 ÷ 2.4억 = 1.69%</span></div>
+    </div>
+
+    <p>표면수익률 3.75%에서 실질수익률 1.69%로 절반 이하로 떨어졌습니다. 더 놀라운 것은 시나리오 A(아파트)의 실질수익률 1.50%와 비교하면 겨우 0.19%p 차이밖에 나지 않는다는 점입니다. 이 차이를 금액으로 계산하면 연 45만원 수준입니다. 월 4만원이 채 안 됩니다.</p>
+
+    <p>그리고 아파트는 시세차익 기대가 높습니다. 오피스텔은 시세차익이 아파트 대비 제한적이기 때문에, 총 수익률 관점에서는 오피스텔이 분명하게 불리합니다.</p>
+
+    <h2>시나리오 C - 빌라 2채, 표면수익률 9%의 실제 모습</h2>
+
+    <p>은퇴자 박성철씨(62세)는 경기도 수원 빌라 2채를 각 9천만원씩, 총 1억8천만원에 매입했습니다. 각각 보증금 2천만원, 월세 55만원으로 임대했습니다. 총 월세 수입은 110만원입니다.</p>
+
+    <div class="scenario-box">
+      <h3>시나리오 C 기본 수익률 계산 (빌라 2채, 월세 110만원)</h3>
+      <div class="result-row"><span class="result-label">총 매입가</span><span class="result-value">1억8,000만원</span></div>
+      <div class="result-row"><span class="result-label">총 보증금</span><span class="result-value">4,000만원</span></div>
+      <div class="result-row"><span class="result-label">실투자금</span><span class="result-value">1억4,000만원</span></div>
+      <div class="result-row"><span class="result-label">연간 임대수입 (110만 × 12)</span><span class="result-value">1,320만원</span></div>
+      <div class="result-row"><span class="result-label">표면수익률</span><span class="result-value highlight">1,320만 ÷ 1.4억 = 9.43%</span></div>
+    </div>
+
+    <p>표면수익률만 보면 압도적입니다. 그런데 빌라는 비용 구조가 완전히 다릅니다. 세입자 교체 때 직접 수리해야 하고, 공동관리비가 없어 임대인이 모든 것을 처리합니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>비용 항목</th>
+            <th>연간 금액 (2채 합산)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>취득세 안분 (5년 보유)</td>
+            <td>36만원 (2주택 1~3% 구간)</td>
+          </tr>
+          <tr>
+            <td>재산세 (공시가격 합산 낮음)</td>
+            <td>24만원</td>
+          </tr>
+          <tr>
+            <td>공실 손실 (연평균 1.5개월 × 2채)</td>
+            <td>165만원 (55만 × 3개월)</td>
+          </tr>
+          <tr>
+            <td>수선비 (노후 빌라 연간 직접 수리)</td>
+            <td>280만원 (2채 × 140만원)</td>
+          </tr>
+          <tr>
+            <td>임대소득세 (2000만원 이하, 분리과세)</td>
+            <td>75만원 (1,320만 × 0.4 × 14%)</td>
+          </tr>
+          <tr>
+            <td>관리 인건비 (직접 대응 시간 환산)</td>
+            <td>별도 고려 필요</td>
+          </tr>
+          <tr>
+            <td><strong>총 비용 합계</strong></td>
+            <td><strong>580만원</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="scenario-box">
+      <h3>시나리오 C 실질수익률 검산</h3>
+      <div class="result-row"><span class="result-label">연간 임대수입</span><span class="result-value">1,320만원</span></div>
+      <div class="result-row"><span class="result-label">총 비용 차감</span><span class="result-value warn">- 580만원</span></div>
+      <div class="result-row"><span class="result-label">실질 수익</span><span class="result-value">740만원</span></div>
+      <div class="result-row"><span class="result-label">실질수익률</span><span class="result-value highlight">740만 ÷ 1.4억 = 5.29%</span></div>
+    </div>
+
+    <p>표면수익률 9.43%에서 실질수익률 5.29%로 4.14%p 낮아졌습니다. 비율로는 표면수익률의 56% 수준입니다. 그래도 세 유형 중 실질수익률이 가장 높습니다. 단, 박성철씨가 수리 전화를 직접 받고 현장에 출동하는 시간을 금전화하면 실질 수익은 더 낮아집니다. 한국임대인연합회 조사에 따르면 빌라 임대인의 월평균 관리 소요 시간은 약 6~8시간으로, 이를 최저임금(2026년 시간당 10,030원)으로 환산하면 월 6만~8만원, 연 72만~96만원에 달합니다.</p>
+
+    <h2>수익률 5%인 줄 알았는데 - 공실 2달이면 수익이 반토막 난다</h2>
+
+    <p>여기서 함정이 있습니다. 오피스텔 임대인들이 가장 흔하게 놓치는 계산 오류입니다. 공실 2개월은 단순히 "2달치 임대료를 못 받는다"가 아닙니다. 대출이자까지 포함하면 실제 손실은 훨씬 큽니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>연간 공실 개월 수</th>
+            <th>연간 임대 수령액</th>
+            <th>실질수익률 영향</th>
+            <th>대출이자 포함 순손실</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0개월 (공실 없음)</td>
+            <td>900만원</td>
+            <td class="rate">3.75%</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>1개월</td>
+            <td>825만원</td>
+            <td class="rate">3.44%</td>
+            <td>75만원 손실</td>
+          </tr>
+          <tr>
+            <td>2개월</td>
+            <td>750만원</td>
+            <td class="rate">3.13%</td>
+            <td>150만원 손실</td>
+          </tr>
+          <tr>
+            <td>3개월</td>
+            <td>675만원</td>
+            <td class="rate">2.81%</td>
+            <td>225만원 손실</td>
+          </tr>
+          <tr>
+            <td>4개월</td>
+            <td>600만원</td>
+            <td class="warn">2.50%</td>
+            <td>300만원 손실</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>오피스텔에 대출 1억원(연 4.5%, 월 37만5천원)이 있다면 공실 2개월 동안 대출이자만 75만원이 나갑니다. 기대임대료 손실 150만원 + 대출이자 75만원 = 공실 2개월의 실제 비용은 225만원입니다. 이는 공실이 없을 때 연간 총 임대수입 900만원의 25%에 해당합니다. 4분기 전체 임대수입이 공실 2개월에 사라지는 셈입니다.</p>
+
+    <p>이것이 임대수익률 계산에서 반드시 공실률을 먼저 확인해야 하는 이유입니다. 역세권이나 대학가 오피스텔이 일반 주거지 오피스텔보다 수익률이 낮아 보여도 실제로는 더 유리한 경우가 많습니다. 공실 리스크가 낮기 때문입니다.</p>
+
+    <p>임대수익률을 직접 계산해보고 싶다면 <a href="../../calc/realestate/rental/" style="color:#F59E0B;">임대수익률 계산기</a>를 활용해 공실 기간을 변수로 넣어 시뮬레이션할 수 있습니다.</p>
+
+    <h2>수선·관리비가 실제로 얼마나 드나</h2>
+
+    <p>임대 물건을 보유한 임대인들이 가장 과소평가하는 비용이 수선비입니다. 매년 나가는 건 아니지만, 세입자가 교체될 때마다 크게 지출되기 때문에 평균을 내면 상당한 금액입니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>수선 항목</th>
+            <th>아파트 (59㎡ 기준)</th>
+            <th>오피스텔 (24㎡ 기준)</th>
+            <th>빌라 (33㎡ 기준)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>도배 (합지)</td>
+            <td>40~60만원</td>
+            <td>20~35만원</td>
+            <td>30~50만원</td>
+          </tr>
+          <tr>
+            <td>장판 교체</td>
+            <td>20~40만원</td>
+            <td>10~20만원</td>
+            <td>15~30만원</td>
+          </tr>
+          <tr>
+            <td>청소 (입주 청소)</td>
+            <td>15~25만원</td>
+            <td>8~15만원</td>
+            <td>10~20만원</td>
+          </tr>
+          <tr>
+            <td>싱크대·욕실 실리콘</td>
+            <td>10~20만원</td>
+            <td>5~15만원</td>
+            <td>10~20만원</td>
+          </tr>
+          <tr>
+            <td>보일러·설비 소모품</td>
+            <td>0~50만원</td>
+            <td>0~30만원</td>
+            <td>10~60만원</td>
+          </tr>
+          <tr>
+            <td>문손잡이·조명 교체</td>
+            <td>5~15만원</td>
+            <td>3~10만원</td>
+            <td>5~15만원</td>
+          </tr>
+          <tr>
+            <td><strong>합계 (평균)</strong></td>
+            <td><strong>90~210만원</strong></td>
+            <td><strong>46~125만원</strong></td>
+            <td><strong>80~195만원</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>세입자 교체 주기를 2년으로 가정하면 연간 수선비는 각각 아파트 75만원, 오피스텔 43만원, 빌라 70만원 수준입니다. 노후 빌라는 예상치 못한 수도관 파열이나 외벽 균열 수리가 추가로 발생하면 한 번에 150~300만원이 나갑니다. 이 금액은 연간 임대수입의 10~25%에 해당합니다.</p>
+
+    <p>수선비를 최소화하려면 입주 시 임차인과 시설물 현황 확인서를 작성하고, 임차인 귀책 여부를 명확히 기재해두는 것이 중요합니다. 시설 교체 책임 범위를 계약서에 명시하면 불필요한 분쟁을 줄일 수 있습니다.</p>
+
+    <p>전세를 월세로 전환할 때 얼마가 적정한지 궁금하다면 <a href="../posts/jeonse-conversion-rate.html" style="color:#F59E0B;">전월세 전환율 계산법과 적정 금액 산출 방법</a>에서 자세한 내용을 확인할 수 있습니다.</p>
+
+    <h2>임대소득세 - 종합과세 vs 분리과세, 어느 쪽이 유리한가</h2>
+
+    <p>소득세법 제64조의2에 따라 주택 임대소득이 연 2,000만 원 이하인 경우 분리과세(14% 단일세율)와 종합과세 중 선택할 수 있습니다. 어느 쪽이 유리한지는 다른 소득 수준에 따라 달라집니다.</p>
+
+    <p>분리과세 계산 공식은 다음과 같습니다. 임대수입에서 필요경비율 60%를 적용한 뒤 14%를 곱합니다.</p>
+
+    <p><strong>분리과세 세액</strong> = 임대수입 × (1 - 0.6) × 14% = 임대수입 × 0.056</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>연간 임대수입</th>
+            <th>분리과세 세액</th>
+            <th>종합과세 세율 (근로소득 4,000만원 합산 시)</th>
+            <th>종합과세 세액</th>
+            <th>유리한 방식</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>600만원</td>
+            <td class="center">34만원</td>
+            <td class="center">24%</td>
+            <td class="center">약 58만원</td>
+            <td><strong>분리과세</strong></td>
+          </tr>
+          <tr>
+            <td>900만원</td>
+            <td class="center">50만원</td>
+            <td class="center">24%</td>
+            <td class="center">약 87만원</td>
+            <td><strong>분리과세</strong></td>
+          </tr>
+          <tr>
+            <td>1,200만원</td>
+            <td class="center">67만원</td>
+            <td class="center">24%</td>
+            <td class="center">약 116만원</td>
+            <td><strong>분리과세</strong></td>
+          </tr>
+          <tr>
+            <td>900만원</td>
+            <td class="center">50만원</td>
+            <td class="center">15% (저소득·은퇴자)</td>
+            <td class="center">약 34만원</td>
+            <td><strong>종합과세</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>결론은 간단합니다. 다른 소득(근로, 사업 등)이 많은 직장인이라면 분리과세가 유리합니다. 반대로 은퇴 후 소득이 없거나 적은 경우에는 임대소득을 종합과세로 신고하면 세율이 낮아져 오히려 세금이 줄어들 수 있습니다.</p>
+
+    <p>임대소득 2,000만원 초과 시에는 종합과세가 의무화됩니다. 이 경우 다른 소득과 합산해 6~45%의 누진세율이 적용되므로, 임대 물건 수를 늘릴 때 세금 구조를 반드시 미리 검토해야 합니다.</p>
+
+    <p>재산세 계산이 궁금하다면 <a href="../posts/property-tax-guide.html" style="color:#F59E0B;">재산세 계산 방법과 절세 포인트</a>에서 공시가격별 세액을 직접 확인해볼 수 있습니다.</p>
+
+    <h2>3가지 유형 실질수익률 최종 비교</h2>
+
+    <p>세 시나리오를 정리합니다. 표면수익률 격차는 커 보이지만, 실질수익률 격차는 훨씬 좁습니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>아파트 (5억)</th>
+            <th>오피스텔 (2.5억)</th>
+            <th>빌라 (1.8억)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>표면수익률</td>
+            <td class="rate">2.13%</td>
+            <td class="rate">3.75%</td>
+            <td class="rate">9.43%</td>
+          </tr>
+          <tr>
+            <td>취득세 연 안분</td>
+            <td>110만원</td>
+            <td>230만원</td>
+            <td>36만원</td>
+          </tr>
+          <tr>
+            <td>재산세</td>
+            <td>55만원</td>
+            <td>35만원</td>
+            <td>24만원</td>
+          </tr>
+          <tr>
+            <td>공실 손실</td>
+            <td>40만원</td>
+            <td>90만원</td>
+            <td>165만원</td>
+          </tr>
+          <tr>
+            <td>수선비</td>
+            <td>55만원</td>
+            <td>90만원</td>
+            <td>280만원</td>
+          </tr>
+          <tr>
+            <td>임대소득세</td>
+            <td>26만원</td>
+            <td>50만원</td>
+            <td>75만원</td>
+          </tr>
+          <tr>
+            <td>총 비용</td>
+            <td>286만원</td>
+            <td>495만원</td>
+            <td>580만원</td>
+          </tr>
+          <tr>
+            <td>실질 수익</td>
+            <td>674만원</td>
+            <td>405만원</td>
+            <td>740만원</td>
+          </tr>
+          <tr>
+            <td><strong>실질수익률</strong></td>
+            <td class="rate"><strong>1.50%</strong></td>
+            <td class="rate"><strong>1.69%</strong></td>
+            <td class="rate"><strong>5.29%</strong></td>
+          </tr>
+          <tr>
+            <td>자본이득 기대</td>
+            <td>높음</td>
+            <td>낮음</td>
+            <td>중간</td>
+          </tr>
+          <tr>
+            <td>관리 부담</td>
+            <td>낮음</td>
+            <td>중간</td>
+            <td>높음</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>표면수익률로는 아파트(2.13%)와 오피스텔(3.75%) 사이에 1.62%p 차이가 있습니다. 그런데 실질수익률 기준으로는 아파트 1.50%, 오피스텔 1.69%로 격차가 0.19%p로 줄어듭니다. 이 차이를 금액으로 계산하면 오피스텔이 연 45만원 더 버는 구조입니다. 그러나 오피스텔은 시세차익 기대가 낮고, 관리 부담이 아파트보다 높습니다. 순수 임대수익률만 따지는 분이 아니라면 아파트가 총합 관점에서 오피스텔보다 불리하지 않습니다.</p>
+
+    <p>빌라는 실질수익률 5.29%로 가장 높지만, 관리 부담이 크고 공실 리스크와 수선비 변동성이 심합니다. 노후 빌라일수록 예상치 못한 대형 수리가 발생해 특정 연도 실질수익률이 마이너스가 될 수도 있습니다. 은퇴 후 안정적 현금흐름을 원하는 분보다 적극적 관리가 가능한 분에게 적합합니다.</p>
+
+    <h2>임대 물건 선택 전 체크해야 할 핵심 포인트</h2>
+
+    <p>세 유형을 비교한 결과를 바탕으로 실제 물건을 고를 때 확인해야 할 항목을 정리합니다. 수익률 계산보다 이 체크리스트가 더 중요할 수 있습니다.</p>
+
+    <h3>공실률 사전 확인 방법</h3>
+    <p>부동산 플랫폼에서 해당 단지 또는 인근 오피스텔의 매물 등록 기간을 확인합니다. 동일 건물 내 빈 호수가 여러 개라면 공실률 리스크가 높은 물건입니다. 주변 임대인에게 직접 물어보는 것도 효과적입니다. 역세권 오피스텔과 일반 주거지 오피스텔의 공실률 차이는 연 0.5개월~1.5개월에 달할 수 있습니다.</p>
+
+    <h3>수선 이력 확인</h3>
+    <p>매매 계약 전 등기부등본과 건물 준공연도를 확인합니다. 15년 이상 된 오피스텔이나 빌라는 수도관·전기배선·보일러가 교체 주기에 접어든 경우가 많습니다. 이런 물건은 수선비 예산을 2~3배로 잡아야 합니다. 실제 임대인을 만나 최근 3년간 수선 내역을 물어보면 많은 정보를 얻을 수 있습니다.</p>
+
+    <h3>보증금 반환 리스크</h3>
+    <p>임대보증금이 매매가의 80%를 초과하는 경우 주의가 필요합니다. 전세사기 예방 차원에서 주택도시보증공사(HUG)의 전세보증보험 가입 여부를 임차인이 요구할 수 있고, 이 경우 임대인의 부채비율이 기준을 초과하면 보험 가입이 거절됩니다. 이는 세입자를 구하기 어렵게 만드는 요인이 됩니다.</p>
+
+    <p>취득세가 얼마인지 미리 계산하고 싶다면 <a href="../posts/acquisition-tax-2026.html" style="color:#F59E0B;">2026년 취득세 계산법 및 다주택자 세율 정리</a>에서 주택 수별 세율을 확인할 수 있습니다.</p>
+
+    <div class="cta-box">
+      <p>내 임대 물건의 공실률·수선비·세금을 모두 반영한 실질수익률을 계산해보세요.</p>
+      <a href="../../calc/realestate/rental/" class="cta-btn">임대수익률 계산기 바로가기</a>
+    </div>
+    <p style="font-size:13px;color:#6B7280;margin-top:8px;text-align:center">표면수익률뿐 아니라 비용 항목별로 입력해 실질수익률을 직접 확인할 수 있습니다.</p>
+
+    <h2>자주 묻는 질문 (FAQ)</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">오피스텔과 아파트 중 임대수익률이 더 높은 쪽은 어디인가요?</div>
+      <div class="faq-a">표면수익률만 놓고 보면 오피스텔이 3~6%로 아파트(2~4%)보다 높습니다. 하지만 공실률, 수선비, 재산세를 모두 포함한 실질수익률은 오피스텔이 1.8~2.5%, 아파트가 1.2~2.0% 수준으로 격차가 줄어듭니다. 서울 오피스텔 평균 공실기간이 연 1.2개월(한국부동산원 2025년 기준)에 달하는 점을 감안하면, 공실 리스크가 낮은 인기 지역 아파트가 실질적으로 더 안정적인 수익을 낼 수 있습니다. 여기에 아파트는 자본이득(시세차익) 기대가 높아 총 수익률 관점에서는 오피스텔보다 우위에 있는 경우가 많습니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">임대소득세는 얼마나 내야 하나요? 종합과세와 분리과세 중 어느 쪽이 유리한가요?</div>
+      <div class="faq-a">소득세법 제64조의2에 따라 주택 임대소득이 연 2,000만 원 이하인 경우 분리과세(14%)와 종합과세 중 선택할 수 있습니다. 분리과세 계산식은 (임대수입 × 필요경비율 60% 적용 후 잔액) × 14%입니다. 월 75만원, 연 900만원 임대수입이라면 (900만 × 0.4) × 14% = 50만4천원이 세금입니다. 다른 근로소득이 없거나 적은 경우에는 종합과세가 오히려 유리할 수 있습니다. 기타소득이 많은 직장인이라면 일반적으로 분리과세를 선택하는 편이 세 부담이 낮습니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">공실 기간 동안 대출이자는 어떻게 처리해야 하나요?</div>
+      <div class="faq-a">공실 기간에도 대출이자는 그대로 납부해야 합니다. 이것이 레버리지 투자의 핵심 위험입니다. 예를 들어 2억5천만원 오피스텔에 대출 1억원(연 4.5%, 월 37만5천원)이 있다면, 공실 2개월 동안 이자만 75만원을 지출하게 됩니다. 이를 감안하면 실질 공실 비용은 기대임대료 150만원 + 대출이자 75만원 = 225만원입니다. 대출 비율이 높을수록 공실 1개월의 타격이 커지므로, 투자 전 공실률이 낮은 지역을 선택하거나 대출 비율을 낮추는 전략이 필요합니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">빌라나 다가구주택 임대는 아파트·오피스텔보다 수익률이 높다고 하는데 실제로도 그런가요?</div>
+      <div class="faq-a">표면수익률만 보면 빌라(5~9%)가 아파트(2~4%)보다 높습니다. 그러나 빌라는 직접 수선·관리가 필요하고, 세입자 교체 비용(도배·장판·청소 등)이 아파트보다 훨씬 높습니다. 한 세대당 세입자 교체 때 평균 150만~300만원의 수선비가 발생합니다. 또한 전세사기 위험, 공시지가 대비 보증금 비율 규제, 노후 건물의 경우 유지보수 부담이 커서 실질수익률은 4~5%대로 내려오는 경우가 많습니다. 임대 관리를 직접 할 여유와 역량이 있는 분께 적합한 투자 유형입니다.</div>
+    </div>
+
+    <h2>투자 전에 반드시 계산하세요</h2>
+
+    <p>이 글에서 계산한 핵심 숫자는 하나입니다. 오피스텔 2억5천만원의 표면수익률 3.75%가 실질수익률 1.69%로 줄어들었습니다. 표면수익률이 2.06%p 과장된 것입니다. 아파트와 비교해 수익률 격차가 1.62%p처럼 보였지만, 실제로는 0.19%p에 불과했습니다.</p>
+
+    <p>임대 물건 선택에서 수익률 숫자는 출발점일 뿐입니다. 공실률, 수선비, 세금, 관리 부담까지 반영한 뒤에야 비로소 실제 수익이 보입니다. 세 유형 중 어느 것이 나은지는 투자금 규모, 관리 역량, 자본이득 기대 여부에 따라 달라집니다. 아파트는 자본이득형, 빌라는 현금흐름형, 오피스텔은 두 가지 모두 중간 정도라는 공식이 실제 계산에서도 확인됩니다.</p>
+
+    <p>임대수익률 계산기를 활용해 본인의 물건에 맞는 수치를 직접 입력해보면, 이 글의 시나리오와 어떻게 다른지 바로 확인할 수 있습니다. 투자 결정을 내리기 전에 반드시 공실 1~2개월 시나리오를 넣어보는 것을 권합니다.</p>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-copy">© 2026 제이퍼 계산기. 본 내용은 참고용이며 실제 투자·세무 결정은 전문가와 상담하시기 바랍니다.</div>
+</footer>
+
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "한국부동산원 수익형부동산 수익률 통계, 소득세법 제64조의2, 2026년 기준",
+  basisDate: "2026년 기준",
+  referenceOrg: "한국부동산원, 국세청",
+  lastReviewed: '2026.05.07',
+  disclaimer: "본 내용은 참고용이며 실제 투자·세무 결정 시 전문가와 상담하시기 바랍니다.",
+  relatedCalc: { name: '임대수익률 계산기', url: '/calc/realestate/rental/' },
+  category: 'realestate'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+
+</body>
+</html>

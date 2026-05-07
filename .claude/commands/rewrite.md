@@ -84,6 +84,10 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - rental-yield-guide.html - 2026-05-06 수정
 - pet-insurance.html - 2026-05-06 수정
 - chatgpt-api-cost.html - 2026-05-06 수정
+- cursor-vs-copilot.html - 2026-05-07 수정
+- gpu-cloud-comparison.html - 2026-05-07 수정
+- date-add-guide.html - 2026-05-07 수정
+- pet-medical-cost.html - 2026-05-07 수정
 
 ## 작업 순서
 

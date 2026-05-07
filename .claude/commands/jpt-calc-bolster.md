@@ -50,15 +50,20 @@ for n, f in results:
 작업 완료 시 `- {경로} ({YYYY-MM-DD} 보강, 옵션{X}, N,NNN자)` 형식으로 추가.
 
 **옵션 누적 카운트 (목표 A:12 / B:11 / C:13)**:
-- A 사용: 2/12
-- B 사용: 1/11
-- C 사용: 2/13
+- A 사용: 4/12
+- B 사용: 3/11
+- C 사용: 3/13
 
 - calc/salary/raise-rate (2026-05-06 보강, 옵션B, 2,996자)
 - calc/salary/job-change (2026-05-06 보강, 옵션C, 2,896자)
 - calc/ai/saas-comparison (2026-05-06 보강, 옵션A, 3,159자)
 - calc/ai/api-token (2026-05-06 보강, 옵션C, 3,135자)
 - calc/health/body-fat (2026-05-06 보강, 옵션A, 3,875자)
+- calc/ai/gpu-cloud (2026-05-07 보강, 옵션A, 2,822자)
+- calc/salary/comparison (2026-05-07 보강, 옵션A, 2,806자)
+- calc/date/weekday (2026-05-07 보강, 옵션B, 2,803자)
+- calc/ai/infra-forecast (2026-05-07 보강, 옵션B, 3,146자)
+- calc/date/date-difference (2026-05-07 보강, 옵션C, 2,825자)
 
 ## 대상 36개 (실측 기준, 짧은 순)
 

@@ -74,3 +74,6 @@
 - jeonse-conversion-rate.html (2026-05-06 검증, 이상 없음 | 전환율 공식·시나리오 A·B·C·임대소득세표 계산 전부 정확, BreadcrumbList p3 /blog/?cat=부동산 정상, FAQ 4개·JSON-LD·링크 이상 없음)
 - jeonse-vs-wolse.html (2026-05-06 검증, 오류 2개 수정 | JSON-LD headline과 h1 불일치 동기화, BreadcrumbList p3 /calc/realestate/ → /blog/?cat=부동산 수정 | 손익분기 금리 계산·시나리오 수치 이상 없음)
 - llm-api-price-comparison.html (2026-05-06 검증, 오류 1개 수정 | BreadcrumbList p3 /calc/ai/ → /blog/?cat=AI·테크 수정 | 모델별 가격표·시나리오 비용 계산 재검산 정확, FAQ 5개·JSON-LD·링크 이상 없음)
+- diet-calorie-guide.html (2026-05-07 검증, 오류 1개 수정 | ARTICLE_INFO_CONFIG basisDate·referenceOrg 누락 필드 추가 | BMR·TDEE·칼로리 적자 계산 재검산 정확, BreadcrumbList p3 /blog/?cat=건강 정상, JSON-LD·링크 이상 없음)
+- realestate-agent-fee.html (2026-05-07 검증, 오류 9개 수정 | 매매 요율표 9억 이상 3행→1행 통합(0.9%이내 협의), 전월세 요율표 구간 재정비(1~3억 0.3%, 3~6억 0.4%, 6억이상 협의), 예시2 전세3억 구간·요율·금액(0.3%→0.4%, 90만→120만), 비교표 전면 재작성, h1·title·meta description·JSON-LD headline·description 7곳 동기화 | 예방접종 오피스텔·상가 요율·환산 공식 이상 없음)
+- saas-vs-self-build.html (2026-05-07 검증, 오류 1개 수정 | BreadcrumbList p3 /calc/ai/ → /blog/?cat=AI·테크 수정 | TCO·BEP 계산 예시 수치 정합성 이상 없음, FAQ 3개·JSON-LD·링크 이상 없음)
