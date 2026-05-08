@@ -26,17 +26,22 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 
 사용자가 카테고리나 주제를 지정하면 그것을 따르고, 지정하지 않으면 위 기준으로 자동 선정한다.
 
-### 우선 주제 큐 (블로그 미연결 계산기)
-아래 계산기에 연결할 블로그 글이 아직 없다. **주제 자동 선정 시 이 목록을 최우선으로 소화한다.**
-각 계산기당 **블로그 글 2편**을 작성해야 목록에서 제거한다. 1편 작성 후에는 완료 횟수를 괄호로 표시하고, 2편째 완료 후 삭제한다.
-목록이 모두 소화되면 이 섹션을 삭제한다.
+### ⚠️ 2026-05-21 애드센스 신청까지 임시 룰 (D-13일)
 
-1. `/calc/realestate/rental/` - 임대수익률 계산기 (부동산) (1/2 완료 - rental-yield-guide.html)
-2. `/calc/realestate/joint/` - 공동명의 절세 계산기 (부동산)
-3. `/calc/realestate/property-tax-comprehensive/` - 보유세 계산기 (부동산)
-4. `/calc/realestate/pyeong/` - 평수 변환 계산기 (부동산)
+**현재 카테고리 격차 6개** (부동산 14 vs 반려동물·날짜·AI 각 8). 신청 직전 카테고리 비대칭은 "특정 주제 위주 사이트"로 평가되어 통과 위험. 5/21 신청 시까지는 아래 임시 룰 적용:
 
-글 작성 후 해당 계산기의 detail-shell.js guides 배열에 블로그 URL을 추가한다. 2편 모두 완료된 계산기만 이 목록에서 제거한다.
+- **카테고리 비율 최우선** (글 수가 가장 적은 카테고리 우선 선정)
+- 우선 주제 큐(미연결 계산기)는 **5/22 이후 재개** - 큐 항목이 모두 부동산 카테고리라 신청 전까지 보류
+- 동률일 때만 제휴 배너 있는 계산기와 연결 (기존 룰 유지)
+
+**5/22~ 큐 재개 시 우선순위 (현재 보류 중)**:
+1. `/calc/realestate/joint/` - 공동명의 절세 계산기
+2. `/calc/realestate/property-tax-comprehensive/` - 보유세 계산기
+3. `/calc/realestate/pyeong/` - 평수 변환 계산기
+
+(`/calc/realestate/rental/` 임대수익률은 2026-05-08 rental-yield-valuation.html 작성으로 2/2 완료되어 큐에서 제거됨)
+
+글 작성 후 해당 계산기의 detail-shell.js guides 배열에 블로그 URL을 추가한다.
 
 ---
 

@@ -88,6 +88,10 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - gpu-cloud-comparison.html - 2026-05-07 수정
 - date-add-guide.html - 2026-05-07 수정
 - pet-medical-cost.html - 2026-05-07 수정
+- ai-infra-cost-guide.html - 2026-05-08 수정
+- date-difference.html - 2026-05-08 수정
+- holiday-2026.html - 2026-05-08 수정
+- saas-vs-self-build.html - 2026-05-08 수정
 
 ## 작업 순서
 

@@ -25,7 +25,7 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},{"@type":"ListItem","position":2,"name":"날짜·D-day 계산기","item":"https://www.jptcalc.kr/calc/date/"},{"@type":"ListItem","position":3,"name":"날짜 더하기/빼기"}]}
   </script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"날짜 더하기/빼기 계산기는 어떤 상황에 유용한가요?","acceptedAnswer":{"@type":"Answer","text":"계약 만료일, 군 복무 전역 예정일, 신고·납부 기한 등을 계산할 때 유용합니다. 시작일에서 계약 기간만큼 더하거나, 기준일에서 법정 기한을 더해 정확한 마감일을 산출할 수 있습니다."}},{"@type":"Question","name":"월 단위 계산 시 말일은 어떻게 처리되나요?","acceptedAnswer":{"@type":"Answer","text":"1월 31일에 1개월을 더하면 2월 28일(또는 윤년의 경우 29일)로 계산됩니다. 해당 월에 그 날짜가 존재하지 않으면 자동으로 그 달의 마지막 날로 조정됩니다."}},{"@type":"Question","name":"년, 월, 일을 동시에 더할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네, 년·월·일 세 값을 동시에 입력할 수 있으며, 년 → 월 → 일 순서로 순차 계산됩니다. 각 단위를 0으로 두면 해당 단위는 계산에서 제외됩니다."}},{"@type":"Question","name":"빼기 계산도 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"네, 연산 버튼을 '빼기'로 전환하면 입력한 기간만큼 과거 날짜를 계산합니다. 예를 들어 오늘에서 100일을 빼면 100일 전 날짜를 확인할 수 있습니다."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"날짜 더하기/빼기 계산기는 어떤 상황에 유용한가요?","acceptedAnswer":{"@type":"Answer","text":"계약 만료일, 군 복무 전역 예정일, 세금 신고·납부 기한 등을 계산할 때 유용합니다. 시작일에서 계약 기간만큼 더하거나, 기준일에서 법정 기한을 더해 정확한 마감일을 산출할 수 있습니다."}},{"@type":"Question","name":"월 단위 계산 시 말일은 어떻게 처리되나요?","acceptedAnswer":{"@type":"Answer","text":"1월 31일에 1개월을 더하면 2월 28일(또는 윤년의 경우 29일)로 계산됩니다. 해당 월에 그 날짜가 존재하지 않으면 자동으로 그 달의 마지막 날로 조정됩니다."}},{"@type":"Question","name":"년, 월, 일을 동시에 더할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네, 세 가지를 동시에 입력하면 년 → 월 → 일 순서로 순차 계산됩니다. 각 단위를 0으로 두면 해당 단위는 계산에서 제외됩니다."}},{"@type":"Question","name":"빼기 계산도 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"네, 연산을 '빼기'로 전환하면 입력한 기간만큼 과거 날짜를 계산합니다. 예를 들어 오늘에서 100일을 빼면 100일 전 날짜를 확인할 수 있습니다."}},{"@type":"Question","name":"음력 날짜로도 계산할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"이 계산기는 그레고리력(양력) 기준으로만 동작합니다. 음력 날짜 계산은 한국천문연구원 역법 서비스(kasi.re.kr)에서 제공하는 음력 변환 도구를 이용하는 것이 정확합니다. 음력 날짜를 양력으로 변환한 뒤 이 계산기에 입력하면 이후 날짜 연산이 가능합니다. 기일이나 음력 명절(추석·설) 등 매년 날짜가 달라지는 경우는 해당 연도 변환값을 따로 확인해야 합니다."}},{"@type":"Question","name":"법정 기한 계산 시 주의할 점이 있나요?","acceptedAnswer":{"@type":"Answer","text":"법정 기한이 토요일·공휴일인 경우 다음 영업일로 자동 연장되는 경우가 많습니다. 세금 신고·납부, 계약 기한, 법원 제출 기한 등은 이 계산기로 결과 날짜를 먼저 확인한 뒤, 해당 날짜가 휴일이면 다음 영업일을 확인해야 합니다. 공휴일 정보는 인사혁신처 공휴일 자료를 참고하세요."}}]}</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
@@ -78,12 +78,50 @@
         <div class="guide-box"><strong>신고·납부 기한</strong><span>기준일에서 법정 기한을 더해 정확한 마감일을 계산하세요.</span></div>
       </div>
     </div>
+    <div class="guide-card">
+      <h2>날짜 연산 처리 원리</h2>
+      <p>이 계산기는 그레고리력(양력) 기반으로 년 → 월 → 일 순서로 순차 계산합니다. 한국천문연구원 역법 기준과 동일하게 윤년 및 말일 처리를 자동 반영합니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>순차 계산 순서</strong><span>년 → 월 → 일 순서로 각 단위를 독립적으로 처리합니다. 예를 들어 2025년 1월 31일에 1년 1개월 1일을 더하면 2026년 3월 1일이 됩니다.</span></div>
+        <div class="guide-box"><strong>말일 자동 조정</strong><span>1월 31일 +1개월 = 2월 28일(윤년은 29일). 해당 월에 없는 날짜는 그 달의 마지막 날로 자동 조정됩니다. 3월 31일 +1개월 = 4월 30일도 같은 원리입니다.</span></div>
+        <div class="guide-box"><strong>윤년 자동 반영</strong><span>2월 29일이 포함된 계산은 윤년 여부(4년마다 한 번)를 자동으로 판단합니다. 2024년은 윤년, 2026년은 평년으로 2026년 2월은 28일까지입니다.</span></div>
+      </div>
+    </div>
+    <div class="guide-card">
+      <h2>실제 계산 예시</h2>
+      <h3>예시 1 - 이주원(34세, 직장인) 전세 계약 만료일 계산</h3>
+      <p>이주원 씨의 전세 계약 시작일은 2024년 2월 15일이고 계약기간은 2년(24개월)입니다. 계약 갱신 통보 기한(만료 2개월 전)도 함께 확인하려 합니다.</p>
+      <ul>
+        <li>계약 만료일: 2024년 2월 15일 + 2년 = 2026년 2월 15일 (일요일)</li>
+        <li>갱신 통보 기한: 만료일 2개월 전 = 2025년 12월 15일</li>
+        <li><strong>오늘(2026년 5월 8일) 기준으로는 이미 만료된 계약입니다</strong></li>
+      </ul>
+      <p>전세 계약 만료 전 2개월~6개월 사이에 갱신 의사를 통보해야 묵시적 갱신이나 분쟁을 예방할 수 있습니다.</p>
+      <h3>예시 2 - 김동현(27세, 현역) 군 복무 전역 예정일 계산</h3>
+      <p>김동현 씨는 2025년 8월 18일 입대했으며 복무기간은 18개월입니다. 전역 예정일을 계산합니다.</p>
+      <ul>
+        <li>전역 예정일: 2025년 8월 18일 + 18개월 = 2027년 2월 18일 (목요일)</li>
+        <li>오늘(2026년 5월 8일) 기준 전역까지: 약 286일 남음</li>
+        <li><strong>전역 후 첫 직장 입사 목표가 2027년 3월이라면 약 28일 여유가 생깁니다</strong></li>
+      </ul>
+    </div>
+    <div class="guide-card">
+      <h2>날짜 계산 시 주의사항</h2>
+      <p>계산기 결과는 그레고리력 기준의 산술적 결과입니다. 법적·행정적 기한에 적용할 때는 아래 사항을 추가로 확인하세요.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>공휴일·휴일 처리</strong><span>법정 기한이 토요일·공휴일에 해당하면 다음 영업일로 자동 연장되는 경우가 많습니다. 세금 신고·납부 기한, 법원 서류 제출 기한은 반드시 해당 기관에 확인하세요.</span></div>
+        <div class="guide-box"><strong>음력 날짜 미지원</strong><span>이 계산기는 양력만 지원합니다. 음력 날짜는 한국천문연구원(kasi.re.kr) 역법 서비스에서 양력으로 변환한 뒤 입력하세요.</span></div>
+        <div class="guide-box"><strong>계약 기간 기산점</strong><span>계약서에 따라 시작일 당일 포함 여부가 다를 수 있습니다. 예를 들어 "2024년 2월 15일부터 2년"이 시작일 포함인지 다음 날부터인지 계약서 원문을 확인해야 합니다.</span></div>
+      </div>
+    </div>
     <div class="guide-card faq-card">
       <h2>자주 묻는 질문</h2>
       <div class="faq-item"><h3>날짜 더하기/빼기 계산기는 어떤 상황에 유용한가요?</h3><p>계약 만료일, 군 복무 전역 예정일, 세금 신고·납부 기한 등을 계산할 때 유용합니다. 시작일에서 계약 기간만큼 더하거나, 기준일에서 법정 기한을 더해 정확한 마감일을 산출할 수 있습니다.</p></div>
       <div class="faq-item"><h3>월 단위 계산 시 말일은 어떻게 처리되나요?</h3><p>1월 31일에 1개월을 더하면 2월 28일(또는 윤년의 경우 29일)로 계산됩니다. 해당 월에 그 날짜가 존재하지 않으면 자동으로 그 달의 마지막 날로 조정됩니다.</p></div>
       <div class="faq-item"><h3>년, 월, 일을 동시에 더할 수 있나요?</h3><p>네, 세 가지를 동시에 입력하면 년 → 월 → 일 순서로 순차 계산됩니다. 각 단위를 0으로 두면 해당 단위는 계산에서 제외됩니다.</p></div>
       <div class="faq-item"><h3>빼기 계산도 가능한가요?</h3><p>네, 연산을 '빼기'로 전환하면 입력한 기간만큼 과거 날짜를 계산합니다. 예를 들어 오늘에서 100일을 빼면 100일 전 날짜를 확인할 수 있습니다.</p></div>
+      <div class="faq-item"><h3>음력 날짜로도 계산할 수 있나요?</h3><p>이 계산기는 그레고리력(양력) 기준으로만 동작합니다. 음력 날짜 계산은 한국천문연구원 역법 서비스(kasi.re.kr)에서 제공하는 음력 변환 도구를 이용하는 것이 정확합니다. 음력 날짜를 양력으로 변환한 뒤 이 계산기에 입력하면 이후 날짜 연산이 가능합니다. 기일이나 음력 명절(추석·설) 등 매년 날짜가 달라지는 경우는 해당 연도 변환값을 따로 확인해야 합니다.</p></div>
+      <div class="faq-item"><h3>법정 기한 계산 시 주의할 점이 있나요?</h3><p>법정 기한이 토요일·공휴일인 경우 다음 영업일로 자동 연장되는 경우가 많습니다. 세금 신고·납부, 계약 기한, 법원 제출 기한 등은 이 계산기로 결과 날짜를 먼저 확인한 뒤, 해당 날짜가 휴일이면 다음 영업일을 확인해야 합니다. 공휴일 정보는 인사혁신처 공휴일 자료를 참고하세요.</p></div>
     </div>
   </div>
   <script>
@@ -97,7 +135,7 @@
     references: [
       { name: '한국천문연구원(kasi.re.kr)', url: 'https://www.kasi.re.kr' },
     ],
-    lastReviewed: '2026.04',
+    lastReviewed: '2026.05',
   };
   </script>
   <script src="/assets/trust-block.js"></script>
@@ -167,7 +205,7 @@ window.ARTICLE_INFO_CONFIG = {
   reviewBasis: '그레고리력 기반 날짜 계산',
   basisDate: '상시',
   referenceOrg: '한국천문연구원',
-  lastReviewed: '2026.04.13',
+  lastReviewed: '2026.05.08',
   category: 'date'
 };
 </script>

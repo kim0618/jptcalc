@@ -77,3 +77,6 @@
 - diet-calorie-guide.html (2026-05-07 검증, 오류 1개 수정 | ARTICLE_INFO_CONFIG basisDate·referenceOrg 누락 필드 추가 | BMR·TDEE·칼로리 적자 계산 재검산 정확, BreadcrumbList p3 /blog/?cat=건강 정상, JSON-LD·링크 이상 없음)
 - realestate-agent-fee.html (2026-05-07 검증, 오류 9개 수정 | 매매 요율표 9억 이상 3행→1행 통합(0.9%이내 협의), 전월세 요율표 구간 재정비(1~3억 0.3%, 3~6억 0.4%, 6억이상 협의), 예시2 전세3억 구간·요율·금액(0.3%→0.4%, 90만→120만), 비교표 전면 재작성, h1·title·meta description·JSON-LD headline·description 7곳 동기화 | 예방접종 오피스텔·상가 요율·환산 공식 이상 없음)
 - saas-vs-self-build.html (2026-05-07 검증, 오류 1개 수정 | BreadcrumbList p3 /calc/ai/ → /blog/?cat=AI·테크 수정 | TCO·BEP 계산 예시 수치 정합성 이상 없음, FAQ 3개·JSON-LD·링크 이상 없음)
+- rental-yield-valuation.html (2026-05-08 검증, 오류 5곳 수정 | FAQ Q1 임대소득세 84만원→67만2,000원(분리과세 표준 960×50%×14%) 수정 + 실질연수입 648→664.8만원, 적정가 1억6,200→1억6,620만원, 차이 7,800→7,380만원으로 도입부·SVG·HTML FAQ·JSON-LD FAQ·마무리 5곳 동기화 | 시나리오 A·B·C 계산·비교표·BreadcrumbList p3 정상)
+- apartment-officetel-rental-comparison.html (2026-05-08 검증, 오류 1개 수정 | 시나리오 A 임대소득세 26만원 표기 옆에 "분리과세 200만 기본공제는 다른 종합소득금액 2,000만 이하인 경우 적용 - 미적용 시 약 53만원" 단서 추가 | 산수 정확, 다른 시나리오·BreadcrumbList p3·JSON-LD·링크 이상 없음)
+- military-discharge-date.html (2026-05-08 검증, 이상 없음 | 군별 복무기간 6종·6개 시나리오 전부 정확, JSON-LD title=headline 일치, FAQ 5개·링크·BreadcrumbList p3 /blog/?cat=날짜·D-day 정상)
