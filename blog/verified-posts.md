@@ -80,3 +80,6 @@
 - rental-yield-valuation.html (2026-05-08 검증, 오류 5곳 수정 | FAQ Q1 임대소득세 84만원→67만2,000원(분리과세 표준 960×50%×14%) 수정 + 실질연수입 648→664.8만원, 적정가 1억6,200→1억6,620만원, 차이 7,800→7,380만원으로 도입부·SVG·HTML FAQ·JSON-LD FAQ·마무리 5곳 동기화 | 시나리오 A·B·C 계산·비교표·BreadcrumbList p3 정상)
 - apartment-officetel-rental-comparison.html (2026-05-08 검증, 오류 1개 수정 | 시나리오 A 임대소득세 26만원 표기 옆에 "분리과세 200만 기본공제는 다른 종합소득금액 2,000만 이하인 경우 적용 - 미적용 시 약 53만원" 단서 추가 | 산수 정확, 다른 시나리오·BreadcrumbList p3·JSON-LD·링크 이상 없음)
 - military-discharge-date.html (2026-05-08 검증, 이상 없음 | 군별 복무기간 6종·6개 시나리오 전부 정확, JSON-LD title=headline 일치, FAQ 5개·링크·BreadcrumbList p3 /blog/?cat=날짜·D-day 정상)
+- ai-saas-cost-guide.html (2026-05-09 검증, 오류 5곳 수정 | 사례B 8인 월 합계 감사 후 $819→$775(200+200+95+240+40 재검산), 절감액 $133→$177, 원화 19만원→26만원, 연간 232만원→308만원, 비개발직 4명→3명(8-5=3), BreadcrumbList p3 /calc/ai/ → /blog/?cat=AI·테크 | 사례A·FAQ·링크 이상 없음 | SVG 0개·시나리오 2개 구조 보강 권고)
+- weekday-calculator-guide.html (2026-05-09 검증, 오류 1개 수정 | BreadcrumbList p3 /calc/date/ → /blog/?cat=날짜·D-day | 젤러 공식·2026 공휴일 11종 요일·1998↔2026 달력 동일성 Python datetime 재검산 전부 정확, FAQ 4개·링크 이상 없음 | 글자수 2,534자 매우 부족·비교표 1개·시나리오 부족 - 보강 권고)
+- ai-infra-cost-guide.html (2026-05-09 검증, 오류 1개 수정 | BreadcrumbList p3 /calc/ai/ → /blog/?cat=AI·테크 | 시나리오 1·2·3 인프라 비용 환율 1,300원 환산 정확, GPU/API 가격 2026년 기준 합리적, FAQ 4개·링크 이상 없음 | SVG 0개 보강 권고)

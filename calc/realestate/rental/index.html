@@ -14,7 +14,7 @@
   <meta name="twitter:description" content="부동산 임대 투자의 총수익률과 순수익률을 무료로 계산하세요. 매입가, 대출, 보증금, 월세를 입력하면 자동 계산됩니다." />
   <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"임대수익률 계산기","url":"https://www.jptcalc.kr/calc/realestate/rental/","description":"부동산 임대 투자의 총수익률과 순수익률을 무료로 계산하세요. 매입가, 대출, 보증금, 월세를 입력하면 자동 계산됩니다.","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"inLanguage":"ko-KR"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},{"@type":"ListItem","position":2,"name":"부동산 계산기","item":"https://www.jptcalc.kr/calc/realestate/"},{"@type":"ListItem","position":3,"name":"임대수익률 계산기","item":"https://www.jptcalc.kr/calc/realestate/rental/"}]}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"임대수익률이란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"투자한 부동산에서 얻는 임대 수익의 비율입니다. 총수익률과 대출이자·관리비 등을 제외한 순수익률로 구분하며, 부동산 투자 판단의 핵심 지표입니다."}},{"@type":"Question","name":"임대수익률 계산 공식은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"총수익률 = 연임대수입 ÷ (매입가 - 보증금) × 100이며, 순수익률 = (연임대수입 - 대출이자 - 기타비용) ÷ 실투자금 × 100입니다."}},{"@type":"Question","name":"임대수익률이 몇 % 이상이면 양호한가요?","acceptedAnswer":{"@type":"Answer","text":"수익률 5% 이상이면 양호, 3~5%는 보통, 3% 미만은 주의가 필요한 수준으로 평가됩니다. 다만 지역별 시세 상승 가능성도 함께 고려해야 합니다."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"임대수익률이란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"투자한 부동산에서 얻는 임대 수익의 비율입니다. 총수익률과 대출이자·관리비 등을 제외한 순수익률로 구분하며, 부동산 투자 판단의 핵심 지표로 활용됩니다."}},{"@type":"Question","name":"임대수익률 계산 공식은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"총수익률 = 연임대수입 ÷ (매입가 - 보증금) × 100이며, 순수익률 = (연임대수입 - 대출이자 - 기타비용) ÷ 실투자금 × 100입니다. 두 지표를 함께 봐야 실질 수익을 파악할 수 있습니다."}},{"@type":"Question","name":"임대수익률이 몇 % 이상이면 양호한가요?","acceptedAnswer":{"@type":"Answer","text":"수익률 5% 이상이면 양호, 3~5%는 보통, 3% 미만은 주의가 필요한 수준으로 평가됩니다. 다만 지역별 시세 상승 가능성과 공실 위험도 함께 고려해야 합니다."}},{"@type":"Question","name":"공실률은 어떻게 반영하나요?","acceptedAnswer":{"@type":"Answer","text":"공실 위험은 본 계산기에 직접 반영되지 않으므로, 연 임대수입에 (1 - 공실률)을 곱한 값으로 다시 계산해 보수적으로 비교하세요. 일반적으로 서울 도심 오피스텔은 5~8%, 지방 다세대는 10~15% 공실률을 가정하며, 공실 1개월당 순수익률은 약 0.3~0.5%p 하락합니다."}},{"@type":"Question","name":"보증금을 운용하면 수익률이 어떻게 달라지나요?","acceptedAnswer":{"@type":"Answer","text":"보증금을 정기예금이나 채권에 운용하면 추가 수익이 발생해 실질 수익률이 0.3~0.7%p 상승할 수 있습니다. 예를 들어 보증금 5,000만원을 연 3.5% 정기예금으로 운용하면 연 175만원의 부가 수익이 생깁니다. 본 계산기 결과는 보증금 운용 수익을 제외한 보수적 수치입니다."}}]}</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
@@ -100,12 +100,65 @@
         <div class="guide-box"><strong>적정 매입가 역산</strong><span>목표 수익률 5% 달성에 필요한 매입가를 역으로 계산해 호가 협상의 기준을 잡습니다.</span></div>
       </div>
     </div>
+    <div class="guide-card">
+      <h2>임대수익률 산출 기준과 공식</h2>
+      <p>임대수익률은 부동산 임대 투자에서 매년 거두는 수익을 투자금 대비 비율로 환산한 지표입니다. 총수익률과 순수익률 두 가지를 함께 보면 대출·관리비 등 비용을 차감한 실수익까지 파악할 수 있습니다. 한국부동산원과 KB부동산이 공시하는 평균 수익률(2026년 기준)을 비교 기준으로 활용합니다.</p>
+      <div class="guide-table-wrap">
+        <table>
+          <thead><tr><th>구분</th><th>계산식</th><th>비고</th></tr></thead>
+          <tbody>
+            <tr><td>총수익률</td><td>연 임대수입 ÷ (매입가 - 보증금) × 100</td><td>대출·비용 미반영 단순 수익률</td></tr>
+            <tr><td>순수익률</td><td>(연 임대수입 - 대출이자 - 기타비용) ÷ 실투자금 × 100</td><td>실제 수익률, 투자 판단 핵심</td></tr>
+            <tr><td>실투자금</td><td>매입가 - 보증금 - 대출금</td><td>본인이 실제 투입한 자금</td></tr>
+            <tr><td>양호 (5% 이상)</td><td>서울 외곽·광역시 평균 수준</td><td>장기 보유 시 적정</td></tr>
+            <tr><td>주의 (3% 미만)</td><td>서울 강남권 일부에서 흔함</td><td>시세 차익을 함께 노려야 합당</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="guide-card">
+      <h2>실제 계산 예시</h2>
+      <h3>예시 1 - 김민수(38세, 직장인) 수원 소형 아파트 투자</h3>
+      <p>수원 영통구 전용 59㎡ 아파트를 5억원에 매입한 사례입니다. 보증금 5,000만원, 월세 80만원으로 임대했고 대출은 2억원을 연 4.0%로 받았습니다. 세금·관리비 등 기타비용은 연 100만원으로 가정합니다.</p>
+      <ul>
+        <li>실투자금: 5억 - 5,000 - 2억 = 2억 5,000만원</li>
+        <li>연 임대수입: 80만원 × 12 = 960만원</li>
+        <li>연 대출이자: 2억 × 4.0% = 800만원</li>
+        <li>연 순수익: 960 - 800 - 100 = 60만원</li>
+        <li>총수익률: 960 ÷ (5억 - 5,000) × 100 ≈ 2.13%</li>
+        <li><strong>순수익률: 60 ÷ 2억 5,000 × 100 ≈ 0.24%</strong></li>
+      </ul>
+      <p>대출 비중이 높아 순수익률이 1%에도 못 미치는 사례로, 시세 상승 없이는 회수가 어렵다고 평가됩니다.</p>
+      <h3>예시 2 - 박지영(45세, 자영업자) 인천 송도 오피스텔 투자</h3>
+      <p>인천 송도 오피스텔을 2억 5,000만원에 매입한 사례입니다. 보증금 1,000만원, 월세 90만원, 대출 1억원을 연 4.5%로 받았으며 기타비용은 연 80만원입니다.</p>
+      <ul>
+        <li>실투자금: 2.5억 - 1,000 - 1억 = 1억 4,000만원</li>
+        <li>연 임대수입: 90만원 × 12 = 1,080만원</li>
+        <li>연 대출이자: 1억 × 4.5% = 450만원</li>
+        <li>연 순수익: 1,080 - 450 - 80 = 550만원</li>
+        <li>총수익률: 1,080 ÷ (2.5억 - 1,000) × 100 ≈ 4.50%</li>
+        <li><strong>순수익률: 550 ÷ 1억 4,000 × 100 ≈ 3.93%</strong></li>
+      </ul>
+      <p>적정한 레버리지 효과로 순수익률이 4%에 근접해 안정적인 임대 수익형으로 분류됩니다.</p>
+    </div>
+    <div class="guide-card">
+      <h2>이것만은 확인하세요</h2>
+      <p>계산기 결과는 가정 조건이 모두 유지될 때의 수치이며, 현실에서는 공실·세금·시세 변동이 함께 작용합니다. 다음 항목은 반드시 별도로 검토하세요.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>공실 위험 반영</strong><span>실제 공실률은 지역별로 5~15% 발생합니다. 공실 1개월당 수익률은 연간 약 0.3~0.5%p 하락하므로 보수적으로 시뮬레이션하세요.</span></div>
+        <div class="guide-box"><strong>최신 시세 확인</strong><span>매입가는 한국부동산원 R-ONE이나 KB부동산 시세를 2026년 기준 최신 자료로 확인해야 정확합니다.</span></div>
+        <div class="guide-box"><strong>세금 별도 차감</strong><span>임대 수익에는 종합소득세·재산세·종부세가 별도로 부과됩니다. 본 계산기는 세전 기준이며 실수령액은 더 낮아집니다.</span></div>
+        <div class="guide-box"><strong>보증금 운용 수익</strong><span>보증금은 정기예금이나 다른 투자에 운용 가능합니다. 보증금 5,000만원을 연 3.5% 정기예금으로 운용하면 연 175만원의 추가 수익이 더해집니다.</span></div>
+      </div>
+    </div>
     <div class="guide-card faq-card">
       <h2>자주 묻는 질문</h2>
       <div class="faq-item"><h3>임대수익률이란 무엇인가요?</h3><p>투자한 부동산에서 얻는 임대 수익의 비율입니다. 총수익률과 대출이자·관리비 등을 제외한 순수익률로 구분하며, 부동산 투자 판단의 핵심 지표로 활용됩니다.</p></div>
       <div class="faq-item"><h3>임대수익률 계산 공식은 무엇인가요?</h3><p>총수익률 = 연임대수입 ÷ (매입가 - 보증금) × 100이며, 순수익률 = (연임대수입 - 대출이자 - 기타비용) ÷ 실투자금 × 100입니다. 두 지표를 함께 봐야 실질 수익을 파악할 수 있습니다.</p></div>
       <div class="faq-item"><h3>임대수익률이 몇 % 이상이면 양호한가요?</h3><p>수익률 5% 이상이면 양호, 3~5%는 보통, 3% 미만은 주의가 필요한 수준으로 평가됩니다. 다만 지역별 시세 상승 가능성과 공실 위험도 함께 고려해야 합니다.</p></div>
-      <div class="update-note">최종 검토: 2026.04.16 · 계산 결과는 참고용입니다.</div>
+      <div class="faq-item"><h3>공실률은 어떻게 반영하나요?</h3><p>공실 위험은 본 계산기에 직접 반영되지 않으므로, 연 임대수입에 (1 - 공실률)을 곱한 값으로 다시 계산해 보수적으로 비교하세요. 일반적으로 서울 도심 오피스텔은 5~8%, 지방 다세대는 10~15% 공실률을 가정하며, 공실 1개월당 순수익률은 약 0.3~0.5%p 하락합니다.</p></div>
+      <div class="faq-item"><h3>보증금을 운용하면 수익률이 어떻게 달라지나요?</h3><p>보증금을 정기예금이나 채권에 운용하면 추가 수익이 발생해 실질 수익률이 0.3~0.7%p 상승할 수 있습니다. 예를 들어 보증금 5,000만원을 연 3.5% 정기예금으로 운용하면 연 175만원의 부가 수익이 생깁니다. 본 계산기 결과는 보증금 운용 수익을 제외한 보수적 수치입니다.</p></div>
+      <div class="update-note">최종 검토: 2026.05.09 · 계산 결과는 참고용입니다.</div>
     </div>
   </div>
 
@@ -120,7 +173,7 @@
     references: [
       { name: '국토교통부 실거래가(rtdownload.molit.go.kr)', url: 'https://rtdownload.molit.go.kr' },
     ],
-    lastReviewed: '2026.04',
+    lastReviewed: '2026.05',
   };
   </script>
   <script src="/assets/trust-block.js"></script>
@@ -206,7 +259,7 @@ window.ARTICLE_INFO_CONFIG = {
   reviewBasis: '부동산 관련 법령 2026년 기준',
   basisDate: '2026년 기준',
   referenceOrg: '국토교통부·대법원',
-  lastReviewed: '2026.04.16',
+  lastReviewed: '2026.05.09',
   category: 'realestate'
 };
 </script>

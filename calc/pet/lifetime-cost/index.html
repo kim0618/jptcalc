@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>반려동물 평생 양육비용 계산기 - 강아지·고양이 총 비용 | jptcalc</title>
-  <meta name="description" content="반려동물 현재 나이, 예상 수명, 월 비용을 입력하면 평생 총 양육비용과 기간별 비용을 계산합니다." />
+  <meta name="description" content="반려동물 현재 나이·예상 수명·기간별 월 비용을 입력하면 청소년기·성체기·노령기 평생 총 양육비용과 5년 누적 예산을 자동 계산하는 무료 계산기입니다." />
   <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://www.jptcalc.kr/calc/pet/lifetime-cost/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="반려동물 평생 양육비용 계산기 | jptcalc" />
-  <meta property="og:description" content="반려동물 현재 나이, 예상 수명, 월 비용을 입력하면 평생 총 양육비용과 기간별 비용을 계산합니다." />
+  <meta property="og:description" content="반려동물 현재 나이·예상 수명·기간별 월 비용을 입력하면 청소년기·성체기·노령기 평생 총 양육비용과 5년 누적 예산을 자동 계산하는 무료 계산기입니다." />
   <meta property="og:url" content="https://www.jptcalc.kr/calc/pet/lifetime-cost/" />
   <meta property="og:site_name" content="제이퍼 계산기" />
   <meta property="og:locale" content="ko_KR" />
@@ -32,7 +32,7 @@
     {"@type":"ListItem","position":3,"name":"반려동물 평생 양육비용 계산기","item":"https://www.jptcalc.kr/calc/pet/lifetime-cost/"}
   ]}
   </script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"강아지 평생 양육비는 평균 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"소형견 기준 15년 양육 시 약 3,000~5,000만원, 대형견은 5,000~8,000만원 이상이 소요되는 것으로 추정됩니다."}},{"@type":"Question","name":"고양이가 강아지보다 평생 비용이 적게 드나요?","acceptedAnswer":{"@type":"Answer","text":"미용비가 거의 없고 사료 소비량이 적어 고양이가 다소 저렴하지만, 수명이 길어(15~20년) 총 비용은 비슷할 수 있습니다."}},{"@type":"Question","name":"노령기 비용이 급증하는 이유는 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"7세 이상부터 만성질환, 정밀검사, 약물 치료 등 의료비가 크게 늘어나고, 특수 사료·영양제 비용도 추가됩니다."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"강아지 평생 양육비는 평균 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"소형견 기준 15년 양육 시 약 3,000~5,000만원, 대형견은 5,000~8,000만원 이상이 소요되는 것으로 추정됩니다."}},{"@type":"Question","name":"고양이가 강아지보다 평생 비용이 적게 드나요?","acceptedAnswer":{"@type":"Answer","text":"미용비가 거의 없고 사료 소비량이 적어 고양이가 다소 저렴하지만, 수명이 길어(15~20년) 총 비용은 비슷할 수 있습니다."}},{"@type":"Question","name":"노령기 비용이 급증하는 이유는 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"7세 이상부터 만성질환, 정밀검사, 약물 치료 등 의료비가 크게 늘어나고, 특수 사료·영양제 비용도 추가됩니다."}},{"@type":"Question","name":"펫보험 가입은 평생비용 절감에 얼마나 도움이 되나요?","acceptedAnswer":{"@type":"Answer","text":"월 3~7만원 펫보험에 가입하면 노령기 의료비를 30~70% 절감할 수 있습니다. 15년 누적 보험료는 약 540~1,260만원이지만, 노령기 만성질환·암 치료 시 1,000만원 이상의 의료비를 보장받을 수 있어 평생비용 안정화에 효과적입니다. 다만 6세 이전에 가입해야 보장 범위가 넓고 보험료가 합리적입니다."}},{"@type":"Question","name":"강아지 품종별 평생비용 차이는 얼마나 되나요?","acceptedAnswer":{"@type":"Answer","text":"품종별 의료비 편차가 가장 큰 변수입니다. 평균 5,000만원 기준 닥스훈트(추간판 질환)는 약 6,500만원, 골든리트리버(고관절·심장)는 약 7,500만원, 시츄(피부·눈 질환)는 약 5,800만원이 들 수 있습니다. 입양 전 품종 특이질환을 확인하고 의료비 별도 적립이 안전합니다."}}]}</script>
   <style>
     /* lifetime-cost 고유 스타일 - 공통 스타일은 /assets/pet-common.css 참조 */
     .input-wrap{position:relative}
@@ -112,12 +112,56 @@
         <div class="guide-box"><strong>여유 예산 확보</strong><span>물가 상승과 예상치 못한 의료비에 대비해 10~20% 여유분을 추가하세요</span></div>
       </div>
     </div>
+    <div class="guide-card">
+      <h2>반려동물 평생 양육비용 구성과 산정 방법</h2>
+      <p>평생 양육비용은 입양 초기비용에 청소년기·성체기·노령기 월 비용을 기간별로 합산해 추정합니다. 한국반려동물산업협회와 농림축산식품부의 시장 조사 자료(2026년 기준)와 동물병원 평균 진료비를 참고해 항목별 평균값을 정리했습니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>청소년기 월 평균</strong><span>0~2세 기간으로 예방접종·중성화·기초 훈련비가 집중됩니다. 소형견 18~22만원, 대형견 25~30만원, 고양이 12~16만원 수준입니다.</span></div>
+        <div class="guide-box"><strong>성체기 월 평균</strong><span>2~7세 기간으로 비용이 안정됩니다. 소형견 13~17만원, 대형견 20~25만원, 고양이 10~13만원이 일반적이며 정기 검진비가 연 1~2회 추가됩니다.</span></div>
+        <div class="guide-box"><strong>노령기 월 평균</strong><span>7세 이후 만성질환·정밀검사·약물치료가 늘어 25~40만원으로 증가합니다. 백내장·심장병 같은 질환 치료 시 일시적으로 100만원대가 발생합니다.</span></div>
+      </div>
+    </div>
+    <div class="guide-card">
+      <h2>실제 평생 비용 계산 예시</h2>
+      <h3>예시 1 - 박서윤(32세, 직장인) 소형견 말티즈 15년 양육 계획</h3>
+      <p>입양 후 막 1살이 된 말티즈 '두부'를 15년 키울 계획인 박서윤씨의 비용 시뮬레이션입니다. 입양 초기비용은 이미 지출했으므로 남은 14년 비용에 집중합니다.</p>
+      <ul>
+        <li>입양 초기비용: 100만원 (이미 지출)</li>
+        <li>청소년기(0~2세, 24개월): 20만원 × 24 = 480만원</li>
+        <li>성체기(2~7세, 60개월): 15만원 × 60 = 900만원</li>
+        <li>노령기(7~15세, 96개월): 30만원 × 96 = 2,880만원</li>
+        <li><strong>평생 합계: 약 4,360만원, 남은 14년 약 4,260만원</strong></li>
+      </ul>
+      <p>월 평균으로 환산하면 약 24만원이 필요하며, 노령기 의료비 비중이 절반을 넘는 구조입니다.</p>
+      <h3>예시 2 - 김재훈(40세, 자영업자) 고양이 코리안숏헤어 18년 양육 계획</h3>
+      <p>3개월 된 새끼 고양이 '뭉치'를 입양해 18년 함께할 계획입니다. 미용비가 거의 들지 않는 대신 수명이 길어 노령기 의료비가 누적됩니다.</p>
+      <ul>
+        <li>입양 초기비용: 80만원</li>
+        <li>청소년기 비용: 14만원 × 24 = 336만원</li>
+        <li>성체기 비용: 11만원 × 60 = 660만원</li>
+        <li>노령기 비용(7~18세, 132개월): 28만원 × 132 = 3,696만원</li>
+        <li><strong>평생 합계: 약 4,772만원</strong></li>
+      </ul>
+      <p>고양이가 강아지보다 월 비용은 적지만 수명이 길어 평생 합계는 비슷하거나 더 클 수 있습니다.</p>
+    </div>
+    <div class="guide-card">
+      <h2>평생비용 추정 시 놓치기 쉬운 점</h2>
+      <p>계산기 결과는 평균 시장가 기반 추정치입니다. 실제 지출은 다음 변수에 따라 크게 달라집니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>품종별 의료비 편차</strong><span>닥스훈트는 추간판 질환, 골든리트리버는 고관절 형성부전 같은 품종 특이질환이 있습니다. 평생 의료비가 평균보다 500~1,500만원 더 들 수 있습니다.</span></div>
+        <div class="guide-box"><strong>비상 의료비 별도</strong><span>응급 수술·종양 치료는 1회당 200~800만원이 발생합니다. 평생 1~2회 발생 가능성을 가정해 별도 비상금 500만원 이상을 준비하세요.</span></div>
+        <div class="guide-box"><strong>물가 상승률 반영</strong><span>사료·동물병원비는 연 3~5% 상승해 왔습니다. 15년 후 비용은 현재 가격의 약 1.6배일 수 있어 장기 합계는 보수적으로 잡아야 합니다.</span></div>
+        <div class="guide-box"><strong>펫보험 가입 효과</strong><span>월 3~7만원 펫보험에 가입하면 노령기 의료비가 30~70% 절감됩니다. 보험료 누적 약 700만원으로 1,000만원 이상 의료비를 보장받을 수 있습니다.</span></div>
+      </div>
+    </div>
     <div class="guide-card faq-card">
       <h2>자주 묻는 질문</h2>
       <div class="faq-item"><h3>강아지 평생 양육비는 평균 얼마인가요?</h3><p>소형견 기준 15년 양육 시 약 3,000~5,000만원, 대형견은 5,000~8,000만원 이상이 소요되는 것으로 추정됩니다.</p></div>
       <div class="faq-item"><h3>고양이가 강아지보다 평생 비용이 적게 드나요?</h3><p>미용비가 거의 없고 사료 소비량이 적어 고양이가 다소 저렴하지만, 수명이 길어(15~20년) 총 비용은 비슷할 수 있습니다.</p></div>
       <div class="faq-item"><h3>노령기 비용이 급증하는 이유는 무엇인가요?</h3><p>7세 이상부터 만성질환, 정밀검사, 약물 치료 등 의료비가 크게 늘어나고, 특수 사료·영양제 비용도 추가됩니다.</p></div>
-      <div class="update-note">최종 검토: 2026.04.25 · 계산 결과는 참고용입니다.</div>
+      <div class="faq-item"><h3>펫보험 가입은 평생비용 절감에 얼마나 도움이 되나요?</h3><p>월 3~7만원 펫보험에 가입하면 노령기 의료비를 30~70% 절감할 수 있습니다. 15년 누적 보험료는 약 540~1,260만원이지만, 노령기 만성질환·암 치료 시 1,000만원 이상의 의료비를 보장받을 수 있어 평생비용 안정화에 효과적입니다. 다만 6세 이전에 가입해야 보장 범위가 넓고 보험료가 합리적입니다.</p></div>
+      <div class="faq-item"><h3>강아지 품종별 평생비용 차이는 얼마나 되나요?</h3><p>품종별 의료비 편차가 가장 큰 변수입니다. 평균 5,000만원 기준 닥스훈트(추간판 질환)는 약 6,500만원, 골든리트리버(고관절·심장)는 약 7,500만원, 시츄(피부·눈 질환)는 약 5,800만원이 들 수 있습니다. 입양 전 품종 특이질환을 확인하고 의료비 별도 적립이 안전합니다.</p></div>
+      <div class="update-note">최종 검토: 2026.05.09 · 계산 결과는 참고용입니다.</div>
     </div>
   </div>
   <script>
@@ -131,7 +175,7 @@
     references: [
       { name: '농림축산식품부(mafra.go.kr)', url: 'https://www.mafra.go.kr' },
     ],
-    lastReviewed: '2026.04',
+    lastReviewed: '2026.05',
   };
   </script>
   <script src="/assets/trust-block.js"></script>
@@ -191,7 +235,7 @@ window.ARTICLE_INFO_CONFIG = {
   reviewBasis: '2026년 시장 조사·동물병원 평균 비용 기준',
   basisDate: '2026년 기준',
   referenceOrg: '농림축산식품부·한국반려동물산업협회',
-  lastReviewed: '2026.04.25',
+  lastReviewed: '2026.05.09',
   category: 'pet'
 };
 </script>
