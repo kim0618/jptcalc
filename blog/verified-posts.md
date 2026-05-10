@@ -83,3 +83,6 @@
 - ai-saas-cost-guide.html (2026-05-09 검증, 오류 5곳 수정 | 사례B 8인 월 합계 감사 후 $819→$775(200+200+95+240+40 재검산), 절감액 $133→$177, 원화 19만원→26만원, 연간 232만원→308만원, 비개발직 4명→3명(8-5=3), BreadcrumbList p3 /calc/ai/ → /blog/?cat=AI·테크 | 사례A·FAQ·링크 이상 없음 | SVG 0개·시나리오 2개 구조 보강 권고)
 - weekday-calculator-guide.html (2026-05-09 검증, 오류 1개 수정 | BreadcrumbList p3 /calc/date/ → /blog/?cat=날짜·D-day | 젤러 공식·2026 공휴일 11종 요일·1998↔2026 달력 동일성 Python datetime 재검산 전부 정확, FAQ 4개·링크 이상 없음 | 글자수 2,534자 매우 부족·비교표 1개·시나리오 부족 - 보강 권고)
 - ai-infra-cost-guide.html (2026-05-09 검증, 오류 1개 수정 | BreadcrumbList p3 /calc/ai/ → /blog/?cat=AI·테크 | 시나리오 1·2·3 인프라 비용 환율 1,300원 환산 정확, GPU/API 가격 2026년 기준 합리적, FAQ 4개·링크 이상 없음 | SVG 0개 보강 권고)
+- chatgpt-api-cost.html (2026-05-10 검증, 이상 없음 | 시나리오1·2 GPT-4o/mini/3.5 비용 재계산 일치, JSON-LD FAQ 4개 HTML 일치, 링크 이상 없음, em dash 없음)
+- claude-vs-gpt.html (2026-05-10 검증, 오류 3곳 수정 | Claude Sonnet 4.6 컨텍스트 200K→1M (3곳), JSON-LD FAQ 4개 HTML 일치, 링크 이상 없음)
+- pet-medical-cost.html (2026-05-10 검증, 오류 1개 수정 | 11세 골든 리트리버 심장병 1년 의료비 합계 295만원→260만원 (70+84+16+90=260), JSON-LD FAQ 4개 HTML 일치, 링크 이상 없음)

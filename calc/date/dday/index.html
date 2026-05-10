@@ -25,7 +25,7 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},{"@type":"ListItem","position":2,"name":"날짜·D-day 계산기","item":"https://www.jptcalc.kr/calc/date/"},{"@type":"ListItem","position":3,"name":"D-day 계산기"}]}
   </script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"D-day란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"D-day(디데이)는 특정 목표일까지 남은 날수를 표시하는 방식입니다. D-0은 목표일 당일, D-1은 하루 전, D+1은 목표일이 하루 지난 것을 의미합니다. 수능, 결혼기념일, 프로젝트 마감일 등에 활용됩니다."}},{"@type":"Question","name":"D-day에서 D-0은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"D-0은 목표일 당일을 의미합니다. 목표일이 오늘이면 D-0, 내일이면 D-1로 표시되며, 목표일이 지나면 D+숫자 형태로 경과 일수를 표시합니다."}},{"@type":"Question","name":"기념일 100일·200일 계산은 어떻게 하나요?","acceptedAnswer":{"@type":"Answer","text":"만남 첫날을 1일째로 계산하여, 100일 기념일은 첫날 +99일이 되는 날로 표시합니다(한국 관습). 1주년·2주년은 같은 월/일의 +1년/+2년 날짜로 계산됩니다."}},{"@type":"Question","name":"음력 기념일도 계산할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"현재는 양력 기준으로만 계산됩니다. 음력 기념일은 매년 양력 날짜가 달라지므로 음력을 양력으로 변환한 후 입력해야 합니다."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"D-day에서 D-0은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"D-0은 목표일 당일을 의미합니다. 목표일이 오늘이면 D-0, 내일이면 D-1로 표시됩니다."}},{"@type":"Question","name":"기념일 100일·200일 계산은 어떻게 하나요?","acceptedAnswer":{"@type":"Answer","text":"만남 첫날을 1일째로 계산하여, 100일 기념일은 첫날 +99일이 되는 날입니다(한국 관습). 1주년·2주년은 같은 월/일의 +1년/+2년 날짜로 계산됩니다."}},{"@type":"Question","name":"D-day 계산에서 시작일은 포함되나요?","acceptedAnswer":{"@type":"Answer","text":"기념일(100일·200일 등)은 시작일을 1일째로 포함하여 계산합니다. 예를 들어 100일은 시작일로부터 99일 뒤입니다. 1주년·2주년은 같은 월/일의 1년·2년 뒤 날짜입니다."}},{"@type":"Question","name":"음력 기념일도 계산할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"현재는 양력 기준으로만 계산됩니다. 음력 기념일은 매년 양력 날짜가 달라지므로 별도 변환이 필요합니다."}},{"@type":"Question","name":"해외에 있을 때 D-day 계산이 한국 기준과 다를 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"이 계산기는 브라우저의 로컬 날짜(기기 설정 날짜)를 기준으로 오늘 날짜를 판단합니다. 해외 체류 중 기기가 현지 날짜로 설정된 경우 한국 날짜와 하루 차이가 날 수 있습니다. 정확한 계산을 원하면 기기 날짜를 한국 날짜로 설정하거나, 날짜를 직접 확인 후 목표일을 입력하세요."}},{"@type":"Question","name":"D-day 목표일이 지나면 어떻게 표시되나요?","acceptedAnswer":{"@type":"Answer","text":"목표일이 지나면 D+숫자 형식으로 경과 일수가 표시됩니다. 과거 날짜(연인 만남일, 생일 등)를 입력하면 50일·100일·200일·300일·500일·1000일, 1·2·3·5·10주년 기념일과 현재로부터 몇 일 전·후인지를 자동으로 보여줍니다. 아직 오지 않은 기념일은 N일 후로 표시됩니다."}}]}</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
@@ -130,12 +130,52 @@
         <div class="guide-box"><strong>프로젝트 마감</strong><span>업무 마감일까지 남은 기간을 파악하여 일정을 관리하세요.</span></div>
       </div>
     </div>
+    <div class="guide-card">
+      <h2>D-day 계산 원리</h2>
+      <p>D-day는 그레고리력(양력) 기준으로 오늘 날짜와 목표 날짜의 차이를 일수로 환산합니다. 계산 방식은 간단하지만 기념일·시험 D-day별로 표시 방식이 다르므로 아래 단계를 참고하세요.</p>
+      <ul>
+        <li><strong>1단계. 목표 날짜 입력:</strong> 1900년~2200년 범위 내의 날짜를 입력합니다. 미래 날짜는 남은 일수(D-숫자), 과거 날짜는 경과 일수(D+숫자)로 표시됩니다.</li>
+        <li><strong>2단계. 오늘과의 차이 계산:</strong> 브라우저의 로컬 날짜(기기 설정 날짜) 기준으로 목표일과의 차이를 밀리초 단위로 계산한 후 일수로 변환합니다.</li>
+        <li><strong>3단계. D-0·D-숫자·D+숫자 표시:</strong> 목표일 당일은 D-0, 하루 남으면 D-1, 하루 지나면 D+1로 표시됩니다. 목표일이 오늘이라면 "오늘이 바로!"로 표시됩니다.</li>
+        <li><strong>4단계. 기념일·체크포인트 자동 계산:</strong> 과거 날짜 입력 시 50·100·200·300·500·1000일, 1·2·3·5·10주년을 자동 표시합니다. 미래 날짜 입력 시 남은 구간 중 D-1000부터 D-1까지 체크포인트 6개를 보여줍니다.</li>
+      </ul>
+    </div>
+    <div class="guide-card">
+      <h2>실제 D-day 계산 예시</h2>
+      <h3>예시 1 - 박지은(23세, 수험생), 2026 수능 D-day 관리</h3>
+      <p>2026년 11월 19일(목) 수능을 목표로 오늘(2026-05-10) 기준 D-day를 설정했습니다. 단계별 체크포인트를 활용해 학습 계획을 점검하고 있습니다.</p>
+      <ul>
+        <li>오늘(2026-05-10) 기준: D-193</li>
+        <li>체크포인트 D-100: 2026-08-11, D-50: 2026-09-30, D-30: 2026-10-20</li>
+        <li>D-100 이후 최종 스퍼트 구간 집중 계획 수립</li>
+        <li><strong>결론: D-193 현재 각 과목별 1회독 완료 목표, D-100부터 실전 모의고사 집중 전환</strong></li>
+      </ul>
+      <h3>예시 2 - 오승연·박민준 커플, 만남일 2023-12-24 기념일 조회</h3>
+      <p>만남 첫날(2023-12-24)을 입력해 오늘(2026-05-10)까지 경과 일수와 앞으로 올 기념일을 한눈에 확인했습니다.</p>
+      <ul>
+        <li>오늘(2026-05-10) 기준: D+867 (867일 경과)</li>
+        <li>다음 주요 기념일: 1000일(2026-09-19), 3주년(2026-12-24)</li>
+        <li>1000일 기념일까지 남은 일수: 132일</li>
+        <li><strong>결론: 이미 2주년을 지났으며 3주년까지 228일, 1000일 기념일이 먼저 도래</strong></li>
+      </ul>
+    </div>
+    <div class="guide-card">
+      <h2>이것만은 확인하세요</h2>
+      <p>D-day 계산기는 단순해 보이지만 기준 날짜 설정 방식에 따라 결과가 달라질 수 있습니다. 자주 혼동하는 세 가지를 미리 확인하세요.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>100일 기준 혼동 주의</strong><span>한국 관습상 만남 첫날이 1일째입니다. 100일 기념일은 첫날 기준 +99일째 되는 날이며, 계산기도 이 방식으로 동작합니다.</span></div>
+        <div class="guide-box"><strong>브라우저 날짜 의존</strong><span>계산기는 기기 시각을 기준으로 오늘 날짜를 판단합니다. 해외 체류 중 기기가 현지 날짜로 설정된 경우 한국 날짜와 하루 차이가 날 수 있습니다.</span></div>
+        <div class="guide-box"><strong>음력 기념일 미지원</strong><span>이 계산기는 양력 기준으로만 동작합니다. 음력 기념일은 매년 양력 날짜가 달라지므로 별도 음력 변환 후 입력이 필요합니다.</span></div>
+      </div>
+    </div>
     <div class="guide-card faq-card">
       <h2>자주 묻는 질문</h2>
       <div class="faq-item"><h3>D-day에서 D-0은 무엇인가요?</h3><p>D-0은 목표일 당일을 의미합니다. 목표일이 오늘이면 D-0, 내일이면 D-1로 표시됩니다.</p></div>
       <div class="faq-item"><h3>기념일 100일·200일 계산은 어떻게 하나요?</h3><p>만남 첫날을 1일째로 계산하여, 100일 기념일은 첫날 +99일이 되는 날입니다(한국 관습). 1주년·2주년은 같은 월/일의 +1년/+2년 날짜로 계산됩니다.</p></div>
       <div class="faq-item"><h3>D-day 계산에서 시작일은 포함되나요?</h3><p>기념일(100일·200일 등)은 시작일을 1일째로 포함하여 계산합니다. 예를 들어 100일은 시작일로부터 99일 뒤입니다. 1주년·2주년은 같은 월/일의 1년·2년 뒤 날짜입니다.</p></div>
       <div class="faq-item"><h3>음력 기념일도 계산할 수 있나요?</h3><p>현재는 양력 기준으로만 계산됩니다. 음력 기념일은 매년 양력 날짜가 달라지므로 별도 변환이 필요합니다.</p></div>
+      <div class="faq-item"><h3>해외에 있을 때 D-day 계산이 한국 기준과 다를 수 있나요?</h3><p>이 계산기는 브라우저의 로컬 날짜(기기 설정 날짜)를 기준으로 오늘 날짜를 판단합니다. 해외 체류 중 기기가 현지 날짜로 설정된 경우 한국 날짜와 하루 차이가 날 수 있습니다. 정확한 계산을 원하면 기기 날짜를 한국 날짜로 설정하거나, 날짜를 직접 확인 후 목표일을 입력하세요.</p></div>
+      <div class="faq-item"><h3>D-day 목표일이 지나면 어떻게 표시되나요?</h3><p>목표일이 지나면 D+숫자 형식으로 경과 일수가 표시됩니다. 과거 날짜(연인 만남일, 생일 등)를 입력하면 50일·100일·200일·300일·500일·1000일, 1·2·3·5·10주년 기념일과 현재로부터 몇 일 전·후인지를 자동으로 보여줍니다. 아직 오지 않은 기념일은 "N일 후"로 표시됩니다.</p></div>
     </div>
   </div>
   <script>
@@ -149,7 +189,7 @@
     references: [
       { name: '한국천문연구원(kasi.re.kr)', url: 'https://www.kasi.re.kr' },
     ],
-    lastReviewed: '2026.04',
+    lastReviewed: '2026.05',
   };
   </script>
   <script src="/assets/trust-block.js"></script>
@@ -243,7 +283,7 @@ window.ARTICLE_INFO_CONFIG = {
   reviewBasis: '그레고리력 기반 날짜 계산',
   basisDate: '상시',
   referenceOrg: '한국천문연구원',
-  lastReviewed: '2026.04.13',
+  lastReviewed: '2026.05.10',
   category: 'date'
 };
 </script>
