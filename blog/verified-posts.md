@@ -86,3 +86,6 @@
 - chatgpt-api-cost.html (2026-05-10 검증, 이상 없음 | 시나리오1·2 GPT-4o/mini/3.5 비용 재계산 일치, JSON-LD FAQ 4개 HTML 일치, 링크 이상 없음, em dash 없음)
 - claude-vs-gpt.html (2026-05-10 검증, 오류 3곳 수정 | Claude Sonnet 4.6 컨텍스트 200K→1M (3곳), JSON-LD FAQ 4개 HTML 일치, 링크 이상 없음)
 - pet-medical-cost.html (2026-05-10 검증, 오류 1개 수정 | 11세 골든 리트리버 심장병 1년 의료비 합계 295만원→260만원 (70+84+16+90=260), JSON-LD FAQ 4개 HTML 일치, 링크 이상 없음)
+- ai-chatbot-subscription-comparison.html (2026-05-11 검증, 이상 없음 | 5종 구독료 $20·환율 1,400원·시간당 단가·시나리오 3종 재계산 정확, JSON-LD FAQ 4개 HTML 일치, 링크 이상 없음, blog-review-footer.js 로드 확인)
+- cat-lifetime-cost.html (2026-05-11 검증, 오류 2개 수정 | 15년 평생비용 최대값 4,000만원→4,700만원 (200+1500+2800=4,700) 8곳 동기화 [title·meta·og·JSON-LD headline·description·BreadcrumbList p4·h1·도입부·"15년 합치면" 섹션·마무리], BreadcrumbList p3 /calc/pet/ → /blog/?cat=반려동물)
+- cursor-vs-copilot.html (2026-05-11 검증, 이상 없음 | Cursor·Copilot 2026년 가격 정확, JSON-LD FAQ 3개 HTML 일치, BreadcrumbList p3 /blog/?cat=AI·테크 정상, 링크 이상 없음)

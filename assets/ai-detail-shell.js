@@ -18,7 +18,7 @@
       key:'saas-comparison',
       quick:['손익분기점(BEP)을 기준으로 SaaS와 자체구축의 유불리를 판단하세요.','자체구축 시 DevOps 인건비와 운영 비용을 반드시 포함해야 합니다.','사용량이 급증할 때 스케일링 비용도 함께 고려하세요.','라이선스, 보안 인증, 데이터 이전 등 숨은 비용을 놓치지 마세요.'],
       related:[['/calc/ai/api-token/','API 토큰 비용','⚡'],['/calc/ai/gpu-cloud/','GPU 클라우드 비교','💻'],['/calc/ai/infra-forecast/','인프라 예측','🚀']],
-      guides:[['/blog/posts/saas-vs-self-build.html','SaaS vs 자체구축 비용 비교 - TCO·손익분기점'],['/blog/posts/ai-saas-cost-guide.html','AI SaaS 구독 비용 최적화 가이드']]
+      guides:[['/blog/posts/ai-chatbot-subscription-comparison.html','AI 챗봇 월 구독 가성비 비교 2026 - ChatGPT·Claude·Gemini'],['/blog/posts/saas-vs-self-build.html','SaaS vs 자체구축 비용 비교 - TCO·손익분기점'],['/blog/posts/ai-saas-cost-guide.html','AI SaaS 구독 비용 최적화 가이드']]
     },
     '/calc/ai/llm-comparison/': {
       key:'llm-comparison',

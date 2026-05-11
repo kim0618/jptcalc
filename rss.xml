@@ -5,8 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Sat, 05 Apr 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+      <title>AI 챗봇 월 구독 가성비 비교 2026 - ChatGPT·Claude·Gemini·Perplexity·Copilot</title>
+      <link>https://www.jptcalc.kr/blog/posts/ai-chatbot-subscription-comparison.html</link>
+      <description>5종 챗봇 월 구독료(평균 $20)와 사무직·프리랜서·개발자 시나리오별 시간당 단가, 무료 vs 유료 손익분기점, 한국 결제 환율·수수료, 사업자 비용 처리까지 정리.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/ai-chatbot-subscription-comparison.html</guid>
+    </item>
 
     <item>
       <title>국민연금 임의가입 가성비 - 전업주부 월 9만원 내고 노후 41만원 받기</title>

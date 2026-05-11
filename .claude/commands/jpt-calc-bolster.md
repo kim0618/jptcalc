@@ -49,12 +49,12 @@ for n, f in results:
 
 ## 보강 완료 목록 (건너뛴다)
 
-**진행 현황: 25개 완료 / 36개**
+**진행 현황: 30개 완료 / 36개**
 
 **옵션 누적 카운트 (목표 A:12 / B:11 / C:13)**:
-- A 사용: 8/12
-- B 사용: 9/11
-- C 사용: 8/13
+- A 사용: 10/12
+- B 사용: 10/11
+- C 사용: 10/13
 
 - calc/salary/raise-rate (2026-05-06 보강, 옵션B, 2,996자)
 - calc/salary/job-change (2026-05-06 보강, 옵션C, 2,896자)
@@ -81,28 +81,28 @@ for n, f in results:
 - calc/realestate/joint (2026-05-10 보강, 옵션C, 3,276자)
 - calc/realestate/propertytax (2026-05-10 보강, 옵션A, 3,475자)
 - calc/realestate/registry (2026-05-10 보강, 옵션B, 3,510자)
+- calc/realestate/pyeong (2026-05-11 보강, 옵션C, 3,601자)
+- calc/realestate/inheritance (2026-05-11 보강, 옵션B, 3,875자)
+- calc/realestate/jongbu (2026-05-11 보강, 옵션A, 3,993자)
+- calc/finance/savings (2026-05-11 보강, 옵션A, 4,014자)
+- calc/finance/deposit (2026-05-11 보강, 옵션C, 4,164자)
 
 ---
 
-## 남은 대상 11개 (옵션 사전 배정)
+## 남은 대상 6개 (옵션 사전 배정)
 
 실행 전 측정 명령어로 자수 재확인 후 진행.
 
 | # | 경로 | 현재 | 패턴 | 권장 옵션 |
 |---|------|------|------|---------|
-| 1 | calc/realestate/pyeong | 1,796자 | 표준 | C |
-| 2 | calc/realestate/inheritance | 1,826자 | 표준 | B |
-| 3 | calc/realestate/jongbu | 1,968자 | 표준 | A |
-| 4 | calc/finance/savings | 2,032자 | 표준 | A |
-| 5 | calc/finance/deposit | 2,063자 | 표준 | C |
-| 6 | calc/health/ideal-weight | 2,084자 | **비표준** | C |
-| 7 | calc/health/bmi | 2,271자 | 표준 | B |
-| 8 | calc/pet/medical | 2,282자 | 표준 | A |
-| 9 | calc/health/bmr | 2,287자 | **비표준** | A |
-| 10 | calc/pet/insurance | 2,418자 | 표준 | C |
-| 11 | calc/realestate/brokerage | 2,468자 | 표준 | C |
+| 1 | calc/health/ideal-weight | 2,084자 | **비표준** | C |
+| 2 | calc/health/bmi | 2,271자 | 표준 | B |
+| 3 | calc/pet/medical | 2,282자 | 표준 | A |
+| 4 | calc/health/bmr | 2,287자 | **비표준** | A |
+| 5 | calc/pet/insurance | 2,418자 | 표준 | C |
+| 6 | calc/realestate/brokerage | 2,468자 | 표준 | C |
 
-**하루 5개 기준**: 5/11(5개) + 5/12(6개) = 완료
+**하루 5개 기준**: 5/12(6개) = 완료
 
 ---
 
