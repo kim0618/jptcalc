@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>펫보험 비교 계산기 - 보험가입 vs 미가입 비용 비교 | jptcalc</title>
-  <meta name="description" content="펫보험 월 보험료와 보장률을 입력하면 보험 가입 시와 미가입 시 연간 총 지출을 비교합니다." />
+  <meta name="description" content="펫보험 월 보험료·보장률을 입력하면 가입 vs 미가입 연간 총 지출을 비교합니다. 손익분기 계산, 약관 핵심 5가지, 슬개골 수술·건강견 실제 시나리오 2종까지 정리했습니다." />
   <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://www.jptcalc.kr/calc/pet/insurance/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="펫보험 비교 계산기 | jptcalc" />
-  <meta property="og:description" content="펫보험 월 보험료와 보장률을 입력하면 보험 가입 시와 미가입 시 연간 총 지출을 비교합니다." />
+  <meta property="og:description" content="펫보험 월 보험료·보장률을 입력하면 가입 vs 미가입 연간 총 지출을 비교합니다. 손익분기 계산, 약관 핵심 5가지, 슬개골 수술·건강견 실제 시나리오 2종까지 정리했습니다." />
   <meta property="og:url" content="https://www.jptcalc.kr/calc/pet/insurance/" />
   <meta property="og:site_name" content="제이퍼 계산기" />
   <meta property="og:locale" content="ko_KR" />
@@ -32,7 +32,7 @@
     {"@type":"ListItem","position":3,"name":"펫보험 비교 계산기","item":"https://www.jptcalc.kr/calc/pet/insurance/"}
   ]}
   </script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"펫보험 보장률 70%면 병원비 전액의 70%를 돌려받나요?","acceptedAnswer":{"@type":"Answer","text":"보장률 70%는 보장 대상 항목에 한해 적용됩니다. 자기부담금, 면책항목, 보장한도가 있으므로 실제 환급액은 달라질 수 있습니다."}},{"@type":"Question","name":"펫보험 보험료는 나이에 따라 올라가나요?","acceptedAnswer":{"@type":"Answer","text":"대부분 갱신형 상품으로, 반려동물 나이가 많아질수록 보험료가 인상됩니다. 가입 시 나이 제한(보통 8~10세)도 있습니다."}},{"@type":"Question","name":"펫보험 없이 의료비를 직접 적립하는 것이 더 나을 수도 있나요?","acceptedAnswer":{"@type":"Answer","text":"건강한 반려동물이라면 월 보험료만큼 적립하는 것이 유리할 수 있지만, 큰 수술이나 만성질환 시 보험이 훨씬 유리합니다."}},{"@type":"Question","name":"펫보험은 몇 살까지 가입할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"대부분 생후 91일~8세(일부 10세)까지 가입 가능합니다. 나이가 많을수록 가입 가능한 상품이 줄어들고 보험료도 높아지므로, 어릴 때 가입하는 것이 선택지가 넓습니다."}},{"@type":"Question","name":"기존 질환이 있어도 펫보험에 가입되나요?","acceptedAnswer":{"@type":"Answer","text":"이미 진단받은 질환은 보장 제외 조건으로 처리되는 경우가 대부분입니다. 일부 보험사는 고지의무 위반 시 계약 해지까지 가능하므로, 가입 시 기존 병력을 정확히 알려야 합니다."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"펫보험 보장률 70%면 병원비 전액의 70%를 돌려받나요?","acceptedAnswer":{"@type":"Answer","text":"보장률 70%는 보장 대상 항목에 한해 적용됩니다. 자기부담금, 면책항목, 보장한도가 있으므로 실제 환급액은 달라질 수 있습니다."}},{"@type":"Question","name":"펫보험 보험료는 나이에 따라 올라가나요?","acceptedAnswer":{"@type":"Answer","text":"대부분 갱신형 상품으로, 반려동물 나이가 많아질수록 보험료가 인상됩니다. 가입 시 나이 제한(보통 8~10세)도 있습니다."}},{"@type":"Question","name":"펫보험 없이 의료비를 직접 적립하는 것이 더 나을 수도 있나요?","acceptedAnswer":{"@type":"Answer","text":"건강한 반려동물이라면 월 보험료만큼 적립하는 것이 유리할 수 있지만, 큰 수술이나 만성질환 시 보험이 훨씬 유리합니다."}},{"@type":"Question","name":"펫보험은 몇 살까지 가입할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"대부분 생후 91일~8세(일부 10세)까지 가입 가능합니다. 나이가 많을수록 가입 가능한 상품이 줄어들고 보험료도 높아지므로, 어릴 때 가입하는 것이 선택지가 넓습니다."}},{"@type":"Question","name":"기존 질환이 있어도 펫보험에 가입되나요?","acceptedAnswer":{"@type":"Answer","text":"이미 진단받은 질환은 보장 제외 조건으로 처리되는 경우가 대부분입니다. 일부 보험사는 고지의무 위반 시 계약 해지까지 가능하므로, 가입 시 기존 병력을 정확히 알려야 합니다."}},{"@type":"Question","name":"펫보험은 보험사마다 보장 범위가 많이 다른가요?","acceptedAnswer":{"@type":"Answer","text":"네, 상당히 다릅니다. 통원만 보장, 입원·수술만 보장, 종합형 등 상품 유형이 다르고, 같은 보장률이어도 1회 보장한도와 연간 보장한도, 자기부담금 기준이 달라 실제 환급액 차이가 큽니다. 금융감독원 금융소비자정보포털(consumer.fss.or.kr)에서 보험사별 상품 비교를 확인하거나, 가입 전 2~3개 보험사의 약관을 직접 비교하는 것을 권장합니다."}},{"@type":"Question","name":"고양이도 강아지와 같은 펫보험을 가입할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네, 가입 가능합니다. 고양이용 펫보험도 강아지와 유사한 구조로 통원·입원·수술을 보장합니다. 고양이는 요로결석, 신장병, 상부 호흡기 질환 발생률이 높은 편이므로 이 항목이 약관에 포함되어 있는지 확인하는 것이 중요합니다. 보험료는 월 1~4만원 수준으로 소형견과 비슷합니다."}}]}</script>
   <style>
     /* insurance 고유 스타일 - 공통 스타일은 /assets/pet-common.css 참조 */
     .input-wrap{position:relative}
@@ -140,6 +140,27 @@
         <div class="guide-box"><strong>5. 통원·입원·수술 구분</strong><span>통원만 보장, 수술만 보장 등 상품 유형이 다릅니다. 종합형이 보험료는 높지만 보장 범위가 넓습니다</span></div>
       </div>
     </div>
+    <div class="guide-card">
+      <h2>실제 계산 예시</h2>
+      <h3>예시 1 - 이진아씨 말티즈 봄이 (5세, 슬개골 탈구 발생)</h3>
+      <p>진아씨 말티즈 봄이가 5세에 슬개골 탈구 진단을 받아 편측 수술을 했습니다. 수술비 120만원 발생. 가입 조건: 월 3만원, 보장률 70%.</p>
+      <ul>
+        <li>연간 보험료: 3만원 × 12 = 36만원</li>
+        <li>수술비 중 보험 지급: 120만원 × 70% = 84만원</li>
+        <li>본인부담 (수술): 120만원 - 84만원 = 36만원</li>
+        <li>보험 가입 시 총 지출: 36만원(보험료) + 36만원(본인부담) = 72만원</li>
+        <li><strong>보험 미가입 시 120만원 vs 가입 시 72만원 - 당해 연도 절감액 48만원</strong></li>
+      </ul>
+      <h3>예시 2 - 박민우씨 골든리트리버 하람 (2세, 건강 상태 양호)</h3>
+      <p>민우씨 골든리트리버는 2세로 건강합니다. 연간 병원비는 정기검진·예방접종 포함 40만원 수준. 가입 조건: 월 5만원, 보장률 70%.</p>
+      <ul>
+        <li>연간 보험료: 5만원 × 12 = 60만원</li>
+        <li>보험 지급: 40만원 × 70% = 28만원</li>
+        <li>본인부담: 40만원 - 28만원 = 12만원</li>
+        <li>보험 가입 시 총 지출: 60만원 + 12만원 = 72만원</li>
+        <li><strong>미가입 40만원 vs 가입 72만원 - 건강한 해에는 32만원 손해. 대형견은 노령기 고관절·종양 위험으로 5~6년 후 역전 가능</strong></li>
+      </ul>
+    </div>
     <div class="guide-card faq-card">
       <h2>자주 묻는 질문</h2>
       <div class="faq-item"><h3>펫보험 보장률 70%면 병원비 전액의 70%를 돌려받나요?</h3><p>보장률 70%는 보장 대상 항목에 한해 적용됩니다. 자기부담금, 면책항목, 보장한도가 있으므로 실제 환급액은 달라질 수 있습니다.</p></div>
@@ -147,6 +168,8 @@
       <div class="faq-item"><h3>펫보험 없이 의료비를 직접 적립하는 것이 더 나을 수도 있나요?</h3><p>건강한 반려동물이라면 월 보험료만큼 적립하는 것이 유리할 수 있지만, 큰 수술이나 만성질환 시 보험이 훨씬 유리합니다.</p></div>
       <div class="faq-item"><h3>펫보험은 몇 살까지 가입할 수 있나요?</h3><p>대부분 생후 91일~8세(일부 10세)까지 가입 가능합니다. 나이가 많을수록 가입 가능한 상품이 줄어들고 보험료도 높아지므로, 어릴 때 가입하는 것이 선택지가 넓습니다.</p></div>
       <div class="faq-item"><h3>기존 질환이 있어도 펫보험에 가입되나요?</h3><p>이미 진단받은 질환은 보장 제외 조건으로 처리되는 경우가 대부분입니다. 일부 보험사는 고지의무 위반 시 계약 해지까지 가능하므로, 가입 시 기존 병력을 정확히 알려야 합니다.</p></div>
+      <div class="faq-item"><h3>펫보험은 보험사마다 보장 범위가 많이 다른가요?</h3><p>네, 상당히 다릅니다. 통원만 보장, 입원·수술만 보장, 종합형 등 상품 유형이 다르고, 같은 보장률이어도 1회 보장한도와 연간 보장한도, 자기부담금 기준이 달라 실제 환급액 차이가 큽니다. 금융감독원 금융소비자정보포털(consumer.fss.or.kr)에서 보험사별 상품 비교를 확인하거나, 가입 전 2~3개 보험사의 약관을 직접 비교하는 것을 권장합니다.</p></div>
+      <div class="faq-item"><h3>고양이도 강아지와 같은 펫보험을 가입할 수 있나요?</h3><p>네, 가입 가능합니다. 고양이용 펫보험도 강아지와 유사한 구조로 통원·입원·수술을 보장합니다. 고양이는 요로결석, 신장병, 상부 호흡기 질환 발생률이 높은 편이므로 이 항목이 약관에 포함되어 있는지 확인하는 것이 중요합니다. 보험료는 월 1~4만원 수준으로 소형견과 비슷합니다.</p></div>
       <div class="update-note">최종 검토: 2026.04.25 · 계산 결과는 참고용입니다.</div>
     </div>
   </div>
@@ -162,7 +185,7 @@
       { name: '금융감독원(fss.or.kr)', url: 'https://www.fss.or.kr' },
       { name: '보험개발원(kidi.or.kr)', url: 'https://www.kidi.or.kr' },
     ],
-    lastReviewed: '2026.04',
+    lastReviewed: '2026.05',
   };
   </script>
   <script src="/assets/trust-block.js"></script>
@@ -227,7 +250,7 @@ window.ARTICLE_INFO_CONFIG = {
   reviewBasis: '2026년 시장 조사·동물병원 평균 비용 기준',
   basisDate: '2026년 기준',
   referenceOrg: '농림축산식품부·한국반려동물산업협회',
-  lastReviewed: '2026.04.25',
+  lastReviewed: '2026.05.12',
   category: 'pet'
 };
 </script>

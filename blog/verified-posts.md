@@ -89,3 +89,6 @@
 - ai-chatbot-subscription-comparison.html (2026-05-11 검증, 이상 없음 | 5종 구독료 $20·환율 1,400원·시간당 단가·시나리오 3종 재계산 정확, JSON-LD FAQ 4개 HTML 일치, 링크 이상 없음, blog-review-footer.js 로드 확인)
 - cat-lifetime-cost.html (2026-05-11 검증, 오류 2개 수정 | 15년 평생비용 최대값 4,000만원→4,700만원 (200+1500+2800=4,700) 8곳 동기화 [title·meta·og·JSON-LD headline·description·BreadcrumbList p4·h1·도입부·"15년 합치면" 섹션·마무리], BreadcrumbList p3 /calc/pet/ → /blog/?cat=반려동물)
 - cursor-vs-copilot.html (2026-05-11 검증, 이상 없음 | Cursor·Copilot 2026년 가격 정확, JSON-LD FAQ 3개 HTML 일치, BreadcrumbList p3 /blog/?cat=AI·테크 정상, 링크 이상 없음)
+- dog-lifetime-cost.html (2026-05-12 검증, 이상 없음 | 말티즈 3,709만원·골든리트리버 5,297만원 합계 정확, JSON-LD FAQ 4개 HTML 일치, 링크 이상 없음)
+- pet-insurance.html (2026-05-12 검증, 이상 없음 | 계산 수치·JSON-LD FAQ 4개 HTML 일치, 링크 이상 없음 | 순수 텍스트 3,480자 - 보강 권고)
+- korean-age-system.html (2026-05-12 검증, 오류 2개 수정 | BreadcrumbList p3 name "날짜/D-day"→"날짜·D-day", item /calc/date/ → /blog/?cat=날짜·D-day | 만 나이 시나리오 계산 정확, FAQ 4개 JSON-LD 일치)
