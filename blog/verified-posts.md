@@ -92,3 +92,6 @@
 - dog-lifetime-cost.html (2026-05-12 검증, 이상 없음 | 말티즈 3,709만원·골든리트리버 5,297만원 합계 정확, JSON-LD FAQ 4개 HTML 일치, 링크 이상 없음)
 - pet-insurance.html (2026-05-12 검증, 이상 없음 | 계산 수치·JSON-LD FAQ 4개 HTML 일치, 링크 이상 없음 | 순수 텍스트 3,480자 - 보강 권고)
 - korean-age-system.html (2026-05-12 검증, 오류 2개 수정 | BreadcrumbList p3 name "날짜/D-day"→"날짜·D-day", item /calc/date/ → /blog/?cat=날짜·D-day | 만 나이 시나리오 계산 정확, FAQ 4개 JSON-LD 일치)
+- resignation-dday-checklist.html (2026-05-13 검증, 오류 1개 수정 | BreadcrumbList JSON-LD 누락 추가 | 퇴직금·실업급여 손실·건강보험료·지연이자 전부 재검산 정확, FAQ 4개 JSON-LD 일치, 링크 4개 실존 확인)
+- gpu-cloud-comparison.html (2026-05-13 검증, 이상 없음 | GPU 클라우드 3개 서비스 월비용·시나리오3종 수치 재계산 정확, JSON-LD FAQ 4개 HTML 일치, BreadcrumbList p3 /blog/?cat=AI·테크 정상, 링크 이상 없음)
+- dog-monthly-cost.html (2026-05-13 검증, 이상 없음 | 월비용 합계·15년 누적 계산 정확, JSON-LD FAQ 4개 HTML 일치, BreadcrumbList p3 /blog/?cat=반려동물 정상, 링크 이상 없음)
