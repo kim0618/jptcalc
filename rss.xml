@@ -5,8 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 11 May 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+      <title>5년에 1억 모으기 - 월급 250·350·500 시드머니 저축 시뮬레이션</title>
+      <link>https://www.jptcalc.kr/blog/posts/five-year-seed-money.html</link>
+      <description>정기적금 3.5% 기준 5년 1억의 월 153만원, 월급별 60개월 시뮬레이션, ISA 절세, 월급보다 강한 저축률, 1억 도달 후 3단계 배분까지 정리.</description>
+      <pubDate>Thu, 14 May 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/five-year-seed-money.html</guid>
+    </item>
 
     <item>
       <title>퇴사 후 놓치면 돈 나가는 D-day 체크리스트 - 실업급여·건강보험·퇴직금 기한 총정리</title>

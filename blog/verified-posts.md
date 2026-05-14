@@ -95,3 +95,6 @@
 - resignation-dday-checklist.html (2026-05-13 검증, 오류 1개 수정 | BreadcrumbList JSON-LD 누락 추가 | 퇴직금·실업급여 손실·건강보험료·지연이자 전부 재검산 정확, FAQ 4개 JSON-LD 일치, 링크 4개 실존 확인)
 - gpu-cloud-comparison.html (2026-05-13 검증, 이상 없음 | GPU 클라우드 3개 서비스 월비용·시나리오3종 수치 재계산 정확, JSON-LD FAQ 4개 HTML 일치, BreadcrumbList p3 /blog/?cat=AI·테크 정상, 링크 이상 없음)
 - dog-monthly-cost.html (2026-05-13 검증, 이상 없음 | 월비용 합계·15년 누적 계산 정확, JSON-LD FAQ 4개 HTML 일치, BreadcrumbList p3 /blog/?cat=반려동물 정상, 링크 이상 없음)
+- five-year-seed-money.html (2026-05-14 검증, 오류 3개 수정 | 케이스2 8,071→8,064만원, 케이스3 1억2,915→1억2,903만원, 차이 3,900→3,871만원 | 금융 팩트·FAQ·링크 이상 없음)
+- dog-vs-cat-cost.html (2026-05-14 검증, 오류 1개 수정 | BreadcrumbList p3 /calc/pet/ → /blog/?cat=반려동물 | 수치 계산·FAQ·링크 이상 없음)
+- holiday-2026.html (2026-05-14 검증, 오류 4개 수정 | FAQ Q1 현충일 대체공휴일 오류 수정(대상 아님), meta·og description "3일"→"4일", BreadcrumbList p3 /calc/date/→/blog/?cat=날짜·D-day, dateModified 갱신 | 공휴일 날짜·요일·대체 삼일절·광복절·개천절 이상 없음)
