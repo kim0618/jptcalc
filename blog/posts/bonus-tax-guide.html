@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>보너스·성과급 세금 계산법 - 300만원 받았는데 통장에 220만원도 안 되는 이유 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="성과급·명절 보너스를 받을 때 빠지는 세금과 4대보험을 항목별로 분해합니다. 100만·300만·1,000만원 시나리오별 실수령액과 연말정산 환급 가능성까지 2026년 기준으로 정리했습니다." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="보너스·성과급 세금 계산법 - 300만원 받았는데 통장에 220만원도 안 되는 이유 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="성과급·명절 보너스를 받을 때 빠지는 세금과 4대보험을 항목별로 분해합니다. 100만·300만·1,000만원 시나리오별 실수령액과 연말정산 환급 가능성까지 2026년 기준으로 정리했습니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/bonus-tax-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/bonus-tax-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BRSX3F10MZ');
+  </script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #3B82F6;
+      --gray-400: #9CA3AF; --gray-500: #6B7280; --gray-600: #4B5563;
+      --dark-bg: #ffffff; --dark-card: #F9FAFB; --dark-border: rgba(0,0,0,0.08);
+    }
+    body { font-family: 'Pretendard', -apple-system, sans-serif; background: #ffffff; color: #111827; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+    .site-header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .header-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; gap: 24px; }
+    .site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .logo-icon { width: 32px; height: 32px; }
+    .logo-icon img { width: 32px; height: 32px; display: block; }
+    .logo-text { font-size: 18px; font-weight: 900; color: #111827; letter-spacing: -0.5px; }
+    .logo-text span { color: #818CF8; }
+    .header-back { margin-left: auto; font-size: 13px; font-weight: 600; color: #6B7280; text-decoration: none !important; }
+    .header-back:hover { color: #111827; }
+    .post-wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+    .post-tag { display: inline-block; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; background: rgba(59,130,246,0.15); color: #3B82F6; margin-bottom: 16px; }
+    h1 { font-size: 26px; font-weight: 900; color: #111827; line-height: 1.35; margin-bottom: 12px; }
+    .post-meta { font-size: 13px; color: #4B5563; margin-bottom: 36px; display: flex; gap: 12px; }
+    .post-body { font-size: 15px; color: #111827; line-height: 1.8; }
+    .post-body h2 { font-size: 19px; font-weight: 800; color: #111827; margin: 40px 0 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .post-body p { margin-bottom: 14px; }
+    .post-body ul { margin: 10px 0 14px 20px; }
+    .post-body li { margin-bottom: 8px; }
+    .post-body a { color: var(--primary); text-decoration: none !important; }
+    .highlight-box { background: rgba(59,130,246,0.08); border-left: 4px solid var(--primary); border-radius: 0 10px 10px 0; padding: 16px 20px; margin: 20px 0; }
+    .highlight-box p { margin: 0; color: #1E40AF; font-size: 14px; }
+    .result-card { background: #F9FAFB; border: 1px solid rgba(0,0,0,0.08); border-radius: 14px; padding: 24px; margin: 20px 0; }
+    .result-card .result-title { font-size: 13px; color: #6B7280; margin-bottom: 6px; }
+    .result-card .result-value { font-size: 28px; font-weight: 900; color: #1E40AF; }
+    .result-card .result-sub { font-size: 13px; color: #4B5563; margin-top: 4px; }
+    .table-wrap { overflow-x: auto; margin: 20px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th { background: #F9FAFB; color: #111827; font-weight: 700; padding: 10px 14px; text-align: left; border: 1px solid rgba(0,0,0,0.08); }
+    td { padding: 10px 14px; border: 1px solid rgba(0,0,0,0.08); color: #1F2937; }
+    td.amount { text-align: right; font-weight: 600; color: #111827; }
+    td.deduct { text-align: right; color: #F87171; }
+    td.rate { color: var(--primary); font-weight: 700; }
+    tr.total td { background: rgba(59,130,246,0.1); font-weight: 800; color: #1E40AF; }
+    .cta-box { background: #F9FAFB; border: 1px solid rgba(0,0,0,0.08); border-radius: 14px; padding: 24px; margin: 40px 0; text-align: center; }
+    .cta-box p { color: #374151; font-size: 14px; margin-bottom: 14px; }
+    .cta-btn { display: inline-block; padding: 12px 28px; background: var(--primary); color: #fff !important; font-size: 14px; font-weight: 800; border-radius: 10px; text-decoration: none !important; }
+    .post-body h3 { font-size: 16px; font-weight: 700; color: #111827; margin: 24px 0 10px; }
+    .faq-item { background: #F9FAFB; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; padding: 20px; margin: 16px 0; }
+    .faq-q { font-weight: 800; color: #111827; margin-bottom: 8px; font-size: 15px; }
+    .faq-a { color: #374151; font-size: 14px; line-height: 1.7; margin: 0; }
+    .site-footer { border-top: 1px solid rgba(0,0,0,0.08); padding: 24px; text-align: center; }
+    .footer-copy { font-size: 10px; color: #374151; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "보너스·성과급 세금 계산법 - 300만원 받았는데 통장에 220만원도 안 되는 이유",
+    "description": "성과급·명절 보너스를 받을 때 빠지는 세금과 4대보험을 항목별로 분해합니다. 100만·300만·1,000만원 시나리오별 실수령액과 연말정산 환급 가능성까지 2026년 기준으로 정리했습니다.",
+    "author": {"@type":"Person","name":"Jay Kim","url":"https://www.jptcalc.kr/about.html","jobTitle":"제이퍼 계산기 운영자"},
+    "publisher": { "@type": "Organization", "name": "제이퍼 계산기", "url": "https://www.jptcalc.kr", "logo": { "@type": "ImageObject", "url": "https://www.jptcalc.kr/android-chrome-512x512.png" } },
+    "datePublished": "2026-05-15",
+    "dateModified": "2026-05-15",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.jptcalc.kr/blog/posts/bonus-tax-guide.html" },
+    "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+    "articleSection": "연봉",
+    "inLanguage": "ko"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "명절 보너스에서 세금이 평소보다 훨씬 많이 빠지는 이유가 뭔가요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "명절 상여처럼 지급 대상 기간이 없는 부정기 상여는 원천징수 시점에 그 달 정기 급여와 합산되어 누진세율이 적용됩니다. 예를 들어 월 416만원 받는 직장인이 명절 보너스 100만원을 받으면 그 달 총 보수가 516만원으로 묶이는데, 간이세액표 기준 소득세가 28만원에서 약 55만원으로 두 배 가까이 오릅니다. 즉 보너스에서만 약 27만원이 빠지는 셈입니다. 다만 이 금액은 원천징수 단계의 임시 추정치이며, 이듬해 2월 연말정산에서 연간 총소득 기준으로 다시 계산되어 환급 또는 추납으로 정리됩니다."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "성과급에도 4대보험이 부과되나요? 매달 빠지는 그 비율과 동일한가요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "네, 부과됩니다. 다만 항목별로 정산 방식이 다릅니다. 국민연금은 매년 7월 보수월액 결정 시 전년도 총보수에 보너스가 포함되어 산정되며, 건강보험도 다음해 4월 정산 때 보너스가 반영된 연간 보수총액으로 재계산됩니다. 고용보험(0.9%)은 보너스를 지급한 달에 즉시 부과됩니다. 결과적으로 보너스 300만원이면 4대보험 추가 부담만 약 13만~22만원 수준이 누적되며, 보너스 받는 달 당장 빠지는 금액은 고용보험·소득세 위주입니다."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "보너스를 한 번에 받지 않고 분할해서 받으면 세금이 줄어드나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "연 단위 총세금은 차이가 없습니다. 보너스를 한 번에 받든 분할해서 받든 연말정산에서 1년치 총소득 기준으로 재계산되기 때문입니다. 단 원천징수 시점의 체감 부담은 크게 다릅니다. 300만원을 한 달에 받으면 그 달 소득세가 60만~70만원 늘어나지만, 100만원씩 세 달로 분할하면 매달 20만원 안팎으로만 증가합니다. 현금 흐름 관리와 카드값·대출 상환 일정이 빠듯하다면 분할이 실질적으로 유리합니다."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "스톡옵션 행사 차익이나 성과 인센티브도 보너스와 같은 방식으로 과세되나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "스톡옵션은 소득세법 시행령 제38조에 따라 행사 시점의 시가와 행사가격의 차액이 근로소득으로 간주되어 보너스와 동일한 누진세율이 적용됩니다. 일반 스톡옵션이면 행사 차익 1억원이라도 약 3,500만원에서 4,000만원 정도의 세금이 한 번에 발생할 수 있습니다. 다만 벤처기업 스톡옵션은 조세특례제한법 제16조의2에 따라 연 5,000만원 한도 비과세 특례가 적용되어 부담이 줄어듭니다. 행사 시점을 연도 말과 다음해 초로 나누면 두 해에 걸쳐 누진 구간을 활용할 수 있어 세금이 수백만원 단위로 달라질 수 있습니다."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},{"@type":"ListItem","position":2,"name":"블로그","item":"https://www.jptcalc.kr/blog/"},{"@type":"ListItem","position":3,"name":"연봉","item":"https://www.jptcalc.kr/blog/?cat=연봉"},{"@type":"ListItem","position":4,"name":"보너스·성과급 세금 계산법 - 300만원 받았는데 통장에 220만원도 안 되는 이유","item":"https://www.jptcalc.kr/blog/posts/bonus-tax-guide.html"}]}</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo">
+      <div class="logo-icon"><img src="../../assets/logo.svg" alt="제이퍼 계산기 로고" /></div>
+      <span class="logo-text">제이퍼<span>계산기</span></span>
+    </a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+
+<div class="post-wrap">
+  <span class="post-tag">연봉</span>
+  <h1>보너스·성과급 세금 계산법 - 300만원 받았는데 통장에 220만원도 안 되는 이유</h1>
+  <div class="post-meta">
+    <span>📅 2026.05.15</span>
+    <span>·</span>
+    <span>6분 읽기</span>
+  </div>
+
+  <div class="post-body">
+    <p>2025년 고용노동부 임금구조기본통계조사에 따르면 5인 이상 사업체 상용근로자 한 명당 연간 정기상여금은 평균 약 528만원이었습니다. 그런데 이 돈을 실제로 통장에 다 받았다고 느끼는 사람은 드뭅니다. 명세서를 열어보면 보너스가 1,000만원인데 차감액이 300만원을 넘는 경우도 흔하죠. 왜 보너스에서는 평소보다 더 많은 비율이 빠져나가는지, 2026년 간이세액표와 4대보험 요율을 기준으로 항목별로 풀어봤습니다.</p>
+
+    <div class="highlight-box">
+      <p><strong>이 글이 필요한 사람:</strong> 명절 보너스 받았는데 통장 금액에 실망한 직장인 / 성과급 협상 시 세후 금액을 미리 알고 싶은 분 / 스톡옵션 행사 시 세금 부담이 궁금한 분 / 보너스 세금이 연말정산에서 어떻게 정산되는지 헷갈리는 분</p>
+    </div>
+
+    <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+      <li>보너스 100만·300만·500만·1,000만원 받을 때 실수령액과 실효 세율</li>
+      <li>정기상여 vs 부정기상여, 같은 금액이라도 원천징수 방식이 다른 이유</li>
+      <li>연봉 4,500만원 직장인이 보너스 1,000만원 받았을 때 그 달 소득세가 4배로 뛰는 구조</li>
+      <li>4대보험은 보너스 받는 달에 매번 빠지지 않는다, 정산 타이밍 정리</li>
+      <li>연말정산에서 보너스 세금을 환급받을 수 있는 공제 항목 5가지</li>
+    </ul>
+
+    <h2>왜 보너스는 평소보다 비율적으로 더 빠지나</h2>
+    <p>핵심은 이겁니다. 우리나라 근로소득세는 누진세율이고, 보너스는 그 누진 구조의 가장 불리한 지점에 얹혀서 과세됩니다. 평소 월 416만원 받는 직장인이라면 간이세액표상 소득세 구간은 약 6.8% 수준입니다. 그런데 같은 달에 보너스 300만원이 더해져 총 716만원이 되면, 그 달 소득세 계산은 716만원 기준 간이세액표 구간으로 점프합니다. 보너스 300만원에는 사실상 한계세율 24%가 적용되는 셈이죠.</p>
+    <p>국세청 「근로소득 간이세액표」(2026년 1월 고시)는 월 보수 구간별로 원천징수 세액을 정해 두고 있는데, 보너스가 합산된 그 달에는 평소보다 두 단계 위 구간으로 올라가는 경우가 대부분입니다. 정기 월급은 한 달 안의 평균 세율을 적용받지만, 보너스는 한 달치 추가 소득이라 그 위의 한계세율이 그대로 떨어집니다.</p>
+    <p>여기에 더해 4대보험까지 일부 부과되고, 지방소득세도 소득세의 10%만큼 따라붙습니다. 정확히 어떤 항목이 얼마나 빠지는지는 시나리오로 보는 게 빠릅니다.</p>
+
+    <h2>시나리오별 실수령액 - 100만·300만·500만·1,000만원</h2>
+    <p>아래 시나리오는 모두 연봉 5,000만원(월 세전 4,166,667원), 부양가족 본인 1명, 비과세 항목 없음 기준입니다. 평소 월 정기 급여에서 빠지는 소득세는 약 285,540원으로 가정하고, 보너스가 합산된 달의 간이세액표 소득세에서 평소 소득세를 차감해 보너스 분 원천징수액을 산정했습니다.</p>
+
+    <h3>시나리오 A. 명절 보너스 100만원 (성과급)</h3>
+    <div class="result-card">
+      <div class="result-title">보너스 100만원 → 실수령</div>
+      <div class="result-value">약 740,000원</div>
+      <div class="result-sub">실효 차감률 약 26%</div>
+    </div>
+    <ul>
+      <li>그 달 총 보수: 4,166,667 + 1,000,000 = 5,166,667원</li>
+      <li>5,166,667원 기준 간이세액표 소득세: 약 549,000원 (평소 대비 약 263,460원 증가)</li>
+      <li>지방소득세 증가분: 약 26,346원</li>
+      <li>고용보험 추가(0.9%): 약 9,000원</li>
+      <li>합계 차감: 약 298,806원 → 실수령 약 701,000원~750,000원</li>
+    </ul>
+    <p>검산하면, 보너스 100만원에서 약 30만원 가까이가 그 달에 빠집니다. 평소 416만원 월급에서 빠지는 비율(약 17%)보다 보너스 차감률(약 26%)이 더 높은 게 이상하게 느껴지지만, 위에서 본 한계세율 누진 효과 때문에 발생하는 정상적인 결과입니다.</p>
+
+    <h3>시나리오 B. 성과급 300만원</h3>
+    <div class="result-card">
+      <div class="result-title">보너스 300만원 → 실수령</div>
+      <div class="result-value">약 2,180,000원</div>
+      <div class="result-sub">실효 차감률 약 27%</div>
+    </div>
+    <ul>
+      <li>그 달 총 보수: 4,166,667 + 3,000,000 = 7,166,667원</li>
+      <li>7,166,667원 기준 간이세액표 소득세: 약 1,028,000원 (평소 대비 약 742,460원 증가)</li>
+      <li>지방소득세 증가분: 약 74,246원</li>
+      <li>고용보험 추가: 약 27,000원</li>
+      <li>합계 차감: 약 843,706원 → 실수령 약 2,156,000원~2,180,000원</li>
+    </ul>
+    <p>그래서 뭐가 달라지는데? 보너스 300만원을 받고 실수령이 220만원에도 못 미친다면, 단순히 "보너스 300만원 받았다"라고 말하기에는 체감 금액이 다릅니다. 카드값 결제 계획을 보너스 기준으로 세웠다가 80만원이 빠진 사실에 당황하는 경우가 흔한 이유입니다.</p>
+
+    <div style="margin:24px 0;overflow-x:auto">
+    <svg role="img" width="100%" viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg">
+      <title>보너스 금액별 실수령액 비교 차트</title>
+      <rect width="680" height="300" rx="12" fill="#F9FAFB"/>
+      <text x="24" y="36" font-size="14" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">보너스 명목 금액 vs 실수령액 (연봉 5,000만원 기준)</text>
+
+      <text x="24" y="78" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">100만원</text>
+      <rect x="110" y="62" width="60" height="20" rx="4" fill="#D1D5DB"/>
+      <rect x="110" y="62" width="44" height="20" rx="4" fill="#3B82F6" opacity="0.8"/>
+      <text x="180" y="78" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">실수령 74만원 (74%)</text>
+
+      <text x="24" y="128" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">300만원</text>
+      <rect x="110" y="112" width="180" height="20" rx="4" fill="#D1D5DB"/>
+      <rect x="110" y="112" width="131" height="20" rx="4" fill="#3B82F6" opacity="0.8"/>
+      <text x="300" y="128" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">실수령 218만원 (73%)</text>
+
+      <text x="24" y="178" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">500만원</text>
+      <rect x="110" y="162" width="300" height="20" rx="4" fill="#D1D5DB"/>
+      <rect x="110" y="162" width="210" height="20" rx="4" fill="#3B82F6" opacity="0.8"/>
+      <text x="420" y="178" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">실수령 350만원 (70%)</text>
+
+      <text x="24" y="228" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">1,000만원</text>
+      <rect x="110" y="212" width="540" height="20" rx="4" fill="#D1D5DB"/>
+      <rect x="110" y="212" width="346" height="20" rx="4" fill="#3B82F6" opacity="0.8"/>
+      <text x="110" y="252" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">실수령 약 641만원 (64%, 1,000만원 구간 점프)</text>
+
+      <text x="24" y="284" font-size="11" fill="#6B7280" font-family="Pretendard,sans-serif">* 회색은 명목 금액, 파란색은 세금·4대보험 차감 후 실수령액 (간이세액표 원천징수 기준, 연말정산 환급 가능성 별도)</text>
+    </svg>
+    </div>
+
+    <h3>시나리오 C. 분기 PI 500만원</h3>
+    <div class="result-card">
+      <div class="result-title">보너스 500만원 → 실수령</div>
+      <div class="result-value">약 3,500,000원</div>
+      <div class="result-sub">실효 차감률 약 30%</div>
+    </div>
+    <p>그 달 총 보수가 916만원으로 묶이면서 간이세액표 구간이 한 번 더 점프합니다. 소득세만 약 130만원 추가로 빠지고, 지방소득세 13만원, 고용보험 약 4.5만원이 따라붙어 합계 약 150만원이 차감됩니다. 분기마다 받는 PI를 카드값 결제 자금으로 잡아두면 매번 50만원 안팎이 모자라는 경험을 하게 됩니다.</p>
+
+    <h3>시나리오 D. 연말 성과급 1,000만원</h3>
+    <div class="result-card">
+      <div class="result-title">보너스 1,000만원 → 실수령</div>
+      <div class="result-value">약 6,410,000원</div>
+      <div class="result-sub">실효 차감률 약 36%</div>
+    </div>
+    <p>여기서 충격이 옵니다. 1,000만원 보너스에서 실제로 손에 쥐는 돈은 640만원대입니다. 그 달 총 보수가 1,416만원이 되면서 간이세액표상 한계세율 구간이 35%까지 올라가기 때문입니다. 지방소득세 36만원, 고용보험 9만원, 그리고 향후 건강보험·국민연금 정산까지 합산되면 차감액은 400만원에 가깝게 누적될 수 있습니다.</p>
+    <p style="margin: 1.2em 0;">👉 <a href="https://www.jptcalc.kr/calc/salary/take-home-pay/" style="color:#3B82F6;font-weight:600;">연봉 실수령액 계산기로 내 보너스 실수령액 직접 계산하기</a></p>
+
+    <h2>업종별 보너스 격차 - 같은 직장인이라도 보너스 부담은 다르다</h2>
+    <p>한국노동연구원 「산업·직종별 임금구조 분석」(2024년) 자료를 보면 업종별 정기상여 비중 차이가 큽니다. 보너스 세금을 따지기 전에 내 업종이 평균적으로 어느 정도의 보너스를 받는지 알면, 비교 기준이 생깁니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>업종</th><th>연간 정기상여 평균</th><th>월급 대비 비율</th><th>연말 일시 성과급 빈도</th></tr>
+        <tr><td>금융·보험업</td><td class="amount">약 1,180만원</td><td>월급의 약 200%</td><td>높음 (PI 분기 지급)</td></tr>
+        <tr><td>전기·전자 제조업</td><td class="amount">약 920만원</td><td>월급의 약 170%</td><td>높음 (반기 PS)</td></tr>
+        <tr><td>정보통신업(IT)</td><td class="amount">약 640만원</td><td>월급의 약 120%</td><td>중간 (분기 보너스)</td></tr>
+        <tr><td>전문·과학·기술업</td><td class="amount">약 510만원</td><td>월급의 약 100%</td><td>중간</td></tr>
+        <tr><td>도소매업</td><td class="amount">약 320만원</td><td>월급의 약 70%</td><td>낮음 (명절 위주)</td></tr>
+        <tr><td>숙박·음식점업</td><td class="amount">약 180만원</td><td>월급의 약 40%</td><td>낮음</td></tr>
+      </table>
+    </div>
+
+    <p>여기서 한 가지 역설이 보입니다. 보너스가 클수록 세금 부담률이 비례적으로 더 커지는 게 아니라, 누진 효과로 인해 보너스 비중이 큰 업종일수록 「보너스 1원당 실수령」이 떨어집니다. 금융업처럼 연봉의 절반 가까이가 보너스로 들어오는 구조면, 본봉 위주 업종 대비 같은 연 총소득이어도 연간 세 부담이 30만~80만원 더 많을 수 있습니다.</p>
+
+    <p>개인적으로는 이게 보너스 비중 높은 업종에서 「연봉 협상은 본봉 기준으로 올려라」는 통념이 도는 이유라고 봅니다. 통상임금에도 포함되고 누진세도 평탄해지기 때문이죠. 통계청 「임금근로일자리 소득결과」(2024년) 데이터에서도 평균 월급 동일 구간에서 본봉 위주 근로자의 연 실수령이 보너스 비중 높은 근로자보다 평균 1.2% 정도 높게 나타납니다.</p>
+
+    <h3>정규직 vs 계약직 보너스 격차</h3>
+    <p>정규직과 계약직 사이 보너스 격차는 여전히 큽니다. 통계청 자료 기준 정규직 대비 계약직의 연간 보너스 평균은 약 38% 수준입니다. 세금 부담률은 비슷하지만 명목 금액 자체가 적어 실수령 차이가 누적됩니다. 1년 보너스 격차가 약 600만원이라면 실수령 격차는 약 420만~450만원입니다.</p>
+
+    <h2>정기상여 vs 부정기상여 - 같은 100만원도 세금이 다르다</h2>
+    <p>국세청 원천징수 가이드라인을 보면 보너스(상여금)는 두 가지로 나뉩니다. 어떤 분류에 속하는지에 따라 그 달 빠지는 세금이 크게 달라집니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>구분</th><th>예시</th><th>원천징수 방식</th><th>그 달 체감 세금</th></tr>
+        <tr><td>정기상여</td><td>분기 PI, 반기 인센티브, 매년 정해진 시기 지급</td><td>지급 대상 기간으로 나눠 월 단위로 환산 후 누진 적용</td><td>상대적으로 적게 빠짐</td></tr>
+        <tr><td>부정기상여</td><td>명절 보너스, 일회성 성과급, 격려금</td><td>그 달 정기 급여와 합산해 한 번에 누진 적용</td><td>한 번에 크게 빠짐</td></tr>
+        <tr><td>이연성과급</td><td>증권사 PB, 임원 성과급 일부</td><td>지급 시점마다 분할 누진 적용</td><td>해마다 분산되어 부담 완화</td></tr>
+      </table>
+    </div>
+
+    <p>같은 100만원을 받더라도 「분기 PI 100만원」은 3개월에 나눠 환산되어 매달 약 33만원이 평균 급여에 더해지는 식으로 세금이 산출되고, 「명절 보너스 100만원」은 그 달 정기 급여에 한 번에 얹혀서 누진세율 상위 구간으로 묶입니다. 결과적으로 부정기상여 100만원이 정기상여 100만원보다 그 달 약 8만~12만원 정도 더 빠지는 경우가 흔합니다.</p>
+
+    <p>물론 연말정산까지 가면 결국 같아집니다. 연간 총소득 기준으로 다시 계산되기 때문이죠. 그래서 보너스 종류는 그 달의 현금 흐름에만 영향을 미치고, 1년 합산 세금에는 차이가 없다는 점을 기억해두면 됩니다. 매달 실수령을 항목별로 비교해보고 싶다면 <a href="../posts/salary-5000-takehome.html">연봉 5,000만원 실수령액 분석</a>과 <a href="../posts/salary-raise-guide.html">연봉 인상률 계산법</a>을 함께 보면 도움이 됩니다.</p>
+
+    <h2>1,000만원 받았는데 실효 세율은 알바보다 높을 수 있다</h2>
+    <p>여기서 함정이 있습니다. 시급 11,000원 받는 편의점 아르바이트생의 일급은 88,000원이고, 여기에는 3.3% 사업소득세만 떼면 끝입니다(연 600만원 미만이면 종합소득세 면제 가능). 그런데 연봉 5,000만원 직장인이 받는 보너스 1,000만원에는 한계세율 35%가 한꺼번에 떨어집니다. 명목 금액 차이만 보면 비교가 안 되는데, 한계 세율로만 보면 정규직의 보너스 구간이 더 무겁다는 역설이 생깁니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>비교 항목</th><th>편의점 알바 일급 8.8만원</th><th>직장인 보너스 1,000만원</th></tr>
+        <tr><td>적용 세율</td><td class="rate">3.3%</td><td class="rate">한계세율 35%</td></tr>
+        <tr><td>차감액</td><td>약 2,904원</td><td>약 350만원</td></tr>
+        <tr><td>실수령률</td><td>약 96.7%</td><td>약 64%</td></tr>
+        <tr><td>연 환산 시 부담</td><td>분리 신고 가능 시 세금 거의 없음</td><td>이미 누진 상위 구간 적용</td></tr>
+      </table>
+    </div>
+
+    <p>물론 연 단위 총소득과 종합소득 정산까지 가면 직장인이 훨씬 많이 가져갑니다. 그래도 "내가 1년에 한 번 받는 보너스에 한계세율 35%가 적용된다"는 사실은 보너스를 받는 그 순간의 충격을 설명해 줍니다. 핵심은 이렇습니다. 보너스는 그 자체가 별도 소득이 아니라, 평소 월급 위에 얹히는 추가 누진 소득입니다. 그래서 평소 연봉이 높을수록 보너스 차감률도 같이 올라갑니다.</p>
+
+    <p>이 구조를 확실히 이해하려면 한계세율(marginal tax rate)과 평균세율(effective tax rate)을 구분해야 합니다. 연봉 5,000만원 직장인의 평균세율은 약 12~15%지만, 마지막 1원이 들어가는 구간(보너스가 얹히는 자리)의 한계세율은 24%입니다. 보너스 1,000만원이 그 위에 얹히면 한계 구간이 35%로 한 칸 더 점프합니다. 즉 보너스 1원당 빠지는 세금이 평소 월급 1원당 빠지는 세금의 2~3배에 달한다는 뜻입니다. 이 차이가 보너스를 받았는데 "왜 이것밖에 안 들어왔지?"라는 체감으로 이어집니다.</p>
+
+    <h2>4대보험 - 보너스 받는 달에도 빠지긴 하는데</h2>
+    <p>여기서 헷갈리는 분이 많습니다. "보너스에 4대보험은 안 빠진다"는 말과 "결국 부과된다"는 말이 같이 돕니다. 정답은 둘 다입니다. 시점이 다를 뿐이죠.</p>
+
+    <h3>고용보험은 즉시 부과</h3>
+    <p>고용보험료(근로자 부담분 0.9%)는 보너스 지급 시점에 그 달 보수총액에 그대로 부과됩니다. 보너스 300만원이면 그 달 고용보험에서만 추가 2.7만원이 빠집니다.</p>
+
+    <h3>국민연금은 사실상 그 달에 안 빠지지만 다음해 7월 반영</h3>
+    <p>국민연금은 「기준소득월액」 기준입니다. 매년 7월에 전년도 총보수를 12로 나눈 평균 보수월액을 기준으로 다시 책정합니다. 보너스가 많은 해는 다음 해 7월부터 1년간 국민연금 부담이 늘어나는 구조입니다. 다만 기준소득월액 상한(2026년 기준 월 590만원)을 이미 초과하면 추가 부담이 없습니다.</p>
+
+    <h3>건강보험은 다음해 4월 보수월액 정산에서 차액 부과</h3>
+    <p>건강보험은 매월 보수월액 기준으로 부과되고, 다음해 4월에 전년도 실제 보수총액 대비 차액을 정산합니다. 즉 보너스가 많은 해는 다음해 4월에 "건강보험 정산보험료" 청구서가 추가로 날아옵니다. 보너스 500만원 기준 건강보험 정산 추가액은 약 18만원 안팎입니다.</p>
+
+    <div class="highlight-box">
+      <p>4대보험 정산은 「국민건강보험법 시행령」 제42조와 「국민연금법」 제3조에 명시된 보수월액 산정 방식에 따라 자동으로 이루어집니다. 보너스를 많이 받은 해 다음해 4월 급여명세서에서 "건강보험료 정산분"이 한 번에 빠지는 경우가 있으므로, 4월 카드값 계획을 잡을 때 참고해두는 게 좋습니다.</p>
+    </div>
+
+    <p>한국부동산원이나 통계청 자료 같은 공식 데이터는 아니지만, 실제로 연말 성과급이 큰 회사에 다니는 직장인의 경우 다음해 4월 정산 시 30만~80만원 단위 추가 부과가 발생합니다. 「부담이 없다가 한 번에 들어온다」는 점이 보너스 4대보험의 특징입니다.</p>
+
+    <h2>스톡옵션·인센티브·복리후생 - 보너스 종류별 과세 차이</h2>
+    <p>「보너스」라는 단어 안에는 여러 형태의 추가 보상이 묶여 있습니다. 과세 방식이 다르기 때문에 같은 금액이라도 실수령이 크게 갈립니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>유형</th><th>과세 방식</th><th>핵심 포인트</th></tr>
+        <tr><td>정기/명절 상여</td><td>근로소득 + 4대보험</td><td>위에서 다룬 누진 합산 방식</td></tr>
+        <tr><td>스톡옵션 행사 차익</td><td>근로소득 합산 (벤처 5,000만원 비과세 특례)</td><td>행사 시점 분산이 절세 핵심</td></tr>
+        <tr><td>우리사주조합 출연</td><td>비과세 한도 연 400만원(코스닥 외 일반 기준)</td><td>장기 보유 시 추가 비과세</td></tr>
+        <tr><td>장기근속 포상금</td><td>근로소득, 일부 비과세 적용</td><td>10년 이상 근속 시 200만원까지 비과세</td></tr>
+        <tr><td>복지포인트·자기계발비</td><td>일부 비과세, 일부 과세</td><td>실제 사용 영수증에 따라 처리</td></tr>
+        <tr><td>경조사비 (회사 지급)</td><td>사회 통념상 인정 범위 내 비과세</td><td>일반적으로 50만~100만원 이내</td></tr>
+      </table>
+    </div>
+
+    <h3>스톡옵션이 가장 무겁다</h3>
+    <p>일반 비상장 기업 스톡옵션은 행사 시점에 시가와 행사가격의 차액 전액이 근로소득으로 잡힙니다. 예를 들어 행사가격 1주 10,000원짜리 스톡옵션 5,000주를 시가 30,000원에 행사하면 차익 1억원이 발생합니다. 이 1억원이 연봉에 그대로 더해지므로, 평소 연봉 5,000만원이던 직장인은 그 해 종합 과세표준이 1억 5,000만원으로 점프해 한계세율 38%가 적용됩니다.</p>
+
+    <p>스톡옵션 차익 1억원에 단순 한계세율 38%만 적용해도 세금이 3,800만원입니다. 여기에 지방소득세 380만원, 4대보험 정산까지 더하면 실수령은 약 5,500만~5,800만원 수준. 명목 1억원 중 4,000만원 가까이가 빠지는 셈이죠. 행사 시점을 12월 말과 1월 초로 양분해 각각 5,000만원씩 두 해에 나눠 행사하면 한계세율 구간이 24~26%로 한 칸 내려가, 두 해 합산 세금이 약 2,800만~3,000만원 수준으로 줄어듭니다. 행사 시점 분산만으로 800만~1,000만원 절세가 가능한 구조입니다.</p>
+
+    <p>그래서 스톡옵션 행사 시점을 12월과 다음해 1월로 나누면 두 해에 걸쳐 누진 구간을 분산할 수 있어 절세 효과가 큽니다. 다만 행사 후 주가 변동 위험을 고려해야 하므로, 정답은 없고 시나리오별 손익을 따져봐야 합니다. 보너스 관련 의사결정이 필요하다면 <a href="../posts/salary-negotiation.html">이직 연봉 협상 전략</a>도 참고하면 도움이 됩니다.</p>
+
+    <h3>비과세 항목은 적극 활용</h3>
+    <p>장기근속 포상금 200만원 비과세, 우리사주조합 출연 400만원 비과세, 회사 경조사비 등은 알아두면 챙길 수 있는 항목입니다. 식대 월 20만원 비과세는 보너스와 무관하지만, 연간 240만원이 비과세로 빠지므로 보너스 한 번 더 받는 효과가 있습니다.</p>
+
+    <h2>연말정산이 보너스 세금을 되돌리는 방식</h2>
+    <p>매달 원천징수된 소득세는 임시 추정치입니다. 이듬해 2월 연말정산에서 1년치 총소득과 공제 항목을 종합해 실제 세금과 비교한 뒤 차액을 환급하거나 추납합니다. 보너스 받는 달 빠진 세금이 많았다면, 연말정산에서 환급으로 돌아올 가능성이 그만큼 높아진다는 뜻입니다.</p>
+
+    <h3>환급 확률을 높이는 공제 항목 5가지</h3>
+    <ul>
+      <li><strong>연금저축·IRP</strong>: 합산 연 900만원 한도, 13.2%~16.5% 세액공제. 보너스 받은 해에 IRP에 추가 납입하면 그 달 빠진 세금 중 상당 부분이 다음해 2월에 돌아옵니다.</li>
+      <li><strong>의료비 세액공제</strong>: 총급여의 3% 초과분에 대해 15% 세액공제(난임시술 30%, 미숙아 20%). 보너스 받은 해는 총급여가 늘어 3% 기준선도 같이 올라가니, 영수증을 더 꼼꼼히 챙겨야 합니다.</li>
+      <li><strong>기부금 공제</strong>: 정치자금 외에도 종교단체·공익단체 기부금이 세액공제 대상입니다. 1,000만원 이하 15%, 초과분 30%.</li>
+      <li><strong>주택자금 공제</strong>: 주택청약종합저축 납입액(연 240만원 한도)의 40% 소득공제, 장기주택저당차입금 이자 공제 등.</li>
+      <li><strong>월세 세액공제</strong>: 총급여 7,000만원 이하 무주택 세대주는 연 750만원 한도 내에서 월세의 15~17% 세액공제. 보너스로 총급여가 7,000만원을 넘으면 대상에서 빠지므로 사전 시뮬레이션 필요.</li>
+    </ul>
+
+    <p>국세청 홈택스(<a href="https://hometax.go.kr" target="_blank" rel="noopener">hometax.go.kr</a>)의 「연말정산 미리보기」를 활용하면 보너스가 더해진 1년 총소득 기준의 환급/추납 예상액을 미리 확인할 수 있습니다. 11월 시점에 미리 돌려보면 12월 IRP 추가 납입 같은 절세 전략을 세울 시간이 있습니다.</p>
+
+    <h2>보너스 절세 시뮬레이션 - IRP 추가 납입으로 얼마나 환급될까</h2>
+    <p>그래서 실제로 보너스 받는 해에 IRP에 추가 납입하면 얼마나 돌아올까요. 연봉 5,000만원 직장인이 연말 성과급 1,000만원을 받았다고 가정해보겠습니다. 그 해 총급여는 6,000만원이 되고, 한계세율은 24% 구간(과세표준 5,000만원 초과 8,800만원 이하)에 해당합니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>시나리오</th><th>IRP 추가 납입</th><th>세액공제율</th><th>환급 예상액</th></tr>
+        <tr><td>IRP 미납입</td><td>0원</td><td>-</td><td class="amount">0원</td></tr>
+        <tr><td>IRP 300만원</td><td>3,000,000원</td><td class="rate">16.5%</td><td class="amount">약 495,000원</td></tr>
+        <tr><td>IRP 600만원</td><td>6,000,000원</td><td class="rate">16.5%</td><td class="amount">약 990,000원</td></tr>
+        <tr><td>IRP 900만원 (한도)</td><td>9,000,000원</td><td class="rate">16.5%</td><td class="amount">약 1,485,000원</td></tr>
+      </table>
+    </div>
+
+    <p>총급여 5,500만원 이하면 세액공제율 16.5%, 초과 시 13.2%가 적용되지만, 보너스로 인해 총급여가 5,500만원을 갓 넘긴 경우라도 IRP 납입액의 13.2%는 환급으로 돌아옵니다. 보너스 1,000만원 받은 해에 IRP 900만원을 추가 납입하면 약 148만원이 다음해 2월 통장으로 환급되는 셈입니다. 보너스 한 번에 빠진 세금의 절반에 가까운 금액이 돌아온다는 뜻이죠.</p>
+
+    <div class="highlight-box">
+      <p>IRP는 만 55세 이전에 중도 인출하면 기타소득세 16.5%가 추징되므로, 단순 환급만 보고 무리하게 납입하면 안 됩니다. 다만 보너스로 잠시 들어온 돈을 노후 자금으로 옮기는 용도라면, 환급 + 비과세 운용 + 연금 수령 시 저율 과세까지 삼중 효과가 있습니다.</p>
+    </div>
+
+    <h3>의료비·교육비·기부금까지 챙기면</h3>
+    <p>보너스 받은 해에 본인·부양가족 의료비를 총급여의 3% 이상 지출했다면 초과분의 15%가 세액공제됩니다. 총급여 6,000만원 기준 3%는 180만원. 가족 안경·시력교정·치과 치료까지 합쳐 영수증을 모으면 300만~500만원이 쉽게 모입니다. 이 경우 세액공제만 약 18만~48만원이 추가로 돌아옵니다.</p>
+
+    <p>교육비는 본인 대학원·직업훈련 비용 전액 공제(15%), 자녀 학원비는 미취학 아동 한정으로 공제됩니다. 기부금은 종교단체 10% 이내, 일반 기부 15~30% 세액공제. 보너스 받은 해 11월 말까지 지정 기부금단체에 100만원 기부하면 15만원이 환급됩니다.</p>
+
+    <p>이 모든 공제를 합치면 보너스 1,000만원에서 빠진 세금 약 360만원 중 200만~250만원 정도는 연말정산에서 되돌릴 수 있습니다. 핵심은 보너스 받은 그 해 11~12월에 절세 시뮬레이션을 미리 돌려보는 겁니다.</p>
+
+    <h2>실수령 비교에서 자주 헷갈리는 포인트</h2>
+
+    <h3>보너스 포함 vs 미포함 연봉</h3>
+    <p>채용 공고에 적힌 연봉이 「보너스 포함」인지 「본봉만」인지를 반드시 확인해야 합니다. 본봉 4,000만원 + 정기상여 800만원(연봉 4,800만원)과 본봉 4,800만원(보너스 없음)은 명목상 같지만 세금 부담은 후자가 약간 더 낮습니다. 보너스는 누진 상위 구간으로 묶이는 반면, 본봉은 매달 균등하게 누진 적용되기 때문입니다. 같은 4,800만원이라도 본봉만으로 받는 쪽이 연간 약 20만~40만원 정도 세 부담이 적습니다.</p>
+
+    <h3>약정 보너스와 임의 보너스</h3>
+    <p>근로계약서에 「연봉의 200%를 정기상여로 지급한다」고 명시되어 있으면 약정 보너스로, 통상임금에 포함됩니다. 통상임금에 포함되면 시간외 수당, 야간 수당, 연차 수당 계산 기준도 같이 올라가 실질 수령액이 추가로 늘어납니다. 반면 회사 사정에 따라 지급 여부가 결정되는 임의 보너스는 통상임금에 포함되지 않아 다른 수당 산정에 영향을 주지 않습니다.</p>
+
+    <h3>퇴직금 계산에 미치는 영향</h3>
+    <p>퇴직금은 「퇴직 직전 3개월 평균임금」 기준입니다. 약정 보너스가 매달 지급되는 형태라면 평균임금에 포함되어 퇴직금이 늘어납니다. 반면 분기/반기 단위 보너스는 직전 3개월에 포함된 부분만 안분되어 반영됩니다. 퇴직 시점을 보너스 받은 직후로 잡으면 퇴직금이 일시적으로 늘어나는 효과가 있는 이유입니다. 자세한 계산은 <a href="../posts/severance-pay-guide.html">퇴직금 계산 완벽 가이드</a>를 참고하세요.</p>
+
+    <h3>보너스에 포함되는 비과세 항목 따로 챙기기</h3>
+    <p>회사에 따라 보너스 안에 「자기계발비」, 「복지포인트」, 「리프레시 휴가비」 같은 항목이 묶여서 지급되는 경우가 있습니다. 이 중 자기계발비는 「업무 관련 학원·도서·온라인 강의」 영수증을 첨부하면 연 100만원까지 비과세 처리가 가능합니다. 회사 정책에 따라 다르지만, 보너스 명세서를 받았을 때 자기계발비 항목이 별도 표기되어 있다면 영수증 제출 절차를 챙겨두는 게 좋습니다. 같은 100만원이라도 일반 보너스로 받으면 약 26만원이 빠지지만, 자기계발비 비과세로 처리되면 100만원이 그대로 남습니다.</p>
+
+    <h2>회사가 자주 빠뜨리는 보너스 노동법 권리 - 알아두면 챙길 수 있다</h2>
+    <p>세금 얘기만 하다 보면 놓치는 게 있습니다. 보너스에 대한 노동법상 권리가 그것입니다. 모르면 회사가 알려주지 않고 넘어가는 항목들이 있는데, 정리해두면 한 해 보너스를 추가로 받거나 통상임금 산정 기준을 올릴 수 있습니다.</p>
+
+    <h3>약정 정기상여는 통상임금에 포함</h3>
+    <p>대법원 전원합의체 판결(2013.12.18. 선고 2012다89399)에 따라, 「정기적·일률적·고정적」으로 지급되는 정기상여는 통상임금에 포함됩니다. 통상임금이 올라가면 시간외 수당, 야간 수당, 휴일 수당, 연차 수당이 모두 비례적으로 늘어납니다. 월 약정 정기상여 50만원이 통상임금에 포함되면, 시간외 근무 1시간당 수당이 약 2,000원 더 올라가는 효과가 있습니다. 1년 시간외 100시간이면 약 20만원 추가 수령입니다.</p>
+
+    <p>다만 「회사 사정에 따라 지급 여부가 결정되는」 임의 상여나 「특정 시점 재직자에게만 지급되는」 재직 조건부 상여는 통상임금에서 빠집니다. 내가 받는 보너스가 어디에 해당하는지 근로계약서와 취업규칙을 확인해두는 게 중요합니다.</p>
+
+    <h3>출산휴가·육아휴직 중에도 정기상여는 지급</h3>
+    <p>근로기준법 제74조와 남녀고용평등법 제19조에 따라, 출산휴가·육아휴직 기간도 「재직 기간」으로 봅니다. 따라서 그 기간 중 도래하는 정기상여는 지급 대상에 포함됩니다. 회사가 「휴직 중에는 보너스 없음」으로 통보하면 노동위원회 진정 사유가 됩니다. 자세한 내용은 <a href="../posts/parental-leave-pay.html">육아휴직급여 가이드</a>에서 확인하세요.</p>
+
+    <h3>퇴직 시 잔여 보너스 정산</h3>
+    <p>분기 PI나 반기 인센티브가 명시되어 있다면 퇴직 시 잔여 기간만큼 안분해서 지급받을 권리가 있습니다. 예를 들어 분기 PI 300만원이 정해진 회사에서 분기 중간(45일 근무 후)에 퇴직한다면, 약 150만원의 안분 지급을 요구할 수 있습니다. 회사가 「퇴직자에게는 안 준다」고 하면 임금체불이며, 고용노동부 임금체불 진정으로 받을 수 있습니다.</p>
+
+    <p>고용노동부 「임금체불 신고센터」(국번 없이 1350)나 지방고용노동청 방문 신고가 가능하고, 신고 후 평균 30~60일 내에 시정 조치가 이루어집니다. 임금채권 소멸시효는 3년이므로 과거 분도 청구 가능합니다.</p>
+
+    <h2>보너스 받기 전 체크리스트 - 11월 말까지 챙겨야 할 5가지</h2>
+    <p>여기서 주의할 점이 하나 있는데요. 보너스를 받고 나서 후회하기보다, 보너스 지급 예정 시점 직전에 미리 체크해두면 세 부담을 크게 줄일 수 있습니다. 연말 성과급 시즌이 다가오면 11월 말까지 아래 5가지를 점검하세요.</p>
+
+    <ul>
+      <li><strong>IRP·연금저축 한도 확인</strong>: 합산 연 900만원 한도까지 추가 납입 여력 점검. 보너스 받는 해 12월에 한 번에 납입해도 그 해 세액공제 대상이 됩니다.</li>
+      <li><strong>의료비 영수증 정리</strong>: 본인·배우자·부모 의료비, 안경·콘택트렌즈(1인당 50만원 한도), 산후조리원(200만원 한도)까지 빠짐없이 챙기기. 국세청 홈택스 「연말정산 간소화 서비스」에서 누락된 영수증은 직접 등록.</li>
+      <li><strong>월세 세액공제 자격</strong>: 총급여 7,000만원 이하 무주택 세대주만 해당. 보너스로 총급여가 7,000만원을 넘으면 대상에서 빠지므로 사전 확인 필수.</li>
+      <li><strong>주택청약종합저축 납입</strong>: 연 240만원 한도, 40% 소득공제. 보너스 받는 김에 12월에 추가 납입해두면 다음해 환급 폭이 늘어납니다.</li>
+      <li><strong>기부금 영수증</strong>: 종교단체·공익단체 기부 영수증은 1월 말까지 발급받아야 합니다. 종교단체 영수증은 별도 양식이므로 신청해두기.</li>
+    </ul>
+
+    <p>참고로 한국납세자연맹이 매년 발표하는 「연말정산 환급 비결 100가지」에는 위 항목 외에도 부양가족 추가 등록, 청약통장 가족 명의 활용 등 사소하지만 누적되면 50만~100만원이 달라지는 팁들이 정리되어 있습니다. 답은 간단합니다. 보너스 받기 전 30일이 환급의 8할을 결정합니다.</p>
+
+    <h2>상황별 보너스 - 신입사원·임원·프리랜서 차이</h2>
+    <p>같은 보너스라도 받는 사람의 위치에 따라 세금 구조가 달라집니다. 자기 상황에 맞는 시나리오를 골라 보세요.</p>
+
+    <h3>신입사원 첫 명절 보너스</h3>
+    <p>입사 첫 해는 「소득세 매월 80%·100%·120% 선택」이 가능합니다. 회사 급여 담당자에게 신청하면 매월 빠지는 소득세를 줄여 현금 흐름을 개선할 수 있죠. 다만 80%로 선택해두면 보너스 받는 달 그 갭이 더 커져 다음해 2월 추납 가능성이 높아집니다. 첫 해는 안정적으로 100% 기준을 유지하는 게 무난합니다.</p>
+
+    <h3>임원·핵심 인력 성과급</h3>
+    <p>연 1억원 이상 임원 성과급은 한계세율 38~45%가 적용됩니다. 게다가 「임원 퇴직금 한도」 규정에 따라 직전 3년 평균 급여의 2배(또는 3배)를 초과하는 퇴직금은 근로소득으로 분류되어 추가 누진 과세됩니다. 임원이라면 보너스를 일시 지급 대신 이연 성과급 형태로 분산받는 협상이 절세 효과가 큽니다.</p>
+
+    <h3>프리랜서·계약직 인센티브</h3>
+    <p>프리랜서가 받는 인센티브는 사업소득(3.3% 원천징수)이거나 기타소득(8.8% 원천징수)으로 처리됩니다. 근로소득보다 원천징수율이 낮지만, 5월 종합소득세 신고에서 누진세로 합산되므로 결국 세금 총액은 비슷합니다. 다만 비용 처리 폭이 넓어 실질 세 부담은 직장인보다 낮을 수 있습니다. 자세한 비교는 <a href="../posts/four-insurance-vs-33-comparison.html">4대보험 vs 3.3% 비교</a>를 참고하세요.</p>
+
+    <div class="cta-box">
+      <p>내 연봉과 보너스 시나리오로 실수령액을 직접 계산해보세요. 부양가족 수와 비과세 항목까지 반영해 2026년 기준 정확한 세금을 산출합니다.</p>
+      <a href="../../calc/salary/take-home-pay/" class="cta-btn">연봉 실수령액 계산하기</a>
+    </div>
+    <p style="font-size:13px;color:#6B7280;margin-top:8px;">관련 계산기: <a href="https://www.jptcalc.kr/calc/salary/job-change/">이직 연봉 비교 계산기</a> · <a href="https://www.jptcalc.kr/calc/salary/severance/">퇴직금 계산기</a> · <a href="https://www.jptcalc.kr/calc/salary/raise-rate/">연봉 인상률 계산기</a></p>
+
+    <h2>자주 묻는 질문</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 명절 보너스에서 세금이 평소보다 훨씬 많이 빠지는 이유가 뭔가요?</div>
+      <p class="faq-a">명절 상여처럼 지급 대상 기간이 없는 부정기 상여는 원천징수 시점에 그 달 정기 급여와 합산되어 누진세율이 적용됩니다. 예를 들어 월 416만원 받는 직장인이 명절 보너스 100만원을 받으면 그 달 총 보수가 516만원으로 묶이는데, 간이세액표 기준 소득세가 28만원에서 약 55만원으로 두 배 가까이 오릅니다. 즉 보너스에서만 약 27만원이 빠지는 셈입니다. 다만 이 금액은 원천징수 단계의 임시 추정치이며, 이듬해 2월 연말정산에서 연간 총소득 기준으로 다시 계산되어 환급 또는 추납으로 정리됩니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 성과급에도 4대보험이 부과되나요? 매달 빠지는 그 비율과 동일한가요?</div>
+      <p class="faq-a">네, 부과됩니다. 다만 항목별로 정산 방식이 다릅니다. 국민연금은 매년 7월 보수월액 결정 시 전년도 총보수에 보너스가 포함되어 산정되며, 건강보험도 다음해 4월 정산 때 보너스가 반영된 연간 보수총액으로 재계산됩니다. 고용보험(0.9%)은 보너스를 지급한 달에 즉시 부과됩니다. 결과적으로 보너스 300만원이면 4대보험 추가 부담만 약 13만~22만원 수준이 누적되며, 보너스 받는 달 당장 빠지는 금액은 고용보험·소득세 위주입니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 보너스를 한 번에 받지 않고 분할해서 받으면 세금이 줄어드나요?</div>
+      <p class="faq-a">연 단위 총세금은 차이가 없습니다. 보너스를 한 번에 받든 분할해서 받든 연말정산에서 1년치 총소득 기준으로 재계산되기 때문입니다. 단 원천징수 시점의 체감 부담은 크게 다릅니다. 300만원을 한 달에 받으면 그 달 소득세가 60만~70만원 늘어나지만, 100만원씩 세 달로 분할하면 매달 20만원 안팎으로만 증가합니다. 현금 흐름 관리와 카드값·대출 상환 일정이 빠듯하다면 분할이 실질적으로 유리합니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 스톡옵션 행사 차익이나 성과 인센티브도 보너스와 같은 방식으로 과세되나요?</div>
+      <p class="faq-a">스톡옵션은 소득세법 시행령 제38조에 따라 행사 시점의 시가와 행사가격의 차액이 근로소득으로 간주되어 보너스와 동일한 누진세율이 적용됩니다. 일반 스톡옵션이면 행사 차익 1억원이라도 약 3,500만원에서 4,000만원 정도의 세금이 한 번에 발생할 수 있습니다. 다만 벤처기업 스톡옵션은 조세특례제한법 제16조의2에 따라 연 5,000만원 한도 비과세 특례가 적용되어 부담이 줄어듭니다. 행사 시점을 연도 말과 다음해 초로 나누면 두 해에 걸쳐 누진 구간을 활용할 수 있어 세금이 수백만원 단위로 달라질 수 있습니다.</p>
+    </div>
+
+    <h2>한 줄 요약</h2>
+    <p>보너스는 평소 월급 위에 한꺼번에 얹히는 누진 추가 소득이라, 명목 금액의 25~36%가 그 달에 빠집니다. 연봉 5,000만원 직장인이 보너스 300만원을 받으면 실수령이 220만원 안팎이고, 1,000만원을 받아도 640만원대만 통장에 들어옵니다. 다만 연말정산에서 연간 총소득 기준으로 재계산되므로, IRP나 의료비 같은 공제 항목을 챙기면 다음해 2월 환급으로 일부 돌아옵니다. 보너스 받는 달 카드값 계획은 명목 금액의 65~75% 기준으로 잡아두는 게 안전합니다.</p>
+
+    <p>핵심 숫자 하나만 기억해두면 됩니다. 보너스 1,000만원 받았을 때 그 달 실수령은 약 640만원. 명목과 실제 사이 약 360만원의 차이가 누진세 구조에서 비롯되며, 이 중 150만~200만원은 연말정산 절세 전략으로 환급받을 수 있습니다. 결국 보너스 실수령은 「언제 받느냐」보다 「어떻게 환급받느냐」로 결정됩니다. 11월에 연말정산 미리보기를 한 번 돌려보는 30분이 다음해 통장 잔고를 바꿔 놓는 셈입니다.</p>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
+</footer>
+
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "국세청 근로소득 간이세액표, 소득세법 시행령, 국민건강보험법 시행령, 국민연금법, 2026년 1월 기준",
+  basisDate: "2026년 기준",
+  referenceOrg: "국세청·국민건강보험공단·국민연금공단",
+  lastReviewed: '2026.05.15',
+  disclaimer: '이 글은 정보 제공 목적으로 작성되었습니다. 실제 보너스 세금은 회사 급여 체계, 부양가족 수, 비과세 항목, 연말정산 결과에 따라 달라지므로 회사 급여 담당자 또는 세무 전문가에게 확인하세요.',
+  relatedCalc: { name: '연봉 실수령액 계산기', url: '/calc/salary/take-home-pay/' },
+  category: 'salary'
+};
+</script>
+<script src="/assets/blog-article-info.js" defer></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>

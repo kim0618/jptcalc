@@ -56,13 +56,19 @@
   </url>
   <url>
     <loc>https://www.jptcalc.kr/blog/</loc>
-    <lastmod>2026-03-29</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.jptcalc.kr/blog/posts/bonus-tax-guide.html</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.jptcalc.kr/blog/posts/irp-vs-pension-savings.html</loc>
-    <lastmod>2026-04-25</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -74,7 +80,7 @@
   </url>
   <url>
     <loc>https://www.jptcalc.kr/blog/posts/medical-expense-deduction-guide.html</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -86,7 +92,7 @@
   </url>
   <url>
     <loc>https://www.jptcalc.kr/blog/posts/blood-pressure-guide.html</loc>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -98,7 +104,7 @@
   </url>
   <url>
     <loc>https://www.jptcalc.kr/blog/posts/unemployment-benefit-guide.html</loc>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -218,7 +224,7 @@
   </url>
   <url>
     <loc>https://www.jptcalc.kr/blog/posts/income-tax-deduction.html</loc>
-    <lastmod>2026-03-29</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -314,7 +320,7 @@
   </url>
   <url>
     <loc>https://www.jptcalc.kr/blog/posts/dday-counter.html</loc>
-    <lastmod>2026-03-29</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -344,7 +350,7 @@
   </url>
   <url>
     <loc>https://www.jptcalc.kr/blog/posts/date-add-guide.html</loc>
-    <lastmod>2026-03-29</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -392,7 +398,7 @@
   </url>
   <url>
     <loc>https://www.jptcalc.kr/blog/posts/parental-leave-pay.html</loc>
-    <lastmod>2026-03-29</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -410,7 +416,7 @@
   </url>
   <url>
     <loc>https://www.jptcalc.kr/blog/posts/salary-raise-guide.html</loc>
-    <lastmod>2026-03-29</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -546,7 +552,7 @@
   <url><loc>https://www.jptcalc.kr/blog/posts/retirement-living-late-start.html</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.jptcalc.kr/blog/posts/long-term-care-cost-guide.html</loc><lastmod>2026-04-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.jptcalc.kr/blog/posts/long-term-care-grade-application.html</loc><lastmod>2026-04-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.jptcalc.kr/blog/posts/national-pension-guide.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.jptcalc.kr/blog/posts/national-pension-guide.html</loc><lastmod>2026-05-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.jptcalc.kr/blog/posts/national-pension-voluntary.html</loc><lastmod>2026-04-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.jptcalc.kr/blog/posts/national-pension-income-tax.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.jptcalc.kr/blog/posts/pension-withdrawal-strategy.html</loc><lastmod>2026-04-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -556,7 +562,7 @@
   <url><loc>https://www.jptcalc.kr/blog/posts/rental-yield-valuation.html</loc><lastmod>2026-05-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.jptcalc.kr/blog/posts/ai-chatbot-subscription-comparison.html</loc><lastmod>2026-05-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.jptcalc.kr/blog/posts/dog-lifetime-cost.html</loc><lastmod>2026-05-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.jptcalc.kr/blog/posts/five-year-seed-money.html</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.jptcalc.kr/blog/posts/five-year-seed-money.html</loc><lastmod>2026-05-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.jptcalc.kr/blog/posts/resignation-dday-checklist.html</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- 연금·복지 카테고리 신규 2026-04-15 -->

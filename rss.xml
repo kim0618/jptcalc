@@ -5,8 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Thu, 14 May 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+      <title>보너스·성과급 세금 계산법 - 300만원 받았는데 통장에 220만원도 안 되는 이유</title>
+      <link>https://www.jptcalc.kr/blog/posts/bonus-tax-guide.html</link>
+      <description>성과급·명절 보너스 받을 때 빠지는 세금과 4대보험을 항목별로 분해. 100만·300만·1,000만원 시나리오별 실수령액과 연말정산 환급 가능성까지 2026년 기준으로 정리.</description>
+      <pubDate>Fri, 15 May 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/bonus-tax-guide.html</guid>
+    </item>
 
     <item>
       <title>5년에 1억 모으기 - 월급 250·350·500 시드머니 저축 시뮬레이션</title>
