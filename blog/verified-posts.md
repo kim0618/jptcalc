@@ -8,3 +8,6 @@
 - unemployment-benefit-guide.html (2026-05-16 검증, 오류 2개 수정 - 수치 135만원→162만원, JSON-LD headline)
 - salary-raise-guide.html (2026-05-16 검증, 오류 1개 수정 - JSON-LD headline)
 - parental-leave-pay.html (2026-05-16 검증, 오류 1개 수정 - JSON-LD headline)
+- bonus-tax-guide.html (2026-05-17 검증, 오류 1개 수정 - 시나리오 D 차감액 "400만원에 가깝게"→"360만원대로")
+- irp-vs-pension-savings.html (2026-05-17 검증, 이상 없음)
+- medical-expense-deduction-guide.html (2026-05-17 검증, 이상 없음)
