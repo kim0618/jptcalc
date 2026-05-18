@@ -11,3 +11,6 @@
 - bonus-tax-guide.html (2026-05-17 검증, 오류 1개 수정 - 시나리오 D 차감액 "400만원에 가깝게"→"360만원대로")
 - irp-vs-pension-savings.html (2026-05-17 검증, 이상 없음)
 - medical-expense-deduction-guide.html (2026-05-17 검증, 이상 없음)
+- national-pension-guide.html (2026-05-18 검증, 오류 1개 수정 - 보험료율 "9%에서"→"9.5%에서" 136줄)
+- five-year-seed-money.html (2026-05-18 검증, 이상 없음)
+- medical-expense-items-guide.html (2026-05-18 검증, 이상 없음)

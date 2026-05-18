@@ -54,12 +54,12 @@ for n, f in results:
 작업 완료 시 `- {파일명} ({YYYY-MM-DD} 보강, 유형{X}, N,NNN자)` 형식으로 추가.
 
 **유형 누적 카운트 (목표 분산 비율, 23편 기준)**:
-- 유형 A (인물 시나리오 추가): 15/6 ✓
-- 유형 B (비교표 추가): 11/5 ✓
-- 유형 C (단계별 가이드): 10/4 ✓
-- 유형 D (자주 오해하는 부분): 9/3 ✓
-- 유형 E (FAQ 확장): 14/3 ✓
-- 유형 F (데이터/수치 보강): 6/2 ✓
+- 유형 A (인물 시나리오 추가): 17/6 ✓
+- 유형 B (비교표 추가): 12/5 ✓
+- 유형 C (단계별 가이드): 11/4 ✓
+- 유형 D (자주 오해하는 부분): 12/3 ✓
+- 유형 E (FAQ 확장): 17/3 ✓
+- 유형 F (데이터/수치 보강): 8/2 ✓
 
 - salary-comparison-guide.html (2026-05-12 보강, 유형A+C+D+E, 5,388자)
 - weekday-calculator-guide.html (2026-05-13 보강, 유형A+B+C+E+F, 5,038자)
@@ -77,6 +77,9 @@ for n, f in results:
 - severance-pay-guide.html (2026-05-17 보강, 유형B+C+D+F, 5,134자)
 - deposit-interest-guide.html (2026-05-17 보강, 유형A+C+E+F, 5,528자)
 - loan-repayment.html (2026-05-17 보강, 유형A+B+D+E, 5,390자)
+- comprehensive-income-tax.html (2026-05-18 보강, 유형D+A+F+E, 5,710자)
+- ai-infra-cost-guide.html (2026-05-18 보강, 유형A+C+D+E, 6,476자)
+- claude-vs-gpt.html (2026-05-18 보강, 유형D+B+F+E, 5,785자)
 
 ## 대상 23편 (실측 기준 - post-body 본문만 측정, 짧은 순)
 

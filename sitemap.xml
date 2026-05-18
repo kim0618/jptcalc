@@ -295,6 +295,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.jptcalc.kr/blog/posts/cat-monthly-cost.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.jptcalc.kr/blog/posts/dog-monthly-cost.html</loc>
     <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
