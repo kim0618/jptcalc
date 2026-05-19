@@ -55,11 +55,11 @@ for n, f in results:
 
 **유형 누적 카운트 (목표 분산 비율, 23편 기준)**:
 - 유형 A (인물 시나리오 추가): 17/6 ✓
-- 유형 B (비교표 추가): 12/5 ✓
-- 유형 C (단계별 가이드): 11/4 ✓
-- 유형 D (자주 오해하는 부분): 12/3 ✓
+- 유형 B (비교표 추가): 14/5 ✓
+- 유형 C (단계별 가이드): 12/4 ✓
+- 유형 D (자주 오해하는 부분): 14/3 ✓
 - 유형 E (FAQ 확장): 17/3 ✓
-- 유형 F (데이터/수치 보강): 8/2 ✓
+- 유형 F (데이터/수치 보강): 11/2 ✓
 
 - salary-comparison-guide.html (2026-05-12 보강, 유형A+C+D+E, 5,388자)
 - weekday-calculator-guide.html (2026-05-13 보강, 유형A+B+C+E+F, 5,038자)
@@ -80,6 +80,9 @@ for n, f in results:
 - comprehensive-income-tax.html (2026-05-18 보강, 유형D+A+F+E, 5,710자)
 - ai-infra-cost-guide.html (2026-05-18 보강, 유형A+C+D+E, 6,476자)
 - claude-vs-gpt.html (2026-05-18 보강, 유형D+B+F+E, 5,785자)
+- jeonse-vs-wolse.html (2026-05-19 보강, 유형B+C+F, 5,390자)
+- pet-insurance.html (2026-05-19 보강, 유형F+D+B, 5,275자)
+- freelancer-tax-refund.html (2026-05-19 보강, 유형F+B+D, 5,274자)
 
 ## 대상 23편 (실측 기준 - post-body 본문만 측정, 짧은 순)
 

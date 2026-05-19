@@ -56,7 +56,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - og:image = https://www.jptcalc.kr/android-chrome-512x512.png
 - canonical = https://www.jptcalc.kr/blog/posts/[파일명].html
 - favicon: ../../assets/logo.svg
-- AdSense: ca-pub-6112766558731601
+- AdSense: **5/21 애드센스 3차 신청까지 임시 비활성** - 새 글 head에 광고 로더(`<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>`) 절대 삽입 금지. 신청 통과 후 복구 시 이 줄을 원래대로 되돌리고 새 글에 광고 로더 다시 박을 것. (원본: `- AdSense: ca-pub-6112766558731601`)
 - GA: G-BRSX3F10MZ
 - Pretendard 폰트 CDN
 - **Article JSON-LD** + **FAQPage JSON-LD** 모두 `<head>` 안에 배치 (아래 JSON-LD 섹션 참고)

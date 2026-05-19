@@ -5,8 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Fri, 15 May 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+      <title>콜레스테롤 정상수치 - LDL·HDL·중성지방 기준과 건강검진 결과 단계별 해석</title>
+      <link>https://www.jptcalc.kr/blog/posts/cholesterol-levels-guide.html</link>
+      <description>총콜레스테롤 200 미만이 정상, LDL은 130 미만 권장. HDL이 낮으면 총콜이 정상이어도 위험. 35세·52세·28세 시나리오 3개로 본 결과 해석과 약 없이 LDL 15% 낮추는 식이 전략.</description>
+      <pubDate>Tue, 19 May 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/cholesterol-levels-guide.html</guid>
+    </item>
 
     <item>
       <title>고양이 한 달 생활비, 실제로 얼마나 들까? 품종·나이별 상세 비용 정리</title>
