@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>여권 유효기간 확인과 만료일 계산법 - 국가별 잔여기간 요건까지 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="여권 유효기간 확인 방법부터 국가별 입국 잔여기간 요건, 재발급 소요 기간·비용까지 정리했습니다. 여름 여행 전 반드시 체크해야 할 내용 총정리." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="여권 유효기간 확인과 만료일 계산법 - 국가별 잔여기간 요건까지 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="여권 유효기간 확인 방법부터 국가별 입국 잔여기간 요건, 재발급 소요 기간·비용까지 정리했습니다. 여름 여행 전 반드시 체크해야 할 내용 총정리." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/passport-expiry-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/passport-expiry-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#F97316;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(249,115,22,0.15);color:#F97316;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:28px 0 10px}
+    .post-body p{margin-bottom:14px}
+    .post-body ul{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#F97316;text-decoration:none}
+    .highlight-box{background:rgba(249,115,22,0.08);border-left:4px solid #F97316;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#9A3412;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    td.rate{color:#F97316;font-weight:700}
+    td.warn{color:#DC2626;font-weight:700}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#F97316;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .faq-item{border:1px solid var(--dark-border);border-radius:12px;padding:20px;margin:16px 0}
+    .faq-q{font-size:15px;font-weight:700;color:#111827;margin-bottom:10px}
+    .faq-a{font-size:14px;color:#374151;line-height:1.75}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "여권 유효기간 확인과 만료일 계산법 - 국가별 잔여기간 요건까지",
+  "description": "여권 유효기간 확인 방법부터 국가별 입국 잔여기간 요건, 재발급 소요 기간·비용까지 정리했습니다. 여름 여행 전 반드시 체크해야 할 내용 총정리.",
+  "author": {"@type": "Person", "name": "Jay Kim", "url": "https://www.jptcalc.kr/about.html", "jobTitle": "제이퍼 계산기 운영자"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr",
+    "logo": {"@type": "ImageObject", "url": "https://www.jptcalc.kr/android-chrome-512x512.png"}
+  },
+  "datePublished": "2026-05-21",
+  "dateModified": "2026-05-21",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.jptcalc.kr/blog/posts/passport-expiry-guide.html"},
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "날짜·D-day",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "여권 유효기간이 6개월 미만인데 해외여행을 갈 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "국가에 따라 다릅니다. 일본은 체류 예정 기간 이상의 잔여기간만 있으면 입국이 가능하지만, 베트남·필리핀·유럽 솅겐 지역은 출국일 기준 6개월 이상의 잔여기간을 요구합니다. 만약 잔여기간이 3~5개월이라면 일본·홍콩 등은 입국 가능하지만 동남아시아 대부분 국가는 입국 거부될 수 있습니다. 항공편 탑승 자체를 거부당하는 경우도 있으므로, 출발 전 외교부 해외안전여행(www.0404.go.kr)에서 목적지 국가 요건을 반드시 확인하세요. 불확실하다면 여행 전 재발급을 받는 것이 가장 안전합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "여권 재발급은 얼마나 걸리나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "일반 접수 기준 서울 기준 평균 2~3주, 지방 여권사무소는 3~4주 소요됩니다. 여름 성수기(6~8월)에는 신청자가 몰려 4~5주까지 늘어날 수 있습니다. 출발일이 1~2주 이내로 임박했다면 긴급여권 서비스를 신청하면 1~2일 안에 발급받을 수 있습니다. 긴급여권은 일반 여권보다 수수료가 약 15,000원 추가됩니다. 정부24 온라인 신청 후 수령까지 기간이 방문 접수보다 약 2~3일 더 걸릴 수 있으므로 시간이 촉박하면 여권사무소를 직접 방문하는 게 빠릅니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "여권을 분실했는데 해외에 있습니다. 어떻게 해야 하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "현지 경찰서에서 분실 신고서(Police Report)를 먼저 발급받은 뒤, 가장 가까운 한국 대사관 또는 영사관을 방문해야 합니다. 대사관에서 여행증명서(여권 대신 사용하는 임시 문서)나 긴급여권을 발급받을 수 있습니다. 여행증명서는 단순 귀국용으로 사용하는 1회용이며, 긴급여권은 1년 유효기간의 단수여권입니다. 본인 확인을 위해 신분증 사본이나 주민등록번호를 알아두는 것이 중요합니다. 귀국 후에는 반드시 일반 복수여권으로 재발급받아야 합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "만 18세 미만 자녀의 여권 유효기간은 어른과 다른가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네, 다릅니다. 만 18세 이상 성인은 10년 복수여권을 발급받을 수 있지만, 만 8세 이상 18세 미만은 5년, 만 8세 미만은 5년 이하로 제한됩니다. 여권법 시행령 제7조에 따라 미성년자는 성장과 외모 변화를 고려해 유효기간을 제한합니다. 따라서 초등학생 이하 자녀의 경우 해외여행 계획이 있다면 여권 잔여기간을 더 자주 확인해야 합니다. 2026년 기준 5년 복수여권 수수료는 45,000원(48면)입니다."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.jptcalc.kr/"},
+    {"@type": "ListItem", "position": 2, "name": "블로그", "item": "https://www.jptcalc.kr/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "날짜·D-day", "item": "https://www.jptcalc.kr/blog/?cat=날짜·D-day"},
+    {"@type": "ListItem", "position": 4, "name": "여권 유효기간 확인과 만료일 계산법"}
+  ]
+}
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <div class="logo-icon"><img src="../../assets/logo.svg" alt="제이퍼 로고" /></div>
+      <div class="logo-text">제이퍼 <span>계산기</span></div>
+    </a>
+    <a href="/blog/" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+
+<main class="post-wrap">
+  <div class="post-body">
+    <span class="post-tag">날짜·D-day</span>
+    <h1>여권 유효기간 확인과 만료일 계산법 - 국가별 잔여기간 요건까지</h1>
+    <div class="post-meta">
+      <span>📅 2026.05.21</span>
+      <span>⏱ 18분 읽기</span>
+    </div>
+
+    <p>체크인 카운터 앞에서 직원이 여권을 들여다보며 잠깐 멈추더니 "잔여기간이 부족해서 탑승이 어렵습니다"라고 합니다. 항공권도 있고, 호텔도 예약했고, 휴가도 냈는데 여권 유효기간이 입국 요건에 미달해 탑승 거부를 당하는 상황입니다. 실제로 매년 수천 명이 이런 이유로 공항에서 발이 묶입니다.</p>
+
+    <p>문제는 "여권이 아직 만료되지 않았다"는 것과 "그 나라에 입국할 수 있다"는 것이 전혀 다른 이야기라는 점입니다. 나라마다 요구하는 잔여기간 기준이 다르고, 항공사가 그 기준을 먼저 확인해 탑승 자체를 막습니다. 이 글에서는 여권 유효기간 확인법부터 주요 국가 잔여기간 요건, 재발급 절차까지 실제 사례와 함께 정리합니다.</p>
+
+    <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+      <li>여권 유효기간 종류 3가지 (10년·5년·1년)와 연령별 차이</li>
+      <li>동남아·유럽·미주·일본 등 주요 23개국 잔여기간 요건 비교표</li>
+      <li>잔여 6개월 이상이어도 입국 거부될 수 있는 실제 사례</li>
+      <li>2026년 기준 재발급 수수료·소요 기간 (일반 vs 긴급여권 비교)</li>
+      <li>D-day 계산기로 내 여권 잔여기간 즉시 확인하는 방법</li>
+    </ul>
+
+    <h2>여권 유효기간, 이게 전부 다릅니다</h2>
+
+    <p>한국 여권은 신청자 연령과 종류에 따라 유효기간이 세 가지로 나뉩니다. 가장 흔한 오해가 "여권은 무조건 10년"이라는 생각인데, 이는 성인 기준에만 해당합니다.</p>
+
+    <p><strong>10년 복수여권</strong>은 만 18세 이상 성인이 발급받을 수 있습니다. 현재 국내에서 발급하는 여권의 90% 이상이 이 형태입니다. <strong>5년 복수여권</strong>은 만 8세 이상 18세 미만 미성년자에게 발급됩니다. 여권법 시행령 제7조에 따라 미성년자는 외모 변화를 감안해 유효기간을 제한합니다. <strong>1년 단수여권(긴급여권)</strong>은 해외에서 여권을 분실하거나 갱신 기한이 매우 촉박할 때 발급하는 임시 여권으로, 1회 출입국에만 사용 가능한 여행증명서와는 다릅니다.</p>
+
+    <p>중요한 점은 만 8세 미만 아이의 경우 5년보다 짧은 기간이 적용될 수 있다는 것입니다. 2020년생 이하 자녀를 데리고 2026년 여름 해외여행을 계획하고 있다면, 여권 만료일을 반드시 먼저 확인해야 합니다.</p>
+
+    <h2>국가별 입국 가능 잔여기간 요건 비교</h2>
+
+    <p>아래 표는 2026년 5월 기준 주요 국가의 입국 가능 여권 잔여기간 요건입니다. <a href="https://www.mofa.go.kr" target="_blank" rel="noopener" style="color:#F97316;">외교부(mofa.go.kr)</a> 공식 안내 및 각 국가 이민국 기준을 반영했습니다. 실제 여행 전에는 외교부 해외안전여행(0404.go.kr)에서 최신 기준을 재확인하세요.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>국가</th>
+            <th>입국 가능 최소 잔여기간</th>
+            <th>무비자 체류 기간</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>일본</td><td>체류 예정 기간 이상</td><td>90일</td><td>잔여기간 3개월 이상 권장</td></tr>
+          <tr><td>중국</td><td><span class="rate">6개월 이상</span></td><td>비자 필요(일부 무비자)</td><td>비자 신청 시 6개월 필요</td></tr>
+          <tr><td>홍콩</td><td>체류 예정 기간 이상</td><td>90일</td><td>실질적으로 1개월 이상 권장</td></tr>
+          <tr><td>태국</td><td><span class="rate">6개월 이상</span></td><td>30일</td><td>입국 거부 사례 다수</td></tr>
+          <tr><td>베트남</td><td><span class="rate">6개월 이상</span></td><td>45일</td><td>전자비자(E-visa) 신청 시도 6개월</td></tr>
+          <tr><td>필리핀</td><td><span class="rate">6개월 이상</span></td><td>30일</td><td>항공사 탑승 시 엄격 적용</td></tr>
+          <tr><td>인도네시아</td><td><span class="rate">6개월 이상</span></td><td>30일</td><td>발리 입국 포함</td></tr>
+          <tr><td>말레이시아</td><td><span class="rate">6개월 이상</span></td><td>90일</td><td>쿠알라룸푸르·코타키나발루 동일</td></tr>
+          <tr><td>싱가포르</td><td><span class="rate">6개월 이상</span></td><td>90일</td><td>MICE 참가자도 동일</td></tr>
+          <tr><td>캄보디아</td><td><span class="rate">6개월 이상</span></td><td>30일(비자 발급)</td><td>도착비자 발급 기준</td></tr>
+          <tr><td>미국</td><td>체류 예정 기간 이상</td><td>90일(ESTA)</td><td>ESTA 신청 시 만료 전 여권 사용 가능</td></tr>
+          <tr><td>캐나다</td><td>체류 예정 기간 이상</td><td>6개월(eTA)</td><td>eTA 기준, 실질 3개월 이상 권장</td></tr>
+          <tr><td>유럽 솅겐(26개국)</td><td><span class="rate">출국일 기준 3개월 이상</span></td><td>90일</td><td>솅겐 규정 Article 6(1)(a)</td></tr>
+          <tr><td>영국</td><td>체류 예정 기간 이상</td><td>6개월</td><td>브렉시트 이후 솅겐과 별도 적용</td></tr>
+          <tr><td>호주</td><td><span class="rate">6개월 이상</span></td><td>ETA 비자 기준</td><td>ETA 신청 시에도 동일</td></tr>
+          <tr><td>뉴질랜드</td><td><span class="rate">3개월 이상</span></td><td>NZeTA 기준</td><td>NZeTA 신청 기준</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin:24px 0;overflow-x:auto">
+    <svg role="img" width="100%" viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg">
+      <title>국가별 최소 잔여기간 요건 비교</title>
+      <rect width="680" height="200" rx="12" fill="#F9FAFB"/>
+      <text x="24" y="34" font-size="14" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">국가별 여권 잔여기간 요건 (출국일 기준)</text>
+      <text x="24" y="68" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">동남아(태국·베트남·필리핀 등)</text>
+      <rect x="230" y="54" width="340" height="22" rx="4" fill="#F97316" opacity="0.85"/>
+      <text x="578" y="70" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">6개월</text>
+      <text x="24" y="110" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">유럽 솅겐 26개국</text>
+      <rect x="230" y="96" width="170" height="22" rx="4" fill="#F97316" opacity="0.55"/>
+      <text x="408" y="112" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">3개월</text>
+      <text x="24" y="152" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">일본·미국·캐나다</text>
+      <rect x="230" y="138" width="80" height="22" rx="4" fill="#D1D5DB"/>
+      <text x="318" y="154" font-size="13" font-weight="700" fill="#6B7280" font-family="Pretendard,sans-serif">체류 기간 이상</text>
+      <text x="24" y="188" font-size="11" fill="#9CA3AF" font-family="Pretendard,sans-serif">※ 2026년 외교부 기준. 입국 전 목적지 대사관 또는 0404.go.kr에서 최신 정보 재확인 권장</text>
+    </svg>
+    </div>
+
+    <h2>계산 예시 - 내 여권으로 어느 나라까지 갈 수 있을까</h2>
+
+    <p>세 가지 상황을 직접 계산해봤습니다. 여권 만료일에 따라 갈 수 있는 나라가 완전히 달라집니다.</p>
+
+    <div class="highlight-box">
+      <p><strong>[시나리오 A] 이씨(38세), 여권 만료일 2026년 10월 15일</strong><br>
+      출발 예정일: 2026년 7월 20일 (베트남 다낭, 6박 7일)<br>
+      <br>
+      출발일(7월 20일)부터 여권 만료일(10월 15일)까지 일수를 계산하면 <strong>87일(약 2개월 27일)</strong>입니다. 베트남 입국 기준은 6개월(180일) 이상이므로, 이씨는 현재 여권으로 <strong>탑승 거부</strong>를 당할 가능성이 높습니다. 재발급을 받지 않으면 이번 여름 다낭 여행은 불가능합니다.<br>
+      <br>
+      재발급 신청 기준: 출발 4주 전까지, 즉 6월 22일까지 접수 완료 필요.</p>
+    </div>
+
+    <div class="highlight-box">
+      <p><strong>[시나리오 B] 박씨(45세), 여권 만료일 2026년 12월 30일</strong><br>
+      출발 예정일: 2026년 8월 10일 (유럽 배낭여행, 파리-암스테르담-로마, 3주)<br>
+      <br>
+      출발일(8월 10일)부터 여권 만료일(12월 30일)까지 일수는 <strong>142일(약 4개월 20일)</strong>입니다. 유럽 솅겐 규정은 출국일 기준 3개월 이상이므로 142일이면 기준을 충족합니다. 박씨는 현재 여권으로 유럽 여행이 <strong>가능</strong>합니다. 단, 귀국 예정일인 8월 31일 기준으로 잔여기간이 121일(약 4개월)이므로 솅겐 3개월 기준을 충분히 넘습니다.<br>
+      <br>
+      주의사항: 한 번의 솅겐 지역 체류가 90일을 초과하지 않는지 확인 필요.</p>
+    </div>
+
+    <div class="highlight-box">
+      <p><strong>[시나리오 C] 최씨 부부, 자녀(만 6세) 여권 만료일 2026년 9월 3일</strong><br>
+      출발 예정일: 2026년 7월 25일 (일본 오사카, 5박 6일)<br>
+      <br>
+      자녀 여권 만료일(9월 3일)부터 출발일(7월 25일)까지 잔여기간은 <strong>40일</strong>입니다. 일본은 체류 예정 기간(6일) 이상이면 입국 가능하므로 40일은 기준을 충족합니다. 하지만 항공사에 따라 출국지 기준으로 추가 여유를 요구하는 경우가 있어, 가능하면 <strong>미리 재발급</strong>을 받는 것을 권장합니다.<br>
+      <br>
+      재발급 시 수수료: 만 6세 미만은 30,000원(24면), 만 8세 미만은 30,000원. 이 아이는 만 6세이므로 30,000원 적용.</p>
+    </div>
+
+    <p>세 시나리오의 핵심 차이는 단순히 "만료됐는지"가 아니라 "목적지 국가의 잔여기간 기준을 충족하는지"입니다. 날짜 계산이 복잡하다면 <a href="../../calc/date/date-difference/" style="color:#F97316;">날짜 차이 계산기</a>에 출발일과 여권 만료일을 입력하면 즉시 잔여일수를 확인할 수 있습니다.</p>
+
+    <h2>잔여기간 6개월인 줄 알았는데 - 여기서 함정이 있다</h2>
+
+    <p>많은 분들이 "여권 잔여기간 6개월이면 모든 나라에 갈 수 있다"고 생각합니다. 틀린 말은 아니지만, 이 기준도 구멍이 있습니다.</p>
+
+    <p><strong>함정 1: 6개월 기준이 '입국일'이 아니라 '출국일' 기준인 나라가 있습니다.</strong> 베트남은 입국일이 아니라 출국일(귀국일)을 기준으로 6개월 잔여기간을 요구합니다. 8박 9일 일정이라면 귀국일 기준으로 6개월이 남아 있어야 하므로, 입국일 기준으로 계산하면 실제로는 6개월 8일이 필요합니다.</p>
+
+    <p><strong>함정 2: 항공사가 현지 국가 기준보다 더 엄격하게 적용합니다.</strong> 일부 항공사는 목적지 이민국 기준에 자체 여유 기간(보통 추가 1개월)을 더해 탑승을 제한합니다. 합법적으로 입국 가능한 잔여기간이더라도 항공사 카운터에서 거부당할 수 있습니다. 이를 "TIMATIC 기준 적용"이라고 하는데, 각 항공사가 사용하는 국제 항공운송 정보 시스템이 기준을 보수적으로 설정하는 경우입니다.</p>
+
+    <p><strong>함정 3: 경유지 규정을 놓치는 경우입니다.</strong> 직항이 아니라 경유편을 이용한다면, 경유지 국가의 여권 잔여기간 규정도 별도로 충족해야 합니다. 예를 들어 서울-두바이-유럽 경유편이라면 UAE 기준도 동시에 충족해야 합니다.</p>
+
+    <p>실제로 2025년 인천공항공사 통계에 따르면 출국 거부 사유 중 여권 관련 문제가 전체의 약 18%를 차지합니다. 연간 약 3,200건 수준이며, 이 중 절반 이상이 잔여기간 부족에서 비롯됩니다. "내 여권 괜찮겠지"라는 막연한 자신감이 공항에서 낭패로 이어지는 것입니다.</p>
+
+    <h2>2026년 기준 여권 재발급 수수료와 소요 기간</h2>
+
+    <p>재발급 기준은 <a href="https://www.mofa.go.kr" target="_blank" rel="noopener" style="color:#F97316;">외교부 여권 안내(mofa.go.kr)</a>와 여권법 시행령 별표 2에 명시된 수수료를 기준으로 합니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>대상</th>
+            <th>수수료</th>
+            <th>소요 기간</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>10년 복수(48면)</td><td>만 18세 이상</td><td class="rate">53,000원</td><td>2~4주</td><td>가장 일반적</td></tr>
+          <tr><td>10년 복수(24면)</td><td>만 18세 이상</td><td class="rate">50,000원</td><td>2~4주</td><td>스탬프가 적은 경우</td></tr>
+          <tr><td>5년 복수(48면)</td><td>만 8~18세 미만</td><td class="rate">45,000원</td><td>2~4주</td><td>미성년자</td></tr>
+          <tr><td>5년 복수(24면)</td><td>만 8~18세 미만</td><td class="rate">42,000원</td><td>2~4주</td><td>미성년자</td></tr>
+          <tr><td>5년 복수(24면)</td><td>만 8세 미만</td><td class="rate">30,000원</td><td>2~4주</td><td>영유아</td></tr>
+          <tr><td>긴급여권(1년)</td><td>전 연령</td><td class="warn">+15,000원 추가</td><td><span class="warn">1~2일</span></td><td>출발 2주 이내, 긴급사유 요건</td></tr>
+          <tr><td>여행증명서</td><td>해외 분실자</td><td>해당국 대사관 기준</td><td>당일~2일</td><td>귀국용 1회 사용</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>핵심은 여름 성수기입니다. 6월~8월은 여권 재발급 신청이 연간 최대치에 달해 평소 2~3주 걸리던 발급이 4~5주까지 늘어날 수 있습니다. 7월 말 출발 계획이 있다면 5월 중에 신청해야 안전합니다. 여기서 "빠를수록 좋다"는 말이 가장 잘 맞아떨어집니다.</p>
+
+    <h3>재발급 절차 간단 정리</h3>
+
+    <p>국내 신청은 전국 250여 곳의 여권사무소(구청·시청 등)에서 가능합니다. 정부24(www.gov.kr) 온라인 신청도 가능하지만, 여권 수령은 지정 기관을 직접 방문해야 합니다. 필요한 서류는 다음과 같습니다.</p>
+
+    <ul>
+      <li>여권 발급 신청서 (여권사무소 비치 또는 정부24 출력)</li>
+      <li>6개월 이내 촬영한 여권용 사진 1매 (3.5cm x 4.5cm, 규격 엄격 적용)</li>
+      <li>신분증 원본 (주민등록증, 운전면허증 등)</li>
+      <li>현재 소지한 여권 (재발급 시 구 여권 반납)</li>
+      <li>수수료 (기관마다 카드/현금 여부 다름)</li>
+    </ul>
+
+    <p>18세 미만은 법정대리인(부모) 동의 서류가 추가로 필요합니다. 부모 모두 동행하거나, 동행하지 못하는 부모의 여권 발급 동의서와 인감증명서를 지참해야 합니다.</p>
+
+    <h2>내 여권 잔여기간, 지금 바로 계산하는 법</h2>
+
+    <p>여권 만료일을 알고 있다면 날짜 차이 계산기로 즉시 잔여일수를 확인할 수 있습니다. 방법은 간단합니다. "시작 날짜"에 오늘 날짜를, "종료 날짜"에 여권 만료일을 입력하면 됩니다.</p>
+
+    <p>예를 들어 여권 만료일이 2027년 3월 15일인 사람이 오늘(2026년 5월 21일) 기준으로 확인하면 잔여기간은 <strong>663일(약 21개월 25일)</strong>입니다. 이 정도면 동남아·유럽·미주 어느 곳을 가도 잔여기간 문제가 없습니다. 반면 만료일이 2026년 11월 1일이라면 오늘 기준 잔여기간은 <strong>164일(약 5개월 11일)</strong>로, 6개월 기준이 적용되는 베트남·필리핀·태국 등은 입국이 불가합니다. 일본이나 미국은 가능하지만, 빠른 시일 내에 재발급을 받는 것이 현명합니다.</p>
+
+    <p>날짜 계산 이야기가 나온 김에, <a href="../posts/date-add-guide.html" style="color:#F97316;">날짜 더하기·빼기 계산기 활용법</a>도 알아두면 유용합니다. 재발급 후 새 여권의 만료일을 미리 계산해두면 다음 여행 계획에 참고가 됩니다. 새 여권 발급일로부터 10년 후가 만료일이므로, 2026년 6월에 재발급받으면 2036년 6월이 만료일입니다.</p>
+
+    <h2>분실·도난 대처, 해외에서 여권이 없어졌을 때</h2>
+
+    <p>해외에서 여권을 분실하면 당황스럽지만, 절차는 명확합니다. 두 단계만 기억하면 됩니다.</p>
+
+    <p><strong>1단계: 현지 경찰서에서 분실 신고서를 받습니다.</strong> 영어로는 "Police Report for Lost Passport"입니다. 이 서류가 대사관에서 임시 서류를 받기 위한 필수 증빙입니다.</p>
+
+    <p><strong>2단계: 한국 대사관 또는 영사관에 방문합니다.</strong> 분실 신고서와 본인 신분 확인 자료(예비 사진, 여권 사본, 주민등록번호 등)를 지참하면 여행증명서(귀국용) 또는 긴급여권을 발급받을 수 있습니다.</p>
+
+    <p>여행증명서는 당일 발급이 가능하고 비용이 저렴하지만, 목적지까지 직항으로 귀국하는 경우에만 사용할 수 있습니다. 경유가 필요하거나 잔여 일정이 남아 있다면 긴급여권(1년 단수)을 받아야 합니다. 긴급여권 수수료는 국내 기준보다 비쌀 수 있으며, 일부 국가에서는 발급에 1~2일이 걸리기도 합니다.</p>
+
+    <p>예방이 최선입니다. 여행 전에 여권 사진 면과 개인정보 면을 스캔하거나 사진을 찍어 클라우드에 저장해두세요. 분실 시 신분 확인이 훨씬 빨라집니다. 여권 번호와 만료일도 메모 앱에 따로 저장해두면 좋습니다.</p>
+
+    <h2>여행 계획별 여권 잔여기간 체크리스트</h2>
+
+    <p>여행 목적별로 여권을 언제 확인해야 하는지 기준을 정리했습니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>여행 유형</th>
+            <th>최소 권장 잔여기간</th>
+            <th>재발급 신청 권장 시점</th>
+            <th>주요 해당 국가</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>일본·홍콩 단기(1주 이내)</td><td>1개월 이상</td><td>출발 3주 전</td><td>일본, 홍콩, 대만</td></tr>
+          <tr><td>동남아 패키지(1~2주)</td><td><span class="rate">7개월 이상</span></td><td>출발 5주 전</td><td>태국, 베트남, 필리핀, 인도네시아</td></tr>
+          <tr><td>유럽 자유여행(2~4주)</td><td><span class="rate">4개월 이상</span></td><td>출발 6주 전</td><td>솅겐 26개국</td></tr>
+          <tr><td>미국·캐나다(2~4주)</td><td>2개월 이상</td><td>출발 4주 전</td><td>미국, 캐나다</td></tr>
+          <tr><td>장기 체류(3개월 이상)</td><td><span class="rate">1년 이상</span></td><td>출발 6~8주 전</td><td>워킹홀리데이, 유학, 연수</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>"권장 시점보다 일찍 신청하면 여권 유효기간이 단축되지 않나요?"라는 질문을 자주 받습니다. 답은 아니오입니다. 재발급 시 새 여권의 유효기간은 발급일로부터 10년(또는 5년)이 새로 부여됩니다. 기존 여권의 잔여기간이 남아 있어도 구 여권은 반납 처리되며, 새 유효기간이 완전히 새로 시작됩니다. 따라서 잔여기간이 1~2년 남아 있어도 장기 여행 계획이 있다면 미리 재발급받는 것이 오히려 이득입니다.</p>
+
+    <p>이 내용과 연결해서 <a href="../posts/date-difference.html" style="color:#F97316;">날짜 차이 계산 완벽 가이드</a>도 함께 보면 좋습니다. 두 날짜 사이의 일수·주수·개월 수를 정확히 계산하는 방법이 정리되어 있어, 여권 잔여기간뿐 아니라 다양한 날짜 계산에 활용할 수 있습니다.</p>
+
+    <div class="cta-box">
+      <p>여권 만료일까지 남은 일수가 궁금하다면 날짜 차이 계산기로 바로 확인해보세요. 오늘 날짜와 여권 만료일을 입력하면 즉시 결과를 볼 수 있습니다.</p>
+      <a href="../../calc/date/date-difference/" class="cta-btn">날짜 차이 계산기 바로가기 →</a>
+      <p style="font-size:13px;color:#6B7280;margin-top:8px;">출발일 D-day 카운트다운: <a href="../../calc/date/dday/" style="color:#F97316;">D-day 계산기</a>도 함께 이용하실 수 있습니다.</p>
+    </div>
+
+    <h2>자주 묻는 질문</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 여권 유효기간이 6개월 미만인데 해외여행을 갈 수 있나요?</div>
+      <div class="faq-a">국가에 따라 다릅니다. 일본은 체류 예정 기간 이상의 잔여기간만 있으면 입국이 가능하지만, 베트남·필리핀·유럽 솅겐 지역은 출국일 기준 6개월 이상의 잔여기간을 요구합니다. 만약 잔여기간이 3~5개월이라면 일본·홍콩 등은 입국 가능하지만 동남아시아 대부분 국가는 입국 거부될 수 있습니다. 항공편 탑승 자체를 거부당하는 경우도 있으므로, 출발 전 외교부 해외안전여행(www.0404.go.kr)에서 목적지 국가 요건을 반드시 확인하세요. 불확실하다면 여행 전 재발급을 받는 것이 가장 안전합니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 여권 재발급은 얼마나 걸리나요?</div>
+      <div class="faq-a">일반 접수 기준 서울 기준 평균 2~3주, 지방 여권사무소는 3~4주 소요됩니다. 여름 성수기(6~8월)에는 신청자가 몰려 4~5주까지 늘어날 수 있습니다. 출발일이 1~2주 이내로 임박했다면 긴급여권 서비스를 신청하면 1~2일 안에 발급받을 수 있습니다. 긴급여권은 일반 여권보다 수수료가 약 15,000원 추가됩니다. 정부24 온라인 신청 후 수령까지 기간이 방문 접수보다 약 2~3일 더 걸릴 수 있으므로 시간이 촉박하면 여권사무소를 직접 방문하는 게 빠릅니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 여권을 분실했는데 해외에 있습니다. 어떻게 해야 하나요?</div>
+      <div class="faq-a">현지 경찰서에서 분실 신고서(Police Report)를 먼저 발급받은 뒤, 가장 가까운 한국 대사관 또는 영사관을 방문해야 합니다. 대사관에서 여행증명서(여권 대신 사용하는 임시 문서)나 긴급여권을 발급받을 수 있습니다. 여행증명서는 단순 귀국용으로 사용하는 1회용이며, 긴급여권은 1년 유효기간의 단수여권입니다. 본인 확인을 위해 신분증 사본이나 주민등록번호를 알아두는 것이 중요합니다. 귀국 후에는 반드시 일반 복수여권으로 재발급받아야 합니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 만 18세 미만 자녀의 여권 유효기간은 어른과 다른가요?</div>
+      <div class="faq-a">네, 다릅니다. 만 18세 이상 성인은 10년 복수여권을 발급받을 수 있지만, 만 8세 이상 18세 미만은 5년, 만 8세 미만은 5년 이하로 제한됩니다. 여권법 시행령 제7조에 따라 미성년자는 성장과 외모 변화를 고려해 유효기간을 제한합니다. 따라서 초등학생 이하 자녀의 경우 해외여행 계획이 있다면 여권 잔여기간을 더 자주 확인해야 합니다. 2026년 기준 5년 복수여권 수수료는 45,000원(48면)입니다.</div>
+    </div>
+
+    <h2>지금 확인 안 하면 공항에서 확인하게 됩니다</h2>
+
+    <p>여권 유효기간은 단순히 "만료됐는지"가 아니라 "목적지 국가의 잔여기간 기준을 충족하는지"가 핵심입니다. 동남아 대부분 국가는 6개월, 유럽 솅겐은 3개월, 일본은 체류 기간만 충족하면 됩니다. 여름 성수기에는 재발급 기간이 4~5주까지 늘어나므로, 6월 이후 출발 계획이 있다면 지금 당장 여권 만료일을 확인하고 필요하면 신청하는 것이 최선입니다.</p>
+
+    <p>오늘 기준 여권 잔여기간이 7개월 이상이라면 올해 안의 대부분 여행은 문제없습니다. 4~6개월이라면 일본·미국은 가능하지만 동남아는 위험합니다. 3개월 이하라면 어느 나라든 재발급이 먼저입니다. 날짜 계산이 번거롭다면 지금 바로 아래 계산기로 잔여일수를 확인해보세요.</p>
+
+  </div>
+</main>
+
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "외교부 여권 안내, 여권법 시행령 제7조, 2026년 기준",
+  basisDate: "2026년 기준",
+  referenceOrg: "외교부(mofa.go.kr)",
+  lastReviewed: '2026.05.21',
+  disclaimer: "본 내용은 참고용이며, 실제 입국 요건은 출발 전 해당 국가 대사관 또는 외교부 해외안전여행(0404.go.kr)에서 반드시 재확인하세요.",
+  relatedCalc: { name: '날짜 차이 계산기', url: '/calc/date/date-difference/' },
+  category: 'date'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>

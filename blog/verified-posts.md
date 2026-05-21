@@ -20,3 +20,6 @@
 - withholding-tax-guide.html (2026-05-20 검증, 이상 없음)
 - comprehensive-income-tax.html (2026-05-20 검증, 오류 1개 수정 - "공동인증서(구 공인인증서)"→"공동인증서")
 - income-tax-may-guide.html (2026-05-20 검증, 이상 없음)
+- vat-guide.html (2026-05-21 검증, 이상 없음)
+- severance-pay-guide.html (2026-05-21 검증, 이상 없음)
+- isa-guide.html (2026-05-21 검증, 오류 1개 수정 - ARTICLE_INFO_CONFIG basisDate 필드 누락 추가)
