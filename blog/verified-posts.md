@@ -27,3 +27,5 @@
 - inheritance-tax-guide.html (2026-05-22 검증, 이상 없음)
 - pension-tax-guide.html (2026-05-22 검증, 오류 3개 수정 - JSON-LD FAQ 2/3/4번째 답변 불일치 수정)
 - joint-ownership-tax-guide.html (2026-05-22 자체 재검증, 오류 7개 수정 - 도입부 43년→40년, h2 제목, 시나리오 2 취득세 183만원→1,838만원, 표 15억/20억 행 증여세·총비용·회수기간, FAQ 2 양도세 수치, FAQ 4 취득세 중과 차액)
+- bonus-tax-guide.html (2026-05-22 thin page 점검, 사실 오류 0 / 도입부 보강 - 결론 우선 첫 문장 + 4시나리오 실수령 요약 highlight-box 추가, 체류 9초 개선용)
+- cholesterol-levels-guide.html (2026-05-22 thin page 점검, 사실 오류 0 / 도입부 보강 - 결론 우선 첫 문장 + 4수치 정상기준 요약 highlight-box 추가, 체류 4초 개선용)
