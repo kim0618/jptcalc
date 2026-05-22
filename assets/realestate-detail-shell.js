@@ -51,7 +51,8 @@
     '/calc/realestate/joint/': {
       key:'joint',
       quick:['공동명의는 양도세 기본공제(250만원)가 지분별로 각각 적용됩니다.','부부 공동명의는 종합부동산세 세액공제(1주택) 혜택을 선택할 수 있습니다.','취득세는 각자 지분만큼 납부하므로 취득 시 부담 차이는 없습니다.','실제 절세 효과는 보유 기간·소득 수준·주택 수에 따라 달라집니다.'],
-      related:[['/calc/realestate/acquisition/','취득세 계산기','📄'],['/calc/realestate/capital-gains/','양도소득세 계산기','📈'],['/calc/realestate/jongbu/','종합부동산세 계산기','🏛️']]
+      related:[['/calc/realestate/acquisition/','취득세 계산기','📄'],['/calc/realestate/capital-gains/','양도소득세 계산기','📈'],['/calc/realestate/jongbu/','종합부동산세 계산기','🏛️']],
+      guides:[['/blog/posts/joint-ownership-tax-guide.html','공동명의 절세 2026 - 공시가격별 종부세 절감액과 전환 비용 함정'],['/blog/posts/jongbu-tax-guide.html','종합부동산세 2026 - 공시가격별 세율 0.5~2.7%, 1주택 고령자 공제까지'],['/blog/posts/acquisition-tax-2026.html','2026 행정안전부 주택 취득세율 - 1주택 6억 이하 1%, 생애최초·2주택 포함']]
     },
     '/calc/realestate/jongbu/': {
       key:'jongbu',
