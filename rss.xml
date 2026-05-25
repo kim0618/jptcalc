@@ -5,8 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 19 May 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 25 May 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+      <title>보유세 2026 - 재산세·종부세 합산 실납부액, 공시가 5억~25억 구간 비교</title>
+      <link>https://www.jptcalc.kr/blog/posts/holding-tax-guide.html</link>
+      <description>1세대 1주택 기준 공시가 8억이면 222만원, 15억이면 종부세 포함 590만원, 20억이면 999만원. 6월 1일 기준일 전략과 종부세 역전 지점(31억)까지 정리합니다.</description>
+      <pubDate>Sun, 25 May 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/holding-tax-guide.html</guid>
+    </item>
 
     <item>
       <title>공동명의 절세 2026 - 공시가격별 종부세 절감액과 전환 비용 함정</title>
