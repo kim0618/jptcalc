@@ -5,8 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Sun, 25 May 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 27 May 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+      <title>2026년 기초연금 수급 자격과 금액 계산 - 소득인정액 247만원의 실제 의미</title>
+      <link>https://www.jptcalc.kr/blog/posts/basic-pension-guide.html</link>
+      <description>선정기준액 247만원은 현금 소득이 아닌 재산 환산 포함. 시나리오별 소득인정액 계산, 국민연금 연계감액 구조, 무료임차소득·금융재산 공제까지 2026년 기준으로 정리.</description>
+      <pubDate>Tue, 27 May 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/basic-pension-guide.html</guid>
+    </item>
 
     <item>
       <title>아파트 평수 완전 해석 - 전용·공급·계약면적 차이와 실사용 크기 비교</title>
