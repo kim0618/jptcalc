@@ -1,5 +1,5 @@
 ---
-description: 제이퍼 계산기 블로그 글 작성 (카테고리 자동 선정, 주제 자동 선정, 파일 생성 + index + sitemap 업데이트)
+description: 제이퍼 계산기 블로그 글 작성 (네이버 타겟 큐 기반 주제 선정, 파일 생성 + index + sitemap 업데이트)
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 ---
 
@@ -10,12 +10,53 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - 사용자가 "5개", "3편" 등 명시한 경우에만 그 수를 따른다.
 - 절대로 자의적으로 편수를 늘리지 않는다.
 
+## 네이버 타겟 큐 신선도 체크 (글 작성 전 최우선)
+
+글 작성을 시작하기 전에 **반드시 먼저** 아래 "네이버 타겟 주제 큐"의 `최종갱신` 날짜와 남은 미사용 주제 수를 확인한다.
+
+- 다음 중 하나라도 해당하면 → **글을 바로 쓰지 말고, 먼저 사용자에게 알린다:**
+  - 오늘이 최종갱신일로부터 **21일 이상**(2026-08-31까지 급성장기 기준, 이후 30일) 지났다
+  - 큐에 남은 미사용 주제가 **3개 미만**이다
+- 알림 문구:
+  > "네이버 타겟 큐가 [최종갱신일] 기준이라 갱신이 필요합니다. 네이버 서치어드바이저 > 리포트에서 **검색어 TOP 30 + 웹문서 TOP 30** 캡처를 보내주시면, 큐를 갱신한 뒤 글을 작성하겠습니다."
+- 사용자가 데이터를 주면 → 큐 갱신(새 승자 추가 / 작성 완료 주제 제거 / 노출↑·CTR↓ 페이지를 제목 최적화 대상에 갱신)하고 `최종갱신`을 오늘로 바꾼 뒤 글 작성을 시작한다.
+- 큐가 신선하고 주제도 충분하면 → 바로 큐에서 주제를 뽑아 작성한다. (사용자에게 묻지 않고 진행)
+
+## 네이버 타겟 주제 큐
+
+**최종갱신: 2026-05-29** (출처: 네이버 서치어드바이저 검색어/웹문서 TOP 30)
+
+주제 선정 시 **이 큐를 카테고리 균형보다 우선**한다. 위에서부터 미사용 주제를 선택하고, 작성 완료한 주제 앞에 `[완료]`를 붙인다.
+
+### Tier 1 - 네이버 검증된 승자 (최우선)
+1. 평균 연봉인상률 - 업종·연차별 적정 인상률 (키워드 "연봉인상률 계산기" 노출 1위 / salary/raise-rate)
+2. 2026 키별 표준·정상체중 기준표 (남녀·나이대) (키워드 "2026 체중기준표"·"정상체중" 고CTR / health/ideal-weight)
+3. 2026 부동산 보유세(재산세+종부세) 계산 총정리 (키워드 "부동산 보유세 계산기" CTR 10% / realestate/property-tax-comprehensive)
+4. 부동산 중개수수료 요율표 2026 - 매매·전월세 구간별 (키워드 "부동산 법정수수료" / realestate/brokerage)
+5. 국민연금 40년 납부 시 예상 수령액 (가입기간별 표) (키워드 "국민연금 40년 납부시 수령액" / pension-welfare/national-pension)
+6. GPT·Claude API 토큰 비용 비교 2026 (키워드 "api 토큰 비용"·"claude 토큰 비용" 고CTR / ai/api-token)
+
+### Tier 2 - 승자 클러스터 확장
+7. 연봉 협상 가이드 - 인상률 몇 %부터 이직보다 유리한가 (salary/raise-rate)
+8. 종부세 vs 재산세 - 더 내는 구간의 함정 (반전 비교 / realestate/jongbu)
+9. 연봉별 실질 시급 환산표 2026 (salary/hourly-wage)
+10. 3.3% 프리랜서 vs 4대보험 직장인 실수령 비교 (키워드 "3.3 4대보험 비교" / tax/freelancer-income)
+11. 공시가격 15억 공동명의 절세 시뮬레이션 (키워드 "공시가격 15억 아파트 공동소유" / realestate/joint)
+12. BMI 21~25 구간별 건강 의미와 관리법 (키워드 "bmi 21" / health/bmi)
+13. 두 날짜 사이 년·개월·일수 정확히 구하는 법 (키워드 "년개월일수 구하기" / date/date-difference)
+14. D-day 활용 가이드 - 전역·수능·기념일 (키워드 "과거 요일"·전역 / date/dday)
+
+### 제목 최적화 대상 (월 1회 점검, 메타 쿨다운 4주 준수)
+노출 많은데 CTR 낮은 페이지를 네이버 검색어에 맞춰 제목 갱신. 변경 전 `git blame`으로 4주 쿨다운 확인.
+- [2026-05-29 완료] 만나이(date/age), 시급(salary/hourly-wage), 날짜차이(date/date-difference)
+- 다음 후보: salary/ 인덱스(쿨다운 ~6/13), finance/savings, salary/take-home-pay
+
 ## 사전 확인
 1. `ls /home/tjd618/jptcalc/blog/posts/` 로 기존 포스트 파일 목록 전체 확인
 2. `ls /home/tjd618/jptcalc/calc/` 및 하위 폴더 확인해서 사용 가능한 계산기 URL 파악
 3. `/home/tjd618/jptcalc/blog/index.html` 에서 data-cat 개수를 세서 카테고리별 글 수 확인
-4. 가장 글이 적은 카테고리를 우선 선정 (동률이면 제휴 배너 있는 계산기와 연결되는 카테고리 우선)
-5. 기존 글과 겹치지 않는 주제를 선정하고, 아직 블로그 글이 없는 계산기와 연결
+4. **주제 선정은 위 "네이버 타겟 주제 큐"를 최우선으로 사용**한다. 큐의 미사용 주제를 위에서부터 선택. 큐가 비었거나 사용자가 카테고리/주제를 직접 지정한 경우에만 "가장 글이 적은 카테고리 우선"으로 폴백한다.
+5. 기존 글과 겹치지 않는 주제를 선정하고, 큐 주제에 연결된 계산기와 본문에서 링크
 6. 기존 포스트 파일 1개 읽어서 해당 카테고리의 포맷·색상 정확히 파악
 7. **같은 카테고리 기존 글 목록 확인** - 본문 내 교차 링크용 (2~3개 선정)
 
@@ -26,21 +67,6 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 
 사용자가 카테고리나 주제를 지정하면 그것을 따르고, 지정하지 않으면 위 기준으로 자동 선정한다.
 
-### ⚠️ 2026-05-21 애드센스 신청까지 임시 룰 (D-13일)
-
-**현재 카테고리 격차 6개** (부동산 14 vs 반려동물·날짜·AI 각 8). 신청 직전 카테고리 비대칭은 "특정 주제 위주 사이트"로 평가되어 통과 위험. 5/21 신청 시까지는 아래 임시 룰 적용:
-
-- **카테고리 비율 최우선** (글 수가 가장 적은 카테고리 우선 선정)
-- 우선 주제 큐(미연결 계산기)는 **5/22 이후 재개** - 큐 항목이 모두 부동산 카테고리라 신청 전까지 보류
-- 동률일 때만 제휴 배너 있는 계산기와 연결 (기존 룰 유지)
-
-**5/22~ 큐 재개 시 우선순위 (현재 보류 중)**:
-1. `/calc/realestate/joint/` - 공동명의 절세 계산기
-2. `/calc/realestate/property-tax-comprehensive/` - 보유세 계산기
-3. `/calc/realestate/pyeong/` - 평수 변환 계산기
-
-(`/calc/realestate/rental/` 임대수익률은 2026-05-08 rental-yield-valuation.html 작성으로 2/2 완료되어 큐에서 제거됨)
-
 글 작성 후 해당 계산기의 detail-shell.js guides 배열에 블로그 URL을 추가한다.
 
 ---
@@ -50,13 +76,13 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 
 ### head 영역
 - charset UTF-8, viewport
-- title: "|제이퍼 계산기 블로그" 포함
+- title: "|제이퍼 계산기 블로그" 포함. **네이버 타겟 큐의 키워드를 제목 앞부분에 그대로 넣는다** (예: 타겟이 "연봉인상률"이면 제목 앞에 "연봉인상률" 포함). 연식(2026)을 붙이면 네이버 CTR에 유리.
 - meta description (120~155자, 핵심 키워드 포함)
 - og:type=article, og:title, og:description, og:url, og:image, twitter:image
 - og:image = https://www.jptcalc.kr/android-chrome-512x512.png
 - canonical = https://www.jptcalc.kr/blog/posts/[파일명].html
 - favicon: ../../assets/logo.svg
-- AdSense: **5/21 애드센스 3차 신청까지 임시 비활성** - 새 글 head에 광고 로더(`<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>`) 절대 삽입 금지. 신청 통과 후 복구 시 이 줄을 원래대로 되돌리고 새 글에 광고 로더 다시 박을 것. (원본: `- AdSense: ca-pub-6112766558731601`)
+- 광고 로더: 새 글 head에 디스플레이 광고 로더(애드센스 등)를 삽입하지 않는다. 현재 수익화는 계산기 페이지 제휴 배너 중심이고, 블로그 글은 트래픽 유입에 집중한다. (애드센스 폐기, 카카오 애드핏 도입 시 별도 안내)
 - GA: G-BRSX3F10MZ
 - Pretendard 폰트 CDN
 - **Article JSON-LD** + **FAQPage JSON-LD** 모두 `<head>` 안에 배치 (아래 JSON-LD 섹션 참고)
@@ -245,7 +271,7 @@ highlight-box 바로 다음에 "이 글에서 확인할 수 있는 것" 리스�
 
 ## 자연스러운 글쓰기 (AI 티 제거)
 
-기존 63개 글이 전부 동일 구조/문체여서 Google이 자동 생성으로 판단할 수 있다.
+기존 글이 전부 동일 구조/문체면 네이버·검색엔진과 카카오 애드핏의 AI 필터가 자동 생성 콘텐츠로 판단할 수 있다.
 **새 글은 아래 규칙을 반드시 적용해서 글마다 다르게 쓴다.**
 
 ### 구조 다양화
