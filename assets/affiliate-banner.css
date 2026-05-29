@@ -1,25 +1,25 @@
 /* ── Affiliate Banner Component ─────────────────────────────── */
-/* 사용법: result-card 바로 다음에 .affiliate-banner 삽입            */
+/* 사용법: result-card 바로 다음에 .affiliate-banner + .affiliate-disclosure 삽입 */
 
 .affiliate-banner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  background: #EFF6FF;
-  border: 1px solid rgba(59,130,246,0.2);
+  background: #EEF2FF;
+  border: 1px solid rgba(79,70,229,0.2);
   border-radius: 12px;
   padding: 14px 18px;
   margin-top: 10px;
-  margin-bottom: 16px;
+  margin-bottom: 6px;
   text-decoration: none;
   transition: border-color 0.15s, box-shadow 0.15s;
   cursor: pointer;
 }
 
 .affiliate-banner:hover {
-  border-color: rgba(59,130,246,0.45);
-  box-shadow: 0 2px 8px rgba(59,130,246,0.12);
+  border-color: rgba(79,70,229,0.45);
+  box-shadow: 0 2px 8px rgba(79,70,229,0.12);
 }
 
 .affiliate-banner__text {
@@ -30,14 +30,14 @@
 .affiliate-banner__title {
   font-size: 13px;
   font-weight: 700;
-  color: #1E40AF;
+  color: #3730A3;
   line-height: 1.4;
   margin-bottom: 2px;
 }
 
 .affiliate-banner__desc {
   font-size: 12px;
-  color: #3B82F6;
+  color: #6366F1;
   font-weight: 500;
 }
 
@@ -45,9 +45,9 @@
   flex-shrink: 0;
   font-size: 12px;
   font-weight: 700;
-  color: #1D4ED8;
+  color: #4338CA;
   background: #fff;
-  border: 1.5px solid rgba(59,130,246,0.4);
+  border: 1.5px solid rgba(79,70,229,0.4);
   border-radius: 8px;
   padding: 7px 13px;
   white-space: nowrap;
@@ -55,9 +55,16 @@
 }
 
 .affiliate-banner:hover .affiliate-banner__cta {
-  background: #3B82F6;
+  background: #4F46E5;
   color: #fff;
-  border-color: #3B82F6;
+  border-color: #4F46E5;
+}
+
+.affiliate-disclosure {
+  font-size: 11px;
+  color: #9CA3AF;
+  line-height: 1.5;
+  margin: 0 2px 16px;
 }
 
 @media (max-width: 480px) {
