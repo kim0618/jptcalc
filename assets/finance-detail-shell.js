@@ -4,9 +4,9 @@
   const pages={
     '/calc/finance/deposit/': {
       key:'deposit',
-      quick:['예금 금리는 세전 금리이므로 이자소득세(15.4%)를 고려하세요.','비과세 종합저축이나 세금우대 상품을 활용하면 세후 수익이 높아집니다.','예금자보호법에 따라 1인당 5천만 원까지 보호됩니다.','금리가 같더라도 이자 지급 방식(만기일시, 월이자)에 따라 실수령이 다릅니다.'],
+      quick:['예금 금리는 세전 금리이므로 이자소득세(15.4%)를 고려하세요.','비과세 종합저축이나 세금우대 상품을 활용하면 세후 수익이 높아집니다.','예금자보호법에 따라 1인당 1억 원까지 보호됩니다(2025년 9월 상향, 원금+이자 합산).','금리가 같더라도 이자 지급 방식(만기일시, 월이자)에 따라 실수령이 다릅니다.'],
       related:[['/calc/finance/savings/','적금 만기','📈'],['/calc/finance/compound/','복리 계산','📊'],['/calc/finance/investment/','투자 수익률','📉']],
-      guides:[['/blog/posts/deposit-interest-guide.html','예금 이자 계산법과 세후 수령액 완벽 정리'],['/blog/posts/savings-vs-deposit.html','적금 vs 예금 - 나에게 맞는 저축 방법은?']]
+      guides:[['/blog/posts/deposit-protection-limit-guide.html','예금자보호 한도 1억원 - 분산 예치 전략 총정리'],['/blog/posts/deposit-interest-guide.html','예금 이자 계산법과 세후 수령액 완벽 정리'],['/blog/posts/savings-vs-deposit.html','적금 vs 예금 - 나에게 맞는 저축 방법은?']]
     },
     '/calc/finance/savings/': {
       key:'savings',
