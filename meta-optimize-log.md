@@ -1,4 +1,14 @@
 
+## 2026-05-31 (6차 라운드 - 노출 상위 calc 페이지)
+- calc/date/age/: 노출 3,566 CTR 1.3% (최다 노출 페이지) - "만나이 생일 당일"·"만 나이 계산법 생일" 쿼리 대응, title "생일 지났나?" 질문형 훅 추가 + "법적나이"→"연나이"로 검색 의도 정렬, og/twitter/WebApp description 본 title·desc와 완전 동기화 (재측정 2026-06-28 예정)
+- calc/salary/hourly-wage/: 노출 1,836 CTR 1.2% - "일급 계산기"(378노출/0.5%) 쿼리 대응, title 앞 "시급·일급" 병기 + "최저시급 10,320원" 수치 직접 노출, "하루 8시간 일급 82,560원" 결과값 desc 삽입, WebApplication JSON-LD description 신규 추가 (재측정 2026-06-28 예정)
+- calc/health/ideal-weight/: 노출 1,528 CTR 2.7% - "2026년 체중기준표"·"적정 체중 계산기" 쿼리 대응, title 브랜드 jptcalc→제이퍼 계산기 통일 + 2026 연식, desc "정리했습니다" AI패턴 제거 + "키별 적정체중 기준표" 결론먼저, og/twitter/WebApp 완전 동기화 (재측정 2026-06-28 예정)
+- calc/finance/savings/: 노출 1,425 CTR 1.3% (4/25 1차교정 후 미개선 → 재교정) - title "월 30만원 적금, 1년 세후 이자는?" 질문형 훅 + 결과값(365만원) + "적금·예금 비교" 차별화, WebApplication description 신규 추가 (재측정 2026-06-28 예정)
+- calc/date/date-difference/: 노출 1,123 CTR 1.3% (4/27 1차교정 후 미개선 → 재교정) - "년개월일수 구하기"(37.5%) 쿼리 대응, title "구하기" 동사형 + 2026 연식, "두 날짜 사이"·"년월일 분해" 핵심어 보강, twitter desc를 meta desc와 완전 일치로 정정 (재측정 2026-06-28 예정)
+- calc/finance/deposit/: 노출 1,025 CTR 1.6% - title 브랜드 jptcalc→제이퍼 계산기 통일 + "1,000만원 연 3.5% 세후 이자는?" 질문형, desc 결과값(약 29만 6천원) + "적금 비교" 차별화, WebApplication description 신규 추가 (재측정 2026-06-28 예정)
+- calc/date/dday/: 노출 904 CTR 1.5% - title 브랜드 jptcalc→제이퍼 계산기 통일 + "목표일까지 며칠?" 질문형 훅 + "100일 카운터", desc "전역일·누적일" 활용 사례 보강, og/twitter/WebApp 완전 동기화 (재측정 2026-06-28 예정)
+- 검증: 7개 모두 title ≤60자(52~58)·desc ≤155자(100~127), og·twitter·WebApplication description = 본 title·desc 완전 동기화. BreadcrumbList 3단계(position 4 없음). 본문·canonical·og:url 미변경, 메타 낚시어/em dash 없음. (본문 h2 "이것만은 확인하세요"는 메타 아님 → 스킬 범위 외로 미수정)
+
 ## 2026-05-16 (5차 라운드 - 계속, 미최적화 calc 페이지 집중)
 - calc/salary/unemployment/: 노출 226 CTR 0% / 평균 순위 3.5 (매우 좋은 순위인데 클릭 0) - title "jptcalc" 브랜드 → "제이퍼 계산기" 통일, "1일 상한 68,100원" 2026 수치 직접 노출, og:title 단축형 → 본 title과 완전 동기화, WebApplication JSON-LD description 신규 추가 (재측정 2026-05-23 예정)
 - calc/realestate/registry/: 노출 556 CTR 0.7% / 등기비용 계산기 쿼리 pos 13.8 - title 앞 "근저당 설정 등기비용" → "등기비용 계산기"로 핵심 키워드 전면 배치, "근저당 설정·소유권이전" 양쪽 케이스 명시, desc 1억 담보 시 총비용 24만원 결과값 추가 (재측정 2026-05-23 예정)

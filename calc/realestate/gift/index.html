@@ -115,13 +115,12 @@
         <li>직계존비속(미성년): <strong>2,000만원</strong></li>
         <li>기타친족(형제·사위·며느리): <strong>1,000만원</strong></li>
       </ul>
-      <h3>세율</h3>
+      <h3>세율 (2026년 개편, 상속세와 동일)</h3>
       <ul>
-        <li>1억 이하: 10%</li>
-        <li>1억~5억: 20% (누진공제 1,000만원)</li>
-        <li>5억~10억: 30% (누진공제 6,000만원)</li>
-        <li>10억~30억: 40% (누진공제 1억 6,000만원)</li>
-        <li>30억 초과: 50% (누진공제 4억 6,000만원)</li>
+        <li>2억 이하: 10%</li>
+        <li>2억~5억: 20% (누진공제 2,000만원)</li>
+        <li>5억~10억: 30% (누진공제 7,000만원)</li>
+        <li>10억 초과: 40% (누진공제 1억 7,000만원) - 30억 초과 50% 구간 폐지</li>
       </ul>
       <h3>신고 기한 내 신고 시 혜택</h3>
       <p>증여일이 속하는 달의 말일부터 <strong>3개월 이내</strong> 신고 시 산출세액의 3% 공제 혜택이 있습니다.</p>
@@ -224,7 +223,7 @@
       </div>
     </div>
     <p style="margin-top:16px;padding:12px 16px;background:#FEF3C7;border-radius:8px;font-size:13px;color:#92400E;line-height:1.6">이 계산기의 결과는 참고용이며 법적 효력이 없습니다. 증여세는 10년간 합산 과세·부담부증여·혼인 공제 등 개별 변수가 많으므로 반드시 세무사 또는 <a href="https://www.nts.go.kr" target="_blank" rel="noopener" style="color:#92400E;font-weight:600">국세청(nts.go.kr)</a>을 통해 확인하세요.</p>
-    <div class="update-note">2026년 세법 기준으로 작성되었습니다. 공제 한도 및 세율은 변경될 수 있으니 <a href="https://www.nts.go.kr" target="_blank" rel="noopener">국세청(nts.go.kr)</a>에서 최신 내용을 확인하세요.<br>최종 검토: 2026.03</div>
+    <div class="update-note">2026년 세법 기준으로 작성되었습니다. 공제 한도 및 세율은 변경될 수 있으니 <a href="https://www.nts.go.kr" target="_blank" rel="noopener">국세청(nts.go.kr)</a>에서 최신 내용을 확인하세요.<br>최종 검토: 2026.05.31</div>
   </div>
   <script>
   window.TRUST_BLOCK_CONFIG = {
@@ -239,7 +238,7 @@
       { name: '국세청(nts.go.kr)', url: 'https://www.nts.go.kr' },
       { name: '홈택스(hometax.go.kr)', url: 'https://www.hometax.go.kr' },
     ],
-    lastReviewed: '2026.03',
+    lastReviewed: '2026.05.31',
   };
   </script>
   <script src="/assets/trust-block.js"></script>
@@ -323,11 +322,10 @@ function calcGift() {
   if (!amountMan) { document.getElementById('gift-result').classList.remove('show'); return; }
 
   function getGiftTax(b) {
-    if (b <= 10000)  return b * 0.10;
-    if (b <= 50000)  return b * 0.20 - 1000;
-    if (b <= 100000) return b * 0.30 - 6000;
-    if (b <= 300000) return b * 0.40 - 16000;
-    return b * 0.50 - 46000;
+    if (b <= 20000)  return b * 0.10;
+    if (b <= 50000)  return b * 0.20 - 2000;
+    if (b <= 100000) return b * 0.30 - 7000;
+    return b * 0.40 - 17000;
   }
 
   const maxDeduct = GIFT_DEDUCT[giftRel];
@@ -381,7 +379,7 @@ window.ARTICLE_INFO_CONFIG = {
   reviewBasis: '부동산 관련 법령 2026년 기준',
   basisDate: '2026년 기준',
   referenceOrg: '국토교통부·대법원',
-  lastReviewed: '2026.04.13',
+  lastReviewed: '2026.05.31',
   category: 'realestate'
 };
 </script>
