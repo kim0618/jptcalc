@@ -104,6 +104,21 @@
         ['/calc/salary/severance/','📦','퇴직금'],
         ['/calc/salary/job-change/','📊','이직 연봉 비교']
       ]
+    },
+    'weekly-holiday-pay': {
+      title: '주휴수당',
+      emoji: '🗓️',
+      tips: [
+        '주 15시간 이상 근무 + 개근 시 주휴수당이 발생합니다.',
+        '단시간 근로자는 (주 소정근로시간÷40)×8시간으로 비례 계산합니다.',
+        '주 40시간을 넘게 일해도 주휴수당은 40시간 기준입니다.',
+        '월급제는 보통 월 209시간에 주휴수당이 포함되어 있습니다.'
+      ],
+      related: [
+        ['/calc/salary/hourly-wage/','⏱️','시급·일급 변환'],
+        ['/calc/salary/take-home-pay/','💵','연봉 실수령액'],
+        ['/calc/salary/unemployment/','🛟','실업급여']
+      ]
     }
   };
 
@@ -111,6 +126,7 @@
     ['/calc/salary/take-home-pay/','💵','연봉 실수령액','take-home-pay'],
     ['/calc/salary/comparison/','⚖️','연봉 비교','comparison'],
     ['/calc/salary/hourly-wage/','⏱️','시급·일급 변환','hourly-wage'],
+    ['/calc/salary/weekly-holiday-pay/','🗓️','주휴수당','weekly-holiday-pay'],
     ['/calc/salary/job-change/','📊','이직 연봉 비교','job-change'],
     ['/calc/salary/raise-rate/','📈','연봉 인상률','raise-rate'],
     ['/calc/salary/severance/','📦','퇴직금','severance'],
@@ -180,7 +196,7 @@
             <a class="msl-link" href="/"><span class="msl-icon">🧮</span><span>전체 보기</span></a>
             <a class="msl-link" href="/calc/realestate/"><span class="msl-icon">🏠</span><span>부동산</span><span class="msl-badge">15</span></a>
             <a class="msl-link" href="/calc/tax/"><span class="msl-icon">💰</span><span>프리랜서 세금</span><span class="msl-badge">6</span></a>
-            <a class="msl-link msl-active" href="/calc/salary/"><span class="msl-icon">📈</span><span>이직 / 연봉</span><span class="msl-badge">7</span></a>
+            <a class="msl-link msl-active" href="/calc/salary/"><span class="msl-icon">📈</span><span>이직 / 연봉</span><span class="msl-badge">8</span></a>
             <a class="msl-link" href="/calc/finance/"><span class="msl-icon">🏦</span><span>금융 · 이자</span><span class="msl-badge">5</span></a>
             <a class="msl-link" href="/calc/health/"><span class="msl-icon">🏃</span><span>건강</span><span class="msl-badge">5</span></a>
             <a class="msl-link" href="/calc/pension-welfare/"><span class="msl-icon">🏛</span><span>연금·복지</span><span class="msl-badge">5</span></a>

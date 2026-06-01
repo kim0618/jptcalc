@@ -43,6 +43,12 @@
       quick:['자발적 퇴사는 원칙적으로 실업급여 수급 대상이 아닙니다.','실업급여는 퇴직 전 3개월 평균임금의 60%를 기준으로 산정됩니다.','수급 기간은 연령과 고용보험 가입 기간에 따라 120~270일입니다.','구직활동 보고를 성실히 이행해야 급여가 지속 지급됩니다.'],
       related:[['/calc/salary/take-home-pay/','연봉 실수령액','💵'],['/calc/salary/severance/','퇴직금','📦'],['/calc/salary/job-change/','이직 연봉 비교','📊']],
       guides:[['/blog/posts/unemployment-benefit-guide.html','실업급여 수급 자격과 계산법 완벽 가이드'],['/blog/posts/severance-pay-guide.html','퇴직금 계산법과 지급 기준 완벽 정리 2026']]
+    },
+    '/calc/salary/weekly-holiday-pay/': {
+      key:'weekly-holiday-pay',
+      quick:['주 15시간 이상 근무 + 개근 시 주휴수당이 발생합니다.','단시간 근로자는 (주 소정근로시간÷40)×8시간으로 비례 계산합니다.','주 40시간을 넘게 일해도 주휴수당은 40시간 기준입니다.','월급제는 보통 월 209시간에 주휴수당이 포함되어 있습니다.'],
+      related:[['/calc/salary/hourly-wage/','시급·일급 변환','⏱️'],['/calc/salary/take-home-pay/','연봉 실수령액','💵'],['/calc/salary/unemployment/','실업급여','🛟']],
+      guides:[['/blog/posts/minimum-wage-2026.html','2026년 최저시급 10,320원 - 월급·연봉 환산 총정리'],['/blog/posts/hourly-wage-guide.html','내 연봉을 시급으로 환산하면 얼마? 실질 시급 계산법']]
     }
   };
   const cfg=pages[path];
@@ -157,6 +163,7 @@
     ['take-home-pay','연봉 실수령액','/calc/salary/take-home-pay/'],
     ['comparison','연봉 비교','/calc/salary/comparison/'],
     ['hourly-wage','시급·일급 변환','/calc/salary/hourly-wage/'],
+    ['weekly-holiday-pay','주휴수당','/calc/salary/weekly-holiday-pay/'],
     ['job-change','이직 연봉 비교','/calc/salary/job-change/'],
     ['raise-rate','연봉 인상률','/calc/salary/raise-rate/'],
     ['severance','퇴직금','/calc/salary/severance/'],
@@ -172,7 +179,7 @@
         <a href="/" class="msl-link"><span class="msl-icon">🧮</span>전체 보기</a>
         <a href="/calc/realestate/" class="msl-link"><span class="msl-icon">🏠</span>부동산<span class="msl-badge">15</span></a>
         <a href="/calc/tax/" class="msl-link"><span class="msl-icon">💰</span>프리랜서 세금<span class="msl-badge">6</span></a>
-        <a href="/calc/salary/" class="msl-link msl-active"><span class="msl-icon">📈</span>이직 / 연봉<span class="msl-badge">7</span></a>
+        <a href="/calc/salary/" class="msl-link msl-active"><span class="msl-icon">📈</span>이직 / 연봉<span class="msl-badge">8</span></a>
         <a href="/calc/finance/" class="msl-link"><span class="msl-icon">🏦</span>금융 · 이자<span class="msl-badge">5</span></a>
         <a href="/calc/health/" class="msl-link"><span class="msl-icon">🏃</span>건강<span class="msl-badge">5</span></a>
         <a href="/calc/pension-welfare/" class="msl-link"><span class="msl-icon">🏛</span>연금·복지<span class="msl-badge">5</span></a>
