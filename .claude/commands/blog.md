@@ -82,7 +82,14 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - og:image = https://www.jptcalc.kr/android-chrome-512x512.png
 - canonical = https://www.jptcalc.kr/blog/posts/[파일명].html
 - favicon: ../../assets/logo.svg
-- 광고 로더: 새 글 head에 디스플레이 광고 로더(애드센스 등)를 삽입하지 않는다. 현재 수익화는 계산기 페이지 제휴 배너 중심이고, 블로그 글은 트래픽 유입에 집중한다. (애드센스 폐기, 카카오 애드핏 도입 시 별도 안내)
+- 광고: 애드센스 디스플레이 로더는 head에 넣지 않는다(애드센스 폐기). 대신 **카카오 애드핏 슬롯 1개를 본문에 반드시 삽입**한다. 위치는 목차형 요약 리스트(`</ul>`) 직후, 첫 콘텐츠 h2 직전. 기존 글 전체가 동일 unit ID·동일 코드를 쓰므로 아래를 그대로 복사한다:
+
+```html
+<div class="adfit-slot" style="text-align:center;margin:28px 0">
+  <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
+  <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+</div>
+```
 - GA: G-BRSX3F10MZ
 - Pretendard 폰트 CDN
 - **Article JSON-LD** + **FAQPage JSON-LD** 모두 `<head>` 안에 배치 (아래 JSON-LD 섹션 참고)
@@ -424,6 +431,7 @@ window.ARTICLE_INFO_CONFIG = {
 □ em dash(—), "계산기으로", "공인인증서" grep 체크
 □ CTA 계산기 URL 실제 존재 확인 (ls)
 □ 마무리 h2 제목이 "마무리"가 아닌 다른 표현인지 확인
+□ 카카오 애드핏 슬롯(adfit-slot + kakao_ad_area + ba.min.js) 1개 포함 여부 (목차 리스트 직후, 첫 h2 직전)
 ```
 
 ### 4. 결과 요약
