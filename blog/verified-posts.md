@@ -71,3 +71,6 @@
 - calc/finance/index.html (intro + 본문 + FAQ HTML/JSON-LD)
 - assets/finance-shell.js, finance-detail-shell.js (quick 팁)
 - sitemap lastmod: 변경 URL(blog 6 + calc 3)만 2026-05-29 갱신, 미변경 calc(compound/investment/loan-repayment)는 원복
+- raise-rate-industry.html (2026-06-01 검증, 오류 6개 수정 - ①5년 누적 185만원→168만원 ②소득세 구간 "6,000만원 초과분 24%"→"4,600~8,800만원 구간 한계세율 24%" ③[재검증]highlight박스 "실질 실수령 1.8~2.4%"가 표(2.7~3.0%)와 모순 → 표 기준 정합화 ④[재검증]워크드 예시가 실수령 증가(net 125만)를 물가×세전연봉(gross 155만)과 비교하는 사과-오렌지 오류로 "30만원 감소" 도출 → net 기준(4,140만×3.1%=128만) 재계산해 "약 3만원, 사실상 제자리"로 정정[표 "겨우 보합"과 일치] ⑤[재검증]시나리오1 "하위 25% 수준" 통계근거 없음 → "평균을 밑도는 수준" ⑥[재검증]본문 raw "<" 부등호(태그 오인 위험)→"≈" 교체, h2 "실질 임금 삭감"→"실질로는 제자리"[표 정합], index카드·rss desc 동기화)
+- emergency-fund-guide.html (2026-06-01 검증, 오류 1개 수정 - A씨 "3개월 무이자 할부"→"3개월 할부 연 18% 이자 발생" [본문 18% 이자 언급과 모순 해소])
+- blood-pressure-guide.html (2026-06-01 검증, 이상 없음 - AHA 2017 기준 표 정확, 각주에 대한고혈압학회 기준 차이 명시. 서브에이전트 "고혈압 1기=130-139" 오류 보고는 기각 [AHA 기준 명시 확인])

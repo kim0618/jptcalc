@@ -30,7 +30,7 @@
       key:'raise-rate',
       quick:['물가상승률을 반영해야 실질 인상률을 알 수 있습니다.','복리 효과로 매년 소폭 인상도 장기적으로 큰 차이를 만듭니다.','인상 후 과세표준 구간이 바뀌면 실수령 인상률이 낮아질 수 있습니다.','업종·직군별 평균 인상률과 비교해 보세요.'],
       related:[['/calc/salary/take-home-pay/','연봉 실수령액','💵'],['/calc/salary/comparison/','연봉 비교','⚖️'],['/calc/salary/job-change/','이직 연봉 비교','📊']],
-      guides:[['/blog/posts/salary-raise-guide.html','연봉 인상률 계산법 - 3% 오르면 실수령액 실제로 얼마 늘까?'],['/blog/posts/salary-comparison-guide.html','연봉 비교 분석법 - 동종업계 내 내 연봉 위치 파악하기']]
+      guides:[['/blog/posts/raise-rate-industry.html','연봉인상률 2026 - 업종·연차별 적정 기준표와 협상 전략'],['/blog/posts/salary-raise-guide.html','연봉 인상률 계산법 - 3% 오르면 실수령액 실제로 얼마 늘까?'],['/blog/posts/salary-comparison-guide.html','연봉 비교 분석법 - 동종업계 내 내 연봉 위치 파악하기']]
     },
     '/calc/salary/severance/': {
       key:'severance',
