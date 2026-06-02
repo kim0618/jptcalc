@@ -31,6 +31,7 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/affiliate-banner.css" />
   <link rel="stylesheet" href="/assets/health-common.css" />
   <style>
     input[type=number]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(16,185,129,0.15)}.result-card{background:linear-gradient(135deg,#ECFDF5 0%,#D1FAE5 100%);border:1px solid rgba(16,185,129,0.25)}
@@ -50,6 +51,15 @@
 
   <div class="card"><div class="card-title">기본 정보</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div class="field" style="margin-bottom:0"><div class="field-label">키</div><div class="input-wrap"><input type="number" id="iw-height" placeholder="예) 170" min="50" max="250" step="0.1" inputmode="decimal" oninput="calcIdealWeight()" /><span class="unit">cm</span></div></div><div class="field" style="margin-bottom:0"><div class="field-label">현재 체중 <span style="font-size:10px;color:var(--gray-400)">(선택, 차이 표시용)</span></div><div class="input-wrap"><input type="number" id="iw-weight" placeholder="예) 65" min="10" max="500" step="0.1" inputmode="decimal" oninput="calcIdealWeight()" /><span class="unit">kg</span></div></div></div><div class="seg-group" id="iw-sex-group" style="margin-top:12px"><button class="seg-btn active" onclick="setIwSex('male',this)">남성</button><button class="seg-btn" onclick="setIwSex('female',this)">여성</button></div><div id="iw-input-warn" style="display:none;font-size:12px;color:#EF4444;margin-top:8px"></div></div>
   <div class="result-card" id="s2-result"><div class="result-highlight"><div class="rh-label">적정 체중 (BMI 22 기준)</div><div class="rh-value" id="iw-ideal">-</div><div class="rh-sub" id="iw-range">정상 범위: -</div></div><div class="result-row" id="iw-diff-row" style="display:none;background:rgba(16,185,129,0.08);border-radius:8px;padding:10px 12px;margin:8px 0"><span class="result-label" style="font-weight:700">현재 체중과의 차이</span><span class="result-value" id="iw-diff" style="font-weight:900">-</span></div><div style="font-size:12px;color:var(--gray-500);margin:14px 0 4px;font-weight:600">BMI 구간별 체중 범위</div><div class="result-row"><span class="result-label" style="color:#3B82F6">저체중 (BMI &lt;18.5)</span><span class="result-value" id="iw-under">-</span></div><div class="result-row"><span class="result-label" style="color:#10B981">정상 (BMI 18.5~23)</span><span class="result-value" id="iw-normal">-</span></div><div class="result-row"><span class="result-label" style="color:#F59E0B">과체중 (BMI 23~25)</span><span class="result-value" id="iw-over">-</span></div><div class="result-row"><span class="result-label" style="color:#EA580C">비만 (BMI 25~30)</span><span class="result-value" id="iw-obese">-</span></div><div class="result-row"><span class="result-label" style="color:#DC2626">고도비만 (BMI ≥30)</span><span class="result-value" id="iw-hiobese">-</span></div><div style="font-size:12px;color:var(--gray-500);margin:14px 0 4px;font-weight:600">공식별 적정 체중 비교</div><div class="result-row"><span class="result-label">BMI 22 기준 (한국·아시아 표준)</span><span class="result-value" id="iw-bmi22">-</span></div><div class="result-row"><span class="result-label">미용체중 (BMI 20)</span><span class="result-value" id="iw-beauty">-</span></div><div class="result-row"><span class="result-label">브로카 공식</span><span class="result-value" id="iw-broca">-</span></div><div class="result-row result-total-row"><span class="result-total-label">로렌츠 공식</span><span class="result-total-value" id="iw-lorentz">-</span></div><p class="result-note">※ BMI 22 = 키(m)² × 22 (한국 표준). 브로카·로렌츠는 보조 참고 공식입니다. 체질·근육량에 따라 적정 범위는 달라질 수 있습니다.</p></div>
+  <a class="affiliate-banner" href="https://bestmore.net/click.php?m=iherb&a=A100703525&l=0000" target="_blank" rel="noopener noreferrer sponsored">
+      <div class="affiliate-banner__text">
+        <div class="affiliate-banner__title">운동·다이어트엔 단백질·영양제, 아이허브에서</div>
+        <div class="affiliate-banner__desc">프로틴·비타민·건강식품을 합리적인 가격에 만나보세요</div>
+      </div>
+      <span class="affiliate-banner__cta">아이허브 보기 →</span>
+    </a>
+  <p class="affiliate-disclosure">※ 위 링크는 제휴 광고이며, 이용 시 제이퍼 계산기가 일정 수수료를 받을 수 있습니다. (이용자 추가 부담 없음)</p>
+
   <div class="seo-card"><h2>적정체중 계산기 이용 안내</h2><h3>적정체중 계산법</h3><p>가장 일반적인 방법은 BMI 22 기준입니다. 적정체중 = 키(m)² × 22. 브로카 공식은 남성 (키-100)×0.9, 여성 (키-100)×0.85입니다.</p></div>
 
   <section class="guide-section seo-card">

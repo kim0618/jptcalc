@@ -31,6 +31,7 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/affiliate-banner.css" />
   <link rel="stylesheet" href="/assets/health-common.css" />
   <style>
     input[type=number]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(16,185,129,0.15)}.result-card{background:linear-gradient(135deg,#ECFDF5 0%,#D1FAE5 100%);border:1px solid rgba(16,185,129,0.25)}
@@ -50,6 +51,15 @@
 
   <div class="card"><div class="card-title">기본 정보 (해군 공식)</div><div class="seg-group" id="bf-sex-group"><button class="seg-btn active" onclick="setBfSex('male',this)">남성</button><button class="seg-btn" onclick="setBfSex('female',this)">여성</button></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div class="field" style="margin-bottom:0"><div class="field-label">키</div><div class="input-wrap"><input type="number" id="bf-height" placeholder="예) 170" min="50" max="250" step="0.1" inputmode="decimal" oninput="calcBodyFat()" /><span class="unit">cm</span></div></div><div class="field" style="margin-bottom:0"><div class="field-label">몸무게</div><div class="input-wrap"><input type="number" id="bf-weight" placeholder="예) 65" min="10" max="500" step="0.1" inputmode="decimal" oninput="calcBodyFat()" /><span class="unit">kg</span></div></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px"><div class="field" style="margin-bottom:0"><div class="field-label">허리둘레 <span style="font-size:10px;color:var(--gray-400)">배꼽 높이 줄자 측정</span></div><div class="input-wrap"><input type="number" id="bf-waist" placeholder="예) 80" min="30" max="200" step="0.1" inputmode="decimal" oninput="calcBodyFat()" /><span class="unit">cm</span></div><div style="font-size:11px;color:var(--gray-500);margin-top:4px">바지 사이즈 참고: 28인치≈71cm / 30≈76cm / 32≈81cm / 34≈86cm</div></div><div class="field" style="margin-bottom:0"><div class="field-label">목둘레 <span style="font-size:10px;color:var(--gray-400)">목의 가장 좁은 부분</span></div><div class="input-wrap"><input type="number" id="bf-neck" placeholder="예) 38" min="20" max="80" step="0.1" inputmode="decimal" oninput="calcBodyFat()" /><span class="unit">cm</span></div><div style="font-size:11px;color:var(--gray-500);margin-top:4px">남성 평균 37~40cm / 여성 평균 32~35cm</div></div></div><div style="margin-top:12px"><div class="field" id="bf-hip-field" style="margin-bottom:0;display:none"><div class="field-label">엉덩이둘레 <span style="font-size:10px;color:var(--primary)">(여성)</span></div><div class="input-wrap"><input type="number" id="bf-hip" placeholder="예) 95" min="40" max="200" step="0.1" inputmode="decimal" oninput="calcBodyFat()" /><span class="unit">cm</span></div></div></div><div id="bf-input-warn" style="display:none;font-size:12px;color:#EF4444;margin-top:8px"></div></div>
   <div class="result-card" id="s3-result"><div class="result-highlight"><div class="rh-label">체지방률</div><div class="rh-value" id="bf-value">-</div><div><span class="bmi-status" id="bf-status">-</span></div></div><div class="result-row"><span class="result-label">체지방량</span><span class="result-value" id="bf-fat-mass">체중 미입력</span></div><div class="result-row"><span class="result-label">제지방량 (근육·뼈·장기)</span><span class="result-value" id="bf-lean-mass">체중 미입력</span></div><div class="result-row"><span class="result-label" id="bf-range-label">정상 범위</span><span class="result-value" id="bf-range-value">-</span></div><div class="result-row result-total-row"><span class="result-total-label" id="bf-goal-label">건강 상한선까지 감량 필요량</span><span class="result-total-value" id="bf-goal-value">-</span></div><p class="result-note">※ 미 해군 공식 기반 추정값(±3% 오차). 정확한 측정은 DEXA 또는 InBody 기기 사용을 권장합니다.</p></div>
+  <a class="affiliate-banner" href="https://bestmore.net/click.php?m=iherb&a=A100703525&l=0000" target="_blank" rel="noopener noreferrer sponsored">
+      <div class="affiliate-banner__text">
+        <div class="affiliate-banner__title">운동·다이어트엔 단백질·영양제, 아이허브에서</div>
+        <div class="affiliate-banner__desc">프로틴·비타민·건강식품을 합리적인 가격에 만나보세요</div>
+      </div>
+      <span class="affiliate-banner__cta">아이허브 보기 →</span>
+    </a>
+  <p class="affiliate-disclosure">※ 위 링크는 제휴 광고이며, 이용 시 제이퍼 계산기가 일정 수수료를 받을 수 있습니다. (이용자 추가 부담 없음)</p>
+
   <div class="seo-card"><h2>체지방률 계산기 이용 안내</h2><h3>체지방률 정상 범위</h3><ul><li>남성: 필수지방 3~5%, 건강 10~20%, 비만 25%+</li><li>여성: 필수지방 10~13%, 건강 18~28%, 비만 32%+</li></ul></div>
 
   <section class="guide-section seo-card">

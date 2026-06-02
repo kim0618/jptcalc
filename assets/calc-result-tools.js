@@ -141,7 +141,8 @@
   function copySnapshot(card){
     const snap = extractSnapshot(card);
     if (!snap){ showToast('먼저 계산을 해주세요'); return; }
-    const text = `[${snap.title}]\n` + snap.rows.map(r => `${r.label}: ${r.value}`).join('\n');
+    const url = location.origin + location.pathname;
+    const text = `[${snap.title}]\n` + snap.rows.map(r => `${r.label}: ${r.value}`).join('\n') + `\n\n📊 제이퍼 계산기에서 계산하기\n${url}`;
     navigator.clipboard.writeText(text).then(()=>showToast('클립보드에 복사되었습니다')).catch(()=>showToast('복사 실패'));
   }
 
