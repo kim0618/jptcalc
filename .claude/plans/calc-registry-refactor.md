@@ -1,32 +1,39 @@
 # 계산기/카테고리 공통화 리팩토링 계획
 
 - **작성일**: 2026-06-01 (2026-06-01 주휴수당 추가로 실측 갱신)
-- **상태**: 📌 보류 (분석 완료, 실행은 나중)
+- **상태**: ✅ 사실상 완료 — 2026-06-01 **사이드바(59계산기+9index+홈)·홈통계·sibling 전부 registry 자동화**(calc-registry.js + JPT_sidebarLeft 헬퍼, node 검증 PASS, fallback 가드). sibling은 detail-shell이 하단 sibling-section을 숨기고 좌측 사이드바가 대체하므로 별도 작업 불필요(확인됨). **잔존 수동은 SEO 메타·JSON-LD hasPart·본문그리드·본문개수텍스트뿐**(전부 정적이라 공통화 불가, 계획대로). 현재 SOP는 §4.
 - **목적**: 계산기 1개 추가 시 수동 수정 **29곳+ → 3곳**으로 축소
 - **제약**: jptcalc는 빌드 도구 없는 순수 정적 사이트 → 공통화는 **런타임 JS**로만 가능. SEO 핵심(title/meta/JSON-LD)은 정적 유지 필수.
 - ⚠️ **실측 경고**: 처음엔 "20곳"으로 추정했으나, 2026-06-01 주휴수당(salary)을 실제 추가해보니 **29곳+**이었다. 카운트가 (shell JS 18 + 카테고리 index HTML 9 + 홈 사이드바·통계·본문) 세 종류로 흩어져 있고, 좌측 서브목록·본문 그리드도 HTML 하드코딩이었다. **아래 [부록 B] 체크리스트가 실측 기준이다.**
 
 ---
 
-## 1. 현황 진단 (하드코딩 위치 전수)
+## 1. 현황 진단 (하드코딩 위치 전수 — 2026-06-01 주휴수당 추가로 실측 갱신)
 
-### 개수 하드코딩
-- **홈 `index.html`** "58개": line 7(meta), 28(WebSite JSON-LD), 608(hero-sub), 826(본문) + "9개 카테고리"
-- **`about.html`** "58개": line 7(meta), 69(본문) / "15종" line 110
-- **카테고리 index `calc/{cat}/index.html`** 자기 개수 (title·meta·og·twitter·JSON-LD desc·본문):
-  - salary "7종/7개": line 6,7,12,13,19,20,29,44 + 본문 389
-  - tax "6종/6개": line 6,7,12,13,19,20,29,45
-  - ai "5종": line 46 / date "5종": 46 / pension-welfare "5종": 385
-  - health "5개": 433 / pet "5개": 398 / realestate "15개": 1375 (+6개 42,1583)
-  - finance: 개수 표기 거의 없음
-- **`llms.txt`**: 카테고리별 개수("7종" 등) 내가 작성
+> 처음 "개수 14곳" 추정으로 적었으나, 실제 추가해보니 **카운트만 약 20곳, 전체 29곳+**. 아래는 실측. (line 번호는 당시 기준, 편집되면 달라질 수 있으니 패턴으로 grep)
 
-### 목록 하드코딩
-- **카테고리 그리드/사이드바**: 9개 `assets/{cat}-shell.js`의 `calcLinks` 배열 (이미 동적, 단 9곳 분산)
-- **개별 페이지 sibling-list**: **33개 계산기 페이지에 HTML 하드코딩** (detail-shell 동적 생성과 혼재 — 지저분)
-- **개별 페이지 관련계산기 위젯**: `{cat}-detail-shell.js`의 related 매핑 (분산)
-- **메인 홈**: cat-card(카테고리 9), popular-item(인기 계산기 10), sidebar-link(19) 하드코딩
-- **JSON-LD hasPart**: 9개 카테고리 index 전부 계산기 목록 정적 나열
+### 개수 하드코딩 — (A) 전체 계산기 수 + (B) 카테고리별 카운트 + (C) 자기 카테고리 종수
+**(A) 전체 계산기 수 (예: 58→59)**
+- **홈 `index.html`**: ①통계 박스 `hero-stat-num">NN<span>개` (⚠️숫자·"개"가 분리돼 "NN개" 치환에 안 잡힘 → `>NN<`로 검색) ②hero-sub 본문 "NN개 계산기" ③WebSite JSON-LD description "NN개" ④본문 강조 "NN개 계산기와 9개 카테고리"
+- **`about.html`**: meta + 본문 "NN개" (2곳)
+- **`llms.txt`**: `> ...무료 계산기 NN종`
+
+**(B) 카테고리별 카운트 (좌측 사이드바, 전 카테고리) — 카운트가 3종 소스에 흩어짐 ★처음 누락한 핵심**
+- **홈 `index.html`**: `sidebar-link`의 `s-badge` (카테고리별, 멀티라인 — 텍스트와 badge가 다른 줄). ※프리랜서 세금이 5로 잘못돼 있던 기존 오류도 여기서 발견(실제 6)
+- **9개 카테고리 index `calc/*/index.html`**: 각 index가 좌측 사이드바를 **HTML 하드코딩** → `{카테고리}<span class="msl-badge">N` (9개 파일 전부에 전 카테고리 카운트)
+- **18개 `assets/*shell*.js`** (shell 9 + detail-shell 9): 계산기 페이지 사이드바용 `{카테고리}...msl-badge">N`
+
+**(C) 자기 카테고리 종수 (예: salary 7종→8종)** — 해당 카테고리 index `calc/{cat}/index.html`만: title·meta desc·og·twitter·WebApplication JSON-LD·CollectionPage JSON-LD desc·본문 (≈8곳) + `llms.txt` 해당 줄
+
+### 목록 하드코딩 (해당 카테고리)
+- **카테고리 index 좌측 계산기 목록**: `{cat}-shell.js`의 `calcLinks` 배열이 생성(자동). 단 `slugMap`(계산기별 tips·related)은 별도 추가 필요
+- **카테고리 index 좌측 서브목록 `msl-calc-list`**: ★`calc/{cat}/index.html`에 **HTML 하드코딩** (shell.js와 별개 — 처음 누락)
+- **카테고리 index 본문 그리드**: ★`calc/{cat}/index.html`에 **HTML 하드코딩** — "상황별 추천" `hub-guide-item` + 그룹 `calc-hub-card` (처음 누락)
+- **카테고리 index JSON-LD `hasPart`**: 계산기 목록 정적 나열
+- **계산기 페이지 좌측 목록**: `{cat}-detail-shell.js`의 `calcItems` 배열 (★shell.js calcLinks와 별개 — 처음 누락) + `pages` 객체(quick·related·guides)
+- **개별 페이지 sibling-list**: 동 카테고리 계산기 페이지에 HTML 하드코딩 (신규 추가 시 기존 페이지 전부 + 신규는 자기 `current`)
+- **메인 홈**: cat-card(카테고리 9, "+N" pill 포함)·popular-item·sidebar-link 하드코딩
+- **블로그 ↔ 계산기 상호링크**: 신규 계산기를 다루는 블로그 글 본문에 계산기 링크 수동 추가(역방향은 detail-shell guides)
 
 ---
 
@@ -77,11 +84,32 @@
 
 ---
 
-## 4. 공통화 완료 후 "계산기 추가 SOP" (목표 상태)
-1. `calc/{cat}/{slug}/index.html` 본체 생성
-2. `calc-registry.js`에 1줄 추가 → 그리드·사이드바·sibling·관련위젯·본문개수 **전부 자동 반영**
-3. 해당 카테고리 index의 JSON-LD `hasPart`에 1줄 + `sitemap.xml` 1줄
-→ 끝 (3곳)
+## 4. 계산기 추가 SOP — 2026-06-01 사이드바 공통화 완료 후 (현재 실제)
+
+> ⚠️ 2026-06-01 **사이드바·홈통계 공통화 완료**. 부록 B(공통화 전 전체수동)의 "카운트 28곳"은 이제 대부분 자동. 아래가 현재 기준.
+
+**✅ 자동 — `assets/calc-registry.js`의 `{cat}.calcs`에 1줄 추가하면:**
+- 계산기 페이지 좌측 사이드바 (카테고리 카운트 9개 + 계산기 목록) — `JPT_sidebarLeft` 헬퍼
+- 9개 카테고리 index 좌측 사이드바 (인라인 스크립트가 헬퍼 호출)
+- 홈 좌측 사이드바 카운트(s-badge) + 통계(JPTCALC_CONFIG 덮어씀)
+- **전체 계산기 수**(`CALC_TOTAL`)는 calcs 합계로 **동적 계산** → 홈 통계 자동
+- **detail-shell이 registry fallback** → 계산기 페이지가 `pages[path]` 항목 없어도 사이드바·관련계산기 자동 생성 (`{cat}.calcs`에만 있으면 됨)
+- 관련계산기 위젯도 같은 카테고리 다른 계산기로 자동
+- → 옛날 "카운트 28곳 + sibling + detail-shell pages 수동"이 **registry 1줄**로 축소
+- ※ 2026-06-01 연차수당(salary) 추가가 이 자동화의 검증 케이스: registry 1줄 + 본체로 사이드바·카운트·통계·관련계산기 전부 자동 확인. 검증 중 CALC_TOTAL 하드코딩·pages 의존 2개 결함 발견→수정.
+
+**⬜ 아직 수동 (계산기 추가 시 처리):**
+1. `calc/{cat}/{slug}/index.html` 본체 생성 + **`<script src="/assets/calc-registry.js"></script>`를 `{cat}-detail-shell.js` 앞에** 추가
+2. `calc-registry.js`의 `{cat}.calcs`에 `{slug,icon,name}` 1줄 (→ 위 ✅ 전부 자동)
+3. ~~sibling-list~~ **불필요** — detail-shell이 `main.page-wrap`에 `{cat}-shell-main` 클래스를 붙여(`classList.add`) 하단 `sibling-section`을 `display:none`으로 숨기고, 좌측 사이드바(registry)가 sibling 역할을 대체함. **새 계산기 본체에 sibling-section을 안 넣어도 되고, 넣어도 숨겨짐.** (주휴수당 때 sibling 8개 수정한 건 숨겨진 죽은 HTML이었음 — 무해)
+4. 해당 카테고리 index `calc/{cat}/index.html`: title·meta·og·twitter·JSON-LD desc "N종"(SEO) + JSON-LD `hasPart` + 본문 그리드 카드(상황별/그룹). ※좌측 서브목록은 자동
+5. 본문 개수 텍스트: 홈 hero-sub·about "N개", 카테고리 index "N종" (SEO·본문)
+6. `sitemap.xml` 1줄
+
+> 즉 **카운트 노가다(28곳) + sibling(동카테고리 전부) 모두 사라짐**. 남은 수동은 **SEO 메타·JSON-LD hasPart·본문 그리드·본문 개수텍스트뿐**(전부 정적 SEO라 공통화 불가, 어차피 손봐야 함). detail-shell 헬퍼 호출엔 `window.JPT_sidebarLeft?` 가드 → registry 미로드 시에도 페이지 안 깨짐.
+
+### sibling-list: 이미 자동 (좌측 사이드바가 대체) ✅
+9개 detail-shell 전부 `main`에 `{cat}-shell-main` 추가 + `.{cat}-shell-main .sibling-section{display:none}` + pages 59개 100% 커버 → 모든 계산기 페이지에서 하단 sibling 숨김, 좌측 사이드바(registry) 목록이 sibling 역할. **별도 자동화 불필요 — 공통화 사실상 완료.**
 
 ---
 

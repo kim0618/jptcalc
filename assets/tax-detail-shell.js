@@ -39,8 +39,15 @@
       guides:[['/blog/posts/medical-expense-deduction-guide.html','의료비 세액공제 - 본인·부모·자녀 지출로 얼마나 돌려받나 2026']]
     }
   };
-  const cfg=pages[path];
-  if(!cfg) return;
+  let cfg=pages[path];
+  if(!cfg){
+    var sm=path.match(/\/calc\/([^/]+)\/([^/]+)\//);
+    var R=window.CALC_REGISTRY;
+    if(sm && R && R[sm[1]] && R[sm[1]].calcs.some(function(c){return c.slug===sm[2];})){
+      var others=R[sm[1]].calcs.filter(function(c){return c.slug!==sm[2];}).slice(0,3);
+      cfg={key:sm[2], quick:[], related:others.map(function(c){return ['/calc/'+sm[1]+'/'+c.slug+'/', c.name, c.icon];}), guides:[]};
+    } else return;
+  }
 
   const style=document.createElement('style');
   style.textContent=`
@@ -143,38 +150,10 @@
   const layout=document.createElement('div');
   layout.className='mega-layout';
 
-  const calcItems=[
-    ['withholding','3.3% 원천징수','/calc/tax/withholding/'],
-    ['income-tax','종합소득세','/calc/tax/income-tax/'],
-    ['vat','부가가치세','/calc/tax/vat/'],
-    ['insurance-comparison','4대보험 비교','/calc/tax/insurance-comparison/'],
-    ['freelancer-income','월 순수입','/calc/tax/freelancer-income/'],
-    ['medical-expense','의료비 세액공제','/calc/tax/medical-expense/']
-  ];
   const left=document.createElement('aside');
   left.className='mega-sidebar-left';
   left.id='mega-sidebar-left';
-  left.innerHTML=`
-    <div class="msl-section">
-      <div class="msl-title">카테고리</div>
-      <nav class="msl-nav">
-        <a href="/" class="msl-link"><span class="msl-icon">🧮</span>전체 보기</a>
-        <a href="/calc/realestate/" class="msl-link"><span class="msl-icon">🏠</span>부동산<span class="msl-badge">15</span></a>
-        <a href="/calc/tax/" class="msl-link msl-active"><span class="msl-icon">💰</span>프리랜서 세금<span class="msl-badge">6</span></a>
-        <a href="/calc/salary/" class="msl-link"><span class="msl-icon">📈</span>이직 / 연봉<span class="msl-badge">8</span></a>
-        <a href="/calc/finance/" class="msl-link"><span class="msl-icon">🏦</span>금융 · 이자<span class="msl-badge">5</span></a>
-        <a href="/calc/health/" class="msl-link"><span class="msl-icon">🏃</span>건강<span class="msl-badge">5</span></a>
-        <a href="/calc/pension-welfare/" class="msl-link"><span class="msl-icon">🏛</span>연금·복지<span class="msl-badge">5</span></a>
-        <a href="/calc/date/" class="msl-link"><span class="msl-icon">📅</span>날짜 · D-day<span class="msl-badge">5</span></a>
-        <a href="/calc/ai/" class="msl-link"><span class="msl-icon">🤖</span>AI / 테크<span class="msl-badge">5</span></a>
-        <a href="/calc/pet/" class="msl-link"><span class="msl-icon">🐾</span>반려동물<span class="msl-badge">5</span></a>
-      </nav>
-    </div>
-    <div class="msl-divider"></div>
-    <div class="msl-section">
-      <div class="msl-title">프리랜서 세금 계산기</div>
-      <div class="msl-calc-list">${calcItems.map(item=>`<a href="${item[2]}" class="msl-calc-btn ${item[0]===cfg.key?'msl-calc-active':''}"><span class="msl-calc-dot"></span>${item[1]}</a>`).join('')}</div>
-    </div>`;
+  left.innerHTML=(window.JPT_sidebarLeft?window.JPT_sidebarLeft('tax', cfg.key):'');
 
   const guidesWidget = (cfg.guides && cfg.guides.length)
     ? `<div class="msr-widget">

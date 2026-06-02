@@ -51,8 +51,16 @@
       guides:[['/blog/posts/minimum-wage-2026.html','2026년 최저시급 10,320원 - 월급·연봉 환산 총정리'],['/blog/posts/hourly-wage-guide.html','내 연봉을 시급으로 환산하면 얼마? 실질 시급 계산법']]
     }
   };
-  const cfg=pages[path];
-  if(!cfg) return;
+  let cfg=pages[path];
+  if(!cfg){
+    // registry에 등록된 계산기면 pages 항목 없어도 활성화(사이드바·관련계산기 자동). quick/guides만 비움.
+    var sm=path.match(/\/calc\/([^/]+)\/([^/]+)\//);
+    var R=window.CALC_REGISTRY;
+    if(sm && R && R[sm[1]] && R[sm[1]].calcs.some(function(c){return c.slug===sm[2];})){
+      var others=R[sm[1]].calcs.filter(function(c){return c.slug!==sm[2];}).slice(0,3);
+      cfg={key:sm[2], quick:[], related:others.map(function(c){return ['/calc/'+sm[1]+'/'+c.slug+'/', c.name, c.icon];}), guides:[]};
+    } else return;
+  }
 
   const style=document.createElement('style');
   style.textContent=`
@@ -159,24 +167,26 @@
   const layout=document.createElement('div');
   layout.className='mega-layout';
 
-  const calcItems=[
-    ['take-home-pay','연봉 실수령액','/calc/salary/take-home-pay/'],
-    ['comparison','연봉 비교','/calc/salary/comparison/'],
-    ['hourly-wage','시급·일급 변환','/calc/salary/hourly-wage/'],
-    ['weekly-holiday-pay','주휴수당','/calc/salary/weekly-holiday-pay/'],
-    ['job-change','이직 연봉 비교','/calc/salary/job-change/'],
-    ['raise-rate','연봉 인상률','/calc/salary/raise-rate/'],
-    ['severance','퇴직금','/calc/salary/severance/'],
-    ['unemployment','실업급여','/calc/salary/unemployment/']
-  ];
-  const left=document.createElement('aside');
-  left.className='mega-sidebar-left';
-  left.id='mega-sidebar-left';
-  left.innerHTML=`
-    <div class="msl-section">
-      <div class="msl-title">카테고리</div>
-      <nav class="msl-nav">
-        <a href="/" class="msl-link"><span class="msl-icon">🧮</span>전체 보기</a>
+  // ── registry 기반 (calc-registry.js 로드 시 자동, 미로드 시 하드코딩 fallback) ──
+  const REG = window.CALC_REGISTRY, CATORDER = window.CALC_CAT_ORDER, CURCAT = 'salary';
+  const calcItems = (REG && REG[CURCAT])
+    ? REG[CURCAT].calcs.map(c=>[c.slug, c.name, `/calc/${CURCAT}/${c.slug}/`])
+    : [
+        ['take-home-pay','연봉 실수령액','/calc/salary/take-home-pay/'],
+        ['comparison','연봉 비교','/calc/salary/comparison/'],
+        ['hourly-wage','시급·일급 변환','/calc/salary/hourly-wage/'],
+        ['weekly-holiday-pay','주휴수당','/calc/salary/weekly-holiday-pay/'],
+        ['job-change','이직 연봉 비교','/calc/salary/job-change/'],
+        ['raise-rate','연봉 인상률','/calc/salary/raise-rate/'],
+        ['severance','퇴직금','/calc/salary/severance/'],
+        ['unemployment','실업급여','/calc/salary/unemployment/']
+      ];
+  const catNavHtml = (REG && CATORDER)
+    ? '<a href="/" class="msl-link"><span class="msl-icon">🧮</span>전체 보기</a>' + CATORDER.map(cat=>{
+        const c=REG[cat], act=(cat===CURCAT?' msl-active':'');
+        return `<a href="/calc/${cat}/" class="msl-link${act}"><span class="msl-icon">${c.icon}</span>${c.name}<span class="msl-badge">${c.calcs.length}</span></a>`;
+      }).join('')
+    : `<a href="/" class="msl-link"><span class="msl-icon">🧮</span>전체 보기</a>
         <a href="/calc/realestate/" class="msl-link"><span class="msl-icon">🏠</span>부동산<span class="msl-badge">15</span></a>
         <a href="/calc/tax/" class="msl-link"><span class="msl-icon">💰</span>프리랜서 세금<span class="msl-badge">6</span></a>
         <a href="/calc/salary/" class="msl-link msl-active"><span class="msl-icon">📈</span>이직 / 연봉<span class="msl-badge">8</span></a>
@@ -185,12 +195,19 @@
         <a href="/calc/pension-welfare/" class="msl-link"><span class="msl-icon">🏛</span>연금·복지<span class="msl-badge">5</span></a>
         <a href="/calc/date/" class="msl-link"><span class="msl-icon">📅</span>날짜 · D-day<span class="msl-badge">5</span></a>
         <a href="/calc/ai/" class="msl-link"><span class="msl-icon">🤖</span>AI / 테크<span class="msl-badge">5</span></a>
-        <a href="/calc/pet/" class="msl-link"><span class="msl-icon">🐾</span>반려동물<span class="msl-badge">5</span></a>
-      </nav>
+        <a href="/calc/pet/" class="msl-link"><span class="msl-icon">🐾</span>반려동물<span class="msl-badge">5</span></a>`;
+  const catTitle = (REG && REG[CURCAT]) ? REG[CURCAT].name : '이직 / 연봉';
+  const left=document.createElement('aside');
+  left.className='mega-sidebar-left';
+  left.id='mega-sidebar-left';
+  left.innerHTML=`
+    <div class="msl-section">
+      <div class="msl-title">카테고리</div>
+      <nav class="msl-nav">${catNavHtml}</nav>
     </div>
     <div class="msl-divider"></div>
     <div class="msl-section">
-      <div class="msl-title">이직 / 연봉 계산기</div>
+      <div class="msl-title">${catTitle} 계산기</div>
       <div class="msl-calc-list">${calcItems.map(item=>`<a href="${item[2]}" class="msl-calc-btn ${item[0]===cfg.key?'msl-calc-active':''}"><span class="msl-calc-dot"></span>${item[1]}</a>`).join('')}</div>
     </div>`;
 

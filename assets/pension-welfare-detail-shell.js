@@ -33,8 +33,15 @@
       guides:[['/blog/posts/long-term-care-grade-application.html','장기요양 등급 신청 절차 - 거부당하지 않는 방문조사 준비법 2026'],['/blog/posts/long-term-care-cost-guide.html','장기요양보험 비용 완전 정리 - 2026년 등급별 본인부담금과 재가·요양원 선택 기준'],['/blog/posts/retirement-living-cost.html','노후 생활비 얼마면 될까 - 30년 준비 자금 계산법']]
     }
   };
-  const cfg=pages[path];
-  if(!cfg) return;
+  let cfg=pages[path];
+  if(!cfg){
+    var sm=path.match(/\/calc\/([^/]+)\/([^/]+)\//);
+    var R=window.CALC_REGISTRY;
+    if(sm && R && R[sm[1]] && R[sm[1]].calcs.some(function(c){return c.slug===sm[2];})){
+      var others=R[sm[1]].calcs.filter(function(c){return c.slug!==sm[2];}).slice(0,3);
+      cfg={key:sm[2], quick:[], related:others.map(function(c){return ['/calc/'+sm[1]+'/'+c.slug+'/', c.name, c.icon];}), guides:[]};
+    } else return;
+  }
 
   const style=document.createElement('style');
   style.textContent=`
@@ -141,37 +148,10 @@
   const layout=document.createElement('div');
   layout.className='mega-layout';
 
-  const calcItems=[
-    ['national-pension','국민연금 수령액','/calc/pension-welfare/national-pension/'],
-    ['basic-pension','기초연금 수급 판정','/calc/pension-welfare/basic-pension/'],
-    ['retirement-living','노후 생활비','/calc/pension-welfare/retirement-living/'],
-    ['pension-tax','연금소득세','/calc/pension-welfare/pension-tax/'],
-    ['long-term-care','장기요양 비용','/calc/pension-welfare/long-term-care/']
-  ];
   const left=document.createElement('aside');
   left.className='mega-sidebar-left';
   left.id='mega-sidebar-left';
-  left.innerHTML=`
-    <div class="msl-section">
-      <div class="msl-title">카테고리</div>
-      <nav class="msl-nav">
-        <a href="/" class="msl-link"><span class="msl-icon">🧮</span>전체 보기</a>
-        <a href="/calc/realestate/" class="msl-link"><span class="msl-icon">🏠</span>부동산<span class="msl-badge">15</span></a>
-        <a href="/calc/tax/" class="msl-link"><span class="msl-icon">💰</span>프리랜서 세금<span class="msl-badge">6</span></a>
-        <a href="/calc/salary/" class="msl-link"><span class="msl-icon">📈</span>이직 / 연봉<span class="msl-badge">8</span></a>
-        <a href="/calc/finance/" class="msl-link"><span class="msl-icon">🏦</span>금융 · 이자<span class="msl-badge">5</span></a>
-        <a href="/calc/health/" class="msl-link"><span class="msl-icon">🏃</span>건강<span class="msl-badge">5</span></a>
-        <a href="/calc/pension-welfare/" class="msl-link msl-active"><span class="msl-icon">🏛</span>연금·복지<span class="msl-badge">5</span></a>
-        <a href="/calc/date/" class="msl-link"><span class="msl-icon">📅</span>날짜 · D-day<span class="msl-badge">5</span></a>
-        <a href="/calc/ai/" class="msl-link"><span class="msl-icon">🤖</span>AI / 테크<span class="msl-badge">5</span></a>
-        <a href="/calc/pet/" class="msl-link"><span class="msl-icon">🐾</span>반려동물<span class="msl-badge">5</span></a>
-      </nav>
-    </div>
-    <div class="msl-divider"></div>
-    <div class="msl-section">
-      <div class="msl-title">연금·복지 계산기</div>
-      <div class="msl-calc-list">${calcItems.map(item=>`<a href="${item[2]}" class="msl-calc-btn ${item[0]===cfg.key?'msl-calc-active':''}"><span class="msl-calc-dot"></span>${item[1]}</a>`).join('')}</div>
-    </div>`;
+  left.innerHTML=(window.JPT_sidebarLeft?window.JPT_sidebarLeft('pension-welfare', cfg.key):'');
 
   const guidesWidget = (cfg.guides && cfg.guides.length)
     ? `<div class="msr-widget">

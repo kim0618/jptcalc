@@ -33,8 +33,15 @@
       guides:[['/blog/posts/ai-infra-cost-guide.html','AI 서비스 운영 비용, 월 얼마나 들까?'],['/blog/posts/gpu-cloud-comparison.html','GPU 클라우드 비용 비교 - AWS vs GCP vs Azure']]
     }
   };
-  const cfg=pages[path];
-  if(!cfg) return;
+  let cfg=pages[path];
+  if(!cfg){
+    var sm=path.match(/\/calc\/([^/]+)\/([^/]+)\//);
+    var R=window.CALC_REGISTRY;
+    if(sm && R && R[sm[1]] && R[sm[1]].calcs.some(function(c){return c.slug===sm[2];})){
+      var others=R[sm[1]].calcs.filter(function(c){return c.slug!==sm[2];}).slice(0,3);
+      cfg={key:sm[2], quick:[], related:others.map(function(c){return ['/calc/'+sm[1]+'/'+c.slug+'/', c.name, c.icon];}), guides:[]};
+    } else return;
+  }
 
   const style=document.createElement('style');
   style.textContent=`
@@ -141,37 +148,10 @@
   const layout=document.createElement('div');
   layout.className='mega-layout';
 
-  const calcItems=[
-    ['api-token','API 토큰 비용','/calc/ai/api-token/'],
-    ['gpu-cloud','GPU 클라우드','/calc/ai/gpu-cloud/'],
-    ['saas-comparison','SaaS vs 자체구축','/calc/ai/saas-comparison/'],
-    ['llm-comparison','LLM 비교표','/calc/ai/llm-comparison/'],
-    ['infra-forecast','인프라 예측','/calc/ai/infra-forecast/']
-  ];
   const left=document.createElement('aside');
   left.className='mega-sidebar-left';
   left.id='mega-sidebar-left';
-  left.innerHTML=`
-    <div class="msl-section">
-      <div class="msl-title">카테고리</div>
-      <nav class="msl-nav">
-        <a href="/" class="msl-link"><span class="msl-icon">🧮</span>전체 보기</a>
-        <a href="/calc/realestate/" class="msl-link"><span class="msl-icon">🏠</span>부동산<span class="msl-badge">15</span></a>
-        <a href="/calc/tax/" class="msl-link"><span class="msl-icon">💰</span>프리랜서 세금<span class="msl-badge">6</span></a>
-        <a href="/calc/salary/" class="msl-link"><span class="msl-icon">📈</span>이직 / 연봉<span class="msl-badge">8</span></a>
-        <a href="/calc/finance/" class="msl-link"><span class="msl-icon">🏦</span>금융 · 이자<span class="msl-badge">5</span></a>
-        <a href="/calc/health/" class="msl-link"><span class="msl-icon">🏃</span>건강<span class="msl-badge">5</span></a>
-        <a href="/calc/pension-welfare/" class="msl-link"><span class="msl-icon">🏛</span>연금·복지<span class="msl-badge">5</span></a>
-        <a href="/calc/date/" class="msl-link"><span class="msl-icon">📅</span>날짜 · D-day<span class="msl-badge">5</span></a>
-        <a href="/calc/ai/" class="msl-link msl-active"><span class="msl-icon">🤖</span>AI / 테크<span class="msl-badge">5</span></a>
-        <a href="/calc/pet/" class="msl-link"><span class="msl-icon">🐾</span>반려동물<span class="msl-badge">5</span></a>
-      </nav>
-    </div>
-    <div class="msl-divider"></div>
-    <div class="msl-section">
-      <div class="msl-title">AI / 테크 계산기</div>
-      <div class="msl-calc-list">${calcItems.map(item=>`<a href="${item[2]}" class="msl-calc-btn ${item[0]===cfg.key?'msl-calc-active':''}"><span class="msl-calc-dot"></span>${item[1]}</a>`).join('')}</div>
-    </div>`;
+  left.innerHTML=(window.JPT_sidebarLeft?window.JPT_sidebarLeft('ai', cfg.key):'');
 
   const guidesWidget = (cfg.guides && cfg.guides.length)
     ? `<div class="msr-widget">
