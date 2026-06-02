@@ -2,6 +2,12 @@
 (function(){
   const path=(location.pathname||'').replace(/index\.html$/,'').replace(/\/+$/,'/') || '/';
   const pages={
+    '/calc/pet/dog-age/': {
+      key:'dog-age',
+      quick:['강아지 나이 × 7은 부정확합니다. 첫 1년이 사람 약 15세에 해당합니다.','같은 나이라도 몸집이 클수록 사람 나이는 더 많습니다.','소형견 10세·중형견 8세·대형견 7세·초대형견 6세 전후가 노령기 진입 시점입니다.','정확한 출생일을 모르면 치아·근육량으로 추정 나이를 입력하세요.'],
+      related:[['/calc/pet/monthly-cost/','월 생활비','🐕'],['/calc/pet/medical/','의료비 예산','💊'],['/calc/pet/lifetime-cost/','평생 양육비','📊']],
+      guides:[['/blog/posts/pet-senior-care-guide.html','노령 반려동물 케어 비용 - 10살 이후 준비'],['/blog/posts/dog-lifetime-cost.html','강아지 평생 양육비 얼마나 들까? 항목별 분석']]
+    },
     '/calc/pet/monthly-cost/': {
       key:'monthly-cost',
       quick:['사료비는 반려동물 크기와 브랜드에 따라 월 3~15만원까지 차이가 납니다.','간식·영양제 비용도 월 고정 지출에 포함해야 정확한 예산이 됩니다.','미용·목욕 비용은 견종에 따라 크게 달라질 수 있습니다.','월 생활비에 예비비(돌발 의료비 등)를 10~20% 추가로 잡으세요.'],

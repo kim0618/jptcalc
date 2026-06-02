@@ -338,6 +338,11 @@ window.CALC_REGISTRY = {
     "color": "#F472B6",
     "calcs": [
       {
+        "slug": "dog-age",
+        "icon": "🐶",
+        "name": "강아지 나이"
+      },
+      {
         "slug": "monthly-cost",
         "icon": "🐕",
         "name": "월 생활비"

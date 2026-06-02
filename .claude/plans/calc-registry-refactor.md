@@ -138,6 +138,7 @@
 
 ### 2. 개수 카운트 (가장 잘 빠뜨림 — 3종으로 흩어져 있음)
 - [ ] **홈 `index.html`** ① 좌측 사이드바 `s-badge` (해당 카테고리) ② 통계 박스 `hero-stat-num">{전체수}<span>개` (숫자·"개" 분리돼 있으니 `>NN<`로 검색) ③ 본문 hero-sub "{전체}개 계산기" ④ WebSite JSON-LD description "{전체}개"
+- [ ] **🔴 홈 `index.html` 카테고리 카드 `cat-pills` (가장 자주 까먹는 곳)** — 본문 "계산기 카테고리" 그리드의 해당 카테고리 `<a class="cat-card c-{cat}">` 안 `.cat-pills`. 칩 4개(`cat-pill`) + `cat-pill more`로 "+N"(=총 N개 − 표시 4개). 신규 계산기를 첫 칩으로 노출하고 `more`의 +N을 +1 올릴 것. `cat-desc` 설명도 갱신. **registry 자동화가 닿지 않는 순수 하드코딩 — 2026-06-02 dog-age 추가 때 이 칩만 누락돼 메인에서 강아지 나이가 안 보였음.**
 - [ ] **`about.html`** "{전체}개" (meta + 본문, 2곳)
 - [ ] **`llms.txt`** ① `> ...무료 계산기 {전체}종` ② 해당 카테고리 줄 "...{N}종"
 - [ ] **9개 카테고리 index `calc/*/index.html`** 좌측 사이드바의 해당 카테고리 `msl-badge` — **9개 파일 전부**(각 index가 전 카테고리 사이드바를 HTML 하드코딩). 패턴: `{카테고리명}<span class="msl-badge">N</span>`
