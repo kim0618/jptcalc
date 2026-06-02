@@ -146,6 +146,18 @@
     navigator.clipboard.writeText(text).then(()=>showToast('클립보드에 복사되었습니다')).catch(()=>showToast('복사 실패'));
   }
 
+  function shareSnapshot(card){
+    const snap = extractSnapshot(card);
+    if (!snap){ showToast('먼저 계산을 해주세요'); return; }
+    const url = location.origin + location.pathname;
+    const text = `[${snap.title}]\n` + snap.rows.map(r => `${r.label}: ${r.value}`).join('\n') + `\n\n📊 제이퍼 계산기에서 계산하기`;
+    if (navigator.share){
+      navigator.share({ title: snap.title, text, url }).catch(()=>{});
+    } else {
+      copySnapshot(card);
+    }
+  }
+
   function saveSnapshot(card, panel){
     const snap = extractSnapshot(card);
     if (!snap){ showToast('먼저 계산을 해주세요'); return; }
@@ -186,7 +198,8 @@
     save: '<svg viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>',
     copy: '<svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>',
     history: '<svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 3v5h5"></path><path d="M12 7v5l4 2"></path></svg>',
-    image: '<svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>'
+    image: '<svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>',
+    share: '<svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>'
   };
 
   function setupCard(card){
@@ -204,6 +217,7 @@
       panel.classList.toggle('show');
       if (panel.classList.contains('show')) renderHistory(card, panel);
     }));
+    row.appendChild(makeButton('결과공유', icons.share, ()=>shareSnapshot(card)));
     row.appendChild(makeButton('이미지저장', icons.image, ()=>saveAsImage(card)));
 
     card.insertAdjacentElement('afterend', row);
