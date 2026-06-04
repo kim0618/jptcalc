@@ -49,6 +49,12 @@
       quick:['주 15시간 이상 근무 + 개근 시 주휴수당이 발생합니다.','단시간 근로자는 (주 소정근로시간÷40)×8시간으로 비례 계산합니다.','주 40시간을 넘게 일해도 주휴수당은 40시간 기준입니다.','월급제는 보통 월 209시간에 주휴수당이 포함되어 있습니다.'],
       related:[['/calc/salary/hourly-wage/','시급·일급 변환','⏱️'],['/calc/salary/take-home-pay/','연봉 실수령액','💵'],['/calc/salary/unemployment/','실업급여','🛟']],
       guides:[['/blog/posts/minimum-wage-2026.html','2026년 최저시급 10,320원 - 월급·연봉 환산 총정리'],['/blog/posts/hourly-wage-guide.html','내 연봉을 시급으로 환산하면 얼마? 실질 시급 계산법']]
+    },
+    '/calc/salary/ordinary-wage/': {
+      key:'ordinary-wage',
+      quick:['통상임금 = 기본급 + 정기·일률적으로 지급되는 고정수당 + 정기상여금입니다.','통상시급은 월 통상임금을 월 소정근로시간 209시간으로 나눠 구합니다.','2024년 12월 대법원 판결로 재직조건부 정기상여금도 통상임금에 포함됩니다.','연장·야간·휴일근로수당과 연차수당, 주휴수당이 모두 통상임금 기준으로 계산됩니다.'],
+      related:[['/calc/salary/annual-leave-pay/','연차수당','🏖️'],['/calc/salary/weekly-holiday-pay/','주휴수당','🗓️'],['/calc/salary/hourly-wage/','시급·일급 변환','⏱️']],
+      guides:[['/blog/posts/annual-leave-guide.html','직장인 연차 일수와 수당 - 입사 1년 미만도 11일 생긴다'],['/blog/posts/parental-leave-pay.html','육아휴직급여 계산법 - 6+6 최대 3,900만원, 매월 실수령액은 얼마일까'],['/blog/posts/minimum-wage-2026.html','2026년 최저시급 10,320원 - 월급 215만원, 주휴수당 계산까지']]
     }
   };
   let cfg=pages[path];

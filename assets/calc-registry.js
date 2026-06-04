@@ -151,6 +151,11 @@ window.CALC_REGISTRY = {
         "name": "연차수당"
       },
       {
+        "slug": "ordinary-wage",
+        "icon": "🧮",
+        "name": "통상임금"
+      },
+      {
         "slug": "job-change",
         "icon": "📊",
         "name": "이직 연봉 비교"

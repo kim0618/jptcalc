@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>통상임금 계산기 2026 - 기본급·고정수당·상여로 통상시급 자동 산정 | 제이퍼 계산기</title>
+  <meta name="description" content="기본급, 고정수당, 연간 정기상여금을 입력하면 월 통상임금과 통상시급(÷209), 1일 통상임금, 연장·야간·휴일근로수당 단가가 한 번에 나옵니다. 월 통상임금 300만원이면 통상시급은 약 14,354원입니다. 2024년 대법원 판결로 재직조건부 상여금도 통상임금에 포함됩니다." />
+  <meta name="keywords" content="통상임금계산기,통상시급계산,연장근로수당,야간수당,휴일수당,통상임금산정,209시간,정기상여금통상임금" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/salary/ordinary-wage/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="통상임금 계산기 2026 - 기본급·고정수당·상여로 통상시급 자동 산정 | 제이퍼 계산기" />
+  <meta property="og:description" content="기본급·고정수당·연간 정기상여금으로 월 통상임금과 통상시급(÷209), 1일 통상임금, 연장·야간·휴일근로수당 단가를 한 번에 계산합니다. 2024년 대법원 판결로 재직조건부 상여금도 통상임금에 포함됩니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/salary/ordinary-wage/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="통상임금 계산기 2026 - 기본급·고정수당·상여로 통상시급 자동 산정 | 제이퍼 계산기" />
+  <meta name="twitter:description" content="기본급·고정수당·연간 정기상여금으로 월 통상임금·통상시급(÷209)·1일 통상임금·연장/야간/휴일근로수당 단가를 한 번에 계산합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/salary-common.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"통상임금 계산기",
+    "url":"https://www.jptcalc.kr/calc/salary/ordinary-wage/",
+    "description":"기본급·고정수당·연간 정기상여금으로 월 통상임금과 통상시급(÷209), 1일 통상임금, 연장·야간·휴일근로수당 단가를 자동 계산합니다. 월 통상임금 300만원이면 통상시급은 약 14,354원입니다.",
+    "applicationCategory":"FinanceApplication",
+    "operatingSystem":"All",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+      {"@type":"ListItem","position":2,"name":"이직/연봉 계산기","item":"https://www.jptcalc.kr/calc/salary/"},
+      {"@type":"ListItem","position":3,"name":"통상임금 계산기","item":"https://www.jptcalc.kr/calc/salary/ordinary-wage/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"통상임금은 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"월 통상임금 = 기본급 + 정기·일률적으로 지급되는 고정수당 + 연간 정기상여금÷12입니다. 여기서 통상시급은 월 통상임금을 월 소정근로시간 209시간으로 나눠 구합니다. 예를 들어 월 통상임금이 300만원이면 통상시급은 3,000,000÷209 = 약 14,354원이고, 1일 통상임금(8시간)은 약 114,833원입니다. 통상시급은 연장·야간·휴일근로수당과 연차수당, 주휴수당을 계산하는 기준이 됩니다."}},{"@type":"Question","name":"왜 209시간으로 나누나요?","acceptedAnswer":{"@type":"Answer","text":"209시간은 주 40시간 근무자의 월 소정근로시간입니다. 주 40시간 근로시간에 유급주휴 8시간을 더한 48시간에 한 달 평균 주수(약 4.345주)를 곱하면 약 209시간이 됩니다. 주 소정근로시간이 40시간보다 짧은 단시간 근로자는 이 기준시간도 비례해서 줄어들기 때문에 통상시급이 달라집니다. 본 계산기는 주 40시간 기준 209시간을 적용합니다."}},{"@type":"Question","name":"정기상여금도 통상임금에 포함되나요?","acceptedAnswer":{"@type":"Answer","text":"네. 2024년 12월 대법원 전원합의체 판결로 통상임금의 '고정성' 요건이 폐기되어, 재직조건이나 일정 근무일수 조건이 붙은 정기상여금도 통상임금에 포함됩니다. 정기적·일률적으로 지급되기만 하면 '재직 중인 사람에게만 준다'는 조건이 있어도 통상임금입니다. 연간 정기상여금을 12로 나눠 월 통상임금에 더하면 됩니다. 다만 실적에 따라 변동하는 성과급은 여전히 제외됩니다."}},{"@type":"Question","name":"통상임금에 포함되는 수당과 제외되는 수당은?","acceptedAnswer":{"@type":"Answer","text":"포함: 기본급, 직책수당·기술수당·자격수당 같은 매달 고정 지급되는 수당, 고정 식대, 정기상여금입니다. 제외: 실적·성과에 따라 변동하는 성과급, 실제 근무에 따라 달라지는 연장·야간·휴일근로수당, 출장비·경조사비 같은 실비변상적 금품, 복리후생적 금품입니다. 핵심 기준은 정기성과 일률성이며, 매달 일정하게 모든 근로자에게 지급되면 통상임금에 들어갑니다."}},{"@type":"Question","name":"통상임금이 높으면 어떤 점이 유리한가요?","acceptedAnswer":{"@type":"Answer","text":"통상임금은 연장·야간·휴일근로수당, 연차수당, 주휴수당, 해고예고수당, 육아휴직급여 산정의 기준입니다. 통상임금이 높을수록 이 수당들도 함께 올라갑니다. 예를 들어 통상시급이 14,354원이면 연장근로 1시간은 1.5배인 21,531원이 됩니다. 회사가 기본급은 낮게 두고 통상임금에서 빠지는 명목 수당을 늘리면 각종 법정수당이 줄어들 수 있으므로, 급여명세서의 고정수당이 통상임금에 제대로 반영됐는지 확인하는 것이 중요합니다."}}]}</script>
+  <style>
+    /* ordinary-wage 고유 스타일 - 공통 스타일은 /assets/salary-common.css 참조 */
+    .input-wrap{position:relative}
+    .input-wrap .unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none}
+    input[type=number]{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
+    input[type=number]::placeholder{color:var(--gray-400);font-weight:400}
+    input[type=number]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(59,130,246,0.15)}
+    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
+    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
+    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
+    .result-card{background:linear-gradient(135deg,#EFF6FF 0%,#DBEAFE 100%);border:1px solid rgba(59,130,246,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-row+.result-row{border-top:1px solid rgba(0,0,0,0.07)}
+    .result-total-row{border-top:1px solid rgba(0,0,0,0.15)!important;margin-top:4px;padding-top:14px!important}
+    .result-total-value{font-size:24px;font-weight:900;color:var(--primary)}
+    .result-sub-title{font-size:11px;font-weight:800;letter-spacing:0.6px;color:var(--gray-500);margin:18px 0 8px}
+    .result-hero{text-align:center;padding:4px 0 16px;border-bottom:1px solid rgba(0,0,0,0.1);margin-bottom:8px}
+    .result-hero-label{font-size:12px;font-weight:700;color:var(--gray-500);margin-bottom:4px}
+    .result-hero-value{font-size:32px;font-weight:900;color:var(--primary);line-height:1.1}
+    .result-hero-sub{font-size:12px;color:var(--gray-500);margin-top:6px}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/salary/" class="nav-item active"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/salary/">이직/연봉 계산기</a><span class="breadcrumb-sep">›</span><span>통상임금 계산기</span></div>
+    <div class="page-header-badge">📌 통상시급 = 월 통상임금 ÷ 209</div>
+    <h1>통상임금 계산기</h1>
+    <p>기본급과 고정수당, 정기상여금을 입력하면 통상시급과 연장·야간·휴일근로수당 단가가 바로 나옵니다</p>
+  </div>
+    <div class="card">
+      <div class="card-title">통상임금 계산</div>
+      <div class="info-box">
+        <span class="info-icon">📌</span>
+        <p>월 통상임금 = <strong>기본급 + 고정수당 + 연간 정기상여금÷12</strong> · 통상시급 = 월 통상임금 ÷ 209</p>
+      </div>
+      <div class="field">
+        <div class="field-label">기본급 <span class="label-hint">월, 만원 단위</span></div>
+        <div class="input-wrap">
+          <input type="number" id="base" placeholder="예) 250" oninput="calcOrdinary()" />
+          <span class="unit">만원</span>
+        </div>
+        <div class="converted" id="base-conv"></div>
+      </div>
+      <div class="field">
+        <div class="field-label">고정수당 합계 <span class="label-hint">직책·기술·식대 등, 월 만원</span></div>
+        <div class="input-wrap">
+          <input type="number" id="fixed" placeholder="예) 50" oninput="calcOrdinary()" />
+          <span class="unit">만원</span>
+        </div>
+        <div class="converted" id="fixed-conv"></div>
+      </div>
+      <div class="field">
+        <div class="field-label">연간 정기상여금 <span class="label-hint">1년 총액, 만원 (선택)</span></div>
+        <div class="input-wrap">
+          <input type="number" id="bonus" placeholder="예) 600" oninput="calcOrdinary()" />
+          <span class="unit">만원</span>
+        </div>
+        <div class="converted" id="bonus-conv"></div>
+      </div>
+    </div>
+    <div class="result-card" id="result">
+      <div class="result-hero">
+        <div class="result-hero-label">통상시급</div>
+        <div class="result-hero-value" id="r-hourly">-</div>
+        <div class="result-hero-sub">월 통상임금 <span id="r-monthly">-</span> ÷ 209시간</div>
+      </div>
+      <div class="result-row"><span class="result-label">1일 통상임금 (8시간)</span><span class="result-value" id="r-daily">-</span></div>
+      <div class="result-sub-title">통상시급으로 계산되는 수당 (1시간당)</div>
+      <div class="result-row"><span class="result-label">연장근로 (× 1.5)</span><span class="result-value" id="r-ot">-</span></div>
+      <div class="result-row"><span class="result-label">야간근로 가산 (× 0.5)</span><span class="result-value" id="r-night">-</span></div>
+      <div class="result-row"><span class="result-label">휴일근로 (× 1.5)</span><span class="result-value" id="r-holiday">-</span></div>
+      <div id="notice" class="result-note" style="margin-top:12px;"></div>
+    </div>
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>통상임금이란? 계산기는 언제 쓰나요?</h2>
+      <p>통상임금은 근로자에게 정기적·일률적으로 지급하기로 정한 시간급·일급·월급을 말합니다. 연장근로수당, 야간수당, 휴일근로수당, 연차수당, 주휴수당, 해고예고수당, 육아휴직급여가 모두 이 통상임금을 기준으로 계산됩니다. 통상임금을 알아야 내가 받을 각종 법정수당이 맞는지 검산할 수 있습니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>연장·야간·휴일수당 검산</strong><span>야근·특근 수당이 통상시급 기준으로 제대로 나왔는지 확인</span></div>
+        <div class="guide-box"><strong>연차·주휴수당 기준</strong><span>1일 통상임금으로 연차수당, 주휴수당을 계산</span></div>
+        <div class="guide-box"><strong>급여 협상</strong><span>고정수당이 통상임금에 반영되는지 확인해 손해 방지</span></div>
+      </div>
+    </div>
+    <div class="guide-card">
+      <h2>통상임금 계산 원리와 단계</h2>
+      <p>통상임금은 매달 고정적으로 받는 임금을 모아 시간당 단가로 환산하는 것입니다. 기준이 되는 월 소정근로시간은 주 40시간 근무자의 경우 209시간입니다.</p>
+      <ul>
+        <li><strong>1단계.</strong> 기본급 확인 - 매달 고정 지급되는 기본 임금</li>
+        <li><strong>2단계.</strong> 고정수당 합산 - 직책·기술·자격수당, 고정 식대 등 정기·일률 지급분</li>
+        <li><strong>3단계.</strong> 정기상여금 월할 - 연간 정기상여금 ÷ 12를 더함</li>
+        <li><strong>4단계.</strong> 통상시급 = 월 통상임금 ÷ 209시간</li>
+        <li><strong>5단계.</strong> 1일 통상임금 = 통상시급 × 8시간, 각 가산수당 = 통상시급 × 배율</li>
+      </ul>
+    </div>
+    <div class="guide-card">
+      <h2>2024년 대법원 판결로 바뀐 통상임금</h2>
+      <p>2024년 12월 19일 대법원 전원합의체는 통상임금의 판단 기준을 11년 만에 바꿨습니다. 기존에는 정기성·일률성·고정성 세 가지를 모두 충족해야 통상임금으로 인정했는데, 이 가운데 <strong>'고정성' 요건이 폐기</strong>됐습니다.</p>
+      <div class="highlight-box">재직조건(지급일에 재직 중일 것)이나 일정 근무일수 조건이 붙은 정기상여금도, 정기적·일률적으로 지급되기만 하면 통상임금에 포함됩니다.</div>
+      <p>과거에는 "재직자에게만 지급한다"는 조건이 붙은 상여금은 통상임금에서 빠졌지만, 이제는 포함됩니다. 그만큼 통상임금이 올라가 연장·야간·휴일수당과 연차수당도 함께 늘어날 수 있습니다. 다만 이 판결은 선고일(2024년 12월 19일) 이후의 통상임금 산정에 적용되며, 그 이전 기간까지 소급하지는 않습니다. 본 계산기에서 연간 정기상여금을 함께 입력하는 이유입니다.</p>
+    </div>
+    <div class="guide-card">
+      <h2>통상임금에 포함되는 항목 / 제외되는 항목</h2>
+      <p>핵심 기준은 정기성과 일률성입니다. 매달 일정하게, 모든 근로자(또는 일정 조건의 근로자 전체)에게 지급되면 통상임금에 들어갑니다.</p>
+      <div class="table-wrap"><table>
+        <tr><th>구분</th><th>해당 항목</th><th>통상임금</th></tr>
+        <tr><td>기본급</td><td>매달 고정 지급되는 기본 임금</td><td class="rate">포함</td></tr>
+        <tr><td>고정수당</td><td>직책·기술·자격·면허 수당</td><td class="rate">포함</td></tr>
+        <tr><td>식대(고정)</td><td>전 직원 매달 동일 지급</td><td class="rate">포함</td></tr>
+        <tr><td>정기상여금</td><td>정기·일률 지급(재직조건 포함)</td><td class="rate">포함</td></tr>
+        <tr><td>성과급</td><td>실적·평가에 따라 변동</td><td class="rate">제외</td></tr>
+        <tr><td>연장·야간·휴일수당</td><td>실제 근무에 따라 변동</td><td class="rate">제외</td></tr>
+        <tr><td>실비변상</td><td>출장비·경조사비 등</td><td class="rate">제외</td></tr>
+      </table></div>
+      <p>2024년 12월 대법원 판결로 재직조건부 정기상여금이 '제외'에서 '포함'으로 바뀐 점이 가장 큰 변화입니다.</p>
+    </div>
+    <div class="guide-card">
+      <h2>실제 계산 예시</h2>
+      <h3>예시 1 - 정민아(34세, 사무직) 기본급 250만 + 직책수당 50만</h3>
+      <p>정민아 씨는 기본급 250만원에 매달 고정으로 받는 직책수당 50만원이 있습니다. 정기상여금은 없습니다. 월 통상임금은 300만원입니다.</p>
+      <ul>
+        <li>통상시급 = 3,000,000 ÷ 209 = 14,354원</li>
+        <li>1일 통상임금 = 14,354 × 8 = 114,833원</li>
+        <li>연장근로 1시간 = 14,354 × 1.5 = <strong>21,531원</strong></li>
+      </ul>
+      <p>정민아 씨가 평일에 2시간 야근하면 연장근로수당으로 약 43,062원을 받아야 합니다.</p>
+      <h3>예시 2 - 이수현(40세, 생산직) 기본급 280만 + 식대 20만 + 연간 상여 600만</h3>
+      <p>이수현 씨는 기본급 280만원, 고정 식대 20만원에 더해 연 600만원의 정기상여금을 받습니다. 상여금은 재직조건이 붙어 있지만 2024년 판결로 통상임금에 포함됩니다.</p>
+      <ul>
+        <li>월 통상임금 = 280만 + 20만 + (600만 ÷ 12) = 350만원</li>
+        <li>통상시급 = 3,500,000 ÷ 209 = 16,746원</li>
+        <li>야간근로 1시간 가산 = 16,746 × 0.5 = <strong>8,373원</strong></li>
+      </ul>
+      <p>만약 상여금을 통상임금에서 빼고 300만원으로만 계산하면 통상시급이 약 1,400원 낮아져, 야근·휴일근무가 많을수록 손해가 커집니다.</p>
+      <h3>예시 3 - 박지훈(28세, 신입) 기본급 230만 단독</h3>
+      <p>박지훈 씨는 별도 고정수당 없이 기본급 230만원만 받습니다. 통상시급은 2026년 최저시급 10,320원을 넘어야 하므로, 기본급만으로도 최저월급 약 215만원 이상이어야 합니다.</p>
+      <ul>
+        <li>통상시급 = 2,300,000 ÷ 209 = 11,005원</li>
+        <li>휴일근로 1시간 = 11,005 × 1.5 = <strong>16,507원</strong></li>
+      </ul>
+    </div>
+    <div class="guide-card">
+      <h2>통상임금으로 계산되는 수당들</h2>
+      <p>통상임금을 정확히 알면 아래 수당이 모두 자동으로 풀립니다. 각 수당은 통상시급 또는 1일 통상임금에 배율을 곱해 산정합니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>연장근로수당</strong><span>통상시급 × 1.5 × 연장시간. 8시간 초과 또는 주 40시간 초과분</span></div>
+        <div class="guide-box"><strong>야간근로수당</strong><span>통상시급 × 0.5 가산 × 야간시간. 밤 10시~새벽 6시</span></div>
+        <div class="guide-box"><strong>휴일근로수당</strong><span>통상시급 × 1.5 × 시간(8시간 초과분은 2.0배)</span></div>
+        <div class="guide-box"><strong>연차수당</strong><span>1일 통상임금 × 미사용 연차일수</span></div>
+        <div class="guide-box"><strong>주휴수당</strong><span>1일 소정근로시간 × 통상시급(주 15시간 이상)</span></div>
+        <div class="guide-box"><strong>해고예고수당</strong><span>30일분 이상의 통상임금</span></div>
+      </div>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>통상임금은 어떻게 계산하나요?</h3><p>월 통상임금 = 기본급 + 정기·일률적으로 지급되는 고정수당 + 연간 정기상여금÷12입니다. 여기서 통상시급은 월 통상임금을 월 소정근로시간 209시간으로 나눠 구합니다. 예를 들어 월 통상임금이 300만원이면 통상시급은 3,000,000÷209 = 약 14,354원이고, 1일 통상임금(8시간)은 약 114,833원입니다. 통상시급은 연장·야간·휴일근로수당과 연차수당, 주휴수당을 계산하는 기준이 됩니다.</p></div>
+      <div class="faq-item"><h3>왜 209시간으로 나누나요?</h3><p>209시간은 주 40시간 근무자의 월 소정근로시간입니다. 주 40시간 근로시간에 유급주휴 8시간을 더한 48시간에 한 달 평균 주수(약 4.345주)를 곱하면 약 209시간이 됩니다. 주 소정근로시간이 40시간보다 짧은 단시간 근로자는 이 기준시간도 비례해서 줄어들기 때문에 통상시급이 달라집니다. 본 계산기는 주 40시간 기준 209시간을 적용합니다.</p></div>
+      <div class="faq-item"><h3>정기상여금도 통상임금에 포함되나요?</h3><p>네. 2024년 12월 대법원 전원합의체 판결로 통상임금의 '고정성' 요건이 폐기되어, 재직조건이나 일정 근무일수 조건이 붙은 정기상여금도 통상임금에 포함됩니다. 정기적·일률적으로 지급되기만 하면 '재직 중인 사람에게만 준다'는 조건이 있어도 통상임금입니다. 연간 정기상여금을 12로 나눠 월 통상임금에 더하면 됩니다. 다만 실적에 따라 변동하는 성과급은 여전히 제외됩니다.</p></div>
+      <div class="faq-item"><h3>통상임금에 포함되는 수당과 제외되는 수당은?</h3><p>포함: 기본급, 직책수당·기술수당·자격수당 같은 매달 고정 지급되는 수당, 고정 식대, 정기상여금입니다. 제외: 실적·성과에 따라 변동하는 성과급, 실제 근무에 따라 달라지는 연장·야간·휴일근로수당, 출장비·경조사비 같은 실비변상적 금품, 복리후생적 금품입니다. 핵심 기준은 정기성과 일률성이며, 매달 일정하게 모든 근로자에게 지급되면 통상임금에 들어갑니다.</p></div>
+      <div class="faq-item"><h3>통상임금이 높으면 어떤 점이 유리한가요?</h3><p>통상임금은 연장·야간·휴일근로수당, 연차수당, 주휴수당, 해고예고수당, 육아휴직급여 산정의 기준입니다. 통상임금이 높을수록 이 수당들도 함께 올라갑니다. 예를 들어 통상시급이 14,354원이면 연장근로 1시간은 1.5배인 21,531원이 됩니다. 회사가 기본급은 낮게 두고 통상임금에서 빠지는 명목 수당을 늘리면 각종 법정수당이 줄어들 수 있으므로, 급여명세서의 고정수당이 통상임금에 제대로 반영됐는지 확인하는 것이 중요합니다.</p></div>
+      <div class="update-note">최종 검토: 2026.06.04 · 계산 결과는 참고용입니다.</div>
+    </div>
+  </div>
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '근로기준법·통상임금 산정 기준, 월 소정근로시간 209시간(주 40시간)',
+    appliedFrom: '2026년 기준 (2024.12.19 대법원 전원합의체 판결 반영)',
+    exceptions: [
+      '통상임금은 정기·일률적으로 지급되는 기본급·고정수당·정기상여금으로 산정합니다',
+      '실적에 따라 변동하는 성과급과 실제 근무에 따른 연장·야간·휴일수당은 제외됩니다',
+      '주 40시간 미만 단시간 근로자는 월 소정근로시간(209시간)이 비례 감소합니다',
+    ],
+    references: [
+      { name: '고용노동부(moel.go.kr)', url: 'https://www.moel.go.kr' },
+      { name: '근로기준법', url: 'https://www.law.go.kr' },
+    ],
+    lastReviewed: '2026.06',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 이직/연봉 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/salary/take-home-pay/" class="sibling-link">💵 연봉 실수령액</a>
+      <a href="/calc/salary/hourly-wage/" class="sibling-link">⏱️ 시급·일급 변환</a>
+      <a href="/calc/salary/weekly-holiday-pay/" class="sibling-link">🗓️ 주휴수당</a>
+      <a href="/calc/salary/annual-leave-pay/" class="sibling-link">🏖️ 연차수당</a>
+      <a href="/calc/salary/ordinary-wage/" class="sibling-link current">🧮 통상임금</a>
+      <a href="/calc/salary/severance/" class="sibling-link">📦 퇴직금</a>
+      <a href="/calc/salary/unemployment/" class="sibling-link">🛟 실업급여</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script>
+function comma(n){ return Math.round(n).toLocaleString() + '원'; }
+function calcOrdinary(){
+  const base = parseFloat(document.getElementById('base').value) || 0;
+  const fixed = parseFloat(document.getElementById('fixed').value) || 0;
+  const bonus = parseFloat(document.getElementById('bonus').value) || 0;
+  document.getElementById('base-conv').textContent = base > 0 ? comma(base*10000) : '';
+  document.getElementById('fixed-conv').textContent = fixed > 0 ? comma(fixed*10000) : '';
+  document.getElementById('bonus-conv').textContent = bonus > 0 ? comma(bonus*10000)+' (월 '+comma(bonus*10000/12)+')' : '';
+  const res = document.getElementById('result');
+  const monthly = base*10000 + fixed*10000 + bonus*10000/12;
+  if (monthly <= 0) { res.classList.remove('show'); return; }
+  res.classList.add('show');
+  const hourly = monthly / 209;
+  const daily = hourly * 8;
+  const ot = hourly * 1.5;
+  const night = hourly * 0.5;
+  const holiday = hourly * 1.5;
+  document.getElementById('r-monthly').textContent = comma(monthly);
+  document.getElementById('r-hourly').textContent = comma(hourly);
+  document.getElementById('r-daily').textContent = comma(daily);
+  document.getElementById('r-ot').textContent = comma(ot);
+  document.getElementById('r-night').textContent = comma(night);
+  document.getElementById('r-holiday').textContent = comma(holiday);
+  const notice = document.getElementById('notice');
+  const MIN_HOURLY = 10320; // 2026년 최저시급
+  let warn = '';
+  if (hourly < MIN_HOURLY) {
+    warn = `<br><span style="color:#DC2626;font-weight:600">⚠️ 통상시급이 2026년 최저시급(10,320원)보다 낮습니다. 고정수당·정기상여금이 누락되지 않았는지 확인하세요.</span>`;
+  }
+  notice.innerHTML = `월 통상임금 ${comma(monthly)} 기준, 통상시급은 <strong>${comma(hourly)}</strong>입니다.${warn}<br><span style="font-size:11px;color:var(--gray-500)">※ 매달 고정 지급되는 수당과 정기상여금을 빠짐없이 포함했는지 확인하세요. 성과급·실비변상 금품은 제외됩니다.</span>`;
+  notice.style.color = '';
+}
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/calc-registry.js"></script>
+<script src="/assets/salary-detail-shell.js"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '근로기준법·통상임금 2026년 기준 (2024.12.19 대법원 전원합의체 판결 반영)',
+  basisDate: '2026년 기준',
+  referenceOrg: '고용노동부',
+  lastReviewed: '2026.06.04',
+  category: 'salary'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/blog-review-footer.js"></script>
+</body>
+</html>
