@@ -30,7 +30,8 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - **완료 클러스터: 연봉(salary)** | 2026-06-01~06-03 완료 | **성과 점검 예정: 2026-07-06** (트리거 B 발동)
   - 허브: raise-rate-industry / 위성: raise-or-quit-guide · hourly-wage-guide · four-insurance-vs-33-comparison
 - **완료 클러스터: 건강(health)** | 허브: weight-by-height-2026(2026-06-03) / 위성: bmi-guide(기존)
-- **현재 클러스터: 없음** | 다음 후보: 국민연금(pension-welfare) #5 허브 → 위성: 임의가입·조기수령·납부예외 | 사용자 확인 후 시작
+- **현재 클러스터: 국민연금(pension-welfare)** | 2026-06-05 시작 | **성과 점검 예정: 2026-07-03**
+  - 허브: national-pension-40years(2026-06-05) / 위성 예정: 조기수령 심화·납부예외·추납 가이드 | 임의가입은 national-pension-voluntary.html로 기커버
 
 ## 네이버 타겟 주제 큐
 
@@ -43,7 +44,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 2. [완료 2026-06-03] 2026 키별 표준·정상체중 기준표 (남녀·나이대) → weight-by-height-2026.html
 3. 2026 부동산 보유세(재산세+종부세) 계산 총정리 (키워드 "부동산 보유세 계산기" CTR 10% / realestate/property-tax-comprehensive)
 4. 부동산 중개수수료 요율표 2026 - 매매·전월세 구간별 (키워드 "부동산 법정수수료" / realestate/brokerage)
-5. 국민연금 40년 납부 시 예상 수령액 (가입기간별 표) (키워드 "국민연금 40년 납부시 수령액" / pension-welfare/national-pension)
+5. [완료 2026-06-05] 국민연금 40년 납부 시 예상 수령액 (가입기간별 표) → national-pension-40years.html
 6. GPT·Claude API 토큰 비용 비교 2026 (키워드 "api 토큰 비용"·"claude 토큰 비용" 고CTR / ai/api-token)
 
 ### Tier 2 - 승자 클러스터 확장
