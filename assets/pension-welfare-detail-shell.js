@@ -6,7 +6,7 @@
       key:'national-pension',
       quick:['국민연금은 최소 10년(120개월) 이상 납부해야 수령할 수 있습니다.','조기수령(60세)은 1년당 6% 감액, 연기수령(70세)은 1년당 7.2% 증액됩니다.','2026년 소득대체율은 41.5%로, 40년 가입 기준 평균소득의 41.5%가 목표 연금액입니다.','정확한 예상 연금액은 국민연금공단(nps.or.kr)에서 공인인증서 없이 조회 가능합니다.'],
       related:[['/calc/pension-welfare/basic-pension/','기초연금 수급 판정','💰'],['/calc/pension-welfare/retirement-living/','노후 생활비','🏡'],['/calc/pension-welfare/pension-tax/','연금소득세','💼']],
-      guides:[['/blog/posts/pension-tax-guide.html','연금소득세 완전 정리 - IRP·연금저축 세율·실수령액·절세 전략'],['/blog/posts/retirement-living-cost.html','노후 생활비 얼마면 될까 - 30년 준비 자금 계산법'],['/blog/posts/retirement-living-late-start.html','40대·50대 노후 준비 늦었을까 - 시작 나이별 월 저축 목표와 3가지 시나리오']]
+      guides:[['/blog/posts/national-pension-additional-payment.html','국민연금 추납(추후납부) 조건·보험료 계산·신청방법 총정리 2026'],['/blog/posts/pension-tax-guide.html','연금소득세 완전 정리 - IRP·연금저축 세율·실수령액·절세 전략'],['/blog/posts/retirement-living-cost.html','노후 생활비 얼마면 될까 - 30년 준비 자금 계산법'],['/blog/posts/retirement-living-late-start.html','40대·50대 노후 준비 늦었을까 - 시작 나이별 월 저축 목표와 3가지 시나리오']]
     },
     '/calc/pension-welfare/basic-pension/': {
       key:'basic-pension',

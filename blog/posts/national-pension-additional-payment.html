@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>국민연금 추납(추후납부) 조건·보험료 계산·신청방법 총정리 2026 | 제이퍼 계산기 블로그</title>
+<meta name="description" content="국민연금 추납(추후납부)은 납부예외·적용제외 기간을 최대 119개월까지 메워 가입기간을 늘리는 제도. 보험료는 신청 당시 기준소득월액 × 9.5%로 산정, 최대 60회 분할 가능. 경력단절 주부·실직자·수급권 미달자 시나리오별 추납 수익률(연 11%대)과 손익분기점, 임의가입자 상한, 신청 방법까지 정리.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="국민연금 추납(추후납부) 조건·보험료 계산·신청방법 총정리 2026 | 제이퍼 계산기 블로그">
+<meta property="og:description" content="국민연금 추납(추후납부)은 납부예외·적용제외 기간을 최대 119개월까지 메워 가입기간을 늘리는 제도. 보험료는 신청 당시 기준소득월액 × 9.5%로 산정, 최대 60회 분할 가능. 경력단절 주부·실직자·수급권 미달자 시나리오별 추납 수익률과 손익분기점, 신청 방법까지.">
+<meta property="og:url" content="https://www.jptcalc.kr/blog/posts/national-pension-additional-payment.html">
+<meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png">
+<meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png">
+<link rel="canonical" href="https://www.jptcalc.kr/blog/posts/national-pension-additional-payment.html">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "국민연금 추납(추후납부) 조건·보험료 계산·신청방법 총정리 2026",
+  "description": "국민연금 추납(추후납부)은 납부예외·적용제외 기간을 최대 119개월까지 메워 가입기간을 늘리는 제도. 보험료는 신청 당시 기준소득월액 × 9.5%로 산정, 최대 60회 분할 가능. 경력단절 주부·실직자·수급권 미달자 시나리오별 추납 수익률(연 11%대)과 손익분기점, 임의가입자 상한, 신청 방법까지 정리.",
+  "author": { "@type": "Organization", "name": "제이퍼 계산기", "url": "https://www.jptcalc.kr" },
+  "publisher": { "@type": "Organization", "name": "제이퍼 계산기", "url": "https://www.jptcalc.kr", "logo": { "@type": "ImageObject", "url": "https://www.jptcalc.kr/android-chrome-512x512.png" } },
+  "datePublished": "2026-06-07",
+  "dateModified": "2026-06-07",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.jptcalc.kr/blog/posts/national-pension-additional-payment.html" },
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "연금·복지",
+  "inLanguage": "ko"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "국민연금 추납은 아무나 신청할 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "추납은 누구나 신청할 수 있는 것이 아닙니다. 신청 시점에 국민연금에 가입 중인 상태여야 하고, 과거에 한 번이라도 보험료를 납부한 이력이 있어야 합니다. 즉 직장가입자, 지역가입자, 임의가입자, 임의계속가입자 중 하나로 현재 가입되어 있어야 합니다. 한 번도 보험료를 낸 적이 없는 순수 미가입자는 추납 대상이 아닙니다. 또한 추납이 가능한 기간은 납부예외 기간(실직·휴직·사업중단 등으로 보험료를 면제받은 기간)과 적용제외 기간(전업주부 등 의무가입 대상에서 빠져 있던 기간)으로 한정됩니다. 보험료를 체납한 기간은 추납이 아니라 일반 체납 보험료 납부로 처리되므로 구분해야 합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "추납 보험료는 어떻게 계산되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "추납 보험료는 과거 납부예외 당시의 보험료가 아니라 추납을 신청하는 시점의 연금보험료를 기준으로 계산합니다. 계산식은 신청 당시 기준소득월액 × 연금보험료율 × 추납 개월수입니다. 2026년 보험료율은 연금개혁에 따라 9.5%가 적용됩니다. 예를 들어 신청 당시 기준소득월액이 300만원이고 96개월을 추납한다면 300만원 × 9.5% × 96 = 2,736만원입니다. 직장가입자도 추납 보험료는 사업주 부담분 없이 본인이 전액 부담한다는 점에 유의해야 합니다. 임의가입자가 추납하는 경우에는 기준소득월액이 전체 가입자 평균소득월액인 A값(2026년 309만원)을 넘을 수 없도록 상한이 적용됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "추납 보험료가 부담되는데 나눠서 낼 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "추납 보험료는 일시납과 분할납 중 선택할 수 있습니다. 분할납은 최대 60회(개월)까지 나눠 낼 수 있어 목돈 부담을 크게 줄일 수 있습니다. 예를 들어 570만원을 추납해야 한다면 일시납은 570만원을 한 번에 내지만, 60회 분할을 선택하면 매달 약 9만 5천원씩 5년간 납부하면 됩니다. 다만 분할납을 선택하면 1년 만기 정기예금 이자율 수준의 이자가 가산되므로 총 납부액은 일시납보다 다소 늘어납니다. 분할 횟수는 추납 개월수에 따라 제한될 수 있으며, 가입자가 60세에 가까워 가입기간이 얼마 남지 않은 경우에는 분할 가능 횟수가 줄어들 수 있습니다. 분할 중 가입 자격을 잃으면 남은 금액을 일시 납부해야 추납이 인정됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "추납하면 무조건 이득인가요? 손해 보는 경우는 없나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "추납은 대부분의 경우 유리하지만 무조건 이득은 아닙니다. 추납으로 늘어난 연금은 사망할 때까지 받으므로, 손익분기점을 넘기려면 연금을 받기 시작한 뒤 보통 8~9년 이상 생존해야 합니다. 65세부터 받는다면 73~74세 전후가 본전 시점이므로, 평균 기대수명을 고려하면 대부분 이득 구간에 들어옵니다. 다만 추납으로도 가입기간 10년을 채우지 못하거나, 건강상 기대수명이 매우 짧다고 판단되는 경우에는 추납의 실익이 줄어듭니다. 또 한 가지 주의할 점은 연금 수령액이 늘면 건강보험 피부양자 자격이나 기초연금 산정에 영향을 줄 수 있다는 것입니다. 단순히 수령액 증가만 볼 것이 아니라 건강보험료·기초연금까지 함께 시뮬레이션해보는 것이 좋습니다."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.jptcalc.kr/"}, {"@type": "ListItem", "position": 2, "name": "블로그", "item": "https://www.jptcalc.kr/blog/"}, {"@type": "ListItem", "position": 3, "name": "연금·복지", "item": "https://www.jptcalc.kr/blog/?cat=연금·복지"}, {"@type": "ListItem", "position": 4, "name": "국민연금 추납(추후납부) 조건·보험료 계산·신청방법 총정리 2026", "item": "https://www.jptcalc.kr/blog/posts/national-pension-additional-payment.html"}]}</script>
+<style>
+  :root { --primary: #0EA5E9; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Pretendard', -apple-system, sans-serif; color: #111827; background: #fff; line-height: 1.7; }
+  .container { max-width: 780px; margin: 0 auto; padding: 24px 20px 60px; }
+  h1 { font-size: clamp(22px, 4vw, 30px); font-weight: 800; line-height: 1.35; margin-bottom: 12px; }
+  h2 { font-size: clamp(18px, 3vw, 22px); font-weight: 700; margin: 36px 0 14px; color: #111827; }
+  h3 { font-size: 16px; font-weight: 700; margin: 22px 0 10px; color: #1F2937; }
+  p { margin-bottom: 16px; font-size: 15px; color: #374151; }
+  .post-tag { display: inline-block; background: rgba(14,165,233,0.15); color: #0EA5E9; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  .post-meta { font-size: 13px; color: #9CA3AF; margin-bottom: 28px; }
+  .highlight-box { background: rgba(14,165,233,0.08); border-left: 4px solid #0EA5E9; border-radius: 0 8px 8px 0; padding: 16px 20px; margin: 20px 0; color: #0C4A6E; }
+  .highlight-box strong { color: #0EA5E9; }
+  .table-wrap { overflow-x: auto; margin: 20px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { background: #F3F4F6; color: #374151; font-weight: 700; padding: 10px 12px; text-align: center; border: 1px solid #E5E7EB; }
+  td { padding: 9px 12px; border: 1px solid #E5E7EB; text-align: center; color: #374151; }
+  td.primary { color: #0EA5E9; font-weight: 700; }
+  td.highlight { background: rgba(14,165,233,0.07); font-weight: 700; }
+  td.danger { color: #EF4444; font-weight: 700; }
+  tr:nth-child(even) td { background: #F9FAFB; }
+  .scenario-box { background: #F9FAFB; border-radius: 12px; padding: 20px 22px; margin: 20px 0; }
+  .scenario-box h3 { margin-top: 0; }
+  .cta-box { background: linear-gradient(135deg, rgba(14,165,233,0.08), rgba(14,165,233,0.02)); border: 1.5px solid rgba(14,165,233,0.3); border-radius: 14px; padding: 24px 26px; margin: 32px 0; text-align: center; }
+  .cta-box p { margin-bottom: 14px; font-size: 15px; color: #374151; }
+  .cta-btn { display: inline-block; background: #0EA5E9; color: #fff; font-size: 15px; font-weight: 700; padding: 12px 28px; border-radius: 8px; text-decoration: none; transition: background 0.2s; }
+  .cta-btn:hover { background: #0284C7; }
+  .faq-item { border: 1px solid #E5E7EB; border-radius: 10px; margin: 12px 0; }
+  .faq-q { font-weight: 700; padding: 14px 18px; font-size: 15px; cursor: pointer; background: #F9FAFB; border-radius: 10px; }
+  .faq-a { padding: 14px 18px; font-size: 14px; color: #4B5563; line-height: 1.75; border-top: 1px solid #E5E7EB; }
+  .adfit-slot { text-align: center; margin: 28px 0; }
+  .reversal-box { background: #FFF7ED; border-left: 4px solid #F59E0B; border-radius: 0 8px 8px 0; padding: 16px 20px; margin: 20px 0; color: #92400E; }
+  .reversal-box strong { color: #D97706; }
+  .step-list { counter-reset: step-counter; list-style: none; padding: 0; margin: 16px 0; }
+  .step-list li { counter-increment: step-counter; position: relative; padding: 12px 16px 12px 52px; margin-bottom: 10px; background: #F9FAFB; border-radius: 8px; font-size: 14px; color: #374151; }
+  .step-list li::before { content: counter(step-counter); position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 26px; height: 26px; background: #0EA5E9; color: #fff; border-radius: 50%; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+</style>
+</head>
+<body>
+<div class="container">
+  <span class="post-tag">연금·복지</span>
+  <h1>국민연금 추납(추후납부) 조건·보험료 계산·신청방법 총정리 2026</h1>
+  <div class="post-meta">📅 2026.06.07 · ⏱ 18분 읽기</div>
+
+  <p>"목돈 2,700만원을 국민연금에 한 번에 넣는다고요? 차라리 그 돈을 정기예금에 넣는 게 낫지 않나요?" 추납을 처음 접한 분들이 흔히 보이는 반응입니다. 그런데 실제로 숫자를 따져보면 이야기가 달라집니다.</p>
+  <p>결론부터 말하면, 추납으로 늘리는 국민연금은 사실상 연 11%대의 확정 수익을 종신으로 보장받는 것과 같습니다. 은행 정기예금 금리가 3% 안팎인 시대에 이만한 수익률은 찾기 어렵습니다. 다만 모두에게 무조건 유리한 것은 아니고, 자격 조건과 손익분기점을 정확히 따져봐야 합니다.</p>
+  <p>이 글에서는 국민연금 추후납부(추납)의 신청 자격, 보험료 계산 방법, 분할납부 활용법, 그리고 경력단절 주부·실직자·수급권 미달자 세 가지 실제 시나리오별 손익을 2026년 기준으로 하나하나 짚어봅니다. 모든 계산은 2026년 보험료율 9.5%와 소득대체율 43%, A값 309만원을 적용했습니다.</p>
+
+  <div class="highlight-box">
+    이 글이 필요한 분: <strong>결혼·육아로 경력이 단절됐던 분</strong>, 실직·휴직으로 국민연금 납부예외 기간이 있는 분, 60세가 가까운데 가입기간 10년을 못 채운 분, 노후 연금을 한 푼이라도 늘리고 싶은 분
+  </div>
+
+  <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+    <li>추납 신청 자격 - 현재 가입자 + 과거 1개월 이상 납부 이력</li>
+    <li>추납 가능 기간 최대 119개월 - 납부예외·적용제외 기간만 해당</li>
+    <li>추납 보험료 계산식과 기준소득월액별 비용표 (100만~309만원)</li>
+    <li>최대 60회 분할납부 - 570만원을 월 9.5만원으로 쪼개는 법</li>
+    <li>경력단절·실직·수급권 미달 3가지 시나리오별 추납 수익률</li>
+    <li>추납 연 11%대 수익 vs 정기예금 3% - 반전 비교</li>
+  </ul>
+
+  <!-- ① 상단: 목차 직후 -->
+  <div class="adfit-slot">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+
+  <h2>국민연금 추납이란 무엇인가</h2>
+  <p>추납, 정식 명칭으로는 추후납부 제도는 과거에 국민연금 보험료를 내지 못했던 기간의 보험료를 나중에 한꺼번에 또는 나눠서 납부해 그 기간을 가입기간으로 인정받는 제도입니다. 핵심은 '가입기간을 사는 것'입니다. 국민연금 수령액은 가입기간에 비례해 늘어나기 때문에, 빈 기간을 메우면 그만큼 평생 받는 연금이 커집니다.</p>
+  <p>여기서 추납이 가능한 기간은 정해져 있습니다. 보험료를 한 푼도 안 낸 기간이 모두 대상이 되는 것은 아닙니다.</p>
+
+  <h3>추납 대상이 되는 기간 2가지</h3>
+  <p><strong>첫째, 납부예외 기간입니다.</strong> 직장을 다니다 실직하거나, 사업이 어려워 소득이 끊기거나, 군 복무·재학 등으로 보험료 납부를 일시 면제받았던 기간이 여기에 해당합니다. 납부예외는 가입 자격은 유지되지만 보험료만 내지 않는 상태입니다.</p>
+  <p><strong>둘째, 적용제외 기간입니다.</strong> 가장 대표적인 사례가 전업주부입니다. 소득이 없는 배우자는 국민연금 의무가입 대상에서 빠지는데, 이때 무소득 배우자로 적용제외되었던 기간을 나중에 추납할 수 있습니다. 단, 적용제외 기간 추납은 1999년 4월 이후의 기간만 인정됩니다.</p>
+  <p>반대로 추납이 안 되는 기간도 분명히 해두겠습니다. 보험료를 내야 하는데 안 낸 '체납' 기간은 추납 대상이 아니라 일반 체납 보험료로 처리됩니다. 또 한 번도 국민연금에 가입한 적 없는 순수 미가입자는 추납 자체를 신청할 수 없습니다.</p>
+
+  <div class="highlight-box">
+    <strong>한 줄 정리:</strong> 추납 = (과거 납부예외·적용제외 기간) × (지금 시점 보험료). 빈 가입기간을 현재가로 사서 평생 연금을 늘리는 제도.
+  </div>
+
+  <h2>추납 신청 자격 - 누가 할 수 있나</h2>
+  <p>추납은 아무나 할 수 없습니다. 두 가지 조건을 동시에 만족해야 합니다.</p>
+  <p><strong>조건 1. 신청 시점에 국민연금 가입 중이어야 합니다.</strong> 직장가입자, 지역가입자, 임의가입자, 임의계속가입자 중 어느 하나로 현재 가입되어 있어야 합니다. 예를 들어 경력단절 전업주부가 추납하려면 먼저 임의가입으로 국민연금에 다시 들어온 뒤에 추납을 신청해야 합니다. 임의가입 절차는 <a href="../posts/national-pension-voluntary.html" style="color:#0EA5E9;">국민연금 임의가입 신청 조건과 보험료</a>에서 자세히 다룹니다.</p>
+  <p><strong>조건 2. 과거에 1개월 이상 보험료 납부 이력이 있어야 합니다.</strong> 추납은 '빈 기간을 메우는' 제도이므로, 채울 기준이 되는 정상 납부 기록이 최소한 있어야 합니다.</p>
+  <p>두 조건을 모두 충족하면 직장가입자든 임의가입자든 추납을 신청할 수 있습니다. 다만 추납 보험료를 산정하는 기준이 가입 유형에 따라 조금씩 달라지므로, 뒤에서 시나리오로 구체적으로 살펴보겠습니다.</p>
+
+  <h2>추납 가능 기간은 최대 119개월</h2>
+  <p>2020년 12월 법 개정으로 추납 가능 기간에 상한이 생겼습니다. 그 전에는 사실상 무제한 추납이 가능해 일부 고소득층이 노후에 목돈을 한꺼번에 추납해 연금을 크게 늘리는 '재테크 수단'으로 악용한다는 지적이 있었습니다. 이에 따라 현재는 추납 가능 기간이 최대 119개월(10년 미만)로 제한됩니다.</p>
+  <p>즉 납부예외나 적용제외 기간이 15년이라도 최대 119개월까지만 추납할 수 있습니다. 반대로 빈 기간이 119개월보다 짧으면 그 기간만큼만 추납이 가능합니다. 예를 들어 적용제외 기간이 8년(96개월)이라면 96개월 전부를 추납할 수 있습니다.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>기준소득월액</th>
+          <th>월 보험료(9.5%)</th>
+          <th>12개월 추납</th>
+          <th>60개월 추납</th>
+          <th>119개월(최대)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>100만원</td><td>9.5만원</td><td>114만원</td><td>570만원</td><td>1,131만원</td></tr>
+        <tr><td>200만원</td><td>19만원</td><td>228만원</td><td>1,140만원</td><td>2,261만원</td></tr>
+        <tr><td>300만원</td><td>28.5만원</td><td>342만원</td><td>1,710만원</td><td>3,392만원</td></tr>
+        <tr><td class="primary">309만원(A값 상한)</td><td class="primary">29.4만원</td><td>352만원</td><td>1,761만원</td><td class="highlight">3,493만원</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:13px;color:#6B7280;margin-top:-12px">※ 2026년 보험료율 9.5% 적용. 임의가입자는 기준소득월액이 A값(309만원)을 초과할 수 없습니다.</p>
+
+  <div style="margin:24px 0;overflow-x:auto">
+  <svg role="img" width="100%" viewBox="0 0 680 180" xmlns="http://www.w3.org/2000/svg">
+    <title>기준소득월액별 119개월 최대 추납 보험료 비교</title>
+    <rect width="680" height="180" rx="12" fill="#F9FAFB"/>
+    <text x="24" y="30" font-size="13" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">119개월(최대) 추납 시 총 보험료 (2026년 9.5% 기준)</text>
+    <text x="24" y="64" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">월 100만원</text>
+    <rect x="120" y="50" width="160" height="20" rx="4" fill="#0EA5E9" opacity="0.5"/>
+    <text x="288" y="65" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">1,131만원</text>
+    <text x="24" y="98" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">월 200만원</text>
+    <rect x="120" y="84" width="320" height="20" rx="4" fill="#0EA5E9" opacity="0.65"/>
+    <text x="448" y="99" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">2,261만원</text>
+    <text x="24" y="132" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">월 300만원</text>
+    <rect x="120" y="118" width="480" height="20" rx="4" fill="#0EA5E9" opacity="0.85"/>
+    <text x="608" y="133" font-size="12" font-weight="700" fill="#0EA5E9" font-family="Pretendard,sans-serif" text-anchor="end">3,392만원</text>
+    <text x="24" y="166" font-size="11" fill="#9CA3AF" font-family="Pretendard,sans-serif">추납 개월수가 같아도 기준소득월액에 따라 보험료가 3배까지 차이</text>
+  </svg>
+  </div>
+
+  <h2>추납 보험료, 이렇게 계산한다</h2>
+  <p>추납 보험료에서 가장 많이 오해하는 부분이 있습니다. 과거 납부예외 당시의 소득이 아니라 추납을 신청하는 '현재 시점'의 보험료를 기준으로 계산한다는 점입니다. 계산식은 단순합니다.</p>
+  <p style="background:#F3F4F6;padding:12px 16px;border-radius:8px;font-family:monospace;font-size:14px">추납 보험료 = 신청 당시 기준소득월액 × 보험료율(9.5%) × 추납 개월수</p>
+  <p>여기서 핵심은 '신청 당시 기준소득월액'입니다. 직장가입자라면 현재 받는 월급이 기준이 되고, 임의가입자라면 본인이 신고한 기준소득월액이 기준입니다. 소득이 높을 때 추납하면 그만큼 보험료도 비싸지므로, 소득이 낮은 시기에 추납하는 것이 비용 측면에서 유리합니다.</p>
+  <p>한 가지 더 주의할 점은 직장가입자의 추납 보험료입니다. 평소 직장가입자는 보험료의 절반을 회사가 부담하지만, 추납 보험료는 회사 부담분이 없어 본인이 전액을 냅니다. 따라서 월급명세서에 찍히는 평소 공제액보다 추납 보험료가 두 배 가까이 크게 느껴질 수 있습니다.</p>
+
+  <h2>시나리오 A - 경력단절 후 재취업한 김씨, 8년을 추납하다</h2>
+  <div class="scenario-box">
+    <h3>상황 설정</h3>
+    <p>1974년생 김씨(현재 52세). 결혼·육아로 직장을 그만두고 10년간 전업주부로 지내다 재취업했습니다. 재취업 전까지 적용제외 기간이 있었고, 그중 8년(96개월)을 추납하려 합니다. 현재 직장가입자로 기준소득월액은 300만원, 추납 전 가입기간은 12년입니다.</p>
+    <p><strong>추납 보험료 계산:</strong></p>
+    <p style="background:#F3F4F6;padding:12px 16px;border-radius:8px;font-family:monospace;font-size:14px">300만원 × 9.5% × 96개월<br>= 28.5만원 × 96 = <strong>2,736만원</strong></p>
+    <p><strong>추납 효과 (가입기간 12년 → 20년):</strong></p>
+    <p style="background:#F3F4F6;padding:12px 16px;border-radius:8px;font-family:monospace;font-size:14px">추납 전(12년): 0.43 × (12/40) × (309+300)/2 = <strong>39.3만원</strong><br>추납 후(20년): 0.43 × (20/40) × (309+300)/2 = <strong>65.5만원</strong></p>
+  </div>
+
+  <p>월 수령액이 39.3만원에서 65.5만원으로 26.2만원 늘었습니다. 연간으로 환산하면 314만원입니다. 2,736만원을 내고 평생 매년 314만원을 더 받는 셈입니다. 원금을 회수하는 데 걸리는 기간은 2,736만원 ÷ 314만원 = 약 8.7년입니다.</p>
+  <p>김씨가 65세부터 연금을 받기 시작한다면 73.7세 무렵에 추납 원금을 모두 회수하고, 그 이후 받는 모든 연금은 순수익입니다. 한국 여성의 기대수명이 87세인 점을 고려하면, 73.7세 이후로도 13년 이상을 더 받게 됩니다. 그래서 뭐가 달라지느냐. 김씨는 2,736만원을 한 번 내고 87세까지 산다고 가정하면 추납으로 늘어난 연금만 약 7,000만원을 받습니다. 낸 돈의 2.5배가 넘습니다.</p>
+
+  <!-- ② 본문중간: 중간 h2 직전 -->
+  <div class="adfit-slot">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-88xhdLeiIK3V35kb" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+
+  <h2>은행 예금은 3%인데 추납은 사실상 연 11% 확정 수익이다</h2>
+  <div class="reversal-box">
+    <strong>직관을 뒤집는 사실:</strong> 목돈을 국민연금에 넣으면 손해 같지만, 추납은 종신토록 받는 연 11%대 확정 수익 상품이다. 시중 어떤 정기예금이나 안전자산도 따라올 수 없다.
+  </div>
+
+  <p>앞서 김씨 사례에서 2,736만원을 내고 매년 314만원을 평생 받는다고 했습니다. 이를 수익률로 환산하면 314 ÷ 2,736 = 약 11.5%입니다. 게다가 이 11.5%는 사망할 때까지 멈추지 않는 종신 수익이고, 매년 물가상승률만큼 연금액이 올라가는 물가연동까지 붙습니다.</p>
+  <p>시중 금융상품과 비교해보면 격차가 분명해집니다.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>노후 자금 운용 방법</th>
+          <th>기대 수익률</th>
+          <th>특징</th>
+          <th>물가 반영</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="primary">국민연금 추납</td><td class="primary">연 11%대(종신)</td><td>가입기간 증가, 평생 수령</td><td>O (물가연동)</td></tr>
+        <tr><td>정기예금</td><td>연 3% 안팎</td><td>원금 보장, 만기 후 소멸</td><td>X</td></tr>
+        <tr><td>연금저축펀드</td><td>연 4~6%(변동)</td><td>세액공제, 원금 손실 가능</td><td>X</td></tr>
+        <tr><td>개인연금보험</td><td>연 2~4%</td><td>공시이율 변동, 사업비 차감</td><td>일부</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:13px;color:#6B7280;margin-top:-12px">※ 추납 수익률은 65세 수령 개시·기대수명까지 생존 가정의 단순 환산값. 실제 수익률은 수령 시점 A값·가입이력·생존 기간에 따라 달라집니다.</p>
+
+  <p>물론 추납의 '연 11%'는 예금 이자처럼 매년 통장에 꽂히는 것이 아니라, 연금을 오래 받을수록 실현되는 수익입니다. 그래서 손익분기점, 즉 얼마나 오래 살아야 본전이 되는지가 중요합니다. 다행히 대부분의 추납은 본전 시점이 73~74세 전후로, 평균 기대수명보다 한참 앞서 회수됩니다. 개인적으로는, 노후에 안정적인 현금흐름을 확보한다는 측면에서 여유 자금이 있다면 추납만큼 확실한 선택은 드물다고 봅니다.</p>
+
+  <h2>시나리오 B - 실직 납부예외 2년을 분할납부로 메운 이씨</h2>
+  <div class="scenario-box">
+    <h3>상황 설정</h3>
+    <p>1981년생 이씨(현재 45세). 코로나 시기에 실직해 24개월간 납부예외 상태였고, 재취업 후 그 2년을 추납하려 합니다. 현재 기준소득월액 250만원. 다만 2,000만원 넘는 김씨 사례와 달리 목돈 여유가 없어 분할납부를 고려 중입니다.</p>
+    <p><strong>추납 보험료 계산:</strong></p>
+    <p style="background:#F3F4F6;padding:12px 16px;border-radius:8px;font-family:monospace;font-size:14px">250만원 × 9.5% × 24개월<br>= 23.75만원 × 24 = <strong>570만원</strong></p>
+    <p><strong>분할납부 선택 시 (60회 분할):</strong></p>
+    <p style="background:#F3F4F6;padding:12px 16px;border-radius:8px;font-family:monospace;font-size:14px">570만원 ÷ 60회 = 월 <strong>약 9.5만원</strong> (+ 정기예금 수준 이자 가산)</p>
+  </div>
+
+  <p>이씨가 일시납으로 570만원을 한 번에 내기는 부담스럽지만, 60회 분할을 선택하면 매달 9만 5천원씩 5년간 나눠 내면 됩니다. 커피 몇 잔 값을 5년간 적립하는 셈입니다. 분할납부는 1년 만기 정기예금 이자율 수준의 이자가 붙어 총액이 일시납보다 조금 늘지만, 목돈 부담을 없애주는 효과가 큽니다.</p>
+  <p>추납 효과를 보면, 이씨의 가입기간이 18년에서 20년으로 늘어난다고 가정할 때 월 수령액은 약 54만원에서 60만원으로 6만원 증가합니다. 연 72만원입니다. 570만원을 내고 매년 72만원을 평생 받으니 원금 회수는 약 7.9년, 65세 수령 시 73세 무렵이면 본전입니다. 분할납부 회차는 추납 개월수와 가입자 나이에 따라 달라지므로, 정확한 분할 가능 횟수는 국민연금공단(1355)에 확인하는 것이 좋습니다.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>납부 방식 (570만원 기준)</th>
+          <th>월 부담액</th>
+          <th>납부 기간</th>
+          <th>이자 가산</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>일시납</td><td>570만원</td><td>1회</td><td>없음</td></tr>
+        <tr><td>12회 분할</td><td>약 47.5만원</td><td>1년</td><td>소액</td></tr>
+        <tr><td>24회 분할</td><td>약 23.8만원</td><td>2년</td><td>있음</td></tr>
+        <tr><td class="primary">60회 분할(최대)</td><td class="primary">약 9.5만원</td><td>5년</td><td>있음</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:13px;color:#6B7280;margin-top:-12px">※ 분할 시 1년 만기 정기예금 이자율 수준의 이자가 가산되어 총 납부액은 일시납보다 다소 늘어납니다.</p>
+
+  <h2>시나리오 C - 60세 코앞, 가입기간 10년을 못 채운 정씨</h2>
+  <p>추납의 가치가 가장 극적으로 드러나는 경우가 바로 이 시나리오입니다. 국민연금은 가입기간이 10년(120개월) 미만이면 평생 받는 노령연금이 아니라, 낸 보험료에 이자를 더한 '반환일시금'을 한 번에 받고 끝납니다. 이 10년 문턱을 추납으로 넘느냐 못 넘느냐에 따라 노후가 완전히 달라집니다.</p>
+
+  <div class="scenario-box">
+    <h3>상황 설정</h3>
+    <p>1967년생 정씨(현재 59세). 자영업을 하며 납부예외가 잦아 실제 가입기간이 7년(84개월)에 불과합니다. 1년 뒤 60세가 되는데, 이대로면 10년을 못 채워 연금 대신 반환일시금만 받게 됩니다. 과거 납부예외 기간 중 36개월(3년)을 추납해 가입기간 10년을 채우려 합니다. 마지막 기준소득월액 200만원.</p>
+    <p><strong>추납 보험료 계산:</strong></p>
+    <p style="background:#F3F4F6;padding:12px 16px;border-radius:8px;font-family:monospace;font-size:14px">200만원 × 9.5% × 36개월<br>= 19만원 × 36 = <strong>684만원</strong></p>
+    <p><strong>추납 전후 비교:</strong></p>
+    <p style="background:#F3F4F6;padding:12px 16px;border-radius:8px;font-family:monospace;font-size:14px">추납 전(7년): 반환일시금 약 1,600만원 1회 수령 후 종료<br>추납 후(10년): 0.43 × (10/40) × (309+200)/2 = <strong>월 27.4만원 평생</strong></p>
+  </div>
+
+  <p>정씨가 684만원을 추납해 가입기간 10년을 채우면, 일시금 한 번으로 끝날 뻔한 국민연금이 매달 27.4만원씩 평생 나오는 종신연금으로 바뀝니다. 65세부터 20년간 받는다고만 가정해도 27.4만원 × 12개월 × 20년 = 약 6,570만원입니다. 684만원을 내고 6,570만원을 돌려받는 구조입니다.</p>
+  <p>여기서 반환일시금 1,600만원을 포기하는 것 아니냐고 생각할 수 있는데, 반환일시금은 그대로 가입기간에 녹아들어 연금으로 환산됩니다. 즉 일시금을 포기하는 게 아니라 평생연금으로 전환되는 것입니다. 60세가 가까운데 가입기간이 8~9년이라면, 추납이야말로 가장 확실한 노후 대비책입니다. 가입기간을 채우는 또 다른 방법인 임의계속가입과 비교한 내용은 <a href="../posts/national-pension-40years.html" style="color:#0EA5E9;">국민연금 40년 납부 시 수령액 전체 표</a>에서 가입기간별 수령액으로 확인할 수 있습니다.</p>
+
+  <a href="https://www.bumohyetaek.kr/guide/national-pension-back-payment-strategy" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:14px;background:#F0FDF4;border:1px solid #BBF7D0;border-radius:12px;padding:16px 20px;margin:20px 0;text-decoration:none;">
+    <span style="font-size:28px;line-height:1">👨‍👩‍👧</span>
+    <div style="flex:1;min-width:0">
+      <div style="font-size:11px;font-weight:700;color:#10B981;margin-bottom:3px;letter-spacing:0.3px">부모님께도 알려드리세요</div>
+      <div style="font-size:14px;font-weight:700;color:#111827;line-height:1.4">국민연금 추납 일시납 vs 분할납 - 몇 세에 납부해야 유리한가</div>
+    </div>
+    <span style="font-size:18px;color:#10B981;flex-shrink:0">→</span>
+  </a>
+
+  <h2>세 시나리오 추납 손익 한눈에 비교</h2>
+  <p>지금까지 본 세 사례를 표로 정리하면, 추납의 효과가 상황에 따라 어떻게 다른지 한눈에 들어옵니다.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>구분</th>
+          <th>김씨(경력단절)</th>
+          <th>이씨(실직)</th>
+          <th>정씨(수급권)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>추납 개월수</td><td>96개월</td><td>24개월</td><td>36개월</td></tr>
+        <tr><td>추납 보험료</td><td>2,736만원</td><td>570만원</td><td>684만원</td></tr>
+        <tr><td>가입기간 변화</td><td>12 → 20년</td><td>18 → 20년</td><td>7 → 10년</td></tr>
+        <tr><td>월 수령액 증가</td><td class="primary">+26.2만원</td><td class="primary">+6.0만원</td><td class="primary">+27.4만원(신규)</td></tr>
+        <tr><td>원금 회수 시점</td><td>약 8.7년</td><td>약 7.9년</td><td>약 2년*</td></tr>
+        <tr><td>핵심 효과</td><td>연금 67% 증액</td><td>소액 분할로 부담 ↓</td><td class="highlight">일시금 → 종신연금</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:13px;color:#6B7280;margin-top:-12px">※ 정씨의 회수 시점은 포기하던 반환일시금 대비가 아니라 추납 보험료 684만원 대비 기준으로, 종신연금 전환 효과가 가장 큽니다.</p>
+
+  <p>표에서 보듯 추납의 효과는 가입기간 10년 문턱을 넘느냐(정씨), 연금액을 크게 키우느냐(김씨), 부담 없이 빈 기간을 메우느냐(이씨)에 따라 달라집니다. 공통점은 셋 다 낸 돈보다 훨씬 많이 돌려받는다는 것입니다.</p>
+
+  <h2>임의가입자 추납에는 상한이 있다</h2>
+  <p>경력단절 전업주부처럼 임의가입으로 국민연금에 들어온 뒤 추납하는 경우에는 추가 규칙이 하나 있습니다. 임의가입자가 추납할 때 기준소득월액은 전체 가입자 평균소득월액인 A값(2026년 309만원)을 초과할 수 없습니다. 즉 본인이 아무리 높은 소득을 신고하더라도 추납 보험료 산정 시에는 A값 기준 보험료가 상한입니다.</p>
+  <p>이 상한은 사실 가입자에게 유리하게 작용하는 경우가 많습니다. 임의가입자는 보통 소득이 없거나 낮으므로, 낮은 기준소득월액으로 추납하면 보험료 부담을 줄일 수 있기 때문입니다. 예를 들어 임의가입 최저 수준인 기준소득월액 100만원으로 추납하면 60개월에 570만원이지만, 같은 60개월을 A값 상한 309만원으로 추납하면 1,761만원이 됩니다. 다만 추납 시 기준소득월액을 낮게 잡으면 그만큼 늘어나는 연금액도 작아지므로, 보험료 부담과 연금 증가분을 함께 따져 결정해야 합니다.</p>
+  <p>임의가입과 추납 중 무엇을 먼저, 어떤 순서로 할지는 개인 상황에 따라 다릅니다. 임의가입 자체의 손익은 <a href="../posts/national-pension-voluntary.html" style="color:#0EA5E9;">국민연금 임의가입 신청 조건과 보험료</a>에서, 수령 후 세금 처리는 <a href="../posts/national-pension-income-tax.html" style="color:#0EA5E9;">국민연금 연금소득세 완전 정리</a>에서 확인할 수 있습니다.</p>
+
+  <h2>추납 신청 방법과 절차</h2>
+  <p>추납 신청은 온라인 또는 전국 국민연금공단 지사에서 할 수 있습니다. 신청 전에 본인의 납부예외·적용제외 기간이 얼마나 되는지부터 확인해야 합니다.</p>
+
+  <ol class="step-list">
+    <li><strong>추납 가능 기간 조회</strong>: 국민연금공단 홈페이지(nps.or.kr) '내 연금 알아보기' 또는 내곁에국민연금 앱에서 본인의 납부예외·적용제외 기간과 추납 가능 개월수를 먼저 확인합니다.</li>
+    <li><strong>가입 자격 확인</strong>: 현재 국민연금 가입 중인지 점검합니다. 전업주부 등 적용제외 상태라면 먼저 임의가입 신청을 한 뒤 추납을 진행해야 합니다.</li>
+    <li><strong>추납 신청</strong>: 홈페이지 '추후납부 신청' 메뉴에서 공동인증서 또는 간편인증으로 로그인 후 추납할 기간과 개월수를 선택합니다. 지사 방문 신청 시 신분증을 지참합니다.</li>
+    <li><strong>납부 방식 선택</strong>: 일시납과 분할납(최대 60회) 중 선택합니다. 분할납 선택 시 매월 고지서 또는 자동이체로 납부합니다.</li>
+    <li><strong>납부 완료 후 가입기간 반영</strong>: 추납 보험료를 모두 납부하면 해당 기간이 가입기간으로 인정되어 향후 연금액 산정에 반영됩니다.</li>
+  </ol>
+
+  <h3>신청 전 꼭 확인할 점</h3>
+  <p>추납을 신청해 보험료를 내기 시작하면 원칙적으로 중도 철회가 어렵습니다. 특히 일시납으로 큰 금액을 낸 뒤 되돌리기는 까다로우므로, 신청 전에 연금 증가분과 손익분기점을 충분히 계산해보는 것이 중요합니다. 또 추납으로 연금 수령액이 늘면 건강보험 피부양자 자격이나 기초연금 수급에 영향을 줄 수 있으니, 단순히 연금액만이 아니라 전체 노후 소득 구조를 함께 점검해야 합니다.</p>
+
+  <h2>추납 전 점검 체크리스트</h2>
+  <div class="highlight-box">
+    <strong>추납 신청 전 먼저 확인할 것들</strong><br><br>
+    ① 내 납부예외·적용제외 기간이 며칠인지 조회 (nps.or.kr '내 연금 알아보기')<br>
+    ② 현재 국민연금 가입 중인지, 아니라면 임의가입 먼저 신청<br>
+    ③ 추납 보험료 = 현재 기준소득월액 × 9.5% × 개월수로 총액 계산<br>
+    ④ 목돈 부담되면 분할납부(최대 60회) 활용 검토<br>
+    ⑤ 가입기간 10년 미만이라면 10년 채우는 추납을 최우선으로<br>
+    ⑥ 연금 증가로 건강보험료·기초연금이 어떻게 바뀌는지 확인
+  </div>
+
+  <p>국민연금 추납은 노후 준비 수단 중에서 가장 수익률이 확실한 선택지에 속합니다. 다만 개인의 가입 이력, 소득 수준, 건강 상태에 따라 최적의 추납 시점과 금액이 달라지므로, 막연히 '추납이 좋다더라'가 아니라 본인 숫자로 직접 계산해보는 것이 핵심입니다. 더 정확한 가입기간과 예상 수령액은 국민연금공단 홈페이지 <a href="https://www.nps.or.kr" target="_blank" rel="noopener" style="color:#0EA5E9;">nps.or.kr</a> '내 연금 알아보기'에서 무료로 확인할 수 있습니다.</p>
+
+  <div class="cta-box">
+    <p>내 소득과 가입기간으로 추납 전후 예상 수령액을 직접 비교해보세요.</p>
+    <a href="../../calc/pension-welfare/national-pension/" class="cta-btn">국민연금 수령액 계산기 →</a>
+    <p style="font-size:13px;color:#6B7280;margin-top:8px">소득·가입기간 입력 → 추납으로 늘어나는 예상액 즉시 확인</p>
+  </div>
+
+  <h2>자주 나오는 질문</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">국민연금 추납은 아무나 신청할 수 있나요?</div>
+    <div class="faq-a">추납은 누구나 신청할 수 있는 것이 아닙니다. 신청 시점에 국민연금에 가입 중인 상태여야 하고, 과거에 한 번이라도 보험료를 납부한 이력이 있어야 합니다. 즉 직장가입자, 지역가입자, 임의가입자, 임의계속가입자 중 하나로 현재 가입되어 있어야 합니다. 한 번도 보험료를 낸 적이 없는 순수 미가입자는 추납 대상이 아닙니다. 또한 추납이 가능한 기간은 납부예외 기간(실직·휴직·사업중단 등으로 보험료를 면제받은 기간)과 적용제외 기간(전업주부 등 의무가입 대상에서 빠져 있던 기간)으로 한정됩니다. 보험료를 체납한 기간은 추납이 아니라 일반 체납 보험료 납부로 처리되므로 구분해야 합니다.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">추납 보험료는 어떻게 계산되나요?</div>
+    <div class="faq-a">추납 보험료는 과거 납부예외 당시의 보험료가 아니라 추납을 신청하는 시점의 연금보험료를 기준으로 계산합니다. 계산식은 신청 당시 기준소득월액 × 연금보험료율 × 추납 개월수입니다. 2026년 보험료율은 연금개혁에 따라 9.5%가 적용됩니다. 예를 들어 신청 당시 기준소득월액이 300만원이고 96개월을 추납한다면 300만원 × 9.5% × 96 = 2,736만원입니다. 직장가입자도 추납 보험료는 사업주 부담분 없이 본인이 전액 부담한다는 점에 유의해야 합니다. 임의가입자가 추납하는 경우에는 기준소득월액이 전체 가입자 평균소득월액인 A값(2026년 309만원)을 넘을 수 없도록 상한이 적용됩니다.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">추납 보험료가 부담되는데 나눠서 낼 수 있나요?</div>
+    <div class="faq-a">추납 보험료는 일시납과 분할납 중 선택할 수 있습니다. 분할납은 최대 60회(개월)까지 나눠 낼 수 있어 목돈 부담을 크게 줄일 수 있습니다. 예를 들어 570만원을 추납해야 한다면 일시납은 570만원을 한 번에 내지만, 60회 분할을 선택하면 매달 약 9만 5천원씩 5년간 납부하면 됩니다. 다만 분할납을 선택하면 1년 만기 정기예금 이자율 수준의 이자가 가산되므로 총 납부액은 일시납보다 다소 늘어납니다. 분할 횟수는 추납 개월수에 따라 제한될 수 있으며, 가입자가 60세에 가까워 가입기간이 얼마 남지 않은 경우에는 분할 가능 횟수가 줄어들 수 있습니다. 분할 중 가입 자격을 잃으면 남은 금액을 일시 납부해야 추납이 인정됩니다.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">추납하면 무조건 이득인가요? 손해 보는 경우는 없나요?</div>
+    <div class="faq-a">추납은 대부분의 경우 유리하지만 무조건 이득은 아닙니다. 추납으로 늘어난 연금은 사망할 때까지 받으므로, 손익분기점을 넘기려면 연금을 받기 시작한 뒤 보통 8~9년 이상 생존해야 합니다. 65세부터 받는다면 73~74세 전후가 본전 시점이므로, 평균 기대수명을 고려하면 대부분 이득 구간에 들어옵니다. 다만 추납으로도 가입기간 10년을 채우지 못하거나, 건강상 기대수명이 매우 짧다고 판단되는 경우에는 추납의 실익이 줄어듭니다. 또 한 가지 주의할 점은 연금 수령액이 늘면 건강보험 피부양자 자격이나 기초연금 산정에 영향을 줄 수 있다는 것입니다. 단순히 수령액 증가만 볼 것이 아니라 건강보험료·기초연금까지 함께 시뮬레이션해보는 것이 좋습니다.</div>
+  </div>
+
+  <h2>한 줄 요약</h2>
+  <p>국민연금 추납의 핵심을 한 문장으로 정리하면 이렇습니다. <strong>추납은 과거 빈 가입기간을 현재 보험료로 메워 평생 연금을 늘리는, 사실상 연 11%대 종신 확정 수익 상품이다.</strong></p>
+  <p>경력단절 주부 김씨는 2,736만원을 추납해 월 연금을 26만원 늘렸고, 실직했던 이씨는 570만원을 월 9.5만원씩 분할해 부담 없이 빈 기간을 메웠으며, 60세가 코앞이던 정씨는 684만원으로 일시금 신세를 면하고 종신연금 수급권을 확보했습니다. 세 사람 모두 낸 돈보다 훨씬 많이 돌려받습니다.</p>
+  <p>주의할 점도 분명합니다. 추납은 한 번 시작하면 되돌리기 어렵고, 연금 증가로 건강보험료나 기초연금이 달라질 수 있습니다. 그래서 막연한 기대가 아니라 본인의 가입 이력과 소득으로 직접 계산해본 뒤 결정해야 합니다.</p>
+  <p>가장 먼저 할 일은 국민연금공단 '내 연금 알아보기'에서 내 추납 가능 기간을 조회하는 것입니다. 그다음 아래 계산기에 소득과 가입기간을 넣어 추납 전후 예상 수령액을 비교해보면, 2,736만원이든 684만원이든 그 한 번의 결정이 노후를 얼마나 바꾸는지 숫자로 확인할 수 있습니다.</p>
+
+</div>
+
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "국민연금법 추후납부 규정, 2026년 국민연금공단 고시, 2025년 연금개혁(보험료율 9.5%·소득대체율 43%)",
+  basisDate: "2026년 기준",
+  referenceOrg: "국민연금공단(nps.or.kr)",
+  lastReviewed: '2026.06.07',
+  disclaimer: "본 내용은 참고용이며 실제 추납 보험료·연금 증가액은 신청 시점 기준소득월액·보험료율·가입이력에 따라 달라질 수 있습니다.",
+  relatedCalc: { name: '국민연금 수령액 계산기', url: '/calc/pension-welfare/national-pension/' },
+  category: 'pension-welfare'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>
