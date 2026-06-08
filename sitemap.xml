@@ -217,6 +217,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.jptcalc.kr/blog/posts/housing-pension-guide.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.jptcalc.kr/blog/posts/national-pension-payment-exemption.html</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -659,6 +665,7 @@
   <url><loc>https://www.jptcalc.kr/calc/pension-welfare/long-term-care/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/pension-welfare/national-pension/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/pension-welfare/basic-pension/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jptcalc.kr/calc/pension-welfare/housing-pension/</loc><lastmod>2026-06-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/tax/medical-expense/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
 </urlset>

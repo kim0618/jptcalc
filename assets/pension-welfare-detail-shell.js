@@ -14,6 +14,12 @@
       related:[['/calc/pension-welfare/national-pension/','국민연금 수령액','🏛'],['/calc/pension-welfare/retirement-living/','노후 생활비','🏡'],['/calc/pension-welfare/long-term-care/','장기요양 비용','🏥']],
       guides:[['/blog/posts/retirement-living-cost.html','노후 생활비 얼마면 될까 - 30년 준비 자금 계산법'],['/blog/posts/retirement-living-late-start.html','40대·50대 노후 준비 늦었을까 - 시작 나이별 월 저축 목표와 3가지 시나리오']]
     },
+    '/calc/pension-welfare/housing-pension/': {
+      key:'housing-pension',
+      quick:['주택연금은 부부 중 연소자가 만 55세 이상이면 가입할 수 있습니다.','월지급금은 가입 시점의 나이와 주택가격으로 확정되며, 나이가 많고 집값이 비쌀수록 많이 받습니다.','집값이 떨어지거나 받은 연금이 집값을 넘어도 평생 거주가 보장됩니다.','정확한 월지급금은 한국주택금융공사(hf.go.kr) 예상연금조회에서 확인하세요.'],
+      related:[['/calc/pension-welfare/retirement-living/','노후 생활비','🏡'],['/calc/pension-welfare/national-pension/','국민연금 수령액','🏛'],['/calc/pension-welfare/basic-pension/','기초연금 수급 판정','💰']],
+      guides:[['/blog/posts/housing-pension-guide.html','주택연금 수령액 - 나이·집값별 월 얼마 받나, 종신지급 예시표 2026'],['/blog/posts/retirement-living-cost.html','노후 생활비 얼마면 될까 - 30년 준비 자금 계산법'],['/blog/posts/retirement-living-late-start.html','40대·50대 노후 준비 늦었을까 - 시작 나이별 월 저축 목표와 3가지 시나리오']]
+    },
     '/calc/pension-welfare/retirement-living/': {
       key:'retirement-living',
       quick:['은퇴 후 필요한 월 생활비는 현재 생활비의 70~80% 수준으로 추정합니다.','물가상승률을 반드시 반영해야 실질적인 노후 준비 금액을 알 수 있습니다.','국민연금·퇴직연금 수령액을 차감한 순수 부족분을 준비하는 것이 핵심입니다.','통계청 기준 한국인 기대수명은 남성 80.6세, 여성 86.6세입니다(2023년 기준).'],

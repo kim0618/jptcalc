@@ -257,6 +257,11 @@ window.CALC_REGISTRY = {
         "name": "기초연금 수급 판정"
       },
       {
+        "slug": "housing-pension",
+        "icon": "🏠",
+        "name": "주택연금(역모기지)"
+      },
+      {
         "slug": "retirement-living",
         "icon": "🏡",
         "name": "노후 생활비"
