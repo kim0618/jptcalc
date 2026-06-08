@@ -122,6 +122,11 @@ window.CALC_REGISTRY = {
         "slug": "regional-health-insurance",
         "icon": "🏥",
         "name": "지역가입자 건강보험료"
+      },
+      {
+        "slug": "copay-ceiling",
+        "icon": "💊",
+        "name": "본인부담상한제 환급"
       }
     ]
   },
