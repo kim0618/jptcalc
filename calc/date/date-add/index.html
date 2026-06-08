@@ -67,6 +67,11 @@
   <div class="card"><div class="card-title">날짜 더하기 / 빼기</div><div class="field"><div class="field-label">시작 날짜</div><input type="date" id="add-start" /></div><div class="field"><div class="field-label">연산</div><div class="seg-group"><button class="seg-btn active" id="add-op-plus" onclick="setAddOp('+',this)">+ 더하기</button><button class="seg-btn" id="add-op-minus" onclick="setAddOp('-',this)">- 빼기</button></div></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:16px"><div><div class="field-label" style="margin-bottom:6px">년</div><div class="input-wrap"><input type="number" id="add-years" value="0" min="0" /><span class="unit">년</span></div></div><div><div class="field-label" style="margin-bottom:6px">월</div><div class="input-wrap"><input type="number" id="add-months" value="0" min="0" /><span class="unit">월</span></div></div><div><div class="field-label" style="margin-bottom:6px">일</div><div class="input-wrap"><input type="number" id="add-days" value="0" min="0" /><span class="unit">일</span></div></div></div><button class="calc-btn" onclick="calcAdd()">결과 날짜 계산하기</button></div>
   <div class="result-card" id="add-result" aria-live="polite"><div class="result-highlight"><div class="rh-label" id="add-op-label">더한 결과</div><div class="rh-value" id="add-result-date"></div><div class="rh-sub" id="add-result-weekday"></div></div><div id="add-detail"></div><div class="result-note">※ 월 단위 계산 시 해당 월에 날짜가 없으면 그 달의 마지막 날로 자동 조정됩니다 (예: 1월 31일 +1개월 = 2월 28일). 년 → 월 → 일 순서로 계산됩니다.</div></div>
 
+  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+
   <div class="guide-section">
     <div class="guide-card">
       <h2>날짜 더하기/빼기 활용 가이드</h2>
