@@ -37,6 +37,12 @@
       quick:['총급여의 3%를 초과한 의료비만 세액공제 대상이 됩니다.','난임시술비는 30%, 미숙아·선천성이상아는 20%, 그 외는 15% 공제율이 적용됩니다.','기타 부양가족 의료비는 700만원 한도 내에서만 공제됩니다.','본인·65세 이상·장애인 의료비는 한도 없이 전액 공제 대상입니다.'],
       related:[['/calc/tax/income-tax/','종합소득세 계산기','📈'],['/calc/tax/withholding/','3.3% 원천징수 계산기','💲'],['/calc/tax/freelancer-income/','월 순수입 계산기','💰']],
       guides:[['/blog/posts/medical-expense-deduction-guide.html','의료비 세액공제 - 본인·부모·자녀 지출로 얼마나 돌려받나 2026']]
+    },
+    '/calc/tax/regional-health-insurance/': {
+      key:'regional-health-insurance',
+      quick:['지역가입자 보험료 = 소득보험료(연소득×7.19%÷12) + 재산보험료(점수×211.5원)입니다.','재산은 재산세 과세표준에서 1억원을 공제한 금액에만 부과점수가 매겨집니다.','자동차는 2024년 2월부터 부과 대상에서 완전히 제외되었습니다.','소득이 없어도 소득보험료 하한액(월 20,160원)과 장기요양보험료는 부담합니다.'],
+      related:[['/calc/tax/insurance-comparison/','4대보험 vs 3.3% 비교','👥'],['/calc/tax/freelancer-income/','월 순수입 계산기','💰'],['/calc/tax/income-tax/','종합소득세 계산기','📈']],
+      guides:[['/blog/posts/freelancer-insurance-guide.html','프리랜서 4대보험, 직장인이랑 뭐가 다를까? 지역가입자 보험료 계산법'],['/blog/posts/health-insurance-dependent-guide.html','건강보험 피부양자 탈락 기준 2026 - 소득·재산 기준과 탈락 후 보험료 계산'],['/blog/posts/social-insurance-guide.html','4대보험료 2026 - 월급 300만원이면 매달 28만원 빠진다']]
     }
   };
   let cfg=pages[path];

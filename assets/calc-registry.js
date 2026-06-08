@@ -117,6 +117,11 @@ window.CALC_REGISTRY = {
         "slug": "medical-expense",
         "icon": "🏥",
         "name": "의료비 세액공제"
+      },
+      {
+        "slug": "regional-health-insurance",
+        "icon": "🏥",
+        "name": "지역가입자 건강보험료"
       }
     ]
   },
