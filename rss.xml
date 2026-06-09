@@ -5,8 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Fri, 29 May 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+      <title>잔금일 하루 차이로 세금 수백만원 달라진다 - 6월 1일 재산세·종부세 기준일 2026</title>
+      <link>https://www.jptcalc.kr/blog/posts/realestate-tax-timing.html</link>
+      <description>재산세·종부세는 매년 6월 1일 소유자 기준으로 과세됩니다. 잔금일을 5월 31일로 잡느냐, 6월 2일로 잡느냐에 따라 수백만원 차이가 생깁니다. 공시가격별 실납부 차이와 협상 전략을 정리했습니다.</description>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/realestate-tax-timing.html</guid>
+    </item>
 
     <item>
       <title>국민연금 추납(추후납부) 조건·보험료 계산·신청방법 총정리 2026</title>

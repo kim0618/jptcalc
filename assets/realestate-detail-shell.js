@@ -62,12 +62,14 @@
     '/calc/realestate/property-tax-comprehensive/': {
       key:'property-tax-comprehensive',
       quick:['재산세는 매년 6월 1일 소유자를 기준으로 과세합니다.','주택분 재산세는 7월(1/2)과 9월(1/2) 두 번에 나눠 납부합니다.','공시가격 9억원 초과 주택은 종합부동산세도 별도 부과됩니다.','실제 세액은 지자체 조례에 따라 일부 감면될 수 있습니다.'],
-      related:[['/calc/realestate/jongbu/','종합부동산세 계산기','🏛️'],['/calc/realestate/acquisition/','취득세 계산기','📄'],['/calc/realestate/propertytax/','재산세 계산기','🏦']]
+      related:[['/calc/realestate/jongbu/','종합부동산세 계산기','🏛️'],['/calc/realestate/acquisition/','취득세 계산기','📄'],['/calc/realestate/propertytax/','재산세 계산기','🏦']],
+      guides:[['/blog/posts/realestate-tax-timing.html','잔금일 하루 차이로 세금 수백만원 달라진다 - 6월 1일 재산세·종부세 기준일 2026'],['/blog/posts/holding-tax-guide.html','2026 보유세 완전 정복 - 재산세·종부세 합산 실납부액, 공시가 5억~25억 구간 비교'],['/blog/posts/property-tax-guide.html','재산세 - 공시가격 3억원 아파트 총 납부액 57만원, 7월·9월 계산법 2026']]
     },
     '/calc/realestate/propertytax/': {
       key:'propertytax',
       quick:['재산세는 매년 6월 1일 소유자를 기준으로 과세합니다.','주택분 재산세는 7월(1/2)과 9월(1/2) 두 번에 나눠 납부합니다.','공시가격 9억원 초과 주택은 종합부동산세도 별도 부과됩니다.','실제 세액은 지자체 조례에 따라 일부 감면될 수 있습니다.'],
-      related:[['/calc/realestate/jongbu/','종합부동산세 계산기','🏛️'],['/calc/realestate/acquisition/','취득세 계산기','📄'],['/calc/realestate/property-tax-comprehensive/','재산세 종합 계산기','🏦']]
+      related:[['/calc/realestate/jongbu/','종합부동산세 계산기','🏛️'],['/calc/realestate/acquisition/','취득세 계산기','📄'],['/calc/realestate/property-tax-comprehensive/','재산세 종합 계산기','🏦']],
+      guides:[['/blog/posts/realestate-tax-timing.html','잔금일 하루 차이로 세금 수백만원 달라진다 - 6월 1일 재산세·종부세 기준일 2026'],['/blog/posts/holding-tax-guide.html','2026 보유세 완전 정복 - 재산세·종부세 합산 실납부액, 공시가 5억~25억 구간 비교'],['/blog/posts/property-tax-guide.html','재산세 - 공시가격 3억원 아파트 총 납부액 57만원, 7월·9월 계산법 2026']]
     },
     '/calc/realestate/pyeong/': {
       key:'pyeong',
