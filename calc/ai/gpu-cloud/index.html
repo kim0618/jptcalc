@@ -79,7 +79,7 @@
 <main class="page-wrap">
   <div class="page-header">
     <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/ai/">AI / 테크 비용 계산기</a><span class="breadcrumb-sep">›</span><span>GPU 클라우드 비용 비교 계산기</span></div>
-    <div class="page-header-badge">💻 2026년 4월 확인 기준 · 온디맨드 가격</div>
+    <div class="page-header-badge">💻 2026년 6월 확인 기준 · 온디맨드 가격</div>
     <h1>GPU 클라우드 비용 비교 계산기</h1>
     <p>AWS·GCP·Azure GPU 클라우드 비용을 한눈에 비교하세요</p>
   </div>
@@ -121,9 +121,9 @@
     </div>
     <div class="guide-card">
       <h2>GPU 클라우드 비용 계산 원리</h2>
-      <p>GPU 클라우드 비용은 시간당 단가 × GPU 수량 × 사용 시간으로 계산됩니다. 2026년 5월 기준 온디맨드 단가는 A100 80GB 기준 AWS $4.10/h, GCP $3.67/h, Azure $3.40/h이며, 리전과 약정 조건에 따라 달라집니다. H100은 A100 대비 1.2~1.5배 비싸지만 학습 속도가 2~3배 빠르기 때문에 실제 작업 시간과 총 비용을 함께 계산해야 유리한 선택을 할 수 있습니다. 각 벤더 공식 가격 페이지에서 최신 단가를 반드시 재확인하세요.</p>
+      <p>GPU 클라우드 비용은 시간당 단가 × GPU 수량 × 사용 시간으로 계산됩니다. 2026년 6월 기준 온디맨드 단가는 A100 80GB 기준 AWS $4.10/h, GCP $3.67/h, Azure $3.40/h이며, 리전과 약정 조건에 따라 달라집니다. H100은 A100 대비 1.2~1.5배 비싸지만 학습 속도가 2~3배 빠르기 때문에 실제 작업 시간과 총 비용을 함께 계산해야 유리한 선택을 할 수 있습니다. 각 벤더 공식 가격 페이지에서 최신 단가를 반드시 재확인하세요.</p>
       <div class="guide-grid">
-        <div class="guide-box"><strong>온디맨드 단가</strong><span>A100 기준 벤더별 $3.40~$4.10/h, H100은 $4.28~$5.12/h (2026년 5월 기준 온디맨드)</span></div>
+        <div class="guide-box"><strong>온디맨드 단가</strong><span>A100 기준 벤더별 $3.40~$4.10/h, H100은 $4.28~$5.12/h (2026년 6월 기준 온디맨드)</span></div>
         <div class="guide-box"><strong>월 비용 산출</strong><span>시간당 단가 × 수량 × 일일 사용 시간 × 30일로 계산. 계산기에 입력하면 자동 환산됩니다</span></div>
         <div class="guide-box"><strong>절감 옵션 비교</strong><span>스팟 인스턴스 50~70% 할인, 1년 예약 약정 30~40% 할인 - 작업 패턴에 따라 선택</span></div>
       </div>
@@ -163,13 +163,13 @@
       <div class="faq-item"><h3>예약 인스턴스는 얼마나 할인되나요?</h3><p>1년 약정 시 약 30~40%, 3년 약정 시 최대 60%까지 할인됩니다. 장기 운영이 확실한 경우 유리합니다.</p></div>
       <div class="faq-item"><h3>리전(지역)에 따라 GPU 가격이 달라지나요?</h3><p>네, 같은 벤더라도 리전에 따라 가격이 10~20% 이상 차이날 수 있습니다. AWS us-east-1(버지니아)이 ap-northeast-2(서울)보다 GPU 가격이 낮은 경우가 많습니다. 한국 내 데이터 보관 규제가 없다면 저렴한 리전을 선택하는 것이 비용 절감에 유리하며, 데이터 전송(egress) 비용도 함께 계산해야 합니다.</p></div>
       <div class="faq-item"><h3>클라우드 GPU와 온프레미스 서버 중 어느 쪽이 경제적인가요?</h3><p>연간 사용 시간이 4,000시간(하루 약 11시간) 이상이면 GPU 서버 직접 구매가 더 저렴할 수 있습니다. H100 GPU 1장은 약 3~4만 달러 수준이며 3년 감가 기준 월 환산 시 클라우드 온디맨드보다 낮아집니다. 반면 간헐적 학습 작업이나 초기 스타트업이라면 초기 투자 없이 유연하게 사용할 수 있는 클라우드가 적합합니다.</p></div>
-      <div class="update-note">최종 검토: 2026.04.14 · 가격은 각 벤더 공식 사이트 기준이며 변동될 수 있습니다.</div>
+      <div class="update-note">최종 검토: 2026.06.09 · 가격은 각 벤더 공식 사이트 기준이며 변동될 수 있습니다.</div>
     </div>
   </div>
   <script>
   window.TRUST_BLOCK_CONFIG = {
-    standard: '2026년 4월 기준 AWS/GCP/Azure 공식 가격표',
-    appliedFrom: '2026년 4월',
+    standard: '2026년 6월 기준 AWS/GCP/Azure 공식 가격표',
+    appliedFrom: '2026년 6월',
     exceptions: [
       '클라우드 가격은 리전·약정 조건에 따라 다르며 수시로 변경됩니다',
       '스팟 인스턴스·예약 인스턴스 할인은 별도 확인이 필요합니다',
@@ -178,7 +178,7 @@
       { name: 'AWS 가격(aws.amazon.com/pricing)', url: 'https://aws.amazon.com/pricing' },
       { name: 'GCP 가격(cloud.google.com/pricing)', url: 'https://cloud.google.com/pricing' },
     ],
-    lastReviewed: '2026.05',
+    lastReviewed: '2026.06',
   };
   </script>
   <script src="/assets/trust-block.js"></script>
@@ -238,10 +238,10 @@ function calc(){
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
-  reviewBasis: '2026년 4월 기준 공식 가격·스펙',
-  basisDate: '2026년 4월',
+  reviewBasis: '2026년 6월 기준 공식 가격·스펙',
+  basisDate: '2026년 6월',
   referenceOrg: '각 서비스 공식 페이지',
-  lastReviewed: '2026.05.07',
+  lastReviewed: '2026.06.09',
   category: 'ai'
 };
 </script>

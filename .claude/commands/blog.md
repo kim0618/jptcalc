@@ -33,7 +33,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - **완료 클러스터: 국민연금(pension-welfare)** | 2026-06-05~06-08 완료 | **성과 점검 예정: 2026-07-06** (트리거 B)
   - 허브: national-pension-40years(06-05) / 위성: national-pension-early-receipt(조기수령·06-08)·national-pension-payment-exemption(납부예외·06-08)·national-pension-additional-payment(추납·06-08) | 임의가입은 national-pension-voluntary.html로 기커버
 - **[완료 2026-06-08] 주택연금 신규 계산기 글(pension-welfare)** | housing-pension-guide.html. HF 2026 월지급금 예시표 기준. detail-shell guides + ARTICLE_INFO guides + 본문 CTA 양방향 연결 완료
-- **다음 클러스터 후보(미정)**: 큐 잔여 단발성 2개(중개수수료 brokerage / API토큰 ai). 또는 부동산 보유세 클러스터 더블다운(holding-tax 허브). 트리거 A(미사용<3)·C(소진) 상태 - /blog 시 서치어드바이저 갱신 필요
+- **다음 클러스터 후보(미정)**: 큐 잔여 단발성 2개(중개수수료 brokerage / API토큰 ai). 트리거 A(미사용<3)·C(소진) 상태 - /blog 시 서치어드바이저 갱신 필요. **단 큐 소진 상태이므로 우선순위 ③(신규 계산기 미커버)이 발동** → 생활·도구 6종 블로그가 0개라 여기부터 쓴다(글자수세기·내신등급 먼저). 서치어드바이저 갱신 데이터가 들어오면 그때 큐를 새로 채워 ②로 복귀.
 
 ## 네이버 타겟 주제 큐
 
@@ -68,7 +68,8 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 1. `ls /home/tjd618/jptcalc/blog/posts/` 로 기존 포스트 파일 목록 전체 확인
 2. `ls /home/tjd618/jptcalc/calc/` 및 하위 폴더 확인해서 사용 가능한 계산기 URL 파악
 3. `/home/tjd618/jptcalc/blog/index.html` 에서 data-cat 개수를 세서 카테고리별 글 수 확인
-4. **주제 선정 우선순위: ① 진행 중 클러스터의 위성 주제 → ② 네이버 타겟 큐 Tier 순서 → ③ (큐 비었거나 사용자 지정 시) 글 적은 카테고리.** "클러스터 진행 현황" 블록에 진행 중 클러스터가 있으면 그 위성을 먼저 뽑아 클러스터를 채운다.
+4. **주제 선정 우선순위: ① 진행 중 클러스터의 위성 주제 → ② 네이버 타겟 큐 Tier 순서 → ③ (큐 비었거나 사용자 지정 시) 블로그 글이 아직 없는 신규 계산기 우선 → ④ 글 적은 카테고리.** "클러스터 진행 현황" 블록에 진행 중 클러스터가 있으면 그 위성을 먼저 뽑아 클러스터를 채운다.
+   - **③ 신규 계산기 미커버 우선순위(2026-06-09 기준)**: 네이버 큐 소진 시, 블로그 글이 0개인 신규 계산기부터 글을 쓴다. 최우선 = **생활·도구 6종**(데이터랩 검증 순): 글자수세기(char-count, 최강)·내신등급(naesin-grade, 시즌)·할인율(discount)·퍼센트(percent)·학점(gpa)·단위변환(unit-converter). 각 글은 cta-box·relatedCalc·해당 detail-shell guides로 그 계산기에 유입을 연결한다. (네이버 큐 자체에는 서치어드바이저 검증 주제만 넣고, 이 신규 계산기 주제는 큐에 넣지 않는다.)
 5. 기존 글과 겹치지 않는 주제를 선정하고, 큐 주제에 연결된 계산기와 본문에서 링크
 6. 기존 포스트 파일 1개 읽어서 해당 카테고리의 포맷·색상 정확히 파악
 7. **같은 카테고리 기존 글 목록 확인** - 본문 내 교차 링크용 (2~3개 선정)
@@ -126,6 +127,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - 날짜·D-day: --primary #F97316, post-tag background rgba(249,115,22,0.15) color #F97316, highlight-box background rgba(249,115,22,0.08) text-color #9A3412
 - AI·테크: --primary #8B5CF6, post-tag background rgba(139,92,246,0.15) color #8B5CF6, highlight-box background rgba(139,92,246,0.08) text-color #5B21B6
 - 연금·복지: --primary #0EA5E9, post-tag background rgba(14,165,233,0.15) color #0EA5E9, highlight-box background rgba(14,165,233,0.08) text-color #0C4A6E
+- 생활·도구: --primary #14B8A6, post-tag background rgba(20,184,166,0.15) color #14B8A6, highlight-box background rgba(20,184,166,0.08) text-color #0F766E
 
 cta-btn 배경색과 td.rate 색상도 각 카테고리의 --primary와 동일하게 적용한다.
 인라인 계산기 링크의 color도 반드시 해당 카테고리의 --primary 색상을 사용한다. (#2563eb 같은 임의 색상 사용 금지)
@@ -418,7 +420,7 @@ window.ARTICLE_INFO_CONFIG = {
 오늘 날짜를 YYYY.MM.DD 형식으로 사용한다.
 
 ### category 값 매핑
-- 부동산=realestate, 세금=tax, 금융=finance, 연봉=salary, 건강=health, 연금·복지=pension-welfare, 반려동물=pet, 날짜·D-day=date, AI·테크=ai
+- 부동산=realestate, 세금=tax, 금융=finance, 연봉=salary, 건강=health, 연금·복지=pension-welfare, 반려동물=pet, 날짜·D-day=date, AI·테크=ai, 생활·도구=tools
 
 ---
 
@@ -426,7 +428,7 @@ window.ARTICLE_INFO_CONFIG = {
 
 ### 1. blog/index.html 카드 추가
 - 카드 포맷: `<a href="./posts/[파일명].html" class="post-card" data-cat="[카테고리명]">`
-- 카테고리별 tag 클래스: 부동산=tag-realestate / 세금=tag-tax / 금융=tag-finance / 연봉=tag-salary / 건강=tag-health / 연금·복지=tag-pension-welfare / 반려동물=tag-pet / 날짜·D-day=tag-date / AI·테크=tag-ai
+- 카테고리별 tag 클래스: 부동산=tag-realestate / 세금=tag-tax / 금융=tag-finance / 연봉=tag-salary / 건강=tag-health / 연금·복지=tag-pension-welfare / 반려동물=tag-pet / 날짜·D-day=tag-date / AI·테크=tag-ai / 생활·도구=tag-tools
 - 최신 글이 목록 상단(post-grid 바로 아래)에 오도록 배치
 
 ### 2. sitemap.xml 업데이트
