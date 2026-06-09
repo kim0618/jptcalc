@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>제이퍼 계산기 (JPT Calc) | 세금·연봉·금융·부동산 무료 계산기</title>
-  <meta name="description" content="제이퍼 계산기(JPT Calc)는 세금, 연봉, 금융, 부동산, 건강, 날짜 등 65개 무료 계산기를 한곳에 모았습니다." />
+  <meta name="description" content="제이퍼 계산기(JPT Calc)는 세금, 연봉, 금융, 부동산, 건강, 날짜 등 71개 무료 계산기를 한곳에 모았습니다." />
   <meta name="keywords" content="계산기,부동산계산기,세금계산기,연봉계산기,금융계산기,BMI계산기,D-day계산기,만나이계산기,프리랜서세금" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
@@ -25,7 +25,7 @@
   <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
   <meta name="twitter:description" content="제이퍼 계산기(JPT Calc)에서 세금, 연봉, 금융, 부동산, 건강, 날짜 계산기를 무료로 이용하세요." />
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebSite","name":"제이퍼 계산기","url":"https://www.jptcalc.kr/","description":"부동산, 프리랜서 세금, 연봉, 금융·이자, 건강(BMI), 날짜·D-day 등 65개 계산기","inLanguage":"ko-KR"}
+  {"@context":"https://schema.org","@type":"WebSite","name":"제이퍼 계산기","url":"https://www.jptcalc.kr/","description":"부동산, 프리랜서 세금, 연봉, 금융·이자, 건강(BMI), 날짜·D-day, 생활·도구 등 71개 계산기","inLanguage":"ko-KR"}
   </script>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
@@ -69,6 +69,7 @@
       --c-finance:    #6366F1;
       --c-date:       #F97316;
       --c-pension-welfare: #0EA5E9;
+      --c-tools:      #14B8A6;
     }
 
     html { font-size: 16px; scroll-behavior: smooth; }
@@ -283,6 +284,7 @@
     .cat-card.c-finance::after    { background: var(--c-finance); }
     .cat-card.c-date::after       { background: var(--c-date); }
     .cat-card.c-pension-welfare::after { background: var(--c-pension-welfare); }
+    .cat-card.c-tools::after      { background: var(--c-tools); }
     .cat-card:hover.c-realestate  { box-shadow: 0 8px 32px rgba(245,158,11,0.15); }
     .cat-card:hover.c-tax         { box-shadow: 0 8px 32px rgba(16,185,129,0.15); }
     .cat-card:hover.c-ai          { box-shadow: 0 8px 32px rgba(139,92,246,0.15); }
@@ -292,6 +294,7 @@
     .cat-card:hover.c-finance     { box-shadow: 0 8px 32px rgba(99,102,241,0.15); }
     .cat-card:hover.c-date        { box-shadow: 0 8px 32px rgba(249,115,22,0.15); }
     .cat-card:hover.c-pension-welfare { box-shadow: 0 8px 32px rgba(14,165,233,0.15); }
+    .cat-card:hover.c-tools       { box-shadow: 0 8px 32px rgba(20,184,166,0.15); }
 
     .cat-icon-wrap {
       width: 40px; height: 40px; border-radius: 10px;
@@ -348,6 +351,8 @@
     .c-date .cat-pill::before { background: var(--c-date); }
     .c-pension-welfare .cat-pill { border: 1px solid rgba(14,165,233,0.3); color: #0369A1; }
     .c-pension-welfare .cat-pill::before { background: var(--c-pension-welfare); }
+    .c-tools .cat-pill       { border: 1px solid rgba(20,184,166,0.3); color: #0F766E; }
+    .c-tools .cat-pill::before { background: var(--c-tools); }
     /* hover: pills fill */
     .cat-card:hover .cat-pill { background: rgba(0,0,0,0.04); }
     .c-realestate:hover .cat-pill { background: rgba(245,158,11,0.1); border-color: rgba(245,158,11,0.5); }
@@ -359,6 +364,7 @@
     .c-finance:hover .cat-pill    { background: rgba(99,102,241,0.1); border-color: rgba(99,102,241,0.5); }
     .c-date:hover .cat-pill       { background: rgba(249,115,22,0.1); border-color: rgba(249,115,22,0.5); }
     .c-pension-welfare:hover .cat-pill { background: rgba(14,165,233,0.1); border-color: rgba(14,165,233,0.5); }
+    .c-tools:hover .cat-pill      { background: rgba(20,184,166,0.1); border-color: rgba(20,184,166,0.5); }
 
     /* 인기 계산기 리스트 */
     .popular-list { display: flex; flex-direction: column; gap: 6px; margin-bottom: 32px; }
@@ -502,23 +508,26 @@
       <a href="./calc/realestate/" class="nav-item">
         <span class="nav-dot" style="background:var(--c-realestate);"></span>부동산
       </a>
-      <a href="./calc/tax/" class="nav-item">
-        <span class="nav-dot" style="background:var(--c-tax);"></span>프리랜서 세금
-      </a>
       <a href="./calc/salary/" class="nav-item">
         <span class="nav-dot" style="background:var(--c-salary);"></span>이직/연봉
       </a>
-      <a href="./calc/finance/" class="nav-item">
-        <span class="nav-dot" style="background:var(--c-finance);"></span>금융·이자
+      <a href="./calc/tools/" class="nav-item">
+        <span class="nav-dot" style="background:var(--c-tools);"></span>생활·도구
       </a>
-      <a href="./calc/health/" class="nav-item">
-        <span class="nav-dot" style="background:var(--c-health);"></span>건강
+      <a href="./calc/tax/" class="nav-item">
+        <span class="nav-dot" style="background:var(--c-tax);"></span>프리랜서 세금
       </a>
       <a href="./calc/pension-welfare/" class="nav-item">
         <span class="nav-dot" style="background:var(--c-pension-welfare);"></span>연금·복지
       </a>
+      <a href="./calc/finance/" class="nav-item">
+        <span class="nav-dot" style="background:var(--c-finance);"></span>금융·이자
+      </a>
       <a href="./calc/date/" class="nav-item">
         <span class="nav-dot" style="background:var(--c-date);"></span>날짜·D-day
+      </a>
+      <a href="./calc/health/" class="nav-item">
+        <span class="nav-dot" style="background:var(--c-health);"></span>건강
       </a>
       <a href="./calc/ai/" class="nav-item">
         <span class="nav-dot" style="background:var(--c-ai);"></span>AI/테크
@@ -553,28 +562,32 @@
           <span class="s-icon">&#127968;</span> 부동산
           <span class="s-badge">15</span>
         </a>
-        <a href="./calc/tax/" class="sidebar-link">
-          <span class="s-icon">&#128176;</span> 프리랜서 세금
-          <span class="s-badge">6</span>
-        </a>
         <a href="./calc/salary/" class="sidebar-link">
           <span class="s-icon">&#128200;</span> 이직 / 연봉
           <span class="s-badge">10</span>
         </a>
-        <a href="./calc/finance/" class="sidebar-link">
-          <span class="s-icon">&#127974;</span> 금융 · 이자
-          <span class="s-badge">5</span>
+        <a href="./calc/tools/" class="sidebar-link">
+          <span class="s-icon">&#128736;&#65039;</span> 생활·도구
+          <span class="s-badge">6</span>
         </a>
-        <a href="./calc/health/" class="sidebar-link">
-          <span class="s-icon">&#127939;</span> 건강
-          <span class="s-badge">5</span>
+        <a href="./calc/tax/" class="sidebar-link">
+          <span class="s-icon">&#128176;</span> 프리랜서 세금
+          <span class="s-badge">6</span>
         </a>
         <a href="./calc/pension-welfare/" class="sidebar-link">
           <span class="s-icon">🧓</span> 연금·복지
           <span class="s-badge">5</span>
         </a>
+        <a href="./calc/finance/" class="sidebar-link">
+          <span class="s-icon">&#127974;</span> 금융 · 이자
+          <span class="s-badge">5</span>
+        </a>
         <a href="./calc/date/" class="sidebar-link">
           <span class="s-icon">&#128197;</span> 날짜 · D-day
+          <span class="s-badge">5</span>
+        </a>
+        <a href="./calc/health/" class="sidebar-link">
+          <span class="s-icon">&#127939;</span> 건강
           <span class="s-badge">5</span>
         </a>
         <a href="./calc/ai/" class="sidebar-link">
@@ -605,14 +618,14 @@
     <section class="hero">
       <div class="hero-badge">&#9889; 2026 공개 기준 반영</div>
       <h1>모든 계산을<br><span>한 곳</span>에서</h1>
-      <p class="hero-sub">세금, 연봉, 금융, 부동산, 건강, 날짜 계산을 한 곳에서 빠르게 확인하세요. 65개 계산기와 9개 카테고리를 무료로 제공합니다.</p>
+      <p class="hero-sub">세금, 연봉, 금융, 부동산, 건강, 날짜 계산을 한 곳에서 빠르게 확인하세요. 71개 계산기와 10개 카테고리를 무료로 제공합니다.</p>
       <div class="hero-stats">
         <div class="hero-stat">
-          <div class="hero-stat-num">65<span>개</span></div>
+          <div class="hero-stat-num">71<span>개</span></div>
           <div class="hero-stat-label">무료 계산기</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-num">9<span>개</span></div>
+          <div class="hero-stat-num">10<span>개</span></div>
           <div class="hero-stat-label">전문 카테고리</div>
         </div>
         <div class="hero-stat">
@@ -639,18 +652,6 @@
           <span class="cat-pill more">+11</span>
         </div>
       </a>
-      <a href="./calc/tax/" class="cat-card c-tax">
-        <div class="cat-icon-wrap">&#128176;</div>
-        <div class="cat-name">프리랜서 세금</div>
-        <div class="cat-desc">프리랜서·자영업자 세금, 건강보험료·의료비 환급 분석</div>
-        <div class="cat-pills">
-          <span class="cat-pill">본인부담상한제</span>
-          <span class="cat-pill">건강보험료</span>
-          <span class="cat-pill">3.3% 원천징수</span>
-          <span class="cat-pill">종합소득세</span>
-          <span class="cat-pill more">+4</span>
-        </div>
-      </a>
       <a href="./calc/salary/" class="cat-card c-salary">
         <div class="cat-icon-wrap">&#128200;</div>
         <div class="cat-name">이직 / 연봉</div>
@@ -663,28 +664,28 @@
           <span class="cat-pill more">+6</span>
         </div>
       </a>
-      <a href="./calc/finance/" class="cat-card c-finance">
-        <div class="cat-icon-wrap">&#127974;</div>
-        <div class="cat-name">금융 · 이자</div>
-        <div class="cat-desc">예금·적금·복리·대출·투자수익률 계산</div>
+      <a href="./calc/tools/" class="cat-card c-tools">
+        <div class="cat-icon-wrap">&#128736;&#65039;</div>
+        <div class="cat-name">생활·도구</div>
+        <div class="cat-desc">퍼센트·단위 변환·할인율·학점·내신·글자수 등 일상 계산 도구</div>
         <div class="cat-pills">
-          <span class="cat-pill">예금이자</span>
-          <span class="cat-pill">적금만기</span>
-          <span class="cat-pill">복리계산</span>
-          <span class="cat-pill">대출상환</span>
-          <span class="cat-pill more">+1</span>
+          <span class="cat-pill">퍼센트 계산</span>
+          <span class="cat-pill">단위 변환</span>
+          <span class="cat-pill">할인율</span>
+          <span class="cat-pill">학점</span>
+          <span class="cat-pill more">+2</span>
         </div>
       </a>
-      <a href="./calc/health/" class="cat-card c-health">
-        <div class="cat-icon-wrap">&#127939;</div>
-        <div class="cat-name">건강</div>
-        <div class="cat-desc">BMI·기초대사량·적정체중·칼로리 계산</div>
+      <a href="./calc/tax/" class="cat-card c-tax">
+        <div class="cat-icon-wrap">&#128176;</div>
+        <div class="cat-name">프리랜서 세금</div>
+        <div class="cat-desc">프리랜서·자영업자 세금, 건강보험료·의료비 환급 분석</div>
         <div class="cat-pills">
-          <span class="cat-pill">BMI</span>
-          <span class="cat-pill">기초대사량</span>
-          <span class="cat-pill">체지방률</span>
-          <span class="cat-pill">칼로리</span>
-          <span class="cat-pill more">+1</span>
+          <span class="cat-pill">본인부담상한제</span>
+          <span class="cat-pill">건강보험료</span>
+          <span class="cat-pill">3.3% 원천징수</span>
+          <span class="cat-pill">종합소득세</span>
+          <span class="cat-pill more">+4</span>
         </div>
       </a>
       <a href="./calc/pension-welfare/" class="cat-card c-pension-welfare">
@@ -699,6 +700,18 @@
           <span class="cat-pill more">+2</span>
         </div>
       </a>
+      <a href="./calc/finance/" class="cat-card c-finance">
+        <div class="cat-icon-wrap">&#127974;</div>
+        <div class="cat-name">금융 · 이자</div>
+        <div class="cat-desc">예금·적금·복리·대출·투자수익률 계산</div>
+        <div class="cat-pills">
+          <span class="cat-pill">예금이자</span>
+          <span class="cat-pill">적금만기</span>
+          <span class="cat-pill">복리계산</span>
+          <span class="cat-pill">대출상환</span>
+          <span class="cat-pill more">+1</span>
+        </div>
+      </a>
       <a href="./calc/date/" class="cat-card c-date">
         <div class="cat-icon-wrap">&#128197;</div>
         <div class="cat-name">날짜 · D-day</div>
@@ -708,6 +721,18 @@
           <span class="cat-pill">날짜차이</span>
           <span class="cat-pill">만 나이</span>
           <span class="cat-pill">요일</span>
+          <span class="cat-pill more">+1</span>
+        </div>
+      </a>
+      <a href="./calc/health/" class="cat-card c-health">
+        <div class="cat-icon-wrap">&#127939;</div>
+        <div class="cat-name">건강</div>
+        <div class="cat-desc">BMI·기초대사량·적정체중·칼로리 계산</div>
+        <div class="cat-pills">
+          <span class="cat-pill">BMI</span>
+          <span class="cat-pill">기초대사량</span>
+          <span class="cat-pill">체지방률</span>
+          <span class="cat-pill">칼로리</span>
           <span class="cat-pill more">+1</span>
         </div>
       </a>
@@ -823,7 +848,7 @@
         <strong>제이퍼 계산기 (JPT Calc)</strong>는 일상과 업무에 필요한 계산을 한 곳에서 빠르게 처리할 수 있도록 만든 무료 계산기 서비스입니다.
         부동산 거래 시 필요한 취득세·양도소득세 계산부터, 프리랜서를 위한 3.3% 원천징수 실수령액 계산,
         이직 연봉 실수령액, 예금·적금·대출 금융 계산, BMI·기초대사량 건강 계산, D-day·만나이 날짜 계산까지 -
-        <strong>65개 계산기와 9개 카테고리</strong>를 모두 무료로 이용할 수 있습니다.
+        <strong>71개 계산기와 10개 카테고리</strong>를 모두 무료로 이용할 수 있습니다.
       </p>
       <p>
         주요 계산기는 <strong>2026 공개 기준과 일반적인 계산 공식</strong>을 바탕으로 제공되며, PC와 모바일 모두에서 편리하게 사용할 수 있도록 최적화되어 있습니다.

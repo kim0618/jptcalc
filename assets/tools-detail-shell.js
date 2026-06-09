@@ -1,44 +1,9 @@
 
 (function(){
   const path=(location.pathname||'').replace(/index\.html$/,'').replace(/\/+$/,'/') || '/';
-  const pages={
-    '/calc/pet/dog-age/': {
-      key:'dog-age',
-      quick:['강아지 나이 × 7은 부정확합니다. 첫 1년이 사람 약 15세에 해당합니다.','같은 나이라도 몸집이 클수록 사람 나이는 더 많습니다.','소형견 10세·중형견 8세·대형견 7세·초대형견 6세 전후가 노령기 진입 시점입니다.','정확한 출생일을 모르면 치아·근육량으로 추정 나이를 입력하세요.'],
-      related:[['/calc/pet/monthly-cost/','월 생활비','🐕'],['/calc/pet/medical/','의료비 예산','💊'],['/calc/pet/lifetime-cost/','평생 양육비','📊']],
-      guides:[['/blog/posts/pet-senior-care-guide.html','노령 반려동물 케어 비용 - 10살 이후 준비'],['/blog/posts/dog-lifetime-cost.html','강아지 평생 양육비 얼마나 들까? 항목별 분석']]
-    },
-    '/calc/pet/monthly-cost/': {
-      key:'monthly-cost',
-      quick:['사료비는 반려동물 크기와 브랜드에 따라 월 3~15만원까지 차이가 납니다.','간식·영양제 비용도 월 고정 지출에 포함해야 정확한 예산이 됩니다.','미용·목욕 비용은 견종에 따라 크게 달라질 수 있습니다.','월 생활비에 예비비(돌발 의료비 등)를 10~20% 추가로 잡으세요.'],
-      related:[['/calc/pet/adoption/','입양 초기비용','🏠'],['/calc/pet/medical/','의료비 예산','💊'],['/calc/pet/lifetime-cost/','평생 양육비','📊']],
-      guides:[['/blog/posts/cat-monthly-cost.html','고양이 한 달 생활비 - 품종·나이별 상세 비용 정리'],['/blog/posts/dog-monthly-cost.html','강아지 월 생활비 현실 가이드 - 항목별 비용 분석'],['/blog/posts/pet-cost-saving-tips.html','반려동물 비용 절약 팁 - 합리적으로 키우는 법']]
-    },
-    '/calc/pet/adoption/': {
-      key:'adoption',
-      quick:['입양 시 중성화·예방접종·마이크로칩 비용을 반드시 포함하세요.','유기동물 입양은 분양비가 없거나 저렴하지만 초기 건강검진 비용이 필요합니다.','케이지·식기·리드줄 등 필수 용품 초기 구매비를 고려하세요.','품종견 분양가는 수십만원~수백만원까지 편차가 큽니다.'],
-      related:[['/calc/pet/monthly-cost/','월 생활비','🐕'],['/calc/pet/medical/','의료비 예산','💊'],['/calc/pet/insurance/','펫보험 비교','🛡️']],
-      guides:[['/blog/posts/pet-adoption-cost-guide.html','반려동물 입양 초기비용 완벽 정리'],['/blog/posts/dog-vs-cat-cost.html','강아지 vs 고양이 - 실제 비용 비교']]
-    },
-    '/calc/pet/medical/': {
-      key:'medical',
-      quick:['연간 예방접종·심장사상충 예방비는 필수 고정 지출입니다.','노령 반려동물은 정기 건강검진 비용이 증가합니다.','응급 의료비는 수십만원~수백만원이 될 수 있으니 대비하세요.','치과 스케일링은 매년 또는 격년으로 필요할 수 있습니다.'],
-      related:[['/calc/pet/monthly-cost/','월 생활비','🐕'],['/calc/pet/insurance/','펫보험 비교','🛡️'],['/calc/pet/lifetime-cost/','평생 양육비','📊']],
-      guides:[['/blog/posts/pet-medical-cost.html','반려동물 의료비 현실 - 항목별 비용 총정리'],['/blog/posts/pet-insurance.html','펫보험 가입 전 반드시 알아야 할 것들']]
-    },
-    '/calc/pet/insurance/': {
-      key:'insurance',
-      quick:['보험 가입 시 면책기간과 대기기간을 반드시 확인하세요.','기왕증(기존 질병)은 보장에서 제외되는 경우가 많습니다.','보험료는 반려동물 나이·품종·보장 범위에 따라 달라집니다.','자기부담금 비율에 따라 실제 보장 금액이 크게 차이 납니다.'],
-      related:[['/calc/pet/medical/','의료비 예산','💊'],['/calc/pet/monthly-cost/','월 생활비','🐕'],['/calc/pet/lifetime-cost/','평생 양육비','📊']],
-      guides:[['/blog/posts/pet-insurance.html','펫보험 가입 전 반드시 알아야 할 것들'],['/blog/posts/pet-medical-cost.html','반려동물 의료비 현실 - 항목별 비용 총정리']]
-    },
-    '/calc/pet/lifetime-cost/': {
-      key:'lifetime-cost',
-      quick:['소형견 평균 수명 12~16년, 대형견 8~12년으로 총 비용이 달라집니다.','노령기에는 의료비가 크게 증가하므로 별도 예산을 마련하세요.','물가 상승률을 반영하면 실제 총 비용은 더 높아질 수 있습니다.','장묘 비용도 평생 양육비에 포함해서 계획하세요.'],
-      related:[['/calc/pet/monthly-cost/','월 생활비','🐕'],['/calc/pet/adoption/','입양 초기비용','🏠'],['/calc/pet/medical/','의료비 예산','💊']],
-      guides:[['/blog/posts/cat-lifetime-cost.html','고양이 평생 양육비 얼마나 들까? 항목별 분석'],['/blog/posts/pet-senior-care-guide.html','노령 반려동물 케어 비용 - 10살 이후 준비']]
-    }
-  };
+  // pages 비움 - 관련계산기·블로그는 calc-registry.js fallback이 같은 카테고리에서 자동 생성.
+  // 계산기 추가 시 별도 수정 불필요(레지스트리 1줄로 자동 반영).
+  const pages={};
   let cfg=pages[path];
   if(!cfg){
     var sm=path.match(/\/calc\/([^/]+)\/([^/]+)\//);
@@ -59,11 +24,11 @@
     .sh-nav{display:flex;align-items:center;gap:2px;flex:1;min-width:0!important;}
     .sh-nav-item{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:600;color:#9CA3AF;transition:all .15s;white-space:nowrap;}
     .sh-nav-item:hover{background:rgba(255,255,255,.06);color:#fff;}
-    .sh-nav-item.sh-active{background:rgba(244,114,182,.12);color:#F472B6;}
+    .sh-nav-item.sh-active{background:rgba(20,184,166,.12);color:#14B8A6;}
     .sh-nav-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
     .sh-cta{margin-left:auto;flex-shrink:0;}
     .sh-btn-blog{padding:7px 14px;border-radius:8px;font-size:13px;font-weight:700;border:1px solid rgba(255,255,255,.2);background:transparent;color:#D1D5DB;text-decoration:none;transition:all .15s;display:inline-block;}
-    .sh-btn-blog:hover{border-color:#F472B6;color:#F472B6;}
+    .sh-btn-blog:hover{border-color:#14B8A6;color:#14B8A6;}
     .sh-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;margin-left:auto;background:none;border:none;}
     .sh-hamburger span{display:block;width:22px;height:2px;background:#9CA3AF;border-radius:2px;}
     .mega-layout{max-width:1400px;margin:0 auto;padding:20px 24px;display:grid;grid-template-columns:220px minmax(0,1fr) 300px;gap:24px;align-items:start;}
@@ -74,12 +39,12 @@
     .msl-link,.msl-calc-btn{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:600;color:#6B7280;transition:all .15s;background:none;border:none;width:100%;text-align:left;font-family:inherit;cursor:pointer;}
     .msl-calc-btn{font-size:12px;padding:8px 10px;border-radius:8px;gap:8px;}
     .msl-link:hover,.msl-calc-btn:hover{background:rgba(0,0,0,.04);color:#111827;}
-    .msl-link.msl-active,.msl-calc-btn.msl-calc-active{background:rgba(244,114,182,.12);color:#F472B6;}
+    .msl-link.msl-active,.msl-calc-btn.msl-calc-active{background:rgba(20,184,166,.12);color:#14B8A6;}
     .msl-icon{font-size:16px;flex-shrink:0;width:20px;text-align:center;}
     .msl-badge{margin-left:auto;font-size:10px;font-weight:700;background:rgba(0,0,0,.06);border-radius:4px;padding:1px 6px;color:#6B7280;}
-    .msl-link.msl-active .msl-badge{background:rgba(244,114,182,.15);color:#F472B6;}
+    .msl-link.msl-active .msl-badge{background:rgba(20,184,166,.15);color:#14B8A6;}
     .msl-divider{height:1px;background:rgba(0,0,0,.06);margin:10px 0;}
-    .msl-calc-dot{width:5px;height:5px;border-radius:50%;background:#F472B6;flex-shrink:0;}
+    .msl-calc-dot{width:5px;height:5px;border-radius:50%;background:#14B8A6;flex-shrink:0;}
     .mega-sidebar-right{position:sticky;top:88px;display:flex;flex-direction:column;gap:16px;align-self:start;}
     .msr-widget{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:14px;padding:18px;}
     .msr-widget-title{font-size:11px;font-weight:800;color:#6B7280;letter-spacing:.5px;text-transform:uppercase;margin-bottom:12px;}
@@ -91,29 +56,29 @@
     .msr-widget-link:hover .msr-widget-text{color:#111827;}
     .mega-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:150;}
     .mega-overlay.open{display:block;}
-    .page-wrap.pet-shell-main{max-width:none!important;width:100%!important;margin:0!important;padding:0!important;min-width:0;display:flex!important;flex-direction:column!important;gap:12px!important;}
-    .pet-shell-main>*{margin-top:0!important;margin-bottom:0!important;min-width:0!important;}
-    .pet-shell-main>.page-header{margin-bottom:0px!important;}
-        .pet-shell-main .card{width:100%!important;box-sizing:border-box!important;}
-    .pet-shell-main .card .field{min-width:0;}
-    .pet-shell-main .card,
-    .pet-shell-main .result-card,
-    .pet-shell-main .explain-section,
-    .pet-shell-main .siblings-section,
-    .pet-shell-main .sibling-section,
-    .pet-shell-main .guide-section{max-width:100%!important;}
-    .pet-shell-main .guide-section{margin-top:0!important;gap:12px!important;}
-    .pet-shell-main .guide-section>*{margin:0!important;}
-    .pet-shell-main .sibling-section{display:none!important;}
-    .pet-shell-main .article-info{margin-bottom:0!important;}
-    .pet-shell-main .review-footer{margin-top:0!important;}
-    .pet-shell-main .guide-section .review-footer{margin-top:0!important;}
-    .pet-shell-main .guide-section>.update-note{margin-top:0!important;}
+    .page-wrap.tools-shell-main{max-width:none!important;width:100%!important;margin:0!important;padding:0!important;min-width:0;display:flex!important;flex-direction:column!important;gap:12px!important;}
+    .tools-shell-main>*{margin-top:0!important;margin-bottom:0!important;min-width:0!important;}
+    .tools-shell-main>.page-header{margin-bottom:0px!important;}
+        .tools-shell-main .card{width:100%!important;box-sizing:border-box!important;}
+    .tools-shell-main .card .field{min-width:0;}
+    .tools-shell-main .card,
+    .tools-shell-main .result-card,
+    .tools-shell-main .explain-section,
+    .tools-shell-main .siblings-section,
+    .tools-shell-main .sibling-section,
+    .tools-shell-main .guide-section{max-width:100%!important;}
+    .tools-shell-main .guide-section{margin-top:0!important;gap:12px!important;}
+    .tools-shell-main .guide-section>*{margin:0!important;}
+    .tools-shell-main .sibling-section{display:none!important;}
+    .tools-shell-main .article-info{margin-bottom:0!important;}
+    .tools-shell-main .review-footer{margin-top:0!important;}
+    .tools-shell-main .guide-section .review-footer{margin-top:0!important;}
+    .tools-shell-main .guide-section>.update-note{margin-top:0!important;}
     .mobile-guides{display:none;margin-top:16px;}
     .mobile-guides__title{font-size:11px;font-weight:800;color:#6B7280;letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px;}
     .mobile-guides__list{display:flex;flex-direction:column;gap:6px;}
     .mobile-guides__link{display:flex;align-items:center;gap:10px;padding:11px 14px;background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:12px;text-decoration:none;transition:border-color .15s;}
-    .mobile-guides__link:hover{border-color:#F472B6;}
+    .mobile-guides__link:hover{border-color:#14B8A6;}
     .mobile-guides__icon{font-size:15px;flex-shrink:0;}
     .mobile-guides__text{font-size:13px;font-weight:600;color:#374151;flex:1;line-height:1.4;}
     @media (max-width:1199px){.mega-layout{grid-template-columns:220px minmax(0,1fr);} .mega-sidebar-right{display:none;}}
@@ -131,14 +96,14 @@
       <nav class="sh-nav">
         <a href="/calc/realestate/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#F59E0B"></span>부동산</a>
         <a href="/calc/salary/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#3B82F6"></span>이직/연봉</a>
-        <a href="/calc/tools/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#14B8A6"></span>생활·도구</a>
+        <a href="/calc/tools/" class="sh-nav-item sh-active"><span class="sh-nav-dot" style="background:#14B8A6"></span>생활·도구</a>
         <a href="/calc/tax/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#10B981"></span>프리랜서 세금</a>
         <a href="/calc/pension-welfare/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#0EA5E9"></span>연금·복지</a>
         <a href="/calc/finance/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#6366F1"></span>금융·이자</a>
         <a href="/calc/date/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#F97316"></span>날짜·D-day</a>
         <a href="/calc/health/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#10B981"></span>건강</a>
         <a href="/calc/ai/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#8B5CF6"></span>AI/테크</a>
-        <a href="/calc/pet/" class="sh-nav-item sh-active"><span class="sh-nav-dot" style="background:#F472B6"></span>반려동물</a>
+        <a href="/calc/pet/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#F472B6"></span>반려동물</a>
       </nav>
       <div class="sh-cta"><a href="/blog/" class="sh-btn-blog">블로그</a></div>
       <button class="sh-hamburger" type="button" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
@@ -146,8 +111,8 @@
   }
 
   const main=document.querySelector('main.page-wrap');
-  if(!main || main.classList.contains('pet-shell-main')) return;
-  main.classList.add('pet-shell-main');
+  if(!main || main.classList.contains('tools-shell-main')) return;
+  main.classList.add('tools-shell-main');
 
   const overlay=document.createElement('div');
   overlay.className='mega-overlay';
@@ -158,7 +123,7 @@
   const left=document.createElement('aside');
   left.className='mega-sidebar-left';
   left.id='mega-sidebar-left';
-  left.innerHTML=(window.JPT_sidebarLeft?window.JPT_sidebarLeft('pet', cfg.key):'');
+  left.innerHTML=(window.JPT_sidebarLeft?window.JPT_sidebarLeft('tools', cfg.key):'');
 
   const guidesWidget = (cfg.guides && cfg.guides.length)
     ? `<div class="msr-widget">
@@ -166,14 +131,16 @@
         <div class="msr-widget-list">${cfg.guides.slice(0,3).map(g=>`<a href="${g[0]}" class="msr-widget-link"><span class="msr-widget-icon">📖</span><span class="msr-widget-text">${g[1]}</span></a>`).join('')}</div>
       </div>`
     : '';
-  const right=document.createElement('aside');
-  right.className='mega-sidebar-right';
-  right.innerHTML=`
-    <div class="msr-widget">
+  // 관련 계산기 위젯: 같은 카테고리에 다른 계산기가 있을 때만 노출(단일 계산기 카테고리에서 빈 박스 방지)
+  const relatedWidget = (cfg.related && cfg.related.length)
+    ? `<div class="msr-widget">
       <div class="msr-widget-title">관련 계산기</div>
       <div class="msr-widget-list">${cfg.related.map(item=>`<a href="${item[0]}" class="msr-widget-link"><span class="msr-widget-icon">${item[2]}</span><span class="msr-widget-text">${item[1]}</span></a>`).join('')}</div>
-    </div>
-    ${guidesWidget}`;
+    </div>`
+    : '';
+  const right=document.createElement('aside');
+  right.className='mega-sidebar-right';
+  right.innerHTML=`${relatedWidget}${guidesWidget}`;
 
   if (cfg.guides && cfg.guides.length) {
     const mobileGuides = document.createElement('div');

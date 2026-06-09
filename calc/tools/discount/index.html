@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>할인율 계산기 - 할인가·할인율 역산·중복할인 계산 | 제이퍼</title>
+  <meta name="description" content="정가와 할인율로 할인가를, 정가와 할인가로 할인율을, 할인가와 할인율로 원래 정가를 역산합니다. 20% 후 10% 같은 중복(이중)할인의 실질 할인율까지 계산하는 무료 할인 계산기." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/tools/discount/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="할인율 계산기 - 할인가·할인율 역산·중복할인 계산 | 제이퍼" />
+  <meta property="og:description" content="할인가·할인율·정가를 서로 역산하고, 중복할인의 실질 할인율까지 계산하는 무료 할인 계산기." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/tools/discount/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/tools-common.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"할인율 계산기","url":"https://www.jptcalc.kr/calc/tools/discount/","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+    {"@type":"ListItem","position":2,"name":"생활·도구 계산기","item":"https://www.jptcalc.kr/calc/tools/"},
+    {"@type":"ListItem","position":3,"name":"할인율 계산기","item":"https://www.jptcalc.kr/calc/tools/discount/"}
+  ]}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"할인가는 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"정가에서 할인율만큼 뺀 값입니다. 할인가 = 정가 × (1 − 할인율 ÷ 100)으로 계산합니다. 예를 들어 50,000원의 30% 할인은 50,000 × 0.7 = 35,000원이고, 할인 금액은 15,000원입니다. '할인가 계산' 모드에 정가와 할인율을 넣으면 됩니다."}},{"@type":"Question","name":"할인율은 어떻게 역산하나요?","acceptedAnswer":{"@type":"Answer","text":"(정가 − 할인가) ÷ 정가 × 100으로 구합니다. 예를 들어 50,000원이 35,000원이 됐다면 (50,000 − 35,000) ÷ 50,000 × 100 = 30% 할인입니다. '할인율 역산' 모드에 정가와 할인가를 넣으면 자동으로 계산됩니다."}},{"@type":"Question","name":"할인된 가격으로 원래 정가를 알 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네. 정가 = 할인가 ÷ (1 − 할인율 ÷ 100)으로 역산합니다. 예를 들어 30% 할인가가 35,000원이라면 35,000 ÷ 0.7 = 50,000원이 원래 정가입니다. '정가 역산' 모드를 사용하세요."}},{"@type":"Question","name":"20% 할인 후 10% 추가 할인은 총 30% 할인인가요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 중복할인은 더하지 않고 곱합니다. 20% 후 10%는 × 0.8 × 0.9 = 0.72, 즉 실질 28% 할인입니다. 30% 할인보다 덜 깎입니다. '중복할인' 모드에 할인율을 쉼표로 나열(예: 20,10)하면 최종 가격과 실질 할인율을 계산합니다."}},{"@type":"Question","name":"쿠폰 할인과 카드 할인을 같이 받으면 얼마나 싸지나요?","acceptedAnswer":{"@type":"Answer","text":"적용 순서와 무관하게 곱으로 계산됩니다. 예를 들어 정가 100,000원에 쿠폰 15%·카드 5%면 100,000 × 0.85 × 0.95 = 80,750원, 실질 19.25% 할인입니다. 단 정액 할인(원 단위)과 정률 할인(% 단위)이 섞이면 적용 순서에 따라 결과가 달라질 수 있습니다."}}]}</script>
+  <style>
+    /* discount 고유 스타일 - 공통은 /assets/tools-common.css */
+    .input-wrap{position:relative}
+    .input-wrap .unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none}
+    input[type=number],input[type=text]{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
+    input::placeholder{color:var(--gray-400);font-weight:400}
+    input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(20,184,166,0.15)}
+    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
+    .mode-group{display:flex;flex-wrap:wrap;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:4px}
+    .mode-btn{flex:1 1 calc(50% - 2px);border:none;border-radius:7px;background:transparent;padding:10px 4px;font-size:12.5px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap}
+    .mode-btn.active{background:var(--primary);color:#fff;font-weight:700}
+    .mode-hint{font-size:12px;color:var(--gray-400);margin:8px 2px 0}
+    .field-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .dc-field>label{display:block;font-size:12px;font-weight:700;color:var(--gray-500);margin-bottom:7px}
+    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
+    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
+    .result-card{background:linear-gradient(135deg,#F0FDFA 0%,#CCFBF1 100%);border:1px solid rgba(20,184,166,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-row+.result-row{border-top:1px solid rgba(0,0,0,0.07)}
+    .rh-value .big-num{font-size:38px;font-weight:900;line-height:1.05;word-break:break-all}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/tools/" class="nav-item active"><span class="nav-dot" style="background:#14B8A6;"></span>생활·도구</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/tools/">생활·도구 계산기</a><span class="breadcrumb-sep">›</span><span>할인율 계산기</span></div>
+    <div class="page-header-badge">🏷️ 할인가·할인율·정가 역산</div>
+    <h1>할인율 계산기</h1>
+    <p>할인가·할인율·정가를 서로 역산하고 중복할인의 실질 할인율까지 계산하세요</p>
+  </div>
+    <div class="card">
+      <div class="card-title">계산 종류</div>
+      <div class="mode-group">
+        <button class="mode-btn active" data-mode="price" onclick="setMode('price',this)">할인가 계산</button>
+        <button class="mode-btn" data-mode="rate" onclick="setMode('rate',this)">할인율 역산</button>
+        <button class="mode-btn" data-mode="origin" onclick="setMode('origin',this)">정가 역산</button>
+        <button class="mode-btn" data-mode="stack" onclick="setMode('stack',this)">중복할인</button>
+      </div>
+      <div class="mode-hint" id="mode-hint">정가와 할인율을 넣으면 할인가와 할인 금액을 계산합니다. 예) 50,000원 30% 할인</div>
+    </div>
+    <div class="card">
+      <div class="card-title">값 입력</div>
+      <div class="field-grid" id="grid-2">
+        <div class="dc-field"><label id="lab-a" for="in-a">정가</label><div class="input-wrap"><input type="number" id="in-a" placeholder="예) 50000" oninput="calc()" /><span class="unit" id="unit-a">원</span></div></div>
+        <div class="dc-field"><label id="lab-b" for="in-b">할인율</label><div class="input-wrap"><input type="number" id="in-b" placeholder="예) 30" oninput="calc()" /><span class="unit" id="unit-b">%</span></div></div>
+      </div>
+      <div id="grid-stack" style="display:none">
+        <div class="dc-field" style="margin-bottom:12px"><label for="in-sp">정가</label><div class="input-wrap"><input type="number" id="in-sp" placeholder="예) 50000" oninput="calc()" /><span class="unit">원</span></div></div>
+        <div class="dc-field"><label for="in-sr">할인율 목록 (쉼표로 구분)</label><div class="input-wrap"><input type="text" id="in-sr" inputmode="decimal" placeholder="예) 20, 10" oninput="calc()" /><span class="unit">%</span></div></div>
+        <div class="mode-hint">순차 적용됩니다. 예) 20, 10 → 20% 할인 후 10% 추가 할인</div>
+      </div>
+    </div>
+    <div class="result-card" id="result">
+      <div class="result-highlight"><div class="rh-label" id="r-label">결과</div><div class="rh-value"><span class="big-num" id="r-main">-</span><span id="r-unit"></span></div><div class="rh-sub" id="r-sub">-</div></div>
+      <div class="result-row"><span class="result-label" id="r-d1-label">-</span><span class="result-value" id="r-d1">-</span></div>
+      <div class="result-row"><span class="result-label" id="r-d2-label">-</span><span class="result-value" id="r-d2">-</span></div>
+      <p class="result-note">입력값은 브라우저 안에서만 계산되며 서버로 전송되지 않습니다. 결과는 참고용입니다.</p>
+    </div>
+
+  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>할인 계산, 4가지 상황</h2>
+      <p>할인은 보는 방향에 따라 계산이 달라집니다. 할인가를 구할 때, 거꾸로 할인율이나 원래 정가를 알고 싶을 때, 그리고 여러 할인이 겹칠 때까지 네 가지를 정리했습니다. 위 계산기의 모드가 각각에 대응합니다.</p>
+      <div class="guide-table-wrap">
+        <table>
+          <thead><tr><th>모드</th><th>공식</th><th>예시</th></tr></thead>
+          <tbody>
+            <tr><td>할인가 계산</td><td>정가 × (1 − 할인율 ÷ 100)</td><td>50,000원 30% → 35,000원</td></tr>
+            <tr><td>할인율 역산</td><td>(정가 − 할인가) ÷ 정가 × 100</td><td>50,000 → 35,000 = 30%</td></tr>
+            <tr><td>정가 역산</td><td>할인가 ÷ (1 − 할인율 ÷ 100)</td><td>35,000원이 30%할인 → 50,000원</td></tr>
+            <tr><td>중복할인</td><td>정가 × (1−r₁)(1−r₂)…</td><td>20% 후 10% → 실질 28%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="guide-card">
+      <h2>중복할인은 더하지 않고 곱합니다</h2>
+      <p>가장 많이 오해하는 부분입니다. 20% 할인 후 추가 10% 할인은 30% 할인이 아니라 28% 할인입니다. 첫 할인으로 정가의 80%가 되고, 그 80%에서 다시 10%를 빼므로 80% × 90% = 72%, 즉 28%만 깎입니다. 쿠폰·카드·멤버십 할인이 겹칠수록 체감보다 덜 깎이는 이유입니다.</p>
+      <div class="guide-table-wrap">
+        <table>
+          <thead><tr><th>중복 할인</th><th>실질 할인율</th><th>10만원 기준 결제액</th></tr></thead>
+          <tbody>
+            <tr><td>20% + 10%</td><td>28%</td><td>72,000원</td></tr>
+            <tr><td>30% + 10%</td><td>37%</td><td>63,000원</td></tr>
+            <tr><td>20% + 10% + 5%</td><td>31.6%</td><td>68,400원</td></tr>
+            <tr><td>50% + 50%</td><td>75%</td><td>25,000원</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="guide-card">
+      <h2>실제 할인 계산 예시</h2>
+      <h3>예시 1 - 정가 역산으로 진짜 할인 확인</h3>
+      <p>'정가 50,000원 → 35,000원'이라는 광고를 봤을 때, 할인율 역산 모드에 50,000과 35,000을 넣으면 30% 할인임을 알 수 있습니다. 반대로 '30% 할인가 35,000원'만 보고 원래 얼마였는지 궁금하면 정가 역산 모드로 50,000원을 확인할 수 있습니다.</p>
+      <ul>
+        <li>할인율 역산: (50,000 − 35,000) ÷ 50,000 × 100 = 30%</li>
+        <li>정가 역산: 35,000 ÷ (1 − 0.30) = 50,000원</li>
+      </ul>
+      <h3>예시 2 - 쿠폰과 카드 할인 겹치기</h3>
+      <p>10만원 상품에 쿠폰 15%와 카드 5%가 함께 적용되면, 중복할인 모드에 '15, 5'를 넣어 최종 80,750원, 실질 19.25% 할인임을 확인할 수 있습니다. 단순히 20% 할인(8만원)으로 생각하면 750원을 더 싸게 본 셈입니다.</p>
+      <ul>
+        <li>100,000 × 0.85 × 0.95 = 80,750원</li>
+        <li>실질 할인율 = 19.25%</li>
+      </ul>
+      <h3>예시 3 - 마진 역산</h3>
+      <p>판매가 35,000원에 30% 할인을 적용해야 한다면, 할인가 계산 모드로 24,500원이 나옵니다. 반대로 최종 24,500원을 받아야 하는데 30% 할인 행사를 한다면 정가 역산으로 35,000원에 표시해야 함을 알 수 있습니다.</p>
+      <ul>
+        <li>할인가: 35,000 × 0.70 = 24,500원</li>
+        <li>정가 역산: 24,500 ÷ 0.70 = 35,000원</li>
+      </ul>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>할인가는 어떻게 계산하나요?</h3><p>정가에서 할인율만큼 뺀 값입니다. 할인가 = 정가 × (1 − 할인율 ÷ 100)으로 계산합니다. 50,000원의 30% 할인은 50,000 × 0.7 = 35,000원이고, 할인 금액은 15,000원입니다. '할인가 계산' 모드에 정가와 할인율을 넣으면 됩니다.</p></div>
+      <div class="faq-item"><h3>할인율은 어떻게 역산하나요?</h3><p>(정가 − 할인가) ÷ 정가 × 100으로 구합니다. 50,000원이 35,000원이 됐다면 (50,000 − 35,000) ÷ 50,000 × 100 = 30% 할인입니다. '할인율 역산' 모드에 정가와 할인가를 넣으면 자동으로 계산됩니다.</p></div>
+      <div class="faq-item"><h3>할인된 가격으로 원래 정가를 알 수 있나요?</h3><p>네. 정가 = 할인가 ÷ (1 − 할인율 ÷ 100)으로 역산합니다. 30% 할인가가 35,000원이라면 35,000 ÷ 0.7 = 50,000원이 원래 정가입니다. '정가 역산' 모드를 사용하세요.</p></div>
+      <div class="faq-item"><h3>20% 할인 후 10% 추가 할인은 총 30% 할인인가요?</h3><p>아닙니다. 중복할인은 더하지 않고 곱합니다. 20% 후 10%는 × 0.8 × 0.9 = 0.72, 즉 실질 28% 할인입니다. 30% 할인보다 덜 깎입니다. '중복할인' 모드에 할인율을 쉼표로 나열(예: 20,10)하면 최종 가격과 실질 할인율을 계산합니다.</p></div>
+      <div class="faq-item"><h3>쿠폰 할인과 카드 할인을 같이 받으면 얼마나 싸지나요?</h3><p>적용 순서와 무관하게 곱으로 계산됩니다. 정가 100,000원에 쿠폰 15%·카드 5%면 100,000 × 0.85 × 0.95 = 80,750원, 실질 19.25% 할인입니다. 단 정액 할인(원 단위)과 정률 할인(% 단위)이 섞이면 적용 순서에 따라 결과가 달라질 수 있습니다.</p></div>
+      <div class="update-note">최종 검토: 2026.06.09 · 계산 결과는 참고용입니다.</div>
+    </div>
+  </div>
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '정률 할인 표준 계산식 기반',
+    appliedFrom: '상시',
+    exceptions: [
+      "'정가 역산'은 할인율이 100%이면 계산할 수 없습니다",
+      '중복할인은 정률(%) 순차 적용 기준이며 정액 할인은 포함하지 않습니다',
+    ],
+    references: [
+      { name: '제이퍼 퍼센트 계산기', url: 'https://www.jptcalc.kr/calc/tools/percent/' },
+    ],
+    lastReviewed: '2026.06',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">© 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script>
+let mode='price';   // price | rate | origin | stack
+
+const MODES={
+  price:  {labA:'정가', labB:'할인율', uA:'원', uB:'%', phA:'예) 50000', phB:'예) 30', hint:'정가와 할인율을 넣으면 할인가와 할인 금액을 계산합니다. 예) 50,000원 30% 할인'},
+  rate:   {labA:'정가', labB:'할인가', uA:'원', uB:'원', phA:'예) 50000', phB:'예) 35000', hint:'정가와 할인가를 넣으면 할인율과 할인 금액을 역산합니다. 예) 50,000 → 35,000'},
+  origin: {labA:'할인가', labB:'할인율', uA:'원', uB:'%', phA:'예) 35000', phB:'예) 30', hint:'할인가와 할인율을 넣으면 할인 전 원래 정가를 역산합니다. 예) 35,000원이 30% 할인'}
+};
+
+function fmt(n){
+  if(n===null||n===undefined||!isFinite(n)) return '-';
+  const r=Math.round(n*1e6)/1e6;
+  return r.toLocaleString('ko-KR',{maximumFractionDigits:6});
+}
+function won(n){
+  if(n===null||n===undefined||!isFinite(n)) return '-';
+  return Math.round(n).toLocaleString('ko-KR')+'원';
+}
+function setMode(m,btn){
+  mode=m;
+  document.querySelectorAll('.mode-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const stack = (m==='stack');
+  document.getElementById('grid-2').style.display = stack ? 'none' : 'grid';
+  document.getElementById('grid-stack').style.display = stack ? 'block' : 'none';
+  if(!stack){
+    const c=MODES[m];
+    document.getElementById('lab-a').textContent=c.labA;
+    document.getElementById('lab-b').textContent=c.labB;
+    document.getElementById('unit-a').textContent=c.uA;
+    document.getElementById('unit-b').textContent=c.uB;
+    document.getElementById('in-a').placeholder=c.phA;
+    document.getElementById('in-b').placeholder=c.phB;
+    document.getElementById('mode-hint').textContent=c.hint;
+  } else {
+    document.getElementById('mode-hint').textContent='할인율을 쉼표로 나열하면 순차 적용한 최종가와 실질 할인율을 계산합니다. 예) 20, 10';
+  }
+  calc();
+}
+function show(label, main, mainUnit, sub, d1l, d1, d2l, d2){
+  const res=document.getElementById('result');
+  res.classList.add('show');
+  document.getElementById('r-label').textContent=label;
+  document.getElementById('r-main').textContent=main;
+  document.getElementById('r-unit').textContent=mainUnit||'';
+  document.getElementById('r-sub').textContent=sub;
+  document.getElementById('r-d1-label').textContent=d1l;
+  document.getElementById('r-d1').textContent=d1;
+  document.getElementById('r-d2-label').textContent=d2l;
+  document.getElementById('r-d2').textContent=d2;
+}
+function hide(){ document.getElementById('result').classList.remove('show'); }
+
+function calc(){
+  if(mode==='stack'){
+    const p=parseFloat(document.getElementById('in-sp').value);
+    const raw=document.getElementById('in-sr').value.trim();
+    if(!isFinite(p)||raw===''){hide();return;}
+    const rates=raw.split(',').map(s=>parseFloat(s.trim())).filter(x=>isFinite(x));
+    if(!rates.length){hide();return;}
+    let factor=1;
+    rates.forEach(r=>{factor*=(1-r/100);});
+    const finalPrice=p*factor;
+    const effRate=(1-factor)*100;
+    show('실질 할인율', fmt(Math.round(effRate*100)/100), '%', rates.join('% → ')+'% 순차 적용',
+         '최종 결제 금액', won(finalPrice),
+         '총 할인 금액', won(p-finalPrice));
+    return;
+  }
+  const a=parseFloat(document.getElementById('in-a').value);
+  const b=parseFloat(document.getElementById('in-b').value);
+  if(!isFinite(a)||!isFinite(b)){hide();return;}
+
+  if(mode==='price'){
+    const disc=a*b/100, price=a-disc;
+    show('할인가', won(price), '', a.toLocaleString('ko-KR')+'원에서 '+fmt(b)+'% 할인',
+         '할인 금액', won(disc), '정가', won(a));
+  } else if(mode==='rate'){
+    if(a===0){hide();return;}
+    const rate=(a-b)/a*100, disc=a-b;
+    show('할인율', fmt(Math.round(rate*100)/100), '%', a.toLocaleString('ko-KR')+'원 → '+b.toLocaleString('ko-KR')+'원',
+         '할인 금액', won(disc), '할인가', won(b));
+  } else { // origin
+    if(b>=100){hide();return;}
+    const origin=a/(1-b/100), disc=origin-a;
+    show('원래 정가', won(origin), '', '할인가 '+a.toLocaleString('ko-KR')+'원 = '+fmt(b)+'% 할인',
+         '할인 금액', won(disc), '할인가', won(a));
+  }
+}
+</script>
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/calc-registry.js"></script>
+<script src="/assets/tools-detail-shell.js"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '정률 할인 표준 계산식',
+  basisDate: '상시 적용',
+  referenceOrg: '제이퍼 계산기',
+  lastReviewed: '2026.06.09',
+  category: 'tools'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/blog-review-footer.js"></script>
+</body>
+</html>

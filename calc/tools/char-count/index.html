@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>글자수 세기 - 공백 포함/제외·byte·원고지 매수 | 제이퍼</title>
+  <meta name="description" content="글을 붙여넣으면 글자수(공백 포함·제외), byte 수, 단어 수, 줄 수, 원고지 매수를 실시간으로 세어줍니다. 자소서·리포트 자수 제한 확인에 쓰는 무료 글자수 세기 도구입니다." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/tools/char-count/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="글자수 세기 - 공백 포함/제외·byte·원고지 매수 | 제이퍼" />
+  <meta property="og:description" content="글을 붙여넣으면 글자수(공백 포함·제외)·byte·단어·줄·원고지 매수를 실시간 카운트. 자소서·리포트 자수 확인용 무료 도구." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/tools/char-count/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/tools-common.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"글자수 세기","url":"https://www.jptcalc.kr/calc/tools/char-count/","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+    {"@type":"ListItem","position":2,"name":"생활·도구 계산기","item":"https://www.jptcalc.kr/calc/tools/"},
+    {"@type":"ListItem","position":3,"name":"글자수 세기","item":"https://www.jptcalc.kr/calc/tools/char-count/"}
+  ]}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"공백 포함과 공백 제외 글자수는 어떻게 다른가요?","acceptedAnswer":{"@type":"Answer","text":"공백 포함은 띄어쓰기를 글자수에 넣고, 공백 제외는 띄어쓰기·탭·줄바꿈을 모두 빼고 셉니다. 예를 들어 '안녕 하세요'는 공백 포함 6자, 공백 제외 5자입니다. 자소서 자수 제한은 보통 공백 포함 기준이지만 제출처마다 다르므로 안내를 확인하세요."}},{"@type":"Question","name":"byte 수는 어떤 기준인가요?","acceptedAnswer":{"@type":"Answer","text":"이 도구의 byte는 한글 1자를 2byte, 영문·숫자·기호·공백을 1byte로 계산하는 방식입니다. 일부 입사지원 시스템이 글자수 대신 byte로 제한을 두기 때문에 함께 표시합니다. 예를 들어 '한글ab'는 2+2+1+1 = 6byte입니다. UTF-8 환경에서는 한글이 3byte이므로 시스템 기준을 확인하세요."}},{"@type":"Question","name":"줄바꿈도 글자수에 포함되나요?","acceptedAnswer":{"@type":"Answer","text":"이 도구는 줄바꿈(엔터)을 글자수에 포함하지 않습니다. 대부분의 자소서·지원서 시스템이 보이는 글자만 세는 방식과 맞춘 것입니다. 다만 시스템에 따라 줄바꿈을 1자로 세거나 byte로 환산하는 경우도 있으니 제출 전 실제 입력란에서 한 번 더 확인하는 것이 안전합니다."}},{"@type":"Question","name":"원고지 매수는 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"원고지 1매를 200자로 보고, 공백 포함 글자수를 200으로 나눈 뒤 올림하여 매수를 표시합니다. 예를 들어 450자면 3매입니다. 실제 원고지는 문장부호·줄바꿈 칸 처리로 칸 수가 달라질 수 있어 대략적인 분량 참고치로 사용하세요."}},{"@type":"Question","name":"입력한 글이 어딘가로 저장되나요?","acceptedAnswer":{"@type":"Answer","text":"아니요. 입력한 글은 브라우저 안에서만 글자수를 세는 데 쓰이고 서버로 전송·저장되지 않습니다. 자소서처럼 민감한 글도 안심하고 붙여넣어 분량을 확인할 수 있습니다."}}]}</script>
+  <style>
+    /* char-count 고유 스타일 - 공통은 /assets/tools-common.css */
+    textarea{width:100%;min-height:240px;border:1px solid rgba(0,0,0,0.1);border-radius:12px;padding:16px;font-size:15px;font-weight:500;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.02);outline:none;resize:vertical;line-height:1.7;transition:border-color .18s,box-shadow .18s}
+    textarea::placeholder{color:var(--gray-400);font-weight:400}
+    textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(20,184,166,0.12);background:#fff}
+    .ta-tools{display:flex;justify-content:flex-end;gap:8px;margin-top:10px}
+    .ta-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:var(--gray-100);border:none;border-radius:8px;font-size:12px;font-weight:600;color:var(--gray-600);cursor:pointer;font-family:inherit;transition:all .15s}
+    .ta-btn:hover{background:var(--gray-200)}
+    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
+    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
+    .result-card{display:block;background:linear-gradient(135deg,#F0FDFA 0%,#CCFBF1 100%);border:1px solid rgba(20,184,166,0.25);border-radius:16px;padding:20px;margin-top:8px}
+    .cnt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .cnt-box{background:#fff;border:1px solid rgba(20,184,166,0.18);border-radius:12px;padding:14px 12px;text-align:center}
+    .cnt-box.main{grid-column:span 3;background:rgba(20,184,166,0.08);border-color:rgba(20,184,166,0.3)}
+    .cnt-label{font-size:11.5px;font-weight:700;color:var(--gray-500);margin-bottom:5px}
+    .cnt-num{font-size:22px;font-weight:900;color:var(--gray-900);line-height:1;word-break:break-all}
+    .cnt-box.main .cnt-num{font-size:34px;color:var(--primary)}
+    .cnt-unit{font-size:13px;font-weight:700;color:var(--gray-500)}
+    .result-note{font-size:11px;color:var(--gray-400);margin-top:12px;line-height:1.6}
+    @media (max-width:480px){.cnt-grid{grid-template-columns:repeat(2,1fr)}.cnt-box.main{grid-column:span 2}}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/tools/" class="nav-item active"><span class="nav-dot" style="background:#14B8A6;"></span>생활·도구</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/tools/">생활·도구 계산기</a><span class="breadcrumb-sep">›</span><span>글자수 세기</span></div>
+    <div class="page-header-badge">📝 공백 포함/제외 · byte · 원고지</div>
+    <h1>글자수 세기</h1>
+    <p>글을 붙여넣으면 글자수·byte·단어·줄·원고지 매수를 실시간으로 세어줍니다</p>
+  </div>
+    <div class="card">
+      <div class="card-title">글 입력</div>
+      <textarea id="text" placeholder="여기에 글을 입력하거나 붙여넣으세요. 자소서·리포트 자수 제한 확인에 사용하세요." oninput="count()" autofocus></textarea>
+      <div class="ta-tools">
+        <button class="ta-btn" type="button" onclick="clearText()">지우기</button>
+      </div>
+    </div>
+    <div class="result-card">
+      <div class="cnt-grid">
+        <div class="cnt-box main"><div class="cnt-label">공백 포함 글자수</div><div class="cnt-num"><span id="c-with">0</span><span class="cnt-unit">자</span></div></div>
+        <div class="cnt-box"><div class="cnt-label">공백 제외</div><div class="cnt-num"><span id="c-no">0</span><span class="cnt-unit">자</span></div></div>
+        <div class="cnt-box"><div class="cnt-label">byte (한글 2)</div><div class="cnt-num"><span id="c-byte">0</span><span class="cnt-unit">B</span></div></div>
+        <div class="cnt-box"><div class="cnt-label">단어 수</div><div class="cnt-num"><span id="c-word">0</span><span class="cnt-unit">개</span></div></div>
+        <div class="cnt-box"><div class="cnt-label">줄 수</div><div class="cnt-num"><span id="c-line">0</span><span class="cnt-unit">줄</span></div></div>
+        <div class="cnt-box"><div class="cnt-label">원고지 (200자)</div><div class="cnt-num"><span id="c-wongo">0</span><span class="cnt-unit">매</span></div></div>
+      </div>
+      <p class="result-note">공백 포함 글자수는 띄어쓰기를 포함하고 줄바꿈은 제외합니다. byte는 한글 2byte·영문 1byte 기준입니다. 자소서·지원서 시스템마다 글자수·byte 산정 방식이 다를 수 있으니 제출처 기준을 확인하세요. 입력 글은 서버로 전송되지 않습니다.</p>
+    </div>
+
+  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>글자수, 기준에 따라 다릅니다</h2>
+      <p>같은 글이라도 세는 기준에 따라 글자수가 달라집니다. 자소서·지원서·과제 제출 전에는 어떤 기준으로 제한이 걸려 있는지 먼저 확인해야 합니다. 이 도구가 보여주는 다섯 가지 기준을 정리했습니다.</p>
+      <div class="guide-table-wrap">
+        <table>
+          <thead><tr><th>기준</th><th>설명</th><th>예: "안녕 하세요"</th></tr></thead>
+          <tbody>
+            <tr><td>공백 포함</td><td>띄어쓰기 포함, 줄바꿈 제외</td><td>6자</td></tr>
+            <tr><td>공백 제외</td><td>모든 공백·줄바꿈 제거</td><td>5자</td></tr>
+            <tr><td>byte (한글 2)</td><td>한글 2·영문 1byte</td><td>11byte</td></tr>
+            <tr><td>단어 수</td><td>공백으로 구분한 덩어리</td><td>2개</td></tr>
+            <tr><td>원고지</td><td>공백 포함 ÷ 200 올림</td><td>1매</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="guide-card">
+      <h2>자소서 자수 제한, 이렇게 확인하세요</h2>
+      <h3>공백 포함이 기본</h3>
+      <p>대부분의 채용 자소서는 공백 포함 글자수로 제한을 둡니다. "500자 이내"라면 띄어쓰기까지 포함해 500자입니다. 다만 일부 공공기관·대기업 시스템은 byte 제한(예: 무공백 기준 또는 한글 2byte)을 쓰기도 하므로, 실제 입력란 하단의 카운터를 한 번 더 확인하는 것이 안전합니다.</p>
+      <h3>줄바꿈과 공백 처리</h3>
+      <p>줄바꿈(엔터)을 글자수에 포함하는 시스템도 있고 제외하는 시스템도 있습니다. 이 도구는 줄바꿈을 제외하지만, 제한에 빠듯하게 맞춘 글이라면 실제 제출 창에서 카운트가 다르게 나올 수 있습니다. 여유를 10~20자 정도 두는 것이 좋습니다.</p>
+      <h3>byte 제한이 걸린 경우</h3>
+      <p>byte 제한은 한글이 2byte를 차지하므로 글자수보다 빨리 한도에 도달합니다. 예를 들어 4,000byte 제한이면 한글로만 쓸 경우 약 2,000자입니다. 영문·숫자를 섞으면 더 많이 쓸 수 있습니다.</p>
+    </div>
+    <div class="guide-card">
+      <h2>활용 예시</h2>
+      <h3>예시 1 - 자소서 500자 항목</h3>
+      <p>"지원 동기를 500자 이내로 작성하시오"라면 글을 붙여넣고 공백 포함 글자수를 500 이하로 맞춥니다. 480~495자 정도로 채우면 가독성과 분량을 함께 잡을 수 있습니다.</p>
+      <h3>예시 2 - 리포트 원고지 분량</h3>
+      <p>"원고지 10매 분량"이라면 공백 포함 약 2,000자(200자 × 10)가 기준입니다. 원고지 매수 칸으로 현재 분량이 몇 매인지 바로 확인할 수 있습니다.</p>
+      <h3>예시 3 - SNS·광고 카피</h3>
+      <p>인스타그램 캡션, 메타 디스크립션처럼 글자수가 중요한 카피는 공백 포함 글자수로 한도를 관리합니다. 메타 디스크립션은 보통 공백 포함 80자 내외가 적정합니다.</p>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>공백 포함과 공백 제외 글자수는 어떻게 다른가요?</h3><p>공백 포함은 띄어쓰기를 글자수에 넣고, 공백 제외는 띄어쓰기·탭·줄바꿈을 모두 빼고 셉니다. 예를 들어 '안녕 하세요'는 공백 포함 6자, 공백 제외 5자입니다. 자소서 자수 제한은 보통 공백 포함 기준이지만 제출처마다 다르므로 안내를 확인하세요.</p></div>
+      <div class="faq-item"><h3>byte 수는 어떤 기준인가요?</h3><p>이 도구의 byte는 한글 1자를 2byte, 영문·숫자·기호·공백을 1byte로 계산하는 방식입니다. 일부 입사지원 시스템이 글자수 대신 byte로 제한을 두기 때문에 함께 표시합니다. 예를 들어 '한글ab'는 2+2+1+1 = 6byte입니다. UTF-8 환경에서는 한글이 3byte이므로 시스템 기준을 확인하세요.</p></div>
+      <div class="faq-item"><h3>줄바꿈도 글자수에 포함되나요?</h3><p>이 도구는 줄바꿈(엔터)을 글자수에 포함하지 않습니다. 대부분의 자소서·지원서 시스템이 보이는 글자만 세는 방식과 맞춘 것입니다. 다만 시스템에 따라 줄바꿈을 1자로 세거나 byte로 환산하는 경우도 있으니 제출 전 실제 입력란에서 한 번 더 확인하는 것이 안전합니다.</p></div>
+      <div class="faq-item"><h3>원고지 매수는 어떻게 계산하나요?</h3><p>원고지 1매를 200자로 보고, 공백 포함 글자수를 200으로 나눈 뒤 올림하여 매수를 표시합니다. 예를 들어 450자면 3매입니다. 실제 원고지는 문장부호·줄바꿈 칸 처리로 칸 수가 달라질 수 있어 대략적인 분량 참고치로 사용하세요.</p></div>
+      <div class="faq-item"><h3>입력한 글이 어딘가로 저장되나요?</h3><p>아니요. 입력한 글은 브라우저 안에서만 글자수를 세는 데 쓰이고 서버로 전송·저장되지 않습니다. 자소서처럼 민감한 글도 안심하고 붙여넣어 분량을 확인할 수 있습니다.</p></div>
+      <div class="update-note">최종 검토: 2026.06.09 · 계산 결과는 참고용입니다.</div>
+    </div>
+  </div>
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '공백 포함(줄바꿈 제외)·공백 제외·한글 2byte 기준',
+    appliedFrom: '상시',
+    exceptions: [
+      '자소서·지원서 시스템마다 글자수·byte·줄바꿈 산정 방식이 다를 수 있습니다',
+      '원고지 매수는 200자 기준 단순 환산 참고치입니다',
+    ],
+    references: [
+      { name: '제이퍼 생활·도구 계산기', url: 'https://www.jptcalc.kr/calc/tools/' },
+    ],
+    lastReviewed: '2026.06',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">© 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script>
+function fmt(n){ return n.toLocaleString('ko-KR'); }
+function count(){
+  const t = document.getElementById('text').value;
+  const noNl = t.replace(/\r?\n/g, '');
+  const withSpace = [...noNl].length;
+  const noSpace = [...t.replace(/\s/g, '')].length;
+  let bytes = 0;
+  for(const ch of noNl){ bytes += (ch.codePointAt(0) > 127 ? 2 : 1); }
+  const words = t.trim() ? t.trim().split(/\s+/).length : 0;
+  const lines = t === '' ? 0 : t.split(/\n/).length;
+  const wongo = Math.ceil(withSpace / 200);
+  document.getElementById('c-with').textContent = fmt(withSpace);
+  document.getElementById('c-no').textContent = fmt(noSpace);
+  document.getElementById('c-byte').textContent = fmt(bytes);
+  document.getElementById('c-word').textContent = fmt(words);
+  document.getElementById('c-line').textContent = fmt(lines);
+  document.getElementById('c-wongo').textContent = fmt(wongo);
+}
+function clearText(){ const el=document.getElementById('text'); el.value=''; el.focus(); count(); }
+count();
+</script>
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/calc-registry.js"></script>
+<script src="/assets/tools-detail-shell.js"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '글자수·byte·원고지 표준 카운트 기준',
+  basisDate: '상시 적용',
+  referenceOrg: '제이퍼 계산기',
+  lastReviewed: '2026.06.09',
+  category: 'tools'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/blog-review-footer.js"></script>
+</body>
+</html>

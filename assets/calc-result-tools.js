@@ -217,8 +217,8 @@
       panel.classList.toggle('show');
       if (panel.classList.contains('show')) renderHistory(card, panel);
     }));
-    row.appendChild(makeButton('결과공유', icons.share, ()=>shareSnapshot(card)));
-    row.appendChild(makeButton('이미지저장', icons.image, ()=>saveAsImage(card)));
+    row.appendChild(makeButton('결과공유', '', ()=>shareSnapshot(card)));
+    row.appendChild(makeButton('이미지저장', '', ()=>saveAsImage(card)));
 
     card.insertAdjacentElement('afterend', row);
     row.insertAdjacentElement('afterend', panel);

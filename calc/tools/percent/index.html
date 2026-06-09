@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>퍼센트 계산기 - 전체의 몇 %, 증감률, 할인가 한 번에 | 제이퍼</title>
+  <meta name="description" content="퍼센트 계산을 한 화면에서. 전체의 몇 %(50,000원의 30%), A는 B의 몇 %, 두 값 사이 증감률, X% 증가·감소한 값(할인가·부가세)까지 4가지 모드를 무료로 계산합니다." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/tools/percent/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="퍼센트 계산기 - 전체의 몇 %, 증감률, 할인가 한 번에 | 제이퍼" />
+  <meta property="og:description" content="전체의 몇 %, A는 B의 몇 %, 증감률, X% 증가·감소한 값까지. 일상 퍼센트 계산을 한 화면에서 무료로." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/tools/percent/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/tools-common.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"퍼센트 계산기","url":"https://www.jptcalc.kr/calc/tools/percent/","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+    {"@type":"ListItem","position":2,"name":"생활·도구 계산기","item":"https://www.jptcalc.kr/calc/tools/"},
+    {"@type":"ListItem","position":3,"name":"퍼센트 계산기","item":"https://www.jptcalc.kr/calc/tools/percent/"}
+  ]}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"전체의 몇 퍼센트인지는 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"전체 값에 비율을 곱한 뒤 100으로 나눕니다. 예를 들어 50,000원의 30%는 50,000 × 30 ÷ 100 = 15,000원입니다. '전체의 몇 %' 모드에 전체 값과 퍼센트를 입력하면 자동으로 계산됩니다."}},{"@type":"Question","name":"어떤 값이 다른 값의 몇 퍼센트인지 구하려면?","acceptedAnswer":{"@type":"Answer","text":"부분 값을 전체 값으로 나눈 뒤 100을 곱합니다. 예를 들어 30점은 200점 만점의 30 ÷ 200 × 100 = 15%입니다. '비율(A는 B의 %)' 모드를 사용하면 됩니다."}},{"@type":"Question","name":"몇 퍼센트 증가·감소했는지 증감률은 어떻게 구하나요?","acceptedAnswer":{"@type":"Answer","text":"(나중 값 − 처음 값) ÷ 처음 값 × 100으로 계산합니다. 예를 들어 200에서 250으로 늘면 (250 − 200) ÷ 200 × 100 = 25% 증가이고, 250에서 200으로 줄면 −20%입니다. 결과가 음수면 감소를 뜻합니다."}},{"@type":"Question","name":"할인된 가격이나 부가세 포함 가격은 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"'X% 증가·감소한 값' 모드를 사용합니다. 12,000원에서 15% 할인은 감소를 선택해 12,000 × (1 − 0.15) = 10,200원, 공급가에 부가세 10%를 더하려면 증가를 선택해 × 1.1로 계산합니다."}},{"@type":"Question","name":"퍼센트와 퍼센트포인트(%p)는 어떻게 다른가요?","acceptedAnswer":{"@type":"Answer","text":"퍼센트포인트는 두 비율의 단순 차이입니다. 금리가 3%에서 5%로 오르면 차이는 2%p이지만, 증가율로는 (5 − 3) ÷ 3 × 100 ≈ 66.7%입니다. 비율 자체의 변화를 말할 때는 %, 두 % 값의 차이를 말할 때는 %p를 씁니다."}}]}</script>
+  <style>
+    /* percent 고유 스타일 - 공통은 /assets/tools-common.css */
+    .input-wrap{position:relative}
+    .input-wrap .unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none}
+    input[type=number]{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
+    input::placeholder{color:var(--gray-400);font-weight:400}
+    input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(20,184,166,0.15)}
+    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
+    .mode-group{display:flex;flex-wrap:wrap;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:4px}
+    .mode-btn{flex:1 1 calc(50% - 2px);border:none;border-radius:7px;background:transparent;padding:10px 4px;font-size:12.5px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap}
+    .mode-btn.active{background:var(--primary);color:#fff;font-weight:700}
+    .mode-hint{font-size:12px;color:var(--gray-400);margin:8px 2px 0}
+    .field-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .pc-field>label{display:block;font-size:12px;font-weight:700;color:var(--gray-500);margin-bottom:7px}
+    .dir-group{display:flex;gap:6px;margin-top:12px}
+    .dir-btn{flex:1;border:1.5px solid var(--gray-200);border-radius:10px;background:#fff;padding:10px;font-size:13px;font-weight:600;color:var(--gray-600);cursor:pointer;font-family:inherit;transition:all .15s}
+    .dir-btn.active{background:var(--primary);border-color:var(--primary);color:#fff}
+    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
+    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
+    .result-card{background:linear-gradient(135deg,#F0FDFA 0%,#CCFBF1 100%);border:1px solid rgba(20,184,166,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-row+.result-row{border-top:1px solid rgba(0,0,0,0.07)}
+    .rh-value .big-num{font-size:40px;font-weight:900;line-height:1;word-break:break-all}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/tools/" class="nav-item active"><span class="nav-dot" style="background:#14B8A6;"></span>생활·도구</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/tools/">생활·도구 계산기</a><span class="breadcrumb-sep">›</span><span>퍼센트 계산기</span></div>
+    <div class="page-header-badge">％ 4가지 비율 계산</div>
+    <h1>퍼센트 계산기</h1>
+    <p>전체의 몇 %, 비율, 증감률, 할인·증감 값을 한 화면에서 계산하세요</p>
+  </div>
+    <div class="card">
+      <div class="card-title">계산 종류</div>
+      <div class="mode-group">
+        <button class="mode-btn active" data-mode="of" onclick="setMode('of',this)">전체의 몇 %</button>
+        <button class="mode-btn" data-mode="ratio" onclick="setMode('ratio',this)">A는 B의 몇 %</button>
+        <button class="mode-btn" data-mode="change" onclick="setMode('change',this)">증감률</button>
+        <button class="mode-btn" data-mode="adjust" onclick="setMode('adjust',this)">X% 증가·감소</button>
+      </div>
+      <div class="mode-hint" id="mode-hint">전체 값과 퍼센트를 입력하면 해당 비율만큼의 값을 계산합니다. 예) 50,000원의 30%</div>
+    </div>
+    <div class="card">
+      <div class="card-title">값 입력</div>
+      <div class="field-grid">
+        <div class="pc-field"><label id="lab-a" for="in-a">전체 값</label><div class="input-wrap"><input type="number" id="in-a" placeholder="예) 50000" oninput="calc()" /><span class="unit" id="unit-a"></span></div></div>
+        <div class="pc-field"><label id="lab-b" for="in-b">퍼센트</label><div class="input-wrap"><input type="number" id="in-b" placeholder="예) 30" oninput="calc()" /><span class="unit" id="unit-b">%</span></div></div>
+      </div>
+      <div class="dir-group" id="dir-group" style="display:none">
+        <button class="dir-btn active" id="dir-inc" onclick="setDir('inc')">증가 (+)</button>
+        <button class="dir-btn" id="dir-dec" onclick="setDir('dec')">감소 (−)</button>
+      </div>
+    </div>
+    <div class="result-card" id="result">
+      <div class="result-highlight"><div class="rh-label" id="r-label">결과</div><div class="rh-value"><span class="big-num" id="r-main">-</span><span id="r-unit"></span></div><div class="rh-sub" id="r-sub">-</div></div>
+      <div class="result-row"><span class="result-label" id="r-d1-label">-</span><span class="result-value" id="r-d1">-</span></div>
+      <div class="result-row"><span class="result-label">계산식</span><span class="result-value" id="r-formula" style="font-size:12px;text-align:right">-</span></div>
+      <p class="result-note">입력값은 브라우저 안에서만 계산되며 서버로 전송되지 않습니다. 결과는 참고용입니다.</p>
+    </div>
+
+  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>퍼센트 계산, 4가지만 알면 끝</h2>
+      <p>퍼센트(%)는 전체를 100으로 봤을 때의 비율입니다. 일상에서 마주치는 퍼센트 계산은 사실상 아래 네 가지 형태로 정리됩니다. 각 공식만 기억하면 할인 가격, 시험 점수 비율, 매출 증감 등 대부분의 상황을 해결할 수 있고, 위 계산기의 네 가지 모드가 각각 이 공식에 대응합니다.</p>
+      <div class="guide-table-wrap">
+        <table>
+          <thead><tr><th>모드</th><th>공식</th><th>예시</th></tr></thead>
+          <tbody>
+            <tr><td>전체의 몇 %</td><td>전체 × 비율 ÷ 100</td><td>50,000원의 30% = 15,000원</td></tr>
+            <tr><td>A는 B의 몇 %</td><td>A ÷ B × 100</td><td>30은 200의 15%</td></tr>
+            <tr><td>증감률</td><td>(나중 − 처음) ÷ 처음 × 100</td><td>200 → 250 = 25% 증가</td></tr>
+            <tr><td>X% 증가·감소</td><td>원값 × (1 ± 비율 ÷ 100)</td><td>12,000원 −15% = 10,200원</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="guide-card">
+      <h2>실제 퍼센트 계산 예시</h2>
+      <h3>예시 1 - 김도현씨, 50,000원의 30% 할인</h3>
+      <p>50,000원짜리 옷이 30% 할인일 때 할인 금액은 '전체의 몇 %' 모드에서 50,000과 30을 넣으면 15,000원이 나옵니다. 실제 결제 금액은 'X% 증가·감소' 모드에서 50,000과 30을 넣고 감소를 선택해 35,000원으로 확인할 수 있습니다.</p>
+      <ul>
+        <li>할인 금액: 50,000 × 30 ÷ 100 = 15,000원</li>
+        <li>결제 금액: 50,000 × (1 − 0.30) = 35,000원</li>
+      </ul>
+      <h3>예시 2 - 박지은씨, 시험 점수 비율</h3>
+      <p>200점 만점에서 30점을 받았다면 'A는 B의 몇 %' 모드에서 A에 30, B에 200을 넣어 15%임을 알 수 있습니다. 목표가 60%라면 200 × 60 ÷ 100 = 120점이 필요합니다.</p>
+      <ul>
+        <li>득점 비율: 30 ÷ 200 × 100 = 15%</li>
+        <li>60% 목표 점수: 200 × 60 ÷ 100 = 120점</li>
+      </ul>
+      <h3>예시 3 - 이수민씨, 매출 증감률</h3>
+      <p>지난달 매출 200만원이 이번 달 250만원이 됐다면 '증감률' 모드에서 처음 200, 나중 250을 넣어 25% 증가를 확인합니다. 반대로 250에서 200으로 줄었다면 −20%로 표시됩니다.</p>
+      <ul>
+        <li>증가율: (250 − 200) ÷ 200 × 100 = 25% 증가</li>
+        <li>감소율: (200 − 250) ÷ 250 × 100 = −20%</li>
+      </ul>
+    </div>
+    <div class="guide-card">
+      <h2>헷갈리기 쉬운 퍼센트 포인트</h2>
+      <h3>퍼센트(%)와 퍼센트포인트(%p)는 다릅니다</h3>
+      <p>금리가 3%에서 5%로 오르면 "2%p 상승"이라고 하지 "2% 상승"이라고 하지 않습니다. 퍼센트포인트는 두 비율의 단순 차이(5 − 3 = 2%p)이고, 증가율로 따지면 (5 − 3) ÷ 3 × 100 ≈ 66.7% 상승입니다. 뉴스에서 자주 혼동되므로 기준이 무엇인지 확인하세요.</p>
+      <h3>중복 할인은 더하지 않습니다</h3>
+      <p>20% 할인 후 추가 10% 할인은 30% 할인이 아닙니다. × 0.8 × 0.9 = 0.72, 즉 28% 할인입니다. 'X% 증가·감소' 모드를 두 번 적용하면 정확한 최종 금액을 구할 수 있습니다.</p>
+      <h3>부가세 역산</h3>
+      <p>부가세 10% 포함 가격에서 공급가를 구하려면 1.1로 나눕니다. 11,000원이면 11,000 ÷ 1.1 = 10,000원이 공급가, 1,000원이 부가세입니다. 10%를 빼는(× 0.9) 것과는 결과가 다릅니다.</p>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>전체의 몇 퍼센트인지는 어떻게 계산하나요?</h3><p>전체 값에 비율을 곱한 뒤 100으로 나눕니다. 예를 들어 50,000원의 30%는 50,000 × 30 ÷ 100 = 15,000원입니다. '전체의 몇 %' 모드에 전체 값과 퍼센트를 입력하면 자동으로 계산됩니다.</p></div>
+      <div class="faq-item"><h3>어떤 값이 다른 값의 몇 퍼센트인지 구하려면?</h3><p>부분 값을 전체 값으로 나눈 뒤 100을 곱합니다. 예를 들어 30점은 200점 만점의 30 ÷ 200 × 100 = 15%입니다. 'A는 B의 몇 %' 모드를 사용하면 됩니다.</p></div>
+      <div class="faq-item"><h3>몇 퍼센트 증가·감소했는지 증감률은 어떻게 구하나요?</h3><p>(나중 값 − 처음 값) ÷ 처음 값 × 100으로 계산합니다. 예를 들어 200에서 250으로 늘면 25% 증가이고, 250에서 200으로 줄면 −20%입니다. 결과가 음수면 감소를 뜻합니다.</p></div>
+      <div class="faq-item"><h3>할인된 가격이나 부가세 포함 가격은 어떻게 계산하나요?</h3><p>'X% 증가·감소한 값' 모드를 사용합니다. 12,000원에서 15% 할인은 감소를 선택해 12,000 × (1 − 0.15) = 10,200원, 공급가에 부가세 10%를 더하려면 증가를 선택해 × 1.1로 계산합니다.</p></div>
+      <div class="faq-item"><h3>퍼센트와 퍼센트포인트(%p)는 어떻게 다른가요?</h3><p>퍼센트포인트는 두 비율의 단순 차이입니다. 금리가 3%에서 5%로 오르면 차이는 2%p이지만, 증가율로는 약 66.7%입니다. 비율 자체의 변화를 말할 때는 %, 두 % 값의 차이를 말할 때는 %p를 씁니다.</p></div>
+      <div class="update-note">최종 검토: 2026.06.09 · 계산 결과는 참고용입니다.</div>
+    </div>
+  </div>
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '표준 퍼센트(비율) 계산 공식 기반',
+    appliedFrom: '상시',
+    exceptions: [
+      "'A는 B의 %'와 '증감률' 모드는 기준 값(B 또는 처음 값)이 0이면 계산할 수 없습니다",
+      '결과는 소수점 여섯 자리까지 반올림해 표시합니다',
+    ],
+    references: [
+      { name: '표준국어대사전 - 백분율', url: 'https://stdict.korean.go.kr' },
+    ],
+    lastReviewed: '2026.06',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">© 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script>
+let mode='of';   // of | ratio | change | adjust
+let dir='inc';   // adjust 방향
+
+const MODES={
+  of:    {labA:'전체 값',  labB:'퍼센트',   uA:'',  uB:'%', hint:'전체 값과 퍼센트를 입력하면 해당 비율만큼의 값을 계산합니다. 예) 50,000원의 30%', phA:'예) 50000', phB:'예) 30'},
+  ratio: {labA:'부분 값 (A)', labB:'전체 값 (B)', uA:'', uB:'', hint:'A가 전체 B에서 차지하는 비율(%)을 계산합니다. 예) 30은 200의 몇 %', phA:'예) 30', phB:'예) 200'},
+  change:{labA:'처음 값',  labB:'나중 값',   uA:'',  uB:'', hint:'처음 값에서 나중 값으로 몇 % 증가·감소했는지 계산합니다. 예) 200 → 250', phA:'예) 200', phB:'예) 250'},
+  adjust:{labA:'기준 값',  labB:'비율',     uA:'',  uB:'%', hint:'기준 값을 입력한 비율만큼 증가·감소시킨 값을 계산합니다. 예) 12,000원 −15%', phA:'예) 12000', phB:'예) 15'}
+};
+
+function fmt(n){
+  if(n===null||n===undefined||!isFinite(n)) return '-';
+  const r=Math.round(n*1e6)/1e6;
+  return r.toLocaleString('ko-KR',{maximumFractionDigits:6});
+}
+function setMode(m,btn){
+  mode=m;
+  document.querySelectorAll('.mode-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const cfg=MODES[m];
+  document.getElementById('lab-a').textContent=cfg.labA;
+  document.getElementById('lab-b').textContent=cfg.labB;
+  document.getElementById('unit-a').textContent=cfg.uA;
+  document.getElementById('unit-b').textContent=cfg.uB;
+  document.getElementById('mode-hint').textContent=cfg.hint;
+  document.getElementById('in-a').placeholder=cfg.phA;
+  document.getElementById('in-b').placeholder=cfg.phB;
+  document.getElementById('dir-group').style.display = (m==='adjust') ? 'flex' : 'none';
+  calc();
+}
+function setDir(d){
+  dir=d;
+  document.getElementById('dir-inc').classList.toggle('active', d==='inc');
+  document.getElementById('dir-dec').classList.toggle('active', d==='dec');
+  calc();
+}
+function calc(){
+  const aRaw=document.getElementById('in-a').value;
+  const bRaw=document.getElementById('in-b').value;
+  const res=document.getElementById('result');
+  if(aRaw===''||bRaw===''){res.classList.remove('show');return;}
+  const a=parseFloat(aRaw), b=parseFloat(bRaw);
+  if(!isFinite(a)||!isFinite(b)){res.classList.remove('show');return;}
+
+  let main, mainUnit, label, sub, d1Label, d1, formula;
+
+  if(mode==='of'){
+    main=a*b/100; mainUnit='';
+    label=fmt(a)+'의 '+fmt(b)+'%는';
+    sub='전체에서 차지하는 값';
+    d1Label='나머지 ('+fmt(100-b)+'%)'; d1=fmt(a-main);
+    formula=fmt(a)+' × '+fmt(b)+' ÷ 100';
+  } else if(mode==='ratio'){
+    if(b===0){res.classList.remove('show');return;}
+    main=a/b*100; mainUnit='%';
+    label=fmt(a)+'는 '+fmt(b)+'의';
+    sub='A가 전체 B에서 차지하는 비율';
+    d1Label='차이 (B − A)'; d1=fmt(b-a);
+    formula=fmt(a)+' ÷ '+fmt(b)+' × 100';
+  } else if(mode==='change'){
+    if(a===0){res.classList.remove('show');return;}
+    main=(b-a)/a*100; mainUnit='%';
+    label=fmt(a)+' → '+fmt(b);
+    sub=(main>=0?'증가':'감소')+'했습니다';
+    d1Label='변화량 (나중 − 처음)'; d1=fmt(b-a);
+    formula='('+fmt(b)+' − '+fmt(a)+') ÷ '+fmt(a)+' × 100';
+  } else { // adjust
+    const factor = dir==='inc' ? (1+b/100) : (1-b/100);
+    main=a*factor; mainUnit='';
+    const amt=a*b/100;
+    label=fmt(a)+'에서 '+fmt(b)+'% '+(dir==='inc'?'증가':'감소');
+    sub=(dir==='inc'?'증가':'감소')+'한 결과 값';
+    d1Label=(dir==='inc'?'더해진':'빠진')+' 금액'; d1=fmt(amt);
+    formula=fmt(a)+' × (1 '+(dir==='inc'?'+':'−')+' '+fmt(b)+' ÷ 100)';
+  }
+
+  res.classList.add('show');
+  document.getElementById('r-label').textContent=label;
+  document.getElementById('r-main').textContent=fmt(main);
+  document.getElementById('r-unit').textContent=mainUnit;
+  document.getElementById('r-sub').textContent=sub;
+  document.getElementById('r-d1-label').textContent=d1Label;
+  document.getElementById('r-d1').textContent=d1;
+  document.getElementById('r-formula').textContent=formula;
+}
+</script>
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/calc-registry.js"></script>
+<script src="/assets/tools-detail-shell.js"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '표준 퍼센트(비율) 계산 공식',
+  basisDate: '상시 적용',
+  referenceOrg: '국립국어원 표준국어대사전',
+  lastReviewed: '2026.06.09',
+  category: 'tools'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/blog-review-footer.js"></script>
+</body>
+</html>

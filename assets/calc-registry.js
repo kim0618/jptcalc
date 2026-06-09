@@ -388,10 +388,47 @@ window.CALC_REGISTRY = {
         "name": "평생 양육비"
       }
     ]
+  },
+  "tools": {
+    "name": "생활·도구",
+    "icon": "🛠️",
+    "color": "#14B8A6",
+    "calcs": [
+      {
+        "slug": "percent",
+        "icon": "％",
+        "name": "퍼센트 계산기"
+      },
+      {
+        "slug": "unit-converter",
+        "icon": "📐",
+        "name": "단위 변환기"
+      },
+      {
+        "slug": "discount",
+        "icon": "🏷️",
+        "name": "할인율 계산기"
+      },
+      {
+        "slug": "gpa",
+        "icon": "🎓",
+        "name": "학점 계산기"
+      },
+      {
+        "slug": "naesin-grade",
+        "icon": "🏫",
+        "name": "내신 등급 계산기"
+      },
+      {
+        "slug": "char-count",
+        "icon": "📝",
+        "name": "글자수 세기"
+      }
+    ]
   }
 };
 window.CALC_TOTAL = Object.keys(window.CALC_REGISTRY).reduce(function(n,k){return n+window.CALC_REGISTRY[k].calcs.length;},0);
-window.CALC_CAT_ORDER = ["realestate", "tax", "salary", "finance", "health", "pension-welfare", "date", "ai", "pet"];
+window.CALC_CAT_ORDER = ["realestate", "salary", "tools", "tax", "pension-welfare", "finance", "date", "health", "ai", "pet"];
 
 /* 좌측 사이드바(카테고리 nav + 계산기 목록) 공통 렌더 — 9개 detail-shell이 호출. registry 미로드 시 빈 문자열. */
 window.JPT_sidebarLeft = function(curCat, curKey){

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>단위 변환기 - 길이·무게·넓이·부피·온도 환산 | 제이퍼</title>
+  <meta name="description" content="길이(cm·m·인치·피트), 무게(kg·g·근·돈·파운드), 넓이(평·㎡·에이커), 부피(L·갤런), 온도(℃·℉·K)를 한 번에 변환하는 무료 단위 변환기입니다. 값을 넣으면 모든 단위로 동시 환산됩니다." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/tools/unit-converter/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="단위 변환기 - 길이·무게·넓이·부피·온도 환산 | 제이퍼" />
+  <meta property="og:description" content="길이·무게·넓이·부피·온도를 한 번에 변환. 값을 넣으면 모든 단위로 동시 환산되는 무료 단위 변환기." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/tools/unit-converter/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/tools-common.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"단위 변환기","url":"https://www.jptcalc.kr/calc/tools/unit-converter/","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+    {"@type":"ListItem","position":2,"name":"생활·도구 계산기","item":"https://www.jptcalc.kr/calc/tools/"},
+    {"@type":"ListItem","position":3,"name":"단위 변환기","item":"https://www.jptcalc.kr/calc/tools/unit-converter/"}
+  ]}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"1평은 몇 제곱미터(㎡)인가요?","acceptedAnswer":{"@type":"Answer","text":"1평은 약 3.3058㎡입니다(정확히는 400/121㎡). 반대로 1㎡는 약 0.3025평입니다. 예를 들어 84㎡ 아파트는 약 25.4평, 59㎡는 약 17.8평입니다. 넓이 탭에서 평과 ㎡를 바로 환산할 수 있습니다."}},{"@type":"Question","name":"1근과 1돈은 몇 그램인가요?","acceptedAnswer":{"@type":"Answer","text":"1근은 600g(고기·채소 기준)이고, 귀금속에 쓰는 1돈은 3.75g입니다. 따라서 금 한 돈은 3.75g, 금 열 돈(1냥)은 37.5g입니다. 무게 탭에서 근·돈·g·kg·파운드를 함께 환산할 수 있습니다."}},{"@type":"Question","name":"인치를 센티미터로 어떻게 바꾸나요?","acceptedAnswer":{"@type":"Answer","text":"1인치는 정확히 2.54cm입니다. 예를 들어 모니터 27인치의 대각선은 27 × 2.54 = 68.58cm입니다. 길이 탭에서 인치(in)를 입력 단위로 선택하면 cm·m 등으로 동시에 변환됩니다."}},{"@type":"Question","name":"섭씨(℃)를 화씨(℉)로 바꾸는 공식은?","acceptedAnswer":{"@type":"Answer","text":"화씨 = 섭씨 × 9 ÷ 5 + 32입니다. 예를 들어 섭씨 37℃는 98.6℉, 100℃는 212℉입니다. 반대로 화씨를 섭씨로 바꿀 때는 (화씨 − 32) × 5 ÷ 9를 씁니다. 온도 탭은 이 공식을 자동으로 적용합니다."}},{"@type":"Question","name":"이 단위 변환기는 어떤 단위를 지원하나요?","acceptedAnswer":{"@type":"Answer","text":"길이(mm·cm·m·km·인치·피트·야드·마일), 무게(mg·g·kg·톤·돈·근·온스·파운드), 넓이(㎠·㎡·㎢·평·헥타르·에이커), 부피(mL·L·㎥·갤런·배럴), 온도(℃·℉·K)를 지원합니다. 값을 입력하면 같은 종류의 모든 단위로 동시에 환산됩니다."}}]}</script>
+  <style>
+    /* unit-converter 고유 스타일 - 공통은 /assets/tools-common.css */
+    .input-wrap{position:relative}
+    input[type=number]{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
+    input::placeholder{color:var(--gray-400);font-weight:400}
+    input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(20,184,166,0.15)}
+    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
+    select{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 16px;font-size:15px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;cursor:pointer;transition:border-color .18s}
+    select:focus{border-color:var(--primary)}
+    .cat-group{display:flex;flex-wrap:wrap;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:4px}
+    .cat-btn{flex:1 1 auto;border:none;border-radius:7px;background:transparent;padding:10px 6px;font-size:13px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap}
+    .cat-btn.active{background:var(--primary);color:#fff;font-weight:700}
+    .conv-row{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:end}
+    .conv-field>label{display:block;font-size:12px;font-weight:700;color:var(--gray-500);margin-bottom:7px}
+    .swap-btn{align-self:center;margin-bottom:2px;width:40px;height:40px;border:1.5px solid var(--gray-200);border-radius:10px;background:#fff;color:var(--primary);font-size:16px;cursor:pointer;transition:all .15s;flex-shrink:0}
+    .swap-btn:hover{border-color:var(--primary);background:var(--primary-light)}
+    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
+    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
+    .result-card{background:linear-gradient(135deg,#F0FDFA 0%,#CCFBF1 100%);border:1px solid rgba(20,184,166,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .rh-value .big-num{font-size:36px;font-weight:900;line-height:1.1;word-break:break-all}
+    .all-units{margin-top:8px}
+    .all-units-title{font-size:11px;font-weight:800;letter-spacing:0.5px;text-transform:uppercase;color:var(--gray-500);margin:18px 0 8px}
+    .au-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid rgba(0,0,0,0.06);font-size:14px}
+    .au-row:last-child{border-bottom:none}
+    .au-unit{color:var(--gray-600);font-weight:500}
+    .au-val{font-weight:700;color:var(--gray-900);word-break:break-all;text-align:right;padding-left:10px}
+    @media (max-width:480px){.conv-row{grid-template-columns:1fr auto 1fr;gap:6px}.cat-btn{flex:1 1 calc(33% - 2px)}}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/tools/" class="nav-item active"><span class="nav-dot" style="background:#14B8A6;"></span>생활·도구</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/tools/">생활·도구 계산기</a><span class="breadcrumb-sep">›</span><span>단위 변환기</span></div>
+    <div class="page-header-badge">📐 길이·무게·넓이·부피·온도</div>
+    <h1>단위 변환기</h1>
+    <p>값 하나를 넣으면 같은 종류의 모든 단위로 동시에 환산됩니다</p>
+  </div>
+    <div class="card">
+      <div class="card-title">변환 종류</div>
+      <div class="cat-group">
+        <button class="cat-btn active" data-cat="length" onclick="setCat('length',this)">길이</button>
+        <button class="cat-btn" data-cat="weight" onclick="setCat('weight',this)">무게</button>
+        <button class="cat-btn" data-cat="area" onclick="setCat('area',this)">넓이</button>
+        <button class="cat-btn" data-cat="volume" onclick="setCat('volume',this)">부피</button>
+        <button class="cat-btn" data-cat="temp" onclick="setCat('temp',this)">온도</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">값 입력</div>
+      <div class="conv-row">
+        <div class="conv-field"><label for="in-val">변환할 값</label><div class="input-wrap"><input type="number" id="in-val" placeholder="예) 10" oninput="calc()" /></div></div>
+        <button class="swap-btn" type="button" onclick="swap()" aria-label="단위 바꾸기" title="단위 바꾸기">⇅</button>
+        <div class="conv-field"><label for="sel-from">입력 단위 → 결과 단위</label>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+            <select id="sel-from" onchange="calc()"></select>
+            <select id="sel-to" onchange="calc()"></select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="result-card" id="result">
+      <div class="result-highlight"><div class="rh-label" id="r-label">결과</div><div class="rh-value"><span class="big-num" id="r-main">-</span></div><div class="rh-sub" id="r-sub">-</div></div>
+      <div class="all-units">
+        <div class="all-units-title">전체 단위로 한눈에</div>
+        <div id="r-all"></div>
+      </div>
+      <p class="result-note">입력값은 브라우저 안에서만 계산되며 서버로 전송되지 않습니다. 결과는 참고용입니다.</p>
+    </div>
+
+  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>자주 쓰는 단위 환산표</h2>
+      <p>일상과 부동산·요리·해외직구에서 자주 마주치는 단위 환산을 정리했습니다. 위 변환기에서 값을 넣으면 같은 종류의 모든 단위가 동시에 계산됩니다.</p>
+      <div class="guide-table-wrap">
+        <table>
+          <thead><tr><th>종류</th><th>환산 기준</th><th>예시</th></tr></thead>
+          <tbody>
+            <tr><td>길이</td><td>1인치 = 2.54cm</td><td>27인치 ≈ 68.6cm</td></tr>
+            <tr><td>길이</td><td>1피트 = 30.48cm</td><td>6피트 ≈ 182.9cm</td></tr>
+            <tr><td>무게</td><td>1파운드 = 453.6g</td><td>150lb ≈ 68kg</td></tr>
+            <tr><td>무게</td><td>1근 = 600g · 1돈 = 3.75g</td><td>금 한 돈 = 3.75g</td></tr>
+            <tr><td>넓이</td><td>1평 ≈ 3.3058㎡</td><td>84㎡ ≈ 25.4평</td></tr>
+            <tr><td>부피</td><td>1갤런(US) ≈ 3.785L</td><td>5갤런 ≈ 18.9L</td></tr>
+            <tr><td>온도</td><td>℉ = ℃ × 9 ÷ 5 + 32</td><td>37℃ = 98.6℉</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="guide-card">
+      <h2>상황별 단위 변환 예시</h2>
+      <h3>예시 1 - 아파트 면적, ㎡를 평으로</h3>
+      <p>부동산 매물의 전용면적이 84.96㎡로 표시되어 있다면, 넓이 탭에서 84.96㎡를 입력해 약 25.7평임을 바로 확인할 수 있습니다. 흔히 말하는 '25평형'이 여기에 해당합니다. 반대로 평을 ㎡로 바꿔 청약 면적 기준을 확인할 수도 있습니다.</p>
+      <ul>
+        <li>84.96㎡ ÷ 3.3058 ≈ 25.7평</li>
+        <li>59㎡ ≈ 17.8평 (소형), 114㎡ ≈ 34.5평 (중대형)</li>
+      </ul>
+      <h3>예시 2 - 해외직구 무게·치수</h3>
+      <p>해외 쇼핑몰의 무게가 150lb, 키 표기가 5ft 9in일 때 무게 탭과 길이 탭으로 각각 약 68kg, 약 175cm임을 확인할 수 있습니다. 배송비 구간이나 사이즈를 가늠할 때 유용합니다.</p>
+      <ul>
+        <li>150lb × 453.6g ≈ 68.0kg</li>
+        <li>5ft 9in = 69in × 2.54 ≈ 175.3cm</li>
+      </ul>
+      <h3>예시 3 - 금 시세, 돈 단위</h3>
+      <p>금을 g 단위 시세로 봤을 때 한 돈이 몇 g인지 헷갈린다면 무게 탭에서 1돈 = 3.75g을 확인하면 됩니다. 금 5돈은 18.75g이므로, g당 시세에 18.75를 곱하면 대략적인 금액이 나옵니다.</p>
+      <ul>
+        <li>1돈 = 3.75g, 1냥(10돈) = 37.5g</li>
+        <li>금 5돈 = 18.75g</li>
+      </ul>
+    </div>
+    <div class="guide-card">
+      <h2>알아두면 좋은 단위 상식</h2>
+      <h3>같은 이름, 다른 값에 주의</h3>
+      <p>갤런은 미국식(약 3.785L)과 영국식(약 4.546L)이 다릅니다. 이 변환기는 일상에서 더 자주 쓰는 미국 갤런을 기준으로 합니다. 또 무게의 '근'은 고기·채소는 600g이지만 한약재는 375g을 쓰는 경우가 있어, 용도를 확인하는 것이 좋습니다.</p>
+      <h3>온도는 비율이 아니라 공식</h3>
+      <p>길이·무게는 단순히 곱하면 되지만 온도는 기준점(0도)이 단위마다 달라 공식으로 변환합니다. 섭씨↔화씨는 ℉ = ℃ × 9 ÷ 5 + 32, 섭씨↔켈빈은 K = ℃ + 273.15를 씁니다. 그래서 '두 배 더운 온도' 같은 표현은 성립하지 않습니다.</p>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>1평은 몇 제곱미터(㎡)인가요?</h3><p>1평은 약 3.3058㎡입니다(정확히는 400/121㎡). 반대로 1㎡는 약 0.3025평입니다. 84㎡ 아파트는 약 25.4평, 59㎡는 약 17.8평입니다. 넓이 탭에서 평과 ㎡를 바로 환산할 수 있습니다.</p></div>
+      <div class="faq-item"><h3>1근과 1돈은 몇 그램인가요?</h3><p>1근은 600g(고기·채소 기준)이고, 귀금속에 쓰는 1돈은 3.75g입니다. 금 한 돈은 3.75g, 금 열 돈(1냥)은 37.5g입니다. 무게 탭에서 근·돈·g·kg·파운드를 함께 환산할 수 있습니다.</p></div>
+      <div class="faq-item"><h3>인치를 센티미터로 어떻게 바꾸나요?</h3><p>1인치는 정확히 2.54cm입니다. 모니터 27인치의 대각선은 27 × 2.54 = 68.58cm입니다. 길이 탭에서 인치(in)를 입력 단위로 선택하면 cm·m 등으로 동시에 변환됩니다.</p></div>
+      <div class="faq-item"><h3>섭씨(℃)를 화씨(℉)로 바꾸는 공식은?</h3><p>화씨 = 섭씨 × 9 ÷ 5 + 32입니다. 섭씨 37℃는 98.6℉, 100℃는 212℉입니다. 반대로 화씨를 섭씨로 바꿀 때는 (화씨 − 32) × 5 ÷ 9를 씁니다. 온도 탭은 이 공식을 자동으로 적용합니다.</p></div>
+      <div class="faq-item"><h3>이 단위 변환기는 어떤 단위를 지원하나요?</h3><p>길이(mm·cm·m·km·인치·피트·야드·마일), 무게(mg·g·kg·톤·돈·근·온스·파운드), 넓이(㎠·㎡·㎢·평·헥타르·에이커), 부피(mL·L·㎥·갤런·배럴), 온도(℃·℉·K)를 지원합니다. 값을 입력하면 같은 종류의 모든 단위로 동시에 환산됩니다.</p></div>
+      <div class="update-note">최종 검토: 2026.06.09 · 계산 결과는 참고용입니다.</div>
+    </div>
+  </div>
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '국제단위계(SI) 및 국내 도량형 환산 기준',
+    appliedFrom: '상시',
+    exceptions: [
+      '갤런은 미국식(3.785L), 근은 600g 기준입니다',
+      '결과는 소수점 여섯 자리까지 반올림해 표시합니다',
+    ],
+    references: [
+      { name: '국가기술표준원 법정계량단위', url: 'https://www.kats.go.kr' },
+    ],
+    lastReviewed: '2026.06',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">© 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script>
+// 단위 데이터 (factor = base 단위 환산 계수). 온도는 special.
+const DATA = {
+  length: { name:'길이', units:[['mm','mm',0.001],['cm','cm',0.01],['m','m',1],['km','km',1000],['in','인치',0.0254],['ft','피트',0.3048],['yd','야드',0.9144],['mi','마일',1609.344]], def:['cm','m'] },
+  weight: { name:'무게', units:[['mg','mg',0.001],['g','g',1],['kg','kg',1000],['t','톤',1000000],['don','돈',3.75],['geun','근',600],['oz','온스',28.349523125],['lb','파운드',453.59237]], def:['kg','g'] },
+  area:   { name:'넓이', units:[['cm2','㎠',0.0001],['m2','㎡',1],['km2','㎢',1000000],['pyeong','평',3.3057851],['ha','헥타르',10000],['ac','에이커',4046.8564224]], def:['m2','pyeong'] },
+  volume: { name:'부피', units:[['mL','mL',0.001],['L','L',1],['m3','㎥',1000],['gal','갤런',3.785411784],['bbl','배럴',158.987294928]], def:['L','mL'] },
+  temp:   { name:'온도', special:true, units:[['C','℃'],['F','℉'],['K','K']], def:['C','F'] }
+};
+let cat='length';
+
+function fmt(n){
+  if(n===null||n===undefined||!isFinite(n)) return '-';
+  const r=Math.round(n*1e6)/1e6;
+  return r.toLocaleString('ko-KR',{maximumFractionDigits:6});
+}
+function label(code){
+  const u=DATA[cat].units.find(x=>x[0]===code);
+  return u?u[1]:code;
+}
+function toBase(v,code){ // temp: → ℃
+  if(DATA[cat].special){ return code==='C'?v: code==='F'?(v-32)*5/9 : v-273.15; }
+  return v*DATA[cat].units.find(x=>x[0]===code)[2];
+}
+function fromBase(b,code){ // temp: ℃ →
+  if(DATA[cat].special){ return code==='C'?b: code==='F'?b*9/5+32 : b+273.15; }
+  return b/DATA[cat].units.find(x=>x[0]===code)[2];
+}
+function fillSelect(id,sel){
+  const el=document.getElementById(id);
+  el.innerHTML=DATA[cat].units.map(u=>`<option value="${u[0]}"${u[0]===sel?' selected':''}>${u[1]}</option>`).join('');
+}
+function setCat(c,btn){
+  cat=c;
+  document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  fillSelect('sel-from',DATA[c].def[0]);
+  fillSelect('sel-to',DATA[c].def[1]);
+  calc();
+}
+function swap(){
+  const f=document.getElementById('sel-from'), t=document.getElementById('sel-to');
+  const tmp=f.value; f.value=t.value; t.value=tmp;
+  calc();
+}
+function calc(){
+  const raw=document.getElementById('in-val').value;
+  const res=document.getElementById('result');
+  if(raw===''){res.classList.remove('show');return;}
+  const v=parseFloat(raw);
+  if(!isFinite(v)){res.classList.remove('show');return;}
+  const from=document.getElementById('sel-from').value;
+  const to=document.getElementById('sel-to').value;
+  const base=toBase(v,from);
+  const out=fromBase(base,to);
+  res.classList.add('show');
+  document.getElementById('r-label').textContent=fmt(v)+' '+label(from)+' =';
+  document.getElementById('r-main').textContent=fmt(out)+' '+label(to);
+  document.getElementById('r-sub').textContent=label(from)+' → '+label(to);
+  // 전체 단위
+  const rows=DATA[cat].units.map(u=>{
+    const val=fromBase(base,u[0]);
+    const cur=(u[0]===to)?' style="color:var(--primary)"':'';
+    return `<div class="au-row"><span class="au-unit">${u[1]}</span><span class="au-val"${cur}>${fmt(val)}</span></div>`;
+  }).join('');
+  document.getElementById('r-all').innerHTML=rows;
+}
+// 초기화
+fillSelect('sel-from',DATA[cat].def[0]);
+fillSelect('sel-to',DATA[cat].def[1]);
+</script>
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/calc-registry.js"></script>
+<script src="/assets/tools-detail-shell.js"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '국제단위계(SI)·국내 법정계량단위',
+  basisDate: '상시 적용',
+  referenceOrg: '국가기술표준원',
+  lastReviewed: '2026.06.09',
+  category: 'tools'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/blog-review-footer.js"></script>
+</body>
+</html>
