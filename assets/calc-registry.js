@@ -423,6 +423,11 @@ window.CALC_REGISTRY = {
         "slug": "char-count",
         "icon": "📝",
         "name": "글자수 세기"
+      },
+      {
+        "slug": "lunar-calendar",
+        "icon": "🌙",
+        "name": "음력 양력 변환기"
       }
     ]
   }

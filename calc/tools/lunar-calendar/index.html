@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>음력 양력 변환기 - 음력 생일·날짜 양력 변환 (KASI 만세력) | 제이퍼</title>
+  <meta name="description" content="음력을 양력으로, 양력을 음력으로 변환합니다. 음력 생일을 올해 양력 날짜로, 윤달·간지(갑진년)·띠까지 한 번에. 한국천문연구원(KASI) 만세력 기준 무료 음력 양력 변환기." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/tools/lunar-calendar/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="음력 양력 변환기 - 음력 생일·날짜 양력 변환 (KASI 만세력) | 제이퍼" />
+  <meta property="og:description" content="음력↔양력 변환, 음력 생일 양력 날짜, 윤달·간지·띠까지. 한국천문연구원(KASI) 만세력 기준 무료 변환기." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/tools/lunar-calendar/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/tools-common.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"음력 양력 변환기","url":"https://www.jptcalc.kr/calc/tools/lunar-calendar/","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+    {"@type":"ListItem","position":2,"name":"생활·도구 계산기","item":"https://www.jptcalc.kr/calc/tools/"},
+    {"@type":"ListItem","position":3,"name":"음력 양력 변환기","item":"https://www.jptcalc.kr/calc/tools/lunar-calendar/"}
+  ]}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"음력 생일을 양력으로 어떻게 바꾸나요?","acceptedAnswer":{"@type":"Answer","text":"음력 → 양력 모드에서 음력 생년월일을 입력하면 해당 양력 날짜가 나옵니다. 음력 생일은 매년 양력 날짜가 달라지므로, 올해 생일을 알고 싶으면 음력 월·일은 그대로 두고 연도만 올해로 바꿔 변환하면 됩니다. 윤달에 태어났다면 윤달 체크박스를 함께 선택하세요."}},{"@type":"Question","name":"윤달은 무엇이고 어떻게 처리하나요?","acceptedAnswer":{"@type":"Answer","text":"윤달은 음력과 계절의 차이를 메우려고 2~3년에 한 번 끼워 넣는 달로, 19년에 7번 들어옵니다. 같은 달이 두 번 반복되는데 두 번째가 윤달입니다. 음력 → 양력 변환 시 윤달 체크박스를 선택하면 윤달 기준으로 계산되며, 해당 연·월에 윤달이 없으면 변환되지 않습니다."}},{"@type":"Question","name":"간지(갑진년)와 띠는 어떻게 정해지나요?","acceptedAnswer":{"@type":"Answer","text":"간지는 10천간(갑을병정무기경신임계)과 12지지(자축인묘진사오미신유술해)를 조합한 60갑자로, 음력 연도에 따라 정해집니다. 띠는 12지지의 동물이며 2024년은 갑진년으로 용띠입니다. 이 변환기는 입력한 날짜의 간지년과 띠를 함께 보여줍니다."}},{"@type":"Question","name":"이 변환기는 어떤 기준으로 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"한국천문연구원(KASI) 만세력 데이터를 기준으로 계산합니다. 변환 가능 범위는 양력 1900년부터 2050년까지로, 생일·기념일 변환에 충분합니다. 음력은 한국 표준시(KST)를 기준으로 하며, 중국 등 다른 시간대의 음력과는 드물게 하루 차이가 날 수 있습니다."}},{"@type":"Question","name":"설날과 추석은 매년 양력으로 며칠인가요?","acceptedAnswer":{"@type":"Answer","text":"설날은 음력 1월 1일, 추석은 음력 8월 15일로, 양력 날짜는 매년 달라집니다. 예를 들어 설날은 2024년 2월 10일, 2025년 1월 29일이고, 추석은 2024년 9월 17일, 2025년 10월 6일입니다. 변환기에 음력 1월 1일 또는 8월 15일을 넣으면 해당 연도의 양력 날짜를 확인할 수 있습니다."}}]}</script>
+  <style>
+    /* lunar-calendar 고유 스타일 - 공통은 /assets/tools-common.css */
+    input[type=number]{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 14px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield;text-align:center}
+    input::placeholder{color:var(--gray-400);font-weight:400}
+    input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(20,184,166,0.15)}
+    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
+    .mode-group{display:flex;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:4px}
+    .mode-btn{flex:1;border:none;border-radius:7px;background:transparent;padding:11px 4px;font-size:13.5px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap}
+    .mode-btn.active{background:var(--primary);color:#fff;font-weight:700}
+    .mode-hint{font-size:12px;color:var(--gray-400);margin:8px 2px 0}
+    .date-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:10px}
+    .lc-field>label{display:block;font-size:12px;font-weight:700;color:var(--gray-500);margin-bottom:7px}
+    .leap-row{margin-top:14px;display:flex;align-items:center;gap:8px}
+    .leap-row input[type=checkbox]{width:18px;height:18px;accent-color:var(--primary);cursor:pointer}
+    .leap-row label{font-size:13px;font-weight:600;color:var(--gray-700);cursor:pointer}
+    .leap-row .hint{font-size:12px;color:var(--gray-400);font-weight:400}
+    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
+    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
+    .result-card{background:linear-gradient(135deg,#F0FDFA 0%,#CCFBF1 100%);border:1px solid rgba(20,184,166,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-row+.result-row{border-top:1px solid rgba(0,0,0,0.07)}
+    .rh-value .big-num{font-size:30px;font-weight:900;line-height:1.15;word-break:keep-all}
+    .lc-error{display:none;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);border-radius:12px;padding:14px 16px;font-size:13px;color:#B91C1C;font-weight:600;margin-top:8px}
+    .lc-error.show{display:block}
+    @media (max-width:480px){.date-grid{gap:6px}}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/tools/" class="nav-item active"><span class="nav-dot" style="background:#14B8A6;"></span>생활·도구</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/tools/">생활·도구 계산기</a><span class="breadcrumb-sep">›</span><span>음력 양력 변환기</span></div>
+    <div class="page-header-badge">🌙 KASI 만세력 · 윤달·간지·띠</div>
+    <h1>음력 양력 변환기</h1>
+    <p>음력↔양력 변환, 음력 생일의 양력 날짜·윤달·간지·띠까지 한 번에</p>
+  </div>
+    <div class="card">
+      <div class="card-title">변환 방향</div>
+      <div class="mode-group">
+        <button class="mode-btn active" data-mode="s2l" onclick="setMode('s2l',this)">양력 → 음력</button>
+        <button class="mode-btn" data-mode="l2s" onclick="setMode('l2s',this)">음력 → 양력</button>
+      </div>
+      <div class="mode-hint" id="mode-hint">양력(평소 쓰는 날짜) 생년월일을 넣으면 음력 날짜로 바꿔줍니다.</div>
+    </div>
+    <div class="card">
+      <div class="card-title" id="input-title">양력 날짜 입력</div>
+      <div class="date-grid">
+        <div class="lc-field"><label for="in-y">연도</label><input type="number" id="in-y" min="1900" max="2050" oninput="calc()" /></div>
+        <div class="lc-field"><label for="in-m">월</label><input type="number" id="in-m" min="1" max="12" oninput="calc()" /></div>
+        <div class="lc-field"><label for="in-d">일</label><input type="number" id="in-d" min="1" max="31" oninput="calc()" /></div>
+      </div>
+      <div class="leap-row" id="leap-row" style="display:none">
+        <input type="checkbox" id="in-leap" onchange="calc()" />
+        <label for="in-leap">윤달 <span class="hint">(같은 달이 두 번일 때 두 번째 달이면 체크)</span></label>
+      </div>
+    </div>
+    <div class="lc-error" id="lc-error">입력한 날짜를 변환할 수 없습니다. 범위(양력 1900~2050년)와 날짜가 올바른지, 윤달이 실제로 있는 달인지 확인하세요.</div>
+    <div class="result-card" id="result">
+      <div class="result-highlight"><div class="rh-label" id="r-label">변환 결과</div><div class="rh-value"><span class="big-num" id="r-main">-</span></div><div class="rh-sub" id="r-sub">-</div></div>
+      <div class="result-row"><span class="result-label">간지(干支)</span><span class="result-value" id="r-gapja">-</span></div>
+      <div class="result-row"><span class="result-label">띠</span><span class="result-value" id="r-ddi">-</span></div>
+      <div class="result-row"><span class="result-label" id="r-src-label">입력 날짜</span><span class="result-value" id="r-src">-</span></div>
+      <p class="result-note">한국천문연구원(KASI) 만세력 기준 · 변환 범위 양력 1900~2050년. 음력은 한국 표준시(KST) 기준이라 다른 시간대 음력과 드물게 하루 차이가 날 수 있습니다. 결과는 참고용입니다.</p>
+    </div>
+
+  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>음력과 양력, 무엇이 다른가</h2>
+      <p>양력은 지구가 태양을 도는 주기(약 365.24일)를 기준으로 한 달력이고, 음력은 달의 차고 기우는 주기(약 29.5일)를 기준으로 합니다. 음력 한 달은 29일(작은달) 또는 30일(큰달)이라 음력 1년은 약 354일로 양력보다 11일쯤 짧습니다. 이 차이를 메우려고 몇 년에 한 번 윤달을 끼워 넣습니다. 그래서 음력 생일은 매년 양력 날짜가 달라집니다.</p>
+      <div class="guide-table-wrap">
+        <table>
+          <thead><tr><th>구분</th><th>기준</th><th>1년 길이</th></tr></thead>
+          <tbody>
+            <tr><td>양력(태양력)</td><td>지구의 공전</td><td>365 또는 366일</td></tr>
+            <tr><td>음력(태음태양력)</td><td>달의 삭망 + 윤달 보정</td><td>약 354일 (윤달 해 약 384일)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="guide-card">
+      <h2>윤달이란 무엇인가</h2>
+      <p>윤달은 음력과 계절의 어긋남을 맞추기 위해 끼워 넣는 한 달입니다. 19년에 7번 들어오며, 윤달이 든 해는 같은 달이 두 번 반복됩니다. 예를 들어 2023년에는 윤2월이 있어 음력 2월이 두 번 있었습니다. 두 번째 2월이 윤달입니다. 음력 생일이 윤달이었다면 윤달이 없는 해에는 평달 기준으로 챙기는 것이 일반적입니다.</p>
+      <div class="guide-table-wrap">
+        <table>
+          <thead><tr><th>최근 윤달</th><th>양력 기간</th></tr></thead>
+          <tbody>
+            <tr><td>2017년 윤5월</td><td>2017-06-24 ~ 07-22</td></tr>
+            <tr><td>2020년 윤4월</td><td>2020-05-23 ~ 06-20</td></tr>
+            <tr><td>2023년 윤2월</td><td>2023-03-22 ~ 04-19</td></tr>
+            <tr><td>2025년 윤6월</td><td>2025-07-25 ~ 08-22</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="guide-card">
+      <h2>실제 변환 예시</h2>
+      <h3>예시 1 - 음력 생일을 올해 양력으로</h3>
+      <p>음력 1995년 2월 15일에 태어난 사람이 2026년 생일을 양력으로 알고 싶다면, 음력 → 양력 모드에서 음력 2026년 2월 15일을 변환합니다. 이렇게 매년 음력 월·일은 그대로 두고 연도만 바꾸면 그 해의 양력 생일을 확인할 수 있습니다.</p>
+      <h3>예시 2 - 설날·추석 날짜 확인</h3>
+      <p>설날은 음력 1월 1일, 추석은 음력 8월 15일입니다. 음력 → 양력으로 음력 2025년 1월 1일을 넣으면 2025년 1월 29일(설날), 음력 2025년 8월 15일을 넣으면 2025년 10월 6일(추석)이 나옵니다.</p>
+      <h3>예시 3 - 내 띠와 간지 확인</h3>
+      <p>2024년 2월 10일(음력 설날)을 변환하면 간지 갑진년, 띠는 용띠로 나옵니다. 띠는 음력 연도를 기준으로 하므로, 양력 1~2월 초 출생이면 음력으로는 전년도에 속해 띠가 달라질 수 있습니다. 정확한 띠는 음력 연도로 확인하세요.</p>
+    </div>
+    <div class="guide-card">
+      <h2>12간지 띠 순서</h2>
+      <p>띠는 12지지의 동물 순서로 돌아갑니다. 자신의 음력 출생 연도 간지를 알면 띠를 알 수 있습니다.</p>
+      <div class="guide-table-wrap">
+        <table>
+          <thead><tr><th>지지</th><th>띠</th><th>지지</th><th>띠</th></tr></thead>
+          <tbody>
+            <tr><td>자(子)</td><td>쥐</td><td>오(午)</td><td>말</td></tr>
+            <tr><td>축(丑)</td><td>소</td><td>미(未)</td><td>양</td></tr>
+            <tr><td>인(寅)</td><td>호랑이</td><td>신(申)</td><td>원숭이</td></tr>
+            <tr><td>묘(卯)</td><td>토끼</td><td>유(酉)</td><td>닭</td></tr>
+            <tr><td>진(辰)</td><td>용</td><td>술(戌)</td><td>개</td></tr>
+            <tr><td>사(巳)</td><td>뱀</td><td>해(亥)</td><td>돼지</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>음력 생일을 양력으로 어떻게 바꾸나요?</h3><p>음력 → 양력 모드에서 음력 생년월일을 입력하면 해당 양력 날짜가 나옵니다. 음력 생일은 매년 양력 날짜가 달라지므로, 올해 생일을 알고 싶으면 음력 월·일은 그대로 두고 연도만 올해로 바꿔 변환하면 됩니다. 윤달에 태어났다면 윤달 체크박스를 함께 선택하세요.</p></div>
+      <div class="faq-item"><h3>윤달은 무엇이고 어떻게 처리하나요?</h3><p>윤달은 음력과 계절의 차이를 메우려고 2~3년에 한 번 끼워 넣는 달로, 19년에 7번 들어옵니다. 같은 달이 두 번 반복되는데 두 번째가 윤달입니다. 음력 → 양력 변환 시 윤달 체크박스를 선택하면 윤달 기준으로 계산되며, 해당 연·월에 윤달이 없으면 변환되지 않습니다.</p></div>
+      <div class="faq-item"><h3>간지(갑진년)와 띠는 어떻게 정해지나요?</h3><p>간지는 10천간(갑을병정무기경신임계)과 12지지(자축인묘진사오미신유술해)를 조합한 60갑자로, 음력 연도에 따라 정해집니다. 띠는 12지지의 동물이며 2024년은 갑진년으로 용띠입니다. 이 변환기는 입력한 날짜의 간지년과 띠를 함께 보여줍니다.</p></div>
+      <div class="faq-item"><h3>이 변환기는 어떤 기준으로 계산하나요?</h3><p>한국천문연구원(KASI) 만세력 데이터를 기준으로 계산합니다. 변환 가능 범위는 양력 1900년부터 2050년까지로, 생일·기념일 변환에 충분합니다. 음력은 한국 표준시(KST)를 기준으로 하며, 중국 등 다른 시간대의 음력과는 드물게 하루 차이가 날 수 있습니다.</p></div>
+      <div class="faq-item"><h3>설날과 추석은 매년 양력으로 며칠인가요?</h3><p>설날은 음력 1월 1일, 추석은 음력 8월 15일로, 양력 날짜는 매년 달라집니다. 예를 들어 설날은 2024년 2월 10일, 2025년 1월 29일이고, 추석은 2024년 9월 17일, 2025년 10월 6일입니다. 변환기에 음력 1월 1일 또는 8월 15일을 넣으면 해당 연도의 양력 날짜를 확인할 수 있습니다.</p></div>
+      <div class="update-note">최종 검토: 2026.06.09 · 한국천문연구원(KASI) 만세력 기준 · 참고용</div>
+    </div>
+  </div>
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '한국천문연구원(KASI) 만세력 데이터 기준',
+    appliedFrom: '양력 1900~2050년',
+    exceptions: [
+      '음력은 한국 표준시(KST) 기준으로 다른 시간대 음력과 드물게 하루 차이가 날 수 있습니다',
+      '윤달이 없는 연·월에 윤달을 선택하면 변환되지 않습니다',
+    ],
+    references: [
+      { name: '한국천문연구원 음양력변환계산', url: 'https://astro.kasi.re.kr/life/pageView/8' },
+    ],
+    lastReviewed: '2026.06',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">© 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script src="/assets/korean-lunar-calendar.min.js"></script>
+<script>
+let mode='s2l';
+const DDI={ '자':'쥐','축':'소','인':'호랑이','묘':'토끼','진':'용','사':'뱀','오':'말','미':'양','신':'원숭이','유':'닭','술':'개','해':'돼지' };
+const WD=['일','월','화','수','목','금','토'];
+const cal=new KoreanLunarCalendar();
+
+function ddiOf(gapjaYear){ // "갑진년" → 용띠
+  if(!gapjaYear) return '-';
+  const jiji=gapjaYear.charAt(1);
+  return DDI[jiji] ? DDI[jiji]+'띠' : '-';
+}
+function weekday(y,m,d){ return WD[new Date(y, m-1, d).getDay()]+'요일'; }
+
+function setMode(m,btn){
+  mode=m;
+  document.querySelectorAll('.mode-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('input-title').textContent = m==='s2l' ? '양력 날짜 입력' : '음력 날짜 입력';
+  document.getElementById('mode-hint').textContent = m==='s2l'
+    ? '양력(평소 쓰는 날짜) 생년월일을 넣으면 음력 날짜로 바꿔줍니다.'
+    : '음력 생년월일을 넣으면 양력 날짜로 바꿔줍니다. 윤달이면 아래 체크박스를 선택하세요.';
+  document.getElementById('leap-row').style.display = m==='l2s' ? 'flex' : 'none';
+  document.getElementById('in-y').max = m==='s2l' ? 2050 : 2050;
+  calc();
+}
+
+function calc(){
+  const res=document.getElementById('result'), err=document.getElementById('lc-error');
+  const y=parseInt(document.getElementById('in-y').value,10);
+  const m=parseInt(document.getElementById('in-m').value,10);
+  const d=parseInt(document.getElementById('in-d').value,10);
+  if(!Number.isFinite(y)||!Number.isFinite(m)||!Number.isFinite(d)){res.classList.remove('show');err.classList.remove('show');return;}
+
+  if(mode==='s2l'){
+    const ok=cal.setSolarDate(y,m,d);
+    if(!ok){ res.classList.remove('show'); err.classList.add('show'); return; }
+    const l=cal.getLunarCalendar(), g=cal.getKoreanGapja();
+    err.classList.remove('show'); res.classList.add('show');
+    document.getElementById('r-label').textContent='음력 날짜';
+    document.getElementById('r-main').textContent='음력 '+l.year+'년 '+(l.intercalation?'윤':'')+l.month+'월 '+l.day+'일';
+    document.getElementById('r-sub').textContent=weekday(y,m,d);
+    document.getElementById('r-gapja').textContent=g.year;
+    document.getElementById('r-ddi').textContent=ddiOf(g.year);
+    document.getElementById('r-src-label').textContent='양력 날짜';
+    document.getElementById('r-src').textContent=y+'년 '+m+'월 '+d+'일';
+  } else {
+    const leap=document.getElementById('in-leap').checked;
+    const ok=cal.setLunarDate(y,m,d,leap);
+    if(!ok){ res.classList.remove('show'); err.classList.add('show'); return; }
+    const s=cal.getSolarCalendar(), g=cal.getKoreanGapja(), lb=cal.getLunarCalendar();
+    err.classList.remove('show'); res.classList.add('show');
+    document.getElementById('r-label').textContent='양력 날짜';
+    document.getElementById('r-main').textContent='양력 '+s.year+'년 '+s.month+'월 '+s.day+'일';
+    document.getElementById('r-sub').textContent=weekday(s.year,s.month,s.day)+(leap&&!lb.intercalation?' · 해당 월에 윤달이 없어 평달로 계산했습니다':'');
+    document.getElementById('r-gapja').textContent=g.year;
+    document.getElementById('r-ddi').textContent=ddiOf(g.year);
+    document.getElementById('r-src-label').textContent='음력 날짜';
+    document.getElementById('r-src').textContent='음력 '+y+'년 '+(lb.intercalation?'윤':'')+m+'월 '+d+'일';
+  }
+}
+// 오늘 날짜로 초기화
+(function(){
+  const t=new Date();
+  document.getElementById('in-y').value=t.getFullYear();
+  document.getElementById('in-m').value=t.getMonth()+1;
+  document.getElementById('in-d').value=t.getDate();
+  calc();
+})();
+</script>
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/calc-registry.js"></script>
+<script src="/assets/tools-detail-shell.js"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '한국천문연구원(KASI) 만세력',
+  basisDate: '양력 1900~2050년',
+  referenceOrg: '한국천문연구원(KASI)',
+  lastReviewed: '2026.06.09',
+  category: 'tools'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/blog-review-footer.js"></script>
+</body>
+</html>
