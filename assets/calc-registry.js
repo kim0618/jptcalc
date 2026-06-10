@@ -216,6 +216,11 @@ window.CALC_REGISTRY = {
         "slug": "investment",
         "icon": "📉",
         "name": "투자 수익률"
+      },
+      {
+        "slug": "stock-average",
+        "icon": "⚖️",
+        "name": "주식 평단가"
       }
     ]
   },
