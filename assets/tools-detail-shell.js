@@ -3,7 +3,9 @@
   const path=(location.pathname||'').replace(/index\.html$/,'').replace(/\/+$/,'/') || '/';
   // pages 비움 - 관련계산기·블로그는 calc-registry.js fallback이 같은 카테고리에서 자동 생성.
   // 계산기 추가 시 별도 수정 불필요(레지스트리 1줄로 자동 반영).
-  const pages={};
+  const pages={
+    '/calc/tools/char-count/':{key:'char-count',quick:[],related:[],guides:[['/blog/posts/char-count-guide.html','글자수 세기 완벽 가이드 2026 - 공백 포함·제외·byte·원고지 매수 총정리']]},
+  };
   let cfg=pages[path];
   if(!cfg){
     var sm=path.match(/\/calc\/([^/]+)\/([^/]+)\//);
