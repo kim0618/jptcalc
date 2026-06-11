@@ -5,6 +5,7 @@
   // 계산기 추가 시 별도 수정 불필요(레지스트리 1줄로 자동 반영).
   const pages={
     '/calc/tools/char-count/':{key:'char-count',quick:[],related:[],guides:[['/blog/posts/char-count-guide.html','글자수 세기 완벽 가이드 2026 - 공백 포함·제외·byte·원고지 매수 총정리']]},
+    '/calc/tools/naesin-grade/':{key:'naesin-grade',quick:[],related:[],guides:[['/blog/posts/naesin-grade-guide.html','내신등급 계산기 보는 법 2026 - 석차백분율·9등급제·5등급제 환산 총정리']]},
   };
   let cfg=pages[path];
   if(!cfg){

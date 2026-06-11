@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>내신등급 계산기 보는 법 2026 - 석차백분율·9등급제·5등급제 환산 총정리 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="석차로 내신 등급 환산하는 법, 9등급제(고3)와 5등급제(고1·고2) 비율 차이, 전과목 평균 내신등급 가중평균 계산법까지 2026년 기준으로 정리했습니다. 기말고사 후 내 등급 바로 확인하세요." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="내신등급 계산기 보는 법 2026 - 석차백분율·9등급제·5등급제 환산 총정리 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="석차로 내신 등급 환산하는 법, 9등급제(고3)와 5등급제(고1·고2) 비율 차이, 전과목 평균 내신등급 가중평균 계산법까지 2026년 기준으로 정리했습니다. 기말고사 후 내 등급 바로 확인하세요." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/naesin-grade-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/naesin-grade-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#14B8A6;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(20,184,166,0.15);color:#14B8A6;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:24px 0 10px}
+    .post-body p{margin-bottom:14px}
+    .post-body ul{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#14B8A6;text-decoration:none}
+    .highlight-box{background:rgba(20,184,166,0.08);border-left:4px solid #14B8A6;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#0F766E;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    td.rate{color:#14B8A6;font-weight:700}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#14B8A6;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .faq-item{border:1px solid #E5E7EB;border-radius:10px;margin:12px 0}
+    .faq-q{font-weight:700;padding:14px 18px;font-size:15px;cursor:pointer;background:#F9FAFB;border-radius:10px}
+    .faq-a{padding:14px 18px;font-size:14px;color:#4B5563;line-height:1.75;border-top:1px solid #E5E7EB}
+    .adfit-slot{text-align:center;margin:28px 0}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "내신등급 계산기 보는 법 2026 - 석차백분율·9등급제·5등급제 환산 총정리",
+  "description": "석차로 내신 등급 환산하는 법, 9등급제(고3)와 5등급제(고1·고2) 비율 차이, 전과목 평균 내신등급 가중평균 계산법까지 2026년 기준으로 정리했습니다. 기말고사 후 내 등급 바로 확인하세요.",
+  "author": {"@type": "Person", "name": "Jay Kim", "url": "https://www.jptcalc.kr/about.html", "jobTitle": "제이퍼 계산기 운영자"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr",
+    "logo": {"@type": "ImageObject", "url": "https://www.jptcalc.kr/android-chrome-512x512.png"}
+  },
+  "datePublished": "2026-06-11",
+  "dateModified": "2026-06-11",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.jptcalc.kr/blog/posts/naesin-grade-guide.html"},
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "생활·도구",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "내신 등급은 석차로 어떻게 계산하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "먼저 석차백분율을 구합니다. 공식은 석차백분율 = (석차 + 동석차 인원 − 1) ÷ 수강자 수 × 100입니다. 동석차가 없으면 석차 ÷ 수강자 수 × 100과 같습니다. 이 백분율을 등급 기준표에 대입합니다. 예를 들어 250명 수강 과목에서 9등이면 9 ÷ 250 × 100 = 3.6%로, 9등급제에서는 상위 4% 이내라 1등급, 5등급제에서도 상위 10% 이내라 1등급입니다. 같은 석차라도 적용되는 등급제에 따라 등급이 달라질 수 있으니 본인 학년의 기준을 먼저 확인해야 합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "2026년에 내 학년은 9등급제인가요, 5등급제인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "내신 5등급제는 2025학년도 고1부터 단계적으로 도입됐습니다. 2026년 기준으로 고1과 고2는 5등급제, 고3은 마지막 9등급제 세대입니다. 즉 2025학년도에 고1이었던 학생들이 2026년에 고2가 되면서 5등급제를 그대로 적용받고, 2026년에 입학한 고1도 5등급제입니다. 반면 2024학년도에 고1이었던 현재 고3은 졸업까지 9등급제를 적용받습니다. 본인이 받은 성적표의 석차등급 표기가 5단계(1~5)인지 9단계(1~9)인지 보면 바로 구분됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "전과목 평균 내신등급은 어떻게 구하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "과목별 등급에 그 과목의 이수단위를 곱한 값을 모두 더한 뒤 총 이수단위로 나누는 가중평균입니다. 공식은 (과목1 등급 × 단위 + 과목2 등급 × 단위 + …) ÷ 총 이수단위입니다. 예를 들어 국어 2등급(4단위), 수학 1등급(4단위), 영어 3등급(4단위), 한국사 2등급(3단위), 통합사회 3등급(3단위), 통합과학 2등급(3단위)이면 가중합 45를 총 단위 21로 나눠 약 2.14등급이 됩니다. 단순 평균이 아니라 단위가 큰 과목일수록 평균에 더 크게 반영된다는 점이 핵심입니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "5등급제로 바뀌면서 1등급이 4%에서 10%로 늘었는데 더 유리해진 건가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1등급 인원이 늘어난 것은 맞지만 입시가 쉬워졌다고 보긴 어렵습니다. 1등급 비율이 상위 4%에서 10%로 넓어지면서 1등급 학생 수가 2배 이상으로 늘어, 같은 1등급 안에서의 변별이 사라졌기 때문입니다. 실제로 2025학년도 첫 학기 결과에서 시험이 평이해 상위권이 늘었다는 분석이 나왔고, 대학은 내신만으로 거르기 어려워 원점수, 세부능력 특기사항, 면접 등 다른 자료의 비중을 높이는 흐름입니다. 등급 숫자는 좋아 보여도 실질 경쟁은 완화되지 않았다고 보는 것이 안전합니다."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+  {"@type":"ListItem","position":2,"name":"블로그","item":"https://www.jptcalc.kr/blog/"},
+  {"@type":"ListItem","position":3,"name":"생활·도구","item":"https://www.jptcalc.kr/blog/?cat=생활·도구"},
+  {"@type":"ListItem","position":4,"name":"내신등급 계산기 보는 법 2026","item":"https://www.jptcalc.kr/blog/posts/naesin-grade-guide.html"}
+]}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo"><div class="logo-icon"><img src="../../assets/logo.svg" alt="로고" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+<div class="post-wrap">
+  <span class="post-tag">생활·도구</span>
+  <h1>내신등급 계산기 보는 법 2026 - 석차백분율·9등급제·5등급제 환산 총정리</h1>
+  <div class="post-meta"><span>📅 2026.06.11</span><span>·</span><span>18분 읽기</span></div>
+  <div class="post-body">
+
+    <p>기말고사 성적표를 받아 들고 가장 먼저 하는 일은 거의 똑같습니다. "그래서 내 등급이 몇 등급이지?" 석차는 적혀 있는데 등급은 한 학기가 다 지나서야 나오니, 시험 직후에는 직접 환산해보는 수밖에 없습니다. 그런데 2025학년도부터 등급제가 바뀌면서 이 계산이 학년마다 달라졌습니다.</p>
+    <p>결론부터 말하면, 같은 "250명 중 25등"이라도 고3은 2등급, 고1·고2는 1등급입니다. 9등급제와 5등급제의 1등급 커트라인이 각각 4%와 10%로 다르기 때문입니다. 이 글에서는 석차로 등급을 구하는 공식부터, 내 학년에 적용되는 등급제, 전과목 평균 내신등급을 내는 가중평균 계산까지 한 번에 정리합니다. 숫자를 직접 넣어가며 따라오면 성적표를 받은 그날 바로 내 위치를 알 수 있습니다.</p>
+
+    <div class="highlight-box"><p>이 글이 필요한 분: 기말·중간고사 직후 본인 등급을 빨리 알고 싶은 고등학생 / 9등급제와 5등급제 중 내 학년에 뭐가 적용되는지 헷갈리는 분 / 전과목 평균 내신등급을 직접 산출해 수시 지원선을 가늠하려는 수험생·학부모 / 동석차(공동 등수)일 때 등급이 어떻게 되는지 궁금한 분</p></div>
+
+    <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+      <li>석차백분율 공식과 동석차(공동 등수)가 있을 때 정확한 계산법</li>
+      <li>9등급제(상위 4%) vs 5등급제(상위 10%) 등급별 누적 비율 전체 표</li>
+      <li>2026년 기준 고1·고2·고3 각각 어떤 등급제가 적용되는지</li>
+      <li>같은 석차백분율 10%·33%가 두 제도에서 몇 등급으로 갈리는지 수치 비교</li>
+      <li>과목별 등급 × 이수단위로 전과목 평균 내신등급 구하는 가중평균 공식</li>
+      <li>1등급이 4%에서 10%로 늘었는데 왜 더 유리하다고 보기 어려운지</li>
+    </ul>
+
+    <div class="adfit-slot">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>석차백분율부터 - 모든 내신 등급의 출발점</h2>
+    <p>내신 등급은 점수가 아니라 석차백분율로 정해집니다. 90점을 받아도 그 과목 평균이 88점이면 등급이 낮고, 70점을 받아도 다들 60점대면 등급이 높습니다. 절대 점수가 아니라 같은 과목을 들은 학생들 사이에서의 상대 위치가 등급을 결정합니다. 그래서 첫 단계는 무조건 석차백분율 계산입니다.</p>
+    <p>공식은 다음과 같습니다.</p>
+    <div class="highlight-box"><p><strong>석차백분율 = (석차 + 동석차 인원 − 1) ÷ 수강자 수 × 100</strong><br>동석차가 없으면 (석차 ÷ 수강자 수 × 100)과 같습니다.</p></div>
+    <p>여기서 수강자 수는 그 과목을 들은 전체 학생 수입니다. 같은 학년 전체가 아니라 해당 과목 수강자 기준이라는 점이 중요합니다. 선택과목처럼 일부만 듣는 과목은 모집단 자체가 작아져서, 같은 석차라도 등급이 크게 달라집니다.</p>
+    <p>예를 들어 한 과목을 250명이 들었고 내가 9등이라면, 9 ÷ 250 × 100 = 3.6%입니다. 이 3.6%를 등급 기준표의 어느 구간에 들어가는지 보면 등급이 나옵니다. 핵심은 간단합니다. 백분율을 먼저 구하고, 그다음 표에 대입한다.</p>
+
+    <h3>동석차(공동 등수)일 때가 진짜 함정</h3>
+    <p>가장 많이 틀리는 부분이 동점자 처리입니다. 시험은 동점이 자주 나오고, 동점이면 석차도 공동으로 매겨집니다. 이때 공식의 "+ 동석차 인원 − 1"이 작동합니다.</p>
+    <p>3명이 공동 5등이라고 합시다(즉 5등, 5등, 5등). 이 세 명의 석차백분율은 모두 (5 + 3 − 1) ÷ 수강자 수 × 100으로 계산합니다. 수강자가 200명이면 (5 + 3 − 1) ÷ 200 × 100 = 7 ÷ 200 × 100 = 3.5%입니다. 공동 등수에서는 가장 불리한(아래) 위치를 기준으로 잡기 때문에, 동점자가 많을수록 백분율이 살짝 올라갑니다. 이 처리를 빼먹고 단순히 5 ÷ 200으로 계산하면 2.5%가 나와서 실제와 1%포인트 차이가 생기고, 등급 경계에 걸쳐 있으면 등급 자체가 바뀝니다.</p>
+
+    <p style="margin:1.2em 0">석차와 인원만 넣으면 동석차까지 반영해 자동 환산: <a href="../../calc/tools/naesin-grade/" style="color:#14B8A6;font-weight:600;">내신 등급 계산기 → 석차백분율·등급 한 번에 확인</a></p>
+
+    <h2>9등급제와 5등급제 - 2026년 내 학년은 어디에 있나</h2>
+    <p>여기서부터가 2026년의 핵심입니다. 교육부의 2028 대입제도 개편안(2023년 10월 확정)에 따라 고교 내신 평가가 기존 9등급 상대평가에서 5등급 상대평가로 전환됐고, 적용은 2025학년도 고1부터 단계적으로 시작됐습니다.</p>
+    <p>학년별로 정리하면 이렇습니다.</p>
+    <ul>
+      <li><strong>2026년 고3</strong>: 2024학년도에 고1이었던 세대. 졸업까지 <strong>9등급제</strong> 적용(마지막 9등급제 세대).</li>
+      <li><strong>2026년 고2</strong>: 2025학년도에 고1로 5등급제를 처음 적용받은 세대. <strong>5등급제</strong>.</li>
+      <li><strong>2026년 고1</strong>: 2026학년도 입학생. <strong>5등급제</strong>.</li>
+    </ul>
+    <p>즉 2026년 1학기 기말고사를 기준으로 보면, 같은 학교 안에서도 고3은 9등급제로, 고1·고2는 5등급제로 등급이 매겨집니다. 성적표를 받았을 때 석차등급이 1~9로 표기되면 9등급제, 1~5로 표기되면 5등급제입니다. 본인이 어느 쪽인지부터 확인해야 환산이 맞습니다.</p>
+
+    <p>두 제도의 등급별 누적 비율은 아래 표와 같습니다. "누적"은 그 등급까지 포함한 상위 비율이라는 뜻입니다.</p>
+
+    <div class="table-wrap"><table>
+      <tr><th>등급</th><th>9등급제 구간 비율</th><th>9등급제 누적(상위)</th><th>5등급제 구간 비율</th><th>5등급제 누적(상위)</th></tr>
+      <tr><td>1등급</td><td>4%</td><td class="rate">4% 이내</td><td>10%</td><td class="rate">10% 이내</td></tr>
+      <tr><td>2등급</td><td>7%</td><td class="rate">11% 이내</td><td>24%</td><td class="rate">34% 이내</td></tr>
+      <tr><td>3등급</td><td>12%</td><td class="rate">23% 이내</td><td>32%</td><td class="rate">66% 이내</td></tr>
+      <tr><td>4등급</td><td>17%</td><td class="rate">40% 이내</td><td>24%</td><td class="rate">90% 이내</td></tr>
+      <tr><td>5등급</td><td>20%</td><td class="rate">60% 이내</td><td>10%</td><td class="rate">100%</td></tr>
+      <tr><td>6등급</td><td>17%</td><td class="rate">77% 이내</td><td>-</td><td>-</td></tr>
+      <tr><td>7등급</td><td>12%</td><td class="rate">89% 이내</td><td>-</td><td>-</td></tr>
+      <tr><td>8등급</td><td>7%</td><td class="rate">96% 이내</td><td>-</td><td>-</td></tr>
+      <tr><td>9등급</td><td>4%</td><td class="rate">100%</td><td>-</td><td>-</td></tr>
+    </table></div>
+
+    <div style="margin:24px 0;overflow-x:auto">
+    <svg role="img" width="100%" viewBox="0 0 680 250" xmlns="http://www.w3.org/2000/svg">
+      <title>9등급제 vs 5등급제 1·2·3등급 누적 커트라인 비교</title>
+      <rect width="680" height="250" rx="12" fill="#F9FAFB"/>
+      <text x="24" y="34" font-size="13" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">등급별 누적 커트라인 비교 (상위 % 기준)</text>
+      <text x="24" y="74" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">1등급</text>
+      <rect x="90" y="60" width="28" height="18" rx="4" fill="#14B8A6" opacity="0.85"/>
+      <text x="126" y="74" font-size="11" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">9등급제 4%</text>
+      <rect x="90" y="82" width="70" height="18" rx="4" fill="#0EA5E9" opacity="0.7"/>
+      <text x="168" y="96" font-size="11" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">5등급제 10%</text>
+      <text x="24" y="134" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">2등급</text>
+      <rect x="90" y="120" width="77" height="18" rx="4" fill="#14B8A6" opacity="0.85"/>
+      <text x="175" y="134" font-size="11" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">9등급제 11%</text>
+      <rect x="90" y="142" width="238" height="18" rx="4" fill="#0EA5E9" opacity="0.7"/>
+      <text x="336" y="156" font-size="11" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">5등급제 34%</text>
+      <text x="24" y="194" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">3등급</text>
+      <rect x="90" y="180" width="161" height="18" rx="4" fill="#14B8A6" opacity="0.85"/>
+      <text x="259" y="194" font-size="11" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">9등급제 23%</text>
+      <rect x="90" y="202" width="462" height="18" rx="4" fill="#0EA5E9" opacity="0.7"/>
+      <text x="560" y="216" font-size="11" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">5등급제 66%</text>
+      <text x="24" y="242" font-size="11" fill="#9CA3AF" font-family="Pretendard,sans-serif">※ 청록=9등급제(고3), 파랑=5등급제(고1·고2). 막대가 길수록 그 등급 안에 들어오는 학생이 많음.</text>
+    </svg>
+    </div>
+
+    <p>표와 그래프가 한눈에 말해주는 것은 5등급제가 등급 구간을 훨씬 넓게 잡는다는 점입니다. 9등급제에서 3등급(누적 23%)이던 백분율 구간이 5등급제에서는 1~2등급 안에 들어옵니다. 그래서 같은 석차라도 5등급제에서 숫자상 등급이 더 좋게 나옵니다. 다만 좋게 나온다고 입시가 쉬워지는 건 아닌데, 이 부분은 뒤에서 따로 다룹니다.</p>
+
+    <h2>실제 석차로 따져보는 등급 환산 시나리오</h2>
+
+    <h3>시나리오 1 - 250명 과목에서 9등, 두 제도 모두 1등급 (서준호, 고2)</h3>
+    <p>서준호 학생은 5등급제를 적용받는 고2입니다. 수학 수강자 250명 중 9등을 했습니다. 석차백분율은 9 ÷ 250 × 100 = 3.6%입니다.</p>
+    <p>검산하면, 3.6%는 5등급제 1등급 커트라인(10% 이내)에 들어가므로 1등급입니다. 참고로 같은 백분율을 9등급제(고3 기준)에 대입해도 4% 이내라 1등급입니다. 이 구간은 두 제도가 같은 결론을 냅니다.</p>
+    <p>의사결정으로 연결하면, 상위 3~4%대는 어느 제도에서든 최상위라 안정적입니다. 다만 5등급제 세대인 서준호 학생은 1등급 안에 들어온 학생이 9등급제보다 2배 이상 많다는 점을 알아야 합니다. 같은 1등급이어도 원점수와 세부능력 특기사항으로 한 번 더 갈린다는 뜻이라, 1등급을 받았다고 방심하면 안 됩니다.</p>
+
+    <h3>시나리오 2 - 같은 "25등 / 250명"인데 학년 따라 등급이 갈린다 (이서연 고3 vs 정도윤 고1)</h3>
+    <p>이서연 학생(고3, 9등급제)과 정도윤 학생(고1, 5등급제)이 각자 다른 학교에서 똑같이 영어 250명 중 25등을 했습니다. 석차백분율은 둘 다 25 ÷ 250 × 100 = 10.0%로 같습니다.</p>
+    <p>그런데 등급은 갈립니다. 9등급제에서 10%는 1등급(4%)을 넘고 2등급(11% 이내) 구간이라, 이서연 학생은 <strong>2등급</strong>입니다. 5등급제에서 10%는 1등급 커트라인(10% 이내)에 딱 걸치므로, 정도윤 학생은 <strong>1등급</strong>입니다.</p>
+    <p>검산: 9등급제 2등급 경계는 누적 11%, 10% < 11% → 2등급 확정. 5등급제 1등급 경계는 누적 10%, 10% ≤ 10% → 1등급 확정. 똑같은 노력과 똑같은 석차인데 적용 제도 하나로 1등급과 2등급이 갈립니다. 그래서 다른 학년·다른 입학연도 학생끼리 "나는 몇 등급" 하고 단순 비교하면 오해가 생깁니다. 반드시 같은 제도 기준끼리 비교해야 합니다.</p>
+
+    <h3>시나리오 3 - 300명 중 100등, 9등급제면 4등급 5등급제면 2등급 (한지우, 진로선택 직전 고2)</h3>
+    <p>한지우 학생은 통합사회 300명 중 100등입니다. 석차백분율은 100 ÷ 300 × 100 = 33.3%입니다.</p>
+    <p>9등급제로 보면 33.3%는 3등급(누적 23%)을 넘고 4등급(누적 40%) 구간이라 4등급입니다. 5등급제로 보면 33.3%는 2등급 커트라인(누적 34%) 안이라 2등급입니다. 검산: 23% < 33.3% ≤ 40% → 9등급제 4등급. 33.3% ≤ 34% → 5등급제 2등급. 무려 두 등급 차이가 납니다.</p>
+    <p>한지우 학생은 5등급제 세대라 2등급으로 기록되지만, 이 숫자를 "옛날 기준 2등급"으로 착각하면 안 됩니다. 9등급제 시절의 2등급은 상위 11% 이내였는데, 5등급제 2등급은 상위 34%까지 포함하므로 의미가 전혀 다릅니다. 수시 지원선을 가늠할 때는 등급 숫자뿐 아니라 그 등급이 어느 백분율 구간인지를 함께 봐야 실수가 없습니다.</p>
+
+    <div class="adfit-slot">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-88xhdLeiIK3V35kb" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>1등급이 4%에서 10%로 늘었는데 더 불리해졌다는 말, 진짜일까</h2>
+    <p>5등급제 소식을 처음 들으면 대부분 "1등급 비율이 2배 넘게 늘었으니 1등급 받기 쉬워졌다"고 생각합니다. 숫자만 보면 맞습니다. 그런데 입시 현장의 체감은 정반대인 경우가 많습니다. 여기에 함정이 있습니다.</p>
+    <p>핵심은 변별의 소멸입니다. 한 학년이 300명인 학교라면 9등급제에서 1등급은 상위 12명(4%)뿐이었습니다. 5등급제에서는 상위 30명(10%)이 모두 1등급입니다. 1등급 정원이 12명에서 30명으로 늘어난 셈입니다. 대학 입장에서는 1등급 지원자가 쏟아지니, 내신 등급만으로는 누가 더 우수한지 가릴 수 없게 됩니다.</p>
+
+    <div class="table-wrap"><table>
+      <tr><th>구분</th><th>9등급제 1등급</th><th>5등급제 1등급</th><th>달라지는 점</th></tr>
+      <tr><td>커트라인(상위)</td><td>4% 이내</td><td class="rate">10% 이내</td><td>커트라인 2.5배 완화</td></tr>
+      <tr><td>300명 학년 1등급 인원</td><td>약 12명</td><td class="rate">약 30명</td><td>인원 2.5배 증가</td></tr>
+      <tr><td>1등급 내 변별</td><td>좁은 4% 안 경쟁</td><td class="rate">넓은 10% 안 혼재</td><td>등급만으론 구분 곤란</td></tr>
+      <tr><td>대학의 평가 보완</td><td>상대적으로 적음</td><td class="rate">원점수·세특·면접 비중↑</td><td>정성평가 영향 확대</td></tr>
+    </table></div>
+
+    <p>실제로 2025학년도 5등급제 첫 학기 결과를 두고, 시험이 평이하게 출제되면서 상위권 비율이 늘고 변별력이 떨어졌다는 분석이 여러 교육 기관에서 나왔습니다. 등급 숫자는 좋아졌지만 대학은 내신 외 자료로 줄을 세우려 하기 때문에, 결과적으로 세부능력 특기사항, 원점수, 정시 수능의 무게가 더 커지는 흐름입니다. "1등급이 흔해졌다"는 말은 곧 "1등급으로는 차별화가 안 된다"는 말과 같습니다.</p>
+    <p>개인적으로는, 5등급제 세대일수록 등급 숫자에 안주하지 말고 원점수와 학생부 기록을 함께 관리하는 전략이 현실적이라고 봅니다. 등급은 넓어졌지만 진짜 경쟁은 그 안으로 숨어든 셈입니다.</p>
+
+    <h2>전과목 평균 내신등급 - 가중평균이 핵심이다</h2>
+    <p>수시 학생부교과전형에서는 한 과목 등급이 아니라 여러 과목을 합친 평균 내신등급을 봅니다. 이때 단순히 등급을 더해서 과목 수로 나누면 틀립니다. 반드시 이수단위로 가중평균을 내야 합니다.</p>
+    <div class="highlight-box"><p><strong>평균 내신등급 = (과목1 등급 × 이수단위 + 과목2 등급 × 이수단위 + …) ÷ 총 이수단위</strong></p></div>
+    <p>이수단위는 그 과목을 한 학기에 몇 시간 배우는지를 나타내는 값입니다. 보통 국어·영어·수학은 단위가 크고(4단위 안팎), 한국사·통합사회·통합과학 등은 그보다 작은 경우가 많습니다. 단위가 큰 과목의 등급이 평균에 더 큰 영향을 줍니다.</p>
+
+    <h3>계산 예시 - 6과목 평균 내신등급 (김민재, 고2 1학기)</h3>
+    <p>김민재 학생의 1학기 성적이 다음과 같다고 합시다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>과목</th><th>등급</th><th>이수단위</th><th>등급 × 단위</th></tr>
+      <tr><td>국어</td><td>2등급</td><td>4</td><td class="rate">8</td></tr>
+      <tr><td>수학</td><td>1등급</td><td>4</td><td class="rate">4</td></tr>
+      <tr><td>영어</td><td>3등급</td><td>4</td><td class="rate">12</td></tr>
+      <tr><td>한국사</td><td>2등급</td><td>3</td><td class="rate">6</td></tr>
+      <tr><td>통합사회</td><td>3등급</td><td>3</td><td class="rate">9</td></tr>
+      <tr><td>통합과학</td><td>2등급</td><td>3</td><td class="rate">6</td></tr>
+      <tr><td><strong>합계</strong></td><td>-</td><td><strong>21</strong></td><td class="rate"><strong>45</strong></td></tr>
+    </table></div>
+    <p>평균 내신등급 = 45 ÷ 21 = 약 2.14등급입니다. 검산하면 8 + 4 + 12 + 6 + 9 + 6 = 45, 총 이수단위 4 + 4 + 4 + 3 + 3 + 3 = 21, 45 ÷ 21 = 2.142… → 2.14로 맞습니다.</p>
+    <p>여기서 단순 평균과 비교해보면 차이가 드러납니다. 등급만 단순 평균하면 (2 + 1 + 3 + 2 + 3 + 2) ÷ 6 = 13 ÷ 6 = 약 2.17등급입니다. 가중평균(2.14)과 0.03 차이로 이번 사례는 작지만, 단위가 큰 국영수에서 고등급(좋은 등급)을 받으면 가중평균이 단순 평균보다 유리해집니다. 반대로 단위 큰 과목에서 낮은 등급을 받으면 평균이 더 나빠집니다.</p>
+
+    <h3>같은 등급 분포, 단위 배치만 바꿔도 평균이 달라진다</h3>
+    <p>가중평균의 위력을 보여주는 대조 사례입니다. 1등급 한 과목과 3등급 한 과목이 있는데, 어느 쪽 단위가 크냐에 따라 평균이 갈립니다. 1등급 과목이 4단위·3등급 과목이 2단위면 (1×4 + 3×2) ÷ 6 = 10 ÷ 6 = 약 1.67등급입니다. 반대로 1등급 과목이 2단위·3등급 과목이 4단위면 (1×2 + 3×4) ÷ 6 = 14 ÷ 6 = 약 2.33등급입니다. 같은 1등급·3등급인데 평균이 1.67과 2.33으로 0.66이나 벌어집니다.</p>
+    <p>이 차이가 의사결정에 주는 메시지는 분명합니다. 단위가 큰 주요 과목(국어·영어·수학)에서 한 등급을 끌어올리는 것이, 단위 작은 과목 두 개를 올리는 것보다 평균에 더 크게 작용합니다. 시험 대비 시간을 어디에 더 쓸지 정할 때 이 원리를 기억하면 효율이 올라갑니다.</p>
+
+    <h2>등급별 백분율을 알아야 지원선이 보인다</h2>
+    <p>평균 내신등급이 나왔다면, 그 등급이 전체에서 어느 위치인지 백분율로 환산해두면 지원 전략에 도움이 됩니다. 아래는 9등급제와 5등급제 각각에서 등급이 대략 어느 상위 백분율 구간인지 정리한 표입니다. 진학 지도에서 자주 쓰는 기준이기도 합니다.</p>
+
+    <div class="table-wrap"><table>
+      <tr><th>등급</th><th>9등급제 상위 구간</th><th>5등급제 상위 구간</th><th>대략적 의미</th></tr>
+      <tr><td>1등급</td><td class="rate">~4%</td><td class="rate">~10%</td><td>최상위권</td></tr>
+      <tr><td>2등급</td><td class="rate">4~11%</td><td class="rate">10~34%</td><td>상위권</td></tr>
+      <tr><td>3등급</td><td class="rate">11~23%</td><td class="rate">34~66%</td><td>중상위~중위</td></tr>
+      <tr><td>4등급</td><td class="rate">23~40%</td><td class="rate">66~90%</td><td>중위권</td></tr>
+      <tr><td>5등급</td><td class="rate">40~60%</td><td class="rate">90~100%</td><td>중위~중하위</td></tr>
+      <tr><td>6~9등급</td><td class="rate">60~100%</td><td>해당 없음</td><td>하위권(9등급제만)</td></tr>
+    </table></div>
+
+    <p>표를 보면 왜 두 제도의 등급을 직접 비교하면 안 되는지 다시 확인됩니다. 9등급제 2등급(상위 4~11%)과 5등급제 2등급(상위 10~34%)은 이름만 같지 위치가 전혀 다릅니다. 대학들도 이 점을 알고 있어서, 5등급제 세대의 지원자는 변환된 점수나 원점수를 함께 반영하는 방식으로 평가를 보완합니다. 본인의 평균 내신등급을 백분율로 바꿔두면, 이름값에 휘둘리지 않고 실제 위치를 객관적으로 볼 수 있습니다.</p>
+    <p>좀 더 정확한 입시 기준은 고용노동부나 통계청 같은 일반 통계가 아니라, 한국대학교육협의회(대교협)의 대입정보포털 '어디가'와 각 대학이 공개하는 입시 결과를 참고하는 것이 정확합니다. 학교 진학상담실에서 제공하는 전년도 합격선 자료도 함께 보면 더 좋습니다.</p>
+
+    <h2>자소서·일정 관리까지 함께 챙기기</h2>
+    <p>내신 등급을 확인했다면 그다음은 수시 일정과 서류 준비입니다. 자기소개서나 학업계획서를 쓸 때는 문항별 글자수 제한이 까다로운데, 공백 포함·제외 기준이 플랫폼마다 달라서 분량 실수가 자주 납니다. <a href="../posts/char-count-guide.html" style="color:#14B8A6;">글자수 세기 완벽 가이드</a>에서 기업·대학별 기준과 환산법을 정리해두었으니 제출 전 점검에 활용하면 좋습니다.</p>
+    <p>또한 수시 원서 접수일, 수능, 면접일까지 남은 날짜를 관리하려면 <a href="../posts/dday-counter.html" style="color:#14B8A6;">D-day 카운터 활용 가이드</a>로 주요 일정을 디데이로 걸어두는 방법이 편리합니다. 접수 마감일과 발표일 사이 간격이 헷갈릴 때는 <a href="../posts/date-difference.html" style="color:#14B8A6;">두 날짜 사이 일수 계산법</a>도 함께 보면 일정 실수를 줄일 수 있습니다.</p>
+
+    <div class="cta-box">
+      <p>석차·인원만 넣으면 석차백분율과 등급, 전과목 평균 내신등급까지 한 번에</p>
+      <a href="../../calc/tools/naesin-grade/" class="cta-btn">내신 등급 계산기 바로가기</a>
+      <p style="font-size:13px;color:#6B7280;margin-top:8px;">석차 환산 모드와 과목별 평균(가중평균) 모드를 모두 지원합니다.</p>
+    </div>
+
+    <h2>자주 묻는 질문</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">내신 등급은 석차로 어떻게 계산하나요?</div>
+      <div class="faq-a">먼저 석차백분율을 구합니다. 공식은 석차백분율 = (석차 + 동석차 인원 − 1) ÷ 수강자 수 × 100입니다. 동석차가 없으면 석차 ÷ 수강자 수 × 100과 같습니다. 이 백분율을 등급 기준표에 대입합니다. 예를 들어 250명 수강 과목에서 9등이면 9 ÷ 250 × 100 = 3.6%로, 9등급제에서는 상위 4% 이내라 1등급, 5등급제에서도 상위 10% 이내라 1등급입니다. 같은 석차라도 적용되는 등급제에 따라 등급이 달라질 수 있으니 본인 학년의 기준을 먼저 확인해야 합니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">2026년에 내 학년은 9등급제인가요, 5등급제인가요?</div>
+      <div class="faq-a">내신 5등급제는 2025학년도 고1부터 단계적으로 도입됐습니다. 2026년 기준으로 고1과 고2는 5등급제, 고3은 마지막 9등급제 세대입니다. 즉 2025학년도에 고1이었던 학생들이 2026년에 고2가 되면서 5등급제를 그대로 적용받고, 2026년에 입학한 고1도 5등급제입니다. 반면 2024학년도에 고1이었던 현재 고3은 졸업까지 9등급제를 적용받습니다. 본인이 받은 성적표의 석차등급 표기가 5단계(1~5)인지 9단계(1~9)인지 보면 바로 구분됩니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">전과목 평균 내신등급은 어떻게 구하나요?</div>
+      <div class="faq-a">과목별 등급에 그 과목의 이수단위를 곱한 값을 모두 더한 뒤 총 이수단위로 나누는 가중평균입니다. 공식은 (과목1 등급 × 단위 + 과목2 등급 × 단위 + …) ÷ 총 이수단위입니다. 예를 들어 국어 2등급(4단위), 수학 1등급(4단위), 영어 3등급(4단위), 한국사 2등급(3단위), 통합사회 3등급(3단위), 통합과학 2등급(3단위)이면 가중합 45를 총 단위 21로 나눠 약 2.14등급이 됩니다. 단순 평균이 아니라 단위가 큰 과목일수록 평균에 더 크게 반영된다는 점이 핵심입니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">5등급제로 바뀌면서 1등급이 4%에서 10%로 늘었는데 더 유리해진 건가요?</div>
+      <div class="faq-a">1등급 인원이 늘어난 것은 맞지만 입시가 쉬워졌다고 보긴 어렵습니다. 1등급 비율이 상위 4%에서 10%로 넓어지면서 1등급 학생 수가 2배 이상으로 늘어, 같은 1등급 안에서의 변별이 사라졌기 때문입니다. 실제로 2025학년도 첫 학기 결과에서 시험이 평이해 상위권이 늘었다는 분석이 나왔고, 대학은 내신만으로 거르기 어려워 원점수, 세부능력 특기사항, 면접 등 다른 자료의 비중을 높이는 흐름입니다. 등급 숫자는 좋아 보여도 실질 경쟁은 완화되지 않았다고 보는 것이 안전합니다.</div>
+    </div>
+
+    <h2>한 줄 요약 - 석차백분율 먼저, 그다음 내 학년 기준표</h2>
+    <p>가장 기억해야 할 숫자 하나만 꼽으면, 1등급 커트라인이 9등급제 4%에서 5등급제 10%로 바뀌었다는 사실입니다. 이 차이 때문에 같은 "250명 중 25등(석차백분율 10%)"이 고3은 2등급, 고1·고2는 1등급으로 갈립니다. 내신 등급을 환산할 때는 무조건 석차백분율(석차 ÷ 수강자 수 × 100, 동석차는 +인원−1 보정)을 먼저 구하고, 본인 학년에 맞는 등급 기준표에 대입하는 순서를 지키면 됩니다.</p>
+    <p>전과목 평균은 단순 평균이 아니라 이수단위 가중평균이라는 점, 그리고 5등급제 등급 숫자가 좋아 보여도 같은 등급 안 경쟁이 치열해졌다는 점까지 함께 기억하면 성적표를 더 정확하게 읽을 수 있습니다. 시험이 끝난 직후 석차만 알면, 등급과 평균은 계산기로 10초면 확인됩니다. 기말고사 성적표를 받은 그날, 숫자를 직접 넣어 내 위치를 객관적으로 점검해보시기 바랍니다.</p>
+
+  </div>
+</div>
+
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "교육부 2028 대입제도 개편안(2023년 확정)·고교 내신 등급 산출 기준, 2026년 기준",
+  basisDate: "2026년 기준",
+  referenceOrg: "교육부, 한국대학교육협의회",
+  lastReviewed: '2026.06.11',
+  disclaimer: "본 내용은 참고용이며, 등급제 적용 학년과 세부 산출 기준은 재학 중인 학교와 교육부 최신 공지를 반드시 확인하세요.",
+  relatedCalc: { name: '내신 등급 계산기', url: '/calc/tools/naesin-grade/' },
+  category: 'tools'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>
