@@ -127,6 +127,16 @@ window.CALC_REGISTRY = {
         "slug": "copay-ceiling",
         "icon": "💊",
         "name": "본인부담상한제 환급"
+      },
+      {
+        "slug": "yellow-umbrella",
+        "icon": "🪙",
+        "name": "노란우산공제"
+      },
+      {
+        "slug": "four-insurance",
+        "icon": "🏢",
+        "name": "4대보험료"
       }
     ]
   },

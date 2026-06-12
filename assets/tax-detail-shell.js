@@ -11,7 +11,7 @@
     '/calc/tax/income-tax/': {
       key:'income-tax',
       quick:['프리랜서 소득은 사업소득으로 분류되어 종합소득세 신고 대상입니다.','경비율(단순·기준)에 따라 과세표준이 크게 달라질 수 있습니다.','기납부한 3.3% 원천징수 세액은 종합소득세에서 공제됩니다.','소득공제·세액공제 항목을 빠짐없이 반영하면 절세 효과를 높일 수 있습니다.'],
-      related:[['/calc/tax/withholding/','3.3% 원천징수 계산기','💲'],['/calc/tax/insurance-comparison/','4대보험 비교 계산기','👥'],['/calc/tax/freelancer-income/','월 순수입 계산기','💰']],
+      related:[['/calc/tax/yellow-umbrella/','노란우산공제 계산기','🪙'],['/calc/tax/withholding/','3.3% 원천징수 계산기','💲'],['/calc/tax/freelancer-income/','월 순수입 계산기','💰']],
       guides:[['/blog/posts/comprehensive-income-tax.html','종합소득세 신고 완벽 가이드 2026'],['/blog/posts/income-tax-deduction.html','종합소득세 공제 항목 총정리 - 놓치면 손해']]
     },
     '/calc/tax/vat/': {
@@ -23,13 +23,13 @@
     '/calc/tax/insurance-comparison/': {
       key:'insurance-comparison',
       quick:['4대보험 직장인은 국민연금·건강보험·고용보험·산재보험이 적용됩니다.','3.3% 프리랜서는 국민연금·건강보험을 지역가입자로 별도 납부합니다.','소득 수준과 경비율에 따라 유불리가 달라지므로 비교 후 판단하세요.','4대보험 가입 시 퇴직금·실업급여 등 추가 혜택도 고려하세요.'],
-      related:[['/calc/tax/withholding/','3.3% 원천징수 계산기','💲'],['/calc/tax/income-tax/','종합소득세 계산기','📈'],['/calc/tax/freelancer-income/','월 순수입 계산기','💰']],
+      related:[['/calc/tax/four-insurance/','4대보험료 계산기','🏢'],['/calc/tax/withholding/','3.3% 원천징수 계산기','💲'],['/calc/tax/income-tax/','종합소득세 계산기','📈']],
       guides:[['/blog/posts/four-insurance-vs-33-comparison.html','4대보험 vs 3.3%, 어떤 계약이 유리할까'],['/blog/posts/freelancer-insurance-guide.html','프리랜서 4대보험, 지역가입자 보험료 계산법']]
     },
     '/calc/tax/freelancer-income/': {
       key:'freelancer-income',
       quick:['3.3% 원천징수, 종합소득세, 국민연금, 건강보험을 모두 반영합니다.','경비율에 따라 실제 순수입이 크게 달라질 수 있습니다.','월 순수입은 세금·보험료를 모두 차감한 실제 가처분 소득입니다.','소득 변동이 클 때는 연 단위로도 함께 확인하면 도움이 됩니다.'],
-      related:[['/calc/tax/withholding/','3.3% 원천징수 계산기','💲'],['/calc/tax/income-tax/','종합소득세 계산기','📈'],['/calc/tax/insurance-comparison/','4대보험 비교 계산기','👥']],
+      related:[['/calc/tax/yellow-umbrella/','노란우산공제 계산기','🪙'],['/calc/tax/income-tax/','종합소득세 계산기','📈'],['/calc/tax/withholding/','3.3% 원천징수 계산기','💲']],
       guides:[['/blog/posts/freelancer-tax-refund.html','프리랜서 3.3%, 5월에 환급받는 방법'],['/blog/posts/withholding-tax-guide.html','3.3% 원천징수 - 실수령액과 환급 완전 정리']]
     },
     '/calc/tax/medical-expense/': {
@@ -49,6 +49,18 @@
       quick:['1년간 낸 급여 본인부담금이 소득분위별 상한액을 넘으면 초과분을 공단이 환급합니다.','2026년 상한액은 1분위 90만원부터 10분위 843만원까지입니다.','요양병원 120일 초과 입원은 더 높은 별도 상한액(1분위 143만~10분위 1,096만)이 적용됩니다.','비급여·선별급여·상급병실료는 대상이 아니며, 급여 본인부담금만 계산됩니다.'],
       related:[['/calc/tax/regional-health-insurance/','지역가입자 건강보험료','🏥'],['/calc/tax/medical-expense/','의료비 세액공제','🏥'],['/calc/tax/income-tax/','종합소득세 계산기','📈']],
       guides:[]
+    },
+    '/calc/tax/four-insurance/': {
+      key:'four-insurance',
+      quick:['2026년 근로자 4대보험 요율: 국민연금 4.75% / 건강보험 3.595% / 장기요양 건강보험료의 13.14% / 고용보험 0.9%.','국민연금에는 상한(637만원)·하한(39만원)이 있어 고소득자도 최대 302,575원만 공제됩니다.','식대 등 비과세 수당은 4대보험 산정 기준에서 제외되어 과세 기준급여를 낮춥니다.','사용자(회사)도 근로자와 동일한 비율로 추가 부담해 총 인건비는 명목 급여보다 약 15~20% 높습니다.'],
+      related:[['/calc/salary/take-home-pay/','연봉 실수령액 계산기','💵'],['/calc/tax/insurance-comparison/','4대보험 vs 3.3% 비교','👥'],['/calc/tax/regional-health-insurance/','지역가입자 건강보험료','🏥']],
+      guides:[['/blog/posts/social-insurance-guide.html','4대보험료 2026 - 월급 300만원이면 매달 28만원 빠진다'],['/blog/posts/four-insurance-vs-33-comparison.html','4대보험 vs 3.3%, 어떤 계약이 유리할까']]
+    },
+    '/calc/tax/yellow-umbrella/': {
+      key:'yellow-umbrella',
+      quick:['소득 4천만원 이하 프리랜서는 연 최대 500만원까지 소득공제를 받을 수 있습니다.','소득 4천만원 초과~1억원 이하는 300만원, 1억원 초과는 200만원이 한도입니다.','납입금에 복리 이자가 붙고 이자소득세도 비과세되어 세금 혜택과 저축 효과를 동시에 누릴 수 있습니다.','10년 미만 임의해지 시 기타소득 과세가 발생하므로 장기 유지가 유리합니다.'],
+      related:[['/calc/tax/income-tax/','종합소득세 계산기','📈'],['/calc/tax/withholding/','3.3% 원천징수 계산기','💲'],['/calc/tax/insurance-comparison/','4대보험 비교 계산기','👥']],
+      guides:[['/blog/posts/income-tax-deduction.html','종합소득세 공제 항목 총정리 - 놓치면 손해'],['/blog/posts/comprehensive-income-tax.html','종합소득세 신고 완벽 가이드 2026']]
     }
   };
   let cfg=pages[path];

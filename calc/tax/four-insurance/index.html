@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4대보험료 계산기 2026 - 월급에서 얼마 빠지나 | jptcalc</title>
+  <meta name="description" content="월급에서 빠지는 국민연금·건강보험·장기요양·고용보험 4대보험료를 한 번에 계산합니다. 근로자·사용자 부담분 구분, 2026년 최신 요율 적용." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/tax/four-insurance/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="4대보험료 계산기 2026 | jptcalc" />
+  <meta property="og:description" content="월급에서 빠지는 국민연금·건강보험·장기요양·고용보험 4대보험료를 한 번에 계산합니다. 근로자·사용자 부담분 구분." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/tax/four-insurance/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4대보험료 계산기 2026 | jptcalc" />
+  <meta name="twitter:description" content="월급에서 빠지는 국민연금·건강보험·장기요양·고용보험 4대보험료를 한 번에 계산합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"4대보험료 계산기 2026",
+    "url":"https://www.jptcalc.kr/calc/tax/four-insurance/",
+    "description":"월급에서 빠지는 국민연금·건강보험·장기요양·고용보험 4대보험료 계산. 근로자·사용자 부담분 구분. 2026년 최신 요율.",
+    "applicationCategory":"FinanceApplication",
+    "operatingSystem":"All",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+      {"@type":"ListItem","position":2,"name":"프리랜서 세금 계산기","item":"https://www.jptcalc.kr/calc/tax/"},
+      {"@type":"ListItem","position":3,"name":"4대보험료 계산기","item":"https://www.jptcalc.kr/calc/tax/four-insurance/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"2026년 4대보험 요율은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"2026년 근로자 부담 요율은 국민연금 4.75%, 건강보험 3.595%, 장기요양보험(건강보험료의 13.14%), 고용보험 0.9%입니다. 사용자(회사)도 동일한 비율로 추가 부담합니다. 산재보험은 전액 사용자 부담이며 업종별로 요율이 다릅니다."}},
+    {"@type":"Question","name":"국민연금 상한액이 있나요?","acceptedAnswer":{"@type":"Answer","text":"네. 2026년(6월까지) 국민연금 기준소득월액 상한은 637만원, 하한은 39만원입니다. 월급이 637만원을 초과해도 637만원 기준으로 4.75%를 적용해 최대 302,575원(본인 부담)이 공제됩니다. 하한 이하 급여자는 39만원을 기준으로 계산합니다."}},
+    {"@type":"Question","name":"비과세 수당은 4대보험에서 제외되나요?","acceptedAnswer":{"@type":"Answer","text":"네. 식대(월 20만원 이하), 자가운전보조금(월 20만원 이하) 등 비과세 수당은 4대보험 과세 기준에서 제외됩니다. 예를 들어 급여 300만원에 식대 20만원이 포함된 경우, 4대보험은 280만원을 기준으로 계산합니다."}},
+    {"@type":"Question","name":"회사(사용자)는 4대보험을 얼마나 부담하나요?","acceptedAnswer":{"@type":"Answer","text":"국민연금·건강보험·장기요양·고용보험은 근로자와 동일한 비율로 사용자가 추가 부담합니다. 월급 300만원 기준 근로자 부담이 약 27만원이면 회사도 약 27만원 이상을 추가로 납부합니다. 여기에 산재보험(전액 사용자, 업종별 0.7~34% 수준)이 더해져 실제 인건비는 명목 급여보다 약 15~20% 높습니다."}},
+    {"@type":"Question","name":"4대보험과 실수령액의 관계는 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"실수령액 = 세전급여 - 4대보험료(근로자 부담) - 소득세(지방세 포함)입니다. 4대보험료만으로는 실수령액을 완전히 알 수 없고, 소득세는 부양가족 수에 따라 달라집니다. 정확한 실수령액은 연봉 실수령액 계산기에서 확인할 수 있습니다."}}
+  ]}
+  </script>
+  <link rel="stylesheet" href="/assets/tax-common.css" />
+  <style>
+    .input-wrap { position: relative; }
+    .input-wrap .unit { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); font-size: 13px; font-weight: 600; color: var(--gray-500); pointer-events: none; }
+
+    .result-split { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+    @media (max-width: 500px) { .result-split { grid-template-columns: 1fr; } }
+
+    .split-box { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 12px; padding: 14px 16px; }
+    .split-box .split-title { font-size: 12px; font-weight: 700; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 10px; }
+    .split-box.worker .split-title { color: var(--primary); }
+    .split-box.employer .split-title { color: #6366F1; }
+
+    .ins-row { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; border-bottom: 1px solid var(--gray-100); font-size: 14px; }
+    .ins-row:last-child { border-bottom: none; font-weight: 700; }
+    .ins-row .ins-label { color: var(--gray-600); }
+    .ins-row .ins-label small { display: block; font-size: 11px; color: var(--gray-400); font-weight: 400; margin-top: 1px; }
+    .ins-row .ins-val { font-weight: 600; color: var(--gray-800); }
+    .ins-row.total-row .ins-val { color: var(--primary); font-size: 15px; }
+    .ins-row.total-row.employer-total .ins-val { color: #6366F1; }
+    .ins-row .ins-val.employer-val { color: #6366F1; }
+
+    .combined-box { display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg,rgba(16,185,129,0.06),rgba(99,102,241,0.06)); border: 1px solid var(--gray-200); border-radius: 12px; padding: 14px 18px; margin-top: 12px; }
+    .combined-box .comb-label { font-size: 13px; font-weight: 600; color: var(--gray-600); }
+    .combined-box .comb-val { font-size: 18px; font-weight: 800; color: var(--gray-900); }
+
+    .rate-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .rate-table th { background: var(--gray-100); padding: 8px 10px; text-align: center; font-weight: 700; font-size: 12px; color: var(--gray-600); }
+    .rate-table td { padding: 8px 10px; text-align: center; border-bottom: 1px solid var(--gray-100); color: var(--gray-700); }
+    .rate-table tr:last-child td { border-bottom: none; }
+    .rate-table td:first-child { text-align: left; font-weight: 600; }
+    .rate-table .highlight-cell { color: var(--primary); font-weight: 700; }
+
+    .example-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .example-table th { background: rgba(16,185,129,0.08); padding: 8px 10px; text-align: center; font-weight: 700; font-size: 12px; color: var(--primary); border-bottom: 2px solid rgba(16,185,129,0.2); }
+    .example-table td { padding: 8px 10px; text-align: center; border-bottom: 1px solid var(--gray-100); font-size: 13px; color: var(--gray-700); }
+    .example-table tr:last-child td { border-bottom: none; }
+    .example-table td:first-child { text-align: left; font-weight: 600; color: var(--gray-800); }
+
+    .sibling-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+    .sibling-link { display: inline-flex; align-items: center; gap: 5px; padding: 6px 12px; background: var(--gray-100); border-radius: 20px; font-size: 12px; font-weight: 600; color: var(--gray-600); text-decoration: none; transition: all 0.15s; }
+    .sibling-link:hover { background: rgba(16,185,129,0.12); color: var(--primary); }
+    .sibling-link.current { background: rgba(16,185,129,0.15); color: var(--primary); }
+  </style>
+  <script src="/assets/calc-registry.js"></script>
+  <script src="/assets/tax-detail-shell.js" defer></script>
+  <script src="/assets/footer-unified.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img src="/assets/logo.svg" alt="제이퍼 계산기 로고" width="28" height="28" />
+      <span class="logo-text">제이퍼 계산기</span>
+    </a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/">부동산</a>
+      <a href="/calc/salary/">연봉</a>
+      <a href="/calc/tools/">생활도구</a>
+      <a href="/calc/tax/" class="active">세금</a>
+      <a href="/calc/pension-welfare/">연금·복지</a>
+      <a href="/calc/finance/">금융</a>
+      <a href="/calc/date/">날짜</a>
+      <a href="/calc/health/">건강</a>
+      <a href="/calc/ai/">AI</a>
+      <a href="/calc/pet/">반려동물</a>
+    </nav>
+    <button class="menu-btn" aria-label="메뉴">&#9776;</button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+    <a href="/calc/realestate/">🏠 부동산</a>
+    <a href="/calc/salary/">💰 연봉</a>
+    <a href="/calc/tools/">🛠️ 생활도구</a>
+    <a href="/calc/tax/">🧾 세금</a>
+    <a href="/calc/pension-welfare/">🏦 연금·복지</a>
+    <a href="/calc/finance/">📈 금융</a>
+    <a href="/calc/date/">📅 날짜</a>
+    <a href="/calc/health/">❤️ 건강</a>
+    <a href="/calc/ai/">🤖 AI</a>
+    <a href="/calc/pet/">🐾 반려동물</a>
+  </div>
+</div>
+
+<main class="main-layout">
+  <aside class="sidebar-left">
+    <div id="jpt-sidebar-left"></div>
+  </aside>
+
+  <div class="content-col">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/tax/">프리랜서 세금 계산기</a><span class="breadcrumb-sep">›</span><span>4대보험료 계산기</span></div>
+    <div class="page-header-badge">&#127963; 직장인 4대보험</div>
+    <h1>4대보험료 계산기 2026</h1>
+    <p>월급에서 빠지는 국민연금·건강보험·장기요양·고용보험을 한 번에 계산합니다</p>
+
+    <div class="card">
+      <div class="card-title">4대보험료 계산</div>
+      <div class="info-box">
+        <span class="info-icon">&#128161;</span>
+        <p>세전 급여와 비과세 수당을 입력하면 <strong>근로자 부담분</strong>과 <strong>사용자(회사) 부담분</strong>을 구분해 보여줍니다.</p>
+      </div>
+
+      <div class="field">
+        <div class="field-label"><span>월 급여 (세전)</span> <span class="label-hint">만원 단위</span></div>
+        <div class="input-wrap">
+          <input type="number" id="inpSalary" placeholder="예) 300" min="0" step="1" oninput="calculate()">
+          <span class="unit">만원</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="field-label"><span>비과세 수당</span> <span class="label-hint">식대·교통비 등, 없으면 0</span></div>
+        <div class="input-wrap">
+          <input type="number" id="inpNontax" placeholder="예) 20" min="0" max="100" step="1" oninput="calculate()">
+          <span class="unit">만원</span>
+        </div>
+        <p style="font-size:12px;color:var(--gray-400);margin-top:4px">식대 월 20만원이 비과세인 경우 20을 입력하세요</p>
+      </div>
+
+      <div id="resultCard" style="display:none">
+        <div class="verdict-box">
+          <div class="verdict-label">근로자 월 4대보험 공제액</div>
+          <div class="verdict-value" id="resTotal">-</div>
+          <div class="verdict-sub" id="resBase">과세 기준급여 -</div>
+        </div>
+
+        <div class="result-split">
+          <div class="split-box worker">
+            <div class="split-title">&#128100; 근로자 부담</div>
+            <div class="ins-row">
+              <div class="ins-label">국민연금<small>4.75%</small></div>
+              <div class="ins-val" id="wNp">-</div>
+            </div>
+            <div class="ins-row">
+              <div class="ins-label">건강보험<small>3.595%</small></div>
+              <div class="ins-val" id="wHp">-</div>
+            </div>
+            <div class="ins-row">
+              <div class="ins-label">장기요양<small>건강보험료×13.14%</small></div>
+              <div class="ins-val" id="wLtc">-</div>
+            </div>
+            <div class="ins-row">
+              <div class="ins-label">고용보험<small>0.9%</small></div>
+              <div class="ins-val" id="wEi">-</div>
+            </div>
+            <div class="ins-row total-row">
+              <div class="ins-label" style="font-weight:700">합계</div>
+              <div class="ins-val" id="wTotal">-</div>
+            </div>
+          </div>
+
+          <div class="split-box employer">
+            <div class="split-title">&#127970; 사용자 부담</div>
+            <div class="ins-row">
+              <div class="ins-label">국민연금<small>4.75%</small></div>
+              <div class="ins-val employer-val" id="eNp">-</div>
+            </div>
+            <div class="ins-row">
+              <div class="ins-label">건강보험<small>3.595%</small></div>
+              <div class="ins-val employer-val" id="eHp">-</div>
+            </div>
+            <div class="ins-row">
+              <div class="ins-label">장기요양<small>건강보험료×13.14%</small></div>
+              <div class="ins-val employer-val" id="eLtc">-</div>
+            </div>
+            <div class="ins-row">
+              <div class="ins-label">고용보험<small>0.9%+α</small></div>
+              <div class="ins-val employer-val" id="eEi">-</div>
+            </div>
+            <div class="ins-row">
+              <div class="ins-label">산재보험<small>업종별 별도</small></div>
+              <div class="ins-val" style="color:var(--gray-400);font-size:12px">별도 산정</div>
+            </div>
+            <div class="ins-row total-row employer-total">
+              <div class="ins-label" style="font-weight:700">합계 (산재 제외)</div>
+              <div class="ins-val" id="eTotal">-</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="combined-box">
+          <div class="comb-label">근로자 + 사용자 합산</div>
+          <div class="comb-val" id="resCombined">-</div>
+        </div>
+
+        <p class="result-note" style="margin-top:12px">※ 2026년 요율 기준. 국민연금 기준소득월액 상한 637만원·하한 39만원(2026년 6월까지). 사용자 고용보험은 기본 0.9% 외 고용안정·직업능력개발 분담금이 업종·규모별로 추가됩니다. 실수령액(소득세 포함)은 <a href="/calc/salary/take-home-pay/" style="color:var(--primary)">연봉 실수령액 계산기</a>에서 확인하세요.</p>
+      </div>
+    </div>
+
+    <!-- 요율 기준표 -->
+    <div class="card">
+      <div class="card-title">2026년 4대보험 요율표</div>
+      <div class="table-wrap">
+        <table class="rate-table">
+          <thead>
+            <tr>
+              <th>항목</th>
+              <th>근로자 부담</th>
+              <th>사용자 부담</th>
+              <th>비고</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>국민연금</td>
+              <td class="highlight-cell">4.75%</td>
+              <td>4.75%</td>
+              <td>상한 637만원·하한 39만원</td>
+            </tr>
+            <tr>
+              <td>건강보험</td>
+              <td class="highlight-cell">3.595%</td>
+              <td>3.595%</td>
+              <td>표준보수월액 기준</td>
+            </tr>
+            <tr>
+              <td>장기요양보험</td>
+              <td class="highlight-cell">건강보험료×13.14%</td>
+              <td>건강보험료×13.14%</td>
+              <td>건강보험료에서 계산</td>
+            </tr>
+            <tr>
+              <td>고용보험</td>
+              <td class="highlight-cell">0.9%</td>
+              <td>0.9%+α</td>
+              <td>사용자 고용안정·직능 추가</td>
+            </tr>
+            <tr>
+              <td>산재보험</td>
+              <td>없음</td>
+              <td>업종별 상이</td>
+              <td>전액 사용자 부담</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 계산 예시 -->
+    <div class="card">
+      <div class="card-title">월급별 4대보험료 예시 (근로자 부담)</div>
+      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">식대 20만원 비과세 가정. 과세 기준급여 = 세전급여 - 20만원.</p>
+      <div class="table-wrap">
+        <table class="example-table">
+          <thead>
+            <tr>
+              <th>이름/상황</th>
+              <th>월 급여</th>
+              <th>국민연금</th>
+              <th>건강+장기요양</th>
+              <th>고용보험</th>
+              <th>합계</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>신입 이지수 (27세, 스타트업)</td>
+              <td>220만원</td>
+              <td>95,000원</td>
+              <td>81,348원</td>
+              <td>18,000원</td>
+              <td>194,348원</td>
+            </tr>
+            <tr>
+              <td>대리 김민준 (32세, 중견기업)</td>
+              <td>320만원</td>
+              <td>142,500원</td>
+              <td>122,021원</td>
+              <td>27,000원</td>
+              <td>291,521원</td>
+            </tr>
+            <tr>
+              <td>과장 박수진 (38세, 대기업)</td>
+              <td>480만원</td>
+              <td>218,500원</td>
+              <td>187,100원</td>
+              <td>41,400원</td>
+              <td>447,000원</td>
+            </tr>
+            <tr>
+              <td>부장 최재호 (45세, 대기업)</td>
+              <td>700만원</td>
+              <td>302,575원</td>
+              <td>276,582원</td>
+              <td>61,200원</td>
+              <td>640,357원</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:12px;color:var(--gray-400);margin-top:8px">※ 월 700만원은 국민연금 상한(637만원) 적용. 산재보험 제외. 소득세 별도.</p>
+    </div>
+
+    <!-- 가이드 -->
+    <div class="card">
+      <div class="card-title">4대보험 완벽 가이드</div>
+
+      <h3 style="font-size:15px;font-weight:700;color:var(--gray-800);margin:16px 0 8px">4대보험이란?</h3>
+      <p style="font-size:14px;line-height:1.7;color:var(--gray-700)">직장인이라면 의무 가입해야 하는 4가지 사회보험입니다. 국민연금(노후 소득)·건강보험(의료비)·고용보험(실업급여·모성보호)·산재보험(업무 중 사고·질병)으로 구성됩니다. 매달 급여에서 자동 공제되며, 사용자(회사)도 대부분 동일한 금액을 별도로 납부합니다.</p>
+
+      <h3 style="font-size:15px;font-weight:700;color:var(--gray-800);margin:20px 0 8px">국민연금 - 상한·하한 적용 구조</h3>
+      <p style="font-size:14px;line-height:1.7;color:var(--gray-700)">국민연금은 기준소득월액에 상한(637만원)과 하한(39만원)이 있습니다. 월급이 700만원이어도 637만원 기준으로 계산해 근로자 302,575원이 최대 공제액입니다. 반대로 최저임금 근로자라도 39만원 기준으로 18,525원 이상 납부합니다. 상한·하한은 매년 7월 조정됩니다.</p>
+
+      <h3 style="font-size:15px;font-weight:700;color:var(--gray-800);margin:20px 0 8px">건강보험 + 장기요양</h3>
+      <p style="font-size:14px;line-height:1.7;color:var(--gray-700)">건강보험료는 과세 기준급여의 3.595%입니다. 여기서 자동으로 장기요양보험료(건강보험료의 13.14%)가 함께 공제됩니다. 건강보험료는 전년도 소득 기준으로 매년 4월 재산정(정산)되어 실제 납부액이 달라질 수 있습니다.</p>
+
+      <h3 style="font-size:15px;font-weight:700;color:var(--gray-800);margin:20px 0 8px">비과세 수당 활용법</h3>
+      <p style="font-size:14px;line-height:1.7;color:var(--gray-700)">식대(월 20만원 이하), 자가운전보조금(월 20만원 이하) 등 비과세 수당은 4대보험과 소득세 산정 기준에서 제외됩니다. 예를 들어 총 급여 300만원 중 식대 20만원이 비과세라면, 4대보험은 280만원 기준으로 계산합니다. 같은 총 비용이라도 비과세 비중이 높을수록 실수령이 높아집니다.</p>
+
+      <h3 style="font-size:15px;font-weight:700;color:var(--gray-800);margin:20px 0 8px">사용자 실제 인건비 계산</h3>
+      <p style="font-size:14px;line-height:1.7;color:var(--gray-700)">월급 300만원 근로자를 채용하면 회사는 300만원 외에 4대보험 사용자 부담분(약 27만원)과 퇴직금 적립(월 25만원)까지 합산해 월 약 350~360만원의 실제 인건비가 발생합니다. 채용 예산 수립 시 명목 급여의 약 15~20%를 추가 비용으로 고려해야 합니다.</p>
+    </div>
+
+    <!-- FAQ -->
+    <div class="card">
+      <div class="card-title">자주 묻는 질문</div>
+      <div class="faq-item">
+        <div class="faq-q">2026년 4대보험 요율은 얼마인가요?</div>
+        <div class="faq-a">근로자 부담 요율은 국민연금 4.75%, 건강보험 3.595%, 장기요양(건강보험료의 13.14%), 고용보험 0.9%입니다. 국민연금은 2025년 개혁으로 매년 0.5%p씩 인상 중이며 2026년에 4.75%가 적용됩니다. 사용자도 같은 비율로 추가 부담합니다.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">국민연금 상한액이 있나요?</div>
+        <div class="faq-a">네. 2026년(6월까지) 기준소득월액 상한은 637만원, 하한은 39만원입니다. 월급이 700만원이어도 637만원에 4.75%를 적용해 302,575원이 최대입니다. 상한과 하한은 매년 7월 조정됩니다.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">비과세 수당은 4대보험에서 제외되나요?</div>
+        <div class="faq-a">네. 식대 월 20만원, 자가운전보조금 월 20만원 등 법정 비과세 수당은 4대보험 과세 기준에서 제외됩니다. 급여명세서에 비과세 항목이 있다면 그만큼 차감한 과세 급여로 4대보험이 계산됩니다.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">회사는 4대보험을 얼마나 부담하나요?</div>
+        <div class="faq-a">국민연금·건강보험·장기요양·고용보험은 근로자와 동일한 비율로 사용자도 납부합니다. 여기에 고용안정·직업능력개발 분담금(업종·규모별 0.25~0.85%)과 산재보험(전액 사용자, 업종별 요율 상이)이 추가됩니다. 결과적으로 실제 인건비는 명목 급여보다 약 15~20% 높습니다.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">4대보험 외에 실수령액에 영향을 주는 항목은 무엇인가요?</div>
+        <div class="faq-a">소득세(지방소득세 포함)가 가장 크게 영향을 줍니다. 소득세는 부양가족 수·비과세 항목에 따라 달라지며 연말정산으로 최종 정산됩니다. 정확한 실수령액은 연봉 실수령액 계산기를 이용하세요.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">다른 세금 계산기</div>
+      <div class="sibling-list">
+        <a href="/calc/tax/four-insurance/" class="sibling-link current">&#127963; 4대보험료</a>
+        <a href="/calc/tax/income-tax/" class="sibling-link">&#128202; 종합소득세</a>
+        <a href="/calc/tax/withholding/" class="sibling-link">&#128178; 3.3% 원천징수</a>
+        <a href="/calc/tax/insurance-comparison/" class="sibling-link">&#128101; 4대보험 vs 3.3%</a>
+        <a href="/calc/tax/regional-health-insurance/" class="sibling-link">&#127973; 지역가입자 건강보험료</a>
+      </div>
+    </div>
+  </div>
+
+  <aside class="sidebar-right">
+    <div id="jpt-sidebar-right"></div>
+  </aside>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/">홈</a>
+      <a href="/about.html">소개</a>
+      <a href="/privacy.html">개인정보처리방침</a>
+      <a href="/terms.html">이용약관</a>
+      <a href="/contact.html">문의하기</a>
+      <a href="/disclaimer.html">면책조항</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 보험료는 건강보험공단·국민연금공단에서 확인하세요.</p>
+  </div>
+</footer>
+
+<script>
+const NP_RATE  = 0.0475;
+const HP_RATE  = 0.03595;
+const LTC_RATE = 0.1314;
+const EI_RATE  = 0.009;
+const NP_CAP   = 637;  // 만원
+const NP_FLOOR = 39;   // 만원
+
+function fmt(man) {
+  const won = Math.round(man * 10000);
+  if (won >= 10000) {
+    const man2 = Math.floor(won / 10000);
+    const remain = won % 10000;
+    if (remain === 0) return man2 + '만원';
+    return man2 + '만 ' + remain.toLocaleString() + '원';
+  }
+  return won.toLocaleString() + '원';
+}
+
+function fmtVal(man) {
+  return (Math.round(man * 10000)).toLocaleString() + '원';
+}
+
+function calculate() {
+  const salaryRaw = document.getElementById('inpSalary').value;
+  const nontaxRaw = document.getElementById('inpNontax').value;
+  const card = document.getElementById('resultCard');
+
+  if (!salaryRaw || salaryRaw === '') { card.style.display = 'none'; return; }
+
+  const salary = parseFloat(salaryRaw) || 0;
+  const nontax = parseFloat(nontaxRaw) || 0;
+  if (salary <= 0) { card.style.display = 'none'; return; }
+
+  const taxable = Math.max(0, salary - nontax);
+
+  // 국민연금: 상한·하한 적용
+  const npBase = Math.min(Math.max(taxable, NP_FLOOR), NP_CAP);
+  const np  = npBase  * NP_RATE;
+  const hp  = taxable * HP_RATE;
+  const ltc = hp      * LTC_RATE;
+  const ei  = taxable * EI_RATE;
+  const workerTotal = np + hp + ltc + ei;
+
+  // 사용자 동일 (산재 제외)
+  const employerTotal = np + hp + ltc + ei;
+  const combined = workerTotal + employerTotal;
+
+  // 표시
+  document.getElementById('resTotal').textContent = fmt(workerTotal);
+  document.getElementById('resBase').textContent  = '과세 기준급여 ' + taxable + '만원' + (nontax > 0 ? ' (비과세 ' + nontax + '만원 제외)' : '');
+
+  document.getElementById('wNp').textContent  = fmtVal(np);
+  document.getElementById('wHp').textContent  = fmtVal(hp);
+  document.getElementById('wLtc').textContent = fmtVal(ltc);
+  document.getElementById('wEi').textContent  = fmtVal(ei);
+  document.getElementById('wTotal').textContent = fmtVal(workerTotal);
+
+  document.getElementById('eNp').textContent  = fmtVal(np);
+  document.getElementById('eHp').textContent  = fmtVal(hp);
+  document.getElementById('eLtc').textContent = fmtVal(ltc);
+  document.getElementById('eEi').textContent  = fmtVal(ei);
+  document.getElementById('eTotal').textContent = fmtVal(employerTotal);
+
+  document.getElementById('resCombined').textContent = fmtVal(combined);
+
+  card.style.display = 'block';
+}
+</script>
+
+<script>
+window.TRUST_BLOCK_CONFIG = {
+  standard: '국민건강보험법·국민연금법·고용보험법·산업재해보상보험법 2026년 요율 기준',
+  appliedFrom: '2026년 1월',
+  exceptions: '업종·규모별 산재보험 요율 상이, 사용자 고용안정·직능 분담금 별도',
+  references: [
+    '국민연금공단 - 2026년 기준소득월액 상·하한액',
+    '국민건강보험공단 - 2026년 보험료율',
+    '고용노동부 - 2026년 고용보험 요율',
+    '근로복지공단 - 2026년 산재보험 요율'
+  ],
+  lastReviewed: '2026.06.12'
+};
+
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '국민연금법·국민건강보험법·고용보험법 2026년 요율',
+  basisDate: '2026년 기준',
+  referenceOrg: '국민연금공단·국민건강보험공단·고용노동부',
+  lastReviewed: '2026.06.12',
+  category: 'tax'
+};
+</script>
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/blog-review-footer.js"></script>
+</body>
+</html>
