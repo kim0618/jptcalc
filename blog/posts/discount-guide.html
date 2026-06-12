@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>할인율 계산 완벽 가이드 2026 - 할인가·역산·중복할인 실질 할인율 총정리 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="할인가 계산, 할인율 역산, 정가 역산, 쿠폰+카드 중복할인 실질 할인율까지 2026년 기준으로 총정리. 30%+20% 중복할인이 왜 50%가 아닌지 수식과 실생활 시나리오로 완벽 설명합니다." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="할인율 계산 완벽 가이드 2026 - 할인가·역산·중복할인 실질 할인율 총정리 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="할인가 계산, 할인율 역산, 정가 역산, 쿠폰+카드 중복할인 실질 할인율까지 2026년 기준으로 총정리. 30%+20% 중복할인이 왜 50%가 아닌지 수식과 실생활 시나리오로 완벽 설명합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/discount-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/discount-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#14B8A6;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(20,184,166,0.15);color:#14B8A6;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:24px 0 10px}
+    .post-body p{margin-bottom:14px}
+    .post-body ul{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#14B8A6;text-decoration:none}
+    .highlight-box{background:rgba(20,184,166,0.08);border-left:4px solid #14B8A6;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#0F766E;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    td.rate{color:#14B8A6;font-weight:700}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#14B8A6;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .faq-item{border:1px solid #E5E7EB;border-radius:10px;margin:12px 0}
+    .faq-q{font-weight:700;padding:14px 18px;font-size:15px;cursor:pointer;background:#F9FAFB;border-radius:10px}
+    .faq-a{padding:14px 18px;font-size:14px;color:#4B5563;line-height:1.75;border-top:1px solid #E5E7EB}
+    .adfit-slot{text-align:center;margin:28px 0}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "할인율 계산 완벽 가이드 2026 - 할인가·역산·중복할인 실질 할인율 총정리",
+  "description": "할인가 계산, 할인율 역산, 정가 역산, 쿠폰+카드 중복할인 실질 할인율까지 2026년 기준으로 총정리. 30%+20% 중복할인이 왜 50%가 아닌지 수식과 실생활 시나리오로 완벽 설명합니다.",
+  "author": {"@type": "Organization", "name": "제이퍼 계산기", "url": "https://www.jptcalc.kr"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr",
+    "logo": {"@type": "ImageObject", "url": "https://www.jptcalc.kr/android-chrome-512x512.png"}
+  },
+  "datePublished": "2026-06-12",
+  "dateModified": "2026-06-12",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.jptcalc.kr/blog/posts/discount-guide.html"},
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "생활·도구",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "쿠폰 20%에 카드 10% 추가 할인을 받으면 왜 30% 할인이 아닌가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "중복할인은 더하는 게 아니라 곱하는 방식으로 작동하기 때문입니다. 쿠폰 20% 할인 후 남은 가격의 80%에서 다시 카드 10%를 깎는 구조입니다. 계산하면 0.8 × 0.9 = 0.72, 즉 실질 28% 할인입니다. 30%와 2%포인트 차이처럼 보이지만 정가가 200,000원이라면 4,000원이 더 나오는 셈입니다. 할인율이 높아질수록 단순 합산과의 격차도 커집니다. 예를 들어 30%+20% 중복할인의 실질값은 44%이지, 50%가 아닙니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "할인율을 역산하고 싶은데 어떻게 계산하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "할인율 역산 공식은 (정가 - 할인가) ÷ 정가 × 100입니다. 예를 들어 정가 189,000원짜리가 139,000원에 팔리고 있다면 (189,000 - 139,000) ÷ 189,000 × 100 = 50,000 ÷ 189,000 × 100 = 약 26.46% 할인입니다. 판매자가 '30% 할인'이라고 표기해도 실제로는 그보다 낮은 경우가 있으니 직접 역산해보는 것이 중요합니다. 오픈마켓에서 특히 이런 사례가 많습니다. 할인율 계산기의 '할인율 역산' 모드를 활용하면 정가와 할인가만 입력해 바로 확인할 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "정가 역산이 필요한 상황이 언제인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "오픈마켓이나 해외직구 사이트에서 할인가와 할인율만 표시되고 정가가 보이지 않을 때 정가 역산이 필요합니다. 정가 역산 공식은 할인가 ÷ (1 - 할인율 ÷ 100)입니다. 예를 들어 할인가 34,200원에 할인율이 10%라면 34,200 ÷ 0.9 = 38,000원이 원래 정가입니다. 특히 면세점이나 아울렛에서 '40% 할인가 89,400원'처럼 할인가만 크게 표시할 때, 정가가 149,000원인지 확인하는 용도로 씁니다. 정가를 알아야 다른 채널과 가격 비교가 정확해집니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "현금영수증 소득공제나 적립금 차감도 할인율에 포함되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "실질 구매가 기준으로 보면 적립금 차감은 일종의 즉시 할인으로 볼 수 있지만, 할인율 계산에서는 구분해서 처리하는 것이 정확합니다. 적립금(포인트)은 현금과 동일한 효과를 내므로 최종 결제금액에서 차감 후 정가 대비 비율을 계산하면 실질 할인율이 나옵니다. 반면 현금영수증 소득공제는 연말정산 시 돌아오는 간접 혜택이라 당장의 구매 시점 할인율로는 산정하기 어렵습니다. 네이버페이, 카카오페이 등 페이 캐시백도 같은 원리로, 확정 캐시백은 최종 지출에서 빼서 실질 할인율을 계산하는 것이 실용적입니다."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <div class="logo-icon"><img src="../../assets/logo.svg" alt="제이퍼 계산기 로고" /></div>
+      <span class="logo-text">제이퍼<span>계산기</span></span>
+    </a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+
+<div class="post-wrap">
+  <span class="post-tag">생활·도구</span>
+  <h1>할인율 계산 완벽 가이드 2026 - 할인가·역산·중복할인 실질 할인율 총정리</h1>
+  <div class="post-meta">
+    <span>2026.06.12</span>
+    <span>제이퍼 계산기 편집팀</span>
+  </div>
+
+  <div class="post-body">
+
+    <p>혹시 이런 경험 있으신가요? 장바구니에 담아뒀던 운동화에 '앱 전용 쿠폰 20% + 카드사 10% 즉시할인' 배너가 뜹니다. 순간 머릿속으로 '합치면 30% 할인이네!'라고 계산하지만, 결제 페이지에서 최종 금액이 예상보다 살짝 높습니다. 그 차이가 왜 생기는지, 그리고 정확한 할인가를 미리 계산하는 법을 이 글에서 모두 다룹니다.</p>
+    <p>할인율 계산은 크게 세 가지로 나뉩니다. 정가와 할인율로 할인가를 구하는 기본 계산, 정가와 할인가로 실제 할인율을 역산하는 것, 그리고 할인가와 할인율만 알 때 원래 정가를 구하는 역산입니다. 여기에 쿠폰과 카드 할인이 겹치는 중복할인까지 더하면 공식이 네 가지가 됩니다. 하나씩 짚겠습니다.</p>
+
+    <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+      <li>정가 × 할인율로 할인가 구하는 공식 + 검산 예시</li>
+      <li>영수증 보고 실제 할인율 역산하는 법 (공식 + 계산 예시)</li>
+      <li>할인가·할인율만 알 때 원래 정가 역산하는 법</li>
+      <li>20% + 10% 중복할인이 왜 28%인지 - 단순 합산 vs 실질 계산 비교표</li>
+      <li>쿠폰+카드+멤버십 3중 할인의 실질 할인율 계산 시나리오</li>
+      <li>정가 5만~20만원 × 할인율 10~50% 조합별 할인가 일람표</li>
+    </ul>
+
+    <!-- ① 상단 애드핏 슬롯: 목차 직후 -->
+    <div class="adfit-slot">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>할인율 계산의 세 가지 공식</h2>
+    <p>할인율 계산에는 딱 세 가지 경우가 있습니다. 어떤 값 두 개를 알고 있느냐에 따라 쓰는 공식이 달라집니다.</p>
+
+    <h3>① 할인가 계산 - 정가와 할인율을 아는 경우</h3>
+    <p>가장 흔한 경우입니다. 정가와 할인율이 주어지면 할인가는 다음과 같이 구합니다.</p>
+    <p><strong>할인가 = 정가 × (1 - 할인율 ÷ 100)</strong></p>
+    <p>예를 들어 정가 89,000원짜리 코트의 30% 할인가는 89,000 × (1 - 30 ÷ 100) = 89,000 × 0.7 = 62,300원입니다. 할인 금액은 89,000 - 62,300 = 26,700원입니다. 검산: 26,700 ÷ 89,000 × 100 = 30.0%, 공식과 일치합니다.</p>
+    <p>여기서 주의할 점이 있습니다. '30% 할인'은 정가의 30%를 깎는다는 뜻이지, 정가의 30%로 판다는 뜻이 아닙니다. 정가의 30% 가격이라면 70% 할인입니다. 이 둘을 혼동하면 계산이 완전히 뒤집힙니다.</p>
+
+    <h3>② 할인율 역산 - 정가와 할인가를 아는 경우</h3>
+    <p>영수증을 보거나 오픈마켓에서 '정가 189,000원 → 139,000원'처럼 두 가격이 모두 표시된 경우, 실제 할인율을 역산할 수 있습니다.</p>
+    <p><strong>할인율(%) = (정가 - 할인가) ÷ 정가 × 100</strong></p>
+    <p>예시: (189,000 - 139,000) ÷ 189,000 × 100 = 50,000 ÷ 189,000 × 100 ≈ 26.46%입니다. 판매 페이지에 '30% 할인'이라고 적혀 있어도 실제 역산 값은 26.46%입니다. 차이가 작아 보이지만 정가가 높아질수록 그 차이는 금액으로 확연하게 커집니다.</p>
+
+    <h3>③ 정가 역산 - 할인가와 할인율을 아는 경우</h3>
+    <p>할인된 가격과 할인율만 알고 정가를 모를 때 쓰는 공식입니다. 면세점 영수증이나 해외직구 사이트처럼 정가가 눈에 잘 안 띄는 경우에 유용합니다.</p>
+    <p><strong>정가 = 할인가 ÷ (1 - 할인율 ÷ 100)</strong></p>
+    <p>예시: 할인가 34,200원, 할인율 10%라면 정가 = 34,200 ÷ (1 - 10 ÷ 100) = 34,200 ÷ 0.9 = 38,000원입니다. 검산: 38,000 × 0.9 = 34,200원, 일치합니다. 아울렛에서 '40% 할인가 89,400원'이라고 적혀 있다면 정가는 89,400 ÷ 0.6 = 149,000원입니다.</p>
+
+    <h2>정가별·할인율별 할인가 일람표</h2>
+    <p>정가 5만~20만원 범위에서 주요 할인율별 최종 할인가를 정리했습니다. 자주 쓰는 가격대는 기억해두면 계산기 없이도 빠르게 어림잡을 수 있습니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>정가</th>
+            <th>10% 할인</th>
+            <th>20% 할인</th>
+            <th>30% 할인</th>
+            <th>40% 할인</th>
+            <th>50% 할인</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>50,000원</td><td class="rate">45,000원</td><td>40,000원</td><td>35,000원</td><td>30,000원</td><td>25,000원</td></tr>
+          <tr><td>80,000원</td><td class="rate">72,000원</td><td>64,000원</td><td>56,000원</td><td>48,000원</td><td>40,000원</td></tr>
+          <tr><td>100,000원</td><td class="rate">90,000원</td><td>80,000원</td><td>70,000원</td><td>60,000원</td><td>50,000원</td></tr>
+          <tr><td>150,000원</td><td class="rate">135,000원</td><td>120,000원</td><td>105,000원</td><td>90,000원</td><td>75,000원</td></tr>
+          <tr><td>200,000원</td><td class="rate">180,000원</td><td>160,000원</td><td>140,000원</td><td>120,000원</td><td>100,000원</td></tr>
+          <tr><td>300,000원</td><td class="rate">270,000원</td><td>240,000원</td><td>210,000원</td><td>180,000원</td><td>150,000원</td></tr>
+          <tr><td>500,000원</td><td class="rate">450,000원</td><td>400,000원</td><td>350,000원</td><td>300,000원</td><td>250,000원</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin:24px 0;overflow-x:auto">
+    <svg role="img" width="100%" viewBox="0 0 680 240" xmlns="http://www.w3.org/2000/svg">
+      <title>정가 10만원 기준 할인율별 할인가 및 절약금액 비교</title>
+      <rect width="680" height="240" rx="12" fill="#F9FAFB"/>
+      <text x="24" y="34" font-size="13" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">정가 100,000원 기준 - 할인율별 실제 절약금액</text>
+
+      <!-- 10% -->
+      <text x="24" y="68" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">10% 할인</text>
+      <rect x="100" y="55" width="56" height="20" rx="4" fill="#14B8A6" opacity="0.4"/>
+      <text x="162" y="70" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">절약 10,000원 / 결제 90,000원</text>
+
+      <!-- 20% -->
+      <text x="24" y="104" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">20% 할인</text>
+      <rect x="100" y="91" width="112" height="20" rx="4" fill="#14B8A6" opacity="0.55"/>
+      <text x="218" y="106" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">절약 20,000원 / 결제 80,000원</text>
+
+      <!-- 30% -->
+      <text x="24" y="140" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">30% 할인</text>
+      <rect x="100" y="127" width="168" height="20" rx="4" fill="#14B8A6" opacity="0.7"/>
+      <text x="274" y="142" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">절약 30,000원 / 결제 70,000원</text>
+
+      <!-- 40% -->
+      <text x="24" y="176" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">40% 할인</text>
+      <rect x="100" y="163" width="224" height="20" rx="4" fill="#14B8A6" opacity="0.85"/>
+      <text x="330" y="178" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">절약 40,000원 / 결제 60,000원</text>
+
+      <!-- 50% -->
+      <text x="24" y="212" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">50% 할인</text>
+      <rect x="100" y="199" width="280" height="20" rx="4" fill="#14B8A6"/>
+      <text x="386" y="214" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">절약 50,000원 / 결제 50,000원</text>
+    </svg>
+    </div>
+
+    <h2>시나리오 1 - 겨울 코트 세일, 실제로 얼마나 싸지는가</h2>
+    <p>직장인 A씨(33세)는 백화점에서 정가 189,000원짜리 코트를 찜해뒀습니다. 연말 세일 기간에 '30% 할인'과 '멤버십 5% 추가 할인' 배너가 동시에 떴습니다. 단순 합산으로는 35% 할인이지만, 실제 계산은 다릅니다.</p>
+    <p><strong>30% 할인 적용 후 가격:</strong> 189,000 × 0.7 = 132,300원</p>
+    <p><strong>멤버십 5% 추가 할인:</strong> 132,300 × 0.95 = 125,685원</p>
+    <p><strong>실질 할인율 역산:</strong> (189,000 - 125,685) ÷ 189,000 × 100 ≈ 33.5%</p>
+    <p>35%라고 기대했지만 실제로는 33.5%입니다. 금액 차이는 189,000 × 0.35 = 66,150원(예상)과 63,315원(실제) - 약 2,835원입니다. 코트 한 벌에서는 큰 금액이 아니지만 백화점 세일 기간에 여러 건 구매하면 합산 차이가 생깁니다.</p>
+    <p>이 차이가 생기는 이유는 멤버십 5%가 정가 기준이 아니라 '30% 할인 후 가격' 기준으로 적용되기 때문입니다. "그래서 뭐가 달라지는데?" - A씨는 멤버십 혜택을 35%라고 계산해 예산을 잡았지만 실제로는 약 3,000원을 더 지출하게 됩니다. 구매 전에 중복할인 계산기로 확인하면 예산 계획이 더 정확해집니다.</p>
+
+    <h2>시나리오 2 - 영수증 보고 판매자가 말한 할인율 검증하기</h2>
+    <p>B씨는 쇼핑몰에서 '30% 할인'이라고 표기된 니트를 구매했습니다. 정가는 79,000원, 결제금액은 57,900원이었습니다. 귀가 후 영수증을 보고 직접 역산해봤습니다.</p>
+    <p><strong>실제 할인율 = (79,000 - 57,900) ÷ 79,000 × 100 = 21,100 ÷ 79,000 × 100 ≈ 26.7%</strong></p>
+    <p>30%라고 광고했지만 실제 할인율은 26.7%였습니다. 30% 할인이라면 79,000 × 0.7 = 55,300원이어야 합니다. 실제 결제금액 57,900원은 79,000 × (1 - 0.267) ≈ 57,900원, 즉 약 26.7% 할인에 해당합니다. 3%포인트 차이지만 금액으로는 55,300원과 57,900원의 차이 - 2,600원입니다.</p>
+    <p>이런 사례가 드물지 않습니다. 오픈마켓에서 정가를 부풀린 뒤 높은 할인율을 표기하는 방식이 종종 쓰입니다. 소비자원에 따르면 '참고가격 대비 할인율' 표시 기준이 명확하지 않아 실질 할인율이 표기 할인율보다 낮은 경우가 자주 발생합니다. 할인율 역산 공식 하나만 알아도 이런 상황에서 스스로 검증할 수 있습니다.</p>
+
+    <h2>20% + 10% 중복할인이 30%가 아닌 이유 - 여기서 함정이 있다</h2>
+    <p>핵심은 이겁니다. 중복할인은 정가 기준으로 각각 적용되는 게 아닙니다. 첫 번째 할인을 적용한 가격에서 두 번째 할인이 다시 적용됩니다.</p>
+    <p>정가 200,000원, 쿠폰 20% + 카드 10% 즉시할인을 가정합니다.</p>
+    <p><strong>단순 합산(잘못된 계산):</strong> 20% + 10% = 30% 할인 → 200,000 × 0.7 = 140,000원</p>
+    <p><strong>실제 중복할인 계산:</strong></p>
+    <p>1단계: 쿠폰 20% 적용 → 200,000 × 0.8 = 160,000원</p>
+    <p>2단계: 카드 10% 즉시할인 → 160,000 × 0.9 = 144,000원</p>
+    <p><strong>실질 할인율 역산:</strong> (200,000 - 144,000) ÷ 200,000 × 100 = 28%</p>
+    <p>단순 합산이면 140,000원인데 실제로는 144,000원, 차이는 4,000원입니다. 결제 페이지에서 예상보다 4,000원이 더 나오는 이유가 바로 이것입니다.</p>
+    <p>공식으로 정리하면 다음과 같습니다. 두 할인율 A%, B%의 중복할인 실질 할인율 = 100 - (100-A) × (100-B) ÷ 100입니다. 20%와 10%를 대입하면 100 - 80 × 90 ÷ 100 = 100 - 72 = 28%로 계산됩니다. 즉 "더하지 말고 곱하라"가 중복할인의 핵심입니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>쿠폰 할인</th>
+            <th>카드 추가 할인</th>
+            <th>단순 합산(×)</th>
+            <th>실질 할인율(○)</th>
+            <th>차이</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>5%</td><td>3%</td><td>8%</td><td class="rate">7.85%</td><td>0.15%p</td></tr>
+          <tr><td>10%</td><td>5%</td><td>15%</td><td class="rate">14.5%</td><td>0.5%p</td></tr>
+          <tr><td>15%</td><td>7%</td><td>22%</td><td class="rate">20.95%</td><td>1.05%p</td></tr>
+          <tr><td>20%</td><td>10%</td><td>30%</td><td class="rate">28%</td><td>2%p</td></tr>
+          <tr><td>25%</td><td>10%</td><td>35%</td><td class="rate">32.5%</td><td>2.5%p</td></tr>
+          <tr><td>30%</td><td>15%</td><td>45%</td><td class="rate">40.5%</td><td>4.5%p</td></tr>
+          <tr><td>30%</td><td>20%</td><td>50%</td><td class="rate">44%</td><td>6%p</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:13px;color:#6B7280;margin-top:-8px">※ 실질 할인율 = 100 - (100-쿠폰%) × (100-카드%) ÷ 100으로 계산</p>
+
+    <!-- ② 본문중간 애드핏 슬롯: 중간 h2 직전 -->
+    <div class="adfit-slot">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-88xhdLeiIK3V35kb" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>시나리오 3 - 블랙프라이데이 3중 할인, 실질 할인율은 얼마?</h2>
+    <p>직장인 C씨(29세)는 블랙프라이데이 행사에서 정가 320,000원짜리 운동화를 구매합니다. 혜택은 세 가지입니다. 앱 전용 쿠폰 15%, 카드사 즉시할인 7%, 멤버십 포인트 3% 적용입니다.</p>
+    <p>단순 합산으로는 15 + 7 + 3 = 25% 할인처럼 보입니다. 실제 계산은 아래와 같습니다.</p>
+    <p><strong>1단계: 앱 쿠폰 15% 적용</strong> → 320,000 × 0.85 = 272,000원</p>
+    <p><strong>2단계: 카드 즉시할인 7%</strong> → 272,000 × 0.93 = 252,960원</p>
+    <p><strong>3단계: 멤버십 포인트 3%</strong> → 252,960 × 0.97 = 245,371원 (원 단위 절사 시 245,371원)</p>
+    <p><strong>실질 할인율 = (320,000 - 245,371) ÷ 320,000 × 100 ≈ 23.3%</strong></p>
+    <p>단순 합산 25%라면 320,000 × 0.75 = 240,000원인데 실제로는 245,371원입니다. 차이는 약 5,371원입니다. 세 가지 혜택을 모두 챙겼는데도 예상보다 5,000원 이상 더 냈습니다. "그래서 뭐가 달라지는데?" - 예산을 240,000원으로 잡았다면 결제 화면에서 당황하게 됩니다. 미리 할인율 계산기로 시뮬레이션하면 이런 차이를 사전에 파악할 수 있습니다.</p>
+    <p>공식 적용: 실질 할인율 = 100 - 0.85 × 0.93 × 0.97 × 100 = 100 - 76.7... ≈ 23.3%로 위 단계별 계산과 정확히 일치합니다.</p>
+
+    <h2>할인율 계산에서 자주 틀리는 세 가지</h2>
+
+    <h3>실수 ① '정가의 30%'와 '30% 할인'을 혼동</h3>
+    <p>정가 100,000원에서 '정가의 30%'는 30,000원입니다. 반면 '30% 할인'은 정가에서 30%를 깎아 70,000원이 됩니다. 즉 '정가의 30% 가격'은 70% 할인입니다. 아울렛에서 "정가 대비 30%" 같은 표현이 나오면 맥락을 정확히 확인해야 합니다.</p>
+
+    <h3>실수 ② 할인율과 할인가 단위를 혼동</h3>
+    <p>쇼핑몰 상세 페이지에서 '10,000원 할인'과 '10% 할인'은 전혀 다른 금액입니다. 정가 50,000원이라면 10,000원 할인(정액)은 20% 할인에 해당하고, 10% 할인(정률)은 5,000원 할인입니다. 정액 할인쿠폰과 정률 할인쿠폰이 섞여 있을 때 어느 쪽이 더 유리한지 비교할 때는 금액 단위로 통일해 비교해야 합니다.</p>
+
+    <h3>실수 ③ 할인 적용 순서에 따라 최종 금액이 달라진다고 생각하는 것</h3>
+    <p>실제로는 적용 순서와 무관하게 최종 금액이 같습니다. 정가 100,000원에 20% 후 10%를 적용하면 100,000 × 0.8 × 0.9 = 72,000원, 10% 후 20%를 적용해도 100,000 × 0.9 × 0.8 = 72,000원입니다. 순서는 결과를 바꾸지 않습니다. 단, 정액 할인과 정률 할인이 섞이면 적용 순서에 따라 결과가 달라질 수 있습니다. 예를 들어 정가 100,000원에서 10,000원 정액 할인 후 20% 정률 할인이면 (100,000 - 10,000) × 0.8 = 72,000원, 순서를 바꿔 20% 정률 할인 후 10,000원 정액 할인이면 100,000 × 0.8 - 10,000 = 70,000원입니다. 정률 할인을 먼저 적용하는 쪽이 70,000원으로 2,000원 더 싸기 때문에 소비자에게 유리합니다.</p>
+
+    <h2>할인율 계산 응용 - 적립금과 캐시백의 처리 방법</h2>
+    <p>적립금과 캐시백은 즉시 할인과 달리 '나중에 돌아오는' 구조입니다. 이 둘을 할인율 계산에 포함할 때는 몇 가지 기준을 잡아야 합니다.</p>
+
+    <h3>즉시 차감 적립금</h3>
+    <p>결제 페이지에서 보유 적립금을 현금처럼 바로 쓸 수 있다면, 이는 할인 금액과 같은 방식으로 처리합니다. 적립금 차감 후 남은 금액이 실제 지출 기준이 됩니다. 예를 들어 정가 80,000원에서 보유 포인트 5,000원을 차감하고 75,000원을 결제했다면 실질 할인율은 5,000 ÷ 80,000 × 100 = 6.25%입니다.</p>
+
+    <h3>캐시백 유형</h3>
+    <p>캐시백은 결제 후 일정 시점에 돌아오는 금액으로, 확정 캐시백과 조건부 캐시백이 있습니다. 확정 캐시백(카드사 청구 할인 등)은 최종 지불 금액을 낮추는 효과가 있으므로 실질 구매가 = 결제금액 - 캐시백으로 계산합니다. 조건부 캐시백은 일정 금액 이상 결제, 특정 채널 사용 등 조건이 붙으므로 실제 수령 전까지는 확정으로 보기 어렵습니다.</p>
+    <p>정가 120,000원에서 즉시 10% 쿠폰(12,000원 할인), 카드 청구 할인 5%(결제금액 108,000원의 5% = 5,400원 환급)를 적용하면 실질 지불액은 108,000 - 5,400 = 102,600원, 실질 할인율은 (120,000 - 102,600) ÷ 120,000 × 100 = 14.5%입니다. 즉시 할인(10%)과 청구 할인(5%)의 단순 합산 15%보다 낮습니다. 이 역시 중복할인이 덧셈이 아닌 곱셈이기 때문입니다.</p>
+
+    <h2>정기 할인 이벤트별 실질 할인율 계산하는 법</h2>
+    <p>대형 쇼핑몰과 오픈마켓은 정기적으로 '최대 XX% 할인' 이벤트를 진행합니다. 그 안에 들어가면 단일 상품 할인, 쿠폰 중복, 카드사 제휴 할인 등이 복잡하게 얽혀 있습니다. 실질 할인율을 정확히 파악하는 절차는 간단합니다.</p>
+    <p>첫째, 최종 결제할 상품의 '노출 가격'(정가 또는 이미 할인된 판매가)을 확인합니다. 둘째, 적용 가능한 쿠폰을 차례로 확인하고 정률인지 정액인지 구분합니다. 셋째, 카드사 즉시할인이나 페이 혜택이 있다면 추가로 계산합니다. 넷째, 최종 결제금액과 최초 정가를 비교해 역산합니다.</p>
+    <p>특히 '노출 가격'이 이미 할인된 가격인 경우 원래 정가를 별도로 확인해야 합니다. 오픈마켓에서 판매자가 자체 할인가를 등록한 뒤 쿠폰을 추가로 적용하는 구조라면, 쿠폰이 적용되는 기준 가격이 정가가 아닌 판매가임을 확인해야 합니다.</p>
+
+    <h2>글자수 세기, 학점 계산과 함께 써보세요</h2>
+    <p>할인율 계산기와 같은 생활·도구 카테고리에는 비슷하게 자주 쓰이는 계산기들이 있습니다. <a href="../posts/char-count-guide.html" style="color:#14B8A6;">글자수 세기 완벽 가이드</a>에서는 공백 포함·제외 기준 차이, 자소서·리포트·SNS별 글자수 제한을 정리했습니다. 할인율 계산과 마찬가지로 정확한 기준을 모르면 예상과 다른 결과가 나오는 상황입니다. 또 <a href="../posts/naesin-grade-guide.html" style="color:#14B8A6;">내신등급 계산기 보는 법 가이드</a>에서는 석차백분율과 9등급제·5등급제 환산법을 다루는데, 이것도 공식 하나를 알면 계산기 없이도 개략값을 어림할 수 있다는 점에서 구조가 비슷합니다.</p>
+
+    <div class="cta-box">
+      <p>할인가 계산, 할인율 역산, 중복할인 시뮬레이션까지 한 번에<br>제이퍼 할인율 계산기를 바로 사용해보세요.</p>
+      <a href="../../calc/tools/discount/" class="cta-btn">할인율 계산기 바로가기 →</a>
+    </div>
+    <p style="font-size:13px;color:#6B7280;margin-top:8px;text-align:center">할인가 계산 / 할인율 역산 / 정가 역산 / 중복할인 4가지 모드 지원</p>
+
+    <h2>자주 나오는 질문</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 쿠폰 20%에 카드 10% 추가 할인을 받으면 왜 30% 할인이 아닌가요?</div>
+      <div class="faq-a">중복할인은 더하는 게 아니라 곱하는 방식으로 작동하기 때문입니다. 쿠폰 20% 할인 후 남은 가격의 80%에서 다시 카드 10%를 깎는 구조입니다. 계산하면 0.8 × 0.9 = 0.72, 즉 실질 28% 할인입니다. 30%와 2%포인트 차이처럼 보이지만 정가가 200,000원이라면 4,000원이 더 나오는 셈입니다. 할인율이 높아질수록 단순 합산과의 격차도 커집니다. 예를 들어 30%+20% 중복할인의 실질값은 44%이지, 50%가 아닙니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 할인율을 역산하고 싶은데 어떻게 계산하나요?</div>
+      <div class="faq-a">할인율 역산 공식은 (정가 - 할인가) ÷ 정가 × 100입니다. 예를 들어 정가 189,000원짜리가 139,000원에 팔리고 있다면 (189,000 - 139,000) ÷ 189,000 × 100 = 50,000 ÷ 189,000 × 100 = 약 26.46% 할인입니다. 판매자가 '30% 할인'이라고 표기해도 실제로는 그보다 낮은 경우가 있으니 직접 역산해보는 것이 중요합니다. 오픈마켓에서 특히 이런 사례가 많습니다. 할인율 계산기의 '할인율 역산' 모드를 활용하면 정가와 할인가만 입력해 바로 확인할 수 있습니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 정가 역산이 필요한 상황이 언제인가요?</div>
+      <div class="faq-a">오픈마켓이나 해외직구 사이트에서 할인가와 할인율만 표시되고 정가가 보이지 않을 때 정가 역산이 필요합니다. 정가 역산 공식은 할인가 ÷ (1 - 할인율 ÷ 100)입니다. 예를 들어 할인가 34,200원에 할인율이 10%라면 34,200 ÷ 0.9 = 38,000원이 원래 정가입니다. 특히 면세점이나 아울렛에서 '40% 할인가 89,400원'처럼 할인가만 크게 표시할 때, 정가가 149,000원인지 확인하는 용도로 씁니다. 정가를 알아야 다른 채널과 가격 비교가 정확해집니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 현금영수증 소득공제나 적립금 차감도 할인율에 포함되나요?</div>
+      <div class="faq-a">실질 구매가 기준으로 보면 적립금 차감은 일종의 즉시 할인으로 볼 수 있지만, 할인율 계산에서는 구분해서 처리하는 것이 정확합니다. 적립금(포인트)은 현금과 동일한 효과를 내므로 최종 결제금액에서 차감 후 정가 대비 비율을 계산하면 실질 할인율이 나옵니다. 반면 현금영수증 소득공제는 연말정산 시 돌아오는 간접 혜택이라 당장의 구매 시점 할인율로는 산정하기 어렵습니다. 네이버페이, 카카오페이 등 페이 캐시백도 같은 원리로, 확정 캐시백은 최종 지출에서 빼서 실질 할인율을 계산하는 것이 실용적입니다.</div>
+    </div>
+
+    <h2>결제 전 30초 체크 - 할인율 계산 정리</h2>
+    <p>할인율 계산에서 가장 중요한 포인트 하나만 꼽으면 "중복할인은 더하지 말고 곱하라"입니다. 20% + 10%는 28%이고, 30% + 20%는 44%입니다. 이 사실만 알고 있어도 결제 화면에서 예상치 못한 금액을 보고 당황하는 일은 없어집니다.</p>
+    <p>기본 세 가지 공식은 간단합니다. 할인가를 구할 때는 정가 × (1 - 할인율 ÷ 100), 할인율을 역산할 때는 (정가 - 할인가) ÷ 정가 × 100, 정가를 역산할 때는 할인가 ÷ (1 - 할인율 ÷ 100)입니다. 이 세 공식이 모든 할인 계산의 뼈대입니다.</p>
+    <p>실생활에서는 이 공식들을 조합해 사용합니다. 블랙프라이데이처럼 3중 할인이 겹칠 때는 단계별로 순서대로 곱해나가면 됩니다. 정액 할인과 정률 할인이 섞여 있다면 적용 순서에 따라 결과가 달라지므로 시뮬레이션을 미리 해두는 것이 좋습니다.</p>
+    <p>판매자가 제시한 할인율이 실제와 일치하는지 검증하는 습관도 중요합니다. (정가 - 할인가) ÷ 정가 × 100, 이 공식만으로 표기 할인율과 실제 할인율이 일치하는지 30초면 확인할 수 있습니다. 할인율 계산기를 활용하면 네 가지 계산 모드를 모두 빠르게 돌려볼 수 있습니다.</p>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-copy">© 2026 제이퍼 계산기. All rights reserved.</div>
+</footer>
+
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "할인율 계산 수식 기준, 2026년 기준",
+  basisDate: "2026년 기준",
+  referenceOrg: "한국소비자원(kca.go.kr)",
+  lastReviewed: '2026.06.12',
+  disclaimer: "본 내용은 참고용이며, 실제 구매 시 판매자의 할인 정책을 반드시 확인하시기 바랍니다.",
+  relatedCalc: { name: '할인율 계산기', url: '/calc/tools/discount/' },
+  category: 'tools'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>
