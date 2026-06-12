@@ -368,6 +368,16 @@ window.CALC_REGISTRY = {
         "name": "강아지 나이"
       },
       {
+        "slug": "cat-age",
+        "icon": "🐱",
+        "name": "고양이 나이"
+      },
+      {
+        "slug": "food-amount",
+        "icon": "🍽️",
+        "name": "사료 급여량"
+      },
+      {
         "slug": "monthly-cost",
         "icon": "🐕",
         "name": "월 생활비"
