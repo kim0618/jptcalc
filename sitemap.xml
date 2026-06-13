@@ -223,6 +223,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.jptcalc.kr/blog/posts/percent-guide.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.jptcalc.kr/blog/posts/discount-guide.html</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>퍼센트 계산 완벽 가이드 2026 - 증감률·퍼센트 포인트·할인가 한 번에 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="퍼센트(%) 계산 4가지 유형(전체의 몇%, 증감률, 역산)과 퍼센트 포인트(%p) 차이, 세금·이자·연봉·할인에서 실제로 쓰는 계산법까지 예시·표·검산 포함 정리. 2026년 기준." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="퍼센트 계산 완벽 가이드 2026 - 증감률·퍼센트 포인트·할인가 한 번에" />
+  <meta property="og:description" content="퍼센트(%) 계산 4가지 유형과 퍼센트 포인트(%p) 차이, 세금·이자·연봉·할인 실전 계산법까지 예시·표 포함 정리." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/percent-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/percent-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "퍼센트 계산 완벽 가이드 2026 - 증감률·퍼센트 포인트·할인가 한 번에",
+    "description": "퍼센트(%) 계산 4가지 유형과 퍼센트 포인트(%p) 차이, 세금·이자·연봉·할인 실전 계산법까지 예시·표 포함 정리.",
+    "author": { "@type": "Person", "name": "Jay Kim", "url": "https://www.jptcalc.kr/about.html", "jobTitle": "제이퍼 계산기 운영자" },
+    "publisher": { "@type": "Organization", "name": "제이퍼 계산기", "url": "https://www.jptcalc.kr", "logo": { "@type": "ImageObject", "url": "https://www.jptcalc.kr/assets/logo_161.png" } },
+    "datePublished": "2026-06-13",
+    "dateModified": "2026-06-13",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.jptcalc.kr/blog/posts/percent-guide.html" },
+    "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+    "articleSection": "생활·도구",
+    "inLanguage": "ko-KR"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "퍼센트와 퍼센트 포인트는 어떻게 다른가요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "퍼센트(%)는 어떤 값이 기준값의 몇 분의 몇인지를 나타내고, 퍼센트 포인트(%p)는 두 퍼센트 수치의 산술적 차이입니다. 예를 들어 금리가 3%에서 4%로 바뀌었을 때 1%p 상승한 것이고, 이를 퍼센트로 환산하면 약 33% 상승한 것입니다. 뉴스에서 '금리 1%p 인상'과 '금리 33% 상승'은 같은 사실을 전혀 다른 각도로 표현한 것입니다. 이 차이를 모르면 경제 뉴스와 금융 상품 약관을 오독하기 쉬우므로 반드시 구별해서 읽어야 합니다."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "50% 오른 후 50% 떨어지면 원금으로 돌아오나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "돌아오지 않습니다. 100만 원이 50% 오르면 150만 원이 되고, 거기서 50% 내리면 75만 원이 됩니다. 25만 원이 손실된 채로 남습니다. 이유는 퍼센트 계산의 기준점이 바뀌기 때문입니다. 상승 시 기준은 100만 원이고 하락 시 기준은 150만 원이라 같은 50%라도 절대 금액이 다릅니다. 원금 회복에 필요한 하락 전 상승률을 계산하려면 '(1/(1-하락률))-1'로 역산해야 합니다. 50% 하락 후 원금 회복에는 100% 상승이 필요하고, 25% 하락 후에는 약 33% 상승이 필요합니다."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "부가세 10% 계산에서 세금 포함가와 세금 별도가 헷갈립니다. 어떻게 계산하나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "세금 별도 표시 가격에 부가세를 추가하려면 표시가 × 1.1을 하면 됩니다. 반대로 부가세 포함 가격에서 공급가액(세금 제외 가격)을 구하려면 포함가 ÷ 1.1을 해야 합니다. 자주 하는 실수는 포함가에서 10%를 빼는 것인데, 100,000원 × 10% = 10,000원을 뺀 90,000원이 아니라 100,000 ÷ 1.1 = 약 90,909원이 정확한 공급가액입니다. 국세청 부가가치세 신고 시 이 역산 공식을 잘못 적용하면 세액이 틀어지므로 주의가 필요합니다."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "연봉 인상률을 어떻게 계산하나요? 제시받은 인상 금액이 몇 퍼센트인지 바로 계산하는 방법이 있나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "인상률(%) = (인상 금액 ÷ 현재 연봉) × 100으로 계산합니다. 예를 들어 현재 연봉 3,800만 원에서 200만 원 인상을 제안받았다면 (200 ÷ 3,800) × 100 = 약 5.26%입니다. 반대로 '5% 인상' 제안을 금액으로 환산하려면 3,800 × 0.05 = 190만 원입니다. 협상 자리에서는 인상 금액과 인상률을 동시에 제시하는 쪽이 협상력이 높아집니다. '200만 원 인상'보다 '5.3% 인상'이 더 크게 느껴질 수 있고, 반대로 상대방이 '높은 퍼센트'를 제시할 때 절대 금액으로 환산해보면 기대보다 작은 경우도 많습니다."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.jptcalc.kr/" },
+      { "@type": "ListItem", "position": 2, "name": "블로그", "item": "https://www.jptcalc.kr/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "생활·도구", "item": "https://www.jptcalc.kr/blog/?cat=생활·도구" },
+      { "@type": "ListItem", "position": 4, "name": "퍼센트 계산 완벽 가이드 2026" }
+    ]
+  }
+  </script>
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#14B8A6;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(20,184,166,0.15);color:#14B8A6;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:24px 0 10px}
+    .post-body p{margin-bottom:14px}
+    .post-body ul{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#14B8A6;text-decoration:none}
+    .highlight-box{background:rgba(20,184,166,0.08);border-left:4px solid #14B8A6;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#0F766E;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    td.rate{color:#14B8A6;font-weight:700}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#14B8A6;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .faq-item{border:1px solid #E5E7EB;border-radius:10px;margin:12px 0}
+    .faq-q{font-weight:700;padding:14px 18px;font-size:15px;cursor:pointer;background:#F9FAFB;border-radius:10px}
+    .faq-a{padding:14px 18px;font-size:14px;color:#4B5563;line-height:1.75;border-top:1px solid #E5E7EB}
+    .adfit-slot{text-align:center;margin:28px 0}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <span class="logo-icon"><img src="../../assets/logo.svg" alt="제이퍼 계산기 로고" /></span>
+      <span class="logo-text">제이퍼 <span>계산기</span></span>
+    </a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+
+<main class="post-wrap">
+  <span class="post-tag">생활·도구</span>
+  <h1>퍼센트 계산 완벽 가이드 2026 - 증감률·퍼센트 포인트·할인가 한 번에</h1>
+  <div class="post-meta">📅 2026.06.13 · ⏱ 13분 읽기</div>
+
+  <div class="post-body">
+
+    <p>퍼센트는 초등학교 때 배웠지만, 실제로 헷갈리는 상황은 어른이 되어서야 자주 생깁니다. "금리가 2%에서 3%로 올랐다"는 뉴스를 들을 때 '1% 올랐다'고 생각하는 사람과 '50% 올랐다'고 계산하는 사람이 동시에 존재합니다. 둘 다 틀리지 않았습니다. 기준이 다를 뿐입니다. 이처럼 퍼센트 계산은 단순해 보이지만 기준점 하나가 바뀌면 결과가 완전히 달라지는 계산입니다.</p>
+
+    <p>이 글에서는 퍼센트 계산의 4가지 유형을 공식부터 정리하고, 연봉 협상·세금·할인·이자까지 실생활에서 실제로 쓰이는 예시를 모두 담았습니다. 퍼센트 포인트(%p)와 퍼센트(%)의 차이, 증감률의 숨겨진 비대칭성, 부가세 역산 공식처럼 실무에서 반드시 알아야 하는 내용도 빠뜨리지 않았습니다.</p>
+
+    <div class="highlight-box">
+      <p>이 글이 필요한 분: 연봉 인상률을 직접 계산하고 싶은 직장인 / 쿠폰 중복 할인가가 헷갈리는 쇼핑족 / 부가세 역산이 필요한 사업자 / 뉴스에서 퍼센트 포인트와 퍼센트가 다른 이유가 궁금한 분</p>
+    </div>
+
+    <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+      <li>퍼센트 계산 4가지 유형 - 공식과 검산 포함</li>
+      <li>퍼센트(%)와 퍼센트 포인트(%p)가 다른 이유 - 금리·수익률 혼동 예방</li>
+      <li>50% 오른 후 50% 떨어지면 손해인 이유 - 증감률의 비대칭성</li>
+      <li>연봉 인상률·부가세·할인가 실전 계산 3가지 시나리오</li>
+      <li>부가세 포함가에서 공급가액 역산 공식 - 90,000원이 아닌 이유</li>
+      <li>목표달성률과 기여도 계산에서 흔한 실수</li>
+    </ul>
+
+    <p style="margin:1.2em 0">바로 계산하려면: <a href="../../calc/tools/percent/" style="color:#14B8A6;font-weight:600;">퍼센트 계산기 → 4가지 유형 한 화면에서 계산</a></p>
+
+    <h2>퍼센트 계산, 4가지 유형만 알면 끝</h2>
+
+    <p>퍼센트 계산에서 헷갈리는 이유의 90%는 "뭘 기준으로 나누느냐"를 혼동하기 때문입니다. 유형별로 기준이 다르므로 먼저 상황에 맞는 공식을 파악하는 것이 우선입니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>유형</th>
+            <th>언제 쓰나</th>
+            <th>공식</th>
+            <th>예시</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>① 전체의 몇 %</strong></td>
+            <td>할인가·세금 계산</td>
+            <td>전체 × (비율/100)</td>
+            <td>50,000원의 30% = 15,000원</td>
+          </tr>
+          <tr>
+            <td><strong>② A는 B의 몇 %</strong></td>
+            <td>달성률·비중 계산</td>
+            <td>(A ÷ B) × 100</td>
+            <td>45는 180의 25%</td>
+          </tr>
+          <tr>
+            <td><strong>③ 증감률</strong></td>
+            <td>인상률·성장률</td>
+            <td>((신값-구값) ÷ 구값) × 100</td>
+            <td>3,800만→4,000만: +5.26%</td>
+          </tr>
+          <tr>
+            <td><strong>④ X% 증가·감소한 값</strong></td>
+            <td>세후금액·부가세 포함가</td>
+            <td>원값 × (1 ± 비율/100)</td>
+            <td>100,000원 + 10% = 110,000원</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>헷갈릴 때 가장 유용한 확인 방법은 역산입니다. 유형 ①로 구한 답을 다시 전체로 나누면 비율이 나와야 하고, 유형 ③으로 구한 증감률을 구값에 적용하면 신값이 나와야 합니다. 계산 결과가 의심스러울 때 30초 역산을 습관화하면 오류를 거의 다 잡을 수 있습니다.</p>
+
+    <h3>유형별 역산 공식</h3>
+
+    <p>유형 ①을 역산(역할인): 원래 가격을 구하려면 할인가 ÷ (1 - 할인율/100). 예를 들어 30% 할인가가 35,000원이라면 원가 = 35,000 ÷ 0.7 = 50,000원입니다.</p>
+    <p>유형 ④를 역산(세금 제외 가격 구하기): 부가세 포함 가격이 110,000원이라면 공급가액 = 110,000 ÷ 1.1 = 100,000원입니다. 여기서 자주 하는 실수가 있는데, 이 부분은 아래 부가세 섹션에서 자세히 다룹니다.</p>
+
+    <!-- 상단 애드핏 슬롯: 목차 직후 -->
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>실전 시나리오 3가지로 계산법 완전 정리</h2>
+
+    <h3>시나리오 1 - 연봉 협상에서 인상률 계산 (박상현씨, 32세, 대리)</h3>
+
+    <p>박상현씨의 현재 연봉은 3,800만 원입니다. 연봉 협상 자리에서 회사가 "200만 원 인상"을 제안했습니다. 박씨는 이게 몇 퍼센트 인상인지 즉시 파악하고 싶었습니다.</p>
+
+    <p>계산: 인상률 = (200 ÷ 3,800) × 100 = 약 5.26%. 고용노동부 사업체노동력조사에 따르면 2025년 상반기 상용근로자의 월평균 임금총액은 전년 동기 대비 3.5% 인상됐습니다. 박씨가 제안받은 5.26%는 이 평균을 웃도는 수치입니다. 검산: 3,800 × 0.0526 ≈ 200만 원, 맞습니다.</p>
+
+    <p>박씨는 추가로 "6% 인상이면 얼마냐"도 계산해봤습니다. 3,800 × 0.06 = 228만 원. 즉, 200만 원과 228만 원의 차이가 협상 포인트입니다. 28만 원의 차이가 월로 환산하면 약 2.3만 원인데, 이걸 "미미한 차이"로 볼 수도 있지만 30년 근속을 가정하면 누적 840만 원의 차이가 납니다. 연봉 협상에서 퍼센트 한 자리가 장기적으로 얼마나 중요한지 보여주는 사례입니다.</p>
+
+    <h3>시나리오 2 - 부가세 계산 (정수아씨, 38세, 프리랜서 디자이너)</h3>
+
+    <p>정수아씨는 클라이언트에게 디자인 작업물 견적을 제출할 때 공급가액과 부가세를 분리해서 청구합니다. 공급가액 550,000원 작업 건의 부가세 포함 총액은 얼마일까요? 550,000 × 1.1 = 605,000원입니다. 세금계산서에 기재할 부가세는 55,000원입니다.</p>
+
+    <p>반대 상황도 생깁니다. 클라이언트가 "총 660,000원으로 계산서 끊어주세요"라고 하면 공급가액이 얼마냐는 질문이 됩니다. 많은 분이 660,000 - 66,000 = 594,000원으로 계산하는데, 이 방식은 틀렸습니다. 정확한 계산은 660,000 ÷ 1.1 = 600,000원이 공급가액이고, 부가세는 60,000원입니다. 660,000 × 0.1 = 66,000원을 빼는 것과 결과가 다른 이유는 660,000원 자체에 이미 부가세가 포함되어 있어서 기준점이 다르기 때문입니다. 국세청 부가가치세 신고 시 공급가액 계산 오류로 가산세를 내는 사례가 꾸준히 발생하는 이유입니다.</p>
+
+    <p>검산: 600,000 × 0.1 = 60,000원 부가세, 공급가액 600,000 + 부가세 60,000 = 660,000원. 정확합니다.</p>
+
+    <h3>시나리오 3 - 중복 할인 적용 (김민준씨, 27세, 직장인)</h3>
+
+    <p>김민준씨는 정가 120,000원짜리 운동화를 구매하려고 합니다. 앱 쿠폰 15% 할인에 카드사 추가 10% 할인이 적용됩니다. 단순하게 "25% 할인이니까 90,000원이겠네"라고 생각했지만, 결제 화면에서 나온 금액은 91,800원이었습니다. 왜 그럴까요?</p>
+
+    <p>중복 할인은 순차적으로 적용됩니다. 먼저 15% 할인: 120,000 × (1 - 0.15) = 120,000 × 0.85 = 102,000원. 다음으로 카드 10% 추가 할인: 102,000 × (1 - 0.10) = 102,000 × 0.90 = 91,800원. 단순 합산 25% 할인가 90,000원과 실제 91,800원의 차이는 1,800원입니다. 할인이 클수록 이 차이도 커집니다. 정가 대비 실제 할인율을 계산하면 (120,000 - 91,800) ÷ 120,000 × 100 = 23.5%, 즉 25%가 아닌 23.5%가 실제 할인율입니다.</p>
+
+    <p>이 원리는 할인에만 적용되는 게 아닙니다. 세금도 마찬가지입니다. 지방소득세(소득세의 10%)를 소득세와 합산한 실효세율 계산에서도 같은 방식이 쓰입니다.</p>
+
+    <h2>퍼센트(%)와 퍼센트 포인트(%p) - 같은 숫자가 완전히 다른 말이다</h2>
+
+    <p>핵심은 이겁니다. 퍼센트 포인트는 두 퍼센트 수치의 산술적 차이이고, 퍼센트는 변화율 그 자체입니다. 같은 변화를 놓고도 표현 방식에 따라 숫자가 크게 달라 보이는 이유입니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>상황</th>
+            <th>변화 전</th>
+            <th>변화 후</th>
+            <th>퍼센트 포인트(%p)</th>
+            <th>퍼센트(%) 변화율</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>기준금리 인상</td>
+            <td>3.00%</td>
+            <td>3.25%</td>
+            <td class="rate">+0.25%p</td>
+            <td>+8.3%</td>
+          </tr>
+          <tr>
+            <td>예금금리 변동</td>
+            <td>2.00%</td>
+            <td>3.00%</td>
+            <td class="rate">+1.00%p</td>
+            <td>+50%</td>
+          </tr>
+          <tr>
+            <td>대출금리 변동</td>
+            <td>5.00%</td>
+            <td>6.00%</td>
+            <td class="rate">+1.00%p</td>
+            <td>+20%</td>
+          </tr>
+          <tr>
+            <td>실업률 변화</td>
+            <td>3.5%</td>
+            <td>4.2%</td>
+            <td class="rate">+0.7%p</td>
+            <td>+20%</td>
+          </tr>
+          <tr>
+            <td>지지율 변화</td>
+            <td>50%</td>
+            <td>55%</td>
+            <td class="rate">+5%p</td>
+            <td>+10%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin:24px 0;overflow-x:auto">
+    <svg role="img" width="100%" viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg">
+      <title>기준금리 1%p 변화 - 퍼센트와 퍼센트 포인트 비교</title>
+      <rect width="680" height="200" rx="12" fill="#F9FAFB"/>
+      <text x="24" y="36" font-size="14" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">같은 변화, 다른 숫자: 기준금리 2% → 3%</text>
+      <text x="24" y="72" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">퍼센트 포인트(%p)</text>
+      <rect x="180" y="58" width="100" height="22" rx="4" fill="#14B8A6" opacity="0.9"/>
+      <text x="288" y="74" font-size="13" font-weight="700" fill="#14B8A6" font-family="Pretendard,sans-serif">+1%p</text>
+      <text x="24" y="112" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">퍼센트(%) 변화율</text>
+      <rect x="180" y="98" width="430" height="22" rx="4" fill="#F59E0B" opacity="0.8"/>
+      <text x="618" y="114" font-size="13" font-weight="700" fill="#F59E0B" font-family="Pretendard,sans-serif">+50%</text>
+      <text x="24" y="155" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">같은 금리 변화(2%→3%)를 표현하는 두 가지 방식. 숫자는 다르지만 둘 다 틀리지 않았다.</text>
+      <text x="24" y="175" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">%p는 산술적 차이(3-2=1), %는 변화율((3-2)÷2×100=50%).</text>
+    </svg>
+    </div>
+
+    <p>이 차이가 실생활에서 중요해지는 순간은 대출 금리가 오를 때입니다. 은행이 "금리를 1%p 인상했습니다"라고 발표할 때, 기존 금리가 3%였다면 새 금리는 4%입니다. 이를 "금리가 33% 상승했다"고 표현할 수도 있지만 신문 기사에선 거의 %p로 씁니다. 반대로 주가나 수익률을 이야기할 때는 변화율(%)을 더 많이 씁니다. 문맥에 따라 두 표현 중 어느 쪽이 쓰이는지 파악하는 것이 경제 뉴스를 읽는 기본기입니다.</p>
+
+    <!-- 본문 중간 애드핏 슬롯 -->
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-88xhdLeiIK3V35kb" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>50% 오른 후 50% 떨어지면 원금이다 - 이 생각이 손실을 만든다</h2>
+
+    <p>여기서 함정이 있습니다. 퍼센트 계산에서 가장 흔한 오해 중 하나가 "같은 비율로 오르고 내리면 제자리"라는 착각입니다. 수치로 확인해보겠습니다.</p>
+
+    <p>100만 원이 50% 상승하면 150만 원입니다. 거기서 50% 하락하면 150 × 0.5 = 75만 원입니다. 원금 100만 원에서 25만 원을 잃은 셈입니다. 이유는 기준점이 바뀌기 때문입니다. 상승 시 기준은 100만 원이고, 하락 시 기준은 150만 원입니다. 같은 50%라도 절대 금액이 다릅니다.</p>
+
+    <p>역방향도 마찬가지입니다. 100만 원이 먼저 50% 하락해 50만 원이 됐다면, 원금 회복에 필요한 상승률은 50%가 아니라 100%입니다. 50만 원 × 2 = 100만 원이 되어야 하니까요. 이 비대칭성은 금융 투자에서 특히 중요합니다. 손실 방어가 수익 추구보다 수학적으로 더 중요한 근거이기도 합니다.</p>
+
+    <p>구체적인 수치로 상황별로 정리하면 아래와 같습니다. 하락 후 원금 회복에 필요한 상승률 공식은 1/(1-하락률) - 1입니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>하락률</th>
+            <th>100만원 기준 하락 후 금액</th>
+            <th>원금 회복에 필요한 상승률</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>-10%</td>
+            <td>90만원</td>
+            <td class="rate">+11.1%</td>
+            <td>소폭 비대칭</td>
+          </tr>
+          <tr>
+            <td>-20%</td>
+            <td>80만원</td>
+            <td class="rate">+25%</td>
+            <td>확연한 차이</td>
+          </tr>
+          <tr>
+            <td>-33.3%</td>
+            <td>66.7만원</td>
+            <td class="rate">+50%</td>
+            <td>1/3 손실 → 50% 회복 필요</td>
+          </tr>
+          <tr>
+            <td>-50%</td>
+            <td>50만원</td>
+            <td class="rate">+100%</td>
+            <td>반토막 → 두 배 필요</td>
+          </tr>
+          <tr>
+            <td>-75%</td>
+            <td>25만원</td>
+            <td class="rate">+300%</td>
+            <td>4배 상승해야 원금</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>이 표를 보면 왜 투자에서 큰 손실을 피하는 것이 큰 수익을 내는 것보다 수학적으로 중요한지 알 수 있습니다. 50% 손실을 복구하려면 100% 수익이 필요하지만, 처음부터 20% 손실로 막았다면 25% 수익만 있으면 됩니다. 퍼센트의 비대칭성을 이해하는 것이 재테크의 기본 논리입니다.</p>
+
+    <h2>세금과 이자 계산에서 퍼센트 완전 정복</h2>
+
+    <h3>소득세율 구조에서 퍼센트 읽기</h3>
+
+    <p>많은 분이 "나는 세율이 몇 %야?"를 물을 때 실수를 합니다. 소득세는 누진세 구조라 전체 소득에 단일 세율을 곱하는 게 아니라, 구간별로 세율이 달라집니다. 2026년 기준 소득세율은 소득세법 제55조에 따라 1,400만 원 이하 6%, 5,000만 원 이하 15%, 8,800만 원 이하 24%, 1억5,000만 원 이하 35%, 3억 원 이하 38%, 5억 원 이하 40%, 10억 원 이하 42%, 10억 원 초과 45%의 누진 구조입니다.</p>
+
+    <p>연봉 5,000만 원 직장인의 경우 과세표준이 약 3,600만 원 정도라면, 1,400만 원에 6%, 나머지 2,200만 원에 15%가 적용됩니다. "나는 15% 세율 구간"이라고 말하는 것은 맞지만, 전체 소득의 15%를 세금으로 내는 게 아닙니다. 실효세율은 이보다 낮습니다. 이처럼 세율 구조에서 퍼센트는 '해당 구간에 적용되는 비율'임을 정확히 알아야 합니다.</p>
+
+    <h3>예금 이자 계산: 연이율과 월이율</h3>
+
+    <p>연이율 3%짜리 예금에 1,000만 원을 넣었을 때 1개월 이자가 얼마인지 계산하는 경우가 있습니다. 단순히 생각하면 3% ÷ 12 = 0.25%, 1,000만 원 × 0.0025 = 25,000원처럼 보입니다. 실제로 대부분의 은행 예금 이자는 이 단순 월이율 방식으로 계산됩니다. 그런데 복리 계산이라면 다릅니다.</p>
+
+    <p>복리는 매월 이자가 원금에 합산되어 다음 달 이자의 기준이 됩니다. 연 3% 복리의 월복리 환산은 (1 + 0.03)^(1/12) - 1 ≈ 0.2466%로, 단순 월이율 0.25%와 미묘하게 다릅니다. 대출 원리금 계산에서는 이 차이가 수십만 원까지 벌어지기도 합니다. 저축보험이나 연금 계산에서는 반드시 복리 공식을 써야 정확한 수치가 나옵니다. 복리 계산은 <a href="../posts/compound-interest.html" style="color:#14B8A6;">복리 계산기 가이드</a>에서 상세히 확인할 수 있습니다.</p>
+
+    <h2>목표달성률과 기여도 계산 - 직장인이 자주 틀리는 퍼센트</h2>
+
+    <p>월 목표 매출 1억 원인데 실적이 8,200만 원이라면, 달성률 = (8,200 ÷ 10,000) × 100 = 82%입니다. 여기까지는 어렵지 않습니다. 그런데 두 사람 A(5,000만 원)와 B(3,200만 원)의 개인 기여도를 계산할 때 "A는 총 실적의 61%, B는 39%"가 아니라 "A는 목표의 50%, B는 32% 달성"이라고 표현할 수 있습니다. 기준을 무엇으로 잡느냐에 따라 달성률 표현이 달라지는 것입니다.</p>
+
+    <p>더 흔한 실수는 목표 초과 달성 상황입니다. 목표 1억 원인데 실적이 1억 2,000만 원이면 달성률은 120%입니다. 어떤 사람은 초과분인 2,000만 원을 기준으로 "20% 초과 달성"이라고 표현하는데, 이는 정확히 같은 내용입니다. 반면 "120% 달성"과 "20% 초과"는 표현하는 맥락이 다릅니다. 상사에게 보고할 때 어느 표현이 더 인상적으로 들리는지는 상황에 따라 다르지만, 수학적으로는 동일한 사실입니다.</p>
+
+    <h3>복수 항목의 기여도 합산 시 주의점</h3>
+
+    <p>팀 A, B, C가 각각 40%, 35%, 25%의 기여도를 가진다면 합이 100%가 맞습니다. 그런데 합이 100%를 초과하거나 미달하는 경우는 기준이 서로 다른 분모로 계산했을 때 생깁니다. 예를 들어 각 팀이 서로 다른 총 매출을 기준으로 자기 기여도를 계산했다면, 단순 합산은 의미 없습니다. 퍼센트를 합산할 때는 항상 분모(기준값)가 같은지 먼저 확인해야 합니다.</p>
+
+    <h2>퍼센트 계산에서 흔히 저지르는 실수 5가지</h2>
+
+    <p>수년간 퍼센트 계산 관련 검색 데이터를 분석해보면 반복되는 오류 유형이 있습니다. 아래 다섯 가지는 특히 주의가 필요합니다.</p>
+
+    <p><strong>실수 1: 중복 할인 합산.</strong> 10% + 10% = 20% 할인이 아닙니다. 첫 번째 10% 할인 후 남은 금액에 다시 10% 할인이 적용되므로 실제 할인율은 19%입니다. 계산: 100 × 0.9 × 0.9 = 81, 즉 19% 할인. 쿠폰과 카드 할인을 단순 합산하는 것은 틀립니다.</p>
+
+    <p><strong>실수 2: 부가세 역산 오류.</strong> 부가세 포함 가격에서 10%를 빼면 공급가액이 나온다는 오해입니다. 110,000원의 10%인 11,000원을 빼면 99,000원이 되는데, 정확한 공급가액은 110,000 ÷ 1.1 = 100,000원입니다.</p>
+
+    <p><strong>실수 3: 증감률 기준 혼동.</strong> "작년 대비 올해 매출이 늘었다"고 할 때 기준은 작년 매출이어야 합니다. 올해 매출을 기준으로 계산하면 전혀 다른 수치가 나옵니다. 증감률의 분모는 항상 기준 시점의 값이어야 합니다.</p>
+
+    <p><strong>실수 4: %와 %p 혼용.</strong> "수익률이 5%에서 7%로 2% 올랐다"는 표현에서 "2% 올랐다"는 엄밀히 말하면 틀렸습니다. 2%p 올랐거나, 40% 상승한 것입니다. 투자 수익률이나 금리를 다룰 때 이 표현 오류가 금전적 오해로 이어질 수 있습니다.</p>
+
+    <p><strong>실수 5: 퍼센트와 소수점 혼동.</strong> 0.5%를 소수로 쓸 때 0.005입니다. 0.5라고 쓰면 50%가 됩니다. 스프레드시트나 계산기에 입력할 때 퍼센트 기호를 떼면 반드시 100으로 나눠야 합니다. 연이자율 5%를 월 계산에 쓸 때 0.05/12를 써야 하는데 5/12를 입력하면 엉뚱한 값이 나옵니다.</p>
+
+    <h2>할인율 계산과 퍼센트 계산의 연관성</h2>
+
+    <p>할인율 계산은 퍼센트 계산의 응용입니다. 정가, 할인율, 할인가 세 값 중 두 가지를 알면 나머지 하나를 구할 수 있습니다. 이 계산을 단계별로 확인하고 싶다면 <a href="../posts/discount-guide.html" style="color:#14B8A6;">할인율 계산 가이드</a>에서 중복 할인·역산 공식을 더 자세히 다루고 있습니다.</p>
+
+    <p>한 가지 더 챙겨야 할 것이 있습니다. 상품 가격 표시가 "10% OFF"인지 "10% 할인 쿠폰 적용"인지에 따라 기준이 달라질 수 있습니다. 원가 기준 할인인지, 정가 기준 할인인지를 확인하는 것이 정확한 계산의 출발점입니다. 특히 온라인 쇼핑몰에서는 판매가 기준인지 정가(원가) 기준인지 약관에 명시되어 있으므로, 큰 금액 구매 전에는 확인하는 습관을 들이는 게 좋습니다.</p>
+
+    <h2>소수 퍼센트와 ppm - 극히 작은 비율 읽는 법</h2>
+
+    <p>일상에서는 잘 안 쓰이지만, 통계·환경·의약품 분야에서는 0.1%보다 작은 비율을 표현해야 하는 경우가 있습니다. 이때 사용하는 단위가 ppm(parts per million, 백만분의 1)과 ppb(parts per billion, 십억분의 1)입니다.</p>
+
+    <p>1ppm = 0.0001% = 0.000001(소수). 예를 들어 수돗물의 잔류염소 기준이 4mg/L 이하인데, 이 농도를 퍼센트로 표현하면 0.0004%가 됩니다. 이처럼 극히 작은 비율은 ppm으로 표현하는 것이 훨씬 직관적입니다. 미세먼지 농도, 혈중 알코올 농도, 식품 첨가물 기준치 등에서 자주 등장하므로 단위 환산법을 알아두면 뉴스와 보고서를 읽을 때 도움이 됩니다.</p>
+
+    <p>반대로 매우 큰 비율이 필요한 경우도 있습니다. 반도체 수율 99.9997%처럼 100%에 가까운 수치를 다룰 때는 Six Sigma 방식으로 불량률을 ppm으로 환산해 표현합니다. 3.4ppm = 불량률 0.00034%가 Six Sigma 수준의 품질 기준입니다.</p>
+
+    <div class="cta-box">
+      <p>퍼센트 계산, 직접 입력해서 확인해보세요. 4가지 유형(전체의 몇%, A는 B의 몇%, 증감률, X% 증가·감소)을 한 화면에서 바로 계산할 수 있습니다.</p>
+      <a href="../../calc/tools/percent/" class="cta-btn">퍼센트 계산기 바로가기 →</a>
+      <p style="font-size:13px;color:#6B7280;margin-top:8px;">증감률, 역산 포함 4가지 모드를 무료로 제공합니다.</p>
+    </div>
+
+    <h2>자주 묻는 질문</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 퍼센트와 퍼센트 포인트는 어떻게 다른가요?</div>
+      <div class="faq-a">퍼센트(%)는 어떤 값이 기준값의 몇 분의 몇인지를 나타내고, 퍼센트 포인트(%p)는 두 퍼센트 수치의 산술적 차이입니다. 예를 들어 금리가 3%에서 4%로 바뀌었을 때 1%p 상승한 것이고, 이를 퍼센트로 환산하면 약 33% 상승한 것입니다. 뉴스에서 '금리 1%p 인상'과 '금리 33% 상승'은 같은 사실을 전혀 다른 각도로 표현한 것입니다. 이 차이를 모르면 경제 뉴스와 금융 상품 약관을 오독하기 쉬우므로 반드시 구별해서 읽어야 합니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 50% 오른 후 50% 떨어지면 원금으로 돌아오나요?</div>
+      <div class="faq-a">돌아오지 않습니다. 100만 원이 50% 오르면 150만 원이 되고, 거기서 50% 내리면 75만 원이 됩니다. 25만 원이 손실된 채로 남습니다. 이유는 퍼센트 계산의 기준점이 바뀌기 때문입니다. 상승 시 기준은 100만 원이고 하락 시 기준은 150만 원이라 같은 50%라도 절대 금액이 다릅니다. 원금 회복에 필요한 하락 전 상승률을 계산하려면 '(1/(1-하락률))-1'로 역산해야 합니다. 50% 하락 후 원금 회복에는 100% 상승이 필요하고, 25% 하락 후에는 약 33% 상승이 필요합니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 부가세 10% 계산에서 세금 포함가와 세금 별도가 헷갈립니다. 어떻게 계산하나요?</div>
+      <div class="faq-a">세금 별도 표시 가격에 부가세를 추가하려면 표시가 × 1.1을 하면 됩니다. 반대로 부가세 포함 가격에서 공급가액(세금 제외 가격)을 구하려면 포함가 ÷ 1.1을 해야 합니다. 자주 하는 실수는 포함가에서 10%를 빼는 것인데, 100,000원 × 10% = 10,000원을 뺀 90,000원이 아니라 100,000 ÷ 1.1 = 약 90,909원이 정확한 공급가액입니다. 국세청 부가가치세 신고 시 이 역산 공식을 잘못 적용하면 세액이 틀어지므로 주의가 필요합니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 연봉 인상률을 어떻게 계산하나요? 제시받은 인상 금액이 몇 퍼센트인지 바로 계산하는 방법이 있나요?</div>
+      <div class="faq-a">인상률(%) = (인상 금액 ÷ 현재 연봉) × 100으로 계산합니다. 예를 들어 현재 연봉 3,800만 원에서 200만 원 인상을 제안받았다면 (200 ÷ 3,800) × 100 = 약 5.26%입니다. 반대로 '5% 인상' 제안을 금액으로 환산하려면 3,800 × 0.05 = 190만 원입니다. 협상 자리에서는 인상 금액과 인상률을 동시에 제시하는 쪽이 협상력이 높아집니다. '200만 원 인상'보다 '5.3% 인상'이 더 크게 느껴질 수 있고, 반대로 상대방이 '높은 퍼센트'를 제시할 때 절대 금액으로 환산해보면 기대보다 작은 경우도 많습니다.</div>
+    </div>
+
+    <h2>퍼센트, 기준이 전부다</h2>
+
+    <p>이 글에서 반복한 핵심은 하나입니다. 퍼센트 계산은 항상 "분모(기준값)가 무엇인가"에서 출발해야 한다는 것입니다. 기준이 달라지면 같은 수치도 완전히 다른 의미가 됩니다. 퍼센트 포인트(%p)와 퍼센트(%)를 구별하는 것도, 중복 할인을 단순 합산하지 않는 것도, 부가세를 정확히 역산하는 것도 모두 "분모를 명확히 하는" 습관에서 비롯됩니다.</p>
+
+    <p>증감률의 비대칭성처럼 처음에는 반직관적으로 느껴지는 내용도, 기준점이 바뀐다는 원리 하나로 설명됩니다. 50% 하락 후 원금 회복에 100% 상승이 필요하다는 사실은 수학적 필연이지 이상한 현상이 아닙니다. 이 원리를 이해하면 투자·세금·급여 협상 어느 상황에서든 퍼센트 계산에 흔들리지 않게 됩니다.</p>
+
+    <p>계산이 복잡하게 느껴지는 상황에서는 <a href="../../calc/tools/percent/" style="color:#14B8A6;">퍼센트 계산기</a>를 활용해보세요. 4가지 유형을 한 화면에서 입력값만 넣으면 바로 결과를 확인할 수 있습니다. 글에서 다룬 할인율 역산은 <a href="../posts/discount-guide.html" style="color:#14B8A6;">할인율 계산 가이드</a>에서, 복리 이자 계산은 별도 가이드에서 더 깊이 다루고 있습니다.</p>
+
+  </div>
+</main>
+
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "소득세법·부가가치세법·고용노동부 자료, 2026년 기준",
+  basisDate: "2026년 기준",
+  referenceOrg: "국세청, 고용노동부",
+  lastReviewed: '2026.06.13',
+  disclaimer: "본 내용은 참고용이며 실제 세금·금융 계산은 전문가 상담을 권장합니다.",
+  relatedCalc: { name: '퍼센트 계산기', url: '/calc/tools/percent/' },
+  category: 'tools'
+};
+</script>
+<script src="/assets/footer-unified.js"></script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+
+</body>
+</html>
