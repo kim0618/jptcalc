@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>학점 계산기 완벽 가이드 2026 - 4.5·4.3·4.0 평점 계산과 GPA 올리는 법 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="4.5·4.3·4.0 만점 스케일별 평점평균(GPA) 계산 공식과 등급별 점수표, 취업·대학원·교환학생 목적별 학점 기준, 3학점 F가 평점을 0.9 떨어뜨리는 이유와 재수강으로 GPA 올리는 전략까지 실전 시나리오 3개로 정리했습니다. 2026년 기준." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="학점 계산기 완벽 가이드 2026 - 4.5·4.3·4.0 평점 계산과 GPA 올리는 법" />
+  <meta property="og:description" content="평점평균 계산 공식부터 스케일별 등급표, 취업·대학원·교환학생 기준, 재수강 전략까지 시나리오로 정리한 학점 가이드." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/gpa-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/gpa-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "학점 계산기 완벽 가이드 2026 - 4.5·4.3·4.0 평점 계산과 GPA 올리는 법",
+    "description": "4.5·4.3·4.0 만점 스케일별 평점평균(GPA) 계산 공식과 등급별 점수표, 취업·대학원·교환학생 목적별 학점 기준, 3학점 F가 평점을 0.9 떨어뜨리는 이유와 재수강으로 GPA 올리는 전략까지 실전 시나리오 3개로 정리했습니다. 2026년 기준.",
+    "author": {"@type": "Person", "name": "Jay Kim", "url": "https://www.jptcalc.kr/about.html", "jobTitle": "제이퍼 계산기 운영자"},
+    "publisher": {
+      "@type": "Organization",
+      "name": "제이퍼 계산기",
+      "url": "https://www.jptcalc.kr",
+      "logo": {"@type": "ImageObject", "url": "https://www.jptcalc.kr/assets/logo_161.png"}
+    },
+    "datePublished": "2026-06-14",
+    "dateModified": "2026-06-14",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.jptcalc.kr/blog/posts/gpa-guide.html"},
+    "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+    "articleSection": "생활·도구",
+    "inLanguage": "ko"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "평점평균(GPA)을 계산하는 정확한 공식이 뭔가요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "평점평균은 각 과목의 등급 점수와 이수학점을 곱한 값의 합을 총 이수학점으로 나눈 가중평균입니다. 예를 들어 경영학 3학점 A+(4.5)와 경제학 3학점 B+(3.5)와 체육 1학점 A+(4.5)를 이수했다면, (4.5×3 + 3.5×3 + 4.5×1) ÷ 7 = 28.5 ÷ 7 = 4.07입니다. 단순히 등급을 더해 평균 내는 것이 아니라, 학점이 큰 과목이 평점에 더 큰 비중을 차지하는 구조입니다. 이 때문에 학점이 많은 전공 필수과목의 성적이 전체 평점에 결정적인 영향을 미칩니다."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "4.5 만점 3.5 학점은 4.3 만점으로 환산하면 얼마인가요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "두 스케일은 직접 환산이 어렵습니다. 4.5 만점의 3.5는 최고 대비 약 77.8%(3.5÷4.5)이고, 같은 비율을 4.3 만점에 적용하면 약 3.35점이 됩니다. 그러나 이 단순 비율 환산은 정확하지 않습니다. 4.5 스케일의 3.5는 B+ 등급에 해당하고, 4.3 스케일에서 B+는 3.3점이므로 등급 기준으로 직접 대응하는 것이 더 정확합니다. 교환학생이나 유학 서류 제출 시에는 학교의 공식 성적증명서를 원본 그대로 제출하고, 필요 시 WES 같은 공인 기관의 환산표를 이용하는 것이 원칙입니다."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "F를 맞은 과목을 재수강하면 기존 F가 평점에서 완전히 사라지나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "학교마다 규정이 다릅니다. 대부분의 국내 대학은 재수강 시 새로운 성적이 기존 성적을 대체해 성적증명서에는 새 성적만 표시됩니다. 그러나 재수강 시 최고 등급을 A0(4.0) 또는 B+(3.5)로 제한하는 학교도 있으니, 학사규정에서 재수강 이수학점 제한 조항을 먼저 확인해야 합니다. 일반적으로 재수강 가능 학점은 학기당 6학점, 대학 생활 전체에서 12~18학점으로 제한됩니다. F가 있는 3학점 전공 과목을 재수강해 A0를 받으면 평점이 최대 0.9~1.0까지 회복될 수 있어 전략적 재수강이 필요합니다."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "취업할 때 학점이 3.5 이상이면 유리한가요, 차이가 없나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "3.0과 3.5의 차이는 서류 단계에서는 거의 없고, 3.0과 2.9의 차이는 서류 자동 탈락 여부로 나뉠 수 있습니다. 대기업 대부분은 3.0 이상을 서류 기준으로 쓰지만, 실제 채용 면접에서 학점을 세밀하게 따지는 경우는 많지 않습니다. 예외는 공기업·금융권으로, NCS 기반 서류에서 학점을 정량 점수로 환산해 반영하는 곳이 있습니다. 결론적으로 3.0 아래는 확실히 불리하고, 3.0~3.5는 학점 외 역량으로 승부하면 되고, 3.5 이상은 학점이 감점 요소가 되지 않는 안전권이라고 보면 됩니다."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.jptcalc.kr/"},
+      {"@type": "ListItem", "position": 2, "name": "블로그", "item": "https://www.jptcalc.kr/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "생활·도구", "item": "https://www.jptcalc.kr/blog/?cat=생활·도구"},
+      {"@type": "ListItem", "position": 4, "name": "학점 계산기 완벽 가이드 2026"}
+    ]
+  }
+  </script>
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#14B8A6;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(20,184,166,0.15);color:#14B8A6;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:24px 0 10px}
+    .post-body p{margin-bottom:14px}
+    .post-body ul{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#14B8A6;text-decoration:none}
+    .highlight-box{background:rgba(20,184,166,0.08);border-left:4px solid #14B8A6;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#0F766E;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    td.rate{color:#14B8A6;font-weight:700}
+    td.warn{color:#DC2626;font-weight:700}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#14B8A6;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .faq-item{border:1px solid #E5E7EB;border-radius:10px;margin:12px 0}
+    .faq-q{font-weight:700;padding:14px 18px;font-size:15px;cursor:pointer;background:#F9FAFB;border-radius:10px}
+    .faq-a{padding:14px 18px;font-size:14px;color:#4B5563;line-height:1.75;border-top:1px solid #E5E7EB}
+    .adfit-slot{text-align:center;margin:28px 0}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+    .scenario-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:12px;padding:20px 24px;margin:20px 0}
+    .scenario-box h3{margin-top:0;color:#14B8A6;font-size:15px}
+    .formula-box{background:rgba(20,184,166,0.06);border:1px dashed #14B8A6;border-radius:10px;padding:16px 20px;margin:16px 0;font-size:14px;color:#0F766E;font-weight:600;text-align:center}
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="https://www.jptcalc.kr/" class="site-logo">
+      <span class="logo-icon"><img src="../../assets/logo.svg" alt="제이퍼" /></span>
+      <span class="logo-text">제이퍼 <span>계산기</span></span>
+    </a>
+    <a href="/blog/" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+
+<main class="post-wrap">
+  <span class="post-tag">생활·도구</span>
+  <h1>학점 계산기 완벽 가이드 2026 - 4.5·4.3·4.0 평점 계산과 GPA 올리는 법</h1>
+  <div class="post-meta">
+    <span>📅 2026.06.14</span>
+    <span>⏱ 13분 읽기</span>
+  </div>
+
+  <div class="post-body">
+
+    <p>취업 서류를 작성하다 보면 반드시 등장하는 칸이 있습니다. "평점(4.5 만점 기준)". 성적증명서를 꺼내 숫자를 찾아보는데, 그 숫자가 어떻게 만들어진 건지 설명할 수 있는 학생이 의외로 드뭅니다. A+를 여럿 받았는데 평점이 기대보다 낮은 이유, 3학점짜리 전공 과목이 1학점짜리 교양보다 평점에 훨씬 큰 영향을 미치는 이유, 재수강하면 F가 정말 사라지는지 같은 질문들이 매 학기 반복됩니다.</p>
+    <p>이 글에서는 평점평균(GPA) 계산 공식을 수식 없이 시나리오로 풀어보고, 4.5·4.3·4.0 세 가지 스케일의 차이, 3학년까지 낮은 학점을 마지막 학년에 얼마나 올릴 수 있는지, 취업과 대학원 진학에서 실제로 요구하는 기준까지 한 번에 정리합니다. 성적표 받은 날 바로 활용할 수 있도록 구체적인 수치 중심으로 썼습니다.</p>
+
+    <div class="highlight-box">
+      <p>이 글이 필요한 사람: 이번 학기 평점을 직접 계산해보고 싶은 대학생 / 재수강 전략을 짜고 있는 학생 / 취업·대학원·교환학생 지원 시 학점 기준이 궁금한 경우 / 4.5 스케일 학점을 4.3으로 환산하는 방법이 필요한 경우</p>
+    </div>
+
+    <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+      <li>4.5·4.3·4.0 스케일별 등급 점수 대조표 - 내 학교 방식 확인</li>
+      <li>평점 3.89가 나오는 실제 계산 과정 - 가중평균 공식 시나리오로 풀기</li>
+      <li>3학점 F 하나가 그 학기 평점을 0.9 끌어내리는 이유</li>
+      <li>3학년까지 3.2인데 졸업 전에 3.5까지 올릴 수 있을까 - 수치로 계산</li>
+      <li>취업·국내대학원·해외대학원·교환학생 목적별 학점 기준 비교표</li>
+      <li>재수강·P/F 전략으로 GPA 관리하는 실전 팁</li>
+    </ul>
+
+    <!-- ① 상단 애드핏 슬롯 -->
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>평점평균(GPA) 계산 공식 - 단순 평균이 아니다</h2>
+    <p>평점평균은 각 과목의 등급 점수와 이수학점을 곱한 값을 모두 더한 뒤, 총 이수학점으로 나누는 <strong>가중평균</strong>입니다. 단순히 받은 등급의 평균을 내는 게 아닙니다. 3학점짜리 과목과 1학점짜리 과목을 똑같이 다루면 전공 핵심과목이 오히려 묻히게 되기 때문에, 학점(이수단위)을 가중치로 반영하는 방식을 씁니다.</p>
+
+    <div class="formula-box">
+      평점평균(GPA) = Σ(등급 점수 × 이수학점) ÷ 총 이수학점
+    </div>
+
+    <p>이 공식에서 핵심은 분모에 들어가는 "총 이수학점"입니다. P/F로 이수한 과목은 분자에도 분모에도 포함되지 않고, F를 받은 과목은 분자에 0점(0×학점)이, 분모에는 그 학점이 포함됩니다. 그래서 F는 단순히 0점이 아니라 다른 과목의 점수를 희석시키는 구조적 페널티를 줍니다.</p>
+
+    <h3>3개 스케일별 등급 점수 대조표</h3>
+    <p>국내 대학에서 쓰는 스케일은 크게 세 가지입니다. 4.5 만점은 플러스만 있는 방식, 4.3 만점은 플러스·마이너스 세분화 방식, 4.0 만점은 등급을 단순화한 방식입니다. 교육부 기준이 통일되어 있지 않아 같은 A+ 등급이라도 학교마다 점수가 다릅니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>등급</th>
+            <th>4.5 만점 (한국 다수)</th>
+            <th>4.3 만점 (일부 대학·미국식)</th>
+            <th>4.0 만점 (일부 대학)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>A+</td><td class="rate">4.5</td><td class="rate">4.3</td><td>-</td></tr>
+          <tr><td>A / A0</td><td class="rate">4.0</td><td class="rate">4.0</td><td class="rate">4.0</td></tr>
+          <tr><td>A-</td><td>-</td><td>3.7</td><td>-</td></tr>
+          <tr><td>B+</td><td>3.5</td><td>3.3</td><td>-</td></tr>
+          <tr><td>B / B0</td><td>3.0</td><td>3.0</td><td>3.0</td></tr>
+          <tr><td>B-</td><td>-</td><td>2.7</td><td>-</td></tr>
+          <tr><td>C+</td><td>2.5</td><td>2.3</td><td>-</td></tr>
+          <tr><td>C / C0</td><td>2.0</td><td>2.0</td><td>2.0</td></tr>
+          <tr><td>C-</td><td>-</td><td>1.7</td><td>-</td></tr>
+          <tr><td>D+</td><td>1.5</td><td>1.3</td><td>-</td></tr>
+          <tr><td>D / D0</td><td>1.0</td><td>1.0</td><td>1.0</td></tr>
+          <tr><td>D-</td><td>-</td><td>0.7</td><td>-</td></tr>
+          <tr><td>F</td><td class="warn">0.0</td><td class="warn">0.0</td><td class="warn">0.0</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>표에서 알 수 있듯이, 4.5 스케일에서는 B+가 3.5점이지만 4.3 스케일에서는 B+가 3.3점입니다. 숫자 자체가 다르기 때문에 두 스케일의 GPA를 직접 비교하는 것은 의미가 없습니다. 다른 학교 친구의 평점과 단순 비교하기 전에 어떤 스케일을 쓰는지 먼저 확인해야 합니다.</p>
+
+    <!-- SVG 인포그래픽 -->
+    <div style="margin:24px 0;overflow-x:auto">
+    <svg role="img" width="100%" viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg">
+      <title>목적별 학점 기준 비교 (4.5 만점 기준)</title>
+      <rect width="680" height="300" rx="12" fill="#F9FAFB"/>
+      <text x="24" y="36" font-size="14" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">목적별 학점 기준 (4.5 만점 기준)</text>
+      <rect x="24" y="48" width="11" height="11" rx="2" fill="#D1D5DB"/>
+      <text x="40" y="57" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">최소 기준</text>
+      <rect x="110" y="48" width="11" height="11" rx="2" fill="none" stroke="#14B8A6" stroke-width="2" stroke-dasharray="3,2"/>
+      <text x="126" y="57" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">경쟁력 있는 수준</text>
+
+      <!-- 눈금 -->
+      <line x1="190" y1="70" x2="190" y2="278" stroke="#E5E7EB" stroke-width="1"/>
+      <line x1="297" y1="70" x2="297" y2="278" stroke="#E5E7EB" stroke-width="1"/>
+      <line x1="404" y1="70" x2="404" y2="278" stroke="#E5E7EB" stroke-width="1"/>
+      <line x1="511" y1="70" x2="511" y2="278" stroke="#E5E7EB" stroke-width="1"/>
+      <line x1="618" y1="70" x2="618" y2="278" stroke="#E5E7EB" stroke-width="1"/>
+      <text x="184" y="82" font-size="11" fill="#9CA3AF" text-anchor="middle" font-family="Pretendard,sans-serif">2.0</text>
+      <text x="291" y="82" font-size="11" fill="#9CA3AF" text-anchor="middle" font-family="Pretendard,sans-serif">3.0</text>
+      <text x="398" y="82" font-size="11" fill="#9CA3AF" text-anchor="middle" font-family="Pretendard,sans-serif">3.5</text>
+      <text x="505" y="82" font-size="11" fill="#9CA3AF" text-anchor="middle" font-family="Pretendard,sans-serif">4.0</text>
+      <text x="612" y="82" font-size="11" fill="#9CA3AF" text-anchor="middle" font-family="Pretendard,sans-serif">4.5</text>
+
+      <!-- Row 1: 대기업 취업 -->
+      <text x="180" y="112" font-size="13" fill="#374151" text-anchor="end" font-family="Pretendard,sans-serif">대기업 취업</text>
+      <rect x="190" y="98" width="107" height="22" rx="4" fill="#D1D5DB"/>
+      <rect x="190" y="98" width="214" height="22" rx="4" fill="none" stroke="#14B8A6" stroke-width="2" stroke-dasharray="4,2"/>
+      <text x="412" y="114" font-size="12" fill="#374151" font-family="Pretendard,sans-serif">최소 3.0 / 권장 3.5</text>
+
+      <!-- Row 2: 교환학생 -->
+      <text x="180" y="157" font-size="13" fill="#374151" text-anchor="end" font-family="Pretendard,sans-serif">교환학생</text>
+      <rect x="190" y="143" width="107" height="22" rx="4" fill="#D1D5DB"/>
+      <rect x="190" y="143" width="214" height="22" rx="4" fill="none" stroke="#14B8A6" stroke-width="2" stroke-dasharray="4,2"/>
+      <text x="412" y="159" font-size="12" fill="#374151" font-family="Pretendard,sans-serif">최소 3.0 / 권장 3.5</text>
+
+      <!-- Row 3: 국내 대학원 -->
+      <text x="180" y="202" font-size="13" fill="#374151" text-anchor="end" font-family="Pretendard,sans-serif">국내 대학원</text>
+      <rect x="190" y="188" width="80" height="22" rx="4" fill="#D1D5DB"/>
+      <rect x="190" y="188" width="214" height="22" rx="4" fill="none" stroke="#14B8A6" stroke-width="2" stroke-dasharray="4,2"/>
+      <text x="412" y="204" font-size="12" fill="#374151" font-family="Pretendard,sans-serif">최소 2.8 / 권장 3.5</text>
+
+      <!-- Row 4: 성적 장학금 -->
+      <text x="180" y="247" font-size="13" fill="#374151" text-anchor="end" font-family="Pretendard,sans-serif">성적 장학금</text>
+      <rect x="190" y="233" width="214" height="22" rx="4" fill="#D1D5DB"/>
+      <rect x="190" y="233" width="321" height="22" rx="4" fill="none" stroke="#14B8A6" stroke-width="2" stroke-dasharray="4,2"/>
+      <text x="519" y="249" font-size="12" fill="#374151" font-family="Pretendard,sans-serif">최소 3.5 / 권장 4.0</text>
+
+      <text x="24" y="292" font-size="11" fill="#9CA3AF" font-family="Pretendard,sans-serif">* 학교별로 기준이 다를 수 있음. 실선=최소, 점선=경쟁선</text>
+    </svg>
+    </div>
+
+    <h2>4.5 vs 4.3 vs 4.0 - 우리 학교는 어떤 방식?</h2>
+    <p>국내 대학은 4.5 만점과 4.3 만점으로 크게 양분되며, 학교 수로는 4.5 만점이 더 많은 편입니다. 4.5 만점은 고려대·한양대를 비롯한 다수 대학이 쓰고, A+·A0처럼 플러스와 0만으로 등급을 나눕니다. 4.3 만점은 서울대·연세대·성균관대·이화여대 등에서 사용하며, A+·A0·A- 같은 마이너스 등급까지 세분화하는 방식입니다. 4.0 만점은 등급을 더 단순화한 일부 대학에서 씁니다.</p>
+    <p>본인 학교 방식을 확인하는 가장 빠른 방법은 성적증명서 맨 하단을 보는 겁니다. 거기에 '본 대학교는 4.5 만점 기준으로...'라고 명시되어 있습니다. 아니면 학생처나 교학처 홈페이지의 '학사안내 - 성적 관련 규정'에서도 확인할 수 있습니다.</p>
+    <p>한 가지 주의할 점이 있습니다. 아래 계산 예시는 모두 4.5 만점 기준입니다. 4.3이나 4.0을 쓰는 학교라면 위 표의 해당 열을 참고해서 같은 공식에 대입하면 됩니다. 제이퍼 <a href="../../calc/tools/gpa/" style="color:#14B8A6;">학점 계산기</a>는 세 가지 스케일을 버튼 한 번으로 전환할 수 있어 편리합니다.</p>
+
+    <h2>실전 계산 예시 - 3가지 시나리오로 따라하기</h2>
+
+    <h3>시나리오 1 - 김민준 씨(22세, 경영학과 2학년)의 이번 학기 평점</h3>
+    <p>김민준 씨는 이번 학기 6과목을 수강했습니다. 학교는 4.5 만점 방식을 씁니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>과목명</th><th>이수학점</th><th>등급</th><th>등급 점수</th><th>가중점수 (×학점)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>경영학원론</td><td>3</td><td>A+</td><td class="rate">4.5</td><td class="rate">13.5</td></tr>
+          <tr><td>회계학원리</td><td>3</td><td>B+</td><td>3.5</td><td>10.5</td></tr>
+          <tr><td>마케팅원론</td><td>2</td><td>A0</td><td class="rate">4.0</td><td class="rate">8.0</td></tr>
+          <tr><td>경제학원론</td><td>3</td><td>B0</td><td>3.0</td><td>9.0</td></tr>
+          <tr><td>교양영어</td><td>2</td><td>A+</td><td class="rate">4.5</td><td class="rate">9.0</td></tr>
+          <tr><td>체육실기</td><td>1</td><td>A+</td><td class="rate">4.5</td><td class="rate">4.5</td></tr>
+          <tr style="background:#F3F4F6;font-weight:700"><td>합계</td><td>14</td><td>-</td><td>-</td><td class="rate">54.5</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="formula-box">
+      GPA = 54.5 ÷ 14 = 3.893 (약 3.89)
+    </div>
+
+    <p>김민준 씨는 A+를 세 과목 받았지만 GPA는 4.5가 아닌 3.89입니다. 3학점짜리 경제학원론에서 B0(3.0)를 받은 영향이 1학점 체육 A+보다 세 배 큰 가중치를 지니기 때문입니다. 이 차이를 이해하면 어떤 과목에 에너지를 집중해야 할지 전략이 달라집니다.</p>
+
+    <h3>시나리오 2 - 박지은 씨(24세, 공과대학 3학년)의 재수강 전후 변화</h3>
+    <p>박지은 씨는 지난 학기 물리학실험(3학점)에서 F를 받았습니다. 나머지 12학점은 모두 A0(4.0)였습니다.</p>
+
+    <div class="scenario-box">
+      <h3>재수강 전</h3>
+      <p>A0 × 12학점 = 4.0 × 12 = 48점 / 물리학실험 F × 3학점 = 0 × 3 = 0점<br>
+      GPA = (48 + 0) ÷ 15 = <strong>3.20</strong></p>
+      <h3 style="margin-top:16px">재수강 후 (물리학실험 A0 취득)</h3>
+      <p>A0 × 12학점 = 48점 / 물리학실험 A0 × 3학점 = 4.0 × 3 = 12점<br>
+      GPA = (48 + 12) ÷ 15 = <strong>4.00</strong></p>
+    </div>
+
+    <p>단 한 과목의 재수강으로 학기 평점이 3.20에서 4.00으로 올라갔습니다. 0.80 상승입니다. 이것이 재수강 전략이 강력한 이유입니다. 물론 학교마다 재수강 후 취득 가능한 최고 등급이 A0 또는 B+로 제한되는 경우가 있으므로 학사규정 확인이 선행되어야 합니다.</p>
+
+    <!-- ② 본문중간 애드핏 슬롯 -->
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-88xhdLeiIK3V35kb" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>여기서 함정이 있다 - 3학점 F 하나가 그 학기 평점을 0.9 끌어내리는 이유</h2>
+    <p>평점 계산에서 가장 오해가 많은 부분이 F의 실제 파급력입니다. "F 하나쯤이야"라고 생각하기 쉽지만, 숫자로 보면 생각보다 훨씬 심각합니다.</p>
+    <p>한 학기에 15학점을 수강하고 모두 A+(4.5)를 받는다면 GPA는 4.5입니다. 가중점수 합계는 4.5 × 15 = 67.5점입니다. 여기서 3학점짜리 전공 과목 하나에서 F를 받으면 어떻게 될까요?</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>상황</th><th>가중점수 합계</th><th>총 학점</th><th>GPA</th><th>변화</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>15학점 전부 A+</td><td>67.5</td><td>15</td><td class="rate">4.50</td><td>-</td></tr>
+          <tr><td>3학점 과목 1개만 F</td><td>67.5 - 13.5 = 54.0</td><td>15</td><td class="warn">3.60</td><td class="warn">-0.90</td></tr>
+          <tr><td>1학점 과목 1개만 F</td><td>67.5 - 4.5 = 63.0</td><td>15</td><td>4.20</td><td>-0.30</td></tr>
+          <tr><td>3학점 과목 1개를 B+(3.5)로</td><td>67.5 - 13.5 + 10.5 = 64.5</td><td>15</td><td>4.30</td><td>-0.20</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>나머지 4과목에서 A+를 받아도, 3학점 전공 과목 하나의 F가 학기 평점을 4.50에서 3.60으로 내립니다. 0.9 하락입니다. 같은 F라도 1학점짜리였다면 0.30만 내려갑니다. 학점 크기에 정확히 비례하는 것입니다.</p>
+    <p>여기서 의사결정 포인트가 생깁니다. 기말고사를 앞두고 에너지를 어디에 쏟을지 고민된다면, 학점이 큰 전공 과목을 D0 이상으로 끌어올리는 것이 1학점 교양을 A+로 올리는 것보다 훨씬 효율적입니다. 수강 철회(W) 기간이 남아 있다면, 확실히 F가 예상되는 3학점 과목을 철회하는 것이 학기 평점을 지키는 현실적인 방법입니다.</p>
+
+    <h2>취업·대학원·교환학생 - 목적별 학점 기준선 정리</h2>
+    <p>"학점이 몇 점이어야 해?" 이 질문에 대한 답은 무엇을 하려는지에 따라 완전히 다릅니다. 목적별로 실제 기준을 정리했습니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>목적</th><th>최소 기준 (4.5 만점)</th><th>경쟁력 있는 수준</th><th>참고</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>대기업 서류 통과</strong></td>
+            <td class="rate">3.0 이상</td>
+            <td>3.5 이상</td>
+            <td>직무 역량이 더 중요, 학점은 최소 요건</td>
+          </tr>
+          <tr>
+            <td><strong>공기업·금융권</strong></td>
+            <td class="rate">3.0 이상</td>
+            <td>3.7 이상</td>
+            <td>NCS 정량 점수에 학점 반영하는 곳 多</td>
+          </tr>
+          <tr>
+            <td><strong>국내 대학원 (일반)</strong></td>
+            <td>2.5~3.0 이상</td>
+            <td class="rate">3.5 이상</td>
+            <td>학교·전공별로 최저 기준 상이</td>
+          </tr>
+          <tr>
+            <td><strong>국내 대학원 (상위권)</strong></td>
+            <td class="rate">3.3~3.5 이상</td>
+            <td>3.7~4.0 이상</td>
+            <td>SKY 및 KAIST·POSTECH 등 연구중심대</td>
+          </tr>
+          <tr>
+            <td><strong>교환학생 선발</strong></td>
+            <td class="rate">3.0 이상</td>
+            <td>3.5 이상</td>
+            <td>상위 파트너 대학(UC, 와세다 등)은 3.5+ 요구</td>
+          </tr>
+          <tr>
+            <td><strong>미국 대학원</strong></td>
+            <td>3.0/4.0 기준</td>
+            <td class="rate">3.5/4.0 이상</td>
+            <td>4.0 스케일 환산 필요, GRE와 병행 고려</td>
+          </tr>
+          <tr>
+            <td><strong>교내 성적 장학금</strong></td>
+            <td>3.5~3.75 이상</td>
+            <td class="rate">4.0 이상</td>
+            <td>학교·장학 종류별 기준 상이 (등록금의 50~100%)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>위 표에서 한 가지 중요한 사실이 보입니다. 대기업 취업 기준인 3.0과 교환학생·대학원 기준 3.0이 같지만, 경쟁력 있는 수준은 목적마다 다릅니다. 취업에서는 3.5 이상이면 학점으로 특별히 불리할 게 없지만, 미국 상위권 대학원을 노린다면 4.5 만점 기준 3.7~4.0을 4.0 스케일로 환산해 3.5 이상은 되어야 한다는 뜻입니다.</p>
+    <p>실용적 조언 하나를 추가하자면, 공기업 NCS 채용에서 학점 정량 환산은 교육부·각 기관 공고마다 다릅니다. 한국전력공사나 국민건강보험공단처럼 학점이 서류 점수에 직접 들어가는 곳은 3.0대 초반과 3.5대 이상의 차이가 수 점 차이로 최종 서류 커트라인을 가를 수 있습니다. 목표 기관의 최근 채용공고를 확인하는 것이 필수입니다.</p>
+
+    <h2>3학년까지 3.2인데 졸업 전에 3.5로 올릴 수 있을까</h2>
+    <p>많은 학생이 3학년 즈음 위기감을 느끼고 이 질문을 합니다. 수치로 직접 계산해 보겠습니다.</p>
+
+    <div class="scenario-box">
+      <h3>이서연 씨(25세, 취업준비 중인 4학년 예정자) 케이스</h3>
+      <p>조건: 3학년까지 90학점 이수 완료, 현재 누적 GPA 3.20 (4.5 만점)<br>
+      목표: 졸업 시 GPA 3.50 (대학원 진학·공기업 지원 목적)<br>
+      남은 학점: 4학년 30학점 (한 학기 15학점 × 2학기)</p>
+    </div>
+
+    <p>현재 누적 가중점수: 3.20 × 90 = <strong>288점</strong><br>
+    목표 누적 가중점수: 3.50 × 120 = <strong>420점</strong><br>
+    4학년에 필요한 가중점수: 420 - 288 = <strong>132점</strong><br>
+    4학년에 필요한 GPA: 132 ÷ 30 = <strong>4.40</strong></p>
+
+    <p>4학년 30학점 전체에서 평균 4.40이 나와야 합니다. 4.5 만점에서 4.40이 나오려면 A+(4.5)와 A0(4.0)의 혼합만 허용되고, B+가 하나라도 들어가면 이미 4.40 아래로 내려갑니다. 사실상 올 A급을 받아야 가능한 목표입니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>4학년 성과 시나리오</th><th>4학년 30학점 가중점수</th><th>졸업 시 GPA</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>4학년 전부 A+ (4.5)</td><td>135</td><td class="rate">3.525</td></tr>
+          <tr><td>4학년 평균 A0 (4.0)</td><td>120</td><td>3.40</td></tr>
+          <tr><td>4학년 평균 B+ (3.5)</td><td>105</td><td>3.275</td></tr>
+          <tr><td>4학년 평균 B0 (3.0)</td><td>90</td><td>3.15</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>충격적인 결과입니다. 4학년 30학점을 전부 A+로 받아야 졸업 GPA가 3.525로 3.5를 간신히 넘습니다. 4학년에 A0 평균이면 3.40에서 멈춥니다. 이것이 바로 "쌓인 학점은 지렛대를 역방향으로 작동시킨다"는 말의 의미입니다. 90학점이라는 무거운 과거가 마지막 30학점의 효과를 희석시킵니다.</p>
+    <p>이서연 씨가 현실적으로 쓸 수 있는 방법은 두 가지입니다. 하나는 4학년에 올인하되 P/F 가능한 과목은 최대한 P/F로 전환해 가중평균에 불리한 과목 수를 줄이는 것, 다른 하나는 과거 학기 중 F가 있는 과목을 재수강해 가중점수를 직접 올리는 것입니다. 이 두 가지를 병행하는 것이 가장 효율적입니다.</p>
+
+    <h2>재수강·P/F 전략으로 GPA 관리하는 법</h2>
+
+    <h3>재수강 전략의 핵심 원칙</h3>
+    <p>재수강은 학점이 큰 과목, 특히 F나 D가 있는 과목부터 우선하는 것이 원칙입니다. 학점이 3인 과목의 F(0점)를 A0(4.0)로 바꾸면 가중점수 12점이 추가됩니다. 반면 학점 1인 과목의 F를 A+로 바꿔도 4.5점만 추가됩니다. 같은 노력이라면 학점이 큰 과목부터입니다.</p>
+    <p>재수강 시 반드시 확인해야 할 세 가지가 있습니다. 첫째, 재수강 후 취득 가능한 최고 등급이 제한되는지 여부(많은 대학이 A0 또는 B+ 상한을 둡니다). 둘째, 학기당·학년 전체에서 재수강 가능한 최대 학점(보통 학기 6학점, 전체 18학점 이내). 셋째, 재수강 과목이 원래 개설 학기와 맞는지 여부(1학기 전용 과목은 2학기에 수강 불가인 경우가 많음).</p>
+
+    <h3>P/F 전략 - 어떤 과목에 쓸까</h3>
+    <p>P/F(패스·페일) 이수는 평점 계산에 포함되지 않습니다. 학점은 인정되고 이수 여부만 성적표에 표시되는 방식입니다. P/F를 전략적으로 활용하면 불리한 과목을 GPA 계산에서 제외할 수 있습니다.</p>
+    <p>어떤 과목에 P/F를 쓸지 판단하는 기준은 간단합니다. 수강 신청 단계에서 "이 과목에서 B0 이상 받기 어렵겠다"고 판단되는 과목에 씁니다. B0(3.0)가 평점을 낮추는 임계점은 현재 누적 GPA 수준에 따라 다르지만, 평점 3.5 이상을 유지 중인 학생이라면 B0가 들어오면 평점이 내려갑니다. 그 과목을 P/F로 바꾸면 플러스는 없어도 마이너스도 없어집니다.</p>
+    <p>주의할 점은 학교마다 학기 또는 전체 P/F 가능 학점 한도가 있다는 것입니다. 또 전공 필수과목은 P/F 지정이 불가한 경우가 대부분이므로, P/F 전략은 주로 일반 교양이나 선택 과목에 적용합니다.</p>
+
+    <h3>학기 중 학점 관리 체크리스트</h3>
+    <p>학기 중 수강 철회(W) 기간이 있다면, 이 시기를 적극 활용하는 것도 GPA 관리의 일부입니다. W는 성적표에 기록되지 않고 이수 학점에도 포함되지 않아 평점에 영향이 없습니다. 중간고사 이후 F가 예상된다면 수강 철회가 재수강보다 선행하는 전략입니다. 단, 철회 시 해당 학점만큼 최소 이수 학점 기준을 충족하지 못하면 장학금 유지 조건이나 졸업 요건에 문제가 생길 수 있습니다.</p>
+    <p>교육부는 학칙으로 대학의 성적 관리 기준을 정하도록 하고 있으며, 구체적인 재수강·P/F·수강 철회 규정은 각 대학의 <a href="https://www.moe.go.kr/" target="_blank" rel="noopener" style="color:#14B8A6;">교육부</a> 인가 학칙에 따라 다릅니다. 소속 대학의 학사지원팀 또는 교학처 홈페이지에서 해당 학기 규정을 정확히 확인해야 합니다.</p>
+
+    <p>관련 글로 <a href="../posts/naesin-grade-guide.html" style="color:#14B8A6;">내신등급 계산기 보는 법 - 석차백분율·9등급제·5등급제 환산 총정리</a>와 <a href="../posts/percent-guide.html" style="color:#14B8A6;">퍼센트 계산 완벽 가이드 - 증감률·퍼센트 포인트·할인가 한 번에</a>도 참고하면 도움이 됩니다. 내신등급은 입시, GPA는 대학 생활과 취업·진학을 관통하는 숫자이지만 계산 구조는 모두 같은 가중평균 원리를 따릅니다.</p>
+
+    <div class="cta-box">
+      <p>내 학점을 직접 계산해 보고 싶으신가요? 과목별 등급과 학점을 입력하면 4.5·4.3·4.0 세 가지 스케일의 평점평균을 동시에 확인할 수 있습니다.</p>
+      <a href="../../calc/tools/gpa/" class="cta-btn">학점 계산기로 바로 계산하기</a>
+    </div>
+    <p style="font-size:13px;color:#6B7280;margin-top:8px;">관련 계산기: <a href="../../calc/tools/naesin-grade/" style="color:#14B8A6;">내신등급 계산기</a> · <a href="../../calc/tools/percent/" style="color:#14B8A6;">퍼센트 계산기</a></p>
+
+    <h2>자주 나오는 질문</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 평점평균(GPA)을 계산하는 정확한 공식이 뭔가요?</div>
+      <div class="faq-a">평점평균은 각 과목의 등급 점수와 이수학점을 곱한 값의 합을 총 이수학점으로 나눈 가중평균입니다. 예를 들어 경영학 3학점 A+(4.5)와 경제학 3학점 B+(3.5)와 체육 1학점 A+(4.5)를 이수했다면, (4.5×3 + 3.5×3 + 4.5×1) ÷ 7 = 28.5 ÷ 7 = 4.07입니다. 단순히 등급을 더해 평균 내는 것이 아니라, 학점이 큰 과목이 평점에 더 큰 비중을 차지하는 구조입니다. 이 때문에 학점이 많은 전공 필수과목의 성적이 전체 평점에 결정적인 영향을 미칩니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 4.5 만점 3.5 학점은 4.3 만점으로 환산하면 얼마인가요?</div>
+      <div class="faq-a">두 스케일은 직접 환산이 어렵습니다. 4.5 만점의 3.5는 최고 대비 약 77.8%(3.5÷4.5)이고, 같은 비율을 4.3 만점에 적용하면 약 3.35점이 됩니다. 그러나 이 단순 비율 환산은 정확하지 않습니다. 4.5 스케일의 3.5는 B+ 등급에 해당하고, 4.3 스케일에서 B+는 3.3점이므로 등급 기준으로 직접 대응하는 것이 더 정확합니다. 교환학생이나 유학 서류 제출 시에는 학교의 공식 성적증명서를 원본 그대로 제출하고, 필요 시 WES 같은 공인 기관의 환산표를 이용하는 것이 원칙입니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. F를 맞은 과목을 재수강하면 기존 F가 평점에서 완전히 사라지나요?</div>
+      <div class="faq-a">학교마다 규정이 다릅니다. 대부분의 국내 대학은 재수강 시 새로운 성적이 기존 성적을 대체해 성적증명서에는 새 성적만 표시됩니다. 그러나 재수강 시 최고 등급을 A0(4.0) 또는 B+(3.5)로 제한하는 학교도 있으니, 학사규정에서 재수강 이수학점 제한 조항을 먼저 확인해야 합니다. 일반적으로 재수강 가능 학점은 학기당 6학점, 대학 생활 전체에서 12~18학점으로 제한됩니다. F가 있는 3학점 전공 과목을 재수강해 A0를 받으면 평점이 최대 0.9~1.0까지 회복될 수 있어 전략적 재수강이 필요합니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 취업할 때 학점이 3.5 이상이면 유리한가요, 차이가 없나요?</div>
+      <div class="faq-a">3.0과 3.5의 차이는 서류 단계에서는 거의 없고, 3.0과 2.9의 차이는 서류 자동 탈락 여부로 나뉠 수 있습니다. 대기업 대부분은 3.0 이상을 서류 기준으로 쓰지만, 실제 채용 면접에서 학점을 세밀하게 따지는 경우는 많지 않습니다. 예외는 공기업·금융권으로, NCS 기반 서류에서 학점을 정량 점수로 환산해 반영하는 곳이 있습니다. 결론적으로 3.0 아래는 확실히 불리하고, 3.0~3.5는 학점 외 역량으로 승부하면 되고, 3.5 이상은 학점이 감점 요소가 되지 않는 안전권이라고 보면 됩니다.</div>
+    </div>
+
+    <h2>GPA는 숫자가 아니라 선택의 기록이다</h2>
+    <p>평점평균은 4년간 어떤 과목에 얼마나 집중했는지를 압축한 숫자입니다. 이 글에서 확인한 핵심 수치는 하나입니다. 3학점 전공 과목의 F 하나가 그 학기 평점을 <strong>0.9</strong> 끌어내립니다. 반대로 그 F를 재수강으로 A0로 바꾸면 0.8이 회복됩니다. 문제는 학기가 지날수록 누적 학점이 쌓여 마지막 학기의 영향력이 점점 작아진다는 점입니다.</p>
+    <p>가장 효과적인 전략은 두 가지를 병행하는 것입니다. 현재 학기에는 학점 큰 과목에 집중해 F를 피하고, 과거 F가 있다면 재수강 우선순위를 학점 순서로 정하는 것입니다. P/F 활용과 수강 철회는 이 전략을 보완하는 도구입니다. 4학년에 올 A+를 받아야 간신히 3.5가 되는 이서연 씨의 시나리오를 기억한다면, 1학년 때부터 GPA를 관리해야 하는 이유가 분명해집니다.</p>
+    <p>본인의 현재 학점에서 졸업 시 목표 GPA가 가능한지는 <a href="../../calc/tools/gpa/" style="color:#14B8A6;">제이퍼 학점 계산기</a>에 과목별 성적을 입력해 확인해 볼 수 있습니다. 스케일도 바꿔가며 비교해 보세요.</p>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p class="footer-copy">© 2026 제이퍼 계산기. 본 내용은 참고용이며 학교 공식 학사규정이 우선합니다.</p>
+</footer>
+
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "각 대학 학사규정·교육부 기준, 2026년 기준",
+  basisDate: "2026년 기준",
+  referenceOrg: "교육부",
+  lastReviewed: '2026.06.14',
+  disclaimer: "본 내용은 참고용이며 소속 대학의 공식 학사규정이 우선합니다.",
+  relatedCalc: { name: '학점 계산기', url: '/calc/tools/gpa/' },
+  category: 'tools'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+
+</body>
+</html>

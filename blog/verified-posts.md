@@ -5,6 +5,10 @@
 
 **2회차 순환 시작 (2026-05-15 재시작)**
 
+- gpa-guide.html (2026-06-14 검증, 당일작업 재검증 오류 1개 수정 - 대학별 만점 매핑 사실오류 web검증 후 정정: 4.5만점=고려대·한양대 / 4.3만점=서울대·연세대·성균관대·이화여대. + meta desc 105→142자 보강·SVG 범례 색구분 개선. 全 GPA 계산 Python 재검산 통과)
+- claude-vs-gpt.html (2026-06-14 검증, 오류 1개 수정 - 프롬프트 캐싱 시나리오 "1일 1만 번"→"월 1만 번", HTML+JSON-LD 2곳 동기화)
+- gpu-cloud-comparison.html (2026-06-14 검증, 이상 없음)
+
 - unemployment-benefit-guide.html (2026-05-16 검증, 오류 2개 수정 - 수치 135만원→162만원, JSON-LD headline)
 - salary-raise-guide.html (2026-05-16 검증, 오류 1개 수정 - JSON-LD headline)
 - parental-leave-pay.html (2026-05-16 검증, 오류 1개 수정 - JSON-LD headline)
