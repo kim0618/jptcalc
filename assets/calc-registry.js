@@ -181,6 +181,11 @@ window.CALC_REGISTRY = {
         "name": "가산수당"
       },
       {
+        "slug": "bonus-pay",
+        "icon": "🎁",
+        "name": "성과급 실수령"
+      },
+      {
         "slug": "job-change",
         "icon": "📊",
         "name": "이직 연봉 비교"
