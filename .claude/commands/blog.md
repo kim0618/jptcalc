@@ -72,6 +72,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
    - **③ 신규 계산기 미커버 우선순위(2026-06-09 기준)**: 네이버 큐 소진 시, 블로그 글이 0개인 신규 계산기부터 글을 쓴다. 최우선 = **생활·도구 6종**(데이터랩 검증 순): 글자수세기(char-count, 최강)·내신등급(naesin-grade, 시즌)·할인율(discount)·퍼센트(percent)·학점(gpa)·단위변환(unit-converter). 각 글은 cta-box·relatedCalc·해당 detail-shell guides로 그 계산기에 유입을 연결한다. (네이버 큐 자체에는 서치어드바이저 검증 주제만 넣고, 이 신규 계산기 주제는 큐에 넣지 않는다.)
 5. 기존 글과 겹치지 않는 주제를 선정하고, 큐 주제에 연결된 계산기와 본문에서 링크
 6. 기존 포스트 파일 1개 읽어서 해당 카테고리의 포맷·색상 정확히 파악
+   - **반드시 헤더·footer 크롬이 정상인 글을 템플릿으로 복사한다** (예: `dog-monthly-cost.html`). 헤더 없는 구버전 글을 베끼면 헤더 누락이 전파된다. 의심되면 `node scripts/check-post-chrome.mjs`로 후보 글 상태를 먼저 확인.
 7. **같은 카테고리 기존 글 목록 확인** - 본문 내 교차 링크용 (2~3개 선정)
 
 ### 시의성 체크 (주제 선정 전 필수)
@@ -282,6 +283,26 @@ highlight-box 바로 다음에 "이 글에서 확인할 수 있는 것" 리스�
 
 ---
 
+## 페이지 크롬 (헤더·footer, 필수)
+
+모든 글은 `<body>` 바로 다음에 헤더, 스크립트 직전에 footer fallback을 넣는다. 인라인 `<style>`에 헤더·footer CSS도 함께 포함(정상 글 복사 시 자동 포함됨).
+
+**헤더 (`<body>` 직후):**
+```html
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo"><div class="logo-icon"><img src="../../assets/logo.svg" alt="로고"/></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+```
+- 로고는 **공백 없이** `제이퍼<span>계산기</span>` (`제이퍼 <span>` 처럼 공백 들어가면 안 됨)
+
+**footer (하단 스크립트 직전):**
+```html
+<footer class="site-footer"><p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용입니다.</p></footer>
+```
+
 ## 본문 구성 순서
 
 1. 도입 문단 (2~3문장, 독자의 문제 상황 공감)
@@ -456,6 +477,7 @@ window.ARTICLE_INFO_CONFIG = {
 □ CTA 계산기 URL 실제 존재 확인 (ls)
 □ 마무리 h2 제목이 "마무리"가 아닌 다른 표현인지 확인
 □ 카카오 애드핏 슬롯 2개 포함 여부 - ①상단(DAN-IE2k, 목차 직후) ②본문중간(DAN-88xhd, 중간 h2 앞, FAQ/마무리 회피). 하단 CTA엔 광고 없어야 함
+□ **공통 크롬 검증: `node scripts/check-post-chrome.mjs` 실행** (헤더·필수 스크립트 누락, 로고 공백 오타 자동 검출. 전 글 통과해야 함)
 ```
 
 ### 4. 결과 요약
