@@ -1,5 +1,21 @@
 # 계산기 페이지 필수 에셋
 
+## ⚠️ 계산기 추가/삭제 후 필수: sibling-section 재생성
+
+계산기를 `assets/calc-registry.js`에 추가/삭제한 뒤 **반드시 실행**:
+
+```bash
+node scripts/inject-sibling.mjs
+```
+
+- 모든 계산기 페이지 하단의 정적 `sibling-section`(관련 계산기 + 관련 가이드)을 registry·블로그 기준으로 재생성
+- **관련 계산기** = calc-registry.js (단일 소스)
+- **관련 가이드** = blog/posts/*.html의 계산기 링크 역매핑 (자동)
+- 이 섹션은 크롤러용(네이버·AI 내부링크). JS 사용자에겐 detail-shell의 `.sibling-section{display:none}`이 숨기고 사이드바를 보여줌
+- 빼먹으면 새 계산기가 크롤러 내부링크 그래프에서 누락됨 (realestate·tools가 과거 이렇게 누락됐던 사례)
+
+블로그 글을 추가했을 때도 재실행하면 해당 계산기의 관련 가이드에 자동 반영된다.
+
 ## CSS (카테고리별 1개 + 공통)
 
 ```html

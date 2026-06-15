@@ -56,3 +56,14 @@ RGB 값은 hex를 분리해서 사용 (예: `#F59E0B` → `rgba(245,158,11,0.15)
 새 글 추가 시 `/sitemap.xml`과 `/rss.xml`에도 항목 추가.
 - sitemap: `<url><loc>`, `<lastmod>` 포함
 - rss: `<item>` 블록, `<pubDate>` RFC 822 형식
+
+## 계산기 sibling-section 갱신 (글이 계산기를 링크하면)
+
+새 글이 본문에서 `/calc/{cat}/{slug}/`를 링크하면, 그 계산기의 "관련 가이드"에 자동 등록하려면 재실행:
+
+```bash
+node scripts/inject-sibling.mjs
+```
+
+- 블로그→계산기 링크를 역매핑해 계산기 페이지 하단 정적 "관련 가이드"(크롤러용)에 반영
+- 필수는 아니나, 계산기↔블로그 양방향 내부링크(SEO)를 최신으로 유지하려면 권장
