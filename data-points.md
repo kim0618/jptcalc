@@ -27,11 +27,15 @@
 - **공식 출처**: https://www.minimumwage.go.kr/ / 고용노동부 고시(moel.go.kr news_seq=18144)
 - **마지막 확인**: 2026-05-31 (검증 완료 - 마스터 시드값 10,030원은 2025년 값 오기였음, 10,320원으로 정정)
 - **변동 주기**: 연 1회 (8월 발표, 익년 1월 적용)
-- **검색 패턴**: `10,320원` / `1만320원` / `최저임금.*2026` / `시급.*10,320` / (구값 `10,030`)
+- **검색 패턴**: `10,320원` / `1만320원` / `최저임금.*2026` / `시급.*10,320` / `10320` (JS 상수 콤마없음 - MIN_HOURLY) / (구값 `10,030`·`10030`)
 - **영향 페이지**:
   - blog/posts/minimum-wage-2026.html (이미 10,320원 정확, 수정 불필요)
   - blog/posts/resignation-dday-checklist.html (구직급여 하한 연동 - 10,030→10,320 수정)
   - blog/posts/apartment-officetel-rental-comparison.html (시간당 환산 - 10,030→10,320 수정)
+  - calc/salary/premium-pay/index.html (가산수당 - JS `const MIN_HOURLY = 10320` 최저시급 미달 경고용, 2026-06-15 추가)
+  - calc/salary/ordinary-wage/index.html (통상임금 - JS MIN_HOURLY = 10320 경고용)
+  - calc/salary/hourly-wage/index.html (시급·일급 - 최저시급 환산, 본문·JS 다수)
+  - ⚠️ calc/salary/take-home-pay·index 등 "10,320원" 본문 표기 페이지도 grep로 일괄 확인
 
 ### 1.2 주휴수당 기준 시간
 - **현재 값**: 주 15시간 이상 근무 시 발생
@@ -114,9 +118,11 @@
 - **공식 출처**: https://www.ei.go.kr/
 - **마지막 확인**: 2026-05-31 (검증 완료, 1.8% 0.9%+0.9% 유지)
 - **변동 주기**: 법 개정 시
-- **검색 패턴**: `고용보험.*0\.9` / `실업급여.*1\.8`
+- **검색 패턴**: `고용보험.*0\.9` / `실업급여.*1\.8` / `0\.009` (JS 상수 - 고용보험 요율)
 - **영향 페이지**:
   - calc/tax/four-insurance/index.html (2026-06 신규 - 근로자 0.9% 부담분)
+  - calc/salary/bonus-pay/index.html (성과급 - JS `bonus * 0.009` 고용보험 당월공제, 본문 "고용보험(0.9%)", 2026-06-15 추가)
+  - calc/salary/take-home-pay/index.html (연봉 실수령 - JS `taxableMonthly * 0.009`)
 
 ### 2.7 건강보험 지역가입자 부과점수당 금액
 - **현재 값**: 점수당 211.5원 / 재산 기본공제 1억원 / 자동차 보험료 폐지 (2026년)
@@ -199,8 +205,14 @@
 - **공식 출처**: https://www.nts.go.kr/ / 홈택스 간이세액표 조회
 - **마지막 확인**: 2026-05-20 (시드 값, 미검증)
 - **변동 주기**: 매년 1월
-- **검색 패턴**: `간이세액표` / `원천징수.*세액` / `간이세액` / `근로소득.*간이`
-- **영향 페이지**: blog/posts/withholding-tax-guide.html, blog/posts/salary-5000-takehome.html, calc/salary/index.html (첫 점검 시 매핑)
+- **검색 패턴**: `간이세액표` / `원천징수.*세액` / `간이세액` / `근로소득.*간이` / `SIMPLIFIED_TAX_TABLE` (JS 테이블) / `JPT_simplifiedTax`
+- **⚠️ 핵심 - 간이세액표 데이터가 2곳에 중복**: ①`assets/salary-tax-table.js` (공유 엔진, 단일소스 지향) ②`calc/salary/take-home-pay/index.html` 인라인 `SIMPLIFIED_TAX_TABLE` (아직 미이관 중복본). **국세청 간이세액표 개정 시 두 파일의 테이블·1000만초과 공식·자녀공제액(12,500/29,160)을 모두 갱신해야 함** (또는 take-home-pay를 salary-tax-table.js 로드로 이관해 중복 제거). bonus-pay는 salary-tax-table.js만 사용하므로 엔진만 고치면 자동 반영.
+- **영향 페이지**:
+  - assets/salary-tax-table.js (★엔진 = 간이세액표 본체 + JPT_simplifiedTax, 2026-06-15 신설)
+  - calc/salary/take-home-pay/index.html (★인라인 중복 테이블 - 함께 갱신 필수)
+  - calc/salary/bonus-pay/index.html (성과급 - 엔진 사용, 상여 원천징수=월평균 방식. 본문 예시 수치도 갱신)
+  - blog/posts/bonus-tax-guide.html (성과급 세금 글 - 시나리오 수치)
+  - blog/posts/withholding-tax-guide.html, blog/posts/salary-5000-takehome.html, calc/salary/index.html (첫 점검 시 매핑)
 
 ---
 
