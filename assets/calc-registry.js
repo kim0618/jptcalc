@@ -176,6 +176,11 @@ window.CALC_REGISTRY = {
         "name": "통상임금"
       },
       {
+        "slug": "premium-pay",
+        "icon": "⏰",
+        "name": "가산수당"
+      },
+      {
         "slug": "job-change",
         "icon": "📊",
         "name": "이직 연봉 비교"
