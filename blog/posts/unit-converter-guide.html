@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>단위변환 계산기 2026 - 평수·인치cm·파운드kg·화씨섭씨 한 번에 변환하는 법 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="평수(평↔㎡), 인치 cm 변환, 파운드 kg, 화씨 섭씨, 마일 km까지 일상에서 자주 헷갈리는 단위 변환을 2026년 기준 변환표와 실생활 시나리오로 총정리. 27인치 모니터가 24인치보다 화면이 26% 넓은 이유까지 수치로 설명합니다." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="단위변환 계산기 2026 - 평수·인치cm·파운드kg·화씨섭씨 한 번에 변환하는 법 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="평수(평↔㎡), 인치 cm 변환, 파운드 kg, 화씨 섭씨, 마일 km까지 일상에서 자주 헷갈리는 단위 변환을 2026년 기준 변환표와 실생활 시나리오로 총정리. 27인치 모니터가 24인치보다 화면이 26% 넓은 이유까지 수치로 설명합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/unit-converter-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/unit-converter-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#14B8A6;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(20,184,166,0.15);color:#14B8A6;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:24px 0 10px}
+    .post-body p{margin-bottom:14px}
+    .post-body ul{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#14B8A6;text-decoration:none}
+    .highlight-box{background:rgba(20,184,166,0.08);border-left:4px solid #14B8A6;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#0F766E;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    td.rate{color:#14B8A6;font-weight:700}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#14B8A6;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .faq-item{border:1px solid #E5E7EB;border-radius:10px;margin:12px 0}
+    .faq-q{font-weight:700;padding:14px 18px;font-size:15px;cursor:pointer;background:#F9FAFB;border-radius:10px}
+    .faq-a{padding:14px 18px;font-size:14px;color:#4B5563;line-height:1.75;border-top:1px solid #E5E7EB}
+    .adfit-slot{text-align:center;margin:28px 0}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "단위변환 계산기 2026 - 평수·인치cm·파운드kg·화씨섭씨 한 번에 변환하는 법",
+  "description": "평수(평↔㎡), 인치 cm 변환, 파운드 kg, 화씨 섭씨, 마일 km까지 일상에서 자주 헷갈리는 단위 변환을 2026년 기준 변환표와 실생활 시나리오로 총정리. 27인치 모니터가 24인치보다 화면이 26% 넓은 이유까지 수치로 설명합니다.",
+  "author": {"@type": "Organization", "name": "제이퍼 계산기", "url": "https://www.jptcalc.kr"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr",
+    "logo": {"@type": "ImageObject", "url": "https://www.jptcalc.kr/android-chrome-512x512.png"}
+  },
+  "datePublished": "2026-06-15",
+  "dateModified": "2026-06-15",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.jptcalc.kr/blog/posts/unit-converter-guide.html"},
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "생활·도구",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "1평은 정확히 몇 ㎡인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1평은 정확히 3.305785㎡입니다. 보통 3.3058㎡ 또는 간단히 3.3㎡로 외웁니다. 반대로 1㎡는 약 0.3025평입니다. 흔히 쓰는 전용면적 84㎡는 84 × 0.3025 = 약 25.4평, 전용 59㎡는 약 17.85평입니다. 다만 분양 광고의 '34평'은 공급면적(전용+공용) 기준이고, 84㎡는 전용면적 기준이라 같은 집을 두 숫자로 부르는 경우가 많으니 어떤 면적인지 먼저 확인해야 합니다. 단위변환 계산기에서 평과 ㎡를 양방향으로 바로 환산할 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "인치를 cm로 바꿀 때 곱하는 숫자는 무엇인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1인치는 정확히 2.54cm이므로 인치 값에 2.54를 곱하면 됩니다. 예를 들어 24인치 모니터는 24 × 2.54 = 60.96cm, 27인치는 68.58cm입니다. 다만 TV와 모니터의 인치는 화면 가로 길이가 아니라 대각선 길이라는 점에 주의해야 합니다. 가구 배치를 위해 가로 폭이 필요하다면 16:9 비율 기준으로 따로 계산해야 하며, 27인치 모니터의 실제 가로 폭은 약 59.8cm입니다. 키를 나타내는 5피트 7인치 같은 표기는 피트에 30.48, 인치에 2.54를 곱해 더하면 170.18cm가 됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "화씨 온도를 섭씨로 빠르게 바꾸는 방법이 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "정확한 공식은 섭씨 = (화씨 - 32) × 5 ÷ 9입니다. 예를 들어 미국 일기예보의 80°F는 (80 - 32) × 5 ÷ 9 = 약 26.7°C로 더운 날씨입니다. 암산이 필요할 때는 '32를 빼고 절반으로 줄인다'가 근사 공식입니다. 80°F라면 32를 빼면 48, 절반은 24°C로 실제 26.7°C와 가깝습니다. 반대로 섭씨를 화씨로 바꿀 때는 섭씨 × 9 ÷ 5 + 32를 씁니다. 사람 체온 36.5°C는 약 97.7°F, 물 끓는점 100°C는 212°F입니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "27인치 모니터는 24인치보다 화면이 얼마나 큰가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "대각선 길이로만 보면 27인치는 24인치보다 약 12.5% 깁니다. 하지만 화면 면적은 대각선 길이의 제곱에 비례하므로 (27 ÷ 24)² = 약 1.27배, 즉 26% 넓습니다. 16:9 비율로 환산하면 24인치는 가로 약 53.1cm·세로 29.9cm, 27인치는 가로 약 59.8cm·세로 33.6cm입니다. '3인치 차이밖에 안 나는데'라고 생각하기 쉽지만 실제 작업 공간은 4분의 1 이상 넓어지는 셈입니다. 인치를 cm로 바꿀 때 대각선과 면적을 구분하면 모니터를 고를 때 도움이 됩니다."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <div class="logo-icon"><img src="../../assets/logo.svg" alt="제이퍼 계산기 로고" /></div>
+      <span class="logo-text">제이퍼<span>계산기</span></span>
+    </a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+
+<div class="post-wrap">
+  <span class="post-tag">생활·도구</span>
+  <h1>단위변환 계산기 2026 - 평수·인치cm·파운드kg·화씨섭씨 한 번에 변환하는 법</h1>
+  <div class="post-meta">
+    <span>2026.06.15</span>
+    <span>제이퍼 계산기 편집팀</span>
+  </div>
+
+  <div class="post-body">
+
+    <p>해외 직구로 옷을 사는데 사이즈가 인치로 적혀 있습니다. 미국 출장지 일기예보는 80도라는데 더운 건지 추운 건지 감이 안 옵니다. 부동산 앱에서는 같은 집을 어떤 곳은 34평, 어떤 곳은 84㎡라고 부릅니다. 우리가 매일 마주치는 숫자의 절반은 익숙하지 않은 단위로 적혀 있습니다.</p>
+    <p>이 글은 일상에서 가장 자주 헷갈리는 단위들을 길이, 무게, 넓이, 온도, 부피로 나눠 한 번에 정리합니다. 외워두면 좋은 변환 계수와 자주 쓰는 값의 변환표, 그리고 실제 상황을 가정한 계산 예시까지 함께 담았습니다. 숫자를 그냥 나열하는 대신 "그래서 실제로 얼마라는 건데"까지 연결해서 설명합니다.</p>
+
+    <div class="highlight-box">
+      <p>해외 직구·여행을 자주 하거나, 아파트 평수와 ㎡가 헷갈리는 분, 모니터·TV 인치를 cm로 가늠하고 싶은 분, 해외 레시피의 오븐 온도를 맞춰야 하는 분에게 특히 도움이 되는 글입니다.</p>
+    </div>
+
+    <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+      <li>1인치=2.54cm, 1평=3.3058㎡ 등 외워두면 좋은 핵심 변환 계수 8가지</li>
+      <li>인치 → cm 변환표 (모니터·TV 24·27·32·55·65인치 + 키 5피트대)</li>
+      <li>전용 59㎡·84㎡·114㎡가 각각 몇 평인지 평↔㎡ 변환표</li>
+      <li>화씨 → 섭씨 변환표 (체온·날씨·오븐 온도 + 암산 근사 공식)</li>
+      <li>kg ↔ 파운드, 캐리어 수하물 23kg이 50파운드인 이유</li>
+      <li>27인치가 24인치보다 화면이 26% 넓은 이유 - 대각선과 면적의 함정</li>
+    </ul>
+
+    <!-- ① 상단 애드핏 슬롯: 목차 직후 -->
+    <div class="adfit-slot">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>먼저 외워두면 평생 쓰는 핵심 변환 계수</h2>
+    <p>단위변환은 사실 곱셈 한 번이면 끝납니다. 어떤 숫자를 곱하느냐만 알면 됩니다. 자주 쓰는 변환 계수를 한 표로 모았습니다. 이 여덟 개만 머릿속에 넣어두면 일상에서 마주치는 단위의 90%는 해결됩니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>변환</th>
+            <th>곱하는 값</th>
+            <th>예시</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>인치 → cm</td><td class="rate">× 2.54</td><td>10인치 = 25.4cm</td></tr>
+          <tr><td>피트 → cm</td><td class="rate">× 30.48</td><td>5피트 = 152.4cm</td></tr>
+          <tr><td>마일 → km</td><td class="rate">× 1.609</td><td>10마일 = 16.09km</td></tr>
+          <tr><td>평 → ㎡</td><td class="rate">× 3.3058</td><td>10평 = 33.06㎡</td></tr>
+          <tr><td>㎡ → 평</td><td class="rate">× 0.3025</td><td>100㎡ = 30.25평</td></tr>
+          <tr><td>파운드 → kg</td><td class="rate">× 0.4536</td><td>10파운드 = 4.54kg</td></tr>
+          <tr><td>kg → 파운드</td><td class="rate">× 2.2046</td><td>10kg = 22.05파운드</td></tr>
+          <tr><td>갤런(US) → 리터</td><td class="rate">× 3.7854</td><td>1갤런 = 3.79리터</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>온도만 예외입니다. 온도는 곱셈만으로 끝나지 않고 더하기·빼기가 들어갑니다. 섭씨를 화씨로 바꿀 때는 섭씨 × 9 ÷ 5 + 32, 화씨를 섭씨로 바꿀 때는 (화씨 - 32) × 5 ÷ 9를 씁니다. 이 부분은 뒤에서 따로 자세히 다룹니다.</p>
+
+    <h2>길이 단위 - 인치·피트·야드·마일을 cm와 km로</h2>
+    <p>길이는 우리가 가장 자주 마주치는 단위입니다. 모니터와 TV는 인치, 해외 사람들의 키는 피트와 인치, 달리기 거리는 마일로 적혀 있습니다. 기준은 단 하나, 1인치 = 2.54cm입니다. 나머지는 여기서 파생됩니다. 1피트는 12인치이므로 30.48cm, 1야드는 3피트이므로 91.44cm입니다.</p>
+
+    <h3>모니터·TV 인치를 cm로</h3>
+    <p>전자제품의 인치는 화면 대각선 길이를 뜻합니다. 자주 쓰는 화면 크기를 cm로 환산하면 다음과 같습니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>인치</th>
+            <th>대각선 cm</th>
+            <th>주 용도</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>24인치</td><td class="rate">60.96cm</td><td>보급형 모니터</td></tr>
+          <tr><td>27인치</td><td class="rate">68.58cm</td><td>사무용·게이밍 모니터</td></tr>
+          <tr><td>32인치</td><td class="rate">81.28cm</td><td>대형 모니터·소형 TV</td></tr>
+          <tr><td>43인치</td><td class="rate">109.22cm</td><td>1인 가구 TV</td></tr>
+          <tr><td>55인치</td><td class="rate">139.7cm</td><td>거실 표준 TV</td></tr>
+          <tr><td>65인치</td><td class="rate">165.1cm</td><td>대형 거실 TV</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin:24px 0;overflow-x:auto">
+    <svg role="img" width="100%" viewBox="0 0 680 240" xmlns="http://www.w3.org/2000/svg">
+      <title>아파트 평형별 ㎡ 환산 비교</title>
+      <rect width="680" height="240" rx="12" fill="#F9FAFB"/>
+      <text x="24" y="34" font-size="13" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">아파트 평형별 면적(㎡) - 1평 = 3.3058㎡ 기준</text>
+
+      <text x="24" y="72" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">18평</text>
+      <rect x="90" y="59" width="119" height="20" rx="4" fill="#14B8A6" opacity="0.45"/>
+      <text x="215" y="74" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">59.5㎡</text>
+
+      <text x="24" y="108" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">24평</text>
+      <rect x="90" y="95" width="159" height="20" rx="4" fill="#14B8A6" opacity="0.6"/>
+      <text x="255" y="110" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">79.3㎡</text>
+
+      <text x="24" y="144" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">32평</text>
+      <rect x="90" y="131" width="212" height="20" rx="4" fill="#14B8A6" opacity="0.75"/>
+      <text x="308" y="146" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">105.8㎡</text>
+
+      <text x="24" y="180" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">45평</text>
+      <rect x="90" y="167" width="298" height="20" rx="4" fill="#14B8A6"/>
+      <text x="394" y="182" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">148.8㎡</text>
+
+      <text x="24" y="216" font-size="11" fill="#9CA3AF" font-family="Pretendard,sans-serif">※ 막대 길이는 면적에 비례 / 1평 = 3.3058㎡ 단순 환산값 (공급·전용면적 구분은 아래 표 참고)</text>
+    </svg>
+    </div>
+
+    <h3>키 표기 - 5피트 7인치는 몇 cm?</h3>
+    <p>해외 프로필이나 운동선수 신장은 5'7"처럼 피트와 인치를 함께 씁니다. 피트에 30.48, 인치에 2.54를 곱해서 더하면 됩니다. 5'7"이라면 5 × 30.48 + 7 × 2.54 = 152.4 + 17.78 = 170.18cm입니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>피트·인치</th>
+            <th>cm</th>
+            <th>피트·인치</th>
+            <th>cm</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>5'5"</td><td class="rate">165.1cm</td><td>5'10"</td><td class="rate">177.8cm</td></tr>
+          <tr><td>5'6"</td><td class="rate">167.6cm</td><td>5'11"</td><td class="rate">180.3cm</td></tr>
+          <tr><td>5'7"</td><td class="rate">170.2cm</td><td>6'0"</td><td class="rate">182.9cm</td></tr>
+          <tr><td>5'8"</td><td class="rate">172.7cm</td><td>6'1"</td><td class="rate">185.4cm</td></tr>
+          <tr><td>5'9"</td><td class="rate">175.3cm</td><td>6'2"</td><td class="rate">188.0cm</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>마일과 km - 달리기·자동차 계기판</h3>
+    <p>1마일은 1.609km입니다. 해외 마라톤이나 미국 자동차 계기판을 볼 때 필요합니다. 5마일은 약 8.05km, 10마일은 약 16.09km입니다. 반대로 km를 마일로 바꿀 때는 0.621을 곱합니다. 풀코스 마라톤 42.195km는 약 26.22마일입니다. 미국 도로 제한속도 65mph는 약 104.6km/h라고 보면 됩니다.</p>
+
+    <h2>무게 단위 - kg과 파운드, 그램과 온스</h2>
+    <p>무게에서 가장 자주 쓰는 변환은 kg과 파운드(lb)입니다. 1파운드는 약 0.4536kg, 1kg은 약 2.2046파운드입니다. 헬스장 덤벨, 해외 택배 무게, 항공 수하물 규정에서 자주 마주칩니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>kg</th>
+            <th>파운드</th>
+            <th>파운드</th>
+            <th>kg</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>50kg</td><td class="rate">110.2lb</td><td>50lb</td><td class="rate">22.7kg</td></tr>
+          <tr><td>60kg</td><td class="rate">132.3lb</td><td>100lb</td><td class="rate">45.4kg</td></tr>
+          <tr><td>70kg</td><td class="rate">154.3lb</td><td>150lb</td><td class="rate">68.0kg</td></tr>
+          <tr><td>80kg</td><td class="rate">176.4lb</td><td>180lb</td><td class="rate">81.6kg</td></tr>
+          <tr><td>90kg</td><td class="rate">198.4lb</td><td>200lb</td><td class="rate">90.7kg</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>여기서 실용적인 팁이 하나 있습니다. 대한항공·아시아나 등 국적기 위탁수하물 1개 무게 제한이 보통 23kg인데, 미국 항공사 규정에서는 같은 기준을 50파운드로 표기합니다. 23kg은 50.7파운드이니 거의 같은 값입니다. 해외 항공권을 살 때 "50lb 제한"을 보고 당황할 필요가 없습니다. 작은 단위인 온스(oz)도 알아두면 좋은데, 1온스는 약 28.35g입니다. 해외 화장품이나 식품 용량 표기에 자주 나옵니다.</p>
+
+    <h2>27인치가 24인치보다 화면이 26% 넓은 이유 - 여기서 함정이 있다</h2>
+    <p>모니터를 고를 때 "24인치에서 27인치로 가면 3인치, 약 12% 정도 커지는 거네"라고 생각하기 쉽습니다. 하지만 실제 작업 공간은 그보다 훨씬 많이 넓어집니다. 함정은 인치가 가로나 세로가 아니라 대각선 길이라는 데 있습니다.</p>
+    <p>대각선이 길어지면 면적은 그 제곱에 비례해서 커집니다. 27을 24로 나누면 1.125, 즉 대각선은 12.5% 깁니다. 하지만 면적 비율은 1.125를 제곱한 1.27배, 약 26.6% 넓습니다.</p>
+    <p>16:9 화면 비율로 실제 가로·세로를 계산해보겠습니다. 24인치 모니터의 가로는 약 53.1cm, 세로는 약 29.9cm로 면적은 약 1,588㎠입니다. 27인치는 가로 약 59.8cm, 세로 약 33.6cm로 면적이 약 2,010㎠입니다. 검산하면 2,010 ÷ 1,588 = 약 1.266으로 26%가 넓다는 계산과 일치합니다.</p>
+    <p>"그래서 뭐가 달라지는데?" 단순히 대각선 숫자만 비교하면 27인치가 살짝 큰 정도로 보이지만, 실제로는 문서를 나란히 두 개 띄울 때의 여유가 확 달라집니다. 대각선 12.5% 차이에 가격을 더 낼 가치가 있나 망설였다면, 실제 화면은 4분의 1 이상 넓어진다는 점을 기준으로 판단하는 것이 정확합니다.</p>
+
+    <!-- ② 본문중간 애드핏 슬롯: 중간 h2 직전 -->
+    <div class="adfit-slot">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-88xhdLeiIK3V35kb" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>넓이 단위 - 평과 ㎡, 부동산에서 가장 헷갈리는 숫자</h2>
+    <p>한국에서 면적 단위는 법적으로 ㎡(제곱미터)로 표기하게 되어 있지만, 일상에서는 여전히 평을 씁니다. 그래서 부동산 거래에서 두 단위가 섞여 나오면 혼란이 생깁니다. 기준은 1평 = 3.305785㎡, 반대로 1㎡ = 약 0.3025평입니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>전용 ㎡</th>
+            <th>평 환산</th>
+            <th>흔히 부르는 평형</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>49㎡</td><td class="rate">14.8평</td><td>소형 (공급 20평대 초반)</td></tr>
+          <tr><td>59㎡</td><td class="rate">17.85평</td><td>공급 24~25평</td></tr>
+          <tr><td>74㎡</td><td class="rate">22.4평</td><td>공급 29~30평</td></tr>
+          <tr><td>84㎡</td><td class="rate">25.41평</td><td>공급 32~34평 (국민평형)</td></tr>
+          <tr><td>114㎡</td><td class="rate">34.49평</td><td>공급 45평대</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>표를 보면 이상한 점이 눈에 띕니다. 전용 84㎡는 25.4평인데 왜 흔히 "34평 아파트"라고 부를까요? 답은 평수의 기준이 다르기 때문입니다. 분양 광고의 평수는 전용면적에 계단·복도·엘리베이터 같은 공용면적을 더한 공급면적 기준이고, ㎡ 표기는 우리 집 현관 안쪽 실제 면적인 전용면적 기준입니다. 같은 집을 어떤 기준으로 보느냐에 따라 25평도 되고 34평도 되는 것입니다. 이 부분은 <a href="../posts/percent-guide.html" style="color:#14B8A6;">비율과 퍼센트 개념</a>을 알면 더 명확해집니다. 공급면적 대비 전용면적의 비율을 전용률이라 부르며 보통 70~75% 수준입니다.</p>
+
+    <h3>시나리오 1 - 전세 매물 두 곳, 진짜 더 넓은 집은?</h3>
+    <p>직장인 A씨(31세)는 전세 매물 두 곳을 비교 중입니다. B아파트는 "공급 25평", C오피스텔은 "전용 65㎡"로 광고되어 있습니다. 단순히 숫자만 보면 25평과 65㎡라 비교가 안 됩니다.</p>
+    <p><strong>B아파트(공급 25평):</strong> 전용률 약 75%를 적용하면 전용면적은 25 × 0.75 = 약 18.75평 = 약 62㎡</p>
+    <p><strong>C오피스텔(전용 65㎡):</strong> 65 × 0.3025 = 약 19.66평</p>
+    <p>검산하면 C오피스텔의 전용 65㎡가 B아파트의 전용 약 62㎡보다 넓습니다. 광고만 보면 "25평이 더 커 보였지만" 실제 내가 쓰는 공간은 전용면적 65㎡인 C가 더 넓습니다. 다만 오피스텔은 전용률이 아파트보다 낮은 경우가 많아 관리비 부담이 다를 수 있으니, 전용면적과 함께 관리비도 따져야 정확한 비교가 됩니다.</p>
+
+    <h3>시나리오 2 - 해외 부동산 광고의 제곱피트(sq ft)</h3>
+    <p>요즘은 해외 부동산이나 에어비앤비 숙소 면적이 제곱피트(sq ft)로 적힌 경우도 많습니다. 1제곱피트는 약 0.0929㎡입니다. 미국 아파트 광고에 "900 sq ft"라고 적혀 있다면 900 × 0.0929 = 약 83.6㎡, 평으로는 약 25.3평입니다. 한국의 국민평형 84㎡와 거의 같은 크기라고 보면 감이 잡힙니다. 이렇게 낯선 단위도 결국 익숙한 평이나 ㎡로 한 번만 바꿔보면 크기를 가늠할 수 있습니다.</p>
+
+    <h2>온도 단위 - 화씨와 섭씨, 여행과 요리의 필수</h2>
+    <p>온도는 다른 단위와 달리 곱셈만으로 안 끝납니다. 0의 위치(어는점)와 눈금 간격이 모두 다르기 때문입니다. 공식을 한 번만 정리해두면 됩니다. 섭씨를 화씨로 바꿀 때는 섭씨 × 9 ÷ 5 + 32, 화씨를 섭씨로 바꿀 때는 (화씨 - 32) × 5 ÷ 9입니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>섭씨(°C)</th>
+            <th>화씨(°F)</th>
+            <th>상황</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>0°C</td><td class="rate">32°F</td><td>물이 어는 점</td></tr>
+          <tr><td>20°C</td><td class="rate">68°F</td><td>쾌적한 실내</td></tr>
+          <tr><td>25°C</td><td class="rate">77°F</td><td>초여름 날씨</td></tr>
+          <tr><td>30°C</td><td class="rate">86°F</td><td>한여름 더위</td></tr>
+          <tr><td>36.5°C</td><td class="rate">97.7°F</td><td>사람 체온</td></tr>
+          <tr><td>100°C</td><td class="rate">212°F</td><td>물이 끓는 점</td></tr>
+          <tr><td>180°C</td><td class="rate">356°F</td><td>오븐 베이킹 온도</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>여행자에게 가장 유용한 건 화씨를 섭씨로 빠르게 어림하는 암산법입니다. 정확한 공식 대신 "32를 빼고 반으로 줄인다"만 기억하면 됩니다. 미국 일기예보가 80°F라면 32를 빼서 48, 절반은 24°C입니다. 실제 정확한 값은 (80 - 32) × 5 ÷ 9 = 약 26.7°C이니 2도 정도 오차로 충분히 쓸 만합니다. 90°F는 32를 빼면 58, 절반은 29°C(실제 32.2°C), 폭염이라는 뜻입니다.</p>
+    <p>요리할 때는 반대 방향이 필요합니다. 해외 레시피가 화씨로 적혀 있으면 오븐을 섭씨로 맞춰야 합니다. 350°F는 (350 - 32) × 5 ÷ 9 = 약 176.7°C로 보통 180°C에 맞춥니다. 400°F는 약 204.4°C이니 200°C로 설정하면 됩니다. 베이킹은 10~20도 차이로 결과가 달라지므로 이때만큼은 암산보다 정확한 변환을 권합니다.</p>
+
+    <h2>부피 단위 - 리터·갤런·온스</h2>
+    <p>부피는 해외 식품과 자동차 연비에서 자주 마주칩니다. 미국에서 쓰는 1갤런은 약 3.785리터입니다(영국 갤런은 약 4.546리터로 다릅니다). 미국 마트에서 우유 1갤런을 사면 약 3.79리터, 우리나라 900mL 우유의 네 배가 조금 넘습니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>부피 단위</th>
+            <th>환산값</th>
+            <th>흔한 예시</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1갤런(US)</td><td class="rate">3.785리터</td><td>미국 우유 한 통</td></tr>
+          <tr><td>1액량온스(fl oz)</td><td class="rate">29.57mL</td><td>해외 음료 용량 표기</td></tr>
+          <tr><td>12fl oz</td><td class="rate">약 355mL</td><td>카페 톨 사이즈</td></tr>
+          <tr><td>16fl oz</td><td class="rate">약 473mL</td><td>카페 그란데 사이즈</td></tr>
+          <tr><td>1쿼트(quart)</td><td class="rate">0.946리터</td><td>약 1리터, 갤런의 1/4</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>자동차 연비도 단위가 다릅니다. 미국은 mpg(갤런당 마일)를 쓰는데, 30mpg를 우리나라 km/L로 바꾸면 약 12.75km/L입니다. 30마일은 48.3km, 1갤런은 3.785리터이므로 48.3 ÷ 3.785 = 약 12.76km/L가 됩니다. 미국 차 광고의 "30mpg 고연비"는 우리 기준으로 평범한 수준이라는 것을 알 수 있습니다.</p>
+
+    <h2>단위변환할 때 자주 하는 실수 세 가지</h2>
+    <p>마지막으로 사람들이 단위변환에서 반복적으로 틀리는 부분을 정리합니다. 첫째, 면적과 부피는 길이의 제곱·세제곱이라는 점입니다. 1m = 100cm이지만 1㎡ = 10,000㎠, 1㎥ = 1,000,000㎤입니다. 길이 변환 계수를 그대로 면적에 쓰면 100배, 1만 배씩 틀립니다.</p>
+    <p>둘째, 같은 이름의 단위라도 나라마다 다릅니다. 갤런은 미국과 영국이 다르고, 온스도 무게 온스(28.35g)와 액량 온스(29.57mL)가 별개입니다. 어느 나라, 어떤 종류인지 확인하는 습관이 필요합니다. 셋째, 온도는 비율이 아니라 눈금이라는 점입니다. 20°C가 10°C의 두 배로 덥다고 말할 수 없습니다. 0의 위치가 임의로 정해진 단위라 곱하기·나누기로 비교하면 안 됩니다. 이런 차이를 머릿속으로 매번 따지기 번거롭다면, <a href="../posts/discount-guide.html" style="color:#14B8A6;">할인율 계산</a>이나 <a href="../posts/gpa-guide.html" style="color:#14B8A6;">학점 환산</a>처럼 단위변환도 계산기로 한 번에 처리하는 것이 가장 정확합니다.</p>
+
+    <p>참고로 우리나라 법정 계량 단위는 국가기술표준원(<a href="https://www.kats.go.kr" target="_blank" rel="noopener" style="color:#14B8A6;">kats.go.kr</a>)이 관리하는 국제단위계(SI)를 따릅니다. 계량에 관한 법률에 따라 상거래와 증명에서는 평·인치 같은 비법정 단위 대신 ㎡·cm를 쓰도록 되어 있어, 공식 문서에서는 ㎡ 표기가 기준이 됩니다.</p>
+
+    <div class="cta-box">
+      <p>인치 cm, 평 ㎡, 파운드 kg, 화씨 섭씨까지<br>제이퍼 단위변환 계산기로 양방향 변환을 한 번에 해보세요.</p>
+      <a href="../../calc/tools/unit-converter/" class="cta-btn">단위변환 계산기 바로가기 →</a>
+    </div>
+    <p style="font-size:13px;color:#6B7280;margin-top:8px;text-align:center">길이 / 무게 / 넓이 / 온도 / 부피 단위를 양방향으로 즉시 환산</p>
+
+    <h2>자주 나오는 질문</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 1평은 정확히 몇 ㎡인가요?</div>
+      <div class="faq-a">1평은 정확히 3.305785㎡입니다. 보통 3.3058㎡ 또는 간단히 3.3㎡로 외웁니다. 반대로 1㎡는 약 0.3025평입니다. 흔히 쓰는 전용면적 84㎡는 84 × 0.3025 = 약 25.4평, 전용 59㎡는 약 17.85평입니다. 다만 분양 광고의 '34평'은 공급면적(전용+공용) 기준이고, 84㎡는 전용면적 기준이라 같은 집을 두 숫자로 부르는 경우가 많으니 어떤 면적인지 먼저 확인해야 합니다. 단위변환 계산기에서 평과 ㎡를 양방향으로 바로 환산할 수 있습니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 인치를 cm로 바꿀 때 곱하는 숫자는 무엇인가요?</div>
+      <div class="faq-a">1인치는 정확히 2.54cm이므로 인치 값에 2.54를 곱하면 됩니다. 예를 들어 24인치 모니터는 24 × 2.54 = 60.96cm, 27인치는 68.58cm입니다. 다만 TV와 모니터의 인치는 화면 가로 길이가 아니라 대각선 길이라는 점에 주의해야 합니다. 가구 배치를 위해 가로 폭이 필요하다면 16:9 비율 기준으로 따로 계산해야 하며, 27인치 모니터의 실제 가로 폭은 약 59.8cm입니다. 키를 나타내는 5피트 7인치 같은 표기는 피트에 30.48, 인치에 2.54를 곱해 더하면 170.18cm가 됩니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 화씨 온도를 섭씨로 빠르게 바꾸는 방법이 있나요?</div>
+      <div class="faq-a">정확한 공식은 섭씨 = (화씨 - 32) × 5 ÷ 9입니다. 예를 들어 미국 일기예보의 80°F는 (80 - 32) × 5 ÷ 9 = 약 26.7°C로 더운 날씨입니다. 암산이 필요할 때는 '32를 빼고 절반으로 줄인다'가 근사 공식입니다. 80°F라면 32를 빼면 48, 절반은 24°C로 실제 26.7°C와 가깝습니다. 반대로 섭씨를 화씨로 바꿀 때는 섭씨 × 9 ÷ 5 + 32를 씁니다. 사람 체온 36.5°C는 약 97.7°F, 물 끓는점 100°C는 212°F입니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 27인치 모니터는 24인치보다 화면이 얼마나 큰가요?</div>
+      <div class="faq-a">대각선 길이로만 보면 27인치는 24인치보다 약 12.5% 깁니다. 하지만 화면 면적은 대각선 길이의 제곱에 비례하므로 (27 ÷ 24)² = 약 1.27배, 즉 26% 넓습니다. 16:9 비율로 환산하면 24인치는 가로 약 53.1cm·세로 29.9cm, 27인치는 가로 약 59.8cm·세로 33.6cm입니다. '3인치 차이밖에 안 나는데'라고 생각하기 쉽지만 실제 작업 공간은 4분의 1 이상 넓어지는 셈입니다. 인치를 cm로 바꿀 때 대각선과 면적을 구분하면 모니터를 고를 때 도움이 됩니다.</div>
+    </div>
+
+    <h2>한 줄 요약 - 결국 곱하는 숫자 하나면 끝난다</h2>
+    <p>단위변환의 핵심은 결국 '어떤 숫자를 곱하느냐'입니다. 인치는 2.54, 평은 3.3058, 파운드는 0.4536, 마일은 1.609. 이 네 개만 외워도 일상에서 마주치는 단위의 대부분이 풀립니다. 온도만 더하기·빼기가 들어간다는 점을 기억하면 됩니다.</p>
+    <p>그리고 두 가지 함정만 피하면 실수가 사라집니다. 면적과 부피는 길이의 제곱·세제곱이라 변환 계수를 그대로 쓰면 안 된다는 점, 그리고 같은 이름의 단위도 나라와 종류에 따라 값이 다르다는 점입니다. 27인치가 24인치보다 화면이 26% 넓었던 것도 결국 대각선과 면적의 관계를 구분하지 못해 생기는 착각이었습니다.</p>
+    <p>자주 쓰는 변환표는 한 번 훑어두면 어림셈에 큰 도움이 됩니다. 하지만 부동산 계약이나 베이킹 온도처럼 정확한 숫자가 필요한 순간에는 암산보다 계산기가 안전합니다. 길이, 무게, 넓이, 온도, 부피를 양방향으로 한 번에 바꿔야 할 때는 단위변환 계산기를 활용해보세요. 숫자 하나만 바꿔도 결과가 즉시 나옵니다.</p>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-copy">© 2026 제이퍼 계산기. All rights reserved.</div>
+</footer>
+
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "국제단위계(SI) 환산 기준, 2026년 기준",
+  basisDate: "2026년 기준",
+  referenceOrg: "국가기술표준원(kats.go.kr)",
+  lastReviewed: '2026.06.15',
+  disclaimer: "본 내용은 참고용이며, 공식 계약·증명 시에는 법정 계량 단위(㎡·cm 등) 기준으로 다시 확인하시기 바랍니다.",
+  relatedCalc: { name: '단위변환 계산기', url: '/calc/tools/unit-converter/' },
+  category: 'tools'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>
