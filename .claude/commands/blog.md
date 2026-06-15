@@ -69,7 +69,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 2. `ls /home/tjd618/jptcalc/calc/` 및 하위 폴더 확인해서 사용 가능한 계산기 URL 파악
 3. `/home/tjd618/jptcalc/blog/index.html` 에서 data-cat 개수를 세서 카테고리별 글 수 확인
 4. **주제 선정 우선순위: ① 진행 중 클러스터의 위성 주제 → ② 네이버 타겟 큐 Tier 순서 → ③ (큐 비었거나 사용자 지정 시) 블로그 글이 아직 없는 신규 계산기 우선 → ④ 글 적은 카테고리.** "클러스터 진행 현황" 블록에 진행 중 클러스터가 있으면 그 위성을 먼저 뽑아 클러스터를 채운다.
-   - **③ 신규 계산기 미커버 우선순위(2026-06-09 기준)**: 네이버 큐 소진 시, 블로그 글이 0개인 신규 계산기부터 글을 쓴다. 최우선 = **생활·도구 6종**(데이터랩 검증 순): 글자수세기(char-count, 최강)·내신등급(naesin-grade, 시즌)·할인율(discount)·퍼센트(percent)·학점(gpa)·단위변환(unit-converter). 각 글은 cta-box·relatedCalc·해당 detail-shell guides로 그 계산기에 유입을 연결한다. (네이버 큐 자체에는 서치어드바이저 검증 주제만 넣고, 이 신규 계산기 주제는 큐에 넣지 않는다.)
+   - **③ 신규 계산기 미커버 우선순위**: 네이버 큐 소진 시, 블로그 글이 0개인 신규 계산기부터 글을 쓴다. **대상 목록은 하드코딩하지 말고 `node scripts/find-orphan-calcs.mjs`를 실행해 "연결된 블로그가 없는 계산기"를 그때그때 받아온다** (계산기가 새로 추가되면 자동으로 이 목록에 잡힘). 데이터랩 검증 수요가 높은 것부터(예: 생활·도구 글자수세기·내신등급) 고른다. 각 글은 cta-box·relatedCalc·해당 detail-shell guides로 그 계산기에 유입을 연결한다. (네이버 큐 자체에는 서치어드바이저 검증 주제만 넣고, 이 신규 계산기 주제는 큐에 넣지 않는다.)
 5. 기존 글과 겹치지 않는 주제를 선정하고, 큐 주제에 연결된 계산기와 본문에서 링크
 6. 기존 포스트 파일 1개 읽어서 해당 카테고리의 포맷·색상 정확히 파악
    - **반드시 헤더·footer 크롬이 정상인 글을 템플릿으로 복사한다** (예: `dog-monthly-cost.html`). 헤더 없는 구버전 글을 베끼면 헤더 누락이 전파된다. 의심되면 `node scripts/check-post-chrome.mjs`로 후보 글 상태를 먼저 확인.
@@ -457,6 +457,13 @@ window.ARTICLE_INFO_CONFIG = {
 - `<lastmod>오늘날짜(YYYY-MM-DD)</lastmod>`
 - `<changefreq>monthly</changefreq>`
 - `<priority>0.7</priority>`
+
+### 2-1. 계산기 양방향 연결 (글이 계산기를 다루면 필수)
+글→계산기, 계산기→글 양쪽을 모두 잇는다. 신규 계산기 글(우선순위 ③)이면 특히 빠짐없이.
+1. **글→계산기**: 본문 cta-box href + `ARTICLE_INFO_CONFIG.relatedCalc.url` 을 정확한 `/calc/{cat}/{slug}/` 로 지정 (실제 폴더 존재 `ls`로 확인)
+2. **계산기→글**: 해당 카테고리 `assets/{cat}-detail-shell.js` 의 그 계산기 `guides` 배열에 `['/blog/posts/[파일명].html','글 제목']` 형식으로 새 글 1줄 추가 (배열 맨 앞에)
+3. **sibling-section 재생성**: `node scripts/inject-sibling.mjs` 실행 (계산기 페이지 하단 크롤러용 "관련 가이드"에 새 글 반영)
+4. **고아 해소 확인**: `node scripts/find-orphan-calcs.mjs` 다시 실행 → 방금 다룬 계산기가 목록에서 빠졌는지 확인
 
 ### 3. 작성 후 자체 검증 (필수)
 ```
