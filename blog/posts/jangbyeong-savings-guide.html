@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>장병내일준비적금 만기 수령액 2026 - 정부 매칭 100% 비과세 계산 총정리 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="장병내일준비적금은 만기 전역 시 납입 원금의 100%를 정부가 매칭해 줍니다. 월 55만원 18개월이면 약 2,019만원. 2026 기준 매칭지원금·납입한도·비과세·복무기간별 만기 수령액을 표와 계산 예시로 정리했습니다." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="장병내일준비적금 만기 수령액 2026 - 정부 매칭 100% 비과세 계산 총정리 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="장병내일준비적금은 만기 전역 시 납입 원금의 100%를 정부가 매칭해 줍니다. 월 55만원 18개월이면 약 2,019만원. 매칭지원금·납입한도·비과세·복무기간별 만기 수령액을 정리했습니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/jangbyeong-savings-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/jangbyeong-savings-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BRSX3F10MZ');
+  </script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #6366F1;
+      --gray-400: #9CA3AF; --gray-500: #6B7280; --gray-600: #4B5563;
+      --dark-bg: #ffffff; --dark-card: #F9FAFB; --dark-border: rgba(0,0,0,0.08);
+    }
+    body { font-family: 'Pretendard', -apple-system, sans-serif; background: #ffffff; color: #111827; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+
+    .site-header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .header-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; gap: 24px; }
+    .site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .logo-icon { width: 32px; height: 32px; }
+    .logo-icon img { width: 32px; height: 32px; display: block; }
+    .logo-text { font-size: 18px; font-weight: 900; color: #111827; letter-spacing: -0.5px; }
+    .logo-text span { color: #818CF8; }
+    .header-back { margin-left: auto; font-size: 13px; font-weight: 600; color: #6B7280; text-decoration: none !important; }
+    .header-back:hover { color: #111827; }
+
+    .post-wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+    .post-tag { display: inline-block; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; background: rgba(99,102,241,0.15); color: #6366F1; margin-bottom: 16px; }
+    h1 { font-size: 26px; font-weight: 900; color: #111827; line-height: 1.35; margin-bottom: 12px; }
+    .post-meta { font-size: 13px; color: #4B5563; margin-bottom: 36px; display: flex; gap: 12px; }
+    .post-body { font-size: 15px; color: #111827; line-height: 1.8; }
+    .post-body h2 { font-size: 19px; font-weight: 800; color: #111827; margin: 40px 0 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .post-body h3 { font-size: 16px; font-weight: 700; color: #111827; margin: 24px 0 10px; }
+    .post-body p { margin-bottom: 14px; }
+    .post-body ul, .post-body ol { margin: 10px 0 14px 20px; }
+    .post-body li { margin-bottom: 8px; }
+    .post-body a { color: var(--primary); text-decoration: none !important; }
+    .post-body a:hover { text-decoration: underline; }
+    .highlight-box { background: rgba(99,102,241,0.08); border-left: 4px solid var(--primary); border-radius: 0 10px 10px 0; padding: 16px 20px; margin: 20px 0; }
+    .highlight-box p { margin: 0; color: #3730A3; font-size: 14px; }
+    .table-wrap { overflow-x: auto; margin: 20px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th { background: #F9FAFB; color: #111827; font-weight: 700; padding: 10px 14px; text-align: left; border: 1px solid rgba(0,0,0,0.08); }
+    td { padding: 10px 14px; border: 1px solid rgba(0,0,0,0.08); color: #1F2937; }
+    tr:hover td { background: rgba(0,0,0,0.02); }
+    .cta-box { background: #F9FAFB; border: 1px solid rgba(0,0,0,0.08); border-radius: 14px; padding: 24px; margin: 40px 0; text-align: center; }
+    .cta-box p { color: #374151; font-size: 14px; margin-bottom: 14px; }
+    .cta-btn { display: inline-block; padding: 12px 28px; background: #6366F1; color: #fff !important; font-size: 14px; font-weight: 800; border-radius: 10px; text-decoration: none !important; }
+    .cta-btn:hover { opacity: 0.9; }
+
+    .step-box { display: flex; gap: 16px; margin: 16px 0; }
+    .step-num { flex-shrink: 0; width: 28px; height: 28px; background: #6366F1; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; margin-top: 2px; }
+    .step-content { flex: 1; }
+    .step-content strong { display: block; font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .faq-item { background: #F9FAFB; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; padding: 20px; margin: 16px 0; }
+    .faq-q { font-weight: 800; color: #111827; margin-bottom: 8px; font-size: 15px; }
+    .faq-a { color: #374151; font-size: 14px; line-height: 1.7; margin: 0; }
+    td.rate { text-align: center; font-weight: 700; color: #6366F1; }
+    td.total-rate { text-align: center; font-weight: 700; color: #111827; }
+
+    .site-footer { border-top: 1px solid rgba(0,0,0,0.08); padding: 24px; text-align: center; }
+    .footer-copy { font-size: 10px; color: #374151; }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "장병내일준비적금 만기 수령액 2026 - 정부 매칭 100% 비과세 계산 총정리",
+  "description": "장병내일준비적금은 만기 전역 시 납입 원금의 100%를 정부가 매칭해 줍니다. 월 55만원 18개월이면 약 2,019만원. 2026 기준 매칭지원금·납입한도·비과세·복무기간별 만기 수령액을 표와 계산 예시로 정리했습니다.",
+  "author":{"@type":"Person","name":"Jay Kim","url":"https://www.jptcalc.kr/about.html","jobTitle":"제이퍼 계산기 운영자"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.jptcalc.kr/android-chrome-512x512.png"
+    }
+  },
+  "datePublished": "2026-06-16",
+  "dateModified": "2026-06-16",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.jptcalc.kr/blog/posts/jangbyeong-savings-guide.html"
+  },
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "금융",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "장병내일준비적금 정부 매칭지원금은 얼마나 받나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "2024년부터 매칭지원금이 납입 원금의 100%로 지원됩니다. 만기 전역(소집해제)으로 적금을 만기 해지하면 내가 납입한 원금과 같은 금액을 정부가 추가로 지급합니다. 예를 들어 18개월간 원금 990만원을 모으면 매칭지원금 990만원이 더해져 매칭만으로 1,980만원이 됩니다. 과거 2022년 33%, 2023년 71%였던 매칭률이 100%까지 올라온 것이라 지금 가입하는 장병이 역대 가장 유리합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "월 얼마까지 납입할 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "개인별 월 납입한도는 55만원입니다. 2025년에 종전 40만원에서 55만원으로 상향됐습니다. 계좌별로는 월 30만원까지이며 1인 최대 2계좌까지 개설할 수 있고, 납입한도는 5만원 단위로 조정합니다. 매칭지원금도 납입 원금을 기준으로 계산되므로 한도를 채워 넣을수록 만기 때 받는 매칭 금액이 커집니다. 여력이 된다면 월 55만원을 모두 채우는 것이 가장 효율적입니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "적금 이자에 세금이 붙나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "장병내일준비적금은 이자소득세 15.4%가 면제되는 비과세 상품입니다. 일반 적금은 이자에서 14% 소득세와 1.4% 지방소득세를 합친 15.4%를 떼지만, 이 적금은 은행 이자 전액을 그대로 받습니다. 비과세 혜택은 2026년 12월 31일까지 가입한 계좌에 적용됩니다. 같은 금리라도 일반 적금보다 세후 이자가 약 18% 더 많은 셈입니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "중도에 적금을 해지하면 매칭지원금을 받나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "정부 매칭지원금은 만기 전역(소집해제) 시 만기 해지하는 경우에만 지급됩니다. 복무 중 중도 해지하면 그동안 납입한 원금과 은행 이자는 돌려받지만 매칭지원금은 받지 못합니다. 매칭이 원금의 100%라 사실상 절반을 포기하는 셈이므로, 급전이 필요하더라도 적금담보대출을 알아보는 편이 낫습니다. 가능하면 전역까지 유지하는 것이 핵심입니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "예전에 있던 1% 이자지원금은 지금도 받나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "과거 운영하던 1% 이자지원금은 은행 이자에 더해 국가가 1%포인트를 보태주던 제도로, 2023년 12월 31일까지 납입된 금액에만 적용되었습니다. 이후 정부 지원이 매칭지원금 100%로 통합되면서 신규 가입분에는 1% 이자지원금이 적용되지 않습니다. 따라서 2026년에 가입한다면 만기 수령액은 납입 원금과 비과세 은행이자, 그리고 매칭지원금 100%로 구성된다고 보면 됩니다."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.jptcalc.kr/"}, {"@type": "ListItem", "position": 2, "name": "블로그", "item": "https://www.jptcalc.kr/blog/"}, {"@type": "ListItem", "position": 3, "name": "금융", "item": "https://www.jptcalc.kr/blog/?cat=금융"}, {"@type": "ListItem", "position": 4, "name": "장병내일준비적금 만기 수령액 2026 - 정부 매칭 100% 비과세 계산 총정리", "item": "https://www.jptcalc.kr/blog/posts/jangbyeong-savings-guide.html"}]}</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo">
+      <div class="logo-icon"><img src="../../assets/logo.svg" alt="제이퍼 계산기 로고" /></div>
+      <span class="logo-text">제이퍼<span>계산기</span></span>
+    </a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+
+<div class="post-wrap">
+  <span class="post-tag">금융</span>
+  <h1>장병내일준비적금 만기 수령액 2026 - 정부 매칭 100% 비과세 계산 총정리</h1>
+  <div class="post-meta">
+    <span>📅 2026.06.16</span>
+    <span>·</span>
+    <span>9분 읽기</span>
+  </div>
+
+  <div class="post-body">
+    <p>내 돈 990만원을 넣었는데 전역할 때 약 2,019만원을 받는다. 이자율이 두 배라는 말이 아니라, 정부가 내 원금과 똑같은 금액을 통째로 얹어준다는 뜻입니다. 장병내일준비적금이 "군 복무 중 무조건 들어야 하는 적금"으로 불리는 이유가 여기 있습니다. 매칭지원금이 원금의 100%, 이자는 비과세, 기본금리도 시중 적금보다 높습니다. 그런데 막상 만기 때 얼마를 받는지, 월 얼마를 넣어야 하는지 정확히 계산해 본 사람은 의외로 적습니다.</p>
+
+    <div class="highlight-box">
+      <p><strong>이 글이 필요한 사람:</strong> 입대를 앞두고 적금을 얼마씩 넣을지 고민하는 분 / 복무 중인데 한도를 다 채울지 망설이는 분 / 전역 시 받을 목돈이 정확히 얼마인지 알고 싶은 분 / 자녀의 군 적금을 챙겨주려는 부모님</p>
+    </div>
+
+    <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+      <li>2026년 매칭지원금 100%·월 55만원 한도 등 최신 제도 기준</li>
+      <li>월 납입액 30~55만원별 18개월 만기 수령액 비교표</li>
+      <li>복무기간 12·18·21·24개월별 만기 수령액 표</li>
+      <li>현역병·사회복무요원 등 인물 3명의 실제 계산 예시</li>
+      <li>같은 990만원을 일반 적금에 넣었을 때와의 수령액 격차</li>
+      <li>중도해지·우대금리·가입은행 등 가입 전 체크포인트</li>
+    </ul>
+
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>장병내일준비적금이 뭐길래</h2>
+    <p>장병내일준비적금은 현역병, 상근예비역, 사회복무요원, 대체복무요원이 복무 기간 동안 가입할 수 있는 정책형 적금입니다. 국방부와 병무청, 법무부가 함께 운영하고 14개 시중은행에서 가입할 수 있습니다. 군 복무 중 모은 돈에 정부가 목돈을 보태 사회 복귀를 돕는다는 취지로 만들어졌습니다.</p>
+    <p>핵심은 세 가지입니다. 첫째, 만기 전역 시 납입 원금의 100%를 정부가 매칭지원금으로 더 줍니다. 둘째, 이자소득세 15.4%가 면제되는 비과세 상품입니다. 셋째, 은행 기본금리 자체가 연 5% 안팎으로 시중 적금보다 높게 설정돼 있습니다. 이 세 가지가 겹치면서 같은 돈을 모아도 전역할 때 받는 금액이 두 배 가까이 불어납니다.</p>
+
+    <h3>2026년 기준 제도 요약</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>항목</th><th>2026년 기준</th></tr>
+        <tr><td>정부 매칭지원금</td><td class="rate">원금의 100%</td></tr>
+        <tr><td>개인별 월 납입한도</td><td>55만원 (2025년 40만원에서 상향)</td></tr>
+        <tr><td>계좌별 월 한도</td><td>30만원 (1인 최대 2계좌, 5만원 단위)</td></tr>
+        <tr><td>가입(납입) 기간</td><td>최소 1개월 ~ 최대 24개월</td></tr>
+        <tr><td>은행 기본금리</td><td>연 5% 안팎 (은행별 상이, 우대금리 별도)</td></tr>
+        <tr><td>이자 과세</td><td class="rate">비과세 (2026.12.31 가입분까지)</td></tr>
+        <tr><td>가입 대상</td><td>현역병·상근예비역·사회복무요원·대체복무요원</td></tr>
+      </table>
+    </div>
+    <p>매칭지원금이 처음부터 100%였던 건 아닙니다. 2022년에는 33%, 2023년에는 71%였다가 2024년부터 100%로 올랐습니다. 정책브리핑 자료에 따르면 납입한도도 2025년에 개인별 월 40만원에서 55만원으로 상향됐습니다. 지금 복무 중이거나 입대를 앞둔 장병이 역대 가장 좋은 조건으로 가입하는 셈입니다.</p>
+
+    <h2>만기 수령액은 세 덩어리로 나뉜다</h2>
+    <p>장병내일준비적금의 만기 수령액을 이해하려면 돈이 세 갈래로 들어온다는 걸 알면 됩니다. 내가 넣은 원금, 은행이 주는 비과세 이자, 그리고 정부가 얹어주는 매칭지원금입니다.</p>
+    <div class="highlight-box">
+      <p><strong>만기 수령액 = ① 납입 원금 + ② 비과세 은행이자 + ③ 정부 매칭지원금(원금의 100%)</strong><br />
+      ① 납입 원금 = 월 납입액 x 납입 개월수<br />
+      ② 은행이자 = 월 납입액 x 연이율 x (개월수 x (개월수+1) / 2) / 12<br />
+      ③ 매칭지원금 = 납입 원금 x 100%</p>
+    </div>
+    <p>여기서 ②번 이자 공식이 낯설 수 있는데, 적금은 매달 나눠 넣기 때문입니다. 첫 달에 넣은 돈은 만기까지 이자가 다 붙지만 마지막 달에 넣은 돈은 한 달치 이자만 붙습니다. 그래서 단순히 "원금 x 금리"가 아니라 납입 회차를 모두 더한 값으로 계산합니다. 다만 장병적금에서 이자는 전체 수령액의 2% 안팎으로 비중이 작습니다. 진짜 주인공은 ③번 매칭지원금입니다.</p>
+
+    <h3>월 납입액별 만기 수령액 (18개월, 연 5% 기준)</h3>
+    <p>복무기간을 18개월로 잡고 월 납입액만 바꿔봤습니다. 매칭지원금이 원금을 그대로 따라가기 때문에, 많이 넣을수록 받는 돈도 정비례로 커집니다.</p>
+    <div style="margin:24px 0;overflow-x:auto">
+    <svg role="img" width="100%" viewBox="0 0 680 240" xmlns="http://www.w3.org/2000/svg">
+      <title>월 납입액별 18개월 만기 수령액 비교</title>
+      <rect width="680" height="240" rx="12" fill="#F9FAFB"/>
+      <text x="24" y="34" font-size="14" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">월 납입액별 만기 수령액 (18개월·연 5%)</text>
+      <text x="24" y="74" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">월 30만</text>
+      <rect x="110" y="60" width="163" height="20" rx="4" fill="#6366F1" opacity="0.8"/>
+      <text x="283" y="75" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">1,101만원</text>
+      <text x="24" y="114" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">월 40만</text>
+      <rect x="110" y="100" width="217" height="20" rx="4" fill="#6366F1" opacity="0.85"/>
+      <text x="337" y="115" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">1,469만원</text>
+      <text x="24" y="154" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">월 50만</text>
+      <rect x="110" y="140" width="271" height="20" rx="4" fill="#6366F1" opacity="0.9"/>
+      <text x="391" y="155" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">1,836만원</text>
+      <text x="24" y="194" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">월 55만</text>
+      <rect x="110" y="180" width="298" height="20" rx="4" fill="#6366F1"/>
+      <text x="418" y="195" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">2,019만원</text>
+      <text x="24" y="226" font-size="11" fill="#9CA3AF" font-family="Pretendard,sans-serif">원금 + 비과세 이자 + 매칭 100% 합산 기준</text>
+    </svg>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>월 납입액</th><th>납입 원금</th><th>비과세 이자</th><th>매칭지원금</th><th>만기 수령액</th></tr>
+        <tr><td>30만원</td><td>540만원</td><td>213,750원</td><td>540만원</td><td class="total-rate">11,013,750원</td></tr>
+        <tr><td>40만원</td><td>720만원</td><td>285,000원</td><td>720만원</td><td class="total-rate">14,685,000원</td></tr>
+        <tr><td>50만원</td><td>900만원</td><td>356,250원</td><td>900만원</td><td class="total-rate">18,356,250원</td></tr>
+        <tr><td>55만원</td><td>990만원</td><td>391,875원</td><td>990만원</td><td class="total-rate">20,191,875원</td></tr>
+      </table>
+    </div>
+    <p>월 30만원과 월 55만원의 차이를 보세요. 18개월 동안 매달 25만원을 더 넣었을 뿐인데 만기 수령액은 약 918만원 차이가 납니다. 이 차이의 절반은 순전히 매칭지원금에서 나옵니다. 여력이 된다면 한도를 꽉 채우는 게 가장 효율적이라는 결론이 숫자로 그대로 드러납니다.</p>
+
+    <h2>인물별로 따져본 실제 수령액</h2>
+    <p>조건을 달리한 세 명의 사례로 만기 수령액이 어떻게 갈리는지 보겠습니다. 모든 계산은 연 5% 기본금리, 매칭 100%, 비과세를 적용했고 직접 검산했습니다.</p>
+
+    <h3>김도현(20세, 육군 현역병) - 한도까지 18개월</h3>
+    <p>입대 직후부터 월 55만원을 18개월 동안 꽉 채워 납입하고 만기 전역하는 경우입니다.</p>
+    <div class="highlight-box">
+      <p>납입 원금: 55만원 x 18개월 = <strong>990만원</strong><br />
+      비과세 이자: 55만원 x 5% x (18 x 19 / 2) / 12 = <strong>391,875원</strong><br />
+      정부 매칭지원금: 990만원 x 100% = <strong>990만원</strong><br />
+      <strong>만기 수령액: 약 2,019만원</strong> (내가 넣은 990만원 + 추가 1,029만원)</p>
+    </div>
+    <p>김도현 씨가 실제로 통장에서 빠져나간 돈은 990만원입니다. 그런데 전역할 때 약 2,019만원이 손에 들어옵니다. 1,029만원이 그냥 생긴 셈인데, 이건 어떤 시중 적금으로도 만들 수 없는 수익률입니다.</p>
+
+    <h3>이준서(21세, 사회복무요원) - 월 30만원 21개월</h3>
+    <p>한도를 다 채우긴 부담스러워 월 30만원씩 21개월 납입한 경우입니다. 사회복무요원도 동일하게 매칭 100%와 비과세를 적용받습니다.</p>
+    <div class="highlight-box">
+      <p>납입 원금: 30만원 x 21개월 = <strong>630만원</strong><br />
+      비과세 이자: 30만원 x 5% x (21 x 22 / 2) / 12 = <strong>288,750원</strong><br />
+      정부 매칭지원금: 630만원 x 100% = <strong>630만원</strong><br />
+      <strong>만기 수령액: 약 1,289만원</strong></p>
+    </div>
+    <p>월 30만원이면 부담이 크지 않은 금액인데도 전역 때 약 1,289만원을 손에 쥡니다. 이 중 630만원이 정부가 보탠 돈입니다. 한도를 다 못 채우더라도 가입 자체를 미루지 않는 게 중요하다는 걸 보여주는 사례입니다.</p>
+
+    <h3>박지훈(22세, 해군 현역병) - 늦게 시작해 12개월</h3>
+    <p>전역을 1년 앞두고 뒤늦게 가입해 월 55만원을 12개월만 납입한 경우입니다.</p>
+    <div class="highlight-box">
+      <p>납입 원금: 55만원 x 12개월 = <strong>660만원</strong><br />
+      비과세 이자: 55만원 x 5% x (12 x 13 / 2) / 12 = <strong>178,750원</strong><br />
+      정부 매칭지원금: 660만원 x 100% = <strong>660만원</strong><br />
+      <strong>만기 수령액: 약 1,338만원</strong></p>
+    </div>
+    <p>늦게 시작해 납입 기간이 절반밖에 안 되는데도 약 1,338만원을 받습니다. 여기서 알 수 있는 건, 기간이 짧아도 매칭은 채운 원금만큼 그대로 따라온다는 점입니다. "이미 늦었으니 안 한다"가 가장 손해입니다. 단 한 달이라도 빨리 시작해 원금을 키우는 쪽이 항상 이깁니다.</p>
+
+    <h2>일반 적금에 넣었다면? 같은 990만원의 운명</h2>
+    <p>여기서 함정이 하나 있습니다. "어차피 990만원 모으는 건 똑같은데 일반 적금이랑 뭐가 그렇게 다르냐"고 생각하기 쉽습니다. 같은 월 55만원, 18개월, 연 5% 조건으로 시중 적금과 직접 비교해 봤습니다.</p>
+    <div class="table-wrap">
+      <table>
+        <tr><th>구분</th><th>일반 시중 적금</th><th>장병내일준비적금</th></tr>
+        <tr><td>납입 원금</td><td>990만원</td><td>990만원</td></tr>
+        <tr><td>은행 이자(세전)</td><td>391,875원</td><td>391,875원</td></tr>
+        <tr><td>이자 세금(15.4%)</td><td>-60,349원</td><td class="rate">0원 (비과세)</td></tr>
+        <tr><td>정부 매칭지원금</td><td>없음</td><td class="rate">+990만원</td></tr>
+        <tr><td>만기 수령액</td><td class="total-rate">약 1,023만원</td><td class="total-rate">약 2,019만원</td></tr>
+      </table>
+    </div>
+    <p>같은 990만원을 넣어도 일반 적금은 만기에 약 1,023만원, 장병적금은 약 2,019만원입니다. 내 돈을 뺀 순수 추가 수익으로 보면 일반 적금은 약 33만원, 장병적금은 약 1,029만원입니다. 추가 수익만 따지면 약 31배 차이입니다. 매칭지원금이라는 한 줄이 이 격차를 전부 만들어냅니다. 군 복무 중이라면 일반 적금에 먼저 돈을 넣을 이유가 사실상 없는 셈입니다.</p>
+
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-88xhdLeiIK3V35kb" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>복무기간이 길수록 매칭도 커진다 (월 55만원, 연 5%)</h2>
+    <p>이번엔 월 납입액을 55만원으로 고정하고 복무(납입) 기간만 바꿔봤습니다. 매칭이 원금에 비례하므로 오래 넣을수록 받는 돈이 가파르게 커집니다.</p>
+    <div class="table-wrap">
+      <table>
+        <tr><th>납입 기간</th><th>납입 원금</th><th>비과세 이자</th><th>매칭지원금</th><th>만기 수령액</th></tr>
+        <tr><td>12개월</td><td>660만원</td><td>178,750원</td><td>660만원</td><td class="total-rate">13,378,750원</td></tr>
+        <tr><td>18개월</td><td>990만원</td><td>391,875원</td><td>990만원</td><td class="total-rate">20,191,875원</td></tr>
+        <tr><td>21개월</td><td>1,155만원</td><td>529,375원</td><td>1,155만원</td><td class="total-rate">23,629,375원</td></tr>
+        <tr><td>24개월</td><td>1,320만원</td><td>687,500원</td><td>1,320만원</td><td class="total-rate">27,087,500원</td></tr>
+      </table>
+    </div>
+    <p>최대 24개월을 꽉 채워 월 55만원씩 넣으면 만기 수령액이 약 2,709만원까지 올라갑니다. 내가 넣은 1,320만원에 정부 매칭 1,320만원과 비과세 이자 약 69만원이 더해진 결과입니다. 복무기간이 24개월보다 길더라도 적금 납입은 최대 24개월까지만 인정되니, 입대 초기부터 시작해 납입 개월수를 최대한 확보하는 게 유리합니다.</p>
+
+    <h2>가입 전에 반드시 체크할 것들</h2>
+    <p>혜택이 큰 만큼 조건을 지키지 않으면 매칭을 통째로 놓칠 수 있습니다. 가입 전과 복무 중에 챙겨야 할 포인트를 정리했습니다.</p>
+
+    <h3>만기 유지가 전부다</h3>
+    <p>정부 매칭지원금은 만기 전역 또는 소집해제 시 만기 해지하는 경우에만 지급됩니다. 복무 중 중도 해지하면 납입 원금과 은행 이자는 돌려받지만 매칭지원금은 한 푼도 못 받습니다. 매칭이 원금의 100%이니 중도해지는 사실상 받을 돈의 절반을 버리는 셈입니다. 목돈이 급하게 필요하면 적금을 깨기보다 적금담보대출을 먼저 알아보세요.</p>
+
+    <h3>한도 상향은 복무 중 1회</h3>
+    <p>개인별 월 한도는 55만원, 계좌별로는 30만원이며 1인 2계좌까지 만들 수 있습니다. 한도는 5만원 단위로 조정하고, 납입한도 상향 신청은 복무 중 1회만 가능합니다. 처음에 적게 시작했다가 적응 후 한도를 올리려 한다면, 이 1회 제한을 염두에 두고 타이밍을 정하는 게 좋습니다.</p>
+
+    <h3>은행별 금리와 우대 조건</h3>
+    <p>14개 시중은행에서 가입할 수 있고 기본금리와 우대금리가 은행마다 다릅니다. 기본금리는 대체로 연 5% 안팎이지만, 자동이체·카드 실적·앱 로그인 같은 우대 조건을 채우면 금리가 더 올라갑니다. 기초생활수급자에게는 일부 은행에서 추가 우대금리를 제공하기도 합니다. 가입 전에 나라사랑포털이나 각 은행 앱에서 금리를 비교해 보세요. 적금 이자 구조 자체가 궁금하다면 <a href="../posts/savings-maturity-guide.html">적금 만기 수령액 계산 가이드</a>에서 단리 적금의 실질 이자율이 왜 약정금리의 절반인지 자세히 다뤘습니다.</p>
+
+    <h3>1% 이자지원금은 이미 종료</h3>
+    <p>예전 자료를 보면 "국가가 은행 이자에 1%포인트를 더 보태준다"는 1% 이자지원금 이야기가 나옵니다. 이 제도는 2023년 12월 31일까지 납입된 금액에만 적용됐고, 이후 매칭지원금 100%로 통합되면서 신규 가입분에는 적용되지 않습니다. 2026년에 가입한다면 만기 수령액은 원금과 비과세 이자, 매칭지원금 100%로 구성된다고 보면 됩니다. 전역 후 모은 목돈을 어떻게 굴릴지 고민이라면 <a href="../posts/five-year-seed-money.html">5년 목돈 모으기 전략</a>이나 <a href="../posts/deposit-interest-guide.html">예금 이자 실수령액 가이드</a>를 함께 참고하세요.</p>
+
+    <div class="cta-box">
+      <p>월 납입액과 복무 개월수를 넣으면 매칭지원금까지 합친 만기 수령액이 바로 나옵니다.</p>
+      <a href="../../calc/finance/jangbyeong-savings/" class="cta-btn">장병내일준비적금 계산하기</a>
+    </div>
+    <p style="font-size:13px;color:#6B7280;margin-top:8px;">관련 계산기: <a href="https://www.jptcalc.kr/calc/finance/savings/">적금 만기 계산기</a> · <a href="https://www.jptcalc.kr/calc/finance/compound/">복리 계산기</a></p>
+
+    <h2>자주 묻는 질문 (FAQ)</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 장병내일준비적금 정부 매칭지원금은 얼마나 받나요?</div>
+      <p class="faq-a">2024년부터 매칭지원금이 납입 원금의 100%로 지원됩니다. 만기 전역(소집해제)으로 적금을 만기 해지하면 내가 납입한 원금과 같은 금액을 정부가 추가로 지급합니다. 예를 들어 18개월간 원금 990만원을 모으면 매칭지원금 990만원이 더해져 매칭만으로 1,980만원이 됩니다. 과거 2022년 33%, 2023년 71%였던 매칭률이 100%까지 올라온 것이라 지금 가입하는 장병이 역대 가장 유리합니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 월 얼마까지 납입할 수 있나요?</div>
+      <p class="faq-a">개인별 월 납입한도는 55만원입니다. 2025년에 종전 40만원에서 55만원으로 상향됐습니다. 계좌별로는 월 30만원까지이며 1인 최대 2계좌까지 개설할 수 있고, 납입한도는 5만원 단위로 조정합니다. 매칭지원금도 납입 원금을 기준으로 계산되므로 한도를 채워 넣을수록 만기 때 받는 매칭 금액이 커집니다. 여력이 된다면 월 55만원을 모두 채우는 것이 가장 효율적입니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 적금 이자에 세금이 붙나요?</div>
+      <p class="faq-a">장병내일준비적금은 이자소득세 15.4%가 면제되는 비과세 상품입니다. 일반 적금은 이자에서 14% 소득세와 1.4% 지방소득세를 합친 15.4%를 떼지만, 이 적금은 은행 이자 전액을 그대로 받습니다. 비과세 혜택은 2026년 12월 31일까지 가입한 계좌에 적용됩니다. 같은 금리라도 일반 적금보다 세후 이자가 약 18% 더 많은 셈입니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 중도에 적금을 해지하면 매칭지원금을 받나요?</div>
+      <p class="faq-a">정부 매칭지원금은 만기 전역(소집해제) 시 만기 해지하는 경우에만 지급됩니다. 복무 중 중도 해지하면 그동안 납입한 원금과 은행 이자는 돌려받지만 매칭지원금은 받지 못합니다. 매칭이 원금의 100%라 사실상 절반을 포기하는 셈이므로, 급전이 필요하더라도 적금담보대출을 알아보는 편이 낫습니다. 가능하면 전역까지 유지하는 것이 핵심입니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 예전에 있던 1% 이자지원금은 지금도 받나요?</div>
+      <p class="faq-a">과거 운영하던 1% 이자지원금은 은행 이자에 더해 국가가 1%포인트를 보태주던 제도로, 2023년 12월 31일까지 납입된 금액에만 적용되었습니다. 이후 정부 지원이 매칭지원금 100%로 통합되면서 신규 가입분에는 1% 이자지원금이 적용되지 않습니다. 따라서 2026년에 가입한다면 만기 수령액은 납입 원금과 비과세 은행이자, 그리고 매칭지원금 100%로 구성된다고 보면 됩니다.</p>
+    </div>
+
+    <h2>한 줄로 정리하면</h2>
+    <p>장병내일준비적금의 핵심은 단 하나, 정부 매칭지원금 100%입니다. 월 55만원을 18개월 채우면 내 돈 990만원이 약 2,019만원이 되어 돌아오고, 24개월을 꽉 채우면 약 2,709만원까지 늘어납니다. 같은 돈을 일반 적금에 넣었을 때 추가 수익이 약 33만원인 것과 비교하면 차이는 명백합니다. 비과세와 높은 기본금리는 덤일 뿐, 진짜 이유는 매칭입니다. 군 복무 중이라면 가능한 한 빨리, 가능한 한 많이 넣는 것이 정답입니다. 더 자세한 제도 안내는 <a href="https://www.mma.go.kr">병무청</a>에서 확인할 수 있고, 내 조건에 맞는 만기 수령액은 아래 계산기로 1분 만에 확인할 수 있습니다.</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용이며 정확한 금액은 가입 은행과 병무청에서 확인하세요.</p>
+</footer>
+
+  <script>
+  window.ARTICLE_INFO_CONFIG = {
+    author: '제이퍼 계산기 편집팀',
+    reviewBasis: '병무청·국방부 장병내일준비적금 안내, 정책브리핑 2026년 기준',
+    basisDate: '2026년 기준',
+    referenceOrg: '병무청·국방부',
+    lastReviewed: '2026.06.16',
+    disclaimer: '이 글은 정보 제공 목적으로 작성되었습니다. 실제 매칭지원금·금리·비과세 적용 여부는 가입 시점과 은행, 복무 형태에 따라 달라지므로 병무청과 가입 은행에서 확인하세요.',
+    relatedCalc: { name: '장병내일준비적금 계산기', url: '/calc/finance/jangbyeong-savings/' },
+    category: 'finance'
+  };
+  </script>
+<script src="/assets/blog-article-info.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>

@@ -31,6 +31,12 @@
       quick:['단순 수익률과 연환산(CAGR) 수익률을 구분해서 비교하세요.','수수료와 세금을 반영한 순수익률이 실제 투자 성과입니다.','분산 투자로 리스크를 줄이면 장기적으로 안정적인 수익을 기대할 수 있습니다.','과거 수익률이 미래 수익을 보장하지 않으므로 참고 지표로만 활용하세요.'],
       related:[['/calc/finance/compound/','복리 계산','📊'],['/calc/finance/deposit/','예금 이자','💰'],['/calc/finance/loan-repayment/','대출 상환','🏠']],
       guides:[['/blog/posts/cagr-guide.html','CAGR 연환산 수익률 계산법과 투자 수익 분석'],['/blog/posts/emergency-fund-guide.html','비상금 얼마나 모아야 할까? 적정 비상금 가이드']]
+    },
+    '/calc/finance/jangbyeong-savings/': {
+      key:'jangbyeong-savings',
+      quick:['정부 매칭지원금은 만기 전역(소집해제) 시에만 납입 원금의 100%로 지급됩니다.','개인별 월 납입한도는 55만원, 계좌별 30만원이며 5만원 단위로 조정합니다.','이자소득세 15.4%가 면제되는 비과세 상품입니다(2026.12.31 가입분까지).','과거 1% 이자지원금은 2023년 말 납입분까지만 적용되고 매칭 100%로 통합됐습니다.'],
+      related:[['/calc/finance/savings/','적금 만기','📈'],['/calc/finance/deposit/','예금 이자','💰'],['/calc/finance/compound/','복리 계산','📊']],
+      guides:[['/blog/posts/jangbyeong-savings-guide.html','장병내일준비적금 만기 수령액 - 정부 매칭 100% 총정리']]
     }
   };
   let cfg=pages[path];

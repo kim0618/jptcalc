@@ -241,6 +241,11 @@ window.CALC_REGISTRY = {
         "slug": "stock-average",
         "icon": "⚖️",
         "name": "주식 평단가"
+      },
+      {
+        "slug": "jangbyeong-savings",
+        "icon": "🎖️",
+        "name": "장병내일준비적금"
       }
     ]
   },
