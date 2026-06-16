@@ -38,6 +38,16 @@
       quick:['DSR 40% 규제는 은행권 기준이며, 비은행권은 50% 이하입니다.','전세자금보증대출(HUG·HF·SGI)은 DSR 산정에서 제외됩니다.','마이너스통장은 실제 사용액이 아닌 한도 전체가 원리금 기준입니다.','소득 산정 방식은 금융기관마다 다를 수 있어 사전 확인이 필요합니다.'],
       related:[['/calc/realestate/loan/','대출이자 계산기','💰'],['/calc/realestate/acquisition/','취득세 계산기','📄'],['/calc/realestate/rental/','임대수익률 계산기','📊']]
     },
+    '/calc/realestate/dti/': {
+      key:'dti',
+      quick:['DTI는 주담대 원리금 전체 + 기타대출 이자만 합산합니다(기타 원금 제외).','규제지역 40%·조정대상지역 50%·비규제지역 60% 기준이 적용됩니다.','DSR은 기타대출 원금까지 더하므로 일반적으로 DTI보다 보수적입니다.','실제 한도는 DTI·DSR·LTV 중 가장 낮은 기준으로 결정됩니다.'],
+      related:[['/calc/realestate/dsr/','대출한도(DSR) 계산기','🔢'],['/calc/realestate/loan/','대출이자 계산기','💰'],['/calc/realestate/acquisition/','취득세 계산기','📄']]
+    },
+    '/calc/realestate/ltv/': {
+      key:'ltv',
+      quick:['주택 가격은 매매가가 아닌 KB시세·감정가·실거래가 중 낮은 값을 씁니다.','규제지역은 9억 이하분 40%, 9억 초과분 20%가 나뉘어 적용됩니다.','수도권·규제지역은 LTV와 별개로 주담대 6억원 한도가 함께 걸립니다.','2주택 이상·미처분 1주택 추가구입은 LTV 0%로 금지됩니다.'],
+      related:[['/calc/realestate/dsr/','대출한도(DSR) 계산기','🔢'],['/calc/realestate/dti/','총부채상환비율(DTI)','💵'],['/calc/realestate/loan/','대출이자 계산기','💰']]
+    },
     '/calc/realestate/gift/': {
       key:'gift',
       quick:['배우자 증여공제는 6억원, 성인 자녀는 5,000만원, 미성년 자녀는 2,000만원입니다.','10년 이내 동일인에게 증여한 재산은 합산과세됩니다.','자금출처조사를 대비해 증여계약서와 이체 내역을 보관하세요.','부담부증여 시 채무 인수 부분은 양도로 보아 양도세가 부과될 수 있습니다.'],
@@ -191,6 +201,23 @@
   left.id='mega-sidebar-left';
   left.innerHTML=(window.JPT_sidebarLeft?window.JPT_sidebarLeft('realestate', cfg.key):'');
 
+  // 관련 블로그: 정적 sibling-section의 '관련 가이드'(inject-sibling이 유지)에서 읽어 표준 패턴(📖)으로 렌더, 없으면 박스 숨김
+  let guideItems=[];
+  document.querySelectorAll('.sibling-section .sibling-title').forEach(function(t){
+    if(t.textContent.indexOf('관련 가이드')>-1){
+      const list=t.nextElementSibling;
+      if(list) list.querySelectorAll('a').forEach(function(a){
+        guideItems.push([a.getAttribute('href'), a.textContent.replace(/^\s*📖\s*/,'').trim()]);
+      });
+    }
+  });
+  guideItems=guideItems.slice(0,3);
+  const guidesWidget = guideItems.length
+    ? `<div class="msr-widget">
+      <div class="msr-widget-title">관련 블로그</div>
+      <div class="msr-widget-list">${guideItems.map(g=>`<a href="${g[0]}" class="msr-widget-link"><span class="msr-widget-icon">📖</span><span class="msr-widget-text">${g[1]}</span></a>`).join('')}</div>
+    </div>`
+    : '';
   const right=document.createElement('aside');
   right.className='mega-sidebar-right';
   right.innerHTML=`
@@ -198,10 +225,7 @@
       <div class="msr-widget-title">관련 계산기</div>
       <div class="msr-widget-list">${cfg.related.map(item=>`<a href="${item[0]}" class="msr-widget-link"><span class="msr-widget-icon">${item[2]}</span><span class="msr-widget-text">${item[1]}</span></a>`).join('')}</div>
     </div>
-    <div class="msr-widget">
-      <div class="msr-widget-title">관련 블로그</div>
-      <div class="msr-widget-list">${cfg.quick.slice(0,3).map(text=>`<div class="msr-widget-link"><span class="msr-widget-icon">📄</span><span class="msr-widget-text">${text}</span></div>`).join('')}</div>
-    </div>`;
+    ${guidesWidget}`;
 
   main.parentNode.insertBefore(overlay, main);
   main.parentNode.insertBefore(layout, main);

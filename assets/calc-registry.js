@@ -42,6 +42,16 @@ window.CALC_REGISTRY = {
         "icon": "🔢"
       },
       {
+        "slug": "dti",
+        "name": "총부채상환비율 (DTI)",
+        "icon": "💵"
+      },
+      {
+        "slug": "ltv",
+        "name": "주택담보인정비율 (LTV)",
+        "icon": "🔑"
+      },
+      {
         "slug": "gift",
         "name": "증여세",
         "icon": "🎁"

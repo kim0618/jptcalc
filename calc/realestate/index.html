@@ -47,7 +47,7 @@
     "@type": "CollectionPage",
     "name": "부동산 계산기 모음",
     "url": "https://www.jptcalc.kr/calc/realestate/",
-    "description": "취득세, 양도소득세, 중개수수료, 재산세, 종합부동산세, 증여세, 상속세, 대출이자, DSR 등 부동산 전 단계 무료 계산기 15가지",
+    "description": "취득세, 양도소득세, 중개수수료, 재산세, 종합부동산세, 증여세, 상속세, 대출이자, DSR, DTI, LTV 등 부동산 전 단계 무료 계산기 17가지",
     "inLanguage": "ko-KR",
     "hasPart": [
       {"@type": "WebApplication", "name": "중개수수료 계산기", "url": "https://www.jptcalc.kr/calc/realestate/brokerage/"},
@@ -63,6 +63,8 @@
       {"@type": "WebApplication", "name": "공동명의 비교", "url": "https://www.jptcalc.kr/calc/realestate/joint/"},
       {"@type": "WebApplication", "name": "대출이자 계산기", "url": "https://www.jptcalc.kr/calc/realestate/loan/"},
       {"@type": "WebApplication", "name": "대출한도 DSR 계산기", "url": "https://www.jptcalc.kr/calc/realestate/dsr/"},
+      {"@type": "WebApplication", "name": "DTI 계산기", "url": "https://www.jptcalc.kr/calc/realestate/dti/"},
+      {"@type": "WebApplication", "name": "LTV 계산기", "url": "https://www.jptcalc.kr/calc/realestate/ltv/"},
       {"@type": "WebApplication", "name": "임대수익률 계산기", "url": "https://www.jptcalc.kr/calc/realestate/rental/"},
       {"@type": "WebApplication", "name": "전월세 전환율 계산기", "url": "https://www.jptcalc.kr/calc/realestate/conversion/"}
     ],
@@ -1355,6 +1357,8 @@
       <a class="msl-calc-btn" href="/calc/realestate/propertytax/"><span class="msl-calc-dot"></span>재산세</a>
       <a class="msl-calc-btn" href="/calc/realestate/inheritance/"><span class="msl-calc-dot"></span>상속세</a>
       <a class="msl-calc-btn" href="/calc/realestate/dsr/"><span class="msl-calc-dot"></span>대출한도 (DSR)</a>
+      <a class="msl-calc-btn" href="/calc/realestate/dti/"><span class="msl-calc-dot"></span>총부채상환비율 (DTI)</a>
+      <a class="msl-calc-btn" href="/calc/realestate/ltv/"><span class="msl-calc-dot"></span>주택담보인정비율 (LTV)</a>
       <a class="msl-calc-btn" href="/calc/realestate/registry/"><span class="msl-calc-dot"></span>등기비용</a>
       <a class="msl-calc-btn" href="/calc/realestate/joint/"><span class="msl-calc-dot"></span>공동명의비교</a>
     </div>
@@ -1368,12 +1372,12 @@
     <div class="breadcrumb"><a href="../../">홈</a><span class="breadcrumb-sep">›</span><span>부동산 계산기</span></div>
     <div class="page-header-badge">🏠 2026년 기준 반영</div>
     <h1>부동산 계산기</h1>
-    <p>취득·보유·매도·대출까지 부동산 전 과정 15가지 계산기</p>
+    <p>취득·보유·매도·대출까지 부동산 전 과정 17가지 계산기</p>
   </div>
 
   <!-- 카테고리 소개 -->
   <div class="hub-intro">
-    부동산 거래는 취득부터 보유, 매도까지 단계마다 세금과 비용이 발생합니다. 3억원짜리 아파트를 사고팔 때 취득세·등기비용·중개수수료만 합쳐도 수백만원이 들고, 보유 기간 중 재산세와 종합부동산세, 매도 시 양도소득세까지 합산하면 부동산 비용은 거래가의 10%를 넘는 경우도 많습니다. 취득 단계의 <a href="/calc/realestate/acquisition/" style="color:var(--primary);font-weight:600;">취득세</a>와 <a href="/calc/realestate/brokerage/" style="color:var(--primary);font-weight:600;">중개수수료</a>, 보유 중 <a href="/calc/realestate/property-tax-comprehensive/" style="color:var(--primary);font-weight:600;">보유세</a>, 매도 시 <a href="/calc/realestate/capital-gains/" style="color:var(--primary);font-weight:600;">양도소득세</a>를 각 단계에 맞게 미리 계산해두면 자금 계획과 절세 타이밍을 잡을 수 있습니다. 15개 계산기를 아래에서 단계·목적별로 바로 사용하세요.
+    부동산 거래는 취득부터 보유, 매도까지 단계마다 세금과 비용이 발생합니다. 3억원짜리 아파트를 사고팔 때 취득세·등기비용·중개수수료만 합쳐도 수백만원이 들고, 보유 기간 중 재산세와 종합부동산세, 매도 시 양도소득세까지 합산하면 부동산 비용은 거래가의 10%를 넘는 경우도 많습니다. 취득 단계의 <a href="/calc/realestate/acquisition/" style="color:var(--primary);font-weight:600;">취득세</a>와 <a href="/calc/realestate/brokerage/" style="color:var(--primary);font-weight:600;">중개수수료</a>, 보유 중 <a href="/calc/realestate/property-tax-comprehensive/" style="color:var(--primary);font-weight:600;">보유세</a>, 매도 시 <a href="/calc/realestate/capital-gains/" style="color:var(--primary);font-weight:600;">양도소득세</a>를 각 단계에 맞게 미리 계산해두면 자금 계획과 절세 타이밍을 잡을 수 있습니다. 17개 계산기를 아래에서 단계·목적별로 바로 사용하세요.
   </div>
 
   <!-- 자주 찾는 계산기 -->
@@ -1561,6 +1565,18 @@
           <div class="calc-hub-icon">🔢</div>
           <div class="calc-hub-name">대출한도 (DSR)</div>
           <div class="calc-hub-desc">소득 대비 대출 가능 한도</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
+        <a class="calc-hub-card" href="/calc/realestate/dti/">
+          <div class="calc-hub-icon">💵</div>
+          <div class="calc-hub-name">총부채상환비율 (DTI)</div>
+          <div class="calc-hub-desc">소득 대비 상환 한도·지역별 기준</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
+        <a class="calc-hub-card" href="/calc/realestate/ltv/">
+          <div class="calc-hub-icon">🔑</div>
+          <div class="calc-hub-name">주택담보인정비율 (LTV)</div>
+          <div class="calc-hub-desc">집값 대비 대출 한도·6억 한도</div>
           <div class="calc-hub-arrow">계산하기 →</div>
         </a>
         <a class="calc-hub-card" href="/calc/realestate/rental/">
