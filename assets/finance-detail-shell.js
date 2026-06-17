@@ -36,7 +36,7 @@
       key:'jangbyeong-savings',
       quick:['정부 매칭지원금은 만기 전역(소집해제) 시에만 납입 원금의 100%로 지급됩니다.','개인별 월 납입한도는 55만원, 계좌별 30만원이며 5만원 단위로 조정합니다.','이자소득세 15.4%가 면제되는 비과세 상품입니다(2026.12.31 가입분까지).','과거 1% 이자지원금은 2023년 말 납입분까지만 적용되고 매칭 100%로 통합됐습니다.'],
       related:[['/calc/finance/savings/','적금 만기','📈'],['/calc/finance/deposit/','예금 이자','💰'],['/calc/finance/compound/','복리 계산','📊']],
-      guides:[['/blog/posts/jangbyeong-savings-guide.html','장병내일준비적금 만기 수령액 - 정부 매칭 100% 총정리']]
+      guides:[['/blog/posts/military-salary-guide.html','군인 월급 계급별 봉급표 2026 - 이병~병장 실수령액과 전역 목돈 전략'],['/blog/posts/jangbyeong-savings-guide.html','장병내일준비적금 만기 수령액 - 정부 매칭 100% 총정리']]
     }
   };
   let cfg=pages[path];
