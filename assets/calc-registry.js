@@ -256,6 +256,11 @@ window.CALC_REGISTRY = {
         "slug": "jangbyeong-savings",
         "icon": "🎖️",
         "name": "장병내일준비적금"
+      },
+      {
+        "slug": "youth-leap-account",
+        "icon": "🚀",
+        "name": "청년도약계좌"
       }
     ]
   },
