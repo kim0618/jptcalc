@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>평균임금 계산기 - 1일 평균임금·휴업수당·산재 자동계산 | jptcalc</title>
+  <meta name="description" content="산정사유 발생일과 직전 3개월 급여·상여·연차수당을 입력하면 1일 평균임금을 계산하고 휴업수당·산재 휴업급여·퇴직금 환산까지 한 번에 보여줍니다. 통상임금 최저보장 비교 포함." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/salary/average-wage/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="평균임금 계산기 | jptcalc" />
+  <meta property="og:description" content="직전 3개월 급여·상여로 1일 평균임금을 계산하고 휴업수당·산재·퇴직금 환산까지. 통상임금 최저보장 비교 포함." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/salary/average-wage/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/salary-common.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"평균임금 계산기","url":"https://www.jptcalc.kr/calc/salary/average-wage/","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+    {"@type":"ListItem","position":2,"name":"이직/연봉 계산기","item":"https://www.jptcalc.kr/calc/salary/"},
+    {"@type":"ListItem","position":3,"name":"평균임금 계산기","item":"https://www.jptcalc.kr/calc/salary/average-wage/"}
+  ]}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"평균임금과 통상임금은 어떻게 다른가요?","acceptedAnswer":{"@type":"Answer","text":"평균임금은 산정사유 발생일 이전 3개월간 실제로 지급된 임금 총액을 그 기간의 총일수로 나눈 금액으로, 상여금·연차수당 등 실제 지급액이 모두 반영됩니다. 통상임금은 정기적·일률적으로 지급하기로 정한 기본급과 고정수당만 포함합니다. 평균임금은 퇴직금·휴업수당·산재보상의 기준이 되고, 통상임금은 연장·야간·휴일수당의 기준이 됩니다."}},{"@type":"Question","name":"평균임금은 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"1일 평균임금 = (산정사유 발생일 이전 3개월간 지급된 임금 총액) ÷ (그 기간의 총일수)입니다. 임금 총액에는 3개월간 받은 기본급과 수당, 연간 상여금의 3/12, 연간 연차수당의 3/12가 포함됩니다. 총일수는 달력상 실제 일수(보통 89~92일)를 사용합니다."}},{"@type":"Question","name":"상여금과 연차수당도 평균임금에 포함되나요?","acceptedAnswer":{"@type":"Answer","text":"네. 정기 상여금과 연차수당은 1년치 금액 중 3개월분(연간 금액 × 3/12)을 평균임금 산정 기간의 임금 총액에 더합니다. 예를 들어 연간 상여금이 600만원이면 150만원(600만원 × 3/12)이 3개월 임금 총액에 산입됩니다."}},{"@type":"Question","name":"평균임금이 통상임금보다 적으면 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"근로기준법 제2조 제2항에 따라 산정된 평균임금이 통상임금보다 적으면 통상임금을 평균임금으로 합니다. 결근이 많았거나 무급휴직 등으로 3개월 급여가 낮았던 경우 평균임금이 통상임금보다 낮아질 수 있는데, 이때는 더 높은 통상임금이 평균임금이 되어 근로자에게 유리하게 보장됩니다."}},{"@type":"Question","name":"평균임금은 어디에 사용되나요?","acceptedAnswer":{"@type":"Answer","text":"평균임금은 퇴직금(1일 평균임금 × 30일 × 재직연수), 휴업수당(평균임금의 70%), 산재 휴업급여(평균임금의 70%, 저소득자 90%), 연차유급휴가수당, 감급 제재의 한도 등의 산정 기준이 됩니다. 하나의 1일 평균임금에서 여러 급여가 파생되므로 정확히 산정하는 것이 중요합니다."}}]}</script>
+  <style>
+    /* average-wage 고유 스타일 - 공통 스타일은 /assets/salary-common.css 참조 */
+    .input-wrap{position:relative}
+    .input-wrap .unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none}
+    input[type=number],input[type=text]{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
+    input[type=number]::placeholder{color:var(--gray-400);font-weight:400}
+    input[type=number]:focus,input[type=text]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(59,130,246,0.15)}
+    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
+    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
+    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
+    .result-card{background:linear-gradient(135deg,#EFF6FF 0%,#DBEAFE 100%);border:1px solid rgba(59,130,246,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-row+.result-row{border-top:1px solid rgba(0,0,0,0.07)}
+    .result-total-row{border-top:1px solid rgba(0,0,0,0.15)!important;margin-top:4px;padding-top:14px!important}
+    .result-total-value{font-size:24px;font-weight:900;color:var(--gray-900)}
+    .guarantee-badge{display:none;margin-top:10px;padding:8px 12px;background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.3);border-radius:8px;font-size:12px;font-weight:600;color:#1D4ED8;line-height:1.5}
+    .guarantee-badge.show{display:block}
+    .use-title{font-size:11px;font-weight:800;letter-spacing:0.6px;color:var(--gray-500);margin:18px 0 6px}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/salary/" class="nav-item active"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span>›</span><a href="/calc/salary/">이직/연봉 계산기</a><span>›</span><span>평균임금 계산기</span></div>
+    <div class="page-header-badge">📐 근로기준법 제2조 기준</div>
+    <h1>평균임금 계산기</h1>
+    <p>직전 3개월 급여로 1일 평균임금을 계산하고 휴업수당·산재·퇴직금 환산까지 한 번에</p>
+  </div>
+
+    <div class="card">
+      <div class="card-title">산정 기준일</div>
+      <div class="field">
+        <div class="field-label">산정사유 발생일 <span class="label-hint">퇴직·휴업·재해 등 사유가 생긴 날</span></div>
+        <div style="display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:8px;">
+          <div class="input-wrap"><input type="number" id="aw-y" placeholder="예) 2026" oninput="calc()" /><span class="unit">년</span></div>
+          <div class="input-wrap"><input type="number" id="aw-m" placeholder="예) 3" min="1" max="12" oninput="calc()" /><span class="unit">월</span></div>
+          <div class="input-wrap"><input type="number" id="aw-d" placeholder="예) 10" min="1" max="31" oninput="calc()" /><span class="unit">일</span></div>
+        </div>
+        <div class="field-hint">발생일 직전 3개월의 달력 일수(보통 89~92일)를 자동으로 적용합니다</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">임금 정보</div>
+      <div class="field">
+        <div class="field-label">직전 3개월 월평균 임금 <span class="label-hint">만원 단위</span></div>
+        <div class="input-wrap"><input type="number" id="aw-monthly" placeholder="예) 350" oninput="calc()" /><span class="unit">만원</span></div>
+        <div class="converted" id="aw-monthly-conv"></div>
+        <div class="field-hint">기본급에 정기적으로 받은 수당(직책수당·식대 등)을 포함한 세전 월급</div>
+      </div>
+      <div class="field">
+        <div class="field-label">연간 상여금 합계 <span class="label-hint">만원 단위</span></div>
+        <div class="input-wrap"><input type="number" id="aw-bonus" placeholder="예) 600" oninput="calc()" /><span class="unit">만원</span></div>
+        <div class="converted" id="aw-bonus-conv"></div>
+        <div class="field-hint">1년간 받은 정기 상여 총액. 3/12만 산입됩니다. 없으면 0</div>
+      </div>
+      <div class="field">
+        <div class="field-label">연간 연차수당 <span class="label-hint">만원 단위 · 선택</span></div>
+        <div class="input-wrap"><input type="number" id="aw-leave" placeholder="예) 100" oninput="calc()" /><span class="unit">만원</span></div>
+        <div class="converted" id="aw-leave-conv"></div>
+        <div class="field-hint">전년도 미사용 연차수당. 3/12만 산입됩니다. 없으면 0</div>
+      </div>
+      <div class="field">
+        <div class="field-label">1일 통상임금 <span class="label-hint">원 단위 · 선택</span></div>
+        <div class="input-wrap"><input type="number" id="aw-ordinary" placeholder="예) 115000" oninput="calc()" /><span class="unit">원</span></div>
+        <div class="field-hint">입력하면 평균임금이 통상임금보다 낮을 때 최저보장(통상임금)을 적용합니다</div>
+      </div>
+    </div>
+    <div class="result-card" id="result">
+      <div class="result-highlight">
+        <div class="rh-label">1일 평균임금</div>
+        <div class="rh-value" id="aw-daily">-</div>
+        <div class="rh-sub" id="aw-period">산정기간 -</div>
+      </div>
+      <div class="result-row"><span class="result-label">산정기간 총일수</span><span class="result-value" id="aw-days">-</span></div>
+      <div class="result-row"><span class="result-label">3개월 임금 총액</span><span class="result-value" id="aw-total">-</span></div>
+      <div class="result-row result-total-row"><span class="result-total-label">적용 1일 평균임금</span><span class="result-total-value" id="aw-applied">-</span></div>
+      <div class="guarantee-badge" id="aw-badge"></div>
+      <div class="use-title">평균임금 활용처 환산</div>
+      <div class="result-row"><span class="result-label">휴업수당 1일 (70%)</span><span class="result-value" id="aw-shutdown">-</span></div>
+      <div class="result-row"><span class="result-label">산재 휴업급여 1일 (70%)</span><span class="result-value" id="aw-injury">-</span></div>
+      <div class="result-row"><span class="result-label">평균임금 30일분 (월액)</span><span class="result-value" id="aw-30">-</span></div>
+      <p class="result-note">※ 1일 평균임금 = (직전 3개월 임금 총액) ÷ (그 기간 총일수). 임금 총액 = 월급 × 3 + 연간 상여 × 3/12 + 연간 연차수당 × 3/12. 평균임금이 통상임금보다 적으면 통상임금을 평균임금으로 합니다(근로기준법 제2조). 산재요양·육아휴직·군복무 기간과 그 기간 임금은 산정에서 제외됩니다. 퇴직금 총액은 재직연수가 필요하므로 <a href="/calc/salary/severance/">퇴직금 계산기</a>를 이용하세요.</p>
+    </div>
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '근로기준법 제2조(평균임금)·제46조(휴업수당), 2026년 1월 1일 기준',
+    appliedFrom: '2026년 1월 1일',
+    exceptions: [
+      '산재요양·육아휴직·업무외 부상질병 등 제외기간은 그 기간과 임금을 모두 빼고 산정합니다',
+      '평균임금이 통상임금보다 적으면 통상임금을 평균임금으로 합니다',
+      '일용직·특수형태근로 등은 별도 산정 방식이 적용될 수 있습니다',
+    ],
+    references: [
+      { name: '고용노동부(moel.go.kr)', url: 'https://www.moel.go.kr' },
+      { name: '찾기쉬운 생활법령정보(easylaw.go.kr)', url: 'https://www.easylaw.go.kr' },
+    ],
+    lastReviewed: '2026.06',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
+  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>평균임금을 계산하기 전에 알아둘 핵심</h2>
+      <p>평균임금은 <strong>퇴직금·휴업수당·산재보상</strong>의 기준이 되는 임금입니다. 산정사유가 발생한 날 이전 3개월 동안 실제로 지급된 임금 총액을 그 기간의 총일수로 나눠 1일 평균임금을 구하며, 정기 상여금과 연차수당도 3개월분(3/12)이 반영됩니다. 통상임금이 연장·야간수당의 기준이라면, 평균임금은 퇴직·재해 시점의 보상 기준이라는 점에서 다릅니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box">
+          <strong>계산 공식</strong>
+          <span>1일 평균임금 = (직전 3개월 임금 총액) ÷ (그 기간 총일수). 임금 총액 = 월급 3개월분 + 연간 상여 × 3/12 + 연차수당 × 3/12.</span>
+        </div>
+        <div class="guide-box">
+          <strong>통상임금 최저보장</strong>
+          <span>산정된 평균임금이 통상임금보다 적으면 통상임금을 평균임금으로 합니다(근로기준법 제2조 제2항). 결근·무급휴직이 많은 달에 근로자를 보호하는 장치입니다.</span>
+        </div>
+        <div class="guide-box">
+          <strong>휴업수당·산재 70%</strong>
+          <span>사용자 귀책 휴업 시 평균임금의 70%를 휴업수당으로 지급하고(제46조), 산재 휴업급여도 평균임금의 70%(저소득자 90%)로 산정됩니다.</span>
+        </div>
+        <div class="guide-box">
+          <strong>제외되는 기간</strong>
+          <span>산재요양·육아휴직·군복무·업무외 부상질병 휴업 기간은 그 기간과 그 기간에 받은 임금을 모두 빼고 남은 기간으로 산정합니다.</span>
+        </div>
+      </div>
+      <p class="ref-links">공식 확인: <a href="https://www.moel.go.kr" target="_blank" rel="noopener">고용노동부(moel.go.kr)</a> · 법령 해설: <a href="https://www.easylaw.go.kr" target="_blank" rel="noopener">찾기쉬운 생활법령정보</a></p>
+    </div>
+    <div class="guide-card">
+      <h2>상황별 평균임금 계산 예시</h2>
+      <p>같은 월급이라도 상여금·연차수당이 있으면 평균임금이 올라가고, 그만큼 퇴직금과 휴업수당도 함께 커집니다.</p>
+      <div class="guide-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>월급 / 상여·연차</th>
+              <th>1일 평균임금</th>
+              <th>휴업수당 1일 (70%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>월 300만원 / 상여·연차 없음</td>
+              <td>약 98,900원</td>
+              <td>약 69,200원</td>
+            </tr>
+            <tr>
+              <td>월 350만원 / 연 상여 600만원</td>
+              <td>약 131,900원</td>
+              <td>약 92,300원</td>
+            </tr>
+            <tr>
+              <td>월 400만원 / 상여 600 + 연차 100만원</td>
+              <td>약 151,100원</td>
+              <td>약 105,800원</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:12px;color:var(--gray-500);margin-top:6px">※ 산정기간 91일 가정. 실제 총일수는 사유발생일에 따라 89~92일로 달라집니다.</p>
+      <h3>입력 시 자주 헷갈리는 부분</h3>
+      <ul>
+        <li><strong>월평균 임금</strong>에는 기본급뿐 아니라 정기적으로 받은 직책수당·식대·교통비 등 고정수당을 포함합니다.</li>
+        <li><strong>상여금·연차수당</strong>은 1년치를 입력하면 자동으로 3/12만 산입됩니다. 연봉에 녹아 매월 나뉘어 받는 구조라면 월급에 이미 포함되어 있으니 0으로 입력하세요.</li>
+        <li><strong>1일 통상임금</strong>은 선택 입력입니다. 입력하면 평균임금이 통상임금보다 낮을 때 최저보장이 적용됩니다.</li>
+        <li>산재요양·육아휴직 등 <strong>제외기간</strong>이 3개월 안에 끼어 있으면 그 기간을 빼고 직접 임금 총액과 일수를 보정해 입력해야 정확합니다.</li>
+      </ul>
+      <h3>결과 해석 방법</h3>
+      <p>표시된 <strong>1일 평균임금</strong>이 모든 보상의 출발점입니다. 퇴직금은 여기에 30일과 재직연수를 곱하고, 휴업수당과 산재 휴업급여는 70%를 적용합니다. 퇴직금 총액까지 한 번에 보려면 재직기간을 입력하는 <a href="/calc/salary/severance/">퇴직금 계산기</a>를, 연장·야간수당 기준이 필요하면 <a href="/calc/salary/ordinary-wage/">통상임금 계산기</a>를 이용하세요.</p>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item">
+        <h3>평균임금과 통상임금은 어떻게 다른가요?</h3>
+        <p>평균임금은 산정사유 발생일 이전 3개월간 실제로 지급된 임금 총액을 총일수로 나눈 금액으로, 상여금·연차수당 등 실제 지급액이 모두 반영됩니다. 통상임금은 정기적·일률적으로 지급하기로 정한 기본급과 고정수당만 포함합니다. 평균임금은 퇴직금·휴업수당·산재보상의 기준이 되고, 통상임금은 연장·야간·휴일수당의 기준이 됩니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>평균임금은 어떻게 계산하나요?</h3>
+        <p>1일 평균임금 = (산정사유 발생일 이전 3개월간 지급된 임금 총액) ÷ (그 기간의 총일수)입니다. 임금 총액에는 3개월간 받은 기본급과 수당, 연간 상여금의 3/12, 연간 연차수당의 3/12가 포함됩니다. 총일수는 달력상 실제 일수(보통 89~92일)를 사용합니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>상여금과 연차수당도 평균임금에 포함되나요?</h3>
+        <p>네. 정기 상여금과 연차수당은 1년치 금액 중 3개월분(연간 금액 × 3/12)을 평균임금 산정 기간의 임금 총액에 더합니다. 예를 들어 연간 상여금이 600만원이면 150만원(600만원 × 3/12)이 3개월 임금 총액에 산입됩니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>평균임금이 통상임금보다 적으면 어떻게 되나요?</h3>
+        <p>근로기준법 제2조 제2항에 따라 산정된 평균임금이 통상임금보다 적으면 통상임금을 평균임금으로 합니다. 결근이 많았거나 무급휴직 등으로 3개월 급여가 낮았던 경우 평균임금이 통상임금보다 낮아질 수 있는데, 이때는 더 높은 통상임금이 평균임금이 되어 근로자에게 유리하게 보장됩니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>평균임금은 어디에 사용되나요?</h3>
+        <p>평균임금은 퇴직금(1일 평균임금 × 30일 × 재직연수), 휴업수당(평균임금의 70%), 산재 휴업급여(평균임금의 70%, 저소득자 90%), 연차유급휴가수당, 감급 제재의 한도 등의 산정 기준이 됩니다. 하나의 1일 평균임금에서 여러 급여가 파생되므로 정확히 산정하는 것이 중요합니다.</p>
+      </div>
+    </div>
+    <div class="update-note">근로기준법 및 산업재해보상보험법 기준으로 작성되었습니다. 임금 산정 기준은 변경될 수 있으니 <a href="https://www.moel.go.kr" target="_blank" rel="noopener">고용노동부(moel.go.kr)</a>에서 최신 내용을 확인하세요.<br>최종 검토: 2026.06</div>
+  </div>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 이직/연봉 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/salary/take-home-pay/" class="sibling-link">💵 연봉 실수령액</a>
+      <a href="/calc/salary/comparison/" class="sibling-link">⚖️ 연봉 비교</a>
+      <a href="/calc/salary/hourly-wage/" class="sibling-link">⏱️ 시급·일급 변환</a>
+      <a href="/calc/salary/weekly-holiday-pay/" class="sibling-link">🗓️ 주휴수당</a>
+      <a href="/calc/salary/annual-leave-pay/" class="sibling-link">🏖️ 연차수당</a>
+      <a href="/calc/salary/ordinary-wage/" class="sibling-link">🧮 통상임금</a>
+      <a href="/calc/salary/average-wage/" class="sibling-link current">📐 평균임금</a>
+      <a href="/calc/salary/premium-pay/" class="sibling-link">⏰ 가산수당</a>
+      <a href="/calc/salary/bonus-pay/" class="sibling-link">🎁 성과급 실수령</a>
+      <a href="/calc/salary/job-change/" class="sibling-link">📊 이직 연봉 비교</a>
+      <a href="/calc/salary/raise-rate/" class="sibling-link">📈 연봉 인상률</a>
+      <a href="/calc/salary/dismissal-notice-pay/" class="sibling-link">📋 해고예고수당</a>
+      <a href="/calc/salary/severance/" class="sibling-link">📦 퇴직금</a>
+      <a href="/calc/salary/unemployment/" class="sibling-link">🛟 실업급여</a>
+    </div>
+    <div class="sibling-title">관련 가이드</div>
+    <div class="sibling-list">
+      <a href="/blog/posts/severance-pay-guide.html" class="sibling-link">📖 퇴직금 계산 공식 2026 - 평균임금·IRP 이전·퇴직소득세 실제 예시</a>
+      <a href="/blog/posts/unemployment-benefit-guide.html" class="sibling-link">📖 실업급여 계산법 2026 - 수급 자격과 1일 최대 68,100원</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script>
+
+function fmtW(won){won=Math.round(won);if(isNaN(won)||won===0)return'-';if(Math.abs(won)>=100000000){const uk=Math.floor(Math.abs(won)/100000000)*Math.sign(won);const rem=Math.round((Math.abs(won)%100000000)/10000);return rem>0?uk.toLocaleString()+'억 '+rem.toLocaleString()+'만원':uk.toLocaleString()+'억원';}if(Math.abs(won)>=10000){const man=Math.floor(Math.abs(won)/10000)*Math.sign(won);const rem=Math.round(Math.abs(won)%10000);return rem>=1000?man.toLocaleString()+'만 '+rem.toLocaleString()+'원':man.toLocaleString()+'만원';}return won.toLocaleString()+'원';}
+function fmtM(man){return fmtW(man*10000);}
+function won0(n){return Math.round(n).toLocaleString()+'원';}
+
+function calc(){
+  const y=parseInt(document.getElementById('aw-y').value)||0;
+  const m=parseInt(document.getElementById('aw-m').value)||0;
+  const d=parseInt(document.getElementById('aw-d').value)||0;
+  const monthly=parseFloat(document.getElementById('aw-monthly').value)||0;
+  const bonus=parseFloat(document.getElementById('aw-bonus').value)||0;
+  const leave=parseFloat(document.getElementById('aw-leave').value)||0;
+  const ordinary=parseFloat(document.getElementById('aw-ordinary').value)||0;
+  document.getElementById('aw-monthly-conv').textContent = monthly>0 ? fmtM(monthly) : '';
+  document.getElementById('aw-bonus-conv').textContent = bonus>0 ? fmtM(bonus) : '';
+  document.getElementById('aw-leave-conv').textContent = leave>0 ? fmtM(leave) : '';
+  const res=document.getElementById('result');
+  const badge=document.getElementById('aw-badge');
+  if(!y||!m||!d||!monthly){res.classList.remove('show');return;}
+  const endDate=new Date(y,m-1,d);
+  const startDate=new Date(y,m-1-3,d);
+  const totalDays=Math.round((endDate-startDate)/(1000*60*60*24));
+  if(totalDays<=0){res.classList.remove('show');return;}
+  const wageTotal=(monthly*10000*3)+(bonus*10000*3/12)+(leave*10000*3/12);
+  const avgDaily=wageTotal/totalDays;
+  let applied=avgDaily, guaranteed=false;
+  if(ordinary>0 && ordinary>avgDaily){applied=ordinary;guaranteed=true;}
+  res.classList.add('show');
+  document.getElementById('aw-daily').textContent=won0(avgDaily);
+  document.getElementById('aw-period').textContent='산정기간 '+totalDays+'일';
+  document.getElementById('aw-days').textContent=totalDays+'일';
+  document.getElementById('aw-total').textContent=fmtW(wageTotal);
+  document.getElementById('aw-applied').textContent=won0(applied);
+  if(guaranteed){
+    badge.classList.add('show');
+    badge.innerHTML='⚠️ 평균임금('+won0(avgDaily)+')이 통상임금보다 낮아 <strong>통상임금 '+won0(ordinary)+'</strong>을 평균임금으로 적용했습니다 (근로기준법 제2조 제2항).';
+  }else{
+    badge.classList.remove('show');
+  }
+  document.getElementById('aw-shutdown').textContent=won0(applied*0.7);
+  document.getElementById('aw-injury').textContent=won0(applied*0.7);
+  document.getElementById('aw-30').textContent=fmtW(applied*30);
+}
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/calc-registry.js"></script>
+<script src="/assets/salary-detail-shell.js"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '근로기준법·산업재해보상보험법 2026년 기준',
+  basisDate: '2026년 기준',
+  referenceOrg: '고용노동부',
+  lastReviewed: '2026.06.19',
+  category: 'salary'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/blog-review-footer.js"></script>
+</body>
+</html>

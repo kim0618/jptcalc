@@ -186,6 +186,11 @@ window.CALC_REGISTRY = {
         "name": "통상임금"
       },
       {
+        "slug": "average-wage",
+        "icon": "📐",
+        "name": "평균임금"
+      },
+      {
         "slug": "premium-pay",
         "icon": "⏰",
         "name": "가산수당"
@@ -204,6 +209,11 @@ window.CALC_REGISTRY = {
         "slug": "raise-rate",
         "icon": "📈",
         "name": "연봉 인상률"
+      },
+      {
+        "slug": "dismissal-notice-pay",
+        "icon": "📋",
+        "name": "해고예고수당"
       },
       {
         "slug": "severance",
