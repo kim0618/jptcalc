@@ -52,6 +52,16 @@ window.CALC_REGISTRY = {
         "icon": "🔑"
       },
       {
+        "slug": "didimdol",
+        "name": "디딤돌대출",
+        "icon": "🏡"
+      },
+      {
+        "slug": "jeonse-loan",
+        "name": "전세자금대출",
+        "icon": "🏘️"
+      },
+      {
         "slug": "gift",
         "name": "증여세",
         "icon": "🎁"
