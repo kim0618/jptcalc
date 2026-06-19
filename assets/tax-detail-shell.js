@@ -42,7 +42,7 @@
       key:'regional-health-insurance',
       quick:['지역가입자 보험료 = 소득보험료(연소득×7.19%÷12) + 재산보험료(점수×211.5원)입니다.','재산은 재산세 과세표준에서 1억원을 공제한 금액에만 부과점수가 매겨집니다.','자동차는 2024년 2월부터 부과 대상에서 완전히 제외되었습니다.','소득이 없어도 소득보험료 하한액(월 20,160원)과 장기요양보험료는 부담합니다.'],
       related:[['/calc/tax/insurance-comparison/','4대보험 vs 3.3% 비교','👥'],['/calc/tax/freelancer-income/','월 순수입 계산기','💰'],['/calc/tax/income-tax/','종합소득세 계산기','📈']],
-      guides:[['/blog/posts/freelancer-insurance-guide.html','프리랜서 4대보험, 직장인이랑 뭐가 다를까? 지역가입자 보험료 계산법'],['/blog/posts/health-insurance-dependent-guide.html','건강보험 피부양자 탈락 기준 2026 - 소득·재산 기준과 탈락 후 보험료 계산'],['/blog/posts/social-insurance-guide.html','4대보험료 2026 - 월급 300만원이면 매달 28만원 빠진다']]
+      guides:[['/blog/posts/regional-health-insurance-guide.html','지역가입자 건강보험료 2026 - 프리랜서·자영업자·은퇴자 월 보험료 계산법'],['/blog/posts/freelancer-insurance-guide.html','프리랜서 4대보험, 직장인이랑 뭐가 다를까? 지역가입자 보험료 계산법'],['/blog/posts/health-insurance-dependent-guide.html','건강보험 피부양자 탈락 기준 2026 - 소득·재산 기준과 탈락 후 보험료 계산'],['/blog/posts/social-insurance-guide.html','4대보험료 2026 - 월급 300만원이면 매달 28만원 빠진다']]
     },
     '/calc/tax/copay-ceiling/': {
       key:'copay-ceiling',
