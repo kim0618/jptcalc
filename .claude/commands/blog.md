@@ -16,7 +16,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 
 | # | 트리거 (이 조건이면 멈추고 요청) | 사용자에게 요청할 정보 | 받은 뒤 할 일 |
 |---|---|---|---|
-| **A. 큐 신선도** | 최종갱신일로부터 **21일 이상**(2026-08-31까지 급성장기, 이후 30일) 경과 **또는** 미사용 주제 **3개 미만** | 네이버 서치어드바이저 > 리포트의 **검색어 TOP 30 + 웹문서 TOP 30 캡처** | 큐 갱신(새 승자 추가 / 완료 주제 제거 / 노출↑·CTR↓ 페이지를 제목최적화 대상에) + `최종갱신`을 오늘로 |
+| **A. 큐 신선도** | 최종갱신일로부터 **21일 이상**(2026-08-31까지 급성장기, 이후 30일) 경과 **또는** 미사용 주제 **3개 미만** | 네이버 서치어드바이저 > 리포트의 **검색어 TOP 30 + 웹문서 TOP 30 캡처** | 큐 갱신(새 승자 추가 / 완료 주제 제거 / 노출↑·CTR↓ 페이지를 제목최적화 대상에) + `최종갱신`을 오늘로 + **아래 "네이버 서치어드바이저 갱신 이력" 표 맨 위에 한 줄 추가(누적)** |
 | **B. 클러스터 성과 점검** | 아래 "클러스터 진행 현황"의 **성과 점검 예정일**이 지났다 | `/report` 실행 가능하면 직접 / 안 되면 **GA4 또는 서치콘솔의 해당 클러스터 글 노출·클릭 데이터** | 먹힌 클러스터 → 위성 글 추가(더블다운), 안 먹힌 클러스터 → 다음 클러스터로 전환. 현황 블록 갱신 |
 | **C. 클러스터 소진** | 현재 진행 클러스터의 위성 주제를 다 썼다(미사용 0) | (정보 불필요) 다음 클러스터 후보를 제시하고 사용자 확인 | 새 클러스터 시작, 현황 블록에 시작일·성과점검 예정일 기록 |
 
@@ -33,36 +33,41 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - **완료 클러스터: 국민연금(pension-welfare)** | 2026-06-05~06-08 완료 | **성과 점검 예정: 2026-07-06** (트리거 B)
   - 허브: national-pension-40years(06-05) / 위성: national-pension-early-receipt(조기수령·06-08)·national-pension-payment-exemption(납부예외·06-08)·national-pension-additional-payment(추납·06-08) | 임의가입은 national-pension-voluntary.html로 기커버
 - **[완료 2026-06-08] 주택연금 신규 계산기 글(pension-welfare)** | housing-pension-guide.html. HF 2026 월지급금 예시표 기준. detail-shell guides + ARTICLE_INFO guides + 본문 CTA 양방향 연결 완료
-- **다음 클러스터 후보(미정)**: 큐 잔여 단발성 2개(중개수수료 brokerage / API토큰 ai). 트리거 A(미사용<3)·C(소진) 상태 - /blog 시 서치어드바이저 갱신 필요. **단 큐 소진 상태이므로 우선순위 ③(신규 계산기 미커버)이 발동** → 생활·도구 6종 블로그가 0개라 여기부터 쓴다(글자수세기·내신등급 먼저). 서치어드바이저 갱신 데이터가 들어오면 그때 큐를 새로 채워 ②로 복귀.
+- **진행 클러스터: 부동산 비용(realestate)** | 2026-06-21 서치어드바이저 갱신으로 시작 | 근거: "부동산 보유세 계산기"가 네이버 검색어 #1(클릭 93·CTR 9.1), realestate 계산기군이 웹문서 상위 다수 점유 = 최고 성과 카테고리. 보유세·취득세·중개수수료는 커버됐고 **등기비용이 빈칸** → 더블다운.
+  - 위성 순서: ① registry-cost-guide(등기비용, Tier 1) → ② property-purchase-costs-guide(매매 부대비용 허브, Tier 2)
+  - **성과 점검 예정: 2026-07-19** (트리거 B)
+- **참고**: orphan 계산기 5종(copay-ceiling·stock-average·cat-age·food-amount·lunar-calendar)은 여전히 전용 블로그 0개 - 네이버 큐 소진 시 우선순위 ③로 폴백. (네이버 큐에는 넣지 않음)
 
 ## 네이버 타겟 주제 큐
 
-**최종갱신: 2026-05-29** (출처: 네이버 서치어드바이저 검색어/웹문서 TOP 30)
+**최종갱신: 2026-06-21** (출처: 네이버 서치어드바이저 검색어/웹문서 TOP 30)
+
+### 📌 네이버 서치어드바이저 갱신 이력 (월 1회)
+
+> 네이버 서치어드바이저 TOP30을 반영해 큐를 갱신할 때마다 **이 표 맨 위에 한 줄 추가**한다. 덮어쓰지 말 것(누적 이력). 위 `최종갱신` 날짜와 항상 일치시킨다.
+
+| 갱신일 | 출처 캡처 | 큐 변경 요약 |
+|---|---|---|
+| 2026-06-21 | 검색어 TOP30 + 웹문서 TOP30 (최근30일 총클릭 2.9천·노출 29.5만, 전월비 +523%·+1318%, 평균 CTR 1%) | 기존 큐 사실상 전소진 확인(brokerage→realestate-agent-fee, api-token→chatgpt-api-cost 등으로 기커버 완료처리). 신규 승자 **등기비용**(registry, CTR 11.5) 추가 + 부동산 비용 클러스터 시작. 제목최적화에 **korean-age-system 블로그**(노출 7,116·CTR 0.7%) 신규 지정 |
+| 2026-05-29 | 검색어 TOP30 + 웹문서 TOP30 | 기준 베이스라인 |
 
 주제 선정 시 **이 큐를 카테고리 균형보다 우선**한다. 위에서부터 미사용 주제를 선택하고, 작성 완료한 주제 앞에 `[완료]`를 붙인다.
 
-### Tier 1 - 네이버 검증된 승자 (최우선)
-1. [완료 2026-06-01] 평균 연봉인상률 - 업종·연차별 적정 인상률 (raise-rate-industry.html / salary/raise-rate)
-2. [완료 2026-06-03] 2026 키별 표준·정상체중 기준표 (남녀·나이대) → weight-by-height-2026.html
-3. [완료 holding-tax-guide.html] 2026 부동산 보유세(재산세+종부세) 계산 총정리 (키워드 "부동산 보유세 계산기" CTR 10% / realestate/property-tax-comprehensive)
-4. 부동산 중개수수료 요율표 2026 - 매매·전월세 구간별 (키워드 "부동산 법정수수료" / realestate/brokerage)
-5. [완료 2026-06-05] 국민연금 40년 납부 시 예상 수령액 (가입기간별 표) → national-pension-40years.html
-6. GPT·Claude API 토큰 비용 비교 2026 (키워드 "api 토큰 비용"·"claude 토큰 비용" 고CTR / ai/api-token)
+### Tier 1 - 네이버 검증된 신규 승자 (최우선)
+1. 부동산 등기비용 계산기 2026 - 법무사 보수·취득세 포함 매매 시 등기 총비용 (키워드 "부동산 등기비용 계산기" 클릭 17·**CTR 11.5%** / calc/realestate/registry **전용 블로그 없음 = 신규 기회** / → registry-cost-guide.html)
+   - 근거: 부동산 비용 클러스터의 빈칸. 보유세(holding-tax-guide)·취득세(acquisition-tax-2026)·중개수수료(realestate-agent-fee)는 커버됐으나 등기비용 전용 글이 없음. registry 계산기는 현재 realestate-agent-fee에서만 링크됨.
 
-### Tier 2 - 승자 클러스터 확장
-7. [완료 2026-06-03] 연봉협상 vs 이직, 인상률 몇 %부터 버티는 게 유리한가 → raise-or-quit-guide.html
-8. [완료 holding-tax-guide.html (합산비교로 커버)] 종부세 vs 재산세 - 더 내는 구간의 함정 (반전 비교 / realestate/jongbu)
-9. [완료 2026-06-01] 연봉별 실질 시급 환산표 2026 → hourly-wage-guide.html
-10. [완료 2026-06-01] 3.3% 프리랜서 vs 4대보험 직장인 실수령 비교 → four-insurance-vs-33-comparison.html
-11. [완료 joint-ownership-tax-guide.html] 공시가격 15억 공동명의 절세 시뮬레이션 (키워드 "공시가격 15억 아파트 공동소유" / realestate/joint)
-12. [완료 기존] BMI 21~25 구간별 건강 의미와 관리법 → bmi-guide.html (키워드 "bmi 21" 커버)
-13. [완료 date-difference.html] 두 날짜 사이 년·개월·일수 정확히 구하는 법 (키워드 "년개월일수 구하기" / date/date-difference)
-14. [완료 dday-counter.html] D-day 활용 가이드 - 전역·수능·기념일 (키워드 "과거 요일"·전역 / date/dday)
+### Tier 2 - 부동산 비용 클러스터 확장 (보유세=네이버 #1 키워드, 더블다운)
+2. 부동산 매매 부대비용 총정리 2026 - 취득세·등기비용·중개수수료·법무사 한눈에 (허브성 / acquisition+registry+brokerage 계산기 묶어 링크 / → property-purchase-costs-guide.html)
+3. 1인 가구 노후 필요자금·생활비 얼마 (키워드 "1인 노후자금 얼마" 클릭 12 / pension-welfare/retirement-living 연결 / → single-household-retirement-guide.html) ⚠️ retirement-living-cost·retirement-living-late-start와 각도 중복 주의 - "1인가구 특화·연령대별 목표액"으로 차별화, 실질 중복이면 스킵하고 Tier 1으로 직행
+
+> 이전 큐(연봉인상률·표준체중·보유세·국민연금40년·API토큰·중개수수료·BMI·날짜차이·D-day 등)는 전부 작성 완료. 완료 이력은 아래 "클러스터 진행 현황"에 보존. brokerage(중개수수료)는 realestate-agent-fee, api-token은 chatgpt-api-cost/claude-vs-gpt/llm-api-price-comparison로 기커버 완료처리됨.
 
 ### 제목 최적화 대상 (월 1회 점검, 메타 쿨다운 4주 준수)
 노출 많은데 CTR 낮은 페이지를 네이버 검색어에 맞춰 제목 갱신. 변경 전 `git blame`으로 4주 쿨다운 확인.
 - [2026-05-29 완료] 만나이(date/age), 시급(salary/hourly-wage), 날짜차이(date/date-difference)
-- 다음 후보: salary/ 인덱스(쿨다운 ~6/13), finance/savings, salary/take-home-pay
+- **[2026-06-21 신규 지정] korean-age-system 블로그** (노출 7,116·CTR 0.7% = 이번 회차 최대 기회): "만 나이 계산법 2026"을 제목 앞부분에 배치하도록 갱신. 키워드 "만 19세 계산방법" CTR 42.9%가 만나이 실수요를 입증. (5/29에 만나이 *계산기*는 최적화했으나 이 *블로그*는 미최적화 / 블로그 메타 쿨다운 확인 후 진행)
+- **내부링크 리프트(제목보다 순위 문제)**: 고노출·저CTR이나 제목이 이미 양호한 계산기 - salary/hourly-wage(6,117·0.9%), salary/index(4,219·0.9%), health/ideal-weight(4,002·1.3%), pension-welfare/national-pension(3,385·1.3%). 제목 손대지 말고 상위 글(weight-by-height-2026·raise-rate-industry 등)에서 내부링크를 추가해 순위를 페이지1로 끌어올린다.
 
 ## 사전 확인
 1. `ls /home/tjd618/jptcalc/blog/posts/` 로 기존 포스트 파일 목록 전체 확인
