@@ -6,7 +6,7 @@
       key:'dog-age',
       quick:['강아지 나이 × 7은 부정확합니다. 첫 1년이 사람 약 15세에 해당합니다.','같은 나이라도 몸집이 클수록 사람 나이는 더 많습니다.','소형견 10세·중형견 8세·대형견 7세·초대형견 6세 전후가 노령기 진입 시점입니다.','정확한 출생일을 모르면 치아·근육량으로 추정 나이를 입력하세요.'],
       related:[['/calc/pet/monthly-cost/','월 생활비','🐕'],['/calc/pet/medical/','의료비 예산','💊'],['/calc/pet/lifetime-cost/','평생 양육비','📊']],
-      guides:[['/blog/posts/pet-senior-care-guide.html','노령 반려동물 케어 비용 - 10살 이후 준비'],['/blog/posts/dog-lifetime-cost.html','강아지 평생 양육비 얼마나 들까? 항목별 분석']]
+      guides:[['/blog/posts/dog-age-guide.html','강아지 나이 계산법 - 사람 나이 환산표 (크기별)'],['/blog/posts/pet-senior-care-guide.html','노령 반려동물 케어 비용 - 10살 이후 준비'],['/blog/posts/dog-lifetime-cost.html','강아지 평생 양육비 얼마나 들까? 항목별 분석']]
     },
     '/calc/pet/monthly-cost/': {
       key:'monthly-cost',
