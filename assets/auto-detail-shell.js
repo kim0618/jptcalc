@@ -2,35 +2,23 @@
 (function(){
   const path=(location.pathname||'').replace(/index\.html$/,'').replace(/\/+$/,'/') || '/';
   const pages={
-    '/calc/health/bmi/': {
-      key:'bmi',
-      quick:['BMI는 체중(kg)을 신장(m)의 제곱으로 나눈 값입니다.','동일 BMI라도 근육량과 체지방 비율에 따라 건강 상태가 다를 수 있습니다.','WHO 기준과 아시아·한국 기준의 비만 판정 구간이 다릅니다.','정기적으로 측정하여 변화 추이를 확인하는 것이 중요합니다.'],
-      related:[['/calc/health/body-fat/','체지방률','💪'],['/calc/health/ideal-weight/','적정체중','⚖️'],['/calc/health/bmr/','기초대사량','🔥']],
-      guides:[['/blog/posts/bmi-guide.html','BMI 지수 해석법 - 한국인 기준 비만 판정 가이드'],['/blog/posts/ideal-weight.html','적정체중 계산법과 건강 체중 관리 전략']]
+    '/calc/auto/auto-loan/': {
+      key:'auto-loan',
+      quick:['자동차 할부는 원리금균등 방식이라 매월 같은 금액(원금+이자)을 납부합니다.','선수금(계약금)을 늘리면 대출 원금이 줄어 총 이자가 감소합니다.','할부 금리는 신용도·차종·할부사에 따라 달라지므로 견적서의 실제 금리를 입력하세요.','잔존가치(유예금)를 설정하는 유예할부는 월 납입액이 낮지만 만기에 목돈이 필요합니다.'],
+      related:[['/calc/auto/auto-tax/','자동차세','🚙'],['/calc/finance/loan-repayment/','대출 상환','🏠'],['/calc/realestate/dsr/','대출한도 (DSR)','🔢']],
+      guides:[]
     },
-    '/calc/health/bmr/': {
-      key:'bmr',
-      quick:['기초대사량은 생명 유지에 필요한 최소 에너지량입니다.','근육량이 많을수록 기초대사량이 높아집니다.','나이가 들수록 기초대사량이 감소하는 경향이 있습니다.','다이어트 시 기초대사량 이하로 섭취하면 요요 현상이 올 수 있습니다.'],
-      related:[['/calc/health/calories/','칼로리 소모','🏃'],['/calc/health/bmi/','BMI','📏'],['/calc/health/body-fat/','체지방률','💪']],
-      guides:[['/blog/posts/bmr-calories.html','기초대사량 계산법 - 다이어트와 체중 유지의 열쇠'],['/blog/posts/diet-calorie-guide.html','다이어트 칼로리 계산법 - 실제로 얼마나 먹어야 할까?']]
+    '/calc/auto/auto-tax/': {
+      key:'auto-tax',
+      quick:['비영업용 승용차 자동차세 = 배기량(cc) × cc당 세액(80/140/200원) + 지방교육세 30%입니다.','차령 3년차부터 매년 5%씩, 12년차 이상 최대 50%까지 본세가 경감됩니다.','1월에 연납하면 2026년 기준 약 4.58% 할인되고, 3·6·9월로 갈수록 줄어듭니다.','전기·수소차는 정액(비영업 연 10만원)이며 차령 경감이 없습니다.'],
+      related:[['/calc/auto/acquisition-tax/','자동차 취득세','📄'],['/calc/auto/auto-loan/','자동차 할부','💳'],['/calc/tax/four-insurance/','4대보험료','🏢']],
+      guides:[]
     },
-    '/calc/health/body-fat/': {
-      key:'body-fat',
-      quick:['체지방률은 체중 대비 체지방의 비율을 나타냅니다.','남성과 여성의 적정 체지방률 기준이 다릅니다.','체지방률이 너무 낮아도 건강에 해로울 수 있습니다.','체성분 분석기를 이용하면 더 정확한 측정이 가능합니다.'],
-      related:[['/calc/health/bmi/','BMI','📏'],['/calc/health/ideal-weight/','적정체중','⚖️'],['/calc/health/bmr/','기초대사량','🔥']],
-      guides:[['/blog/posts/body-fat-guide.html','체지방률 측정법과 적정 범위 - 근육과 지방 비율 관리'],['/blog/posts/visceral-fat-guide.html','내장지방 줄이는 법 - 복부비만 관리 완벽 가이드']]
-    },
-    '/calc/health/calories/': {
-      key:'calories',
-      quick:['운동 종류와 강도에 따라 소모 칼로리가 크게 달라집니다.','체중이 많이 나갈수록 동일 운동에서 더 많은 칼로리를 소모합니다.','유산소 운동과 근력 운동을 병행하면 효과적입니다.','일상 활동(걷기, 계단 오르기 등)도 칼로리 소모에 기여합니다.'],
-      related:[['/calc/health/bmr/','기초대사량','🔥'],['/calc/health/bmi/','BMI','📏'],['/calc/health/body-fat/','체지방률','💪']],
-      guides:[['/blog/posts/diet-calorie-guide.html','다이어트 칼로리 계산법 - 실제로 얼마나 먹어야 할까?'],['/blog/posts/bmr-calories.html','기초대사량 계산법 - 다이어트와 체중 유지의 열쇠']]
-    },
-    '/calc/health/ideal-weight/': {
-      key:'ideal-weight',
-      quick:['적정체중은 키, 성별, 나이 등을 고려하여 산출됩니다.','표준체중 공식은 여러 가지가 있으며 참고용으로 활용하세요.','근육량이 많은 경우 적정체중보다 무거울 수 있습니다.','BMI와 함께 참고하면 더 정확한 건강 판단이 가능합니다.'],
-      related:[['/calc/health/bmi/','BMI','📏'],['/calc/health/body-fat/','체지방률','💪'],['/calc/health/bmr/','기초대사량','🔥']],
-      guides:[['/blog/posts/ideal-weight.html','적정체중 계산법과 건강 체중 관리 전략'],['/blog/posts/bmi-guide.html','BMI 지수 해석법 - 한국인 기준 비만 판정 가이드']]
+    '/calc/auto/acquisition-tax/': {
+      key:'acquisition-tax',
+      quick:['비영업용 승용차 취득세 = 과세표준(부가세 뺀 공급가액) × 7%입니다.','과세표준 = 공장도가격 + 개별소비세 + 교육세 = 차량가격 ÷ 1.1입니다.','개별소비세는 2026년 7월 1일 출고분부터 정상세율 5%(6월까지 3.5%)입니다.','경차는 취득세 75만원 한도 면제, 전기·수소차는 140만원 한도 면제(~2026.12.31)입니다.'],
+      related:[['/calc/auto/auto-tax/','자동차세','🚙'],['/calc/auto/auto-loan/','자동차 할부','💳'],['/calc/realestate/acquisition/','부동산 취득세','📄']],
+      guides:[]
     }
   };
   let cfg=pages[path];
@@ -50,14 +38,14 @@
     .sh-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
     .sh-logo-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;}
     .sh-logo-text{font-size:18px;font-weight:900;color:#fff;letter-spacing:-.5px;line-height:1;}
-    .sh-nav{display:flex;align-items:center;gap:2px;flex:1;min-width:0;}
+    .sh-nav{display:flex;align-items:center;gap:2px;flex:1;min-width:0!important;}
     .sh-nav-item{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:600;color:#9CA3AF;transition:all .15s;white-space:nowrap;}
     .sh-nav-item:hover{background:rgba(255,255,255,.06);color:#fff;}
-    .sh-nav-item.sh-active{background:rgba(16,185,129,.12);color:#10B981;}
+    .sh-nav-item.sh-active{background:rgba(239,68,68,.12);color:#EF4444;}
     .sh-nav-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
     .sh-cta{margin-left:auto;flex-shrink:0;}
     .sh-btn-blog{padding:7px 14px;border-radius:8px;font-size:13px;font-weight:700;border:1px solid rgba(255,255,255,.2);background:transparent;color:#D1D5DB;text-decoration:none;transition:all .15s;display:inline-block;}
-    .sh-btn-blog:hover{border-color:#10B981;color:#10B981;}
+    .sh-btn-blog:hover{border-color:#EF4444;color:#EF4444;}
     .sh-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;margin-left:auto;background:none;border:none;}
     .sh-hamburger span{display:block;width:22px;height:2px;background:#9CA3AF;border-radius:2px;}
     .mega-layout{max-width:1400px;margin:0 auto;padding:20px 24px;display:grid;grid-template-columns:220px minmax(0,1fr) 300px;gap:24px;align-items:start;}
@@ -68,12 +56,12 @@
     .msl-link,.msl-calc-btn{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:600;color:#6B7280;transition:all .15s;background:none;border:none;width:100%;text-align:left;font-family:inherit;cursor:pointer;}
     .msl-calc-btn{font-size:12px;padding:8px 10px;border-radius:8px;gap:8px;}
     .msl-link:hover,.msl-calc-btn:hover{background:rgba(0,0,0,.04);color:#111827;}
-    .msl-link.msl-active,.msl-calc-btn.msl-calc-active{background:rgba(16,185,129,.12);color:#10B981;}
+    .msl-link.msl-active,.msl-calc-btn.msl-calc-active{background:rgba(239,68,68,.12);color:#EF4444;}
     .msl-icon{font-size:16px;flex-shrink:0;width:20px;text-align:center;}
     .msl-badge{margin-left:auto;font-size:10px;font-weight:700;background:rgba(0,0,0,.06);border-radius:4px;padding:1px 6px;color:#6B7280;}
-    .msl-link.msl-active .msl-badge{background:rgba(16,185,129,.15);color:#10B981;}
+    .msl-link.msl-active .msl-badge{background:rgba(239,68,68,.15);color:#EF4444;}
     .msl-divider{height:1px;background:rgba(0,0,0,.06);margin:10px 0;}
-    .msl-calc-dot{width:5px;height:5px;border-radius:50%;background:#10B981;flex-shrink:0;}
+    .msl-calc-dot{width:5px;height:5px;border-radius:50%;background:#EF4444;flex-shrink:0;}
     .mega-sidebar-right{position:sticky;top:88px;display:flex;flex-direction:column;gap:16px;align-self:start;}
     .msr-widget{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:14px;padding:18px;}
     .msr-widget-title{font-size:11px;font-weight:800;color:#6B7280;letter-spacing:.5px;text-transform:uppercase;margin-bottom:12px;}
@@ -85,29 +73,29 @@
     .msr-widget-link:hover .msr-widget-text{color:#111827;}
     .mega-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:150;}
     .mega-overlay.open{display:block;}
-    .page-wrap.health-shell-main{max-width:none!important;width:100%!important;margin:0!important;padding:0!important;min-width:0;display:flex!important;flex-direction:column!important;gap:12px!important;}
-    .health-shell-main>*{margin-top:0!important;margin-bottom:0!important;min-width:0!important;}
-    .health-shell-main>.page-header{margin-bottom:0px!important;}
-    .health-shell-main .card{width:100%!important;box-sizing:border-box!important;}
-    .health-shell-main .card .field{min-width:0;}
-    .health-shell-main .card,
-    .health-shell-main .result-card,
-    .health-shell-main .explain-section,
-    .health-shell-main .siblings-section,
-    .health-shell-main .sibling-section,
-    .health-shell-main .guide-section{max-width:100%!important;}
-    .health-shell-main .guide-section{margin-top:0!important;gap:12px!important;}
-    .health-shell-main .guide-section>*{margin:0!important;}
-    .health-shell-main .sibling-section{display:none!important;}
-    .health-shell-main .article-info{margin-bottom:0!important;}
-    .health-shell-main .review-footer{margin-top:0!important;}
-    .health-shell-main .guide-section .review-footer{margin-top:0!important;}
-    .health-shell-main .guide-section>.update-note{margin-top:0!important;}
+    .page-wrap.auto-shell-main{max-width:none!important;width:100%!important;margin:0!important;padding:0!important;min-width:0;display:flex!important;flex-direction:column!important;gap:12px!important;}
+    .auto-shell-main>*{margin-top:0!important;margin-bottom:0!important;min-width:0!important;}
+    .auto-shell-main>.page-header{margin-bottom:0px!important;}
+        .auto-shell-main .card{width:100%!important;box-sizing:border-box!important;}
+    .auto-shell-main .card .field{min-width:0;}
+    .auto-shell-main .card,
+    .auto-shell-main .result-card,
+    .auto-shell-main .explain-section,
+    .auto-shell-main .siblings-section,
+    .auto-shell-main .sibling-section,
+    .auto-shell-main .guide-section{max-width:100%!important;}
+    .auto-shell-main .guide-section{margin-top:0!important;gap:12px!important;}
+    .auto-shell-main .guide-section>*{margin:0!important;}
+    .auto-shell-main .sibling-section{display:none!important;}
+    .auto-shell-main .article-info{margin-bottom:0!important;}
+    .auto-shell-main .review-footer{margin-top:0!important;}
+    .auto-shell-main .guide-section .review-footer{margin-top:0!important;}
+    .auto-shell-main .guide-section>.update-note{margin-top:0!important;}
     .mobile-guides,.mobile-related{display:none;margin-top:16px;}
     .mobile-guides__title{font-size:11px;font-weight:800;color:#6B7280;letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px;}
     .mobile-guides__list{display:flex;flex-direction:column;gap:6px;}
     .mobile-guides__link{display:flex;align-items:center;gap:10px;padding:11px 14px;background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:12px;text-decoration:none;transition:border-color .15s;}
-    .mobile-guides__link:hover{border-color:#10B981;}
+    .mobile-guides__link:hover{border-color:#EF4444;}
     .mobile-guides__icon{font-size:15px;flex-shrink:0;}
     .mobile-guides__text{font-size:13px;font-weight:600;color:#374151;flex:1;line-height:1.4;}
     @media (max-width:1199px){.mega-layout{grid-template-columns:220px minmax(0,1fr);} .mega-sidebar-right{display:none;}}
@@ -130,10 +118,10 @@
         <a href="/calc/pension-welfare/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#0EA5E9"></span>연금·복지</a>
         <a href="/calc/finance/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#6366F1"></span>금융·이자</a>
         <a href="/calc/date/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#F97316"></span>날짜·D-day</a>
-        <a href="/calc/health/" class="sh-nav-item sh-active"><span class="sh-nav-dot" style="background:#10B981"></span>건강</a>
+        <a href="/calc/health/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#10B981"></span>건강</a>
         <a href="/calc/ai/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#8B5CF6"></span>AI/테크</a>
         <a href="/calc/pet/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#F472B6"></span>반려동물</a>
-        <a href="/calc/auto/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#EF4444"></span>자동차</a>
+        <a href="/calc/auto/" class="sh-nav-item sh-active"><span class="sh-nav-dot" style="background:#EF4444"></span>자동차</a>
       </nav>
       <div class="sh-cta"><a href="/blog/" class="sh-btn-blog">블로그</a></div>
       <button class="sh-hamburger" type="button" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
@@ -141,8 +129,8 @@
   }
 
   const main=document.querySelector('main.page-wrap');
-  if(!main || main.classList.contains('health-shell-main')) return;
-  main.classList.add('health-shell-main');
+  if(!main || main.classList.contains('auto-shell-main')) return;
+  main.classList.add('auto-shell-main');
 
   const overlay=document.createElement('div');
   overlay.className='mega-overlay';
@@ -153,7 +141,7 @@
   const left=document.createElement('aside');
   left.className='mega-sidebar-left';
   left.id='mega-sidebar-left';
-  left.innerHTML=(window.JPT_sidebarLeft?window.JPT_sidebarLeft('health', cfg.key):'');
+  left.innerHTML=(window.JPT_sidebarLeft?window.JPT_sidebarLeft('auto', cfg.key):'');
 
   const guidesWidget = (cfg.guides && cfg.guides.length)
     ? `<div class="msr-widget">

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>자동차 할부 계산기 2026 - 월 납입금·총 이자·유예금(잔존가치) 계산 | 제이퍼 계산기</title>
+  <meta name="description" content="차량 가격·선수금·할부 금리·기간을 입력하면 자동차 할부 월 납입금과 총 이자를 자동 계산합니다. 유예할부(잔존가치) 설정 시 월 납입금이 얼마나 낮아지는지 비교. 3,000만원 차량 선수금 500만원 60개월 5.9% 기준 월 약 48만원." />
+  <meta name="keywords" content="자동차할부계산기,자동차할부,자동차대출계산기,유예할부계산기,할부이자계산기,자동차할부이자,차량할부계산기" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/auto/auto-loan/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="자동차 할부 계산기 2026 - 월 납입금·총 이자·유예금 계산 | 제이퍼 계산기" />
+  <meta property="og:description" content="차량 가격·선수금·할부 금리·기간으로 월 납입금과 총 이자를 자동 계산. 유예할부(잔존가치) 비교 지원." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/auto/auto-loan/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="자동차 할부 계산기 2026 | 제이퍼 계산기" />
+  <meta name="twitter:description" content="차량 가격·선수금·할부 금리·기간으로 월 납입금과 총 이자를 자동 계산. 유예할부(잔존가치) 비교 지원." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/affiliate-banner.css" />
+  <link rel="stylesheet" href="/assets/auto-common.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"자동차 할부 계산기",
+    "url":"https://www.jptcalc.kr/calc/auto/auto-loan/",
+    "applicationCategory":"FinanceApplication",
+    "operatingSystem":"All",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+      {"@type":"ListItem","position":2,"name":"자동차 계산기","item":"https://www.jptcalc.kr/calc/auto/"},
+      {"@type":"ListItem","position":3,"name":"자동차 할부 계산기","item":"https://www.jptcalc.kr/calc/auto/auto-loan/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"자동차 할부 월 납입금은 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"자동차 할부는 대부분 원리금균등 방식으로, 매월 같은 금액(원금+이자)을 납부합니다. 대출 원금은 '차량 가격 − 선수금'이며, 월 납입금 = 원금 × 월이자율 ÷ (1 − (1+월이자율)^−개월수)로 계산됩니다. 예를 들어 3,000만원 차량에 선수금 500만원, 연 5.9%, 60개월이면 대출 원금 2,500만원에 월 약 48만 2천원을 납부합니다."}},{"@type":"Question","name":"선수금을 늘리면 얼마나 이득인가요?","acceptedAnswer":{"@type":"Answer","text":"선수금(계약금)을 늘리면 대출 원금이 줄어 월 납입금과 총 이자가 모두 감소합니다. 3,000만원 차량을 연 5.9%·60개월로 살 때 선수금 500만원이면 총 이자가 약 393만원이지만, 선수금 1,000만원이면 대출 원금이 2,000만원으로 줄어 총 이자가 약 314만원으로 약 79만원 절감됩니다. 여윳돈이 있다면 선수금을 높이는 것이 가장 확실한 이자 절감법입니다."}},{"@type":"Question","name":"유예할부(잔존가치)란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"유예할부는 차량 가격의 일부(보통 30~40%)를 '잔존가치'로 설정해 할부 기간 중에는 갚지 않고 만기에 일시 상환하는 방식입니다. 월 납입금이 크게 낮아지는 대신 만기에 목돈(유예금)이 필요하고, 유예금에도 이자가 붙어 총 이자는 더 많아집니다. 3,000만원 차량·선수금 500만원·연 5.9%·60개월에서 잔존가치 900만원을 설정하면 월 납입금이 약 48만원에서 약 35만원으로 낮아지지만, 만기에 900만원을 따로 갚아야 합니다."}},{"@type":"Question","name":"자동차 할부 금리는 보통 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"할부 금리는 신용도·차종(신차/중고차)·할부사(캐피탈/카드사/제조사 금융)에 따라 다릅니다. 2026년 기준 신차 할부는 대략 연 4~7%, 중고차 할부는 연 6~12% 수준이 일반적입니다. 제조사 금융(현대캐피탈 등)은 프로모션으로 저금리·무이자 할부를 제공하기도 하므로, 견적서에 적힌 실제 적용 금리를 입력해 계산하세요."}},{"@type":"Question","name":"할부와 리스·렌트는 어떻게 다른가요?","acceptedAnswer":{"@type":"Answer","text":"할부는 차량 소유권을 가지면서 대금을 나눠 갚는 방식이고, 리스·장기렌트는 차량을 빌려 쓰고 월 사용료를 내는 방식입니다. 할부는 차가 본인 자산이 되지만 취득세·보험을 직접 부담하고, 리스·렌트는 초기 비용이 적고 유지관리가 편하지만 만기 시 차가 남지 않습니다. 총 비용은 주행거리·보유 기간·세금 처리 방식에 따라 달라지므로 각각 계산해 비교하는 것이 좋습니다."}}]}</script>
+  <style>
+    input[type=number]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(239,68,68,0.15)}
+    .result-card{background:linear-gradient(135deg,#FEF2F2 0%,#FEE2E2 100%);border:1px solid rgba(239,68,68,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-highlight{background:rgba(239,68,68,0.1);border-radius:12px;padding:16px;margin-bottom:16px;text-align:center}
+    .rh-label{font-size:12px;color:var(--gray-500);margin-bottom:4px}
+    .rh-value{font-size:28px;font-weight:900;color:var(--primary)}
+    .rh-sub{font-size:12px;color:var(--gray-500);margin-top:2px}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/tools/" class="nav-item"><span class="nav-dot" style="background:#14B8A6;"></span>생활·도구</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+      <a href="/calc/auto/" class="nav-item active"><span class="nav-dot" style="background:#EF4444;"></span>자동차</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/auto/">자동차 계산기</a><span class="breadcrumb-sep">›</span><span>자동차 할부 계산기</span></div>
+    <div class="page-header-badge">🚗 선수금·유예할부 반영</div>
+    <h1>자동차 할부 계산기</h1>
+    <p>차량 가격·선수금·금리·기간으로 월 납입금과 총 이자를 계산하세요</p>
+  </div>
+    <div class="card">
+      <div class="card-title">할부 정보</div>
+      <div class="field">
+        <div class="field-label">차량 가격 <span class="label-hint">만원 단위</span></div>
+        <div class="input-wrap"><input type="number" id="car-price" min="0" placeholder="예) 3000" oninput="calc()" /><span class="unit">만원</span></div>
+        <div class="converted" id="car-price-display"></div>
+      </div>
+      <div class="field">
+        <div class="field-label">선수금 (계약금) <span class="label-hint">현금으로 먼저 낼 금액</span></div>
+        <div class="input-wrap"><input type="number" id="down-payment" min="0" placeholder="예) 500" oninput="calc()" /><span class="unit">만원</span></div>
+        <div class="converted" id="down-display"></div>
+      </div>
+      <div class="field">
+        <div class="field-label">잔존가치 (유예금) <span class="label-hint">유예할부 시 만기에 일시 상환, 없으면 0</span></div>
+        <div class="input-wrap"><input type="number" id="residual" min="0" placeholder="예) 0" oninput="calc()" /><span class="unit">만원</span></div>
+        <div class="converted" id="residual-display"></div>
+      </div>
+      <div class="field">
+        <div class="field-label">연 할부 금리</div>
+        <div class="input-wrap"><input type="number" id="loan-rate" min="0" placeholder="예) 5.9" step="0.1" oninput="calc()" /><span class="unit">%</span></div>
+      </div>
+      <div class="field">
+        <div class="field-label">할부 기간</div>
+        <div class="seg-group" style="margin-bottom:0" id="loan-period-group">
+          <button class="seg-btn" onclick="setLoanPeriod(12,this)">12개월</button>
+          <button class="seg-btn" onclick="setLoanPeriod(36,this)">36개월</button>
+          <button class="seg-btn active" onclick="setLoanPeriod(60,this)">60개월</button>
+          <button class="seg-btn" onclick="setLoanPeriod(72,this)">72개월</button>
+        </div>
+      </div>
+    </div>
+    <div class="result-card" id="result">
+      <div class="result-highlight">
+        <div class="rh-label">월 납입금</div>
+        <div class="rh-value" id="r-monthly">-</div>
+        <div class="rh-sub" id="r-period-label">60개월 · 원리금균등</div>
+      </div>
+      <div class="result-row"><span class="result-label">대출 원금 (차량가 − 선수금)</span><span class="result-value" id="r-principal">-</span></div>
+      <div class="result-row"><span class="result-label">총 이자</span><span class="result-value" id="r-interest">-</span></div>
+      <div class="result-row" id="r-residual-row" style="display:none"><span class="result-label">만기 유예금 (일시 상환)</span><span class="result-value" id="r-residual">-</span></div>
+      <div class="result-row result-total-row">
+        <span class="result-total-label">총 납입액 (선수금 제외)</span>
+        <span class="result-total-value" id="r-total">-</span>
+      </div>
+      <p class="result-note">※ 원리금균등 기준 추정치입니다. 유예할부는 만기에 유예금을 일시 상환해야 하며, 유예금에도 이자가 붙어 총 이자가 늘어납니다. 실제 금액·금리는 캐피탈·카드사 견적서에서 확인하세요.</p>
+</div>
+
+  <a class="affiliate-banner" href="https://lase.kr/click.php?m=mycredit1&a=A100703525&l=0000" target="_blank" rel="noopener noreferrer sponsored">
+        <div class="affiliate-banner__text">
+          <div class="affiliate-banner__title">할부 전 내 신용점수부터 확인하세요</div>
+          <div class="affiliate-banner__desc">NICE지키미에서 무료 신용점수 조회 (금리 우대 조건)</div>
+        </div>
+        <span class="affiliate-banner__cta">신용점수 확인하기 →</span>
+      </a>
+  <p class="affiliate-disclosure">※ 위 링크는 제휴 광고이며, 이용 시 제이퍼 계산기가 일정 수수료를 받을 수 있습니다. (이용자 추가 부담 없음)</p>
+
+  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>자동차 할부, 월 납입금은 이렇게 정해진다</h2>
+      <p>자동차 할부는 대부분 원리금균등 방식입니다. 차량 가격에서 선수금을 뺀 금액이 대출 원금이 되고, 여기에 할부 금리와 기간을 적용해 매월 같은 금액을 납부합니다. 같은 차량이라도 선수금·금리·기간 조합에 따라 월 납입금과 총 이자가 크게 달라지므로, 견적서를 받기 전 시뮬레이션해 보는 것이 좋습니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box">
+          <strong>선수금 (계약금)</strong>
+          <span>먼저 현금으로 내는 금액. 선수금이 클수록 대출 원금이 줄어 월 납입금과 총 이자가 모두 감소합니다.</span>
+        </div>
+        <div class="guide-box">
+          <strong>할부 금리</strong>
+          <span>신용도·차종·할부사에 따라 다릅니다. 신차는 대략 연 4~7%, 중고차는 연 6~12% 수준입니다. 제조사 금융 프로모션 시 저금리·무이자도 있습니다.</span>
+        </div>
+        <div class="guide-box">
+          <strong>유예할부 (잔존가치)</strong>
+          <span>차량가의 30~40%를 만기에 일시 상환하도록 미루는 방식. 월 납입금은 낮아지지만 만기에 목돈이 필요하고 총 이자는 늘어납니다.</span>
+        </div>
+        <div class="guide-box">
+          <strong>할부 기간</strong>
+          <span>기간이 길수록 월 부담은 줄지만 총 이자가 커집니다. 신차는 36~60개월이 일반적이며, 차량 보유 계획에 맞춰 정하세요.</span>
+        </div>
+      </div>
+      <p class="ref-links">금리 비교: <a href="https://fine.fss.or.kr" target="_blank" rel="noopener">금융소비자포털(fine.fss.or.kr)</a></p>
+    </div>
+    <div class="guide-card">
+      <h2>2026년 자동차 할부 금리 참고표</h2>
+      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">할부 금리는 신용도·차종·할부사별로 다르며, 아래는 일반적인 시장 범위입니다(견적서의 실제 금리를 입력하세요).</p>
+      <div class="table-wrap">
+      <table class="rate-table">
+        <thead>
+          <tr><th>구분</th><th>일반 금리 범위</th><th>비고</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>신차 (제조사 금융)</td><td class="highlight-cell">연 4~7%</td><td>프로모션 시 저금리·무이자 할부</td></tr>
+          <tr><td>신차 (카드·캐피탈)</td><td>연 5~8%</td><td>신용도에 따라 차등</td></tr>
+          <tr><td>중고차 할부</td><td>연 6~12%</td><td>차령·주행거리 영향 큼</td></tr>
+          <tr><td>유예할부 (잔존가치형)</td><td>연 5~9%</td><td>월 부담↓·총 이자↑·만기 목돈 필요</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <h3>실제 사용 예시</h3>
+      <p>3,000만원 차량을 연 5.9% 할부로 구매할 때 선수금·기간·방식에 따른 차이입니다.</p>
+      <table>
+        <thead>
+          <tr><th>조건</th><th>대출 원금</th><th>기간</th><th>월 납입금</th><th>총 이자</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>선수금 500만 / 일반</td><td>2,500만원</td><td>60개월</td><td>약 48만 2천원</td><td>약 393만원</td></tr>
+          <tr><td>선수금 1,000만 / 일반</td><td>2,000만원</td><td>60개월</td><td>약 38만 6천원</td><td>약 314만원</td></tr>
+          <tr><td>선수금 500만 / 유예 900만</td><td>2,500만원</td><td>60개월</td><td>약 35만 3천원</td><td>약 517만원</td></tr>
+        </tbody>
+      </table>
+      <p class="ref-links">* 위 수치는 참고용 추정치입니다. 취급수수료, 제조사 프로모션, 중도상환 조건 등에 따라 실제 금액은 달라집니다.</p>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item">
+        <h3>자동차 할부 월 납입금은 어떻게 계산하나요?</h3>
+        <p>자동차 할부는 대부분 원리금균등 방식으로, 매월 같은 금액(원금+이자)을 납부합니다. 대출 원금은 '차량 가격 − 선수금'이며, 월 납입금 = 원금 × 월이자율 ÷ (1 − (1+월이자율)<sup>−개월수</sup>)로 계산됩니다. 예를 들어 3,000만원 차량에 선수금 500만원, 연 5.9%, 60개월이면 대출 원금 2,500만원에 월 약 48만 2천원을 납부합니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>선수금을 늘리면 얼마나 이득인가요?</h3>
+        <p>선수금(계약금)을 늘리면 대출 원금이 줄어 월 납입금과 총 이자가 모두 감소합니다. 3,000만원 차량을 연 5.9%·60개월로 살 때 선수금 500만원이면 총 이자가 약 393만원이지만, 선수금 1,000만원이면 대출 원금이 2,000만원으로 줄어 총 이자가 약 314만원으로 약 79만원 절감됩니다. 여윳돈이 있다면 선수금을 높이는 것이 가장 확실한 이자 절감법입니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>유예할부(잔존가치)란 무엇인가요?</h3>
+        <p>유예할부는 차량 가격의 일부(보통 30~40%)를 '잔존가치'로 설정해 할부 기간 중에는 갚지 않고 만기에 일시 상환하는 방식입니다. 월 납입금이 크게 낮아지는 대신 만기에 목돈(유예금)이 필요하고, 유예금에도 이자가 붙어 총 이자는 더 많아집니다. 3,000만원 차량·선수금 500만원·연 5.9%·60개월에서 잔존가치 900만원을 설정하면 월 납입금이 약 48만원에서 약 35만원으로 낮아지지만, 만기에 900만원을 따로 갚아야 합니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>자동차 할부 금리는 보통 얼마인가요?</h3>
+        <p>할부 금리는 신용도·차종(신차/중고차)·할부사(캐피탈/카드사/제조사 금융)에 따라 다릅니다. 2026년 기준 신차 할부는 대략 연 4~7%, 중고차 할부는 연 6~12% 수준이 일반적입니다. 제조사 금융(현대캐피탈 등)은 프로모션으로 저금리·무이자 할부를 제공하기도 하므로, 견적서에 적힌 실제 적용 금리를 입력해 계산하세요.</p>
+      </div>
+      <div class="faq-item">
+        <h3>할부와 리스·렌트는 어떻게 다른가요?</h3>
+        <p>할부는 차량 소유권을 가지면서 대금을 나눠 갚는 방식이고, 리스·장기렌트는 차량을 빌려 쓰고 월 사용료를 내는 방식입니다. 할부는 차가 본인 자산이 되지만 취득세·보험을 직접 부담하고, 리스·렌트는 초기 비용이 적고 유지관리가 편하지만 만기 시 차가 남지 않습니다. 총 비용은 주행거리·보유 기간·세금 처리 방식에 따라 달라지므로 각각 계산해 비교하는 것이 좋습니다.</p>
+      </div>
+    </div>
+    <div class="update-note">최종 검토: 2026.06.22 · 할부 금리·조건은 할부사마다 다를 수 있으니 견적서 또는 <a href="https://fine.fss.or.kr" target="_blank" rel="noopener">금융소비자포털(fine.fss.or.kr)</a>에서 확인하세요.</div>
+  </div>
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '원리금균등 상환 공식 및 자동차 할부 일반 조건',
+    appliedFrom: '2026년 기준',
+    exceptions: [
+      '할부 금리는 신용도·차종·할부사(캐피탈/카드/제조사 금융)별로 달라집니다',
+      '유예할부(잔존가치형)는 만기에 유예금을 일시 상환해야 하며 총 이자가 늘어납니다',
+      '제조사 프로모션(저금리·무이자)·취급수수료·중도상환수수료는 별도로 확인이 필요합니다',
+    ],
+    references: [
+      { name: '금융소비자포털(fine.fss.or.kr)', url: 'https://fine.fss.or.kr' },
+    ],
+    lastReviewed: '2026.06.22',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 자동차 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/auto/auto-loan/" class="sibling-link current">💳 자동차 할부</a>
+      <a href="/calc/auto/auto-tax/" class="sibling-link">🚙 자동차세</a>
+      <a href="/calc/auto/acquisition-tax/" class="sibling-link">📄 자동차 취득세</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script>
+let loanPeriod=60;
+function Ww(w){return Math.round(w).toLocaleString()+'원';}
+function setLoanPeriod(m,btn){loanPeriod=m;document.querySelectorAll('#loan-period-group .seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');calc();}
+function showConverted(inputEl,dispEl){const v=parseFloat(inputEl.value);if(!v||v<=0){dispEl.textContent='';return;}dispEl.textContent=v>=10000?'= '+(v/10000).toFixed(2)+'억원':'= '+v.toLocaleString()+'만원';}
+
+function calc(){
+  const price=parseFloat(document.getElementById('car-price').value)||0;
+  const down=parseFloat(document.getElementById('down-payment').value)||0;
+  const residualMan=parseFloat(document.getElementById('residual').value)||0;
+  const r=parseFloat(document.getElementById('loan-rate').value)||0;
+  showConverted(document.getElementById('car-price'),document.getElementById('car-price-display'));
+  showConverted(document.getElementById('down-payment'),document.getElementById('down-display'));
+  showConverted(document.getElementById('residual'),document.getElementById('residual-display'));
+  const res=document.getElementById('result');
+  const principal=(price-down)*10000;
+  if(price<=0||down<0||residualMan<0||principal<=0||r<0||residualMan*10000>=principal){res.classList.remove('show');return;}
+  res.classList.add('show');
+  const FV=residualMan*10000;
+  const n=loanPeriod;
+  const mr=r/100/12;
+  let monthly;
+  if(mr>0){
+    monthly=(principal - FV/Math.pow(1+mr,n)) * mr / (1 - Math.pow(1+mr,-n));
+  } else {
+    monthly=(principal-FV)/n;
+  }
+  const totalPay=monthly*n+FV;
+  const totalInterest=totalPay-principal;
+  document.getElementById('r-monthly').textContent=Ww(monthly);
+  document.getElementById('r-period-label').textContent=n+'개월 · 원리금균등'+(FV>0?' (유예할부)':'');
+  document.getElementById('r-principal').textContent=Ww(principal);
+  document.getElementById('r-interest').textContent=Ww(totalInterest);
+  const rrow=document.getElementById('r-residual-row');
+  if(FV>0){rrow.style.display='';document.getElementById('r-residual').textContent=Ww(FV);}
+  else{rrow.style.display='none';}
+  document.getElementById('r-total').textContent=Ww(totalPay);
+}
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+  <script src="/assets/footer-unified.js"></script>
+<script src="/assets/calc-registry.js"></script>
+<script src="/assets/auto-detail-shell.js"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '원리금균등 상환 공식·자동차 할부 일반 조건',
+  basisDate: '2026년 기준',
+  referenceOrg: '금융감독원',
+  lastReviewed: '2026.06.22',
+  category: 'auto'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/blog-review-footer.js"></script>
+</body>
+</html>

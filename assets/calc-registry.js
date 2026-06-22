@@ -505,10 +505,32 @@ window.CALC_REGISTRY = {
         "name": "음력 양력 변환기"
       }
     ]
+  },
+  "auto": {
+    "name": "자동차",
+    "icon": "🚗",
+    "color": "#EF4444",
+    "calcs": [
+      {
+        "slug": "auto-loan",
+        "icon": "💳",
+        "name": "자동차 할부"
+      },
+      {
+        "slug": "auto-tax",
+        "icon": "🚙",
+        "name": "자동차세"
+      },
+      {
+        "slug": "acquisition-tax",
+        "icon": "📄",
+        "name": "자동차 취득세"
+      }
+    ]
   }
 };
 window.CALC_TOTAL = Object.keys(window.CALC_REGISTRY).reduce(function(n,k){return n+window.CALC_REGISTRY[k].calcs.length;},0);
-window.CALC_CAT_ORDER = ["realestate", "salary", "tools", "tax", "pension-welfare", "finance", "date", "health", "ai", "pet"];
+window.CALC_CAT_ORDER = ["realestate", "salary", "tools", "tax", "pension-welfare", "finance", "date", "health", "ai", "pet", "auto"];
 
 /* 좌측 사이드바(카테고리 nav + 계산기 목록) 공통 렌더 — 9개 detail-shell이 호출. registry 미로드 시 빈 문자열. */
 window.JPT_sidebarLeft = function(curCat, curKey){

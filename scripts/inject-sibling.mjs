@@ -14,6 +14,7 @@ const TITLES={
   realestate:'다른 부동산 계산기', salary:'다른 이직/연봉 계산기', tax:'다른 프리랜서 세금 계산기',
   'pension-welfare':'다른 연금·복지 계산기', date:'다른 날짜 계산기', finance:'다른 금융·이자 계산기',
   health:'다른 건강 계산기', pet:'다른 반려동물 계산기', ai:'다른 AI / 테크 계산기', tools:'다른 생활·도구 계산기',
+  auto:'다른 자동차 계산기',
 };
 const GUIDE_CAP=6;
 

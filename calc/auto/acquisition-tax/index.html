@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>자동차 취득세 계산기 2026 - 신차 개별소비세·부가세·실구매가 합산 | 제이퍼 계산기</title>
+  <meta name="description" content="공장도가격과 차종을 입력하면 신차 취득세(7%)와 개별소비세·교육세·부가세, 신차 실구매가까지 한 번에 계산합니다. 공장도 3,000만원 승용차 기준 취득세 약 223만원, 실구매가 약 3,738만원. 전기차·경차 감면 반영." />
+  <meta name="keywords" content="자동차취득세계산기,자동차취득세,신차취득세,개별소비세계산기,신차실구매가,자동차세금계산기,전기차취득세" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/auto/acquisition-tax/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="자동차 취득세 계산기 2026 - 신차 개별소비세·부가세·실구매가 | 제이퍼 계산기" />
+  <meta property="og:description" content="공장도가격·차종으로 신차 취득세·개별소비세·교육세·부가세·실구매가를 한 번에 계산합니다. 전기차·경차 감면 반영." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/auto/acquisition-tax/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="자동차 취득세 계산기 2026 | 제이퍼 계산기" />
+  <meta name="twitter:description" content="공장도가격·차종으로 신차 취득세·개별소비세·부가세·실구매가를 한 번에 계산합니다. 전기차·경차 감면 반영." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/affiliate-banner.css" />
+  <link rel="stylesheet" href="/assets/auto-common.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"자동차 취득세 계산기",
+    "url":"https://www.jptcalc.kr/calc/auto/acquisition-tax/",
+    "applicationCategory":"FinanceApplication",
+    "operatingSystem":"All",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+      {"@type":"ListItem","position":2,"name":"자동차 계산기","item":"https://www.jptcalc.kr/calc/auto/"},
+      {"@type":"ListItem","position":3,"name":"자동차 취득세 계산기","item":"https://www.jptcalc.kr/calc/auto/acquisition-tax/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"자동차 취득세는 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"비영업용 승용차 취득세는 과세표준(부가세를 뺀 공급가액) × 7%로 계산합니다. 과세표준은 공장도가격 + 개별소비세 + 개소세 교육세이며, 차량 판매가격(부가세 포함)을 1.1로 나눈 값과 같습니다. 예를 들어 공장도가격 3,000만원 승용차는 차량가격 약 3,514만원, 과세표준 약 3,195만원, 취득세 약 223만원입니다. 경차(1,000cc 미만)는 4%이고 75만원 한도로 면제됩니다."}},{"@type":"Question","name":"개별소비세는 2026년에 몇 %인가요?","acceptedAnswer":{"@type":"Answer","text":"승용차 개별소비세는 정상세율 5%입니다. 2025년부터 시행된 한시 인하세율 3.5%는 2026년 6월 30일로 종료되어, 2026년 7월 1일 출고분부터는 5%가 적용됩니다. 기준 시점은 계약일이 아니라 출고일(등록일)입니다. 개별소비세에는 그 30%인 교육세가 추가되며, 1,000cc 미만 경차는 개별소비세가 면제됩니다."}},{"@type":"Question","name":"전기차 취득세 감면은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"전기차·수소차는 취득세가 140만원 한도로 면제됩니다(2026년 12월 31일까지, 2027년부터 100만원으로 축소 예정). 예를 들어 과세표준이 4,500만원이면 취득세 315만원에서 140만원을 뺀 175만원만 부담합니다. 개별소비세도 300만원 한도로 면제됩니다. 하이브리드 취득세 감면은 2024년에 종료되어 현재는 없습니다."}},{"@type":"Question","name":"신차 실구매가에는 무엇이 포함되나요?","acceptedAnswer":{"@type":"Answer","text":"신차 실구매가는 차량가격(공장도가격 + 개별소비세 + 교육세 + 부가가치세)에 취득세와 공채(지역개발채권·도시철도채권) 매입 비용을 더한 금액입니다. 공채는 지역·배기량별로 다르고 즉시 할인 매도 시 실부담이 액면의 5~10% 수준이며, 1,600cc 미만은 대부분 면제됩니다. 이 계산기는 차량가격과 취득세까지 산출하며 공채는 별도입니다."}},{"@type":"Question","name":"경차 취득세는 정말 0원인가요?","acceptedAnswer":{"@type":"Answer","text":"1,000cc 미만 경차는 취득세율이 4%이고 75만원 한도로 면제됩니다. 차량가액 1,875만원(부가세 제외) 이하분에 대해 적용되므로, 일반적인 경차는 취득세 4%가 75만원 한도 안에 들어 실부담이 0원이 됩니다. 공장도가격 1,500만원 경차의 경우 과세표준 1,500만원 × 4% = 60만원이 75만원 한도 내라 전액 면제됩니다."}}]}</script>
+  <style>
+    input[type=number]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(239,68,68,0.15)}
+    .result-card{background:linear-gradient(135deg,#FEF2F2 0%,#FEE2E2 100%);border:1px solid rgba(239,68,68,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-highlight{background:rgba(239,68,68,0.1);border-radius:12px;padding:16px;margin-bottom:16px;text-align:center}
+    .rh-label{font-size:12px;color:var(--gray-500);margin-bottom:4px}
+    .rh-value{font-size:28px;font-weight:900;color:var(--primary)}
+    .rh-sub{font-size:12px;color:var(--gray-500);margin-top:2px}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/tools/" class="nav-item"><span class="nav-dot" style="background:#14B8A6;"></span>생활·도구</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+      <a href="/calc/auto/" class="nav-item active"><span class="nav-dot" style="background:#EF4444;"></span>자동차</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/auto/">자동차 계산기</a><span class="breadcrumb-sep">›</span><span>자동차 취득세 계산기</span></div>
+    <div class="page-header-badge">📄 개별소비세·부가세·실구매가 합산</div>
+    <h1>자동차 취득세 계산기</h1>
+    <p>공장도가격으로 신차 취득세·개별소비세·부가세·실구매가를 한 번에 계산하세요</p>
+  </div>
+    <div class="card">
+      <div class="card-title">차량 정보</div>
+      <div class="field">
+        <div class="field-label">차종 / 연료</div>
+        <div class="seg-group" style="margin-bottom:0" id="type-group">
+          <button class="seg-btn active" onclick="setType('gas',this)">일반 승용</button>
+          <button class="seg-btn" onclick="setType('compact',this)">경차</button>
+          <button class="seg-btn" onclick="setType('ev',this)">전기·수소</button>
+        </div>
+      </div>
+      <div class="field">
+        <div class="field-label">공장도가격 <span class="label-hint">부가세·개소세 전 출고 기준가 (만원)</span></div>
+        <div class="input-wrap"><input type="number" id="factory" min="0" placeholder="예) 3000" oninput="calc()" /><span class="unit">만원</span></div>
+        <div class="converted" id="factory-display"></div>
+      </div>
+      <div class="field" id="iso-field">
+        <div class="field-label">출고 시점 <span class="label-hint">개별소비세율 (계약일 아닌 출고일 기준)</span></div>
+        <div class="seg-group" style="margin-bottom:0" id="iso-group">
+          <button class="seg-btn active" onclick="setIso(0.05,this)">2026년 7월 이후 (5%)</button>
+          <button class="seg-btn" onclick="setIso(0.035,this)">2026년 6월 이전 (3.5%)</button>
+        </div>
+      </div>
+    </div>
+    <div class="result-card" id="result">
+      <div class="result-highlight">
+        <div class="rh-label">자동차 취득세</div>
+        <div class="rh-value" id="r-acq">-</div>
+        <div class="rh-sub" id="r-acq-sub">과세표준 × 세율</div>
+      </div>
+      <div class="result-row" id="r-iso-row"><span class="result-label">개별소비세<span id="r-iso-rate"></span></span><span class="result-value" id="r-iso">-</span></div>
+      <div class="result-row" id="r-isoedu-row"><span class="result-label">개소세 교육세 (30%)</span><span class="result-value" id="r-isoedu">-</span></div>
+      <div class="result-row"><span class="result-label">부가가치세 (10%)</span><span class="result-value" id="r-vat">-</span></div>
+      <div class="result-row"><span class="result-label">차량가격 (출고가)</span><span class="result-value" id="r-carprice">-</span></div>
+      <div class="result-row result-total-row">
+        <span class="result-total-label">신차 실구매가 (공채 별도)</span>
+        <span class="result-total-value" id="r-realprice">-</span>
+      </div>
+      <p class="result-note" id="r-note">※ 취득세 과세표준은 공장도가격 + 개별소비세 + 교육세(= 차량가격 ÷ 1.1)입니다. 신차 실구매가에는 공채(지역개발채권) 매입 비용이 별도로 추가되며, 1,600cc 미만은 대부분 면제됩니다. 실제 금액은 위택스·딜러 견적서에서 확인하세요.</p>
+</div>
+
+  <a class="affiliate-banner" href="https://lase.kr/click.php?m=mycredit1&a=A100703525&l=0000" target="_blank" rel="noopener noreferrer sponsored">
+        <div class="affiliate-banner__text">
+          <div class="affiliate-banner__title">신차 구매 전 자동차보험료 비교</div>
+          <div class="affiliate-banner__desc">여러 보험사 보험료를 한 번에 비교하고 절약</div>
+        </div>
+        <span class="affiliate-banner__cta">보험료 비교하기 →</span>
+      </a>
+  <p class="affiliate-disclosure">※ 위 링크는 제휴 광고이며, 이용 시 제이퍼 계산기가 일정 수수료를 받을 수 있습니다. (이용자 추가 부담 없음)</p>
+
+  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>신차 살 때 붙는 세금, 한눈에 정리</h2>
+      <p>신차를 사면 차량가격에 이미 개별소비세·교육세·부가세가 포함되어 있고, 등록할 때 취득세를 따로 냅니다. 공장도가격(부가세·개소세 전 가격)을 기준으로 세금이 단계적으로 쌓이는 구조이며, 마지막에 공채(지역개발채권) 매입까지 더하면 신차 실구매가가 됩니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box">
+          <strong>① 개별소비세 5%</strong>
+          <span>공장도가격의 5%(2026년 7월~). 1,000cc 미만 경차는 면제, 전기·수소차는 300만원 한도 면제됩니다.</span>
+        </div>
+        <div class="guide-box">
+          <strong>② 개소세 교육세 30%</strong>
+          <span>개별소비세액의 30%가 교육세로 추가됩니다.</span>
+        </div>
+        <div class="guide-box">
+          <strong>③ 부가가치세 10%</strong>
+          <span>(공장도가격 + 개소세 + 교육세)의 10%. 여기까지가 차량가격(출고가)입니다.</span>
+        </div>
+        <div class="guide-box">
+          <strong>④ 취득세 7%</strong>
+          <span>차량가격에서 부가세를 뺀 과세표준의 7%(승용). 경차 4%·전기차 140만원 한도 면제.</span>
+        </div>
+      </div>
+      <p class="ref-links">조회·신청: <a href="https://www.wetax.go.kr" target="_blank" rel="noopener">위택스(wetax.go.kr)</a></p>
+    </div>
+    <div class="guide-card">
+      <h2>2026년 자동차 취득세율표</h2>
+      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">취득세 과세표준은 부가세를 뺀 공급가액(차량가격 ÷ 1.1)이며, 차종별 세율은 아래와 같습니다.</p>
+      <div class="table-wrap">
+      <table class="rate-table">
+        <thead>
+          <tr><th>차종</th><th>취득세율</th><th>감면</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>비영업용 승용차</td><td class="highlight-cell">7%</td><td>-</td></tr>
+          <tr><td>경차 (1,000cc 미만)</td><td class="highlight-cell">4%</td><td>75만원 한도 면제</td></tr>
+          <tr><td>영업용 자동차</td><td>4%</td><td>-</td></tr>
+          <tr><td>승합·화물차</td><td>5%</td><td>-</td></tr>
+          <tr><td>전기·수소차</td><td>7%</td><td>140만원 한도 면제 (~2026.12.31)</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p style="font-size:12px;color:var(--gray-500);margin-top:8px">※ 하이브리드 취득세 감면은 2024년 종료되어 현재 없습니다. 전기차 감면 한도는 2027년 100만원으로 축소 예정입니다.</p>
+    </div>
+    <div class="guide-card">
+      <h2>신차 세금 구성 (공장도가격 기준)</h2>
+      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">개별소비세 → 교육세 → 부가세 순으로 차량가격이 만들어지고, 취득세는 별도로 부과됩니다. 개별소비세는 2026년 7월 1일 출고분부터 정상세율 5%입니다.</p>
+      <div class="table-wrap">
+      <table class="rate-table">
+        <thead>
+          <tr><th>세목</th><th>세율</th><th>과세표준</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>개별소비세</td><td class="highlight-cell">5%</td><td>공장도가격</td></tr>
+          <tr><td>개소세 교육세</td><td>30%</td><td>개별소비세액</td></tr>
+          <tr><td>부가가치세</td><td>10%</td><td>공장도 + 개소세 + 교육세</td></tr>
+          <tr><td>취득세 (승용)</td><td class="highlight-cell">7%</td><td>공장도 + 개소세 + 교육세</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <h3>실제 사용 예시 (개별소비세 5% 기준)</h3>
+      <table>
+        <thead>
+          <tr><th>차종</th><th>공장도가격</th><th>차량가격(출고가)</th><th>취득세</th><th>실구매가(공채 별도)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>승용차</td><td>3,000만원</td><td>약 3,514만원</td><td>약 223만원</td><td>약 3,738만원</td></tr>
+          <tr><td>경차</td><td>1,500만원</td><td>약 1,650만원</td><td>0원 (면제)</td><td>약 1,650만원</td></tr>
+          <tr><td>전기차</td><td>4,500만원</td><td>약 4,950만원</td><td>약 175만원</td><td>약 5,125만원</td></tr>
+        </tbody>
+      </table>
+      <p class="ref-links">* 위 수치는 참고용 추정치입니다. 공채 매입 비용은 지역·배기량별로 다르며 별도입니다.</p>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item">
+        <h3>자동차 취득세는 어떻게 계산하나요?</h3>
+        <p>비영업용 승용차 취득세는 과세표준(부가세를 뺀 공급가액) × 7%로 계산합니다. 과세표준은 공장도가격 + 개별소비세 + 개소세 교육세이며, 차량 판매가격(부가세 포함)을 1.1로 나눈 값과 같습니다. 예를 들어 공장도가격 3,000만원 승용차는 차량가격 약 3,514만원, 과세표준 약 3,195만원, 취득세 약 223만원입니다. 경차(1,000cc 미만)는 4%이고 75만원 한도로 면제됩니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>개별소비세는 2026년에 몇 %인가요?</h3>
+        <p>승용차 개별소비세는 정상세율 5%입니다. 2025년부터 시행된 한시 인하세율 3.5%는 2026년 6월 30일로 종료되어, 2026년 7월 1일 출고분부터는 5%가 적용됩니다. 기준 시점은 계약일이 아니라 출고일(등록일)입니다. 개별소비세에는 그 30%인 교육세가 추가되며, 1,000cc 미만 경차는 개별소비세가 면제됩니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>전기차 취득세 감면은 얼마인가요?</h3>
+        <p>전기차·수소차는 취득세가 140만원 한도로 면제됩니다(2026년 12월 31일까지, 2027년부터 100만원으로 축소 예정). 예를 들어 과세표준이 4,500만원이면 취득세 315만원에서 140만원을 뺀 175만원만 부담합니다. 개별소비세도 300만원 한도로 면제됩니다. 하이브리드 취득세 감면은 2024년에 종료되어 현재는 없습니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>신차 실구매가에는 무엇이 포함되나요?</h3>
+        <p>신차 실구매가는 차량가격(공장도가격 + 개별소비세 + 교육세 + 부가가치세)에 취득세와 공채(지역개발채권·도시철도채권) 매입 비용을 더한 금액입니다. 공채는 지역·배기량별로 다르고 즉시 할인 매도 시 실부담이 액면의 5~10% 수준이며, 1,600cc 미만은 대부분 면제됩니다. 이 계산기는 차량가격과 취득세까지 산출하며 공채는 별도입니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>경차 취득세는 정말 0원인가요?</h3>
+        <p>1,000cc 미만 경차는 취득세율이 4%이고 75만원 한도로 면제됩니다. 차량가액 1,875만원(부가세 제외) 이하분에 대해 적용되므로, 일반적인 경차는 취득세 4%가 75만원 한도 안에 들어 실부담이 0원이 됩니다. 공장도가격 1,500만원 경차의 경우 과세표준 1,500만원 × 4% = 60만원이 75만원 한도 내라 전액 면제됩니다.</p>
+      </div>
+    </div>
+    <div class="update-note">최종 검토: 2026.06.22 · 자동차 세금은 지방세법·개별소비세법 기준이며, 정확한 부과액은 <a href="https://www.wetax.go.kr" target="_blank" rel="noopener">위택스(wetax.go.kr)</a>에서 확인하세요.</div>
+  </div>
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '지방세법(취득세) · 개별소비세법 · 교육세법 · 부가가치세법',
+    appliedFrom: '2026년 기준 (개별소비세 5%, 2026.07.01~)',
+    exceptions: [
+      '개별소비세 한시 인하세율 3.5%는 2026년 6월 30일 종료, 7월 1일 출고분부터 5%가 적용됩니다',
+      '전기차 취득세 140만원 한도 면제는 2026년 12월 31일까지이며 2027년 100만원으로 축소 예정입니다',
+      '공채(지역개발채권) 매입 비용은 지역·배기량별로 다르며 본 계산에 포함되지 않습니다',
+    ],
+    references: [
+      { name: '위택스(wetax.go.kr)', url: 'https://www.wetax.go.kr' },
+    ],
+    lastReviewed: '2026.06.22',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 자동차 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/auto/auto-loan/" class="sibling-link">💳 자동차 할부</a>
+      <a href="/calc/auto/auto-tax/" class="sibling-link">🚙 자동차세</a>
+      <a href="/calc/auto/acquisition-tax/" class="sibling-link current">📄 자동차 취득세</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script>
+let acqType='gas', isoRate=0.05;
+function Ww(w){return Math.round(w).toLocaleString()+'원';}
+function setType(t,btn){acqType=t;document.querySelectorAll('#type-group .seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.getElementById('iso-field').style.display=(t==='compact'?'none':'');calc();}
+function setIso(r,btn){isoRate=r;document.querySelectorAll('#iso-group .seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');calc();}
+function showConverted(inputEl,dispEl){const v=parseFloat(inputEl.value);if(!v||v<=0){dispEl.textContent='';return;}dispEl.textContent=v>=10000?'= '+(v/10000).toFixed(2)+'억원':'= '+v.toLocaleString()+'만원';}
+
+function calc(){
+  const factory=(parseFloat(document.getElementById('factory').value)||0)*10000;
+  showConverted(document.getElementById('factory'),document.getElementById('factory-display'));
+  const res=document.getElementById('result');
+  if(factory<=0){res.classList.remove('show');return;}
+  res.classList.add('show');
+
+  // 개별소비세
+  let iso, acqRate;
+  if(acqType==='compact'){ iso=0; acqRate=0.04; }
+  else if(acqType==='ev'){ iso=Math.max(0, factory*isoRate - 3000000); acqRate=0.07; }
+  else {
+    // 한시인하(3.5%) 적용 시 감면액은 차량당 100만원 한도(개소세법). 한도 초과분은 5%−100만으로 환산.
+    iso = (isoRate===0.035) ? (factory*0.05 - Math.min(factory*0.015, 1000000)) : factory*isoRate;
+    acqRate=0.07;
+  }
+  iso=Math.round(iso);
+  const isoEdu=Math.round(iso*0.30);
+  const vat=Math.round((factory+iso+isoEdu)*0.10);
+  const carPrice=factory+iso+isoEdu+vat;
+  const acqBase=factory+iso+isoEdu;
+  let acq=acqBase*acqRate;
+  if(acqType==='compact') acq=Math.max(0, acq-750000);
+  if(acqType==='ev') acq=Math.max(0, acq-1400000);
+  acq=Math.floor(acq/10)*10;
+  const realPrice=carPrice+acq;
+
+  document.getElementById('r-acq').textContent=Ww(acq);
+  document.getElementById('r-acq-sub').textContent='과세표준 '+Ww(acqBase)+' × '+(acqRate*100)+'%'+(acqType==='ev'?' − 140만 면제':acqType==='compact'?' − 75만 한도':'');
+  // 개소세 행 (경차 0이면 숨김 처리 대신 0 표기)
+  const isoRow=document.getElementById('r-iso-row'), isoEduRow=document.getElementById('r-isoedu-row');
+  if(acqType==='compact'){ isoRow.style.display='none'; isoEduRow.style.display='none'; }
+  else { isoRow.style.display=''; isoEduRow.style.display='';
+    document.getElementById('r-iso-rate').textContent=' ('+(isoRate*100)+'%'+(acqType==='ev'?', 300만 면제':'')+')';
+    document.getElementById('r-iso').textContent=Ww(iso);
+    document.getElementById('r-isoedu').textContent=Ww(isoEdu);
+  }
+  document.getElementById('r-vat').textContent=Ww(vat);
+  document.getElementById('r-carprice').textContent=Ww(carPrice);
+  document.getElementById('r-realprice').textContent=Ww(realPrice);
+}
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+  <script src="/assets/footer-unified.js"></script>
+<script src="/assets/calc-registry.js"></script>
+<script src="/assets/auto-detail-shell.js"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '지방세법(취득세)·개별소비세법·교육세법·부가가치세법',
+  basisDate: '2026년 기준',
+  referenceOrg: '행정안전부·국세청·위택스',
+  lastReviewed: '2026.06.22',
+  category: 'auto'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/blog-review-footer.js"></script>
+</body>
+</html>

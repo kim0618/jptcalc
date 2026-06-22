@@ -18,11 +18,12 @@ import { dirname, join } from 'node:path';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 // ── ① 정책 카테고리 표 누락 ────────────────────────────────
-const POLICY_CATS = ['salary', 'tax', 'realestate', 'finance'];
+const POLICY_CATS = ['salary', 'tax', 'realestate', 'finance', 'auto'];
 // 표가 면제되는 순수 공식·날짜·비교 계산기 (slug)
 const SKIP_NO_TABLE = new Set([
   'loan', 'stock-average', 'investment',          // 공식
   'raise-rate', 'comparison',                     // 연봉 공식·비교
+  'auto-loan', 'fuel-cost',                       // 자동차 순수공식(원리금균등·유류비)
 ]);
 
 const missingTable = [];
@@ -85,7 +86,7 @@ for (const file of scanFiles) {
 // ── 리포트 ─────────────────────────────────────────────────
 console.log('① 정책 카테고리 표 누락 (요율/기준표 추가 검토 후보)');
 if (missingTable.length === 0) {
-  console.log('  ✓ salary·tax·realestate·finance 계산기 모두 표 보유 (화이트리스트 제외)');
+  console.log('  ✓ salary·tax·realestate·finance·auto 계산기 모두 표 보유 (화이트리스트 제외)');
 } else {
   for (const m of missingTable) console.log('  · ' + m);
   console.log('  → 정책·세율 페이지면 요율/기준표 추가, 순수 공식이면 SKIP_NO_TABLE에 등록');
