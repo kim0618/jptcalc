@@ -109,7 +109,7 @@
     .finance-shell-main .review-footer{margin-top:0!important;}
     .finance-shell-main .guide-section .review-footer{margin-top:0!important;}
     .finance-shell-main .guide-section>.update-note{margin-top:0!important;}
-    .mobile-guides{display:none;margin-top:16px;}
+    .mobile-guides,.mobile-related{display:none;margin-top:16px;}
     .mobile-guides__title{font-size:11px;font-weight:800;color:#6B7280;letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px;}
     .mobile-guides__list{display:flex;flex-direction:column;gap:6px;}
     .mobile-guides__link{display:flex;align-items:center;gap:10px;padding:11px 14px;background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:12px;text-decoration:none;transition:border-color .15s;}
@@ -117,7 +117,7 @@
     .mobile-guides__icon{font-size:15px;flex-shrink:0;}
     .mobile-guides__text{font-size:13px;font-weight:600;color:#374151;flex:1;line-height:1.4;}
     @media (max-width:1199px){.mega-layout{grid-template-columns:220px minmax(0,1fr);} .mega-sidebar-right{display:none;}}
-    @media (max-width:767px){.sh-inner{padding:0 16px;} .sh-nav,.sh-cta{display:none;} .sh-hamburger{display:flex;} .mega-layout{grid-template-columns:1fr;padding:16px;gap:16px;} .mega-sidebar-left{display:none;} .mega-sidebar-left.open{display:block;position:fixed;top:60px;left:0;bottom:0;width:260px;background:#fff;border-right:1px solid rgba(0,0,0,.06);padding:20px 12px;overflow-y:auto;z-index:200;} .mobile-guides{display:block;} }
+    @media (max-width:767px){.sh-inner{padding:0 16px;} .sh-nav,.sh-cta{display:none;} .sh-hamburger{display:flex;} .mega-layout{grid-template-columns:1fr;padding:16px;gap:16px;} .mega-sidebar-left{display:none;} .mega-sidebar-left.open{display:block;position:fixed;top:60px;left:0;bottom:0;width:260px;background:#fff;border-right:1px solid rgba(0,0,0,.06);padding:20px 12px;overflow-y:auto;z-index:200;} .mobile-related,.mobile-guides{display:block;} }
   `;
   document.head.appendChild(style);
 
@@ -174,6 +174,19 @@
       <div class="msr-widget-list">${cfg.related.map(item=>`<a href="${item[0]}" class="msr-widget-link"><span class="msr-widget-icon">${item[2]}</span><span class="msr-widget-text">${item[1]}</span></a>`).join('')}</div>
     </div>
     ${guidesWidget}`;
+
+  if (cfg.related && cfg.related.length) {
+    const mobileRelated = document.createElement("div");
+    mobileRelated.className = "mobile-related";
+    mobileRelated.innerHTML =
+      "<div class=\"mobile-guides__title\">관련 계산기</div>" +
+      "<div class=\"mobile-guides__list\">" +
+      cfg.related.map(item =>
+        `<a class="mobile-guides__link" href="${item[0]}"><span class="mobile-guides__icon">${item[2]}</span><span class="mobile-guides__text">${item[1]}</span></a>`
+      ).join("") +
+      "</div>";
+    main.appendChild(mobileRelated);
+  }
 
   if (cfg.guides && cfg.guides.length) {
     const mobileGuides = document.createElement('div');

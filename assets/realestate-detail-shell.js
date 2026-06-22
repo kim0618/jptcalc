@@ -99,6 +99,7 @@
     '/calc/realestate/registry/': {
       key:'registry',
       quick:['등기비용은 등록면허세·교육세·채권매입비용·법무사 수수료로 구성됩니다.','채권 매입 후 즉시 매도(시장매도) 시 할인율에 따른 차액이 실비용입니다.','소유권 이전 등기 신청은 잔금일로부터 60일 이내에 해야 합니다.','법무사 수수료는 법정 기준이 있으나 실제로는 협의 가능합니다.'],
+      guides:[['/blog/posts/registry-cost-guide.html','부동산 등기비용 계산기 2026 - 매매 등기 총비용, 채권·인지세·법무사비까지']],
       related:[['/calc/realestate/acquisition/','취득세 계산기','📄'],['/calc/realestate/brokerage/','중개수수료 계산기','🏠'],['/calc/realestate/loan/','대출이자 계산기','💰']]
     }
   };
@@ -144,6 +145,13 @@
     .msl-divider{height:1px;background:rgba(0,0,0,.06);margin:10px 0;}
     .msl-calc-dot{width:5px;height:5px;border-radius:50%;background:#F59E0B;flex-shrink:0;}
     .mega-sidebar-right{position:sticky;top:88px;display:flex;flex-direction:column;gap:12px;align-self:start;}
+    .mobile-related{display:none;margin-top:16px;}
+    .mobile-related__title{font-size:11px;font-weight:800;color:#6B7280;letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px;}
+    .mobile-related__list{display:flex;flex-direction:column;gap:6px;}
+    .mobile-related__link{display:flex;align-items:center;gap:10px;padding:11px 14px;background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:12px;text-decoration:none;transition:border-color .15s;}
+    .mobile-related__link:hover{border-color:#3B82F6;}
+    .mobile-related__icon{font-size:15px;flex-shrink:0;}
+    .mobile-related__text{font-size:13px;font-weight:600;color:#374151;flex:1;line-height:1.4;}
     .msr-widget{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:14px;padding:14px 16px;}
     .msr-widget-title{font-size:11px;font-weight:800;color:#6B7280;letter-spacing:.2px;margin-bottom:10px;}
     .msr-widget-list{display:flex;flex-direction:column;gap:4px;}
@@ -168,7 +176,7 @@
     .realestate-shell-main .guide-section>*{margin:0!important;}
     .realestate-shell-main .sibling-section{display:none!important;}
     @media (max-width:1199px){.mega-layout{grid-template-columns:220px minmax(0,1fr);} .mega-sidebar-right{display:none;}}
-    @media (max-width:767px){.sh-inner{padding:0 16px;} .sh-nav,.sh-cta{display:none;} .sh-hamburger{display:flex;} .mega-layout{grid-template-columns:1fr;padding:16px;gap:16px;} .mega-sidebar-left{display:none;} .mega-sidebar-left.open{display:block;position:fixed;top:60px;left:0;bottom:0;width:260px;background:#fff;border-right:1px solid rgba(0,0,0,.06);padding:20px 12px;overflow-y:auto;z-index:200;} }
+    @media (max-width:767px){.sh-inner{padding:0 16px;} .sh-nav,.sh-cta{display:none;} .sh-hamburger{display:flex;} .mega-layout{grid-template-columns:1fr;padding:16px;gap:16px;} .mega-sidebar-left{display:none;} .mega-sidebar-left.open{display:block;position:fixed;top:60px;left:0;bottom:0;width:260px;background:#fff;border-right:1px solid rgba(0,0,0,.06);padding:20px 12px;overflow-y:auto;z-index:200;} .mobile-related{display:block;} }
   `;
   document.head.appendChild(style);
 
@@ -236,6 +244,19 @@
       <div class="msr-widget-list">${cfg.related.map(item=>`<a href="${item[0]}" class="msr-widget-link"><span class="msr-widget-icon">${item[2]}</span><span class="msr-widget-text">${item[1]}</span></a>`).join('')}</div>
     </div>
     ${guidesWidget}`;
+
+  if (cfg.related && cfg.related.length) {
+    const mobileRelated = document.createElement('div');
+    mobileRelated.className = 'mobile-related';
+    mobileRelated.innerHTML =
+      '<div class="mobile-related__title">관련 계산기</div>' +
+      '<div class="mobile-related__list">' +
+      cfg.related.map(item =>
+        `<a class="mobile-related__link" href="${item[0]}"><span class="mobile-related__icon">${item[2]}</span><span class="mobile-related__text">${item[1]}</span></a>`
+      ).join('') +
+      '</div>';
+    main.appendChild(mobileRelated);
+  }
 
   main.parentNode.insertBefore(overlay, main);
   main.parentNode.insertBefore(layout, main);
