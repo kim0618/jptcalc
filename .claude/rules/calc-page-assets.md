@@ -77,3 +77,31 @@ window.TRUST_BLOCK_CONFIG = {
 1. WebApplication (Article 대신)
 2. FAQPage
 3. BreadcrumbList (홈 > 카테고리 > 계산기명)
+
+> Dataset/Table JSON-LD는 **추가 안 함** (보류). 구글 전용 신호인데 트래픽이 네이버·ChatGPT 중심이라 이득 0 + 표-스키마 이중 유지보수 부담만 생김. 구글 트래픽 회복 시 재검토.
+
+## 정책·세율 계산기는 요율/기준표 1개 필수
+
+세금·요율·정책 기반 계산기(salary·tax·realestate·finance 중 돈·정책성)는 본문에 **요율표 또는 기준표를 최소 1개** 둔다. 순수 공식(평단가·CAGR·BMI)·날짜·비교 계산기는 면제.
+
+견본: `calc/tax/four-insurance/index.html`의 요율표.
+
+```html
+<div class="guide-card">
+  <h2>2026년 OOO 요율표</h2>
+  <!-- 표 바로 위 40~60자 핵심 요약 1문장 (ChatGPT 인용·네이버 발췌용) -->
+  <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">한 문장 핵심 요약</p>
+  <div class="table-wrap">
+    <table class="rate-table">
+      <thead><tr><th>항목</th><th>...</th></tr></thead>
+      <tbody><tr><td>...</td><td class="highlight-cell">핵심값</td></tr></tbody>
+    </table>
+  </div>
+</div>
+```
+
+원칙:
+- **표 값은 그 계산기의 JS 상수에서 추출** (재발명 금지 - 계산 로직과 표가 어긋나면 안 됨)
+- 표에 새 정책값이 있으면 `data-points.md`에 검색패턴+영향페이지 등록 (refresh 누락 방지)
+- 공식 출처 WebFetch로 검증 후 게재
+- 연도별 추이표는 최신 연도 행을 맨 위 또는 강조

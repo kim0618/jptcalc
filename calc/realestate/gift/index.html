@@ -115,12 +115,13 @@
         <li>직계존비속(미성년): <strong>2,000만원</strong></li>
         <li>기타친족(형제·사위·며느리): <strong>1,000만원</strong></li>
       </ul>
-      <h3>세율 (2026년 개편, 상속세와 동일)</h3>
+      <h3>세율 (현행, 상속세와 동일)</h3>
       <ul>
-        <li>2억 이하: 10%</li>
-        <li>2억~5억: 20% (누진공제 2,000만원)</li>
-        <li>5억~10억: 30% (누진공제 7,000만원)</li>
-        <li>10억 초과: 40% (누진공제 1억 7,000만원) - 30억 초과 50% 구간 폐지</li>
+        <li>1억 이하: 10%</li>
+        <li>1억~5억: 20% (누진공제 1,000만원)</li>
+        <li>5억~10억: 30% (누진공제 6,000만원)</li>
+        <li>10억~30억: 40% (누진공제 1억 6,000만원)</li>
+        <li>30억 초과: 50% (누진공제 4억 6,000만원)</li>
       </ul>
       <h3>신고 기한 내 신고 시 혜택</h3>
       <p>증여일이 속하는 달의 말일부터 <strong>3개월 이내</strong> 신고 시 산출세액의 3% 공제 혜택이 있습니다.</p>
@@ -273,7 +274,7 @@
     </div>
     <div class="sibling-title">관련 가이드</div>
     <div class="sibling-list">
-      <a href="/blog/posts/gift-tax-guide.html" class="sibling-link">📖 증여세 계산 2026 - 직계존속 5천만원 공제, 세율 10~40% 실제 …</a>
+      <a href="/blog/posts/gift-tax-guide.html" class="sibling-link">📖 증여세 계산 2026 - 직계존속 5천만원 공제, 세율 10~50% 실제 …</a>
       <a href="/blog/posts/inheritance-tax-guide.html" class="sibling-link">📖 상속세 계산 2026 - 일괄공제 5억·세율 10~50%·신고기한 6개월</a>
     </div>
   </div>
@@ -356,10 +357,11 @@ function calcGift() {
   if (!amountMan) { document.getElementById('gift-result').classList.remove('show'); return; }
 
   function getGiftTax(b) {
-    if (b <= 20000)  return b * 0.10;
-    if (b <= 50000)  return b * 0.20 - 2000;
-    if (b <= 100000) return b * 0.30 - 7000;
-    return b * 0.40 - 17000;
+    if (b <= 10000)  return b * 0.10;
+    if (b <= 50000)  return b * 0.20 - 1000;
+    if (b <= 100000) return b * 0.30 - 6000;
+    if (b <= 300000) return b * 0.40 - 16000;
+    return b * 0.50 - 46000;
   }
 
   const maxDeduct = GIFT_DEDUCT[giftRel];

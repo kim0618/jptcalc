@@ -611,21 +611,21 @@
   <url><loc>https://www.jptcalc.kr/calc/realestate/acquisition/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/realestate/brokerage/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/realestate/capital-gains/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.jptcalc.kr/calc/realestate/conversion/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jptcalc.kr/calc/realestate/conversion/</loc><lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/realestate/dsr/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/realestate/dti/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/realestate/ltv/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/realestate/didimdol/</loc><lastmod>2026-06-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/realestate/jeonse-loan/</loc><lastmod>2026-06-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.jptcalc.kr/calc/realestate/gift/</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.jptcalc.kr/calc/realestate/inheritance/</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jptcalc.kr/calc/realestate/gift/</loc><lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jptcalc.kr/calc/realestate/inheritance/</loc><lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/realestate/joint/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.jptcalc.kr/calc/realestate/jongbu/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jptcalc.kr/calc/realestate/jongbu/</loc><lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/realestate/loan/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/realestate/property-tax-comprehensive/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.jptcalc.kr/calc/realestate/propertytax/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jptcalc.kr/calc/realestate/propertytax/</loc><lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/realestate/pyeong/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.jptcalc.kr/calc/realestate/registry/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jptcalc.kr/calc/realestate/registry/</loc><lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/realestate/rental/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- 세금 계산기 하위 페이지 -->
@@ -637,8 +637,8 @@
 
   <!-- 연봉 계산기 하위 페이지 -->
   <url><loc>https://www.jptcalc.kr/calc/salary/comparison/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.jptcalc.kr/calc/salary/hourly-wage/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.jptcalc.kr/calc/salary/weekly-holiday-pay/</loc><lastmod>2026-06-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jptcalc.kr/calc/salary/hourly-wage/</loc><lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jptcalc.kr/calc/salary/weekly-holiday-pay/</loc><lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/salary/annual-leave-pay/</loc><lastmod>2026-06-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/salary/ordinary-wage/</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/salary/average-wage/</loc><lastmod>2026-06-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -658,8 +658,8 @@
   <url><loc>https://www.jptcalc.kr/calc/finance/loan-repayment/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/finance/savings/</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/finance/stock-average/</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.jptcalc.kr/calc/finance/jangbyeong-savings/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.jptcalc.kr/calc/finance/youth-leap-account/</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jptcalc.kr/calc/finance/jangbyeong-savings/</loc><lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jptcalc.kr/calc/finance/youth-leap-account/</loc><lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- AI 계산기 하위 페이지 -->
   <url><loc>https://www.jptcalc.kr/calc/ai/api-token/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -669,19 +669,19 @@
   <url><loc>https://www.jptcalc.kr/calc/ai/saas-comparison/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- 건강 계산기 하위 페이지 -->
-  <url><loc>https://www.jptcalc.kr/calc/health/bmi/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.jptcalc.kr/calc/health/bmr/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.jptcalc.kr/calc/health/body-fat/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.jptcalc.kr/calc/health/calories/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jptcalc.kr/calc/health/bmi/</loc><lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jptcalc.kr/calc/health/bmr/</loc><lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jptcalc.kr/calc/health/body-fat/</loc><lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jptcalc.kr/calc/health/calories/</loc><lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/health/ideal-weight/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- 반려동물 계산기 하위 페이지 -->
-  <url><loc>https://www.jptcalc.kr/calc/pet/adoption/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jptcalc.kr/calc/pet/adoption/</loc><lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/pet/cat-age/</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/pet/food-amount/</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/pet/dog-age/</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/pet/insurance/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.jptcalc.kr/calc/pet/lifetime-cost/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jptcalc.kr/calc/pet/lifetime-cost/</loc><lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/pet/medical/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/pet/monthly-cost/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/tools/percent/</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -700,7 +700,7 @@
   <url><loc>https://www.jptcalc.kr/calc/date/weekday/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- 블로그 포스트 2026-04-02 -->
-  <url><loc>https://www.jptcalc.kr/blog/posts/gift-tax-guide.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.jptcalc.kr/blog/posts/gift-tax-guide.html</loc><lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.jptcalc.kr/blog/posts/social-insurance-guide.html</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.jptcalc.kr/blog/posts/annual-leave-guide.html</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.jptcalc.kr/blog/posts/pet-senior-care-guide.html</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -736,7 +736,7 @@
   <url><loc>https://www.jptcalc.kr/blog/posts/rental-yield-valuation.html</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.jptcalc.kr/blog/posts/apartment-area-guide.html</loc><lastmod>2026-05-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.jptcalc.kr/blog/posts/holding-tax-guide.html</loc><lastmod>2026-05-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.jptcalc.kr/blog/posts/joint-ownership-tax-guide.html</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.jptcalc.kr/blog/posts/joint-ownership-tax-guide.html</loc><lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.jptcalc.kr/blog/posts/ai-chatbot-subscription-comparison.html</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.jptcalc.kr/blog/posts/dog-lifetime-cost.html</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.jptcalc.kr/blog/posts/five-year-seed-money.html</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
