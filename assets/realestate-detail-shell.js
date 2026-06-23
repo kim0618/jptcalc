@@ -5,11 +5,13 @@
     '/calc/realestate/brokerage/': {
       key:'brokerage',
       quick:['중개수수료는 법정 상한 이내 협의 가능합니다.','매매·전세·월세·반전세마다 상한 요율이 다릅니다.','거래금액이 클수록 수수료율이 아닌 상한 요율 적용 여부를 먼저 보세요.','실제 중개보수는 부가세·현장 조건에 따라 달라질 수 있습니다.'],
+      guides:[['/blog/posts/property-purchase-costs-guide.html','부동산 매매 부대비용 총정리 2026 - 취득세·등기비용·중개수수료 한눈에']],
       related:[['/calc/realestate/acquisition/','취득세 계산기','📄'],['/calc/realestate/conversion/','전월세전환 계산기','🔄'],['/calc/realestate/registry/','등기비용 계산기','📋']]
     },
     '/calc/realestate/acquisition/': {
       key:'acquisition',
       quick:['주택 수 판단은 취득 후 기준으로 달라질 수 있어 미리 확인하는 편이 안전합니다.','조정대상지역 여부와 취득 방식(매수·증여·상속)에 따라 세율이 크게 달라집니다.','감면 대상 여부는 관할 시·군·구청 또는 세무서 안내를 함께 확인하세요.','실제 신고 전에는 농어촌특별세·지방교육세 포함 여부를 다시 점검하세요.'],
+      guides:[['/blog/posts/property-purchase-costs-guide.html','부동산 매매 부대비용 총정리 2026 - 취득세·등기비용·중개수수료 한눈에']],
       related:[['/calc/realestate/brokerage/','중개수수료 계산기','🏠'],['/calc/realestate/capital-gains/','양도소득세 계산기','📈'],['/calc/realestate/#tab-propertytax','재산세 계산기','🏛️']]
     },
     '/calc/realestate/conversion/': {
@@ -99,7 +101,7 @@
     '/calc/realestate/registry/': {
       key:'registry',
       quick:['등기비용은 등록면허세·교육세·채권매입비용·법무사 수수료로 구성됩니다.','채권 매입 후 즉시 매도(시장매도) 시 할인율에 따른 차액이 실비용입니다.','소유권 이전 등기 신청은 잔금일로부터 60일 이내에 해야 합니다.','법무사 수수료는 법정 기준이 있으나 실제로는 협의 가능합니다.'],
-      guides:[['/blog/posts/registry-cost-guide.html','부동산 등기비용 계산기 2026 - 매매 등기 총비용, 채권·인지세·법무사비까지']],
+      guides:[['/blog/posts/property-purchase-costs-guide.html','부동산 매매 부대비용 총정리 2026 - 취득세·등기비용·중개수수료 한눈에'],['/blog/posts/registry-cost-guide.html','부동산 등기비용 계산기 2026 - 매매 등기 총비용, 채권·인지세·법무사비까지']],
       related:[['/calc/realestate/acquisition/','취득세 계산기','📄'],['/calc/realestate/brokerage/','중개수수료 계산기','🏠'],['/calc/realestate/loan/','대출이자 계산기','💰']]
     }
   };
