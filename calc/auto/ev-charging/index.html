@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>전기차 충전비 계산기 2026 - 충전 요금·내연차 유류비 비교 | 제이퍼 계산기</title>
+  <meta name="description" content="배터리 용량과 충전율을 입력하면 전기차 충전비를 계산하고, 같은 거리 내연차 유류비와 비교합니다. 77.4kWh 10→80% 완속 충전 약 1만 6천원, 100km 주행 시 전기 5,886원 vs 휘발유 16,750원. 2026년 충전 요금 반영." />
+  <meta name="keywords" content="전기차충전비계산기,전기차충전요금,전기차연료비,전기차유류비비교,충전비계산,전기차전기요금,완속급속충전요금" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/auto/ev-charging/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="전기차 충전비 계산기 2026 - 충전 요금·유류비 비교 | 제이퍼 계산기" />
+  <meta property="og:description" content="배터리 용량·충전율로 전기차 충전비를 계산하고 내연차 유류비와 비교합니다. 2026년 충전 요금 반영." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/auto/ev-charging/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="전기차 충전비 계산기 2026 | 제이퍼 계산기" />
+  <meta name="twitter:description" content="배터리 용량·충전율로 전기차 충전비를 계산하고 내연차 유류비와 비교합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/auto-common.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"전기차 충전비 계산기",
+    "url":"https://www.jptcalc.kr/calc/auto/ev-charging/",
+    "applicationCategory":"FinanceApplication",
+    "operatingSystem":"All",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+      {"@type":"ListItem","position":2,"name":"자동차 계산기","item":"https://www.jptcalc.kr/calc/auto/"},
+      {"@type":"ListItem","position":3,"name":"전기차 충전비 계산기","item":"https://www.jptcalc.kr/calc/auto/ev-charging/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"전기차 충전비는 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"충전비는 충전한 전력량(kWh) × 충전 단가(원/kWh)로 계산합니다. 충전 전력량은 배터리 용량 × (목표 충전율 − 현재 충전율) ÷ 100입니다. 예를 들어 77.4kWh 배터리를 10%에서 80%까지 완속(294.3원/kWh)으로 충전하면 전력량 54.18kWh, 충전비는 약 1만 6천원입니다. 같은 충전을 급속(391.9원/kWh)으로 하면 약 2만 1천원입니다."}},{"@type":"Question","name":"완속과 급속 충전 요금은 얼마나 차이 나나요?","acceptedAnswer":{"@type":"Answer","text":"2026년 4월 30일 충전 요금 5단계 개편 이후 환경부 공공충전기 기준 완속(30kW 미만)은 약 294.3원/kWh, 초급속(200kW 이상)은 약 391.9원/kWh입니다. 같은 양을 충전해도 급속이 완속보다 약 33% 비쌉니다. 민간 사업자나 비회원 요금은 더 비싸 비회원 급속은 500원/kWh를 넘기도 하므로, 평소에는 완속·회원 요금을 활용하는 것이 경제적입니다."}},{"@type":"Question","name":"전기차가 내연차보다 연료비가 얼마나 저렴한가요?","acceptedAnswer":{"@type":"Answer","text":"100km를 주행할 때 전비 5km/kWh 전기차를 완속(294.3원)으로 충전하면 약 5,886원, 연비 12km/L 휘발유차를 2,010원/L 기준으로 운행하면 약 16,750원입니다. 전기차가 약 10,864원(65%) 저렴합니다. 월 1,500km를 주행하면 월 약 16만원, 연간 약 196만원을 절약할 수 있습니다. 다만 급속 충전 위주이거나 충전 요금이 오르면 격차는 줄어듭니다."}},{"@type":"Question","name":"2026년 전기차 충전 요금은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"2026년 4월 30일 공공충전 요금이 5단계로 개편되어 완속 30kW 미만은 294.3원/kWh로 인하되고 초급속 200kW 이상은 391.9원/kWh로 인상되었습니다. 충전기 출력 구간에 따라 단가가 달라지며, 회원·비회원, 환경부·한전·민간 사업자에 따라서도 편차가 있습니다. 정확한 요금은 무공해차 통합누리집(ev.or.kr)이나 충전 사업자 앱에서 확인하세요."}},{"@type":"Question","name":"배터리를 10%에서 80%까지만 충전하는 이유는 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"리튬이온 배터리는 0%에 가깝거나 100% 완충 상태가 반복되면 수명이 빨리 줄어듭니다. 그래서 일상 충전은 보통 20~80% 또는 10~80% 구간을 권장합니다. 또한 급속 충전은 80%를 넘어가면 충전 속도가 크게 느려지므로, 급속은 80%까지만 하고 나머지는 완속으로 채우는 것이 시간과 비용 면에서 효율적입니다."}}]}</script>
+  <style>
+    input[type=number]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(239,68,68,0.15)}
+    .result-card{background:linear-gradient(135deg,#FEF2F2 0%,#FEE2E2 100%);border:1px solid rgba(239,68,68,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-highlight{background:rgba(239,68,68,0.1);border-radius:12px;padding:16px;margin-bottom:16px;text-align:center}
+    .rh-label{font-size:12px;color:var(--gray-500);margin-bottom:4px}
+    .rh-value{font-size:28px;font-weight:900;color:var(--primary)}
+    .rh-sub{font-size:12px;color:var(--gray-500);margin-top:2px}
+    .cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+    .cmp-box{border-radius:12px;padding:14px;text-align:center}
+    .cmp-ev{background:rgba(239,68,68,0.1)}
+    .cmp-gas{background:rgba(107,114,128,0.1)}
+    .cmp-box .cmp-t{font-size:12px;color:var(--gray-500);margin-bottom:4px}
+    .cmp-box .cmp-v{font-size:20px;font-weight:800}
+    .cmp-ev .cmp-v{color:var(--primary)}
+    .cmp-gas .cmp-v{color:var(--gray-700)}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/tools/" class="nav-item"><span class="nav-dot" style="background:#14B8A6;"></span>생활·도구</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+      <a href="/calc/auto/" class="nav-item active"><span class="nav-dot" style="background:#EF4444;"></span>자동차</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/auto/">자동차 계산기</a><span class="breadcrumb-sep">›</span><span>전기차 충전비 계산기</span></div>
+    <div class="page-header-badge">🔌 2026 충전 요금·유류비 비교</div>
+    <h1>전기차 충전비 계산기</h1>
+    <p>배터리 용량·충전율로 충전비를 계산하고 내연차 유류비와 비교하세요</p>
+  </div>
+    <div class="card">
+      <div class="card-title">충전 정보</div>
+      <div class="field">
+        <div class="field-label">배터리 용량 <span class="label-hint">차량 사양서 기재 (kWh)</span></div>
+        <div class="input-wrap"><input type="number" id="battery" min="0" placeholder="예) 77.4" step="0.1" oninput="calcCharge()" /><span class="unit">kWh</span></div>
+      </div>
+      <div class="field">
+        <div class="field-label">현재 → 목표 충전율</div>
+        <div style="display:flex;gap:10px">
+          <div class="input-wrap" style="flex:1"><input type="number" id="from" min="0" max="100" value="10" oninput="calcCharge()" /><span class="unit">%</span></div>
+          <div class="input-wrap" style="flex:1"><input type="number" id="to" min="0" max="100" value="80" oninput="calcCharge()" /><span class="unit">%</span></div>
+        </div>
+      </div>
+      <div class="field">
+        <div class="field-label">충전 방식</div>
+        <div class="seg-group" style="margin-bottom:0" id="speed-group">
+          <button class="seg-btn active" onclick="setSpeed(294.3,this)">완속 (294.3원)</button>
+          <button class="seg-btn" onclick="setSpeed(391.9,this)">급속 (391.9원)</button>
+        </div>
+      </div>
+      <div class="field">
+        <div class="field-label">충전 단가 <span class="label-hint">사업자·회원여부에 따라 조정</span></div>
+        <div class="input-wrap"><input type="number" id="unit-price" min="0" value="294.3" step="0.1" oninput="onUnitInput()" /><span class="unit">원/kWh</span></div>
+      </div>
+    </div>
+    <div class="result-card" id="charge-result">
+      <div class="result-highlight">
+        <div class="rh-label">충전비</div>
+        <div class="rh-value" id="r-cost">-</div>
+        <div class="rh-sub" id="r-cost-sub">충전 전력량 × 단가</div>
+      </div>
+      <div class="result-row"><span class="result-label">충전 전력량</span><span class="result-value" id="r-energy">-</span></div>
+      <div class="result-row"><span class="result-label">완충(0→100%) 환산</span><span class="result-value" id="r-full">-</span></div>
+      <div class="result-row result-total-row">
+        <span class="result-total-label">충전비</span>
+        <span class="result-total-value" id="r-cost2">-</span>
+      </div>
+      <p class="result-note">※ 환경부 공공충전기 2026년 요금(완속 294.3·초급속 391.9원/kWh) 기준입니다. 민간 사업자·비회원 요금은 더 비쌀 수 있으니 충전 단가를 직접 조정해 계산하세요.</p>
+</div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-title">내연차 유류비 비교</div>
+      <div class="field">
+        <div class="field-label">주행 거리 <span class="label-hint">비교할 거리 (km)</span></div>
+        <div class="input-wrap"><input type="number" id="dist" min="0" placeholder="예) 100" oninput="calcCompare()" /><span class="unit">km</span></div>
+      </div>
+      <div class="field">
+        <div class="field-label">전비 <span class="label-hint">전기차 전력 효율</span></div>
+        <div class="input-wrap"><input type="number" id="ev-eff" min="0" value="5" step="0.1" oninput="calcCompare()" /><span class="unit">km/kWh</span></div>
+      </div>
+      <div class="field">
+        <div class="field-label">연비 <span class="label-hint">내연차 연료 효율</span></div>
+        <div class="input-wrap"><input type="number" id="fuel-eff" min="0" value="12" step="0.1" oninput="calcCompare()" /><span class="unit">km/L</span></div>
+      </div>
+      <div class="field">
+        <div class="field-label">유가 <span class="label-hint">휘발유·경유 단가</span></div>
+        <div class="input-wrap"><input type="number" id="fuel-price" min="0" value="2010" oninput="calcCompare()" /><span class="unit">원/L</span></div>
+      </div>
+    </div>
+    <div class="result-card" id="cmp-result">
+      <div class="cmp-grid">
+        <div class="cmp-box cmp-ev"><div class="cmp-t">전기차 충전비</div><div class="cmp-v" id="c-ev">-</div></div>
+        <div class="cmp-box cmp-gas"><div class="cmp-t">내연차 유류비</div><div class="cmp-v" id="c-gas">-</div></div>
+      </div>
+      <div class="result-row result-total-row">
+        <span class="result-total-label" id="c-save-label">절감액</span>
+        <span class="result-total-value" id="c-save" style="color:#EF4444">-</span>
+      </div>
+      <p class="result-note" id="c-note">※ 입력한 거리 기준 비교입니다. 전기차 충전비는 위 충전 단가를 사용합니다. 전비·연비는 차량·운전 습관에 따라 달라집니다.</p>
+</div>
+
+
+  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>전기차 충전비, 이렇게 계산된다</h2>
+      <p>전기차 충전비는 실제로 충전한 전력량(kWh)에 충전 단가(원/kWh)를 곱한 값입니다. 충전 전력량은 배터리 용량에 충전한 비율(목표 충전율 − 현재 충전율)을 곱해 구합니다. 충전 방식(완속·급속)과 사업자·회원 여부에 따라 단가가 달라지므로, 같은 차라도 충전 환경에 따라 비용이 크게 차이 납니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box">
+          <strong>충전 전력량</strong>
+          <span>배터리 용량(kWh) × (목표% − 현재%) ÷ 100. 예: 77.4kWh를 10→80% 충전하면 54.18kWh.</span>
+        </div>
+        <div class="guide-box">
+          <strong>충전 단가</strong>
+          <span>2026년 환경부 공공 완속 294.3원/kWh, 초급속 391.9원/kWh. 민간·비회원은 더 비쌉니다.</span>
+        </div>
+        <div class="guide-box">
+          <strong>완속 vs 급속</strong>
+          <span>급속이 완속보다 약 33% 비쌉니다. 평소 완속·회원 요금, 장거리 때만 급속이 경제적입니다.</span>
+        </div>
+        <div class="guide-box">
+          <strong>10→80% 충전</strong>
+          <span>배터리 수명과 급속 충전 속도를 고려해 일상 충전은 10~80% 구간을 권장합니다.</span>
+        </div>
+      </div>
+      <p class="ref-links">요금 조회: <a href="https://www.ev.or.kr" target="_blank" rel="noopener">무공해차 통합누리집(ev.or.kr)</a></p>
+    </div>
+    <div class="guide-card">
+      <h2>2026년 전기차 충전 요금표</h2>
+      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">2026년 4월 30일 공공충전 요금이 5단계로 개편되어 완속은 인하, 초급속은 인상되었습니다(환경부 공공충전기 기준).</p>
+      <div class="table-wrap">
+      <table class="rate-table">
+        <thead>
+          <tr><th>충전기 구분</th><th>출력</th><th>요금 (원/kWh)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>완속</td><td>30kW 미만</td><td class="highlight-cell">294.3원</td></tr>
+          <tr><td>급속</td><td>100kW대</td><td>약 347원</td></tr>
+          <tr><td>초급속</td><td>200kW 이상</td><td class="highlight-cell">391.9원</td></tr>
+          <tr><td>민간·비회원 (참고)</td><td>-</td><td>450~500원+</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p style="font-size:12px;color:var(--gray-500);margin-top:8px">※ 환경부·한전 공공충전기는 회원·비회원 동일, 민간 사업자(GS차지비 등)는 비회원이 크게 비쌉니다. 정확한 요금은 ev.or.kr·충전 앱에서 확인하세요.</p>
+    </div>
+    <div class="guide-card">
+      <h2>전기차 vs 내연차 연료비 (실제 예시)</h2>
+      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">100km 주행 기준, 전기차는 전비 5km/kWh·완속 294.3원, 내연차는 연비 12km/L·휘발유 2,010원/L로 비교했습니다.</p>
+      <table>
+        <thead>
+          <tr><th>주행 거리</th><th>전기차 충전비</th><th>휘발유차 유류비</th><th>절감액</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>100km</td><td>약 5,886원</td><td>약 16,750원</td><td>약 10,864원</td></tr>
+          <tr><td>월 1,500km</td><td>약 88,290원</td><td>약 251,250원</td><td>약 162,960원</td></tr>
+          <tr><td>연 18,000km</td><td>약 105.9만원</td><td>약 302만원</td><td>약 196만원</td></tr>
+        </tbody>
+      </table>
+      <p class="ref-links">* 완속·회원 요금 기준입니다. 급속 위주로 충전하거나 충전 요금이 오르면 절감 폭은 줄어듭니다.</p>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item">
+        <h3>전기차 충전비는 어떻게 계산하나요?</h3>
+        <p>충전비는 충전한 전력량(kWh) × 충전 단가(원/kWh)로 계산합니다. 충전 전력량은 배터리 용량 × (목표 충전율 − 현재 충전율) ÷ 100입니다. 예를 들어 77.4kWh 배터리를 10%에서 80%까지 완속(294.3원/kWh)으로 충전하면 전력량 54.18kWh, 충전비는 약 1만 6천원입니다. 같은 충전을 급속(391.9원/kWh)으로 하면 약 2만 1천원입니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>완속과 급속 충전 요금은 얼마나 차이 나나요?</h3>
+        <p>2026년 4월 30일 충전 요금 5단계 개편 이후 환경부 공공충전기 기준 완속(30kW 미만)은 약 294.3원/kWh, 초급속(200kW 이상)은 약 391.9원/kWh입니다. 같은 양을 충전해도 급속이 완속보다 약 33% 비쌉니다. 민간 사업자나 비회원 요금은 더 비싸 비회원 급속은 500원/kWh를 넘기도 하므로, 평소에는 완속·회원 요금을 활용하는 것이 경제적입니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>전기차가 내연차보다 연료비가 얼마나 저렴한가요?</h3>
+        <p>100km를 주행할 때 전비 5km/kWh 전기차를 완속(294.3원)으로 충전하면 약 5,886원, 연비 12km/L 휘발유차를 2,010원/L 기준으로 운행하면 약 16,750원입니다. 전기차가 약 10,864원(65%) 저렴합니다. 월 1,500km를 주행하면 월 약 16만원, 연간 약 196만원을 절약할 수 있습니다. 다만 급속 충전 위주이거나 충전 요금이 오르면 격차는 줄어듭니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>2026년 전기차 충전 요금은 얼마인가요?</h3>
+        <p>2026년 4월 30일 공공충전 요금이 5단계로 개편되어 완속 30kW 미만은 294.3원/kWh로 인하되고 초급속 200kW 이상은 391.9원/kWh로 인상되었습니다. 충전기 출력 구간에 따라 단가가 달라지며, 회원·비회원, 환경부·한전·민간 사업자에 따라서도 편차가 있습니다. 정확한 요금은 무공해차 통합누리집(ev.or.kr)이나 충전 사업자 앱에서 확인하세요.</p>
+      </div>
+      <div class="faq-item">
+        <h3>배터리를 10%에서 80%까지만 충전하는 이유는 무엇인가요?</h3>
+        <p>리튬이온 배터리는 0%에 가깝거나 100% 완충 상태가 반복되면 수명이 빨리 줄어듭니다. 그래서 일상 충전은 보통 20~80% 또는 10~80% 구간을 권장합니다. 또한 급속 충전은 80%를 넘어가면 충전 속도가 크게 느려지므로, 급속은 80%까지만 하고 나머지는 완속으로 채우는 것이 시간과 비용 면에서 효율적입니다.</p>
+      </div>
+    </div>
+    <div class="update-note">최종 검토: 2026.06.22 · 충전 요금은 2026년 4월 30일 개편 기준이며, 사업자·회원 여부에 따라 다를 수 있으니 <a href="https://www.ev.or.kr" target="_blank" rel="noopener">무공해차 통합누리집(ev.or.kr)</a>에서 확인하세요.</div>
+  </div>
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '환경부 공공충전 요금 (2026.04.30 5단계 개편) 및 전력량 기반 계산',
+    appliedFrom: '2026년 4월 30일~',
+    exceptions: [
+      '충전 요금은 충전기 출력·사업자·회원 여부에 따라 다르며 민간·비회원은 더 비쌉니다',
+      '전비·연비는 차량·계절·운전 습관에 따라 달라집니다',
+      '내연차 유류비 비교는 유가 변동에 따라 절감 폭이 달라집니다',
+    ],
+    references: [
+      { name: '무공해차 통합누리집(ev.or.kr)', url: 'https://www.ev.or.kr' },
+    ],
+    lastReviewed: '2026.06.22',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 자동차 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/auto/auto-loan/" class="sibling-link">💳 자동차 할부</a>
+      <a href="/calc/auto/auto-tax/" class="sibling-link">🚙 자동차세</a>
+      <a href="/calc/auto/acquisition-tax/" class="sibling-link">📄 자동차 취득세</a>
+      <a href="/calc/auto/ev-charging/" class="sibling-link current">🔌 전기차 충전비</a>
+      <a href="/calc/auto/used-car-tax/" class="sibling-link">🔁 중고차 취득세</a>
+      <a href="/calc/auto/fuel-cost/" class="sibling-link">⛽ 유류비</a>
+      <a href="/calc/auto/ev-subsidy/" class="sibling-link">⚡ 전기차 보조금</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script>
+let chargeUnit=294.3;
+function Ww(w){return Math.round(w).toLocaleString()+'원';}
+function setSpeed(u,btn){chargeUnit=u;document.querySelectorAll('#speed-group .seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.getElementById('unit-price').value=u;calcCharge();calcCompare();}
+function onUnitInput(){chargeUnit=parseFloat(document.getElementById('unit-price').value)||0;document.querySelectorAll('#speed-group .seg-btn').forEach(b=>b.classList.remove('active'));calcCharge();calcCompare();}
+
+function calcCharge(){
+  const bat=parseFloat(document.getElementById('battery').value)||0;
+  const from=parseFloat(document.getElementById('from').value);
+  const to=parseFloat(document.getElementById('to').value);
+  const res=document.getElementById('charge-result');
+  if(bat<=0||isNaN(from)||isNaN(to)||to<=from||from<0||to>100||chargeUnit<=0){res.classList.remove('show');return;}
+  res.classList.add('show');
+  const energy=bat*(to-from)/100;
+  const cost=energy*chargeUnit;
+  const full=bat*chargeUnit;
+  document.getElementById('r-cost').textContent=Ww(cost);
+  document.getElementById('r-cost-sub').textContent=energy.toFixed(2)+'kWh × '+chargeUnit+'원';
+  document.getElementById('r-energy').textContent=energy.toFixed(2)+' kWh ('+(to-from)+'%)';
+  document.getElementById('r-full').textContent=Ww(full);
+  document.getElementById('r-cost2').textContent=Ww(cost);
+}
+function calcCompare(){
+  const dist=parseFloat(document.getElementById('dist').value)||0;
+  const evEff=parseFloat(document.getElementById('ev-eff').value)||0;
+  const fuelEff=parseFloat(document.getElementById('fuel-eff').value)||0;
+  const fuelPrice=parseFloat(document.getElementById('fuel-price').value)||0;
+  const res=document.getElementById('cmp-result');
+  if(dist<=0||evEff<=0||fuelEff<=0||fuelPrice<=0||chargeUnit<=0){res.classList.remove('show');return;}
+  res.classList.add('show');
+  const ev=dist/evEff*chargeUnit;
+  const gas=dist/fuelEff*fuelPrice;
+  const save=gas-ev;
+  document.getElementById('c-ev').textContent=Ww(ev);
+  document.getElementById('c-gas').textContent=Ww(gas);
+  const pct=gas>0?Math.round(save/gas*100):0;
+  document.getElementById('c-save-label').textContent=(save>=0?'전기차 절감액':'전기차 추가 비용')+' ('+Math.abs(pct)+'%)';
+  document.getElementById('c-save').textContent=(save>=0?'':'+')+Ww(Math.abs(save));
+  document.getElementById('c-save').style.color=save>=0?'#EF4444':'#6B7280';
+}
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+  <script src="/assets/footer-unified.js"></script>
+<script src="/assets/calc-registry.js"></script>
+<script src="/assets/auto-detail-shell.js"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '환경부 공공충전 요금(2026.04.30 개편)·전력량 기반 계산',
+  basisDate: '2026년 기준',
+  referenceOrg: '환경부·무공해차 통합누리집',
+  lastReviewed: '2026.06.22',
+  category: 'auto'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/blog-review-footer.js"></script>
+</body>
+</html>

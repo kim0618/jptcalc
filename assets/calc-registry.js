@@ -525,6 +525,26 @@ window.CALC_REGISTRY = {
         "slug": "acquisition-tax",
         "icon": "📄",
         "name": "자동차 취득세"
+      },
+      {
+        "slug": "ev-charging",
+        "icon": "🔌",
+        "name": "전기차 충전비"
+      },
+      {
+        "slug": "used-car-tax",
+        "icon": "🔁",
+        "name": "중고차 취득세"
+      },
+      {
+        "slug": "fuel-cost",
+        "icon": "⛽",
+        "name": "유류비"
+      },
+      {
+        "slug": "ev-subsidy",
+        "icon": "⚡",
+        "name": "전기차 보조금"
       }
     ]
   }
