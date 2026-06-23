@@ -281,6 +281,11 @@ window.CALC_REGISTRY = {
         "slug": "youth-leap-account",
         "icon": "🚀",
         "name": "청년도약계좌"
+      },
+      {
+        "slug": "youth-future-savings",
+        "icon": "💳",
+        "name": "청년미래적금"
       }
     ]
   },
