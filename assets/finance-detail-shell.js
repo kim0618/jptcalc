@@ -42,7 +42,7 @@
       key:'youth-future-savings',
       quick:['정부기여금은 유형에 따라 납입액의 6%(일반형) 또는 12%(우대형)입니다.','월 납입한도는 50만원, 만기는 3년(36개월)이며 이자소득세 15.4%가 비과세됩니다.','우대형은 개인소득 3,600만원 이하·중위 150% 이하, 또는 중소기업 재직·신규취업·소상공인이 대상입니다.','청년도약계좌에서 갈아탈 때는 미래적금 가입신청·계좌개설을 먼저 한 뒤 도약계좌를 특별중도해지해야 합니다.'],
       related:[['/calc/finance/youth-leap-account/','청년도약계좌','🚀'],['/calc/finance/savings/','적금 만기','📈'],['/calc/finance/jangbyeong-savings/','장병내일준비적금','🎖️']],
-      guides:[]
+      guides:[['/blog/posts/youth-future-savings-guide.html','청년미래적금 vs 청년도약계좌 2026 - 갈아타기 조건·일반형 우대형 차이']]
     }
   };
   let cfg=pages[path];
