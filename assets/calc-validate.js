@@ -28,6 +28,19 @@
         setTimeout(function () { clampNegative(self); }, 0);
       });
     }
+    // 날짜·월 입력: 연도 4자리 제한 (202122 같은 6자리 연도 등 비정상 입력 방지).
+    // 미래 날짜가 필요한 계산기(D-day·날짜차이·날짜더하기 등)도 있으므로 상한은 넓게(2200) 둔다.
+    // 특정 계산기에서 더 좁은 범위가 필요하면 해당 input에 min/max를 직접 지정(여기선 건드리지 않음).
+    var dInputs = document.querySelectorAll('input[type=date]');
+    for (var d = 0; d < dInputs.length; d++) {
+      if (!dInputs[d].hasAttribute('max')) dInputs[d].setAttribute('max', '2200-12-31');
+      if (!dInputs[d].hasAttribute('min')) dInputs[d].setAttribute('min', '1900-01-01');
+    }
+    var mInputs = document.querySelectorAll('input[type=month]');
+    for (var m = 0; m < mInputs.length; m++) {
+      if (!mInputs[m].hasAttribute('max')) mInputs[m].setAttribute('max', '2200-12');
+      if (!mInputs[m].hasAttribute('min')) mInputs[m].setAttribute('min', '1900-01');
+    }
   }
 
   if (document.readyState === 'loading') {

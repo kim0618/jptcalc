@@ -17,6 +17,7 @@
 | 반려동물 | pet | #F472B6 | tag-pet | 반려동물 |
 | 생활·도구 | tools | #14B8A6 | tag-tools | 생활·도구 |
 | 자동차 | auto | #EF4444 | tag-auto | 자동차 |
+| 출산·육아 | baby | #84CC16 | tag-baby | 출산·육아 |
 
 ## 사용 위치별 값
 

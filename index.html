@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>제이퍼 계산기 (JPT Calc) | 세금·연봉·금융·부동산 무료 계산기</title>
-  <meta name="description" content="제이퍼 계산기(JPT Calc)는 세금, 연봉, 금융, 부동산, 건강, 날짜 등 95개 무료 계산기를 한곳에 모았습니다." />
+  <meta name="description" content="제이퍼 계산기(JPT Calc)는 세금, 연봉, 금융, 부동산, 건강, 날짜 등 104개 무료 계산기를 한곳에 모았습니다." />
   <meta name="keywords" content="계산기,부동산계산기,세금계산기,연봉계산기,금융계산기,BMI계산기,D-day계산기,만나이계산기,프리랜서세금" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
@@ -25,7 +25,7 @@
   <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
   <meta name="twitter:description" content="제이퍼 계산기(JPT Calc)에서 세금, 연봉, 금융, 부동산, 건강, 날짜 계산기를 무료로 이용하세요." />
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebSite","name":"제이퍼 계산기","url":"https://www.jptcalc.kr/","description":"부동산, 프리랜서 세금, 연봉, 금융·이자, 건강(BMI), 날짜·D-day, 생활·도구 등 95개 계산기","inLanguage":"ko-KR"}
+  {"@context":"https://schema.org","@type":"WebSite","name":"제이퍼 계산기","url":"https://www.jptcalc.kr/","description":"부동산, 프리랜서 세금, 연봉, 금융·이자, 건강(BMI), 날짜·D-day, 생활·도구 등 104개 계산기","inLanguage":"ko-KR"}
   </script>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
@@ -71,6 +71,7 @@
       --c-pension-welfare: #0EA5E9;
       --c-tools:      #14B8A6;
       --c-auto:       #EF4444;
+      --c-baby:       #84CC16;
     }
 
     html { font-size: 16px; scroll-behavior: smooth; }
@@ -287,6 +288,7 @@
     .cat-card.c-pension-welfare::after { background: var(--c-pension-welfare); }
     .cat-card.c-tools::after      { background: var(--c-tools); }
     .cat-card.c-auto::after       { background: var(--c-auto); }
+    .cat-card.c-baby::after       { background: var(--c-baby); }
     .cat-card:hover.c-realestate  { box-shadow: 0 8px 32px rgba(245,158,11,0.15); }
     .cat-card:hover.c-tax         { box-shadow: 0 8px 32px rgba(16,185,129,0.15); }
     .cat-card:hover.c-ai          { box-shadow: 0 8px 32px rgba(139,92,246,0.15); }
@@ -298,6 +300,7 @@
     .cat-card:hover.c-pension-welfare { box-shadow: 0 8px 32px rgba(14,165,233,0.15); }
     .cat-card:hover.c-tools       { box-shadow: 0 8px 32px rgba(20,184,166,0.15); }
     .cat-card:hover.c-auto        { box-shadow: 0 8px 32px rgba(239,68,68,0.15); }
+    .cat-card:hover.c-baby        { box-shadow: 0 8px 32px rgba(132,204,22,0.15); }
 
     .cat-icon-wrap {
       width: 40px; height: 40px; border-radius: 10px;
@@ -315,6 +318,7 @@
     .c-pension-welfare .cat-icon-wrap { background: rgba(14,165,233,0.12); }
     .c-tools .cat-icon-wrap      { background: rgba(20,184,166,0.12); }
     .c-auto .cat-icon-wrap       { background: rgba(239,68,68,0.12); }
+    .c-baby .cat-icon-wrap       { background: rgba(132,204,22,0.12); }
 
     .cat-name {
       font-size: 14px; font-weight: 800; color: var(--gray-900); margin-bottom: 4px;
@@ -360,6 +364,8 @@
     .c-tools .cat-pill::before { background: var(--c-tools); }
     .c-auto .cat-pill        { border: 1px solid rgba(239,68,68,0.3); color: #B91C1C; }
     .c-auto .cat-pill::before { background: var(--c-auto); }
+    .c-baby .cat-pill        { border: 1px solid rgba(132,204,22,0.3); color: #4D7C0F; }
+    .c-baby .cat-pill::before { background: var(--c-baby); }
     /* hover: pills fill */
     .cat-card:hover .cat-pill { background: rgba(0,0,0,0.04); }
     .c-realestate:hover .cat-pill { background: rgba(245,158,11,0.1); border-color: rgba(245,158,11,0.5); }
@@ -373,6 +379,7 @@
     .c-pension-welfare:hover .cat-pill { background: rgba(14,165,233,0.1); border-color: rgba(14,165,233,0.5); }
     .c-tools:hover .cat-pill      { background: rgba(20,184,166,0.1); border-color: rgba(20,184,166,0.5); }
     .c-auto:hover .cat-pill       { background: rgba(239,68,68,0.1); border-color: rgba(239,68,68,0.5); }
+    .c-baby:hover .cat-pill       { background: rgba(132,204,22,0.1); border-color: rgba(132,204,22,0.5); }
 
     /* 인기 계산기 리스트 */
     .popular-list { display: flex; flex-direction: column; gap: 6px; margin-bottom: 32px; }
@@ -546,6 +553,9 @@
       <a href="./calc/auto/" class="nav-item">
         <span class="nav-dot" style="background:var(--c-auto);"></span>자동차
       </a>
+      <a href="./calc/baby/" class="nav-item">
+        <span class="nav-dot" style="background:var(--c-baby);"></span>출산·육아
+      </a>
     </nav>
     <div class="header-cta">
       <a href="./blog/" class="btn-blog">블로그</a>
@@ -613,6 +623,10 @@
           <span class="s-icon">&#128663;</span> 자동차
           <span class="s-badge">7</span>
         </a>
+        <a href="./calc/baby/" class="sidebar-link">
+          <span class="s-icon">&#128118;</span> 출산·육아
+          <span class="s-badge">9</span>
+        </a>
       </nav>
     </div>
     <div class="sidebar-divider"></div>
@@ -633,14 +647,14 @@
     <section class="hero">
       <div class="hero-badge">&#9889; 2026 공개 기준 반영</div>
       <h1>모든 계산을<br><span>한 곳</span>에서</h1>
-      <p class="hero-sub">세금, 연봉, 금융, 부동산, 건강, 날짜 계산을 한 곳에서 빠르게 확인하세요. 95개 계산기와 11개 카테고리를 무료로 제공합니다.</p>
+      <p class="hero-sub">세금, 연봉, 금융, 부동산, 건강, 날짜 계산을 한 곳에서 빠르게 확인하세요.<br />104개 계산기와 12개 카테고리를 무료로 제공합니다.</p>
       <div class="hero-stats">
         <div class="hero-stat">
-          <div class="hero-stat-num">94<span>개</span></div>
+          <div class="hero-stat-num">104<span>개</span></div>
           <div class="hero-stat-label">무료 계산기</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-num">10<span>개</span></div>
+          <div class="hero-stat-num">12<span>개</span></div>
           <div class="hero-stat-label">전문 카테고리</div>
         </div>
         <div class="hero-stat">
@@ -788,6 +802,18 @@
           <span class="cat-pill more">+1</span>
         </div>
       </a>
+      <a href="./calc/baby/" class="cat-card c-baby">
+        <div class="cat-icon-wrap">&#128118;</div>
+        <div class="cat-name">출산·육아</div>
+        <div class="cat-desc">배란일·출산예정일·부모급여 등 임신·출산·육아 날짜와 지원금 계산</div>
+        <div class="cat-pills">
+          <span class="cat-pill">배란일·가임기</span>
+          <span class="cat-pill">출산예정일</span>
+          <span class="cat-pill">부모급여</span>
+          <span class="cat-pill">아동수당</span>
+          <span class="cat-pill more">+5</span>
+        </div>
+      </a>
     </div>
 
     <!-- 카카오 애드핏 광고 -->
@@ -876,7 +902,7 @@
         <strong>제이퍼 계산기 (JPT Calc)</strong>는 일상과 업무에 필요한 계산을 한 곳에서 빠르게 처리할 수 있도록 만든 무료 계산기 서비스입니다.
         부동산 거래 시 필요한 취득세·양도소득세 계산부터, 프리랜서를 위한 3.3% 원천징수 실수령액 계산,
         이직 연봉 실수령액, 예금·적금·대출 금융 계산, BMI·기초대사량 건강 계산, D-day·만나이 날짜 계산까지 -
-        <strong>95개 계산기와 11개 카테고리</strong>를 모두 무료로 이용할 수 있습니다.
+        <strong>104개 계산기와 12개 카테고리</strong>를 모두 무료로 이용할 수 있습니다.
       </p>
       <p>
         주요 계산기는 <strong>2026 공개 기준과 일반적인 계산 공식</strong>을 바탕으로 제공되며, PC와 모바일 모두에서 편리하게 사용할 수 있도록 최적화되어 있습니다.

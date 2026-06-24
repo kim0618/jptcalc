@@ -110,6 +110,7 @@
         <a href="/calc/ai/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#8B5CF6"></span>AI/테크</a>
         <a href="/calc/pet/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#F472B6"></span>반려동물</a>
         <a href="/calc/auto/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#EF4444"></span>자동차</a>
+        <a href="/calc/baby/" class="sh-nav-item"><span class="sh-nav-dot" style="background:#84CC16"></span>출산·육아</a>
       </nav>
       <div class="sh-cta"><a href="/blog/" class="sh-btn-blog">블로그</a></div>
       <button class="sh-hamburger" type="button" aria-label="메뉴 열기"><span></span><span></span><span></span></button>

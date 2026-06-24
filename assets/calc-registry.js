@@ -552,10 +552,62 @@ window.CALC_REGISTRY = {
         "name": "전기차 보조금"
       }
     ]
+  },
+  "baby": {
+    "name": "출산·육아",
+    "icon": "👶",
+    "color": "#84CC16",
+    "calcs": [
+      {
+        "slug": "ovulation",
+        "icon": "🥚",
+        "name": "배란일·가임기"
+      },
+      {
+        "slug": "due-date",
+        "icon": "🤰",
+        "name": "출산예정일·임신주수"
+      },
+      {
+        "slug": "baby-months",
+        "icon": "👶",
+        "name": "아기 개월수"
+      },
+      {
+        "slug": "parental-benefit",
+        "icon": "🍼",
+        "name": "부모급여"
+      },
+      {
+        "slug": "child-allowance",
+        "icon": "👛",
+        "name": "아동수당"
+      },
+      {
+        "slug": "first-meeting",
+        "icon": "🎁",
+        "name": "첫만남이용권"
+      },
+      {
+        "slug": "home-care-allowance",
+        "icon": "🏠",
+        "name": "가정양육수당"
+      },
+      {
+        "slug": "total-support",
+        "icon": "💰",
+        "name": "출산 지원금 통합"
+      },
+      {
+        "slug": "parental-leave-pay",
+        "icon": "🧑‍🍼",
+        "name": "육아휴직급여"
+      }
+    ]
   }
 };
 window.CALC_TOTAL = Object.keys(window.CALC_REGISTRY).reduce(function(n,k){return n+window.CALC_REGISTRY[k].calcs.length;},0);
-window.CALC_CAT_ORDER = ["realestate", "salary", "tools", "tax", "pension-welfare", "finance", "date", "health", "ai", "pet", "auto"];
+window.CALC_CAT_ORDER = ["realestate", "salary", "tools", "tax", "pension-welfare", "finance", "date", "health", "ai", "pet", "auto", "baby"];
 
 /* 좌측 사이드바(카테고리 nav + 계산기 목록) 공통 렌더 — 9개 detail-shell이 호출. registry 미로드 시 빈 문자열. */
 window.JPT_sidebarLeft = function(curCat, curKey){

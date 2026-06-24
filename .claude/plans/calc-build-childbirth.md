@@ -12,8 +12,8 @@
 | 항목 | 값 |
 |---|---|
 | 한글명 | **출산·육아** |
-| slug (폴더) | **`baby`** (확정 필요 - 대안 childcare/parenting) |
-| 표시색 | **`#FB7185`** rose-400 (확정 필요 - pet `#F472B6`과 구분되도록) |
+| slug (폴더) | **`baby`** ✅확정(2026-06-24) |
+| 표시색 | **`#84CC16`** lime-500 ✅확정(2026-06-24, 빈 hue 슬롯·pet핑크/auto빨강과 최대 구분, pill텍스트 #4D7C0F). 나중 교체 쉬움(CSS var 1개) |
 | 아이콘 | **👶** |
 | nav 순서 | `CALC_CAT_ORDER` **맨 뒤(12번째)** = auto 다음 (신규는 기본 맨뒤, [[feedback_jptcalc_category_order]]) |
 | data-filter | `출산·육아` |
@@ -153,7 +153,12 @@
 
 ---
 
-## 4. 착수 전 확정 필요 (2건)
+## 4. 진행 상황
 
-1. **slug**: `baby` 권장 (대안 `childcare`/`parenting`) — URL에 박혀 되돌리기 어려움
-2. **표시색**: `#FB7185`(rose) 권장 — pet 핑크와 구분, 브랜드 취향
+- ✅ **P0 카테고리 셋업 완료(2026-06-24)**: slug=`baby`·색=lime `#84CC16`·아이콘 👶. registry(CALC_CAT_ORDER 12번째)+baby-common.css+baby-detail-shell.js+/calc/baby/index.html+홈(--c-baby·nav·sidebar·cat-card·cat-pills·카운트 96/12 보정)+nav일괄삽입(detail-shell12+카테고리index12, realestate 상대경로 수동)+blog(filter+tag-baby)+about+llms+sitemap+category-registry.md+inject-sibling TITLES+check-rate-tables POLICY_CATS(ovulation은 SKIP_NO_TABLE). 가드 전수통과(JSON-LD3/3·nav12/12·FAQ5=5·총96계산기).
+- ✅ **P1 배란일(ovulation) 완료(2026-06-24)**: `/calc/baby/ovulation/`, 🥚. 입력=마지막생리일+주기(기본28, 빠른버튼 26/28/30/32). 출력=배란예상일(D-day)·가임기(배란−5~+1)·다음생리·다음배란. 황체기14일 역산, node검산 PASS(28일 LMP6/1→배란6/15·가임6/10~16). 순수날짜=요율표면제. 관련계산기는 현존 페이지(date/health)로 임시연결(P2 due-date·baby-months 빌드 시 교체).
+- ✅ **P2 완료(2026-06-24)**: ①**출산예정일·임신주수(due-date)** 🤰 — 모드토글(마지막생리일/배란·수정일), 네겔레 LMP+280일(주기보정 ±(cycle−28))·배란일+266일, 현재 임신주수(GA=오늘−LMP)·삼분기(1삼<98일/2삼<196일/3삼)·태아나이(GA−14)·출산 D-day. node검산 PASS(LMP1/1·28일→예정일10/8). ②**아기 개월수(baby-months)** 👶 — 출생일→만개월+일(월말경계 borrow 처리)·만나이·총일수·다음 영유아검진(14~35일/4·9·18·30·42·54·66개월)·다음생일 D-day. node검산 PASS(2025-01-15→17개월9일, 윤일·월말 OK). 둘 다 순수날짜=SKIP_NO_TABLE 등록. registry baby 3종·총98계산기. 동기화 전수(카테고리index 사이드바/그리드/hasPart3/msr·홈 카운트98·pills3·sidebar badge3·sitemap·llms·inject-sibling). ovulation 관련계산기를 due-date·baby-months로 교체. JSON-LD 3/3·FAQ 5=5·인라인 calc JS 문법 OK·HTTP 200.
+- ✅ **P3~P5 + 적대검증 완료(2026-06-24)**: 정책 5종 + 통합허브 + 육아휴직급여. web 재검증 확정수치=부모급여 0세100만/1세50만(동결)·아동수당 만9세미만 월10만(2026.3.20 확대)·첫만남 200/300만·가정양육수당 일반10만/농어촌15.6·12.9·10만/장애아20·10만·육아휴직급여 일반(1~3개월100%상한250만/4~6개월100%200만/7~12개월80%160만/하한70만)+6+6특례(250·250·300·350·400·450만). **node검산 전수 PASS**. data-points §10.2~10.7 등록. **적대 재검증 2에이전트(정책수치+코드/SEO) 결과 치명0**: 수치 9종 전부 정확(복지로·보건복지부·고용노동부·nodong.kr 교차), 경미2 즉수정(요율표 .highlight-cell 라임 스타일 baby-common.css 추가 / 정적 no-JS nav 9종 통일=연금·복지). **총 104계산기·12카테고리. baby 9종 100% 완성·배포준비.** JSON-LD3/3·FAQ5=5·calcJS·요율표가드·HTTP200·nav12/12 전수통과.
+- ⏳ **남은 선택지**: P6 양육비(child-support) — YMYL(이혼·법률)·0.2x·별 성격이라 **보류 권장**. 진행 시 서울가정법원 양육비 산정기준표 + 면책 강화 필요. 사용자 판단 대기.
+- ✅ **최종 런타임 버그검증 + 입력위생 강화(2026-06-24)**: 사용자가 날짜칸에 6자리연도(202122-02-32) 입력되는 버그 제보 → ①**전역 수정 calc-validate.js**: 모든 date입력 min=1900-01-01/max=2200-12-31, month입력 1900-01~2200-12 자동부여(연도 4자리 강제). ⚠️D-day·날짜차이·날짜더하기는 미래 필수라 상한 넓게(2200), max=today 금지. ②baby-detail-shell.js: baby 날짜입력(출생일·생리일·배란일)만 max=today로 좁힘(미래불가, 전역 덮어씀). ③런타임 버그헌터 에이전트 → **치명1+경미2 수정**: [치명]baby-months 신생아 1차검진 누락+66개월 8차 사라짐(루프 `m<c.m`→창종료 `m<c.e` 기준 재작성, 1차는 totalDays<35 일수기준, node 11/11 PASS) / [경미]first-meeting prev-children 직접입력 999 클램프(Math.min 10) / [경미]parental-leave-pay 통상임금 max=3000. 미래생년월 만액표시·due-date 미래수정일은 정상동작(오해소지 경미, 미수정). 전수 재QA: 104계산기·9종 JSON-LD3/3·FAQ5=5·calcJS·HTTP200, 날짜/부동산 계산기 회귀 0.
+- **배포는 사용자 직접(rsync)** — 빌드까지 완료.

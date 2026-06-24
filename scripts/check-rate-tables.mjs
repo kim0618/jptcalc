@@ -18,12 +18,13 @@ import { dirname, join } from 'node:path';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 // ── ① 정책 카테고리 표 누락 ────────────────────────────────
-const POLICY_CATS = ['salary', 'tax', 'realestate', 'finance', 'auto'];
+const POLICY_CATS = ['salary', 'tax', 'realestate', 'finance', 'auto', 'baby'];
 // 표가 면제되는 순수 공식·날짜·비교 계산기 (slug)
 const SKIP_NO_TABLE = new Set([
   'loan', 'stock-average', 'investment',          // 공식
   'raise-rate', 'comparison',                     // 연봉 공식·비교
   'auto-loan', 'fuel-cost',                       // 자동차 순수공식(원리금균등·유류비)
+  'ovulation', 'due-date', 'baby-months',         // 출산·육아 순수 날짜계산(배란일·출산예정일·월령)
 ]);
 
 const missingTable = [];

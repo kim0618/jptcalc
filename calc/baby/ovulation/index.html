@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>배란일 계산기 2026 - 가임기·다음 생리 예정일 자동 계산 | 제이퍼 계산기</title>
+  <meta name="description" content="마지막 생리 시작일과 평균 생리주기를 입력하면 배란 예상일과 임신 확률이 높은 가임기, 다음 생리 예정일을 자동 계산합니다. 생리주기 28일 기준 생리 시작 14일째가 배란 예상일입니다." />
+  <meta name="keywords" content="배란일계산기,가임기계산기,배란일,가임기,생리주기계산기,임신가능일계산기,다음생리예정일" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/baby/ovulation/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="배란일 계산기 2026 - 가임기·다음 생리 예정일 자동 계산 | 제이퍼 계산기" />
+  <meta property="og:description" content="마지막 생리 시작일과 평균 생리주기로 배란 예상일·가임기·다음 생리 예정일을 자동 계산합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/baby/ovulation/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="배란일 계산기 2026 | 제이퍼 계산기" />
+  <meta name="twitter:description" content="마지막 생리 시작일과 평균 생리주기로 배란 예상일·가임기·다음 생리 예정일을 자동 계산합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/baby-common.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"배란일 계산기",
+    "url":"https://www.jptcalc.kr/calc/baby/ovulation/",
+    "applicationCategory":"UtilitiesApplication",
+    "operatingSystem":"All",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+      {"@type":"ListItem","position":2,"name":"출산·육아 계산기","item":"https://www.jptcalc.kr/calc/baby/"},
+      {"@type":"ListItem","position":3,"name":"배란일 계산기","item":"https://www.jptcalc.kr/calc/baby/ovulation/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"배란일은 생리 시작 며칠 후인가요?","acceptedAnswer":{"@type":"Answer","text":"생리주기가 28일로 규칙적이면 마지막 생리 시작일로부터 약 14일째가 배란 예상일입니다. 주기가 30일이면 16일째, 26일이면 12일째처럼 주기가 길수록 배란일도 뒤로 밀립니다. 배란일은 다음 생리 예정일에서 14일을 뺀 날로 계산하기 때문입니다."}},{"@type":"Question","name":"가임기는 며칠 동안인가요?","acceptedAnswer":{"@type":"Answer","text":"임신 확률이 높은 가임기는 배란 예상일 5일 전부터 배란 다음날까지 약 6일간입니다. 정자가 여성의 몸 안에서 3~5일 생존하고 난자가 배란 후 약 12~24시간 수정 가능하기 때문에, 배란 며칠 전 관계로도 임신이 될 수 있습니다."}},{"@type":"Question","name":"생리주기가 불규칙해도 배란일을 알 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"주기가 불규칙하면 계산기로 구한 배란일 오차가 커집니다. 최근 몇 달간의 평균 주기를 입력하면 대략적인 시기는 알 수 있지만, 정확도를 높이려면 배란테스트기(LH 검사)와 기초체온을 함께 확인하고 필요하면 산부인과 진료를 받는 것이 좋습니다."}},{"@type":"Question","name":"배란일 계산기는 얼마나 정확한가요?","acceptedAnswer":{"@type":"Answer","text":"배란일 계산기는 황체기(배란 후 다음 생리까지)가 평균 14일로 일정하다는 점을 이용한 추정치입니다. 주기가 규칙적이면 실제 배란일과 1~2일 이내로 맞는 경우가 많지만, 스트레스·체중 변화·질환이 있으면 며칠씩 차이 날 수 있어 보조 지표로 활용하는 것이 좋습니다."}},{"@type":"Question","name":"배란일과 가임기에 관계하면 반드시 임신되나요?","acceptedAnswer":{"@type":"Answer","text":"가임기에 관계해도 임신이 100% 되는 것은 아닙니다. 건강한 부부도 가임기 한 주기당 임신 확률은 약 20~30% 수준입니다. 임신이 잘 되지 않으면 6개월~1년 정도 시도 후 산부인과 상담을 받아보는 것이 좋습니다."}}]}</script>
+  <style>
+    .result-card{background:linear-gradient(135deg,#F7FEE7 0%,#ECFCCB 100%);border:1px solid rgba(132,204,22,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-highlight{background:rgba(132,204,22,0.12);border-radius:12px;padding:16px;margin-bottom:16px;text-align:center}
+    .rh-label{font-size:12px;color:var(--gray-500);margin-bottom:4px}
+    .rh-value{font-size:26px;font-weight:900;color:#4D7C0F}
+    .rh-sub{font-size:12px;color:var(--gray-500);margin-top:4px}
+    .fertile-bar{display:flex;align-items:center;justify-content:center;gap:6px;background:rgba(132,204,22,0.1);border:1px solid rgba(132,204,22,0.25);border-radius:10px;padding:10px 12px;margin-bottom:14px;font-size:13px;font-weight:600;color:#4D7C0F}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+      <a href="/calc/baby/" class="nav-item active"><span class="nav-dot" style="background:#84CC16;"></span>출산·육아</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/baby/">출산·육아 계산기</a><span class="breadcrumb-sep">›</span><span>배란일 계산기</span></div>
+    <div class="page-header-badge">🥚 가임기·다음 생리 예정일</div>
+    <h1>배란일 계산기</h1>
+    <p>마지막 생리 시작일과 평균 생리주기로 배란 예상일과 가임기를 계산하세요</p>
+  </div>
+    <div class="card">
+      <div class="card-title">생리 정보</div>
+      <div class="field">
+        <div class="field-label">마지막 생리 시작일</div>
+        <div class="input-wrap"><input type="date" id="lmp" oninput="calc()" /></div>
+        <div class="field-hint">가장 최근 생리가 시작된 날짜를 선택하세요.</div>
+      </div>
+      <div class="field">
+        <div class="field-label">평균 생리주기 <span class="label-hint">보통 21~35일, 기본 28일</span></div>
+        <div class="input-wrap"><input type="number" id="cycle" min="20" max="45" value="28" placeholder="예) 28" oninput="calc()" /><span class="unit">일</span></div>
+        <div class="field-hint">생리 시작일부터 다음 생리 시작일까지의 간격입니다.</div>
+      </div>
+      <div class="seg-group" style="margin-bottom:0" id="cycle-quick">
+        <button class="seg-btn" type="button" onclick="setCycle(26,this)">26일</button>
+        <button class="seg-btn active" type="button" onclick="setCycle(28,this)">28일</button>
+        <button class="seg-btn" type="button" onclick="setCycle(30,this)">30일</button>
+        <button class="seg-btn" type="button" onclick="setCycle(32,this)">32일</button>
+      </div>
+    </div>
+    <div class="result-card" id="result">
+      <div class="result-highlight">
+        <div class="rh-label">배란 예상일</div>
+        <div class="rh-value" id="r-ovulation">-</div>
+        <div class="rh-sub" id="r-ovulation-dday">-</div>
+      </div>
+      <div class="fertile-bar" id="r-fertile-bar">가임기 <span id="r-fertile-range">-</span></div>
+      <div class="result-row"><span class="result-label">가임기 (임신 확률 높음)</span><span class="result-value" id="r-fertile">-</span></div>
+      <div class="result-row"><span class="result-label">다음 생리 예정일</span><span class="result-value" id="r-next-period">-</span></div>
+      <div class="result-row result-total-row">
+        <span class="result-total-label">다음 배란 예상일</span>
+        <span class="result-total-value" id="r-next-ovulation" style="font-size:16px">-</span>
+      </div>
+      <p class="result-note">※ 배란일은 황체기 14일을 기준으로 한 추정치입니다. 생리주기가 불규칙하면 오차가 커지므로, 배란테스트기·기초체온·산부인과 진료를 함께 활용하세요.</p>
+    </div>
+
+  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>배란일과 가임기, 이렇게 계산한다</h2>
+      <p>배란일은 다음 생리 예정일을 기준으로 거꾸로 계산합니다. 생리주기는 사람마다 다르지만, 배란 후 다음 생리까지의 황체기는 평균 14일로 비교적 일정하기 때문입니다. 그래서 마지막 생리 시작일에 생리주기를 더해 다음 생리 예정일을 구한 뒤, 거기서 14일을 빼면 배란 예상일이 됩니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box">
+          <strong>배란 예상일</strong>
+          <span>마지막 생리 시작일 + (생리주기 − 14). 28일 주기면 생리 시작일로부터 14일 뒤입니다.</span>
+        </div>
+        <div class="guide-box">
+          <strong>가임기 (약 6일)</strong>
+          <span>배란 예상일 5일 전부터 배란 다음날까지. 정자 생존(3~5일)과 난자 수정 가능 시간을 반영한 구간입니다.</span>
+        </div>
+        <div class="guide-box">
+          <strong>다음 생리 예정일</strong>
+          <span>마지막 생리 시작일 + 생리주기. 생리 예정일과 배란일은 항상 14일 간격입니다.</span>
+        </div>
+      </div>
+      <p>정자는 여성의 몸 안에서 약 3~5일까지 살아남고, 난자는 배란 후 약 12~24시간 동안만 수정이 가능합니다. 그래서 배란 당일뿐 아니라 배란 며칠 전에 관계해도 임신이 될 수 있어, 임신을 계획한다면 가임기 구간 전체를 활용하는 것이 좋습니다.</p>
+    </div>
+    <div class="guide-card">
+      <h2>생리주기별 배란 예상일·가임기</h2>
+      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">마지막 생리 시작일을 기준으로 며칠 뒤가 배란 예상일·가임기인지 정리한 표입니다(황체기 14일 기준).</p>
+      <div class="guide-table-wrap">
+      <table>
+        <thead>
+          <tr><th>평균 생리주기</th><th>배란 예상일</th><th>가임기</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>26일</td><td>생리 시작 12일 뒤</td><td>7~13일 뒤</td></tr>
+          <tr><td>28일 (표준)</td><td>생리 시작 14일 뒤</td><td>9~15일 뒤</td></tr>
+          <tr><td>30일</td><td>생리 시작 16일 뒤</td><td>11~17일 뒤</td></tr>
+          <tr><td>32일</td><td>생리 시작 18일 뒤</td><td>13~19일 뒤</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <h3>정확도를 높이려면</h3>
+      <ul>
+        <li>배란테스트기(LH 검사): 배란 24~36시간 전 황체형성호르몬 급증을 감지</li>
+        <li>기초체온 측정: 배란 후 체온이 0.3~0.5℃ 상승</li>
+        <li>산부인과 초음파: 난포 크기로 배란 시점을 직접 확인</li>
+      </ul>
+      <p class="ref-links">* 위 수치는 황체기 14일을 가정한 추정치입니다. 개인차가 크므로 의학적 판단은 산부인과 진료를 따르세요.</p>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item">
+        <h3>배란일은 생리 시작 며칠 후인가요?</h3>
+        <p>생리주기가 28일로 규칙적이면 마지막 생리 시작일로부터 약 14일째가 배란 예상일입니다. 주기가 30일이면 16일째, 26일이면 12일째처럼 주기가 길수록 배란일도 뒤로 밀립니다. 배란일은 다음 생리 예정일에서 14일을 뺀 날로 계산하기 때문입니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>가임기는 며칠 동안인가요?</h3>
+        <p>임신 확률이 높은 가임기는 배란 예상일 5일 전부터 배란 다음날까지 약 6일간입니다. 정자가 여성의 몸 안에서 3~5일 생존하고 난자가 배란 후 약 12~24시간 수정 가능하기 때문에, 배란 며칠 전 관계로도 임신이 될 수 있습니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>생리주기가 불규칙해도 배란일을 알 수 있나요?</h3>
+        <p>주기가 불규칙하면 계산기로 구한 배란일 오차가 커집니다. 최근 몇 달간의 평균 주기를 입력하면 대략적인 시기는 알 수 있지만, 정확도를 높이려면 배란테스트기(LH 검사)와 기초체온을 함께 확인하고 필요하면 산부인과 진료를 받는 것이 좋습니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>배란일 계산기는 얼마나 정확한가요?</h3>
+        <p>배란일 계산기는 황체기(배란 후 다음 생리까지)가 평균 14일로 일정하다는 점을 이용한 추정치입니다. 주기가 규칙적이면 실제 배란일과 1~2일 이내로 맞는 경우가 많지만, 스트레스·체중 변화·질환이 있으면 며칠씩 차이 날 수 있어 보조 지표로 활용하는 것이 좋습니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>배란일과 가임기에 관계하면 반드시 임신되나요?</h3>
+        <p>가임기에 관계해도 임신이 100% 되는 것은 아닙니다. 건강한 부부도 가임기 한 주기당 임신 확률은 약 20~30% 수준입니다. 임신이 잘 되지 않으면 6개월~1년 정도 시도 후 산부인과 상담을 받아보는 것이 좋습니다.</p>
+      </div>
+    </div>
+    <div class="update-note">최종 검토: 2026.06.24 · 배란일·가임기는 황체기 14일 기준 추정치이며, 정확한 판정은 산부인과 진료를 권장합니다.</div>
+  </div>
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '배란일은 황체기 14일 기준 역산, 가임기는 배란 5일 전~다음날',
+    appliedFrom: '일반 산부인과 기준',
+    exceptions: [
+      '생리주기가 불규칙하면 배란일 오차가 커집니다',
+      '스트레스·체중 변화·질환은 실제 배란 시점을 바꿀 수 있습니다',
+      '정확한 배란·임신 판정은 배란테스트기·기초체온·산부인과 진료를 따르세요',
+    ],
+    references: [],
+    lastReviewed: '2026.06.24',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 출산·육아 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/baby/ovulation/" class="sibling-link current">🥚 배란일·가임기</a>
+      <a href="/calc/baby/due-date/" class="sibling-link">🤰 출산예정일·임신주수</a>
+      <a href="/calc/baby/baby-months/" class="sibling-link">👶 아기 개월수</a>
+      <a href="/calc/baby/parental-benefit/" class="sibling-link">🍼 부모급여</a>
+      <a href="/calc/baby/child-allowance/" class="sibling-link">👛 아동수당</a>
+      <a href="/calc/baby/first-meeting/" class="sibling-link">🎁 첫만남이용권</a>
+      <a href="/calc/baby/home-care-allowance/" class="sibling-link">🏠 가정양육수당</a>
+      <a href="/calc/baby/total-support/" class="sibling-link">💰 출산 지원금 통합</a>
+      <a href="/calc/baby/parental-leave-pay/" class="sibling-link">🧑‍🍼 육아휴직급여</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script>
+let cycleDays=28;
+const WD=['일','월','화','수','목','금','토'];
+function fmtDate(d){return d.getFullYear()+'년 '+(d.getMonth()+1)+'월 '+d.getDate()+'일 ('+WD[d.getDay()]+')';}
+function fmtShort(d){return (d.getMonth()+1)+'월 '+d.getDate()+'일';}
+function addDays(d,n){const r=new Date(d.getTime());r.setDate(r.getDate()+n);return r;}
+function ddayLabel(target){
+  const today=new Date();today.setHours(0,0,0,0);
+  const diff=Math.round((target.getTime()-today.getTime())/86400000);
+  if(diff===0) return '오늘';
+  if(diff>0) return 'D-'+diff;
+  return 'D+'+(-diff)+' (지남)';
+}
+function setCycle(v,btn){
+  cycleDays=v;
+  document.getElementById('cycle').value=v;
+  document.querySelectorAll('#cycle-quick .seg-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  calc();
+}
+function calc(){
+  const lmpVal=document.getElementById('lmp').value;
+  const cycle=parseInt(document.getElementById('cycle').value)||0;
+  cycleDays=cycle;
+  // sync quick buttons highlight
+  document.querySelectorAll('#cycle-quick .seg-btn').forEach(b=>{
+    b.classList.toggle('active', parseInt(b.textContent)===cycle);
+  });
+  const res=document.getElementById('result');
+  if(!lmpVal || cycle<20 || cycle>45){res.classList.remove('show');return;}
+  const lmp=new Date(lmpVal+'T00:00:00');
+  if(isNaN(lmp.getTime())){res.classList.remove('show');return;}
+  res.classList.add('show');
+  const ovulation=addDays(lmp, cycle-14);
+  const fertStart=addDays(ovulation,-5);
+  const fertEnd=addDays(ovulation,1);
+  const nextPeriod=addDays(lmp,cycle);
+  const nextOvulation=addDays(ovulation,cycle);
+  document.getElementById('r-ovulation').textContent=fmtDate(ovulation);
+  document.getElementById('r-ovulation-dday').textContent=ddayLabel(ovulation);
+  document.getElementById('r-fertile-range').textContent=fmtShort(fertStart)+' ~ '+fmtShort(fertEnd);
+  document.getElementById('r-fertile').textContent=fmtShort(fertStart)+' ~ '+fmtShort(fertEnd)+' (6일간)';
+  document.getElementById('r-next-period').textContent=fmtDate(nextPeriod);
+  document.getElementById('r-next-ovulation').textContent=fmtDate(nextOvulation);
+}
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+<script src="/assets/footer-unified.js"></script>
+<script src="/assets/calc-registry.js"></script>
+<script src="/assets/baby-detail-shell.js"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '배란일 황체기 14일 기준 산정·가임기 일반 기준',
+  basisDate: '2026년 기준',
+  referenceOrg: '산부인과 일반 기준',
+  lastReviewed: '2026.06.24',
+  category: 'baby'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/blog-review-footer.js"></script>
+</body>
+</html>
