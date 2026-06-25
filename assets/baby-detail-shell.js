@@ -35,7 +35,7 @@
       key:'parental-benefit',
       quick:['2026년 부모급여는 만 0세 월 100만원, 만 1세 월 50만원입니다.','출생부터 24개월간 받으면 총 1,800만원을 지원받습니다.','어린이집 이용 시 보육료 바우처가 우선 지원되고 0세는 차액만 현금입니다.','아동수당(월 10만원)과 중복 지급됩니다.'],
       related:[['/calc/baby/child-allowance/','아동수당','👛'],['/calc/baby/home-care-allowance/','가정양육수당','🏠'],['/calc/baby/first-meeting/','첫만남이용권','🎁']],
-      guides:[]
+      guides:[['/blog/posts/parental-benefit-guide.html','부모급여 2026 완전 가이드 - 0세 월 100만·1세 50만 신청·지급일·아동수당 중복 여부']]
     },
     '/calc/baby/child-allowance/': {
       key:'child-allowance',
