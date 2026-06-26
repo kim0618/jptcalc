@@ -71,8 +71,8 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
    - 근거: 부동산 비용 클러스터의 빈칸. 보유세(holding-tax-guide)·취득세(acquisition-tax-2026)·중개수수료(realestate-agent-fee)는 커버됐으나 등기비용 전용 글이 없음. registry 계산기는 현재 realestate-agent-fee에서만 링크됨.
 
 ### Tier 2 - 부동산 비용 클러스터 확장 (보유세=네이버 #1 키워드, 더블다운)
-2. 부동산 매매 부대비용 총정리 2026 - 취득세·등기비용·중개수수료·법무사 한눈에 (허브성 / acquisition+registry+brokerage 계산기 묶어 링크 / → property-purchase-costs-guide.html)
-3. 1인 가구 노후 필요자금·생활비 얼마 (키워드 "1인 노후자금 얼마" 클릭 12 / pension-welfare/retirement-living 연결 / → single-household-retirement-guide.html) ⚠️ retirement-living-cost·retirement-living-late-start와 각도 중복 주의 - "1인가구 특화·연령대별 목표액"으로 차별화, 실질 중복이면 스킵하고 Tier 1으로 직행
+2. [완료] 부동산 매매 부대비용 총정리 2026 - 취득세·등기비용·중개수수료·법무사 한눈에 (허브성 / acquisition+registry+brokerage 계산기 묶어 링크 / → property-purchase-costs-guide.html)
+3. [완료 2026-06-26] 1인 가구 노후 필요자금·생활비 얼마 (키워드 "1인 노후자금 얼마" 클릭 12 / pension-welfare/retirement-living 연결 / → single-household-retirement-guide.html) - 1인가구 특화(적정 192만·부부 1인당 대비 +44만)·30/40/50대 연령대별 목표액·의료간병 1.5억으로 차별화하여 작성, 기존 retirement-living-cost(부부)·late-start(나이별)와 비중복 확인
 
 > 이전 큐(연봉인상률·표준체중·보유세·국민연금40년·API토큰·중개수수료·BMI·날짜차이·D-day 등)는 전부 작성 완료. 완료 이력은 아래 "클러스터 진행 현황"에 보존. brokerage(중개수수료)는 realestate-agent-fee, api-token은 chatgpt-api-cost/claude-vs-gpt/llm-api-price-comparison로 기커버 완료처리됨.
 
