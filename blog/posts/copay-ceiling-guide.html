@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>본인부담상한제 환급금 2026 - 소득분위별 상한액과 내 환급금 계산법 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="2026년 8월 환급받을 본인부담상한제 금액은 2025년 의료비 기준입니다. 1분위 상한 89만원, 10분위 826만원. 소득분위별 상한액 표, 계산 시나리오 3가지, 요양병원 120일 초과 별도 기준까지 정리합니다." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="본인부담상한제 환급금 2026 - 소득분위별 상한액과 내 환급금 계산법 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="2026년 8월 환급받을 본인부담상한제 금액은 2025년 의료비 기준입니다. 1분위 상한 89만원, 10분위 826만원. 소득분위별 상한액 표, 계산 시나리오 3가지, 요양병원 120일 초과 별도 기준까지 정리합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/copay-ceiling-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/copay-ceiling-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#10B981;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(16,185,129,0.15);color:#10B981;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:24px 0 10px}
+    .post-body p{margin-bottom:14px}
+    .post-body ul{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#10B981;text-decoration:none}
+    .highlight-box{background:rgba(16,185,129,0.08);border-left:4px solid #10B981;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#065f46;font-size:14px;line-height:1.7}
+    .warn-box{background:rgba(245,158,11,0.08);border-left:4px solid #F59E0B;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .warn-box p{margin:0;color:#92400E;font-size:14px;line-height:1.7}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    td.rate{color:#10B981;font-weight:700}
+    td.warn{color:#DC2626;font-weight:700}
+    td.zero{color:#6B7280;font-style:italic}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#10B981;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .faq-item{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:12px;padding:20px;margin:16px 0}
+    .faq-q{font-weight:800;color:#111827;margin-bottom:8px;font-size:15px}
+    .faq-a{color:#374151;font-size:14px;line-height:1.7;margin:0}
+    .adfit-slot{text-align:center;margin:28px 0}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+    .scenario-box{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:12px;padding:20px;margin:20px 0}
+    .scenario-box strong{color:#065F46}
+    .step-list{counter-reset:step;margin:16px 0}
+    .step-list li{counter-increment:step;list-style:none;padding-left:32px;position:relative;margin-bottom:10px}
+    .step-list li::before{content:counter(step);position:absolute;left:0;top:1px;width:22px;height:22px;background:#10B981;color:#fff;font-size:11px;font-weight:800;border-radius:50%;display:flex;align-items:center;justify-content:center}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "본인부담상한제 환급금 2026 - 소득분위별 상한액과 내 환급금 계산법",
+  "description": "2026년 8월 환급받을 본인부담상한제 금액은 2025년 의료비 기준입니다. 1분위 상한 89만원, 10분위 826만원. 소득분위별 상한액 표, 계산 시나리오 3가지, 요양병원 120일 초과 별도 기준까지 정리합니다.",
+  "author":{"@type":"Organization","name":"제이퍼 계산기","url":"https://www.jptcalc.kr"},
+  "publisher":{"@type":"Organization","name":"제이퍼 계산기","url":"https://www.jptcalc.kr","logo":{"@type":"ImageObject","url":"https://www.jptcalc.kr/android-chrome-512x512.png"}},
+  "datePublished":"2026-06-27",
+  "dateModified":"2026-06-27",
+  "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.jptcalc.kr/blog/posts/copay-ceiling-guide.html"},
+  "image":"https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection":"세금",
+  "inLanguage":"ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"올해 8월에 환급받을 의료비는 몇 년도 기준인가요?","acceptedAnswer":{"@type":"Answer","text":"2026년 8월에 받는 환급금은 2025년 1월~12월에 발생한 의료비를 기준으로 합니다. 본인부담상한제는 전년도 의료비를 다음 해 8월에 정산하는 구조입니다. 즉, 2025년에 병원비를 많이 냈다면 2026년 8월에 국민건강보험공단으로부터 신청 안내문을 받게 됩니다. 2026년에 낸 의료비는 2027년 8월에 환급 대상이 됩니다. 따라서 지금 확인해야 할 상한액은 2025년 기준 분위별 상한액이며, 1분위 89만원부터 10분위 826만원입니다."}},
+    {"@type":"Question","name":"비급여 의료비도 본인부담상한제 계산에 포함되나요?","acceptedAnswer":{"@type":"Answer","text":"포함되지 않습니다. 본인부담상한제는 건강보험이 적용되는 급여 항목의 본인부담금만 집계합니다. 상급병실 차액, 미용·성형, 라식·라섹, 임플란트, 선별급여, 전액본인부담 진료비는 상한제 계산에서 빠집니다. 예를 들어 2025년 총 병원비가 1,000만원이어도 그 중 비급여가 600만원이라면 급여 본인부담금 400만원만 상한제 기준으로 따집니다. 병원 영수증의 '급여 본인부담금' 항목 합계를 기준으로 계산해야 환급 예상액이 정확하게 나옵니다."}},
+    {"@type":"Question","name":"환급 신청 기한을 놓치면 영영 못 받나요?","acceptedAnswer":{"@type":"Answer","text":"그렇지 않습니다. 본인부담상한제 환급 청구권은 지급신청서를 받은 날로부터 3년간 유효합니다. 전년도 의료비에 대한 지급 결정이 매년 8월경 이뤄지므로 통상 최근 3개 연도 의료비분까지 소급 신청이 가능하며, 공단에 문의하면 미수령 환급금이 있는지 확인해 줍니다. 신청은 The건강보험 앱, 공단 홈페이지(nhis.or.kr), 전화(1577-1000), 가까운 공단 지사 방문으로 할 수 있습니다. 다만 3년이 지나면 청구권이 소멸되므로, 매년 8월 안내문이 오지 않더라도 본인 의료비 지출이 많았던 해라면 직접 공단에 확인하는 것이 안전합니다."}},
+    {"@type":"Question","name":"사전급여를 이미 받았으면 사후환급도 따로 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네, 두 가지는 별개로 작동합니다. 사전급여는 같은 병원에서 발생한 본인부담금이 최고 상한액(2025년 826만원)을 초과하면 그 병원이 초과분을 즉시 청구하지 않는 방식입니다. 반면 사후환급은 여러 병원에 걸쳐 납부한 급여 본인부담금의 합산액이 본인의 소득분위 상한액을 초과할 경우 공단이 다음 해 8월에 돌려주는 방식입니다. 예를 들어 A병원 200만원, B병원 150만원, C병원 100만원을 낸 6-7분위 가입자라면 총 450만원 중 상한액 320만원을 초과한 130만원을 사후환급으로 돌려받을 수 있습니다."}},
+    {"@type":"Question","name":"본인부담상한제 계산기로 미리 계산하면 실제 환급액과 맞나요?","acceptedAnswer":{"@type":"Answer","text":"대략적인 추정에는 유용하지만 정확한 금액과는 차이가 날 수 있습니다. 실제 환급액은 공단이 확정한 소득분위, 급여와 비급여의 정확한 구분, 요양병원 입원 일수, 산정특례·희귀질환 적용 여부 등을 종합해 산출합니다. 특히 비급여를 포함해 입력하거나 소득분위를 잘못 선택하면 실제보다 크게 과대 추정됩니다. 제이퍼 계산기의 본인부담상한제 환급금 계산기는 2025·2026년 분위별 상한액이 최신 기준으로 반영되어 있고, 요양병원 120일 초과 상한도 별도로 선택할 수 있어 참고용으로는 충분히 활용 가능합니다."}}
+  ]
+}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},{"@type":"ListItem","position":2,"name":"블로그","item":"https://www.jptcalc.kr/blog/"},{"@type":"ListItem","position":3,"name":"세금","item":"https://www.jptcalc.kr/blog/?cat=세금"},{"@type":"ListItem","position":4,"name":"본인부담상한제 환급금 2026 - 소득분위별 상한액과 내 환급금 계산법","item":"https://www.jptcalc.kr/blog/posts/copay-ceiling-guide.html"}]}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo"><div class="logo-icon"><img src="../../assets/logo.svg" alt="로고"/></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+<div class="post-wrap">
+  <span class="post-tag">세금</span>
+  <h1>본인부담상한제 환급금 2026 - 소득분위별 상한액과 내 환급금 계산법</h1>
+  <div class="post-meta"><span>📅 2026.06.27</span><span>·</span><span>10분 읽기</span></div>
+  <div class="post-body">
+
+    <p>결론부터 말하면, 올해 8월에 환급받는 돈은 2025년에 낸 의료비 기준입니다. 국민건강보험공단은 매년 8월 전년도 급여 본인부담금이 소득분위별 상한액을 초과한 가입자에게 안내문을 보내고 초과분을 돌려줍니다. 2025년에 암, 심장질환, 큰 수술 등으로 병원비를 많이 납부했다면, 2026년 8월이 환급 확인 시점입니다. 1분위(저소득층) 상한액은 89만원으로 이 기준만 넘으면 초과분 전액을 돌려받습니다.</p>
+
+    <div class="highlight-box">
+      <p><strong>이 글이 필요한 사람:</strong> 2025년에 급여 의료비를 100만원 이상 낸 분 / 부모님이나 가족 중 입원·수술이 많았던 분 / 본인부담상한제를 처음 들어보고 내가 해당되는지 확인하고 싶은 분 / 요양병원에 오래 입원한 가족이 있어 별도 기준이 적용되는지 궁금한 분.</p>
+    </div>
+
+    <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+      <li>2025·2026년 소득분위 7구간별 상한액 완전 비교표</li>
+      <li>올해 8월 환급 대상인지 계산하는 시나리오 3가지 (저소득·중간·고소득)</li>
+      <li>요양병원 120일 초과 시 별도 상한액 표 - 일반 환자와 얼마나 다른지</li>
+      <li>비급여·선별급여가 계산 오류를 일으키는 이유와 정확한 입력 기준</li>
+      <li>신청 방법, 기한(3년), 소급 신청까지 단계별 절차</li>
+      <li>소득이 높을수록 환급이 적어지는 역설 - 데이터로 확인</li>
+    </ul>
+
+    <!-- 상단 애드핏 슬롯 -->
+    <div class="adfit-slot">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>사전급여와 사후환급 - 두 가지 지급 방식</h2>
+
+    <p>본인부담상한제는 하나의 제도 안에 두 가지 지급 방식이 있습니다. 혼용하면 헷갈리므로 먼저 구분하고 넘어갑니다.</p>
+
+    <p><strong>사전급여</strong>는 같은 요양기관(병원 한 곳)에서 급여 본인부담금이 해당 연도 최고 상한액을 초과하면, 그 병원이 초과분을 처음부터 청구하지 않는 방식입니다. 2025년 최고 상한액은 10분위 기준 826만원입니다. 암 환자가 한 병원에서 본인부담금이 826만원을 넘으면, 826만원까지만 내고 나머지는 병원이 공단에 직접 청구합니다. 환자 입장에서는 병원에서 자동으로 처리되므로 신청 절차가 없습니다.</p>
+
+    <p><strong>사후환급</strong>은 여러 병원에 낸 급여 본인부담금을 1년 치 합산해 본인 소득분위 상한액을 초과한 경우입니다. 공단이 다음 해 8월경 대상자에게 신청 안내문을 발송합니다. 안내문을 받은 뒤 The건강보험 앱, 공단 홈페이지, 전화, 지사 방문으로 신청하면 보통 며칠 내로 계좌에 입금됩니다. 사전급여를 이미 병원에서 받았더라도, 다른 병원 의료비까지 합산하면 추가 초과분이 발생할 수 있으므로 사후환급도 별도로 확인해야 합니다.</p>
+
+    <p>핵심 차이 한 줄 요약: 사전급여는 한 병원 기준, 사후환급은 여러 병원 합산 기준입니다.</p>
+
+    <h2>소득분위별 상한액 - 2025·2026년 비교표</h2>
+
+    <p>아래 표는 국민건강보험공단 기준 소득분위별 본인부담상한액입니다. 2026년 8월 환급은 2025년 의료비·2025년 상한액이 기준이므로 2025년 열을 먼저 확인하세요. 2026년 의료비는 2027년 8월에 정산됩니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>소득분위</th>
+            <th>직장 월보험료 기준</th>
+            <th>2025년 상한액</th>
+            <th>2026년 상한액</th>
+            <th>전년 대비</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1분위</td><td>5.7만원 이하</td><td>89만원</td><td class="rate">90만원</td><td>+1만원</td></tr>
+          <tr><td>2~3분위</td><td>5.7만~8.4만원</td><td>110만원</td><td class="rate">112만원</td><td>+2만원</td></tr>
+          <tr><td>4~5분위</td><td>8.4만~11.1만원</td><td>170만원</td><td class="rate">173만원</td><td>+3만원</td></tr>
+          <tr><td>6~7분위</td><td>11.1만~15.9만원</td><td>320만원</td><td class="rate">326만원</td><td>+6만원</td></tr>
+          <tr><td>8분위</td><td>15.9만~20.1만원</td><td>437만원</td><td class="rate">446만원</td><td>+9만원</td></tr>
+          <tr><td>9분위</td><td>20.1만~27.3만원</td><td>525만원</td><td class="rate">536만원</td><td>+11만원</td></tr>
+          <tr><td>10분위</td><td>27.3만원 초과</td><td>826만원</td><td class="rate">843만원</td><td>+17만원</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="font-size:13px;color:#6B7280;margin-top:-8px">※ 직장가입자 월 건강보험료 기준. 지역가입자는 부과점수 기준으로 별도 구분. 정확한 본인 분위는 매년 8월 공단이 전년도 보험료로 확정.</p>
+
+    <!-- SVG 인포그래픽: 의료비 500만 기준 소득분위별 환급액 -->
+    <div style="margin:24px 0;overflow-x:auto">
+    <svg role="img" width="100%" viewBox="0 0 680 230" xmlns="http://www.w3.org/2000/svg">
+      <title>2025년 의료비 500만원 기준 소득분위별 예상 환급액</title>
+      <rect width="680" height="230" rx="12" fill="#F9FAFB"/>
+      <text x="24" y="32" font-size="13" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">2025년 급여 의료비 500만원 납부 시 소득분위별 예상 환급액</text>
+      <text x="24" y="50" font-size="11" fill="#6B7280" font-family="Pretendard,sans-serif">상한액을 넘는 초과분만 환급 · 9분위·10분위는 상한 초과 없어 환급 없음</text>
+
+      <!-- 1분위: 500-89=411만 → 비율 411/450*460=420 -->
+      <text x="24" y="82" font-size="12" fill="#374151" font-family="Pretendard,sans-serif">1분위</text>
+      <rect x="80" y="68" width="420" height="20" rx="4" fill="#10B981" opacity="0.85"/>
+      <text x="508" y="83" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">411만원</text>
+
+      <!-- 2-3분위: 500-110=390만 → 390/411*420=398 -->
+      <text x="24" y="112" font-size="12" fill="#374151" font-family="Pretendard,sans-serif">2~3분위</text>
+      <rect x="80" y="98" width="398" height="20" rx="4" fill="#10B981" opacity="0.75"/>
+      <text x="486" y="113" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">390만원</text>
+
+      <!-- 4-5분위: 500-170=330만 → 330/411*420=337 -->
+      <text x="24" y="142" font-size="12" fill="#374151" font-family="Pretendard,sans-serif">4~5분위</text>
+      <rect x="80" y="128" width="337" height="20" rx="4" fill="#10B981" opacity="0.65"/>
+      <text x="425" y="143" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">330만원</text>
+
+      <!-- 6-7분위: 500-320=180만 → 180/411*420=184 -->
+      <text x="24" y="172" font-size="12" fill="#374151" font-family="Pretendard,sans-serif">6~7분위</text>
+      <rect x="80" y="158" width="184" height="20" rx="4" fill="#10B981" opacity="0.55"/>
+      <text x="272" y="173" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">180만원</text>
+
+      <!-- 8분위: 500-437=63만 → 63/411*420=64 -->
+      <text x="24" y="202" font-size="12" fill="#374151" font-family="Pretendard,sans-serif">8분위</text>
+      <rect x="80" y="188" width="64" height="20" rx="4" fill="#10B981" opacity="0.45"/>
+      <text x="152" y="203" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">63만원</text>
+
+      <!-- 9분위·10분위: 없음 표기 -->
+      <text x="24" y="224" font-size="11" fill="#9CA3AF" font-family="Pretendard,sans-serif">9~10분위: 상한 초과 없음 (환급 0원)</text>
+    </svg>
+    </div>
+
+    <p>눈에 띄는 건 1분위와 8분위의 격차입니다. 같은 500만원의 의료비를 냈어도 1분위는 411만원을 돌려받고, 8분위는 63만원만 돌려받습니다. 9분위(상한 525만원)와 10분위(826만원)는 500만원이 상한 아래이므로 환급이 전혀 없습니다. 이 구조가 뒤에서 설명할 '역설'의 핵심입니다.</p>
+
+    <h2>계산 시나리오 - 내 경우 얼마나 돌려받나</h2>
+
+    <h3>시나리오 1. 이 씨(59세, 1분위, 당뇨 합병증으로 입원 3개월)</h3>
+    <div class="scenario-box">
+      <p>이 씨는 2025년에 여러 병원을 오가며 급여 본인부담금 총 230만원을 납부했습니다. 월 건강보험료가 4.5만원이므로 1분위에 해당하고, 2025년 상한액은 89만원입니다.</p>
+      <p><strong>환급 계산:</strong> 230만원 - 89만원 = <strong>141만원 환급 예상</strong></p>
+      <p>2026년 8월에 공단으로부터 신청 안내문이 옵니다. The건강보험 앱에서 신청하면 3~5일 내 입금됩니다. 비급여 진료비는 계산에서 빼야 하므로, 병원 영수증의 '급여 본인부담금' 합계만 기준으로 계산해야 실제 환급액과 가까워집니다.</p>
+    </div>
+
+    <h3>시나리오 2. 박 씨(42세, 6-7분위, 맹장 수술 후 회복 입원)</h3>
+    <div class="scenario-box">
+      <p>박 씨는 2025년 맹장 수술과 이후 회복 입원으로 A병원 190만원, B병원 80만원, C의원 55만원 등 급여 본인부담금 합계 325만원을 납부했습니다. 월 건강보험료가 13만원이므로 6~7분위이고, 상한액은 320만원입니다.</p>
+      <p><strong>환급 계산:</strong> 325만원 - 320만원 = <strong>5만원 환급 예상</strong></p>
+      <p>환급액이 작아 보이지만 공단이 자동으로 확인해주므로 놓칠 이유가 없습니다. 만약 2025년 총 급여 의료비가 300만원에 그쳤다면 상한 320만원 미달로 환급이 없었을 겁니다. 실제 사후환급 여부는 공단이 확정 소득분위와 정확한 급여 본인부담금을 집계한 결과에 달려 있습니다.</p>
+    </div>
+
+    <h3>시나리오 3. 김 씨(48세, 9분위, 디스크 수술과 재활)</h3>
+    <div class="scenario-box">
+      <p>김 씨는 2025년 허리디스크 수술과 재활치료로 급여 본인부담금 500만원을 납부했습니다. 월 건강보험료가 23만원이므로 9분위이고, 상한액은 525만원입니다.</p>
+      <p><strong>환급 계산:</strong> 500만원 < 525만원 → <strong>환급 없음</strong></p>
+      <p>9분위 상한이 525만원이므로 500만원은 상한 이내입니다. 2026년 8월에 안내문이 오지 않습니다. 같은 상황에서 1분위라면 411만원을 받았을 텐데, 소득이 높다는 이유만으로 환급이 0원입니다. 이 역설은 아래 섹션에서 더 구체적으로 살펴봅니다.</p>
+    </div>
+
+    <h2>소득이 높을수록 덜 돌려받는 역설</h2>
+
+    <p>본인부담상한제는 저소득층을 더 두텁게 보호하도록 설계되어 있습니다. 그런데 이 구조가 만들어내는 결과는 생각보다 극단적입니다.</p>
+
+    <p>같은 1,000만원의 급여 의료비를 냈다고 가정합니다. 분위별 환급액을 계산하면 아래와 같습니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>소득분위</th>
+            <th>2025년 상한액</th>
+            <th>의료비 1,000만 기준 환급액</th>
+            <th>실질 부담액</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1분위</td><td>89만원</td><td class="rate">911만원</td><td>89만원</td></tr>
+          <tr><td>2~3분위</td><td>110만원</td><td class="rate">890만원</td><td>110만원</td></tr>
+          <tr><td>4~5분위</td><td>170만원</td><td class="rate">830만원</td><td>170만원</td></tr>
+          <tr><td>6~7분위</td><td>320만원</td><td class="rate">680만원</td><td>320만원</td></tr>
+          <tr><td>8분위</td><td>437만원</td><td class="rate">563만원</td><td>437만원</td></tr>
+          <tr><td>9분위</td><td>525만원</td><td class="rate">475만원</td><td>525만원</td></tr>
+          <tr><td>10분위</td><td>826만원</td><td class="rate">174만원</td><td>826만원</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>1분위는 의료비 1,000만원 중 89만원만 부담하고 나머지 911만원을 돌려받습니다. 반면 10분위는 826만원을 직접 내고 174만원만 환급받습니다. 국민건강보험법 제44조의2에 근거한 이 구조는 의도적인 설계입니다. 의료비 쇼크가 실제 생계에 영향을 미치는 저소득층을 더 강하게 보호하기 위한 것입니다.</p>
+
+    <p>여기서 오해하기 쉬운 함정이 있습니다. "나는 소득이 높으니까 본인부담상한제 혜택이 없다"고 생각하는 분들입니다. 10분위라도 급여 의료비가 826만원을 초과하면 환급이 발생합니다. 암, 중증 심장질환, 뇌혈관질환 같은 큰 수술이 겹치면 10분위도 충분히 해당될 수 있습니다. 내 분위가 높더라도 의료비 지출이 컸던 해에는 반드시 확인해볼 가치가 있습니다.</p>
+
+    <p>또한 <a href="../posts/medical-expense-deduction-guide.html" style="color:#10B981">의료비 세액공제</a>와 본인부담상한제는 서로 중복 적용됩니다. 상한제로 돌려받은 환급금은 연말정산 의료비 세액공제 계산에서 제외해야 하지만, 두 제도 자체는 별개입니다. 같은 의료비로 두 가지 혜택을 모두 챙길 수 있는지 확인해보시기 바랍니다.</p>
+
+    <!-- 본문중간 애드핏 슬롯 -->
+    <div class="adfit-slot">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-88xhdLeiIK3V35kb" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>요양병원 120일 초과 - 별도 상한액이 적용된다</h2>
+
+    <p>일반 입원과 달리 요양병원에 1년 동안 120일을 초과해 입원하면 별도의 더 높은 상한액이 적용됩니다. 노인장기요양 외 목적의 장기 요양병원 입원을 억제하기 위한 정책으로, 2014년부터 시행되고 있습니다.</p>
+
+    <div class="warn-box">
+      <p><strong>주의:</strong> 요양병원 120일 초과 상한은 같은 분위라도 일반 상한보다 훨씬 높습니다. 이를 모르고 일반 상한으로 계산하면 환급 예상액이 실제보다 크게 나올 수 있습니다.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>소득분위</th>
+            <th>2025년 일반 상한</th>
+            <th>2025년 요양병원 120일 초과</th>
+            <th>2026년 요양병원 120일 초과</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1분위</td><td>89만원</td><td class="warn">141만원</td><td>143만원</td></tr>
+          <tr><td>2~3분위</td><td>110만원</td><td class="warn">178만원</td><td>181만원</td></tr>
+          <tr><td>4~5분위</td><td>170만원</td><td class="warn">240만원</td><td>245만원</td></tr>
+          <tr><td>6~7분위</td><td>320만원</td><td class="warn">396만원</td><td>404만원</td></tr>
+          <tr><td>8분위</td><td>437만원</td><td class="warn">569만원</td><td>580만원</td></tr>
+          <tr><td>9분위</td><td>525만원</td><td class="warn">684만원</td><td>698만원</td></tr>
+          <tr><td>10분위</td><td>826만원</td><td class="warn">1,074만원</td><td>1,096만원</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>예를 들어 4~5분위 가입자가 2025년에 요양병원에 150일 입원해 급여 본인부담금 350만원을 납부했다고 가정합니다. 일반 상한(170만원)으로 계산하면 180만원 환급이 나오지만, 요양병원 120일 초과 상한(240만원)을 적용하면 110만원으로 줄어듭니다. 계산 시 반드시 입원 일수를 확인해야 합니다.</p>
+
+    <p>부모님이 치매나 중증 노인성 질환으로 요양병원에 장기 입원해 계신다면, 120일 기준을 넘었는지 확인하는 것이 선행 작업입니다. The건강보험 앱 또는 공단 고객센터(1577-1000)에서 요양병원 입원 일수를 조회할 수 있습니다.</p>
+
+    <a href="https://www.bumohyetaek.kr/guide/health-insurance-limit" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:14px;background:#F0FDF4;border:1px solid #BBF7D0;border-radius:12px;padding:16px 20px;margin:20px 0;text-decoration:none;">
+      <span style="font-size:28px;line-height:1">👨‍👩‍👧</span>
+      <div style="flex:1;min-width:0">
+        <div style="font-size:11px;font-weight:700;color:#10B981;margin-bottom:3px;letter-spacing:0.3px">부모님께도 알려드리세요</div>
+        <div style="font-size:14px;font-weight:700;color:#111827;line-height:1.4">건강보험 본인부담 상한제 - 병원비 환급받는 방법</div>
+      </div>
+      <span style="font-size:18px;color:#10B981;flex-shrink:0">→</span>
+    </a>
+
+    <h2>비급여 의료비 - 계산 오류의 주범</h2>
+
+    <p>가장 흔한 실수는 병원에서 받은 영수증 총액을 그대로 입력하는 겁니다. 총 진료비에는 급여와 비급여가 섞여 있고, 본인부담상한제는 급여 본인부담금만 집계합니다.</p>
+
+    <p>비급여에 해당하는 주요 항목을 정리합니다. 이 항목들은 상한제 계산에서 빠집니다.</p>
+
+    <ul>
+      <li>상급병실(2인실, 1인실) 병실 차액</li>
+      <li>미용·성형 목적 시술 (쌍꺼풀, 지방흡입, 보톡스 등)</li>
+      <li>임플란트, 치아 미백, 스케일링 (연 1회 급여 스케일링 제외)</li>
+      <li>선별급여 항목 (본인부담률 50~80%로 높게 설정된 것들)</li>
+      <li>전액 본인부담 진료비</li>
+      <li>추나요법 중 급여 인정 범위 초과분</li>
+      <li>실손의료보험에서 보상받은 금액 (중복 집계 불가)</li>
+    </ul>
+
+    <p>병원 영수증을 보면 항목이 크게 세 가지로 나뉩니다: ① 급여 공단부담금, ② 급여 본인부담금, ③ 비급여 본인부담금. 상한제에 들어가는 건 ②번뿐입니다. 홈택스 연말정산 간소화 서비스에서 보이는 의료비와 다를 수 있으니, 정확히 확인하려면 병원 영수증 원본의 '급여 본인부담금' 항목 합계를 직접 더하는 것이 가장 안전합니다.</p>
+
+    <p>또한 <a href="../posts/medical-expense-items-guide.html" style="color:#10B981">의료비 항목별 급여·비급여 구분</a>을 확인하면 어떤 진료비가 상한제 계산에 들어가는지 더 구체적으로 파악할 수 있습니다.</p>
+
+    <h2>환급 신청 방법과 기한</h2>
+
+    <p>공단이 안내문을 보내지 않았더라도 본인이 직접 조회하고 신청할 수 있습니다. 신청 기한은 지급신청서(지급 안내)를 받은 날로부터 3년입니다. 전년도 의료비에 대한 지급 결정은 매년 8월경 이뤄지므로, 통상 최근 3개 연도 의료비분까지 소급 신청할 수 있습니다.</p>
+
+    <ol class="step-list">
+      <li><strong>환급 대상 확인</strong> - The건강보험 앱 또는 공단 홈페이지(nhis.or.kr)에 로그인 후 '환급금 조회/신청' 메뉴에서 연도별 환급 가능액 확인</li>
+      <li><strong>계좌 등록</strong> - 환급금 수령 계좌를 미리 등록해두면 신청 즉시 처리 속도가 빨라짐</li>
+      <li><strong>신청 제출</strong> - 앱·홈페이지 온라인 신청 / 공단 고객센터 전화(1577-1000) / 가까운 공단 지사 방문 신청 중 선택</li>
+      <li><strong>입금 확인</strong> - 신청 후 보통 3~5 영업일 내 지정 계좌로 입금</li>
+    </ol>
+
+    <p>안내문이 오지 않았을 때도 적극적으로 확인하는 게 좋습니다. 공단이 주소 변경 등으로 안내문을 보내지 못하거나 분실된 경우도 있고, 가입자 본인이 미리 조회하면 당해 연도 환급 대상인지 빠르게 파악할 수 있습니다. 과거 3개년(2022·2023·2024년 의료비)에 대해서도 미수령 환급금이 있는지 한 번에 조회됩니다.</p>
+
+    <p>건강보험 피부양자로 등재된 부모님이 계신다면, 부모님 의료비도 부모님 명의의 사후환급 대상이 될 수 있습니다. 피부양자 건강보험 혜택에 대한 자세한 내용은 <a href="../posts/health-insurance-dependent-guide.html" style="color:#10B981">건강보험 피부양자 등록 조건과 혜택</a>에서 확인할 수 있습니다.</p>
+
+    <div class="cta-box">
+      <p>2025년 급여 의료비와 소득분위를 입력하면 올해 8월 예상 환급액을 바로 계산합니다.</p>
+      <a href="../../calc/tax/copay-ceiling/" class="cta-btn" style="background:#10B981">본인부담상한제 환급금 계산기 →</a>
+    </div>
+    <p style="font-size:13px;color:#6B7280;margin-top:8px;text-align:center">2025·2026년 기준 · 요양병원 120일 초과 별도 적용 가능</p>
+
+    <h2>자주 나오는 질문</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">올해 8월에 환급받을 의료비는 몇 년도 기준인가요?</div>
+      <div class="faq-a">2026년 8월에 받는 환급금은 2025년 1월~12월에 발생한 의료비를 기준으로 합니다. 본인부담상한제는 전년도 의료비를 다음 해 8월에 정산하는 구조입니다. 즉, 2025년에 병원비를 많이 냈다면 2026년 8월에 국민건강보험공단으로부터 신청 안내문을 받게 됩니다. 2026년에 낸 의료비는 2027년 8월에 환급 대상이 됩니다. 따라서 지금 확인해야 할 상한액은 2025년 기준 분위별 상한액이며, 1분위 89만원부터 10분위 826만원입니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">비급여 의료비도 본인부담상한제 계산에 포함되나요?</div>
+      <div class="faq-a">포함되지 않습니다. 본인부담상한제는 건강보험이 적용되는 급여 항목의 본인부담금만 집계합니다. 상급병실 차액, 미용·성형, 라식·라섹, 임플란트, 선별급여, 전액본인부담 진료비는 상한제 계산에서 빠집니다. 예를 들어 2025년 총 병원비가 1,000만원이어도 그 중 비급여가 600만원이라면 급여 본인부담금 400만원만 상한제 기준으로 따집니다. 병원 영수증의 '급여 본인부담금' 항목 합계를 기준으로 계산해야 환급 예상액이 정확하게 나옵니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">환급 신청 기한을 놓치면 영영 못 받나요?</div>
+      <div class="faq-a">그렇지 않습니다. 본인부담상한제 환급 청구권은 지급신청서를 받은 날로부터 3년간 유효합니다. 전년도 의료비에 대한 지급 결정이 매년 8월경 이뤄지므로 통상 최근 3개 연도 의료비분까지 소급 신청이 가능하며, 공단에 문의하면 미수령 환급금이 있는지 확인해 줍니다. 신청은 The건강보험 앱, 공단 홈페이지(nhis.or.kr), 전화(1577-1000), 가까운 공단 지사 방문으로 할 수 있습니다. 다만 3년이 지나면 청구권이 소멸되므로, 매년 8월 안내문이 오지 않더라도 본인 의료비 지출이 많았던 해라면 직접 공단에 확인하는 것이 안전합니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">사전급여를 이미 받았으면 사후환급도 따로 받을 수 있나요?</div>
+      <div class="faq-a">네, 두 가지는 별개로 작동합니다. 사전급여는 같은 병원에서 발생한 본인부담금이 최고 상한액(2025년 826만원)을 초과하면 그 병원이 초과분을 즉시 청구하지 않는 방식입니다. 반면 사후환급은 여러 병원에 걸쳐 납부한 급여 본인부담금의 합산액이 본인의 소득분위 상한액을 초과할 경우 공단이 다음 해 8월에 돌려주는 방식입니다. 예를 들어 A병원 200만원, B병원 150만원, C병원 100만원을 낸 6-7분위 가입자라면 총 450만원 중 상한액 320만원을 초과한 130만원을 사후환급으로 돌려받을 수 있습니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">본인부담상한제 계산기로 미리 계산하면 실제 환급액과 맞나요?</div>
+      <div class="faq-a">대략적인 추정에는 유용하지만 정확한 금액과는 차이가 날 수 있습니다. 실제 환급액은 공단이 확정한 소득분위, 급여와 비급여의 정확한 구분, 요양병원 입원 일수, 산정특례·희귀질환 적용 여부 등을 종합해 산출합니다. 특히 비급여를 포함해 입력하거나 소득분위를 잘못 선택하면 실제보다 크게 과대 추정됩니다. 제이퍼 계산기의 본인부담상한제 환급금 계산기는 2025·2026년 분위별 상한액이 최신 기준으로 반영되어 있고, 요양병원 120일 초과 상한도 별도로 선택할 수 있어 참고용으로는 충분히 활용 가능합니다.</div>
+    </div>
+
+    <h2>2025년 의료비 합산, 지금이 확인 타이밍입니다</h2>
+
+    <p>본인부담상한제는 따로 신청하지 않아도 공단이 대상자를 가려내 안내합니다. 하지만 주소 변경이나 안내문 분실로 넘어가는 경우도 있고, 과거 미수령 환급금이 있어도 스스로 찾지 않으면 3년 청구권이 소멸됩니다. 2025년에 급여 의료비 지출이 1분위 기준 89만원을 넘은 적이 있다면 반드시 The건강보험 앱에서 환급 가능액을 먼저 조회해보세요.</p>
+
+    <p>소득분위별 상한액은 해마다 조금씩 오릅니다. 2025년 1분위 89만원이 2026년 90만원으로 1만원 오른 것처럼, 물가 상승을 반영한 소폭 조정이 매년 이루어집니다. 2026년 기준 상한액은 환급이 아닌 올해 낸 의료비 참고용으로 활용하시면 됩니다.</p>
+
+    <p>무엇보다 중요한 건, 이 환급금이 '내가 이미 냈고 돌려받을 권리가 있는 돈'이라는 사실입니다. 국민건강보험공단(nhis.or.kr)에서 조회는 무료이고 5분이면 됩니다. 2025년에 큰 병원비가 들었던 분이라면, 이번 6~7월 안에 조회해 두면 8월 환급을 놓치지 않습니다.</p>
+
+  </div>
+</div>
+<footer class="site-footer"><p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용입니다.</p></footer>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "국민건강보험법 제44조의2, 국민건강보험공단 2025·2026년 본인부담상한액 고시",
+  basisDate: "2025·2026년 기준",
+  referenceOrg: "국민건강보험공단",
+  lastReviewed: '2026.06.27',
+  disclaimer: "본 내용은 참고용이며 실제 환급액은 공단 확정 결과와 다를 수 있습니다.",
+  relatedCalc: { name: '본인부담상한제 환급금 계산기', url: '/calc/tax/copay-ceiling/' },
+  category: 'tax'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>

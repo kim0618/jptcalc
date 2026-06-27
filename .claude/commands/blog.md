@@ -27,14 +27,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 
 > 이 블록에 지정 항목이 있으면 **클러스터·네이버 큐보다 먼저** 이 1편을 쓴다. 작성 완료하면 이 블록을 비우고(또는 `[완료]` 표기) 평소 선정 순서로 복귀한다.
 
-- **[지정 2026-06-23, 사용자] 청년미래적금 가이드 1편 (금융)** — ⏰ 시의성: 가입신청 **2026.7.3 마감** (D-day 짧음, 검색 피크기). 다음 작성 슬롯(2026-06-24)에서 바로 이 1편부터 쓸 것.
-  - **주제/각도**: "청년도약계좌 vs 청년미래적금 - 갈아탈까 버틸까" (비교·갈아타기 키워드가 현재 최강 후크). 본문에 **일반형 vs 우대형 자격 3트랙**(중기재직·신규취업·소상공인)과 **갈아타기 절차 순서**(미래적금 가입신청·계좌개설 먼저 → 도약계좌 특별중도해지, 중복불가)를 반드시 포함. 체감 환산수익률(우대형 ~연 19%대) 설명 1섹션.
-  - **제목 키워드 선두 배치**: "청년미래적금" + 2026. 예) `청년미래적금 vs 청년도약계좌 2026 - 갈아타기 조건·일반형 우대형 차이`
-  - **연결 계산기(필수 양방향)**: `/calc/finance/youth-future-savings/` (cta-box + ARTICLE_INFO relatedCalc), 보조로 `/calc/finance/youth-leap-account/` 비교 링크
-  - **파일명 제안**: `youth-future-savings-guide.html`
-  - **교차링크(금융 기존글)**: savings-maturity-guide.html, five-year-seed-money.html, isa-guide.html 중 2~3개
-  - **수치 출처**: 금융위(fsc.go.kr)·서민금융진흥원. ⚠️기여금 일반형6%/우대형12%, 한도 50만, 만기 3년, 기본금리 전은행 연5.0%·최고8%. 토스뱅크 페이지는 소상공인 매출 "4억"·우대금리 단독 오기라 출처 사용 금지. data-points §5.4-1 참조.
-  - 작성 후: detail-shell guides 배열 추가 + `node scripts/inject-sibling.mjs` + `find-orphan-calcs.mjs` 재확인 (계산기 양방향)
+- **[완료 2026-06-24] 청년미래적금 가이드 1편 (금융)** — youth-future-savings-guide.html 작성 완료. 텍스트 26,525자, 크롬 정상, detail-shell 연결 완료.
 
 ### 클러스터 진행 현황 (글 선정 시 Tier 순서보다 우선)
 
@@ -46,9 +39,8 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - **완료 클러스터: 국민연금(pension-welfare)** | 2026-06-05~06-08 완료 | **성과 점검 예정: 2026-07-06** (트리거 B)
   - 허브: national-pension-40years(06-05) / 위성: national-pension-early-receipt(조기수령·06-08)·national-pension-payment-exemption(납부예외·06-08)·national-pension-additional-payment(추납·06-08) | 임의가입은 national-pension-voluntary.html로 기커버
 - **[완료 2026-06-08] 주택연금 신규 계산기 글(pension-welfare)** | housing-pension-guide.html. HF 2026 월지급금 예시표 기준. detail-shell guides + ARTICLE_INFO guides + 본문 CTA 양방향 연결 완료
-- **진행 클러스터: 부동산 비용(realestate)** | 2026-06-21 서치어드바이저 갱신으로 시작 | 근거: "부동산 보유세 계산기"가 네이버 검색어 #1(클릭 93·CTR 9.1), realestate 계산기군이 웹문서 상위 다수 점유 = 최고 성과 카테고리. 보유세·취득세·중개수수료는 커버됐고 **등기비용이 빈칸** → 더블다운.
-  - 위성 순서: ① registry-cost-guide(등기비용, Tier 1) → ② property-purchase-costs-guide(매매 부대비용 허브, Tier 2)
-  - **성과 점검 예정: 2026-07-19** (트리거 B)
+- **완료 클러스터: 부동산 비용(realestate)** | 2026-06-21~06-22 완료 | **성과 점검 예정: 2026-07-19** (트리거 B)
+  - 허브: holding-tax-guide / 위성: ① registry-cost-guide(등기비용·06-22) · ② property-purchase-costs-guide(매매 부대비용·06-26)
 - **참고**: orphan 계산기 5종(copay-ceiling·stock-average·cat-age·food-amount·lunar-calendar)은 여전히 전용 블로그 0개 - 네이버 큐 소진 시 우선순위 ③로 폴백. (네이버 큐에는 넣지 않음)
 
 ## 네이버 타겟 주제 큐
@@ -67,8 +59,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 주제 선정 시 **이 큐를 카테고리 균형보다 우선**한다. 위에서부터 미사용 주제를 선택하고, 작성 완료한 주제 앞에 `[완료]`를 붙인다.
 
 ### Tier 1 - 네이버 검증된 신규 승자 (최우선)
-1. 부동산 등기비용 계산기 2026 - 법무사 보수·취득세 포함 매매 시 등기 총비용 (키워드 "부동산 등기비용 계산기" 클릭 17·**CTR 11.5%** / calc/realestate/registry **전용 블로그 없음 = 신규 기회** / → registry-cost-guide.html)
-   - 근거: 부동산 비용 클러스터의 빈칸. 보유세(holding-tax-guide)·취득세(acquisition-tax-2026)·중개수수료(realestate-agent-fee)는 커버됐으나 등기비용 전용 글이 없음. registry 계산기는 현재 realestate-agent-fee에서만 링크됨.
+1. [완료 2026-06-22] 부동산 등기비용 계산기 2026 → registry-cost-guide.html (텍스트 27,208자, 크롬 정상)
 
 ### Tier 2 - 부동산 비용 클러스터 확장 (보유세=네이버 #1 키워드, 더블다운)
 2. [완료] 부동산 매매 부대비용 총정리 2026 - 취득세·등기비용·중개수수료·법무사 한눈에 (허브성 / acquisition+registry+brokerage 계산기 묶어 링크 / → property-purchase-costs-guide.html)

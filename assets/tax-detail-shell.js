@@ -48,7 +48,7 @@
       key:'copay-ceiling',
       quick:['1년간 낸 급여 본인부담금이 소득분위별 상한액을 넘으면 초과분을 공단이 환급합니다.','2026년 상한액은 1분위 90만원부터 10분위 843만원까지입니다.','요양병원 120일 초과 입원은 더 높은 별도 상한액(1분위 143만~10분위 1,096만)이 적용됩니다.','비급여·선별급여·상급병실료는 대상이 아니며, 급여 본인부담금만 계산됩니다.'],
       related:[['/calc/tax/regional-health-insurance/','지역가입자 건강보험료','🏥'],['/calc/tax/medical-expense/','의료비 세액공제','🏥'],['/calc/tax/income-tax/','종합소득세 계산기','📈']],
-      guides:[]
+      guides:[['/blog/posts/copay-ceiling-guide.html','본인부담상한제 환급금 2026 - 소득분위별 상한액과 내 환급금 계산법']]
     },
     '/calc/tax/four-insurance/': {
       key:'four-insurance',
