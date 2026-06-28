@@ -41,7 +41,9 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - **[완료 2026-06-08] 주택연금 신규 계산기 글(pension-welfare)** | housing-pension-guide.html. HF 2026 월지급금 예시표 기준. detail-shell guides + ARTICLE_INFO guides + 본문 CTA 양방향 연결 완료
 - **완료 클러스터: 부동산 비용(realestate)** | 2026-06-21~06-22 완료 | **성과 점검 예정: 2026-07-19** (트리거 B)
   - 허브: holding-tax-guide / 위성: ① registry-cost-guide(등기비용·06-22) · ② property-purchase-costs-guide(매매 부대비용·06-26)
-- **참고**: orphan 계산기 5종(copay-ceiling·stock-average·cat-age·food-amount·lunar-calendar)은 여전히 전용 블로그 0개 - 네이버 큐 소진 시 우선순위 ③로 폴백. (네이버 큐에는 넣지 않음)
+- **진행 중 클러스터: 자동차(auto)** | 2026-06-28 시작 (자동차 카테고리 블로그 0편이던 미개척 영역 진입) | **성과 점검 예정: 2026-07-26** (트리거 B)
+  - 허브: car-tax-guide(자동차세·06-28, auto-tax 고아 해소) / **남은 위성 후보(미사용)**: ① acquisition-tax(자동차 취득세) · ② ev-subsidy(전기차 보조금) · ③ fuel-cost(유류비) · ④ used-car-tax(중고차 취득세) · ⑤ ev-charging(전기차 충전비) · ⑥ auto-loan(자동차 할부). 자동차세 글에서 ①③ 계산기는 이미 본문 링크 연결됨. 위성 작성 시 car-tax-guide와 교차링크로 클러스터 강화.
+- **참고**: orphan 계산기 4종(copay·auto-tax는 해소 / stock-average·cat-age·food-amount·lunar-calendar 잔존)은 전용 블로그 0개 - 네이버 큐 소진 시 우선순위 ③로 폴백. (네이버 큐에는 넣지 않음). 자동차 6종 orphan은 위 자동차 클러스터 위성으로 흡수 예정.
 
 ## 네이버 타겟 주제 큐
 

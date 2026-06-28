@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>자동차세 계산기 2026 - 배기량·차령 감면·연납 할인 한눈에 정리 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="2026년 자동차세 계산법 총정리. 배기량 cc당 80·140·200원, 지방교육세 30%, 차령 3년차부터 매년 5%씩 최대 50% 경감, 전기차 13만원 정액, 1월 연납 4.58% 할인까지. 쏘나타 2,000cc 차령 6년 연세액 41만 6천원 검산 예시 포함." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="자동차세 계산기 2026 - 배기량·차령 감면·연납 할인 한눈에 정리 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="2026년 자동차세 계산법 총정리. 배기량 cc당 80·140·200원, 지방교육세 30%, 차령 3년차부터 매년 5%씩 최대 50% 경감, 전기차 13만원 정액, 1월 연납 4.58% 할인까지. 쏘나타 2,000cc 차령 6년 연세액 41만 6천원 검산 예시 포함." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/car-tax-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/car-tax-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#EF4444;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(239,68,68,0.15);color:#EF4444;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:24px 0 10px}
+    .post-body p{margin-bottom:14px}
+    .post-body ul,.post-body ol{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#EF4444;text-decoration:none}
+    .highlight-box{background:rgba(239,68,68,0.1);border-left:4px solid #EF4444;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#991B1B;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    td.rate{color:#EF4444;font-weight:700}
+    tr:hover td{background:rgba(0,0,0,0.02)}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#EF4444;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .faq-item{margin:18px 0}
+    .faq-q{font-weight:700;color:#111827;margin-bottom:6px}
+    .faq-a{color:#374151;font-size:14px;margin:0}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "자동차세 계산기 2026 - 배기량·차령 감면·연납 할인 한눈에 정리",
+  "description": "2026년 자동차세 계산법 총정리. 배기량 cc당 80·140·200원, 지방교육세 30%, 차령 3년차부터 매년 5%씩 최대 50% 경감, 전기차 13만원 정액, 1월 연납 4.58% 할인까지. 쏘나타 2,000cc 차령 6년 연세액 41만 6천원 검산 예시 포함.",
+  "author":{"@type":"Person","name":"Jay Kim","url":"https://www.jptcalc.kr/about.html","jobTitle":"제이퍼 계산기 운영자"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.jptcalc.kr/android-chrome-512x512.png"
+    }
+  },
+  "datePublished": "2026-06-28",
+  "dateModified": "2026-06-28",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.jptcalc.kr/blog/posts/car-tax-guide.html"
+  },
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "자동차",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "자동차세는 어떻게 계산하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "비영업용 승용차 자동차세는 배기량(cc) × cc당 세액으로 본세를 구하고, 여기에 지방교육세 30%를 더합니다. cc당 세액은 1,000cc 이하 80원, 1,600cc 이하 140원, 1,600cc 초과 200원입니다. 예를 들어 2,000cc 차량은 본세가 2,000 × 200 = 40만원이고, 지방교육세 12만원을 더해 연세액 52만원이 됩니다. 다만 차령이 3년 이상이면 본세가 경감되므로 실제 부과액은 더 낮아집니다. 배기량은 자동차등록증에 표기된 총배기량을 기준으로 합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "차령(연식)이 오래되면 자동차세가 줄어드나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네. 비영업용 승용·승합차는 차량 등록 후 3년차부터 매년 5%씩 자동차세 본세가 경감되며, 12년차 이상은 최대 50%까지 경감됩니다. 예를 들어 본세 40만원인 2,000cc 차량이 차령 6년이면 20% 경감되어 본세가 32만원, 지방교육세 9만 6천원을 더해 연세액이 약 41만 6천원입니다. 같은 차가 차령 12년이 되면 50% 경감으로 연세액이 26만원까지 내려갑니다. 단 전기차 정액분과 영업용 차량에는 차령 경감이 적용되지 않습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "전기차와 수소차의 자동차세는 얼마인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "전기차와 수소차는 배기량이 없어 정액으로 부과됩니다. 비영업용은 본세 연 10만원에 지방교육세 30%를 더해 연 13만원, 영업용은 본세 연 2만원에 지방교육세를 더해 연 2만 6천원입니다. 차량 가격이나 배터리 용량과 무관하게 동일하며, 차령 경감도 적용되지 않습니다. 비영업용 연세액 13만원은 10만원을 초과하므로 6월과 12월 두 번으로 나누어 부과됩니다. 8,000만원짜리 전기차나 4,000만원짜리 전기차나 자동차세는 똑같이 13만원입니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "1월에 자동차세를 한꺼번에 내면 얼마나 할인되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "자동차세를 1월에 연납(선납)하면 2026년 기준 남은 기간분에 대해 공제율 5%가 적용되어 실질 약 4.58% 할인됩니다. 연세액 41만 6천원인 경우 1월 연납 시 약 1만 9천원이 할인됩니다. 1월 외에 3월(약 3.77%), 6월(약 2.52%), 9월(약 1.26%)에도 연납할 수 있으나 늦을수록 할인폭이 줄어듭니다. 원래 2025년부터 공제율이 3%로 낮아질 예정이었으나 5%로 동결되었습니다. 신청은 위택스(wetax.go.kr)나 관할 지자체에서 합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "자동차세는 언제 납부하고, 안 내면 어떻게 되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "정기분 자동차세는 1기분(과세기준일 6월 1일, 납기 6월 16~30일)과 2기분(과세기준일 12월 1일, 납기 12월 16~31일)으로 나누어 부과됩니다. 연세액이 10만원 이하이면 6월에 전액 일괄 부과됩니다. 납기를 넘기면 3%의 가산금이 즉시 붙고, 체납 상태가 이어지면 번호판 영치나 압류로 이어질 수 있습니다. 미리 한꺼번에 내고 할인받으려면 1·3·6·9월에 연납을 신청하면 됩니다. 차량을 중간에 팔면 보유 일수만큼만 일할 계산해 납부합니다."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.jptcalc.kr/"}, {"@type": "ListItem", "position": 2, "name": "블로그", "item": "https://www.jptcalc.kr/blog/"}, {"@type": "ListItem", "position": 3, "name": "자동차", "item": "https://www.jptcalc.kr/blog/?cat=자동차"}, {"@type": "ListItem", "position": 4, "name": "자동차세 계산기 2026 - 배기량·차령 감면·연납 할인 한눈에 정리", "item": "https://www.jptcalc.kr/blog/posts/car-tax-guide.html"}]}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo"><div class="logo-icon"><img src="../../assets/logo.svg" alt="로고"/></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+<div class="post-wrap">
+  <span class="post-tag">자동차</span>
+  <h1>자동차세 계산기 2026 - 배기량·차령 감면·연납 할인 한눈에 정리</h1>
+  <div class="post-meta"><span>📅 2026.06.28</span><span>·</span><span>10분 읽기</span></div>
+  <div class="post-body">
+    <p>해마다 6월과 12월이면 어김없이 날아오는 고지서가 하나 있습니다. 바로 자동차세입니다. 1기분 납기가 6월 16일부터 30일까지라, 이 글을 읽는 지금이 딱 그 시즌이죠. 그런데 막상 고지서를 받아보면 "왜 옆집 비슷한 차는 나보다 덜 내지?", "전기차는 정말 거의 안 낸다던데?" 같은 의문이 듭니다. 자동차세는 계산 구조만 알면 1분이면 직접 검산할 수 있습니다. 2026년 기준으로 배기량부터 차령 감면, 연납 할인까지 숫자로 끝까지 따라가 보겠습니다.</p>
+
+    <div class="highlight-box"><p>이 글은 6월·12월 자동차세 고지서가 적정한지 확인하고 싶은 차주, 새 차 구입 전 연간 유지비를 가늠하려는 분, 전기차와 내연기관차의 세금 차이가 궁금한 분, 1월 연납으로 얼마나 아낄 수 있는지 따져보려는 분을 위한 글입니다.</p></div>
+
+    <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+      <li>자동차세 공식 - 배기량 × cc당 세액(80·140·200원) + 지방교육세 30%</li>
+      <li>배기량 구간별 대표 차종 연세액 - 모닝 10.4만원부터 그랜저 85.8만원까지</li>
+      <li>차령 3년차부터 매년 5%씩, 12년차 50% 경감되는 실제 세액 변화표</li>
+      <li>전기차·수소차가 차값과 무관하게 13만원 정액인 이유</li>
+      <li>1월 연납 4.58% 할인의 실제 절감액과 월별 할인율 비교</li>
+      <li>같은 2,000cc인데 신차와 12년차가 세금 두 배 차이 나는 구간</li>
+    </ul>
+
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>자동차세, 결국 배기량 곱하기입니다</h2>
+    <p>비영업용 승용차의 자동차세는 의외로 단순합니다. 배기량(cc)에 cc당 정해진 세액을 곱해 본세를 구하고, 거기에 지방교육세 30%를 더하면 끝입니다. 공식으로 쓰면 이렇습니다.</p>
+    <p><strong>연세액 = (배기량 × cc당 세액) × 1.3</strong></p>
+    <p>여기서 cc당 세액은 배기량 구간에 따라 세 단계로 나뉩니다. 지방세법 제127조에 명시된 비영업용 승용차 세율이 기준입니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>배기량 구간</th><th>cc당 세액</th><th>대표 차종(예시)</th><th>연세액(교육세 포함, 차령 경감 전)</th></tr>
+      <tr><td>1,000cc 이하</td><td class="rate">80원</td><td>모닝 998cc</td><td>약 10만 4천원</td></tr>
+      <tr><td>1,600cc 이하</td><td class="rate">140원</td><td>아반떼 1,598cc</td><td>약 29만 1천원</td></tr>
+      <tr><td>1,600cc 초과</td><td class="rate">200원</td><td>쏘나타 2,000cc</td><td>52만원</td></tr>
+      <tr><td>1,600cc 초과</td><td class="rate">200원</td><td>그랜저 3,300cc</td><td>85만 8천원</td></tr>
+      <tr><td>전기·수소차</td><td class="rate">정액</td><td>아이오닉·EV6 등</td><td>13만원</td></tr>
+    </table></div>
+    <div style="margin:24px 0;overflow-x:auto">
+    <svg role="img" width="100%" viewBox="0 0 680 250" xmlns="http://www.w3.org/2000/svg">
+      <title>배기량별 자동차세 연세액 비교 (차령 경감 전)</title>
+      <rect width="680" height="250" rx="12" fill="#F9FAFB"/>
+      <text x="24" y="34" font-size="14" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">배기량별 연세액 비교 (지방교육세 포함, 신차 기준)</text>
+      <text x="24" y="70" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">모닝 998cc</text>
+      <rect x="150" y="56" width="48" height="20" rx="4" fill="#EF4444" opacity="0.5"/>
+      <text x="206" y="71" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">10.4만원</text>
+      <text x="24" y="106" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">전기차 정액</text>
+      <rect x="150" y="92" width="60" height="20" rx="4" fill="#EF4444" opacity="0.6"/>
+      <text x="218" y="107" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">13만원</text>
+      <text x="24" y="142" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">아반떼 1,598cc</text>
+      <rect x="150" y="128" width="135" height="20" rx="4" fill="#EF4444" opacity="0.7"/>
+      <text x="293" y="143" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">29.1만원</text>
+      <text x="24" y="178" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">쏘나타 2,000cc</text>
+      <rect x="150" y="164" width="241" height="20" rx="4" fill="#EF4444" opacity="0.85"/>
+      <text x="399" y="179" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">52만원</text>
+      <text x="24" y="214" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">그랜저 3,300cc</text>
+      <rect x="150" y="200" width="398" height="20" rx="4" fill="#EF4444"/>
+      <text x="556" y="215" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">85.8만원</text>
+    </svg>
+    </div>
+    <p>표를 검산해볼까요. 모닝(998cc)은 998 × 80 = 79,840원이 본세고, 지방교육세 30%인 23,952원을 더하면 103,792원, 약 10만 4천원입니다. 쏘나타(2,000cc)는 2,000 × 200 = 40만원 본세에 교육세 12만원을 더해 정확히 52만원이 나옵니다. 여기서 한 가지 눈에 띄는 게 있죠. 전기차 정액 13만원이 1,600cc 아반떼(29만원)의 절반도 안 됩니다. 배기량이라는 과세 기준이 없는 전기차가 세금에서 크게 유리한 구조라는 게 표 한 장에 그대로 드러납니다.</p>
+
+    <h2>차령이 쌓일수록 세금은 가벼워집니다</h2>
+    <p>위 연세액은 어디까지나 신차 기준입니다. 실제로는 차령(자동차 등록 후 경과 연수)이 3년차로 접어들면 본세가 깎이기 시작합니다. 3년차에 5%, 그 뒤로 매년 5%포인트씩 늘어 12년차 이상이면 최대 50%까지 경감됩니다. 경감은 본세에만 적용되고, 지방교육세는 경감된 본세의 30%로 다시 계산됩니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>차령</th><th>경감율</th><th>2,000cc 본세</th><th>연세액(교육세 포함)</th></tr>
+      <tr><td>1~2년</td><td>0%</td><td>40만원</td><td>52만원</td></tr>
+      <tr><td>3년</td><td class="rate">5%</td><td>38만원</td><td>49만 4천원</td></tr>
+      <tr><td>5년</td><td class="rate">15%</td><td>34만원</td><td>44만 2천원</td></tr>
+      <tr><td>7년</td><td class="rate">25%</td><td>30만원</td><td>39만원</td></tr>
+      <tr><td>10년</td><td class="rate">40%</td><td>24만원</td><td>31만 2천원</td></tr>
+      <tr><td>12년 이상</td><td class="rate">50%</td><td>20만원</td><td>26만원</td></tr>
+    </table></div>
+    <p>표를 보면 2,000cc 쏘나타 한 대의 연세액이 신차 52만원에서 12년차 26만원으로, 정확히 절반까지 내려갑니다. 매년 5%포인트씩 깎이니 차를 오래 탈수록 세금 부담이 가벼워지는 셈이죠. "새 차일수록 세금을 많이 낸다"는 말이 여기서 나옵니다. 다만 경감은 12년차에서 멈추고, 그 이후로는 50%로 고정됩니다.</p>
+
+    <h3>시나리오 1: 직장인 김OO씨, 쏘나타 2,000cc 차령 6년</h3>
+    <p>40대 직장인 김OO씨가 2020년에 출고한 쏘나타(2,000cc)를 타고 있다고 해봅시다. 2026년 기준 차령은 6년차입니다. 단계별로 계산하면 이렇습니다.</p>
+    <ul>
+      <li>본세: 2,000cc × 200원 = 40만원</li>
+      <li>차령 경감(6년차 20%): 40만원 × (1 − 0.20) = 32만원</li>
+      <li>지방교육세: 32만원 × 30% = 9만 6천원</li>
+      <li>연세액 합계: 32만원 + 9만 6천원 = <strong>41만 6천원</strong></li>
+    </ul>
+    <p>검산하면 320,000 + 96,000 = 416,000원이 맞습니다. 이 금액은 6월과 12월에 각각 20만 8천원씩 나누어 부과됩니다. 만약 김씨가 이듬해 1월에 연납을 신청했다면 약 4.58%, 즉 1만 9천원가량을 아껴 39만 7천원만 냈을 겁니다. 한 해 커피 몇 잔 값이지만, 차를 여러 대 굴리는 가구라면 무시할 수 없는 차이가 됩니다.</p>
+
+    <h3>시나리오 2: 사회초년생 이OO씨, 경차 모닝 998cc</h3>
+    <p>이제 막 차를 산 사회초년생 이OO씨는 연비와 유지비를 따져 경차 모닝(998cc)을 골랐습니다. 차령은 2년차라 아직 경감 대상이 아닙니다.</p>
+    <ul>
+      <li>본세: 998cc × 80원 = 79,840원</li>
+      <li>차령 경감: 2년차라 0%</li>
+      <li>지방교육세: 79,840원 × 30% = 23,952원</li>
+      <li>연세액 합계: 79,840 + 23,952 = <strong>103,792원</strong></li>
+    </ul>
+    <p>약 10만 4천원이 나옵니다. 연세액이 10만원을 살짝 넘기 때문에 6월·12월 두 번으로 나뉘어 약 5만 2천원씩 부과됩니다. 쏘나타(41만 6천원)와 비교하면 경차의 자동차세가 4분의 1 수준이라는 게 한눈에 보이죠. 경차를 고르는 이유가 단지 차값이 싸서만은 아니라는 걸 세금에서도 확인할 수 있습니다.</p>
+
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-88xhdLeiIK3V35kb" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>전기차·수소차는 차값과 상관없이 13만원입니다</h2>
+    <p>전기차와 수소차에는 배기량이라는 개념이 없습니다. 그래서 배기량 기준으로는 세금을 매길 수 없어, 정액으로 부과합니다. 비영업용 기준 본세가 연 10만원이고 여기에 지방교육세 30%인 3만원을 더해 <strong>연 13만원</strong>입니다. 영업용은 본세 2만원에 교육세를 더해 약 2만 6천원입니다.</p>
+    <p>핵심은 차량 가격이나 배터리 용량과 전혀 무관하다는 점입니다. 4,000만원짜리 소형 전기차든 1억원이 넘는 고성능 전기 SUV든 자동차세는 똑같이 13만원입니다. 또 전기차에는 차령 경감이 적용되지 않습니다. 정액이라 깎을 본세 비율이라는 게 의미가 없기 때문이죠. 신차나 10년 된 전기차나 매년 13만원으로 동일합니다.</p>
+
+    <h3>시나리오 3과 4: 그랜저 vs 전기차, 같은 차값 다른 세금</h3>
+    <p>비교를 위해 비슷한 가격대의 두 차를 놓고 보겠습니다. 박OO씨는 3,300cc 그랜저(신차), 정OO씨는 비슷한 가격의 전기 SUV를 샀다고 가정합니다.</p>
+    <ul>
+      <li>박OO씨 그랜저 3,300cc: 3,300 × 200 = 66만원 본세 + 교육세 19만 8천원 = <strong>85만 8천원</strong></li>
+      <li>정OO씨 전기 SUV: 본세 10만원 + 교육세 3만원 = <strong>13만원</strong> 정액</li>
+    </ul>
+    <p>같은 5천만~6천만원대 차를 샀는데 자동차세는 85만 8천원과 13만원으로 약 6.6배 차이가 납니다. 연간 약 73만원의 격차죠. 10년을 탄다면 그랜저 쪽이 자동차세만으로 700만원 넘게 더 내는 셈입니다. 물론 전기차는 충전 인프라나 배터리 교체 같은 다른 변수가 있지만, 적어도 보유세 측면에서는 전기차가 압도적으로 가볍다는 게 숫자로 분명합니다. 충전비까지 함께 따져보려면 <a href="../../calc/auto/ev-charging/" style="color:#EF4444;font-weight:600">전기차 충전비 계산기</a>와 <a href="../../calc/auto/fuel-cost/" style="color:#EF4444;font-weight:600">유류비 계산기</a>로 주행 비용을 비교해보는 것도 좋습니다.</p>
+
+    <h2>1월에 몰아서 내면 깎아줍니다 - 연납 할인</h2>
+    <p>자동차세는 1년에 두 번(6월·12월) 나눠 내는 게 기본이지만, 한 해 치를 미리 한꺼번에 내면 할인을 받습니다. 이걸 연납(선납)이라고 합니다. 가장 유리한 건 1월 연납으로, 2026년 기준 공제율은 5%이고 이미 지난 1월분을 제외한 실질 할인율은 약 4.58%입니다. 신청 시기가 늦어질수록 남은 기간이 줄어 할인폭도 작아집니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>연납 신청 시기</th><th>실질 할인율</th><th>연세액 41만 6천원 기준 절감액</th></tr>
+      <tr><td>1월</td><td class="rate">약 4.58%</td><td>약 19,000원</td></tr>
+      <tr><td>3월</td><td class="rate">약 3.77%</td><td>약 15,700원</td></tr>
+      <tr><td>6월</td><td class="rate">약 2.52%</td><td>약 10,500원</td></tr>
+      <tr><td>9월</td><td class="rate">약 1.26%</td><td>약 5,200원</td></tr>
+    </table></div>
+    <p>여기서 알아둘 만한 배경이 있습니다. 연납 공제율은 원래 훨씬 높았습니다. 2022년까지는 10%였고, 2023년 7%, 2024년 5%로 계속 낮아졌죠. 행정안전부는 2025년부터 공제율을 3%로 더 내릴 계획이었지만, 2026년 개정 지방세 관계법에서 이를 5%로 동결했습니다. 즉 지금의 5%(실질 4.58%)는 한 차례 더 깎일 뻔하다가 유지된 혜택입니다. 신청은 위택스(<a href="https://www.wetax.go.kr">wetax.go.kr</a>)나 관할 지자체에서 하며, 일단 1월에 연납을 신청하면 이후 매년 1월 자동으로 안내를 받을 수 있습니다.</p>
+
+    <h2>여기서 함정 - 같은 차인데 세금이 두 배 차이 납니다</h2>
+    <p>"자동차세는 차종으로 정해지는 고정값"이라고 생각하기 쉽습니다. 하지만 똑같은 모델이라도 차령에 따라 세금이 두 배까지 벌어집니다. 같은 쏘나타 2,000cc를 예로, 신차와 12년 된 차를 나란히 두면 이렇습니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>구분</th><th>본세</th><th>지방교육세</th><th>연세액</th></tr>
+      <tr><td>쏘나타 2,000cc 신차(1년차)</td><td>40만원</td><td>12만원</td><td class="rate">52만원</td></tr>
+      <tr><td>쏘나타 2,000cc 12년차</td><td>20만원</td><td>6만원</td><td class="rate">26만원</td></tr>
+      <tr><td>차이</td><td>20만원</td><td>6만원</td><td class="rate">26만원</td></tr>
+    </table></div>
+    <p>완전히 같은 배기량, 같은 모델인데 연세액이 52만원과 26만원으로 정확히 두 배 차이입니다. 새 차를 뽑으면 그만큼 보유세도 최고치에서 시작한다는 뜻이죠. 중고차를 알아볼 때 흔히 차값과 연비, 보험료만 비교하는데, 사실 차령이 오래된 차는 자동차세에서도 매년 수십만원을 덜 냅니다. 개인적으로는 출퇴근용 세컨드카처럼 연식에 크게 구애받지 않는 용도라면, 이 자동차세 차이까지 더해 중고차의 총보유비용이 생각보다 더 매력적일 수 있다고 봅니다. 차를 살 때는 취득 단계 세금인 <a href="../../calc/auto/acquisition-tax/" style="color:#EF4444;font-weight:600">자동차 취득세</a>도 함께 계산해두면 첫 1년 총비용이 정확히 잡힙니다.</p>
+
+    <h2>납기를 놓치면 가산금이 붙습니다</h2>
+    <p>자동차세는 보유한 사람에게 자동으로 부과되는 세금이라, 깜빡하고 납기를 넘기기 쉽습니다. 정기분 납부 일정과 연체 시 불이익을 정리하면 이렇습니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>구분</th><th>과세기준일</th><th>납기</th></tr>
+      <tr><td>1기분</td><td>6월 1일</td><td>6월 16일 ~ 30일</td></tr>
+      <tr><td>2기분</td><td>12월 1일</td><td>12월 16일 ~ 31일</td></tr>
+      <tr><td>연세액 10만원 이하</td><td>6월 1일</td><td>6월에 전액 일괄</td></tr>
+    </table></div>
+    <p>납기를 하루라도 넘기면 3%의 가산금이 즉시 붙습니다. 체납이 계속되면 매달 추가 가산이 붙고, 끝내 미납하면 번호판을 떼어가는 영치나 예금·급여 압류로까지 이어질 수 있습니다. 또 자동차세를 완납하지 않으면 차량 정기검사나 명의 이전에 제약이 생길 수 있으니, 납기 안에 내는 게 가장 깔끔합니다. 차를 연중에 팔거나 폐차하면 보유 일수만큼만 일할 계산해 정산하므로, 양도일 기준으로 세금이 자동 조정됩니다. 자동차세는 지방세라 관할 지자체와 위택스에서 조회·납부할 수 있고, 자세한 기준은 <a href="https://www.mois.go.kr">행정안전부(mois.go.kr)</a> 지방세 안내에서 확인할 수 있습니다.</p>
+
+    <div class="cta-box">
+      <p>배기량과 최초 등록연도만 넣으면 차령 경감과 연납 할인까지 자동으로 계산됩니다.</p>
+      <a href="../../calc/auto/auto-tax/" class="cta-btn">자동차세 계산하기</a>
+    </div>
+    <p style="font-size:13px;color:#6B7280;margin-top:8px;">관련 계산기: <a href="https://www.jptcalc.kr/calc/auto/acquisition-tax/">자동차 취득세 계산기</a> · <a href="https://www.jptcalc.kr/calc/auto/fuel-cost/">유류비 계산기</a> · <a href="https://www.jptcalc.kr/calc/auto/ev-subsidy/">전기차 보조금 계산기</a></p>
+
+    <h2>자주 나오는 질문</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 자동차세는 어떻게 계산하나요?</div>
+      <p class="faq-a">비영업용 승용차 자동차세는 배기량(cc) × cc당 세액으로 본세를 구하고, 여기에 지방교육세 30%를 더합니다. cc당 세액은 1,000cc 이하 80원, 1,600cc 이하 140원, 1,600cc 초과 200원입니다. 예를 들어 2,000cc 차량은 본세가 2,000 × 200 = 40만원이고, 지방교육세 12만원을 더해 연세액 52만원이 됩니다. 다만 차령이 3년 이상이면 본세가 경감되므로 실제 부과액은 더 낮아집니다. 배기량은 자동차등록증에 표기된 총배기량을 기준으로 합니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 차령(연식)이 오래되면 자동차세가 줄어드나요?</div>
+      <p class="faq-a">네. 비영업용 승용·승합차는 차량 등록 후 3년차부터 매년 5%씩 자동차세 본세가 경감되며, 12년차 이상은 최대 50%까지 경감됩니다. 예를 들어 본세 40만원인 2,000cc 차량이 차령 6년이면 20% 경감되어 본세가 32만원, 지방교육세 9만 6천원을 더해 연세액이 약 41만 6천원입니다. 같은 차가 차령 12년이 되면 50% 경감으로 연세액이 26만원까지 내려갑니다. 단 전기차 정액분과 영업용 차량에는 차령 경감이 적용되지 않습니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 전기차와 수소차의 자동차세는 얼마인가요?</div>
+      <p class="faq-a">전기차와 수소차는 배기량이 없어 정액으로 부과됩니다. 비영업용은 본세 연 10만원에 지방교육세 30%를 더해 연 13만원, 영업용은 본세 연 2만원에 지방교육세를 더해 연 2만 6천원입니다. 차량 가격이나 배터리 용량과 무관하게 동일하며, 차령 경감도 적용되지 않습니다. 비영업용 연세액 13만원은 10만원을 초과하므로 6월과 12월 두 번으로 나누어 부과됩니다. 8,000만원짜리 전기차나 4,000만원짜리 전기차나 자동차세는 똑같이 13만원입니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 1월에 자동차세를 한꺼번에 내면 얼마나 할인되나요?</div>
+      <p class="faq-a">자동차세를 1월에 연납(선납)하면 2026년 기준 남은 기간분에 대해 공제율 5%가 적용되어 실질 약 4.58% 할인됩니다. 연세액 41만 6천원인 경우 1월 연납 시 약 1만 9천원이 할인됩니다. 1월 외에 3월(약 3.77%), 6월(약 2.52%), 9월(약 1.26%)에도 연납할 수 있으나 늦을수록 할인폭이 줄어듭니다. 원래 2025년부터 공제율이 3%로 낮아질 예정이었으나 5%로 동결되었습니다. 신청은 위택스(wetax.go.kr)나 관할 지자체에서 합니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 자동차세는 언제 납부하고, 안 내면 어떻게 되나요?</div>
+      <p class="faq-a">정기분 자동차세는 1기분(과세기준일 6월 1일, 납기 6월 16~30일)과 2기분(과세기준일 12월 1일, 납기 12월 16~31일)으로 나누어 부과됩니다. 연세액이 10만원 이하이면 6월에 전액 일괄 부과됩니다. 납기를 넘기면 3%의 가산금이 즉시 붙고, 체납 상태가 이어지면 번호판 영치나 압류로 이어질 수 있습니다. 미리 한꺼번에 내고 할인받으려면 1·3·6·9월에 연납을 신청하면 됩니다. 차량을 중간에 팔면 보유 일수만큼만 일할 계산해 납부합니다.</p>
+    </div>
+
+    <h2>한 줄로 정리하면</h2>
+    <p>자동차세는 배기량 × cc당 세액(80·140·200원)에 지방교육세 30%를 더한 값이 기본이고, 차령 3년차부터 매년 5%씩 최대 50%까지 깎입니다. 2,000cc 쏘나타 신차는 연 52만원이지만 차령 6년이면 41만 6천원, 12년이면 26만원으로 절반까지 내려갑니다. 전기차는 차값과 무관하게 13만원 정액이라 보유세에서 가장 가볍고, 1월에 연납하면 4.58%를 추가로 아낄 수 있습니다. 내 차의 정확한 연세액이 궁금하다면 배기량과 최초 등록연도를 자동차세 계산기에 넣어 차령 경감과 연납 할인까지 한 번에 확인해보세요.</p>
+  </div>
+</div>
+<footer class="site-footer"><p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용입니다.</p></footer>
+<script src="/assets/footer-unified.js" defer></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "지방세법 제127조·제128조, 2026년 개정 지방세 관계법(연납 공제율 5%), 위택스 기준",
+  basisDate: "2026년 기준",
+  referenceOrg: "행정안전부·위택스",
+  lastReviewed: '2026.06'
+};
+</script>
+<script>
+window.ARTICLE_INFO_CONFIG.relatedCalc = { name: '자동차세 계산기', url: '/calc/auto/auto-tax/' };
+window.ARTICLE_INFO_CONFIG.category = 'auto';
+</script>
+<script src="/assets/blog-article-info.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>
