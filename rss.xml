@@ -5,9 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Fri, 26 Jun 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
 
+    <item>
+      <title>자동차 취득세 계산 2026 - 7% 세율·개별소비세 5%·경차 면제·전기차 감면 총정리</title>
+      <link>https://www.jptcalc.kr/blog/posts/car-acquisition-tax-guide.html</link>
+      <description>2026년 자동차 취득세 계산법 총정리. 비영업용 승용차 7%, 과세표준은 차량가를 1.1로 나눈 공급가액 기준. 개별소비세 5%, 경차 75만원 한도 면제, 전기차 140만원 감면, 출고일 7월 1일 전후 68만원 차이까지 검산 예시로 정리.</description>
+      <pubDate>Mon, 29 Jun 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/car-acquisition-tax-guide.html</guid>
+    </item>
     <item>
       <title>자동차세 계산기 2026 - 배기량·차령 감면·연납 할인 한눈에 정리</title>
       <link>https://www.jptcalc.kr/blog/posts/car-tax-guide.html</link>

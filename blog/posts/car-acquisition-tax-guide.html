@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>자동차 취득세 계산 2026 - 7% 세율·개별소비세 5%·경차 면제·전기차 감면 총정리 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="2026년 자동차 취득세 계산법 총정리. 비영업용 승용차 7%, 과세표준은 차량가를 1.1로 나눈 공급가액 기준. 개별소비세 5%, 경차 75만원 한도 면제, 전기차 140만원 감면, 출고일 7월 1일 전후 68만원 차이까지 검산 예시로 정리." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="자동차 취득세 계산 2026 - 7% 세율·개별소비세 5%·경차 면제·전기차 감면 총정리 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="2026년 자동차 취득세 계산법 총정리. 비영업용 승용차 7%, 과세표준은 차량가를 1.1로 나눈 공급가액 기준. 개별소비세 5%, 경차 75만원 한도 면제, 전기차 140만원 감면, 출고일 7월 1일 전후 68만원 차이까지 검산 예시로 정리." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/car-acquisition-tax-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/car-acquisition-tax-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#EF4444;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(239,68,68,0.15);color:#EF4444;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:24px 0 10px}
+    .post-body p{margin-bottom:14px}
+    .post-body ul,.post-body ol{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#EF4444;text-decoration:none}
+    .highlight-box{background:rgba(239,68,68,0.1);border-left:4px solid #EF4444;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#991B1B;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    td.rate{color:#EF4444;font-weight:700}
+    tr:hover td{background:rgba(0,0,0,0.02)}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#EF4444;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .faq-item{margin:18px 0}
+    .faq-q{font-weight:700;color:#111827;margin-bottom:6px}
+    .faq-a{color:#374151;font-size:14px;margin:0}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "자동차 취득세 계산 2026 - 7% 세율·개별소비세 5%·경차 면제·전기차 감면 총정리",
+  "description": "2026년 자동차 취득세 계산법 총정리. 비영업용 승용차 7%, 과세표준은 차량가를 1.1로 나눈 공급가액 기준. 개별소비세 5%, 경차 75만원 한도 면제, 전기차 140만원 감면, 출고일 7월 1일 전후 68만원 차이까지 검산 예시로 정리.",
+  "author":{"@type":"Person","name":"Jay Kim","url":"https://www.jptcalc.kr/about.html","jobTitle":"제이퍼 계산기 운영자"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.jptcalc.kr/android-chrome-512x512.png"
+    }
+  },
+  "datePublished": "2026-06-29",
+  "dateModified": "2026-06-29",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.jptcalc.kr/blog/posts/car-acquisition-tax-guide.html"
+  },
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "자동차",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "자동차 취득세는 어떻게 계산하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "비영업용 승용차 취득세는 과세표준 × 7%로 계산합니다. 과세표준은 부가가치세를 뺀 공급가액으로, 차량 판매가격(부가세 포함)을 1.1로 나눈 값과 같습니다. 예를 들어 판매가 3,500만원 승용차는 과세표준이 약 3,182만원이고 취득세는 약 223만원입니다. 쉽게는 부가세 포함 차량가의 약 6.36%가 취득세라고 보면 됩니다. 1,000cc 미만 경차는 세율이 4%이고 75만원 한도로 면제됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "개별소비세는 2026년에 몇 %인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "승용차 개별소비세는 정상세율 5%입니다. 2025년부터 적용된 한시 인하세율 3.5%는 2026년 6월 30일 출고분까지만 유효하고, 2026년 7월 1일 출고분부터는 5%로 돌아갑니다. 기준 시점은 계약일이 아니라 출고일(등록일)입니다. 개별소비세에는 그 30%인 교육세가 따라붙고, 과세표준에도 포함되어 취득세까지 늘립니다. 공장도가격 3,000만원 차량은 출고일이 6월 30일이냐 7월 1일이냐에 따라 총 부담이 약 68만원 차이 납니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "전기차 취득세 감면은 얼마인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "전기차와 수소차는 취득세가 140만원 한도로 면제됩니다. 이 감면은 2026년 12월 31일 취득분까지 적용되고, 2027년부터는 한도가 100만원으로 줄어들 예정입니다. 예를 들어 과세표준 4,500만원 전기 SUV는 취득세 315만원에서 140만원을 뺀 175만원만 냅니다. 개별소비세도 300만원 한도로 따로 면제됩니다. 하이브리드 차량의 취득세 감면은 2024년에 종료되어 현재는 없습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "경차 취득세는 정말 0원인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1,000cc 미만 경차는 취득세율이 4%이고 75만원 한도로 면제됩니다. 차량가액 1,875만원(부가세 제외) 이하분에 적용되므로, 일반적인 경차는 4% 세액이 75만원 한도 안에 들어 실부담이 0원이 됩니다. 예를 들어 판매가 1,650만원 경차는 과세표준 1,500만원에 4%를 곱한 60만원이 한도 내라 전액 면제됩니다. 경차는 개별소비세도 면제되어 차값 외에 붙는 세금이 거의 없습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "신차 실구매가에는 취득세 말고 또 무엇이 드나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "신차 실구매가는 차량가격(공장도가격 + 개별소비세 + 교육세 + 부가세)에 취득세와 공채(지역개발채권·도시철도채권) 매입 비용을 더한 금액입니다. 공채는 지역과 배기량에 따라 다르고, 등록 직후 바로 할인 매도하면 실부담이 액면의 5~10% 수준으로 줄며 1,600cc 미만은 대부분 면제됩니다. 여기에 번호판·등록 대행 수수료가 수만원 더 붙습니다. 취득세는 신차든 중고차든 새로 명의를 취득하는 사람이 등록일로부터 60일 이내에 납부해야 합니다."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.jptcalc.kr/"}, {"@type": "ListItem", "position": 2, "name": "블로그", "item": "https://www.jptcalc.kr/blog/"}, {"@type": "ListItem", "position": 3, "name": "자동차", "item": "https://www.jptcalc.kr/blog/?cat=자동차"}, {"@type": "ListItem", "position": 4, "name": "자동차 취득세 계산 2026 - 7% 세율·개별소비세 5%·경차 면제·전기차 감면 총정리", "item": "https://www.jptcalc.kr/blog/posts/car-acquisition-tax-guide.html"}]}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo"><div class="logo-icon"><img src="../../assets/logo.svg" alt="로고"/></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+<div class="post-wrap">
+  <span class="post-tag">자동차</span>
+  <h1>자동차 취득세 계산 2026 - 7% 세율·개별소비세 5%·경차 면제·전기차 감면 총정리</h1>
+  <div class="post-meta"><span>📅 2026.06.29</span><span>·</span><span>11분 읽기</span></div>
+  <div class="post-body">
+    <p>새 차 계약서에 사인하기 직전, 영업사원이 내미는 견적서 맨 아랫줄에 "취득세"라는 항목이 적혀 있습니다. 차값만 보고 예산을 짰는데, 여기에 수백만원이 더 붙는 걸 그제야 알아챈 분들이 많을 겁니다. 자동차 취득세는 차를 등록하는 순간 한 번 내는 지방세인데, 의외로 계산 구조가 명확해서 견적서를 받기 전에 미리 검산해둘 수 있습니다. 2026년 기준으로 세율과 과세표준, 그리고 7월 1일을 기점으로 바뀌는 개별소비세까지 숫자로 끝까지 따라가 보겠습니다.</p>
+
+    <div class="highlight-box"><p>이 글은 새 차 견적서의 취득세가 적정한지 확인하려는 분, 경차나 전기차의 세금 감면이 실제로 얼마인지 궁금한 분, 출고일을 언제로 잡아야 유리한지 고민하는 분, 중고차 명의 이전 시 취득세가 얼마 나올지 가늠하려는 분을 위한 글입니다.</p></div>
+
+    <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+      <li>자동차 취득세 공식 - 과세표준(차량가÷1.1) × 7%, 사실상 차량가의 약 6.36%</li>
+      <li>차량 판매가 2,500만~6,500만원 구간별 취득세 조견표</li>
+      <li>차종별 취득세율 - 비영업 승용 7%, 경차 4%(면제), 영업용 4%, 화물·승합 5%</li>
+      <li>개별소비세 3.5%→5% 복귀, 출고일 7월 1일 전후 68만원 차이</li>
+      <li>경차 75만원 한도 면제·전기차 140만원 감면의 실제 절감액</li>
+      <li>중고차 취득세는 시가표준액 기준으로 달라지는 이유</li>
+    </ul>
+
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>자동차 취득세, 핵심은 7%와 과세표준입니다</h2>
+    <p>비영업용 승용차의 취득세율은 7%입니다. 다만 이 7%를 곱하는 대상이 우리가 흔히 생각하는 "차값"이 아니라는 게 첫 번째 포인트입니다. 취득세의 과세표준은 부가가치세를 뺀 공급가액이고, 부가세 포함 차량 판매가격을 1.1로 나눈 값과 같습니다. 공식으로 쓰면 이렇습니다.</p>
+    <p><strong>취득세 = (차량 판매가격 ÷ 1.1) × 7%</strong></p>
+    <p>여기서 차량 판매가격은 공장도가격에 개별소비세, 교육세, 부가세가 모두 더해진 우리가 매장에서 보는 가격입니다. 7%를 부가세까지 포함한 차량가에 곱하면 세금을 이중으로 매기는 셈이 되니, 부가세를 걷어낸 공급가액에만 7%를 적용하는 것이죠. 결과적으로 취득세는 부가세 포함 차량가의 약 6.36%(7% ÷ 1.1)가 됩니다. 답은 간단합니다. 차량가에 0.0636을 곱하면 대략적인 취득세가 바로 나옵니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>차량 판매가격(부가세 포함)</th><th>과세표준(÷1.1)</th><th>취득세(7%)</th></tr>
+      <tr><td>2,500만원</td><td>약 2,273만원</td><td class="rate">약 159만원</td></tr>
+      <tr><td>3,500만원</td><td>약 3,182만원</td><td class="rate">약 223만원</td></tr>
+      <tr><td>4,500만원</td><td>약 4,091만원</td><td class="rate">약 286만원</td></tr>
+      <tr><td>5,500만원</td><td>5,000만원</td><td class="rate">350만원</td></tr>
+      <tr><td>6,500만원</td><td>약 5,909만원</td><td class="rate">약 414만원</td></tr>
+    </table></div>
+    <div style="margin:24px 0;overflow-x:auto">
+    <svg role="img" width="100%" viewBox="0 0 680 250" xmlns="http://www.w3.org/2000/svg">
+      <title>차량 판매가격별 자동차 취득세 비교</title>
+      <rect width="680" height="250" rx="12" fill="#F9FAFB"/>
+      <text x="24" y="34" font-size="14" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">차량 판매가격별 취득세 (비영업용 승용 7%)</text>
+      <text x="24" y="70" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">2,500만원</text>
+      <rect x="150" y="56" width="153" height="20" rx="4" fill="#EF4444" opacity="0.55"/>
+      <text x="311" y="71" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">159만원</text>
+      <text x="24" y="106" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">3,500만원</text>
+      <rect x="150" y="92" width="214" height="20" rx="4" fill="#EF4444" opacity="0.65"/>
+      <text x="372" y="107" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">223만원</text>
+      <text x="24" y="142" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">4,500만원</text>
+      <rect x="150" y="128" width="275" height="20" rx="4" fill="#EF4444" opacity="0.78"/>
+      <text x="433" y="143" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">286만원</text>
+      <text x="24" y="178" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">5,500만원</text>
+      <rect x="150" y="164" width="336" height="20" rx="4" fill="#EF4444" opacity="0.9"/>
+      <text x="494" y="179" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">350만원</text>
+      <text x="24" y="214" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">6,500만원</text>
+      <rect x="150" y="200" width="398" height="20" rx="4" fill="#EF4444"/>
+      <text x="556" y="215" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">414만원</text>
+    </svg>
+    </div>
+    <p>표를 검산해볼까요. 판매가 5,500만원 차의 과세표준은 5,500 ÷ 1.1 = 5,000만원이고, 여기에 7%를 곱하면 정확히 350만원입니다. 판매가 3,500만원이면 과세표준 약 3,182만원(35,000,000 ÷ 1.1 = 31,818,182)에 7%를 곱해 약 223만원이 나옵니다. 차값이 1,000만원 오를 때마다 취득세가 약 64만원(1,000만 ÷ 1.1 × 7%)씩 늘어나는 셈이죠. 옵션을 더 넣어 차값을 올리면 그만큼 취득세도 6.36%씩 따라 붙는다는 걸 기억해두면 예산을 짤 때 도움이 됩니다.</p>
+
+    <h2>차종마다 세율이 다릅니다 - 7%가 전부는 아니에요</h2>
+    <p>위 7%는 비영업용 승용차 기준입니다. 지방세법 제12조는 차종과 용도에 따라 취득세율을 다르게 정해두고 있습니다. 같은 차라도 영업용(택시·렌터카 등)으로 등록하면 세율이 낮고, 화물차나 승합차는 또 다릅니다. 정리하면 이렇습니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>차종 / 용도</th><th>취득세율</th><th>비고</th></tr>
+      <tr><td>비영업용 승용차</td><td class="rate">7%</td><td>일반 자가용 승용차</td></tr>
+      <tr><td>경차(1,000cc 미만)</td><td class="rate">4%</td><td>75만원 한도 면제 → 사실상 0원</td></tr>
+      <tr><td>영업용 승용차</td><td class="rate">4%</td><td>택시·렌터카 등</td></tr>
+      <tr><td>비영업용 화물·승합차</td><td class="rate">5%</td><td>1톤 트럭, 승합 등</td></tr>
+      <tr><td>영업용 화물·승합차</td><td class="rate">4%</td><td>영업용 등록 차량</td></tr>
+      <tr><td>이륜자동차(125cc 초과)</td><td class="rate">2%</td><td>대형 오토바이</td></tr>
+    </table></div>
+    <p>여기서 알아둘 점은 영업용으로 등록하면 취득세율 자체는 4%로 낮지만, 영업용 차량은 매년 내는 자동차세와 보험료 체계가 달라 단순 비교가 어렵다는 것입니다. 일반 소비자가 실제로 마주치는 건 대부분 비영업용 승용차 7%와 경차 4%(면제) 두 가지죠. 핵심은 이겁니다. 내 차가 승용이냐 화물이냐, 1,000cc를 넘느냐가 세율을 가릅니다.</p>
+
+    <h3>시나리오 1: 직장인 박OO씨, 가솔린 SUV 판매가 3,500만원</h3>
+    <p>30대 직장인 박OO씨가 가솔린 SUV(2,000cc급)를 판매가 3,500만원에 계약하고 2026년 8월에 출고받는다고 해봅시다. 출고일이 7월 이후라 개별소비세는 정상세율 5%가 적용됩니다. 취득세만 따지면 이렇습니다.</p>
+    <ul>
+      <li>과세표준: 3,500만원 ÷ 1.1 = 약 3,182만원</li>
+      <li>취득세: 31,818,182원 × 7% = <strong>약 223만원</strong></li>
+    </ul>
+    <p>검산하면 31,818,182 × 0.07 = 2,227,273원으로 약 223만원이 맞습니다. 박씨는 차값 3,500만원 외에 취득세 223만원, 그리고 공채와 번호판 비용 등을 합쳐 대략 3,730만~3,740만원을 실제로 지출하게 됩니다. 견적서의 차값만 보고 3,500만원을 예산으로 잡았다면 230만원 가까이 모자라는 셈이죠. 이 차이를 모르고 계약하면 인도 직전에 자금을 급히 마련해야 하는 일이 생깁니다.</p>
+
+    <h3>시나리오 2: 사회초년생 이OO씨, 경차 판매가 1,650만원</h3>
+    <p>이제 막 사회에 나온 이OO씨는 유지비를 아끼려고 1,000cc 미만 경차를 판매가 1,650만원에 골랐습니다. 경차는 세율부터 다릅니다.</p>
+    <ul>
+      <li>과세표준: 1,650만원 ÷ 1.1 = 1,500만원</li>
+      <li>취득세(4%): 1,500만원 × 4% = 60만원</li>
+      <li>경차 감면: 75만원 한도 면제 → 60만원 전액 면제, <strong>실부담 0원</strong></li>
+    </ul>
+    <p>경차는 취득세율이 4%인 데다 산출세액이 75만원 한도 안이면 전액 면제됩니다. 60만원은 75만원 한도 내라 한 푼도 내지 않습니다. 게다가 경차는 개별소비세도 면제되어 차값에 붙는 세금이 사실상 없습니다. 박씨의 SUV가 취득세만 223만원인 것과 비교하면, 경차를 고르는 순간 취득 단계에서만 200만원 넘게 아끼는 셈이죠. 경차의 매력이 차값에만 있는 게 아니라는 걸 세금에서도 확인할 수 있습니다.</p>
+
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-88xhdLeiIK3V35kb" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h3>시나리오 3: 전기차 구매자 최OO씨, 과세표준 4,500만원 전기 SUV</h3>
+    <p>최OO씨는 보조금까지 고려해 전기 SUV를 선택했습니다. 과세표준이 4,500만원이라고 할 때 전기차 감면을 적용하면 이렇습니다.</p>
+    <ul>
+      <li>감면 전 취득세: 4,500만원 × 7% = 315만원</li>
+      <li>전기차 감면(140만원 한도): 315만원 − 140만원 = <strong>175만원</strong></li>
+    </ul>
+    <p>전기차와 수소차는 취득세가 140만원 한도로 면제됩니다. 산출세액 315만원에서 140만원을 빼고 175만원만 내면 되죠. 개별소비세도 300만원 한도로 따로 면제됩니다. 다만 이 취득세 감면은 2026년 12월 31일 취득분까지만 140만원이고, 2027년부터는 한도가 100만원으로 줄어들 예정입니다. 즉 같은 전기차라도 2026년 안에 등록하면 2027년보다 취득세를 40만원 더 아낄 수 있습니다. 전기차는 차량 보조금이 별도로 더 붙으니, <a href="../../calc/auto/ev-subsidy/" style="color:#EF4444;font-weight:600">전기차 보조금 계산기</a>로 지역별 지원금까지 함께 따져보면 실제 부담이 한층 더 줄어듭니다.</p>
+
+    <h2>여기서 함정 - 출고일 하루 차이로 68만원이 갈립니다</h2>
+    <p>"취득세는 차값으로 정해지니 언제 받든 똑같겠지"라고 생각하기 쉽습니다. 하지만 2026년에는 출고일이 단 하루 차이여도 총 부담이 크게 벌어지는 구간이 있습니다. 바로 개별소비세 때문입니다. 2025년부터 한시적으로 적용되던 인하세율 3.5%가 2026년 6월 30일 출고분까지만 유효하고, 7월 1일 출고분부터는 정상세율 5%로 돌아갑니다. 개별소비세가 오르면 거기에 붙는 교육세(개소세의 30%)와 부가세, 그리고 과세표준에 포함되는 취득세까지 연쇄적으로 늘어납니다.</p>
+    <p>한 가지 짚어둘 점은 이 개별소비세 인하에는 감면 한도 100만원이 걸려 있다는 것입니다. 공장도가격이 약 6,667만원을 넘는 고가 차량은 인하 혜택이 100만원에서 멈추기 때문에, 출고일에 따른 차이도 그 선에서 묶입니다. 다만 대부분의 대중차는 이 한도에 닿지 않아 인하분이 그대로 반영됩니다. 공장도가격 3,000만원짜리 가솔린 승용차를 6월 30일에 받느냐, 7월 1일에 받느냐로 비교해보겠습니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>구분</th><th>6월 30일 출고(개소세 3.5%)</th><th>7월 1일 출고(개소세 5%)</th></tr>
+      <tr><td>개별소비세</td><td>105만원</td><td>150만원</td></tr>
+      <tr><td>교육세(개소세 30%)</td><td>31만 5천원</td><td>45만원</td></tr>
+      <tr><td>공급가액(과세표준)</td><td>약 3,137만원</td><td>3,195만원</td></tr>
+      <tr><td>차량 판매가격</td><td>약 3,450만원</td><td>약 3,515만원</td></tr>
+      <tr><td>취득세(7%)</td><td>약 220만원</td><td>약 224만원</td></tr>
+      <tr><td>차량가+취득세 합계</td><td class="rate">약 3,670만원</td><td class="rate">약 3,738만원</td></tr>
+    </table></div>
+    <p>두 경우의 총 부담을 비교하면 약 68만원 차이가 납니다(37,381,500 − 36,697,050 = 684,450원). 똑같은 차인데 출고 서류상 날짜가 6월이냐 7월이냐로 68만원이 갈리는 거죠. 그래서 2026년 상반기에 계약한 분들은 가급적 6월 안에 출고·등록을 마치는 게 유리하고, 인기 차종이라 출고가 7월로 넘어간다면 이 차액을 예산에 미리 반영해두는 게 좋습니다. 기준은 계약일이 아니라 출고일(등록일)이라는 점을 꼭 기억하세요. 계약을 5월에 했어도 차를 7월에 받으면 5% 세율이 적용됩니다.</p>
+
+    <h2>중고차 취득세는 계산 기준이 다릅니다</h2>
+    <p>지금까지는 신차 기준이었습니다. 중고차를 사서 명의를 이전할 때도 취득세를 내는데, 세율은 비영업용 승용차 7%로 같지만 과세표준을 잡는 방식이 다릅니다. 중고차는 매매계약서에 적힌 신고가액과 지방자치단체가 정한 시가표준액 중 더 큰 값을 과세표준으로 삼습니다. 신차 때 이미 낸 개별소비세와 교육세는 다시 붙지 않습니다.</p>
+    <p>예를 들어 시가표준액이 1,200만원인 중고 쏘나타를 1,000만원에 샀다고 신고해도, 시가표준액이 더 크기 때문에 취득세는 1,200만원 × 7% = 84만원으로 계산됩니다. 반대로 시가표준액 1,200만원짜리를 1,500만원에 샀다면 신고가 1,500만원 × 7% = 105만원이 되죠. 핵심은 싸게 샀다고 신고해도 시가표준액 밑으로는 세금이 내려가지 않는다는 점입니다. 중고차 시세와 시가표준액을 함께 확인하려면 <a href="../../calc/auto/used-car-tax/" style="color:#EF4444;font-weight:600">중고차 취득세 계산기</a>로 두 기준을 넣어 비교해보면 됩니다. 부동산에서 취득가액과 공시가격 중 큰 값을 쓰는 것과 비슷한 원리인데, 이 구조가 궁금하다면 <a href="../posts/acquisition-tax-2026.html" style="color:#EF4444;font-weight:600">주택 취득세율 정리 글</a>도 함께 참고할 만합니다.</p>
+
+    <h2>취득세 말고 더 드는 돈 - 공채와 부대비용</h2>
+    <p>새 차를 등록할 때 실제 지갑에서 나가는 돈은 차값과 취득세만이 아닙니다. 자동차를 등록하려면 지역개발채권이나 도시철도채권 같은 공채를 의무적으로 사야 합니다. 공채는 지역과 배기량에 따라 매입 비율이 달라, 같은 차라도 서울이냐 지방이냐에 따라 금액이 다릅니다.</p>
+    <p>다행히 공채는 사자마자 바로 할인된 가격에 되팔 수 있어서, 실제 부담은 액면가의 5~10% 수준으로 줄어듭니다. 1,600cc 미만 차량은 대부분 공채 매입 의무가 면제되고, 경차도 면제 대상입니다. 여기에 번호판 비용과 등록 대행 수수료가 수만원 더해집니다. 신차의 실구매가를 정리하면 이렇습니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>항목</th><th>내용</th><th>대략 비중(판매가 3,500만 기준)</th></tr>
+      <tr><td>차량 판매가격</td><td>공장도가 + 개소세 + 교육세 + 부가세</td><td>3,500만원</td></tr>
+      <tr><td>취득세(7%)</td><td>과세표준 × 7%</td><td class="rate">약 223만원</td></tr>
+      <tr><td>공채(즉시 할인 매도 기준)</td><td>지역·배기량별, 실부담 액면의 5~10%</td><td>수만~십수만원</td></tr>
+      <tr><td>번호판·등록 대행</td><td>탁송·대행 수수료 포함</td><td>수만원</td></tr>
+    </table></div>
+    <p>결국 판매가 3,500만원 차를 사면 취득세까지 더해 약 3,730만~3,750만원이 실제로 든다고 보면 됩니다. 취득세는 등록일로부터 60일 이내에 내야 하고, 보통 신차는 영업소가 등록 대행 과정에서 함께 처리해줍니다. 자동차세처럼 매년 내는 보유세는 또 별개라, 차를 사고 1년간 들어가는 세금을 한눈에 보고 싶다면 <a href="../posts/car-tax-guide.html" style="color:#EF4444;font-weight:600">자동차세 계산 가이드</a>와 함께 보는 걸 권합니다. 자동차 취득세의 법적 근거와 감면 규정은 <a href="https://www.mois.go.kr">행정안전부(mois.go.kr)</a>의 지방세 안내와 지방세특례제한법에서 확인할 수 있습니다.</p>
+
+    <div class="cta-box">
+      <p>차종과 차량 가격, 출고 시기만 넣으면 개별소비세와 취득세, 경차·전기차 감면까지 자동으로 계산됩니다.</p>
+      <a href="../../calc/auto/acquisition-tax/" class="cta-btn">자동차 취득세 계산하기</a>
+    </div>
+    <p style="font-size:13px;color:#6B7280;margin-top:8px;">관련 계산기: <a href="https://www.jptcalc.kr/calc/auto/used-car-tax/">중고차 취득세 계산기</a> · <a href="https://www.jptcalc.kr/calc/auto/auto-tax/">자동차세 계산기</a> · <a href="https://www.jptcalc.kr/calc/auto/ev-subsidy/">전기차 보조금 계산기</a></p>
+
+    <h2>자주 나오는 질문</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 자동차 취득세는 어떻게 계산하나요?</div>
+      <p class="faq-a">비영업용 승용차 취득세는 과세표준 × 7%로 계산합니다. 과세표준은 부가가치세를 뺀 공급가액으로, 차량 판매가격(부가세 포함)을 1.1로 나눈 값과 같습니다. 예를 들어 판매가 3,500만원 승용차는 과세표준이 약 3,182만원이고 취득세는 약 223만원입니다. 쉽게는 부가세 포함 차량가의 약 6.36%가 취득세라고 보면 됩니다. 1,000cc 미만 경차는 세율이 4%이고 75만원 한도로 면제됩니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 개별소비세는 2026년에 몇 %인가요?</div>
+      <p class="faq-a">승용차 개별소비세는 정상세율 5%입니다. 2025년부터 적용된 한시 인하세율 3.5%는 2026년 6월 30일 출고분까지만 유효하고, 2026년 7월 1일 출고분부터는 5%로 돌아갑니다. 기준 시점은 계약일이 아니라 출고일(등록일)입니다. 개별소비세에는 그 30%인 교육세가 따라붙고, 과세표준에도 포함되어 취득세까지 늘립니다. 공장도가격 3,000만원 차량은 출고일이 6월 30일이냐 7월 1일이냐에 따라 총 부담이 약 68만원 차이 납니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 전기차 취득세 감면은 얼마인가요?</div>
+      <p class="faq-a">전기차와 수소차는 취득세가 140만원 한도로 면제됩니다. 이 감면은 2026년 12월 31일 취득분까지 적용되고, 2027년부터는 한도가 100만원으로 줄어들 예정입니다. 예를 들어 과세표준 4,500만원 전기 SUV는 취득세 315만원에서 140만원을 뺀 175만원만 냅니다. 개별소비세도 300만원 한도로 따로 면제됩니다. 하이브리드 차량의 취득세 감면은 2024년에 종료되어 현재는 없습니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 경차 취득세는 정말 0원인가요?</div>
+      <p class="faq-a">1,000cc 미만 경차는 취득세율이 4%이고 75만원 한도로 면제됩니다. 차량가액 1,875만원(부가세 제외) 이하분에 적용되므로, 일반적인 경차는 4% 세액이 75만원 한도 안에 들어 실부담이 0원이 됩니다. 예를 들어 판매가 1,650만원 경차는 과세표준 1,500만원에 4%를 곱한 60만원이 한도 내라 전액 면제됩니다. 경차는 개별소비세도 면제되어 차값 외에 붙는 세금이 거의 없습니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 신차 실구매가에는 취득세 말고 또 무엇이 드나요?</div>
+      <p class="faq-a">신차 실구매가는 차량가격(공장도가격 + 개별소비세 + 교육세 + 부가세)에 취득세와 공채(지역개발채권·도시철도채권) 매입 비용을 더한 금액입니다. 공채는 지역과 배기량에 따라 다르고, 등록 직후 바로 할인 매도하면 실부담이 액면의 5~10% 수준으로 줄며 1,600cc 미만은 대부분 면제됩니다. 여기에 번호판·등록 대행 수수료가 수만원 더 붙습니다. 취득세는 신차든 중고차든 새로 명의를 취득하는 사람이 등록일로부터 60일 이내에 납부해야 합니다.</p>
+    </div>
+
+    <h2>한 줄로 정리하면</h2>
+    <p>자동차 취득세는 비영업용 승용차 기준 과세표준(차량가 ÷ 1.1)에 7%를 곱한 값으로, 사실상 부가세 포함 차량가의 약 6.36%입니다. 판매가 3,500만원 SUV는 취득세가 약 223만원이고, 경차는 75만원 한도 면제로 사실상 0원, 전기차는 140만원까지 깎입니다. 특히 2026년에는 개별소비세가 7월 1일부터 3.5%에서 5%로 오르기 때문에, 공장도 3,000만원 차의 경우 출고일 하루 차이로 약 68만원이 갈립니다. 견적서에 사인하기 전에 차량 가격과 출고 시기를 자동차 취득세 계산기에 넣어 경차·전기차 감면까지 한 번에 확인해보세요.</p>
+  </div>
+</div>
+<footer class="site-footer"><p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용입니다.</p></footer>
+<script src="/assets/footer-unified.js" defer></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "지방세법 제12조, 개별소비세법(승용차 5%), 지방세특례제한법(경차·전기차 감면), 2026년 기준",
+  basisDate: "2026년 기준",
+  referenceOrg: "행정안전부·국세청",
+  lastReviewed: '2026.06'
+};
+</script>
+<script>
+window.ARTICLE_INFO_CONFIG.relatedCalc = { name: '자동차 취득세 계산기', url: '/calc/auto/acquisition-tax/' };
+window.ARTICLE_INFO_CONFIG.category = 'auto';
+</script>
+<script src="/assets/blog-article-info.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>
