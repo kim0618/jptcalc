@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>전기차 보조금 2026 총정리 - 국고 최대 680만원·지자체·실구매가 계산법 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="2026년 전기차 보조금 완전 분석. 국고 최대 580만원에 노후차 전환 100만원, 지자체 보조금까지 더하면 총 1,000만원 이상도 가능. 차량가격 5,300만·8,500만 구간 차등표, 시나리오 4개 검산, 지역별 지자체 비교까지 숫자로 정리." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="전기차 보조금 2026 총정리 - 국고 최대 680만원·지자체·실구매가 계산법 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="2026년 전기차 보조금 완전 분석. 국고 최대 580만원에 노후차 전환 100만원, 지자체 보조금까지 더하면 총 1,000만원 이상도 가능. 차량가격 5,300만·8,500만 구간 차등표, 시나리오 4개 검산, 지역별 지자체 비교까지 숫자로 정리." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/ev-subsidy-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/ev-subsidy-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#EF4444;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(239,68,68,0.15);color:#EF4444;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:24px 0 10px}
+    .post-body p{margin-bottom:14px}
+    .post-body ul,.post-body ol{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#EF4444;text-decoration:none}
+    .highlight-box{background:rgba(239,68,68,0.1);border-left:4px solid #EF4444;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#991B1B;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    td.rate{color:#EF4444;font-weight:700}
+    tr:hover td{background:rgba(0,0,0,0.02)}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#EF4444;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .faq-item{margin:18px 0}
+    .faq-q{font-weight:700;color:#111827;margin-bottom:6px}
+    .faq-a{color:#374151;font-size:14px;margin:0}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+    .scenario-box{background:#FFF7F7;border:1px solid rgba(239,68,68,0.2);border-radius:12px;padding:20px 24px;margin:20px 0}
+    .scenario-box h3{margin:0 0 12px;font-size:15px;color:#991B1B}
+    .scenario-box p{margin-bottom:8px;font-size:14px;color:#374151}
+    .scenario-box p:last-child{margin-bottom:0}
+    .result-row{display:flex;justify-content:space-between;font-size:14px;padding:6px 0;border-bottom:1px solid rgba(0,0,0,0.05)}
+    .result-row:last-child{border-bottom:none;font-weight:800;color:#EF4444;font-size:15px;padding-top:10px}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "전기차 보조금 2026 총정리 - 국고 최대 680만원·지자체·실구매가 계산법",
+  "description": "2026년 전기차 보조금 완전 분석. 국고 최대 580만원에 노후차 전환 100만원, 지자체 보조금까지 더하면 총 1,000만원 이상도 가능. 차량가격 5,300만·8,500만 구간 차등표, 시나리오 4개 검산, 지역별 지자체 비교까지 숫자로 정리.",
+  "author": {"@type":"Person","name":"Jay Kim","url":"https://www.jptcalc.kr/about.html","jobTitle":"제이퍼 계산기 운영자"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr",
+    "logo": {"@type":"ImageObject","url":"https://www.jptcalc.kr/android-chrome-512x512.png"}
+  },
+  "datePublished": "2026-06-30",
+  "dateModified": "2026-06-30",
+  "mainEntityOfPage": {"@type":"WebPage","@id":"https://www.jptcalc.kr/blog/posts/ev-subsidy-guide.html"},
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "자동차",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "2026년 전기차 국고보조금은 최대 얼마인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "2026년 전기승용차 국고보조금은 중·대형 최대 580만원, 소형·경형 530만원입니다. 여기에 출고 3년 이상 내연차를 폐차하거나 매각한 뒤 구매하면 노후차 전환지원금 100만원이 추가되어, 국고 단독 최대 680만원까지 받을 수 있습니다. 단 이는 차량가격이 5,300만원 미만이고, 해당 차량의 주행거리·에너지효율 성능 요건을 충족할 때의 최대치입니다. 실제 금액은 차량 모델별 성능 등급에 따라 달라질 수 있으므로 무공해차 통합누리집(ev.or.kr)에서 모델별 확정 보조금을 꼭 조회해야 합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "차량 가격이 5,300만원을 넘으면 보조금이 줄어드나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "맞습니다. 2026년 기준으로 차량가격 5,300만원 미만은 국고보조금 100%, 5,300만원 이상 8,500만원 미만은 50%만 지원됩니다. 8,500만원 이상은 국고보조금이 전혀 없습니다. 예를 들어 국고 대표액이 580만원인 차량을 6,000만원에 구매하면 실제 국고보조금은 290만원(50%)만 받습니다. 차량가격 구간은 매년 조정되며, 2027년부터 하한이 5,000만원으로 낮아질 예정이라 구매 시점 기준을 꼭 확인해야 합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "지자체 보조금은 어디서 얼마나 받을 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "지자체 보조금은 지역·차종·예산 잔량에 따라 천차만별입니다. 서울은 통상 100만원대에 그치지만, 충남·경북·경남·강원·제주 등 지방 일부 지역은 200만원~400만원 이상을 지원하는 경우도 있습니다. 2026년 기준으로 지자체는 국비 대비 최소 30%를 편성하도록 되어 있어, 국고 580만원 차량이라면 지자체는 최소 174만원 수준이 기준선입니다. 중요한 것은 예산이 소진되면 지급이 조기 마감된다는 점입니다. 정확한 잔여 예산과 금액은 무공해차 통합누리집(ev.or.kr)에서 지역·모델별로 실시간 조회하세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "전기차 보조금 외에 취득세 감면도 받을 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네, 보조금과 별개로 취득세 감면 혜택이 있습니다. 전기차와 수소차는 취득세가 140만원 한도로 면제됩니다. 이 감면은 2026년 12월 31일 취득분까지 적용되고, 2027년부터는 100만원으로 한도가 줄어들 예정입니다. 예를 들어 과세표준 4,500만원 전기 SUV라면 취득세(315만원)에서 140만원을 뺀 175만원만 납부합니다. 즉 보조금과 취득세 감면을 합산하면 국고+지자체+취득세 감면으로 최대 1,000만원 이상 절감도 가능합니다. 단 하이브리드 차량의 취득세 감면은 2024년에 종료됐으니 혼동하지 않도록 주의하세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "청년이나 차상위계층, 다자녀 가구는 보조금을 더 받나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네, 2026년 기준으로 추가 가산 제도가 있습니다. 만 19~34세 청년 생애최초 구매자와 차상위 이하 계층은 각각 국고보조금의 20%를 추가로 받습니다. 예를 들어 국고 580만원 차량이면 약 116만원이 더해집니다. 다자녀 가구는 정액으로 2자녀 100만원, 3자녀 200만원, 4자녀 이상 300만원이 추가되며, 청년·차상위 가산과 함께 받을 수 있습니다. 환경부 안내 예시로는 차상위이면서 3자녀인 가구가 국비 500만원 중형차를 사면 기본 500만원에 차상위 100만원과 다자녀 200만원을 더해 국비만 800만원이 됩니다. 다만 가산도 차량가격이 5,300만원을 넘으면 깎인 국고를 기준으로 계산되니, 본인 해당 여부와 정확한 금액은 ev.or.kr 신청 단계에서 확인하세요."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+    {"@type":"ListItem","position":2,"name":"블로그","item":"https://www.jptcalc.kr/blog/"},
+    {"@type":"ListItem","position":3,"name":"자동차","item":"https://www.jptcalc.kr/blog/?cat=자동차"},
+    {"@type":"ListItem","position":4,"name":"전기차 보조금 2026 총정리"}
+  ]
+}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo"><div class="logo-icon"><img src="../../assets/logo.svg" alt="로고"/></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+
+<div class="post-wrap">
+  <span class="post-tag">자동차</span>
+  <h1>전기차 보조금 2026 총정리 - 국고 최대 680만원·지자체·실구매가 계산법</h1>
+  <div class="post-meta">
+    <span>📅 2026.06.30</span>
+    <span>⏱ 18분 읽기</span>
+  </div>
+
+  <div class="post-body">
+
+    <p>결론부터 말하면, 2026년 전기차 보조금은 조건만 잘 맞추면 국고+노후차 전환+지자체를 합쳐 1,000만원을 넘길 수 있습니다. 문제는 이게 딱 이 한 줄로 끝나지 않는다는 겁니다. 차량가격이 5,300만원을 넘으면 국고보조금이 반 토막 나고, 8,500만원을 넘으면 국고는 0원이 됩니다. 같은 모델이라도 어느 지역에서 구매하느냐에 따라 지자체 보조금이 100만원대와 400만원대로 엇갈립니다. "전기차 사면 보조금 준다던데요"는 맞는 말이지만, "얼마나, 어떤 조건에서"를 모르면 예산 계획이 흔들립니다. 이 글에서 구조를 숫자로 끝까지 따라가 보겠습니다.</p>
+
+    <div class="highlight-box"><p>이 글은 2026년 전기차 구매를 검토하면서 실구매가를 미리 뽑아보고 싶은 분, 국고보조금과 지자체 보조금의 차이가 헷갈리는 분, 노후차 전환지원금 적용 대상인지 확인하려는 분, 취득세 감면까지 합산한 실절감액이 궁금한 분을 위한 글입니다.</p></div>
+
+    <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+      <li>차량가격 5,300만·8,500만원 기준 국고보조금 구간 차등표 (2026년 최신)</li>
+      <li>국고 최대 680만원 도달하는 조건 - 차종·전환지원금 분기점</li>
+      <li>청년·차상위 국비 20% 가산, 다자녀 100~300만원 추가 정리</li>
+      <li>지역별 지자체 보조금 비교 (서울 vs 지방 최대 300만원 차이)</li>
+      <li>4가지 실구매 시나리오 검산 - 소형부터 고가 수입 전기차까지</li>
+      <li>보조금 + 취득세 감면 140만원 합산 시 실절감액 총정리</li>
+      <li>보조금 신청 방법과 예산 소진 시 대처법</li>
+    </ul>
+
+    <!-- ① 상단 애드핏 슬롯 -->
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>2026년 전기차 보조금 3단 구조</h2>
+
+    <p>전기차 보조금은 한 덩어리가 아닙니다. 정확히 세 층으로 쌓입니다. 국고보조금이 뼈대고, 노후차 전환지원금이 보너스이며, 지자체 보조금이 마지막에 얹힙니다. 이 세 가지를 더한 값을 차량 판매가에서 빼면 실구매가가 나옵니다.</p>
+
+    <p>핵심은 이겁니다. 국고보조금만 보면 안 됩니다. 지자체 보조금과 취득세 감면(별도)까지 포함해야 진짜 실절감액이 나옵니다. 국가에서 보조금 지원 기준을 정하고 환경부가 집행하며, 지자체는 별도 예산으로 추가 지원합니다. 2026년 기준 환경부 고시에 따르면 지자체는 국비 대비 최소 30%를 편성해야 합니다.</p>
+
+    <h3>① 국고보조금 - 차종 등급별 대표액</h3>
+
+    <p>2026년 국고보조금의 출발점은 차종 등급별 대표액입니다. 중·대형 전기승용차는 최대 580만원, 소형·경형은 530만원입니다. 이 수치는 기준 대표액이며, 실제로는 해당 차량의 주행거리·에너지효율 성능 등급에 따라 달라질 수 있습니다. 국산 인기 모델들은 대부분 대표액 100%를 받지만, 일부 수입차나 성능 하위 모델은 감액될 수 있으므로 모델별 확정 보조금은 <a href="https://www.ev.or.kr" target="_blank" rel="noopener" style="color:#EF4444;">무공해차 통합누리집(ev.or.kr)</a>에서 반드시 조회해야 합니다.</p>
+
+    <h3>② 차량가격 구간계수 - 여기서 보조금이 반 토막 난다</h3>
+
+    <p>대표액에 그냥 곱하면 안 됩니다. 차량가격 구간에 따라 계수가 달라집니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>차량가격 구간</th>
+            <th>국고보조금 지급 비율</th>
+            <th>중·대형 대표액 580만원 기준 실지급</th>
+            <th>소형 대표액 530만원 기준 실지급</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>5,300만원 미만</td>
+            <td class="rate">100%</td>
+            <td>580만원</td>
+            <td>530만원</td>
+          </tr>
+          <tr>
+            <td>5,300만원 이상 ~ 8,500만원 미만</td>
+            <td class="rate">50%</td>
+            <td>290만원</td>
+            <td>265만원</td>
+          </tr>
+          <tr>
+            <td>8,500만원 이상</td>
+            <td class="rate" style="color:#6B7280">0% (미지원)</td>
+            <td>0원</td>
+            <td>0원</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>5,300만원이라는 숫자가 생각보다 가깝게 느껴지는 이유가 있습니다. 인기 국산 전기 중형 SUV 상위 트림이 이 선을 살짝 넘는 경우가 많기 때문입니다. 옵션 몇 가지를 선택하다 보면 5,300만원 구간을 넘어 보조금이 290만원으로 줄어드는 상황이 생깁니다. 트림 선택 전에 차량가격이 5,300만원 기준 어느 쪽인지 확인하는 게 중요합니다.</p>
+
+    <h3>③ 노후차 전환지원금 - 조건 맞으면 100만원 추가</h3>
+
+    <p>국고보조금 지원 대상 차량(차량가격 8,500만원 미만)을 구매할 때, 기존에 보유 중인 출고 3년 이상 내연기관차를 폐차하거나 매각하면 100만원이 추가됩니다. 명칭이 "전환지원금"인 이유가 여기 있습니다. 내연차에서 전기차로 전환하는 행위를 장려하는 겁니다. 가족 간 명의 이전이나 하이브리드 차량 매각은 인정되지 않으며, 정확한 요건은 접수 시점 환경부 지침을 따릅니다.</p>
+
+    <div style="margin:24px 0;overflow-x:auto">
+      <svg role="img" width="100%" viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg">
+        <title>2026년 전기차 국고보조금 구간별 비교</title>
+        <rect width="680" height="200" rx="12" fill="#F9FAFB"/>
+        <text x="24" y="36" font-size="14" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">2026 국고보조금 - 차량가격별 지급액 (중·대형 기준)</text>
+        <text x="24" y="70" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">5,300만 미만</text>
+        <rect x="160" y="56" width="380" height="24" rx="5" fill="#EF4444" opacity="0.85"/>
+        <text x="548" y="73" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">580만원 (100%)</text>
+        <text x="24" y="116" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">5,300만~8,500만</text>
+        <rect x="160" y="102" width="190" height="24" rx="5" fill="#EF4444" opacity="0.5"/>
+        <text x="358" y="119" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">290만원 (50%)</text>
+        <text x="24" y="162" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">8,500만 이상</text>
+        <rect x="160" y="148" width="40" height="24" rx="5" fill="#D1D5DB"/>
+        <text x="208" y="165" font-size="13" font-weight="700" fill="#9CA3AF" font-family="Pretendard,sans-serif">0원 (미지원)</text>
+        <text x="24" y="194" font-size="11" fill="#9CA3AF" font-family="Pretendard,sans-serif">※ 소형·경형은 530만/265만/0원. 노후차 전환지원금 100만원은 별도.</text>
+      </svg>
+    </div>
+
+    <h2>청년·차상위·다자녀라면 국비가 더 붙는다 (가산 제도)</h2>
+
+    <p>도입부에서 "조건만 맞추면 1,000만원을 넘길 수 있다"고 했던 이유가 바로 여기 있습니다. 2026년 보조금에는 특정 대상에게 국비를 더 얹어주는 가산 제도가 있습니다. 앞서 본 국고+전환+지자체에 더해, 아래 조건에 해당하면 국비 보조금이 추가로 늘어납니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>가산 항목</th>
+            <th>대상 요건</th>
+            <th>추가 지원</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>청년 생애최초</td>
+            <td>만 19~34세, 본인 명의 내연기관차 등록 이력 없음</td>
+            <td class="rate">국비의 20%</td>
+          </tr>
+          <tr>
+            <td>차상위 이하 계층</td>
+            <td>차상위계층·기초생활수급자 등</td>
+            <td class="rate">국비의 20%</td>
+          </tr>
+          <tr>
+            <td>다자녀 (2자녀)</td>
+            <td>18세 이하 자녀 2명</td>
+            <td>100만원</td>
+          </tr>
+          <tr>
+            <td>다자녀 (3자녀)</td>
+            <td>18세 이하 자녀 3명</td>
+            <td>200만원</td>
+          </tr>
+          <tr>
+            <td>다자녀 (4자녀 이상)</td>
+            <td>18세 이하 자녀 4명 이상</td>
+            <td>300만원</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>여기서 "국비의 20%"가 핵심입니다. 정액이 아니라 그 차량의 국고보조금에 비례합니다. 국고 580만원 차량이면 차상위 가산은 116만원(580 × 20%), 국고 530만원이면 106만원입니다. 청년과 차상위는 둘 다 20%라 중복 적용은 통상 더 유리한 하나만 잡히지만, 다자녀 가산은 정액이라 청년·차상위 가산과 함께 받을 수 있습니다.</p>
+
+    <div class="highlight-box"><p>실제 사례: 환경부 정책 안내에 따르면 차상위 계층이면서 자녀 3명인 가구가 국비 500만원인 중형 전기승용차를 사면, 기본 500만원 + 차상위 가산 100만원(500 × 20%) + 다자녀 200만원 = 국비만 800만원입니다. 여기에 노후차 전환 100만원과 지자체 보조금까지 더하면 총 1,000만원을 넘기는 게 충분히 가능합니다.</p></div>
+
+    <p>주의할 점은 가산도 차량가격 구간계수의 영향을 받는다는 겁니다. 차량가격이 5,300만원을 넘어 국고보조금이 50%로 깎이면, 그 깎인 국고를 기준으로 20%를 계산하므로 가산액도 함께 줄어듭니다. 청년·차상위 가산을 최대한 받으려면 역시 5,300만원 미만 차량이 유리합니다. 본인이 가산 대상인지와 정확한 금액은 <a href="https://www.ev.or.kr" target="_blank" rel="noopener" style="color:#EF4444;">무공해차 통합누리집(ev.or.kr)</a> 신청 단계에서 확인됩니다.</p>
+
+    <h2>지역별 지자체 보조금 - 서울과 지방의 차이가 실화다</h2>
+
+    <p>지자체 보조금은 국고보조금만큼 중요합니다. 어떤 지역에서 구매하느냐에 따라 최종 실구매가가 200만원에서 400만원 이상 차이날 수 있습니다. 지자체는 매년 예산을 책정하고, 선착순으로 지급하기 때문에 시즌 초에 신청하는 것이 유리합니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>지역</th>
+            <th>전기승용차 지자체 보조금 (2026년 예시)</th>
+            <th>특이사항</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>서울</td>
+            <td class="rate">약 100만원</td>
+            <td>수도권 중 최저 수준</td>
+          </tr>
+          <tr>
+            <td>경기</td>
+            <td>약 100~150만원</td>
+            <td>지자체별 상이</td>
+          </tr>
+          <tr>
+            <td>인천</td>
+            <td>약 150만원</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>부산</td>
+            <td>약 200만원</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>대전·광주</td>
+            <td>약 150~200만원</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>충남</td>
+            <td>약 300~400만원</td>
+            <td>지방 상위권</td>
+          </tr>
+          <tr>
+            <td>경북·경남</td>
+            <td>약 250~350만원</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>강원</td>
+            <td>약 250~300만원</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>제주</td>
+            <td>약 200~300만원</td>
+            <td>섬 지역 특수 지원</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>위 수치는 2026년 기준 대략적인 예시이며, 실제 금액은 차종과 예산 잔량에 따라 달라집니다. 중요한 포인트는 지방에서 구매하면 수도권 대비 최대 200~300만원 더 받을 수 있다는 사실입니다. 이사 예정이거나 지인·가족 명의 활용을 고려 중이라면 지역별 보조금 차이를 반드시 먼저 비교하세요. 실시간 잔여 예산과 정확한 금액은 <a href="https://www.ev.or.kr" target="_blank" rel="noopener" style="color:#EF4444;">무공해차 통합누리집(ev.or.kr)</a>에서 지역·모델 선택 후 조회할 수 있습니다.</p>
+
+    <!-- ② 본문중간 애드핏 슬롯 -->
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-88xhdLeiIK3V35kb" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>실구매 시나리오 4가지 검산</h2>
+
+    <p>수치가 너무 많으면 오히려 헷갈립니다. 대표적인 4가지 상황으로 끊어서 검산해 봅니다. 모든 시나리오에서 지자체 보조금은 해당 지역의 예시값을 사용했고, 취득세 감면은 별도 항목으로 표시합니다.</p>
+
+    <div class="scenario-box">
+      <h3>시나리오 1 - 김씨(38세, 경기 거주), 소형 전기차 3,200만원</h3>
+      <p>차량가격 3,200만원 소형 전기승용차. 5년 된 휘발유 소형차를 폐차 처리 예정.</p>
+      <div class="result-row"><span>국고보조금 (소형 530만원 × 100%)</span><span style="font-weight:700;color:#EF4444">530만원</span></div>
+      <div class="result-row"><span>노후차 전환지원금 (3년 이상 내연차 폐차)</span><span style="font-weight:700;color:#EF4444">100만원</span></div>
+      <div class="result-row"><span>경기 지자체 보조금 (예시)</span><span style="font-weight:700;color:#EF4444">130만원</span></div>
+      <div class="result-row"><span>총 보조금</span><span>760만원</span></div>
+      <div class="result-row"><span>실구매가 (3,200 - 760)</span><span>2,440만원</span></div>
+      <p style="font-size:13px;color:#6B7280;margin-top:12px">여기에 취득세 감면 최대 140만원을 적용하면 실절감 합계 900만원 수준. 3,200만원 차를 사실상 2,300만원대에 사는 셈입니다. 보조금 전부터 차값 기준으로 예산을 잡다가 "생각보다 싸네" 하고 상위 트림을 욕심내면 결국 예산이 초과되는 경우가 많으니 주의하세요.</p>
+    </div>
+
+    <div class="scenario-box">
+      <h3>시나리오 2 - 이씨(45세, 서울 거주), 중형 SUV 전기차 4,900만원</h3>
+      <p>차량가격 4,900만원 중·대형 전기 SUV. 기존 차 매각 계획 없음(노후차 전환 미적용).</p>
+      <div class="result-row"><span>국고보조금 (중·대형 580만원 × 100%)</span><span style="font-weight:700;color:#EF4444">580만원</span></div>
+      <div class="result-row"><span>노후차 전환지원금</span><span style="color:#6B7280">미적용</span></div>
+      <div class="result-row"><span>서울 지자체 보조금 (예시)</span><span style="font-weight:700;color:#EF4444">100만원</span></div>
+      <div class="result-row"><span>총 보조금</span><span>680만원</span></div>
+      <div class="result-row"><span>실구매가 (4,900 - 680)</span><span>4,220만원</span></div>
+      <p style="font-size:13px;color:#6B7280;margin-top:12px">취득세 감면 140만원을 더하면 실절감 820만원. 같은 차를 노후차 전환까지 적용하고 충남에서 구매한다면 (보조금 580+100+300=980만원 → 실구매 3,920만원, 절감 1,120만원). 지역과 노후차 조건만 달라져도 300만원 차이가 납니다.</p>
+    </div>
+
+    <div class="scenario-box">
+      <h3>시나리오 3 - 박씨(52세, 충남 거주), 중형 SUV 전기차 6,000만원 (5,300만원 초과)</h3>
+      <p>차량가격 6,000만원 프리미엄 중·대형 전기차. 7년 된 디젤 SUV 매각 예정.</p>
+      <div class="result-row"><span>국고보조금 (580만원 × 50%, 5,300만 초과)</span><span style="font-weight:700;color:#EF4444">290만원</span></div>
+      <div class="result-row"><span>노후차 전환지원금 (7년 내연차 매각)</span><span style="font-weight:700;color:#EF4444">100만원</span></div>
+      <div class="result-row"><span>충남 지자체 보조금 (예시)</span><span style="font-weight:700;color:#EF4444">350만원</span></div>
+      <div class="result-row"><span>총 보조금</span><span>740만원</span></div>
+      <div class="result-row"><span>실구매가 (6,000 - 740)</span><span>5,260만원</span></div>
+      <p style="font-size:13px;color:#6B7280;margin-top:12px">5,300만원 기준에서 700만원 더 비싸진 탓에 국고보조금이 290만원으로 반 토막 났습니다. 만약 옵션 조정으로 차량가격을 5,299만원으로 낮출 수 있다면, 국고는 580만원으로 돌아와 290만원이 더 절감됩니다. 트림·옵션 선택 시 5,300만원 구간을 의식하는 게 유리합니다.</p>
+    </div>
+
+    <div class="scenario-box">
+      <h3>시나리오 4 - 최씨(47세, 강남), 수입 고급 전기차 9,500만원 (8,500만원 초과)</h3>
+      <p>차량가격 9,500만원 수입 프리미엄 전기차. 노후차 전환 해당 없음.</p>
+      <div class="result-row"><span>국고보조금 (8,500만원 이상 → 0원)</span><span style="color:#6B7280">0원</span></div>
+      <div class="result-row"><span>노후차 전환지원금</span><span style="color:#6B7280">해당 없음</span></div>
+      <div class="result-row"><span>지자체 보조금</span><span style="color:#6B7280">0원 (국고 미지원 차량 제외 지자체도 미지원)</span></div>
+      <div class="result-row"><span>총 보조금</span><span>0원</span></div>
+      <div class="result-row"><span>실구매가</span><span>9,500만원 (보조금 없음)</span></div>
+      <p style="font-size:13px;color:#6B7280;margin-top:12px">취득세 감면 140만원은 여전히 받을 수 있습니다. 과세표준 기준 취득세 665만원에서 140만원을 빼면 525만원. 이것만이 유일한 혜택입니다. 8,500만원 이상 고가 전기차는 보조금 체계 밖에 있다고 이해하는 것이 정확합니다.</p>
+    </div>
+
+    <h2>여기서 함정이 있다 - 비쌀수록 보조금 효율이 급락한다</h2>
+
+    <p>전기차 보조금을 처음 알아보는 분들이 가장 많이 오해하는 포인트입니다. "전기차는 보조금이 많다"는 말은 5,300만원 미만 차량에 집중됩니다. 5,300만원을 넘는 순간 국고보조금이 절반으로 줄고, 8,500만원을 넘으면 국고+지자체가 모두 사라집니다. 이걸 숫자로 비교하면 충격적입니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>차량가격</th>
+            <th>국고보조금</th>
+            <th>노후차 전환</th>
+            <th>지자체(서울 예시)</th>
+            <th>총 절감(보조금)</th>
+            <th>차량가 대비 절감 비율</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>3,200만원 (소형)</td>
+            <td class="rate">530만원</td>
+            <td>100만원</td>
+            <td>130만원</td>
+            <td>760만원</td>
+            <td class="rate">23.8%</td>
+          </tr>
+          <tr>
+            <td>4,900만원 (중형)</td>
+            <td class="rate">580만원</td>
+            <td>-</td>
+            <td>100만원</td>
+            <td>680만원</td>
+            <td class="rate">13.9%</td>
+          </tr>
+          <tr>
+            <td>6,000만원 (프리미엄)</td>
+            <td>290만원</td>
+            <td>100만원</td>
+            <td>100만원</td>
+            <td>490만원</td>
+            <td>8.2%</td>
+          </tr>
+          <tr>
+            <td>9,500만원 (고가 수입)</td>
+            <td style="color:#9CA3AF">0원</td>
+            <td style="color:#9CA3AF">-</td>
+            <td style="color:#9CA3AF">0원</td>
+            <td style="color:#9CA3AF">0원</td>
+            <td style="color:#9CA3AF">0%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>소형 전기차는 차량가 대비 23.8%를 보조금으로 돌려받습니다. 6,000만원 프리미엄은 8.2%에 그칩니다. 그리고 9,500만원짜리 고급 수입 전기차는 취득세 감면 140만원 외에 아무것도 없습니다. "비쌀수록 보조금이 더 많을 것"이라는 직관과 정반대입니다. 전기차 보조금 정책은 대중 보급을 목표로 설계되어 있어, 저렴한 차일수록 절감 효율이 높습니다.</p>
+
+    <p>이걸 월 비용으로 환산하면 의미가 더 명확해집니다. 소형 전기차 760만원 절감을 5년(60개월)로 나누면 월 12만7천원을 절약하는 셈입니다. 6,000만원 프리미엄의 490만원 절감은 월 8만2천원. 같은 기간에 차량가 차이(2,800만원)를 내고 있으니 비교는 명확합니다.</p>
+
+    <h2>전기차 취득세 감면 140만원 - 보조금과 별개로 챙긴다</h2>
+
+    <p>보조금과 별개로, 전기차는 취득세에서도 혜택이 있습니다. 지방세특례제한법에 따라 전기차와 수소차는 취득세를 140만원 한도로 감면받습니다. 2026년 12월 31일 취득분까지 적용되고, 2027년부터는 100만원으로 줄어들 예정입니다.</p>
+
+    <p>자동차 취득세는 비영업용 승용차 기준 과세표준(=차량가/1.1)의 7%입니다. 예를 들어 4,900만원 전기 SUV라면 과세표준은 약 4,455만원이고, 취득세 원래 금액은 약 311만원입니다. 여기서 140만원을 감면받으면 실납부액은 171만원. 보조금 680만원 + 취득세 감면 140만원 = 820만원을 총절감한 게 됩니다.</p>
+
+    <p>자동차 취득세 계산 방식이 헷갈린다면 <a href="../posts/car-acquisition-tax-guide.html" style="color:#EF4444;">자동차 취득세 계산 2026 - 7% 세율·개별소비세·경차 면제·전기차 감면 총정리</a> 글에서 세율과 과세표준 계산법을 확인해 보세요. 전기차 감면 외에도 경차 75만원 면제, 출고일 7월 1일 기점 개별소비세 변화 등이 취득세에 연쇄 영향을 줍니다.</p>
+
+    <h2>보조금 신청 방법과 예산 소진 대처법</h2>
+
+    <p>보조금 신청은 구매자가 직접 하는 게 아닙니다. 차량 구매 계약 후 판매사(딜러)가 지자체에 대행 신청하는 구조입니다. 구매자는 신분증과 관련 서류만 제출하면 됩니다. 노후차 전환지원금 신청 시에는 기존 차량의 말소 증명 서류나 매각 사실 확인 서류가 추가로 필요합니다.</p>
+
+    <p>문제는 예산 소진입니다. 특히 지자체 보조금은 예산이 선착순으로 소진되면 지급이 중단됩니다. 연초(1~2월)에 물량이 확정되면 인기 지역과 인기 모델에서는 빠르면 상반기 중에 예산이 마감되는 경우도 있습니다. 계약 전에 잔여 예산을 ev.or.kr에서 먼저 확인하는 것이 중요합니다. 예산이 소진됐다면 다음 해 예산 배정을 기다리거나, 잔여 예산이 남아있는 인근 지자체를 검토할 수 있습니다.</p>
+
+    <h3>보조금 신청 체크리스트</h3>
+    <ul>
+      <li>무공해차 통합누리집(ev.or.kr)에서 구매 모델 확정 보조금 조회</li>
+      <li>지역 지자체 잔여 예산 확인 (딜러에게도 확인 요청 가능)</li>
+      <li>노후차 전환 적용 시 기존 차량 폐차 또는 매각 서류 준비</li>
+      <li>계약 후 딜러가 보조금 신청 접수 → 승인 후 출고 가능</li>
+      <li>취득세 감면은 차량 등록 시 자동 적용 (별도 신청 불필요)</li>
+    </ul>
+
+    <h2>연간 자동차세도 함께 확인하세요</h2>
+
+    <p>전기차를 구매하면 취등록세와 보조금만 챙기고 끝나는 경우가 많습니다. 하지만 해마다 내야 하는 자동차세도 달라집니다. 전기차는 배기량이 없어 일률 13만원(비영업용 기준) 수준인 반면, 배기량 2,000cc 내연차는 연간 약 52만원입니다. 10년 보유 기준으로 39만원 × 10년 = 390만원의 추가 절감이 가능합니다.</p>
+
+    <p>자동차세 구조와 차령 감면, 연납 할인 혜택은 <a href="../posts/car-tax-guide.html" style="color:#EF4444;">자동차세 계산 2026 - 배기량·차령 감면·연납 할인 한눈에 정리</a>에서 확인할 수 있습니다. 전기차 구매 전후 연간 유지비 비교를 할 때 자동차세 차이도 같이 계산해 보면 의사결정에 도움이 됩니다.</p>
+
+    <div class="cta-box">
+      <p>차량 가격·차종·지역을 입력하면 2026년 국고보조금과 실구매가를 자동으로 계산합니다.</p>
+      <a href="../../calc/auto/ev-subsidy/" class="cta-btn">전기차 보조금 계산기 바로가기</a>
+    </div>
+    <p style="font-size:13px;color:#6B7280;margin-top:8px;text-align:center">지자체 보조금을 직접 입력하면 총 실구매가까지 한 번에 계산됩니다.</p>
+
+    <h2>자주 묻는 질문</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 2026년 전기차 국고보조금은 최대 얼마인가요?</div>
+      <div class="faq-a">2026년 전기승용차 국고보조금은 중·대형 최대 580만원, 소형·경형 530만원입니다. 여기에 출고 3년 이상 내연차를 폐차하거나 매각한 뒤 구매하면 노후차 전환지원금 100만원이 추가되어, 국고 단독 최대 680만원까지 받을 수 있습니다. 단 이는 차량가격이 5,300만원 미만이고, 해당 차량의 주행거리·에너지효율 성능 요건을 충족할 때의 최대치입니다. 실제 금액은 차량 모델별 성능 등급에 따라 달라질 수 있으므로 무공해차 통합누리집(ev.or.kr)에서 모델별 확정 보조금을 꼭 조회해야 합니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 차량 가격이 5,300만원을 넘으면 보조금이 줄어드나요?</div>
+      <div class="faq-a">맞습니다. 2026년 기준으로 차량가격 5,300만원 미만은 국고보조금 100%, 5,300만원 이상 8,500만원 미만은 50%만 지원됩니다. 8,500만원 이상은 국고보조금이 전혀 없습니다. 예를 들어 국고 대표액이 580만원인 차량을 6,000만원에 구매하면 실제 국고보조금은 290만원(50%)만 받습니다. 차량가격 구간은 매년 조정되며, 2027년부터 하한이 5,000만원으로 낮아질 예정이라 구매 시점 기준을 꼭 확인해야 합니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 지자체 보조금은 어디서 얼마나 받을 수 있나요?</div>
+      <div class="faq-a">지자체 보조금은 지역·차종·예산 잔량에 따라 천차만별입니다. 서울은 통상 100만원대에 그치지만, 충남·경북·경남·강원·제주 등 지방 일부 지역은 200만원~400만원 이상을 지원하는 경우도 있습니다. 2026년 기준으로 지자체는 국비 대비 최소 30%를 편성하도록 되어 있어, 국고 580만원 차량이라면 지자체는 최소 174만원 수준이 기준선입니다. 중요한 것은 예산이 소진되면 지급이 조기 마감된다는 점입니다. 정확한 잔여 예산과 금액은 무공해차 통합누리집(ev.or.kr)에서 지역·모델별로 실시간 조회하세요.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 전기차 보조금 외에 취득세 감면도 받을 수 있나요?</div>
+      <div class="faq-a">네, 보조금과 별개로 취득세 감면 혜택이 있습니다. 전기차와 수소차는 취득세가 140만원 한도로 면제됩니다. 이 감면은 2026년 12월 31일 취득분까지 적용되고, 2027년부터는 100만원으로 한도가 줄어들 예정입니다. 예를 들어 과세표준 4,500만원 전기 SUV라면 취득세(315만원)에서 140만원을 뺀 175만원만 납부합니다. 즉 보조금과 취득세 감면을 합산하면 국고+지자체+취득세 감면으로 최대 1,000만원 이상 절감도 가능합니다. 단 하이브리드 차량의 취득세 감면은 2024년에 종료됐으니 혼동하지 않도록 주의하세요.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 청년이나 차상위계층, 다자녀 가구는 보조금을 더 받나요?</div>
+      <div class="faq-a">네, 2026년 기준으로 추가 가산 제도가 있습니다. 만 19~34세 청년 생애최초 구매자와 차상위 이하 계층은 각각 국고보조금의 20%를 추가로 받습니다. 예를 들어 국고 580만원 차량이면 약 116만원이 더해집니다. 다자녀 가구는 정액으로 2자녀 100만원, 3자녀 200만원, 4자녀 이상 300만원이 추가되며, 청년·차상위 가산과 함께 받을 수 있습니다. 환경부 안내 예시로는 차상위이면서 3자녀인 가구가 국비 500만원 중형차를 사면 기본 500만원에 차상위 100만원과 다자녀 200만원을 더해 국비만 800만원이 됩니다. 다만 가산도 차량가격이 5,300만원을 넘으면 깎인 국고를 기준으로 계산되니, 본인 해당 여부와 정확한 금액은 ev.or.kr 신청 단계에서 확인하세요.</div>
+    </div>
+
+    <h2>2026년 전기차 보조금, 핵심 세 줄 요약</h2>
+
+    <p>보조금 구조 자체는 단순합니다. 국고+전환+지자체, 세 덩어리를 더해서 차량가에서 뺍니다. 복잡한 건 차량가격 구간계수와 지역별 지자체 격차입니다. 5,300만원 선에서 국고가 반 토막 나는 구간 효과는 생각보다 크고, 서울과 충남의 지자체 차이 300만원은 무시하기 어렵습니다.</p>
+
+    <p>시나리오 1(소형 전기차 3,200만원, 경기)의 실절감은 900만원이었고, 시나리오 4(수입 9,500만원)는 취득세 감면 140만원뿐이었습니다. 같은 "전기차"라도 선택에 따라 절감폭이 760만원이나 차이납니다. 결국 2026년 전기차 보조금을 최대한 활용하려면 5,300만원 미만 차량을 선택하고, 노후차 전환지원금 요건을 갖추고, 지자체 보조금이 높은 지역에서 구매하는 세 가지가 핵심입니다.</p>
+
+    <p>정확한 보조금 시뮬레이션은 아래 계산기에서 차량가격·차종·지자체 보조금을 입력해 실구매가를 직접 뽑아보시기 바랍니다.</p>
+
+  </div>
+</div>
+
+<footer class="site-footer"><p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용입니다.</p></footer>
+
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "환경부 전기차 보조금 고시, 지방세특례제한법, 2026년 기준",
+  basisDate: "2026년 기준",
+  referenceOrg: "환경부, 무공해차 통합누리집(ev.or.kr)",
+  lastReviewed: '2026.06.30',
+  disclaimer: "본 내용은 참고용이며 실제 보조금은 차량 모델, 지역, 예산 잔량에 따라 달라집니다. 정확한 금액은 ev.or.kr에서 확인하세요.",
+  relatedCalc: { name: '전기차 보조금 계산기', url: '/calc/auto/ev-subsidy/' },
+  category: 'auto'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>
