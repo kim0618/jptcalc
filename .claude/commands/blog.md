@@ -42,7 +42,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - **완료 클러스터: 부동산 비용(realestate)** | 2026-06-21~06-22 완료 | **성과 점검 예정: 2026-07-19** (트리거 B)
   - 허브: holding-tax-guide / 위성: ① registry-cost-guide(등기비용·06-22) · ② property-purchase-costs-guide(매매 부대비용·06-26)
 - **진행 중 클러스터: 자동차(auto)** | 2026-06-28 시작 (자동차 카테고리 블로그 0편이던 미개척 영역 진입) | **성과 점검 예정: 2026-07-26** (트리거 B)
-  - 허브: car-tax-guide(자동차세·06-28, auto-tax 고아 해소) / 위성: ① car-acquisition-tax-guide(자동차 취득세·06-29, acquisition-tax+used-car-tax 고아 동시 해소, car-tax-guide와 교차링크 완료) / **남은 위성 후보(미사용)**: ② ev-subsidy(전기차 보조금) · ③ fuel-cost(유류비) · ④ ev-charging(전기차 충전비) · ⑤ auto-loan(자동차 할부, 남은 유일 auto orphan). 위성 작성 시 car-tax-guide·car-acquisition-tax-guide와 교차링크로 클러스터 강화.
+  - 허브: car-tax-guide(자동차세·06-28, auto-tax 고아 해소) / 위성: ① car-acquisition-tax-guide(자동차 취득세·06-29, acquisition-tax+used-car-tax 고아 동시 해소) · ② ev-subsidy-guide(전기차 보조금·06-30) · ③ fuel-cost-guide(유류비·07-01, fuel-cost 고아 해소, car-tax-guide·car-acquisition-tax-guide·ev-subsidy-guide 교차링크 완료) / **남은 위성 후보(미사용)**: ④ ev-charging(전기차 충전비) · ⑤ auto-loan(자동차 할부, 남은 유일 auto orphan). 위성 작성 시 기존 위성들과 교차링크로 클러스터 강화.
 - **참고**: orphan 계산기 4종(copay·auto-tax는 해소 / stock-average·cat-age·food-amount·lunar-calendar 잔존)은 전용 블로그 0개 - 네이버 큐 소진 시 우선순위 ③로 폴백. (네이버 큐에는 넣지 않음). 자동차 6종 orphan은 위 자동차 클러스터 위성으로 흡수 예정.
 
 ## 네이버 타겟 주제 큐

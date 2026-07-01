@@ -5,9 +5,23 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 29 Jun 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
 
+    <item>
+      <title>유류비 계산법 2026 - 연비·유종별 기름값 한눈에 비교</title>
+      <link>https://www.jptcalc.kr/blog/posts/fuel-cost-guide.html</link>
+      <description>2026년 유류비 계산법 총정리. 휘발유·경유·LPG 단가 비교, 출퇴근 거리별 월간 유류비표, 경유차가 정말 저렴한지 검증, 전기차 대비 65% 차이까지 시나리오로 확인하세요.</description>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/fuel-cost-guide.html</guid>
+    </item>
+    <item>
+      <title>전기차 보조금 2026 총정리 - 국고 최대 680만원·지자체·실구매가 계산법</title>
+      <link>https://www.jptcalc.kr/blog/posts/ev-subsidy-guide.html</link>
+      <description>2026년 전기차 보조금 완전 분석. 국고 최대 580만원에 노후차 전환 100만원, 지자체 보조금까지 더하면 총 1,000만원 이상도 가능. 차량가격 5,300만·8,500만 구간 차등표, 시나리오 4개 검산, 지역별 지자체 비교까지 숫자로 정리.</description>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/ev-subsidy-guide.html</guid>
+    </item>
     <item>
       <title>자동차 취득세 계산 2026 - 7% 세율·개별소비세 5%·경차 면제·전기차 감면 총정리</title>
       <link>https://www.jptcalc.kr/blog/posts/car-acquisition-tax-guide.html</link>
