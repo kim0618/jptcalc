@@ -340,7 +340,8 @@ function calcPremium(){
   const nightPay = hourly * 0.5 * night;
   const holPay = hourly * 1.5 * hol;
   const holotPay = hourly * 2.0 * holot;
-  const total = otPay + nightPay + holPay + holotPay;
+  // 총합은 화면에 표시되는(개별 반올림된) 각 수당의 합과 일치시킨다
+  const total = Math.round(otPay) + Math.round(nightPay) + Math.round(holPay) + Math.round(holotPay);
   function setRow(id, rowId, pay, hours){
     document.getElementById(rowId).style.display = hours > 0 ? 'flex' : 'none';
     document.getElementById(id).textContent = comma(pay);
