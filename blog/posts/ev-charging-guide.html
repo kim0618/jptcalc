@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>전기차 충전비 계산법 2026 - 완속·급속 요금 차이와 휘발유차 유류비 비교 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="2026년 4월 완속·급속 충전 요금 개편 이후 전기차 충전비 계산법을 정리했습니다. 완속 294.3원·급속 347원·초급속 391.9원 요금 비교, 아이오닉5·EV6 실제 충전 시나리오, 휘발유차 대비 절감액까지 확인하세요." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="전기차 충전비 계산법 2026 - 완속·급속 요금 차이와 휘발유차 유류비 비교 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="2026년 4월 완속·급속 충전 요금 개편 이후 전기차 충전비 계산법을 정리했습니다. 완속 294.3원·급속 347원·초급속 391.9원 요금 비교, 아이오닉5·EV6 실제 충전 시나리오, 휘발유차 대비 절감액까지 확인하세요." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/ev-charging-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/ev-charging-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#EF4444;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(239,68,68,0.15);color:#EF4444;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:24px 0 10px}
+    .post-body p{margin-bottom:14px}
+    .post-body ul,.post-body ol{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#EF4444;text-decoration:none}
+    .highlight-box{background:rgba(239,68,68,0.1);border-left:4px solid #EF4444;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#991B1B;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    td.rate{color:#EF4444;font-weight:700}
+    tr:hover td{background:rgba(0,0,0,0.02)}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#EF4444;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .faq-item{margin:18px 0}
+    .faq-q{font-weight:700;color:#111827;margin-bottom:6px}
+    .faq-a{color:#374151;font-size:14px;margin:0}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+    .scenario-box{background:#FFF7F7;border:1px solid rgba(239,68,68,0.2);border-radius:12px;padding:20px 24px;margin:20px 0}
+    .scenario-box h3{margin:0 0 12px;font-size:15px;color:#991B1B}
+    .scenario-box p{margin-bottom:8px;font-size:14px;color:#374151}
+    .scenario-box p:last-child{margin-bottom:0}
+    .result-row{display:flex;justify-content:space-between;font-size:14px;padding:6px 0;border-bottom:1px solid rgba(0,0,0,0.05)}
+    .result-row:last-child{border-bottom:none;font-weight:800;color:#EF4444;font-size:15px;padding-top:10px}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "전기차 충전비 계산법 2026 - 완속·급속 요금 차이와 휘발유차 유류비 비교",
+  "description": "2026년 4월 완속·급속 충전 요금 개편 이후 전기차 충전비 계산법을 정리했습니다. 완속 294.3원·급속 347원·초급속 391.9원 요금 비교, 아이오닉5·EV6 실제 충전 시나리오, 휘발유차 대비 절감액까지 확인하세요.",
+  "author": {"@type":"Person","name":"Jay Kim","url":"https://www.jptcalc.kr/about.html","jobTitle":"제이퍼 계산기 운영자"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr",
+    "logo": {"@type":"ImageObject","url":"https://www.jptcalc.kr/android-chrome-512x512.png"}
+  },
+  "datePublished": "2026-07-02",
+  "dateModified": "2026-07-02",
+  "mainEntityOfPage": {"@type":"WebPage","@id":"https://www.jptcalc.kr/blog/posts/ev-charging-guide.html"},
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "자동차",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "전기차 충전비는 정확히 어떻게 계산하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "충전비는 충전한 전력량(kWh)에 충전 단가(원/kWh)를 곱해 구합니다. 충전 전력량은 배터리 용량 × (목표 충전율 − 현재 충전율) ÷ 100입니다. 예를 들어 77.4kWh 배터리를 10%에서 80%까지 완속(294.3원/kWh)으로 충전하면 전력량은 54.18kWh, 충전비는 약 15,945원입니다. 같은 충전을 초급속(391.9원/kWh)으로 하면 약 21,233원까지 올라갑니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "완속과 급속, 초급속 충전 요금은 얼마나 차이 나나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "2026년 4월 30일 개편된 환경부 공공충전 요금 기준으로 완속(30kW 미만)은 294.3원/kWh, 급속(100kW대)은 약 347원/kWh, 초급속(200kW 이상)은 391.9원/kWh입니다. 완속 대비 급속은 약 18%, 초급속은 약 33% 비쌉니다. 민간 사업자의 비회원 요금은 450~500원/kWh를 넘기도 해서 완속 대비 최대 70%까지 비싸질 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "전기차는 어떤 상황에서도 휘발유차보다 저렴한가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "그렇지는 않습니다. 100km 주행 기준으로 완속 충전은 휘발유 대비 약 65% 저렴하지만, 초급속만 이용하면 절감률이 약 53%로 줄고, 민간 비회원 요금으로 충전하면 약 40%까지 떨어집니다. 여전히 휘발유차보다는 저렴하지만, 충전 환경에 따라 절감폭이 최대 25%포인트까지 벌어질 수 있어 완속·회원 요금을 확보하는 것이 중요합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "월 1,500km를 타면 연간 얼마나 절약되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "월 1,500km 기준으로 완속 충전 위주라면 연료비는 연 약 105만원(휘발유차는 연 약 302만원)으로 연간 약 196만원을 절약합니다. 하지만 민간 비회원 급속 위주로 충전한다면 연 약 180만원이 들어 절감액이 연 약 122만원으로 줄어듭니다. 두 시나리오의 절감액 차이는 연간 약 74만원에 달하므로, 충전 습관이 실제 절감액을 크게 좌우합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "배터리를 항상 10~80% 구간만 충전해야 하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "일상적으로는 그렇게 권장됩니다. 리튬이온 배터리는 0%에 가깝거나 100% 완충 상태가 반복되면 수명이 빨리 줄어듭니다. 또한 급속 충전은 80%를 넘어서면 속도가 크게 느려지므로, 급속은 80%까지만 채우고 나머지는 완속으로 마무리하는 것이 시간과 비용 모두에서 효율적입니다. 장거리 여행처럼 100%가 꼭 필요한 경우에는 예외적으로 완충해도 됩니다."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+    {"@type":"ListItem","position":2,"name":"블로그","item":"https://www.jptcalc.kr/blog/"},
+    {"@type":"ListItem","position":3,"name":"자동차","item":"https://www.jptcalc.kr/blog/?cat=자동차"},
+    {"@type":"ListItem","position":4,"name":"전기차 충전비 계산법 2026 - 완속·급속 요금 차이와 휘발유차 유류비 비교"}
+  ]
+}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo"><div class="logo-icon"><img src="../../assets/logo.svg" alt="로고"/></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+
+<div class="post-wrap">
+  <span class="post-tag">자동차</span>
+  <h1>전기차 충전비 계산법 2026 - 완속·급속 요금 차이와 휘발유차 유류비 비교</h1>
+  <div class="post-meta">
+    <span>📅 2026.07.02</span>
+    <span>⏱ 16분 읽기</span>
+  </div>
+
+  <div class="post-body">
+
+    <p>2026년 4월 30일, 전기차 공공충전 요금이 5단계로 전면 개편됐습니다. 완속은 내려가고 초급속은 올라갔습니다. 그런데 정작 많은 전기차 운전자들은 자기 차의 한 달 충전비가 얼마인지 정확히 모릅니다. 주유소 영수증처럼 눈에 보이는 지출이 아니라 앱 결제로 조용히 빠져나가기 때문입니다. 충전비는 배터리 용량과 충전 단가, 딱 두 숫자만 알면 누구나 검산할 수 있습니다. 문제는 완속이냐 급속이냐, 회원이냐 비회원이냐에 따라 같은 배터리를 채워도 금액이 최대 70%까지 벌어진다는 점입니다.</p>
+
+    <div class="highlight-box"><p>이 글은 전기차를 타면서 한 달 충전비가 대략 얼마인지 궁금한 분, 완속과 급속 중 어느 쪽을 주로 이용해야 할지 고민인 분, 전기차 전환 시 휘발유차 대비 실제 절감액을 확인하고 싶은 분을 위한 글입니다.</p></div>
+
+    <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+      <li>충전비 계산 공식과 2026년 4월 30일 개편된 완속·급속·초급속 요금표</li>
+      <li>77.4kWh 배터리를 10→80% 충전할 때 완속·급속·초급속·민간비회원 요금 비교</li>
+      <li>EV6(58kWh) 30→80% 충전으로 재검산한 완속 대비 급속 33% 차이</li>
+      <li>전기차가 항상 65% 저렴하지 않은 이유 - 충전 방식별 절감률 65%→40%</li>
+      <li>100km 주행 기준 전기차 4단계 요금 vs 휘발유차 유류비 전체 비교표</li>
+      <li>월 1,500km 주행 시 충전 습관에 따라 연간 절감액이 74만원까지 갈리는 이유</li>
+    </ul>
+
+    <!-- ① 상단 애드핏 슬롯 -->
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>전기차 충전비, 결국 이 두 숫자로 정해진다</h2>
+
+    <p>공식은 단순합니다. 충전 전력량(kWh)에 충전 단가(원/kWh)를 곱하면 충전비가 나옵니다. 충전 전력량은 배터리 용량에 충전한 비율(목표 충전율 − 현재 충전율)을 곱해서 구합니다. 예를 들어 배터리 용량이 77.4kWh인 차를 10%에서 80%까지 채운다면, 채운 비율은 70%이므로 전력량은 77.4 × 0.7 = 54.18kWh입니다.</p>
+
+    <p>변수는 딱 하나, 충전 단가입니다. 배터리 용량과 충전 비율은 차량과 그날의 주행 계획이 정하지만, 단가는 어느 충전기에서 충전하느냐에 따라 완전히 달라집니다. 무공해차 통합누리집(ev.or.kr)에 따르면 2026년 4월 30일부로 환경부·한전 공공충전기 요금이 출력 구간별 5단계로 재편되면서, 완속 요금은 내려가고 초급속 요금은 올라가는 구조로 바뀌었습니다. 이 개편 하나만으로 같은 차, 같은 배터리를 채워도 충전비가 달라지게 됐습니다.</p>
+
+    <h2>2026년 충전 요금표 - 완속에서 초급속까지</h2>
+
+    <p>같은 전력량을 채워도 어느 충전기를 쓰느냐에 따라 단가가 4단계로 벌어집니다. 환경부 공공충전기 기준 요금은 다음과 같습니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>충전기 구분</th>
+            <th>출력</th>
+            <th>요금(원/kWh)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>완속</td>
+            <td>30kW 미만</td>
+            <td class="rate">294.3원</td>
+          </tr>
+          <tr>
+            <td>급속</td>
+            <td>100kW대</td>
+            <td>약 347원</td>
+          </tr>
+          <tr>
+            <td>초급속</td>
+            <td>200kW 이상</td>
+            <td>391.9원</td>
+          </tr>
+          <tr>
+            <td>민간·비회원(참고)</td>
+            <td>-</td>
+            <td class="rate">450~500원+</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>완속과 초급속의 단가 차이는 97.6원, 비율로는 약 33%입니다. 여기에 민간 사업자의 비회원 요금까지 더하면 완속 대비 최대 70% 가까이 비싸질 수 있습니다. 환경부·한전 공공충전기는 회원·비회원 요금이 동일하지만, GS차지비 같은 민간 사업자는 비회원 요금을 크게 높게 책정하는 경우가 많습니다.</p>
+
+    <div style="margin:24px 0;overflow-x:auto">
+      <svg role="img" width="100%" viewBox="0 0 680 220" xmlns="http://www.w3.org/2000/svg">
+        <title>2026년 충전기 구분별 단가 비교(원/kWh)</title>
+        <rect width="680" height="220" rx="12" fill="#F9FAFB"/>
+        <text x="24" y="34" font-size="14" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">충전기 구분별 단가 (원/kWh)</text>
+        <text x="24" y="68" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">완속</text>
+        <rect x="110" y="54" width="253" height="24" rx="5" fill="#EF4444" opacity="0.5"/>
+        <text x="371" y="71" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">294.3원</text>
+        <text x="24" y="108" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">급속</text>
+        <rect x="110" y="94" width="298" height="24" rx="5" fill="#EF4444" opacity="0.65"/>
+        <text x="416" y="111" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">347원</text>
+        <text x="24" y="148" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">초급속</text>
+        <rect x="110" y="134" width="337" height="24" rx="5" fill="#EF4444" opacity="0.8"/>
+        <text x="455" y="151" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">391.9원</text>
+        <text x="24" y="188" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">민간·비회원</text>
+        <rect x="110" y="174" width="430" height="24" rx="5" fill="#EF4444"/>
+        <text x="548" y="191" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">500원+</text>
+        <text x="24" y="212" font-size="11" fill="#9CA3AF" font-family="Pretendard,sans-serif">※ 2026년 4월 30일 개편된 환경부 공공충전기 요금 기준, 민간·비회원은 참고치입니다.</text>
+      </svg>
+    </div>
+
+    <h2>아이오닉5 10→80% 충전, 완속 vs 급속 실제 차이</h2>
+
+    <p>표에 나온 숫자를 실제 충전 시나리오로 옮겨보면 체감이 달라집니다.</p>
+
+    <div class="scenario-box">
+      <h3>시나리오 1 - 최씨(38세, 회사원), 아이오닉5(배터리 77.4kWh) 10%→80% 완속 충전</h3>
+      <p>충전 전력량 77.4 × (80−10) ÷ 100 = 54.18kWh, 완속 294.3원/kWh 기준으로 검산했습니다.</p>
+      <div class="result-row"><span>충전 전력량</span><span style="font-weight:700;color:#EF4444">54.18kWh</span></div>
+      <div class="result-row"><span>완속 충전비 (294.3원)</span><span style="font-weight:700;color:#EF4444">15,945원</span></div>
+      <p style="font-size:13px;color:#6B7280;margin-top:12px">회사 지하주차장 완속기를 매번 이용한다면 한 번 충전에 약 1만 6천원, 주 2회 충전 기준 월 약 12만 8천원이 듭니다.</p>
+    </div>
+
+    <div class="scenario-box">
+      <h3>시나리오 2 - 같은 최씨, 급한 일정으로 급속·초급속·민간비회원 충전기를 이용한 경우</h3>
+      <p>같은 54.18kWh를 채우되 충전기 종류만 바꿔서 비교했습니다.</p>
+      <div class="result-row"><span>급속(347원)</span><span style="font-weight:700;color:#EF4444">18,800원</span></div>
+      <div class="result-row"><span>초급속(391.9원)</span><span style="font-weight:700;color:#EF4444">21,233원</span></div>
+      <div class="result-row"><span>민간·비회원(500원)</span><span style="font-weight:700;color:#EF4444">27,090원</span></div>
+      <p style="font-size:13px;color:#6B7280;margin-top:12px">완속 15,945원과 민간·비회원 27,090원의 차이는 11,145원, 비율로는 약 70%입니다. 배터리도 차도 똑같은데 충전기 하나 잘못 고르면 한 번 충전에 만원 넘게 더 나가는 셈입니다. 핵심은 이겁니다. 급한 게 아니라면 완속을 먼저 찾아보는 습관이 낫습니다.</p>
+    </div>
+
+    <h2>EV6로 한 번 더 검산해보면</h2>
+
+    <p>배터리 용량이 다른 차로도 같은 계산이 성립하는지 검증해봤습니다.</p>
+
+    <div class="scenario-box">
+      <h3>시나리오 3 - 박씨(42세, 영업직), EV6(배터리 58kWh) 30%→80% 충전, 집에 충전기가 없어 회사 근처 공영주차장 이용</h3>
+      <p>충전 전력량 58 × (80−30) ÷ 100 = 29kWh. 박씨는 평소 급하지 않으면 완속을, 외근 중 급하면 초급속을 씁니다.</p>
+      <div class="result-row"><span>충전 전력량</span><span style="font-weight:700;color:#EF4444">29kWh</span></div>
+      <div class="result-row"><span>완속(294.3원)</span><span style="font-weight:700;color:#EF4444">8,535원</span></div>
+      <div class="result-row"><span>초급속(391.9원)</span><span style="font-weight:700;color:#EF4444">11,365원</span></div>
+      <div class="result-row"><span>민간·비회원(500원)</span><span style="font-weight:700;color:#EF4444">14,500원</span></div>
+      <p style="font-size:13px;color:#6B7280;margin-top:12px">배터리 용량이 아이오닉5보다 작아도 완속과 초급속의 비율 차이는 똑같이 약 33%로 나타납니다. 즉 이 차이는 차종과 무관하게 요금 체계 자체에서 나오는 구조적인 격차입니다.</p>
+    </div>
+
+    <!-- ② 본문중간 애드핏 슬롯 -->
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-88xhdLeiIK3V35kb" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>전기차가 항상 싼 건 아니다 - 충전 방식에 따라 절감폭이 반토막난다</h2>
+
+    <p>"전기차는 휘발유차보다 훨씬 싸다"는 말, 절반만 맞습니다. 100km를 주행할 때 전비 5km/kWh 전기차와 연비 12km/L·2,010원/L 휘발유차를 충전 방식별로 나란히 비교하면 이렇게 나옵니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>충전·주유 방식</th>
+            <th>100km 비용</th>
+            <th>휘발유 대비 절감률</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>전기차 - 완속(294.3원)</td>
+            <td class="rate">5,886원</td>
+            <td class="rate">65%</td>
+          </tr>
+          <tr>
+            <td>전기차 - 급속(347원)</td>
+            <td>6,940원</td>
+            <td>59%</td>
+          </tr>
+          <tr>
+            <td>전기차 - 초급속(391.9원)</td>
+            <td>7,838원</td>
+            <td>53%</td>
+          </tr>
+          <tr>
+            <td>전기차 - 민간·비회원(500원)</td>
+            <td>10,000원</td>
+            <td>40%</td>
+          </tr>
+          <tr>
+            <td>휘발유차(연비 12km/L)</td>
+            <td>16,750원</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>완속으로만 충전하면 절감률은 65%지만, 급속·초급속을 섞어 쓰면 53~59%로 떨어지고, 민간 비회원 요금 위주라면 40%까지 내려갑니다. 여전히 휘발유차보다는 저렴하지만, 완속을 썼을 때와 비교하면 절감률이 25%포인트나 깎이는 셈입니다. 개인적으로는 "전기차라서 무조건 싸다"고 안심하기보다, 자기 충전 습관이 완속 쪽에 가까운지 급속·비회원 쪽에 가까운지부터 점검해보라고 권합니다.</p>
+
+    <p>여기서 주의할 점이 하나 있는데요. 이 비교는 전비 5km/kWh를 기준으로 삼은 값입니다. 실제로는 겨울철 히터 사용, 고속 주행 비중에 따라 전비가 4km/kWh대까지 떨어지기도 합니다. 전비가 낮아지면 같은 완속 요금이라도 100km 비용이 올라가므로, 계기판 실측 전비를 넣어 다시 계산해보는 것이 정확합니다.</p>
+
+    <h2>월 1,500km 타면 연간 얼마나 아낄까</h2>
+
+    <p>한 달 주행거리를 1,500km로 놓고 연간 단위로 환산하면 충전 습관의 차이가 훨씬 크게 벌어집니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>월 연료비</th>
+            <th>연간 연료비</th>
+            <th>휘발유차 대비 연간 절감액</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>전기차 - 완속 위주</td>
+            <td class="rate">88,290원</td>
+            <td class="rate">1,059,480원</td>
+            <td class="rate">1,955,520원</td>
+          </tr>
+          <tr>
+            <td>전기차 - 민간·비회원 위주</td>
+            <td>150,000원</td>
+            <td>1,800,000원</td>
+            <td>1,215,000원</td>
+          </tr>
+          <tr>
+            <td>휘발유차(연비 12km/L)</td>
+            <td>251,250원</td>
+            <td>3,015,000원</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>완속 위주로 충전하면 연간 약 196만원을 아끼지만, 민간·비회원 급속 위주라면 절감액이 약 122만원으로 줄어듭니다. 두 시나리오의 차이는 연간 74만원입니다. 이 차이를 월로 환산하면 매달 약 6만2천원을 어디서 충전하느냐만으로 벌거나 잃는 셈입니다. 연봉 협상에서 몇만원을 더 받으려 애쓰는 것보다, 완속 충전기 위치 몇 곳을 미리 파악해두는 편이 체감상 더 큰 차이를 만들 수 있습니다.</p>
+
+    <p>충전비뿐 아니라 자동차세도 유종에 따라 차이가 큽니다. 전기차·수소차는 배기량이 없어 <a href="../posts/car-tax-guide.html" style="color:#EF4444;">자동차세가 정액 13만원</a>으로 고정되지만, 배기량 2,000cc 내연차는 연간 약 52만원입니다. 전기차 구매를 아직 저울질 중이라면 <a href="../posts/ev-subsidy-guide.html" style="color:#EF4444;">전기차 보조금 2026 총정리</a>에서 실구매가까지 함께 확인하는 것이 좋고, 내연차와의 유류비 격차를 처음부터 다시 짚어보고 싶다면 <a href="../posts/fuel-cost-guide.html" style="color:#EF4444;">유류비 계산법 2026</a> 글을 참고하면 됩니다.</p>
+
+    <div class="cta-box">
+      <p>배터리 용량과 충전율, 충전 단가를 입력하면 충전비와 내연차 유류비 비교 결과가 바로 나옵니다.</p>
+      <a href="../../calc/auto/ev-charging/" class="cta-btn">전기차 충전비 계산기 바로가기</a>
+    </div>
+    <p style="font-size:13px;color:#6B7280;margin-top:8px;text-align:center">실제 이용하는 충전 사업자의 단가를 직접 입력하면 더 정확한 금액이 나옵니다.</p>
+
+    <h2>자주 묻는 질문</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 전기차 충전비는 정확히 어떻게 계산하나요?</div>
+      <div class="faq-a">충전비는 충전한 전력량(kWh)에 충전 단가(원/kWh)를 곱해 구합니다. 충전 전력량은 배터리 용량 × (목표 충전율 − 현재 충전율) ÷ 100입니다. 예를 들어 77.4kWh 배터리를 10%에서 80%까지 완속(294.3원/kWh)으로 충전하면 전력량은 54.18kWh, 충전비는 약 15,945원입니다. 같은 충전을 초급속(391.9원/kWh)으로 하면 약 21,233원까지 올라갑니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 완속과 급속, 초급속 충전 요금은 얼마나 차이 나나요?</div>
+      <div class="faq-a">2026년 4월 30일 개편된 환경부 공공충전 요금 기준으로 완속(30kW 미만)은 294.3원/kWh, 급속(100kW대)은 약 347원/kWh, 초급속(200kW 이상)은 391.9원/kWh입니다. 완속 대비 급속은 약 18%, 초급속은 약 33% 비쌉니다. 민간 사업자의 비회원 요금은 450~500원/kWh를 넘기도 해서 완속 대비 최대 70%까지 비싸질 수 있습니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 전기차는 어떤 상황에서도 휘발유차보다 저렴한가요?</div>
+      <div class="faq-a">그렇지는 않습니다. 100km 주행 기준으로 완속 충전은 휘발유 대비 약 65% 저렴하지만, 초급속만 이용하면 절감률이 약 53%로 줄고, 민간 비회원 요금으로 충전하면 약 40%까지 떨어집니다. 여전히 휘발유차보다는 저렴하지만, 충전 환경에 따라 절감폭이 최대 25%포인트까지 벌어질 수 있어 완속·회원 요금을 확보하는 것이 중요합니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 월 1,500km를 타면 연간 얼마나 절약되나요?</div>
+      <div class="faq-a">월 1,500km 기준으로 완속 충전 위주라면 연료비는 연 약 105만원(휘발유차는 연 약 302만원)으로 연간 약 196만원을 절약합니다. 하지만 민간 비회원 급속 위주로 충전한다면 연 약 180만원이 들어 절감액이 연 약 122만원으로 줄어듭니다. 두 시나리오의 절감액 차이는 연간 약 74만원에 달하므로, 충전 습관이 실제 절감액을 크게 좌우합니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 배터리를 항상 10~80% 구간만 충전해야 하나요?</div>
+      <div class="faq-a">일상적으로는 그렇게 권장됩니다. 리튬이온 배터리는 0%에 가깝거나 100% 완충 상태가 반복되면 수명이 빨리 줄어듭니다. 또한 급속 충전은 80%를 넘어서면 속도가 크게 느려지므로, 급속은 80%까지만 채우고 나머지는 완속으로 마무리하는 것이 시간과 비용 모두에서 효율적입니다. 장거리 여행처럼 100%가 꼭 필요한 경우에는 예외적으로 완충해도 됩니다.</div>
+    </div>
+
+    <h2>숫자로 정리하면</h2>
+
+    <p>전기차 충전비는 배터리 용량과 충전 비율, 그리고 단가 이 세 숫자의 곱셈입니다. 2026년 4월 30일 요금 개편 이후 완속은 294.3원, 급속은 약 347원, 초급속은 391.9원으로 갈렸고, 민간 비회원 요금까지 포함하면 같은 충전량에도 최대 70%까지 금액 차이가 납니다. 아이오닉5(77.4kWh)를 10→80% 채울 때 완속은 15,945원이지만 민간·비회원은 27,090원까지 올라가고, EV6(58kWh)로 검증해도 완속과 초급속의 비율 차이는 똑같이 약 33%로 나타났습니다.</p>
+
+    <p>가장 중요한 숫자는 이겁니다. 월 1,500km를 타는 전기차 운전자가 완속 위주로 충전하면 휘발유차 대비 연간 약 196만원을 아끼지만, 민간·비회원 급속 위주라면 그 절감액이 약 122만원으로 줄어듭니다. 전기차는 대부분의 상황에서 여전히 저렴하지만, "얼마나 저렴한가"는 결국 어디서 충전하느냐에 달려 있습니다. 아래 계산기에 본인 차량의 배터리 용량과 충전율, 실제 이용하는 충전 단가를 넣어보면 정확한 금액을 바로 확인할 수 있습니다.</p>
+
+  </div>
+</div>
+
+<footer class="site-footer"><p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용입니다.</p></footer>
+
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "환경부 공공충전 요금(2026.04.30 5단계 개편), 무공해차 통합누리집(ev.or.kr) 기준",
+  basisDate: "2026년 기준",
+  referenceOrg: "환경부, 무공해차 통합누리집(ev.or.kr)",
+  lastReviewed: '2026.07.02',
+  disclaimer: "본 내용은 참고용이며 실제 충전비는 차량 전비, 충전 사업자·회원 여부, 충전 시점 요금에 따라 달라집니다. 정확한 요금은 무공해차 통합누리집이나 충전 사업자 앱에서 확인하세요.",
+  relatedCalc: { name: '전기차 충전비 계산기', url: '/calc/auto/ev-charging/' },
+  category: 'auto'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>
