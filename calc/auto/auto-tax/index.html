@@ -317,7 +317,6 @@ function calc(){
   }
   if(regYear>=1990 && regYear<=TAX_YEAR) ageDisp.textContent='차령 '+age+'년'+(disc>0?' · 경감 '+Math.round(disc*100)+'%':' · 경감 없음');
   else ageDisp.textContent='';
-  else ageDisp.textContent='';
 
   res.classList.add('show');
   const tax=Math.round(base*(1-disc));
