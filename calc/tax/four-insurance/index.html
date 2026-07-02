@@ -483,7 +483,10 @@ function calculate() {
 
   // 사용자 동일 (산재 제외)
   const employerTotal = np + hp + ltc + ei;
-  const combined = workerTotal + employerTotal;
+  // 합산은 화면에 표시되는(반올림된) 근로자·사용자 부담액의 합과 일치시킨다
+  const workerWon   = Math.round(workerTotal * 10000);
+  const employerWon = Math.round(employerTotal * 10000);
+  const combinedWon = workerWon + employerWon;
 
   // 표시
   document.getElementById('resTotal').textContent = fmt(workerTotal);
@@ -501,7 +504,7 @@ function calculate() {
   document.getElementById('eEi').textContent  = fmtVal(ei);
   document.getElementById('eTotal').textContent = fmtVal(employerTotal);
 
-  document.getElementById('resCombined').textContent = fmtVal(combined);
+  document.getElementById('resCombined').textContent = combinedWon.toLocaleString() + '원';
 
   card.style.display = 'block';
 }
