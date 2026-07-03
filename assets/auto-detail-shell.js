@@ -6,7 +6,7 @@
       key:'auto-loan',
       quick:['자동차 할부는 원리금균등 방식이라 매월 같은 금액(원금+이자)을 납부합니다.','선수금(계약금)을 늘리면 대출 원금이 줄어 총 이자가 감소합니다.','할부 금리는 신용도·차종·할부사에 따라 달라지므로 견적서의 실제 금리를 입력하세요.','잔존가치(유예금)를 설정하는 유예할부는 월 납입액이 낮지만 만기에 목돈이 필요합니다.'],
       related:[['/calc/auto/auto-tax/','자동차세','🚙'],['/calc/finance/loan-repayment/','대출 상환','🏠'],['/calc/realestate/dsr/','대출한도 (DSR)','🔢']],
-      guides:[]
+      guides:[['/blog/posts/auto-loan-guide.html','자동차 할부 계산법 2026 - 월 납입금·총 이자 공식과 선수금·유예할부 비교']]
     },
     '/calc/auto/auto-tax/': {
       key:'auto-tax',

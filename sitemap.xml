@@ -7,6 +7,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.jptcalc.kr/blog/posts/auto-loan-guide.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.jptcalc.kr/blog/posts/ev-charging-guide.html</loc>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -116,13 +122,13 @@
   </url>
   <url>
     <loc>https://www.jptcalc.kr/blog/posts/military-salary-guide.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.jptcalc.kr/blog/posts/jangbyeong-savings-guide.html</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

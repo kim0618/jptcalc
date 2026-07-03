@@ -41,9 +41,9 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - **[완료 2026-06-08] 주택연금 신규 계산기 글(pension-welfare)** | housing-pension-guide.html. HF 2026 월지급금 예시표 기준. detail-shell guides + ARTICLE_INFO guides + 본문 CTA 양방향 연결 완료
 - **완료 클러스터: 부동산 비용(realestate)** | 2026-06-21~06-22 완료 | **성과 점검 예정: 2026-07-19** (트리거 B)
   - 허브: holding-tax-guide / 위성: ① registry-cost-guide(등기비용·06-22) · ② property-purchase-costs-guide(매매 부대비용·06-26)
-- **진행 중 클러스터: 자동차(auto)** | 2026-06-28 시작 (자동차 카테고리 블로그 0편이던 미개척 영역 진입) | **성과 점검 예정: 2026-07-26** (트리거 B)
-  - 허브: car-tax-guide(자동차세·06-28, auto-tax 고아 해소) / 위성: ① car-acquisition-tax-guide(자동차 취득세·06-29, acquisition-tax+used-car-tax 고아 동시 해소) · ② ev-subsidy-guide(전기차 보조금·06-30) · ③ fuel-cost-guide(유류비·07-01, fuel-cost 고아 해소) · ④ ev-charging-guide(전기차 충전비·07-02) / **남은 위성(미사용)**: ⑤ auto-loan(자동차 할부, 남은 유일 auto orphan) 1편. 이거 쓰면 자동차 클러스터 소진 → 아래 참고대로 고아 계산기 직행.
-- **참고 (고아 계산기 직행 규칙, 2026-07-02)**: 자동차 클러스터 소진(auto-loan 작성) 후에는 **네이버 큐 리필을 기다리지 말고 곧장 우선순위 ③(고아 계산기)로 간다.** 실제 목록은 하드코딩하지 말고 `node scripts/find-orphan-calcs.mjs`로 그때그때 받는다(현재 9종: baby 4[ovulation·due-date·baby-months·parental-leave-pay]·auto-loan·stock-average·cat-age·food-amount·lunar-calendar). **baby 4종 우선**(2026-07-02 제휴 배너 배치 완료라 가이드 유입이 바로 수익화됨). 고아 소진 후 네이버 큐로 복귀.
+- **완료 클러스터: 자동차(auto)** | 2026-06-28~07-03 완료 (자동차 카테고리 블로그 0편이던 미개척 영역 진입, 6편으로 소진) | **성과 점검 예정: 2026-07-26** (트리거 B)
+  - 허브: car-tax-guide(자동차세·06-28, auto-tax 고아 해소) / 위성: ① car-acquisition-tax-guide(자동차 취득세·06-29, acquisition-tax+used-car-tax 고아 동시 해소) · ② ev-subsidy-guide(전기차 보조금·06-30) · ③ fuel-cost-guide(유류비·07-01, fuel-cost 고아 해소) · ④ ev-charging-guide(전기차 충전비·07-02) · ⑤ auto-loan-guide(자동차 할부·07-03, auto-loan 고아 해소, 마지막 위성)
+- **참고 (고아 계산기 직행 규칙, 2026-07-03)**: 자동차 클러스터 소진 완료(auto-loan-guide 작성) → **네이버 큐 리필을 기다리지 말고 곧장 우선순위 ③(고아 계산기)로 간다.** 실제 목록은 하드코딩하지 말고 `node scripts/find-orphan-calcs.mjs`로 그때그때 받는다(현재 8종: baby 4[ovulation·due-date·baby-months·parental-leave-pay]·stock-average·cat-age·food-amount·lunar-calendar). **baby 4종 우선**(2026-07-02 제휴 배너 배치 완료라 가이드 유입이 바로 수익화됨). 고아 소진 후 네이버 큐로 복귀.
 
 ## 네이버 타겟 주제 큐
 
