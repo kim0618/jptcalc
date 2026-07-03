@@ -317,7 +317,7 @@ function calcAnnualTax(annual_man, dep_count) {
 
 function calcMonthly(annual_man, dep_count) {
   const monthly = annual_man * 10000 / 12;
-  const pensionBase = monthly > 0 ? Math.min(Math.max(monthly, 390000), 6370000) : 0;
+  const pensionBase = monthly > 0 ? Math.min(Math.max(monthly, 410000), 6590000) : 0;
   const pension = pensionBase * 0.0475;
   const health = monthly * 0.03595;
   const ltc = health * 0.1314;

@@ -179,7 +179,7 @@
       <p>연봉 인상 협상 전, 이 세 가지를 놓치면 기대치와 실제 실수령이 크게 다를 수 있습니다.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>비과세 항목 분리</strong><span>식대(월 최대 20만원)·교통비 등 비과세 수당은 연봉 계산 시 제외됩니다. 회사마다 비과세 규모가 달라 같은 연봉이라도 실수령이 달라질 수 있습니다.</span></div>
-        <div class="guide-box"><strong>4대보험 상한 기준</strong><span>국민연금 부과 상한선은 월 637만원(2026년)입니다. 이 이상 구간에서는 연봉이 올라도 연금 공제액이 늘지 않아, 고연봉자의 실수령 증가폭이 상대적으로 커집니다.</span></div>
+        <div class="guide-box"><strong>4대보험 상한 기준</strong><span>국민연금 부과 상한선은 월 659만원(2026년)입니다. 이 이상 구간에서는 연봉이 올라도 연금 공제액이 늘지 않아, 고연봉자의 실수령 증가폭이 상대적으로 커집니다.</span></div>
         <div class="guide-box"><strong>물가상승률 비교</strong><span>2025년 소비자물가 상승률은 약 2.3%였습니다. 인상률이 이보다 낮으면 실질 구매력이 줄어드는 것으로, 단순 인상 퍼센트만 보지 말고 물가와 비교하는 것이 중요합니다.</span></div>
       </div>
     </div>
@@ -299,7 +299,7 @@ function calcAnnualTax(annual_man, dep_count) {
 
 function calcMonthly(annual_man, dep_count) {
   const monthly = annual_man * 10000 / 12;
-  const pensionBase = monthly > 0 ? Math.min(Math.max(monthly, 390000), 6370000) : 0;
+  const pensionBase = monthly > 0 ? Math.min(Math.max(monthly, 410000), 6590000) : 0;
   const pension = pensionBase * 0.0475;
   const health = monthly * 0.03595;
   const ltc = health * 0.1314;

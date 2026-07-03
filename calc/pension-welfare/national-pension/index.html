@@ -164,7 +164,7 @@
         <span class="unit">만원</span>
       </div>
       <div class="converted" id="incomeConverted"></div>
-      <div class="field-hint">건강보험·국민연금 납부 기준 소득. 상한 637만원, 하한 40만원(2025.7~2026.6 기준).</div>
+      <div class="field-hint">건강보험·국민연금 납부 기준 소득. 상한 659만원, 하한 41만원(2026.7~2027.6 기준).</div>
     </div>
 
     <div class="field">
@@ -217,7 +217,7 @@
     </div>
     <div class="result-row">
       <span class="result-label">전체 가입자 평균 (A값)</span>
-      <span class="result-value">3,089,062원 <span class="badge-year">2025년</span></span>
+      <span class="result-value">3,193,511원 <span class="badge-year">2026년</span></span>
     </div>
     <div class="result-row">
       <span class="result-label">소득대체율</span>
@@ -251,7 +251,7 @@
     </div>
 
     <div class="warning-box">
-      &#9888; 이 결과는 2025년 A값(3,089,062원) · 2026년 소득대체율(43%, 2025년 연금개혁 반영) · 2025.7~2026.6 소득 상하한(637만/40만)을 적용한 <strong>참고용 간이 추정치</strong>입니다. 실제 수령액은 가입 연도별 소득대체율 가중평균·재평가율, 부양가족 연금 등에 따라 달라집니다.
+      &#9888; 이 결과는 2026년 A값(3,193,511원) · 2026년 소득대체율(43%, 2025년 연금개혁 반영) · 2026.7~2027.6 소득 상하한(659만/41만)을 적용한 <strong>참고용 간이 추정치</strong>입니다. 실제 수령액은 가입 연도별 소득대체율 가중평균·재평가율, 부양가족 연금 등에 따라 달라집니다.
     </div>
     <div class="official-link-box">
       <a href="https://www.nps.or.kr/jsppage/etc/pension_est/pension_est.jsp" target="_blank" rel="noopener" class="official-link primary">&#127981; 국민연금공단 예상연금 조회 ↗</a>
@@ -323,7 +323,7 @@
       <h3>월 평균 기준소득월액</h3>
       <ul>
         <li>국민연금 보험료 납부 기준이 되는 소득으로, 실수령액과 다를 수 있습니다.</li>
-        <li>2025.7~2026.6 기준 상한액은 637만원, 하한액은 40만원입니다 (2026.7부터 659만원·41만원 예정).</li>
+        <li>2026.7~2027.6 기준 상한액은 659만원, 하한액은 41만원입니다 (매년 7월 A값 변동률 반영 조정).</li>
         <li>가입 기간 전체 평균을 입력하면 더 정확한 추정이 가능합니다.</li>
       </ul>
     </div>
@@ -349,12 +349,12 @@
         <h3>소득대체율 43%는 무슨 의미인가요?</h3>
         <p>40년 가입 기준으로 가입 기간 평균 소득의 43%를 목표 연금액으로 설정한다는 의미입니다. 2025년 국민연금법 개정으로 2026년 1월 1일부터 41.5%에서 43%로 1.5%p 인상되었습니다. 보험료율도 같은 시점부터 매년 0.5%p씩 단계 인상되어 2033년 13%에 도달합니다.</p>
       </div>
-      <div class="update-note">국민연금법 제51조 기준, 2025년 A값(3,089,062원) · 2026년 소득대체율(43%, 2025년 연금개혁 반영) 적용 간이 계산기입니다. 정확한 예상 연금액은 국민연금공단(nps.or.kr)에서 확인하세요.</div>
+      <div class="update-note">국민연금법 제51조 기준, 2026년 A값(3,193,511원) · 2026년 소득대체율(43%, 2025년 연금개혁 반영) 적용 간이 계산기입니다. 정확한 예상 연금액은 국민연금공단(nps.or.kr)에서 확인하세요.</div>
     </div>
   </div>
   <script>
   window.TRUST_BLOCK_CONFIG = {
-    standard: '국민연금법 제51조(노령연금액), 2025년 기준소득월액 A값(3,089,062원), 2026년 소득대체율(43%, 2025년 연금개혁 반영)',
+    standard: '국민연금법 제51조(노령연금액), 2026년 기준소득월액 A값(3,193,511원), 2026년 소득대체율(43%, 2025년 연금개혁 반영)',
     appliedFrom: '2026년 기준 간이 계산',
     exceptions: [
       '이 계산기는 간이 추정치로, 실제 수령액과 차이가 있을 수 있습니다',
@@ -407,10 +407,10 @@
 </footer>
 
 <script>
-const A_VALUE = 3089062;
+const A_VALUE = 3193511;
 const REPLACE_RATE = 0.43;
-const INCOME_MIN = 400000;
-const INCOME_MAX = 6370000;
+const INCOME_MIN = 410000;
+const INCOME_MAX = 6590000;
 
 let receiptType = 'normal';
 let earlyYears = 1;
@@ -485,8 +485,8 @@ function calculate() {
   }
 
   const income = Math.max(INCOME_MIN, Math.min(INCOME_MAX, rawIncome));
-  const capNote = rawIncome > INCOME_MAX ? ' (상한 637만원 적용)'
-                : rawIncome < INCOME_MIN ? ' (하한 40만원 적용)' : '';
+  const capNote = rawIncome > INCOME_MAX ? ' (상한 659만원 적용)'
+                : rawIncome < INCOME_MIN ? ' (하한 41만원 적용)' : '';
 
   const base = calcBase(totalMonths, income);
   const earlyBase = Math.round(base * (1 - 0.06 * 5));
@@ -524,7 +524,7 @@ function calculate() {
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
-  reviewBasis: '국민연금법 제51조, 2025년 A값·2026년 소득대체율 기준',
+  reviewBasis: '국민연금법 제51조, 2026년 A값·2026년 소득대체율 기준',
   basisDate: '2026년 기준',
   referenceOrg: '국민연금공단',
   lastReviewed: '2026.04.22',
