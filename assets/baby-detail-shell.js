@@ -17,7 +17,7 @@
       key:'ovulation',
       quick:['배란일은 다음 생리 예정일에서 14일을 뺀 날로 추정합니다(황체기 14일 고정).','가임기는 배란 예상일 5일 전부터 배란 다음날까지 약 6일간입니다.','생리주기가 28일이면 생리 시작 후 약 14일째가 배란일입니다.','주기가 불규칙하면 배란일 오차가 커지므로 배란테스트기·기초체온과 함께 확인하세요.'],
       related:[['/calc/baby/due-date/','출산예정일·임신주수','🤰'],['/calc/baby/baby-months/','아기 개월수','👶'],['/calc/date/date-add/','날짜 더하기/빼기','➕']],
-      guides:[]
+      guides:[['/blog/posts/ovulation-guide.html','배란일 계산법 2026 - 가임기·임신 확률 높은 날 정확히 찾는 법']]
     },
     '/calc/baby/due-date/': {
       key:'due-date',
