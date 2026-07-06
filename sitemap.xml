@@ -7,6 +7,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.jptcalc.kr/blog/posts/stock-average-price-guide.html</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.jptcalc.kr/blog/posts/ovulation-guide.html</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -338,13 +344,13 @@
   </url>
   <url>
     <loc>https://www.jptcalc.kr/blog/posts/national-pension-payment-exemption.html</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.jptcalc.kr/blog/posts/national-pension-additional-payment.html</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

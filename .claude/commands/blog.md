@@ -33,10 +33,10 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 
 진행 중인 클러스터가 있으면 **그 위성 주제를 큐에서 먼저 뽑는다.** 클러스터가 없거나 소진되면 Tier 1 승자 중 하나를 새 허브로 삼아 클러스터를 시작한다. (단, 위 "📌 다음 1편 우선 지정"이 있으면 그것이 최우선.)
 
-- **완료 클러스터: 연봉(salary)** | 2026-06-01~06-03 완료 | **성과 점검 예정: 2026-07-06** (트리거 B 발동)
+- **완료 클러스터: 연봉(salary)** | 2026-06-01~06-03 완료 | **성과점검 완료 2026-07-06: 먹힘** - GA4 34일 뷰 76~126(전 위성 고르게 유입)·체류 118~211초, SC 클릭은 0(구글붕괴 여파, 네이버 유입으로 해석). 위성 추가 후보로 남겨두되 현재 우선순위는 고아 계산기
   - 허브: raise-rate-industry / 위성: raise-or-quit-guide · hourly-wage-guide · four-insurance-vs-33-comparison
 - **완료 클러스터: 건강(health)** | 허브: weight-by-height-2026(2026-06-03) / 위성: bmi-guide(기존)
-- **완료 클러스터: 국민연금(pension-welfare)** | 2026-06-05~06-08 완료 | **성과 점검 예정: 2026-07-06** (트리거 B)
+- **완료 클러스터: 국민연금(pension-welfare)** | 2026-06-05~06-08 완료 | **성과점검 완료 2026-07-06: 미흡** - GA4 34일 뷰 허브 7·조기수령 10·납부예외 10(체류 8초, thin 의심)·추납만 47로 편차 큼. 추가 위성 보류, 다음 연금 콘텐츠는 신규 클러스터로 재검토
   - 허브: national-pension-40years(06-05) / 위성: national-pension-early-receipt(조기수령·06-08)·national-pension-payment-exemption(납부예외·06-08)·national-pension-additional-payment(추납·06-08) | 임의가입은 national-pension-voluntary.html로 기커버
 - **[완료 2026-06-08] 주택연금 신규 계산기 글(pension-welfare)** | housing-pension-guide.html. HF 2026 월지급금 예시표 기준. detail-shell guides + ARTICLE_INFO guides + 본문 CTA 양방향 연결 완료
 - **완료 클러스터: 부동산 비용(realestate)** | 2026-06-21~06-22 완료 | **성과 점검 예정: 2026-07-19** (트리거 B)

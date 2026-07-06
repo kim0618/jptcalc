@@ -5,9 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Thu, 02 Jul 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
 
+    <item>
+      <title>주식 평단가 계산법 2026 - 물타기 후 새 평단·목표 평단 역산까지</title>
+      <link>https://www.jptcalc.kr/blog/posts/stock-average-price-guide.html</link>
+      <description>평단가 공식은 (기존수량×기존평단+추가수량×추가단가)÷총수량. 물타기 후 새 평단가, 목표 평단까지 필요한 매수량 역산, 2026년 증권거래세 0.20% 반영 실제 손익분기가를 인물 예시로 계산합니다.</description>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/stock-average-price-guide.html</guid>
+    </item>
     <item>
       <title>배란일 계산법 2026 - 가임기·임신 확률 높은 날 정확히 찾는 법</title>
       <link>https://www.jptcalc.kr/blog/posts/ovulation-guide.html</link>

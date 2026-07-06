@@ -43,6 +43,12 @@
       quick:['정부기여금은 유형에 따라 납입액의 6%(일반형) 또는 12%(우대형)입니다.','월 납입한도는 50만원, 만기는 3년(36개월)이며 이자소득세 15.4%가 비과세됩니다.','우대형은 개인소득 3,600만원 이하·중위 150% 이하, 또는 중소기업 재직·신규취업·소상공인이 대상입니다.','청년도약계좌에서 갈아탈 때는 미래적금 가입신청·계좌개설을 먼저 한 뒤 도약계좌를 특별중도해지해야 합니다.'],
       related:[['/calc/finance/youth-leap-account/','청년도약계좌','🚀'],['/calc/finance/savings/','적금 만기','📈'],['/calc/finance/jangbyeong-savings/','장병내일준비적금','🎖️']],
       guides:[['/blog/posts/youth-future-savings-guide.html','청년미래적금 vs 청년도약계좌 2026 - 갈아타기 조건·일반형 우대형 차이']]
+    },
+    '/calc/finance/stock-average/': {
+      key:'stock-average',
+      quick:['새 평단가는 (기존수량×기존평단+추가수량×추가단가)÷총수량으로 계산합니다.','목표 평단가까지 필요한 수량은 추가 매수 단가가 목표 평단보다 낮아야만 역산됩니다.','물타기로 평단가가 낮아져도 보유 수량이 늘어난 만큼 추가 하락 시 손실 절대금액은 커질 수 있습니다.','2026년부터 증권거래세가 코스피·코스닥 모두 매도금액의 0.20%로 조정돼 실제 손익분기가는 평단가보다 소폭 높습니다.'],
+      related:[['/calc/finance/investment/','투자 수익률','📉'],['/calc/finance/compound/','복리 계산','📊'],['/calc/finance/deposit/','예금 이자','💰']],
+      guides:[['/blog/posts/stock-average-price-guide.html','주식 평단가 계산법 2026 - 물타기 후 새 평단·목표 평단 역산까지']]
     }
   };
   let cfg=pages[path];
