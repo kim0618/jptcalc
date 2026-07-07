@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>음력 양력 변환기 완벽 정리 - 생일·제사 날짜, 윤달·간지까지 헷갈리지 않는 법 (2026) | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="음력 생일을 양력으로 바꾸는 법, 윤달 낀 해 생일 챙기는 법, 설날·추석 매년 날짜가 다른 이유, 간지·띠 계산법까지 2026년 기준으로 정리했습니다. KASI 만세력 기준 변환기로 바로 확인하세요." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="음력 양력 변환기 완벽 정리 - 생일·제사 날짜, 윤달·간지까지 헷갈리지 않는 법 (2026)" />
+  <meta property="og:description" content="음력 생일을 양력으로 바꾸는 법, 윤달 낀 해 생일 챙기는 법, 설날·추석 매년 날짜가 다른 이유, 간지·띠 계산법까지 2026년 기준으로 정리했습니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/lunar-calendar-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/lunar-calendar-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#14B8A6;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(20,184,166,0.15);color:#14B8A6;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:24px 0 10px}
+    .post-body p{margin-bottom:14px}
+    .post-body ul{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#14B8A6;text-decoration:none}
+    .highlight-box{background:rgba(20,184,166,0.08);border-left:4px solid #14B8A6;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#0F766E;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    td.rate{color:#14B8A6;font-weight:700}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#14B8A6;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .faq-item{border:1px solid #E5E7EB;border-radius:10px;margin:12px 0}
+    .faq-q{font-weight:700;padding:14px 18px;font-size:15px;cursor:pointer;background:#F9FAFB;border-radius:10px}
+    .faq-a{padding:14px 18px;font-size:14px;color:#4B5563;line-height:1.75;border-top:1px solid #E5E7EB}
+    .adfit-slot{text-align:center;margin:28px 0}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "음력 양력 변환기 완벽 정리 - 생일·제사 날짜, 윤달·간지까지 헷갈리지 않는 법 (2026)",
+  "description": "음력 생일을 양력으로 바꾸는 법, 윤달 낀 해 생일 챙기는 법, 설날·추석 매년 날짜가 다른 이유, 간지·띠 계산법까지 2026년 기준으로 정리했습니다. KASI 만세력 기준 변환기로 바로 확인하세요.",
+  "author": {"@type": "Person", "name": "Jay Kim", "url": "https://www.jptcalc.kr/about.html", "jobTitle": "제이퍼 계산기 운영자"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr",
+    "logo": {"@type": "ImageObject", "url": "https://www.jptcalc.kr/android-chrome-512x512.png"}
+  },
+  "datePublished": "2026-07-07",
+  "dateModified": "2026-07-07",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.jptcalc.kr/blog/posts/lunar-calendar-guide.html"},
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "생활·도구",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "음력 생일을 매년 양력으로 어떻게 확인하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "음력 생일은 태어난 음력 월·일만 고정이고 연도는 매년 올해로 바꿔서 변환하면 됩니다. 예를 들어 음력 9월 12일생이라면, 변환기에서 음력 2026년 9월 12일을 넣으면 양력 2026년 10월 22일이 나옵니다. 다음 해 생일을 알고 싶으면 음력 월·일은 그대로 두고 연도만 2027년으로 바꿔 다시 변환하면 됩니다. 음력 1년이 양력보다 짧기 때문에 매년 양력 날짜가 보통 열흘 안팎씩 당겨지다가, 윤달이 낀 해에는 반대로 한 달 가까이 밀립니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "윤달에 태어났으면 생일을 어떻게 챙기나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "그 해에 실제로 윤달이 있으면 윤달 기준으로 변환하고, 윤달이 없는 해에는 평달(같은 월의 일반 달) 기준으로 챙기는 것이 일반적입니다. 예를 들어 1998년 윤5월 20일생은 그 해 양력으로 7월 13일이었지만, 윤달이 없는 2026년에는 음력 5월 20일(평달)을 기준으로 변환한 양력 7월 4일에 생일을 챙기면 됩니다. 변환기에서 윤달 체크박스는 실제로 그 연·월에 윤달이 있을 때만 반영되고, 없는 해에 체크해도 평달 기준으로 계산됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "간지(병오년)와 띠는 어떻게 정해지나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "간지는 10천간(갑을병정무기경신임계)과 12지지(자축인묘진사오미신유술해)를 조합한 60갑자로, 음력 연도에 따라 정해집니다. 띠는 12지지에 대응하는 동물이며 2026년은 병오년으로 말띠입니다. 다만 양력 1~2월 초에 태어났다면 그 시점의 음력은 아직 전년도에 속할 수 있어 띠가 하나 앞당겨질 수 있습니다. 예를 들어 2026년 양력 2월 10일생은 설날(2월 17일) 이전이라 음력으로는 2025년 을사년(뱀띠)에 속합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "이 변환기는 어떤 기준으로 계산하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "한국천문연구원(KASI) 만세력 데이터를 기준으로 계산합니다. 변환 가능 범위는 양력 1900년부터 2050년까지로, 생일·제사·기념일 변환에 충분합니다. 음력은 한국 표준시(KST)를 기준으로 하며, 중국 등 다른 시간대의 음력과는 드물게 하루 차이가 날 수 있습니다. 매년 새로 나오는 만세력이나 사주 앱과 비교했을 때 하루 이상 차이가 난다면 표준시 기준이 다른 것은 아닌지 먼저 확인하는 것이 좋습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "설날과 추석은 왜 매년 양력 날짜가 다른가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "설날은 음력 1월 1일, 추석은 음력 8월 15일로 날짜 자체는 고정이지만, 음력 1년이 양력보다 약 11일 짧기 때문에 그 고정된 음력 날짜에 대응하는 양력 날짜가 매년 밀립니다. 2026년 설날은 양력 2월 17일, 추석은 9월 25일입니다. 그런데 이렇게 계속 당겨지기만 하면 명절이 여름 한복판까지 밀려버리기 때문에, 2~3년마다 윤달을 끼워 넣어 다시 겨울 쪽으로 되돌립니다. 그래서 설날은 대략 1월 21일에서 2월 20일 사이, 추석은 9월 초에서 10월 초 사이를 오갑니다."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+  {"@type":"ListItem","position":2,"name":"블로그","item":"https://www.jptcalc.kr/blog/"},
+  {"@type":"ListItem","position":3,"name":"생활·도구","item":"https://www.jptcalc.kr/blog/?cat=생활·도구"},
+  {"@type":"ListItem","position":4,"name":"음력 양력 변환기 완벽 정리 2026","item":"https://www.jptcalc.kr/blog/posts/lunar-calendar-guide.html"}
+]}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo"><div class="logo-icon"><img src="../../assets/logo.svg" alt="로고" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+<div class="post-wrap">
+  <span class="post-tag">생활·도구</span>
+  <h1>음력 양력 변환기 완벽 정리 - 생일·제사 날짜, 윤달·간지까지 헷갈리지 않는 법 (2026)</h1>
+  <div class="post-meta"><span>📅 2026.07.07</span><span>·</span><span>16분 읽기</span></div>
+  <div class="post-body">
+
+    <p>추석을 앞두고 어머니가 "올해 추석이 며칠이니?" 물으실 때, 음력 8월 15일이라는 건 알아도 양력 날짜는 매번 다시 찾아봐야 합니다. 할머니 생신이 음력 9월 12일이라는 것도 온 가족이 알고 있는데, 정작 그게 올해 양력으로 며칠인지는 해마다 헷갈립니다. 음력은 매년 양력 날짜가 바뀌기 때문입니다.</p>
+    <p>문제는 단순히 날짜가 조금씩 밀리는 정도가 아니라는 점입니다. 어떤 해는 열흘 이상 당겨지고, 윤달이 낀 해는 반대로 한 달 가까이 밀립니다. 심지어 음력 12월 생일인 경우 다음 해 1월로 넘어가버리는 일도 생깁니다. 이 글에서는 음력 생일을 올해 양력으로 바꾸는 법부터, 윤달 낀 해 처리법, 설날·추석이 매번 다른 이유, 간지·띠 계산까지 실제 숫자로 검산하며 정리합니다.</p>
+
+    <div class="highlight-box"><p>이 글이 필요한 분: 부모님·조부모님 음력 생신을 매년 다시 찾아야 하는 분 / 제사·차례 날짜를 양력으로 미리 잡아둬야 하는 분 / 윤달에 태어나 생일 계산이 헷갈리는 분 / 내 띠가 정확히 무엇인지, 양력 1~2월생이라 헷갈리는 분</p></div>
+
+    <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+      <li>음력 1년이 양력보다 약 11일 짧아서 생기는 날짜 밀림 현상의 원리</li>
+      <li>음력 9월 12일생이 2026년엔 양력 몇 일인지 실제 검산 사례</li>
+      <li>윤달(19년에 7번)에 태어난 사람이 윤달 없는 해에 생일 챙기는 법</li>
+      <li>2026년 설날(2월 17일)·추석(9월 25일) 정확한 양력 날짜와 계산 원리</li>
+      <li>음력 12월 생일이 다음 해 1월로 넘어갈 수 있다는 반전 사례</li>
+      <li>양력 1~2월생의 간지·띠가 헷갈리는 이유와 정확히 확인하는 법</li>
+    </ul>
+
+    <div class="adfit-slot">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>음력과 양력, 근본적으로 기준이 다른 두 달력</h2>
+    <p>양력(태양력)은 지구가 태양을 한 바퀴 도는 주기(약 365.24일)를 기준으로 만든 달력입니다. 반면 음력(태음태양력)은 달이 차고 기우는 주기(약 29.5일)를 기준으로 하되, 계절과 어긋나지 않도록 태양의 움직임도 함께 반영합니다. 이 차이 때문에 음력 한 달은 29일(작은달) 또는 30일(큰달)이고, 음력 1년(12개월)은 약 354일로 양력보다 11일 정도 짧습니다.</p>
+    <p>한국천문연구원(KASI)이 공개한 음양력 변환 계산 자료에 따르면, 이 11일의 차이가 매년 쌓이면 3년 만에 한 달 가까이 벌어집니다. 그대로 두면 음력 명절이 계절을 벗어나 여름 한복판까지 밀려버리기 때문에, 2~3년에 한 번씩 윤달을 끼워 넣어 계절과 다시 맞춥니다.</p>
+
+    <div class="table-wrap"><table>
+      <tr><th>구분</th><th>기준</th><th>평년 1년 길이</th><th>윤달 낀 해</th></tr>
+      <tr><td>양력(태양력)</td><td>지구의 공전</td><td class="rate">365일 (윤년 366일)</td><td>해당 없음</td></tr>
+      <tr><td>음력(태음태양력)</td><td>달의 삭망 + 윤달 보정</td><td class="rate">약 354일</td><td class="rate">약 384일 (13개월)</td></tr>
+    </table></div>
+
+    <div style="margin:24px 0;overflow-x:auto">
+    <svg role="img" width="100%" viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg">
+      <title>양력 1년과 음력 1년(평년·윤달 낀 해) 일수 비교</title>
+      <rect width="680" height="200" rx="12" fill="#F9FAFB"/>
+      <text x="24" y="34" font-size="13" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">1년 일수 비교 - 왜 음력 날짜가 매년 바뀌는가</text>
+      <text x="24" y="74" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">양력 1년</text>
+      <rect x="110" y="60" width="365" height="18" rx="4" fill="#9CA3AF" opacity="0.8"/>
+      <text x="484" y="74" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">365일</text>
+      <text x="24" y="114" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">음력 평년</text>
+      <rect x="110" y="100" width="354" height="18" rx="4" fill="#14B8A6" opacity="0.85"/>
+      <text x="473" y="114" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">약 354일 (-11일)</text>
+      <text x="24" y="154" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">음력 윤달 해</text>
+      <rect x="110" y="140" width="384" height="18" rx="4" fill="#0EA5E9" opacity="0.8"/>
+      <text x="503" y="154" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">약 384일 (+30일)</text>
+      <text x="24" y="186" font-size="11" fill="#9CA3AF" font-family="Pretendard,sans-serif">※ 음력 평년은 양력보다 11일 짧아 날짜가 당겨지고, 윤달 해는 한 달치가 더해져 크게 밀립니다.</text>
+    </svg>
+    </div>
+
+    <h3>윤달이란 무엇이고 언제 오는가</h3>
+    <p>윤달은 이 11일의 오차를 메우려고 19년에 7번 꼴로 끼워 넣는 한 달입니다. 윤달이 든 해는 같은 음력 월이 두 번 반복되며, 두 번째 반복이 윤달입니다. 예를 들어 2004년에는 윤2월이 있어서, 음력 2월 15일(평달)은 양력 2004년 3월 5일이었지만 같은 음력 2월 15일이라도 윤달(윤2월 15일)로 지정하면 양력 2004년 4월 4일로, 꼭 한 달 차이가 납니다.</p>
+
+    <div class="table-wrap"><table>
+      <tr><th>윤달이 있던 해</th><th>윤달</th><th>양력 기간(대략)</th></tr>
+      <tr><td>2017년</td><td>윤5월</td><td>2017-06-24 ~ 07-22</td></tr>
+      <tr><td>2020년</td><td>윤4월</td><td>2020-05-23 ~ 06-20</td></tr>
+      <tr><td>2023년</td><td>윤2월</td><td>2023-03-22 ~ 04-19</td></tr>
+      <tr><td>2025년</td><td>윤6월</td><td>2025-07-25 ~ 08-22</td></tr>
+    </table></div>
+
+    <p style="margin:1.2em 0">음력·양력 날짜와 윤달 여부만 넣으면 간지·띠까지 한 번에: <a href="../../calc/tools/lunar-calendar/" style="color:#14B8A6;font-weight:600;">음력 양력 변환기 → 지금 바로 확인</a></p>
+
+    <h2>음력 생일, 올해 양력으로 바꾸는 실제 계산 사례</h2>
+    <p>음력 생일을 양력으로 바꿀 때 핵심은 간단합니다. 태어난 음력 월·일은 그대로 두고, 연도만 확인하고 싶은 해로 바꿔서 변환하면 됩니다. 아래 네 가지 시나리오로 실제 숫자를 검산해보겠습니다.</p>
+
+    <h3>시나리오 1 - 며느리 박지현씨, 시어머니 음력 9월 12일 생신을 2026년 양력으로</h3>
+    <p>박지현씨의 시어머니는 음력 9월 12일생입니다. 2026년 생신이 양력으로 며칠인지 확인하려면, 음력 → 양력 모드에서 음력 2026년 9월 12일을 넣습니다. 결과는 <strong>양력 2026년 10월 22일</strong>, 간지로는 병오년입니다.</p>
+    <p>검산해보면, 음력 9월 12일은 매년 고정이지만 그 해의 음력-양력 오차에 따라 양력 날짜가 계속 바뀝니다. 박지현씨가 작년(2025년) 기준으로 알던 날짜를 그대로 올해도 쓰면 실제 생신과 며칠 어긋날 수 있으므로, 매년 새로 변환해야 실수가 없습니다.</p>
+
+    <h3>시나리오 2 - 윤달에 태어난 최성훈씨, 윤달 없는 해엔 어떻게 챙기나</h3>
+    <p>최성훈씨는 1998년 윤5월 20일생입니다. 그 해 양력으로는 7월 13일이었습니다. 그런데 2026년에는 윤달이 없습니다(2025년 윤6월 이후 다음 윤달은 몇 년 뒤입니다). 이럴 땐 평달, 즉 음력 5월 20일 기준으로 변환합니다.</p>
+    <p>음력 2026년 5월 20일을 변환하면 <strong>양력 2026년 7월 4일</strong>이 나옵니다. 검산: 변환기에서 윤달 체크박스를 선택해도 그 해에 실제 윤달이 없으면 평달로 계산되므로, 최성훈씨는 별도 조작 없이 음력 5월 20일만 넣으면 됩니다. 다만 실제로 윤5월이 돌아오는 해(다음은 2028년)가 오면 그때는 윤달 체크박스를 선택해야 정확합니다.</p>
+
+    <h3>시나리오 3 - 음력 12월생 김민서씨, 생일이 다음 해 1월로 넘어가는 경우</h3>
+    <p>김민서씨는 음력 12월 3일생입니다. 2026년 기준으로 변환하면 놀랍게도 <strong>양력 2027년 1월 10일</strong>이 나옵니다. 같은 해 12월이 아니라 해가 바뀐 다음 해 1월로 넘어간 것입니다.</p>
+    <p>검산: 음력 12월은 한 해의 마지막 달인데, 그 해 양력-음력 오차가 커서 양력으로 환산하면 다음 해 초로 밀리는 경우가 실제로 발생합니다. 이 차이를 놓치면 "올해 12월에 생일 챙겨야지" 하고 넘어갔다가 실제로는 이미 지나버렸거나, 반대로 아직 안 왔는데 챙겼다고 착각하는 일이 생깁니다. 음력 연말·연초 생일은 반드시 그 해의 정확한 변환 결과를 확인해야 합니다.</p>
+
+    <h3>이번 해 12월이라고 생각하기 쉽지만, 실제로는 다음 해로 넘어간다</h3>
+    <p>많은 사람이 "음력 12월 생일이니 당연히 그 해 12월 안에 있겠지"라고 생각합니다. 하지만 위 김민서씨 사례처럼 음력 12월 초·중순 생일도 그 해 음력-양력 오차 크기에 따라 다음 해 1월로 넘어갈 수 있습니다. 이 차이를 몰라 매년 음력 12월이 되면 달력만 보고 "아직 멀었다"고 넘겼다가, 정작 양력으로는 이미 12월 안에 생일이 지나가 버리는 경우도 나옵니다. 특히 연말연시 일정이 몰려 있는 달이라 착각이 잦은 구간입니다. 결론은 하나입니다. 음력 월이 12월이라고 해서 방심하지 말고, 반드시 그 해의 실제 변환 결과를 먼저 확인하는 것이 좋습니다.</p>
+
+    <div class="adfit-slot">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-88xhdLeiIK3V35kb" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>설날·추석이 매년 다른 이유, 2026년 정확한 날짜</h2>
+    <p>설날은 음력 1월 1일, 추석은 음력 8월 15일로 음력 날짜 자체는 고정입니다. 그런데 이 고정된 음력 날짜에 대응하는 양력 날짜가 해마다 바뀌는 이유는 앞서 설명한 11일의 오차 때문입니다. 2026년 설날과 추석을 실제로 변환하면 다음과 같습니다.</p>
+
+    <div class="table-wrap"><table>
+      <tr><th>명절</th><th>음력 날짜</th><th>2026년 양력 날짜</th><th>참고</th></tr>
+      <tr><td>설날</td><td>음력 1월 1일</td><td class="rate">2026년 2월 17일(화)</td><td>2024년은 2월 10일이었음</td></tr>
+      <tr><td>추석</td><td>음력 8월 15일</td><td class="rate">2026년 9월 25일(금)</td><td>2024년은 9월 17일이었음</td></tr>
+    </table></div>
+
+    <p>2년 사이 설날은 7일, 추석은 8일 정도 뒤로 밀렸습니다. 이런 밀림이 계속 누적되다가 윤달이 끼는 해에 다시 앞으로 당겨지는 방식으로 반복됩니다. 그래서 설날은 대략 양력 1월 21일에서 2월 20일 사이, 추석은 9월 초에서 10월 초 사이를 오가며, 실제로 이 범위를 벗어나는 경우는 거의 없습니다. 제사나 차례를 준비하는 입장에서는 최소 한두 달 전에 그 해 정확한 양력 날짜를 확인해두는 것이 일정 실수를 줄이는 방법입니다.</p>
+
+    <h3>2024~2030년 설날·추석 양력 날짜 한눈에 보기</h3>
+    <p>매번 검색하지 않도록 향후 몇 년치 날짜를 미리 정리해두면 연차 계획이나 제사 준비에 도움이 됩니다. 아래 표는 KASI 만세력 기준으로 변환기에서 직접 산출한 값입니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>연도</th><th>설날(음력 1월 1일)</th><th>추석(음력 8월 15일)</th></tr>
+      <tr><td>2026년</td><td class="rate">2월 17일(화)</td><td class="rate">9월 25일(금)</td></tr>
+      <tr><td>2027년</td><td>2월 7일(일)</td><td>9월 15일(수)</td></tr>
+      <tr><td>2028년</td><td>1월 27일(목)</td><td>10월 3일(화)</td></tr>
+      <tr><td>2029년</td><td>2월 13일(화)</td><td>9월 22일(토)</td></tr>
+      <tr><td>2030년</td><td>2월 3일(일)</td><td>9월 12일(목)</td></tr>
+    </table></div>
+    <p>표를 보면 2027년까지는 설날·추석 모두 계속 앞당겨지다가, 2028년 설날은 1월 27일로 더 당겨지는 대신 추석은 10월 3일로 갑자기 뒤로 밀리는 것이 보입니다. 이런 엇갈림이 생기는 이유는 설날과 추석 사이에 윤달이 끼는 해가 있으면 그 뒤쪽 날짜(추석)만 밀려나기 때문입니다. 이렇듯 명절 날짜는 연도별로 규칙적으로 당겨지기만 하는 게 아니라, 두 명절 사이 윤달 유무에 따라 서로 다른 방향으로 움직일 수 있다는 점을 기억해두면 미리 계획을 세울 때 헷갈리지 않습니다.</p>
+
+    <h2>간지와 띠, 헷갈리지 않고 정확히 확인하는 법</h2>
+    <p>간지는 10천간(갑을병정무기경신임계)과 12지지(자축인묘진사오미신유술해)를 조합한 60갑자로, 음력 연도를 기준으로 정해집니다. 띠는 이 중 12지지에 해당하는 동물이며, 2026년은 병오년으로 말띠입니다.</p>
+
+    <div class="table-wrap"><table>
+      <tr><th>지지</th><th>띠</th><th>지지</th><th>띠</th></tr>
+      <tr><td>자(子)</td><td>쥐</td><td>오(午)</td><td>말</td></tr>
+      <tr><td>축(丑)</td><td>소</td><td>미(未)</td><td>양</td></tr>
+      <tr><td>인(寅)</td><td>호랑이</td><td>신(申)</td><td>원숭이</td></tr>
+      <tr><td>묘(卯)</td><td>토끼</td><td>유(酉)</td><td>닭</td></tr>
+      <tr><td>진(辰)</td><td>용</td><td>술(戌)</td><td>개</td></tr>
+      <tr><td>사(巳)</td><td>뱀</td><td>해(亥)</td><td>돼지</td></tr>
+    </table></div>
+
+    <h3>양력 1~2월생이 자기 띠를 잘못 아는 경우</h3>
+    <p>가장 흔한 착각은 양력 생년으로 그대로 띠를 계산하는 것입니다. 예를 들어 양력 2026년 2월 10일에 태어난 아기는 얼핏 "2026년생이니 말띠"라고 생각하기 쉽습니다. 그런데 2026년 설날은 2월 17일입니다. 즉 2월 10일은 설날 이전이라 음력으로는 아직 2025년(을사년)에 속하고, 이 아기의 띠는 말띠가 아니라 뱀띠입니다.</p>
+    <p>검산하면, 양력 2026년 2월 10일을 변환기에 넣었을 때 음력 결과가 2025년으로 나오는지가 기준입니다. 실제로 이 시점은 음력 2025년 12월(설날 전)에 해당하므로 간지도 을사년으로 나옵니다. 매년 양력 1월과 2월 초·중순 출생자는 이런 식으로 띠가 한 해 앞당겨질 수 있으니, 정확한 띠를 알고 싶다면 반드시 변환기로 음력 연도를 직접 확인해야 합니다.</p>
+
+    <p>공휴일과 대체공휴일까지 함께 챙기고 싶다면 <a href="./holiday-2026.html" style="color:#14B8A6;">2026년 공휴일 총정리</a>에서 설날·추석 연휴 전체 일정을 확인할 수 있고, 생신을 만 나이로 정확히 계산하려면 <a href="./korean-age-system.html" style="color:#14B8A6;">한국 나이 계산법 총정리</a>가 도움이 됩니다. 변환한 날짜가 무슨 요일인지 바로 알고 싶다면 <a href="./weekday-calculator-guide.html" style="color:#14B8A6;">특정 날짜 요일 계산법</a>도 함께 참고하면 좋습니다.</p>
+
+    <h2>제사·차례 날짜 챙길 때 자주 하는 실수</h2>
+    <p>제사 날짜는 대개 고인의 음력 기일을 기준으로 지내는데, 이 역시 매년 양력 날짜가 바뀝니다. 여기서 신뢰할 수 있는 기준을 세우는 것이 중요합니다. 한국천문연구원(KASI)의 음양력 변환 계산 자료에 따르면, 음력은 한국 표준시(KST)를 기준으로 계산되며, 이 변환기 역시 같은 기준(KASI 만세력 데이터, 변환 가능 범위 양력 1900~2050년)을 적용합니다.</p>
+    <p>자주 하는 실수는 크게 세 가지입니다. 첫째, 작년에 확인해둔 양력 날짜를 올해도 그대로 쓰는 것입니다. 앞서 봤듯 음력 날짜는 매년 양력으로 다르게 나오므로, 반드시 해마다 새로 변환해야 합니다. 둘째, 윤달 생일·기일을 평달로 착각해 한 달 차이로 챙기는 것입니다. 그 해에 실제 윤달이 있는지부터 확인해야 합니다. 셋째, 음력 연말 기일을 그 해 양력 12월 안에 있다고 단정하는 것입니다. 위 김민서씨 사례처럼 다음 해 1월로 넘어갈 수 있으므로 미리 변환해 확인해야 합니다.</p>
+
+    <div class="cta-box">
+      <p>음력↔양력 변환, 윤달, 간지·띠까지 날짜만 넣으면 한 번에 확인</p>
+      <a href="../../calc/tools/lunar-calendar/" class="cta-btn">음력 양력 변환기 바로가기</a>
+      <p style="font-size:13px;color:#6B7280;margin-top:8px;">양력 1900~2050년 범위, 한국천문연구원(KASI) 만세력 기준입니다.</p>
+    </div>
+
+    <h2>자주 묻는 질문</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">음력 생일을 매년 양력으로 어떻게 확인하나요?</div>
+      <div class="faq-a">음력 생일은 태어난 음력 월·일만 고정이고 연도는 매년 올해로 바꿔서 변환하면 됩니다. 예를 들어 음력 9월 12일생이라면, 변환기에서 음력 2026년 9월 12일을 넣으면 양력 2026년 10월 22일이 나옵니다. 다음 해 생일을 알고 싶으면 음력 월·일은 그대로 두고 연도만 2027년으로 바꿔 다시 변환하면 됩니다. 음력 1년이 양력보다 짧기 때문에 매년 양력 날짜가 보통 열흘 안팎씩 당겨지다가, 윤달이 낀 해에는 반대로 한 달 가까이 밀립니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">윤달에 태어났으면 생일을 어떻게 챙기나요?</div>
+      <div class="faq-a">그 해에 실제로 윤달이 있으면 윤달 기준으로 변환하고, 윤달이 없는 해에는 평달(같은 월의 일반 달) 기준으로 챙기는 것이 일반적입니다. 예를 들어 1998년 윤5월 20일생은 그 해 양력으로 7월 13일이었지만, 윤달이 없는 2026년에는 음력 5월 20일(평달)을 기준으로 변환한 양력 7월 4일에 생일을 챙기면 됩니다. 변환기에서 윤달 체크박스는 실제로 그 연·월에 윤달이 있을 때만 반영되고, 없는 해에 체크해도 평달 기준으로 계산됩니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">간지(병오년)와 띠는 어떻게 정해지나요?</div>
+      <div class="faq-a">간지는 10천간(갑을병정무기경신임계)과 12지지(자축인묘진사오미신유술해)를 조합한 60갑자로, 음력 연도에 따라 정해집니다. 띠는 12지지에 대응하는 동물이며 2026년은 병오년으로 말띠입니다. 다만 양력 1~2월 초에 태어났다면 그 시점의 음력은 아직 전년도에 속할 수 있어 띠가 하나 앞당겨질 수 있습니다. 예를 들어 2026년 양력 2월 10일생은 설날(2월 17일) 이전이라 음력으로는 2025년 을사년(뱀띠)에 속합니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">이 변환기는 어떤 기준으로 계산하나요?</div>
+      <div class="faq-a">한국천문연구원(KASI) 만세력 데이터를 기준으로 계산합니다. 변환 가능 범위는 양력 1900년부터 2050년까지로, 생일·제사·기념일 변환에 충분합니다. 음력은 한국 표준시(KST)를 기준으로 하며, 중국 등 다른 시간대의 음력과는 드물게 하루 차이가 날 수 있습니다. 매년 새로 나오는 만세력이나 사주 앱과 비교했을 때 하루 이상 차이가 난다면 표준시 기준이 다른 것은 아닌지 먼저 확인하는 것이 좋습니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">설날과 추석은 왜 매년 양력 날짜가 다른가요?</div>
+      <div class="faq-a">설날은 음력 1월 1일, 추석은 음력 8월 15일로 날짜 자체는 고정이지만, 음력 1년이 양력보다 약 11일 짧기 때문에 그 고정된 음력 날짜에 대응하는 양력 날짜가 매년 밀립니다. 2026년 설날은 양력 2월 17일, 추석은 9월 25일입니다. 그런데 이렇게 계속 당겨지기만 하면 명절이 여름 한복판까지 밀려버리기 때문에, 2~3년마다 윤달을 끼워 넣어 다시 겨울 쪽으로 되돌립니다. 그래서 설날은 대략 1월 21일에서 2월 20일 사이, 추석은 9월 초에서 10월 초 사이를 오갑니다.</div>
+    </div>
+
+    <h2>핵심만 다시 정리하면</h2>
+    <p>가장 기억해야 할 숫자 하나만 꼽으면, 음력 1년이 양력보다 약 11일 짧다는 사실입니다. 이 11일의 오차가 매년 쌓여 음력 생일·제사 날짜의 양력 위치를 계속 바꾸고, 2~3년마다 끼어드는 윤달이 그 오차를 다시 되돌립니다. 음력 생일은 월·일만 고정한 채 매년 새로 변환해야 하고, 윤달 생일은 그 해 실제 윤달 유무를 먼저 확인해야 하며, 음력 12월 생일은 다음 해 1월로 넘어갈 수 있다는 점도 놓치기 쉬운 부분입니다.</p>
+    <p>설날(2026년 2월 17일)과 추석(2026년 9월 25일)처럼 매년 확인이 필요한 날짜, 부모님·조부모님의 음력 생신, 제사 기일까지 이 원리 하나면 계속 헷갈리지 않고 챙길 수 있습니다. 매번 손으로 계산할 필요 없이, 음력·양력 날짜를 넣기만 하면 윤달과 간지·띠까지 한 번에 나오는 변환기로 지금 바로 확인해보시기 바랍니다.</p>
+
+  </div>
+</div>
+
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "한국천문연구원(KASI) 만세력 데이터, 2026년 기준",
+  basisDate: "2026년 기준",
+  referenceOrg: "한국천문연구원(KASI)",
+  lastReviewed: '2026.07.07',
+  disclaimer: "본 내용은 참고용이며, 음력·양력 변환 결과는 한국 표준시(KST) 기준입니다. 정확한 결과는 변환기를 통해 다시 확인하시기 바랍니다.",
+  relatedCalc: { name: '음력 양력 변환기', url: '/calc/tools/lunar-calendar/' },
+  category: 'tools'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>

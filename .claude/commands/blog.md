@@ -43,7 +43,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
   - 허브: holding-tax-guide / 위성: ① registry-cost-guide(등기비용·06-22) · ② property-purchase-costs-guide(매매 부대비용·06-26)
 - **완료 클러스터: 자동차(auto)** | 2026-06-28~07-03 완료 (자동차 카테고리 블로그 0편이던 미개척 영역 진입, 6편으로 소진) | **성과 점검 예정: 2026-07-26** (트리거 B)
   - 허브: car-tax-guide(자동차세·06-28, auto-tax 고아 해소) / 위성: ① car-acquisition-tax-guide(자동차 취득세·06-29, acquisition-tax+used-car-tax 고아 동시 해소) · ② ev-subsidy-guide(전기차 보조금·06-30) · ③ fuel-cost-guide(유류비·07-01, fuel-cost 고아 해소) · ④ ev-charging-guide(전기차 충전비·07-02) · ⑤ auto-loan-guide(자동차 할부·07-03, auto-loan 고아 해소, 마지막 위성)
-- **참고 (고아 계산기 직행 규칙, 2026-07-03)**: 자동차 클러스터 소진 완료(auto-loan-guide 작성) → **네이버 큐 리필을 기다리지 말고 곧장 우선순위 ③(고아 계산기)로 간다.** 실제 목록은 하드코딩하지 말고 `node scripts/find-orphan-calcs.mjs`로 그때그때 받는다(현재 8종: baby 4[ovulation·due-date·baby-months·parental-leave-pay]·stock-average·cat-age·food-amount·lunar-calendar). **baby 4종 우선**(2026-07-02 제휴 배너 배치 완료라 가이드 유입이 바로 수익화됨). 고아 소진 후 네이버 큐로 복귀.
+- **참고 (고아 계산기 직행 규칙, 2026-07-03)**: 자동차 클러스터 소진 완료(auto-loan-guide 작성) → **네이버 큐 리필을 기다리지 말고 곧장 우선순위 ③(고아 계산기)로 간다.** 실제 목록은 하드코딩하지 말고 `node scripts/find-orphan-calcs.mjs`로 그때그때 받는다. **2026-07-07 진행**: stock-average(stock-average-price-guide 07-06)·lunar-calendar(lunar-calendar-guide 07-07) 작성 완료. **parental-leave-pay는 함정**이었음 - 이미 2026-06-04 작성된 `parental-leave-pay.html`이 있었으나 salary 카테고리로 분류되고 baby-detail-shell.js guides가 비어 있어 고아로 오탐지된 것 → 새 글 대신 guides 배열 연결 + CTA/relatedCalc를 실제 `/calc/baby/parental-leave-pay/`로 정정해 해소(중복 글 방지). **잔여 고아 2종은 pet(cat-age·food-amount)뿐**. 고아 소진 후 네이버 큐로 복귀.
 
 ## 네이버 타겟 주제 큐
 
@@ -79,7 +79,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 1. `ls /home/tjd618/jptcalc/blog/posts/` 로 기존 포스트 파일 목록 전체 확인
 2. `ls /home/tjd618/jptcalc/calc/` 및 하위 폴더 확인해서 사용 가능한 계산기 URL 파악
 3. `/home/tjd618/jptcalc/blog/index.html` 에서 data-cat 개수를 세서 카테고리별 글 수 확인
-4. **주제 선정 우선순위: ① 진행 중 클러스터의 위성 주제 → ② 네이버 타겟 큐 Tier 순서 → ③ 블로그 글이 아직 없는 신규 계산기(고아) → ④ 글 적은 카테고리.** "클러스터 진행 현황" 블록에 진행 중 클러스터가 있으면 그 위성을 먼저 뽑아 클러스터를 채운다. **단, 현 자동차 클러스터 소진(auto-loan) 직후에는 큐 리필을 기다리지 말고 곧장 ③(고아 계산기, baby 4종 우선)으로 간다** - "클러스터 진행 현황" 참고 참조.
+4. **주제 선정 우선순위: ① 진행 중 클러스터의 위성 주제 → ② 네이버 타겟 큐 Tier 순서 → ③ 블로그 글이 아직 없는 신규 계산기(고아) → ④ 글 적은 카테고리.** "클러스터 진행 현황" 블록에 진행 중 클러스터가 있으면 그 위성을 먼저 뽑아 클러스터를 채운다. **단, 현 자동차 클러스터 소진(auto-loan) 직후에는 큐 리필을 기다리지 말고 곧장 ③(고아 계산기)으로 간다** - "클러스터 진행 현황" 참고 참조.
    - **③ 신규 계산기 미커버 우선순위**: 클러스터·큐 소진 시, 블로그 글이 0개인 신규 계산기부터 글을 쓴다. **대상 목록은 하드코딩하지 말고 `node scripts/find-orphan-calcs.mjs`를 실행해 "연결된 블로그가 없는 계산기"를 그때그때 받아온다** (계산기가 새로 추가되면 자동으로 이 목록에 잡힘). 데이터랩 검증 수요가 높은 것부터(예: 생활·도구 글자수세기·내신등급) 고른다. 각 글은 cta-box·relatedCalc·해당 detail-shell guides로 그 계산기에 유입을 연결한다. (네이버 큐 자체에는 서치어드바이저 검증 주제만 넣고, 이 신규 계산기 주제는 큐에 넣지 않는다.)
 5. 기존 글과 겹치지 않는 주제를 선정하고, 큐 주제에 연결된 계산기와 본문에서 링크
 6. 기존 포스트 파일 1개 읽어서 해당 카테고리의 포맷·색상 정확히 파악

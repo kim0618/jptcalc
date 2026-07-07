@@ -5,9 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 06 Jul 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
 
+    <item>
+      <title>음력 양력 변환기 완벽 정리 - 생일·제사 날짜, 윤달·간지까지 헷갈리지 않는 법 (2026)</title>
+      <link>https://www.jptcalc.kr/blog/posts/lunar-calendar-guide.html</link>
+      <description>음력 생일 올해 양력 날짜 확인법, 윤달 낀 해 생일 챙기는 법, 2026년 설날(2/17)·추석(9/25) 정확한 날짜, 간지·띠 계산까지 실제 사례로 검산했습니다.</description>
+      <pubDate>Tue, 07 Jul 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/lunar-calendar-guide.html</guid>
+    </item>
     <item>
       <title>주식 평단가 계산법 2026 - 물타기 후 새 평단·목표 평단 역산까지</title>
       <link>https://www.jptcalc.kr/blog/posts/stock-average-price-guide.html</link>
@@ -603,9 +610,9 @@
     </item>
 
     <item>
-      <title>육아휴직급여 계산법 - 통상임금 80%, 실수령액은 실제로 얼마일까?</title>
+      <title>육아휴직급여 계산법 2026 - 통상임금 100%·6+6 최대 4,000만원, 매월 실수령액은 얼마일까</title>
       <link>https://www.jptcalc.kr/blog/posts/parental-leave-pay.html</link>
-      <description>육아휴직급여 지급 구조(1-3개월 80%, 이후 기간), 상한액·하한액, 배우자 동시 사용 6+6 혜택, 실제 케이스별 계산을 상세히 정리했습니다.</description>
+      <description>2026년 육아휴직급여는 1~3개월 통상임금 100%(상한 250만)·4~6개월 100%(상한 200만)·7개월~ 80%(상한 160만), 사후지급금은 폐지돼 전액 매월 지급됩니다. 6+6 부모 동시 사용 시 합산 최대 4,000만원.</description>
       <pubDate>Sun, 29 Mar 2026 00:00:00 +0900</pubDate>
       <guid>https://www.jptcalc.kr/blog/posts/parental-leave-pay.html</guid>
     </item>

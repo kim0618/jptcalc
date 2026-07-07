@@ -84,9 +84,12 @@
     <div class="card">
       <div class="card-title">출산 정보</div>
       <div class="field">
-        <div class="field-label">이번 출산 전 자녀 수 <span class="label-hint">출생 순위 판정용</span></div>
-        <div class="input-wrap"><input type="number" id="prev-children" min="0" max="10" value="0" placeholder="예) 0" oninput="calc()" /><span class="unit">명</span></div>
-        <div class="field-hint">이번에 태어나는 아이 이전에 이미 둔 자녀 수입니다(첫 출산이면 0).</div>
+        <div class="field-label">이번이 첫 출산인가요? <span class="label-hint">출생 순위 판정용</span></div>
+        <div class="seg-group" style="margin-bottom:0" id="first-group">
+          <button class="seg-btn active" type="button" onclick="setFirst(1,this)">네, 첫째예요</button>
+          <button class="seg-btn" type="button" onclick="setFirst(0,this)">아니요, 이미 자녀 있음</button>
+        </div>
+        <div class="field-hint">첫만남이용권은 첫째 200만, 둘째 이상 300만입니다. 셋째·넷째도 둘째와 동일하게 300만이라 이미 자녀가 있으면 모두 300만이 적용됩니다.</div>
       </div>
       <div class="field">
         <div class="field-label">이번에 태어난 아이 수</div>
@@ -218,14 +221,15 @@
 </footer>
 <script>
 let multi=1;
+let isFirst=1; // 1 = 첫 출산(전 자녀 0), 0 = 이미 자녀 있음(둘째 이상)
 function Won(w){return Math.round(w).toLocaleString()+'원';}
 function setMulti(n,btn){multi=n;document.querySelectorAll('#multi-group .seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');calc();}
+function setFirst(v,btn){isFirst=v;document.querySelectorAll('#first-group .seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');calc();}
 function calc(){
-  const el=document.getElementById('prev-children');
-  let prev=parseInt(el.value);
+  // 지급액은 첫 출산 여부에만 좌우됨(둘째 이상은 셋째·넷째도 flat 300만).
+  // 전 자녀 0(첫 출산) 또는 1(이미 자녀 있음)만 있으면 다태아 순위까지 정확히 계산된다.
+  const prev = isFirst ? 0 : 1;
   const res=document.getElementById('result');
-  if(isNaN(prev)||prev<0){res.classList.remove('show');return;}
-  if(prev>10){ prev=10; el.value=10; }  // max 클램프(직접 입력 우회 방지)
   res.classList.add('show');
   let total=0, firsts=0, seconds=0;
   for(let i=1;i<=multi;i++){
