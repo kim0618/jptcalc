@@ -2,7 +2,7 @@
 
 ## 목적
 
-jptcalc, bumohyetaek, lovtaro 3개 사이트의 **GA4 + 서치콘솔 데이터**를 한 번에 조회해서 운영 인사이트 제공.
+jptcalc, bumohyetaek, lovtaro, formda 4개 사이트의 **GA4 + 서치콘솔 데이터**를 한 번에 조회해서 운영 인사이트 제공.
 
 ## 사이트별 오픈일 (컨텍스트)
 
@@ -11,6 +11,7 @@ jptcalc, bumohyetaek, lovtaro 3개 사이트의 **GA4 + 서치콘솔 데이터**
 | jptcalc | 2026-03-23 | 계산기+블로그 (네이버·ChatGPT 유입 중심) |
 | bumohyetaek | 2026-04-03 | 정책/육아 정보 블로그 |
 | lovtaro | 2026-04-06 | 인스타 타로 카드 |
+| formda | 2026-07-08 | 문서 자동작성 도구 (Cloudflare Pages) |
 
 **판단 기준:**
 - 오픈 30일 미만 → 초기 단계, 색인/유입 적은 게 정상
@@ -40,7 +41,7 @@ node /home/tjd618/.claude/analytics/report.mjs [period] [site]
   - `30d` — 최근 30일
   - `90d` — 최근 90일
 - `site` (선택, 기본 전체):
-  - `jptcalc` / `bumohyetaek` / `lovtaro`
+  - `jptcalc` / `bumohyetaek` / `lovtaro` / `formda`
 
 ### 예시
 
@@ -56,6 +57,9 @@ node /home/tjd618/.claude/analytics/report.mjs 28d jptcalc
 
 # lovtaro만 30일
 node /home/tjd618/.claude/analytics/report.mjs 30d lovtaro
+
+# formda만 7일
+node /home/tjd618/.claude/analytics/report.mjs 7d formda
 ```
 
 ## 실행 지침
@@ -77,6 +81,7 @@ node /home/tjd618/.claude/analytics/report.mjs 30d lovtaro
 | "jpt", "계산기" | `jptcalc` |
 | "부모혜택", "bumo" | `bumohyetaek` |
 | "로브타로", "타로", "인스타" | `lovtaro` |
+| "폼다", "formda", "문서" | `formda` |
 | "전체", (생략) | (전체) |
 
 ### 2. Bash 도구로 스크립트 실행
