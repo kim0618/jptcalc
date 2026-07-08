@@ -2,6 +2,12 @@
 (function(){
   const path=(location.pathname||'').replace(/index\.html$/,'').replace(/\/+$/,'/') || '/';
   const pages={
+    '/calc/pet/cat-age/': {
+      key:'cat-age',
+      quick:['고양이 나이 × 7은 부정확합니다. 1세=사람 15세, 2세=24세, 이후 연 4세가 국제 표준입니다.','강아지와 달리 크기·품종에 따른 환산 차이는 없습니다.','국제 동물병원협회(AAHA) 기준 7세부터 중년기, 10~11세부터 노령묘에 접어듭니다.','완전 실내묘가 실외 출입묘보다 평균 5~6년 더 오래 삽니다.'],
+      related:[['/calc/pet/monthly-cost/','월 생활비','🐕'],['/calc/pet/medical/','의료비 예산','💊'],['/calc/pet/lifetime-cost/','평생 양육비','📊']],
+      guides:[['/blog/posts/cat-age-guide.html','고양이 나이 계산법 - 사람 나이 환산표와 노령묘 진입 시점'],['/blog/posts/cat-monthly-cost.html','고양이 한 달 생활비 - 품종·나이별 상세 비용 정리'],['/blog/posts/cat-lifetime-cost.html','고양이 평생 양육비 얼마나 들까? 항목별 분석']]
+    },
     '/calc/pet/dog-age/': {
       key:'dog-age',
       quick:['강아지 나이 × 7은 부정확합니다. 첫 1년이 사람 약 15세에 해당합니다.','같은 나이라도 몸집이 클수록 사람 나이는 더 많습니다.','소형견 10세·중형견 8세·대형견 7세·초대형견 6세 전후가 노령기 진입 시점입니다.','정확한 출생일을 모르면 치아·근육량으로 추정 나이를 입력하세요.'],

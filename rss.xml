@@ -5,9 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 07 Jul 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
 
+    <item>
+      <title>고양이 나이 계산법 2026 - 사람 나이 환산표와 노령묘 진입 시점 총정리</title>
+      <link>https://www.jptcalc.kr/blog/posts/cat-age-guide.html</link>
+      <description>고양이 나이를 사람 나이로 환산하는 국제 표준 공식(1세=15세, 2세=24세, 이후 연 4세) 정리. 강아지와 다른 이유, 7세 중년·10세 노령묘 진입 시점과 비용 변화를 실제 예시로 계산합니다.</description>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/cat-age-guide.html</guid>
+    </item>
     <item>
       <title>음력 양력 변환기 완벽 정리 - 생일·제사 날짜, 윤달·간지까지 헷갈리지 않는 법 (2026)</title>
       <link>https://www.jptcalc.kr/blog/posts/lunar-calendar-guide.html</link>
