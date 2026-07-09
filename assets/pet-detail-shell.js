@@ -8,6 +8,12 @@
       related:[['/calc/pet/monthly-cost/','월 생활비','🐕'],['/calc/pet/medical/','의료비 예산','💊'],['/calc/pet/lifetime-cost/','평생 양육비','📊']],
       guides:[['/blog/posts/cat-age-guide.html','고양이 나이 계산법 - 사람 나이 환산표와 노령묘 진입 시점'],['/blog/posts/cat-monthly-cost.html','고양이 한 달 생활비 - 품종·나이별 상세 비용 정리'],['/blog/posts/cat-lifetime-cost.html','고양이 평생 양육비 얼마나 들까? 항목별 분석']]
     },
+    '/calc/pet/food-amount/': {
+      key:'food-amount',
+      quick:['NRC 표준 공식 RER=70×체중(kg)^0.75로 기초 에너지 요구량을 먼저 구합니다.','같은 10kg 강아지도 자견인지 체중감량 중인지에 따라 급여량이 3배까지 차이납니다.','중성화 수술 후에는 대사율이 낮아져 계수를 10~20% 낮춰야 합니다.','급여량은 출발점일 뿐, 2~4주마다 체중·체형을 확인하며 조정해야 합니다.'],
+      related:[['/calc/pet/monthly-cost/','월 생활비','🐕'],['/calc/pet/medical/','의료비 예산','💊'],['/calc/pet/lifetime-cost/','평생 양육비','📊']],
+      guides:[['/blog/posts/food-amount-guide.html','강아지 고양이 사료 급여량 계산법 - NRC 공식으로 하루 급여량 정확히 구하기'],['/blog/posts/dog-monthly-cost.html','강아지 월 생활비 현실 가이드 - 항목별 비용 분석'],['/blog/posts/pet-cost-saving-tips.html','반려동물 비용 절약 팁 - 합리적으로 키우는 법']]
+    },
     '/calc/pet/dog-age/': {
       key:'dog-age',
       quick:['강아지 나이 × 7은 부정확합니다. 첫 1년이 사람 약 15세에 해당합니다.','같은 나이라도 몸집이 클수록 사람 나이는 더 많습니다.','소형견 10세·중형견 8세·대형견 7세·초대형견 6세 전후가 노령기 진입 시점입니다.','정확한 출생일을 모르면 치아·근육량으로 추정 나이를 입력하세요.'],

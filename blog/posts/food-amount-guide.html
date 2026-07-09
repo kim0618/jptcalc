@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>강아지 고양이 사료 급여량 계산법 2026 - NRC 공식으로 하루 급여량 정확히 구하기 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="사료 포장지 권장량 대신 NRC 국제 표준 공식(RER·DER)으로 우리 강아지·고양이의 정확한 하루 급여량을 구하는 법. 활동 단계별 계수표, 체중별 계산 예시 4가지, 체형 조정법까지 정리했습니다." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="강아지 고양이 사료 급여량 계산법 2026 - NRC 공식으로 하루 급여량 정확히 구하기 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="사료 포장지 권장량 대신 NRC 국제 표준 공식(RER·DER)으로 우리 강아지·고양이의 정확한 하루 급여량을 구하는 법. 활동 단계별 계수표, 체중별 계산 예시 4가지, 체형 조정법까지 정리했습니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/food-amount-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/food-amount-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#F472B6;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(244,114,182,0.15);color:#F472B6;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body h3{font-size:16px;font-weight:800;color:#111827;margin:26px 0 10px}
+    .post-body p{margin-bottom:14px}
+    .post-body ul{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#F472B6;text-decoration:none}
+    .highlight-box{background:rgba(244,114,182,0.08);border-left:4px solid #F472B6;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#9D174D;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    td.rate{color:#F472B6;font-weight:700}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#F472B6;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .faq-item{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:12px;padding:20px;margin:16px 0}
+    .faq-q{font-weight:800;color:#111827;margin-bottom:8px;font-size:15px}
+    .faq-a{color:#374151;font-size:14px;line-height:1.7;margin:0}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "강아지 고양이 사료 급여량 계산법 2026 - NRC 공식으로 하루 급여량 정확히 구하기",
+  "description": "사료 포장지 권장량 대신 NRC 국제 표준 공식(RER·DER)으로 우리 강아지·고양이의 정확한 하루 급여량을 구하는 법. 활동 단계별 계수표, 체중별 계산 예시 4가지, 체형 조정법까지 정리했습니다.",
+  "author":{"@type":"Person","name":"Jay Kim","url":"https://www.jptcalc.kr/about.html","jobTitle":"제이퍼 계산기 운영자"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr",
+    "logo": { "@type": "ImageObject", "url": "https://www.jptcalc.kr/android-chrome-512x512.png" }
+  },
+  "datePublished": "2026-07-09",
+  "dateModified": "2026-07-09",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.jptcalc.kr/blog/posts/food-amount-guide.html" },
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "반려동물",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "건식과 습식 사료를 같이 줄 때는 급여량을 어떻게 계산하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "먼저 하루 권장 칼로리(DER)를 구한 다음, 건식과 습식이 각각 차지할 칼로리 비율을 정합니다. 예를 들어 DER 400kcal 중 건식 70%·습식 30%로 나눈다면 건식에는 280kcal, 습식에는 120kcal를 배분합니다. 건식 380kcal/100g이면 280÷380×100=74g, 습식 85kcal/100g이면 120÷85×100=141g을 급여하면 됩니다. 두 사료의 칼로리를 각각 확인하지 않고 그램 수만 반씩 나누면 총 칼로리가 부족하거나 과해질 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "고양이는 사료를 자율급식해도 되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "가능하지만 비만 위험이 있는 고양이라면 권장하지 않습니다. 자율급식은 활동량이 많고 체형 관리가 잘 되는 젊은 고양이에게는 무리가 없지만, 중성화 후 대사율이 낮아진 성묘나 노령묘는 자율급식 시 과식으로 이어지기 쉽습니다. 계산기로 나온 하루 급여량을 정해두고 그만큼만 하루 2끼로 나눠 주는 정량 급식이 체중 관리에 더 안전합니다. 이미 자율급식 중이라면 하루 총 급여량을 2~3일간 실측해 계산값과 비교해보는 것이 좋습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "다이어트 사료로 바꾸면 계수를 어떻게 조정해야 하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "다이어트 사료는 보통 100g당 칼로리가 일반 사료보다 20~30% 낮게 설계되어 있어, 계수는 그대로 두고 사료 칼로리 값만 낮춰서 계산하면 됩니다. 예를 들어 일반 사료 380kcal/100g에서 다이어트 사료 280kcal/100g으로 바꾸면 같은 DER이라도 급여량(그램 수)은 오히려 늘어납니다. 체중감량이 목적이라면 계수 자체도 체중감량 단계(강아지 1.0, 고양이 0.8)로 낮춰서 계산하고, 2~3주 단위로 체중 변화를 확인하며 조정하세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "체중이 갑자기 늘거나 줄면 며칠 만에 급여량을 조정해야 하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "일반적으로 2~4주 간격으로 체중을 재고 조정하는 것이 안전합니다. 매일 체중이 오르내리는 것은 수분 섭취량 차이 등으로 인한 정상 변동이라 즉각 반응할 필요는 없습니다. 다만 2~4주 사이 체중이 5% 이상 변했다면 급여량을 10~15% 조정하고, 한 달 사이 체중의 10% 이상이 급격히 빠지거나 늘었다면 사료량 문제가 아니라 질환 가능성이 있으므로 동물병원 진료를 우선해야 합니다."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.jptcalc.kr/"}, {"@type": "ListItem", "position": 2, "name": "블로그", "item": "https://www.jptcalc.kr/blog/"}, {"@type": "ListItem", "position": 3, "name": "반려동물", "item": "https://www.jptcalc.kr/blog/?cat=반려동물"}, {"@type": "ListItem", "position": 4, "name": "강아지 고양이 사료 급여량 계산법 2026 - NRC 공식으로 하루 급여량 정확히 구하기", "item": "https://www.jptcalc.kr/blog/posts/food-amount-guide.html"}]}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo"><div class="logo-icon"><img src="../../assets/logo.svg" alt="로고"/></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+<div class="post-wrap">
+  <span class="post-tag">반려동물</span>
+  <h1>강아지 고양이 사료 급여량 계산법 2026 - NRC 공식으로 하루 급여량 정확히 구하기</h1>
+  <div class="post-meta"><span>📅 2026.07.09</span><span>·</span><span>9분 읽기</span></div>
+  <div class="post-body">
+    <p>혹시 사료 포장지 뒷면의 급여량 표를 보고 "몸무게가 얼추 맞으니 이 정도 주면 되겠지" 하고 어림짐작으로 퍼주신 적 있으신가요? 대부분의 보호자가 그렇게 합니다. 문제는 포장지 표가 "평균 체중의 중성화 성견·성묘"라는 단 하나의 조건만 가정하고 만들어졌다는 점입니다. 같은 체중이라도 자견인지 노령견인지, 중성화를 했는지, 다이어트가 필요한지에 따라 실제 필요한 칼로리는 최대 3배까지 차이가 납니다. NRC(미국 국립연구위원회)가 정립한 국제 표준 에너지 공식을 쓰면 이 차이를 숫자로 정확히 잡아낼 수 있습니다.</p>
+
+    <div class="highlight-box"><p>이 글은 사료 포장지 권장량이 우리 아이에게 맞는지 궁금한 분, 중성화·다이어트·성장기 등 상황별로 급여량을 다시 계산하고 싶은 분, 체중 관리가 필요한 반려동물을 키우는 분에게 도움이 됩니다.</p></div>
+
+    <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+      <li>NRC 표준 공식 RER=70×체중^0.75, DER=RER×활동계수 계산 원리</li>
+      <li>강아지·고양이 활동 단계별 DER 계수표(자견~체중감량까지 6단계)</li>
+      <li>같은 10kg 강아지인데 단계에 따라 급여량이 최대 3배 차이나는 이유</li>
+      <li>몰티즈·리트리버·코숏·자견 등 체중별 실제 계산 시나리오 4가지</li>
+      <li>중성화 전후 하루 급여량 차이와 이걸 무시했을 때 생기는 문제</li>
+      <li>BCS(체형 점수)로 급여량을 2~4주마다 미세 조정하는 법</li>
+    </ul>
+
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>RER과 DER, 사료량 계산의 뼈대</h2>
+    <p>NRC(미국 국립연구위원회)는 2006년 발간한 「Nutrient Requirements of Dogs and Cats」에서 반려동물의 에너지 요구량을 계산하는 표준 공식을 제시했습니다. 이 공식은 두 단계로 나뉩니다. 첫 번째는 기초 에너지 요구량(RER, Resting Energy Requirement)으로, 아무 활동도 하지 않고 생명만 유지하는 데 필요한 최소 칼로리입니다. 공식은 RER = 70 × 체중(kg)^0.75입니다. 두 번째는 하루 권장 칼로리(DER, Daily Energy Requirement)로, RER에 활동 단계별 계수를 곱해 실제 생활 수준을 반영합니다. 마지막으로 이 DER을 사료 100g당 칼로리로 나누면 하루에 줘야 할 그램 수가 나옵니다.</p>
+    <p>사료관리법에 따라 국내에서 유통되는 반려동물 사료는 포장지에 성분표와 급여 가이드 표시가 의무화되어 있습니다. 하지만 이 표시는 대개 체중 구간별 평균치라서, 우리 아이의 나이·중성화 여부·활동량까지 반영하지는 못합니다. 그 빈틈을 NRC 공식이 메워줍니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>단계</th><th>강아지 계수</th><th>고양이 계수</th><th>설명</th></tr>
+      <tr><td>자견/자묘 4개월 미만</td><td class="rate">3.0</td><td class="rate">2.5</td><td>급성장기, 칼로리 요구 최고</td></tr>
+      <tr><td>자견/자묘 4개월 이상</td><td>2.0</td><td>2.0</td><td>성장 지속, 성견·성묘 전환 전</td></tr>
+      <tr><td>중성화 성견/성묘</td><td>1.6</td><td>1.2</td><td>대사율 저하, 비만 주의</td></tr>
+      <tr><td>미중성화 성견/성묘</td><td>1.8</td><td>1.4</td><td>일반 활동 성체</td></tr>
+      <tr><td>노령·활동 적음</td><td>1.4</td><td>1.0</td><td>대사율 감소, 과체중 주의</td></tr>
+      <tr><td>체중감량 중</td><td class="rate">1.0</td><td class="rate">0.8</td><td>수의사 지도 하 감량 목적</td></tr>
+    </table></div>
+    <p>표에서 보듯 같은 종이라도 자견과 체중감량 단계는 계수가 3배 가까이 차이납니다. 답은 간단합니다. 체중만 보고 급여량을 정하면 안 되고, 반드시 단계까지 함께 봐야 한다는 것입니다.</p>
+
+    <p style="margin: 1.2em 0;">
+      👉 <a href="https://www.jptcalc.kr/calc/pet/food-amount/" style="color:#F472B6;font-weight:600;">사료 급여량 계산기로 우리 아이 하루 급여량 바로 계산해보기</a>
+    </p>
+
+    <h2>같은 10kg 강아지인데 급여량이 3배 차이난다</h2>
+    <p>여기서 주의할 점이 하나 있는데요, 보호자들이 가장 자주 놓치는 부분이 바로 이것입니다. "10kg 강아지"라는 정보만으로는 급여량을 정할 수 없습니다. 아래는 체중 10kg으로 동일하고 사료 칼로리도 100g당 380kcal로 똑같이 놓은 상태에서, 단계만 바꿔본 결과입니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>단계</th><th>계수</th><th>DER</th><th>하루 급여량</th></tr>
+      <tr><td class="rate">자견 4개월 미만</td><td>3.0</td><td>1,181kcal</td><td class="rate">311g</td></tr>
+      <tr><td>자견 4개월 이상</td><td>2.0</td><td>787kcal</td><td>207g</td></tr>
+      <tr><td>미중성화 성견</td><td>1.8</td><td>709kcal</td><td>186g</td></tr>
+      <tr><td>중성화 성견</td><td>1.6</td><td>630kcal</td><td>166g</td></tr>
+      <tr><td>노령·활동 적음</td><td>1.4</td><td>551kcal</td><td>145g</td></tr>
+      <tr><td class="rate">체중감량 중</td><td>1.0</td><td>394kcal</td><td class="rate">104g</td></tr>
+    </table></div>
+    <div style="margin:24px 0;overflow-x:auto">
+    <svg role="img" width="100%" viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg">
+      <title>동일 체중 10kg 강아지, 단계별 하루 급여량 비교</title>
+      <rect width="680" height="200" rx="12" fill="#F9FAFB"/>
+      <text x="24" y="34" font-size="14" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">10kg 강아지, 단계에 따라 급여량이 이렇게 달라집니다</text>
+      <text x="24" y="76" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">자견 4개월 미만</text>
+      <rect x="160" y="62" width="311" height="22" rx="4" fill="#F472B6"/>
+      <text x="480" y="78" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">311g</text>
+      <text x="24" y="120" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">중성화 성견</text>
+      <rect x="160" y="106" width="166" height="22" rx="4" fill="#F472B6" opacity="0.75"/>
+      <text x="335" y="122" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">166g</text>
+      <text x="24" y="164" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">체중감량 중</text>
+      <rect x="160" y="150" width="104" height="22" rx="4" fill="#D1D5DB"/>
+      <text x="273" y="166" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">104g</text>
+    </svg>
+    </div>
+    <p>자견 4개월 미만(311g)과 체중감량 중(104g)의 차이는 무려 207g, 거의 3배입니다. 만약 자견 시기에 체중감량 계수를 잘못 적용해 104g만 준다면 하루 787kcal가 부족해 성장 장애로 이어질 수 있고, 반대로 체중감량이 필요한 개에게 자견 기준 311g을 준다면 하루 787kcal가 초과돼 비만이 가속화됩니다. 개인적으로는 보호자들이 사료량을 "체중 하나"로만 생각하는 습관을 가장 먼저 바꿔야 한다고 봅니다.</p>
+
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-88xhdLeiIK3V35kb" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>실제로 계산해보면 - 체중별 시나리오 4가지</h2>
+    <p>공식만 봐서는 감이 잘 안 옵니다. 실제 체중과 상황을 넣어 하나씩 계산해보겠습니다. 모든 수치는 RER=70×체중^0.75, DER=RER×계수 공식으로 검산했습니다.</p>
+
+    <h3>1. 몰티즈 '보리' 4kg, 중성화 성견</h3>
+    <p>직장인 신유리씨가 키우는 몰티즈 '보리'는 4kg 중성화 성견입니다. RER = 70 × 4^0.75 = 198kcal, DER = 198 × 1.6 = 317kcal입니다. 건식 사료 100g당 380kcal 기준이면 하루 급여량은 317 ÷ 380 × 100 = 약 83g입니다. 2끼로 나누면 1회 약 42g입니다. 소형견이라 그램 수 오차가 눈에 잘 안 보일 수 있지만, 5g만 더 줘도 하루 칼로리 기준 6% 초과라 체중 1~2kg대 소형견에게는 결코 작은 차이가 아닙니다.</p>
+
+    <h3>2. 골든리트리버 '초코' 25kg, 미중성화 vs 중성화 비교</h3>
+    <p>이준혁씨의 골든리트리버 '초코'는 25kg 미중성화 성견입니다. RER = 70 × 25^0.75 = 783kcal, DER = 783 × 1.8 = 1,409kcal, 급여량은 1,409 ÷ 380 × 100 = 약 371g입니다. 만약 초코가 중성화 수술을 받는다면 계수가 1.6으로 낮아져 DER은 1,252kcal, 급여량은 약 330g으로 줄어듭니다. 그 차이는 하루 41g, 한 달로 계산하면 약 1,230g으로, 3kg짜리 사료 한 봉지 기준으로 보면 한 달에 40% 넘는 양을 덜 먹게 되는 셈입니다. 이 차이를 무시하고 미중성화 시절 급여량을 그대로 유지하면 중성화 후 대사율이 낮아진 상태에서 매일 41g씩 과잉 섭취하게 되어 6개월이면 체중이 눈에 띄게 늘어날 수 있습니다.</p>
+
+    <h3>3. 코리안숏헤어 '나비' 6kg, 노령 실내묘 vs 활동성 비교</h3>
+    <p>정수아씨의 코숏 '나비'는 6kg입니다. 노령·실내 활동이 적은 단계(계수 1.0)로 계산하면 RER = 70 × 6^0.75 = 268kcal, DER도 268kcal로 동일, 급여량은 268 ÷ 350 × 100 = 약 77g입니다. 만약 나비가 아직 미중성화 활동성 고양이(계수 1.4)라면 DER은 376kcal, 급여량은 약 107g으로 30g이나 늘어납니다. 반대로 활동성 고양이 기준을 노령묘에게 그대로 적용하면 하루 30g, 즉 DER 기준 108kcal를 매일 과다 섭취하게 되어 노령묘에게 특히 위험한 비만과 관절 부담으로 이어질 수 있습니다.</p>
+
+    <h3>4. 생후 3개월 자견 '두부' 2kg, 계수를 잘못 적용하면</h3>
+    <p>대학생 오하늘씨가 입양한 생후 3개월 강아지 '두부'는 2kg입니다. 자견 4개월 미만 계수(3.0)로 계산하면 RER = 70 × 2^0.75 = 118kcal, DER = 118 × 3.0 = 353kcal, 습식 사료 100g당 400kcal 기준 급여량은 약 88g입니다. 만약 초보 보호자가 성견 기준(계수 1.8)으로 잘못 계산하면 DER은 212kcal에 그쳐 급여량이 약 53g으로 줄어듭니다. 하루 35g, DER 기준 141kcal가 부족한 상태로 몇 주를 보내면 자견 시기의 골격·근육 성장에 필요한 영양이 모자라 성장 지연으로 이어질 수 있습니다. 자견·자묘는 성견·성묘보다 계수가 최대 3배 높다는 점을 반드시 기억해야 합니다.</p>
+
+    <div class="highlight-box"><p>핵심은 이겁니다. 25kg 리트리버가 중성화 전후로 하루 41g, 6kg 고양이가 활동 단계에 따라 하루 30g씩 차이가 납니다. 체중만 알고 단계를 무시하면 매일 조금씩 쌓여 몇 달 뒤 체중계 위에서 그 차이를 확인하게 됩니다.</p></div>
+
+    <h2>체형(BCS)으로 급여량 미세 조정하기</h2>
+    <p>계산기로 나온 숫자는 출발점이지 정답이 아닙니다. 실제 급여량은 2~4주마다 체중과 체형을 확인하며 미세 조정해야 합니다. 수의사들이 흔히 쓰는 BCS(Body Condition Score, 체형 점수) 기준으로 보면 조정 방향이 명확해집니다.</p>
+    <ul>
+      <li><strong>이상 체형(BCS 4~5/9)</strong>: 갈비뼈가 손으로 쉽게 만져지고 허리가 약간 잘록합니다. 현재 급여량을 유지합니다.</li>
+      <li><strong>과체중(BCS 6~7/9)</strong>: 갈비뼈가 잘 만져지지 않고 허리 라인이 없습니다. 현재 급여량에서 10~20% 감량합니다.</li>
+      <li><strong>저체중(BCS 2~3/9)</strong>: 갈비뼈와 골반뼈가 두드러지게 보입니다. 현재 급여량에서 10~20% 증량합니다.</li>
+    </ul>
+    <p>이런 미세 조정 이전에 큰 그림에서 반려동물 한 달 생활비를 먼저 점검해보는 것도 도움이 됩니다. <a href="../posts/dog-monthly-cost.html" style="color:#F472B6;">강아지 월 생활비 가이드</a>와 <a href="../posts/cat-monthly-cost.html" style="color:#F472B6;">고양이 한 달 생활비 가이드</a>에서 사료비가 전체 지출에서 차지하는 비중을 확인할 수 있습니다. 사실 사료량을 정확히 맞추는 것 자체가 가장 확실한 비용 절약법이기도 합니다. 과다 급여로 남는 사료를 버리거나, 비만으로 인한 관절·당뇨 치료비가 늘어나는 것을 생각하면 <a href="../posts/pet-cost-saving-tips.html" style="color:#F472B6;">반려동물 비용 절약 팁</a>에서 소개하는 방법들과도 방향이 같습니다.</p>
+
+    <div class="cta-box">
+      <p>우리 강아지·고양이의 체중과 활동 단계를 입력하고 정확한 하루 급여량을 계산해보세요.</p>
+      <a href="../../calc/pet/food-amount/" class="cta-btn">사료 급여량 계산하기</a>
+    </div>
+    <p style="font-size:13px;color:#6B7280;margin-top:8px;">관련 계산기: <a href="https://www.jptcalc.kr/calc/pet/monthly-cost/">반려동물 월 생활비 계산기</a> · <a href="https://www.jptcalc.kr/calc/pet/medical/">의료비 예산 계산기</a></p>
+
+    <h2>자주 묻는 질문</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 건식과 습식 사료를 같이 줄 때는 급여량을 어떻게 계산하나요?</div>
+      <p class="faq-a">먼저 하루 권장 칼로리(DER)를 구한 다음, 건식과 습식이 각각 차지할 칼로리 비율을 정합니다. 예를 들어 DER 400kcal 중 건식 70%·습식 30%로 나눈다면 건식에는 280kcal, 습식에는 120kcal를 배분합니다. 건식 380kcal/100g이면 280÷380×100=74g, 습식 85kcal/100g이면 120÷85×100=141g을 급여하면 됩니다. 두 사료의 칼로리를 각각 확인하지 않고 그램 수만 반씩 나누면 총 칼로리가 부족하거나 과해질 수 있습니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 고양이는 사료를 자율급식해도 되나요?</div>
+      <p class="faq-a">가능하지만 비만 위험이 있는 고양이라면 권장하지 않습니다. 자율급식은 활동량이 많고 체형 관리가 잘 되는 젊은 고양이에게는 무리가 없지만, 중성화 후 대사율이 낮아진 성묘나 노령묘는 자율급식 시 과식으로 이어지기 쉽습니다. 계산기로 나온 하루 급여량을 정해두고 그만큼만 하루 2끼로 나눠 주는 정량 급식이 체중 관리에 더 안전합니다. 이미 자율급식 중이라면 하루 총 급여량을 2~3일간 실측해 계산값과 비교해보는 것이 좋습니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 다이어트 사료로 바꾸면 계수를 어떻게 조정해야 하나요?</div>
+      <p class="faq-a">다이어트 사료는 보통 100g당 칼로리가 일반 사료보다 20~30% 낮게 설계되어 있어, 계수는 그대로 두고 사료 칼로리 값만 낮춰서 계산하면 됩니다. 예를 들어 일반 사료 380kcal/100g에서 다이어트 사료 280kcal/100g으로 바꾸면 같은 DER이라도 급여량(그램 수)은 오히려 늘어납니다. 체중감량이 목적이라면 계수 자체도 체중감량 단계(강아지 1.0, 고양이 0.8)로 낮춰서 계산하고, 2~3주 단위로 체중 변화를 확인하며 조정하세요.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 체중이 갑자기 늘거나 줄면 며칠 만에 급여량을 조정해야 하나요?</div>
+      <p class="faq-a">일반적으로 2~4주 간격으로 체중을 재고 조정하는 것이 안전합니다. 매일 체중이 오르내리는 것은 수분 섭취량 차이 등으로 인한 정상 변동이라 즉각 반응할 필요는 없습니다. 다만 2~4주 사이 체중이 5% 이상 변했다면 급여량을 10~15% 조정하고, 한 달 사이 체중의 10% 이상이 급격히 빠지거나 늘었다면 사료량 문제가 아니라 질환 가능성이 있으므로 동물병원 진료를 우선해야 합니다.</p>
+    </div>
+
+    <h2>핵심만 다시 짚으면</h2>
+    <p>사료 포장지의 권장량은 평균 체중의 중성화 성견·성묘 하나만 가정한 숫자일 뿐입니다. 실제로는 같은 10kg 강아지도 자견인지 체중감량 중인지에 따라 하루 급여량이 311g에서 104g까지, 거의 3배 차이가 납니다. 25kg 리트리버는 중성화 전후로 하루 41g, 6kg 고양이는 활동 단계에 따라 하루 30g의 차이가 발생했습니다. NRC 공식(RER=70×체중^0.75, DER=RER×계수)에 우리 아이의 체중과 단계를 정확히 넣고, 2~4주마다 체형을 확인하며 미세 조정하는 것이 가장 현실적인 방법입니다. 지금 계산기에 우리 강아지·고양이의 체중과 단계를 넣어 하루 급여량을 확인해보세요.</p>
+  </div>
+</div>
+<footer class="site-footer"><p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용입니다.</p></footer>
+  <script src="/assets/footer-unified.js" defer></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "NRC(미국 국립연구위원회) 표준 에너지 공식(RER=70×BW^0.75)·사료관리법 기준",
+  basisDate: "2026년 기준",
+  referenceOrg: "National Research Council·농림축산식품부",
+  lastReviewed: '2026.07.09',
+  disclaimer: "본 내용은 참고용이며, 정확한 급여량과 건강 상태는 동물병원 상담으로 확인하세요.",
+  relatedCalc: { name: '사료 급여량 계산기', url: '/calc/pet/food-amount/' },
+  category: 'pet'
+};
+</script>
+<script src="/assets/blog-article-info.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>
