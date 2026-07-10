@@ -47,7 +47,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 
 ## 네이버 타겟 주제 큐
 
-**최종갱신: 2026-06-21** (출처: 네이버 서치어드바이저 검색어/웹문서 TOP 30)
+**최종갱신: 2026-07-10** (출처: 네이버 서치어드바이저 검색어/웹문서 TOP 30)
 
 ### 📌 네이버 서치어드바이저 갱신 이력 (월 1회)
 
@@ -55,6 +55,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 
 | 갱신일 | 출처 캡처 | 큐 변경 요약 |
 |---|---|---|
+| 2026-07-10 | 검색어 TOP30 + 웹문서 TOP30 (최근30일 총클릭 5.4천·노출 50.6만, 전월비 +233%·+338%, 평균 CTR 1.1%) | Tier1·2 전항목 완료 상태에서 갱신(미사용 0개, 트리거 A). TOP30 대부분(보유세·등기비용·성과급세금·연봉인상률·학점/내신·원고지글자수·통상임금·주택연금·BMI·이직연봉상승·유류비·상여금세금·노후생활비)이 이미 기존 계산기·블로그로 기커버되어 웹문서 TOP30 상위에 그대로 노출 중(정상 신호, 신규 작성 불필요). 근저당·소유권이전등기는 registry-cost-guide.html에 이미 포함되어 신규 대상 아님. 3.3% 원천징수는 withholding-tax-guide.html이 07-08 갱신되어 최신 상태. **신규 승자: 청년도약계좌**(계산기 calc/finance/youth-leap-account는 있으나 전용 만기수령액 가이드 없음, 기존 youth-future-savings-guide는 청년미래적금과의 "갈아타기 비교"용이라 앵글 다름·클릭 18+13=31·노출 1055+1045=2100) → Tier 1 추가. 내부링크 리프트 후보에 **realestate/pyeong**(평수 변환, 노출 18,991·CTR 0.3%, 제목은 이미 키워드 일치라 제목 문제 아님) 신규 추가 |
 | 2026-06-21 | 검색어 TOP30 + 웹문서 TOP30 (최근30일 총클릭 2.9천·노출 29.5만, 전월비 +523%·+1318%, 평균 CTR 1%) | 기존 큐 사실상 전소진 확인(brokerage→realestate-agent-fee, api-token→chatgpt-api-cost 등으로 기커버 완료처리). 신규 승자 **등기비용**(registry, CTR 11.5) 추가 + 부동산 비용 클러스터 시작. 제목최적화에 **korean-age-system 블로그**(노출 7,116·CTR 0.7%) 신규 지정 |
 | 2026-05-29 | 검색어 TOP30 + 웹문서 TOP30 | 기준 베이스라인 |
 
@@ -62,18 +63,21 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 
 ### Tier 1 - 네이버 검증된 신규 승자 (최우선)
 1. [완료 2026-06-22] 부동산 등기비용 계산기 2026 → registry-cost-guide.html (텍스트 27,208자, 크롬 정상)
+2. **[기커버 2026-07-10] 청년도약계좌 만기 수령액 계산법** - 신규 작성 안 함 결정. 가드대로 기존 두 글 h2를 전수 확인한 결과 제안했던 새 앵글이 이미 존재: 중도해지 손익분기 → savings-maturity-guide.html에 전용 h2 "중도해지하면 이자가 얼마나 줄까?"(+youth-future 15회), 소득구간별 기여금 매트릭스 → youth-future-savings-guide.html에 전용 h2 "일반형 6% vs 우대형 12% - 자격 3트랙 완전 분리"(총급여 13회·매칭 9회). 새 앵글 없어 근중복 → 대량생산 강등 회피 위해 미작성. 대신 calc/finance/youth-leap-account에서 이 두 글로 내부링크 보강으로 대체 권장
+3. **[완료 2026-07-10] 통상임금 계산법 2026** → ordinary-wage-guide.html (실본문 5,920자=중앙값 수준, 크롬 정상. ※ 옛 sed+wc 측정법은 CSS/JS 포함이라 폐기, count-chars.mjs 기준). 키워드 "1일 통상임금 계산기" 클릭20·노출295·CTR6.8% / calc/salary/ordinary-wage 연결. TOP30 전항목 재점검 중 발견한 진짜 공백 - 계산기는 있으나 guides 배열에 연결된 글 3개(annual-leave-guide·parental-leave-pay·minimum-wage-2026)가 전부 통상임금을 "다른 주제의 근거 개념"으로만 스치듯 언급할 뿐 전용 글이 없었음. 2024년 12월 대법원 판결(재직조건부 정기상여금도 통상임금 포함) 앵글로 작성, guides 배열 맨 앞에 신규 연결 완료
 
 ### Tier 2 - 부동산 비용 클러스터 확장 (보유세=네이버 #1 키워드, 더블다운)
-2. [완료] 부동산 매매 부대비용 총정리 2026 - 취득세·등기비용·중개수수료·법무사 한눈에 (허브성 / acquisition+registry+brokerage 계산기 묶어 링크 / → property-purchase-costs-guide.html)
-3. [완료 2026-06-26] 1인 가구 노후 필요자금·생활비 얼마 (키워드 "1인 노후자금 얼마" 클릭 12 / pension-welfare/retirement-living 연결 / → single-household-retirement-guide.html) - 1인가구 특화(적정 192만·부부 1인당 대비 +44만)·30/40/50대 연령대별 목표액·의료간병 1.5억으로 차별화하여 작성, 기존 retirement-living-cost(부부)·late-start(나이별)와 비중복 확인
+4. [완료] 부동산 매매 부대비용 총정리 2026 - 취득세·등기비용·중개수수료·법무사 한눈에 (허브성 / acquisition+registry+brokerage 계산기 묶어 링크 / → property-purchase-costs-guide.html)
+5. [완료 2026-06-26] 1인 가구 노후 필요자금·생활비 얼마 (키워드 "1인 노후자금 얼마" 클릭 12 / pension-welfare/retirement-living 연결 / → single-household-retirement-guide.html) - 1인가구 특화(적정 192만·부부 1인당 대비 +44만)·30/40/50대 연령대별 목표액·의료간병 1.5억으로 차별화하여 작성, 기존 retirement-living-cost(부부)·late-start(나이별)와 비중복 확인
 
 > 이전 큐(연봉인상률·표준체중·보유세·국민연금40년·API토큰·중개수수료·BMI·날짜차이·D-day 등)는 전부 작성 완료. 완료 이력은 아래 "클러스터 진행 현황"에 보존. brokerage(중개수수료)는 realestate-agent-fee, api-token은 chatgpt-api-cost/claude-vs-gpt/llm-api-price-comparison로 기커버 완료처리됨.
 
 ### 제목 최적화 대상 (월 1회 점검, 메타 쿨다운 4주 준수)
 노출 많은데 CTR 낮은 페이지를 네이버 검색어에 맞춰 제목 갱신. 변경 전 `git blame`으로 4주 쿨다운 확인.
 - [2026-05-29 완료] 만나이(date/age), 시급(salary/hourly-wage), 날짜차이(date/date-difference)
-- **[2026-06-21 신규 지정] korean-age-system 블로그** (노출 7,116·CTR 0.7% = 이번 회차 최대 기회): "만 나이 계산법 2026"을 제목 앞부분에 배치하도록 갱신. 키워드 "만 19세 계산방법" CTR 42.9%가 만나이 실수요를 입증. (5/29에 만나이 *계산기*는 최적화했으나 이 *블로그*는 미최적화 / 블로그 메타 쿨다운 확인 후 진행)
-- **내부링크 리프트(제목보다 순위 문제)**: 고노출·저CTR이나 제목이 이미 양호한 계산기 - salary/hourly-wage(6,117·0.9%), salary/index(4,219·0.9%), health/ideal-weight(4,002·1.3%), pension-welfare/national-pension(3,385·1.3%). 제목 손대지 말고 상위 글(weight-by-height-2026·raise-rate-industry 등)에서 내부링크를 추가해 순위를 페이지1로 끌어올린다.
+- **korean-age-system 블로그** (2026-06-21 지정, 아직 미실행 / 07-10 재확인 CTR 0.4%로 더 악화, 노출 12,448): "만 나이 계산법 2026"을 제목 앞부분에 배치. 마지막 수정 2026-06-13이라 4주 쿨다운은 **2026-07-11 해제** - 다음 회차(또는 그 이후)에 우선 실행
+- **[2026-07-10 신규] realestate/pyeong 내부링크 리프트**: 노출 18,991·CTR 0.3%로 이번 회차 최대 기회. 제목이 이미 "평수 변환 계산기 2026 - 평 ↔ ㎡ 무료 변환"으로 키워드 일치라 제목 문제 아니라 순위 문제로 판단 - 상위 부동산 글(registry-cost-guide·holding-tax-guide 등)에서 pyeong 계산기로 내부링크 추가
+- **내부링크 리프트(제목보다 순위 문제)**: 고노출·저CTR이나 제목이 이미 양호한 계산기 - salary/hourly-wage(6,117→2,374 하락 중), health/ideal-weight(4,002·1.3%), pension-welfare/national-pension(3,385·1.3%). 제목 손대지 말고 상위 글(weight-by-height-2026·raise-rate-industry 등)에서 내부링크를 추가해 순위를 페이지1로 끌어올린다.
 
 ## 사전 확인
 1. `ls /home/tjd618/jptcalc/blog/posts/` 로 기존 포스트 파일 목록 전체 확인
@@ -149,10 +153,12 @@ cta-btn 배경색과 td.rate 색상도 각 카테고리의 --primary와 동일�
 ## 콘텐츠 퀄리티 기준 (핵심)
 
 ### 텍스트 분량
-- HTML 태그·CSS·스크립트를 제외한 **순수 텍스트 15,000자 이상** 작성 (Bash로 반드시 측정)
-- 13,000자 미만은 얇은 글(thin content)로 간주해 섹션을 추가해서 보강
+> ⚠️ 2026-07-10 측정 기준 정정: 기존 "순수 텍스트 15,000자" + `sed 's/<[^>]*>//g' | wc -c` 는 **이중으로 틀린 지표**였다. ① `wc -c`는 바이트를 세는데 한글은 글자당 3바이트라 "자"와 어긋나고, ② tag만 지우면 `<style>`/`<script>` **내용물(CSS·JS)** 이 텍스트로 남아 실제 본문의 2~4배로 부풀려진다. 실제로 139편 전수 측정 결과 실본문 중앙값은 **6,176자**, 15,000자를 넘는 글은 4편(3%)뿐이었다. 아래 기준은 실측 분포에 맞춘 값이다.
+- **실제 본문 순수 텍스트(head·script·style·header·footer 제외) 6,000자 이상** 권장 (139편 중앙값 수준)
+- **4,000자 미만은 thin content**로 간주해 섹션을 추가해서 보강 (반드시)
+- 측정은 반드시 전용 스크립트로: `node scripts/count-chars.mjs blog/posts/파일.html` (△=6,000 미만, ✗=4,000 미만 thin). 인자 없이 실행하면 전체 분포+thin 목록.
 - 분량을 채우기 위한 중복·반복 문장 금지 - 내용이 없으면 새 섹션을 추가할 것
-- 15,000자를 못 채우겠으면 주제 범위를 넓히거나 시나리오를 추가
+- 6,000자를 못 채우겠으면 주제 범위를 넓히거나 시나리오를 추가
 
 ### 계산 예시 (3~4개 필수)
 단순 수치 나열이 아닌 **인물·상황 기반 시나리오**로 작성한다.
@@ -479,8 +485,8 @@ window.ARTICLE_INFO_CONFIG = {
 ### 3. 작성 후 자체 검증 (필수)
 ```
 검증 항목:
-□ HTML 태그 제거 후 순수 텍스트 15,000자 이상인지 확인 (13,000 미만이면 반드시 보강)
-  - Bash: cat 파일.html | sed 's/<[^>]*>//g' | tr -s ' \n' | wc -c
+□ 실제 본문 순수 텍스트 6,000자 이상 권장 / 4,000자 미만이면 thin이므로 반드시 보강
+  - Bash: node scripts/count-chars.mjs blog/posts/파일.html  (△=6,000 미만, ✗=4,000 미만. sed+wc -c 옛 명령은 CSS/JS 포함·바이트라 폐기)
 □ 목차형 요약 리스트 포함 여부 (도입부 직후)
 □ 반전 비교 섹션 1개 포함 여부
 □ 계산 예시 3개 이상, 수식 검산 완료, 의사결정 연결 문장 포함
