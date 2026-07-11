@@ -23,7 +23,7 @@
       key:'due-date',
       quick:['출산예정일은 네겔레 법칙으로 마지막 생리 시작일 + 280일(40주)로 구합니다.','간편식은 마지막 생리 월 −3, 일 +7, 연 +1로 거의 같은 날짜가 나옵니다.','생리주기가 28일이 아니면 (주기−28)일만큼 예정일을 보정합니다.','임신 주수는 마지막 생리일을 0주로 세므로 실제 태아 나이보다 약 2주 많습니다.'],
       related:[['/calc/baby/ovulation/','배란일·가임기','🥚'],['/calc/baby/baby-months/','아기 개월수','👶'],['/calc/date/dday/','D-day','📆']],
-      guides:[]
+      guides:[['/blog/posts/due-date-guide.html','출산예정일 계산법 2026 - 네겔레 법칙·임신 주수·삼분기 완전정리']]
     },
     '/calc/baby/baby-months/': {
       key:'baby-months',

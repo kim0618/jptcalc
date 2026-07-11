@@ -62,7 +62,7 @@
   </url>
   <url>
     <loc>https://www.jptcalc.kr/blog/posts/loan-refinance-guide.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -80,7 +80,7 @@
   </url>
   <url>
     <loc>https://www.jptcalc.kr/blog/posts/saas-vs-self-build.html</loc>
-    <lastmod>2026-07-08</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -99,6 +99,12 @@
   <url>
     <loc>https://www.jptcalc.kr/blog/posts/windsurf-vs-cursor-cost-guide.html</loc>
     <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jptcalc.kr/blog/posts/due-date-guide.html</loc>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

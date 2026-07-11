@@ -5,9 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Wed, 08 Jul 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
 
+    <item>
+      <title>출산예정일 계산법 2026 - 네겔레 법칙·임신 주수·삼분기 완전정리</title>
+      <link>https://www.jptcalc.kr/blog/posts/due-date-guide.html</link>
+      <description>출산예정일은 마지막 생리일+280일(네겔레 법칙). 임신 주수가 실제 태아 나이보다 2주 많은 이유, 배란일·초음파 기준 보정법, 조산·과숙 판정 기준까지 시나리오별로 정리했습니다.</description>
+      <pubDate>Sat, 11 Jul 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/due-date-guide.html</guid>
+    </item>
     <item>
       <title>강아지 고양이 사료 급여량 계산법 2026 - NRC 공식으로 하루 급여량 정확히 구하기</title>
       <link>https://www.jptcalc.kr/blog/posts/food-amount-guide.html</link>
