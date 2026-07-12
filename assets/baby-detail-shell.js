@@ -59,7 +59,7 @@
       key:'total-support',
       quick:['첫만남이용권+부모급여+아동수당+가정양육수당을 합산합니다.','첫째 가정양육 시 출생~취학 전 약 3,700만원, 둘째 이상 약 3,800만원입니다.','어린이집 이용 시 가정양육수당이 보육료로 전환되어 현금 합계가 달라집니다.','지자체 출산장려금은 별도이며 포함되지 않습니다.'],
       related:[['/calc/baby/parental-benefit/','부모급여','🍼'],['/calc/baby/child-allowance/','아동수당','👛'],['/calc/baby/home-care-allowance/','가정양육수당','🏠']],
-      guides:[]
+      guides:[['/blog/posts/childbirth-support-guide.html','출산 지원금 총정리 2026 - 첫만남이용권·부모급여·아동수당·양육수당 합치면 얼마']]
     },
     '/calc/baby/parental-leave-pay/': {
       key:'parental-leave-pay',
