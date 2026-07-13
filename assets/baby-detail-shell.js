@@ -41,7 +41,7 @@
       key:'child-allowance',
       quick:['2026년 아동수당은 만 9세 미만으로 확대되어 월 10만원을 지급합니다.','소득·재산과 무관하게 출생부터 약 108개월간 총 1,080만원을 받습니다.','부모급여·가정양육수당과 중복 지급됩니다.','비수도권·인구감소지역은 추가 지원이 있을 수 있습니다.'],
       related:[['/calc/baby/parental-benefit/','부모급여','🍼'],['/calc/baby/home-care-allowance/','가정양육수당','🏠'],['/calc/baby/first-meeting/','첫만남이용권','🎁']],
-      guides:[]
+      guides:[['/blog/posts/child-allowance-guide.html','아동수당 2026 완전정리 - 만 9세 미만 확대, 지역별 최대 13만원까지']]
     },
     '/calc/baby/first-meeting/': {
       key:'first-meeting',
