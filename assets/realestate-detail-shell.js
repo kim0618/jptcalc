@@ -101,7 +101,7 @@
     '/calc/realestate/registry/': {
       key:'registry',
       quick:['등기비용은 등록면허세·교육세·채권매입비용·법무사 수수료로 구성됩니다.','채권 매입 후 즉시 매도(시장매도) 시 할인율에 따른 차액이 실비용입니다.','소유권 이전 등기 신청은 잔금일로부터 60일 이내에 해야 합니다.','법무사 수수료는 법정 기준이 있으나 실제로는 협의 가능합니다.'],
-      guides:[['/blog/posts/property-purchase-costs-guide.html','부동산 매매 부대비용 총정리 2026 - 취득세·등기비용·중개수수료 한눈에'],['/blog/posts/registry-cost-guide.html','부동산 등기비용 계산기 2026 - 매매 등기 총비용, 채권·인지세·법무사비까지']],
+      guides:[['/blog/posts/self-registry-guide.html','셀프등기 하는 법 2026 - 인터넷등기소 소유권이전등기 순서·필요서류·법무사비 절감액'],['/blog/posts/property-purchase-costs-guide.html','부동산 매매 부대비용 총정리 2026 - 취득세·등기비용·중개수수료 한눈에'],['/blog/posts/registry-cost-guide.html','부동산 등기비용 계산기 2026 - 매매 등기 총비용, 채권·인지세·법무사비까지']],
       related:[['/calc/realestate/acquisition/','취득세 계산기','📄'],['/calc/realestate/brokerage/','중개수수료 계산기','🏠'],['/calc/realestate/loan/','대출이자 계산기','💰']]
     }
   };
