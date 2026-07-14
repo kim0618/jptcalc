@@ -153,6 +153,10 @@
         <span class="result-total-value" id="s2-r-annual">-</span>
       </div>
       <div id="s2-min-compare" class="result-note" style="margin-top:12px;"></div>
+      <a id="s2-cta" class="bridge-cta" href="#" target="_blank" rel="noopener" style="display:none;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;padding:14px 16px;background:#fff;color:var(--primary);border:1px solid rgba(59,130,246,0.35);border-radius:12px;font-weight:700;font-size:14px;text-decoration:none;line-height:1.4;box-shadow:0 1px 3px rgba(59,130,246,0.08);">
+        <span>📄 이 시급으로 근로계약서 만들기</span>
+        <span style="opacity:.7;font-weight:600;white-space:nowrap;">폼다에서 자동작성 →</span>
+      </a>
     </div>
   <div class="adfit-slot" style="text-align:center;margin:28px 0">
     <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
@@ -405,6 +409,7 @@ function calcHourly() {
     cmp.innerHTML = `✅ 최저시급(10,320원) 대비 <strong>${((hourly/minWage-1)*100).toFixed(0)}%</strong> 높은 시급입니다.${notice}`;
     cmp.style.color = '';
   }
+  setHourlyCta(hourly);
 }
 
 function calcFromHourly() {
@@ -438,6 +443,16 @@ function calcFromHourly() {
     cmp.innerHTML = `✅ 최저시급(10,320원) 대비 <strong>${((h/minWage-1)*100).toFixed(0)}%</strong> 높은 시급입니다.${notice}`;
     cmp.style.color = '';
   }
+  setHourlyCta(h);
+}
+
+// 폼다 근로계약서 브릿지: 시급(원)을 payType 시급 + payAmount로 프리필
+function setHourlyCta(hourly) {
+  var cta = document.getElementById('s2-cta');
+  if (!cta || !hourly || hourly <= 0) { if (cta) cta.style.display = 'none'; return; }
+  var payload = { payType: '시급', payAmount: Math.round(hourly) };
+  cta.href = 'https://formda.kr/tools/employment-contract?d=' + encodeURIComponent(JSON.stringify(payload)) + '&utm_source=jptcalc&utm_medium=bridge&utm_campaign=employment&utm_content=hourly-wage';
+  cta.style.display = 'flex';
 }
 </script>
 

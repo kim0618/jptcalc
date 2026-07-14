@@ -151,6 +151,10 @@
         <span class="result-total-value" id="s0-deduction">-</span>
       </div>
       <p class="result-note">※ 2026년 기준. 국민연금 기준소득월액 상한 659만원·하한 41만원(2026년 7월부터 적용). 월 비과세 금액 입력 시 4대보험·소득세 산정 기준에서 제외됩니다. 근로소득세는 국세청 근로소득 간이세액표(소득세법 시행령 별표2, 2024.2.29. 개정) 100% 기준 매월 원천징수액입니다. 8~20세 자녀세액공제(1명 월 12,500원 / 2명 29,160원 / 3명 이상 29,160원+추가 25,000원)는 자동 반영. 의료비·교육비·기부금 등 추가 공제는 연말정산 시 별도 환급/납부됩니다. 정확한 금액은 급여명세서를 기준으로 확인하세요.</p>
+      <a id="s0-payslip-cta" class="bridge-cta" href="#" target="_blank" rel="noopener" style="display:none;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;padding:14px 16px;background:#fff;color:var(--primary);border:1px solid rgba(59,130,246,0.35);border-radius:12px;font-weight:700;font-size:14px;text-decoration:none;line-height:1.4;box-shadow:0 1px 3px rgba(59,130,246,0.08);">
+        <span>📄 이 결과 그대로 급여명세서 만들기</span>
+        <span style="opacity:.7;font-weight:600;white-space:nowrap;">폼다에서 자동작성 →</span>
+      </a>
 </div>
 
   <a class="affiliate-banner" href="https://bestmore.net/click.php?m=allcredit&a=A100703525&l=0000" target="_blank" rel="noopener noreferrer sponsored">
@@ -461,6 +465,26 @@ function calcTakehome() {
   document.getElementById('s0-tax').textContent = `−${comma(r.monthlyTax)}`;
   document.getElementById('s0-local').textContent = `−${comma(r.localTax)}`;
   document.getElementById('s0-deduction').textContent = comma(r.totalDedu);
+  // 폼다 급여명세서 브릿지: 계산 결과(6공제 + 과세/비과세 급여)를 그대로 프리필
+  const cta = document.getElementById('s0-payslip-cta');
+  if (cta) {
+    const earnings = nt > 0
+      ? [{ name: '기본급', amount: Math.round(r.taxableMonthly), taxfree: false }, { name: '식대', amount: Math.round(nt * 10000), taxfree: true }]
+      : [{ name: '기본급', amount: Math.round(r.taxableMonthly), taxfree: false }];
+    const payload = {
+      earnings: earnings,
+      deductions: [
+        { name: '국민연금', amount: Math.round(r.pension) },
+        { name: '건강보험', amount: Math.round(r.health) },
+        { name: '장기요양보험', amount: Math.round(r.ltc) },
+        { name: '고용보험', amount: Math.round(r.emp) },
+        { name: '소득세', amount: Math.round(r.monthlyTax) },
+        { name: '지방소득세', amount: Math.round(r.localTax) }
+      ]
+    };
+    cta.href = 'https://formda.kr/tools/payslip?d=' + encodeURIComponent(JSON.stringify(payload)) + '&utm_source=jptcalc&utm_medium=bridge&utm_campaign=payslip';
+    cta.style.display = 'flex';
+  }
 }
 
 function clearResult(prefix) {

@@ -227,6 +227,10 @@
         </div>
 
         <p class="result-note" style="margin-top:12px">※ 2026년 요율 기준. 국민연금 기준소득월액 상한 659만원·하한 41만원(2026년 7월부터). 사용자 고용보험은 기본 0.9% 외 고용안정·직업능력개발 분담금이 업종·규모별로 추가됩니다. 실수령액(소득세 포함)은 <a href="/calc/salary/take-home-pay/" style="color:var(--primary)">연봉 실수령액 계산기</a>에서 확인하세요.</p>
+        <a id="fi-payslip-cta" class="bridge-cta" href="#" target="_blank" rel="noopener" style="display:none;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;padding:14px 16px;background:#fff;color:var(--primary);border:1px solid rgba(16,185,129,0.35);border-radius:12px;font-weight:700;font-size:14px;text-decoration:none;line-height:1.4;box-shadow:0 1px 3px rgba(16,185,129,0.08);">
+          <span>📄 이 4대보험 공제로 급여명세서 만들기</span>
+          <span style="opacity:.7;font-weight:600;white-space:nowrap;">폼다에서 자동작성 →</span>
+        </a>
       </div>
     </div>
 
@@ -447,8 +451,8 @@ const NP_RATE  = 0.0475;
 const HP_RATE  = 0.03595;
 const LTC_RATE = 0.1314;
 const EI_RATE  = 0.009;
-const NP_CAP   = 637;  // 만원
-const NP_FLOOR = 40;   // 만원
+const NP_CAP   = 659;  // 만원 (2026.7~2027.6 기준소득월액 상한, 매년 7월 조정)
+const NP_FLOOR = 41;   // 만원 (2026.7~2027.6 하한)
 
 function fmt(man) {
   const won = Math.round(man * 10000);
@@ -510,6 +514,27 @@ function calculate() {
   document.getElementById('eTotal').textContent = fmtVal(employerTotal);
 
   document.getElementById('resCombined').textContent = combinedWon.toLocaleString() + '원';
+
+  // 폼다 급여명세서 브릿지: 4대보험 근로자 4항목 + 과세 기본급(비과세 시 식대 분리) 프리필. 소득세는 사용자 입력
+  const ctaFi = document.getElementById('fi-payslip-cta');
+  if (ctaFi) {
+    const earnFi = nontax > 0
+      ? [{ name: '기본급', amount: Math.round(taxable * 10000), taxfree: false }, { name: '식대', amount: Math.round(nontax * 10000), taxfree: true }]
+      : [{ name: '기본급', amount: Math.round(taxable * 10000), taxfree: false }];
+    const payloadFi = {
+      earnings: earnFi,
+      deductions: [
+        { name: '국민연금', amount: Math.round(np * 10000) },
+        { name: '건강보험', amount: Math.round(hp * 10000) },
+        { name: '장기요양보험', amount: Math.round(ltc * 10000) },
+        { name: '고용보험', amount: Math.round(ei * 10000) },
+        { name: '소득세', amount: 0 },
+        { name: '지방소득세', amount: 0 }
+      ]
+    };
+    ctaFi.href = 'https://formda.kr/tools/payslip?d=' + encodeURIComponent(JSON.stringify(payloadFi)) + '&utm_source=jptcalc&utm_medium=bridge&utm_campaign=payslip&utm_content=four-insurance';
+    ctaFi.style.display = 'flex';
+  }
 
   card.style.display = 'block';
 }

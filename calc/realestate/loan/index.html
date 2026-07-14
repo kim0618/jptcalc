@@ -79,7 +79,12 @@
       <button class="seg-btn" onclick="selectRepay('bullet', this)">만기일시</button>
     </div>
   </div>
-  <div class="result-card" id="loan-result"><div id="loan-result-content"></div></div>
+  <div class="result-card" id="loan-result"><div id="loan-result-content"></div>
+    <a id="loan-cta" class="bridge-cta" href="#" target="_blank" rel="noopener" style="display:none;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;padding:14px 16px;background:#fff;color:var(--primary);border:1px solid rgba(245,158,11,0.35);border-radius:12px;font-weight:700;font-size:14px;text-decoration:none;line-height:1.4;box-shadow:0 1px 3px rgba(245,158,11,0.08);">
+      <span>📄 이 금액으로 차용증 만들기</span>
+      <span style="opacity:.7;font-weight:600;white-space:nowrap;">폼다에서 자동작성 →</span>
+    </a>
+  </div>
   <a class="affiliate-banner" href="https://bestmore.net/click.php?m=allcredit&a=A100703525&l=0000" target="_blank" rel="noopener noreferrer sponsored">
       <div class="affiliate-banner__text">
         <div class="affiliate-banner__title">대출 전 내 신용점수부터 확인하세요</div>
@@ -271,6 +276,23 @@ function calcLoan() {
   }
   document.getElementById('loan-result-content').innerHTML = html;
   document.getElementById('loan-result').classList.add('show');
+  // 폼다 차용증 브릿지: 원금·이자율·기간(→변제기)·상환방식 프리필
+  var ctaLoan = document.getElementById('loan-cta');
+  if (ctaLoan) {
+    var due = new Date();
+    due.setMonth(due.getMonth() + Math.round(years * 12));   // 개월 단위 환산(소수 연도도 정확: 1.5년=18개월)
+    var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+    var dueStr = due.getFullYear() + '-' + pad(due.getMonth() + 1) + '-' + pad(due.getDate());
+    var repayMap = { 'equal-payment': '원리금균등상환', 'equal-principal': '원금균등상환', 'bullet': '만기일시상환' };
+    var payloadLoan = {
+      amount: principal,
+      rate: document.getElementById('loan-rate').value,
+      dueDate: dueStr,
+      repayMethod: repayMap[repayType] || ''
+    };
+    ctaLoan.href = 'https://formda.kr/tools/loan?d=' + encodeURIComponent(JSON.stringify(payloadLoan)) + '&utm_source=jptcalc&utm_medium=bridge&utm_campaign=loan';
+    ctaLoan.style.display = 'flex';
+  }
 }
 </script>
 

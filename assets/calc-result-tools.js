@@ -172,17 +172,20 @@
     const snap = extractSnapshot(card);
     if (!snap){ showToast('먼저 계산을 해주세요'); return; }
     showToast('이미지 저장 중...');
-    const banners = card.querySelectorAll('.affiliate-banner');
-    banners.forEach(b => b.style.display = 'none');
+    // 캡처 제외: 제휴 배너 + 폼다 브릿지 CTA(이동 링크라 저장물에 미포함). display 값 보존 후 복원.
+    const hidden = card.querySelectorAll('.affiliate-banner, .bridge-cta');
+    const prevDisp = [];
+    hidden.forEach((b, i) => { prevDisp[i] = b.style.display; b.style.display = 'none'; });
+    const restore = () => hidden.forEach((b, i) => { b.style.display = prevDisp[i]; });
     loadHtml2Canvas().then((html2canvas)=>html2canvas(card, { scale: 2, useCORS: true })).then(canvas => {
-      banners.forEach(b => b.style.display = '');
+      restore();
       const link = document.createElement('a');
       const safe = snap.title.replace(/[\\/:*?"<>|]+/g, '_');
       link.download = `${safe}.png`;
       link.href = canvas.toDataURL('image/png');
       link.click();
       showToast('이미지가 저장되었습니다');
-    }).catch(()=>{ banners.forEach(b => b.style.display = ''); showToast('저장 실패 - 다시 시도해주세요'); });
+    }).catch(()=>{ restore(); showToast('저장 실패 - 다시 시도해주세요'); });
   }
 
   function makeButton(label, icon, onClick){

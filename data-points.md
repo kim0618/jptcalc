@@ -106,10 +106,11 @@
 - **공식 출처**: 보건복지부 고시 / https://www.nps.or.kr/ (KDI eiec·정책브리핑 교차)
 - **마지막 확인**: 2026-07-03 (WebSearch 명시치 6,590,000/410,000 + A값 3.4% 연동 확인. ⚠️구 페이지에 하한 39만/40만 혼재 → 41만으로 통일)
 - **변동 주기**: 연 1회 (매년 7월, A값 3년 평균 변동률 반영). 매년 7월 초 refresh 필수
-- **검색 패턴**: `637만` / `6,370,000` / `6370000`(JS 상한 상수) / `390000`·`400000`(JS 하한) / `PENSION_CAP` / `PENSION_FLOOR` / `INCOME_MAX` / `INCOME_MIN` / `302,575` / `39만`·`40만`(하한 텍스트)
+- **검색 패턴**: `637만` / `6,370,000` / `6370000`(JS 상한 상수) / `390000`·`400000`(JS 하한) / `PENSION_CAP` / `PENSION_FLOOR` / `NP_CAP` / `NP_FLOOR`(four-insurance 만원 상수) / `INCOME_MAX` / `INCOME_MIN` / `302,575` / `39만`·`40만`(하한 텍스트) / 만원 단위 상수 `= 637`·`= 40`(변수명 무관 grep)
 - **영향 페이지** (JS 상수 = 출력값 직결):
   - calc/salary/unemployment·severance·take-home-pay·raise-rate·job-change·comparison (6개, `6370000` 상한 + 일부 `390000` 하한)
   - calc/tax/freelancer-income (`PENSION_CAP=637`·`PENSION_FLOOR=39`)
+  - **calc/tax/four-insurance (`NP_CAP=637`·`NP_FLOOR=40` 만원 상수 = 출력 직결! ⚠️2026-07-14 stale 발견·659/41로 수정. 7/3 갱신 때 텍스트만 고치고 JS상수 누락됐던 커버리지 갭)**
   - calc/pension-welfare/national-pension (`INCOME_MAX=6370000`·`INCOME_MIN=400000` + field-hint)
   - 텍스트·FAQ·JSON-LD·trust-block: calc/tax/four-insurance(6곳)·insurance-comparison·index / calc/salary/index·raise-rate / assets/tax-detail-shell.js
   - 블로그: national-pension-40years(13곳·상한표 재계산)·national-pension-voluntary(7)·national-pension-guide·bonus-tax-guide·nontaxable-allowance-guide·social-insurance-guide (Group C 별도처리)
