@@ -45,9 +45,9 @@
     },
     '/calc/baby/first-meeting/': {
       key:'first-meeting',
-      quick:['첫만남이용권은 첫째아 200만원, 둘째아 이상 300만원입니다(2024.1.1 이후 출생).','출생아 1명당 지급되어 쌍둥이는 각각 받습니다.','국민행복카드 바우처로 지급되며 사용 기한은 출생일로부터 1년입니다.','부모급여·아동수당과 중복 지급됩니다.'],
+      quick:['첫만남이용권은 첫째아 200만원, 둘째아 이상 300만원입니다(2024.1.1 이후 출생).','출생아 1명당 지급되어 쌍둥이는 각각 받습니다.','국민행복카드 바우처로 지급되며 사용 기한은 출생일로부터 2년입니다(2024.1.1 이후 출생아부터 확대).','부모급여·아동수당과 중복 지급됩니다.'],
       related:[['/calc/baby/parental-benefit/','부모급여','🍼'],['/calc/baby/child-allowance/','아동수당','👛'],['/calc/baby/home-care-allowance/','가정양육수당','🏠']],
-      guides:[]
+      guides:[['/blog/posts/first-meeting-voucher-guide.html','첫만남이용권 사용법 2026 - 사용처·사용기한 2년·잔액 소진까지 완전정리']]
     },
     '/calc/baby/home-care-allowance/': {
       key:'home-care-allowance',
