@@ -53,7 +53,7 @@
       key:'home-care-allowance',
       quick:['가정양육수당은 만 24~86개월 미만, 어린이집 미이용 시 일반 월 10만원입니다.','농어촌은 24~35개월 15만6천원, 36~47개월 12만9천원, 48개월~ 10만원입니다.','장애아동은 36개월 미만 20만원, 36개월~ 10만원입니다.','어린이집 이용 시 보육료로 전환되어 중복 수급할 수 없습니다.'],
       related:[['/calc/baby/parental-benefit/','부모급여','🍼'],['/calc/baby/child-allowance/','아동수당','👛'],['/calc/baby/first-meeting/','첫만남이용권','🎁']],
-      guides:[]
+      guides:[['/blog/posts/home-care-allowance-guide.html','가정양육수당 2026 완전정리 - 24개월부터 월 10만원, 부모급여 끝나면 80% 줄어드는 이유']]
     },
     '/calc/baby/total-support/': {
       key:'total-support',

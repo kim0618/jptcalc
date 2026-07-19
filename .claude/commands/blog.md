@@ -40,7 +40,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - **완료 클러스터: 국민연금(pension-welfare)** | 2026-06-05~06-08 완료 | **성과점검 완료 2026-07-06: 미흡** - GA4 34일 뷰 허브 7·조기수령 10·납부예외 10(체류 8초, thin 의심)·추납만 47로 편차 큼. 추가 위성 보류, 다음 연금 콘텐츠는 신규 클러스터로 재검토
   - 허브: national-pension-40years(06-05) / 위성: national-pension-early-receipt(조기수령·06-08)·national-pension-payment-exemption(납부예외·06-08)·national-pension-additional-payment(추납·06-08) | 임의가입은 national-pension-voluntary.html로 기커버
 - **[완료 2026-06-08] 주택연금 신규 계산기 글(pension-welfare)** | housing-pension-guide.html. HF 2026 월지급금 예시표 기준. detail-shell guides + ARTICLE_INFO guides + 본문 CTA 양방향 연결 완료
-- **완료 클러스터: 부동산 비용(realestate)** | 2026-06-21~06-22 완료 | **성과 점검 예정: 2026-07-19** (트리거 B)
+- **완료 클러스터: 부동산 비용(realestate)** | 2026-06-21~06-22 완료 | **성과점검 완료 2026-07-19: 먹힘** - GA4 34일 뷰 holding-tax 62·registry-cost 123·property-purchase 60(체류 78~135초, thin 없음). SC 클릭은 0(구글붕괴 여파, 네이버 유입으로 해석, 타 클러스터와 동일 패턴). 위성 추가 후보로 남겨두되 현재 우선순위는 네이버 큐 재갱신
   - 허브: holding-tax-guide / 위성: ① registry-cost-guide(등기비용·06-22) · ② property-purchase-costs-guide(매매 부대비용·06-26)
 - **완료 클러스터: 자동차(auto)** | 2026-06-28~07-03 완료 (자동차 카테고리 블로그 0편이던 미개척 영역 진입, 6편으로 소진) | **성과 점검 예정: 2026-07-26** (트리거 B)
   - 허브: car-tax-guide(자동차세·06-28, auto-tax 고아 해소) / 위성: ① car-acquisition-tax-guide(자동차 취득세·06-29, acquisition-tax+used-car-tax 고아 동시 해소) · ② ev-subsidy-guide(전기차 보조금·06-30) · ③ fuel-cost-guide(유류비·07-01, fuel-cost 고아 해소) · ④ ev-charging-guide(전기차 충전비·07-02) · ⑤ auto-loan-guide(자동차 할부·07-03, auto-loan 고아 해소, 마지막 위성)
