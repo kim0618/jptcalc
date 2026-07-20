@@ -680,7 +680,7 @@
   </url>
   <url>
     <loc>https://www.jptcalc.kr/blog/posts/isa-guide.html</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -840,7 +840,7 @@
 
   <!-- 블로그 포스트 2026-04-02 -->
   <url><loc>https://www.jptcalc.kr/blog/posts/gift-tax-guide.html</loc><lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.jptcalc.kr/blog/posts/social-insurance-guide.html</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.jptcalc.kr/blog/posts/social-insurance-guide.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.jptcalc.kr/blog/posts/annual-leave-guide.html</loc><lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- 블로그 포스트 2026-04-03 검증글 -->
@@ -898,6 +898,7 @@
   <url><loc>https://www.jptcalc.kr/blog/posts/registry-cost-guide.html</loc><lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.jptcalc.kr/blog/posts/self-registry-guide.html</loc><lastmod>2026-07-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.jptcalc.kr/blog/posts/first-meeting-voucher-guide.html</loc><lastmod>2026-07-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.jptcalc.kr/blog/posts/jeonse-loan-guide.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/auto/</loc><lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/auto/auto-loan/</loc><lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/auto/auto-tax/</loc><lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>

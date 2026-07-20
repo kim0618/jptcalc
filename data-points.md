@@ -113,7 +113,7 @@
   - **calc/tax/four-insurance (`NP_CAP=637`·`NP_FLOOR=40` 만원 상수 = 출력 직결! ⚠️2026-07-14 stale 발견·659/41로 수정. 7/3 갱신 때 텍스트만 고치고 JS상수 누락됐던 커버리지 갭)**
   - calc/pension-welfare/national-pension (`INCOME_MAX=6370000`·`INCOME_MIN=400000` + field-hint)
   - 텍스트·FAQ·JSON-LD·trust-block: calc/tax/four-insurance(6곳)·insurance-comparison·index / calc/salary/index·raise-rate / assets/tax-detail-shell.js
-  - 블로그: national-pension-40years(13곳·상한표 재계산)·national-pension-voluntary(7)·national-pension-guide·bonus-tax-guide·nontaxable-allowance-guide·social-insurance-guide (Group C 별도처리)
+  - 블로그: national-pension-40years(13곳·상한표 재계산)·national-pension-voluntary(7)·national-pension-guide·bonus-tax-guide·nontaxable-allowance-guide·social-insurance-guide (Group C 별도처리 - **완료**: 하한 39만/18,525원→41만/19,475원은 2026-07-19 /verify에서, 상한 잔존 구값 277,650원(=617만×4.5%, 상한·요율 둘 다 구값)→313,025원 통일은 2026-07-20 /verify에서 각각 처리. ⚠️**하한만 고치고 상한을 놓친 패턴**이었으니 다음 7월 갱신 때는 상한·하한을 반드시 한 쌍으로 grep할 것. 나머지 Group C 항목(national-pension-* 6편·bonus-tax·nontaxable-allowance)은 미확인 상태로 남음)
 
 ### 2.3 건강보험 요율
 - **현재 값**: 7.19% (근로자 3.595% + 사용자 3.595%)
