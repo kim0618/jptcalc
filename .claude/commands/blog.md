@@ -27,6 +27,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 
 > 이 블록에 지정 항목이 있으면 **클러스터·네이버 큐보다 먼저** 이 1편을 쓴다. 작성 완료하면 이 블록을 비우고(또는 `[완료]` 표기) 평소 선정 순서로 복귀한다.
 
+- **[완료 2026-07-21] 아기 개월수 계산법 1편 (출산·육아, 트리거 A 갱신 결과 실질공백 대응)** — baby-months-guide.html 작성 완료(7/21). 텍스트 6,081자, 크롬 정상. 07-21 서치어드바이저 갱신에서 신규 Tier1 승자가 없어(내신/학점 클러스터 등 TOP30 대부분 기커버 확인) baby-detail-shell.js의 baby-months(아기 개월수 계산기) guides가 빈 배열이었던 실질 공백을 이번 1편으로 해소. index.html·sitemap.xml·rss.xml·guides 배열·inject-sibling.mjs 전부 반영 확인, find-orphan-calcs.mjs 재확인 결과 여전히 0개.
 - **[완료 2026-07-14] 셀프등기 절차 1편 (부동산·registry 클러스터 증축)** — self-registry-guide.html 작성 완료(7/14). 텍스트 6,848자, 크롬 정상, index.html·sitemap.xml·rss.xml·registry-detail-shell guides 전부 연결 확인(7/15 재검증).
 - **[완료 2026-06-24] 청년미래적금 가이드 1편 (금융)** — youth-future-savings-guide.html 작성 완료. 텍스트 26,525자, 크롬 정상, detail-shell 연결 완료.
 
@@ -48,7 +49,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 
 ## 네이버 타겟 주제 큐
 
-**최종갱신: 2026-07-10** (출처: 네이버 서치어드바이저 검색어/웹문서 TOP 30)
+**최종갱신: 2026-07-21** (출처: 네이버 서치어드바이저 검색어/웹문서 TOP 30)
 
 ### 📌 네이버 서치어드바이저 갱신 이력 (월 1회)
 
@@ -56,6 +57,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 
 | 갱신일 | 출처 캡처 | 큐 변경 요약 |
 |---|---|---|
+| 2026-07-21 | 검색어 TOP30 + 웹문서 TOP30 (최근30일 총클릭 5.7천·노출 50.1만, 전월비 +93.9%·+69.9%, 평균 CTR 1.1%) | Tier1·2 전항목 완료 상태에서 갱신(미사용 0개, 트리거 A). 검색어 TOP30 중 7개(내신 평균·학점 등급표·석차등급·내신 등급 비율·4.3학점표·평균 내신 등급 등)가 내신/학점 클러스터로 몰렸으나 naesin-grade-guide.html·gpa-guide.html이 이미 h2 단위로 전부 커버(석차백분율·9등급/5등급 환산·4.5vs4.3vs4.0)하고 있고 웹문서 TOP30 1·2·4·16위를 이 두 글/계산기가 차지 중(정상 신호, 신규 작성 불필요). 성과급 세금(#5,14)도 bonus-tax-guide.html에 전용 h2 있음, 이직 연봉상승률(#19)도 raise-or-quit-guide.html 기커버, 근저당·소유권이전등기(#15,16)도 registry-cost-guide 기커버. **이번 회차 신규 Tier1 승자 없음** - 대신 실질 공백 발견: baby-detail-shell.js의 baby-months(아기 개월수 계산기) guides가 빈 배열([])로 전용 글 없음(07-12에 total-support 작성 시 같은 카테고리에서 놓쳤던 항목) → 이번 1편으로 작성. 제목최적화 **korean-age-system 4주 쿨다운 2026-07-11 해제 확인, 아직 미실행 상태 유지**(다음 회차 우선 실행 권고). military-salary-guide·military-discharge-date(웹문서 #9,25, CTR 1.4~1.7%)는 내부링크 리프트 후보로 신규 관찰 |
 | 2026-07-10 | 검색어 TOP30 + 웹문서 TOP30 (최근30일 총클릭 5.4천·노출 50.6만, 전월비 +233%·+338%, 평균 CTR 1.1%) | Tier1·2 전항목 완료 상태에서 갱신(미사용 0개, 트리거 A). TOP30 대부분(보유세·등기비용·성과급세금·연봉인상률·학점/내신·원고지글자수·통상임금·주택연금·BMI·이직연봉상승·유류비·상여금세금·노후생활비)이 이미 기존 계산기·블로그로 기커버되어 웹문서 TOP30 상위에 그대로 노출 중(정상 신호, 신규 작성 불필요). 근저당·소유권이전등기는 registry-cost-guide.html에 이미 포함되어 신규 대상 아님. 3.3% 원천징수는 withholding-tax-guide.html이 07-08 갱신되어 최신 상태. **신규 승자: 청년도약계좌**(계산기 calc/finance/youth-leap-account는 있으나 전용 만기수령액 가이드 없음, 기존 youth-future-savings-guide는 청년미래적금과의 "갈아타기 비교"용이라 앵글 다름·클릭 18+13=31·노출 1055+1045=2100) → Tier 1 추가. 내부링크 리프트 후보에 **realestate/pyeong**(평수 변환, 노출 18,991·CTR 0.3%, 제목은 이미 키워드 일치라 제목 문제 아님) 신규 추가 |
 | 2026-06-21 | 검색어 TOP30 + 웹문서 TOP30 (최근30일 총클릭 2.9천·노출 29.5만, 전월비 +523%·+1318%, 평균 CTR 1%) | 기존 큐 사실상 전소진 확인(brokerage→realestate-agent-fee, api-token→chatgpt-api-cost 등으로 기커버 완료처리). 신규 승자 **등기비용**(registry, CTR 11.5) 추가 + 부동산 비용 클러스터 시작. 제목최적화에 **korean-age-system 블로그**(노출 7,116·CTR 0.7%) 신규 지정 |
 | 2026-05-29 | 검색어 TOP30 + 웹문서 TOP30 | 기준 베이스라인 |

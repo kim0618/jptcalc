@@ -29,7 +29,7 @@
       key:'baby-months',
       quick:['아기 개월수는 출생일로부터 지난 만 개월 수로 셉니다(출생일=만 0개월 0일).','만 17개월은 만 1세 5개월과 같습니다.','국가 영유아 건강검진은 14~35일, 4·9·18·30·42·54·66개월에 받습니다.','미숙아는 예정일 기준 교정연령을 별도로 사용하기도 합니다.'],
       related:[['/calc/baby/due-date/','출산예정일·임신주수','🤰'],['/calc/baby/ovulation/','배란일·가임기','🥚'],['/calc/date/age/','만 나이','🎂']],
-      guides:[]
+      guides:[['/blog/posts/baby-months-guide.html','아기 개월수 계산법 2026 - 만 월령부터 영유아 검진 8차 시기까지 완전정리']]
     },
     '/calc/baby/parental-benefit/': {
       key:'parental-benefit',
