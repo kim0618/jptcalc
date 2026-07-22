@@ -8,6 +8,9 @@
     '/calc/tools/naesin-grade/':{key:'naesin-grade',quick:[],related:[],guides:[['/blog/posts/naesin-grade-guide.html','내신등급 계산기 보는 법 2026 - 석차백분율·9등급제·5등급제 환산 총정리']]},
     '/calc/tools/discount/':{key:'discount',quick:[],related:[],guides:[['/blog/posts/discount-guide.html','할인율 계산 완벽 가이드 2026 - 할인가·역산·중복할인 실질 할인율 총정리']]},
     '/calc/tools/gpa/':{key:'gpa',quick:[],related:[],guides:[['/blog/posts/gpa-guide.html','학점 계산기 완벽 가이드 2026 - 4.5·4.3·4.0 평점 계산과 GPA 올리는 법']]},
+    '/calc/tools/percent/':{key:'percent',quick:[],related:[],guides:[['/blog/posts/percent-guide.html','퍼센트 계산 완벽 가이드 2026 - 증감률·퍼센트 포인트·할인가 한 번에']]},
+    '/calc/tools/unit-converter/':{key:'unit-converter',quick:[],related:[],guides:[['/blog/posts/cooking-measurement-guide.html','계량스푼 계량컵 변환법 2026 - 큰술·작은술·1컵을 ml·g로 정확히 바꾸는 법'],['/blog/posts/unit-converter-guide.html','단위변환 계산기 2026 - 평수·인치cm·파운드kg·화씨섭씨 한 번에 변환하는 법']]},
+    '/calc/tools/lunar-calendar/':{key:'lunar-calendar',quick:[],related:[],guides:[['/blog/posts/lunar-calendar-guide.html','음력 양력 변환기 완벽 정리 - 생일·제사 날짜, 윤달·간지까지 헷갈리지 않는 법 (2026)']]},
   };
   let cfg=pages[path];
   if(!cfg){
