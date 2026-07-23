@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>자동차 유지비 계산법 2026 - 세금·보험료·유류비·감가상각 3년 총정리 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="자동차 유지비를 취득세·자동차세·유류비·보험료·정비비·감가상각 6가지로 나눠 계산했습니다. 준중형 세단 3년 유지비 2,113만원, 전기차와 비교하면 얼마나 차이 나는지 실제 수치로 확인하세요." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="자동차 유지비 계산법 2026 - 세금·보험료·유류비·감가상각 3년 총정리 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="자동차 유지비를 취득세·자동차세·유류비·보험료·정비비·감가상각 6가지로 나눠 계산했습니다. 준중형 세단 3년 유지비 2,113만원, 전기차와 비교하면 얼마나 차이 나는지 실제 수치로 확인하세요." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/car-maintenance-cost-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/car-maintenance-cost-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#EF4444;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(239,68,68,0.15);color:#EF4444;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:24px 0 10px}
+    .post-body p{margin-bottom:14px}
+    .post-body ul,.post-body ol{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#EF4444;text-decoration:none}
+    .highlight-box{background:rgba(239,68,68,0.1);border-left:4px solid #EF4444;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#991B1B;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    td.rate{color:#EF4444;font-weight:700}
+    tr:hover td{background:rgba(0,0,0,0.02)}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#EF4444;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .faq-item{margin:18px 0}
+    .faq-q{font-weight:700;color:#111827;margin-bottom:6px}
+    .faq-a{color:#374151;font-size:14px;margin:0}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+    .scenario-box{background:#FFF7F7;border:1px solid rgba(239,68,68,0.2);border-radius:12px;padding:20px 24px;margin:20px 0}
+    .scenario-box h3{margin:0 0 12px;font-size:15px;color:#991B1B}
+    .scenario-box p{margin-bottom:8px;font-size:14px;color:#374151}
+    .scenario-box p:last-child{margin-bottom:0}
+    .result-row{display:flex;justify-content:space-between;font-size:14px;padding:6px 0;border-bottom:1px solid rgba(0,0,0,0.05)}
+    .result-row:last-child{border-bottom:none;font-weight:800;color:#EF4444;font-size:15px;padding-top:10px}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "자동차 유지비 계산법 2026 - 세금·보험료·유류비·감가상각 3년 총정리",
+  "description": "자동차 유지비를 취득세·자동차세·유류비·보험료·정비비·감가상각 6가지로 나눠 계산했습니다. 준중형 세단 3년 유지비 2,113만원, 전기차와 비교하면 얼마나 차이 나는지 실제 수치로 확인하세요.",
+  "author": {"@type":"Person","name":"Jay Kim","url":"https://www.jptcalc.kr/about.html","jobTitle":"제이퍼 계산기 운영자"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr",
+    "logo": {"@type":"ImageObject","url":"https://www.jptcalc.kr/android-chrome-512x512.png"}
+  },
+  "datePublished": "2026-07-23",
+  "dateModified": "2026-07-23",
+  "mainEntityOfPage": {"@type":"WebPage","@id":"https://www.jptcalc.kr/blog/posts/car-maintenance-cost-guide.html"},
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "자동차",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "자동차 유지비는 정확히 어떻게 계산하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "자동차 유지비는 취득세(1회성), 자동차세·유류비·보험료·정비비(매년 반복), 감가상각(비현금성 가치 하락) 6가지를 더해서 구합니다. 예를 들어 판매가 2,750만원 준중형 세단(1,600cc)을 연 1만 5,000km 타면, 취득세 175만원(1회), 자동차세 29만 1,200원, 유류비 약 231만 9천원, 보험료 약 70만원, 정비비 약 40만원이 매년 들어 현금성 지출만 2년차부터 연 약 371만원입니다. 여기에 감가상각 약 275만원을 더하면 2년차 총 유지비는 약 646만원이 됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "감가상각도 유지비에 포함해야 하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네, 포함하는 것이 맞습니다. 감가상각은 카드 명세서에 찍히지 않지만 차를 팔거나 처분할 때 실제로 손해로 돌아오는 경제적 비용입니다. 앞선 준중형 세단 예시에서 2년차 총 유지비 약 646만원 중 감가상각 275만원이 차지하는 비중은 약 43%로, 세금·보험료·유류비를 다 합친 것과 맞먹습니다. 감가상각을 빼고 세금과 기름값만 보면 실제 부담을 절반 가까이 과소평가하게 됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "전기차가 내연기관차보다 유지비가 정말 저렴한가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "이번 계산 기준으로는 그렇습니다. 판매가 2,750만원 내연 준중형 세단의 3년 총 유지비(취득세+세금+유류비+보험료+정비비+감가상각)는 약 2,113만원인 반면, 판매가 3,500만원 동급 전기 세단은 약 1,722만원으로 약 391만원(18.5%) 더 저렴하게 나왔습니다. 차량 가격은 전기차가 750만원 더 비싸지만 유지비 차이로 상당 부분 상쇄되며, 여기에 정부·지자체 보조금까지 더하면 실질 격차는 더 좁혀집니다. 다만 보험료와 배터리 열화에 따른 감가상각은 변동성이 커서 실제 차이는 조건별로 달라질 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "신차 대신 중고차를 사면 유지비가 확실히 줄어드나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "항목별로 다릅니다. 중고차는 취득세 과세표준이 낮고 차령이 3년 이상이면 자동차세 본세가 5%씩 최대 50%까지 경감되어 세금 부담은 줄어듭니다. 반면 신차의 감가상각률이 첫 1~2년에 가장 가파르므로, 이 구간을 이미 지난 중고차를 사면 감가상각 부담을 상당 부분 피할 수 있습니다. 다만 연식이 오래될수록 정비·소모품비는 늘어나는 경향이 있어, 세금·감가상각에서 아낀 돈의 일부가 정비비로 다시 나갈 수 있습니다."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+    {"@type":"ListItem","position":2,"name":"블로그","item":"https://www.jptcalc.kr/blog/"},
+    {"@type":"ListItem","position":3,"name":"자동차","item":"https://www.jptcalc.kr/blog/?cat=자동차"},
+    {"@type":"ListItem","position":4,"name":"자동차 유지비 계산법 2026 - 세금·보험료·유류비·감가상각 3년 총정리"}
+  ]
+}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo"><div class="logo-icon"><img src="../../assets/logo.svg" alt="로고"/></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+
+<div class="post-wrap">
+  <span class="post-tag">자동차</span>
+  <h1>자동차 유지비 계산법 2026 - 세금·보험료·유류비·감가상각 3년 총정리</h1>
+  <div class="post-meta">
+    <span>📅 2026.07.23</span>
+    <span>⏱ 18분 읽기</span>
+  </div>
+
+  <div class="post-body">
+
+    <p>국내에서 준중형 세단 한 대를 새로 뽑아 1년 타면 취득세와 자동차세, 보험료, 기름값, 정비비를 더해 약 546만원이 나갑니다. 그런데 여기에 감가상각까지 더하면 실제 경제적 부담은 820만원을 넘어섭니다. 문제는 이 차이를 실감하는 사람이 거의 없다는 점입니다. 자동차세·유류비·보험료는 통장이나 카드 명세서에 찍히지만, 가장 큰 돈인 감가상각은 차를 팔기 전까지 눈에 보이지 않기 때문입니다. 취득세부터 감가상각까지 6가지 항목을 하나씩 검산하면서, 준중형 세단 1대를 3년 타면 실제로 얼마가 드는지 숫자로 끝까지 따라가 보겠습니다.</p>
+
+    <div class="highlight-box"><p>이 글은 신차 구입 전 연간 유지비 총액을 가늠하려는 분, 세금과 보험료 말고 진짜 큰돈이 어디서 나가는지 궁금한 분, 전기차와 내연기관차의 3년 유지비를 비교하고 싶은 분, 중고차와 신차 중 무엇이 더 경제적인지 따져보려는 분을 위한 글입니다.</p></div>
+
+    <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+      <li>유지비를 구성하는 6가지 항목 - 취득세·자동차세·유류비·보험료·정비비·감가상각</li>
+      <li>판매가 2,750만원 준중형 세단(1,600cc) 1년차 546만원, 2년차부터 371만원 검산</li>
+      <li>카드 명세서엔 안 찍히는 감가상각이 2년차 총 유지비의 43%를 차지하는 이유</li>
+      <li>동급 전기 세단(3,500만원)으로 바꾸면 3년 유지비가 얼마나 달라지는지</li>
+      <li>내연차 3년 2,113만원 vs 전기차 3년 1,722만원 - 391만원 차이의 정체</li>
+      <li>신차보다 중고차가 유리한 항목과 불리한 항목 구분</li>
+    </ul>
+
+    <!-- ① 상단 애드핏 슬롯 -->
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>유지비를 구성하는 6가지 항목</h2>
+
+    <p>"자동차 유지비"라는 한 단어에는 성격이 전혀 다른 지출이 섞여 있습니다. 한 번만 내는 것도 있고, 매년 반복되는 것도 있고, 아예 현금으로 나가지 않는 것도 있습니다. 이 셋을 구분하지 않으면 유지비를 과소평가하기 쉽습니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>항목</th>
+            <th>성격</th>
+            <th>결정 요인</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>취득세</td>
+            <td>1회성 (구입 시)</td>
+            <td>차량가 × 7%(비영업용 승용차)</td>
+          </tr>
+          <tr>
+            <td>자동차세</td>
+            <td>매년 반복</td>
+            <td>배기량(cc) × cc당 세액 + 지방교육세</td>
+          </tr>
+          <tr>
+            <td>유류비·충전비</td>
+            <td>매년 반복</td>
+            <td>주행거리 ÷ 연비(전비) × 단가</td>
+          </tr>
+          <tr>
+            <td>보험료</td>
+            <td>매년 반복</td>
+            <td>운전자 연령·경력·사고이력</td>
+          </tr>
+          <tr>
+            <td>정비·소모품비</td>
+            <td>매년 반복</td>
+            <td>엔진오일·타이어·기타 소모품</td>
+          </tr>
+          <tr>
+            <td class="rate">감가상각</td>
+            <td class="rate">비현금성, 매년 발생</td>
+            <td class="rate">차량가 대비 연평균 하락률</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>행정안전부(mois.go.kr) 소관 지방세법에 따르면 비영업용 승용차 취득세율은 7%이고, 자동차세는 배기량(cc)에 cc당 세액을 곱해 정해집니다. 이 두 항목은 법정 세율이라 정확히 검산할 수 있지만, 보험료·정비비·감가상각은 개인 조건과 시장 상황에 따라 달라지는 변동값입니다. 아래 시나리오에서는 법정 항목은 정확한 공식으로, 변동 항목은 시장 평균치를 인용해 계산했습니다.</p>
+
+    <h2>정씨의 준중형 세단, 1년차 vs 2년차 얼마나 다를까</h2>
+
+    <p>구체적인 숫자로 옮겨보겠습니다. 각 항목의 계산 근거를 그대로 따라가면 누구나 자기 차로 재검산할 수 있습니다.</p>
+
+    <div class="scenario-box">
+      <h3>시나리오 1 - 정씨(34세, 마케터), 준중형 세단(1,600cc, 판매가 2,750만원) 신차 구입, 연 1만 5,000km 주행</h3>
+      <p>취득세: 과세표준(판매가÷1.1) 2,500만원 × 7% = 175만원(1회)</p>
+      <p>자동차세: 1,600cc × 140원 = 22만 4천원(본세), 지방교육세 30% 포함 연세액 29만 1,200원</p>
+      <p>유류비: 1만 5,000km ÷ 연비 13km/L = 1,153.8L, 휘발유 2,010원/L 기준 약 231만 9천원</p>
+      <p>보험료: 30대 무사고 개인용 기준 시장 평균 약 70만원(2026년 요율 인상 반영)</p>
+      <p>정비·소모품비: 엔진오일 연 2회 약 12만원 + 타이어 5년 1세트 40만원의 연 환산 8만원 + 기타 소모품·점검 약 20만원 = 약 40만원</p>
+      <div class="result-row"><span>1년차 현금성 지출 합계(취득세 포함)</span><span style="font-weight:700;color:#EF4444">약 546만원</span></div>
+      <div class="result-row"><span>2년차부터 현금성 지출(취득세 제외)</span><span style="font-weight:700;color:#EF4444">약 371만원/년</span></div>
+      <p style="font-size:13px;color:#6B7280;margin-top:12px">이 차이를 월로 환산하면 취득세를 낸 1년차는 월 약 45만 5천원, 2년차부터는 월 약 30만 9천원이 자동차 하나에 들어가는 셈입니다.</p>
+    </div>
+
+    <p>여기까지는 대부분 예상 범위 안의 숫자입니다. 문제는 지금부터입니다.</p>
+
+    <!-- ② 본문중간 애드핏 슬롯 -->
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-88xhdLeiIK3V35kb" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>안 보이는 진짜 큰돈, 감가상각이다</h2>
+
+    <p>중고차 매매업계 시세 통계를 보면 국산차는 연평균 약 10%포인트씩 잔가율이 떨어집니다. 정씨의 2,750만원 세단에 이 비율을 그대로 적용하면 연 감가상각액은 275만원입니다. 앞서 계산한 2년차 현금성 지출 371만원에 이 275만원을 더하면, 2년차 총 유지비는 약 646만원으로 올라갑니다. 여기서는 계산을 단순하게 하려고 3년 평균을 연 10%포인트로 균등 배분했지만, 실제 감가는 신차 출고 첫 1~2년에 가장 가파르고 이후 완만해집니다. 즉 신차 1~2년차의 실제 감가상각은 275만원보다 크고, 연식이 쌓일수록 작아진다는 점을 감안하고 보면 됩니다.</p>
+
+    <p>핵심은 이겁니다. 감가상각 275만원은 646만원 중 약 43%를 차지합니다. 자동차세·유류비·보험료·정비비를 다 합쳐도 371만원인데, 카드 명세서에 단 한 줄도 찍히지 않는 감가상각 하나가 그것과 맞먹는 돈입니다. "이번 달엔 기름값이랑 보험료로 30만원 나갔네" 하고 넘어가기 쉽지만, 실제로는 그 옆에서 20만원 넘는 가치가 조용히 사라지고 있는 셈입니다. 개인적으로는 신차 구입을 고민할 때 "월 유지비"만 보고 판단하면 실제 경제적 부담을 절반 가까이 놓칠 수 있다고 봅니다.</p>
+
+    <p>3년을 누적하면 격차는 더 벌어집니다. 현금성 지출은 취득세 175만원(1회)에 371만원씩 3년을 더해 약 1,288만원이고, 감가상각은 275만원씩 3년(3년 후 잔가율 약 70% 가정)이면 825만원입니다. 둘을 더한 3년 총 유지비는 약 2,113만원입니다.</p>
+
+    <h2>전기차로 바꾸면 3년에 얼마나 달라질까</h2>
+
+    <p>같은 정씨가 내연차 대신 동급 전기 세단(판매가 3,500만원)을 선택했다면 어떻게 달라질까요.</p>
+
+    <div class="scenario-box">
+      <h3>시나리오 2 - 같은 정씨, 준중형 전기 세단(배터리 전비 5km/kWh, 판매가 3,500만원) 선택 시</h3>
+      <p>취득세: 과세표준 3,181만 8천원 × 7% = 222만 7천원, 전기차 감면 140만원 한도 적용 후 약 82만 7천원(1회)</p>
+      <p>자동차세: 전기차는 배기량이 없어 정액 부과, 비영업용 연 13만원(지방교육세 포함)</p>
+      <p>충전비: 1만 5,000km ÷ 전비 5km/kWh = 3,000kWh, 완속 294.3원/kWh 기준 약 88만 3천원</p>
+      <p>보험료: 배터리 수리비 등을 반영해 내연차보다 다소 높게 책정되는 경향을 감안한 참고치 약 75만원</p>
+      <p>정비·소모품비: 엔진오일 등 소모품이 없어 낮은 편, 참고치 약 20만원</p>
+      <div class="result-row"><span>1년차 현금성 지출 합계(취득세 포함)</span><span style="font-weight:700;color:#EF4444">약 279만원</span></div>
+      <div class="result-row"><span>2년차부터 현금성 지출(취득세 제외)</span><span style="font-weight:700;color:#EF4444">약 196만원/년</span></div>
+      <p style="font-size:13px;color:#6B7280;margin-top:12px">내연차와 같은 연 10%p 감가상각 가정(3,500만원 × 10% = 연 350만원, 배터리 열화 등으로 실제는 달라질 수 있음)을 더하면 2년차 총 유지비는 약 546만원입니다.</p>
+    </div>
+
+    <div style="margin:24px 0;overflow-x:auto">
+      <svg role="img" width="100%" viewBox="0 0 680 160" xmlns="http://www.w3.org/2000/svg">
+        <title>내연차 vs 전기차 3년 총 유지비 비교(취득세+세금+유류비+보험료+정비비+감가상각)</title>
+        <rect width="680" height="160" rx="12" fill="#F9FAFB"/>
+        <text x="24" y="34" font-size="14" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">3년 총 유지비 비교 (취득세+세금+유류비+보험료+정비비+감가상각)</text>
+        <text x="24" y="72" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">내연차(2,750만원)</text>
+        <rect x="170" y="58" width="410" height="24" rx="5" fill="#EF4444" opacity="0.85"/>
+        <text x="588" y="75" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">2,113만원</text>
+        <text x="24" y="112" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">전기차(3,500만원)</text>
+        <rect x="170" y="98" width="334" height="24" rx="5" fill="#D1D5DB"/>
+        <text x="512" y="115" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">1,722만원</text>
+        <text x="24" y="146" font-size="11" fill="#9CA3AF" font-family="Pretendard,sans-serif">※ 3년 후 잔가율 약 70% 가정, 보조금 미반영 기준. 차량가는 전기차가 750만원 더 비쌉니다.</text>
+      </svg>
+    </div>
+
+    <h2>내연차 vs 전기차, 3년 누적 비교표</h2>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>내연 준중형(2,750만원)</th>
+            <th>전기 준중형(3,500만원)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>취득세(1회)</td>
+            <td>175만원</td>
+            <td class="rate">82.7만원</td>
+          </tr>
+          <tr>
+            <td>3년 현금성 지출 합계</td>
+            <td>약 1,288만원</td>
+            <td class="rate">약 672만원</td>
+          </tr>
+          <tr>
+            <td>3년 감가상각 누적</td>
+            <td>약 825만원</td>
+            <td>약 1,050만원</td>
+          </tr>
+          <tr>
+            <td><strong>3년 총 유지비</strong></td>
+            <td><strong>약 2,113만원</strong></td>
+            <td class="rate"><strong>약 1,722만원</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>전기차는 차량가가 750만원 더 비싸지만, 3년 총 유지비는 오히려 391만원(약 18.5%) 더 저렴하게 나옵니다. 차량가와 유지비 차이를 합쳐 보면 실질 부담 격차는 359만원까지 좁혀집니다. 여기에 <a href="../posts/ev-subsidy-guide.html" style="color:#EF4444;">전기차 보조금</a>까지 반영하면, 조건에 따라 실구매가가 오히려 내연차보다 낮아지는 경우도 나올 수 있습니다. 다만 보험료와 배터리 열화에 따른 감가상각은 차종·주행 습관별 편차가 커서, 이 비교는 참고용 시나리오로 받아들이는 것이 좋습니다.</p>
+
+    <p>취득세와 유류비를 더 정확히 검산하고 싶다면 <a href="../posts/car-acquisition-tax-guide.html" style="color:#EF4444;">자동차 취득세 계산 2026</a> 글과 <a href="../posts/fuel-cost-guide.html" style="color:#EF4444;">유류비 계산법 2026</a> 글을 함께 참고하면 됩니다. 할부로 구입할 계획이라면 여기에 이자 비용도 추가로 얹어야 하는데, 이 부분은 <a href="../posts/auto-loan-guide.html" style="color:#EF4444;">자동차 할부 계산법</a>에서 별도로 확인할 수 있습니다.</p>
+
+    <h2>신차 대신 중고차라면 유지비가 줄어들까</h2>
+
+    <p>항목별로 방향이 갈립니다. 중고차는 취득세 과세표준 자체가 낮아 1회성 부담이 작고, 차령이 3년 이상이면 자동차세 본세가 매년 5%씩 최대 50%까지 경감됩니다. 무엇보다 신차 첫 1~2년 구간에서 가장 가파른 감가상각을 이미 지나온 상태라, 앞서 계산한 연 275만원 수준의 감가상각 부담을 상당 부분 피할 수 있습니다.</p>
+
+    <p>반대로 정비·소모품비는 연식과 주행거리에 비례해서 늘어나는 경향이 있습니다. 세금과 감가상각에서 아낀 돈의 일부가 브레이크 패드나 타이어, 각종 부품 교체 비용으로 다시 나갈 수 있다는 뜻입니다. <a href="../posts/car-tax-guide.html" style="color:#EF4444;">자동차세 계산기 2026</a> 글에서 차령별 경감률을 확인하면, 지금 고려 중인 중고차의 연식에 따라 세금이 얼마나 줄어드는지 바로 검산할 수 있습니다.</p>
+
+    <div class="cta-box">
+      <p>주행거리와 연비(전비), 단가를 입력하면 유류비·충전비가 바로 계산됩니다. 취득세·자동차세는 각각의 전용 계산기에서 확인하세요.</p>
+      <a href="../../calc/auto/fuel-cost/" class="cta-btn">유류비·충전비 계산기 바로가기</a>
+    </div>
+    <p style="font-size:13px;color:#6B7280;margin-top:8px;text-align:center"><a href="../../calc/auto/acquisition-tax/" style="color:#6B7280;">취득세 계산기</a> · <a href="../../calc/auto/auto-tax/" style="color:#6B7280;">자동차세 계산기</a>도 함께 확인해보세요.</p>
+
+    <h2>자주 묻는 질문</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 자동차 유지비는 정확히 어떻게 계산하나요?</div>
+      <div class="faq-a">자동차 유지비는 취득세(1회성), 자동차세·유류비·보험료·정비비(매년 반복), 감가상각(비현금성 가치 하락) 6가지를 더해서 구합니다. 예를 들어 판매가 2,750만원 준중형 세단(1,600cc)을 연 1만 5,000km 타면, 취득세 175만원(1회), 자동차세 29만 1,200원, 유류비 약 231만 9천원, 보험료 약 70만원, 정비비 약 40만원이 매년 들어 현금성 지출만 2년차부터 연 약 371만원입니다. 여기에 감가상각 약 275만원을 더하면 2년차 총 유지비는 약 646만원이 됩니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 감가상각도 유지비에 포함해야 하나요?</div>
+      <div class="faq-a">네, 포함하는 것이 맞습니다. 감가상각은 카드 명세서에 찍히지 않지만 차를 팔거나 처분할 때 실제로 손해로 돌아오는 경제적 비용입니다. 앞선 준중형 세단 예시에서 2년차 총 유지비 약 646만원 중 감가상각 275만원이 차지하는 비중은 약 43%로, 세금·보험료·유류비를 다 합친 것과 맞먹습니다. 감가상각을 빼고 세금과 기름값만 보면 실제 부담을 절반 가까이 과소평가하게 됩니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 전기차가 내연기관차보다 유지비가 정말 저렴한가요?</div>
+      <div class="faq-a">이번 계산 기준으로는 그렇습니다. 판매가 2,750만원 내연 준중형 세단의 3년 총 유지비(취득세+세금+유류비+보험료+정비비+감가상각)는 약 2,113만원인 반면, 판매가 3,500만원 동급 전기 세단은 약 1,722만원으로 약 391만원(18.5%) 더 저렴하게 나왔습니다. 차량 가격은 전기차가 750만원 더 비싸지만 유지비 차이로 상당 부분 상쇄되며, 여기에 정부·지자체 보조금까지 더하면 실질 격차는 더 좁혀집니다. 다만 보험료와 배터리 열화에 따른 감가상각은 변동성이 커서 실제 차이는 조건별로 달라질 수 있습니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 신차 대신 중고차를 사면 유지비가 확실히 줄어드나요?</div>
+      <div class="faq-a">항목별로 다릅니다. 중고차는 취득세 과세표준이 낮고 차령이 3년 이상이면 자동차세 본세가 5%씩 최대 50%까지 경감되어 세금 부담은 줄어듭니다. 반면 신차의 감가상각률이 첫 1~2년에 가장 가파르므로, 이 구간을 이미 지난 중고차를 사면 감가상각 부담을 상당 부분 피할 수 있습니다. 다만 연식이 오래될수록 정비·소모품비는 늘어나는 경향이 있어, 세금·감가상각에서 아낀 돈의 일부가 정비비로 다시 나갈 수 있습니다.</div>
+    </div>
+
+    <h2>한 줄로 정리하면</h2>
+
+    <p>자동차 유지비는 취득세·자동차세·유류비·보험료·정비비 다섯 가지 현금 지출과, 눈에 보이지 않는 감가상각까지 여섯 가지로 이루어집니다. 판매가 2,750만원 준중형 세단을 예로 들면 1년차 현금성 지출은 약 546만원, 감가상각까지 더한 2년차 총 유지비는 약 646만원이었습니다. 3년을 누적하면 총 유지비는 약 2,113만원까지 늘어나고, 이 중 상당 부분이 감가상각처럼 체감하기 어려운 항목에서 나왔습니다.</p>
+
+    <p>가장 기억할 숫자는 이겁니다. 2년차 총 유지비 646만원 중 43%는 카드 명세서에 한 줄도 남지 않는 감가상각입니다. 세금과 보험료, 기름값만 더해서 "이 정도면 괜찮네"라고 판단했다면, 실제 경제적 부담은 그보다 훨씬 클 수 있습니다. 아래 계산기에 본인 차량의 주행거리와 연비, 단가를 넣어 유류비부터 검산해보고, 취득세·자동차세 계산기로 나머지 항목까지 채워보면 자신의 정확한 유지비를 확인할 수 있습니다.</p>
+
+  </div>
+</div>
+
+<footer class="site-footer"><p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용입니다.</p></footer>
+
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "지방세법(취득세 7%·자동차세 cc당 세액), 금융감독원(fss.or.kr) 자동차보험료 통계, 2026년 기준",
+  basisDate: "2026년 기준",
+  referenceOrg: "행정안전부(mois.go.kr), 금융감독원(fss.or.kr)",
+  lastReviewed: '2026.07.23',
+  disclaimer: "본 내용은 참고용이며 실제 유지비는 차량 조건, 운전자 정보, 보험사·정비 업체에 따라 달라집니다. 정확한 세금은 위택스, 보험료는 각 보험사에서 확인하세요.",
+  relatedCalc: { name: '유류비 계산기', url: '/calc/auto/fuel-cost/' },
+  category: 'auto'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>

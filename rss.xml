@@ -5,9 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Wed, 22 Jul 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
 
+    <item>
+      <title>자동차 유지비 계산법 2026 - 세금·보험료·유류비·감가상각 3년 총정리</title>
+      <link>https://www.jptcalc.kr/blog/posts/car-maintenance-cost-guide.html</link>
+      <description>자동차 유지비를 취득세·자동차세·유류비·보험료·정비비·감가상각 6가지로 나눠 계산했습니다. 준중형 세단 3년 유지비 2,113만원, 전기차와 비교하면 얼마나 차이 나는지 실제 수치로 확인하세요.</description>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/car-maintenance-cost-guide.html</guid>
+    </item>
     <item>
       <title>계량스푼 계량컵 변환법 2026 - 큰술·작은술·1컵을 ml·g로 정확히 바꾸는 법</title>
       <link>https://www.jptcalc.kr/blog/posts/cooking-measurement-guide.html</link>

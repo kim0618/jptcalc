@@ -36,7 +36,7 @@
       key:'fuel-cost',
       quick:['유류비 = 필요 연료량 × 유가, 필요 연료량 = 주행 거리 ÷ 연비입니다.','100km를 연비 12km/L·휘발유 2,010원으로 주행하면 약 16,750원(1km당 약 168원)입니다.','실제 연비는 공인 연비보다 10~20% 낮을 수 있어 계기판 평균 연비 입력을 권장합니다.','유가는 매주 변동하니 오피넷(opinet.co.kr)에서 실제 단가를 확인하세요.'],
       related:[['/calc/auto/ev-charging/','전기차 충전비','🔌'],['/calc/auto/auto-tax/','자동차세','🚙'],['/calc/auto/auto-loan/','자동차 할부','💳']],
-      guides:[['/blog/posts/fuel-cost-guide.html','유류비 계산법 2026 - 연비·유종별 기름값 한눈에 비교']]
+      guides:[['/blog/posts/car-maintenance-cost-guide.html','자동차 유지비 계산법 2026 - 세금·보험료·유류비·감가상각 3년 총정리'],['/blog/posts/fuel-cost-guide.html','유류비 계산법 2026 - 연비·유종별 기름값 한눈에 비교']]
     },
     '/calc/auto/ev-subsidy/': {
       key:'ev-subsidy',
