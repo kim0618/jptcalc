@@ -5,9 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Thu, 23 Jul 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
 
+    <item>
+      <title>자동차 감가상각 계산법 2026 - 잔가율표로 보는 연식별 시세, 몇 년 타고 팔아야 유리할까</title>
+      <link>https://www.jptcalc.kr/blog/posts/car-depreciation-guide.html</link>
+      <description>자동차 감가상각을 행정안전부 잔가율표로 계산하는 법을 정리했습니다. 3,500만원 신차가 등록 즉시 17.4%, 3년 후 48.2% 떨어지는 이유와 8년 이상 타면 감가 속도가 느려지는 시점까지 확인하세요.</description>
+      <pubDate>Fri, 24 Jul 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/car-depreciation-guide.html</guid>
+    </item>
     <item>
       <title>자동차 유지비 계산법 2026 - 세금·보험료·유류비·감가상각 3년 총정리</title>
       <link>https://www.jptcalc.kr/blog/posts/car-maintenance-cost-guide.html</link>
