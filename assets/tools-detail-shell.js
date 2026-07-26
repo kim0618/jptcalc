@@ -5,7 +5,7 @@
   // 계산기 추가 시 별도 수정 불필요(레지스트리 1줄로 자동 반영).
   const pages={
     '/calc/tools/char-count/':{key:'char-count',quick:[],related:[],guides:[['/blog/posts/char-count-guide.html','글자수 세기 완벽 가이드 2026 - 공백 포함·제외·byte·원고지 매수 총정리']]},
-    '/calc/tools/naesin-grade/':{key:'naesin-grade',quick:[],related:[],guides:[['/blog/posts/naesin-grade-guide.html','내신등급 계산기 보는 법 2026 - 석차백분율·9등급제·5등급제 환산 총정리']]},
+    '/calc/tools/naesin-grade/':{key:'naesin-grade',quick:[],related:[],guides:[['/blog/posts/naesin-achievement-grade-guide.html','성취평가제 A~E 완전정리 2026 - 절대평가인데 석차등급은 왜 낮게 나올까'],['/blog/posts/naesin-grade-guide.html','내신등급 계산기 보는 법 2026 - 석차백분율·9등급제·5등급제 환산 총정리']]},
     '/calc/tools/discount/':{key:'discount',quick:[],related:[],guides:[['/blog/posts/discount-guide.html','할인율 계산 완벽 가이드 2026 - 할인가·역산·중복할인 실질 할인율 총정리']]},
     '/calc/tools/gpa/':{key:'gpa',quick:[],related:[],guides:[['/blog/posts/gpa-guide.html','학점 계산기 완벽 가이드 2026 - 4.5·4.3·4.0 평점 계산과 GPA 올리는 법']]},
     '/calc/tools/percent/':{key:'percent',quick:[],related:[],guides:[['/blog/posts/percent-guide.html','퍼센트 계산 완벽 가이드 2026 - 증감률·퍼센트 포인트·할인가 한 번에']]},

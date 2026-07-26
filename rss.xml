@@ -5,9 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Fri, 24 Jul 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jul 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
 
+    <item>
+      <title>성취평가제 A~E 완전정리 2026 - 절대평가인데 석차등급은 왜 낮게 나올까</title>
+      <link>https://www.jptcalc.kr/blog/posts/naesin-achievement-grade-guide.html</link>
+      <description>성취도 A~E 분할점수(90·80·70·60점), 석차등급과 병기되는 과목·성취도만 나오는 과목, A를 받고도 등급이 낮게 나오는 이유를 실제 시나리오로 정리했습니다.</description>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/naesin-achievement-grade-guide.html</guid>
+    </item>
     <item>
       <title>자동차 감가상각 계산법 2026 - 잔가율표로 보는 연식별 시세, 몇 년 타고 팔아야 유리할까</title>
       <link>https://www.jptcalc.kr/blog/posts/car-depreciation-guide.html</link>

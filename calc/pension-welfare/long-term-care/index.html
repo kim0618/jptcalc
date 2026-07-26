@@ -49,7 +49,7 @@
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
     {"@type":"Question","name":"장기요양 등급 판정은 어떻게 받나요?","acceptedAnswer":{"@type":"Answer","text":"국민건강보험공단(1577-1000)에 장기요양 인정 신청서를 제출하면, 공단 직원이 가정을 방문해 심신 기능 상태를 조사합니다. 이후 등급 판정 위원회에서 1~5등급 또는 인지지원등급으로 판정하며, 신청일로부터 약 30일 내에 결과를 통보합니다."}},
     {"@type":"Question","name":"등급 외 판정을 받으면 아무 혜택도 없나요?","acceptedAnswer":{"@type":"Answer","text":"등급 외 판정을 받더라도 지자체에서 운영하는 노인 돌봄 서비스, 재가 지원 서비스 등을 이용할 수 있습니다. 상태가 악화되면 재신청이 가능하므로 주기적으로 상태를 확인하는 것이 좋습니다."}},
-    {"@type":"Question","name":"본인부담금을 더 줄이는 방법이 있나요?","acceptedAnswer":{"@type":"Answer","text":"기초생활수급자나 의료급여수급자에 해당하면 본인부담금이 50% 감경됩니다. 천재지변·재난 등으로 경제적으로 곤란한 경우 추가 감경을 신청할 수 있으며, 국민건강보험공단 지사에 감경 신청서를 제출하면 됩니다."}},
+    {"@type":"Question","name":"본인부담금을 더 줄이는 방법이 있나요?","acceptedAnswer":{"@type":"Answer","text":"국민기초생활보장법에 따른 의료급여 수급자(1종)는 본인부담금이 면제되어 0원입니다. 의료급여 수급자(2종 등)와 건강보험료 순위 하위 25% 이하는 60% 감경으로 재가 6%·시설 8%, 건강보험료 순위 25% 초과~50% 이하는 40% 감경으로 재가 9%·시설 12%를 부담합니다. 감경 대상 여부는 공단이 건강보험료 순위와 재산 과세표준을 바탕으로 자동 판정해 적용하는 것이 원칙이라 대부분 별도 신청이 필요 없습니다. 다만 자료만으로 확인이 어려운 경우에는 국민건강보험공단 지사에 감경 신청서를 제출해야 합니다."}},
     {"@type":"Question","name":"재가급여와 시설급여를 동시에 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"원칙적으로 동시에 이용할 수 없습니다. 시설에 입소하면 재가급여는 중단됩니다. 다만 단기보호(재가급여)를 이용해 일시적으로 시설 서비스를 받는 것은 가능합니다. 상황에 따라 케어 매니저와 상의하세요."}},
     {"@type":"Question","name":"장기요양 등급이 변경될 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네. 유효기간 내에도 상태가 변화하면 등급 변경 신청이 가능합니다. 상태가 호전되면 등급이 하향될 수 있고, 악화되면 상향될 수 있습니다. 유효기간 만료 전에 갱신 신청을 하면 등급이 재판정됩니다."}}
   ]}
@@ -151,12 +151,14 @@
 
     <!-- 감경 대상 여부 -->
     <div class="field">
-      <div class="field-label">감경 대상 여부</div>
+      <div class="field-label">본인부담 감경 구분</div>
       <div class="seg-group">
-        <button class="seg-btn active" id="btnGeneral" onclick="setReduction(false)">일반</button>
-        <button class="seg-btn" id="btnReduced" onclick="setReduction(true)">감경 대상</button>
+        <button class="seg-btn active" id="btnGeneral" onclick="setReduction('general')">일반</button>
+        <button class="seg-btn" id="btnR40" onclick="setReduction('r40')">40% 감경</button>
+        <button class="seg-btn" id="btnR60" onclick="setReduction('r60')">60% 감경</button>
+        <button class="seg-btn" id="btnExempt" onclick="setReduction('exempt')">면제</button>
       </div>
-      <div class="field-label-sub">의료급여수급자, 국민기초생활보장 수급자 중 저소득층이 감경 대상입니다.</div>
+      <div class="field-label-sub">면제=국민기초생활보장법상 의료급여 수급자(1종) / 60% 감경=의료급여 수급자(2종 등)·건강보험료 순위 하위 25% 이하 / 40% 감경=건강보험료 순위 25% 초과~50% 이하</div>
     </div>
   </div>
 
@@ -217,7 +219,7 @@
     <p style="font-size:11px;color:var(--gray-500);margin-top:8px;line-height:1.6;">
       * 시설급여는 노인요양시설(장기입소) 기준. 노인요양공동생활가정은 별도 요율 적용.<br>
       * 인지지원등급은 재가급여만 이용 가능.<br>
-      * 감경 대상 시 본인부담률 50% 경감(재가 7.5%, 시설 10%).<br>
+      * 감경 대상 시 60% 감경은 재가 6%·시설 8%, 40% 감경은 재가 9%·시설 12%. 의료급여 수급자(1종)는 면제.<br>
       * 출처: 국민건강보험공단 2026년 장기요양 급여 한도액 고시
     </p>
   </div>
@@ -234,7 +236,7 @@
       <div class="guide-grid">
         <div class="guide-box"><strong>재가급여 본인부담 15%</strong><span>집에서 방문요양·방문목욕·주야간보호 등을 이용하는 형태</span></div>
         <div class="guide-box"><strong>시설급여 본인부담 20%</strong><span>노인요양시설에 입소하는 형태, 1~5등급만 이용 가능</span></div>
-        <div class="guide-box"><strong>감경 대상 50% 할인</strong><span>기초수급자·차상위계층은 본인부담금이 절반으로 감경</span></div>
+        <div class="guide-box"><strong>감경 60% / 40%</strong><span>기초수급자(의료급여 1종)는 면제, 저소득층은 소득 구간에 따라 60% 또는 40% 감경</span></div>
       </div>
     </div>
     <div class="guide-card">
@@ -253,7 +255,7 @@
           </tbody>
         </table>
       </div>
-      <p style="font-size:12px;color:var(--gray-500);margin-top:8px">※ 감경 대상자는 위 본인부담금의 50%만 납부합니다. 한도 초과 이용분은 전액 본인 부담입니다.</p>
+      <p style="font-size:12px;color:var(--gray-500);margin-top:8px">※ 60% 감경 대상자는 위 본인부담금의 40%, 40% 감경 대상자는 60%를 납부하며, 의료급여 수급자(1종)는 면제입니다. 한도 초과 이용분은 전액 본인 부담입니다.</p>
     </div>
     <div class="guide-card">
       <h2>입력값과 결과 해석</h2>
@@ -261,11 +263,11 @@
       <ul>
         <li><strong>장기요양 등급</strong>은 국민건강보험공단의 등급 판정 결과를 기준으로 선택합니다. 아직 판정 전이라면 예상 등급을 선택해 비용을 미리 확인할 수 있습니다.</li>
         <li><strong>급여 유형</strong>에서 재가급여는 집에서 서비스를 받는 경우, 시설급여는 요양시설에 입소하는 경우입니다. 인지지원등급은 재가급여만 가능합니다.</li>
-        <li><strong>감경 여부</strong>는 기초생활수급자·차상위계층에 해당하면 '감경 대상'을 선택하세요. 본인부담금이 50% 줄어듭니다.</li>
+        <li><strong>감경 구분</strong>은 의료급여 수급자(1종)면 '면제', 의료급여 2종이거나 건강보험료 순위 하위 25% 이하면 '60% 감경', 25~50% 구간이면 '40% 감경'을 선택하세요.</li>
         <li>실제 이용 금액이 한도액보다 적으면 이용한 만큼만 본인부담률이 적용됩니다.</li>
       </ul>
       <h3>결과 해석 방법</h3>
-      <p>본인부담금 = 월 급여 한도액 x 본인부담률(재가 15%, 시설 20%). 감경 대상자는 부담률이 절반으로 줄어듭니다. 한도액을 초과하는 서비스 비용은 전액 본인이 부담하므로, 실제 이용 시 케어 매니저와 상의해 한도 내에서 서비스를 설계하는 것이 중요합니다.</p>
+      <p>본인부담금 = 월 급여 한도액 x 본인부담률(재가 15%, 시설 20%). 60% 감경 대상자는 재가 6%·시설 8%, 40% 감경 대상자는 재가 9%·시설 12%가 적용되고, 의료급여 수급자(1종)는 본인부담금이 면제됩니다. 한도액을 초과하는 서비스 비용은 전액 본인이 부담하므로, 실제 이용 시 케어 매니저와 상의해 한도 내에서 서비스를 설계하는 것이 중요합니다.</p>
     </div>
     <div class="guide-card faq-card">
       <h2>자주 묻는 질문</h2>
@@ -279,7 +281,7 @@
       </div>
       <div class="faq-item">
         <h3>본인부담금을 더 줄이는 방법이 있나요?</h3>
-        <p>기초생활수급자나 의료급여수급자에 해당하면 본인부담금이 50% 감경됩니다. 천재지변·재난 등으로 경제적으로 곤란한 경우 추가 감경을 신청할 수 있으며, 국민건강보험공단 지사에 감경 신청서를 제출하면 됩니다.</p>
+        <p>국민기초생활보장법에 따른 의료급여 수급자(1종)는 본인부담금이 면제되어 0원입니다. 의료급여 수급자(2종 등)와 건강보험료 순위 하위 25% 이하는 60% 감경으로 재가 6%·시설 8%, 건강보험료 순위 25% 초과~50% 이하는 40% 감경으로 재가 9%·시설 12%를 부담합니다. 감경 대상 여부는 공단이 건강보험료 순위와 재산 과세표준을 바탕으로 자동 판정해 적용하는 것이 원칙이라 대부분 별도 신청이 필요 없습니다. 다만 자료만으로 확인이 어려운 경우에는 국민건강보험공단 지사에 감경 신청서를 제출해야 합니다.</p>
       </div>
       <div class="faq-item">
         <h3>재가급여와 시설급여를 동시에 받을 수 있나요?</h3>
@@ -298,7 +300,7 @@
     appliedFrom: '2026년 1월 1일',
     exceptions: [
       '월 급여 한도액을 초과하는 서비스 비용은 전액 본인이 부담합니다',
-      '기초수급자·차상위계층은 본인부담금이 50% 감경됩니다',
+      '의료급여 수급자(1종)는 면제, 저소득층은 60%(재가 6%·시설 8%) 또는 40%(재가 9%·시설 12%) 감경됩니다',
       '인지지원등급은 재가급여만 이용 가능하며, 시설급여는 이용할 수 없습니다',
     ],
     references: [
@@ -364,7 +366,17 @@ const GRADE_DESC = {
 
 let currentGrade = '1';
 let currentCareType = 'home';
-let isReduced = false;
+// 본인부담 감경 구분별 실제 부담률 (장기요양 본인부담금 감경에 관한 고시)
+// 면제: 국민기초생활보장법상 의료급여 수급자(1종) → 0원
+// 60% 감경: 의료급여 수급자(2종 등)·건보료 순위 하위 25% 이하 → 재가 6%, 시설 8%
+// 40% 감경: 건보료 순위 25% 초과~50% 이하 → 재가 9%, 시설 12%
+const REDUCTION_RATES = {
+  general: { home: 0.15, facility: 0.20, label: '' },
+  r40:     { home: 0.09, facility: 0.12, label: ' (40% 감경)' },
+  r60:     { home: 0.06, facility: 0.08, label: ' (60% 감경)' },
+  exempt:  { home: 0,    facility: 0,    label: ' (면제)' }
+};
+let reductionType = 'general';
 
 function fmt(n) {
   if (n === null || n === undefined) return '-';
@@ -409,10 +421,12 @@ function setCareType(type) {
   calculate();
 }
 
-function setReduction(reduced) {
-  isReduced = reduced;
-  document.getElementById('btnGeneral').classList.toggle('active', !reduced);
-  document.getElementById('btnReduced').classList.toggle('active', reduced);
+function setReduction(type) {
+  reductionType = type;
+  const btnMap = { general: 'btnGeneral', r40: 'btnR40', r60: 'btnR60', exempt: 'btnExempt' };
+  Object.keys(btnMap).forEach(function(k) {
+    document.getElementById(btnMap[k]).classList.toggle('active', k === type);
+  });
   calculate();
 }
 
@@ -428,8 +442,8 @@ function buildTable() {
   const body = document.getElementById('limitTableBody');
   body.innerHTML = grades.map(([label, g]) => {
     const l = LIMITS[g];
-    const homeRate = isReduced ? 0.075 : 0.15;
-    const facRate = isReduced ? 0.10 : 0.20;
+    const homeRate = REDUCTION_RATES[reductionType].home;
+    const facRate = REDUCTION_RATES[reductionType].facility;
     const homeSelf = Math.round(l.home * homeRate);
     const facSelf = l.facility ? Math.round(l.facility * facRate) : null;
     const isActive = g === currentGrade;
@@ -457,8 +471,9 @@ function calculate() {
     return;
   }
 
-  const baseRate = currentCareType === 'home' ? 0.15 : 0.20;
-  const rate = isReduced ? baseRate * 0.5 : baseRate;
+  const rate = currentCareType === 'home'
+    ? REDUCTION_RATES[reductionType].home
+    : REDUCTION_RATES[reductionType].facility;
 
   const selfPay = Math.round(limitAmt * rate);
   const publicPay = limitAmt - selfPay;
@@ -475,7 +490,7 @@ function calculate() {
   document.getElementById('rSelfPayTotal').textContent = fmt(selfPay);
   document.getElementById('rGrade').textContent = gradeLabel;
   document.getElementById('rCareType').textContent = careLabel;
-  document.getElementById('rRate').textContent = rateDisplay + (isReduced ? ' (감경 적용)' : '');
+  document.getElementById('rRate').textContent = rateDisplay + REDUCTION_RATES[reductionType].label;
 
   buildTable();
 }
