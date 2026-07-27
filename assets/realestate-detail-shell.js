@@ -58,7 +58,7 @@
     '/calc/realestate/jeonse-loan/': {
       key:'jeonse-loan',
       quick:['버팀목 전세대출 한도는 지역별 상한과 보증금×대출비율(일반 70%·신혼/2자녀/신생아 80%) 중 낮은 값입니다.','신생아 특례 소득 2.5억 상향은 백지화되어 1.3억/맞벌이 2억이 현행이고, 호당한도는 6.27로 3억→2.4억 축소됐습니다.','수도권 외(지방) 주택은 기본금리에서 0.2%p가 추가 인하됩니다.','전세대출은 만기일시상환이라 임차기간 중 매달 이자만 납부합니다.'],
-      guides:[['/blog/posts/jeonse-loan-guide.html','전세자금대출 한도 계산법 2026 - 버팀목·신생아 특례 소득·보증금 요건 총정리']],
+      guides:[['/blog/posts/jeonse-deposit-protection-guide.html','전세보증금 지키는 법 2026 - 전입신고·확정일자·전세보증금반환보증 3종세트 총정리'],['/blog/posts/jeonse-loan-guide.html','전세자금대출 한도 계산법 2026 - 버팀목·신생아 특례 소득·보증금 요건 총정리']],
       related:[['/calc/realestate/conversion/','전월세 전환율 계산기','🔄'],['/calc/realestate/didimdol/','디딤돌대출 계산기','🏡'],['/calc/realestate/loan/','대출이자 계산기','💰']]
     },
     '/calc/realestate/gift/': {
