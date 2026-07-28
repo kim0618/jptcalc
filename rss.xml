@@ -5,9 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 27 Jul 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
 
+    <item>
+      <title>이사 손없는날 2026 계산법 - 8월·9월·10월 날짜 총정리</title>
+      <link>https://www.jptcalc.kr/blog/posts/moving-day-guide.html</link>
+      <description>음력 날짜 끝자리가 9·0인 날이 손없는날인 계산 원리부터, 2026년 8~10월 전체 목록, 손없는날 이사 비용이 평일보다 10~30% 비싼 이유까지 정리했습니다.</description>
+      <pubDate>Tue, 28 Jul 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/moving-day-guide.html</guid>
+    </item>
     <item>
       <title>전세보증금 지키는 법 2026 - 전입신고·확정일자·전세보증금반환보증 3종세트 총정리</title>
       <link>https://www.jptcalc.kr/blog/posts/jeonse-deposit-protection-guide.html</link>
@@ -731,9 +738,9 @@
     </item>
 
     <item>
-      <title>연봉 인상률 계산법 - 3% 오르면 실수령액 실제로 얼마 늘까?</title>
+      <title>연봉 인상률 계산법 - 3% 올랐는데 실수령 증가는 2.6~2.7%인 이유</title>
       <link>https://www.jptcalc.kr/blog/posts/salary-raise-guide.html</link>
-      <description>연봉이 오르면 세금과 보험료도 함께 오릅니다. 연봉 구간별 인상 시 실수령액 변화, 실질 인상률 계산법, 협상에서 실수령 기준 제시 전략까지 정리했습니다.</description>
+      <description>연봉이 3% 오르면 실수령은 2.6~2.7% 증가에 그칩니다. 소득세 누진과 4대보험료가 함께 올라서입니다. 연봉 구간별 실수령 변화표와 협상 시 실수령 기준으로 제시하는 방법을 계산기로 확인하세요.</description>
       <pubDate>Sun, 29 Mar 2026 00:00:00 +0900</pubDate>
       <guid>https://www.jptcalc.kr/blog/posts/salary-raise-guide.html</guid>
     </item>
