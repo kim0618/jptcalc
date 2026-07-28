@@ -117,7 +117,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - og:image = https://www.jptcalc.kr/android-chrome-512x512.png
 - canonical = https://www.jptcalc.kr/blog/posts/[파일명].html
 - favicon: ../../assets/logo.svg
-- 광고: 애드센스 디스플레이 로더는 head에 넣지 않는다(애드센스 폐기). 대신 **카카오 애드핏 슬롯 2개를 본문에 반드시 삽입**한다(기존 글 전체 동일 구조). 두 슬롯은 unit ID만 다르고 나머지 코드는 동일하다.
+- 광고: **2026-07-28 애드센스 4차 신청 준비로 head 로더를 전 페이지에 재삽입했다.** 새 글 head 에도 gtag 줄 바로 아래에 `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>` 를 넣는다(noindex 격리 15편은 예외, 넣지 않음). 이것과 별개로 **카카오 애드핏 슬롯 2개를 본문에 반드시 삽입**한다(기존 글 전체 동일 구조). 두 슬롯은 unit ID만 다르고 나머지 코드는 동일하다. 애드핏과 애드센스 로더는 병행 가능하며, 애드센스 승인 시 애드핏을 걷어내고 교체할지는 그때 판단한다.
   - **① 상단 슬롯** (unit `DAN-IE2keARtehW1pRBT`): 목차형 요약 리스트(`</ul>`) 직후, 첫 콘텐츠 h2 직전.
   - **② 본문중간 슬롯** (unit `DAN-88xhdLeiIK3V35kb`): 글 h2의 **중간 순번 h2 직전**. 단 FAQ("자주 묻는/나오는 질문")·마무리 섹션 앞은 피하고, 그런 위치면 그 다음 본문 콘텐츠 h2 앞으로 옮긴다. 상단 슬롯과 최소 2개 섹션 이상 떨어뜨린다. **하단(CTA/마무리)에는 광고를 넣지 않는다** - 계산기 전환 구간이므로 광고 청정구역.
 
@@ -469,6 +469,17 @@ window.ARTICLE_INFO_CONFIG = {
 
 ## 후속 작업 (파일 작성 후 반드시 진행)
 
+### 0. ⚠️ noindex 글은 절대 되살리지 말 것 (index·sitemap·rss 재생성 시)
+
+2026-06-29 애드센스 준비로 약한 꼬리 15편에 `robots noindex,follow` 를 걸고 sitemap·blog/index·rss 에서 뺐다. 그런데 이후 작업이 **sitemap 과 blog/index 를 통째로 다시 만들면서 15편을 전부 되살렸다**(커밋 f7bb01d 7/10, 9643af7 7/15). noindex 는 검색엔진만 막지 애드센스 심사자의 동선은 못 막으므로, 목록 카드가 살아있으면 프루닝이 무효가 된다. 2026-07-28 재차 제거함.
+
+- **blog/index.html 카드 추가·sitemap 갱신은 "새 글 1건 추가"로만 하고, 전체 재생성을 하지 말 것.**
+- 부득이 재생성했다면 반드시 `node scripts/check-noindex-excluded.mjs` 로 확인한다.
+- 대상 15편(전부 blog/posts 에 파일은 살아있고 계산기 sibling 링크도 유지됨. 삭제 금지):
+  AI 7 - claude-vs-gpt · cursor-vs-copilot · ai-saas-cost-guide · ai-infra-cost-guide · saas-vs-self-build · windsurf-vs-cursor-cost-guide · ai-chatbot-subscription-comparison
+  펫 4 - cat-monthly-cost · pet-cost-saving-tips · pet-senior-care-guide · dog-vs-cat-cost
+  얇은 온니치 4 - salary-negotiation · income-tax-may-guide · savings-vs-deposit · loan-refinance-guide
+
 ### 1. blog/index.html 카드 추가
 - 카드 포맷: `<a href="./posts/[파일명].html" class="post-card" data-cat="[카테고리명]">`
 - 카테고리별 tag 클래스: 부동산=tag-realestate / 세금=tag-tax / 금융=tag-finance / 연봉=tag-salary / 건강=tag-health / 연금·복지=tag-pension-welfare / 반려동물=tag-pet / 날짜·D-day=tag-date / AI·테크=tag-ai / 생활·도구=tag-tools
@@ -508,6 +519,7 @@ window.ARTICLE_INFO_CONFIG = {
 □ 마무리 h2 제목이 "마무리"가 아닌 다른 표현인지 확인
 □ 카카오 애드핏 슬롯 2개 포함 여부 - ①상단(DAN-IE2k, 목차 직후) ②본문중간(DAN-88xhd, 중간 h2 앞, FAQ/마무리 회피). 하단 CTA엔 광고 없어야 함
 □ **공통 크롬 검증: `node scripts/check-post-chrome.mjs` 실행** (헤더·필수 스크립트 누락, 로고 공백 오타 자동 검출. 전 글 통과해야 함)
+□ **noindex 격리 검증: `node scripts/check-noindex-excluded.mjs` 실행** (위 0번. noindex 15편이 sitemap·blog/index·rss 에 되살아났는지 자동 검출. 종료코드 0이어야 함)
 ```
 
 ### 4. 결과 요약
