@@ -189,6 +189,11 @@ jptcalc.kr의 **세율·보험요율·기준값**을 정기 점검해 항상 최
 
 ## 완료 후 로그 기록
 
-```bash
-python3 -c "import json,datetime; logs=json.load(open('/home/tjd618/skill-log.json')); now=datetime.datetime.now(); logs.insert(0,{'date':now.strftime('%Y-%m-%d'),'time':now.strftime('%H:%M'),'project':'jptcalc','skill':'jptcalc-refresh'}); open('/home/tjd618/skill-log.json','w').write(json.dumps(logs,ensure_ascii=False,indent=2))"
-```
+**수동 기록 불필요.** `~/.claude/log-skill.sh`(PostToolUse 훅)가 스킬 호출 시 **자동으로** 두 곳에 기록한다:
+
+- `~/skill-log.json` - 로컬 대시보드용 (홈 디렉토리라 **PC 간 동기화 안 됨**)
+- `.claude/skill-log.md` - **git 추적 = PC 간 동기화됨.** 다른 PC에서 무엇을 돌렸는지 아는 유일한 근거
+
+⚠️ 이 로그는 **"스킬을 호출했다"만** 기록한다(중간에 멈춰도 행이 남음). 산출물이 실제로 만들어졌는지는 각 스킬의 전용 대장·큐 파일로 판단할 것.
+
+`.claude/skill-log.md`는 사용자가 커밋해야 다른 PC에 전파되므로, 작업 완료 보고 시 **커밋 대상에 포함**하라고 안내할 것.

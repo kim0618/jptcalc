@@ -55,6 +55,33 @@
     .filter-btn:hover { border-color: #4F46E5; color: #4F46E5; }
     .filter-btn.active { border-color: #4F46E5; color: #4F46E5; background: rgba(79,70,229,0.07); }
 
+    /* 인기글 (필터 대상 아님 - .post-card 와 클래스를 분리해 필터 JS가 건드리지 않게 함) */
+    .feat-section { margin-bottom: 34px; }
+    .feat-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 16px; }
+    .feat-head h2 { font-size: 18px; font-weight: 900; color: #111827; margin: 0; }
+    .feat-head span { font-size: 12.5px; color: #9CA3AF; }
+    .feat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .feat-card {
+      position: relative; overflow: hidden;
+      background: #ffffff; border: 1px solid rgba(0,0,0,0.08); border-left: 3px solid var(--accent, #4F46E5);
+      border-radius: 14px; padding: 20px 22px 18px;
+      text-decoration: none; display: flex; flex-direction: column; gap: 10px; transition: all 0.15s;
+    }
+    .feat-card:hover { border-color: rgba(79,70,229,0.35); border-left-color: var(--accent, #4F46E5); transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+    /* 배경 워터마크 순위 숫자 */
+    .feat-card::after {
+      content: attr(data-rank);
+      position: absolute; right: 10px; bottom: -14px;
+      font-size: 68px; font-weight: 900; line-height: 1;
+      color: var(--accent, #4F46E5); opacity: 0.07; pointer-events: none;
+    }
+    .feat-top { display: flex; align-items: center; gap: 8px; }
+    .feat-rank { font-size: 12px; font-weight: 900; color: var(--accent, #4F46E5); letter-spacing: .3px; }
+    .feat-card .post-title { font-size: 15.5px; }
+    .feat-card .post-desc { font-size: 12.5px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .feat-divider { height: 1px; background: rgba(0,0,0,0.07); margin: 0 0 26px; }
+    @media (max-width: 640px) { .feat-grid { grid-template-columns: 1fr; } .feat-card::after { font-size: 58px; } }
+
     /* 포스트 그리드 */
     .post-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
     @media (max-width: 640px) { .post-grid { grid-template-columns: 1fr; } }
@@ -111,6 +138,53 @@
     <p style="font-size:13px;color:#9CA3AF;margin-top:6px;">국세청·국토교통부·금융감독원 등 공공기관 기준을 바탕으로 작성합니다. 계산기와 함께 활용하면 더 정확한 판단이 가능합니다.</p>
   </div>
 
+  <div class="feat-section">
+    <div class="feat-head">
+      <h2>🔥 인기글</h2>
+      <span>지금 가장 많이 읽히는 가이드</span>
+    </div>
+    <div class="feat-grid">
+      <a href="./posts/housing-pension-guide.html" class="feat-card" data-rank="1" style="--accent:#0EA5E9">
+        <div class="feat-top"><span class="feat-rank">NO.1</span><span class="post-tag tag-pension-welfare">연금·복지</span></div>
+        <div class="post-title">주택연금 수령액 - 나이·집값별 월 얼마 받나, 종신지급 예시표 2026</div>
+        <div class="post-desc">70세 3억 주택 월 92만원, 75세 7억이면 월 267만원. 나이·집값별 종신지급 월 수령액 표, 부부 연소자 기준의 함정, 일찍 가입 vs 늦게 가입 누적액 역전까지 한국주택금융공사 예시표로 정리.</div>
+        <div class="post-meta">📅 2026.06.08 · ⏱ 16분 읽기</div>
+      </a>
+      <a href="./posts/national-pension-guide.html" class="feat-card" data-rank="2" style="--accent:#0EA5E9">
+        <div class="feat-top"><span class="feat-rank">NO.2</span><span class="post-tag tag-pension-welfare">연금·복지</span></div>
+        <div class="post-title">국민연금 수령액 계산 - 소득 300만원 20년 납부 시 월 65만원, 30년이면 98만원</div>
+        <div class="post-desc">국민연금 수령액은 가입기간과 소득에 따라 달라집니다. 월 소득 300만원 20년 납부면 약 65만원, 30년이면 98만원. 조기수령 vs 연기수령 손익분기점과 2025년 연금개혁(소득대체율 43%) 반영 시나리오를 비교했습니다.</div>
+        <div class="post-meta">📅 2026.04.22 · ⏱ 21분 읽기</div>
+      </a>
+      <a href="./posts/four-insurance-vs-33-comparison.html" class="feat-card" data-rank="3" style="--accent:#10B981">
+        <div class="feat-top"><span class="feat-rank">NO.3</span><span class="post-tag tag-tax">세금</span></div>
+        <div class="post-title">4대보험 vs 3.3%, 어떤 계약이 더 유리할까? 실수령액 완전 비교</div>
+        <div class="post-desc">월 200만~500만원 계약 기준 직원과 프리랜서 실수령액 차이, 건강보험·국민연금·고용보험 혜택까지 숫자로 비교합니다. 단기 계약 선택 전 꼭 확인하세요.</div>
+        <div class="post-meta">📅 2026.04.06 · ⏱ 6분 읽기</div>
+      </a>
+      <a href="./posts/raise-or-quit-guide.html" class="feat-card" data-rank="4" style="--accent:#3B82F6">
+        <div class="feat-top"><span class="feat-rank">NO.4</span><span class="post-tag tag-salary">연봉</span></div>
+        <div class="post-title">연봉협상 vs 이직, 인상률 몇 %부터 버티는 게 유리한가 2026</div>
+        <div class="post-desc">이직 오퍼가 현재 인상안보다 높아도 손익분기를 먼저 따져야 합니다. 수습 삭감·연차 초기화·복리후생 차이로 연 210만원 이상 비용 발생. 연봉 구간별 최소 이직 인상률 기준표와 3개 시나리오로 정리.</div>
+        <div class="post-meta">📅 2026.06.02 · ⏱ 12분 읽기</div>
+      </a>
+      <a href="./posts/registry-cost-guide.html" class="feat-card" data-rank="5" style="--accent:#F59E0B">
+        <div class="feat-top"><span class="feat-rank">NO.5</span><span class="post-tag tag-realestate">부동산</span></div>
+        <div class="post-title">부동산 등기비용 계산기 2026 - 매매 등기 총비용, 채권·인지세·법무사비까지</div>
+        <div class="post-desc">등록면허세 매매 2%·근저당 0.2%, 지방교육세 20%, 인지세 1억~10억 15만원, 국민주택채권 매입·할인, 법무사 수수료까지. 6억 아파트 매매 등기 단계 실지출 약 176만원과 셀프등기 절감액을 계산 예시로 정리했습니다.</div>
+        <div class="post-meta">📅 2026.06.22 · ⏱ 9분 읽기</div>
+      </a>
+      <a href="./posts/long-term-care-cost-guide.html" class="feat-card" data-rank="6" style="--accent:#0EA5E9">
+        <div class="feat-top"><span class="feat-rank">NO.6</span><span class="post-tag tag-pension-welfare">연금·복지</span></div>
+        <div class="post-title">장기요양보험 비용 완전 정리 - 2026년 등급별 본인부담금과 재가·요양원 선택 기준</div>
+        <div class="post-desc">3등급 재가 229,230원 vs 요양원 489,240원 차이, 비급여 포함 실제 월 비용, 기초수급자 감경 혜택, 등급 판정 절차까지 시나리오로 정리</div>
+        <div class="post-meta">📅 2026.04.21 · ⏱ 15분 읽기</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="feat-divider"></div>
+
   <div class="blog-filters">
     <button class="filter-btn active" data-filter="전체">전체</button>
     <button class="filter-btn" data-filter="부동산">부동산</button>
@@ -128,6 +202,13 @@
   </div>
 
   <div class="post-grid">
+    <a href="./posts/pet-registration-guide.html" class="post-card" data-cat="반려동물">
+      <span class="post-tag tag-pet">반려동물</span>
+      <div class="post-title">동물등록 안 하면 과태료 얼마 2026 - 등록방법·비용·자진신고 총정리</div>
+      <div class="post-desc">내장형 등록비는 지원사업 시 자부담 1만원, 미지원 시 5만~9만원. 미등록 과태료 1차 20만원·3차 60만원, 이사 시 주소는 전입신고로 자동 처리되는 이유와 2차 자진신고 9월 1일~10월 31일 일정까지 정리했습니다.</div>
+      <div class="post-meta">📅 2026.07.30 · ⏱ 22분 읽기</div>
+    </a>
+
     <a href="./posts/maternity-leave-pay-guide.html" class="post-card" data-cat="출산·육아">
       <span class="post-tag tag-baby">출산·육아</span>
       <div class="post-title">출산전후휴가급여 계산법 2026 - 육아휴직급여와 다른 점, 상한액 220만원 완전정리</div>
@@ -481,7 +562,7 @@
       <span class="post-tag tag-health">건강</span>
       <div class="post-title">2026 키별 표준체중 기준표 - 남녀 신장 145~185cm 정상체중 범위</div>
       <div class="post-desc">대한비만학회 BMI 기준 키별 정상체중 범위 완전 표. Broca 공식 vs BMI vs WHO 비교, 65세 이상 별도 기준(BMI 22~27), 3개 시나리오로 내 목표 체중 계산.</div>
-      <div class="post-meta">📅 2026.06.03 · ⏱ 11분 읽기</div>
+      <div class="post-meta">📅 2026.06.03 · ⏱ 21분 읽기</div>
     </a>
 
     <a href="./posts/raise-or-quit-guide.html" class="post-card" data-cat="연봉">
@@ -825,12 +906,12 @@
 
     <a href="./posts/blood-pressure-guide.html" class="post-card" data-cat="건강">
       <span class="post-tag tag-health">건강</span>
-      <div class="post-title">혈압 정상범위와 고혈압 기준 완벽 정리 - 나이별 목표 혈압</div>
-      <div class="post-desc">혈압 수치 읽는 법, 정상·주의·고혈압 기준표, 나이별 목표 혈압, 집에서 정확하게 측정하는 방법까지 한 번에 정리했습니다.</div>
+      <div class="post-title">혈압 정상범위와 고혈압 기준 완벽 정리 - 위험도별 목표 혈압</div>
+      <div class="post-desc">혈압 수치 읽는 법, 정상·주의·고혈압전단계·1기·2기 기준표와 그리고/또는 판정법, 위험도별 목표 혈압, 가정혈압 135/85 기준까지 정리했습니다.</div>
       <div class="post-meta">
         <span class="post-date">2026.04.01</span>
         <span>·</span>
-        <span>5분 읽기</span>
+        <span>20분 읽기</span>
       </div>
     </a>
 
@@ -1226,7 +1307,7 @@
       <div class="post-meta">
         <span class="post-date">2026.03.21</span>
         <span>·</span>
-        <span>4분 읽기</span>
+        <span>14분 읽기</span>
       </div>
     </a>
 

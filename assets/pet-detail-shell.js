@@ -30,13 +30,13 @@
       key:'adoption',
       quick:['입양 시 중성화·예방접종·마이크로칩 비용을 반드시 포함하세요.','유기동물 입양은 분양비가 없거나 저렴하지만 초기 건강검진 비용이 필요합니다.','케이지·식기·리드줄 등 필수 용품 초기 구매비를 고려하세요.','품종견 분양가는 수십만원~수백만원까지 편차가 큽니다.'],
       related:[['/calc/pet/monthly-cost/','월 생활비','🐕'],['/calc/pet/medical/','의료비 예산','💊'],['/calc/pet/insurance/','펫보험 비교','🛡️']],
-      guides:[['/blog/posts/pet-adoption-cost-guide.html','반려동물 입양 초기비용 완벽 정리'],['/blog/posts/dog-vs-cat-cost.html','강아지 vs 고양이 - 실제 비용 비교']]
+      guides:[['/blog/posts/pet-registration-guide.html','동물등록 안 하면 과태료 얼마 2026 - 등록방법·비용·자진신고 총정리'],['/blog/posts/pet-adoption-cost-guide.html','반려동물 입양 초기비용 완벽 정리'],['/blog/posts/dog-vs-cat-cost.html','강아지 vs 고양이 - 실제 비용 비교']]
     },
     '/calc/pet/medical/': {
       key:'medical',
       quick:['연간 예방접종·심장사상충 예방비는 필수 고정 지출입니다.','노령 반려동물은 정기 건강검진 비용이 증가합니다.','응급 의료비는 수십만원~수백만원이 될 수 있으니 대비하세요.','치과 스케일링은 매년 또는 격년으로 필요할 수 있습니다.'],
       related:[['/calc/pet/monthly-cost/','월 생활비','🐕'],['/calc/pet/insurance/','펫보험 비교','🛡️'],['/calc/pet/lifetime-cost/','평생 양육비','📊']],
-      guides:[['/blog/posts/pet-medical-cost.html','반려동물 의료비 현실 - 항목별 비용 총정리'],['/blog/posts/pet-insurance.html','펫보험 가입 전 반드시 알아야 할 것들']]
+      guides:[['/blog/posts/pet-registration-guide.html','동물등록 안 하면 과태료 얼마 2026 - 등록방법·비용·자진신고 총정리'],['/blog/posts/pet-medical-cost.html','반려동물 의료비 현실 - 항목별 비용 총정리'],['/blog/posts/pet-insurance.html','펫보험 가입 전 반드시 알아야 할 것들']]
     },
     '/calc/pet/insurance/': {
       key:'insurance',

@@ -18,7 +18,14 @@ import { dirname, join } from 'node:path';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 // ── ① 정책 카테고리 표 누락 ────────────────────────────────
-const POLICY_CATS = ['salary', 'tax', 'realestate', 'finance', 'auto', 'baby'];
+// 2026-07-30: pet·health·pension-welfare 추가.
+//   계기 = 이 세 카테고리가 가드 사각지대라 기준표 불일치가 오래 방치됐다.
+//   실제 사고: calc/health/ideal-weight·bmi가 마른비만 기준을 "여성 33%"로 두고 있었는데
+//   블로그 4편은 "여성 30%"였고, body-fat-guide의 ACSM 표는 "여성 44% 이상 비만"이라
+//   같은 단어에 세 가지 값이 공존. 2026-07-30 /verify 4차에서 계산기 2개를 30%로 정정.
+//   세율이 아니어도 "기준표(cutoff·등급·요율)"를 쓰는 카테고리는 전부 가드 대상으로 본다.
+//   추가 시점 확인 결과 이 세 카테고리는 전 계산기가 이미 표 보유 → 신규 경고 0건.
+const POLICY_CATS = ['salary', 'tax', 'realestate', 'finance', 'auto', 'baby', 'pet', 'health', 'pension-welfare'];
 // 표가 면제되는 순수 공식·날짜·비교 계산기 (slug)
 const SKIP_NO_TABLE = new Set([
   'loan', 'stock-average', 'investment',          // 공식
@@ -87,7 +94,7 @@ for (const file of scanFiles) {
 // ── 리포트 ─────────────────────────────────────────────────
 console.log('① 정책 카테고리 표 누락 (요율/기준표 추가 검토 후보)');
 if (missingTable.length === 0) {
-  console.log('  ✓ salary·tax·realestate·finance·auto 계산기 모두 표 보유 (화이트리스트 제외)');
+  console.log(`  ✓ ${POLICY_CATS.join('·')} 계산기 모두 표 보유 (화이트리스트 제외)`);
 } else {
   for (const m of missingTable) console.log('  · ' + m);
   console.log('  → 정책·세율 페이지면 요율/기준표 추가, 순수 공식이면 SKIP_NO_TABLE에 등록');

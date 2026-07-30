@@ -5,9 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Wed, 29 Jul 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
 
+    <item>
+      <title>동물등록 안 하면 과태료 얼마 2026 - 등록방법·비용·자진신고 총정리</title>
+      <link>https://www.jptcalc.kr/blog/posts/pet-registration-guide.html</link>
+      <description>내장형 등록비는 지원사업 시 자부담 1만원, 미지원 시 5만~9만원. 미등록 과태료 1차 20만원·3차 60만원, 이사 시 주소는 전입신고로 자동 처리되는 이유와 2차 자진신고 9월 1일~10월 31일 일정까지 정리했습니다.</description>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/pet-registration-guide.html</guid>
+    </item>
     <item>
       <title>출산전후휴가급여 계산법 2026 - 육아휴직급여와 다른 점, 상한액 220만원 완전정리</title>
       <link>https://www.jptcalc.kr/blog/posts/maternity-leave-pay-guide.html</link>
@@ -385,9 +392,9 @@
     </item>
 
     <item>
-      <title>혈압 정상범위와 고혈압 기준 완벽 정리 - 나이별 목표 혈압</title>
+      <title>혈압 정상범위와 고혈압 기준 완벽 정리 - 위험도별 목표 혈압</title>
       <link>https://www.jptcalc.kr/blog/posts/blood-pressure-guide.html</link>
-      <description>혈압 수치 의미, 정상·주의·고혈압 기준표, 나이별 목표 혈압, 집에서 정확하게 재는 법까지. 혈압 완벽 가이드입니다.</description>
+      <description>혈압 수치 의미, 정상·주의·고혈압전단계·1기·2기 기준표, 위험도별 목표 혈압, 가정혈압 135/85 기준까지. 혈압 완벽 가이드입니다.</description>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0900</pubDate>
       <guid>https://www.jptcalc.kr/blog/posts/blood-pressure-guide.html</guid>
     </item>
