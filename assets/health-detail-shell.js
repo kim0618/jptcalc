@@ -6,7 +6,7 @@
       key:'bmi',
       quick:['BMI는 체중(kg)을 신장(m)의 제곱으로 나눈 값입니다.','동일 BMI라도 근육량과 체지방 비율에 따라 건강 상태가 다를 수 있습니다.','WHO 기준과 아시아·한국 기준의 비만 판정 구간이 다릅니다.','정기적으로 측정하여 변화 추이를 확인하는 것이 중요합니다.'],
       related:[['/calc/health/body-fat/','체지방률','💪'],['/calc/health/ideal-weight/','적정체중','⚖️'],['/calc/health/bmr/','기초대사량','🔥']],
-      guides:[['/blog/posts/bmi-guide.html','BMI 지수 해석법 - 한국인 기준 비만 판정 가이드'],['/blog/posts/ideal-weight.html','적정체중 계산법과 건강 체중 관리 전략']]
+      guides:[['/blog/posts/bmi-guide.html','한국인 BMI 기준 - 18.5~22.9 정상, 25 이상 비만 (BMI 21은 정상인가요?)'],['/blog/posts/cholesterol-levels-guide.html','콜레스테롤 정상수치 - LDL·HDL·중성지방 기준과 건강검진 결과 단계별 해석'],['/blog/posts/ideal-weight.html','적정체중 계산법과 건강 체중 관리 전략']]
     },
     '/calc/health/bmr/': {
       key:'bmr',
@@ -18,7 +18,7 @@
       key:'body-fat',
       quick:['체지방률은 체중 대비 체지방의 비율을 나타냅니다.','남성과 여성의 적정 체지방률 기준이 다릅니다.','체지방률이 너무 낮아도 건강에 해로울 수 있습니다.','체성분 분석기를 이용하면 더 정확한 측정이 가능합니다.'],
       related:[['/calc/health/bmi/','BMI','📏'],['/calc/health/ideal-weight/','적정체중','⚖️'],['/calc/health/bmr/','기초대사량','🔥']],
-      guides:[['/blog/posts/body-fat-guide.html','체지방률 측정법과 적정 범위 - 근육과 지방 비율 관리'],['/blog/posts/visceral-fat-guide.html','내장지방 줄이는 법 - 복부비만 관리 완벽 가이드']]
+      guides:[['/blog/posts/body-fat-guide.html','체지방률 정상 범위와 측정 방법 - 체중이 같아도 몸매가 다른 이유'],['/blog/posts/sarcopenia-guide.html','근감소증(사코페니아) 완전 가이드 - 40대부터 근육이 사라지는 속도와 막는 법'],['/blog/posts/visceral-fat-guide.html','내장지방 줄이는 법 - 복부비만 관리 완벽 가이드']]
     },
     '/calc/health/calories/': {
       key:'calories',
