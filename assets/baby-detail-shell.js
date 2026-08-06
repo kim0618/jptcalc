@@ -47,7 +47,7 @@
       key:'first-meeting',
       quick:['첫만남이용권은 첫째아 200만원, 둘째아 이상 300만원입니다(2024.1.1 이후 출생).','출생아 1명당 지급되어 쌍둥이는 각각 받습니다.','국민행복카드 바우처로 지급되며 사용 기한은 출생일로부터 2년입니다(2024.1.1 이후 출생아부터 확대).','부모급여·아동수당과 중복 지급됩니다.'],
       related:[['/calc/baby/parental-benefit/','부모급여','🍼'],['/calc/baby/child-allowance/','아동수당','👛'],['/calc/baby/home-care-allowance/','가정양육수당','🏠']],
-      guides:[['/blog/posts/first-meeting-voucher-guide.html','첫만남이용권 사용법 2026 - 사용처·사용기한 2년·잔액 소진까지 완전정리']]
+      guides:[['/blog/posts/postpartum-care-center-cost-guide.html','산후조리원 비용 2026 - 서울 특실 810만원, 지원금으로 얼마나 메울까'],['/blog/posts/first-meeting-voucher-guide.html','첫만남이용권 사용법 2026 - 사용처·사용기한 2년·잔액 소진까지 완전정리']]
     },
     '/calc/baby/home-care-allowance/': {
       key:'home-care-allowance',
@@ -59,7 +59,7 @@
       key:'total-support',
       quick:['첫만남이용권+부모급여+아동수당+가정양육수당을 합산합니다.','첫째 가정양육 시 출생~취학 전 약 3,700만원, 둘째 이상 약 3,800만원입니다.','어린이집 이용 시 가정양육수당이 보육료로 전환되어 현금 합계가 달라집니다.','지자체 출산장려금은 별도이며 포함되지 않습니다.'],
       related:[['/calc/baby/parental-benefit/','부모급여','🍼'],['/calc/baby/child-allowance/','아동수당','👛'],['/calc/baby/home-care-allowance/','가정양육수당','🏠']],
-      guides:[['/blog/posts/childbirth-support-guide.html','출산 지원금 총정리 2026 - 첫만남이용권·부모급여·아동수당·양육수당 합치면 얼마']]
+      guides:[['/blog/posts/postpartum-care-center-cost-guide.html','산후조리원 비용 2026 - 서울 특실 810만원, 지원금으로 얼마나 메울까'],['/blog/posts/childbirth-support-guide.html','출산 지원금 총정리 2026 - 첫만남이용권·부모급여·아동수당·양육수당 합치면 얼마']]
     },
     '/calc/baby/parental-leave-pay/': {
       key:'parental-leave-pay',
