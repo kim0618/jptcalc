@@ -24,7 +24,7 @@
       key:'monthly-cost',
       quick:['사료비는 반려동물 크기와 브랜드에 따라 월 3~15만원까지 차이가 납니다.','간식·영양제 비용도 월 고정 지출에 포함해야 정확한 예산이 됩니다.','미용·목욕 비용은 견종에 따라 크게 달라질 수 있습니다.','월 생활비에 예비비(돌발 의료비 등)를 10~20% 추가로 잡으세요.'],
       related:[['/calc/pet/adoption/','입양 초기비용','🏠'],['/calc/pet/medical/','의료비 예산','💊'],['/calc/pet/lifetime-cost/','평생 양육비','📊']],
-      guides:[['/blog/posts/cat-monthly-cost.html','고양이 한 달 생활비 - 품종·나이별 상세 비용 정리'],['/blog/posts/dog-monthly-cost.html','강아지 월 생활비 현실 가이드 - 항목별 비용 분석'],['/blog/posts/pet-cost-saving-tips.html','반려동물 비용 절약 팁 - 합리적으로 키우는 법']]
+      guides:[['/blog/posts/pet-travel-guide.html','추석 연휴 반려동물 동반 여행 준비 2026 - 펫호텔 펫시터 비용, 기차 동반 규정 총정리'],['/blog/posts/cat-monthly-cost.html','고양이 한 달 생활비 - 품종·나이별 상세 비용 정리'],['/blog/posts/dog-monthly-cost.html','강아지 월 생활비 현실 가이드 - 항목별 비용 분석'],['/blog/posts/pet-cost-saving-tips.html','반려동물 비용 절약 팁 - 합리적으로 키우는 법']]
     },
     '/calc/pet/adoption/': {
       key:'adoption',
