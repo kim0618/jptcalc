@@ -5,7 +5,7 @@
     '/calc/realestate/brokerage/': {
       key:'brokerage',
       quick:['중개수수료는 법정 상한 이내 협의 가능합니다.','매매·전세·월세·반전세마다 상한 요율이 다릅니다.','거래금액이 클수록 수수료율이 아닌 상한 요율 적용 여부를 먼저 보세요.','실제 중개보수는 부가세·현장 조건에 따라 달라질 수 있습니다.'],
-      guides:[['/blog/posts/property-purchase-costs-guide.html','부동산 매매 부대비용 총정리 2026 - 취득세·등기비용·중개수수료 한눈에']],
+      guides:[['/blog/posts/moving-cost-guide.html','이사 비용 총정리 2026 - 포장이사·반포장이사 시세부터 사다리차·입주청소까지'],['/blog/posts/property-purchase-costs-guide.html','부동산 매매 부대비용 총정리 2026 - 취득세·등기비용·중개수수료 한눈에']],
       related:[['/calc/realestate/acquisition/','취득세 계산기','📄'],['/calc/realestate/conversion/','전월세전환 계산기','🔄'],['/calc/realestate/registry/','등기비용 계산기','📋']]
     },
     '/calc/realestate/acquisition/': {
