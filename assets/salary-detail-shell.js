@@ -55,6 +55,12 @@
       quick:['통상임금 = 기본급 + 정기·일률적으로 지급되는 고정수당 + 정기상여금입니다.','통상시급은 월 통상임금을 월 소정근로시간 209시간으로 나눠 구합니다.','2024년 12월 대법원 판결로 재직조건부 정기상여금도 통상임금에 포함됩니다.','연장·야간·휴일근로수당과 연차수당, 주휴수당이 모두 통상임금 기준으로 계산됩니다.'],
       related:[['/calc/salary/annual-leave-pay/','연차수당','🏖️'],['/calc/salary/weekly-holiday-pay/','주휴수당','🗓️'],['/calc/salary/hourly-wage/','시급·일급 변환','⏱️']],
       guides:[['/blog/posts/ordinary-wage-guide.html','통상임금 계산법 2026 - 기본급·고정수당으로 통상시급 구하는 법'],['/blog/posts/annual-leave-guide.html','직장인 연차 일수와 수당 - 입사 1년 미만도 11일 생긴다'],['/blog/posts/parental-leave-pay.html','육아휴직급여 계산법 2026 - 통상임금 100%·6+6 최대 4,000만원, 매월 실수령액은 얼마일까'],['/blog/posts/minimum-wage-2026.html','2026년 최저시급 10,320원 - 월급 215만원, 주휴수당 계산까지']]
+    },
+    '/calc/salary/average-wage/': {
+      key:'average-wage',
+      quick:['1일 평균임금 = 최근 3개월 임금총액 ÷ 그 기간 총일수, 상여금·연차수당은 연간액의 3/12이 산입됩니다.','산정된 평균임금이 통상임금보다 적으면 통상임금을 평균임금으로 합니다(근로기준법 제2조 제2항).','산재 휴업급여는 원칙 평균임금의 70%지만, 저소득자는 90%로, 요양이 3일 이내면 미지급됩니다.','2026년 최고 보상기준 268,299원을 넘으면 평균임금이 아무리 높아도 휴업급여는 하루 187,809원으로 고정됩니다.'],
+      related:[['/calc/salary/severance/','퇴직금','📦'],['/calc/salary/ordinary-wage/','통상임금','⏱️'],['/calc/salary/unemployment/','실업급여','🛟']],
+      guides:[['/blog/posts/average-wage-guide.html','평균임금 계산법 2026 - 산재 휴업급여 얼마 받는지 계산하기'],['/blog/posts/severance-pay-guide.html','퇴직금 계산법과 지급 기준 완벽 정리 2026'],['/blog/posts/unemployment-benefit-guide.html','실업급여 수급 자격과 계산법 완벽 가이드']]
     }
   };
   let cfg=pages[path];

@@ -5,9 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 11 Aug 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
 
+    <item>
+      <title>평균임금 계산법 2026 - 산재 휴업급여 얼마 받는지 계산하기</title>
+      <link>https://www.jptcalc.kr/blog/posts/average-wage-guide.html</link>
+      <description>평균임금은 최근 3개월 임금총액을 총일수로 나눈 값입니다. 산재 휴업급여는 원칙 70%지만 저소득자는 90%로, 고소득자는 상한선까지 걸립니다. 2026년 최고·최저 보상기준으로 실제 얼마 받는지 직접 계산해보세요.</description>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/average-wage-guide.html</guid>
+    </item>
     <item>
       <title>이사 비용 총정리 2026 - 포장이사·반포장이사 시세부터 사다리차·입주청소까지</title>
       <link>https://www.jptcalc.kr/blog/posts/moving-cost-guide.html</link>

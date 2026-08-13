@@ -354,12 +354,20 @@ function saveAsImage(resultId, title) {
 }
 
 // 재산세 세율 (주택)
+// 표준세율 (지방세법 제111조제1항제3호나목) - 만원 단위 기준
 function getPropertyTax(baseMan) {
-  // 만원 단위 기준
   if (baseMan <= 6000)   return baseMan * 0.001;                         // 0.1%
   if (baseMan <= 15000)  return 6 + (baseMan - 6000) * 0.0015;          // 6만원 + 초과분 0.15%
   if (baseMan <= 30000)  return 19.5 + (baseMan - 15000) * 0.0025;      // 19.5만원 + 초과분 0.25%
   return 57 + (baseMan - 30000) * 0.004;                                 // 57만원 + 초과분 0.4%
+}
+
+// 1세대1주택 특례세율 (지방세법 제111조의2) - 시가표준액 9억원 이하만 적용, 2026.12.28 성립분까지 유효
+function getPropertyTaxSpecial(baseMan) {
+  if (baseMan <= 6000)   return baseMan * 0.0005;                        // 0.05%
+  if (baseMan <= 15000)  return 3 + (baseMan - 6000) * 0.001;           // 3만원 + 초과분 0.1%
+  if (baseMan <= 30000)  return 12 + (baseMan - 15000) * 0.002;         // 12만원 + 초과분 0.2%
+  return 42 + (baseMan - 30000) * 0.0035;                                // 42만원 + 초과분 0.35%
 }
 
 // 종부세 세율 (만원 단위 과세표준) - 일반/2주택 이하
@@ -398,7 +406,10 @@ function calcPtcComprehensive() {
                      ? (priceMan <= 30000 ? 0.43 : priceMan <= 60000 ? 0.44 : 0.45)
                      : 0.60;
   const ptBaseMan    = priceMan * ptFairRatio;          // 공정시장가액비율 적용
-  const ptTaxMan     = getPropertyTax(ptBaseMan);       // 재산세 본세
+  // 세율 특례(제111조의2)는 시가표준액 9억원 이하 1세대1주택만. 9억 초과는 비율 45%는 유지하되 세율만 표준세율.
+  const is1H         = ptcType === '1세대 1주택';
+  const useSpecial   = is1H && priceMan <= 90000;
+  const ptTaxMan     = useSpecial ? getPropertyTaxSpecial(ptBaseMan) : getPropertyTax(ptBaseMan);
   const urbanTaxMan  = ptBaseMan * 0.0014;               // 도시지역분 (과세표준 × 0.14%)
   const eduTaxMan    = ptTaxMan * 0.20;                 // 지방교육세 20%
 
@@ -409,7 +420,11 @@ function calcPtcComprehensive() {
 
   const jbTaxableMan = Math.max(priceMan - jbDeductMan, 0);
   const jbBaseMan    = jbTaxableMan * 0.60;
-  let   jbTaxMan     = ptcType === '다주택·법인' ? getJbTaxMulti(jbBaseMan) : getJbTax(jbBaseMan);
+  const jbGrossMan   = ptcType === '다주택·법인' ? getJbTaxMulti(jbBaseMan) : getJbTax(jbBaseMan);
+  // 재산세 중복분 공제 (종부세법 제9조③, 시행령 제4조의3①)
+  // = 종부세 과세표준 × 재산세 공정시장가액비율 → 재산세 표준세율로 계산한 세액
+  const jbPtCreditMan = jbBaseMan > 0 ? getPropertyTax(jbBaseMan * ptFairRatio) : 0;
+  let   jbTaxMan     = Math.max(jbGrossMan - jbPtCreditMan, 0);
   const ruralTaxMan  = jbTaxMan * 0.20;
 
   // ── 합계 ──
@@ -426,6 +441,14 @@ function calcPtcComprehensive() {
     <div class="result-row">
       <span class="result-label">종부세 과세표준</span>
       <span class="result-value">${fmt(Math.round(jbBaseMan))}</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">종부세 산출세액</span>
+      <span class="result-value">${fmt(Math.round(jbGrossMan))}</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">재산세 중복분 공제</span>
+      <span class="result-value">- ${fmt(Math.round(jbPtCreditMan))}</span>
     </div>
     <div class="result-row">
       <span class="result-label">종합부동산세</span>
@@ -452,11 +475,11 @@ function calcPtcComprehensive() {
       <span class="result-value">${fmt(Math.round(ptBaseMan))}</span>
     </div>
     <div class="result-row">
-      <span class="result-label">재산세</span>
+      <span class="result-label">재산세${useSpecial ? ' (1세대1주택 특례세율)' : ''}</span>
       <span class="result-value">${fmt(Math.round(ptTaxMan))}</span>
     </div>
     <div class="result-row">
-      <span class="result-label">도시지역분 (재산세 × 14%)</span>
+      <span class="result-label">도시지역분 (과세표준 × 0.14%)</span>
       <span class="result-value">${fmt(Math.round(urbanTaxMan))}</span>
     </div>
     <div class="result-row">
@@ -469,7 +492,7 @@ function calcPtcComprehensive() {
       <span class="result-total-label">총 보유세</span>
       <span class="result-total-value">${fmt(Math.round(totalMan))}</span>
     </div>
-    <div class="result-note">* 2026년 기준 / 공정시장가액비율 재산세 ${Math.round(ptFairRatio*100)}%(1세대 1주택 특례 43~45%)·종부세 60% / 실제 세액은 관할 세무서·구청 확인</div>`;
+    <div class="result-note">* 2026년 기준 / 공정시장가액비율 재산세 ${Math.round(ptFairRatio*100)}%(1세대 1주택 특례 43~45%)·종부세 60% / ${is1H ? (useSpecial ? '세율은 1세대1주택 특례세율(제111조의2, 9억 이하)' : '공시가 9억 초과라 세율은 표준세율(특례는 비율 45%만 유지)') : '표준세율'} / 종부세는 재산세 중복분 공제 반영, 고령자·장기보유 세액공제는 미반영 / 실제 세액은 관할 세무서·구청 확인</div>`;
 
   resultEl.classList.add('show');
 }
