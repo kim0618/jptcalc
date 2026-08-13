@@ -557,7 +557,20 @@ window.ARTICLE_INFO_CONFIG = {
 
 ## 후속 작업 (파일 작성 후 반드시 진행)
 
-### 0. ⚠️ noindex 글은 절대 되살리지 말 것 (index·sitemap·rss 재생성 시)
+### 0. ⚠️ noindex 격리는 두 체제다. 방향이 정반대이니 섞지 말 것
+
+**체제 A 전면차단 15편** (`robots noindex,follow`, 2026-06-29) - 구글·네이버 모두 차단 + 세 파일에서 제외. 아래 원문 참조.
+
+**체제 B 구글한정 105편** (`googlebot noindex,follow`, 2026-08-13) - 애드센스 4차 거절 후속. 구글이 이미 색인을 거부한 블로그 105편을 **구글 시야에서만** 뺐다. 이 글들은 네이버 트래픽의 본체이므로 **sitemap·blog/index·rss 에 그대로 남겨야 한다**(체제 A와 정반대). 절대 하면 안 되는 것:
+
+- 이 105편에 범용 `name="robots"` noindex 를 걸지 말 것. 네이버까지 죽어서 트래픽 본체가 날아간다. 반드시 `name="googlebot"` 이어야 한다.
+- 이 105편을 sitemap 에서 빼지 말 것. 네이버 발견 경로다.
+- **새로 쓰는 글에는 googlebot noindex 를 넣지 말 것.** 신규 글은 구글 색인 회복을 관측하는 카나리아다. 이게 막히면 5차 신청 시점을 판단할 지표 자체가 사라진다.
+- 애드센스 로더(adsbygoogle)는 105편에도 **그대로 둔다**. 광고 크롤러(Mediapartners-Google)는 googlebot 토큰의 적용 대상이 아니라서 승인 시 네이버 유입에 광고가 정상 노출된다. (로더를 빼는 예외는 체제 A 15편뿐)
+
+대상 목록은 하드코딩하지 않는다. `node scripts/check-noindex-excluded.mjs` 가 메타를 직접 읽어 두 체제를 분류하고 각각 반대 방향으로 검사한다.
+
+---
 
 2026-06-29 애드센스 준비로 약한 꼬리 15편에 `robots noindex,follow` 를 걸고 sitemap·blog/index·rss 에서 뺐다. 그런데 이후 작업이 **sitemap 과 blog/index 를 통째로 다시 만들면서 15편을 전부 되살렸다**(커밋 f7bb01d 7/10, 9643af7 7/15). noindex 는 검색엔진만 막지 애드센스 심사자의 동선은 못 막으므로, 목록 카드가 살아있으면 프루닝이 무효가 된다. 2026-07-28 재차 제거함.
 
@@ -607,7 +620,8 @@ window.ARTICLE_INFO_CONFIG = {
 □ 마무리 h2 제목이 "마무리"가 아닌 다른 표현인지 확인
 □ 카카오 애드핏 슬롯 2개 포함 여부 - ①상단(DAN-IE2k, 목차 직후) ②본문중간(DAN-88xhd, 중간 h2 앞, FAQ/마무리 회피). 하단 CTA엔 광고 없어야 함
 □ **공통 크롬 검증: `node scripts/check-post-chrome.mjs` 실행** (헤더·필수 스크립트 누락, 로고 공백 오타 자동 검출. 전 글 통과해야 함)
-□ **noindex 격리 검증: `node scripts/check-noindex-excluded.mjs` 실행** (위 0번. noindex 15편이 sitemap·blog/index·rss 에 되살아났는지 자동 검출. 종료코드 0이어야 함)
+□ **noindex 격리 검증: `node scripts/check-noindex-excluded.mjs` 실행** (위 0번. 체제 A 15편이 sitemap·blog/index·rss 에 되살아났는지 + 체제 B 105편이 sitemap 에서 빠졌는지 양방향 검출. 종료코드 0이어야 함)
+□ **새 글에 googlebot noindex 가 안 들어갔는지 확인** (위 0번. 신규 글은 구글 색인 회복 카나리아라 반드시 색인 가능해야 함)
 □ **요율/기준표 가드: `node scripts/check-rate-tables.mjs` 실행** (정책·기준표 카테고리 9종 salary·tax·realestate·finance·auto·baby·pet·health·pension-welfare 표 누락 + 상속·증여 부결안 회귀 검출. 종료코드 0이어야 함)
 □ **원문 검증 의무 이행 확인** (위 "원문 검증 의무" 섹션): 글에 쓴 **조문번호·과태료 금액·수수료·의학 기준·통계·정부 일정**을 하나씩 짚어, 각각 원문(law.go.kr 조문·별표 / 고시 / 학회 지침 / 원 보고서 / 공고)을 실제로 열어 확인했는지 자문한다. **웹서치 요약만 본 항목이 하나라도 있으면 발행 전에 원문을 열거나 그 주장을 뺀다.** 특히 ①조문번호(전부개정으로 바뀌었을 수 있음) ②수수료를 실제 비용으로 뭉갰는지 ③통계 분모 ④"예정"이라 썼는데 이미 공고됐는지
 □ **data-points.md 등재 완료** (위 "새 정책수치는 data-points.md 등재가 발행 조건"): 이 글에서 새로 도입한 정책·요율·기준 수치를 전부 원장에 등재했는지. 수치·근거 원문 위치(조·항·별표)·확인일·검색 패턴·영향 페이지 5개 항목 포함. **등재할 새 수치가 없으면 "없음"으로 확인만 하고 통과**
