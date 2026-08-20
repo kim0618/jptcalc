@@ -6,7 +6,7 @@
       key:'bmi',
       quick:['BMI는 체중(kg)을 신장(m)의 제곱으로 나눈 값입니다.','동일 BMI라도 근육량과 체지방 비율에 따라 건강 상태가 다를 수 있습니다.','WHO 기준과 아시아·한국 기준의 비만 판정 구간이 다릅니다.','정기적으로 측정하여 변화 추이를 확인하는 것이 중요합니다.'],
       related:[['/calc/health/body-fat/','체지방률','💪'],['/calc/health/ideal-weight/','적정체중','⚖️'],['/calc/health/bmr/','기초대사량','🔥']],
-      guides:[['/blog/posts/bmi-guide.html','한국인 BMI 기준 - 18.5~22.9 정상, 25 이상 비만 (BMI 21은 정상인가요?)'],['/blog/posts/cholesterol-levels-guide.html','콜레스테롤 정상수치 - LDL·HDL·중성지방 기준과 건강검진 결과 단계별 해석'],['/blog/posts/ideal-weight.html','적정체중 계산법과 건강 체중 관리 전략']]
+      guides:[['/blog/posts/blood-sugar-guide.html','공복혈당 정상수치 2026 - 당화혈색소(HbA1c) 당뇨병 전단계 진단기준'],['/blog/posts/bmi-guide.html','한국인 BMI 기준 - 18.5~22.9 정상, 25 이상 비만 (BMI 21은 정상인가요?)'],['/blog/posts/cholesterol-levels-guide.html','콜레스테롤 정상수치 - LDL·HDL·중성지방 기준과 건강검진 결과 단계별 해석'],['/blog/posts/ideal-weight.html','적정체중 계산법과 건강 체중 관리 전략']]
     },
     '/calc/health/bmr/': {
       key:'bmr',
