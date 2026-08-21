@@ -100,7 +100,7 @@
         <span class="unit">%</span>
       </div>
     </div>
-    <div class="field-label" id="ltv-mode-note" style="margin-top:10px;font-size:12px;color:var(--gray-500,#888)">규제지역(투기·투기과열, 서울 전역+경기 일부): 9억 이하분 40% / 9억 초과분 20%, 주담대 6억원 한도 적용</div>
+    <div class="field-label" id="ltv-mode-note" style="margin-top:10px;font-size:12px;color:var(--gray-500,#888)">규제지역(투기·투기과열, 서울 전역+경기 일부): LTV 주택가격 무관 40% · 금액한도 15억 이하 6억 / 15~25억 4억 / 25억 초과 2억</div>
   </div>
 
   <div class="result-card" id="ltv-result">
@@ -130,7 +130,7 @@
       </ul>
       <h3>2026년 지역별 기준 (10·15 대책)</h3>
       <ul>
-        <li><strong>규제지역</strong> (투기·투기과열, 서울 전역+경기 일부): 9억 이하분 40% / 9억 초과분 20%</li>
+        <li><strong>규제지역</strong> (투기·투기과열, 서울 전역+경기 일부): LTV <strong>일괄 40%</strong>(주택가격 무관) + 금액한도 15억 이하 6억원 / 15~25억 4억원 / 25억 초과 2억원</li>
         <li><strong>비규제지역</strong>: 무주택 LTV 70%</li>
         <li><strong>수도권·규제지역 주담대 6억원 한도</strong> (6·27 대책)</li>
         <li><strong>2주택 이상·미처분 1주택 추가구입</strong>: LTV 0% (금지)</li>
@@ -321,7 +321,7 @@ function ltvSelectMode(mode, btn) {
     note.textContent = '비규제지역 무주택 기준 LTV 70%를 적용합니다.';
   } else {
     rateRow.style.display = 'none';
-    note.textContent = '규제지역(투기·투기과열, 서울 전역+경기 일부): 9억 이하분 40% / 9억 초과분 20%, 주담대 6억원 한도 적용';
+    note.textContent = '규제지역(투기·투기과열, 서울 전역+경기 일부): LTV 주택가격 무관 40% · 금액한도 15억 이하 6억 / 15~25억 4억 / 25억 초과 2억';
   }
   calcLtv();
 }
@@ -375,14 +375,15 @@ function calcLtv() {
   if (!price) { document.getElementById('ltv-result').classList.remove('show'); return; }
 
   let maxLoan, basis, capped = false;
-  const CAP = 60000;        // 6억원 = 60,000만원
-  const TIER = 90000;       // 9억원 = 90,000만원
+  // 2025.10.15 대책: 규제지역 LTV는 주택가격과 무관하게 일괄 40%.
+  // (종전 '9억 이하 40% / 초과분 20%' 구간차등은 2019 12·16 대책 규정으로 현행 아님)
+  // 대신 주택가격 구간별 금액 한도: 15억 이하 6억 / 15~25억 4억 / 25억 초과 2억
   if (ltvMode === '규제지역') {
-    const under = Math.min(price, TIER) * 0.40;
-    const over  = Math.max(0, price - TIER) * 0.20;
-    maxLoan = under + over - prior;            // 선순위 차감 후
-    if (maxLoan > CAP) { maxLoan = CAP; capped = true; }  // 6억 한도 적용
-    basis = '규제지역 40%(9억↓)/20%(9억 초과)' + (capped ? ' · 6억 한도' : '');
+    const CAP = price <= 150000 ? 60000 : (price <= 250000 ? 40000 : 20000);
+    const capLabel = price <= 150000 ? '6억' : (price <= 250000 ? '4억' : '2억');
+    maxLoan = price * 0.40 - prior;            // 선순위 차감 후
+    if (maxLoan > CAP) { maxLoan = CAP; capped = true; }
+    basis = '규제지역 LTV 40%(가격 무관)' + (capped ? ` · ${capLabel} 한도 적용` : ` · ${capLabel} 한도 이내`);
   } else if (ltvMode === '비규제지역') {
     maxLoan = price * 0.70 - prior;
     basis = '비규제지역 LTV 70%';
