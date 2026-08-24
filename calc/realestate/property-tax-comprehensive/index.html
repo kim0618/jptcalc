@@ -183,28 +183,28 @@
             <td>15억원</td>
             <td>1세대 1주택</td>
             <td>약 343만원</td>
-            <td>약 97만원</td>
-            <td>약 440만원</td>
+            <td>약 69만원</td>
+            <td>약 412만원</td>
           </tr>
           <tr>
             <td>합산 공시가격 35억원 · 2주택 이하</td>
             <td>35억원</td>
             <td>2주택 이하</td>
             <td>약 1,226만원</td>
-            <td>약 1,340만원</td>
-            <td>약 2,566만원</td>
+            <td>약 1,264만원</td>
+            <td>약 2,490만원</td>
           </tr>
           <tr>
             <td>합산 공시가격 35억원 · 3주택 이상 (중과)</td>
             <td>35억원</td>
             <td>3주택 이상</td>
             <td>약 1,226만원</td>
-            <td>약 1,642만원</td>
-            <td>약 2,869만원</td>
+            <td>약 1,567만원</td>
+            <td>약 2,793만원</td>
           </tr>
         </tbody>
       </table>
-      <p class="ref-links">* 위 수치는 2026년 기준 참고용 추정치입니다. 공정시장가액비율(재산세 1세대 1주택 특례 43~45%·종부세 60%), 과세표준 상한제 등 개인별 적용 요건에 따라 실제 금액은 달라집니다.<br>* <strong>재산세는 주택별로 각각 과세</strong>되는데 이 계산기는 입력한 합산 공시가격에 누진세율을 한 번에 적용하므로, 2주택 이상에서는 재산세가 실제보다 높게 나옵니다(종부세는 합산이 맞습니다). 주택별 재산세는 재산세 계산기를 이용하세요.<br>* 종부세 값에는 재산세 중복분 공제(종부세법 제9조③·시행령 제4조의3①)를 반영했으나, 산식 내 '표준세율' 해석(누진표 적용 vs 한계세율 단일 적용)이 확정되지 않아 실제 고지액과 차이가 날 수 있습니다.</p>
+      <p class="ref-links">* 위 수치는 2026년 기준 참고용 추정치입니다. 공정시장가액비율(재산세 1세대 1주택 특례 43~45%·종부세 60%), 과세표준 상한제 등 개인별 적용 요건에 따라 실제 금액은 달라집니다.<br>* <strong>재산세는 주택별로 각각 과세</strong>되는데 이 계산기는 입력한 합산 공시가격에 누진세율을 한 번에 적용하므로, 2주택 이상에서는 재산세가 실제보다 높게 나옵니다(종부세는 합산이 맞습니다). 주택별 재산세는 재산세 계산기를 이용하세요.<br>* 종부세 값에는 재산세 중복분 공제(종부세법 제9조③·시행령 제4조의3①, 시행규칙 별지 제31호서식 부표 - 해당연도 재산세액 × 재산세 과세표준 표준세율 환산액 ÷ 재산세 과세표준 전체 표준세율 재산세액)를 반영했습니다.</p>
       <h3>자주 헷갈리는 입력값</h3>
       <ul>
         <li><strong>공시가격 ≠ 시세:</strong> 공시가격은 국토교통부가 고시하는 가격으로, 아파트 시세의 60~80% 수준입니다. 부동산공시가격알리미에서 조회해 입력하세요.</li>
@@ -262,7 +262,7 @@
       { name: '부동산공시가격알리미(realtyprice.kr)', url: 'https://www.realtyprice.kr' },
       { name: '위택스(wetax.go.kr)', url: 'https://www.wetax.go.kr' },
     ],
-    lastReviewed: '2026.08.21',
+    lastReviewed: '2026.08.24',
   };
   </script>
   <script src="/assets/trust-block.js"></script>
@@ -431,9 +431,15 @@ function calcPtcComprehensive() {
   const jbBaseMan    = jbTaxableMan * 0.60;
   // 세율(제9조①): 2주택 이하는 1주택과 동일한 세율표, 3주택 이상만 중과세율표 적용
   const jbGrossMan   = ptcType === '3주택 이상' ? getJbTaxMulti(jbBaseMan) : getJbTax(jbBaseMan);
-  // 재산세 중복분 공제 (종부세법 제9조③, 시행령 제4조의3①)
-  // = 종부세 과세표준 × 재산세 공정시장가액비율 → 재산세 표준세율로 계산한 세액
-  const jbPtCreditMan = jbBaseMan > 0 ? getPropertyTax(jbBaseMan * ptFairRatio) : 0;
+  // 재산세 중복분 공제 (종부세법 제9조③, 시행령 제4조의3①, 시행규칙 별지 제31호서식 부표 작성방법)
+  // 공제할 재산세액 = 해당연도 실제 재산세액 × (과세표준 표준세율 재산세액 ÷ 총표준세율 재산세액)
+  // - 과세표준 표준세율 재산세액(분자) = (종부세 과세표준) × 재산세 공정시장가액비율 × 0.4%(단일세율)
+  // - 총표준세율 재산세액(분모) = 재산세 과세표준 전체에 재산세 누진세율표(제111조①3호)를 적용한 금액(1세대1주택 특례세율 미적용)
+  const jbPtCreditNumerMan = jbBaseMan * ptFairRatio * 0.004;
+  const jbPtCreditDenomMan = getPropertyTax(ptBaseMan);
+  const jbPtCreditMan = (jbBaseMan > 0 && jbPtCreditDenomMan > 0)
+    ? ptTaxMan * jbPtCreditNumerMan / jbPtCreditDenomMan
+    : 0;
   let   jbTaxMan     = Math.max(jbGrossMan - jbPtCreditMan, 0);
   const ruralTaxMan  = jbTaxMan * 0.20;
 
@@ -518,7 +524,7 @@ window.ARTICLE_INFO_CONFIG = {
   reviewBasis: '부동산 관련 법령 2026년 기준',
   basisDate: '2026년 기준',
   referenceOrg: '국토교통부·대법원',
-  lastReviewed: '2026.08.21',
+  lastReviewed: '2026.08.24',
   category: 'realestate'
 };
 </script>

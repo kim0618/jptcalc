@@ -5,9 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Thu, 13 Aug 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
 
+    <item>
+      <title>자동차 정기검사 비용·주기·과태료 총정리 2026 - 신차 최초검사, 4년 아니라 5년입니다</title>
+      <link>https://www.jptcalc.kr/blog/posts/car-inspection-guide.html</link>
+      <description>비사업용 승용차 정기검사는 2년마다지만, 2025년 1월 1일 이후 등록한 신차는 최초 검사 유효기간이 4년에서 5년으로 늘었습니다. 검사 가능 기간, 지연 60일 과태료 24만원 계산법, 정기검사·종합검사 수수료 차이까지 법령 원문으로 정리했습니다.</description>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/car-inspection-guide.html</guid>
+    </item>
     <item>
       <title>공복혈당 정상수치 2026 - 당화혈색소(HbA1c) 당뇨병 전단계 진단기준</title>
       <link>https://www.jptcalc.kr/blog/posts/blood-sugar-guide.html</link>
@@ -362,7 +369,7 @@
     <item>
       <title>보유세 2026 - 재산세·종부세 합산 실납부액, 공시가 5억~25억 구간 비교</title>
       <link>https://www.jptcalc.kr/blog/posts/holding-tax-guide.html</link>
-      <description>1세대 1주택 기준 공시가 8억이면 126만원, 15억이면 종부세 포함 439.9만원, 20억이면 770.4만원. 재산세 중복분 공제와 6월 1일 기준일 전략, 종부세 역전 지점(약 27.1억)까지 정리합니다.</description>
+      <description>1세대 1주택 기준 공시가 8억이면 126만원, 15억이면 종부세 포함 412만원, 20억이면 709.9만원. 재산세 중복분 공제와 6월 1일 기준일 전략, 종부세 역전 지점(약 29.6억)까지 정리합니다.</description>
       <pubDate>Sun, 25 May 2026 00:00:00 +0900</pubDate>
       <guid>https://www.jptcalc.kr/blog/posts/holding-tax-guide.html</guid>
     </item>
