@@ -291,7 +291,7 @@ function calc(){
   let acq=Math.floor(taxBase*rate/10)*10;
   if(ucType==='compact') acq=Math.max(0,acq-750000);
   document.getElementById('r-acq').textContent=Ww(acq);
-  document.getElementById('r-acq-sub').textContent='과세표준 '+Ww(taxBase)+' × '+(rate*100)+'%'+(ucType==='compact'?' − 75만 한도':'');
+  document.getElementById('r-acq-sub').textContent='과세표준 '+Ww(taxBase)+' × '+(+(rate*100).toFixed(2))+'%'+(ucType==='compact'?' − 75만 한도':'');
   document.getElementById('r-residual').textContent=(yrs<1?'1년 미만':yrs+'년')+' · '+rr;
   document.getElementById('r-std').textContent=Ww(stdVal);
   document.getElementById('r-base-label').textContent=(declared>stdVal?'과세표준 (실거래가 적용)':'과세표준 (시가표준액 적용)');
