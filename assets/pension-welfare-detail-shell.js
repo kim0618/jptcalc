@@ -10,7 +10,7 @@
     },
     '/calc/pension-welfare/basic-pension/': {
       key:'basic-pension',
-      quick:['기초연금은 만 65세 이상 소득 하위 70% 어르신에게 지급됩니다.','2025년 기준 선정기준액은 단독가구 228만원, 부부가구 364.8만원입니다.','부동산·금융자산은 연 4%로 환산해 소득인정액에 합산됩니다.','정확한 수급 여부는 복지로(bokjiro.go.kr) 또는 주민센터에서 확인하세요.'],
+      quick:['기초연금은 만 65세 이상 소득 하위 70% 어르신에게 지급됩니다.','2026년 기준 선정기준액은 단독가구 247만원, 부부가구 395.2만원입니다.','부동산·금융자산은 연 4%로 환산해 소득인정액에 합산됩니다.','정확한 수급 여부는 복지로(bokjiro.go.kr) 또는 주민센터에서 확인하세요.'],
       related:[['/calc/pension-welfare/national-pension/','국민연금 수령액','🏛'],['/calc/pension-welfare/retirement-living/','노후 생활비','🏡'],['/calc/pension-welfare/long-term-care/','장기요양 비용','🏥']],
       guides:[['/blog/posts/retirement-living-cost.html','노후 생활비 얼마면 될까 - 30년 준비 자금 계산법'],['/blog/posts/retirement-living-late-start.html','40대·50대 노후 준비 늦었을까 - 시작 나이별 월 저축 목표와 3가지 시나리오']]
     },

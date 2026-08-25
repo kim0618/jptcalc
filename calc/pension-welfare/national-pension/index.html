@@ -102,7 +102,9 @@
     .rate-table tbody tr:last-child td{border-bottom:none;}
     .rate-table td:first-child{font-weight:600;color:var(--gray-800);}
     @media(max-width:480px){.compare-cols3{grid-template-columns:1fr}}
-  </style>
+  .bf-entry{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px;padding:11px 14px;border-radius:10px;border:1px solid var(--gray-200);background:var(--gray-50);color:var(--gray-700);font-size:13px;font-weight:700;text-decoration:none}
+.bf-entry:hover{border-color:var(--primary);color:var(--primary)}
+</style>
 </head>
 <body>
 <header class="site-header">
@@ -258,6 +260,8 @@
       <a href="https://www.nps.or.kr/jsppage/etc/pension_est/pension_est.jsp" target="_blank" rel="noopener" class="official-link primary">&#127981; 국민연금공단 예상연금 조회 ↗</a>
       <a href="/calc/pension-welfare/basic-pension/" class="official-link secondary">&#128176; 기초연금 수급 판정 →</a>
     </div>
+  
+    <a class="bf-entry" href="/calc/pension-welfare/#sec-guide">&#129517; 부모님이 받을 수 있는 다른 혜택 진단하기 &rarr;</a>
   </div>
 
   <!-- 수령 방식별 조정률 표 -->
