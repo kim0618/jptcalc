@@ -81,9 +81,7 @@
     return pageTitle();
   }
 
-  function extractSnapshot(card){
-    if (!isVisible(card)) return null;
-    const title = contextTitle(card);
+  function cardRows(card){
     const rows = [];
     card.querySelectorAll('.result-row').forEach((row)=>{
       const label = row.querySelector('.result-label, .result-total-label')?.textContent?.trim();
@@ -96,13 +94,48 @@
       const sub = box.querySelector('.rh-sub')?.textContent?.trim();
       if (value) rows.push({label, value: sub ? `${value} (${sub})` : value});
     });
+    return rows;
+  }
+
+  function cardLabel(card){
+    const direct = Array.from(card.children).find(el => el.classList.contains('rh-label'));
+    return direct ? direct.textContent.trim() : '';
+  }
+
+  function pack(title, rows){
+    if (!rows.length) return null;
+    const summary = rows.slice(0, 2).map(r => `${r.label} ${r.value}`).join(' · ');
+    return { title, rows, summary, time: new Date().toLocaleString('ko-KR') };
+  }
+
+  function extractSnapshot(card){
+    if (!isVisible(card)) return null;
+    const rows = cardRows(card);
     if (!rows.length){
       const raw = card.innerText.trim();
       if (!raw) return null;
       rows.push({label:'계산 결과', value: raw.split('\n').slice(0,6).join(' / ')});
     }
-    const summary = rows.slice(0, 2).map(r => `${r.label} ${r.value}`).join(' · ');
-    return { title, rows, summary, time: new Date().toLocaleString('ko-KR') };
+    return pack(contextTitle(card), rows);
+  }
+
+  // data-result-group: 한 화면에 여러 result-card가 동시에 뜨는 계산기(예: 연봉 비교)는
+  // 카드마다 버튼을 붙이지 않고 그룹 전체를 하나의 결과로 다룬다.
+  function extractGroupSnapshot(group){
+    if (!isVisible(group)) return null;
+    const rows = [];
+    group.querySelectorAll('.result-card').forEach((card)=>{
+      if (!isVisible(card)) return;
+      const prefix = cardLabel(card);
+      const rs = cardRows(card);
+      if (rs.length){
+        rs.forEach(r => rows.push({label: prefix ? `${prefix} ${r.label}` : r.label, value: r.value}));
+      } else {
+        const raw = card.innerText.trim().replace(/\s+/g, ' ');
+        if (raw) rows.push({label: prefix || '요약', value: raw});
+      }
+    });
+    return pack(pageTitle(), rows);
   }
 
   function historyKey(card){ return `${PREFIX}${location.pathname}::${card.id || 'result'}`; }
@@ -138,28 +171,28 @@
     return String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
   }
 
-  function copySnapshot(card){
-    const snap = extractSnapshot(card);
+  function copySnapshot(getSnap){
+    const snap = getSnap();
     if (!snap){ showToast('먼저 계산을 해주세요'); return; }
     const url = location.origin + location.pathname;
     const text = `[${snap.title}]\n` + snap.rows.map(r => `${r.label}: ${r.value}`).join('\n') + `\n\n📊 제이퍼 계산기에서 계산하기\n${url}`;
     navigator.clipboard.writeText(text).then(()=>showToast('클립보드에 복사되었습니다')).catch(()=>showToast('복사 실패'));
   }
 
-  function shareSnapshot(card){
-    const snap = extractSnapshot(card);
+  function shareSnapshot(getSnap){
+    const snap = getSnap();
     if (!snap){ showToast('먼저 계산을 해주세요'); return; }
     const url = location.origin + location.pathname;
     const text = `[${snap.title}]\n` + snap.rows.map(r => `${r.label}: ${r.value}`).join('\n') + `\n\n📊 제이퍼 계산기에서 계산하기`;
     if (navigator.share){
       navigator.share({ title: snap.title, text, url }).catch(()=>{});
     } else {
-      copySnapshot(card);
+      copySnapshot(getSnap);
     }
   }
 
-  function saveSnapshot(card, panel){
-    const snap = extractSnapshot(card);
+  function saveSnapshot(card, panel, getSnap){
+    const snap = getSnap();
     if (!snap){ showToast('먼저 계산을 해주세요'); return; }
     const arr = getHistory(card);
     arr.unshift(snap);
@@ -168,8 +201,8 @@
     showToast('저장되었습니다');
   }
 
-  function saveAsImage(card){
-    const snap = extractSnapshot(card);
+  function saveAsImage(card, getSnap){
+    const snap = getSnap();
     if (!snap){ showToast('먼저 계산을 해주세요'); return; }
     showToast('이미지 저장 중...');
     // 캡처 제외: 제휴 배너 + 폼다 브릿지 CTA(이동 링크라 저장물에 미포함). display 값 보존 후 복원.
@@ -205,36 +238,36 @@
     share: '<svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>'
   };
 
-  function setupCard(card){
-    if (!card.id) card.id = `jcalc-result-${Math.random().toString(36).slice(2, 8)}`;
-    const next = card.nextElementSibling;
+  function setupTarget(el, getSnap){
+    if (!el.id) el.id = `jcalc-result-${Math.random().toString(36).slice(2, 8)}`;
+    const next = el.nextElementSibling;
     if (next && next.classList && next.classList.contains('action-row')) return;
     const row = document.createElement('div');
     row.className = 'action-row';
     const panel = document.createElement('div');
     panel.className = 'history-panel';
 
-    row.appendChild(makeButton('저장', icons.save, ()=>saveSnapshot(card, panel)));
-    row.appendChild(makeButton('복사', icons.copy, ()=>copySnapshot(card)));
+    row.appendChild(makeButton('저장', icons.save, ()=>saveSnapshot(el, panel, getSnap)));
+    row.appendChild(makeButton('복사', icons.copy, ()=>copySnapshot(getSnap)));
     row.appendChild(makeButton('기록', icons.history, ()=>{
       panel.classList.toggle('show');
-      if (panel.classList.contains('show')) renderHistory(card, panel);
+      if (panel.classList.contains('show')) renderHistory(el, panel);
     }));
-    row.appendChild(makeButton('결과공유', '', ()=>shareSnapshot(card)));
-    row.appendChild(makeButton('이미지저장', '', ()=>saveAsImage(card)));
+    row.appendChild(makeButton('결과공유', '', ()=>shareSnapshot(getSnap)));
+    row.appendChild(makeButton('이미지저장', '', ()=>saveAsImage(el, getSnap)));
 
-    card.insertAdjacentElement('afterend', row);
+    el.insertAdjacentElement('afterend', row);
     row.insertAdjacentElement('afterend', panel);
 
     const sync = ()=>{
-      const visible = isVisible(card) && !!extractSnapshot(card);
+      const visible = isVisible(el) && !!getSnap();
       row.style.display = visible ? 'flex' : 'none';
       if (!visible) panel.classList.remove('show');
     };
     sync();
     const observer = new MutationObserver(sync);
-    observer.observe(card, { attributes: true, attributeFilter: ['class', 'style'] });
-    card.querySelectorAll('*').forEach(el=>observer.observe(el, {attributes:true, attributeFilter:['class','style']}));
+    observer.observe(el, { attributes: true, attributeFilter: ['class', 'style'] });
+    el.querySelectorAll('*').forEach(node=>observer.observe(node, {attributes:true, attributeFilter:['class','style']}));
     window.addEventListener('input', sync, true);
     window.addEventListener('change', sync, true);
     window.addEventListener('click', ()=>setTimeout(sync, 0), true);
@@ -242,7 +275,15 @@
 
   function init(){
     injectStyles(); ensureToast();
-    document.querySelectorAll('.result-card').forEach(card => setupCard(card));
+    const grouped = new Set();
+    document.querySelectorAll('[data-result-group]').forEach(group => {
+      group.querySelectorAll('.result-card').forEach(card => grouped.add(card));
+      setupTarget(group, ()=>extractGroupSnapshot(group));
+    });
+    document.querySelectorAll('.result-card').forEach(card => {
+      if (grouped.has(card)) return;
+      setupTarget(card, ()=>extractSnapshot(card));
+    });
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
