@@ -434,7 +434,7 @@
   </url>
   <url>
     <loc>https://www.jptcalc.kr/blog/posts/acquisition-tax-2026.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -524,7 +524,7 @@
   </url>
   <url>
     <loc>https://www.jptcalc.kr/blog/posts/realestate-agent-fee.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -746,14 +746,14 @@
   </url>
 
   <!-- 부동산 계산기 하위 페이지 -->
-  <url><loc>https://www.jptcalc.kr/calc/realestate/acquisition/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jptcalc.kr/calc/realestate/acquisition/</loc><lastmod>2026-08-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/realestate/brokerage/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/realestate/capital-gains/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/realestate/conversion/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/realestate/dsr/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/realestate/dti/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/realestate/ltv/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.jptcalc.kr/calc/realestate/didimdol/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jptcalc.kr/calc/realestate/didimdol/</loc><lastmod>2026-08-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/realestate/jeonse-loan/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/realestate/gift/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/realestate/inheritance/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
