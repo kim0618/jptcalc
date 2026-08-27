@@ -24,7 +24,7 @@
       key:'age',
       quick:['2023년 6월부터 한국도 만 나이 통일법이 시행되었습니다.','만 나이는 생일이 지나야 한 살이 더해집니다.','법적 나이(연 나이)와 만 나이는 다를 수 있으니 용도에 맞게 확인하세요.','생년월일만 입력하면 현재 만 나이가 자동 계산됩니다.'],
       related:[['/calc/date/dday/','D-day','📆'],['/calc/date/date-difference/','날짜 차이','📏'],['/calc/date/date-add/','날짜 더하기/빼기','➕']],
-      guides:[['/blog/posts/korean-age-system.html','만 나이 통일법 완벽 정리 - 2023년 이후 달라진 것들'],['/blog/posts/military-discharge-date.html','전역일 계산법 - 복무 기간별 전역 예정일 확인']]
+      guides:[['/blog/posts/hwangap-chilsun-age-guide.html','환갑 나이 계산법 2026 - 육순과 헷갈리면 1년 차이 납니다'],['/blog/posts/korean-age-system.html','만 나이 통일법 완벽 정리 - 2023년 이후 달라진 것들'],['/blog/posts/military-discharge-date.html','전역일 계산법 - 복무 기간별 전역 예정일 확인']]
     },
     '/calc/date/weekday/': {
       key:'weekday',
