@@ -30,7 +30,7 @@
       key:'used-car-tax',
       quick:['중고차 취득세 = 과세표준 × 세율(승용 7%·경차 4%)입니다.','과세표준 = 실거래가와 시가표준액 중 큰 금액입니다.','시가표준액 = 기준가격 × 경과연수별 잔가율(3년 0.518·10년 0.157)입니다.','취득세 7%/4%에는 지방교육세가 통합돼 별도 가산하지 않습니다.'],
       related:[['/calc/auto/acquisition-tax/','자동차 취득세','📄'],['/calc/auto/auto-tax/','자동차세','🚙'],['/calc/auto/auto-loan/','자동차 할부','💳']],
-      guides:[['/blog/posts/car-depreciation-guide.html','자동차 감가상각 계산법 2026 - 잔가율표로 보는 연식별 시세, 몇 년 타고 팔아야 유리할까'],['/blog/posts/car-acquisition-tax-guide.html','자동차 취득세 계산 2026 - 7% 세율·개별소비세 5%·경차 면제·전기차 감면 총정리']]
+      guides:[['/blog/posts/car-ownership-transfer-guide.html','자동차 명의이전 방법 2026 - 이전등록 기한 15일, 넘기면 과태료 아니라 범칙금입니다'],['/blog/posts/car-depreciation-guide.html','자동차 감가상각 계산법 2026 - 잔가율표로 보는 연식별 시세, 몇 년 타고 팔아야 유리할까'],['/blog/posts/car-acquisition-tax-guide.html','자동차 취득세 계산 2026 - 7% 세율·개별소비세 5%·경차 면제·전기차 감면 총정리']]
     },
     '/calc/auto/fuel-cost/': {
       key:'fuel-cost',
