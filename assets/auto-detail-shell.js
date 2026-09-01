@@ -12,7 +12,7 @@
       key:'auto-tax',
       quick:['비영업용 승용차 자동차세 = 배기량(cc) × cc당 세액(80/140/200원) + 지방교육세 30%입니다.','차령 3년차부터 매년 5%씩, 12년차 이상 최대 50%까지 본세가 경감됩니다.','1월에 연납하면 2026년 기준 약 4.58% 할인되고, 3·6·9월로 갈수록 줄어듭니다.','전기·수소차는 정액(비영업 연 10만원)이며 차령 경감이 없습니다.'],
       related:[['/calc/auto/acquisition-tax/','자동차 취득세','📄'],['/calc/auto/auto-loan/','자동차 할부','💳'],['/calc/tax/four-insurance/','4대보험료','🏢']],
-      guides:[['/blog/posts/car-inspection-guide.html','자동차 정기검사 비용·주기·과태료 총정리 2026 - 신차 최초검사, 4년 아니라 5년입니다'],['/blog/posts/car-tax-guide.html','자동차세 계산기 2026 - 배기량·차령 감면·연납 할인 한눈에 정리']]
+      guides:[['/blog/posts/car-scrap-guide.html','자동차 폐차 절차·비용·세금 환급 2026 - 말소등록 1개월 안 하면 과태료입니다'],['/blog/posts/car-inspection-guide.html','자동차 정기검사 비용·주기·과태료 총정리 2026 - 신차 최초검사, 4년 아니라 5년입니다'],['/blog/posts/car-tax-guide.html','자동차세 계산기 2026 - 배기량·차령 감면·연납 할인 한눈에 정리']]
     },
     '/calc/auto/acquisition-tax/': {
       key:'acquisition-tax',
