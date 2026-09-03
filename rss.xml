@@ -5,9 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 01 Sep 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
 
+    <item>
+      <title>소비기한 계산법 2026 - 유통기한과 뭐가 다른가, 우유는 왜 아직 안 바뀌었나</title>
+      <link>https://www.jptcalc.kr/blog/posts/consumption-expiry-guide.html</link>
+      <description>소비기한과 유통기한의 법적 정의부터 계산 공식, 2023년 시행일과 우유류 2031년 유예까지 식품표시광고법 원문 기준으로 정리했습니다. 두부·가공유 등 대표 식품 10종 참고값표까지 함께 확인하세요.</description>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/consumption-expiry-guide.html</guid>
+    </item>
     <item>
       <title>자동차 폐차 절차·비용·세금 환급 2026 - 말소등록 1개월 안 하면 과태료입니다</title>
       <link>https://www.jptcalc.kr/blog/posts/car-scrap-guide.html</link>

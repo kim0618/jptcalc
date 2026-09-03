@@ -18,7 +18,7 @@
       key:'date-add',
       quick:['특정 날짜에서 일·주·월·년 단위로 더하거나 뺄 수 있습니다.','월 단위 계산 시 말일 처리에 주의하세요(예: 1/31 + 1개월 = 2/28).','영업일 기준으로 계산하면 주말·공휴일이 자동 제외됩니다.','계약 만료일, 신고 기한 등을 정확히 산출할 수 있습니다.'],
       related:[['/calc/date/dday/','D-day','📆'],['/calc/date/date-difference/','날짜 차이','📏'],['/calc/date/weekday/','요일 계산','📅']],
-      guides:[['/blog/posts/retirement-age-date-guide.html','정년퇴직일 계산법 2026 - 만 60세 법정 정년, 내 퇴직일은 정확히 언제?'],['/blog/posts/date-add-guide.html','날짜 더하기·빼기 계산법 - 계약 만료일 정확히 계산하기'],['/blog/posts/holiday-2026.html','2026년 공휴일 22일 - 제헌절 부활·노동절 신설과 대체공휴일·황금연휴 총정리']]
+      guides:[['/blog/posts/consumption-expiry-guide.html','소비기한 계산법 2026 - 유통기한과 뭐가 다른가, 우유는 왜 아직 안 바뀌었나'],['/blog/posts/retirement-age-date-guide.html','정년퇴직일 계산법 2026 - 만 60세 법정 정년, 내 퇴직일은 정확히 언제?'],['/blog/posts/date-add-guide.html','날짜 더하기·빼기 계산법 - 계약 만료일 정확히 계산하기'],['/blog/posts/holiday-2026.html','2026년 공휴일 22일 - 제헌절 부활·노동절 신설과 대체공휴일·황금연휴 총정리']]
     },
     '/calc/date/age/': {
       key:'age',
