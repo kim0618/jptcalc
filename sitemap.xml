@@ -608,13 +608,13 @@
   </url>
   <url>
     <loc>https://www.jptcalc.kr/blog/posts/chatgpt-api-cost.html</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.jptcalc.kr/blog/posts/gpu-cloud-comparison.html</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -722,7 +722,7 @@
   </url>
   <url>
     <loc>https://www.jptcalc.kr/blog/posts/pet-medical-cost.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -826,7 +826,7 @@
 
   <!-- AI 계산기 하위 페이지 -->
   <url><loc>https://www.jptcalc.kr/calc/ai/api-token/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.jptcalc.kr/calc/ai/gpu-cloud/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jptcalc.kr/calc/ai/gpu-cloud/</loc><lastmod>2026-09-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/ai/infra-forecast/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/ai/llm-comparison/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.jptcalc.kr/calc/ai/saas-comparison/</loc><lastmod>2026-05-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>

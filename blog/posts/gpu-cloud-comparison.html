@@ -74,7 +74,7 @@
     }
   },
   "datePublished": "2026-03-23",
-  "dateModified": "2026-03-23",
+  "dateModified": "2026-09-04",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://www.jptcalc.kr/blog/posts/gpu-cloud-comparison.html"
@@ -136,25 +136,26 @@
 <div class="post-wrap">
   <span class="post-tag">AI·테크</span>
   <h1>GPU 클라우드 서버 비용 비교 - AWS vs GCP vs Azure vs Lambda</h1>
-  <div class="post-meta"><span>📅 2026.03.23</span><span>·</span><span>6분 읽기</span></div>
+  <div class="post-meta"><span>📅 2026.03.23</span><span>·</span><span>16분 읽기</span></div>
   <div class="post-body">
-    <p>결론부터 말하면, 어떤 클라우드를 쓰느냐에 따라 동일한 작업의 비용이 3~5배 차이납니다. A100 서버 기준 AWS는 시간당 약 $4.10, Lambda Labs는 $1.99입니다. 같은 GPU인데 두 배 넘게 차이가 납니다.</p>
+    <p>결론부터 말하면, 격차는 "어느 대형 클라우드냐"가 아니라 "대형 클라우드냐 아니냐"에서 벌어집니다. A100 1장 환산으로 GCP·Azure가 시간당 $3.67, AWS가 $2.74, Lambda Labs가 $1.99입니다. 관리형 클라우드끼리는 최대 1.8배 차이인데, Vast.ai 같은 개인 GPU 마켓플레이스까지 넣으면 최저 $0.55로 <strong>6배 이상</strong>으로 벌어집니다.</p>
     <p>스타트업이면 크레딧 프로그램을 먼저 확인해야 하고, 개인 연구자라면 Vast.ai가 압도적으로 저렴합니다. 어떤 경우에 어떤 플랫폼이 맞는지 비용 수치로 정리했습니다.</p>
 
     <h2>같은 A100인데 벤더마다 가격이 이렇게 다르다</h2>
     <div class="table-wrap"><table>
       <tr><th>클라우드</th><th>GPU</th><th>시간당 비용</th><th>특징</th></tr>
-      <tr><td>AWS (p4d.24xlarge)</td><td>A100 x8</td><td>$32.77 (약 8대)</td><td>안정적, 생태계 풍부</td></tr>
-      <tr><td>GCP (a2-highgpu-1g)</td><td>A100 x1</td><td>$3.67</td><td>TPU 옵션, 유연한 과금</td></tr>
-      <tr><td>Azure (NC A100 v4)</td><td>A100 x1</td><td>$3.40</td><td>MS 서비스 연동</td></tr>
-      <tr><td>Lambda Labs</td><td>A100 x1</td><td>$1.99</td><td>AI 특화, 저렴</td></tr>
-      <tr><td>Vast.ai</td><td>A100 x1</td><td>$0.90~$2.50</td><td>개인 GPU 마켓플레이스</td></tr>
+      <tr><td>AWS (p4d.24xlarge)</td><td>A100 40GB x8</td><td>$21.96 (8장 합계)</td><td>안정적, 생태계 풍부</td></tr>
+      <tr><td>GCP (a2-highgpu-1g)</td><td>A100 40GB x1</td><td>$3.67</td><td>TPU 옵션, 유연한 과금</td></tr>
+      <tr><td>Azure (NC24ads A100 v4)</td><td>A100 80GB x1</td><td>$3.67</td><td>MS 서비스 연동</td></tr>
+      <tr><td>Lambda Labs</td><td>A100 40GB x1</td><td>$1.99</td><td>AI 특화, 저렴</td></tr>
+      <tr><td>Vast.ai</td><td>A100 x1</td><td>$0.55~$2.50</td><td>개인 GPU 마켓플레이스, 변동 심함</td></tr>
     </table></div>
+    <p style="font-size:13px;color:#6B7280;margin-top:-8px">미국 리전(AWS us-east-1, GCP us-central1) 온디맨드 정가 기준이며, 2026년 9월 확인값입니다. Vast.ai는 호스트가 값을 정하는 마켓플레이스라 시점에 따라 폭이 큽니다. 표에서 놓치기 쉬운 부분이 하나 있는데, <strong>같은 $3.67로 GCP는 40GB, Azure는 80GB를 줍니다.</strong> VRAM이 빠듯한 작업이라면 같은 값으로 메모리를 두 배 받는 셈입니다.</p>
     <p style="margin: 1.2em 0;">
       👉 <a href="https://www.jptcalc.kr/calc/ai/gpu-cloud/" style="color: #2563eb; font-weight: 600;">GPU 클라우드 비교 계산기로 직접 계산해보기</a>
     </p>
 
-    <div class="highlight-box"><p>Lambda Labs나 Vast.ai 같은 AI 특화 플랫폼은 AWS/GCP 대비 50~70% 저렴합니다. 단, 엔터프라이즈 지원이 약합니다.</p></div>
+    <div class="highlight-box"><p>Lambda Labs는 GCP·Azure 대비 약 45%, AWS(GPU 1장 환산 기준) 대비 약 27% 저렴합니다. Vast.ai는 마켓플레이스라 시간당 $0.55부터 시작해 조건에 따라 더 큰 폭으로 저렴해질 수 있습니다. 다만 엔터프라이즈 지원은 두 플랫폼 모두 약합니다.</p></div>
 
     <div class="adfit-slot" style="text-align:center;margin:28px 0">
       <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
@@ -190,9 +191,10 @@
     <p>2026년 기준, NVIDIA H100은 A100 대비 학습 성능이 약 2~3배 향상되었습니다. 하지만 시간당 가격도 1.5~2배 높아, 실제 비용 효율은 워크로드 특성에 따라 다릅니다.</p>
     <div class="table-wrap"><table>
       <tr><th>GPU</th><th>시간당 비용 (Lambda)</th><th>LLM 학습 상대 성능</th><th>비용 대비 성능</th></tr>
-      <tr><td>A100 80GB</td><td>$1.99</td><td>1x (기준)</td><td>1x</td></tr>
-      <tr><td>H100 80GB</td><td>$3.29</td><td>약 2.5x</td><td>약 1.5x</td></tr>
+      <tr><td>A100 40GB (PCIe)</td><td>$1.99</td><td>1x (기준)</td><td>1x</td></tr>
+      <tr><td>H100 80GB (PCIe 1장)</td><td>$3.29</td><td>약 2.5x</td><td>약 1.5x</td></tr>
     </table></div>
+    <p>표의 $1.99는 A100 <strong>40GB</strong> 단가입니다. VRAM 80GB가 필요하면 같은 Lambda 기준 GPU당 $2.79로 올라가고, 그러면 H100과의 단가 차이가 1.65배에서 1.18배로 좁혀져 비용 대비 성능은 약 1.5배에서 2.1배로 오히려 H100 쪽이 더 유리해집니다. 즉 <strong>80GB가 필요한 순간부터는 A100을 고집할 이유가 거의 없습니다.</strong></p>
     <p>대규모 LLM 파인튜닝이나 학습 시 H100이 총 비용 면에서 유리한 경우가 많습니다. 반면 소규모 실험이나 추론 작업에서는 A100의 가성비가 여전히 좋습니다(NVIDIA 공식 벤치마크 기준).</p>
 
     <div class="adfit-slot" style="text-align:center;margin:28px 0">
@@ -205,9 +207,9 @@
     <div class="table-wrap"><table>
       <tr><th>클라우드</th><th>GPU</th><th>온디맨드 월 비용</th><th>스팟/선점 월 비용</th></tr>
       <tr><td>GCP</td><td>A100 x1</td><td>약 $646 (약 88만원)</td><td>약 $226 (약 31만원)</td></tr>
-      <tr><td>Azure</td><td>A100 x1</td><td>약 $598 (약 82만원)</td><td>약 $239 (약 33만원)</td></tr>
+      <tr><td>Azure</td><td>A100 x1</td><td>약 $646 (약 88만원)</td><td>약 $239 (약 33만원)</td></tr>
       <tr><td>Lambda Labs</td><td>A100 x1</td><td>약 $350 (약 48만원)</td><td>-</td></tr>
-      <tr><td>Vast.ai</td><td>A100 x1</td><td>약 $158~$440</td><td>-</td></tr>
+      <tr><td>Vast.ai</td><td>A100 x1</td><td>약 $97~$440</td><td>-</td></tr>
     </table></div>
     <p>환율 1,370원/$ 기준 추정치입니다. Lambda Labs는 스팟 옵션이 없지만 온디맨드 가격 자체가 낮아 월 기준으로도 경쟁력이 있습니다. 사용 시간이 월 400시간을 넘으면 예약 인스턴스나 온프레미스 전환을 검토하는 것이 합리적입니다.</p>
 
@@ -228,7 +230,7 @@
     <p>같은 GPU 클라우드라도 팀 규모, 사용 기간, 예산에 따라 최적 선택이 완전히 달라집니다. 세 가지 실제 상황을 비교해봤습니다.</p>
 
     <h3>시나리오 1: 1인 개발자 D씨 - 사이드 프로젝트 파인튜닝</h3>
-    <div class="highlight-box"><p>목적: Llama 3 8B 모델 LoRA 파인튜닝 (자체 데이터 1만 건)<br>예상 소요: A100 40GB 기준 약 4~6시간<br><strong>추천: Vast.ai A100 40GB ($0.90/h) = 총 $3.6~$5.4 (약 5,000~7,400원)</strong><br>Lambda Labs($1.99/h)도 사용 가능. 총 $8~$12 (약 11,000~16,000원)<br>AWS/GCP는 이 규모에서 과도한 비용 발생 ($15~$22)</p></div>
+    <div class="highlight-box"><p>목적: Llama 3 8B 모델 LoRA 파인튜닝 (자체 데이터 1만 건)<br>예상 소요: A100 40GB 기준 약 4~6시간<br><strong>추천: Vast.ai A100 40GB ($0.90/h) = 총 $3.6~$5.4 (약 5,000~7,400원)</strong><br>Lambda Labs($1.99/h)도 사용 가능. 총 $8~$12 (약 11,000~16,000원)<br>AWS/GCP는 이 규모에서 과도한 비용 발생 ($11~$22)</p></div>
     <p>소규모 실험은 저가 플랫폼의 가성비가 압도적입니다. 단, Vast.ai는 개인이 제공하는 GPU이므로 데이터 보안에 민감한 프로젝트에는 적합하지 않습니다. 민감 데이터가 포함된 경우 Lambda Labs 이상을 사용하는 것이 안전합니다.</p>
 
     <h3>시나리오 2: 스타트업 E팀(5명) - LLM 기반 제품 프로토타입</h3>
@@ -236,8 +238,8 @@
     <p>스타트업이라면 크레딧 프로그램을 먼저 신청하는 것이 정석입니다. GCP의 Google for Startups Cloud Program은 최대 $100,000 크레딧을 제공하며, 위 3개월 비용을 전액 커버할 수 있습니다. 크레딧이 소진되면 Lambda Labs로 전환해 비용을 절감하는 2단계 전략이 효과적입니다.</p>
 
     <h3>시나리오 3: 대학원 연구실 F팀 - 논문용 대규모 학습</h3>
-    <div class="highlight-box"><p>목적: 30B 모델 풀 학습 (custom architecture, 약 2주 연속)<br>필요 GPU: H100 x4 (또는 A100 x8), 약 336시간<br>Lambda Labs H100 x4: $3.29 × 4 × 336 = <strong>약 $4,422 (약 606만원)</strong><br>AWS p4d.24xlarge (A100 x8): $32.77 × 336 = <strong>약 $11,011 (약 1,508만원)</strong><br>차이: 약 <strong>900만원</strong></p></div>
-    <p>동일 작업에서 플랫폼 선택만으로 900만원 차이가 납니다. 대학·연구기관은 GCP의 Research Credits 프로그램이나 NVIDIA Academic Program을 통해 무료 또는 할인된 GPU 자원을 확보할 수 있으므로 먼저 확인하세요. AWS의 경우 연구 목적 크레딧(AWS Cloud Credit for Research)도 별도로 운영합니다.</p>
+    <div class="highlight-box"><p>목적: 30B 모델 풀 학습 (custom architecture, 약 2주 연속)<br>필요 GPU: H100 x4 (또는 A100 x8), 약 336시간<br>Lambda Labs H100 SXM 4장 구성(GPU당 $4.09): $4.09 × 4 × 336 = <strong>약 $5,497 (약 753만원)</strong><br>AWS p4d.24xlarge (A100 x8): $21.96 × 336 = <strong>약 $7,379 (약 1,011만원)</strong><br>차이: 약 <strong>258만원</strong></p></div>
+    <p>여기서 주의할 점이 하나 있습니다. Lambda는 GPU를 몇 장 묶느냐에 따라 GPU당 단가가 달라져서, H100 PCIe 1장은 $3.29지만 4장 SXM 구성은 GPU당 $4.09입니다. 위 표의 $3.29를 그냥 4배 하면 실제보다 100만원 넘게 싸게 잡히므로, 다장 구성은 반드시 해당 구성의 단가로 계산해야 합니다. 그래도 동일 작업에서 플랫폼 선택만으로 258만원 차이가 납니다. 대학·연구기관은 GCP의 Research Credits 프로그램이나 NVIDIA Academic Program을 통해 무료 또는 할인된 GPU 자원을 확보할 수 있으므로 먼저 확인하세요. AWS의 경우 연구 목적 크레딧(AWS Cloud Credit for Research)도 별도로 운영합니다.</p>
 
     <h2>클라우드 GPU 비용 최적화 체크리스트</h2>
     <p>GPU 클라우드 비용을 줄이는 방법은 인스턴스 유형 선택뿐만이 아닙니다. 실무에서 자주 놓치는 최적화 포인트를 정리했습니다.</p>
@@ -287,7 +289,7 @@ window.ARTICLE_INFO_CONFIG = {
   author: "제이퍼 계산기 편집팀",
   reviewBasis: "주요 클라우드 서비스 공식 가격 정책, 2026년 기준",
   basisDate: "2026년 기준",
-  lastReviewed: '2026.03'
+  lastReviewed: '2026.09.04'
 };
 </script>
 <script>

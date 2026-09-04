@@ -122,9 +122,9 @@
     </div>
     <div class="guide-card">
       <h2>GPU 클라우드 비용 계산 원리</h2>
-      <p>GPU 클라우드 비용은 시간당 단가 × GPU 수량 × 사용 시간으로 계산됩니다. 2026년 6월 기준 온디맨드 단가는 A100 80GB 기준 AWS $4.10/h, GCP $3.67/h, Azure $3.40/h이며, 리전과 약정 조건에 따라 달라집니다. H100은 A100 대비 1.2~1.5배 비싸지만 학습 속도가 2~3배 빠르기 때문에 실제 작업 시간과 총 비용을 함께 계산해야 유리한 선택을 할 수 있습니다. 각 벤더 공식 가격 페이지에서 최신 단가를 반드시 재확인하세요.</p>
+      <p>GPU 클라우드 비용은 시간당 단가 × GPU 수량 × 사용 시간으로 계산됩니다. 2026년 9월 확인 기준 A100 온디맨드 단가는 GPU 1장 환산으로 AWS $2.74/h(p4d.24xlarge 8장 $21.96), GCP $3.67/h(a2-highgpu-1g, 40GB), Azure $3.67/h(NC24ads A100 v4, 80GB)이며, 리전과 약정 조건에 따라 달라집니다. 같은 $3.67라도 GCP는 40GB, Azure는 80GB라 VRAM이 빠듯하면 Azure 쪽이 유리합니다. H100은 A100보다 비싸지만 학습 속도가 2~3배 빠르기 때문에 실제 작업 시간과 총 비용을 함께 계산해야 유리한 선택을 할 수 있습니다. 각 벤더 공식 가격 페이지에서 최신 단가를 반드시 재확인하세요.</p>
       <div class="guide-grid">
-        <div class="guide-box"><strong>온디맨드 단가</strong><span>A100 기준 벤더별 $3.40~$4.10/h, H100은 $4.28~$5.12/h (2026년 6월 기준 온디맨드)</span></div>
+        <div class="guide-box"><strong>온디맨드 단가</strong><span>A100 기준 벤더별 $2.74~$3.67/h (GPU 1장 환산, 2026년 9월 확인). AI 특화 플랫폼은 $1.99부터</span></div>
         <div class="guide-box"><strong>월 비용 산출</strong><span>시간당 단가 × 수량 × 일일 사용 시간 × 30일로 계산. 계산기에 입력하면 자동 환산됩니다</span></div>
         <div class="guide-box"><strong>절감 옵션 비교</strong><span>스팟 인스턴스 50~70% 할인, 1년 예약 약정 30~40% 할인 - 작업 패턴에 따라 선택</span></div>
       </div>
@@ -132,12 +132,12 @@
     <div class="guide-card">
       <h2>실제 계산 예시</h2>
       <h3>예시 1 - 박주원(34세, AI 스타트업 개발자)</h3>
-      <p>모델 파인튜닝 작업으로 A100 80GB 2개를 하루 12시간씩 사용합니다. 벤더별 월 비용(30일 기준)은 다음과 같습니다.</p>
+      <p>모델 파인튜닝 작업으로 A100 2개를 하루 12시간씩 사용합니다. 벤더별 월 비용(30일 기준, 환율 1,360원/$)은 다음과 같습니다.</p>
       <ul>
-        <li>AWS: $4.10 × 2 × 12시간 × 30일 = <strong>$2,952/월</strong> (약 428만원)</li>
-        <li>GCP: $3.67 × 2 × 12 × 30 = <strong>$2,642/월</strong> (약 383만원)</li>
-        <li>Azure: $3.40 × 2 × 12 × 30 = <strong>$2,448/월</strong> (약 355만원)</li>
-        <li><strong>최저가(Azure) 선택 시 AWS 대비 월 $504 절감, 연 $6,048 차이가 납니다</strong></li>
+        <li>AWS: $2.74 × 2 × 12시간 × 30일 = <strong>$1,973/월</strong> (약 268만원)</li>
+        <li>GCP: $3.67 × 2 × 12 × 30 = <strong>$2,642/월</strong> (약 359만원)</li>
+        <li>Azure: $3.67 × 2 × 12 × 30 = <strong>$2,642/월</strong> (약 359만원)</li>
+        <li><strong>최저가(AWS) 선택 시 월 $669, 연 $8,028 차이가 납니다.</strong> AWS는 8장 묶음(p4d.24xlarge)만 제공하므로 2장만 쓰려면 GCP·Azure가 현실적이고, 이 경우 두 벤더 단가가 같아 VRAM이 큰 Azure(80GB)가 유리합니다</li>
       </ul>
       <h3>예시 2 - 최민지(28세, ML 엔지니어)</h3>
       <p>챗봇 추론 서비스에 L4 24GB 1개를 하루 4시간씩 상시 운영합니다. L4는 추론 전용으로 A100 대비 비용 효율이 높습니다.</p>
@@ -211,7 +211,7 @@
 </footer>
 <script>
 
-const GPU={a100:{name:'A100 80GB',aws:4.10,gcp:3.67,azure:3.40},h100:{name:'H100 80GB',aws:5.12,gcp:4.58,azure:4.28},l4:{name:'L4 24GB',aws:0.81,gcp:0.70,azure:0.65}};
+const GPU={a100:{name:'A100',aws:2.74,gcp:3.67,azure:3.67},h100:{name:'H100 80GB',aws:5.12,gcp:4.58,azure:4.28},l4:{name:'L4 24GB',aws:0.81,gcp:0.70,azure:0.65}};
 let gpuType='a100';
 function fmtUsd(v){return '$'+v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
 function fmtKrw(v){v=Math.round(v);if(v>=100000000)return Math.floor(v/100000000).toLocaleString()+'억 '+Math.floor((v%100000000)/10000).toLocaleString()+'만원';if(v>=10000)return Math.floor(v/10000).toLocaleString()+'만 '+(v%10000).toLocaleString()+'원';return v.toLocaleString()+'원';}

@@ -708,8 +708,8 @@
     <item>
       <title>ChatGPT API 비용 계산 - 토큰 요금 완전 정리</title>
       <link>https://www.jptcalc.kr/blog/posts/chatgpt-api-cost.html</link>
-      <description>ChatGPT API 토큰 요금 체계, GPT-4o·GPT-4 Turbo·GPT-3.5 모델별 비용 비교, 실제 사용량 기준 월 비용 예측 방법을 정리했습니다.</description>
-      <pubDate>Sun, 29 Mar 2026 00:00:00 +0900</pubDate>
+      <description>ChatGPT(OpenAI) API 토큰 요금 체계, GPT-5.4·GPT-5.4 mini·GPT-5.5 모델별 비용 비교, 실제 사용량 기준 월 비용 예측 방법을 정리했습니다.</description>
+      <pubDate>Sat, 21 Mar 2026 00:00:00 +0900</pubDate>
       <guid>https://www.jptcalc.kr/blog/posts/chatgpt-api-cost.html</guid>
     </item>
 
@@ -717,7 +717,7 @@
       <title>GPU 클라우드 서버 비용 비교 - AWS vs GCP vs Azure vs Lambda</title>
       <link>https://www.jptcalc.kr/blog/posts/gpu-cloud-comparison.html</link>
       <description>AI·딥러닝 GPU 클라우드 서버 비용 비교. AWS, GCP, Azure, Lambda Labs, Vast.ai 가격 및 특징을 정리했습니다.</description>
-      <pubDate>Sun, 29 Mar 2026 00:00:00 +0900</pubDate>
+      <pubDate>Mon, 23 Mar 2026 00:00:00 +0900</pubDate>
       <guid>https://www.jptcalc.kr/blog/posts/gpu-cloud-comparison.html</guid>
     </item>
 
