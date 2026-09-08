@@ -48,7 +48,7 @@
       key:'lifetime-cost',
       quick:['소형견 평균 수명 12~16년, 대형견 8~12년으로 총 비용이 달라집니다.','노령기에는 의료비가 크게 증가하므로 별도 예산을 마련하세요.','물가 상승률을 반영하면 실제 총 비용은 더 높아질 수 있습니다.','장묘 비용도 평생 양육비에 포함해서 계획하세요.'],
       related:[['/calc/pet/monthly-cost/','월 생활비','🐕'],['/calc/pet/adoption/','입양 초기비용','🏠'],['/calc/pet/medical/','의료비 예산','💊']],
-      guides:[['/blog/posts/cat-lifetime-cost.html','고양이 평생 양육비 얼마나 들까? 항목별 분석'],['/blog/posts/pet-senior-care-guide.html','노령 반려동물 케어 비용 - 10살 이후 준비']]
+      guides:[['/blog/posts/pet-funeral-guide.html','반려동물 장례 비용 총정리 2026 - 화장 시세와 불법 처리 과태료'],['/blog/posts/cat-lifetime-cost.html','고양이 평생 양육비 얼마나 들까? 항목별 분석'],['/blog/posts/pet-senior-care-guide.html','노령 반려동물 케어 비용 - 10살 이후 준비']]
     }
   };
   let cfg=pages[path];
