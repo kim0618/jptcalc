@@ -5,9 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 14 Sep 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
 
+    <item>
+      <title>택배 부피무게 계산법 2026 - 가벼운 상자가 더 비싸지는 이유</title>
+      <link>https://www.jptcalc.kr/blog/posts/delivery-volumetric-weight-guide.html</link>
+      <description>택배 요금은 무게와 크기(3변의 합) 중 더 높은 구간이 기준입니다. 1.2kg 액자가 상자 크기 때문에 13,000원(3.25배)이 되는 계산과, 해외배송 부피무게 공식(÷6,000·÷5,000)을 실제 예시로 정리했습니다.</description>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/delivery-volumetric-weight-guide.html</guid>
+    </item>
     <item>
       <title>자동차보험 할인할증등급 계산법 2026 - 소액 사고 보험처리하면 3년간 얼마 손해일까</title>
       <link>https://www.jptcalc.kr/blog/posts/car-insurance-grade-guide.html</link>
