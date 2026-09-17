@@ -5,9 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 15 Sep 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
 
+    <item>
+      <title>배당수익률 계산법 2026 - 코스피는 반토막났는데 내 배당주는 왜 다를까</title>
+      <link>https://www.jptcalc.kr/blog/posts/dividend-yield-guide.html</link>
+      <description>배당수익률은 매입가냐 현재가냐에 따라 달라지고 세금 15.4%를 빼면 또 달라집니다. 코스피 배당수익률이 1년 새 2.14%에서 한때 0.82%까지 떨어진 이유와 2026년 신설된 고배당기업 분리과세까지 계산으로 정리했습니다.</description>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/dividend-yield-guide.html</guid>
+    </item>
     <item>
       <title>택배 부피무게 계산법 2026 - 가벼운 상자가 더 비싸지는 이유</title>
       <link>https://www.jptcalc.kr/blog/posts/delivery-volumetric-weight-guide.html</link>

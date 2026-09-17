@@ -30,7 +30,7 @@
       key:'investment',
       quick:['단순 수익률과 연환산(CAGR) 수익률을 구분해서 비교하세요.','수수료와 세금을 반영한 순수익률이 실제 투자 성과입니다.','분산 투자로 리스크를 줄이면 장기적으로 안정적인 수익을 기대할 수 있습니다.','과거 수익률이 미래 수익을 보장하지 않으므로 참고 지표로만 활용하세요.'],
       related:[['/calc/finance/compound/','복리 계산','📊'],['/calc/finance/deposit/','예금 이자','💰'],['/calc/finance/loan-repayment/','대출 상환','🏠']],
-      guides:[['/blog/posts/cagr-guide.html','CAGR 연환산 수익률 계산법과 투자 수익 분석'],['/blog/posts/emergency-fund-guide.html','비상금 얼마나 모아야 할까? 적정 비상금 가이드']]
+      guides:[['/blog/posts/dividend-yield-guide.html','배당수익률 계산법 2026 - 매입가·세후 기준과 2026년 고배당기업 분리과세'],['/blog/posts/cagr-guide.html','CAGR 연환산 수익률 계산법과 투자 수익 분석'],['/blog/posts/emergency-fund-guide.html','비상금 얼마나 모아야 할까? 적정 비상금 가이드']]
     },
     '/calc/finance/jangbyeong-savings/': {
       key:'jangbyeong-savings',
