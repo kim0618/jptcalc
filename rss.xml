@@ -5,9 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Thu, 17 Sep 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
 
+    <item>
+      <title>간수치 정상범위 2026 - AST·ALT·감마지티피 건강검진 판정기준과 수치가 높은 원인</title>
+      <link>https://www.jptcalc.kr/blog/posts/liver-enzyme-guide.html</link>
+      <description>AST 229가 찍혔는데 원인은 간이 아니라 근력 운동이었던 실제 증례부터, 건강검진 판정표(AST 40·ALT 35·감마지티피 남 11~63/여 8~35)와 지방간 새 이름 MASLD 위험인자 5가지까지 시나리오로 풀었습니다.</description>
+      <pubDate>Mon, 21 Sep 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/liver-enzyme-guide.html</guid>
+    </item>
     <item>
       <title>배당수익률 계산법 2026 - 코스피는 반토막났는데 내 배당주는 왜 다를까</title>
       <link>https://www.jptcalc.kr/blog/posts/dividend-yield-guide.html</link>
