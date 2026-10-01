@@ -36,7 +36,7 @@
       key:'medical',
       quick:['연간 예방접종·심장사상충 예방비는 필수 고정 지출입니다.','노령 반려동물은 정기 건강검진 비용이 증가합니다.','응급 의료비는 수십만원~수백만원이 될 수 있으니 대비하세요.','치과 스케일링은 매년 또는 격년으로 필요할 수 있습니다.'],
       related:[['/calc/pet/monthly-cost/','월 생활비','🐕'],['/calc/pet/insurance/','펫보험 비교','🛡️'],['/calc/pet/lifetime-cost/','평생 양육비','📊']],
-      guides:[['/blog/posts/pet-registration-guide.html','동물등록 안 하면 과태료 얼마 2026 - 등록방법·비용·자진신고 총정리'],['/blog/posts/pet-medical-cost.html','반려동물 의료비 현실 - 항목별 비용 총정리'],['/blog/posts/pet-insurance.html','펫보험 가입 전 반드시 알아야 할 것들']]
+      guides:[['/blog/posts/pet-neutering-cost-guide.html','반려동물 중성화 수술 비용 2026 - 강아지·고양이 가격과 지자체 지원금'],['/blog/posts/pet-registration-guide.html','동물등록 안 하면 과태료 얼마 2026 - 등록방법·비용·자진신고 총정리'],['/blog/posts/pet-medical-cost.html','반려동물 의료비 현실 - 항목별 비용 총정리'],['/blog/posts/pet-insurance.html','펫보험 가입 전 반드시 알아야 할 것들']]
     },
     '/calc/pet/insurance/': {
       key:'insurance',
