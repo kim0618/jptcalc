@@ -71,9 +71,17 @@
 2. `verified-posts.md`를 새 회차용으로 재작성한다. 남기는 것은 ①회차 헤더와 아카이브 포인터 ②**RECHECK QUEUE 블록 그대로** ③"회차를 넘어 계속 유효한 검증 원칙"(개별 글 파일명 없이 방법론만) ④빈 "N회차 검증 완료 목록" 섹션.
 3. 🔴 **제외 판정은 「N회차 검증 완료 목록」 섹션 안의 파일명만** 본다. 파일 전체를 grep하면 RECHECK 대기 글과 교훈에 언급된 글이 **조용히 제외되어 영구히 검증되지 않는다** - 이것이 교훈을 같은 파일에 남길 수 없는 이유다. 판정 코드는 반드시 섹션을 분리해서 쓴다:
    ```python
+   import re
    sec = open('blog/verified-posts.md').read().split('## N회차 검증 완료 목록')[1]
-   unverified = [u for u in blog_urls if u + '.html' not in sec]
+   # 🔴 부분문자열 매칭 금지: 앞 문자가 영숫자나 하이픈이면 다른 글의 꼬리다
+   def done(name): return re.search(r'(?<![\w-])' + re.escape(name), sec) is not None
+   unverified = [u for u in blog_urls if not done(u + '.html')]
    ```
+   🔴 **왜 단순 `in`을 쓰면 안 되는가 (2026-10-02 2단계 적발, 1회차부터 계속 새던 구멍)**: `u + '.html' in sec` 는 **부분문자열 매칭**이라 짧은 파일명이 긴 파일명의 꼬리에 걸린다. 실측된 사례 2건:
+   - `withholding-tax-guide.html` 이 등재되면 → **`holding-tax-guide.html`**(보유세, 부동산 허브글)이 자동 제외
+   - `disabled-car-tax-guide.html` 이 등재되면 → **`car-tax-guide.html`**(자동차세 허브글)이 자동 제외
+   두 글은 그래서 **1·2회차 내내 한 번도 배정되지 않았다.** 위 `(?<![\w-])` 경계를 반드시 쓰고, 새 회차를 시작할 때 **제외 목록을 눈으로 한 번 출력해** 의외의 글이 빠져 있지 않은지 확인한다.
+   ⚠️ 경계를 고쳐도 **기록·교훈 본문에 단순 언급된 글**(예: "○○는 이미 정확히 반영돼 수정 불필요")은 여전히 제외된다. 완료 선언이 아니라 언급일 뿐이면 **RECHECK QUEUE에 등록**해 되살릴 것.
 4. **새 회차에서 글을 배정하면, 그 파일명으로 `verified-posts-archive.md`를 먼저 grep**해 지난 회차의 적발 내역·미해결 항목·수정 근거를 읽고 시작한다. 이걸 건너뛰면 지난 회차가 이미 원문으로 확정한 값을 다시 의심하거나, 넘겨둔 숙제를 영원히 놓친다.
 
 ### Step 3: 카테고리 분류
