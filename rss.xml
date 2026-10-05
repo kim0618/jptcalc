@@ -5,9 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Thu, 01 Oct 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
 
+    <item>
+      <title>마진율 계산법 2026 - 원가에 30% 붙였는데 마진은 23%인 이유</title>
+      <link>https://www.jptcalc.kr/blog/posts/margin-markup-guide.html</link>
+      <description>원가 18,000원에 30%를 붙이면 판매가 23,400원이고 실제 마진율은 23.08%입니다. 마크업과 마진율의 차이, 마진 30%를 만드는 역산 공식(원가÷0.7), 할인과 수수료가 마진을 깎는 계산을 예시로 정리했습니다.</description>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/margin-markup-guide.html</guid>
+    </item>
     <item>
       <title>반려동물 중성화 수술 비용 2026 - 강아지·고양이 가격과 지자체 지원금</title>
       <link>https://www.jptcalc.kr/blog/posts/pet-neutering-cost-guide.html</link>
