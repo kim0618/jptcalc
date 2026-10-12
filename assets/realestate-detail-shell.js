@@ -53,6 +53,7 @@
     '/calc/realestate/didimdol/': {
       key:'didimdol',
       quick:['소득요건은 부부합산 기준이며, 신생아 특례 2.5억 상향은 백지화되어 1.3억/맞벌이 2억이 현행입니다.','6.27 대책으로 2025.6.28 신규 접수분부터 신생아 5억→4억·일반 2.5억→2억으로 한도가 줄었습니다.','한도는 상품 상한과 주택가×LTV(70~80%) 중 낮은 값으로 정해집니다.','표시 금리는 우대 적용 전 기본금리이며, 다자녀·생애최초·지방 0.2%p 우대로 더 낮아집니다.'],
+      guides:[['/blog/posts/didimdol-loan-guide.html','디딤돌 대출 계산기 2026 - 한도·금리 계산법과 생애첫주택·신생아 특례 조건 비교']],
       related:[['/calc/realestate/dti/','총부채상환비율(DTI)','💵'],['/calc/realestate/ltv/','주택담보인정비율(LTV)','🔑'],['/calc/realestate/loan/','대출이자 계산기','💰']]
     },
     '/calc/realestate/jeonse-loan/': {

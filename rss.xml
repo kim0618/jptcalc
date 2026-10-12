@@ -5,9 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 05 Oct 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
 
+    <item>
+      <title>디딤돌 대출 계산기 2026 - 한도·금리 계산법과 생애첫주택·신생아 특례 조건 비교</title>
+      <link>https://www.jptcalc.kr/blog/posts/didimdol-loan-guide.html</link>
+      <description>디딤돌대출 한도는 상품 한도가 아니라 주택가격×LTV와 비교한 작은 값입니다. 일반·생애최초·신혼·신생아 특례별 실제 한도와 소득구간별 금리표, 같은 3.2억원 대출의 월 상환액 차이를 사례로 계산했습니다.</description>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/didimdol-loan-guide.html</guid>
+    </item>
     <item>
       <title>마진율 계산법 2026 - 원가에 30% 붙였는데 마진은 23%인 이유</title>
       <link>https://www.jptcalc.kr/blog/posts/margin-markup-guide.html</link>
