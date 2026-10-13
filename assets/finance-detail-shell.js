@@ -24,7 +24,7 @@
       key:'loan-repayment',
       quick:['원리금균등 상환은 매월 동일 금액을 납부하지만, 초기에는 이자 비중이 큽니다.','원금균등 상환은 초기 부담이 크지만 총 이자가 적습니다.','중도상환수수료를 확인한 뒤 여유자금으로 조기 상환을 검토하세요.','변동금리 대출은 기준금리 변동에 따라 상환액이 달라질 수 있습니다.'],
       related:[['/calc/finance/deposit/','예금 이자','💰'],['/calc/finance/compound/','복리 계산','📊'],['/calc/finance/investment/','투자 수익률','📉']],
-      guides:[['/blog/posts/loan-repayment.html','대출 상환 방식 비교 - 원리금균등 vs 원금균등'],['/blog/posts/loan-refinance-guide.html','대출 갈아타기 - 중도상환수수료와 절감 효과 계산']]
+      guides:[['/blog/posts/prepayment-fee-guide.html','중도상환수수료 계산법 2026 - 요율·잔존기간·3년 면제와 갈아타기 손익분기'],['/blog/posts/loan-repayment.html','대출 상환 방식 비교 - 원리금균등 vs 원금균등'],['/blog/posts/loan-refinance-guide.html','대출 갈아타기 - 중도상환수수료와 절감 효과 계산']]
     },
     '/calc/finance/investment/': {
       key:'investment',
