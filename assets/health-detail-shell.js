@@ -24,7 +24,7 @@
       key:'calories',
       quick:['운동 종류와 강도에 따라 소모 칼로리가 크게 달라집니다.','체중이 많이 나갈수록 동일 운동에서 더 많은 칼로리를 소모합니다.','유산소 운동과 근력 운동을 병행하면 효과적입니다.','일상 활동(걷기, 계단 오르기 등)도 칼로리 소모에 기여합니다.'],
       related:[['/calc/health/bmr/','기초대사량','🔥'],['/calc/health/bmi/','BMI','📏'],['/calc/health/body-fat/','체지방률','💪']],
-      guides:[['/blog/posts/diet-calorie-guide.html','다이어트 칼로리 계산법 - 실제로 얼마나 먹어야 할까?'],['/blog/posts/bmr-calories.html','기초대사량 계산법 - 다이어트와 체중 유지의 열쇠']]
+      guides:[['/blog/posts/exercise-calorie-burn-guide.html','운동 칼로리 소모량 계산법 2026 - MET 공식과 체중별 걷기·러닝·줄넘기 소모 칼로리표'],['/blog/posts/diet-calorie-guide.html','다이어트 칼로리 계산법 - 실제로 얼마나 먹어야 할까?'],['/blog/posts/bmr-calories.html','기초대사량 계산법 - 다이어트와 체중 유지의 열쇠']]
     },
     '/calc/health/ideal-weight/': {
       key:'ideal-weight',

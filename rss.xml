@@ -5,9 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 13 Oct 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
 
+    <item>
+      <title>운동 칼로리 소모량 계산법 2026 - MET 공식과 체중별 걷기·러닝·줄넘기 소모 칼로리표</title>
+      <link>https://www.jptcalc.kr/blog/posts/exercise-calorie-burn-guide.html</link>
+      <description>운동 칼로리 소모량은 MET × 체중(kg) × 시간(h)로 계산합니다. 2024년판 Compendium 원문값으로 체중 50·70·90kg별 걷기·러닝·줄넘기 소모량과, 가만히 있어도 쓰는 몫을 뺀 실제 추가 소모량을 비교했습니다.</description>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/exercise-calorie-burn-guide.html</guid>
+    </item>
     <item>
       <title>중도상환수수료 계산법 2026 - 같은 1억을 1년 차에 갚는데 36만원과 93만원이 갈리는 이유</title>
       <link>https://www.jptcalc.kr/blog/posts/prepayment-fee-guide.html</link>
@@ -701,9 +708,9 @@
     </item>
 
     <item>
-      <title>프리랜서 3.3% 원천징수, 5월에 환급받는 방법</title>
+      <title>프리랜서 3.3% 원천징수 환급 - 5월 종소세 신고로 돌려받는 법</title>
       <link>https://www.jptcalc.kr/blog/posts/freelancer-tax-refund.html</link>
-      <description>프리랜서라면 매달 떼인 3.3%를 5월 종합소득세 신고로 돌려받을 수 있습니다. 신고 방법과 절세 팁을 단계별로 정리했습니다.</description>
+      <description>3.3% 원천징수(사업소득세 3% + 지방소득세 0.3%)는 5월 종합소득세 신고로 일부 환급받을 수 있습니다. 연 소득 2,400만원 기준 예상 환급액과 홈택스 신고 단계별 방법을 정리했습니다.</description>
       <pubDate>Sun, 29 Mar 2026 00:00:00 +0900</pubDate>
       <guid>https://www.jptcalc.kr/blog/posts/freelancer-tax-refund.html</guid>
     </item>
