@@ -6,7 +6,7 @@
       key:'dday',
       quick:['D-day는 특정 날짜까지 남은 일수를 계산합니다.','시작일과 종료일을 포함할지 여부에 따라 1일 차이가 날 수 있습니다.','음력 기념일은 매년 양력 날짜가 달라지므로 주의하세요.','반복 기념일(생일, 기념일 등)은 매년 자동으로 갱신됩니다.'],
       related:[['/calc/date/date-difference/','날짜 차이','📏'],['/calc/date/age/','만 나이','🎂'],['/calc/date/date-add/','날짜 더하기/빼기','➕']],
-      guides:[['/blog/posts/dday-counter.html','D-day 계산기 활용법 - 시험·입사·기념일 카운트다운'],['/blog/posts/korean-age-system.html','만 나이 통일법 완벽 정리 - 2023년 이후 달라진 것들']]
+      guides:[['/blog/posts/suneung-dday-guide.html','수능 D-day 계산법 2026 - 11월 19일 수능부터 정시 등록 마감 D+91까지 날짜 전체 정리'],['/blog/posts/dday-counter.html','D-day 계산기 활용법 - 시험·입사·기념일 카운트다운'],['/blog/posts/korean-age-system.html','만 나이 통일법 완벽 정리 - 2023년 이후 달라진 것들']]
     },
     '/calc/date/date-difference/': {
       key:'date-difference',
