@@ -101,7 +101,7 @@
 ### 5-1. 신청 직전 (사용자)
 1. **2차 rsync 배포** (사용자 직접)
    ```
-   rsync -avz --delete /home/tjd618/jptcalc/ root@223.130.151.202:/root/jptcalc/
+   (배포 명령은 .claude/rules/deploy-policy.md의 허용 목록 방식을 따른다. 서버 주소·계정은 저장소에 적지 않는다. 2026-10-21 제거)
    ```
 2. **라이브 광고 로더 0건 재확인**
    ```
