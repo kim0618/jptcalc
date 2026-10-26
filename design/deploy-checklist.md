@@ -1,6 +1,8 @@
 # 리뉴얼 배포 전 체크리스트
 
-## ★ 배포 직전 상태 (2026-10-26 기준)
+## ★ 배포 완료 (2026-10-26 15:51 KST, main `1ab44d8`)
+
+> 아래 표는 배포 직전까지의 기록과 배포 결과다. 롤백: nginx는 `sites-available/jptcalc.kr.bak-20261026`으로 되돌린 뒤 reload, 사이트는 `e36a541`을 git archive로 꺼내 같은 필터(`.deploy-filter`)로 rsync.
 
 | 구분 | 항목 | 상태 |
 |---|---|---|
@@ -43,10 +45,10 @@
 | **사용자** | **배포 전 build_all은 SKIP_CLICK 없이 실행** | `bash design/tools/build_all.sh` 그대로(약 15분). 8 정적 검사·9 클릭 검사가 모두 0이어야 배포. `SKIP_CLICK=1`은 작업 중 빠른 재생성용일 뿐 배포 전에는 쓰지 않는다 |
 | 완료 | 1. main 커밋(10/26) | `e36a541` deploy-filter: vendor 라이선스 파일 포함(`+ /assets/vendor/**/LICENSE*`를 2)항 위에, 로컬 rsync -n 시험 1,237 → 1,240 = LICENSE 3개만 늘고 그 외 변화 0). main 미커밋 0 |
 | 완료 | 2. 작업본 커밋(10/26) | `cd1ed2d` jptcalc v2 리뉴얼(redesign): 1,622파일(새 1,279 + 수정 343) 약 62.5MB, 커밋 직전 build_all 바뀐 파일 0. 검수 캡처 0·vendor 15 포함, `__pycache__`는 a74cc04부터 추적하던 루트 1개만. 이 체크리스트 수정은 뒤따르는 커밋 |
-| 사용자 | 3. merge | `git -C ~/jptcalc merge --no-ff redesign` → 충돌 6개는 `git checkout --theirs -- <6개>` 후 `git add` → `git commit` → `git diff --stat redesign HEAD`가 `4ad2db5`의 3파일만이면 정상 |
-| 사용자 | 4. 배포 | **허용 목록 필터(`.deploy-filter`, main 4ad2db5) 사용**: 삭제 동기화 + 제외 대상까지 삭제(`--delete-excluded`) + 빈 폴더 정리. design/·__pycache__/·.git·.claude·*.md는 필터가 뺀다 |
-| 사용자 | 5. nginx 404 | 서버 server 블록에 `error_page 404 /404.html;` 추가 → 설정 검사 → 다시 읽기 |
-| 사용자 | 6. 배포 직후 확인 | `/`·`/calc/realestate/dsr/`·`/blog/`·`/recent/` 200, `/design/brief.md` 404, `/calc/nope/` 404+새 화면, 새 파비콘, GA4 실시간 이벤트, dti·pyeong 옛 화면 정상, `/assets/ds/situations.json`·`/assets/ds/cat-menu.json` 200(데스크톱 헤더 상황별·카테고리 펼침과 모든 페이지 상황 시트가 이 두 파일을 읽음), `/assets/vendor/pretendard/1.3.9/woff2/Pretendard-Regular.woff2`·`/assets/vendor/flatpickr/4.6.13/flatpickr.min.js` 200(글꼴·달력이 여기서만 옴) |
+| 완료 | 3. merge(10/26) | `1ab44d8` Merge branch 'redesign'(부모 `e36a541`·`4f0158c`). 충돌 6개는 redesign 쪽, `git diff --stat redesign HEAD` = `.deploy-filter`·`deploy-policy.md`·`adsense-check` 3개. push 안 함 |
+| 완료 | 4. 배포(2026-10-26 15:51:08 KST) | `.deploy-filter` 사용, 삭제 동기화 + `--delete-excluded` + 빈 폴더 정리. 미리보기 대비: deleting 7,636줄 동일(서버 전용 내부 파일 7,354 = .git 7,314·.claude 21·scripts 8·.md 9·serve.py·__pycache__, 공개 파일 삭제 0), 보낸 파일 1,187(배포 대상 1,240 중 53개는 서버와 해시·시각 같아 건너뜀). 배포 전 비밀값 검사(커밋 287개·blob 5,829, 정규식 + 대조군) 발견 0 |
+| 완료 | 5. nginx(배포 전 10/26 15:47) | 백업 `sites-available/jptcalc.kr.bak-20261026`. 추가: `error_page 404 /404.html`, gzip_types(css·js·json·svg·text·xml), `/.well-known/` 허용, 점 경로·`*.md|py|pyc|sh|mjs|json.bak`·`/design/` 404, 캐시 = `?v=` 있는 css·js 1년 immutable / 없으면 1시간 / `/assets/vendor/` 1년 / html no-cache / 이미지 7일(map `$arg_v`·`$sent_http_content_type`). `nginx -t` 통과 후 reload |
+| 완료 | 6. 배포 직후 확인(10/26) | 200: `/`·dsr·take-home-pay·`/blog/`·holding-tax-guide·`/recent/`·`/404.html`·`/about.html`·situations.json·cat-menu.json·flatpickr.min.js·pretendard.css·woff2·dti·pyeong·ads.txt·robots.txt·sitemap.xml·소유확인 html·vendor LICENSE 3개. 404: `/calc/nope/`(본문 = 새 404.html 해시 동일)·`/.git/HEAD`·`/.deploy-filter`·`/design/brief.md`·`/CLAUDE.md`·`/serve.py`·`/data-points.md`. 헤더: base.css gzip + `max-age=31536000, immutable`, index.html `no-cache`, woff2 1년. 서버 웹 루트 내부 파일 0(.md는 vendor LICENSE.md만), 파일 1,240개(35MB, 디스크 여유 1.9G). 운영 렌더링 5쪽 × 390·1280: JS 오류 0·4xx 0·넘침 0, 글꼴 자체 서버, 광고 외 외부 요청은 dti뿐(CDN 유지) |
 | 사용자 | 7. 11/9 이후 dti·pyeong 복원 | `cp design/hold/realestate/dti/index.html calc/realestate/dti/` (pyeong 같게) → `node scripts/inject-sibling.mjs`(하단 목록을 새 모양으로) → 간격 검사 `spacing_audit.py`에서 두 페이지 예외 해제 → 커밋·배포 |
 | 사용자 | 페이지·CSS/JS 수정 후 | 생성기가 있는 페이지는 원본·설정을 고친 뒤 `bash design/tools/build_all.sh`(바뀐 파일 수 확인, 다시 돌려 0이면 정상). 부동산 17·허브는 파일을 직접 고친 뒤 build_all(?v=·하단 목록 갱신) |
 | 사용자 | CSS/JS 수정 후 | 공용 CSS·JS(assets/ds/*, *-common.css, cookie-consent.js, calc-registry.js 등)를 고치면 생성기(build_home·build_blog·build_pages·build_hub·inject-sibling)를 다시 돌리거나 `python3 -I design/tools/asset_version.py` → 주소의 `?v=`(파일 내용 해시 8자리)가 갱신돼 방문자 캐시가 새 파일을 받는다. 안 바뀐 파일은 값도 그대로 |
