@@ -1,0 +1,25 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="/assets/ds/tokens.css"><link rel="stylesheet" href="/assets/ds/base.css"></head>
+<body><main class="page-wrap">
+<div class="page-header"><div class="breadcrumb"><a href="#">홈</a> › <a href="#">부동산</a> › DTI 계산기</div><h1 class="page-title">DTI 계산기</h1><p class="page-subtitle">연소득 대비 주담대 원리금과 기타대출 이자 비율</p>
+<div class="ds-meta"><span class="ds-chip-meta">2026.4.1 시행 기준</span><span class="ds-chip-meta">10.12 검토</span></div></div>
+<div class="ds-calc-grid"><div class="ds-col-main">
+<div class="card"><div class="card-title">소득·상환 정보</div><div class="ds-input-grid">
+<div class="field"><div class="field-label">연소득 <span class="label-hint">세전</span></div><div class="input-wrap"><input id="dti-income" value="5,000"><span class="unit">만원</span></div><div class="converted">5천만원</div></div>
+<div class="field"><div class="field-label">주담대 연간 원리금</div><div class="input-wrap"><input value="1,500"><span class="unit">만원</span></div><div class="field-hint">원금+이자 합계</div></div>
+<div class="field"><div class="field-label">기타대출 연간 이자</div><div class="input-wrap"><input value="200"><span class="unit">만원</span></div><div class="field-hint">이자만 넣습니다</div></div>
+<div class="field"><div class="field-label">적용 지역</div><div class="seg-group"><button class="seg-btn active">규제 40%</button><button class="seg-btn">조정 50%</button><button class="seg-btn">그 외 60%</button></div></div>
+</div></div>
+<div class="guide-card"><h2>연소득별 DTI 한도</h2><p>주담대 원리금으로 쓸 수 있는 연간 상한입니다.</p><div class="table-wrap"><table><thead><tr><th>연소득</th><th>규제 40%</th><th>조정 50%</th></tr></thead><tbody><tr><td>4,000만원</td><td>1,600만원</td><td>2,000만원</td></tr><tr><td>6,000만원</td><td>2,400만원</td><td>3,000만원</td></tr></tbody></table></div></div>
+<div class="ds-ad"></div>
+<div class="guide-card"><h2>자주 묻는 질문</h2><div class="faq-item"><h3>DTI와 DSR은 무엇이 다른가요?</h3><p>DTI는 기타대출 이자만, DSR은 원금까지 넣습니다.</p></div><div class="faq-item"><h3>소득은 세전인가요?</h3><p>세전 연소득 기준입니다.</p></div></div>
+</div><div class="ds-col-side">
+<div class="result-card show" id="dti-result"><div class="ds-result-label">내 DTI</div><div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px"><div><span class="ds-result-number">34.0</span><span class="ds-result-unit">%</span></div><span class="ds-verdict is-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5 9-10"/></svg>한도 이내</span></div>
+<div class="ds-gauge"><div class="ds-gauge-fill" style="width:42.5%"></div><div class="ds-gauge-tick" style="left:50%"></div></div><div class="ds-gauge-scale"><span>0%</span><span>한도 40%</span><span>80%</span></div>
+<div id="dti-result-content"><div class="result-row"><span class="result-label">연 상환 합계</span><span class="result-value">1,700만원</span></div><div class="result-row"><span class="result-label">한도까지 여유</span><span class="result-value">연 300만원</span></div><div class="result-row"><span class="result-label">주담대 원리금 최대</span><span class="result-value">연 1,800만원</span></div></div>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px"><button class="ds-btn-text">결과 복사</button><a class="ds-btn-primary" href="#">DSR도 계산 →</a></div></div>
+<div class="card"><div class="card-title">이어서 계산</div><div class="ds-list"><a class="ds-list-item" href="#"><span class="ds-list-body"><span class="ds-list-title">대출한도(DSR)</span><span class="ds-list-desc">기타대출 원금까지 넣은 한도</span></span><span class="ds-badge-pop">인기</span><svg class="ds-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg></a><a class="ds-list-item" href="#"><span class="ds-list-body"><span class="ds-list-title">LTV</span><span class="ds-list-desc">집값 대비 대출 한도</span></span><svg class="ds-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg></a></div></div>
+<div class="ds-trust">최종 검토 2026.10.12 · 은행업감독규정 별표6 (2026.4.1 시행) · 금융위원회·금융감독원</div>
+</div></div></main>
+<div class="ds-sticky-bar"><span class="ds-sticky-dot"></span>DTI 34.0% · 한도 이내</div></body></html>

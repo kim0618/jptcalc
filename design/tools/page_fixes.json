@@ -1,0 +1,39 @@
+{
+ "_설명": "원본 백업(orig/)은 그대로 두고, 변환 결과에 적용하는 페이지별 보정(정확히 1번씩 나와야 함). 2026-10-19 보정 작업",
+ "date/age": [
+  [
+   "KO_DAYS[birth.getDay()]+'요일)",
+   "KO_DAYS[birth.getDay()]+')"
+  ]
+ ],
+ "tax/four-insurance": [
+  [
+   "background: linear-gradient(135deg,rgba(16,185,129,0.06),rgba(99,102,241,0.06));",
+   "background: var(--primary-tint);"
+  ]
+ ],
+ "salary/comparison": [
+  [
+   "<div class=\"result-card show\" style=\"margin:0;background:linear-gradient(135deg,#FFFBEB 0%,#FEF3C7 100%)\">",
+   "<div class=\"result-card show\" style=\"margin:0;background:var(--warn-tint)\">"
+  ],
+  [
+   "<div class=\"rh-label\" style=\"color:#3B82F6;font-weight:800;margin-bottom:10px;\">연봉 A</div>",
+   "<div class=\"rh-label\" style=\"color:var(--blue);font-weight:800;margin-bottom:10px;\">연봉 A</div>"
+  ],
+  [
+   "<div class=\"rh-label\" style=\"color:#F59E0B;font-weight:800;margin-bottom:10px;\">연봉 B</div>",
+   "<div class=\"rh-label\" style=\"color:var(--warn-text);font-weight:800;margin-bottom:10px;\">연봉 B</div>"
+  ]
+ ],
+ "salary/take-home-pay": [
+  [
+   "<div class=\"rh-sub\" id=\"s0-net-annual\">연 실수령액 -</div>",
+   "<div class=\"rh-sub\" id=\"s0-net-annual\">연 실수령액 -</div><div class=\"ds-comp\" id=\"s0-comp\" aria-hidden=\"true\" hidden><span class=\"ds-comp-m\"></span><span class=\"ds-comp-o\"></span><span class=\"ds-comp-t\"></span></div>"
+  ],
+  [
+   "</body>",
+   "<script>\n/* 시안 15 공제 구성 막대: 계산을 새로 하지 않고 결과 상자에 표시된 숫자만 읽어 그린다(실수령 / 4대보험 / 소득세) */\n(function () {\n  var ids = { net: 's0-net', ins: ['s0-pension', 's0-health', 's0-ltc', 's0-emp'], tax: ['s0-tax', 's0-local'] };\n  var n = function (id) { var e = document.getElementById(id); var v = e ? String(e.textContent).replace(/[^\\d]/g, '') : ''; return v ? +v : 0; };\n  var bar = document.getElementById('s0-comp'); if (!bar) return;\n  function draw() {\n    var net = n(ids.net), ins = ids.ins.reduce(function (s, i) { return s + n(i); }, 0), tax = ids.tax.reduce(function (s, i) { return s + n(i); }, 0), tot = net + ins + tax;\n    bar.hidden = !(net > 0 && tot > 0);\n    if (bar.hidden) return;\n    var p = function (x) { return (x / tot * 100).toFixed(2) + '%'; };\n    bar.children[0].style.width = p(net); bar.children[1].style.width = p(ins); bar.children[2].style.width = p(tax);\n  }\n  new MutationObserver(draw).observe(document.getElementById('s0-result'), { childList: true, subtree: true, characterData: true });\n  draw();\n})();\n</script>\n</body>"
+  ]
+ ]
+}

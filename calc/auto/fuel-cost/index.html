@@ -22,10 +22,9 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link rel="stylesheet" href="/assets/auto-common.css" />
+<link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -50,41 +49,45 @@
   </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"유류비는 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"유류비는 필요 연료량 × 유가로 계산합니다. 필요 연료량은 주행 거리 ÷ 연비입니다. 예를 들어 100km를 연비 12km/L 차량으로 주행하면 필요 연료량은 약 8.33L이고, 휘발유 2,010원/L 기준으로 유류비는 약 16,750원입니다. 1km당 비용은 약 168원입니다."}},{"@type":"Question","name":"연비는 어디서 확인하나요?","acceptedAnswer":{"@type":"Answer","text":"연비는 자동차 제원표나 자동차등록증, 차량 계기판의 평균 연비 표시에서 확인할 수 있습니다. 공인 연비는 복합·도심·고속 기준으로 나뉘며, 실제 연비는 운전 습관·계절·정체 상황에 따라 공인 연비보다 10~20% 낮게 나오는 경우가 많습니다. 실제 유류비를 정확히 보려면 계기판의 실측 평균 연비를 입력하세요."}},{"@type":"Question","name":"휘발유·경유·LPG 중 어떤 연료가 저렴한가요?","acceptedAnswer":{"@type":"Answer","text":"단가는 보통 LPG < 경유 < 휘발유 순으로 저렴하지만, 연비와 차량 가격을 함께 봐야 합니다. 경유차는 연비가 높아 장거리 주행에 유리하고, LPG는 단가가 가장 낮지만 연비가 낮은 편입니다. 같은 거리를 주행할 때 실제 연료비는 단가 ÷ 연비로 비교해야 정확하므로, 이 계산기에서 유종을 바꿔가며 1km당 비용을 비교해 보세요."}},{"@type":"Question","name":"실제 유가는 어디서 확인하나요?","acceptedAnswer":{"@type":"Answer","text":"전국·지역별 실시간 주유소 유가는 한국석유공사 오피넷(opinet.co.kr)에서 확인할 수 있습니다. 유가는 국제 유가·환율·유류세에 따라 매주 변동하므로, 이 계산기의 유종별 기본값은 참고용이며 실제 주유 단가를 직접 입력하면 더 정확합니다."}},{"@type":"Question","name":"전기차와 비교하면 연료비가 얼마나 차이 나나요?","acceptedAnswer":{"@type":"Answer","text":"100km 주행 기준 연비 12km/L 휘발유차는 약 16,750원, 전비 5km/kWh 전기차를 완속(294.3원/kWh)으로 충전하면 약 5,886원으로 전기차가 약 65% 저렴합니다. 다만 전기차는 차량 가격이 높고 급속 충전 위주면 격차가 줄어듭니다. 전기차 충전비와의 자세한 비교는 전기차 충전비 계산기에서 확인할 수 있습니다."}}]}</script>
   <style>
-    input[type=number]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(239,68,68,0.15)}
-    .result-card{background:linear-gradient(135deg,#FEF2F2 0%,#FEE2E2 100%);border:1px solid rgba(239,68,68,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
-    .result-card.show{display:block}
-    .result-highlight{background:rgba(239,68,68,0.1);border-radius:12px;padding:16px;margin-bottom:16px;text-align:center}
-    .rh-label{font-size:12px;color:var(--gray-500);margin-bottom:4px}
-    .rh-value{font-size:28px;font-weight:900;color:var(--primary)}
-    .rh-sub{font-size:12px;color:var(--gray-500);margin-top:2px}
+    /* 페이지 고유 스타일(공통 부품 재정의는 base.css가 맡아 뺐다) */
+    .rh-label { font-size:12px;color:var(--gray-500);margin-bottom:4px }
+    .rh-value { font-size:28px;font-weight:900;color:var(--primary) }
+    .rh-sub { font-size:12px;color:var(--gray-500);margin-top:2px }
   </style>
 </head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
-    <nav class="header-nav">
-      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
-      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/tools/" class="nav-item"><span class="nav-dot" style="background:#14B8A6;"></span>생활·도구</a>
-      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
-      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
-      <a href="/calc/auto/" class="nav-item active"><span class="nav-dot" style="background:#EF4444;"></span>자동차</a>
-    </nav>
-    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
-    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
-  </div>
+<body data-cat="auto" style="--cat: var(--c-auto)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
 </header>
-<main class="page-wrap">
-  <div class="page-header">
-    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/auto/">자동차 계산기</a><span class="breadcrumb-sep">›</span><span>유류비 계산기</span></div>
-    <div class="page-header-badge">⛽ 연비·유가 기반 기름값 계산</div>
-    <h1>유류비 계산기</h1>
-    <p>주행 거리·연비·유가로 유류비와 필요 연료량, 1km당 비용을 계산하세요</p>
+
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/auto/">자동차 계산기</a> &rsaquo; 유류비 계산기</div>
+      <div class="page-badge">연비·유가 기반 기름값 계산</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-car"></use></svg></span>
+        <h1 class="page-title">유류비 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">연비·유가 기반 기름값 계산</span>
+          <span class="ds-trust-chip">2026.06.22 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">주행 거리·연비·유가로 유류비와 필요 연료량, 1km당 비용을 계산하세요</p>
+    </div>
   </div>
-    <div class="card">
-      <div class="card-title">주행 정보</div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+      <div class="field-label ds-group-label">주행 정보</div>
       <div class="field">
         <div class="field-label">주행 거리 <span class="label-hint">편도 기준 (km)</span></div>
         <div class="input-wrap"><input type="number" id="dist" min="0" placeholder="예) 100" oninput="calc()" /><span class="unit">km</span></div>
@@ -106,7 +109,14 @@
         <div class="input-wrap"><input type="number" id="price" min="0" value="2010" oninput="onPriceInput()" /><span class="unit">원/L</span></div>
       </div>
     </div>
-    <div class="result-card" id="result">
+
+        <button type="button" class="ds-btn-calc" data-calc-submit="calc" data-result="result" data-required="dist">계산하기</button>
+      </div>
+    </section>
+
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="result">
       <div class="result-highlight">
         <div class="rh-label">유류비</div>
         <div class="rh-value" id="r-cost">-</div>
@@ -119,18 +129,46 @@
         <span class="result-total-value" id="r-round">-</span>
       </div>
       <p class="result-note">※ 입력한 연비·유가 기준 추정치입니다. 실제 연비는 운전 습관·계절·정체에 따라 달라지며, 유가는 한국석유공사 오피넷(opinet.co.kr)에서 실시간 확인할 수 있습니다.</p>
-</div>
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/auto/ev-charging/">전기차 충전비 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
 
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">유류비</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
 
-  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="fuel-cost-next">
+        <a class="ds-next-card" href="/calc/auto/ev-charging/" data-next="ev-charging"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-car"></use></svg></span><span class="ds-next-body"><b>전기차 충전비 계산기</b><span>배터리 용량·충전율로 충전비를 계산하고, 같은 거리 내연차 유류비와 비교합니다. 2026년 완속·급속 충전 요금을 반영합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/auto/ev-subsidy/" data-next="ev-subsidy"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-car"></use></svg></span><span class="ds-next-body"><b>전기차 보조금 계산기</b><span>차량 가격·차종·지역으로 2026년 전기차 국고·지자체 보조금과 실구매가를 계산합니다. 차량가 구간별 차등과 전환지원금을 반영합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
+  </div>
+
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">거리 ÷ 연비 × 유가 기반 유류비 계산 <a href="https://www.opinet.co.kr" target="_blank" rel="noopener">한국석유공사 오피넷 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#fuel-cost-s1">유류비, 이렇게</a><a href="#fuel-cost-s2">구간별 표</a><a href="#fuel-cost-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
     <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
     <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
   </div>
 
   <div class="guide-section">
-    <div class="guide-card">
-      <h2>유류비, 이렇게 계산된다</h2>
-      <p>유류비는 주행에 필요한 연료량에 유가를 곱한 값입니다. 필요 연료량은 주행 거리를 연비로 나눠 구합니다. 같은 거리를 가도 연비와 유종(휘발유·경유·LPG)에 따라 비용이 달라지므로, 실제 계기판 연비와 주유 단가를 입력하면 정확한 유류비를 알 수 있습니다.</p>
+            <section class="ds-section ds-prose" aria-labelledby="fuel-cost-s1">
+          <div class="ds-section-head"><h2 id="fuel-cost-s1">유류비, 이렇게 계산된다</h2></div>
+<p>유류비는 주행에 필요한 연료량에 유가를 곱한 값입니다. 필요 연료량은 주행 거리를 연비로 나눠 구합니다. 같은 거리를 가도 연비와 유종(휘발유·경유·LPG)에 따라 비용이 달라지므로, 실제 계기판 연비와 주유 단가를 입력하면 정확한 유류비를 알 수 있습니다.</p>
       <div class="guide-grid">
         <div class="guide-box">
           <strong>필요 연료량 = 거리 ÷ 연비</strong>
@@ -150,11 +188,11 @@
         </div>
       </div>
       <p class="ref-links">실시간 유가: <a href="https://www.opinet.co.kr" target="_blank" rel="noopener">한국석유공사 오피넷(opinet.co.kr)</a></p>
-    </div>
-    <div class="guide-card">
-      <h2>유종별 평균 유가 참고표</h2>
-      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">아래는 유종별 대략적인 단가 범위입니다(실시간 아님). 정확한 계산은 실제 주유 단가를 입력하세요.</p>
-      <div class="table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="fuel-cost-s2">
+          <div class="ds-section-head"><h2 id="fuel-cost-s2">유종별 평균 유가 참고표</h2></div>
+<p class="ds-table-lead">아래는 유종별 대략적인 단가 범위입니다(실시간 아님). 정확한 계산은 실제 주유 단가를 입력하세요.</p>
+      <div class="ds-table-card">
       <table class="rate-table">
         <thead>
           <tr><th>유종</th><th>대략 단가 (원/L)</th><th>특징</th></tr>
@@ -178,32 +216,35 @@
         </tbody>
       </table>
       <p class="ref-links">* 유가는 국제 유가·환율·유류세에 따라 매주 변동합니다. 실제 단가는 오피넷에서 확인하세요.</p>
-    </div>
-    <div class="guide-card faq-card">
-      <h2>자주 묻는 질문</h2>
-      <div class="faq-item">
-        <h3>유류비는 어떻게 계산하나요?</h3>
-        <p>유류비는 필요 연료량 × 유가로 계산합니다. 필요 연료량은 주행 거리 ÷ 연비입니다. 예를 들어 100km를 연비 12km/L 차량으로 주행하면 필요 연료량은 약 8.33L이고, 휘발유 2,010원/L 기준으로 유류비는 약 16,750원입니다. 1km당 비용은 약 168원입니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>연비는 어디서 확인하나요?</h3>
-        <p>연비는 자동차 제원표나 자동차등록증, 차량 계기판의 평균 연비 표시에서 확인할 수 있습니다. 공인 연비는 복합·도심·고속 기준으로 나뉘며, 실제 연비는 운전 습관·계절·정체 상황에 따라 공인 연비보다 10~20% 낮게 나오는 경우가 많습니다. 실제 유류비를 정확히 보려면 계기판의 실측 평균 연비를 입력하세요.</p>
-      </div>
-      <div class="faq-item">
-        <h3>휘발유·경유·LPG 중 어떤 연료가 저렴한가요?</h3>
-        <p>단가는 보통 LPG < 경유 < 휘발유 순으로 저렴하지만, 연비와 차량 가격을 함께 봐야 합니다. 경유차는 연비가 높아 장거리 주행에 유리하고, LPG는 단가가 가장 낮지만 연비가 낮은 편입니다. 같은 거리를 주행할 때 실제 연료비는 단가 ÷ 연비로 비교해야 정확하므로, 이 계산기에서 유종을 바꿔가며 1km당 비용을 비교해 보세요.</p>
-      </div>
-      <div class="faq-item">
-        <h3>실제 유가는 어디서 확인하나요?</h3>
-        <p>전국·지역별 실시간 주유소 유가는 한국석유공사 오피넷(opinet.co.kr)에서 확인할 수 있습니다. 유가는 국제 유가·환율·유류세에 따라 매주 변동하므로, 이 계산기의 유종별 기본값은 참고용이며 실제 주유 단가를 직접 입력하면 더 정확합니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>전기차와 비교하면 연료비가 얼마나 차이 나나요?</h3>
-        <p>100km 주행 기준 연비 12km/L 휘발유차는 약 16,750원, 전비 5km/kWh 전기차를 완속(294.3원/kWh)으로 충전하면 약 5,886원으로 전기차가 약 65% 저렴합니다. 다만 전기차는 차량 가격이 높고 급속 충전 위주면 격차가 줄어듭니다. 전기차 충전비와의 자세한 비교는 <a href="/calc/auto/ev-charging/">전기차 충전비 계산기</a>에서 확인할 수 있습니다.</p>
-      </div>
-    </div>
+        </section>
+            <section class="ds-section faq-card" aria-labelledby="fuel-cost-faq">
+          <div class="ds-section-head"><h2 id="fuel-cost-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>유류비는 어떻게 계산하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>유류비는 필요 연료량 × 유가로 계산합니다. 필요 연료량은 주행 거리 ÷ 연비입니다. 예를 들어 100km를 연비 12km/L 차량으로 주행하면 필요 연료량은 약 8.33L이고, 휘발유 2,010원/L 기준으로 유류비는 약 16,750원입니다. 1km당 비용은 약 168원입니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>연비는 어디서 확인하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>연비는 자동차 제원표나 자동차등록증, 차량 계기판의 평균 연비 표시에서 확인할 수 있습니다. 공인 연비는 복합·도심·고속 기준으로 나뉘며, 실제 연비는 운전 습관·계절·정체 상황에 따라 공인 연비보다 10~20% 낮게 나오는 경우가 많습니다. 실제 유류비를 정확히 보려면 계기판의 실측 평균 연비를 입력하세요.</p>
+            </details>
+      <details class="faq-item"><summary><h3>휘발유·경유·LPG 중 어떤 연료가 저렴한가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>단가는 보통 LPG < 경유 < 휘발유 순으로 저렴하지만, 연비와 차량 가격을 함께 봐야 합니다. 경유차는 연비가 높아 장거리 주행에 유리하고, LPG는 단가가 가장 낮지만 연비가 낮은 편입니다. 같은 거리를 주행할 때 실제 연료비는 단가 ÷ 연비로 비교해야 정확하므로, 이 계산기에서 유종을 바꿔가며 1km당 비용을 비교해 보세요.</p>
+            </details>
+      <details class="faq-item"><summary><h3>실제 유가는 어디서 확인하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>전국·지역별 실시간 주유소 유가는 한국석유공사 오피넷(opinet.co.kr)에서 확인할 수 있습니다. 유가는 국제 유가·환율·유류세에 따라 매주 변동하므로, 이 계산기의 유종별 기본값은 참고용이며 실제 주유 단가를 직접 입력하면 더 정확합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>전기차와 비교하면 연료비가 얼마나 차이 나나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>100km 주행 기준 연비 12km/L 휘발유차는 약 16,750원, 전비 5km/kWh 전기차를 완속(294.3원/kWh)으로 충전하면 약 5,886원으로 전기차가 약 65% 저렴합니다. 다만 전기차는 차량 가격이 높고 급속 충전 위주면 격차가 줄어듭니다. 전기차 충전비와의 자세한 비교는 <a href="/calc/auto/ev-charging/">전기차 충전비 계산기</a>에서 확인할 수 있습니다.</p>
+            </details>
+          </div>
+        </section>
     <div class="update-note">최종 검토: 2026.06.22 · 유가는 매주 변동하므로 정확한 단가는 <a href="https://www.opinet.co.kr" target="_blank" rel="noopener">오피넷(opinet.co.kr)</a>에서 확인하세요.</div>
   </div>
+    </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
   <script>
   window.TRUST_BLOCK_CONFIG = {
     standard: '거리 ÷ 연비 × 유가 기반 유류비 계산',
@@ -219,43 +260,50 @@
     lastReviewed: '2026.06.22',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>
-  <div class="sibling-section">
-    <div class="sibling-title">다른 자동차 계산기</div>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 자동차 계산기</h2>
     <div class="sibling-list">
-      <a href="/calc/auto/auto-loan/" class="sibling-link">💳 자동차 할부</a>
-      <a href="/calc/auto/auto-tax/" class="sibling-link">🚙 자동차세</a>
-      <a href="/calc/auto/acquisition-tax/" class="sibling-link">📄 자동차 취득세</a>
-      <a href="/calc/auto/ev-charging/" class="sibling-link">🔌 전기차 충전비</a>
-      <a href="/calc/auto/used-car-tax/" class="sibling-link">🔁 중고차 취득세</a>
-      <a href="/calc/auto/fuel-cost/" class="sibling-link current">⛽ 유류비</a>
-      <a href="/calc/auto/ev-subsidy/" class="sibling-link">⚡ 전기차 보조금</a>
+      <a href="/calc/auto/auto-loan/" class="sibling-link">자동차 할부</a>
+      <a href="/calc/auto/auto-tax/" class="sibling-link">자동차세</a>
+      <a href="/calc/auto/acquisition-tax/" class="sibling-link">자동차 취득세</a>
+      <a href="/calc/auto/ev-charging/" class="sibling-link">전기차 충전비</a>
+      <a href="/calc/auto/used-car-tax/" class="sibling-link">중고차 취득세</a>
+      <a href="/calc/auto/ev-subsidy/" class="sibling-link">전기차 보조금</a>
     </div>
-    <div class="sibling-title">관련 가이드</div>
-    <div class="sibling-list">
-      <a href="/blog/posts/car-inspection-guide.html" class="sibling-link">📖 자동차 정기검사 비용·주기·과태료 총정리 2026 - 신차 최초검사, 4년…</a>
-      <a href="/blog/posts/car-insurance-grade-guide.html" class="sibling-link">📖 자동차보험 할인할증등급 계산법 2026 - 소액 사고 보험처리하면 3년간 …</a>
-      <a href="/blog/posts/car-maintenance-cost-guide.html" class="sibling-link">📖 자동차 유지비 계산법 2026 - 세금·보험료·유류비·감가상각 3년 총정리</a>
-      <a href="/blog/posts/car-tax-guide.html" class="sibling-link">📖 자동차세 계산기 2026 - 배기량·차령 감면·연납 할인 한눈에 정리</a>
-      <a href="/blog/posts/fuel-cost-guide.html" class="sibling-link">📖 유류비 계산법 2026 - 연비·유종별 기름값 한눈에 비교</a>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/car-inspection-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/car-inspection-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>자동차 정기검사 비용·주기·과태료 총정리 2026 - 신차 최초검사, 4년 아니라 5년입니다</span></a>
+      <a href="/blog/posts/car-insurance-grade-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/car-insurance-grade-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>자동차보험 할인할증등급 계산법 2026 - 소액 사고 보험처리하면 3년간 얼마 손해일까</span></a>
+      <a href="/blog/posts/car-maintenance-cost-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/car-maintenance-cost-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>자동차 유지비 계산법 2026 - 세금·보험료·유류비·감가상각 3년 총정리</span></a>
+      <a href="/blog/posts/car-tax-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/car-tax-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>자동차세 계산기 2026 - 배기량·차령 감면·연납 할인 한눈에 정리</span></a>
+      <a href="/blog/posts/fuel-cost-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/fuel-cost-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>유류비 계산법 2026 - 연비·유종별 기름값 한눈에 비교</span></a>
     </div>
   </div>
 </main>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
-    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
   </div>
 </footer>
+
+<script src="/assets/ds/calc-kit.js?v=d45e66d9"></script>
 <script>
 let fuelPrice=2010;
 function Ww(w){return Math.round(w).toLocaleString()+'원';}
 function setFuel(p,btn){fuelPrice=p;document.querySelectorAll('#fuel-group .seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.getElementById('price').value=p;calc();}
-function onPriceInput(){fuelPrice=parseFloat(document.getElementById('price').value)||0;document.querySelectorAll('#fuel-group .seg-btn').forEach(b=>b.classList.remove('active'));calc();}
+function onPriceInput(){fuelPrice=parseFloat(String(document.getElementById('price').value).replace(/,/g, ''))||0;document.querySelectorAll('#fuel-group .seg-btn').forEach(b=>b.classList.remove('active'));calc();}
 
 function calc(){
-  const dist=parseFloat(document.getElementById('dist').value)||0;
-  const eff=parseFloat(document.getElementById('eff').value)||0;
+  const dist=parseFloat(String(document.getElementById('dist').value).replace(/,/g, ''))||0;
+  const eff=parseFloat(String(document.getElementById('eff').value).replace(/,/g, ''))||0;
   const res=document.getElementById('result');
   if(dist<=0||eff<=0||fuelPrice<=0){res.classList.remove('show');return;}
   res.classList.add('show');
@@ -270,11 +318,10 @@ function calc(){
 }
 </script>
 
-<script src="/assets/calc-validate.js"></script>
-<script src="/assets/calc-result-tools.js"></script>
-  <script src="/assets/footer-unified.js"></script>
-<script src="/assets/calc-registry.js"></script>
-<script src="/assets/auto-detail-shell.js"></script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
@@ -285,7 +332,13 @@ window.ARTICLE_INFO_CONFIG = {
   category: 'auto'
 };
 </script>
-<script src="/assets/blog-article-info.js"></script>
-<script src="/assets/blog-review-footer.js"></script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "result", "required": ["dist"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#fuel-cost-next", "next": []});
+  DSCalc.placeTrust('ds-trust-col');
+</script>
+<script src="/assets/ds/prefill.js?v=fa5eb49a" defer></script>
 </body>
 </html>

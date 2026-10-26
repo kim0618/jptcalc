@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>배당수익률 계산법 2026 - 코스피는 반토막났는데 내 배당주는 왜 다를까 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="배당수익률은 매입가냐 현재가냐에 따라 달라지고, 배당소득세 15.4%를 빼면 또 달라집니다. 코스피 배당수익률이 1년 새 2.14%에서 한때 0.82%까지 떨어진 이유와 2026년 신설된 고배당기업 분리과세 세율표까지 계산으로 정리했습니다." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="배당수익률 계산법 2026 - 코스피는 반토막났는데 내 배당주는 왜 다를까 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="배당수익률은 매입가냐 현재가냐에 따라 달라지고, 배당소득세 15.4%를 빼면 또 달라집니다. 코스피 배당수익률이 1년 새 2.14%에서 한때 0.82%까지 떨어진 이유와 2026년 신설된 고배당기업 분리과세 세율표까지 계산으로 정리했습니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/dividend-yield-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/dividend-yield-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#6366F1;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(99,102,241,0.15);color:#6366F1;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:24px 0 10px}
+    .post-body p{margin-bottom:14px}
+    .post-body ul,.post-body ol{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#6366F1;text-decoration:none}
+    .highlight-box{background:rgba(99,102,241,0.08);border-left:4px solid #6366F1;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#3730A3;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    td.rate{color:#6366F1;font-weight:700}
+    tr:hover td{background:rgba(0,0,0,0.02)}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#6366F1;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .faq-item{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:12px;padding:20px;margin:16px 0}
+    .faq-q{font-weight:800;color:#111827;margin-bottom:8px;font-size:15px}
+    .faq-a{color:#374151;font-size:14px;line-height:1.7;margin:0}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+    .scenario-box{background:#F5F5FF;border:1px solid rgba(99,102,241,0.2);border-radius:12px;padding:20px 24px;margin:20px 0}
+    .scenario-box h3{margin:0 0 12px;font-size:15px;color:#3730A3}
+    .scenario-box p{margin-bottom:8px;font-size:14px;color:#374151}
+    .scenario-box p:last-child{margin-bottom:0}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "배당수익률 계산법 2026 - 코스피는 반토막났는데 내 배당주는 왜 다를까",
+  "description": "배당수익률은 매입가냐 현재가냐에 따라 달라지고, 배당소득세 15.4%를 빼면 또 달라집니다. 코스피 배당수익률이 1년 새 2.14%에서 한때 0.82%까지 떨어진 이유와 2026년 신설된 고배당기업 분리과세 세율표까지 계산으로 정리했습니다.",
+  "author": {"@type":"Person","name":"Jay Kim","url":"https://www.jptcalc.kr/about.html","jobTitle":"제이퍼 계산기 운영자"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr",
+    "logo": {"@type":"ImageObject","url":"https://www.jptcalc.kr/android-chrome-512x512.png"}
+  },
+  "datePublished": "2026-09-17",
+  "dateModified": "2026-09-17",
+  "mainEntityOfPage": {"@type":"WebPage","@id":"https://www.jptcalc.kr/blog/posts/dividend-yield-guide.html"},
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "금융",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "배당수익률은 매입가와 현재가 중 어느 쪽으로 계산해야 정확한가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "목적에 따라 다릅니다. 내가 이미 보유한 주식에서 매년 얼마를 받는지 체감하려면 매입가 기준(원가 대비 수익률)이 맞고, 지금 이 가격에 새로 사도 괜찮은지 판단하려면 현재가 기준을 봐야 합니다. 3년 전 5만원에 산 주식이 지금 8만원이고 주당배당금이 2,500원이라면, 매입가 기준 수익률은 5.0%지만 지금 신규로 8만원에 사는 사람의 수익률은 3.125%에 그칩니다. 증권사 HTS나 포털에 뜨는 배당수익률은 대부분 현재가 기준입니다. 회사가 배당을 공시할 때 적는 시가배당률은 배당결정일이나 배당기준일 직전 1주일 평균 주가를 기준으로 해서, 오늘 앱에 보이는 수익률과 또 다를 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "배당금에서 세금은 얼마나 떼이나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "배당소득세 14%에 지방소득세 1.4%(소득세의 10%)가 더해져 실효세율 15.4%가 원천징수됩니다. 소득세법 제129조제1항제2호나목에 근거한 세율입니다. 연간 배당금이 100만원이라면 세후로는 약 84.6만원을 받게 됩니다. 이 15.4%는 대부분의 국내 상장주식·펀드 배당에 적용되는 기본 세율이며, 별도 신고 없이 증권사가 원천징수해서 지급합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "배당·이자소득이 많으면 세금이 더 붙나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네, 연간 이자소득과 배당소득의 합계가 2,000만원을 초과하면 금융소득종합과세 대상이 됩니다(소득세법 제14조제3항제6호). 이때 세액은 소득세법 제62조에 따라 두 방식 중 큰 금액으로 정해집니다. 하나는 2,000만원까지 14%를 매기고 초과분만 근로소득 등 다른 소득과 합쳐 6~45% 누진세율로 계산하는 방식이고, 다른 하나는 금융소득 전액에 14%를 매기고 다른 소득은 따로 계산하는 방식입니다. 예를 들어 근로소득 과세표준이 1억원(35% 구간)인 사람이 예금이자·ETF 분배금으로 2,500만원을 받으면 첫 번째 방식이 105만원 더 크므로, 이미 원천징수된 350만원 외에 소득세 105만원(지방소득세 별도)을 다음 해 5월에 더 냅니다. 국내 상장사 현금배당이라면 배당세액공제가 붙어 추가 세액이 이보다 줄어듭니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "2026년에 새로 생긴 고배당기업 배당소득 분리과세가 뭔가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "조세특례제한법 제104조의27에 따라 2026년 1월 1일 이후 받는 배당소득부터, 2028년 12월 31일이 속하는 사업연도에 발생한 배당소득까지 한시로 적용되는 제도입니다. 코스피·코스닥 상장사(코넥스 제외) 중 직전 사업연도 배당이 2024년 사업연도보다 줄지 않았고, 배당성향이 40% 이상이거나 배당성향 25% 이상이면서 배당금을 전전 사업연도보다 10% 이상 늘린 '고배당기업'의 현금배당이 대상입니다. 이 배당은 다른 소득과 합산하지 않고 2,000만원 이하 14%, 2,000만원 초과~3억원 이하 280만원+초과분 20% 같은 별도 세율로 분리과세됩니다. 다만 배당의 원천징수세율도 원래 14%라서, 금융소득이 2,000만원 이하로 원천징수에서 끝나는 투자자는 세금이 달라지지 않습니다. 종합과세 대상자라도 다른 소득의 세율 구간이 24% 이하면 대체로 신청하지 않는 편이 세금이 적고, 신청하려면 종합소득세 확정신고 때 분리과세신청서를 내야 합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "배당수익률이 높은 종목이 항상 좋은 투자인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "아닙니다. 배당수익률은 배당금을 주가로 나눈 값이라, 회사 실적이 나빠져 주가가 급락해도 숫자만 보면 수익률이 높아진 것처럼 보일 수 있습니다. 이런 경우 다음 해에 배당 자체가 줄어드는 배당컷으로 이어지는 경우가 많습니다. 배당수익률과 함께 최근 몇 년간 배당금 액수 추이, 배당성향(순이익 대비 배당 비율)이 지나치게 높지 않은지, 영업이익이 꾸준한지를 함께 확인해야 합니다. 배당성향이 100%에 가깝거나 넘는 기업은 이익이 줄면 배당을 유지하기 어렵습니다."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.jptcalc.kr/"}, {"@type": "ListItem", "position": 2, "name": "블로그", "item": "https://www.jptcalc.kr/blog/"}, {"@type": "ListItem", "position": 3, "name": "금융", "item":"https://www.jptcalc.kr/blog/?cat=금융"}, {"@type": "ListItem", "position": 4, "name": "배당수익률 계산법 2026 - 코스피는 반토막났는데 내 배당주는 왜 다를까"}]}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo"><div class="logo-icon"><img src="../../assets/logo.svg" alt="로고"/></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+
+<div class="post-wrap">
+  <span class="post-tag">금융</span>
+  <h1>배당수익률 계산법 2026 - 코스피는 반토막났는데 내 배당주는 왜 다를까</h1>
+  <div class="post-meta"><span>📅 2026.09.17</span><span>·</span><span>25분 읽기</span></div>
+
+  <div class="post-body">
+
+    <p>코스피 시가총액이 1년 만에 3배 가까이 뛰었다고 하면 배당도 넉넉해졌겠거니 짐작하기 쉽지만, 실제로는 정반대입니다. 2026년 4월 29일 코스피 평균 배당수익률은 0.82%까지 떨어져 2000년 3월 이후 최저치를 기록했습니다. 배당금이 줄어서가 아니라 수익률 계산식의 분모, 즉 주가가 배당금보다 훨씬 빨리 커졌기 때문입니다.</p>
+    <p>같은 배당금이라도 어떤 가격으로 나누느냐, 세금을 어느 시점에 빼느냐에 따라 배당수익률은 완전히 다른 숫자가 됩니다. 여기에 2026년부터 새로 생긴 고배당기업 분리과세까지 얽히면 계산이 한층 복잡해집니다.</p>
+
+    <div class="highlight-box"><p>이 글은 배당주·배당 ETF에 투자 중이거나 투자를 고려하는 분, 증권사 앱에 뜨는 배당수익률이 매입가 기준인지 현재가 기준인지 헷갈리는 분, 배당소득세와 금융소득종합과세까지 반영한 실수령 수익률을 알고 싶은 분을 위한 글입니다.</p></div>
+
+    <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+      <li>배당수익률 공식 - 매입가 기준과 현재가 기준, 같은 배당금인데 5.0%와 3.125%로 갈리는 이유</li>
+      <li>배당소득세 15.4% 원천징수 후 세후 배당수익률 계산법(소득세법 제129조)</li>
+      <li>연 이자·배당소득 2,000만원 넘으면 달라지는 금융소득종합과세 계산 예시</li>
+      <li>코스피 배당수익률이 1년 새 2.14%에서 한때 0.82%까지 떨어진 실제 데이터</li>
+      <li>2026년 신설된 고배당기업 배당소득 분리과세 - 세율표, 요건, 이득 보는 사람과 그대로인 사람</li>
+      <li>배당수익률만 보고 투자하면 위험한 이유 - 배당컷과 배당성향 확인법</li>
+    </ul>
+
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>배당수익률, 어느 가격으로 나누느냐가 다른 답을 만든다</h2>
+    <p>배당수익률의 기본 공식은 간단합니다.</p>
+    <p><strong>배당수익률(%) = 연간 주당배당금 ÷ 주식 가격 × 100</strong></p>
+    <p>문제는 분모의 "주식 가격"을 무엇으로 잡느냐입니다. 증권사 앱이나 포털에서 보여주는 배당수익률은 대부분 <strong>현재가 기준</strong>입니다. 오늘 이 가격에 사면 이 정도 수익률이 나온다는 뜻입니다. 반면 이미 주식을 갖고 있는 사람이 체감하는 실제 수익률은 <strong>매입가 기준(원가 대비 수익률)</strong>입니다. 두 값은 주가가 매입 시점과 달라진 만큼 벌어집니다.</p>
+    <p>회사가 배당을 공시할 때 적는 <strong>시가배당률</strong>은 또 다른 숫자입니다. 배당결정일이나 배당기준일 직전 1주일간의 평균 주가로 나눈 값이라(회사마다 기준일이 다름), 공시가 나온 뒤 주가가 움직이면 앱에 보이는 현재가 수익률과 어긋납니다.</p>
+
+    <div class="table-wrap"><table>
+      <tr><th>구분</th><th>매입가 기준</th><th>현재가 기준</th></tr>
+      <tr><td>계산 분모</td><td>내가 실제로 산 가격</td><td>오늘의 시장 가격</td></tr>
+      <tr><td>의미</td><td>내 원금 대비 실제 수익률</td><td>지금 신규 매수 시 예상 수익률</td></tr>
+      <tr><td>주가 상승 시</td><td>변하지 않음</td><td class="rate">낮아짐</td></tr>
+      <tr><td>증권사 앱 표시</td><td>보통 표시 안 함</td><td class="rate">기본 표시값</td></tr>
+    </table></div>
+
+    <h2>인물로 보는 매입가 vs 현재가, 세전 vs 세후</h2>
+
+    <div class="scenario-box">
+      <h3>사례 1 - 3년 전 매수한 최OO씨(38세)</h3>
+      <p>3년 전 국내 배당주를 주당 50,000원에 매입했고, 현재 주가는 80,000원, 연간 주당배당금은 2,500원입니다.</p>
+      <p><strong>매입가 기준:</strong> 2,500 ÷ 50,000 × 100 = <strong>5.0%</strong></p>
+      <p><strong>현재가 기준(지금 신규 매수라면):</strong> 2,500 ÷ 80,000 × 100 ≒ <strong>3.125%</strong></p>
+      <p><strong>세후(원천징수 15.4% 차감, 2,500 × 0.846 = 2,115원):</strong> 매입가 기준 4.23%, 현재가 기준 2.64%</p>
+    </div>
+
+    <div class="scenario-box">
+      <h3>사례 2 - 은행주를 저가에 산 조OO씨 vs 지금 사는 신OO씨</h3>
+      <p>2년 전 은행주를 20,000원에 매입한 조OO씨와, 오늘 30,000원에 신규 매수하는 신OO씨가 똑같이 주당배당금 1,200원을 받습니다.</p>
+      <p><strong>조OO씨(매입가 20,000원):</strong> 1,200 ÷ 20,000 × 100 = 6.0% (세후 1,015.2 ÷ 20,000 = 5.076%)</p>
+      <p><strong>신OO씨(매입가 30,000원):</strong> 1,200 ÷ 30,000 × 100 = 4.0% (세후 1,015.2 ÷ 30,000 = 3.384%)</p>
+      <p>같은 회사, 같은 배당금인데 언제 샀느냐만으로 세후 수익률이 1.69%p 벌어집니다.</p>
+    </div>
+
+    <div class="scenario-box">
+      <h3>사례 3 - 월배당 ETF에 1,000만원을 넣은 백OO씨</h3>
+      <p>월배당 ETF에 1,000만원을 투자해 매월 5만원씩(연 60만원) 분배금을 받습니다. ETF는 종류에 따라 실제 과세 대상 금액이 분배금과 다를 수 있어, 여기서는 분배금 전액에 15.4%가 원천징수된다고 가정합니다.</p>
+      <p><strong>세전 배당수익률:</strong> 60만원 ÷ 1,000만원 × 100 = 6.0%</p>
+      <p><strong>세후:</strong> 월 배당 50,000원 × 0.846 = 42,300원, 연 507,600원 → 507,600 ÷ 10,000,000 × 100 = <strong>5.076%</strong></p>
+      <p>세전 6.0%라는 숫자만 보고 투자를 결정하면, 실제 통장에 찍히는 수익률은 그보다 0.924%p 낮습니다.</p>
+    </div>
+
+    <p>배당수익률은 1년 치 배당만 보지만, 실제 성과는 주가 차익까지 합쳐야 나옵니다. 사례 1의 최OO씨가 100주를 갖고 있고 3년 동안 매년 같은 배당을 받았다고 가정하면 매입 금액 500만원, 현재 평가금액 800만원, 보유 3년, 받은 배당 합계 75만원입니다. 이 경우 총수익률은 75.0%, 연평균 수익률(CAGR)은 약 20.51%이고, 배당을 세후 금액 63.45만원으로 넣으면 총수익률 72.69%, CAGR 약 19.97%로 내려갑니다.</p>
+
+    <p style="margin:1.2em 0">👉 <a href="../../calc/finance/investment/" style="color:#6366F1;font-weight:600">투자 수익률 계산기에 이 숫자를 넣어 직접 확인해보기</a></p>
+
+    <h2>코스피가 3배 가까이 뛰자 배당수익률은 반토막났다</h2>
+    <p>배당수익률의 분모가 주가라는 사실을 극단적으로 보여주는 사례가 최근의 코스피입니다. <a href="https://www.fnnews.com/news/202605061513011012" target="_blank" rel="noopener" style="color:#6366F1">파이낸셜뉴스가 한국거래소 자료를 인용해 보도한 내용</a>에 따르면, 코스피 시가총액은 2025년 5월 7일 약 2,106조원에서 2026년 5월 6일 약 6,072조원으로 1년 만에 3배 가까이 늘었습니다. 같은 기간 코스피지수는 2,547.80에서 7,384.56으로 뛰었습니다.</p>
+    <p>그런데 코스피 평균 배당수익률은 2025년 5월 7일 2.14%에서 2026년 5월 4일 0.92%로 반토막이 났고, 4월 29일에는 0.82%까지 떨어져 2000년 3월 20일 이후 최저치를 기록했습니다.</p>
+
+    <div class="table-wrap"><table>
+      <tr><th>시점</th><th>코스피지수</th><th>시가총액</th><th>평균 배당수익률</th></tr>
+      <tr><td>2025.05.07</td><td>2,547.80</td><td>약 2,106조원</td><td class="rate">2.14%</td></tr>
+      <tr><td>2026.04.29</td><td>-</td><td>-</td><td class="rate">0.82% (사상 최저)</td></tr>
+      <tr><td>2026.05.04</td><td>-</td><td>-</td><td class="rate">0.92%</td></tr>
+      <tr><td>2026.05.06</td><td>7,384.56</td><td>약 6,072조원</td><td>-</td></tr>
+    </table></div>
+    <p style="font-size:12px;color:#9CA3AF;margin-top:-8px">※ 배당수익률은 5월 4일, 코스피지수·시가총액은 5월 6일 시점 수치로 발표일이 다릅니다.</p>
+
+    <p>개별 종목으로 보면 더 뚜렷합니다. 삼성전자는 시가총액이 323조원에서 1,563조원으로(약 5배) 커지는 동안 주당배당금은 1,446원에서 1,668원으로 15.3% <strong>늘었는데도</strong> 배당수익률은 2.65%에서 0.72%로 떨어졌습니다. SK하이닉스는 시가총액이 138조원에서 1,136조원으로(약 8배) 커지면서 배당금이 2,204원에서 3,000원으로 36.1% 늘었지만, 배당수익률은 1.16%에서 0.21%로 주저앉았습니다.</p>
+    <p>여기서 배울 점은 하나입니다. 배당수익률이 떨어졌다고 해서 그 회사가 배당을 줄인 것은 아닙니다. 오히려 배당금은 두 자릿수로 늘었는데, 주가가 그보다 훨씬 빠르게 오르면서 수익률이라는 비율만 낮아진 것입니다. 배당수익률 하나만 보고 "이 종목은 배당이 나빠졌다"고 판단하면 틀릴 수 있습니다.</p>
+
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-88xhdLeiIK3V35kb" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <div style="margin:24px 0;overflow-x:auto">
+    <svg role="img" width="100%" viewBox="0 0 680 210" xmlns="http://www.w3.org/2000/svg">
+      <title>코스피 시가총액 약 2.9배 증가와 배당수익률 절반 이하 하락 비교(2025년 5월 대비 2026년 5월)</title>
+      <rect width="680" height="210" rx="12" fill="#F9FAFB"/>
+      <text x="24" y="34" font-size="14" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">시가총액은 약 2.9배, 배당수익률은 절반 이하(2025년 5월 → 2026년 5월)</text>
+      <text x="24" y="72" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">시가총액 2025</text>
+      <rect x="170" y="58" width="110" height="22" rx="4" fill="#D1D5DB"/>
+      <text x="288" y="74" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">2,106조원</text>
+      <text x="24" y="108" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">시가총액 2026</text>
+      <rect x="170" y="94" width="317" height="22" rx="4" fill="#6366F1" opacity="0.85"/>
+      <text x="495" y="110" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">6,072조원</text>
+      <text x="24" y="150" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">배당수익률 2025</text>
+      <rect x="170" y="136" width="214" height="22" rx="4" fill="#D1D5DB"/>
+      <text x="392" y="152" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">2.14%</text>
+      <text x="24" y="186" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">배당수익률 2026</text>
+      <rect x="170" y="172" width="92" height="22" rx="4" fill="#6366F1" opacity="0.6"/>
+      <text x="270" y="188" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">0.92%</text>
+    </svg>
+    </div>
+    <p style="font-size:12px;color:#9CA3AF;margin-top:-8px">※ 파이낸셜뉴스(2026.5.6) 보도, 한국거래소 자료 인용. 시가총액은 2025.5.7·2026.5.6, 배당수익률은 2025.5.7·2026.5.4 기준이며, 막대 길이는 항목별로 값에 비례합니다.</p>
+
+    <h2>배당소득세와 금융소득종합과세, 여기까지 계산해야 실수령 수익률</h2>
+    <p>배당금은 세전 그대로 통장에 들어오지 않습니다. 소득세법 제129조제1항제2호나목에 따라 국내 상장주식 배당소득에는 <strong>기본 원천징수세율 14%</strong>가 적용되고, 여기에 지방소득세(소득세의 10%) 1.4%가 더해져 실효세율 <strong>15.4%</strong>가 증권사에서 자동으로 원천징수됩니다.</p>
+    <p>여기서 끝나지 않는 경우도 있습니다. 소득세법 제14조제3항제6호는 이자소득과 배당소득의 합계가 <strong>2,000만원을 넘으면</strong> 원천징수로 끝나지 않고 다른 종합소득과 합산해 신고해야 한다고 정합니다. 이를 <strong>금융소득종합과세</strong>라고 부릅니다.</p>
+
+    <div class="scenario-box">
+      <h3>사례 4 - 예금이자·ETF 분배금으로 2,500만원 받은 이OO씨(45세, 근로소득자)</h3>
+      <p>이OO씨는 근로소득 과세표준이 1억원(35% 구간)이고, 올해 예금이자와 ETF 분배금으로 2,500만원을 받아 이미 350만원(2,500만원 × 14%)이 원천징수됐습니다. 배당세액공제가 붙지 않는 소득이라고 가정합니다.</p>
+      <p><strong>① 종합과세 방식:</strong> 2,000만원 × 14% = 280만원, 초과분 500만원은 근로소득 위에 얹혀 35%로 175만원 → 금융소득 몫 455만원</p>
+      <p><strong>② 비교 방식:</strong> 금융소득 전액 2,500만원 × 14% = 350만원</p>
+      <p>소득세법 제62조는 두 금액 중 큰 쪽을 세액으로 정하므로 ①이 적용되고, 이OO씨는 다음 해 5월 종합소득세 신고 때 <strong>105만원</strong>(지방소득세 별도)을 더 냅니다.</p>
+    </div>
+
+    <p>국내 상장사 현금배당처럼 법인세를 낸 이익에서 나온 배당이 2,000만원을 넘어 종합과세되면 <strong>배당세액공제(Gross-up)</strong>가 붙습니다. 소득세법 제17조제3항과 제56조에 따라 2,000만원을 넘는 부분에 해당하는 배당에 11%를 더해 소득으로 잡은 뒤, 같은 금액을 산출세액에서 빼 주는 방식입니다. 회사 단계에서 이미 낸 법인세를 일부 돌려주는 장치라, 같은 2,500만원이라도 상장사 배당이면 사례 4보다 추가 세액이 줄어듭니다. 다만 공제한 뒤의 세액이 금융소득 전액에 14%를 매긴 금액보다 작아지지는 않습니다(소득세법 제15조제2호). 실제 계산은 홈택스 종합소득세 신고 화면에서 처리됩니다.</p>
+
+    <h2>2026년 새로 생긴 고배당기업 분리과세 - 누구에게 이득인가</h2>
+    <p>조세특례제한법 제104조의27은 2025년 12월 23일 공포된 개정으로 새로 들어간 조항입니다. 부칙에 따라 2026년 1월 1일 이후 받는 배당소득부터 적용되고, 2028년 12월 31일이 속하는 사업연도에 발생한 배당소득까지만 한시로 적용됩니다. 아래 요건을 모두 갖춘 <strong>고배당기업</strong>에서 <strong>금전으로</strong> 받은 배당(주식배당 제외)은 다른 종합소득과 합산하지 않고 별도 세율로 분리과세할 수 있습니다.</p>
+    <ul>
+      <li>사업연도 종료일 현재 주권상장법인일 것(코스피·코스닥 상장사, 코넥스 제외, 투자회사 등 일부 제외)</li>
+      <li>직전 사업연도 배당이 2024년 사업연도보다 줄지 않았을 것</li>
+      <li>직전 사업연도 배당성향이 40% 이상이거나, 배당성향 25% 이상이면서 배당금이 전전 사업연도보다 10% 이상 늘었을 것</li>
+    </ul>
+    <p>배당성향은 현금배당 총액을 당기순이익(연결재무제표를 작성하면 지배회사 소유주지분 순이익)으로 나눈 비율입니다(시행령 제104조의24제4항). 해당 여부는 회사가 정기주주총회에서 배당을 결의한 다음 날까지 공시하므로, 투자자는 공시로 확인하면 됩니다. 2025 사업연도분 배당은 예외적으로 배당성향·배당 증가 요건을 직전 사업연도가 아니라 해당 사업연도 수치로 따집니다(부칙 제48조).</p>
+    <div class="table-wrap"><table>
+      <tr><th>특례배당소득 구간</th><th>세율</th></tr>
+      <tr><td>2,000만원 이하</td><td class="rate">14%</td></tr>
+      <tr><td>2,000만원 초과 ~ 3억원 이하</td><td class="rate">280만원 + 초과분의 20%</td></tr>
+      <tr><td>3억원 초과 ~ 50억원 이하</td><td class="rate">5,880만원 + 초과분의 25%</td></tr>
+      <tr><td>50억원 초과</td><td class="rate">123,380만원 + 초과분의 30%</td></tr>
+    </table></div>
+    <p>여기서 헷갈리기 쉬운 점이 있습니다. 배당은 원래 14%로 원천징수되므로, 금융소득이 연 2,000만원 이하라 원천징수로 끝나는 투자자에게는 특례 구간 세율 14%가 달라지는 것이 없습니다. 이득을 보는 사람도 금융소득종합과세 대상자 전부가 아닙니다. 사례 5처럼 상장사 배당만 있는 경우, 특례의 20%와 종합과세 쪽 부담(초과분에 Gross-up 11%를 더해 누진세율을 매기고 같은 금액을 공제)을 비교하면 다른 소득의 한계세율이 약 27.9%를 넘어야 특례가 유리합니다. 세율 구간으로는 35% 구간(종합소득 과세표준 8,800만원 초과)부터이고, 24% 구간 이하라면 신청하지 않는 편이 세금이 적습니다. 신청은 선택이므로 두 방식을 계산해 보고 정하면 됩니다. 또 세율표는 단순 정률이 아니라 <strong>구간별 누진공제 방식</strong>이라, "2,000만원 초과분엔 20%"로만 이해하면 2,000만원까지 붙는 280만원을 빠뜨립니다.</p>
+    <div class="scenario-box">
+      <h3>사례 5 - 고배당기업 배당만 3,000만원 받은 윤OO씨(52세)</h3>
+      <p>윤OO씨는 근로소득 과세표준이 1억원(35% 구간)이고, 요건을 갖춘 고배당기업에서 현금배당 3,000만원을 받았습니다. 다른 이자·배당소득은 없고, 배당을 받을 때 이미 420만원(3,000만원 × 14%)이 원천징수됐습니다.</p>
+      <p><strong>특례를 신청하지 않으면(종합과세):</strong> 2,000만원 초과분 1,000만원에 Gross-up 110만원(11%)을 더한 1,110만원이 근로소득 위에 얹혀 35%로 388.5만원, 2,000만원분은 14%로 280만원입니다. 여기서 배당세액공제 110만원을 빼면 558.5만원으로, 전액에 14%를 매긴 420만원보다 크므로 558.5만원이 확정되고 138.5만원을 더 냅니다.</p>
+      <p><strong>분리과세를 신청하면:</strong> 280만원 + (3,000만원 − 2,000만원) × 20% = 480만원이고, 더 내는 돈은 60만원입니다.</p>
+      <p>차이는 <strong>78.5만원</strong>(소득세 기준, 지방소득세 별도)입니다. 반대로 윤OO씨가 배당을 1,000만원만 받았다면 원천징수 140만원으로 끝나고, 특례를 신청해도 세율이 똑같이 14%라 달라지는 것이 없습니다.</p>
+      <p>근로소득 과세표준이 6,000만원(24% 구간)인 사람이 같은 배당 3,000만원을 받았다면 종합과세 쪽이 436.4만원(280만원 + 1,110만원 × 24% − 110만원)으로 특례의 480만원보다 43.6만원 적습니다. 이 경우에는 신청하지 않는 편이 낫습니다.</p>
+    </div>
+    <p>이 특례는 자동으로 적용되지 않습니다. 배당을 받은 해의 종합소득세 확정신고 때 <strong>분리과세신청서</strong>를 관할 세무서에 내야 합니다(시행령 제104조의24제6항). 조문 원문은 <a href="https://www.law.go.kr/법령/조세특례제한법" target="_blank" rel="noopener" style="color:#6366F1">국가법령정보센터 조세특례제한법</a>에서 확인할 수 있습니다.</p>
+    <p>종합과세 대상이 아닌 대부분의 투자자에게 더 손쉬운 절세 수단은 ISA입니다. ISA 계좌 안에서 생긴 이자·배당은 계좌를 해지할 때 합계 200만원(총급여 5,000만원 이하 등은 400만원)까지 비과세이고, 초과분도 9%(지방소득세 포함 9.9%)로 분리과세됩니다(조세특례제한법 제91조의18). 다만 가입(또는 연장)하는 해의 직전 3개 과세기간 중 한 번이라도 금융소득종합과세 대상이었다면 이 혜택을 받을 수 없습니다(같은 법 제129조의2). 가입 유형별 조건은 <a href="../posts/isa-guide.html" style="color:#6366F1">ISA 계좌 비과세 한도 비교</a>에서 볼 수 있습니다.</p>
+
+    <h2>배당수익률만 보고 투자하면 안 되는 이유</h2>
+    <p>배당수익률이 유독 높게 튀는 종목은 두 가지 경우 중 하나입니다. 정말 배당을 많이 주거나, 주가가 급락해서 분모가 작아졌거나입니다. 후자라면 다음 해 <strong>배당컷</strong>(배당 축소·중단)으로 이어질 위험이 있습니다. 배당성향(당기순이익 대비 배당금 비율)이 100%에 가깝거나 넘는 회사는 이익이 조금만 줄어도 배당을 유지하기 어렵습니다.</p>
+    <p>또 하나는 <strong>배당락</strong>입니다. 국내 주식은 산 날로부터 2영업일 뒤에 결제(T+2)되므로, 배당기준일에 주주로 올라 있으려면 기준일 2영업일 전까지 사야 합니다. 기준일 1영업일 전이 배당락일이고, 이날에는 배당받을 권리가 빠진 만큼 주가가 떨어지는 경우가 많습니다. 배당락 직전에 수익률만 보고 급히 사면 받은 배당만큼 주가가 빠져 손익이 거의 달라지지 않을 수 있고, 배당에는 15.4% 세금까지 붙습니다. 요즘은 배당금을 먼저 정한 뒤 기준일을 이듬해로 잡는 회사도 있어, 기준일은 회사 공시로 확인하는 것이 안전합니다.</p>
+    <p>복리 효과와 함께 장기 수익률을 따져보고 싶다면 <a href="../posts/cagr-guide.html" style="color:#6366F1">CAGR 연환산 수익률 계산법</a>도 참고하시고, 예금·적금과 비교해보고 싶다면 <a href="../posts/deposit-interest-guide.html" style="color:#6366F1">예금 이자 계산법</a> 글도 함께 보시길 권합니다.</p>
+
+    <div class="cta-box">
+      <p>매입 금액, 현재 평가금액, 보유 기간, 받은 배당 합계를 넣으면 배당까지 포함한 총수익률과 연평균 수익률(CAGR)을 계산합니다. 배당 칸에 세후 금액을 넣으면 세후 기준으로도 볼 수 있습니다.</p>
+      <a href="../../calc/finance/investment/" class="cta-btn">투자 수익률 계산하기</a>
+    </div>
+    <p style="font-size:13px;color:#6B7280;margin-top:8px">관련 계산기: <a href="https://www.jptcalc.kr/calc/finance/deposit/">예금 이자 계산기</a> · <a href="https://www.jptcalc.kr/calc/finance/compound/">복리 계산기</a></p>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 배당수익률은 매입가와 현재가 중 어느 쪽으로 계산해야 정확한가요?</div>
+      <div class="faq-a">목적에 따라 다릅니다. 내가 이미 보유한 주식에서 매년 얼마를 받는지 체감하려면 매입가 기준(원가 대비 수익률)이 맞고, 지금 이 가격에 새로 사도 괜찮은지 판단하려면 현재가 기준을 봐야 합니다. 3년 전 5만원에 산 주식이 지금 8만원이고 주당배당금이 2,500원이라면, 매입가 기준 수익률은 5.0%지만 지금 신규로 8만원에 사는 사람의 수익률은 3.125%에 그칩니다. 증권사 HTS나 포털에 뜨는 배당수익률은 대부분 현재가 기준입니다. 회사가 배당을 공시할 때 적는 시가배당률은 배당결정일이나 배당기준일 직전 1주일 평균 주가를 기준으로 해서, 오늘 앱에 보이는 수익률과 또 다를 수 있습니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q. 배당금에서 세금은 얼마나 떼이나요?</div>
+      <div class="faq-a">배당소득세 14%에 지방소득세 1.4%(소득세의 10%)가 더해져 실효세율 15.4%가 원천징수됩니다. 소득세법 제129조제1항제2호나목에 근거한 세율입니다. 연간 배당금이 100만원이라면 세후로는 약 84.6만원을 받게 됩니다. 이 15.4%는 대부분의 국내 상장주식·펀드 배당에 적용되는 기본 세율이며, 별도 신고 없이 증권사가 원천징수해서 지급합니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q. 배당·이자소득이 많으면 세금이 더 붙나요?</div>
+      <div class="faq-a">네, 연간 이자소득과 배당소득의 합계가 2,000만원을 초과하면 금융소득종합과세 대상이 됩니다(소득세법 제14조제3항제6호). 이때 세액은 소득세법 제62조에 따라 두 방식 중 큰 금액으로 정해집니다. 하나는 2,000만원까지 14%를 매기고 초과분만 근로소득 등 다른 소득과 합쳐 6~45% 누진세율로 계산하는 방식이고, 다른 하나는 금융소득 전액에 14%를 매기고 다른 소득은 따로 계산하는 방식입니다. 예를 들어 근로소득 과세표준이 1억원(35% 구간)인 사람이 예금이자·ETF 분배금으로 2,500만원을 받으면 첫 번째 방식이 105만원 더 크므로, 이미 원천징수된 350만원 외에 소득세 105만원(지방소득세 별도)을 다음 해 5월에 더 냅니다. 국내 상장사 현금배당이라면 배당세액공제가 붙어 추가 세액이 이보다 줄어듭니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q. 2026년에 새로 생긴 고배당기업 배당소득 분리과세가 뭔가요?</div>
+      <div class="faq-a">조세특례제한법 제104조의27에 따라 2026년 1월 1일 이후 받는 배당소득부터, 2028년 12월 31일이 속하는 사업연도에 발생한 배당소득까지 한시로 적용되는 제도입니다. 코스피·코스닥 상장사(코넥스 제외) 중 직전 사업연도 배당이 2024년 사업연도보다 줄지 않았고, 배당성향이 40% 이상이거나 배당성향 25% 이상이면서 배당금을 전전 사업연도보다 10% 이상 늘린 '고배당기업'의 현금배당이 대상입니다. 이 배당은 다른 소득과 합산하지 않고 2,000만원 이하 14%, 2,000만원 초과~3억원 이하 280만원+초과분 20% 같은 별도 세율로 분리과세됩니다. 다만 배당의 원천징수세율도 원래 14%라서, 금융소득이 2,000만원 이하로 원천징수에서 끝나는 투자자는 세금이 달라지지 않습니다. 종합과세 대상자라도 다른 소득의 세율 구간이 24% 이하면 대체로 신청하지 않는 편이 세금이 적고, 신청하려면 종합소득세 확정신고 때 분리과세신청서를 내야 합니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q. 배당수익률이 높은 종목이 항상 좋은 투자인가요?</div>
+      <div class="faq-a">아닙니다. 배당수익률은 배당금을 주가로 나눈 값이라, 회사 실적이 나빠져 주가가 급락해도 숫자만 보면 수익률이 높아진 것처럼 보일 수 있습니다. 이런 경우 다음 해에 배당 자체가 줄어드는 배당컷으로 이어지는 경우가 많습니다. 배당수익률과 함께 최근 몇 년간 배당금 액수 추이, 배당성향(순이익 대비 배당 비율)이 지나치게 높지 않은지, 영업이익이 꾸준한지를 함께 확인해야 합니다. 배당성향이 100%에 가깝거나 넘는 기업은 이익이 줄면 배당을 유지하기 어렵습니다.</div>
+    </div>
+
+    <h2>숫자 하나로 정리하면</h2>
+    <p>배당수익률은 같은 회사, 같은 배당금이라도 매입가 기준이냐 현재가 기준이냐에 따라 다른 숫자가 나오고, 세금 15.4%를 빼면 또 한 번 낮아집니다. 코스피에서는 이 원리가 극단적으로 드러났습니다. 시가총액이 3배 가까이 커지는 동안 삼성전자·SK하이닉스는 배당금을 오히려 15~36% 늘렸는데도, 배당수익률은 각각 2.65%에서 0.72%로, 1.16%에서 0.21%로 내려갔습니다. 2026년부터 생긴 고배당기업 분리과세는 금융소득종합과세 대상자 중에서도 다른 소득이 35% 구간 이상일 때 이득이고(사례 5에서 78.5만원, 24% 구간이면 오히려 43.6만원 손해), 원천징수로 끝나는 투자자에게는 세율이 그대로 14%입니다. 내 보유 종목의 매입 금액과 받은 배당 합계를 투자 수익률 계산기에 넣어, 배당수익률 하나가 아니라 총수익률로 성과를 확인해 보시길 권합니다.</p>
+
+  </div>
+</div>
+
+<footer class="site-footer"><p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용입니다.</p></footer>
+
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "소득세법 제14조·제15조·제17조·제55조·제56조·제62조·제129조, 조세특례제한법 제91조의18·제104조의27·제129조의2 및 같은 법 시행령 제104조의24, 한국거래소 자료 인용 보도(2026.5.6), 2026년 기준",
+  basisDate: "2026년 기준",
+  referenceOrg: "국가법령정보센터, 국세청, 한국거래소",
+  lastReviewed: '2026.09.17',
+  disclaimer: "본 내용은 참고용이며 특정 투자 상품에 대한 추천이 아닙니다. 실제 세금·세율은 개인의 다른 소득, 보유 종목의 요건 충족 여부에 따라 달라지므로 국세청 홈택스 또는 세무 전문가와 확인하시기 바랍니다.",
+  relatedCalc: { name: '투자 수익률 계산기', url: '/calc/finance/investment/' },
+  category: 'finance'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>

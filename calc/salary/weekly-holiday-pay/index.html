@@ -21,10 +21,9 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link rel="stylesheet" href="/assets/salary-common.css" />
+<link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -49,64 +48,45 @@
   }
   </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"주휴수당은 누가 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"근로기준법상 1주 소정근로시간이 15시간 이상이고 1주간의 소정근로일을 개근한 근로자라면 정규직·계약직·아르바이트 구분 없이 모두 받을 수 있습니다. 4주를 평균하여 1주 소정근로시간이 15시간 미만이면 주휴수당 지급 대상에서 제외됩니다. 결근이 있으면 해당 주의 주휴수당은 발생하지 않지만, 지각이나 조퇴는 개근으로 인정됩니다."}},{"@type":"Question","name":"주 20시간 일하는 아르바이트도 주휴수당을 받나요?","acceptedAnswer":{"@type":"Answer","text":"네, 주 15시간 이상이면 단시간 근로자도 주휴수당을 받습니다. 다만 풀타임과 달리 시간에 비례해 계산합니다. 주 20시간 근무라면 (20÷40)×8 = 4시간분이 주휴수당으로, 시급 12,000원 기준 48,000원입니다. 1주 소정근로시간이 40시간에 비례하므로 주 20시간은 풀타임의 절반 수준의 주휴수당을 받게 됩니다."}},{"@type":"Question","name":"주휴수당 계산 공식은 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"주휴수당 = (1주 소정근로시간 ÷ 40) × 8 × 시급입니다. 1주 소정근로시간이 40시간을 넘으면 40시간으로 계산합니다(초과분은 연장근로로 별도 가산). 예를 들어 주 40시간 근무에 시급 10,320원이면 (40÷40)×8×10,320 = 82,560원이 1주 주휴수당입니다. 월 단위로 환산하려면 1주 주휴수당에 4.345주(365÷12÷7)를 곱합니다."}},{"@type":"Question","name":"월급에 주휴수당이 이미 포함되어 있나요?","acceptedAnswer":{"@type":"Answer","text":"월급제 근로자는 대부분 포함되어 있습니다. 월 소정근로시간 209시간은 주 40시간 근무에 유급 주휴시간(주 8시간)을 더해 (40+8)×4.345로 산출한 값이라, 시급 × 209시간으로 월급을 받는다면 주휴수당이 이미 반영된 것입니다. 반면 시급제·일급제로 실제 근무시간만큼만 받는 경우에는 주휴수당이 별도로 지급되어야 합니다."}},{"@type":"Question","name":"주 40시간을 넘게 일하면 주휴수당도 늘어나나요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 주휴수당은 소정근로시간 기준이며 최대 40시간까지만 인정됩니다. 주 48시간을 일해도 주휴수당은 주 40시간 기준인 8시간분으로 동일합니다. 40시간을 초과한 8시간은 연장근로에 해당하여 통상임금의 1.5배 가산수당으로 별도 지급되며, 주휴수당 계산에는 포함되지 않습니다."}},{"@type":"Question","name":"주휴수당을 받지 못하면 어떻게 하나요?","acceptedAnswer":{"@type":"Answer","text":"주휴수당 미지급은 임금체불에 해당합니다. 먼저 사업주에게 지급을 요청하고, 해결되지 않으면 고용노동부 고객상담센터(1350) 상담 후 관할 지방고용노동청에 임금체불 진정을 제기할 수 있습니다. 진정 시 근로계약서·급여명세서·출근기록 등 근무 사실을 입증할 자료를 준비하면 좋습니다. 임금채권 소멸시효는 3년이므로 그 안에 청구해야 합니다."}}]}</script>
-  <style>
-    /* weekly-holiday-pay 고유 스타일 - 공통 스타일은 /assets/salary-common.css 참조 */
-    .input-wrap{position:relative}
-    .input-wrap .unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none}
-    input[type=number]{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
-    input[type=number]::placeholder{color:var(--gray-400);font-weight:400}
-    input[type=number]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(59,130,246,0.15)}
-    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
-    .seg-group{display:flex;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:0}
-    .seg-btn{flex:1;border:none;border-radius:7px;background:transparent;padding:9px 4px;font-size:12px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap}
-    .seg-btn:hover{color:var(--gray-700)}
-    .seg-btn.active{background:var(--primary);color:#fff;font-weight:700}
-    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
-    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
-    .result-card{background:linear-gradient(135deg,#EFF6FF 0%,#DBEAFE 100%);border:1px solid rgba(59,130,246,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
-    .result-card.show{display:block}
-    .result-row+.result-row{border-top:1px solid rgba(0,0,0,0.07)}
-    .result-total-row{border-top:1px solid rgba(0,0,0,0.15)!important;margin-top:4px;padding-top:14px!important}
-    .result-total-value{font-size:24px;font-weight:900;color:var(--primary)}
-    .result-highlight-value{font-size:20px;font-weight:900;color:var(--gray-900)}
-  </style>
 </head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
-    <nav class="header-nav">
-      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
-      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/salary/" class="nav-item active"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
-      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
-      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
-      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
-      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
-      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
-    </nav>
-    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
-    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
-  </div>
+<body data-cat="salary" style="--cat: var(--c-salary)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
 </header>
-<main class="page-wrap">
-  <div class="page-header">
-    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/salary/">이직/연봉 계산기</a><span class="breadcrumb-sep">›</span><span>주휴수당 계산기</span></div>
-    <div class="page-header-badge">📌 2026년 최저시급 10,320원</div>
-    <h1>주휴수당 계산기</h1>
-    <p>시급·근무시간만 입력하면 주휴수당과 월 환산액을 바로 확인하세요</p>
-  </div>
-    <div class="card">
-      <div class="card-title">주휴수당 계산</div>
-      <div class="info-box">
-        <span class="info-icon">📌</span>
-        <p>주 <strong>15시간 이상</strong> 근무 + 개근 시 발생 · 2026년 최저시급 <strong>10,320원</strong></p>
+
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/salary/">이직/연봉 계산기</a> &rsaquo; 주휴수당 계산기</div>
+      <div class="page-badge">2026년 최저시급 10,320원</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-briefcase"></use></svg></span>
+        <h1 class="page-title">주휴수당 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">2026년 최저시급 10,320원</span>
+          <span class="ds-trust-chip">2026.06.01 검토</span>
+        </div>
       </div>
+      <p class="page-subtitle">시급·근무시간만 입력하면 주휴수당과 월 환산액을 바로 확인하세요</p>
+    </div>
+  </div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+      <div class="field-label ds-group-label">주휴수당 계산</div>
+      
       <div class="field">
         <div class="field-label">시급 <span class="label-hint">원</span></div>
         <div class="input-wrap">
-          <input type="number" id="wage" placeholder="예) 10320" oninput="calcHoliday()" />
+          <input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="wage" placeholder="예) 10320" oninput="calcHoliday()" />
           <span class="unit">원</span>
         </div>
         <div class="converted" id="wage-conv"></div>
@@ -128,7 +108,17 @@
         </div>
       </div>
     </div>
-    <div class="result-card" id="result">
+<div class="info-box">
+        <span class="info-icon"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-info"></use></svg></span>
+        <p>주 <strong>15시간 이상</strong> 근무 + 개근 시 발생 · 2026년 최저시급 <strong>10,320원</strong></p>
+      </div>
+        <button type="button" class="ds-btn-calc" data-calc-submit="calcHoliday" data-result="result" data-required="wage">계산하기</button>
+      </div>
+    </section>
+
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="result">
       <div class="result-row"><span class="result-label">1주 소정근로시간</span><span class="result-value" id="r-week-hours">-</span></div>
       <div class="result-row"><span class="result-label">주휴 인정시간</span><span class="result-value" id="r-holiday-hours">-</span></div>
       <div class="result-row"><span class="result-label" style="font-weight:700">주휴수당 (1주)</span><span class="result-highlight-value" id="r-holiday-weekly">-</span></div>
@@ -139,20 +129,50 @@
       </div>
       <div id="notice" class="result-note" style="margin-top:12px;"></div>
       <a id="whp-cta" class="bridge-cta" data-html2canvas-ignore="true" href="#" target="_blank" rel="noopener" style="display:none;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;padding:14px 16px;background:#fff;color:var(--primary);border:1px solid rgba(59,130,246,0.35);border-radius:12px;font-weight:700;font-size:14px;text-decoration:none;line-height:1.4;box-shadow:0 1px 3px rgba(59,130,246,0.08);">
-        <span>📄 이 시급으로 근로계약서 만들기</span>
+        <span>이 시급으로 근로계약서 만들기</span>
         <span style="opacity:.7;font-weight:600;white-space:nowrap;">폼다에서 자동작성 →</span>
       </a>
-    </div>
-  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/salary/annual-leave-pay/">연차수당 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">주휴 포함 월급</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="weekly-holiday-pay-next">
+        <a class="ds-next-card" href="/calc/salary/annual-leave-pay/" data-next="annual-leave-pay"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-briefcase"></use></svg></span><span class="ds-next-body"><b>연차수당 계산기</b><span>월 통상임금과 미사용 연차일수로 연차수당을 계산합니다. 1일 통상임금=(월급÷209)×8 기준이며, 연말·퇴직 시 받을 미사용 연차 보상액을 확인합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/salary/premium-pay/" data-next="premium-pay"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-briefcase"></use></svg></span><span class="ds-next-body"><b>가산수당 계산기</b><span>통상시급과 근무시간으로 연장(1.5배)·야간(0.5배 가산)·휴일(1.5배, 8시간 초과 2배) 근로수당을 한 번에 계산합니다. 야간에 겹친 연장근무의 가산 합산까지 반영합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
+  </div>
+
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">근로기준법 제55조·최저임금법 2026년 최저시급 10,320원 기준 <a href="https://www.moel.go.kr" target="_blank" rel="noopener">고용노동부 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#weekly-holiday-pay-s1">구간별 표</a><a href="#weekly-holiday-pay-s2">주휴수당 계산기는</a><a href="#weekly-holiday-pay-s3">주휴수당 계산</a><a href="#weekly-holiday-pay-s4">계산 예시</a><a href="#weekly-holiday-pay-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
     <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
     <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
   </div>
 
   <div class="guide-section">
-    <div class="guide-card">
-      <h2>주 근무시간별 주휴수당 기준표 (2026년 최저시급 기준)</h2>
-      <p>주휴수당은 주 15시간 이상 근무하고 개근하면 발생하며, (1주 소정근로시간 ÷ 40) × 8 × 시급으로 계산합니다(최대 40시간 기준). 아래는 2026년 최저시급 10,320원 기준 예시입니다.</p>
-      <div class="guide-table-wrap">
+            <section class="ds-section ds-prose" aria-labelledby="weekly-holiday-pay-s1">
+          <div class="ds-section-head"><h2 id="weekly-holiday-pay-s1">주 근무시간별 주휴수당 기준표 (2026년 최저시급 기준)</h2></div>
+<p>주휴수당은 주 15시간 이상 근무하고 개근하면 발생하며, (1주 소정근로시간 ÷ 40) × 8 × 시급으로 계산합니다(최대 40시간 기준). 아래는 2026년 최저시급 10,320원 기준 예시입니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead>
             <tr>
@@ -171,19 +191,19 @@
         </table>
       </div>
       <p style="font-size:13px;color:var(--gray-600);margin-top:10px">주 40시간을 초과해도 주휴수당은 8시간분으로 동일하며, 초과분은 연장근로 가산수당으로 별도 지급됩니다. 월 단위 환산은 1주 주휴수당 × 4.345주이며, 월급 209시간으로 받는 월급제는 주휴수당이 이미 포함된 것입니다.</p>
-    </div>
-    <div class="guide-card">
-      <h2>주휴수당 계산기는 언제 쓰나요?</h2>
-      <p>아르바이트, 파트타임, 시급제·일급제 근로자가 받아야 할 주휴수당을 확인할 때 씁니다. 월급제라면 보통 주휴수당이 월급에 포함되어 있지만, 시간 단위로 임금을 받는다면 주휴수당을 별도로 챙겨야 합니다.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="weekly-holiday-pay-s2">
+          <div class="ds-section-head"><h2 id="weekly-holiday-pay-s2">주휴수당 계산기는 언제 쓰나요?</h2></div>
+<p>아르바이트, 파트타임, 시급제·일급제 근로자가 받아야 할 주휴수당을 확인할 때 씁니다. 월급제라면 보통 주휴수당이 월급에 포함되어 있지만, 시간 단위로 임금을 받는다면 주휴수당을 별도로 챙겨야 합니다.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>알바·파트타임</strong><span>주 15시간 이상 근무 시 받을 주휴수당 확인</span></div>
         <div class="guide-box"><strong>단시간 근로자</strong><span>주 40시간 미만의 비례 주휴수당 계산</span></div>
         <div class="guide-box"><strong>월 환산</strong><span>주휴수당을 월 단위로 환산한 금액 확인</span></div>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>주휴수당 계산 원리와 단계</h2>
-      <p>주휴수당은 1주 동안 소정근로일을 개근한 근로자에게 주어지는 유급휴일 임금입니다. 근로기준법 제55조에 근거하며, 단시간 근로자는 주 40시간에 비례해 계산합니다.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="weekly-holiday-pay-s3">
+          <div class="ds-section-head"><h2 id="weekly-holiday-pay-s3">주휴수당 계산 원리와 단계</h2></div>
+<p>주휴수당은 1주 동안 소정근로일을 개근한 근로자에게 주어지는 유급휴일 임금입니다. 근로기준법 제55조에 근거하며, 단시간 근로자는 주 40시간에 비례해 계산합니다.</p>
       <ul>
         <li><strong>1단계.</strong> 1주 소정근로시간 확인 (= 1일 근무시간 × 주 근무일수)</li>
         <li><strong>2단계.</strong> 지급 조건 확인 - 1주 소정근로시간이 15시간 이상이어야 발생</li>
@@ -191,10 +211,10 @@
         <li><strong>4단계.</strong> 주휴수당 = 주휴 인정시간 × 시급</li>
         <li><strong>5단계.</strong> 월 환산 = 1주 주휴수당 × 4.345주 (365 ÷ 12 ÷ 7)</li>
       </ul>
-    </div>
-    <div class="guide-card">
-      <h2>실제 계산 예시</h2>
-      <h3>예시 1 - 김도윤(24세, 편의점 풀타임) 시급 10,320원</h3>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="weekly-holiday-pay-s4">
+          <div class="ds-section-head"><h2 id="weekly-holiday-pay-s4">실제 계산 예시</h2></div>
+<h3>예시 1 - 김도윤(24세, 편의점 풀타임) 시급 10,320원</h3>
       <p>김도윤 씨는 시급 10,320원으로 하루 8시간, 주 5일 근무합니다. 1주 소정근로시간은 40시간입니다.</p>
       <ul>
         <li>주휴 인정시간 = (40 ÷ 40) × 8 = 8시간</li>
@@ -218,20 +238,20 @@
         <li><strong>주휴수당 미발생 (주 15시간 미만)</strong></li>
       </ul>
       <p>주 15시간 미만이면 아무리 개근해도 주휴수당이 발생하지 않습니다. 하루를 더 일하거나 근무시간을 늘려 주 15시간을 넘기면 주휴수당 대상이 됩니다.</p>
-    </div>
-    <div class="guide-card">
-      <h2>주휴수당 받을 때 놓치기 쉬운 것</h2>
-      <p>주휴수당은 조건과 한도가 명확합니다. 아래 항목을 함께 확인하면 정확한 금액을 챙길 수 있습니다.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="weekly-holiday-pay-s5">
+          <div class="ds-section-head"><h2 id="weekly-holiday-pay-s5">주휴수당 받을 때 놓치기 쉬운 것</h2></div>
+<p>주휴수당은 조건과 한도가 명확합니다. 아래 항목을 함께 확인하면 정확한 금액을 챙길 수 있습니다.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>40시간 상한</strong><span>주휴수당은 소정근로 최대 40시간 기준입니다. 주 48시간을 일해도 주휴수당은 주 40시간 기준 8시간분으로 같고, 초과 8시간은 연장근로 1.5배로 별도 지급됩니다.</span></div>
         <div class="guide-box"><strong>개근 요건</strong><span>결근이 있으면 그 주의 주휴수당은 발생하지 않습니다. 다만 지각·조퇴는 개근으로 인정되며, 연차·병가 등 약정된 휴가는 결근으로 보지 않습니다.</span></div>
         <div class="guide-box"><strong>15시간 미만 제외</strong><span>4주 평균 1주 소정근로시간이 15시간 미만이면 근로기준법상 주휴수당 적용 대상이 아닙니다. 주말 단시간 알바는 이 기준을 넘는지 먼저 확인하세요.</span></div>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>1일 근무시간별 주휴수당 (2026 최저시급 10,320원·주5일)</h2>
-      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">구간별로 계산기를 돌려 얻은 결과를 정리했습니다.</p>
-      <div class="guide-table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="weekly-holiday-pay-s6">
+          <div class="ds-section-head"><h2 id="weekly-holiday-pay-s6">1일 근무시간별 주휴수당 (2026 최저시급 10,320원·주5일)</h2></div>
+<p class="ds-table-lead">구간별로 계산기를 돌려 얻은 결과를 정리했습니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead><tr><th>1일 근무시간</th><th>1주 소정근로시간</th><th>주휴 인정시간</th><th>주휴수당 (1주)</th><th>월 환산 주휴수당</th></tr></thead>
           <tbody>
@@ -242,18 +262,38 @@
           </tbody>
         </table>
       </div>
-    </div>
-    <div class="guide-card faq-card">
-      <h2>자주 묻는 질문</h2>
-      <div class="faq-item"><h3>주휴수당은 누가 받을 수 있나요?</h3><p>근로기준법상 1주 소정근로시간이 15시간 이상이고 1주간의 소정근로일을 개근한 근로자라면 정규직·계약직·아르바이트 구분 없이 모두 받을 수 있습니다. 4주를 평균하여 1주 소정근로시간이 15시간 미만이면 주휴수당 지급 대상에서 제외됩니다. 결근이 있으면 해당 주의 주휴수당은 발생하지 않지만, 지각이나 조퇴는 개근으로 인정됩니다.</p></div>
-      <div class="faq-item"><h3>주 20시간 일하는 아르바이트도 주휴수당을 받나요?</h3><p>네, 주 15시간 이상이면 단시간 근로자도 주휴수당을 받습니다. 다만 풀타임과 달리 시간에 비례해 계산합니다. 주 20시간 근무라면 (20÷40)×8 = 4시간분이 주휴수당으로, 시급 12,000원 기준 48,000원입니다. 1주 소정근로시간이 40시간에 비례하므로 주 20시간은 풀타임의 절반 수준의 주휴수당을 받게 됩니다.</p></div>
-      <div class="faq-item"><h3>주휴수당 계산 공식은 어떻게 되나요?</h3><p>주휴수당 = (1주 소정근로시간 ÷ 40) × 8 × 시급입니다. 1주 소정근로시간이 40시간을 넘으면 40시간으로 계산합니다(초과분은 연장근로로 별도 가산). 예를 들어 주 40시간 근무에 시급 10,320원이면 (40÷40)×8×10,320 = 82,560원이 1주 주휴수당입니다. 월 단위로 환산하려면 1주 주휴수당에 4.345주(365÷12÷7)를 곱합니다.</p></div>
-      <div class="faq-item"><h3>월급에 주휴수당이 이미 포함되어 있나요?</h3><p>월급제 근로자는 대부분 포함되어 있습니다. 월 소정근로시간 209시간은 주 40시간 근무에 유급 주휴시간(주 8시간)을 더해 (40+8)×4.345로 산출한 값이라, 시급 × 209시간으로 월급을 받는다면 주휴수당이 이미 반영된 것입니다. 반면 시급제·일급제로 실제 근무시간만큼만 받는 경우에는 주휴수당이 별도로 지급되어야 합니다.</p></div>
-      <div class="faq-item"><h3>주 40시간을 넘게 일하면 주휴수당도 늘어나나요?</h3><p>아닙니다. 주휴수당은 소정근로시간 기준이며 최대 40시간까지만 인정됩니다. 주 48시간을 일해도 주휴수당은 주 40시간 기준인 8시간분으로 동일합니다. 40시간을 초과한 8시간은 연장근로에 해당하여 통상임금의 1.5배 가산수당으로 별도 지급되며, 주휴수당 계산에는 포함되지 않습니다.</p></div>
-      <div class="faq-item"><h3>주휴수당을 받지 못하면 어떻게 하나요?</h3><p>주휴수당 미지급은 임금체불에 해당합니다. 먼저 사업주에게 지급을 요청하고, 해결되지 않으면 고용노동부 고객상담센터(1350) 상담 후 관할 지방고용노동청에 임금체불 진정을 제기할 수 있습니다. 진정 시 근로계약서·급여명세서·출근기록 등 근무 사실을 입증할 자료를 준비하면 좋습니다. 임금채권 소멸시효는 3년이므로 그 안에 청구해야 합니다.</p></div>
+        </section>
+            <section class="ds-section faq-card" aria-labelledby="weekly-holiday-pay-faq">
+          <div class="ds-section-head"><h2 id="weekly-holiday-pay-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>주휴수당은 누가 받을 수 있나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>근로기준법상 1주 소정근로시간이 15시간 이상이고 1주간의 소정근로일을 개근한 근로자라면 정규직·계약직·아르바이트 구분 없이 모두 받을 수 있습니다. 4주를 평균하여 1주 소정근로시간이 15시간 미만이면 주휴수당 지급 대상에서 제외됩니다. 결근이 있으면 해당 주의 주휴수당은 발생하지 않지만, 지각이나 조퇴는 개근으로 인정됩니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>주 20시간 일하는 아르바이트도 주휴수당을 받나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>네, 주 15시간 이상이면 단시간 근로자도 주휴수당을 받습니다. 다만 풀타임과 달리 시간에 비례해 계산합니다. 주 20시간 근무라면 (20÷40)×8 = 4시간분이 주휴수당으로, 시급 12,000원 기준 48,000원입니다. 1주 소정근로시간이 40시간에 비례하므로 주 20시간은 풀타임의 절반 수준의 주휴수당을 받게 됩니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>주휴수당 계산 공식은 어떻게 되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>주휴수당 = (1주 소정근로시간 ÷ 40) × 8 × 시급입니다. 1주 소정근로시간이 40시간을 넘으면 40시간으로 계산합니다(초과분은 연장근로로 별도 가산). 예를 들어 주 40시간 근무에 시급 10,320원이면 (40÷40)×8×10,320 = 82,560원이 1주 주휴수당입니다. 월 단위로 환산하려면 1주 주휴수당에 4.345주(365÷12÷7)를 곱합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>월급에 주휴수당이 이미 포함되어 있나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>월급제 근로자는 대부분 포함되어 있습니다. 월 소정근로시간 209시간은 주 40시간 근무에 유급 주휴시간(주 8시간)을 더해 (40+8)×4.345로 산출한 값이라, 시급 × 209시간으로 월급을 받는다면 주휴수당이 이미 반영된 것입니다. 반면 시급제·일급제로 실제 근무시간만큼만 받는 경우에는 주휴수당이 별도로 지급되어야 합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>주 40시간을 넘게 일하면 주휴수당도 늘어나나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>아닙니다. 주휴수당은 소정근로시간 기준이며 최대 40시간까지만 인정됩니다. 주 48시간을 일해도 주휴수당은 주 40시간 기준인 8시간분으로 동일합니다. 40시간을 초과한 8시간은 연장근로에 해당하여 통상임금의 1.5배 가산수당으로 별도 지급되며, 주휴수당 계산에는 포함되지 않습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>주휴수당을 받지 못하면 어떻게 하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>주휴수당 미지급은 임금체불에 해당합니다. 먼저 사업주에게 지급을 요청하고, 해결되지 않으면 고용노동부 고객상담센터(1350) 상담 후 관할 지방고용노동청에 임금체불 진정을 제기할 수 있습니다. 진정 시 근로계약서·급여명세서·출근기록 등 근무 사실을 입증할 자료를 준비하면 좋습니다. 임금채권 소멸시효는 3년이므로 그 안에 청구해야 합니다.</p>
+            </details>
       <div class="update-note">최종 검토: 2026.06.01 · 계산 결과는 참고용입니다.</div>
-    </div>
+          </div>
+        </section>
   </div>
+    </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
   <script>
   window.TRUST_BLOCK_CONFIG = {
     standard: '근로기준법 제55조·최저임금법 2026년 최저시급 10,320원 기준',
@@ -269,38 +309,45 @@
     lastReviewed: '2026.06',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>
-  <div class="sibling-section">
-    <div class="sibling-title">다른 이직/연봉 계산기</div>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 이직/연봉 계산기</h2>
     <div class="sibling-list">
-      <a href="/calc/salary/take-home-pay/" class="sibling-link">💵 연봉 실수령액</a>
-      <a href="/calc/salary/comparison/" class="sibling-link">⚖️ 연봉 비교</a>
-      <a href="/calc/salary/hourly-wage/" class="sibling-link">⏱️ 시급·일급 변환</a>
-      <a href="/calc/salary/weekly-holiday-pay/" class="sibling-link current">🗓️ 주휴수당</a>
-      <a href="/calc/salary/annual-leave-pay/" class="sibling-link">🏖️ 연차수당</a>
-      <a href="/calc/salary/ordinary-wage/" class="sibling-link">🧮 통상임금</a>
-      <a href="/calc/salary/average-wage/" class="sibling-link">📐 평균임금</a>
-      <a href="/calc/salary/premium-pay/" class="sibling-link">⏰ 가산수당</a>
-      <a href="/calc/salary/bonus-pay/" class="sibling-link">🎁 성과급 실수령</a>
-      <a href="/calc/salary/job-change/" class="sibling-link">📊 이직 연봉 비교</a>
-      <a href="/calc/salary/raise-rate/" class="sibling-link">📈 연봉 인상률</a>
-      <a href="/calc/salary/dismissal-notice-pay/" class="sibling-link">📋 해고예고수당</a>
-      <a href="/calc/salary/severance/" class="sibling-link">📦 퇴직금</a>
-      <a href="/calc/salary/unemployment/" class="sibling-link">🛟 실업급여</a>
+      <a href="/calc/salary/take-home-pay/" class="sibling-link">연봉 실수령액</a>
+      <a href="/calc/salary/comparison/" class="sibling-link">연봉 비교</a>
+      <a href="/calc/salary/hourly-wage/" class="sibling-link">시급·일급 변환</a>
+      <a href="/calc/salary/annual-leave-pay/" class="sibling-link">연차수당</a>
+      <a href="/calc/salary/ordinary-wage/" class="sibling-link">통상임금</a>
+      <a href="/calc/salary/average-wage/" class="sibling-link">평균임금</a>
+      <a href="/calc/salary/premium-pay/" class="sibling-link">가산수당</a>
+      <a href="/calc/salary/bonus-pay/" class="sibling-link">성과급 실수령</a>
+      <a href="/calc/salary/job-change/" class="sibling-link">이직 연봉 비교</a>
+      <a href="/calc/salary/raise-rate/" class="sibling-link">연봉 인상률</a>
+      <a href="/calc/salary/dismissal-notice-pay/" class="sibling-link">해고예고수당</a>
+      <a href="/calc/salary/severance/" class="sibling-link">퇴직금</a>
+      <a href="/calc/salary/unemployment/" class="sibling-link">실업급여</a>
     </div>
-    <div class="sibling-title">관련 가이드</div>
-    <div class="sibling-list">
-      <a href="/blog/posts/hourly-wage-guide.html" class="sibling-link">📖 시급·연봉 환산표 - 연봉 3,000만원 = 시급 약 12,000원(세전 …</a>
-      <a href="/blog/posts/minimum-wage-2026.html" class="sibling-link">📖 2026년 최저시급 10,320원 - 월급 215만원, 주휴수당 계산까지</a>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/hourly-wage-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/hourly-wage-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>시급·연봉 환산표 - 연봉 3,000만원 = 시급 약 12,000원(세전 기준)</span></a>
+      <a href="/blog/posts/minimum-wage-2026.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/minimum-wage-2026-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>2026년 최저시급 10,320원 - 월급 215만원, 주휴수당 계산까지</span></a>
     </div>
   </div>
 </main>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
-    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
   </div>
 </footer>
+
+<script src="/assets/ds/calc-kit.js?v=d45e66d9"></script>
 <script>
 function comma(n) { return Math.round(n).toLocaleString() + '원'; }
 function fmtMan(won) {
@@ -324,8 +371,8 @@ function setWeekDays(d, btn) {
 }
 
 function calcHoliday() {
-  const wage = parseFloat(document.getElementById('wage').value);
-  const dayHours = parseFloat(document.getElementById('day-hours').value);
+  const wage = parseFloat(String(document.getElementById('wage').value).replace(/,/g, ''));
+  const dayHours = parseFloat(String(document.getElementById('day-hours').value).replace(/,/g, ''));
   document.getElementById('wage-conv').textContent = wage > 0 ? comma(wage) : '';
   const res = document.getElementById('result');
   if (!wage || wage <= 0 || !dayHours || dayHours <= 0) { res.classList.remove('show'); return; }
@@ -347,7 +394,7 @@ function calcHoliday() {
     document.getElementById('r-holiday-weekly').textContent = '0원';
     document.getElementById('r-holiday-monthly').textContent = '0원';
     document.getElementById('r-total-monthly').textContent = comma(weekHours * wage * WEEKS_PER_MONTH);
-    notice.innerHTML = `⚠️ 1주 소정근로시간이 <strong>${weekHours}시간</strong>으로 15시간 미만이라 주휴수당이 발생하지 않습니다. 주 15시간 이상 근무해야 주휴수당 대상이 됩니다.`;
+    notice.innerHTML = `1주 소정근로시간이 <strong>${weekHours}시간</strong>으로 15시간 미만이라 주휴수당이 발생하지 않습니다. 주 15시간 이상 근무해야 주휴수당 대상이 됩니다.`;
     notice.style.color = '#EF4444';
     return;
   }
@@ -366,7 +413,7 @@ function calcHoliday() {
   document.getElementById('r-total-monthly').textContent = fmtMan(totalMonthly);
 
   const minWage = 10320;
-  let msg = `✅ 주 ${weekHours}시간 근무 시 주휴수당은 1주 <strong>${comma(holidayWeekly)}</strong>입니다.`;
+  let msg = `주 ${weekHours}시간 근무 시 주휴수당은 1주 <strong>${comma(holidayWeekly)}</strong>입니다.`;
   if (weekHours > 40) {
     msg += `<br><span style="font-size:11px;color:var(--gray-500)">※ 주 ${weekHours}시간 중 40시간 초과 ${weekHours-40}시간은 연장근로로, 주휴수당은 40시간 기준이며 초과분은 1.5배 가산수당으로 별도 지급됩니다.</span>`;
   }
@@ -378,11 +425,10 @@ function calcHoliday() {
 }
 </script>
 
-<script src="/assets/calc-validate.js"></script>
-<script src="/assets/calc-result-tools.js"></script>
-  <script src="/assets/footer-unified.js" defer></script>
-<script src="/assets/calc-registry.js"></script>
-<script src="/assets/salary-detail-shell.js"></script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
@@ -393,7 +439,13 @@ window.ARTICLE_INFO_CONFIG = {
   category: 'salary'
 };
 </script>
-<script src="/assets/blog-article-info.js"></script>
-<script src="/assets/blog-review-footer.js"></script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "result", "required": ["wage"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#weekly-holiday-pay-next", "next": []});
+  DSCalc.placeTrust('ds-trust-col');
+</script>
+<script src="/assets/ds/prefill.js?v=fa5eb49a" defer></script>
 </body>
 </html>

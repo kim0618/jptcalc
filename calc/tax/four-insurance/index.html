@@ -21,9 +21,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -56,24 +54,18 @@
     {"@type":"Question","name":"4대보험과 실수령액의 관계는 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"소득세(지방소득세 포함)가 가장 크게 영향을 줍니다. 소득세는 부양가족 수·비과세 항목에 따라 달라지며 연말정산으로 최종 정산됩니다. 정확한 실수령액은 연봉 실수령액 계산기를 이용하세요."}}
   ]}
   </script>
-  <link rel="stylesheet" href="/assets/tax-common.css" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
   <style>
-    .input-wrap { position: relative; }
-    .input-wrap .unit { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); font-size: 13px; font-weight: 600; color: var(--gray-500); pointer-events: none; }
-
+    /* 페이지 고유 스타일(공통 부품 재정의는 base.css가 맡아 뺐다) */
     .verdict-box { text-align: center; padding: 22px 20px; margin-bottom: 16px; border-radius: 14px; background: rgba(16,185,129,0.07); border: 2px solid rgba(16,185,129,0.28); }
     .verdict-label { font-size: 13px; font-weight: 700; margin-bottom: 6px; color: #065F46; }
     .verdict-value { font-size: 30px; font-weight: 900; margin-bottom: 4px; color: var(--primary); }
     .verdict-sub { font-size: 12px; color: var(--gray-500); }
-
-    .result-split { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
-    @media (max-width: 500px) { .result-split { grid-template-columns: 1fr; } }
-
     .split-box { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 12px; padding: 14px 16px; }
     .split-box .split-title { font-size: 12px; font-weight: 700; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 10px; }
     .split-box.worker .split-title { color: var(--primary); }
     .split-box.employer .split-title { color: #6366F1; }
-
     .ins-row { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; border-bottom: 1px solid var(--gray-100); font-size: 14px; }
     .ins-row:last-child { border-bottom: none; font-weight: 700; }
     .ins-row .ins-label { color: var(--gray-600); }
@@ -82,67 +74,60 @@
     .ins-row.total-row .ins-val { color: var(--primary); font-size: 15px; }
     .ins-row.total-row.employer-total .ins-val { color: #6366F1; }
     .ins-row .ins-val.employer-val { color: #6366F1; }
-
-    .combined-box { display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg,rgba(16,185,129,0.06),rgba(99,102,241,0.06)); border: 1px solid var(--gray-200); border-radius: 12px; padding: 14px 18px; margin-top: 12px; }
+    .combined-box { display: flex; justify-content: space-between; align-items: center; background: var(--primary-tint); border: 1px solid var(--gray-200); border-radius: 12px; padding: 14px 18px; margin-top: 12px; }
     .combined-box .comb-label { font-size: 13px; font-weight: 600; color: var(--gray-600); }
     .combined-box .comb-val { font-size: 18px; font-weight: 800; color: var(--gray-900); }
-
     .rate-table { width: 100%; border-collapse: collapse; font-size: 13px; }
     .rate-table th { background: var(--gray-100); padding: 8px 10px; text-align: center; font-weight: 700; font-size: 12px; color: var(--gray-600); }
     .rate-table td { padding: 8px 10px; text-align: center; border-bottom: 1px solid var(--gray-100); color: var(--gray-700); }
     .rate-table tr:last-child td { border-bottom: none; }
     .rate-table td:first-child { text-align: left; font-weight: 600; }
     .rate-table .highlight-cell { color: var(--primary); font-weight: 700; }
-
     .example-table { width: 100%; border-collapse: collapse; font-size: 13px; }
     .example-table th { background: rgba(16,185,129,0.08); padding: 8px 10px; text-align: center; font-weight: 700; font-size: 12px; color: var(--primary); border-bottom: 2px solid rgba(16,185,129,0.2); }
     .example-table td { padding: 8px 10px; text-align: center; border-bottom: 1px solid var(--gray-100); font-size: 13px; color: var(--gray-700); }
     .example-table tr:last-child td { border-bottom: none; }
     .example-table td:first-child { text-align: left; font-weight: 600; color: var(--gray-800); }
-
     .sibling-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
     .sibling-link { display: inline-flex; align-items: center; gap: 5px; padding: 6px 12px; background: var(--gray-100); border-radius: 20px; font-size: 12px; font-weight: 600; color: var(--gray-600); text-decoration: none; transition: all 0.15s; }
     .sibling-link:hover { background: rgba(16,185,129,0.12); color: var(--primary); }
     .sibling-link.current { background: rgba(16,185,129,0.15); color: var(--primary); }
   </style>
 </head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="logo">
-      <img src="/assets/logo.svg" alt="제이퍼 계산기 로고" width="28" height="28" />
-      <span class="logo-text">제이퍼 계산기</span>
-    </a>
-    <nav class="header-nav">
-      <a href="/calc/realestate/">부동산</a>
-      <a href="/calc/salary/">연봉</a>
-      <a href="/calc/tools/">생활도구</a>
-      <a href="/calc/tax/" class="active">세금</a>
-      <a href="/calc/pension-welfare/">연금·복지</a>
-      <a href="/calc/finance/">금융</a>
-      <a href="/calc/date/">날짜</a>
-      <a href="/calc/health/">건강</a>
-      <a href="/calc/ai/">AI</a>
-      <a href="/calc/pet/">반려동물</a>
-    </nav>
-    <button class="menu-btn" aria-label="메뉴">&#9776;</button>
-  </div>
+<body data-cat="tax" style="--cat: var(--c-tax)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
 </header>
 
-<main class="page-wrap">
-  <div class="page-header">
-    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/tax/">프리랜서 세금 계산기</a><span class="breadcrumb-sep">›</span><span>4대보험료 계산기</span></div>
-    <div class="page-header-badge">&#127963; 직장인 4대보험</div>
-    <h1>4대보험료 계산기 2026</h1>
-    <p>월급에서 빠지는 국민연금·건강보험·장기요양·고용보험을 한 번에 계산합니다</p>
-  </div>
-
-    <div class="card">
-      <div class="card-title">4대보험료 계산</div>
-      <div class="info-box">
-        <span class="info-icon">&#128161;</span>
-        <p>세전 급여와 비과세 수당을 입력하면 <strong>근로자 부담분</strong>과 <strong>사용자(회사) 부담분</strong>을 구분해 보여줍니다.</p>
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/tax/">프리랜서 세금 계산기</a> &rsaquo; 4대보험료 계산기</div>
+      <div class="page-badge">직장인 4대보험</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-receipt"></use></svg></span>
+        <h1 class="page-title">4대보험료 계산기 2026</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">직장인 4대보험</span>
+          <span class="ds-trust-chip">2026.06.12 검토</span>
+        </div>
       </div>
+      <p class="page-subtitle">월급에서 빠지는 국민연금·건강보험·장기요양·고용보험을 한 번에 계산합니다</p>
+    </div>
+  </div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+      <div class="field-label ds-group-label">4대보험료 계산</div>
+      
 
       <div class="field">
         <div class="field-label"><span>월 급여 (세전)</span> <span class="label-hint">만원 단위</span></div>
@@ -160,8 +145,17 @@
         </div>
         <p style="font-size:12px;color:var(--gray-400);margin-top:4px">식대 월 20만원이 비과세인 경우 20을 입력하세요</p>
       </div>
+<div class="info-box">
+        <span class="info-icon"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-info"></use></svg></span>
+        <p>세전 급여와 비과세 수당을 입력하면 <strong>근로자 부담분</strong>과 <strong>사용자(회사) 부담분</strong>을 구분해 보여줍니다.</p>
+      </div>
+        <button type="button" class="ds-btn-calc" data-calc-submit="calculate" data-result="resultCard" data-required="inpSalary">계산하기</button>
+      </div>
+    </section>
 
-      <div id="resultCard" class="result-card" style="display:none">
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div id="resultCard" class="result-card ds-wrap" style="display:none">
         <div class="verdict-box">
           <div class="verdict-label">근로자 월 4대보험 공제액</div>
           <div class="verdict-value" id="resTotal">-</div>
@@ -229,22 +223,54 @@
 
         <p class="result-note" style="margin-top:12px">※ 2026년 요율 기준. 국민연금 기준소득월액 상한 659만원·하한 41만원(2026년 7월부터). 사용자 고용보험은 기본 0.9% 외 고용안정·직업능력개발 분담금이 업종·규모별로 추가됩니다. 실수령액(소득세 포함)은 <a href="/calc/salary/take-home-pay/" style="color:var(--primary)">연봉 실수령액 계산기</a>에서 확인하세요.</p>
         <a id="fi-payslip-cta" class="bridge-cta" data-html2canvas-ignore="true" href="#" target="_blank" rel="noopener" style="display:none;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;padding:14px 16px;background:#fff;color:var(--primary);border:1px solid rgba(16,185,129,0.35);border-radius:12px;font-weight:700;font-size:14px;text-decoration:none;line-height:1.4;box-shadow:0 1px 3px rgba(16,185,129,0.08);">
-          <span>📄 이 4대보험 공제로 급여명세서 만들기</span>
+          <span>이 4대보험 공제로 급여명세서 만들기</span>
           <span style="opacity:.7;font-weight:600;white-space:nowrap;">폼다에서 자동작성 →</span>
         </a>
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('resultCard')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/tax/insurance-comparison/">4대보험 비교 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
       </div>
-    </div>
 
-  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">계산 결과</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="four-insurance-next">
+        <a class="ds-next-card" href="/calc/tax/insurance-comparison/" data-next="insurance-comparison"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-receipt"></use></svg></span><span class="ds-next-body"><b>4대보험 비교 계산기</b><span>같은 매출일 때 직장가입자(회사 분담)와 지역가입자(전액 본인 부담) 보험료·세금을 나란히 비교합니다. 프리랜서 전환·복귀 의사결정에 유용합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/tax/regional-health-insurance/" data-next="regional-health-insurance"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-receipt"></use></svg></span><span class="ds-next-body"><b>지역가입자 건강보험료 계산기</b><span>연소득과 재산세 과세표준을 입력하면 지역가입자 건강보험료와 장기요양보험료를 계산합니다. 2026년 보험료율 7.19%·재산 부과점수표·1억 기본공제·자동차 폐지를 반영합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
+  </div>
+
+  <div class="ds-calc-extra">
+    </div>
+  </div>
+
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">국민건강보험법·국민연금법·고용보험법·산업재해보상보험법 2026년 요율 기준 <a href="https://www.nps.or.kr" target="_blank" rel="noopener">국민연금공단 - 2026년 기준소득월액 상·하한액 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#four-insurance-s3">가이드</a><a href="#four-insurance-s1">요율표</a><a href="#four-insurance-s2">계산 예시</a><a href="#four-insurance-s4">구간별 표</a><a href="#four-insurance-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
     <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
     <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
   </div>
 
   <div class="guide-section">
     <!-- 요율 기준표 -->
-    <div class="guide-card">
-      <h2>2026년 4대보험 요율표</h2>
-      <div class="table-wrap">
+            <section class="ds-section ds-prose" aria-labelledby="four-insurance-s1">
+          <div class="ds-section-head"><h2 id="four-insurance-s1">2026년 4대보험 요율표</h2></div>
+<div class="ds-table-card">
         <table class="rate-table">
           <thead>
             <tr>
@@ -288,13 +314,13 @@
           </tbody>
         </table>
       </div>
-    </div>
+        </section>
 
     <!-- 계산 예시 -->
-    <div class="guide-card">
-      <h2>월급별 4대보험료 예시 (근로자 부담)</h2>
-      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">식대 20만원 비과세 가정. 과세 기준급여 = 세전급여 - 20만원.</p>
-      <div class="table-wrap">
+            <section class="ds-section ds-prose" aria-labelledby="four-insurance-s2">
+          <div class="ds-section-head"><h2 id="four-insurance-s2">월급별 4대보험료 예시 (근로자 부담)</h2></div>
+<p class="ds-table-lead">식대 20만원 비과세 가정. 과세 기준급여 = 세전급여 - 20만원.</p>
+      <div class="ds-table-card">
         <table class="example-table">
           <thead>
             <tr>
@@ -343,13 +369,12 @@
         </table>
       </div>
       <p style="font-size:12px;color:var(--gray-400);margin-top:8px">※ 월 700만원은 국민연금 상한(659만원) 적용. 산재보험 제외. 소득세 별도.</p>
-    </div>
+        </section>
 
     <!-- 가이드 -->
-    <div class="guide-card">
-      <h2>4대보험 완벽 가이드</h2>
-
-      <h3 style="font-size:15px;font-weight:700;color:var(--gray-800);margin:16px 0 8px;padding-top:0;border-top:none">4대보험이란?</h3>
+            <section class="ds-section ds-prose" aria-labelledby="four-insurance-s3">
+          <div class="ds-section-head"><h2 id="four-insurance-s3">4대보험 완벽 가이드</h2></div>
+<h3 style="font-size:15px;font-weight:700;color:var(--gray-800);margin:16px 0 8px;padding-top:0;border-top:none">4대보험이란?</h3>
       <p style="font-size:14px;line-height:1.7;color:var(--gray-700)">직장인이라면 의무 가입해야 하는 4가지 사회보험입니다. 국민연금(노후 소득)·건강보험(의료비)·고용보험(실업급여·모성보호)·산재보험(업무 중 사고·질병)으로 구성됩니다. 매달 급여에서 자동 공제되며, 사용자(회사)도 대부분 동일한 금액을 별도로 납부합니다.</p>
 
       <h3 style="font-size:15px;font-weight:700;color:var(--gray-800);margin:20px 0 8px;padding-top:16px;border-top:1px solid var(--gray-100)">국민연금 - 상한·하한 적용 구조</h3>
@@ -363,13 +388,13 @@
 
       <h3 style="font-size:15px;font-weight:700;color:var(--gray-800);margin:20px 0 8px;padding-top:16px;border-top:1px solid var(--gray-100)">사용자 실제 인건비 계산</h3>
       <p style="font-size:14px;line-height:1.7;color:var(--gray-700)">월급 300만원 근로자를 채용하면 회사는 300만원 외에 4대보험 사용자 부담분(약 27만원)과 퇴직금 적립(월 25만원)까지 합산해 월 약 350~360만원의 실제 인건비가 발생합니다. 채용 예산 수립 시 명목 급여의 약 15~20%를 추가 비용으로 고려해야 합니다.</p>
-    </div>
+        </section>
 
     <!-- FAQ -->
-    <div class="guide-card">
-      <h2>월 급여별 4대보험료 (근로자 부담분)</h2>
-      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">대표 입력값을 넣어 계산기가 산출한 결과를 표로 정리했습니다.</p>
-      <div class="guide-table-wrap">
+            <section class="ds-section ds-prose" aria-labelledby="four-insurance-s4">
+          <div class="ds-section-head"><h2 id="four-insurance-s4">월 급여별 4대보험료 (근로자 부담분)</h2></div>
+<p class="ds-table-lead">대표 입력값을 넣어 계산기가 산출한 결과를 표로 정리했습니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead><tr><th>월 급여</th><th>건강보험료×13.14%</th><th>합계 (산재 제외)</th><th>근로자 + 사용자 합산</th></tr></thead>
           <tbody>
@@ -381,31 +406,34 @@
           </tbody>
         </table>
       </div>
-    </div>
-    <div class="guide-card faq-card">
-      <h2>자주 묻는 질문</h2>
-      <div class="faq-item">
-        <h3>2026년 4대보험 요율은 얼마인가요?</h3>
-        <p>근로자 부담 요율은 국민연금 4.75%, 건강보험 3.595%, 장기요양(건강보험료의 13.14%), 고용보험 0.9%입니다. 국민연금은 2025년 개혁으로 근로자 부담분이 매년 0.25%p씩 인상되며 2026년에 4.75%가 적용됩니다. 사용자도 같은 비율로 추가 부담합니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>국민연금 상한액이 있나요?</h3>
-        <p>네. 2026년 7월부터 기준소득월액 상한은 659만원, 하한은 41만원입니다. 월급이 700만원이어도 659만원에 4.75%를 적용해 313,025원이 최대입니다. 상한과 하한은 매년 7월 조정됩니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>비과세 수당은 4대보험에서 제외되나요?</h3>
-        <p>네. 식대 월 20만원, 자가운전보조금 월 20만원 등 법정 비과세 수당은 4대보험 과세 기준에서 제외됩니다. 급여명세서에 비과세 항목이 있다면 그만큼 차감한 과세 급여로 4대보험이 계산됩니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>회사(사용자)는 4대보험을 얼마나 부담하나요?</h3>
-        <p>국민연금·건강보험·장기요양·고용보험은 근로자와 동일한 비율로 사용자도 납부합니다. 여기에 고용안정·직업능력개발 분담금(업종·규모별 0.25~0.85%)과 산재보험(전액 사용자, 업종별 요율 상이)이 추가됩니다. 결과적으로 실제 인건비는 명목 급여보다 약 15~20% 높습니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>4대보험 외에 실수령액에 영향을 주는 항목은 무엇인가요?</h3>
-        <p>소득세(지방소득세 포함)가 가장 크게 영향을 줍니다. 소득세는 부양가족 수·비과세 항목에 따라 달라지며 연말정산으로 최종 정산됩니다. 정확한 실수령액은 연봉 실수령액 계산기를 이용하세요.</p>
-      </div>
+        </section>
+            <section class="ds-section faq-card" aria-labelledby="four-insurance-faq">
+          <div class="ds-section-head"><h2 id="four-insurance-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>2026년 4대보험 요율은 얼마인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>근로자 부담 요율은 국민연금 4.75%, 건강보험 3.595%, 장기요양(건강보험료의 13.14%), 고용보험 0.9%입니다. 국민연금은 2025년 개혁으로 근로자 부담분이 매년 0.25%p씩 인상되며 2026년에 4.75%가 적용됩니다. 사용자도 같은 비율로 추가 부담합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>국민연금 상한액이 있나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>네. 2026년 7월부터 기준소득월액 상한은 659만원, 하한은 41만원입니다. 월급이 700만원이어도 659만원에 4.75%를 적용해 313,025원이 최대입니다. 상한과 하한은 매년 7월 조정됩니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>비과세 수당은 4대보험에서 제외되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>네. 식대 월 20만원, 자가운전보조금 월 20만원 등 법정 비과세 수당은 4대보험 과세 기준에서 제외됩니다. 급여명세서에 비과세 항목이 있다면 그만큼 차감한 과세 급여로 4대보험이 계산됩니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>회사(사용자)는 4대보험을 얼마나 부담하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>국민연금·건강보험·장기요양·고용보험은 근로자와 동일한 비율로 사용자도 납부합니다. 여기에 고용안정·직업능력개발 분담금(업종·규모별 0.25~0.85%)과 산재보험(전액 사용자, 업종별 요율 상이)이 추가됩니다. 결과적으로 실제 인건비는 명목 급여보다 약 15~20% 높습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>4대보험 외에 실수령액에 영향을 주는 항목은 무엇인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>소득세(지방소득세 포함)가 가장 크게 영향을 줍니다. 소득세는 부양가족 수·비과세 항목에 따라 달라지며 연말정산으로 최종 정산됩니다. 정확한 실수령액은 연봉 실수령액 계산기를 이용하세요.</p>
+            </details>
       <div class="update-note">국민건강보험법·국민연금법·고용보험법 2026년 요율 기준 간이 계산기입니다. 정확한 보험료는 <a href="https://www.nhis.or.kr" target="_blank" rel="noopener">국민건강보험공단</a>, <a href="https://www.nps.or.kr" target="_blank" rel="noopener">국민연금공단</a> 또는 회사 급여담당자에게 확인하세요.</div>
+          </div>
+        </section>
+  </div>
+
     </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
   </div>
 
   <script>
@@ -425,43 +453,43 @@
     lastReviewed: '2026.06.12',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
 
-  <div class="sibling-section">
-    <div class="sibling-title">다른 프리랜서 세금 계산기</div>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 프리랜서 세금 계산기</h2>
     <div class="sibling-list">
-      <a href="/calc/tax/withholding/" class="sibling-link">💲 3.3% 원천징수</a>
-      <a href="/calc/tax/income-tax/" class="sibling-link">📈 종합소득세</a>
-      <a href="/calc/tax/vat/" class="sibling-link">📄 부가가치세</a>
-      <a href="/calc/tax/insurance-comparison/" class="sibling-link">👥 4대보험 비교</a>
-      <a href="/calc/tax/freelancer-income/" class="sibling-link">💰 월 순수입</a>
-      <a href="/calc/tax/medical-expense/" class="sibling-link">🏥 의료비 세액공제</a>
-      <a href="/calc/tax/regional-health-insurance/" class="sibling-link">🏥 지역가입자 건강보험료</a>
-      <a href="/calc/tax/copay-ceiling/" class="sibling-link">💊 본인부담상한제 환급</a>
-      <a href="/calc/tax/yellow-umbrella/" class="sibling-link">🪙 노란우산공제</a>
-      <a href="/calc/tax/four-insurance/" class="sibling-link current">🏢 4대보험료</a>
+      <a href="/calc/tax/withholding/" class="sibling-link">3.3% 원천징수</a>
+      <a href="/calc/tax/income-tax/" class="sibling-link">종합소득세</a>
+      <a href="/calc/tax/vat/" class="sibling-link">부가가치세</a>
+      <a href="/calc/tax/insurance-comparison/" class="sibling-link">4대보험 비교</a>
+      <a href="/calc/tax/freelancer-income/" class="sibling-link">월 순수입</a>
+      <a href="/calc/tax/medical-expense/" class="sibling-link">의료비 세액공제</a>
+      <a href="/calc/tax/regional-health-insurance/" class="sibling-link">지역가입자 건강보험료</a>
+      <a href="/calc/tax/copay-ceiling/" class="sibling-link">본인부담상한제 환급</a>
+      <a href="/calc/tax/yellow-umbrella/" class="sibling-link">노란우산공제</a>
     </div>
-    <div class="sibling-title">관련 가이드</div>
-    <div class="sibling-list">
-      <a href="/blog/posts/four-insurance-vs-33-comparison.html" class="sibling-link">📖 4대보험 vs 3.3% 실수령액 비교 - 월 300만원이면 27만원 차이</a>
-      <a href="/blog/posts/social-insurance-guide.html" class="sibling-link">📖 4대보험료 2026 - 월급 300만원이면 매달 29만원 빠진다</a>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/four-insurance-vs-33-comparison.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/four-insurance-vs-33-comparison-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>4대보험 vs 3.3% 실수령액 비교 - 월 300만원이면 27만원 차이</span></a>
+      <a href="/blog/posts/social-insurance-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/social-insurance-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>4대보험료 2026 - 월급 300만원이면 매달 29만원 빠진다</span></a>
     </div>
   </div>
 </main>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links">
-      <a href="/">홈</a>
-      <a href="/about.html">소개</a>
-      <a href="/privacy.html">개인정보처리방침</a>
-      <a href="/terms.html">이용약관</a>
-      <a href="/contact.html">문의하기</a>
-      <a href="/disclaimer.html">면책조항</a>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
     </div>
-    <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 보험료는 건강보험공단·국민연금공단에서 확인하세요.</p>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 보험료는 건강보험공단·국민연금공단에서 확인하세요.</p>
   </div>
 </footer>
+
+<script src="/assets/ds/calc-kit.js?v=d45e66d9"></script>
 
 <script>
 const NP_RATE  = 0.0475;
@@ -557,11 +585,10 @@ function calculate() {
 }
 </script>
 
-<script src="/assets/calc-registry.js"></script>
-<script src="/assets/tax-detail-shell.js" defer></script>
-<script src="/assets/footer-unified.js" defer></script>
-<script src="/assets/calc-validate.js"></script>
-<script src="/assets/calc-result-tools.js"></script>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
@@ -573,7 +600,14 @@ window.ARTICLE_INFO_CONFIG = {
   category: 'tax'
 };
 </script>
-<script src="/assets/blog-article-info.js"></script>
-<script src="/assets/blog-review-footer.js"></script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "resultCard", "required": ["inpSalary"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#four-insurance-next", "next": [{"key": "insurance-comparison", "path": "/calc/tax/insurance-comparison/", "sub": "같은 매출일 때 직장가입자(회사 분담)와 지역가입자(전액 본인 부담) 보험료·세금을 나란히 비교합니다. 프리랜서 전환·복귀 의사결정에 유용합니다.", "params": {"salary_m": "inpSalary"}, "from": "four-insurance"}]});
+  DSCalc.placeTrust('ds-trust-col');
+  (function () { const a = document.getElementById('ds-primary-next'); if (!a) return; const go = () => { const v = {}; Object.entries({"salary_m": "inpSalary"}).forEach(([k, id]) => v[k] = DSCalc.num(id)); a.href = DSCalc.link('/calc/tax/insurance-comparison/', v, 'four-insurance'); }; document.addEventListener('input', go, true); go(); })();
+</script>
+<script src="/assets/ds/prefill.js?v=fa5eb49a" defer></script>
 </body>
 </html>

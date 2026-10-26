@@ -21,9 +21,7 @@
     gtag('js', new Date());
     gtag('config', 'G-BRSX3F10MZ');
   </script>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
 
   <script type="application/ld+json">
 {
@@ -100,94 +98,29 @@
   ]
 }
 </script>
-
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --primary: #F59E0B;
-      --gray-400: #9CA3AF; --gray-500: #6B7280; --gray-600: #4B5563;
-      --dark-bg: #ffffff; --dark-card: #F9FAFB; --dark-border: rgba(0,0,0,0.08);
-    }
-    body { font-family: 'Pretendard', -apple-system, sans-serif; background: #ffffff; color: #111827; min-height: 100vh; -webkit-font-smoothing: antialiased; }
-
-    .site-header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.08); }
-    .header-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; gap: 24px; }
-    .site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
-    .logo-icon { width: 32px; height: 32px; }
-    .logo-icon img { width: 32px; height: 32px; display: block; }
-    .logo-text { font-size: 18px; font-weight: 900; color: #111827; letter-spacing: -0.5px; }
-    .logo-text span { color: #818CF8; }
-    .header-back { margin-left: auto; font-size: 13px; font-weight: 600; color: #6B7280; text-decoration: none !important; }
-    .header-back:hover { color: #111827; }
-
-
-    .post-wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
-    .post-tag { display: inline-block; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; background: rgba(245,158,11,0.15); color: #F59E0B; margin-bottom: 16px; }
-    h1 { font-size: 26px; font-weight: 900; color: #111827; line-height: 1.35; margin-bottom: 12px; }
-    .post-meta { font-size: 13px; color: #4B5563; margin-bottom: 36px; display: flex; gap: 12px; }
-    .post-body { font-size: 15px; color: #111827; line-height: 1.8; }
-    .post-body h2 { font-size: 19px; font-weight: 800; color: #111827; margin: 40px 0 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.08); }
-    .post-body h3 { font-size: 16px; font-weight: 700; color: #111827; margin: 24px 0 10px; }
-    .post-body p { margin-bottom: 14px; }
-    .post-body ul, .post-body ol { margin: 10px 0 14px 20px; }
-    .post-body li { margin-bottom: 8px; }
-    .post-body a { color: var(--primary); text-decoration: none !important; }
-    .post-body a:hover { text-decoration: underline; }
-    .highlight-box { background: rgba(245,158,11,0.08); border-left: 4px solid #F59E0B; border-radius: 0 10px 10px 0; padding: 16px 20px; margin: 20px 0; }
-    .highlight-box p { margin: 0; color: #92400E; font-size: 14px; }
-    .table-wrap { overflow-x: auto; margin: 20px 0; }
-    table { width: 100%; border-collapse: collapse; font-size: 14px; }
-    th { background: #F9FAFB; color: #111827; font-weight: 700; padding: 10px 14px; text-align: left; border: 1px solid rgba(0,0,0,0.08); word-break: keep-all; }
-    td { padding: 10px 14px; border: 1px solid rgba(0,0,0,0.08); color: #1F2937; word-break: keep-all; }
-    tr:hover td { background: rgba(0,0,0,0.02); }
-    td.rate { font-weight: 700; color: #F59E0B; }
-    td.center { text-align: center; }
-    td.warn { color: #DC2626; font-weight: 700; }
-    .cta-box { background: #F9FAFB; border: 1px solid rgba(0,0,0,0.08); border-radius: 14px; padding: 24px; margin: 40px 0; text-align: center; }
-    .cta-box p { color: #374151; font-size: 14px; margin-bottom: 14px; }
-    .cta-btn { display: inline-block; padding: 12px 28px; background: #F59E0B; color: #fff !important; font-size: 14px; font-weight: 800; border-radius: 10px; text-decoration: none !important; }
-    .cta-btn:hover { opacity: 0.9; }
-    .faq-item { background: #F9FAFB; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; padding: 20px; margin: 16px 0; }
-    .faq-q { font-weight: 800; color: #111827; margin-bottom: 8px; font-size: 15px; }
-    .faq-a { color: #374151; font-size: 14px; line-height: 1.7; margin: 0; }
-
-    .site-footer { border-top: 1px solid rgba(0,0,0,0.08); padding: 24px; text-align: center; }
-    .footer-copy { font-size: 10px; color: #374151; }
-    .scenario-box { background: rgba(245,158,11,0.06); border: 1px solid rgba(245,158,11,0.2); border-radius: 12px; padding: 20px 24px; margin: 20px 0; }
-    .scenario-box h3 { color: #92400E; margin-top: 0; margin-bottom: 12px; font-size: 15px; }
-    .scenario-box p { margin-bottom: 8px; font-size: 14px; color: #374151; }
-    .scenario-box p:last-child { margin-bottom: 0; }
-    .result-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
-    .result-row:last-child { border-bottom: none; }
-    .result-label { color: #6B7280; }
-    .result-value { font-weight: 700; color: #111827; }
-    .result-value.highlight { color: #F59E0B; font-size: 16px; }
-    .result-value.warn { color: #DC2626; }
-  </style>
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
 </head>
-<body>
-
-<header class="site-header">
-  <div class="header-inner">
-    <a href="../../" class="site-logo">
-      <div class="logo-icon"><img src="../../assets/logo.svg" alt="제이퍼 계산기 로고" /></div>
-      <span class="logo-text">제이퍼<span>계산기</span></span>
-    </a>
-    <a href="../" class="header-back">← 블로그 목록</a>
-  </div>
+<body data-cat="realestate" style="--cat: var(--c-realestate)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories">카테고리</a><a href="/blog/" aria-current="page">블로그</a></nav>
+  </div></div>
 </header>
 
-<div class="post-wrap">
-  <span class="post-tag">부동산</span>
-  <h1>아파트·오피스텔·빌라 임대수익률 비교 - 공실·수선비 포함한 실질 수익 계산</h1>
-  <div class="post-meta">
-    <span>📅 2026.05.07</span>
-    <span>⏱ 18분 읽기</span>
-  </div>
+<main class="ds-post ds-container">
+  <article>
+    <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/blog/">블로그</a> &rsaquo; <a href="/blog/?cat=부동산">부동산</a></div>
+    <div class="ds-post-meta"><span class="ds-post-chip">부동산</span><span>2026.05.07</span><span>제이퍼 계산기 편집팀</span><span>18분 읽기</span></div>
+    <h1 class="ds-post-title">아파트·오피스텔·빌라 임대수익률 비교 - 공실·수선비 포함한 실질 수익 계산</h1>
+    <picture><source media="(min-width: 1024px)" srcset="/assets/img/blog-thumb/apartment-officetel-rental-comparison-16x9.webp" width="1280" height="720"><img class="ds-post-thumb is-cover" src="/assets/img/blog-thumb/apartment-officetel-rental-comparison-3x1.webp" alt="1.83% 3.75% 오피스텔 실질수익률" width="1440" height="480" decoding="async" fetchpriority="high"></picture>
+    <div class="ds-post-body ds-prose">
+<p>수익률 3.75%라고 계산했는데, 실제로는 1.83%였습니다. 오피스텔 2억5천만원에 투자해 월 75만원씩 받겠다고 설계한 임대인이 3년 뒤 장부를 열었을 때 마주한 숫자입니다. 공실 1.2개월, 도배장판 교체, 보일러 수리, 재산세, 임대소득세까지 더하면 손에 쥐는 금액이 절반 수준으로 줄어듭니다.</p>
+    <a class="ds-post-cta" href="/calc/realestate/rental/" style="--cat: var(--c-realestate)"><span class="ds-icon-tile"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-house"></use></svg></span><span class="ds-post-cta-body"><b>임대수익률 계산기</b><span>단순·실투자 수익률 비교</span></span><span class="ds-post-cta-go">계산하기 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></span></a>
 
-  <div class="post-body">
+    <details class="ds-post-toc"><summary>목차 (11)<svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary><ol><li><a href="#sec-1">어디부터 다른가 - 유형별 기본 특성</a></li><li><a href="#sec-2">시나리오 A - 아파트 5억원을 보증부 월세로 운영하면</a></li><li><a href="#sec-3">시나리오 B - 오피스텔 2억5천만원의 실질 수익</a></li><li><a href="#sec-4">시나리오 C - 빌라 2채, 표면수익률 9%의 실제 모습</a></li><li><a href="#sec-5">공실 2달이면 대출이자까지 겹쳐 손실이 임대수입의 25%에 달한다</a></li><li><a href="#sec-6">수선·관리비가 실제로 얼마나 드나</a></li><li><a href="#sec-7">임대소득세 - 종합과세 vs 분리과세, 어느 쪽이 유리한가</a></li><li><a href="#sec-8">세 유형, 결국 누가 더 남나</a></li><li><a href="#sec-9">고르기 전에 봐야 할 것</a></li><li><a href="#sec-10">자주 묻는 질문 (FAQ)</a></li><li><a href="#sec-11">한 줄 요약</a></li></ol></details>
 
-    <p>수익률 3.75%라고 계산했는데, 실제로는 1.83%였습니다. 오피스텔 2억5천만원에 투자해 월 75만원씩 받겠다고 설계한 임대인이 3년 뒤 장부를 열었을 때 마주한 숫자입니다. 공실 1.2개월, 도배장판 교체, 보일러 수리, 재산세, 임대소득세까지 더하면 손에 쥐는 금액이 절반 수준으로 줄어듭니다.</p>
 
     <p>이 글에서는 아파트, 오피스텔, 빌라(다가구) 세 유형의 임대수익률을 표면수익률이 아니라 공실·수선비·세금을 모두 포함한 실질수익률로 비교합니다. 투자 전에 반드시 알아야 할 숫자들을 직접 계산했습니다.</p>
 
@@ -195,7 +128,7 @@
       <p><strong>이 글이 필요한 분</strong><br>임대 물건 매입을 처음 고민 중인 분 / 수익률이 기대보다 낮은 이유를 모르는 현직 임대인 / 아파트·오피스텔·빌라 중 어디에 투자할지 결정 못 한 분 / 임대소득세 신고를 앞두고 세금 구조가 궁금한 분</p>
     </div>
 
-    <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+    <ul class="ds-bg-sub" style="padding: 16px 20px 16px 36px; border-radius: var(--radius-md); margin: 16px 0; font-size: var(--fs-label); line-height: 1.8">
       <li>아파트·오피스텔·빌라 표면수익률 vs 실질수익률 유형별 비교표</li>
       <li>공실 0개월~4개월 시나리오별 연간 수익 손실 계산 (월세 75만원 기준)</li>
       <li>임대인 A씨(아파트 5억), B씨(오피스텔 2.5억), C씨(빌라 1.8억) 실질 수익률 검산</li>
@@ -204,7 +137,7 @@
       <li>수익률 3.75% 오피스텔이 아파트보다 손에 쥐는 돈이 적을 수 있는 이유</li>
     </ul>
 
-    <h2>어디부터 다른가 - 유형별 기본 특성</h2>
+    <h2 id="sec-1">어디부터 다른가 - 유형별 기본 특성</h2>
 
     <p>임대수익률을 이야기하기 전에, 각 유형의 기본 특성을 이해해야 합니다. 표면수익률만 보고 투자를 결정하는 것이 왜 위험한지를 이 표가 보여줍니다.</p>
 
@@ -267,41 +200,41 @@
 
     <p>한국부동산원 오피스텔 가격동향조사에 따르면 2025년 11월 기준 전국 오피스텔 평균 수익률은 5.64%로 2018년 1월 조사 이래 최고치이고, 서울은 4.99%입니다. 아파트는 임대수익률 통계를 별도로 집계하지 않지만, 서울 아파트 전세가율(매매가 대비 전세가 비율)이 55~65% 수준임을 감안하면 순수 임대수익률(월세 기준)은 2~4% 구간에 형성되어 있습니다.</p>
 
-    <div style="margin:24px 0;overflow-x:auto">
+    <div style="margin: 24px 0; overflow-x: auto">
     <svg role="img" width="100%" viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg">
       <title>유형별 표면수익률 vs 실질수익률 비교</title>
-      <rect width="680" height="200" rx="12" fill="#F9FAFB"/>
-      <text x="24" y="32" font-size="13" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">유형별 임대수익률 비교 (표면 vs 실질)</text>
+      <rect width="680" height="200" rx="12" style="fill: var(--bg)"/>
+      <text x="24" y="32" font-size="13" font-weight="800" font-family="Pretendard,sans-serif" style="fill: var(--text)">유형별 임대수익률 비교 (표면 vs 실질)</text>
       <!-- 아파트 -->
-      <text x="24" y="68" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">아파트 표면</text>
-      <rect x="110" y="56" width="96" height="18" rx="4" fill="#F59E0B" opacity="0.8"/>
-      <text x="214" y="70" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">2.13%</text>
-      <text x="24" y="92" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">아파트 실질</text>
-      <rect x="110" y="80" width="64" height="18" rx="4" fill="#F59E0B" opacity="0.35"/>
-      <text x="182" y="94" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">1.42%</text>
+      <text x="24" y="68" font-size="12" font-family="Pretendard,sans-serif" style="fill: var(--text-sub)">아파트 표면</text>
+      <rect x="110" y="56" width="96" height="18" rx="4" opacity="0.8" style="fill: var(--warn)"/>
+      <text x="214" y="70" font-size="12" font-weight="700" font-family="Pretendard,sans-serif" style="fill: var(--text)">2.13%</text>
+      <text x="24" y="92" font-size="12" font-family="Pretendard,sans-serif" style="fill: var(--text-sub)">아파트 실질</text>
+      <rect x="110" y="80" width="64" height="18" rx="4" opacity="0.35" style="fill: var(--warn)"/>
+      <text x="182" y="94" font-size="12" font-weight="700" font-family="Pretendard,sans-serif" style="fill: var(--text)">1.42%</text>
       <!-- 오피스텔 -->
-      <text x="24" y="120" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">오피스텔 표면</text>
-      <rect x="110" y="108" width="169" height="18" rx="4" fill="#F59E0B" opacity="0.8"/>
-      <text x="287" y="122" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">3.75%</text>
-      <text x="24" y="144" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">오피스텔 실질</text>
-      <rect x="110" y="132" width="82" height="18" rx="4" fill="#F59E0B" opacity="0.35"/>
-      <text x="200" y="146" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">1.83%</text>
+      <text x="24" y="120" font-size="12" font-family="Pretendard,sans-serif" style="fill: var(--text-sub)">오피스텔 표면</text>
+      <rect x="110" y="108" width="169" height="18" rx="4" opacity="0.8" style="fill: var(--warn)"/>
+      <text x="287" y="122" font-size="12" font-weight="700" font-family="Pretendard,sans-serif" style="fill: var(--text)">3.75%</text>
+      <text x="24" y="144" font-size="12" font-family="Pretendard,sans-serif" style="fill: var(--text-sub)">오피스텔 실질</text>
+      <rect x="110" y="132" width="82" height="18" rx="4" opacity="0.35" style="fill: var(--warn)"/>
+      <text x="200" y="146" font-size="12" font-weight="700" font-family="Pretendard,sans-serif" style="fill: var(--text)">1.83%</text>
       <!-- 빌라 -->
-      <text x="24" y="172" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">빌라 표면</text>
-      <rect x="110" y="160" width="424" height="18" rx="4" fill="#F59E0B" opacity="0.8"/>
-      <text x="542" y="174" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">9.43%</text>
-      <text x="24" y="196" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">빌라 실질</text>
-      <rect x="110" y="184" width="286" height="18" rx="4" fill="#F59E0B" opacity="0.35"/>
-      <text x="404" y="198" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">6.36%</text>
-      <text x="600" y="32" font-size="11" fill="#9CA3AF" font-family="Pretendard,sans-serif">서울 기준</text>
+      <text x="24" y="172" font-size="12" font-family="Pretendard,sans-serif" style="fill: var(--text-sub)">빌라 표면</text>
+      <rect x="110" y="160" width="424" height="18" rx="4" opacity="0.8" style="fill: var(--warn)"/>
+      <text x="542" y="174" font-size="12" font-weight="700" font-family="Pretendard,sans-serif" style="fill: var(--text)">9.43%</text>
+      <text x="24" y="196" font-size="12" font-family="Pretendard,sans-serif" style="fill: var(--text-sub)">빌라 실질</text>
+      <rect x="110" y="184" width="286" height="18" rx="4" opacity="0.35" style="fill: var(--warn)"/>
+      <text x="404" y="198" font-size="12" font-weight="700" font-family="Pretendard,sans-serif" style="fill: var(--text)">6.36%</text>
+      <text x="600" y="32" font-size="11" font-family="Pretendard,sans-serif" style="fill: var(--text-muted)">서울 기준</text>
     </svg>
     </div>
 
-    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+    <div class="adfit-slot ds-ad" style="text-align: center; margin: 28px 0">
       <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
       <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
     </div>
-    <h2>시나리오 A - 아파트 5억원을 보증부 월세로 운영하면</h2>
+    <h2 id="sec-2">시나리오 A - 아파트 5억원을 보증부 월세로 운영하면</h2>
 
     <p>직장인 김재훈씨(42세)는 경기 성남 분당구 아파트(전용 59㎡)를 5억원에 매입했습니다. 1주택자이며, 기존 거주 아파트가 따로 있습니다. 보증금 5천만원에 월세 80만원으로 세를 놓았습니다.</p>
 
@@ -372,7 +305,7 @@
 
     <p>다만 김재훈씨 아파트의 경우 5년 보유 후 시세 5억5천으로 상승한다고 가정하면, 시세차익 5천만원 + 임대수익 5년 합계 3,205만원(641만 × 5년) = 총 8,205만원을 거둡니다. 이를 실투자금 4억5천만원 대비 연환산 수익률로 계산하면 약 3.6% 수준입니다. 자본이득이 임대수익을 훨씬 웃도는 구조입니다.</p>
 
-    <h2>시나리오 B - 오피스텔 2억5천만원의 실질 수익</h2>
+    <h2 id="sec-3">시나리오 B - 오피스텔 2억5천만원의 실질 수익</h2>
 
     <p>프리랜서 이수진씨(38세)는 서울 마포구 오피스텔(전용 24㎡)을 2억5천만원에 매입했습니다. 업무용 오피스텔로 등록해 취득세를 4.6%로 신고했습니다. 보증금 1천만원, 월세 75만원입니다.</p>
 
@@ -443,7 +376,7 @@
 
     <p>그럼에도 아파트는 시세차익 기대가 높습니다. 오피스텔은 시세차익이 아파트 대비 제한적이기 때문에, 임대수익만으로는 오피스텔이 근소하게 앞서지만 자본이득까지 포함한 총 수익률 관점에서는 아파트가 여전히 경쟁력 있는 선택입니다.</p>
 
-    <h2>시나리오 C - 빌라 2채, 표면수익률 9%의 실제 모습</h2>
+    <h2 id="sec-4">시나리오 C - 빌라 2채, 표면수익률 9%의 실제 모습</h2>
 
     <p>은퇴자 박성철씨(62세)는 경기도 수원 빌라 2채를 각 9천만원씩, 총 1억8천만원에 매입했습니다. 각각 보증금 2천만원, 월세 55만원으로 임대했습니다. 총 월세 수입은 110만원입니다.</p>
 
@@ -509,7 +442,7 @@
 
     <p>표면수익률 9.43%에서 실질수익률 6.36%로 3.07%p 낮아졌습니다. 비율로는 표면수익률의 67% 수준입니다. 그래도 세 유형 중 실질수익률이 가장 높습니다. 단, 박성철씨가 수리 전화를 직접 받고 현장에 출동하는 시간은 위 표에 들어가 있지 않습니다. 빌라 2채를 직접 관리하는 데 월 6시간을 쓴다고 가정하면, 2026년 최저임금 시간당 10,320원(고용노동부 고시 제2025-47호)으로 환산해도 연 74만원어치의 노동입니다. 실질수익 891만원의 8%가 장부에 잡히지 않는 자기 인건비인 셈입니다.</p>
 
-    <h2>공실 2달이면 대출이자까지 겹쳐 손실이 임대수입의 25%에 달한다</h2>
+    <h2 id="sec-5">공실 2달이면 대출이자까지 겹쳐 손실이 임대수입의 25%에 달한다</h2>
 
     <p>여기서 함정이 있습니다. 오피스텔 임대인들이 가장 흔하게 놓치는 계산 오류입니다. 공실 2개월은 단순히 "2달치 임대료를 못 받는다"가 아닙니다. 대출이자까지 포함하면 실제 손실은 훨씬 큽니다.</p>
 
@@ -562,14 +495,14 @@
 
     <p>이것이 임대수익률 계산에서 반드시 공실률을 먼저 확인해야 하는 이유입니다. 역세권이나 대학가 오피스텔이 일반 주거지 오피스텔보다 수익률이 낮아 보여도 실제로는 더 유리한 경우가 많습니다. 공실 리스크가 낮기 때문입니다.</p>
 
-    <p>임대수익률을 직접 계산해보고 싶다면 <a href="../../calc/realestate/rental/" style="color:#F59E0B;">임대수익률 계산기</a>를 활용해 공실 기간을 변수로 넣어 시뮬레이션할 수 있습니다.</p>
+    <p>임대수익률을 직접 계산해보고 싶다면 <a href="../../calc/realestate/rental/">임대수익률 계산기</a>를 활용해 공실 기간을 변수로 넣어 시뮬레이션할 수 있습니다.</p>
 
-    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+    <div class="adfit-slot ds-ad" style="text-align: center; margin: 28px 0">
       <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-88xhdLeiIK3V35kb" data-ad-width="300" data-ad-height="250"></ins>
       <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
     </div>
 
-    <h2>수선·관리비가 실제로 얼마나 드나</h2>
+    <h2 id="sec-6">수선·관리비가 실제로 얼마나 드나</h2>
 
     <p>임대 물건을 보유한 임대인들이 가장 과소평가하는 비용이 수선비입니다. 매년 나가는 건 아니지만, 세입자가 교체될 때마다 크게 지출되기 때문에 평균을 내면 상당한 금액입니다.</p>
 
@@ -634,9 +567,9 @@
 
     <p>수선비를 최소화하려면 입주 시 임차인과 시설물 현황 확인서를 작성하고, 임차인 귀책 여부를 명확히 기재해두는 것이 중요합니다. 시설 교체 책임 범위를 계약서에 명시하면 불필요한 분쟁을 줄일 수 있습니다.</p>
 
-    <p>전세를 월세로 전환할 때 얼마가 적정한지 궁금하다면 <a href="../posts/jeonse-conversion-rate.html" style="color:#F59E0B;">전월세 전환율 계산법과 적정 금액 산출 방법</a>에서 자세한 내용을 확인할 수 있습니다.</p>
+    <p>전세를 월세로 전환할 때 얼마가 적정한지 궁금하다면 <a href="../posts/jeonse-conversion-rate.html">전월세 전환율 계산법과 적정 금액 산출 방법</a>에서 자세한 내용을 확인할 수 있습니다.</p>
 
-    <h2>임대소득세 - 종합과세 vs 분리과세, 어느 쪽이 유리한가</h2>
+    <h2 id="sec-7">임대소득세 - 종합과세 vs 분리과세, 어느 쪽이 유리한가</h2>
 
     <p>소득세법 제64조의2에 따라 주택 임대소득이 연 2,000만 원 이하인 경우 분리과세(14% 단일세율)와 종합과세 중 선택할 수 있습니다. 어느 쪽이 유리한지는 다른 소득 수준에 따라 달라집니다.</p>
 
@@ -694,9 +627,9 @@
 
     <p>임대소득 2,000만원 초과 시에는 종합과세가 의무화됩니다. 이 경우 다른 소득과 합산해 6~45%의 누진세율이 적용되므로, 임대 물건 수를 늘릴 때 세금 구조를 반드시 미리 검토해야 합니다.</p>
 
-    <p>재산세 계산이 궁금하다면 <a href="../posts/property-tax-guide.html" style="color:#F59E0B;">재산세 계산 방법과 절세 포인트</a>에서 공시가격별 세액을 직접 확인해볼 수 있습니다.</p>
+    <p>재산세 계산이 궁금하다면 <a href="../posts/property-tax-guide.html">재산세 계산 방법과 절세 포인트</a>에서 공시가격별 세액을 직접 확인해볼 수 있습니다.</p>
 
-    <h2>세 유형, 결국 누가 더 남나</h2>
+    <h2 id="sec-8">세 유형, 결국 누가 더 남나</h2>
 
     <p>세 시나리오를 한 표에 모았습니다. 표면수익률 격차는 커 보이지만, 실질수익률 격차는 훨씬 좁습니다.</p>
 
@@ -785,7 +718,7 @@
 
     <p>빌라는 실질수익률 6.36%로 가장 높지만, 관리 부담이 크고 공실 리스크와 수선비 변동성이 심합니다. 노후 빌라일수록 예상치 못한 대형 수리가 발생해 특정 연도 실질수익률이 마이너스가 될 수도 있습니다. 은퇴 후 안정적 현금흐름을 원하는 분보다 적극적 관리가 가능한 분에게 적합합니다.</p>
 
-    <h2>고르기 전에 봐야 할 것</h2>
+    <h2 id="sec-9">고르기 전에 봐야 할 것</h2>
 
     <p>세 유형을 비교한 결과를 바탕으로 실제 물건을 고를 때 확인해야 할 항목을 짚어봅니다. 수익률 계산보다 이 체크리스트가 더 중요할 수 있습니다.</p>
 
@@ -798,51 +731,57 @@
     <h3>보증금 반환 리스크</h3>
     <p>임대보증금이 매매가의 80%를 초과하는 경우 주의가 필요합니다. 전세사기 예방 차원에서 주택도시보증공사(HUG)의 전세보증보험 가입 여부를 임차인이 요구할 수 있고, 이 경우 임대인의 부채비율이 기준을 초과하면 보험 가입이 거절됩니다. 이는 세입자를 구하기 어렵게 만드는 요인이 됩니다.</p>
 
-    <p>취득세가 얼마인지 미리 계산하고 싶다면 <a href="../posts/acquisition-tax-2026.html" style="color:#F59E0B;">2026년 취득세 계산법 및 다주택자 세율 정리</a>에서 주택 수별 세율을 확인할 수 있습니다.</p>
+    <p>취득세가 얼마인지 미리 계산하고 싶다면 <a href="../posts/acquisition-tax-2026.html">2026년 취득세 계산법 및 다주택자 세율 정리</a>에서 주택 수별 세율을 확인할 수 있습니다.</p>
 
     <div class="cta-box">
       <p>내 임대 물건의 공실률·수선비·세금을 모두 반영한 실질수익률을 계산해보세요.</p>
       <a href="../../calc/realestate/rental/" class="cta-btn">임대수익률 계산기 바로가기</a>
     </div>
-    <p style="font-size:13px;color:#6B7280;margin-top:8px;text-align:center">표면수익률뿐 아니라 비용 항목별로 입력해 실질수익률을 직접 확인할 수 있습니다.</p>
+    <div class="review-footer"><p class="review-footer__title">검토 안내</p><p class="review-footer__text">이 글은 공공기관 공개 자료를 기준으로 작성되었으며, 정보 제공 목적입니다. 실제 거래·계약 전 관할 기관 또는 공인중개사에게 확인하세요.</p></div>
+    <p class="ds-t-sub" style="font-size: var(--fs-meta); margin-top: 8px; text-align: center">표면수익률뿐 아니라 비용 항목별로 입력해 실질수익률을 직접 확인할 수 있습니다.</p>
 
-    <h2>자주 묻는 질문 (FAQ)</h2>
+    <h2 id="sec-10">자주 묻는 질문 (FAQ)</h2>
 
-    <div class="faq-item">
-      <div class="faq-q">오피스텔과 아파트 중 임대수익률이 더 높은 쪽은 어디인가요?</div>
+    <details class="faq-item"><summary><h3 class="faq-q">오피스텔과 아파트 중 임대수익률이 더 높은 쪽은 어디인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
       <div class="faq-a">표면수익률만 놓고 보면 오피스텔이 3~6%로 아파트(2~4%)보다 높습니다. 하지만 공실률, 수선비, 재산세를 모두 포함한 실질수익률은 오피스텔이 1.8~2.5%, 아파트가 1.2~2.0% 수준으로 격차가 줄어듭니다. 이 글의 시나리오는 오피스텔 공실을 연 1.2개월로 가정했는데, 공실이 이보다 길어지면 격차는 금방 뒤집힙니다. 공실 리스크가 낮은 인기 지역 아파트가 실질적으로 더 안정적인 수익을 낼 수 있습니다. 여기에 아파트는 자본이득(시세차익) 기대가 높아 총 수익률 관점에서는 오피스텔보다 우위에 있는 경우가 많습니다.</div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-q">임대소득세는 얼마나 내야 하나요? 종합과세와 분리과세 중 어느 쪽이 유리한가요?</div>
+    <details class="faq-item"><summary><h3 class="faq-q">임대소득세는 얼마나 내야 하나요? 종합과세와 분리과세 중 어느 쪽이 유리한가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
       <div class="faq-a">소득세법 제64조의2 제2항에 따라 주택 임대소득이 연 2,000만 원 이하인 경우 분리과세(14%)와 종합과세 중 선택할 수 있습니다. 여기서 필요경비율이 하나가 아니라는 점이 중요합니다. 민간임대주택법상 등록임대주택이면 필요경비 60%에 기본공제 400만원, 미등록이면 필요경비 50%에 기본공제 200만원으로 갈립니다. 미등록 기준으로 월 75만원, 연 900만원 임대수입이라면 (900만 × 0.5) × 14% = 63만원이 세금이고, 분리과세 주택임대소득을 뺀 종합소득금액이 2,000만원 이하여서 기본공제 200만원을 받으면 35만원으로 줄어듭니다. 다른 소득이 없거나 적은 은퇴자라면 종합과세가 오히려 유리할 수 있고, 소득이 많은 직장인이라면 일반적으로 분리과세가 세 부담이 낮습니다.</div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-q">공실 기간 동안 대출이자는 어떻게 처리해야 하나요?</div>
+    <details class="faq-item"><summary><h3 class="faq-q">공실 기간 동안 대출이자는 어떻게 처리해야 하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
       <div class="faq-a">공실 기간에도 대출이자는 그대로 납부해야 합니다. 이것이 레버리지 투자의 핵심 위험입니다. 예를 들어 2억5천만원 오피스텔에 대출 1억원(연 4.5%, 월 37만5천원)이 있다면, 공실 2개월 동안 이자만 75만원을 지출하게 됩니다. 이를 감안하면 실질 공실 비용은 기대임대료 150만원 + 대출이자 75만원 = 225만원입니다. 대출 비율이 높을수록 공실 1개월의 타격이 커지므로, 투자 전 공실률이 낮은 지역을 선택하거나 대출 비율을 낮추는 전략이 필요합니다.</div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-q">빌라나 다가구주택 임대는 아파트·오피스텔보다 수익률이 높다고 하는데 실제로도 그런가요?</div>
+    <details class="faq-item"><summary><h3 class="faq-q">빌라나 다가구주택 임대는 아파트·오피스텔보다 수익률이 높다고 하는데 실제로도 그런가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
       <div class="faq-a">표면수익률만 보면 빌라(5~9%)가 아파트(2~4%)보다 높습니다. 그러나 빌라는 관리사무소가 없어 임대인이 직접 수선·관리를 처리해야 합니다. 세입자 교체 때 드는 도배·장판·청소 비용 자체는 한 세대 기준 80만~195만원으로 같은 조건의 아파트(90만~210만원)와 비슷하지만, 빌라는 여기에 더해 수도관 파열이나 외벽 균열 같은 구조적 수리가 한 번에 150만~300만원씩 별도로 발생합니다. 아파트라면 장기수선충당금과 관리비로 처리될 항목이 빌라에서는 전부 임대인 몫입니다. 여기에 전세사기 위험과 노후 건물의 유지보수 부담까지 감안하면 실질수익률은 6%대로 내려오는 경우가 많습니다. 임대 관리를 직접 할 여유와 역량이 있는 분께 적합한 투자 유형입니다.</div>
-    </div>
+    </details>
 
-    <h2>한 줄 요약</h2>
+    <h2 id="sec-11">한 줄 요약</h2>
 
     <p>이 글에서 계산한 핵심 숫자는 하나입니다. 오피스텔 2억5천만원의 표면수익률 3.75%가 실질수익률 1.83%로 줄어들었습니다. 표면수익률이 1.92%p 과장된 것입니다. 아파트와 비교해 수익률 격차가 1.62%p처럼 보였지만, 실질수익률 기준으로는 0.40%p로 좁혀졌습니다.</p>
 
     <p>임대 물건 선택에서 수익률 숫자는 출발점일 뿐입니다. 공실률, 수선비, 세금, 관리 부담까지 반영한 뒤에야 비로소 실제 수익이 보입니다. 세 유형 중 어느 것이 나은지는 투자금 규모, 관리 역량, 자본이득 기대 여부에 따라 달라집니다. 아파트는 자본이득형, 빌라는 현금흐름형, 오피스텔은 두 가지 모두 중간 정도라는 공식이 실제 계산에서도 확인됩니다.</p>
 
     <p>임대수익률 계산기를 활용해 본인의 물건에 맞는 수치를 직접 입력해보면, 이 글의 시나리오와 어떻게 다른지 바로 확인할 수 있습니다. 투자 결정을 내리기 전에 반드시 공실 1~2개월 시나리오를 넣어보는 것을 권합니다.</p>
+    </div>
+    <aside class="article-info" aria-label="글 작성 및 검토 정보"><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">작성</span><span class="article-info__value">제이퍼 계산기 편집팀</span></div><span class="article-info__sep" aria-hidden="true">|</span><div class="article-info__item"><span class="article-info__label">최종 검토일</span><span class="article-info__value">2026.08.12</span></div></div><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">검토 기준</span><span class="article-info__value">한국부동산원 오피스텔 가격동향조사, 소득세법 제64조의2 제2항, 2026년 기준</span></div></div><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">적용 기준</span><span class="article-info__value">2026년 기준</span></div><span class="article-info__sep" aria-hidden="true">|</span><div class="article-info__item"><span class="article-info__label">참고 기관</span><span class="article-info__value">한국부동산원, 국세청</span></div></div><div class="article-info__calc"><span class="article-info__label">관련 계산기</span> <a href="/calc/realestate/rental/">임대수익률 계산기 &rarr;</a></div><p class="article-info__disclaimer">본 내용은 참고용이며 실제 투자·세무 결정 시 전문가와 상담하시기 바랍니다.</p></aside>
+  </article>
+</main>
 
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
   </div>
-</div>
-
-<footer class="site-footer">
-  <div class="footer-copy">© 2026 제이퍼 계산기. 본 내용은 참고용이며 실제 투자·세무 결정은 전문가와 상담하시기 바랍니다.</div>
 </footer>
-
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: "제이퍼 계산기 편집팀",
@@ -855,9 +794,7 @@ window.ARTICLE_INFO_CONFIG = {
   category: 'realestate'
 };
 </script>
-<script src="/assets/blog-article-info.js"></script>
-<script src="/assets/footer-unified.js" defer></script>
-<script src="/assets/blog-review-footer.js" defer></script>
-
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
 </body>
 </html>

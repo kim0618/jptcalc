@@ -15,6 +15,12 @@
 
 제이퍼 계산기 블로그 글의 **계산 오류·사실 오류·링크 오류**를 상시 검증. 전체 순환 후 다시 처음부터 반복한다.
 
+## ★ 원고 → 생성 체제 (2026-10-19 리뉴얼, 아래 모든 경로 지시보다 우선)
+- **고치는 파일은 원고** `design/blog-source/posts/파일.html`(글)과 `design/blog-source/index.html`(목록 카드)이다. 공개 `blog/posts/`·`blog/index.html`은 생성물이라 직접 고치지 않는다.
+- 원고를 고친 뒤 반드시 다시 생성: `node design/tools/blog_static_info.mjs design/tools/results/blog_info.json design/blog-source/posts/*.html && python3 -I design/tools/build_blog.py`
+- 읽고 검증하는 대상(수식·표·링크·JSON-LD)은 원고와 생성물이 같다. 단 SVG 색·인라인 색·FAQ 접기·작성자 안내는 생성기가 바꾸므로 그 부분은 생성물(`blog/posts/`)로 본다.
+- 생성물 head(title·meta·OG·JSON-LD)는 원고와 같아야 한다: `python3 -I design/tools/head_check.py blog/posts/*.html`은 커밋 기준과 비교하므로, 원고를 고친 커밋 뒤에는 원고 head와 생성물 head를 직접 대조한다.
+
 ## ⚙️ 2단계 모델 분담 (사용자 실제 운영 방식, 2026-07-30 확인)
 
 사용자는 하루에 **① 소넷으로 `/blog` → `/verify` 순서로 돌린 뒤 ② 오푸스로 전환해 전체 분석·검증**을 진행한다. 이 구조를 전제로 각 단계가 할 일을 나눈다. **모델 전환 자체가 자기검증 앵커링을 끊는 장치**이므로(같은 모델이 자기 서사를 승인하는 문제) 이 2단계는 유지한다.
@@ -176,11 +182,11 @@
 
 **F. 금지어·글자수·구조**
 - em dash(—), "계산기으로", "공인인증서" 포함 금지
-- **글자수는 반드시 `node scripts/count-chars.mjs blog/posts/파일.html` 로 측정** (실제 본문 순수 텍스트, head·script·style 제외). 4,000자 미만이면 thin으로 보강 권고, 6,000자 이상이면 양호. ⚠️ 옛 `sed 's/<[^>]*>//g' \| wc -c` 는 CSS/JS를 포함하고 바이트를 세서 실제의 2~4배로 부풀려지므로 절대 쓰지 말 것("15,000자" 기준은 이 착시에서 나온 허수였고, 실측 139편 중앙값은 6,176자). subagent에게도 이 스크립트로 재도록 지시할 것.
+- **글자수는 반드시 `node scripts/count-chars.mjs design/blog-source/posts/파일.html`(원고) 로 측정** (실제 본문 순수 텍스트, head·script·style 제외). 4,000자 미만이면 thin으로 보강 권고, 6,000자 이상이면 양호. ⚠️ 옛 `sed 's/<[^>]*>//g' \| wc -c` 는 CSS/JS를 포함하고 바이트를 세서 실제의 2~4배로 부풀려지므로 절대 쓰지 말 것("15,000자" 기준은 이 착시에서 나온 허수였고, 실측 139편 중앙값은 6,176자). subagent에게도 이 스크립트로 재도록 지시할 것.
 - 비교표 2개 이상, FAQ 3~5개(답변 4문장 이상), SVG 1개, 시나리오 3~4개
 
 **G. 면책·YMYL 신뢰 점검**
-- 모든 글: `blog-review-footer.js` 로드 여부 확인 (`<script src="/assets/blog-review-footer.js">` 또는 `../../assets/blog-review-footer.js`). 로드되면 면책 문구 자동 생성 → 통과. 없을 때만 본문 내 면책 텍스트 직접 확인
+- 모든 글: 생성된 글(`blog/posts/`)에 정적 검토 안내 `<div class="review-footer">`와 작성자 안내 `<aside class="article-info">`가 있는지 확인(리뉴얼 후 blog-review-footer.js는 원고에만 있고 공개 글에는 없어야 정상, 있으면 check-post-chrome.mjs가 실패). 카테고리에 검토 안내 문구가 없는 글(tools·auto·baby·pension-welfare)은 본문 내 면책 텍스트 직접 확인
 - 금융·투자 글: 본문 내 "참고용", "전문가 상의" 등 교육 목적 명시 여부 추가 확인
 - 지나치게 단정적인 의료/법률/투자 조언 ("반드시 OO하면 낫는다" 등)
 
@@ -215,10 +221,11 @@ A는 "각 셀이 맞나"를 보지만, **글이 주장하는 방향·크기 비�
 
 | 무엇을 고쳤나 | 반드시 함께 확인할 곳 |
 |---|---|
-| **title / meta description** | ① 글의 `<title>`·`og:title`·`meta description`·`og:description` ② Article JSON-LD `headline`·`description` ③ `<h1>` ④ BreadcrumbList position 4 `name` ⑤ **`blog/index.html` 카드의 post-title·post-desc** ⑥ **`rss.xml`의 `<title>`·`<description>`** → ⑤⑥ 누락이 실제로 발생했음 |
+| **title / meta description** | ① 글의 `<title>`·`og:title`·`meta description`·`og:description` ② Article JSON-LD `headline`·`description` ③ `<h1>` ④ BreadcrumbList position 4 `name` ⑤ **원고 목록 `design/blog-source/index.html` 카드의 post-title·post-desc(고친 뒤 다시 생성)** ⑥ **`rss.xml`의 `<title>`·`<description>`** → ⑤⑥ 누락이 실제로 발생했음 |
 | **본문 수치 (표·시나리오)** | 도입부·목차형 요약 리스트·highlight-box·반전 섹션·마무리 요약·FAQ·메타 description·SVG 라벨에 같은 숫자가 박혀 있는지 grep |
+| **본문 숫자 (coverText 갱신 확인, 2026-10-20 신설)** | `design/blog-cover-text.csv`의 그 글 행: 큰 숫자(big)·설명(desc)·근거 문장(evidence)이 고친 본문과 여전히 같은지. 근거 문장이 바뀌었으면 행을 고치고(big은 근거 문장 안 글자 그대로, 12자·16자 제한) 표지를 다시 만든다(`build_blog_covers.py <slug>`) |
 | **FAQ 본문** | FAQPage JSON-LD를 문자 단위로 동기화(`\"` 이스케이프만 차이 허용) |
-| **분량이 바뀜** | 읽기시간 = 글자수÷400 재계산 → 글 `post-meta`와 `blog/index.html` 카드 **양쪽** 갱신 |
+| **분량이 바뀜** | 읽기시간 = 글자수÷400 재계산 → 원고 글 `post-meta`와 원고 목록 `design/blog-source/index.html` 카드 **양쪽** 갱신 후 다시 생성 |
 | **SVG 텍스트·막대** | H·I 항목 재검사(축척 비례 + 넘침) |
 | **실질적 내용 변경** | Article JSON-LD `dateModified`, `ARTICLE_INFO_CONFIG.lastReviewed`, `sitemap.xml`의 `<lastmod>` 를 오늘로 |
 
@@ -226,13 +233,14 @@ A는 "각 셀이 맞나"를 보지만, **글이 주장하는 방향·크기 비�
 
 **마지막 게이트 (전부 통과해야 종료)**
 ```bash
-node scripts/check-post-chrome.mjs          # 헤더·스크립트·로고
+node design/tools/blog_static_info.mjs design/tools/results/blog_info.json design/blog-source/posts/*.html && python3 -I design/tools/build_blog.py   # 원고 → 생성
+node scripts/check-post-chrome.mjs          # 생성물이 새 틀인지(옛 스크립트·옛 헤더 있으면 실패)
 node scripts/find-orphan-calcs.mjs          # 고아 계산기
 node scripts/check-noindex-excluded.mjs     # noindex 15편 부활 검출
 node scripts/check-rate-tables.mjs          # 정책·기준표 카테고리 9종 + 부결안 회귀
-node scripts/count-chars.mjs blog/posts/파일.html
+node scripts/count-chars.mjs design/blog-source/posts/파일.html   # 원고로 잰다
 python3 -c "import xml.dom.minidom as m;[m.parse(f) for f in ['sitemap.xml','rss.xml']]"
-grep -n "—\|계산기으로\|공인인증서" blog/posts/파일.html   # 0건이어야 함
+grep -n "—\|계산기으로\|공인인증서" design/blog-source/posts/파일.html   # 0건이어야 함
 ```
 
 **수정으로 새 정책수치가 확정됐으면 `data-points.md`에 등재한다** (수치·근거 원문 위치(조·항·별표)·확인일·검색 패턴·영향 페이지). 등재하지 않으면 `/jptcalc-refresh` 회전 점검에서 영구히 빠진다. 2026-07-30 배치에서 동물등록 관련 수치 10여 개를 원문까지 확인해 확정했는데 등재가 0건이었다.
@@ -262,7 +270,7 @@ grep -n "—\|계산기으로\|공인인증서" blog/posts/파일.html   # 0건�
 - 모든 계산은 부모 Claude가 **직접 Bash로 재계산**. subagent 수치 그대로 신뢰 금지
 - `/blog` 스킬로 새 글이 추가되면 자동으로 다음 검증 대상에 포함됨 (verified-posts.md에 없으므로)
 - 검증 중 HTML 구조·스타일 개선은 하지 말 것. 사실·수치·링크 오류만 수정
-- 글 한 편 수정으로 index.html·sitemap.xml이 영향받으면 안 되지만, 제목·desc 변경 시에는 index.html 카드 텍스트도 동기화
+- 글 한 편 수정으로 목록·sitemap.xml이 영향받으면 안 되지만, 제목·desc 변경 시에는 원고 목록 카드 텍스트도 동기화(공개 blog/index.html은 다시 생성으로 반영)
 
 ## 완료 후 로그 기록
 

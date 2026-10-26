@@ -38,6 +38,9 @@
         .jcalc-next__calcs{grid-template-columns:1fr;gap:6px}
         .jcalc-next__calc{justify-content:flex-start;padding:12px 13px}
       }
+    `;
+    // 옛 화면(dti·pyeong)만: 리뉴얼 페이지의 알림은 base.css가 토큰으로 그린다(여기서 덮으면 탭바와 겹침)
+    if (!document.querySelector('link[href*="/assets/ds/base.css"]')) style.textContent += `
       .toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#111827;color:#fff;padding:10px 20px;border-radius:10px;font-size:13px;font-weight:600;z-index:9999;opacity:0;transition:opacity .3s;pointer-events:none}
       .toast.show{opacity:1}
     `;
@@ -62,7 +65,7 @@
     if (loadHtml2Canvas._promise) return loadHtml2Canvas._promise;
     loadHtml2Canvas._promise = new Promise((resolve, reject) => {
       const s = document.createElement('script');
-      s.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+      s.src = '/assets/vendor/html2canvas/1.4.1/html2canvas.min.js?v=e87e5507';
       s.onload = () => resolve(window.html2canvas);
       s.onerror = reject;
       document.head.appendChild(s);
@@ -255,12 +258,47 @@
     return String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
   }
 
+  /* 글자 복사(10/21): navigator.clipboard → 없거나 실패하면 textarea + execCommand('copy') → 그것도 안 되면
+     글자를 선택해 둔 상자를 띄우고 "길게 눌러 복사" 안내. 어떤 경우에도 오류를 던지지 않는다.
+     toast: 알림 함수(페이지 자체 알림을 쓰는 곳은 넘긴다). window.jptCopyText로도 쓴다 */
+  function legacyCopy(text){
+    try {
+      const ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.top = '-1000px'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, text.length);
+      const ok = document.execCommand && document.execCommand('copy');
+      document.body.removeChild(ta); return !!ok;
+    } catch (e) { return false; }
+  }
+  function manualCopyBox(text, toast){
+    let box = document.getElementById('jcalc-copybox');
+    if (!box){
+      box = document.createElement('div'); box.id = 'jcalc-copybox'; box.className = 'jcalc-copybox'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-label', '복사할 글자');
+      box.innerHTML = '<p>자동 복사가 안 됩니다. 아래 글자를 길게 눌러 복사해 주세요.</p><textarea readonly rows="6"></textarea><button type="button">닫기</button>';
+      box.querySelector('button').addEventListener('click', () => { box.hidden = true; });
+      document.body.appendChild(box);
+    }
+    const ta = box.querySelector('textarea'); ta.value = text; box.hidden = false;
+    try { ta.focus({ preventScroll: true }); ta.select(); } catch (e) {}
+    toast('길게 눌러 복사해 주세요');
+  }
+  function copyText(text, toast){
+    toast = toast || showToast;
+    const done = () => toast('클립보드에 복사되었습니다');
+    const fallback = () => { if (legacyCopy(text)) done(); else manualCopyBox(text, toast); };
+    try {
+      if (navigator.clipboard && window.isSecureContext !== false) { navigator.clipboard.writeText(text).then(done, fallback); return; }
+    } catch (e) {}
+    fallback();
+  }
+  window.jptCopyText = copyText;
+
   function copySnapshot(getSnap){
     const snap = getSnap();
     if (!snap){ showToast('먼저 계산을 해주세요'); return; }
     const url = location.origin + location.pathname;
     const text = `[${snap.title}]\n` + snap.rows.map(r => `${r.label}: ${r.value}`).join('\n') + `\n\n📊 제이퍼 계산기에서 계산하기\n${url}`;
-    navigator.clipboard.writeText(text).then(()=>showToast('클립보드에 복사되었습니다')).catch(()=>showToast('복사 실패'));
+    copyText(text);
   }
 
   function shareSnapshot(getSnap){

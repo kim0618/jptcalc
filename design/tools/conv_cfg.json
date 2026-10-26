@@ -1,0 +1,1991 @@
+{
+ "salary/take-home-pay": {
+  "next": [
+   {
+    "key": "job-change",
+    "path": "/calc/salary/job-change/",
+    "title": "이직 연봉 비교 계산기",
+    "sub": "현재 실수령을 유지하거나 넘으려면 제안 연봉이 얼마여야 하는지 역산합니다. 퇴직금 정산, 수습기간 급여 삭감도 변수로 반영됩니다.",
+    "params": {
+     "salary": "s0-salary"
+    }
+   },
+   {
+    "key": "raise-rate",
+    "path": "/calc/salary/raise-rate/",
+    "title": "연봉 인상률 계산기",
+    "sub": "이전 연봉과 새 연봉을 넣으면 인상률(%)과 월 실수령 증가액이 산출됩니다. 과표 구간이 바뀔 때 세후 인상 폭이 줄어드는 현상도 확인할 수 있습니다.",
+    "params": {
+     "salary": "s0-salary"
+    }
+   }
+  ],
+  "primary": [
+   "이직 연봉 비교 계산",
+   "/calc/salary/job-change/",
+   {
+    "salary": "s0-salary"
+   }
+  ],
+  "prefill": {
+   "s0-salary": "salary"
+  }
+ },
+ "salary/bonus-pay": {
+  "next": [
+   {
+    "key": "take-home-pay",
+    "path": "/calc/salary/take-home-pay/",
+    "title": "연봉 실수령액 계산기",
+    "sub": "세전 연봉에서 국민연금·건강·장기요양·고용보험과 근로소득세·지방소득세를 차감해 월 실수령액을 산출합니다. 부양가족 수·비과세 식대까지 반영됩니다."
+   },
+   {
+    "key": "hourly-wage",
+    "path": "/calc/salary/hourly-wage/",
+    "title": "시급·일급 변환 계산기",
+    "sub": "연봉·월급·주급·일급·시급을 상호 환산합니다. 주휴수당 포함 월 209시간 기준과 2026년 최저시급 10,320원 적용 여부를 선택할 수 있습니다."
+   }
+  ],
+  "primary": [
+   "연봉 실수령액 계산",
+   "/calc/salary/take-home-pay/"
+  ]
+ },
+ "salary/hourly-wage": {
+  "next": [
+   {
+    "key": "take-home-pay",
+    "path": "/calc/salary/take-home-pay/",
+    "title": "연봉 실수령액 계산기",
+    "sub": "세전 연봉에서 국민연금·건강·장기요양·고용보험과 근로소득세·지방소득세를 차감해 월 실수령액을 산출합니다. 부양가족 수·비과세 식대까지 반영됩니다.",
+    "params": {
+     "salary": "s2-salary"
+    }
+   },
+   {
+    "key": "weekly-holiday-pay",
+    "path": "/calc/salary/weekly-holiday-pay/",
+    "title": "주휴수당 계산기",
+    "sub": "시급·1일 근무시간·주 근무일수로 주휴수당을 계산합니다. 주 15시간 이상 근무 시 (소정근로시간÷40)×8시간으로 비례 산정하며 월 환산액까지 확인됩니다."
+   }
+  ],
+  "primary": [
+   "연봉 실수령액 계산",
+   "/calc/salary/take-home-pay/",
+   {
+    "salary": "s2-salary"
+   }
+  ],
+  "prefill": {
+   "s2-salary": "salary"
+  },
+  "required": [
+   "s2-salary",
+   "s2-hour-wage"
+  ]
+ },
+ "salary/job-change": {
+  "next": [
+   {
+    "key": "take-home-pay",
+    "path": "/calc/salary/take-home-pay/",
+    "title": "연봉 실수령액 계산기",
+    "sub": "세전 연봉에서 국민연금·건강·장기요양·고용보험과 근로소득세·지방소득세를 차감해 월 실수령액을 산출합니다. 부양가족 수·비과세 식대까지 반영됩니다.",
+    "params": {
+     "salary": "s1-current"
+    }
+   },
+   {
+    "key": "comparison",
+    "path": "/calc/salary/comparison/",
+    "title": "연봉 비교 계산기",
+    "sub": "두 연봉의 월 실수령액·연간 실수령·공제액을 표로 나란히 비교합니다. 한계세율 구간 차이에 따른 세후 효과까지 한눈에 확인됩니다.",
+    "params": {
+     "salary": "s1-current"
+    }
+   }
+  ],
+  "primary": [
+   "연봉 실수령액 계산",
+   "/calc/salary/take-home-pay/",
+   {
+    "salary": "s1-current"
+   }
+  ],
+  "prefill": {
+   "s1-current": "salary"
+  }
+ },
+ "salary/comparison": {
+  "next": [
+   {
+    "key": "take-home-pay",
+    "path": "/calc/salary/take-home-pay/",
+    "title": "연봉 실수령액 계산기",
+    "sub": "세전 연봉에서 국민연금·건강·장기요양·고용보험과 근로소득세·지방소득세를 차감해 월 실수령액을 산출합니다. 부양가족 수·비과세 식대까지 반영됩니다.",
+    "params": {
+     "salary": "s4-a"
+    }
+   },
+   {
+    "key": "job-change",
+    "path": "/calc/salary/job-change/",
+    "title": "이직 연봉 비교 계산기",
+    "sub": "현재 실수령을 유지하거나 넘으려면 제안 연봉이 얼마여야 하는지 역산합니다. 퇴직금 정산, 수습기간 급여 삭감도 변수로 반영됩니다.",
+    "params": {
+     "salary": "s4-a"
+    }
+   }
+  ],
+  "primary": [
+   "연봉 실수령액 계산",
+   "/calc/salary/take-home-pay/",
+   {
+    "salary": "s4-a"
+   }
+  ],
+  "prefill": {
+   "s4-a": "salary"
+  }
+ },
+ "salary/raise-rate": {
+  "next": [
+   {
+    "key": "take-home-pay",
+    "path": "/calc/salary/take-home-pay/",
+    "title": "연봉 실수령액 계산기",
+    "sub": "세전 연봉에서 국민연금·건강·장기요양·고용보험과 근로소득세·지방소득세를 차감해 월 실수령액을 산출합니다. 부양가족 수·비과세 식대까지 반영됩니다.",
+    "params": {
+     "salary": "s3-after"
+    }
+   },
+   {
+    "key": "job-change",
+    "path": "/calc/salary/job-change/",
+    "title": "이직 연봉 비교 계산기",
+    "sub": "현재 실수령을 유지하거나 넘으려면 제안 연봉이 얼마여야 하는지 역산합니다. 퇴직금 정산, 수습기간 급여 삭감도 변수로 반영됩니다."
+   }
+  ],
+  "primary": [
+   "연봉 실수령액 계산",
+   "/calc/salary/take-home-pay/",
+   {
+    "salary": "s3-after"
+   }
+  ],
+  "prefill": {
+   "s3-before": "salary"
+  }
+ },
+ "salary/weekly-holiday-pay": {
+  "next": [
+   {
+    "key": "annual-leave-pay",
+    "path": "/calc/salary/annual-leave-pay/",
+    "title": "연차수당 계산기",
+    "sub": "월 통상임금과 미사용 연차일수로 연차수당을 계산합니다. 1일 통상임금=(월급÷209)×8 기준이며, 연말·퇴직 시 받을 미사용 연차 보상액을 확인합니다."
+   },
+   {
+    "key": "premium-pay",
+    "path": "/calc/salary/premium-pay/",
+    "title": "가산수당 계산기",
+    "sub": "통상시급과 근무시간으로 연장(1.5배)·야간(0.5배 가산)·휴일(1.5배, 8시간 초과 2배) 근로수당을 한 번에 계산합니다. 야간에 겹친 연장근무의 가산 합산까지 반영합니다."
+   }
+  ],
+  "primary": [
+   "연차수당 계산",
+   "/calc/salary/annual-leave-pay/"
+  ]
+ },
+ "salary/annual-leave-pay": {
+  "next": [
+   {
+    "key": "dismissal-notice-pay",
+    "path": "/calc/salary/dismissal-notice-pay/",
+    "title": "해고예고수당 계산기",
+    "sub": "30일 전 예고 없이 해고됐을 때 받는 30일분 통상임금을 계산합니다. 1일 통상임금=(월급÷209)×8 기준이며, 계속근로 3개월 미만 예외까지 안내합니다.",
+    "params": {
+     "monthly": "wage"
+    }
+   },
+   {
+    "key": "premium-pay",
+    "path": "/calc/salary/premium-pay/",
+    "title": "가산수당 계산기",
+    "sub": "통상시급과 근무시간으로 연장(1.5배)·야간(0.5배 가산)·휴일(1.5배, 8시간 초과 2배) 근로수당을 한 번에 계산합니다. 야간에 겹친 연장근무의 가산 합산까지 반영합니다.",
+    "params": {
+     "monthly": "wage"
+    }
+   }
+  ],
+  "primary": [
+   "해고예고수당 계산",
+   "/calc/salary/dismissal-notice-pay/",
+   {
+    "monthly": "wage"
+   }
+  ]
+ },
+ "salary/premium-pay": {
+  "next": [
+   {
+    "key": "ordinary-wage",
+    "path": "/calc/salary/ordinary-wage/",
+    "title": "통상임금 계산기",
+    "sub": "기본급·고정수당·정기상여금으로 월 통상임금과 통상시급(÷209)을 산정하고, 연장·야간·휴일근로수당 단가까지 자동 계산합니다. 2024년 대법원 판결로 재직조건부 상여금도 포함됩니다."
+   },
+   {
+    "key": "weekly-holiday-pay",
+    "path": "/calc/salary/weekly-holiday-pay/",
+    "title": "주휴수당 계산기",
+    "sub": "시급·1일 근무시간·주 근무일수로 주휴수당을 계산합니다. 주 15시간 이상 근무 시 (소정근로시간÷40)×8시간으로 비례 산정하며 월 환산액까지 확인됩니다."
+   }
+  ],
+  "primary": [
+   "통상임금 계산",
+   "/calc/salary/ordinary-wage/"
+  ],
+  "prefill": {
+   "monthly": "monthly"
+  }
+ },
+ "salary/ordinary-wage": {
+  "next": [
+   {
+    "key": "premium-pay",
+    "path": "/calc/salary/premium-pay/",
+    "title": "가산수당 계산기",
+    "sub": "통상시급과 근무시간으로 연장(1.5배)·야간(0.5배 가산)·휴일(1.5배, 8시간 초과 2배) 근로수당을 한 번에 계산합니다. 야간에 겹친 연장근무의 가산 합산까지 반영합니다."
+   },
+   {
+    "key": "annual-leave-pay",
+    "path": "/calc/salary/annual-leave-pay/",
+    "title": "연차수당 계산기",
+    "sub": "월 통상임금과 미사용 연차일수로 연차수당을 계산합니다. 1일 통상임금=(월급÷209)×8 기준이며, 연말·퇴직 시 받을 미사용 연차 보상액을 확인합니다."
+   }
+  ],
+  "primary": [
+   "가산수당 계산",
+   "/calc/salary/premium-pay/"
+  ]
+ },
+ "salary/average-wage": {
+  "next": [
+   {
+    "key": "severance",
+    "path": "/calc/salary/severance/",
+    "title": "퇴직금 계산기",
+    "sub": "근로기준법 기준 '평균임금 × 30일 × 재직일수/365' 공식을 적용합니다. 입사일·퇴사일을 입력하면 DB형·DC형 차이까지 비교할 수 있습니다."
+   },
+   {
+    "key": "unemployment",
+    "path": "/calc/salary/unemployment/",
+    "title": "실업급여 계산기",
+    "sub": "평균임금의 60%, 1일 상한 68,100원, 나이·가입기간별 120~270일 수급기간을 자동 산정합니다. 구직급여 첫 지급일 예측도 제공합니다."
+   }
+  ],
+  "primary": [
+   "퇴직금 계산",
+   "/calc/salary/severance/"
+  ]
+ },
+ "salary/severance": {
+  "next": [
+   {
+    "key": "unemployment",
+    "path": "/calc/salary/unemployment/",
+    "title": "실업급여 계산기",
+    "sub": "평균임금의 60%, 1일 상한 68,100원, 나이·가입기간별 120~270일 수급기간을 자동 산정합니다. 구직급여 첫 지급일 예측도 제공합니다.",
+    "params": {
+     "monthly": "rt-monthly"
+    }
+   },
+   {
+    "key": "average-wage",
+    "path": "/calc/salary/average-wage/",
+    "title": "평균임금 계산기",
+    "sub": "직전 3개월 급여·상여·연차수당으로 1일 평균임금을 산정하고, 휴업수당·산재 휴업급여(70%)와 퇴직금 30일분 환산까지 보여줍니다. 통상임금 최저보장 비교도 지원합니다."
+   }
+  ],
+  "primary": [
+   "실업급여 계산",
+   "/calc/salary/unemployment/",
+   {
+    "monthly": "rt-monthly"
+   }
+  ]
+ },
+ "salary/unemployment": {
+  "next": [
+   {
+    "key": "severance",
+    "path": "/calc/salary/severance/",
+    "title": "퇴직금 계산기",
+    "sub": "근로기준법 기준 '평균임금 × 30일 × 재직일수/365' 공식을 적용합니다. 입사일·퇴사일을 입력하면 DB형·DC형 차이까지 비교할 수 있습니다."
+   },
+   {
+    "key": "dismissal-notice-pay",
+    "path": "/calc/salary/dismissal-notice-pay/",
+    "title": "해고예고수당 계산기",
+    "sub": "30일 전 예고 없이 해고됐을 때 받는 30일분 통상임금을 계산합니다. 1일 통상임금=(월급÷209)×8 기준이며, 계속근로 3개월 미만 예외까지 안내합니다."
+   }
+  ],
+  "primary": [
+   "퇴직금 계산",
+   "/calc/salary/severance/"
+  ],
+  "prefill": {
+   "ue-monthly": "monthly"
+  }
+ },
+ "salary/dismissal-notice-pay": {
+  "next": [
+   {
+    "key": "severance",
+    "path": "/calc/salary/severance/",
+    "title": "퇴직금 계산기",
+    "sub": "근로기준법 기준 '평균임금 × 30일 × 재직일수/365' 공식을 적용합니다. 입사일·퇴사일을 입력하면 DB형·DC형 차이까지 비교할 수 있습니다."
+   },
+   {
+    "key": "unemployment",
+    "path": "/calc/salary/unemployment/",
+    "title": "실업급여 계산기",
+    "sub": "평균임금의 60%, 1일 상한 68,100원, 나이·가입기간별 120~270일 수급기간을 자동 산정합니다. 구직급여 첫 지급일 예측도 제공합니다."
+   }
+  ],
+  "primary": [
+   "퇴직금 계산",
+   "/calc/salary/severance/"
+  ],
+  "prefill": {
+   "dn-monthly": "monthly"
+  }
+ },
+ "tax/withholding": {
+  "next": [
+   {
+    "key": "freelancer-income",
+    "path": "/calc/tax/freelancer-income/",
+    "title": "월 순수입 계산기",
+    "sub": "월평균 매출에서 원천징수·지역건강보험·국민연금·경비를 차감해 실제 가처분소득을 계산합니다. 월 생활비·저축 목표 설정에 도움이 됩니다."
+   },
+   {
+    "key": "income-tax",
+    "path": "/calc/tax/income-tax/",
+    "title": "종합소득세 계산기",
+    "sub": "단순경비율·기준경비율, 기본공제·인적공제, 자녀세액공제를 반영해 5월 신고 예상 세액을 산출합니다. 환급·추가 납부 여부를 미리 판단할 수 있습니다."
+   }
+  ],
+  "primary": [
+   "월 순수입 계산",
+   "/calc/tax/freelancer-income/"
+  ],
+  "required": [
+   "wh-amount"
+  ]
+ },
+ "tax/income-tax": {
+  "next": [
+   {
+    "key": "withholding",
+    "path": "/calc/tax/withholding/",
+    "title": "3.3% 원천징수 계산기",
+    "sub": "계약금액에서 소득세 3%와 지방소득세 0.3%를 제외한 실제 입금액을 즉시 확인합니다. 단가 제안·거래명세서 검토에 바로 활용할 수 있습니다."
+   },
+   {
+    "key": "yellow-umbrella",
+    "path": "/calc/tax/yellow-umbrella/",
+    "title": "노란우산공제 계산기",
+    "sub": "연 소득과 납입액을 입력하면 소득공제 한도와 예상 절세액을 계산합니다. 소득 4천만원 이하 500만원·1억원 이하 300만원·1억원 초과 200만원 한도. 2026년 종합소득세 세율 기준."
+   }
+  ],
+  "primary": [
+   "3.3% 원천징수 계산",
+   "/calc/tax/withholding/"
+  ]
+ },
+ "tax/vat": {
+  "next": [
+   {
+    "key": "income-tax",
+    "path": "/calc/tax/income-tax/",
+    "title": "종합소득세 계산기",
+    "sub": "단순경비율·기준경비율, 기본공제·인적공제, 자녀세액공제를 반영해 5월 신고 예상 세액을 산출합니다. 환급·추가 납부 여부를 미리 판단할 수 있습니다."
+   },
+   {
+    "key": "withholding",
+    "path": "/calc/tax/withholding/",
+    "title": "3.3% 원천징수 계산기",
+    "sub": "계약금액에서 소득세 3%와 지방소득세 0.3%를 제외한 실제 입금액을 즉시 확인합니다. 단가 제안·거래명세서 검토에 바로 활용할 수 있습니다."
+   }
+  ],
+  "primary": [
+   "종합소득세 계산",
+   "/calc/tax/income-tax/"
+  ]
+ },
+ "tax/freelancer-income": {
+  "next": [
+   {
+    "key": "withholding",
+    "path": "/calc/tax/withholding/",
+    "title": "3.3% 원천징수 계산기",
+    "sub": "계약금액에서 소득세 3%와 지방소득세 0.3%를 제외한 실제 입금액을 즉시 확인합니다. 단가 제안·거래명세서 검토에 바로 활용할 수 있습니다."
+   },
+   {
+    "key": "income-tax",
+    "path": "/calc/tax/income-tax/",
+    "title": "종합소득세 계산기",
+    "sub": "단순경비율·기준경비율, 기본공제·인적공제, 자녀세액공제를 반영해 5월 신고 예상 세액을 산출합니다. 환급·추가 납부 여부를 미리 판단할 수 있습니다."
+   }
+  ],
+  "primary": [
+   "3.3% 원천징수 계산",
+   "/calc/tax/withholding/"
+  ]
+ },
+ "tax/four-insurance": {
+  "next": [
+   {
+    "key": "insurance-comparison",
+    "path": "/calc/tax/insurance-comparison/",
+    "title": "4대보험 비교 계산기",
+    "sub": "같은 매출일 때 직장가입자(회사 분담)와 지역가입자(전액 본인 부담) 보험료·세금을 나란히 비교합니다. 프리랜서 전환·복귀 의사결정에 유용합니다.",
+    "params": {
+     "salary_m": "inpSalary"
+    }
+   },
+   {
+    "key": "regional-health-insurance",
+    "path": "/calc/tax/regional-health-insurance/",
+    "title": "지역가입자 건강보험료 계산기",
+    "sub": "연소득과 재산세 과세표준을 입력하면 지역가입자 건강보험료와 장기요양보험료를 계산합니다. 2026년 보험료율 7.19%·재산 부과점수표·1억 기본공제·자동차 폐지를 반영합니다."
+   }
+  ],
+  "primary": [
+   "4대보험 비교 계산",
+   "/calc/tax/insurance-comparison/",
+   {
+    "salary_m": "inpSalary"
+   }
+  ],
+  "prefill": {
+   "inpSalary": "salary_m"
+  },
+  "required": [
+   "inpSalary"
+  ]
+ },
+ "tax/insurance-comparison": {
+  "next": [
+   {
+    "key": "four-insurance",
+    "path": "/calc/tax/four-insurance/",
+    "title": "4대보험료 계산기",
+    "sub": "월급에서 빠지는 국민연금·건강보험·장기요양·고용보험을 한 번에 계산합니다. 근로자·사용자 부담분 구분. 국민연금 상한(659만원) 자동 적용. 2026년 최신 요율.",
+    "params": {
+     "salary_m": "cmp-salary"
+    }
+   },
+   {
+    "key": "regional-health-insurance",
+    "path": "/calc/tax/regional-health-insurance/",
+    "title": "지역가입자 건강보험료 계산기",
+    "sub": "연소득과 재산세 과세표준을 입력하면 지역가입자 건강보험료와 장기요양보험료를 계산합니다. 2026년 보험료율 7.19%·재산 부과점수표·1억 기본공제·자동차 폐지를 반영합니다."
+   }
+  ],
+  "primary": [
+   "4대보험료 계산",
+   "/calc/tax/four-insurance/",
+   {
+    "salary_m": "cmp-salary"
+   }
+  ],
+  "prefill": {
+   "cmp-salary": "salary_m"
+  }
+ },
+ "tax/regional-health-insurance": {
+  "next": [
+   {
+    "key": "four-insurance",
+    "path": "/calc/tax/four-insurance/",
+    "title": "4대보험료 계산기",
+    "sub": "월급에서 빠지는 국민연금·건강보험·장기요양·고용보험을 한 번에 계산합니다. 근로자·사용자 부담분 구분. 국민연금 상한(659만원) 자동 적용. 2026년 최신 요율."
+   },
+   {
+    "key": "insurance-comparison",
+    "path": "/calc/tax/insurance-comparison/",
+    "title": "4대보험 비교 계산기",
+    "sub": "같은 매출일 때 직장가입자(회사 분담)와 지역가입자(전액 본인 부담) 보험료·세금을 나란히 비교합니다. 프리랜서 전환·복귀 의사결정에 유용합니다."
+   }
+  ],
+  "primary": [
+   "4대보험료 계산",
+   "/calc/tax/four-insurance/"
+  ],
+  "required": [
+   "inpIncome|inpProperty"
+  ]
+ },
+ "tax/medical-expense": {
+  "next": [
+   {
+    "key": "copay-ceiling",
+    "path": "/calc/tax/copay-ceiling/",
+    "title": "본인부담상한제 환급 계산기",
+    "sub": "소득분위와 연간 본인부담 의료비를 입력하면 상한액 초과분 예상 환급금을 계산합니다. 2026년 분위별 상한액(1분위 90만~10분위 843만)과 요양병원 120일 초과 기준을 반영합니다."
+   },
+   {
+    "key": "yellow-umbrella",
+    "path": "/calc/tax/yellow-umbrella/",
+    "title": "노란우산공제 계산기",
+    "sub": "연 소득과 납입액을 입력하면 소득공제 한도와 예상 절세액을 계산합니다. 소득 4천만원 이하 500만원·1억원 이하 300만원·1억원 초과 200만원 한도. 2026년 종합소득세 세율 기준."
+   }
+  ],
+  "primary": [
+   "본인부담상한제 환급 계산",
+   "/calc/tax/copay-ceiling/"
+  ]
+ },
+ "tax/copay-ceiling": {
+  "next": [
+   {
+    "key": "medical-expense",
+    "path": "/calc/tax/medical-expense/",
+    "title": "의료비 세액공제 계산기",
+    "sub": "총급여 3%를 초과한 의료비의 15%(난임시술 20~30%)를 세액에서 공제합니다. 본인·65세 이상·장애인 의료비는 한도 없이 반영됩니다."
+   },
+   {
+    "key": "regional-health-insurance",
+    "path": "/calc/tax/regional-health-insurance/",
+    "title": "지역가입자 건강보험료 계산기",
+    "sub": "연소득과 재산세 과세표준을 입력하면 지역가입자 건강보험료와 장기요양보험료를 계산합니다. 2026년 보험료율 7.19%·재산 부과점수표·1억 기본공제·자동차 폐지를 반영합니다."
+   }
+  ],
+  "primary": [
+   "의료비 세액공제 계산",
+   "/calc/tax/medical-expense/"
+  ],
+  "required": [
+   "inpMedical"
+  ]
+ },
+ "tax/yellow-umbrella": {
+  "next": [
+   {
+    "key": "income-tax",
+    "path": "/calc/tax/income-tax/",
+    "title": "종합소득세 계산기",
+    "sub": "단순경비율·기준경비율, 기본공제·인적공제, 자녀세액공제를 반영해 5월 신고 예상 세액을 산출합니다. 환급·추가 납부 여부를 미리 판단할 수 있습니다."
+   },
+   {
+    "key": "medical-expense",
+    "path": "/calc/tax/medical-expense/",
+    "title": "의료비 세액공제 계산기",
+    "sub": "총급여 3%를 초과한 의료비의 15%(난임시술 20~30%)를 세액에서 공제합니다. 본인·65세 이상·장애인 의료비는 한도 없이 반영됩니다."
+   }
+  ],
+  "primary": [
+   "종합소득세 계산",
+   "/calc/tax/income-tax/"
+  ],
+  "required": [
+   "inpIncome",
+   "inpPayment"
+  ]
+ },
+ "finance/deposit": {
+  "next": [
+   {
+    "key": "compound",
+    "path": "/calc/finance/compound/",
+    "title": "복리 계산기",
+    "sub": "연복리·월복리·일복리 설정을 지원합니다. 원금·금리·기간에 따라 자산이 몇 배로 불어나는지, 단리와 격차가 얼마나 벌어지는지 10년·20년·30년 단위로 비교합니다.",
+    "params": {
+     "principal": "dep-amount"
+    }
+   },
+   {
+    "key": "savings",
+    "path": "/calc/finance/savings/",
+    "title": "적금 만기 계산기",
+    "sub": "월 납입액·기간·금리를 입력하면 만기 수령액과 실효수익률을 계산합니다. 적금은 표시 금리의 약 절반이 실효수익률이 되는 이유를 숫자로 확인할 수 있습니다."
+   }
+  ],
+  "primary": [
+   "복리 계산",
+   "/calc/finance/compound/",
+   {
+    "principal": "dep-amount"
+   }
+  ],
+  "prefill": {
+   "dep-amount": "principal"
+  }
+ },
+ "finance/savings": {
+  "next": [
+   {
+    "key": "youth-leap-account",
+    "path": "/calc/finance/youth-leap-account/",
+    "title": "청년도약계좌 계산기",
+    "sub": "월 납입액·개인소득 구간을 넣으면 정부기여금(월 최대 33,000원)과 비과세 이자를 합산한 5년 만기 수령액을 계산합니다. 월 70만원·연소득 2,400만원 이하 가입 시 약 5,000만원이 됩니다.",
+    "params": {
+     "monthly": "sav-monthly"
+    }
+   },
+   {
+    "key": "deposit",
+    "path": "/calc/finance/deposit/",
+    "title": "예금 이자 계산기",
+    "sub": "원금과 연이율, 예치 기간을 입력하면 세전 이자와 이자소득세 15.4% 공제 후 세후 수령액을 동시에 산출합니다. 여러 은행 금리 비교 시 실수령액 기준으로 확인할 수 있습니다."
+   }
+  ],
+  "primary": [
+   "청년도약계좌 계산",
+   "/calc/finance/youth-leap-account/",
+   {
+    "monthly": "sav-monthly"
+   }
+  ],
+  "prefill": {
+   "sav-monthly": "monthly"
+  }
+ },
+ "finance/compound": {
+  "next": [
+   {
+    "key": "deposit",
+    "path": "/calc/finance/deposit/",
+    "title": "예금 이자 계산기",
+    "sub": "원금과 연이율, 예치 기간을 입력하면 세전 이자와 이자소득세 15.4% 공제 후 세후 수령액을 동시에 산출합니다. 여러 은행 금리 비교 시 실수령액 기준으로 확인할 수 있습니다.",
+    "params": {
+     "principal": "comp-principal"
+    }
+   },
+   {
+    "key": "investment",
+    "path": "/calc/finance/investment/",
+    "title": "투자 수익률 계산기",
+    "sub": "시초가·종가·투자 기간을 입력하면 단순 수익률과 연환산 복리 수익률(CAGR)을 동시에 산출합니다. 기간이 다른 투자 성과를 비교할 때 활용합니다."
+   }
+  ],
+  "primary": [
+   "예금 이자 계산",
+   "/calc/finance/deposit/",
+   {
+    "principal": "comp-principal"
+   }
+  ],
+  "prefill": {
+   "comp-principal": "principal"
+  }
+ },
+ "finance/youth-leap-account": {
+  "next": [
+   {
+    "key": "youth-future-savings",
+    "path": "/calc/finance/youth-future-savings/",
+    "title": "청년미래적금 계산기",
+    "sub": "유형(일반형 6%·우대형 12%)과 월 납입액을 넣으면 정부기여금·비과세 이자를 합산한 3년 만기 수령액과 일반 과세적금 환산 수익률을 계산합니다. 우대형 월 50만원 가입 시 약 2,265만원으로 체감 연 19%대입니다.",
+    "params": {
+     "monthly": "i-monthly"
+    }
+   },
+   {
+    "key": "savings",
+    "path": "/calc/finance/savings/",
+    "title": "적금 만기 계산기",
+    "sub": "월 납입액·기간·금리를 입력하면 만기 수령액과 실효수익률을 계산합니다. 적금은 표시 금리의 약 절반이 실효수익률이 되는 이유를 숫자로 확인할 수 있습니다.",
+    "params": {
+     "monthly": "i-monthly"
+    }
+   }
+  ],
+  "primary": [
+   "청년미래적금 계산",
+   "/calc/finance/youth-future-savings/",
+   {
+    "monthly": "i-monthly"
+   }
+  ],
+  "prefill": {
+   "i-monthly": "monthly"
+  }
+ },
+ "finance/youth-future-savings": {
+  "next": [
+   {
+    "key": "youth-leap-account",
+    "path": "/calc/finance/youth-leap-account/",
+    "title": "청년도약계좌 계산기",
+    "sub": "월 납입액·개인소득 구간을 넣으면 정부기여금(월 최대 33,000원)과 비과세 이자를 합산한 5년 만기 수령액을 계산합니다. 월 70만원·연소득 2,400만원 이하 가입 시 약 5,000만원이 됩니다.",
+    "params": {
+     "monthly": "i-monthly"
+    }
+   },
+   {
+    "key": "savings",
+    "path": "/calc/finance/savings/",
+    "title": "적금 만기 계산기",
+    "sub": "월 납입액·기간·금리를 입력하면 만기 수령액과 실효수익률을 계산합니다. 적금은 표시 금리의 약 절반이 실효수익률이 되는 이유를 숫자로 확인할 수 있습니다.",
+    "params": {
+     "monthly": "i-monthly"
+    }
+   }
+  ],
+  "primary": [
+   "청년도약계좌 계산",
+   "/calc/finance/youth-leap-account/",
+   {
+    "monthly": "i-monthly"
+   }
+  ],
+  "prefill": {
+   "i-monthly": "monthly"
+  }
+ },
+ "finance/jangbyeong-savings": {
+  "next": [
+   {
+    "key": "savings",
+    "path": "/calc/finance/savings/",
+    "title": "적금 만기 계산기",
+    "sub": "월 납입액·기간·금리를 입력하면 만기 수령액과 실효수익률을 계산합니다. 적금은 표시 금리의 약 절반이 실효수익률이 되는 이유를 숫자로 확인할 수 있습니다.",
+    "params": {
+     "monthly": "i-monthly"
+    }
+   },
+   {
+    "key": "deposit",
+    "path": "/calc/finance/deposit/",
+    "title": "예금 이자 계산기",
+    "sub": "원금과 연이율, 예치 기간을 입력하면 세전 이자와 이자소득세 15.4% 공제 후 세후 수령액을 동시에 산출합니다. 여러 은행 금리 비교 시 실수령액 기준으로 확인할 수 있습니다."
+   }
+  ],
+  "primary": [
+   "적금 만기 계산",
+   "/calc/finance/savings/",
+   {
+    "monthly": "i-monthly"
+   }
+  ],
+  "prefill": {
+   "i-monthly": "monthly"
+  }
+ },
+ "finance/investment": {
+  "next": [
+   {
+    "key": "compound",
+    "path": "/calc/finance/compound/",
+    "title": "복리 계산기",
+    "sub": "연복리·월복리·일복리 설정을 지원합니다. 원금·금리·기간에 따라 자산이 몇 배로 불어나는지, 단리와 격차가 얼마나 벌어지는지 10년·20년·30년 단위로 비교합니다."
+   },
+   {
+    "key": "stock-average",
+    "path": "/calc/finance/stock-average/",
+    "title": "주식 평단가 계산기",
+    "sub": "보유 수량·평단가에 추가 매수 수량·단가를 넣으면 물타기 후 새 평단가를 계산합니다. 목표 평단까지 낮추는 데 필요한 추가 매수 수량·금액도 역산하며 소수점 해외주식도 지원합니다."
+   }
+  ],
+  "primary": [
+   "복리 계산",
+   "/calc/finance/compound/"
+  ]
+ },
+ "finance/stock-average": {
+  "next": [
+   {
+    "key": "investment",
+    "path": "/calc/finance/investment/",
+    "title": "투자 수익률 계산기",
+    "sub": "시초가·종가·투자 기간을 입력하면 단순 수익률과 연환산 복리 수익률(CAGR)을 동시에 산출합니다. 기간이 다른 투자 성과를 비교할 때 활용합니다."
+   },
+   {
+    "key": "compound",
+    "path": "/calc/finance/compound/",
+    "title": "복리 계산기",
+    "sub": "연복리·월복리·일복리 설정을 지원합니다. 원금·금리·기간에 따라 자산이 몇 배로 불어나는지, 단리와 격차가 얼마나 벌어지는지 10년·20년·30년 단위로 비교합니다."
+   }
+  ],
+  "primary": [
+   "투자 수익률 계산",
+   "/calc/finance/investment/"
+  ]
+ },
+ "finance/loan-repayment": {
+  "next": [
+   {
+    "key": "investment",
+    "path": "/calc/finance/investment/",
+    "title": "투자 수익률 계산기",
+    "sub": "시초가·종가·투자 기간을 입력하면 단순 수익률과 연환산 복리 수익률(CAGR)을 동시에 산출합니다. 기간이 다른 투자 성과를 비교할 때 활용합니다."
+   },
+   {
+    "key": "compound",
+    "path": "/calc/finance/compound/",
+    "title": "복리 계산기",
+    "sub": "연복리·월복리·일복리 설정을 지원합니다. 원금·금리·기간에 따라 자산이 몇 배로 불어나는지, 단리와 격차가 얼마나 벌어지는지 10년·20년·30년 단위로 비교합니다."
+   }
+  ],
+  "primary": [
+   "투자 수익률 계산",
+   "/calc/finance/investment/"
+  ]
+ },
+ "baby/ovulation": {
+  "next": [
+   {
+    "key": "due-date",
+    "path": "/calc/baby/due-date/",
+    "title": "출산예정일·임신주수 계산기",
+    "sub": "마지막 생리일 또는 배란·수정일로 네겔레 법칙(+280일) 출산예정일과 현재 임신 주수, 삼분기 단계를 계산합니다."
+   },
+   {
+    "key": "baby-months",
+    "path": "/calc/baby/baby-months/",
+    "title": "아기 개월수 계산기",
+    "sub": "아기 출생일로 현재 만 개월수와 만 나이, 총 일수를 계산하고 개월수에 맞는 국가 영유아 건강검진 시기를 안내합니다."
+   }
+  ],
+  "primary": [
+   "출산예정일·임신주수 계산",
+   "/calc/baby/due-date/"
+  ],
+  "required": [
+   "lmp"
+  ]
+ },
+ "baby/due-date": {
+  "next": [
+   {
+    "key": "total-support",
+    "path": "/calc/baby/total-support/",
+    "title": "출산 지원금 통합 계산기",
+    "sub": "첫만남이용권·부모급여·아동수당·가정양육수당을 합쳐 출생부터 취학 전까지 받는 총 정부 지원금(첫째 약 3,700만원)을 계산합니다."
+   },
+   {
+    "key": "ovulation",
+    "path": "/calc/baby/ovulation/",
+    "title": "배란일·가임기 계산기",
+    "sub": "마지막 생리 시작일과 평균 생리주기를 입력하면 배란 예상일과 임신 확률이 높은 가임기, 다음 생리 예정일을 계산합니다."
+   }
+  ],
+  "primary": [
+   "출산 지원금 통합 계산",
+   "/calc/baby/total-support/"
+  ],
+  "required": [
+   "base-date"
+  ]
+ },
+ "baby/baby-months": {
+  "next": [
+   {
+    "key": "parental-benefit",
+    "path": "/calc/baby/parental-benefit/",
+    "title": "부모급여 계산기",
+    "sub": "자녀 생년월로 2026년 부모급여(0세 월 100만·1세 월 50만) 월 지급액과 앞으로 받을 총액을 계산합니다."
+   },
+   {
+    "key": "child-allowance",
+    "path": "/calc/baby/child-allowance/",
+    "title": "아동수당 계산기",
+    "sub": "자녀 생년월로 2026년 만 9세 미만 확대된 아동수당(월 10만원)의 잔여 수령액과 총 수령액을 계산합니다."
+   }
+  ],
+  "primary": [
+   "부모급여 계산",
+   "/calc/baby/parental-benefit/"
+  ],
+  "required": [
+   "birth"
+  ]
+ },
+ "baby/total-support": {
+  "next": [
+   {
+    "key": "first-meeting",
+    "path": "/calc/baby/first-meeting/",
+    "title": "첫만남이용권 계산기",
+    "sub": "출생 순위와 이번 출산 아이 수로 첫만남이용권(첫째 200만·둘째 이상 300만)을 계산합니다. 쌍둥이 각각 지급 반영."
+   },
+   {
+    "key": "parental-benefit",
+    "path": "/calc/baby/parental-benefit/",
+    "title": "부모급여 계산기",
+    "sub": "자녀 생년월로 2026년 부모급여(0세 월 100만·1세 월 50만) 월 지급액과 앞으로 받을 총액을 계산합니다."
+   }
+  ],
+  "primary": [
+   "첫만남이용권 계산",
+   "/calc/baby/first-meeting/"
+  ]
+ },
+ "baby/parental-benefit": {
+  "next": [
+   {
+    "key": "home-care-allowance",
+    "path": "/calc/baby/home-care-allowance/",
+    "title": "가정양육수당 계산기",
+    "sub": "가정에서 키우는 만 24~86개월 자녀의 양육수당(일반·농어촌·장애아동 단가)과 잔여 총액을 계산합니다."
+   },
+   {
+    "key": "child-allowance",
+    "path": "/calc/baby/child-allowance/",
+    "title": "아동수당 계산기",
+    "sub": "자녀 생년월로 2026년 만 9세 미만 확대된 아동수당(월 10만원)의 잔여 수령액과 총 수령액을 계산합니다."
+   }
+  ],
+  "primary": [
+   "가정양육수당 계산",
+   "/calc/baby/home-care-allowance/"
+  ],
+  "required": [
+   "birth-month"
+  ]
+ },
+ "baby/child-allowance": {
+  "next": [
+   {
+    "key": "parental-benefit",
+    "path": "/calc/baby/parental-benefit/",
+    "title": "부모급여 계산기",
+    "sub": "자녀 생년월로 2026년 부모급여(0세 월 100만·1세 월 50만) 월 지급액과 앞으로 받을 총액을 계산합니다."
+   },
+   {
+    "key": "home-care-allowance",
+    "path": "/calc/baby/home-care-allowance/",
+    "title": "가정양육수당 계산기",
+    "sub": "가정에서 키우는 만 24~86개월 자녀의 양육수당(일반·농어촌·장애아동 단가)과 잔여 총액을 계산합니다."
+   }
+  ],
+  "primary": [
+   "부모급여 계산",
+   "/calc/baby/parental-benefit/"
+  ],
+  "required": [
+   "birth-month"
+  ]
+ },
+ "baby/first-meeting": {
+  "next": [
+   {
+    "key": "total-support",
+    "path": "/calc/baby/total-support/",
+    "title": "출산 지원금 통합 계산기",
+    "sub": "첫만남이용권·부모급여·아동수당·가정양육수당을 합쳐 출생부터 취학 전까지 받는 총 정부 지원금(첫째 약 3,700만원)을 계산합니다."
+   },
+   {
+    "key": "parental-benefit",
+    "path": "/calc/baby/parental-benefit/",
+    "title": "부모급여 계산기",
+    "sub": "자녀 생년월로 2026년 부모급여(0세 월 100만·1세 월 50만) 월 지급액과 앞으로 받을 총액을 계산합니다."
+   }
+  ],
+  "primary": [
+   "출산 지원금 통합 계산",
+   "/calc/baby/total-support/"
+  ]
+ },
+ "baby/home-care-allowance": {
+  "next": [
+   {
+    "key": "parental-benefit",
+    "path": "/calc/baby/parental-benefit/",
+    "title": "부모급여 계산기",
+    "sub": "자녀 생년월로 2026년 부모급여(0세 월 100만·1세 월 50만) 월 지급액과 앞으로 받을 총액을 계산합니다."
+   },
+   {
+    "key": "child-allowance",
+    "path": "/calc/baby/child-allowance/",
+    "title": "아동수당 계산기",
+    "sub": "자녀 생년월로 2026년 만 9세 미만 확대된 아동수당(월 10만원)의 잔여 수령액과 총 수령액을 계산합니다."
+   }
+  ],
+  "primary": [
+   "부모급여 계산",
+   "/calc/baby/parental-benefit/"
+  ],
+  "required": [
+   "birth-month"
+  ]
+ },
+ "baby/parental-leave-pay": {
+  "next": [
+   {
+    "key": "total-support",
+    "path": "/calc/baby/total-support/",
+    "title": "출산 지원금 통합 계산기",
+    "sub": "첫만남이용권·부모급여·아동수당·가정양육수당을 합쳐 출생부터 취학 전까지 받는 총 정부 지원금(첫째 약 3,700만원)을 계산합니다."
+   },
+   {
+    "key": "parental-benefit",
+    "path": "/calc/baby/parental-benefit/",
+    "title": "부모급여 계산기",
+    "sub": "자녀 생년월로 2026년 부모급여(0세 월 100만·1세 월 50만) 월 지급액과 앞으로 받을 총액을 계산합니다."
+   }
+  ],
+  "primary": [
+   "출산 지원금 통합 계산",
+   "/calc/baby/total-support/"
+  ]
+ },
+ "pension-welfare/national-pension": {
+  "next": [
+   {
+    "key": "basic-pension",
+    "path": "/calc/pension-welfare/basic-pension/",
+    "title": "기초연금 수급 판정 계산기",
+    "sub": "근로·사업소득과 금융·부동산 재산을 넣으면 소득인정액을 산출해 수급 가능성을 바로 판정합니다. 2026년 선정기준액(단독 247만원, 부부 395.2만원) 기준으로 감액 여부와 예상 수령액까지 보여줍니다."
+   },
+   {
+    "key": "pension-tax",
+    "path": "/calc/pension-welfare/pension-tax/",
+    "title": "연금소득세 계산기",
+    "sub": "IRP·연금저축 수령액에 연령별 분리과세율(5.5%·4.4%·3.3%)을 적용하고, 1,500만원 초과 시 종합과세 vs 16.5% 분리과세를 비교합니다. 연간 수령 스케줄을 조금만 바꿔도 세 부담이 달라지는 구조를 직관적으로 보여줍니다."
+   }
+  ],
+  "primary": [
+   "기초연금 수급 판정 계산",
+   "/calc/pension-welfare/basic-pension/"
+  ]
+ },
+ "pension-welfare/basic-pension": {
+  "next": [
+   {
+    "key": "national-pension",
+    "path": "/calc/pension-welfare/national-pension/",
+    "title": "국민연금 수령액 계산기",
+    "sub": "가입기간과 평균 소득월액을 입력하면 국민연금공단 산식(소득대체율 40% 기준)으로 예상 연금을 추정합니다. 조기 수령 시 연 6% 감액, 연기 수령 시 연 7.2% 증액 시뮬레이션도 함께 확인할 수 있습니다."
+   },
+   {
+    "key": "housing-pension",
+    "path": "/calc/pension-welfare/housing-pension/",
+    "title": "주택연금(역모기지) 계산기",
+    "sub": "집값과 나이를 입력하면 한국주택금융공사 2026년 월지급금 예시표를 기준으로 종신지급 정액형 예상 월 수령액을 보간 계산합니다. 부부 가입 시 연소자 나이를 자동 반영하고 연·10년 누적 수령액까지 보여줍니다."
+   }
+  ],
+  "primary": [
+   "국민연금 수령액 계산",
+   "/calc/pension-welfare/national-pension/"
+  ]
+ },
+ "pension-welfare/housing-pension": {
+  "next": [
+   {
+    "key": "retirement-living",
+    "path": "/calc/pension-welfare/retirement-living/",
+    "title": "노후 생활비 계산기",
+    "sub": "현재 월 생활비와 은퇴 연령, 예상 수명을 입력하면 물가상승률(연 2~3%)을 반영해 은퇴 후 필요 총자금을 산출합니다. 국민연금·퇴직연금·개인연금 수령액을 차감한 뒤 실질 부족분까지 한 번에 볼 수 있습니다."
+   },
+   {
+    "key": "basic-pension",
+    "path": "/calc/pension-welfare/basic-pension/",
+    "title": "기초연금 수급 판정 계산기",
+    "sub": "근로·사업소득과 금융·부동산 재산을 넣으면 소득인정액을 산출해 수급 가능성을 바로 판정합니다. 2026년 선정기준액(단독 247만원, 부부 395.2만원) 기준으로 감액 여부와 예상 수령액까지 보여줍니다."
+   }
+  ],
+  "primary": [
+   "노후 생활비 계산",
+   "/calc/pension-welfare/retirement-living/"
+  ]
+ },
+ "pension-welfare/pension-tax": {
+  "next": [
+   {
+    "key": "national-pension",
+    "path": "/calc/pension-welfare/national-pension/",
+    "title": "국민연금 수령액 계산기",
+    "sub": "가입기간과 평균 소득월액을 입력하면 국민연금공단 산식(소득대체율 40% 기준)으로 예상 연금을 추정합니다. 조기 수령 시 연 6% 감액, 연기 수령 시 연 7.2% 증액 시뮬레이션도 함께 확인할 수 있습니다."
+   },
+   {
+    "key": "retirement-living",
+    "path": "/calc/pension-welfare/retirement-living/",
+    "title": "노후 생활비 계산기",
+    "sub": "현재 월 생활비와 은퇴 연령, 예상 수명을 입력하면 물가상승률(연 2~3%)을 반영해 은퇴 후 필요 총자금을 산출합니다. 국민연금·퇴직연금·개인연금 수령액을 차감한 뒤 실질 부족분까지 한 번에 볼 수 있습니다."
+   }
+  ],
+  "primary": [
+   "국민연금 수령액 계산",
+   "/calc/pension-welfare/national-pension/"
+  ]
+ },
+ "pension-welfare/retirement-living": {
+  "next": [
+   {
+    "key": "national-pension",
+    "path": "/calc/pension-welfare/national-pension/",
+    "title": "국민연금 수령액 계산기",
+    "sub": "가입기간과 평균 소득월액을 입력하면 국민연금공단 산식(소득대체율 40% 기준)으로 예상 연금을 추정합니다. 조기 수령 시 연 6% 감액, 연기 수령 시 연 7.2% 증액 시뮬레이션도 함께 확인할 수 있습니다."
+   },
+   {
+    "key": "housing-pension",
+    "path": "/calc/pension-welfare/housing-pension/",
+    "title": "주택연금(역모기지) 계산기",
+    "sub": "집값과 나이를 입력하면 한국주택금융공사 2026년 월지급금 예시표를 기준으로 종신지급 정액형 예상 월 수령액을 보간 계산합니다. 부부 가입 시 연소자 나이를 자동 반영하고 연·10년 누적 수령액까지 보여줍니다."
+   }
+  ],
+  "primary": [
+   "국민연금 수령액 계산",
+   "/calc/pension-welfare/national-pension/"
+  ]
+ },
+ "pension-welfare/long-term-care": {
+  "next": [
+   {
+    "key": "retirement-living",
+    "path": "/calc/pension-welfare/retirement-living/",
+    "title": "노후 생활비 계산기",
+    "sub": "현재 월 생활비와 은퇴 연령, 예상 수명을 입력하면 물가상승률(연 2~3%)을 반영해 은퇴 후 필요 총자금을 산출합니다. 국민연금·퇴직연금·개인연금 수령액을 차감한 뒤 실질 부족분까지 한 번에 볼 수 있습니다."
+   },
+   {
+    "key": "basic-pension",
+    "path": "/calc/pension-welfare/basic-pension/",
+    "title": "기초연금 수급 판정 계산기",
+    "sub": "근로·사업소득과 금융·부동산 재산을 넣으면 소득인정액을 산출해 수급 가능성을 바로 판정합니다. 2026년 선정기준액(단독 247만원, 부부 395.2만원) 기준으로 감액 여부와 예상 수령액까지 보여줍니다."
+   }
+  ],
+  "primary": [
+   "노후 생활비 계산",
+   "/calc/pension-welfare/retirement-living/"
+  ]
+ },
+ "pet/dog-age": {
+  "next": [
+   {
+    "key": "cat-age",
+    "path": "/calc/pet/cat-age/",
+    "title": "고양이 나이 계산기",
+    "sub": "고양이 나이를 사람 나이로 환산합니다. 국제 표준 환산식(1세=15세, 2세=24세, 이후 연 4세)으로 사람 나이와 생애 단계(새끼·청년·중년·노령묘)를 알려줍니다."
+   },
+   {
+    "key": "food-amount",
+    "path": "/calc/pet/food-amount/",
+    "title": "사료 급여량 계산기",
+    "sub": "강아지·고양이 체중과 활동 단계를 입력하면 하루 적정 사료 급여량(g)을 계산합니다. NRC 국제 표준 에너지 공식(RER·DER)으로 개체에 맞는 급여량을 산출합니다."
+   }
+  ],
+  "primary": [
+   "고양이 나이 계산",
+   "/calc/pet/cat-age/"
+  ],
+  "required": [
+   "d-year|d-month"
+  ]
+ },
+ "pet/cat-age": {
+  "next": [
+   {
+    "key": "dog-age",
+    "path": "/calc/pet/dog-age/",
+    "title": "강아지 나이 계산기",
+    "sub": "강아지 나이를 사람 나이로 환산합니다. 소형견·중형견·대형견·초대형견 크기별 AKC 환산표를 적용해 사람 나이와 생애 단계(자견·성견·노령견)를 알려줍니다."
+   },
+   {
+    "key": "food-amount",
+    "path": "/calc/pet/food-amount/",
+    "title": "사료 급여량 계산기",
+    "sub": "강아지·고양이 체중과 활동 단계를 입력하면 하루 적정 사료 급여량(g)을 계산합니다. NRC 국제 표준 에너지 공식(RER·DER)으로 개체에 맞는 급여량을 산출합니다."
+   }
+  ],
+  "primary": [
+   "강아지 나이 계산",
+   "/calc/pet/dog-age/"
+  ],
+  "required": [
+   "c-year|c-month"
+  ]
+ },
+ "pet/food-amount": {
+  "next": [
+   {
+    "key": "dog-age",
+    "path": "/calc/pet/dog-age/",
+    "title": "강아지 나이 계산기",
+    "sub": "강아지 나이를 사람 나이로 환산합니다. 소형견·중형견·대형견·초대형견 크기별 AKC 환산표를 적용해 사람 나이와 생애 단계(자견·성견·노령견)를 알려줍니다."
+   },
+   {
+    "key": "cat-age",
+    "path": "/calc/pet/cat-age/",
+    "title": "고양이 나이 계산기",
+    "sub": "고양이 나이를 사람 나이로 환산합니다. 국제 표준 환산식(1세=15세, 2세=24세, 이후 연 4세)으로 사람 나이와 생애 단계(새끼·청년·중년·노령묘)를 알려줍니다."
+   }
+  ],
+  "primary": [
+   "강아지 나이 계산",
+   "/calc/pet/dog-age/"
+  ],
+  "required": [
+   "weight"
+  ]
+ },
+ "pet/monthly-cost": {
+  "next": [
+   {
+    "key": "adoption",
+    "path": "/calc/pet/adoption/",
+    "title": "입양 초기비용 계산기",
+    "sub": "분양비·입양비, 기초 예방접종(3~5만원), 중성화 수술(암컷 20~40만원), 켄넬·밥그릇·리드줄 등 첫 달에 필요한 총비용을 계산합니다."
+   },
+   {
+    "key": "medical",
+    "path": "/calc/pet/medical/",
+    "title": "의료비 예산 계산기",
+    "sub": "연간 예방접종·심장사상충·정기검진 비용과 나이·품종별 응급 의료비 발생 확률을 반영해 연간 적립 목표를 산출합니다."
+   }
+  ],
+  "primary": [
+   "입양 초기비용 계산",
+   "/calc/pet/adoption/"
+  ]
+ },
+ "pet/adoption": {
+  "next": [
+   {
+    "key": "monthly-cost",
+    "path": "/calc/pet/monthly-cost/",
+    "title": "월 생활비 계산기",
+    "sub": "사료·간식·미용·용품 소모품까지 월 고정 지출을 항목별로 합산합니다. 소형견·대형견·고양이 유형별 평균 범위와 비교해 과소비 항목도 확인할 수 있습니다."
+   },
+   {
+    "key": "medical",
+    "path": "/calc/pet/medical/",
+    "title": "의료비 예산 계산기",
+    "sub": "연간 예방접종·심장사상충·정기검진 비용과 나이·품종별 응급 의료비 발생 확률을 반영해 연간 적립 목표를 산출합니다."
+   }
+  ],
+  "primary": [
+   "월 생활비 계산",
+   "/calc/pet/monthly-cost/"
+  ]
+ },
+ "pet/medical": {
+  "next": [
+   {
+    "key": "monthly-cost",
+    "path": "/calc/pet/monthly-cost/",
+    "title": "월 생활비 계산기",
+    "sub": "사료·간식·미용·용품 소모품까지 월 고정 지출을 항목별로 합산합니다. 소형견·대형견·고양이 유형별 평균 범위와 비교해 과소비 항목도 확인할 수 있습니다."
+   },
+   {
+    "key": "adoption",
+    "path": "/calc/pet/adoption/",
+    "title": "입양 초기비용 계산기",
+    "sub": "분양비·입양비, 기초 예방접종(3~5만원), 중성화 수술(암컷 20~40만원), 켄넬·밥그릇·리드줄 등 첫 달에 필요한 총비용을 계산합니다."
+   }
+  ],
+  "primary": [
+   "월 생활비 계산",
+   "/calc/pet/monthly-cost/"
+  ],
+  "required": [
+   "v-checkup|v-vaccine|v-parasite|v-dental|v-emergency|v-surgery"
+  ]
+ },
+ "pet/insurance": {
+  "next": [
+   {
+    "key": "lifetime-cost",
+    "path": "/calc/pet/lifetime-cost/",
+    "title": "평생 양육비 계산기",
+    "sub": "입양 초기부터 성체기·노령기(7세+)까지 단계별 비용 변화를 반영해 강아지·고양이의 생애 총비용을 예측합니다. 노령기 의료비 가중치 2~3배 반영."
+   },
+   {
+    "key": "dog-age",
+    "path": "/calc/pet/dog-age/",
+    "title": "강아지 나이 계산기",
+    "sub": "강아지 나이를 사람 나이로 환산합니다. 소형견·중형견·대형견·초대형견 크기별 AKC 환산표를 적용해 사람 나이와 생애 단계(자견·성견·노령견)를 알려줍니다."
+   }
+  ],
+  "primary": [
+   "평생 양육비 계산",
+   "/calc/pet/lifetime-cost/"
+  ]
+ },
+ "pet/lifetime-cost": {
+  "next": [
+   {
+    "key": "insurance",
+    "path": "/calc/pet/insurance/",
+    "title": "펫보험 비교 계산기",
+    "sub": "월 보험료와 자기부담금·보장한도를 입력해 보험 가입 시와 미가입 시의 10년 누적 비용을 비교합니다. 손익분기점 나이도 함께 표시됩니다."
+   },
+   {
+    "key": "dog-age",
+    "path": "/calc/pet/dog-age/",
+    "title": "강아지 나이 계산기",
+    "sub": "강아지 나이를 사람 나이로 환산합니다. 소형견·중형견·대형견·초대형견 크기별 AKC 환산표를 적용해 사람 나이와 생애 단계(자견·성견·노령견)를 알려줍니다."
+   }
+  ],
+  "primary": [
+   "펫보험 비교 계산",
+   "/calc/pet/insurance/"
+  ]
+ },
+ "auto/auto-loan": {
+  "next": [
+   {
+    "key": "auto-tax",
+    "path": "/calc/auto/auto-tax/",
+    "title": "자동차세 계산기",
+    "sub": "배기량(cc)·최초 등록연도로 2026년 자동차세와 지방교육세, 차령별 경감, 1월 연납 할인까지 자동 계산합니다. 전기·수소차 정액도 지원합니다."
+   },
+   {
+    "key": "acquisition-tax",
+    "path": "/calc/auto/acquisition-tax/",
+    "title": "자동차 취득세 계산기",
+    "sub": "공장도가격으로 신차 취득세와 개별소비세·교육세·부가세, 신차 실구매가를 한 번에 계산합니다. 전기차·경차 감면을 반영합니다."
+   }
+  ],
+  "primary": [
+   "자동차세 계산",
+   "/calc/auto/auto-tax/"
+  ]
+ },
+ "auto/auto-tax": {
+  "next": [
+   {
+    "key": "acquisition-tax",
+    "path": "/calc/auto/acquisition-tax/",
+    "title": "자동차 취득세 계산기",
+    "sub": "공장도가격으로 신차 취득세와 개별소비세·교육세·부가세, 신차 실구매가를 한 번에 계산합니다. 전기차·경차 감면을 반영합니다."
+   },
+   {
+    "key": "used-car-tax",
+    "path": "/calc/auto/used-car-tax/",
+    "title": "중고차 취득세 계산기",
+    "sub": "기준가격·제작연도로 중고차 명의이전 취득세를 시가표준액(경과연수별 잔가율) 기준으로 계산합니다. 실거래가·경차 면제를 반영합니다."
+   }
+  ],
+  "primary": [
+   "자동차 취득세 계산",
+   "/calc/auto/acquisition-tax/"
+  ],
+  "required": [
+   "cc",
+   "reg-year"
+  ]
+ },
+ "auto/acquisition-tax": {
+  "next": [
+   {
+    "key": "auto-tax",
+    "path": "/calc/auto/auto-tax/",
+    "title": "자동차세 계산기",
+    "sub": "배기량(cc)·최초 등록연도로 2026년 자동차세와 지방교육세, 차령별 경감, 1월 연납 할인까지 자동 계산합니다. 전기·수소차 정액도 지원합니다."
+   },
+   {
+    "key": "used-car-tax",
+    "path": "/calc/auto/used-car-tax/",
+    "title": "중고차 취득세 계산기",
+    "sub": "기준가격·제작연도로 중고차 명의이전 취득세를 시가표준액(경과연수별 잔가율) 기준으로 계산합니다. 실거래가·경차 면제를 반영합니다."
+   }
+  ],
+  "primary": [
+   "자동차세 계산",
+   "/calc/auto/auto-tax/"
+  ]
+ },
+ "auto/used-car-tax": {
+  "next": [
+   {
+    "key": "auto-tax",
+    "path": "/calc/auto/auto-tax/",
+    "title": "자동차세 계산기",
+    "sub": "배기량(cc)·최초 등록연도로 2026년 자동차세와 지방교육세, 차령별 경감, 1월 연납 할인까지 자동 계산합니다. 전기·수소차 정액도 지원합니다."
+   },
+   {
+    "key": "acquisition-tax",
+    "path": "/calc/auto/acquisition-tax/",
+    "title": "자동차 취득세 계산기",
+    "sub": "공장도가격으로 신차 취득세와 개별소비세·교육세·부가세, 신차 실구매가를 한 번에 계산합니다. 전기차·경차 감면을 반영합니다."
+   }
+  ],
+  "primary": [
+   "자동차세 계산",
+   "/calc/auto/auto-tax/"
+  ]
+ },
+ "auto/ev-charging": {
+  "next": [
+   {
+    "key": "fuel-cost",
+    "path": "/calc/auto/fuel-cost/",
+    "title": "유류비 계산기",
+    "sub": "주행 거리·연비·유가로 유류비와 필요 연료량, 1km당 비용을 계산합니다. 휘발유·경유·LPG 유종별로 비교할 수 있습니다."
+   },
+   {
+    "key": "ev-subsidy",
+    "path": "/calc/auto/ev-subsidy/",
+    "title": "전기차 보조금 계산기",
+    "sub": "차량 가격·차종·지역으로 2026년 전기차 국고·지자체 보조금과 실구매가를 계산합니다. 차량가 구간별 차등과 전환지원금을 반영합니다."
+   }
+  ],
+  "primary": [
+   "유류비 계산",
+   "/calc/auto/fuel-cost/"
+  ],
+  "required": [
+   "battery"
+  ]
+ },
+ "auto/fuel-cost": {
+  "next": [
+   {
+    "key": "ev-charging",
+    "path": "/calc/auto/ev-charging/",
+    "title": "전기차 충전비 계산기",
+    "sub": "배터리 용량·충전율로 충전비를 계산하고, 같은 거리 내연차 유류비와 비교합니다. 2026년 완속·급속 충전 요금을 반영합니다."
+   },
+   {
+    "key": "ev-subsidy",
+    "path": "/calc/auto/ev-subsidy/",
+    "title": "전기차 보조금 계산기",
+    "sub": "차량 가격·차종·지역으로 2026년 전기차 국고·지자체 보조금과 실구매가를 계산합니다. 차량가 구간별 차등과 전환지원금을 반영합니다."
+   }
+  ],
+  "primary": [
+   "전기차 충전비 계산",
+   "/calc/auto/ev-charging/"
+  ],
+  "required": [
+   "dist"
+  ]
+ },
+ "auto/ev-subsidy": {
+  "next": [
+   {
+    "key": "ev-charging",
+    "path": "/calc/auto/ev-charging/",
+    "title": "전기차 충전비 계산기",
+    "sub": "배터리 용량·충전율로 충전비를 계산하고, 같은 거리 내연차 유류비와 비교합니다. 2026년 완속·급속 충전 요금을 반영합니다."
+   },
+   {
+    "key": "fuel-cost",
+    "path": "/calc/auto/fuel-cost/",
+    "title": "유류비 계산기",
+    "sub": "주행 거리·연비·유가로 유류비와 필요 연료량, 1km당 비용을 계산합니다. 휘발유·경유·LPG 유종별로 비교할 수 있습니다."
+   }
+  ],
+  "primary": [
+   "전기차 충전비 계산",
+   "/calc/auto/ev-charging/"
+  ]
+ },
+ "tools/percent": {
+  "next": [
+   {
+    "key": "discount",
+    "path": "/calc/tools/discount/",
+    "title": "할인율 계산기",
+    "sub": "할인가·할인율·정가를 서로 역산하고, 20% 후 10% 같은 중복할인의 실질 할인율과 최종 결제 금액을 계산합니다."
+   },
+   {
+    "key": "unit-converter",
+    "path": "/calc/tools/unit-converter/",
+    "title": "단위 변환기",
+    "sub": "길이·무게·넓이·부피·온도를 한 번에 변환합니다. 값을 넣으면 인치·평·근·돈·℉ 등 같은 종류의 모든 단위로 동시에 환산됩니다."
+   }
+  ],
+  "primary": [
+   "할인율 계산",
+   "/calc/tools/discount/"
+  ],
+  "required": [
+   "in-a",
+   "in-b"
+  ]
+ },
+ "tools/discount": {
+  "next": [
+   {
+    "key": "percent",
+    "path": "/calc/tools/percent/",
+    "title": "퍼센트 계산기",
+    "sub": "전체의 몇 %, 한 값이 다른 값의 몇 %, 두 값 사이의 증감률, X% 증가·감소한 값까지 네 가지 비율 계산을 한 화면에서 처리합니다."
+   },
+   {
+    "key": "unit-converter",
+    "path": "/calc/tools/unit-converter/",
+    "title": "단위 변환기",
+    "sub": "길이·무게·넓이·부피·온도를 한 번에 변환합니다. 값을 넣으면 인치·평·근·돈·℉ 등 같은 종류의 모든 단위로 동시에 환산됩니다."
+   }
+  ],
+  "primary": [
+   "퍼센트 계산",
+   "/calc/tools/percent/"
+  ],
+  "required": [
+   "in-a",
+   "in-b",
+   "in-sp",
+   "in-sr"
+  ]
+ },
+ "tools/unit-converter": {
+  "next": [
+   {
+    "key": "percent",
+    "path": "/calc/tools/percent/",
+    "title": "퍼센트 계산기",
+    "sub": "전체의 몇 %, 한 값이 다른 값의 몇 %, 두 값 사이의 증감률, X% 증가·감소한 값까지 네 가지 비율 계산을 한 화면에서 처리합니다."
+   },
+   {
+    "key": "discount",
+    "path": "/calc/tools/discount/",
+    "title": "할인율 계산기",
+    "sub": "할인가·할인율·정가를 서로 역산하고, 20% 후 10% 같은 중복할인의 실질 할인율과 최종 결제 금액을 계산합니다."
+   }
+  ],
+  "primary": [
+   "퍼센트 계산",
+   "/calc/tools/percent/"
+  ],
+  "required": [
+   "in-val"
+  ]
+ },
+ "tools/lunar-calendar": {
+  "next": [
+   {
+    "key": "percent",
+    "path": "/calc/tools/percent/",
+    "title": "퍼센트 계산기",
+    "sub": "전체의 몇 %, 한 값이 다른 값의 몇 %, 두 값 사이의 증감률, X% 증가·감소한 값까지 네 가지 비율 계산을 한 화면에서 처리합니다."
+   },
+   {
+    "key": "discount",
+    "path": "/calc/tools/discount/",
+    "title": "할인율 계산기",
+    "sub": "할인가·할인율·정가를 서로 역산하고, 20% 후 10% 같은 중복할인의 실질 할인율과 최종 결제 금액을 계산합니다."
+   }
+  ],
+  "primary": [
+   "퍼센트 계산",
+   "/calc/tools/percent/"
+  ]
+ },
+ "tools/gpa": {
+  "next": [
+   {
+    "key": "naesin-grade",
+    "path": "/calc/tools/naesin-grade/",
+    "title": "내신 등급 계산기",
+    "sub": "석차와 수강자 수로 내신 등급(9등급제)을 환산하고, 과목별 등급·이수단위로 전과목 평균 내신등급(가중평균)까지 계산합니다."
+   },
+   {
+    "key": "char-count",
+    "path": "/calc/tools/char-count/",
+    "title": "글자수 세기",
+    "sub": "글을 붙여넣으면 글자수(공백 포함·제외)·byte·단어 수·줄 수·원고지 매수를 실시간으로 세어줍니다. 자소서·리포트 자수 확인에 유용합니다."
+   }
+  ],
+  "primary": [
+   "내신 등급 계산",
+   "/calc/tools/naesin-grade/"
+  ],
+  "required": [
+   ".g-credit"
+  ]
+ },
+ "tools/naesin-grade": {
+  "next": [
+   {
+    "key": "gpa",
+    "path": "/calc/tools/gpa/",
+    "title": "학점 계산기",
+    "sub": "과목별 성적과 학점으로 평점평균(GPA)을 계산합니다. 4.5·4.3·4.0 만점 스케일과 총 이수 학점, 백분율 환산을 지원합니다."
+   },
+   {
+    "key": "char-count",
+    "path": "/calc/tools/char-count/",
+    "title": "글자수 세기",
+    "sub": "글을 붙여넣으면 글자수(공백 포함·제외)·byte·단어 수·줄 수·원고지 매수를 실시간으로 세어줍니다. 자소서·리포트 자수 확인에 유용합니다."
+   }
+  ],
+  "primary": [
+   "학점 계산",
+   "/calc/tools/gpa/"
+  ],
+  "required": [
+   "in-rank",
+   "in-total"
+  ]
+ },
+ "tools/char-count": {
+  "next": [
+   {
+    "key": "gpa",
+    "path": "/calc/tools/gpa/",
+    "title": "학점 계산기",
+    "sub": "과목별 성적과 학점으로 평점평균(GPA)을 계산합니다. 4.5·4.3·4.0 만점 스케일과 총 이수 학점, 백분율 환산을 지원합니다."
+   },
+   {
+    "key": "naesin-grade",
+    "path": "/calc/tools/naesin-grade/",
+    "title": "내신 등급 계산기",
+    "sub": "석차와 수강자 수로 내신 등급(9등급제)을 환산하고, 과목별 등급·이수단위로 전과목 평균 내신등급(가중평균)까지 계산합니다."
+   }
+  ],
+  "primary": [
+   "학점 계산",
+   "/calc/tools/gpa/"
+  ],
+  "static_card": true
+ },
+ "date/dday": {
+  "next": [
+   {
+    "key": "date-difference",
+    "path": "/calc/date/date-difference/",
+    "title": "날짜 차이 계산기",
+    "sub": "두 날짜 사이의 차이를 일수·주수·개월수·년수로 계산합니다. 근로기준법 기준 근속기간 산정, 임대차 계약 잔여기간 확인 등에 활용됩니다. 윤년도 자동으로 반영됩니다."
+   },
+   {
+    "key": "date-add",
+    "path": "/calc/date/date-add/",
+    "title": "날짜 더하기/빼기 계산기",
+    "sub": "기준 날짜에서 일·주·개월·년 단위로 더하거나 뺀 날짜를 계산합니다. 대출 만기일, 납부기한, 보증금 반환 기한 등 법적 기간 계산에 유용합니다. 말일 처리(2월 28일 등)도 자동으로 조정됩니다."
+   }
+  ],
+  "primary": [
+   "날짜 차이 계산",
+   "/calc/date/date-difference/"
+  ],
+  "required": [
+   "dday-target"
+  ]
+ },
+ "date/date-difference": {
+  "next": [
+   {
+    "key": "dday",
+    "path": "/calc/date/dday/",
+    "title": "D-day 계산기",
+    "sub": "목표 날짜까지 남은 일수를 실시간으로 계산합니다. 시험·계약 만료·결혼식 등 여러 D-day를 저장해 한 번에 관리할 수 있습니다. 시작일 포함 여부와 공휴일 제외 옵션도 지원합니다."
+   },
+   {
+    "key": "date-add",
+    "path": "/calc/date/date-add/",
+    "title": "날짜 더하기/빼기 계산기",
+    "sub": "기준 날짜에서 일·주·개월·년 단위로 더하거나 뺀 날짜를 계산합니다. 대출 만기일, 납부기한, 보증금 반환 기한 등 법적 기간 계산에 유용합니다. 말일 처리(2월 28일 등)도 자동으로 조정됩니다."
+   }
+  ],
+  "primary": [
+   "D-day 계산",
+   "/calc/date/dday/"
+  ],
+  "required": [
+   "diff-start",
+   "diff-end"
+  ]
+ },
+ "date/date-add": {
+  "next": [
+   {
+    "key": "dday",
+    "path": "/calc/date/dday/",
+    "title": "D-day 계산기",
+    "sub": "목표 날짜까지 남은 일수를 실시간으로 계산합니다. 시험·계약 만료·결혼식 등 여러 D-day를 저장해 한 번에 관리할 수 있습니다. 시작일 포함 여부와 공휴일 제외 옵션도 지원합니다."
+   },
+   {
+    "key": "date-difference",
+    "path": "/calc/date/date-difference/",
+    "title": "날짜 차이 계산기",
+    "sub": "두 날짜 사이의 차이를 일수·주수·개월수·년수로 계산합니다. 근로기준법 기준 근속기간 산정, 임대차 계약 잔여기간 확인 등에 활용됩니다. 윤년도 자동으로 반영됩니다."
+   }
+  ],
+  "primary": [
+   "D-day 계산",
+   "/calc/date/dday/"
+  ],
+  "required": [
+   "add-start",
+   "add-years|add-months|add-days"
+  ]
+ },
+ "date/age": {
+  "next": [
+   {
+    "key": "weekday",
+    "path": "/calc/date/weekday/",
+    "title": "요일 계산기",
+    "sub": "특정 날짜의 요일을 즉시 확인합니다. 계약서 작성일, 공문서 제출 마감, 공휴일 전후 영업일 확인에 활용됩니다. 1주일 단위로 전후 날짜를 탐색하는 기능도 제공합니다."
+   },
+   {
+    "key": "dday",
+    "path": "/calc/date/dday/",
+    "title": "D-day 계산기",
+    "sub": "목표 날짜까지 남은 일수를 실시간으로 계산합니다. 시험·계약 만료·결혼식 등 여러 D-day를 저장해 한 번에 관리할 수 있습니다. 시작일 포함 여부와 공휴일 제외 옵션도 지원합니다."
+   }
+  ],
+  "primary": [
+   "요일 계산",
+   "/calc/date/weekday/"
+  ],
+  "required": [
+   "age-birth"
+  ]
+ },
+ "date/weekday": {
+  "next": [
+   {
+    "key": "age",
+    "path": "/calc/date/age/",
+    "title": "만 나이 계산기",
+    "sub": "생년월일을 입력하면 오늘 기준 만 나이와 다음 생일까지 남은 일수를 계산합니다. 2023년 6월 28일부터 시행된 만 나이 통일법에 따라 법적·행정적으로 만 나이가 기준입니다. 세는 나이, 연 나이와의 차이도 함께 확인할 수 있습니다."
+   },
+   {
+    "key": "dday",
+    "path": "/calc/date/dday/",
+    "title": "D-day 계산기",
+    "sub": "목표 날짜까지 남은 일수를 실시간으로 계산합니다. 시험·계약 만료·결혼식 등 여러 D-day를 저장해 한 번에 관리할 수 있습니다. 시작일 포함 여부와 공휴일 제외 옵션도 지원합니다."
+   }
+  ],
+  "primary": [
+   "만 나이 계산",
+   "/calc/date/age/"
+  ],
+  "required": [
+   "weekday-date"
+  ]
+ },
+ "health/bmi": {
+  "next": [
+   {
+    "key": "body-fat",
+    "path": "/calc/health/body-fat/",
+    "title": "체지방률 계산기",
+    "sub": "인바디 없이 허리·목·엉덩이 둘레를 입력해 미 해군 공식으로 체지방률을 추정합니다. 남성 10~20%, 여성 18~28%를 적정 범위로 판정합니다."
+   },
+   {
+    "key": "ideal-weight",
+    "path": "/calc/health/ideal-weight/",
+    "title": "적정체중 계산기",
+    "sub": "BMI 22 기준 공식(키cm² ÷ 10000 × 22)과 브로카 공식 두 가지로 표준체중을 계산합니다. 현재 체중과의 차이도 즉시 확인할 수 있습니다."
+   }
+  ],
+  "primary": [
+   "체지방률 계산",
+   "/calc/health/body-fat/"
+  ],
+  "required": [
+   "bmi-height",
+   "bmi-weight"
+  ]
+ },
+ "health/body-fat": {
+  "next": [
+   {
+    "key": "bmi",
+    "path": "/calc/health/bmi/",
+    "title": "BMI 계산기",
+    "sub": "키와 체중만 입력하면 대한비만학회 기준(정상 18.5~22.9, 비만 25 이상)으로 자동 판정합니다. WHO 기준과 한국 기준 차이도 함께 안내합니다."
+   },
+   {
+    "key": "ideal-weight",
+    "path": "/calc/health/ideal-weight/",
+    "title": "적정체중 계산기",
+    "sub": "BMI 22 기준 공식(키cm² ÷ 10000 × 22)과 브로카 공식 두 가지로 표준체중을 계산합니다. 현재 체중과의 차이도 즉시 확인할 수 있습니다."
+   }
+  ],
+  "primary": [
+   "BMI 계산",
+   "/calc/health/bmi/"
+  ],
+  "required": [
+   "bf-height",
+   "bf-weight",
+   "bf-waist",
+   "bf-neck"
+  ]
+ },
+ "health/ideal-weight": {
+  "next": [
+   {
+    "key": "bmi",
+    "path": "/calc/health/bmi/",
+    "title": "BMI 계산기",
+    "sub": "키와 체중만 입력하면 대한비만학회 기준(정상 18.5~22.9, 비만 25 이상)으로 자동 판정합니다. WHO 기준과 한국 기준 차이도 함께 안내합니다."
+   },
+   {
+    "key": "body-fat",
+    "path": "/calc/health/body-fat/",
+    "title": "체지방률 계산기",
+    "sub": "인바디 없이 허리·목·엉덩이 둘레를 입력해 미 해군 공식으로 체지방률을 추정합니다. 남성 10~20%, 여성 18~28%를 적정 범위로 판정합니다."
+   }
+  ],
+  "primary": [
+   "BMI 계산",
+   "/calc/health/bmi/"
+  ],
+  "required": [
+   "iw-height"
+  ]
+ },
+ "health/bmr": {
+  "next": [
+   {
+    "key": "calories",
+    "path": "/calc/health/calories/",
+    "title": "칼로리 소모 계산기",
+    "sub": "걷기·달리기·수영·자전거 등 운동 종목별로 체중과 시간을 입력해 소모 칼로리를 계산합니다. 다이어트 목표 달성에 필요한 운동량 기준도 안내합니다."
+   },
+   {
+    "key": "bmi",
+    "path": "/calc/health/bmi/",
+    "title": "BMI 계산기",
+    "sub": "키와 체중만 입력하면 대한비만학회 기준(정상 18.5~22.9, 비만 25 이상)으로 자동 판정합니다. WHO 기준과 한국 기준 차이도 함께 안내합니다."
+   }
+  ],
+  "primary": [
+   "칼로리 소모 계산",
+   "/calc/health/calories/"
+  ],
+  "required": [
+   "bmr-age",
+   "bmr-height",
+   "bmr-weight"
+  ]
+ },
+ "health/calories": {
+  "next": [
+   {
+    "key": "bmr",
+    "path": "/calc/health/bmr/",
+    "title": "기초대사량 계산기",
+    "sub": "가장 정확한 Mifflin-St Jeor 공식(2005년)으로 기초대사량을 계산하고, 활동 수준에 따른 일일 필요 칼로리(TDEE)도 함께 제공합니다."
+   },
+   {
+    "key": "bmi",
+    "path": "/calc/health/bmi/",
+    "title": "BMI 계산기",
+    "sub": "키와 체중만 입력하면 대한비만학회 기준(정상 18.5~22.9, 비만 25 이상)으로 자동 판정합니다. WHO 기준과 한국 기준 차이도 함께 안내합니다."
+   }
+  ],
+  "primary": [
+   "기초대사량 계산",
+   "/calc/health/bmr/"
+  ],
+  "required": [
+   "cal-age",
+   "cal-height",
+   "cal-weight"
+  ]
+ },
+ "ai/api-token": {
+  "next": [
+   {
+    "key": "gpu-cloud",
+    "path": "/calc/ai/gpu-cloud/",
+    "title": "GPU 클라우드 계산기",
+    "sub": "AWS, GCP, Azure, Lambda Labs 등 주요 클라우드의 GPU 인스턴스 시간당·월별 비용을 비교합니다. GPU 종류(A100, H100, A10G 등), 사용 시간, 온디맨드 vs 예약 옵션에 따라 월 비용이 수십만 원에서 수천만 원까지 달라집니다. AI 모델 학습과 추론 용도에 따라 최적 인스턴스 타입이 다릅니다."
+   },
+   {
+    "key": "saas-comparison",
+    "path": "/calc/ai/saas-comparison/",
+    "title": "SaaS vs 자체구축 계산기",
+    "sub": "월 SaaS 구독료와 자체구축 초기비용·운영비를 비교해 손익분기점을 자동으로 계산합니다. 사용자 수가 임계값을 넘으면 자체구축이 더 저렴해지는 시점을 그래프로 확인할 수 있습니다. 기업 규모와 성장 계획에 맞는 도입 방식을 결정하는 데 활용하세요."
+   }
+  ],
+  "primary": [
+   "GPU 클라우드 계산",
+   "/calc/ai/gpu-cloud/"
+  ]
+ },
+ "ai/gpu-cloud": {
+  "next": [
+   {
+    "key": "api-token",
+    "path": "/calc/ai/api-token/",
+    "title": "API 토큰 비용 계산기",
+    "sub": "GPT-5.4, Claude Sonnet 4.6, Gemini 2.5 등 주요 LLM의 입력·출력 토큰 단가에 예상 사용량을 곱해 일/월/연 비용을 계산합니다. 같은 작업이라도 모델에 따라 토큰 수와 단가가 크게 달라지므로 사전 시뮬레이션이 필수입니다. 프롬프트 길이와 응답 길이를 조정하면서 비용 최적 모델을 선택하세요."
+   },
+   {
+    "key": "saas-comparison",
+    "path": "/calc/ai/saas-comparison/",
+    "title": "SaaS vs 자체구축 계산기",
+    "sub": "월 SaaS 구독료와 자체구축 초기비용·운영비를 비교해 손익분기점을 자동으로 계산합니다. 사용자 수가 임계값을 넘으면 자체구축이 더 저렴해지는 시점을 그래프로 확인할 수 있습니다. 기업 규모와 성장 계획에 맞는 도입 방식을 결정하는 데 활용하세요."
+   }
+  ],
+  "primary": [
+   "API 토큰 비용 계산",
+   "/calc/ai/api-token/"
+  ],
+  "required": [
+   "gpu-hours",
+   "gpu-count"
+  ]
+ },
+ "ai/saas-comparison": {
+  "next": [
+   {
+    "key": "api-token",
+    "path": "/calc/ai/api-token/",
+    "title": "API 토큰 비용 계산기",
+    "sub": "GPT-5.4, Claude Sonnet 4.6, Gemini 2.5 등 주요 LLM의 입력·출력 토큰 단가에 예상 사용량을 곱해 일/월/연 비용을 계산합니다. 같은 작업이라도 모델에 따라 토큰 수와 단가가 크게 달라지므로 사전 시뮬레이션이 필수입니다. 프롬프트 길이와 응답 길이를 조정하면서 비용 최적 모델을 선택하세요."
+   },
+   {
+    "key": "gpu-cloud",
+    "path": "/calc/ai/gpu-cloud/",
+    "title": "GPU 클라우드 계산기",
+    "sub": "AWS, GCP, Azure, Lambda Labs 등 주요 클라우드의 GPU 인스턴스 시간당·월별 비용을 비교합니다. GPU 종류(A100, H100, A10G 등), 사용 시간, 온디맨드 vs 예약 옵션에 따라 월 비용이 수십만 원에서 수천만 원까지 달라집니다. AI 모델 학습과 추론 용도에 따라 최적 인스턴스 타입이 다릅니다."
+   }
+  ],
+  "primary": [
+   "API 토큰 비용 계산",
+   "/calc/ai/api-token/"
+  ],
+  "required": [
+   "saas-calls",
+   "saas-cost-per"
+  ]
+ },
+ "ai/llm-comparison": {
+  "next": [
+   {
+    "key": "infra-forecast",
+    "path": "/calc/ai/infra-forecast/",
+    "title": "인프라 예측 계산기",
+    "sub": "서버, 데이터베이스, CDN, API 게이트웨이 등 항목별 월 비용을 입력하면 전체 인프라 비용을 합산합니다. 사용량 기반 변동 비용과 고정 비용을 분리해 예산 계획을 세울 수 있습니다. 스타트업부터 엔터프라이즈까지 규모별 인프라 비용 벤치마크를 참고 자료로 제공합니다."
+   },
+   {
+    "key": "api-token",
+    "path": "/calc/ai/api-token/",
+    "title": "API 토큰 비용 계산기",
+    "sub": "GPT-5.4, Claude Sonnet 4.6, Gemini 2.5 등 주요 LLM의 입력·출력 토큰 단가에 예상 사용량을 곱해 일/월/연 비용을 계산합니다. 같은 작업이라도 모델에 따라 토큰 수와 단가가 크게 달라지므로 사전 시뮬레이션이 필수입니다. 프롬프트 길이와 응답 길이를 조정하면서 비용 최적 모델을 선택하세요."
+   }
+  ],
+  "primary": [
+   "인프라 예측 계산",
+   "/calc/ai/infra-forecast/"
+  ],
+  "table_card": true
+ },
+ "ai/infra-forecast": {
+  "next": [
+   {
+    "key": "llm-comparison",
+    "path": "/calc/ai/llm-comparison/",
+    "title": "LLM 비교표 계산기",
+    "sub": "GPT-5.4, Claude Sonnet 4.6, Gemini 2.5 Flash 등 최신 LLM의 성능 벤치마크·응답 속도·토큰 단가를 한 화면에서 비교합니다. 2026년 기준 모델 가격과 컨텍스트 윈도우 크기가 업데이트되어 있습니다. 작업 유형(코딩·글쓰기·분석)에 따른 모델 추천도 함께 제공합니다."
+   },
+   {
+    "key": "api-token",
+    "path": "/calc/ai/api-token/",
+    "title": "API 토큰 비용 계산기",
+    "sub": "GPT-5.4, Claude Sonnet 4.6, Gemini 2.5 등 주요 LLM의 입력·출력 토큰 단가에 예상 사용량을 곱해 일/월/연 비용을 계산합니다. 같은 작업이라도 모델에 따라 토큰 수와 단가가 크게 달라지므로 사전 시뮬레이션이 필수입니다. 프롬프트 길이와 응답 길이를 조정하면서 비용 최적 모델을 선택하세요."
+   }
+  ],
+  "primary": [
+   "LLM 비교표 계산",
+   "/calc/ai/llm-comparison/"
+  ],
+  "required": [
+   "infra-api|infra-compute|infra-db|infra-storage|infra-cdn|infra-monitor|infra-misc"
+  ]
+ }
+}

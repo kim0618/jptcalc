@@ -23,9 +23,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
 
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
 
   <script type="application/ld+json">
   {
@@ -58,84 +56,68 @@
     {"@type":"Question","name":"중도 해지하면 불이익이 있나요?","acceptedAnswer":{"@type":"Answer","text":"10년 미만에 임의해지하면 공제받은 소득공제액이 기타소득으로 과세됩니다. 즉, 그간 절세받은 세금을 다시 내야 할 수 있어 손실이 발생합니다. 다만 폐업, 사망, 질병·부상에 의한 퇴임 등 법정 사유로 해지하는 경우에는 기타소득 과세 없이 원금과 이자를 수령할 수 있습니다. 10년 이상 유지한 경우 임의해지에도 불이익이 없습니다."}}
   ]}
   </script>
-
-  <link rel="stylesheet" href="/assets/tax-common.css" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
   <style>
-    input[type=number]{width:100%;border:1.5px solid var(--gray-200);border-radius:10px;padding:12px 56px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:var(--gray-50);outline:none;transition:border-color .18s;-moz-appearance:textfield}
-    input[type=number]::placeholder{color:var(--gray-400);font-weight:400}
-    input[type=number]:focus{border-color:var(--primary);background:#fff}
-    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
-    .input-wrap{position:relative;display:flex;align-items:center;}
-    .input-wrap input{padding-right:50px;}
-    .input-wrap .unit{position:absolute;right:14px;font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none;}
-    .converted{font-size:12px;color:var(--primary);margin-top:4px;font-weight:600;min-height:18px;}
-    .seg-group{display:flex;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:0;}
-    .seg-btn{flex:1;border:none;border-radius:7px;background:transparent;padding:9px 6px;font-size:13px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap;}
-    .seg-btn:hover{color:var(--gray-700);}
-    .seg-btn.active{background:var(--primary);color:#fff;font-weight:700;}
-    .result-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--gray-100);font-size:14px;}
-    .result-row:last-child{border-bottom:none;}
-    .result-label{color:var(--gray-600);font-weight:500;}
-    .result-value{font-weight:700;color:var(--gray-900);}
-    .result-section-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin:16px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--gray-100);}
-    .verdict-box{text-align:center;padding:22px 20px;margin-bottom:16px;border-radius:14px;background:rgba(16,185,129,0.07);border:2px solid rgba(16,185,129,0.28);}
-    .verdict-box.none{background:rgba(107,114,128,0.06);border-color:rgba(107,114,128,0.2);}
-    .verdict-label{font-size:13px;font-weight:700;margin-bottom:6px;color:#065F46;}
-    .verdict-box.none .verdict-label{color:#4B5563;}
-    .verdict-amount{font-size:30px;font-weight:900;margin-bottom:4px;color:var(--primary);}
-    .verdict-box.none .verdict-amount{font-size:22px;color:#6B7280;}
-    .verdict-sub{font-size:12px;color:var(--gray-500);}
-    .warning-box{background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.3);border-radius:10px;padding:13px 15px;font-size:12px;color:#92400E;line-height:1.7;margin-top:12px;}
-    .official-link-box{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;}
-    .official-link{flex:1;min-width:140px;display:flex;align-items:center;justify-content:center;gap:8px;padding:11px 14px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:700;transition:opacity .15s;}
-    .official-link:hover{opacity:0.85;}
-    .official-link.primary{background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);color:#047857;}
-    .official-link.secondary{background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.3);color:#2563EB;}
-    .rate-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
-    .rate-table th{padding:8px 10px;text-align:center;font-size:11px;font-weight:700;color:var(--gray-500);background:var(--gray-50);border-bottom:1px solid var(--gray-200);}
-    .rate-table th:first-child{text-align:left;}
-    .rate-table td{padding:9px 10px;border-bottom:1px solid var(--gray-100);color:var(--gray-700);text-align:center;}
-    .rate-table tbody tr:last-child td{border-bottom:none;}
-    .rate-table td:first-child{font-weight:600;color:var(--gray-800);text-align:left;}
-    .rate-table td.highlight{color:var(--primary);font-weight:800;}
-    .badge-year{display:inline-block;background:rgba(16,185,129,0.12);color:#047857;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:6px;vertical-align:middle;}
-    .limit-badge{display:inline-block;background:rgba(245,158,11,0.12);color:#92400E;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:6px;}
+    /* 페이지 고유 스타일(공통 부품 재정의는 base.css가 맡아 뺐다) */
+    .verdict-box { text-align:center;padding:22px 20px;margin-bottom:16px;border-radius:14px;background:rgba(16,185,129,0.07);border:2px solid rgba(16,185,129,0.28); }
+    .verdict-box.none { background:rgba(107,114,128,0.06);border-color:rgba(107,114,128,0.2); }
+    .verdict-label { font-size:13px;font-weight:700;margin-bottom:6px;color:#065F46; }
+    .verdict-box.none .verdict-label { color:#4B5563; }
+    .verdict-amount { font-size:30px;font-weight:900;margin-bottom:4px;color:var(--primary); }
+    .verdict-box.none .verdict-amount { font-size:22px;color:#6B7280; }
+    .verdict-sub { font-size:12px;color:var(--gray-500); }
+    .warning-box { background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.3);border-radius:10px;padding:13px 15px;font-size:12px;color:#92400E;line-height:1.7;margin-top:12px; }
+    .official-link-box { display:flex;gap:10px;flex-wrap:wrap;margin-top:12px; }
+    .official-link { flex:1;min-width:140px;display:flex;align-items:center;justify-content:center;gap:8px;padding:11px 14px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:700;transition:opacity .15s; }
+    .official-link:hover { opacity:0.85; }
+    .official-link.primary { background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);color:#047857; }
+    .official-link.secondary { background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.3);color:#2563EB; }
+    .rate-table { width:100%;border-collapse:collapse;font-size:13px;margin-top:8px; }
+    .rate-table th { padding:8px 10px;text-align:center;font-size:11px;font-weight:700;color:var(--gray-500);background:var(--gray-50);border-bottom:1px solid var(--gray-200); }
+    .rate-table th:first-child { text-align:left; }
+    .rate-table td { padding:9px 10px;border-bottom:1px solid var(--gray-100);color:var(--gray-700);text-align:center; }
+    .rate-table tbody tr:last-child td { border-bottom:none; }
+    .rate-table td:first-child { font-weight:600;color:var(--gray-800);text-align:left; }
+    .rate-table td.highlight { color:var(--primary);font-weight:800; }
+    .badge-year { display:inline-block;background:rgba(16,185,129,0.12);color:#047857;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:6px;vertical-align:middle; }
+    .limit-badge { display:inline-block;background:rgba(245,158,11,0.12);color:#92400E;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:6px; }
   </style>
 </head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
-    <nav class="header-nav">
-      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
-      <a href="/calc/tax/" class="nav-item active"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
-      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
-      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
-      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
-      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
-      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
-    </nav>
-    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
-    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
-  </div>
+<body data-cat="tax" style="--cat: var(--c-tax)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
 </header>
 
-<main class="page-wrap">
-  <div class="page-header">
-    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/tax/">프리랜서 세금 계산기</a><span class="breadcrumb-sep">›</span><span>노란우산공제 계산기</span></div>
-    <div class="page-header-badge">🪙 소득공제 · 절세 · 2026년</div>
-    <h1>노란우산공제 계산기</h1>
-    <p>연 소득과 납입액을 입력하면 소득공제 한도와 예상 절세액을 계산합니다.</p>
-  </div>
-
-  <div class="card">
-    <div class="card-title">소득·납입 정보</div>
-    <div class="info-box">
-      <span class="info-icon">&#128161;</span>
-      <p>소득 구간에 따라 공제 한도가 달라집니다. <strong>4천만원 이하 600만원 / 1억원 이하 400만원 / 1억원 초과 200만원</strong>이 적용됩니다.</p>
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/tax/">프리랜서 세금 계산기</a> &rsaquo; 노란우산공제 계산기</div>
+      <div class="page-badge">소득공제 · 절세 · 2026년</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-receipt"></use></svg></span>
+        <h1 class="page-title">노란우산공제 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">소득공제 · 절세 · 2026년</span>
+          <span class="ds-trust-chip">2026.06.12 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">연 소득과 납입액을 입력하면 소득공제 한도와 예상 절세액을 계산합니다.</p>
     </div>
+  </div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+    <div class="field-label ds-group-label">소득·납입 정보</div>
+    
 
     <div class="field">
       <div class="field-label">연 사업·근로소득 <span class="label-hint">(세전 연 소득)</span></div>
@@ -166,9 +148,17 @@
       <div class="field-hint">지방소득세는 소득세의 10%로, 일반적으로 절세액 계산에 포함하는 것이 실제 절세 효과에 가깝습니다.</div>
     </div>
   </div>
+<div class="info-box">
+      <span class="info-icon"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-info"></use></svg></span>
+      <p>소득 구간에 따라 공제 한도가 달라집니다. <strong>4천만원 이하 600만원 / 1억원 이하 400만원 / 1억원 초과 200만원</strong>이 적용됩니다.</p>
+    </div>
+        <button type="button" class="ds-btn-calc" data-calc-submit="calculate" data-result="resultCard" data-required="inpIncome,inpPayment">계산하기</button>
+      </div>
+    </section>
 
-  <!-- 결과 카드 -->
-  <div class="result-card" id="resultCard">
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="resultCard">
 
     <div id="verdictBox" class="verdict-box">
       <div class="verdict-label" id="vLabel">연간 예상 절세액</div>
@@ -206,9 +196,38 @@
       <a href="https://www.8899.or.kr" target="_blank" rel="noopener" class="official-link primary">&#127981; 중소기업중앙회 노란우산 ↗</a>
       <a href="/calc/tax/income-tax/" class="official-link secondary">&#128202; 종합소득세 계산기 →</a>
     </div>
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('resultCard')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/tax/income-tax/">종합소득세 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">계산 결과</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="yellow-umbrella-next">
+        <a class="ds-next-card" href="/calc/tax/income-tax/" data-next="income-tax"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-receipt"></use></svg></span><span class="ds-next-body"><b>종합소득세 계산기</b><span>단순경비율·기준경비율, 기본공제·인적공제, 자녀세액공제를 반영해 5월 신고 예상 세액을 산출합니다. 환급·추가 납부 여부를 미리 판단할 수 있습니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/tax/medical-expense/" data-next="medical-expense"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-receipt"></use></svg></span><span class="ds-next-body"><b>의료비 세액공제 계산기</b><span>총급여 3%를 초과한 의료비의 15%(난임시술 20~30%)를 세액에서 공제합니다. 본인·65세 이상·장애인 의료비는 한도 없이 반영됩니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
   </div>
 
-  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">조세특례제한법 제86조의3 <a href="https://www.8899.or.kr" target="_blank" rel="noopener">중소기업중앙회 노란우산 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#yellow-umbrella-s1">공제</a><a href="#yellow-umbrella-s2">계산 예시</a><a href="#yellow-umbrella-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
     <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
     <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
   </div>
@@ -232,19 +251,19 @@
   </div>
 
   <div class="guide-section">
-    <div class="guide-card">
-      <h2>노란우산공제, 이것만 알면 됩니다</h2>
-      <p>프리랜서와 개인사업자는 직장인과 달리 퇴직금·실업급여가 없습니다. 노란우산공제는 이들을 위한 소득공제 혜택이 있는 사회안전망 상품으로, 매달 납입하면서 세금도 줄이고 노후 자금도 마련할 수 있습니다.</p>
+            <section class="ds-section ds-prose" aria-labelledby="yellow-umbrella-s1">
+          <div class="ds-section-head"><h2 id="yellow-umbrella-s1">노란우산공제, 이것만 알면 됩니다</h2></div>
+<p>프리랜서와 개인사업자는 직장인과 달리 퇴직금·실업급여가 없습니다. 노란우산공제는 이들을 위한 소득공제 혜택이 있는 사회안전망 상품으로, 매달 납입하면서 세금도 줄이고 노후 자금도 마련할 수 있습니다.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>소득이 낮을수록 공제 한도가 큼</strong><span>연 소득 4천만원 이하라면 600만원까지 공제받아 절세 효과가 가장 큽니다. 연봉 환산 약 3,300만원 이하 프리랜서가 해당됩니다</span></div>
         <div class="guide-box"><strong>복리 이자 + 소득공제 이중 혜택</strong><span>납입금에 연 복리 이자가 붙는 동시에 매년 소득공제를 받아 절세 효과를 누릴 수 있습니다. 이자소득세도 비과세됩니다</span></div>
         <div class="guide-box"><strong>임의해지 주의</strong><span>10년 미만에 임의해지하면 공제받은 금액이 기타소득으로 과세됩니다. 폐업·사망·질병 등 법정 사유 해지는 불이익 없습니다</span></div>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>소득별 절세 예시 (2026년 기준)</h2>
-      <p>아래 예시는 기본공제 150만원만 적용한 단순 추정치입니다. 실제 절세액은 추가 공제 항목에 따라 다릅니다.</p>
-      <div class="guide-table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="yellow-umbrella-s2">
+          <div class="ds-section-head"><h2 id="yellow-umbrella-s2">소득별 절세 예시 (2026년 기준)</h2></div>
+<p>아래 예시는 기본공제 150만원만 적용한 단순 추정치입니다. 실제 절세액은 추가 공제 항목에 따라 다릅니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead><tr><th>가입자</th><th>연 소득</th><th>연 납입액</th><th>공제 한도</th><th>예상 절세액</th></tr></thead>
           <tbody>
@@ -256,11 +275,11 @@
         </table>
       </div>
       <p style="font-size:12px;color:var(--gray-500);margin-top:8px">※ 절세액 = (공제 전 세금) - (공제 후 세금), 지방소득세 포함. 기본공제 150만원 외 추가 공제 없음 가정.</p>
-    </div>
-    <div class="guide-card">
-      <h2>소득별 노란우산공제 절세액 (연 납입 500만원)</h2>
-      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">대표 입력값을 넣어 계산기가 산출한 결과를 표로 정리했습니다.</p>
-      <div class="guide-table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="yellow-umbrella-s3">
+          <div class="ds-section-head"><h2 id="yellow-umbrella-s3">소득별 노란우산공제 절세액 (연 납입 500만원)</h2></div>
+<p class="ds-table-lead">대표 입력값을 넣어 계산기가 산출한 결과를 표로 정리했습니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead><tr><th>연 사업소득</th><th>연 소득 구간</th><th>소득공제 한도</th><th>공제 적용 금액</th><th>연간 절세액 (소득세+지방소득세)</th></tr></thead>
           <tbody>
@@ -271,31 +290,34 @@
           </tbody>
         </table>
       </div>
-    </div>
-    <div class="guide-card faq-card">
-      <h2>자주 묻는 질문</h2>
-      <div class="faq-item">
-        <h3>노란우산공제란 무엇인가요?</h3>
-        <p>노란우산공제는 소기업·소상공인 대표자와 프리랜서(사업소득자)의 노후 소득 안정을 위해 중소기업중앙회가 운영하는 공제 상품입니다. 매달 납입한 공제금을 소득공제로 받아 세금을 줄이면서 목돈도 마련할 수 있습니다. 연간 최대 600만원(소득 4천만원 이하 기준)을 소득에서 공제받아 종합소득세를 줄일 수 있으며, 폐업·노령 등 사유 발생 시 원금과 이자를 함께 수령합니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>노란우산공제 소득공제 한도는 얼마인가요?</h3>
-        <p>2026년 기준 소득공제 한도는 사업소득(또는 근로소득)에 따라 다릅니다. 소득 4,000만원 이하이면 연 최대 600만원, 4,000만원 초과~1억원 이하이면 연 최대 400만원, 1억원 초과이면 연 최대 200만원까지 공제됩니다. 납입액이 한도보다 많아도 공제는 한도까지만 적용됩니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>노란우산공제로 얼마나 절세할 수 있나요?</h3>
-        <p>절세액은 소득 수준에 따라 크게 다릅니다. 연 소득 3,000만원 프리랜서가 연 600만원을 납입하면 약 99만원(지방소득세 포함)을 절세할 수 있습니다. 연 소득 5,500만원이면 납입 400만원 기준 약 101만원, 연 소득 1.5억원이면 납입 200만원 기준 약 77만원입니다. 세율 구간이 높을수록 절세 효과도 커지는 구조입니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>노란우산공제는 누가 가입할 수 있나요?</h3>
-        <p>소기업·소상공인 대표자(개인사업자 및 소기업 법인 대표)와 부동산 임대업을 제외한 사업소득이 있는 프리랜서가 가입할 수 있습니다. 직장인(근로소득만 있는 경우)은 원칙적으로 가입 대상이 아닙니다. 가입은 중소기업중앙회 또는 제휴 은행·카드사에서 신청할 수 있으며, 월 5만원~100만원(최대) 범위에서 납입액을 정할 수 있습니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>중도 해지하면 불이익이 있나요?</h3>
-        <p>10년 미만에 임의해지하면 공제받은 소득공제액이 기타소득으로 과세됩니다. 즉, 그간 절세받은 세금을 다시 내야 할 수 있어 손실이 발생합니다. 다만 폐업, 사망, 질병·부상에 의한 퇴임 등 법정 사유로 해지하는 경우에는 기타소득 과세 없이 원금과 이자를 수령할 수 있습니다. 10년 이상 유지한 경우 임의해지에도 불이익이 없습니다.</p>
-      </div>
+        </section>
+            <section class="ds-section faq-card" aria-labelledby="yellow-umbrella-faq">
+          <div class="ds-section-head"><h2 id="yellow-umbrella-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>노란우산공제란 무엇인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>노란우산공제는 소기업·소상공인 대표자와 프리랜서(사업소득자)의 노후 소득 안정을 위해 중소기업중앙회가 운영하는 공제 상품입니다. 매달 납입한 공제금을 소득공제로 받아 세금을 줄이면서 목돈도 마련할 수 있습니다. 연간 최대 600만원(소득 4천만원 이하 기준)을 소득에서 공제받아 종합소득세를 줄일 수 있으며, 폐업·노령 등 사유 발생 시 원금과 이자를 함께 수령합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>노란우산공제 소득공제 한도는 얼마인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>2026년 기준 소득공제 한도는 사업소득(또는 근로소득)에 따라 다릅니다. 소득 4,000만원 이하이면 연 최대 600만원, 4,000만원 초과~1억원 이하이면 연 최대 400만원, 1억원 초과이면 연 최대 200만원까지 공제됩니다. 납입액이 한도보다 많아도 공제는 한도까지만 적용됩니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>노란우산공제로 얼마나 절세할 수 있나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>절세액은 소득 수준에 따라 크게 다릅니다. 연 소득 3,000만원 프리랜서가 연 600만원을 납입하면 약 99만원(지방소득세 포함)을 절세할 수 있습니다. 연 소득 5,500만원이면 납입 400만원 기준 약 101만원, 연 소득 1.5억원이면 납입 200만원 기준 약 77만원입니다. 세율 구간이 높을수록 절세 효과도 커지는 구조입니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>노란우산공제는 누가 가입할 수 있나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>소기업·소상공인 대표자(개인사업자 및 소기업 법인 대표)와 부동산 임대업을 제외한 사업소득이 있는 프리랜서가 가입할 수 있습니다. 직장인(근로소득만 있는 경우)은 원칙적으로 가입 대상이 아닙니다. 가입은 중소기업중앙회 또는 제휴 은행·카드사에서 신청할 수 있으며, 월 5만원~100만원(최대) 범위에서 납입액을 정할 수 있습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>중도 해지하면 불이익이 있나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>10년 미만에 임의해지하면 공제받은 소득공제액이 기타소득으로 과세됩니다. 즉, 그간 절세받은 세금을 다시 내야 할 수 있어 손실이 발생합니다. 다만 폐업, 사망, 질병·부상에 의한 퇴임 등 법정 사유로 해지하는 경우에는 기타소득 과세 없이 원금과 이자를 수령할 수 있습니다. 10년 이상 유지한 경우 임의해지에도 불이익이 없습니다.</p>
+            </details>
       <div class="update-note">중소기업협동조합법 제115조 및 조세특례제한법 제86조의3 기준 간이 계산기입니다. 소득공제 한도는 조세특례제한법에 따라 변경될 수 있으므로, 정확한 공제 적용은 중소기업중앙회 노란우산(8899.or.kr) 또는 세무사에게 확인하세요.</div>
+          </div>
+        </section>
+  </div>
+
     </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
   </div>
 
   <script>
@@ -315,44 +337,44 @@
     lastReviewed: '2026.06.12',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
 
-  <div class="sibling-section">
-    <div class="sibling-title">다른 프리랜서 세금 계산기</div>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 프리랜서 세금 계산기</h2>
     <div class="sibling-list">
-      <a href="/calc/tax/withholding/" class="sibling-link">💲 3.3% 원천징수</a>
-      <a href="/calc/tax/income-tax/" class="sibling-link">📈 종합소득세</a>
-      <a href="/calc/tax/vat/" class="sibling-link">📄 부가가치세</a>
-      <a href="/calc/tax/insurance-comparison/" class="sibling-link">👥 4대보험 비교</a>
-      <a href="/calc/tax/freelancer-income/" class="sibling-link">💰 월 순수입</a>
-      <a href="/calc/tax/medical-expense/" class="sibling-link">🏥 의료비 세액공제</a>
-      <a href="/calc/tax/regional-health-insurance/" class="sibling-link">🏥 지역가입자 건강보험료</a>
-      <a href="/calc/tax/copay-ceiling/" class="sibling-link">💊 본인부담상한제 환급</a>
-      <a href="/calc/tax/yellow-umbrella/" class="sibling-link current">🪙 노란우산공제</a>
-      <a href="/calc/tax/four-insurance/" class="sibling-link">🏢 4대보험료</a>
+      <a href="/calc/tax/withholding/" class="sibling-link">3.3% 원천징수</a>
+      <a href="/calc/tax/income-tax/" class="sibling-link">종합소득세</a>
+      <a href="/calc/tax/vat/" class="sibling-link">부가가치세</a>
+      <a href="/calc/tax/insurance-comparison/" class="sibling-link">4대보험 비교</a>
+      <a href="/calc/tax/freelancer-income/" class="sibling-link">월 순수입</a>
+      <a href="/calc/tax/medical-expense/" class="sibling-link">의료비 세액공제</a>
+      <a href="/calc/tax/regional-health-insurance/" class="sibling-link">지역가입자 건강보험료</a>
+      <a href="/calc/tax/copay-ceiling/" class="sibling-link">본인부담상한제 환급</a>
+      <a href="/calc/tax/four-insurance/" class="sibling-link">4대보험료</a>
     </div>
-    <div class="sibling-title">관련 가이드</div>
-    <div class="sibling-list">
-      <a href="/blog/posts/comprehensive-income-tax.html" class="sibling-link">📖 종합소득세 신고, 나는 대상자인가? - 프리랜서·부업자 기준 2026</a>
-      <a href="/blog/posts/freelancer-tax-refund.html" class="sibling-link">📖 프리랜서 3.3% 원천징수 환급 - 5월 종소세 신고로 돌려받는 법</a>
-      <a href="/blog/posts/income-tax-deduction.html" class="sibling-link">📖 종합소득세 공제 항목 체크리스트 2026 - 소득공제·세액공제 빠짐없이</a>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/comprehensive-income-tax.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/comprehensive-income-tax-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>종합소득세 신고, 나는 대상자인가? - 프리랜서·부업자 기준 2026</span></a>
+      <a href="/blog/posts/freelancer-tax-refund.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/freelancer-tax-refund-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>프리랜서 3.3% 원천징수 환급 - 5월 종소세 신고로 돌려받는 법</span></a>
+      <a href="/blog/posts/income-tax-deduction.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/income-tax-deduction-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>종합소득세 공제 항목 체크리스트 2026 - 소득공제·세액공제 빠짐없이</span></a>
     </div>
   </div>
 </main>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links">
-      <a href="/">홈</a>
-      <a href="/about.html">소개</a>
-      <a href="/privacy.html">개인정보처리방침</a>
-      <a href="/terms.html">이용약관</a>
-      <a href="/contact.html">문의하기</a>
-      <a href="/disclaimer.html">면책조항</a>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
     </div>
-    <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 절세 방법은 세무사(또는 중소기업중앙회 노란우산)에서 확인하세요.</p>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 절세 방법은 세무사(또는 중소기업중앙회 노란우산)에서 확인하세요.</p>
   </div>
 </footer>
+
+<script src="/assets/ds/calc-kit.js?v=d45e66d9"></script>
 
 <script>
 // 2026년 종합소득세 세율표 (과세표준 구간, 세율, 누진공제)
@@ -390,7 +412,7 @@ function selectLocalTax(v, btn) {
 }
 
 function onNumInput(el, convertedId) {
-  const val = parseInt(el.value) || 0;
+  const val = parseInt(String(el.value).replace(/,/g, '')) || 0;
   document.getElementById(convertedId).textContent = val > 0 ? fmtShort(val * 10000) : '';
   calculate();
 }
@@ -489,11 +511,10 @@ function calculate() {
   card.classList.add('show');
 }
 </script>
-<script src="/assets/calc-registry.js"></script>
-<script src="/assets/tax-detail-shell.js" defer></script>
-<script src="/assets/footer-unified.js" defer></script>
-<script src="/assets/calc-validate.js"></script>
-<script src="/assets/calc-result-tools.js"></script>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
@@ -505,7 +526,13 @@ window.ARTICLE_INFO_CONFIG = {
   category: 'tax'
 };
 </script>
-<script src="/assets/blog-article-info.js"></script>
-<script src="/assets/blog-review-footer.js"></script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "resultCard", "required": ["inpIncome", "inpPayment"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#yellow-umbrella-next", "next": []});
+  DSCalc.placeTrust('ds-trust-col');
+</script>
+<script src="/assets/ds/prefill.js?v=fa5eb49a" defer></script>
 </body>
 </html>

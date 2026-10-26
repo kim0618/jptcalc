@@ -9,62 +9,17 @@
   <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
   <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
   <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Pretendard', -apple-system, sans-serif;
-      background: #ffffff;
-      color: #111827;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    .back-link {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-size: 13px; font-weight: 600; color: #6B7280;
-      text-decoration: none; margin-bottom: 32px;
-    }
-    .back-link:hover { color: #3730A3; }
-    h1 { font-size: 24px; font-weight: 900; color: #111827; margin-bottom: 6px; }
-    .updated { font-size: 13px; color: #9CA3AF; margin-bottom: 36px; }
-    h2 { font-size: 16px; font-weight: 800; color: #374151; margin: 32px 0 12px; padding-bottom: 8px; border-bottom: 2px solid #F3F4F6; }
-    p { font-size: 14px; color: #4B5563; margin-bottom: 10px; }
-    ul { margin: 8px 0 10px 18px; }
-    li { font-size: 14px; color: #4B5563; margin-bottom: 6px; }
-    a { color: #3730A3; }
-    .highlight-box {
-      background: #EEF2FF; border-left: 4px solid #3730A3;
-      border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 16px 0;
-      font-size: 13px; color: #312e81;
-    }
-    .category-grid {
-      display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 16px 0;
-    }
-    .category-card {
-      background: #fff; border: 1px solid #E5E7EB; border-radius: 10px;
-      padding: 14px 16px;
-    }
-    .category-card .icon { font-size: 20px; margin-bottom: 6px; }
-    .category-card .name { font-size: 14px; font-weight: 700; color: #111827; }
-    .category-card .desc { font-size: 12px; color: #6B7280; margin-top: 2px; }
-    .principle-list { margin: 8px 0 10px 0; padding: 0; list-style: none; }
-    .principle-list li { font-size: 14px; color: #4B5563; margin-bottom: 8px; padding-left: 20px; position: relative; }
-    .principle-list li::before { content: '-'; position: absolute; left: 0; color: #9CA3AF; }
-    .notice-box {
-      background: #F9FAFB; border: 1px solid #E5E7EB;
-      border-radius: 10px; padding: 16px 20px; margin: 16px 0;
-    }
-    .notice-box p { margin-bottom: 6px; }
-    .notice-box p:last-child { margin-bottom: 0; }
-  </style>
+<link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
 </head>
-<body>
-<div class="wrap">
-  <a href="/" class="back-link">← 제이퍼 계산기로 돌아가기</a>
+<body data-cat="page">
+<header id="ds-site-header" class="ds-header"></header>
+
+<main class="ds-container ds-doc">
+<article class="ds-doc-body">
+  <a href="/" class="ds-doc-back"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-left"></use></svg>제이퍼 계산기로 돌아가기</a>
 
   <h1>사이트 소개</h1>
   <div class="updated">제이퍼 계산기 (JPT Calc) · 104개 계산기 · 12개 카테고리 · 최종 검토일: 2026년 6월 24일</div>
@@ -78,9 +33,9 @@
   <p>세금, 대출, 부동산 수수료 같은 계산은 누구나 살면서 반드시 하게 되는데, 정작 정확한 기준을 찾아서 계산하기가 어렵습니다. 공공기관 사이트에 기준은 공개되어 있지만, 보통 사람이 읽고 적용하기엔 복잡합니다. 그래서 공식 기준을 반영한 계산기를 직접 만들기 시작했고, 지금의 제이퍼 계산기가 되었습니다.</p>
 
   <h2>운영자 소개</h2>
-  <div class="notice-box" style="background:#EEF2FF;border:1px solid #C7D2FE;">
-    <p style="font-weight:700;color:#111827;margin-bottom:8px;">Jay Kim (제이) - 제이퍼 계산기 운영자</p>
-    <ul style="margin:0 0 0 18px;padding:0;">
+  <div class="notice-box">
+    <p class="ds-doc-strong">Jay Kim (제이) - 제이퍼 계산기 운영자</p>
+    <ul>
       <li><strong>전문 분야</strong>: 웹 개발(프론트엔드·백엔드), 데이터 분석, 세무·금융 계산 로직 설계</li>
       <li><strong>경력</strong>: IT 업계 실무 경험을 바탕으로 복잡한 법령·세율 체계를 사용자 친화적 계산기로 구현</li>
       <li><strong>콘텐츠 방침</strong>: 국세청·국토교통부·금융감독원 등 공공기관 공식 자료만을 기준으로 계산 로직 작성. 특정 상품·서비스 유도 없이 정보성 중심 운영</li>
@@ -106,62 +61,62 @@
   <h2>제공 서비스</h2>
   <div class="category-grid">
     <div class="category-card">
-      <div class="icon">🏠</div>
+      <span class="ds-cat-ico" style="--cat: var(--c-realestate)"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-house"></use></svg></span>
       <div class="name">부동산 계산기</div>
       <div class="desc">취득세, 양도세, 중개수수료 등 19종</div>
     </div>
     <div class="category-card">
-      <div class="icon">💰</div>
+      <span class="ds-cat-ico" style="--cat: var(--c-tax)"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-receipt"></use></svg></span>
       <div class="name">프리랜서 세금 계산기</div>
       <div class="desc">3.3% 원천징수, 종합소득세, 부가세</div>
     </div>
     <div class="category-card">
-      <div class="icon">🧓</div>
+      <span class="ds-cat-ico" style="--cat: var(--c-pension-welfare)"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span>
       <div class="name">연금·복지 계산기</div>
       <div class="desc">국민연금, 기초연금, 주택연금, 노후 생활비</div>
     </div>
     <div class="category-card">
-      <div class="icon">🛠️</div>
+      <span class="ds-cat-ico" style="--cat: var(--c-tools)"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-wrench"></use></svg></span>
       <div class="name">생활·도구 계산기</div>
       <div class="desc">퍼센트, 단위 변환, 할인율, 글자수 등</div>
     </div>
     <div class="category-card">
-      <div class="icon">💼</div>
+      <span class="ds-cat-ico" style="--cat: var(--c-salary)"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-briefcase"></use></svg></span>
       <div class="name">연봉 계산기</div>
       <div class="desc">실수령액, 이직연봉, 시급 변환</div>
     </div>
     <div class="category-card">
-      <div class="icon">🏦</div>
+      <span class="ds-cat-ico" style="--cat: var(--c-finance)"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-piggy-bank"></use></svg></span>
       <div class="name">금융·이자 계산기</div>
       <div class="desc">예금, 적금, 복리, 대출 상환</div>
     </div>
     <div class="category-card">
-      <div class="icon">⚖️</div>
+      <span class="ds-cat-ico" style="--cat: var(--c-health)"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-heart-pulse"></use></svg></span>
       <div class="name">건강 계산기</div>
       <div class="desc">BMI, 기초대사량, 체지방률</div>
     </div>
     <div class="category-card">
-      <div class="icon">📅</div>
+      <span class="ds-cat-ico" style="--cat: var(--c-date)"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-calendar-days"></use></svg></span>
       <div class="name">날짜·D-day 계산기</div>
       <div class="desc">D-day, 만나이, 날짜 차이 계산</div>
     </div>
     <div class="category-card">
-      <div class="icon">🤖</div>
+      <span class="ds-cat-ico" style="--cat: var(--c-ai)"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-cpu"></use></svg></span>
       <div class="name">AI 비용 계산기</div>
       <div class="desc">API 토큰, GPU 클라우드 비용 비교</div>
     </div>
     <div class="category-card">
-      <div class="icon">🐾</div>
+      <span class="ds-cat-ico" style="--cat: var(--c-pet)"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-paw-print"></use></svg></span>
       <div class="name">반려동물 비용 계산기</div>
       <div class="desc">입양비, 월생활비, 평생 양육비용</div>
     </div>
     <div class="category-card">
-      <div class="icon">🚗</div>
+      <span class="ds-cat-ico" style="--cat: var(--c-auto)"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-car"></use></svg></span>
       <div class="name">자동차 계산기</div>
       <div class="desc">자동차 할부, 자동차세, 취득세 등 차량 비용</div>
     </div>
     <div class="category-card">
-      <div class="icon">👶</div>
+      <span class="ds-cat-ico" style="--cat: var(--c-baby)"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-baby"></use></svg></span>
       <div class="name">출산·육아 계산기</div>
       <div class="desc">배란일, 출산예정일, 부모급여·아동수당 등 지원금</div>
     </div>
@@ -225,7 +180,22 @@
     <li><a href="./disclaimer.html">면책조항</a> - 계산 결과의 한계 및 면책 범위</li>
     <li><a href="./contact.html">문의하기</a> - 오류 제보, 개선 제안, 일반 문의</li>
   </ul>
-</div>
-  <script src="/assets/footer-unified.js" defer></script>
+</article>
+</main>
+
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
+  </div>
+</footer>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
 </body>
 </html>

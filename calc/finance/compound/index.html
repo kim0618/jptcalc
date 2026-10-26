@@ -21,10 +21,9 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link rel="stylesheet" href="/assets/finance-common.css" />
+<link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -49,46 +48,48 @@
   </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"72의 법칙이란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"72를 연 수익률(%)로 나누면 원금이 2배가 되는 대략적인 기간(년)을 구할 수 있는 간편 공식입니다. 예를 들어 연 6% 수익률이면 약 12년(72÷6)이 걸립니다."}},{"@type":"Question","name":"연복리와 월복리 차이가 얼마나 되나요?","acceptedAnswer":{"@type":"Answer","text":"같은 연 수익률이라도 복리 주기가 짧을수록 최종 금액이 커집니다. 다만 일반적인 금리 수준에서는 그 차이가 크지 않으며, 장기 투자 시 차이가 누적됩니다."}},{"@type":"Question","name":"인플레이션을 감안해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"네, 명목 수익률에서 인플레이션을 차감한 실질 수익률로 계산해야 실제 구매력 기준의 자산 증가를 파악할 수 있습니다."}},{"@type":"Question","name":"복리와 단리의 차이는 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"단리는 원금에만 이자가 붙지만, 복리는 원금과 이전에 발생한 이자 모두에 이자가 붙습니다. 투자 기간이 길어질수록 복리와 단리의 차이가 급격히 벌어지며, 장기 투자에서 복리 효과는 기하급수적으로 커집니다."}},{"@type":"Question","name":"복리 효과를 극대화하려면 어떻게 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"가장 큰 변수는 시간입니다. 같은 1,000만원이라도 25세에 시작하면 65세까지 약 40년, 35세에 시작하면 30년이라 복리 자산은 약 2배 차이가 납니다. 또한 발생한 이자나 배당을 인출하지 않고 재투자하는 것이 복리 효과를 키우는 핵심이며, 수수료가 낮은 ETF·인덱스 펀드를 선택하면 장기 누적 수익률이 더 높아집니다."}},{"@type":"Question","name":"복리 주기가 짧을수록 무조건 유리한가요?","acceptedAnswer":{"@type":"Answer","text":"이론적으로는 일 복리·연속 복리가 가장 유리하지만, 일반적인 금리 수준(연 3~7%)에서 연 복리와 일 복리의 차이는 0.1~0.3%p 수준에 불과합니다. 따라서 복리 주기보다 수익률 자체를 1%p 높이거나 투자 기간을 5년 늘리는 편이 자산 증가에 훨씬 큰 영향을 줍니다."}}]}</script>
   <style>
-    input[type=number]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(99,102,241,0.15)}
-    .result-card{background:linear-gradient(135deg,#EEF2FF 0%,#E0E7FF 100%);border:1px solid rgba(99,102,241,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
-    .result-card.show{display:block}
-    .result-highlight{background:rgba(99,102,241,0.1);border-radius:12px;padding:16px;margin-bottom:16px;text-align:center}
-    .rh-label{font-size:12px;color:var(--gray-500);margin-bottom:4px}
-    .rh-value{font-size:28px;font-weight:900;color:var(--primary)}
-    .rh-sub{font-size:12px;color:var(--gray-500);margin-top:2px}
+    /* 페이지 고유 스타일(공통 부품 재정의는 base.css가 맡아 뺐다) */
+    .rh-label { font-size:12px;color:var(--gray-500);margin-bottom:4px }
+    .rh-value { font-size:28px;font-weight:900;color:var(--primary) }
+    .rh-sub { font-size:12px;color:var(--gray-500);margin-top:2px }
   </style>
 </head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
-    <nav class="header-nav">
-      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
-      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/finance/" class="nav-item active"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
-      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
-      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
-      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
-      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
-      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
-    </nav>
-    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
-    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
-  </div>
+<body data-cat="finance" style="--cat: var(--c-finance)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
 </header>
-<main class="page-wrap">
-  <div class="page-header">
-    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/finance/">금융·이자 계산기</a><span class="breadcrumb-sep">›</span><span>복리 계산기</span></div>
-    <div class="page-header-badge">📈 연·분기·월 복리 지원</div>
-    <h1>복리 계산기</h1>
-    <p>원금·수익률·기간으로 복리 수익과 72법칙 결과를 확인하세요</p>
+
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/finance/">금융·이자 계산기</a> &rsaquo; 복리 계산기</div>
+      <div class="page-badge">연·분기·월 복리 지원</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-piggy-bank"></use></svg></span>
+        <h1 class="page-title">복리 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">연·분기·월 복리 지원</span>
+          <span class="ds-trust-chip">2026.05.09 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">원금·수익률·기간으로 복리 수익과 72법칙 결과를 확인하세요</p>
+    </div>
   </div>
-    <div class="card">
-      <div class="card-title">복리 계산</div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+      <div class="field-label ds-group-label">복리 계산</div>
       <div class="field">
         <div class="field-label">원금 <span class="label-hint">만원 단위</span></div>
-        <div class="input-wrap"><input type="number" id="comp-principal" min="0" placeholder="예) 1000" oninput="calc()" /><span class="unit">만원</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num data-prefill="principal" id="comp-principal" min="0" placeholder="예) 1000" oninput="calc()" /><span class="unit">만원</span></div>
         <div class="converted" id="comp-display"></div>
       </div>
       <div class="field">
@@ -108,7 +109,14 @@
         </div>
       </div>
     </div>
-    <div class="result-card" id="result">
+
+        <button type="button" class="ds-btn-calc" data-calc-submit="calc" data-result="result" data-required="comp-principal">계산하기</button>
+      </div>
+    </section>
+
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="result">
       <div class="result-highlight">
         <div class="rh-label">최종 금액</div>
         <div class="rh-value" id="comp-total">-</div>
@@ -122,26 +130,56 @@
         <span class="result-total-value" id="comp-rule72">-</span>
       </div>
       <p class="result-note">※ 72 법칙: 72 ÷ 연수익률 = 원금이 2배가 되는 대략적인 기간입니다.</p>
-    </div>
-  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/finance/deposit/">예금 이자 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">최종 금액</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="compound-next">
+        <a class="ds-next-card" href="/calc/finance/deposit/" data-next="deposit"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-piggy-bank"></use></svg></span><span class="ds-next-body"><b>예금 이자 계산기</b><span>원금과 연이율, 예치 기간을 입력하면 세전 이자와 이자소득세 15.4% 공제 후 세후 수령액을 동시에 산출합니다. 여러 은행 금리 비교 시 실수령액 기준으로 확인할 수 있습니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/finance/investment/" data-next="investment"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-piggy-bank"></use></svg></span><span class="ds-next-body"><b>투자 수익률 계산기</b><span>시초가·종가·투자 기간을 입력하면 단순 수익률과 연환산 복리 수익률(CAGR)을 동시에 산출합니다. 기간이 다른 투자 성과를 비교할 때 활용합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
+  </div>
+
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">복리 수익 계산 공식(A = P(1+r/n)^(nt)) 기반 <a href="https://www.fss.or.kr" target="_blank" rel="noopener">금융감독원 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#compound-s1">복리의 힘,</a><a href="#compound-s2">구간별 표</a><a href="#compound-s3">계산 예시</a><a href="#compound-s4">복리 계산</a><a href="#compound-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
     <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
     <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
   </div>
 
   <div class="guide-section">
-    <div class="guide-card">
-      <h2>복리의 힘, 왜 '시간'이 가장 중요한가</h2>
-      <p>복리는 원금뿐 아니라 이전 기간에 발생한 이자에도 이자가 붙는 방식입니다. 투자 기간이 길어질수록 복리 효과는 기하급수적으로 커지며, 이것이 바로 "복리는 세계 8번째 불가사의"라 불리는 이유입니다. 같은 수익률이라도 시작 시점이 빠를수록 최종 자산이 크게 달라집니다.</p>
+            <section class="ds-section ds-prose" aria-labelledby="compound-s1">
+          <div class="ds-section-head"><h2 id="compound-s1">복리의 힘, 왜 '시간'이 가장 중요한가</h2></div>
+<p>복리는 원금뿐 아니라 이전 기간에 발생한 이자에도 이자가 붙는 방식입니다. 투자 기간이 길어질수록 복리 효과는 기하급수적으로 커지며, 이것이 바로 "복리는 세계 8번째 불가사의"라 불리는 이유입니다. 같은 수익률이라도 시작 시점이 빠를수록 최종 자산이 크게 달라집니다.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>복리 vs 단리</strong><span>기간이 길수록 복리와 단리의 차이가 급격히 벌어집니다</span></div>
         <div class="guide-box"><strong>72의 법칙</strong><span>72를 연수익률로 나누면 원금 2배 소요 기간을 알 수 있습니다</span></div>
         <div class="guide-box"><strong>복리 주기 효과</strong><span>연복리보다 월복리가, 월복리보다 일복리가 유리합니다</span></div>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>복리 계산 공식과 주요 지표</h2>
-      <p>복리는 원금 P를 연 수익률 r%로 t년간 n회 복리 주기로 운용할 때 최종 자산이 A = P(1 + r/n)^(nt) 공식으로 계산됩니다. 단리·72법칙·실질수익률 등 주요 지표를 함께 보면 장기 자산 형성 전략을 정량적으로 비교할 수 있습니다. 금융감독원과 한국은행이 안내하는 일반적 계산 기준을 따릅니다.</p>
-      <div class="guide-table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="compound-s2">
+          <div class="ds-section-head"><h2 id="compound-s2">복리 계산 공식과 주요 지표</h2></div>
+<p>복리는 원금 P를 연 수익률 r%로 t년간 n회 복리 주기로 운용할 때 최종 자산이 A = P(1 + r/n)^(nt) 공식으로 계산됩니다. 단리·72법칙·실질수익률 등 주요 지표를 함께 보면 장기 자산 형성 전략을 정량적으로 비교할 수 있습니다. 금융감독원과 한국은행이 안내하는 일반적 계산 기준을 따릅니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead><tr><th>지표</th><th>공식</th><th>예시 (1,000만원, 7%, 10년)</th></tr></thead>
           <tbody>
@@ -154,10 +192,10 @@
           </tbody>
         </table>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>실제 복리 계산 예시</h2>
-      <h3>예시 1 - 김지훈(28세, IT 직장인) 장기 적립식 투자</h3>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="compound-s3">
+          <div class="ds-section-head"><h2 id="compound-s3">실제 복리 계산 예시</h2></div>
+<h3>예시 1 - 김지훈(28세, IT 직장인) 장기 적립식 투자</h3>
       <p>매달 적금 만기금을 모아 1,000만원 종잣돈을 마련한 김지훈씨는 30년간 연 7% 수익률을 목표로 ETF 장기 투자를 계획합니다. 연 복리로 환산해 자산이 어떻게 불어나는지 확인합니다.</p>
       <ul>
         <li>원금: 1,000만원</li>
@@ -177,21 +215,21 @@
         <li><strong>월 복리 추가 수익: 약 21만원 / 5년 누적 명목 수익: 약 1,104만원</strong></li>
       </ul>
       <p>단기에서는 복리 주기 차이가 작지만, 인플레이션을 차감한 실질 수익률이 자산 증가의 진짜 척도가 됩니다.</p>
-    </div>
-    <div class="guide-card">
-      <h2>복리 계산 시 꼭 확인할 점</h2>
-      <p>복리 결과는 수수료·세금·인플레이션을 반영하지 않은 이론치입니다. 실전 투자에 적용할 때는 다음 항목을 추가로 검토하세요.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="compound-s4">
+          <div class="ds-section-head"><h2 id="compound-s4">복리 계산 시 꼭 확인할 점</h2></div>
+<p>복리 결과는 수수료·세금·인플레이션을 반영하지 않은 이론치입니다. 실전 투자에 적용할 때는 다음 항목을 추가로 검토하세요.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>세금 차감</strong><span>예금이자에는 15.4% 이자소득세, 주식 양도차익에는 양도소득세가 별도 차감됩니다. 세후 실수령액은 본 계산기 결과보다 낮아집니다.</span></div>
         <div class="guide-box"><strong>인플레이션 반영</strong><span>한국은행 소비자물가상승률은 매년 2~3% 수준입니다. 명목수익률에서 차감한 실질수익률로 환산해야 구매력 기준 자산 증가를 알 수 있습니다.</span></div>
         <div class="guide-box"><strong>수수료 영향</strong><span>증권 거래 수수료, 펀드 판매수수료, 운용보수가 연 0.5~1.5%만큼 수익률을 갉아먹습니다. 30년 장기에서는 누적 수익이 20% 이상 차이날 수 있습니다.</span></div>
         <div class="guide-box"><strong>원금 손실 가능성</strong><span>주식·ETF는 시장 변동에 따라 원금 손실이 발생할 수 있습니다. 복리는 양(+) 수익이 지속될 때의 가정이며, 실제 평균 수익률은 더 낮을 수 있습니다.</span></div>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>원금별 복리 수익 (연 5%·10년·연 복리)</h2>
-      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">구간별로 계산기를 돌려 얻은 결과를 정리했습니다.</p>
-      <div class="guide-table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="compound-s5">
+          <div class="ds-section-head"><h2 id="compound-s5">원금별 복리 수익 (연 5%·10년·연 복리)</h2></div>
+<p class="ds-table-lead">구간별로 계산기를 돌려 얻은 결과를 정리했습니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead><tr><th>원금</th><th>최종 금액</th><th>수익</th><th>총 수익률</th></tr></thead>
           <tbody>
@@ -202,18 +240,38 @@
           </tbody>
         </table>
       </div>
-    </div>
-    <div class="guide-card faq-card">
-      <h2>자주 묻는 질문</h2>
-      <div class="faq-item"><h3>72의 법칙이란 무엇인가요?</h3><p>72를 연 수익률(%)로 나누면 원금이 2배가 되는 대략적인 기간(년)을 구할 수 있는 간편 공식입니다. 예를 들어 연 6% 수익률이면 약 12년(72÷6)이 걸립니다.</p></div>
-      <div class="faq-item"><h3>연복리와 월복리 차이가 얼마나 되나요?</h3><p>같은 연 수익률이라도 복리 주기가 짧을수록 최종 금액이 커집니다. 다만 일반적인 금리 수준에서는 그 차이가 크지 않으며, 장기 투자 시 차이가 누적됩니다.</p></div>
-      <div class="faq-item"><h3>인플레이션을 감안해야 하나요?</h3><p>네, 명목 수익률에서 인플레이션을 차감한 실질 수익률로 계산해야 실제 구매력 기준의 자산 증가를 파악할 수 있습니다.</p></div>
-      <div class="faq-item"><h3>복리와 단리의 차이는 무엇인가요?</h3><p>단리는 원금에만 이자가 붙지만, 복리는 원금과 이전에 발생한 이자 모두에 이자가 붙습니다. 투자 기간이 길어질수록 복리와 단리의 차이가 급격히 벌어지며, 장기 투자에서 복리 효과는 기하급수적으로 커집니다.</p></div>
-      <div class="faq-item"><h3>복리 효과를 극대화하려면 어떻게 해야 하나요?</h3><p>가장 큰 변수는 시간입니다. 같은 1,000만원이라도 25세에 시작하면 65세까지 약 40년, 35세에 시작하면 30년이라 복리 자산은 약 2배 차이가 납니다. 또한 발생한 이자나 배당을 인출하지 않고 재투자하는 것이 복리 효과를 키우는 핵심이며, 수수료가 낮은 ETF·인덱스 펀드를 선택하면 장기 누적 수익률이 더 높아집니다.</p></div>
-      <div class="faq-item"><h3>복리 주기가 짧을수록 무조건 유리한가요?</h3><p>이론적으로는 일 복리·연속 복리가 가장 유리하지만, 일반적인 금리 수준(연 3~7%)에서 연 복리와 일 복리의 차이는 0.1~0.3%p 수준에 불과합니다. 따라서 복리 주기보다 수익률 자체를 1%p 높이거나 투자 기간을 5년 늘리는 편이 자산 증가에 훨씬 큰 영향을 줍니다.</p></div>
+        </section>
+            <section class="ds-section faq-card" aria-labelledby="compound-faq">
+          <div class="ds-section-head"><h2 id="compound-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>72의 법칙이란 무엇인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>72를 연 수익률(%)로 나누면 원금이 2배가 되는 대략적인 기간(년)을 구할 수 있는 간편 공식입니다. 예를 들어 연 6% 수익률이면 약 12년(72÷6)이 걸립니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>연복리와 월복리 차이가 얼마나 되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>같은 연 수익률이라도 복리 주기가 짧을수록 최종 금액이 커집니다. 다만 일반적인 금리 수준에서는 그 차이가 크지 않으며, 장기 투자 시 차이가 누적됩니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>인플레이션을 감안해야 하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>네, 명목 수익률에서 인플레이션을 차감한 실질 수익률로 계산해야 실제 구매력 기준의 자산 증가를 파악할 수 있습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>복리와 단리의 차이는 무엇인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>단리는 원금에만 이자가 붙지만, 복리는 원금과 이전에 발생한 이자 모두에 이자가 붙습니다. 투자 기간이 길어질수록 복리와 단리의 차이가 급격히 벌어지며, 장기 투자에서 복리 효과는 기하급수적으로 커집니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>복리 효과를 극대화하려면 어떻게 해야 하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>가장 큰 변수는 시간입니다. 같은 1,000만원이라도 25세에 시작하면 65세까지 약 40년, 35세에 시작하면 30년이라 복리 자산은 약 2배 차이가 납니다. 또한 발생한 이자나 배당을 인출하지 않고 재투자하는 것이 복리 효과를 키우는 핵심이며, 수수료가 낮은 ETF·인덱스 펀드를 선택하면 장기 누적 수익률이 더 높아집니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>복리 주기가 짧을수록 무조건 유리한가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>이론적으로는 일 복리·연속 복리가 가장 유리하지만, 일반적인 금리 수준(연 3~7%)에서 연 복리와 일 복리의 차이는 0.1~0.3%p 수준에 불과합니다. 따라서 복리 주기보다 수익률 자체를 1%p 높이거나 투자 기간을 5년 늘리는 편이 자산 증가에 훨씬 큰 영향을 줍니다.</p>
+            </details>
       <div class="update-note">최종 검토: 2026.05.09 · 계산 결과는 참고용입니다.</div>
-    </div>
+          </div>
+        </section>
   </div>
+    </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
   <script>
   window.TRUST_BLOCK_CONFIG = {
     standard: '복리 수익 계산 공식(A = P(1+r/n)^(nt)) 기반',
@@ -229,47 +287,54 @@
     lastReviewed: '2026.05.09',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>
-  <div class="sibling-section">
-    <div class="sibling-title">다른 금융·이자 계산기</div>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 금융·이자 계산기</h2>
     <div class="sibling-list">
-      <a href="/calc/finance/deposit/" class="sibling-link">💰 예금 이자</a>
-      <a href="/calc/finance/savings/" class="sibling-link">📈 적금 만기</a>
-      <a href="/calc/finance/compound/" class="sibling-link current">📊 복리 계산</a>
-      <a href="/calc/finance/loan-repayment/" class="sibling-link">🏠 대출 상환</a>
-      <a href="/calc/finance/investment/" class="sibling-link">📉 투자 수익률</a>
-      <a href="/calc/finance/stock-average/" class="sibling-link">⚖️ 주식 평단가</a>
-      <a href="/calc/finance/jangbyeong-savings/" class="sibling-link">🎖️ 장병내일준비적금</a>
-      <a href="/calc/finance/youth-leap-account/" class="sibling-link">🚀 청년도약계좌</a>
-      <a href="/calc/finance/youth-future-savings/" class="sibling-link">💳 청년미래적금</a>
+      <a href="/calc/finance/deposit/" class="sibling-link">예금 이자</a>
+      <a href="/calc/finance/savings/" class="sibling-link">적금 만기</a>
+      <a href="/calc/finance/loan-repayment/" class="sibling-link">대출 상환</a>
+      <a href="/calc/finance/investment/" class="sibling-link">투자 수익률</a>
+      <a href="/calc/finance/stock-average/" class="sibling-link">주식 평단가</a>
+      <a href="/calc/finance/jangbyeong-savings/" class="sibling-link">장병내일준비적금</a>
+      <a href="/calc/finance/youth-leap-account/" class="sibling-link">청년도약계좌</a>
+      <a href="/calc/finance/youth-future-savings/" class="sibling-link">청년미래적금</a>
     </div>
-    <div class="sibling-title">관련 가이드</div>
-    <div class="sibling-list">
-      <a href="/blog/posts/cagr-guide.html" class="sibling-link">📖 CAGR(연평균 성장률)로 투자 수익률 제대로 비교하는 법</a>
-      <a href="/blog/posts/compound-interest.html" class="sibling-link">📖 복리의 힘과 72법칙 - 돈이 2배 되는 시간 계산</a>
-      <a href="/blog/posts/deposit-interest-guide.html" class="sibling-link">📖 정기예금 이자 계산 - 1,000만원 연 3.5% 예치 시 세후 수령액 2…</a>
-      <a href="/blog/posts/deposit-protection-limit-guide.html" class="sibling-link">📖 예금자보호 한도 1억원 - 2025년 9월 상향 후 분산 예치 전략 총정리</a>
-      <a href="/blog/posts/dividend-yield-guide.html" class="sibling-link">📖 배당수익률 계산법 2026 - 코스피는 반토막났는데 내 배당주는 왜 다를까</a>
-      <a href="/blog/posts/emergency-fund-guide.html" class="sibling-link">📖 비상금 통장 전략 - 얼마나, 어디에 모아야 할까?</a>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/cagr-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/cagr-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>CAGR(연평균 성장률)로 투자 수익률 제대로 비교하는 법</span></a>
+      <a href="/blog/posts/compound-interest.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/compound-interest-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>복리의 힘과 72법칙 - 돈이 2배 되는 시간 계산</span></a>
+      <a href="/blog/posts/deposit-interest-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/deposit-interest-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>정기예금 이자 계산 - 1,000만원 연 3.5% 예치 시 세후 수령액 29만6천원</span></a>
+      <a href="/blog/posts/deposit-protection-limit-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/deposit-protection-limit-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>예금자보호 한도 1억원 - 2025년 9월 상향 후 분산 예치 전략 총정리</span></a>
+      <a href="/blog/posts/dividend-yield-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/dividend-yield-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>배당수익률 계산법 2026 - 코스피는 반토막났는데 내 배당주는 왜 다를까</span></a>
+      <a href="/blog/posts/emergency-fund-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/emergency-fund-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>비상금 통장 전략 - 얼마나, 어디에 모아야 할까?</span></a>
     </div>
   </div>
 </main>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
-    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
   </div>
 </footer>
+
+<script src="/assets/ds/calc-kit.js?v=d45e66d9"></script>
 <script>
 
 let freq=1;
 function Wm(man){if(man>=10000)return(man/10000).toFixed(2)+'억원';return Math.round(man).toLocaleString()+'만원';}
 function setFreq(f,btn){freq=f;document.querySelectorAll('#comp-freq-group .seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');calc();}
-function showConverted(inputEl,dispEl){const v=parseFloat(inputEl.value);if(!v||v<=0){dispEl.textContent='';return;}dispEl.textContent=v>=10000?'= '+(v/10000).toFixed(2)+'억원':'= '+v.toLocaleString()+'만원';}
+function showConverted(inputEl,dispEl){const v=parseFloat(String(inputEl.value).replace(/,/g, ''));if(!v||v<=0){dispEl.textContent='';return;}dispEl.textContent=v>=10000?'= '+(v/10000).toFixed(2)+'억원':'= '+v.toLocaleString()+'만원';}
 function calc(){
-  const p=parseFloat(document.getElementById('comp-principal').value)||0;
-  const r=parseFloat(document.getElementById('comp-rate').value)||0;
-  const y=parseFloat(document.getElementById('comp-years').value)||0;
+  const p=parseFloat(String(document.getElementById('comp-principal').value).replace(/,/g, ''))||0;
+  const r=parseFloat(String(document.getElementById('comp-rate').value).replace(/,/g, ''))||0;
+  const y=parseFloat(String(document.getElementById('comp-years').value).replace(/,/g, ''))||0;
   showConverted(document.getElementById('comp-principal'),document.getElementById('comp-display'));
   const res=document.getElementById('result');
   if(p<=0||r<=0||y<=0){res.classList.remove('show');return;}
@@ -287,11 +352,10 @@ function calc(){
 }
 </script>
 
-<script src="/assets/calc-validate.js"></script>
-<script src="/assets/calc-result-tools.js"></script>
-  <script src="/assets/footer-unified.js"></script>
-<script src="/assets/calc-registry.js"></script>
-<script src="/assets/finance-detail-shell.js"></script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
@@ -302,7 +366,14 @@ window.ARTICLE_INFO_CONFIG = {
   category: 'finance'
 };
 </script>
-<script src="/assets/blog-article-info.js"></script>
-<script src="/assets/blog-review-footer.js"></script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "result", "required": ["comp-principal"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#compound-next", "next": [{"key": "deposit", "path": "/calc/finance/deposit/", "sub": "원금과 연이율, 예치 기간을 입력하면 세전 이자와 이자소득세 15.4% 공제 후 세후 수령액을 동시에 산출합니다. 여러 은행 금리 비교 시 실수령액 기준으로 확인할 수 있습니다.", "params": {"principal": "comp-principal"}, "from": "compound"}]});
+  DSCalc.placeTrust('ds-trust-col');
+  (function () { const a = document.getElementById('ds-primary-next'); if (!a) return; const go = () => { const v = {}; Object.entries({"principal": "comp-principal"}).forEach(([k, id]) => v[k] = DSCalc.num(id)); a.href = DSCalc.link('/calc/finance/deposit/', v, 'compound'); }; document.addEventListener('input', go, true); go(); })();
+</script>
+<script src="/assets/ds/prefill.js?v=fa5eb49a" defer></script>
 </body>
 </html>

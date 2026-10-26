@@ -18,10 +18,9 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link rel="stylesheet" href="/assets/tools-common.css" />
+  <link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebApplication","name":"단위 변환기","url":"https://www.jptcalc.kr/calc/tools/unit-converter/","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
   </script>
@@ -34,64 +33,60 @@
   </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"1평은 몇 제곱미터(㎡)인가요?","acceptedAnswer":{"@type":"Answer","text":"1평은 약 3.3058㎡입니다(정확히는 400/121㎡). 반대로 1㎡는 약 0.3025평입니다. 예를 들어 84㎡ 아파트는 약 25.4평, 59㎡는 약 17.8평입니다. 넓이 탭에서 평과 ㎡를 바로 환산할 수 있습니다."}},{"@type":"Question","name":"1근과 1돈은 몇 그램인가요?","acceptedAnswer":{"@type":"Answer","text":"1근은 600g(고기·채소 기준)이고, 귀금속에 쓰는 1돈은 3.75g입니다. 따라서 금 한 돈은 3.75g, 금 열 돈(1냥)은 37.5g입니다. 무게 탭에서 근·돈·g·kg·파운드를 함께 환산할 수 있습니다."}},{"@type":"Question","name":"인치를 센티미터로 어떻게 바꾸나요?","acceptedAnswer":{"@type":"Answer","text":"1인치는 정확히 2.54cm입니다. 예를 들어 모니터 27인치의 대각선은 27 × 2.54 = 68.58cm입니다. 길이 탭에서 인치(in)를 입력 단위로 선택하면 cm·m 등으로 동시에 변환됩니다."}},{"@type":"Question","name":"섭씨(℃)를 화씨(℉)로 바꾸는 공식은?","acceptedAnswer":{"@type":"Answer","text":"화씨 = 섭씨 × 9 ÷ 5 + 32입니다. 예를 들어 섭씨 37℃는 98.6℉, 100℃는 212℉입니다. 반대로 화씨를 섭씨로 바꿀 때는 (화씨 − 32) × 5 ÷ 9를 씁니다. 온도 탭은 이 공식을 자동으로 적용합니다."}},{"@type":"Question","name":"이 단위 변환기는 어떤 단위를 지원하나요?","acceptedAnswer":{"@type":"Answer","text":"길이(mm·cm·m·km·인치·피트·야드·마일), 무게(mg·g·kg·톤·돈·근·온스·파운드), 넓이(㎠·㎡·㎢·평·헥타르·에이커), 부피(mL·L·㎥·갤런·배럴), 온도(℃·℉·K), 데이터(비트·바이트·KB·MB·GB·TB와 1,024 기준 KiB·MiB·GiB·TiB)를 지원합니다. 값을 입력하면 같은 종류의 모든 단위로 동시에 환산됩니다."}}]}</script>
   <style>
-    /* unit-converter 고유 스타일 - 공통은 /assets/tools-common.css */
-    .input-wrap{position:relative}
-    input[type=number]{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
-    input::placeholder{color:var(--gray-400);font-weight:400}
-    input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(20,184,166,0.15)}
-    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
-    select{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 16px;font-size:15px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;cursor:pointer;transition:border-color .18s}
-    select:focus{border-color:var(--primary)}
-    .cat-group{display:flex;flex-wrap:wrap;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:4px}
-    .cat-btn{flex:1 1 auto;border:none;border-radius:7px;background:transparent;padding:10px 6px;font-size:13px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap}
-    .cat-btn.active{background:var(--primary);color:#fff;font-weight:700}
-    .conv-row{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:end}
-    .conv-field>label{display:block;font-size:12px;font-weight:700;color:var(--gray-500);margin-bottom:7px}
-    .swap-btn{align-self:center;margin-bottom:2px;width:40px;height:40px;border:1.5px solid var(--gray-200);border-radius:10px;background:#fff;color:var(--primary);font-size:16px;cursor:pointer;transition:all .15s;flex-shrink:0}
-    .swap-btn:hover{border-color:var(--primary);background:var(--primary-light)}
-    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
-    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
-    .result-card{background:linear-gradient(135deg,#F0FDFA 0%,#CCFBF1 100%);border:1px solid rgba(20,184,166,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
-    .result-card.show{display:block}
-    .rh-value .big-num{font-size:36px;font-weight:900;line-height:1.1;word-break:break-all}
-    .all-units{margin-top:8px}
-    .all-units-title{font-size:11px;font-weight:800;letter-spacing:0.5px;text-transform:uppercase;color:var(--gray-500);margin:18px 0 8px}
-    .au-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid rgba(0,0,0,0.06);font-size:14px}
-    .au-row:last-child{border-bottom:none}
-    .au-unit{color:var(--gray-600);font-weight:500}
-    .au-val{font-weight:700;color:var(--gray-900);word-break:break-all;text-align:right;padding-left:10px}
-    @media (max-width:480px){.conv-row{grid-template-columns:1fr auto 1fr;gap:6px}.cat-btn{flex:1 1 calc(33% - 2px)}}
+    /* 페이지 고유 스타일(공통 부품 재정의는 base.css가 맡아 뺐다) */
+    .cat-group { display:flex;flex-wrap:wrap;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:4px }
+    .cat-btn { flex:1 1 auto;border:none;border-radius:7px;background:transparent;padding:10px 6px;font-size:13px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap }
+    .cat-btn.active { background:var(--primary);color:#fff;font-weight:700 }
+    .conv-row { display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:end }
+    .conv-field>label { display:block;font-size:12px;font-weight:700;color:var(--gray-500);margin-bottom:7px }
+    .swap-btn { align-self:center;margin-bottom:2px;width:40px;height:40px;border:1.5px solid var(--gray-200);border-radius:10px;background:#fff;color:var(--primary);font-size:16px;cursor:pointer;transition:all .15s;flex-shrink:0 }
+    .swap-btn:hover { border-color:var(--primary);background:var(--primary-light) }
+    .rh-value .big-num { font-size:36px;font-weight:900;line-height:1.1;word-break:break-all }
+    .all-units { margin-top:8px }
+    .all-units-title { font-size:11px;font-weight:800;letter-spacing:0.5px;text-transform:uppercase;color:var(--gray-500);margin:18px 0 8px }
+    .au-row { display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid rgba(0,0,0,0.06);font-size:14px }
+    .au-row:last-child { border-bottom:none }
+    .au-unit { color:var(--gray-600);font-weight:500 }
+    .au-val { font-weight:700;color:var(--gray-900);word-break:break-all;text-align:right;padding-left:10px }
+    @media (max-width:480px) {
+  .conv-row { grid-template-columns:1fr auto 1fr;gap:6px }
+  .cat-btn { flex:1 1 calc(33% - 2px) }
+}
   </style>
 </head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
-    <nav class="header-nav">
-      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
-      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/tools/" class="nav-item active"><span class="nav-dot" style="background:#14B8A6;"></span>생활·도구</a>
-      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
-      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
-      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
-      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
-      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
-      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
-    </nav>
-    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
-    <button class="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
-  </div>
+<body data-cat="tools" style="--cat: var(--c-tools)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
 </header>
-<main class="page-wrap">
-  <div class="page-header">
-    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/tools/">생활·도구 계산기</a><span class="breadcrumb-sep">›</span><span>단위 변환기</span></div>
-    <div class="page-header-badge">📐 길이·무게·넓이·부피·온도</div>
-    <h1>단위 변환기</h1>
-    <p>값 하나를 넣으면 같은 종류의 모든 단위로 동시에 환산됩니다</p>
+
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/tools/">생활·도구 계산기</a> &rsaquo; 단위 변환기</div>
+      <div class="page-badge">길이·무게·넓이·부피·온도</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-wrench"></use></svg></span>
+        <h1 class="page-title">단위 변환기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">길이·무게·넓이·부피·온도</span>
+          <span class="ds-trust-chip">2026.06.09 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">값 하나를 넣으면 같은 종류의 모든 단위로 동시에 환산됩니다</p>
+    </div>
   </div>
-    <div class="card">
-      <div class="card-title">변환 종류</div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+      <div class="field-label ds-group-label">변환 종류</div>
       <div class="cat-group">
         <button class="cat-btn active" data-cat="length" onclick="setCat('length',this)">길이</button>
         <button class="cat-btn" data-cat="weight" onclick="setCat('weight',this)">무게</button>
@@ -102,7 +97,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-title">값 입력</div>
+      <div class="field-label ds-group-label">값 입력</div>
       <div class="conv-row">
         <div class="conv-field"><label for="in-val">변환할 값</label><div class="input-wrap"><input type="number" id="in-val" placeholder="예) 10" oninput="calc()" /></div></div>
         <button class="swap-btn" type="button" onclick="swap()" aria-label="단위 바꾸기" title="단위 바꾸기">⇅</button>
@@ -114,25 +109,61 @@
         </div>
       </div>
     </div>
-    <div class="result-card" id="result">
+
+        <button type="button" class="ds-btn-calc" data-calc-submit="calc" data-result="result" data-required="in-val">계산하기</button>
+      </div>
+    </section>
+
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="result">
       <div class="result-highlight"><div class="rh-label" id="r-label">결과</div><div class="rh-value"><span class="big-num" id="r-main">-</span></div><div class="rh-sub" id="r-sub">-</div></div>
       <div class="all-units">
         <div class="all-units-title">전체 단위로 한눈에</div>
         <div id="r-all"></div>
       </div>
       <p class="result-note">입력값은 브라우저 안에서만 계산되며 서버로 전송되지 않습니다. 결과는 참고용입니다.</p>
-    </div>
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/tools/percent/">퍼센트 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
 
-  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">결과</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="unit-converter-next">
+        <a class="ds-next-card" href="/calc/tools/percent/" data-next="percent"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-wrench"></use></svg></span><span class="ds-next-body"><b>퍼센트 계산기</b><span>전체의 몇 %, 한 값이 다른 값의 몇 %, 두 값 사이의 증감률, X% 증가·감소한 값까지 네 가지 비율 계산을 한 화면에서 처리합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/tools/discount/" data-next="discount"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-wrench"></use></svg></span><span class="ds-next-body"><b>할인율 계산기</b><span>할인가·할인율·정가를 서로 역산하고, 20% 후 10% 같은 중복할인의 실질 할인율과 최종 결제 금액을 계산합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
+  </div>
+
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">국제단위계(SI) 및 국내 도량형 환산 기준 <a href="https://www.kats.go.kr" target="_blank" rel="noopener">국가기술표준원 법정계량단위 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#unit-converter-s1">구간별 표</a><a href="#unit-converter-s2">계산 예시</a><a href="#unit-converter-s3">알아두면 좋은</a><a href="#unit-converter-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
     <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
     <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
   </div>
 
   <div class="guide-section">
-    <div class="guide-card">
-      <h2>자주 쓰는 단위 환산표</h2>
-      <p>일상과 부동산·요리·해외직구에서 자주 마주치는 단위 환산을 정리했습니다. 위 변환기에서 값을 넣으면 같은 종류의 모든 단위가 동시에 계산됩니다.</p>
-      <div class="guide-table-wrap">
+            <section class="ds-section ds-prose" aria-labelledby="unit-converter-s1">
+          <div class="ds-section-head"><h2 id="unit-converter-s1">자주 쓰는 단위 환산표</h2></div>
+<p>일상과 부동산·요리·해외직구에서 자주 마주치는 단위 환산을 정리했습니다. 위 변환기에서 값을 넣으면 같은 종류의 모든 단위가 동시에 계산됩니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead><tr><th>종류</th><th>환산 기준</th><th>예시</th></tr></thead>
           <tbody>
@@ -146,10 +177,10 @@
           </tbody>
         </table>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>상황별 단위 변환 예시</h2>
-      <h3>예시 1 - 아파트 면적, ㎡를 평으로</h3>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="unit-converter-s2">
+          <div class="ds-section-head"><h2 id="unit-converter-s2">상황별 단위 변환 예시</h2></div>
+<h3>예시 1 - 아파트 면적, ㎡를 평으로</h3>
       <p>부동산 매물의 전용면적이 84.96㎡로 표시되어 있다면, 넓이 탭에서 84.96㎡를 입력해 약 25.7평임을 바로 확인할 수 있습니다. 흔히 말하는 '25평형'이 여기에 해당합니다. 반대로 평을 ㎡로 바꿔 청약 면적 기준을 확인할 수도 있습니다.</p>
       <ul>
         <li>84.96㎡ ÷ 3.3058 ≈ 25.7평</li>
@@ -167,24 +198,42 @@
         <li>1돈 = 3.75g, 1냥(10돈) = 37.5g</li>
         <li>금 5돈 = 18.75g</li>
       </ul>
-    </div>
-    <div class="guide-card">
-      <h2>알아두면 좋은 단위 상식</h2>
-      <h3>같은 이름, 다른 값에 주의</h3>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="unit-converter-s3">
+          <div class="ds-section-head"><h2 id="unit-converter-s3">알아두면 좋은 단위 상식</h2></div>
+<h3>같은 이름, 다른 값에 주의</h3>
       <p>갤런은 미국식(약 3.785L)과 영국식(약 4.546L)이 다릅니다. 이 변환기는 일상에서 더 자주 쓰는 미국 갤런을 기준으로 합니다. 또 무게의 '근'은 고기·채소는 600g이지만 한약재는 375g을 쓰는 경우가 있어, 용도를 확인하는 것이 좋습니다.</p>
       <h3>온도는 비율이 아니라 공식</h3>
       <p>길이·무게는 단순히 곱하면 되지만 온도는 기준점(0도)이 단위마다 달라 공식으로 변환합니다. 섭씨↔화씨는 ℉ = ℃ × 9 ÷ 5 + 32, 섭씨↔켈빈은 K = ℃ + 273.15를 씁니다. 그래서 '두 배 더운 온도' 같은 표현은 성립하지 않습니다.</p>
-    </div>
-    <div class="guide-card faq-card">
-      <h2>자주 묻는 질문</h2>
-      <div class="faq-item"><h3>1평은 몇 제곱미터(㎡)인가요?</h3><p>1평은 약 3.3058㎡입니다(정확히는 400/121㎡). 반대로 1㎡는 약 0.3025평입니다. 84㎡ 아파트는 약 25.4평, 59㎡는 약 17.8평입니다. 넓이 탭에서 평과 ㎡를 바로 환산할 수 있습니다.</p></div>
-      <div class="faq-item"><h3>1근과 1돈은 몇 그램인가요?</h3><p>1근은 600g(고기·채소 기준)이고, 귀금속에 쓰는 1돈은 3.75g입니다. 금 한 돈은 3.75g, 금 열 돈(1냥)은 37.5g입니다. 무게 탭에서 근·돈·g·kg·파운드를 함께 환산할 수 있습니다.</p></div>
-      <div class="faq-item"><h3>인치를 센티미터로 어떻게 바꾸나요?</h3><p>1인치는 정확히 2.54cm입니다. 모니터 27인치의 대각선은 27 × 2.54 = 68.58cm입니다. 길이 탭에서 인치(in)를 입력 단위로 선택하면 cm·m 등으로 동시에 변환됩니다.</p></div>
-      <div class="faq-item"><h3>섭씨(℃)를 화씨(℉)로 바꾸는 공식은?</h3><p>화씨 = 섭씨 × 9 ÷ 5 + 32입니다. 섭씨 37℃는 98.6℉, 100℃는 212℉입니다. 반대로 화씨를 섭씨로 바꿀 때는 (화씨 − 32) × 5 ÷ 9를 씁니다. 온도 탭은 이 공식을 자동으로 적용합니다.</p></div>
-      <div class="faq-item"><h3>이 단위 변환기는 어떤 단위를 지원하나요?</h3><p>길이(mm·cm·m·km·인치·피트·야드·마일), 무게(mg·g·kg·톤·돈·근·온스·파운드), 넓이(㎠·㎡·㎢·평·헥타르·에이커), 부피(mL·L·㎥·갤런·배럴), 온도(℃·℉·K), 데이터(비트·바이트·KB·MB·GB·TB와 1,024 기준 KiB·MiB·GiB·TiB)를 지원합니다. 값을 입력하면 같은 종류의 모든 단위로 동시에 환산됩니다.</p></div>
+        </section>
+            <section class="ds-section faq-card" aria-labelledby="unit-converter-faq">
+          <div class="ds-section-head"><h2 id="unit-converter-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>1평은 몇 제곱미터(㎡)인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>1평은 약 3.3058㎡입니다(정확히는 400/121㎡). 반대로 1㎡는 약 0.3025평입니다. 84㎡ 아파트는 약 25.4평, 59㎡는 약 17.8평입니다. 넓이 탭에서 평과 ㎡를 바로 환산할 수 있습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>1근과 1돈은 몇 그램인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>1근은 600g(고기·채소 기준)이고, 귀금속에 쓰는 1돈은 3.75g입니다. 금 한 돈은 3.75g, 금 열 돈(1냥)은 37.5g입니다. 무게 탭에서 근·돈·g·kg·파운드를 함께 환산할 수 있습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>인치를 센티미터로 어떻게 바꾸나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>1인치는 정확히 2.54cm입니다. 모니터 27인치의 대각선은 27 × 2.54 = 68.58cm입니다. 길이 탭에서 인치(in)를 입력 단위로 선택하면 cm·m 등으로 동시에 변환됩니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>섭씨(℃)를 화씨(℉)로 바꾸는 공식은?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>화씨 = 섭씨 × 9 ÷ 5 + 32입니다. 섭씨 37℃는 98.6℉, 100℃는 212℉입니다. 반대로 화씨를 섭씨로 바꿀 때는 (화씨 − 32) × 5 ÷ 9를 씁니다. 온도 탭은 이 공식을 자동으로 적용합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>이 단위 변환기는 어떤 단위를 지원하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>길이(mm·cm·m·km·인치·피트·야드·마일), 무게(mg·g·kg·톤·돈·근·온스·파운드), 넓이(㎠·㎡·㎢·평·헥타르·에이커), 부피(mL·L·㎥·갤런·배럴), 온도(℃·℉·K), 데이터(비트·바이트·KB·MB·GB·TB와 1,024 기준 KiB·MiB·GiB·TiB)를 지원합니다. 값을 입력하면 같은 종류의 모든 단위로 동시에 환산됩니다.</p>
+            </details>
       <div class="update-note">최종 검토: 2026.06.09 · 계산 결과는 참고용입니다.</div>
-    </div>
+          </div>
+        </section>
   </div>
+    </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
   <script>
   window.TRUST_BLOCK_CONFIG = {
     standard: '국제단위계(SI) 및 국내 도량형 환산 기준',
@@ -199,33 +248,40 @@
     lastReviewed: '2026.06',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>
-  <div class="sibling-section">
-    <div class="sibling-title">다른 생활·도구 계산기</div>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 생활·도구 계산기</h2>
     <div class="sibling-list">
-      <a href="/calc/tools/percent/" class="sibling-link">％ 퍼센트 계산기</a>
-      <a href="/calc/tools/unit-converter/" class="sibling-link current">📐 단위 변환기</a>
-      <a href="/calc/tools/discount/" class="sibling-link">🏷️ 할인율 계산기</a>
-      <a href="/calc/tools/gpa/" class="sibling-link">🎓 학점 계산기</a>
-      <a href="/calc/tools/naesin-grade/" class="sibling-link">🏫 내신 등급 계산기</a>
-      <a href="/calc/tools/char-count/" class="sibling-link">📝 글자수 세기</a>
-      <a href="/calc/tools/lunar-calendar/" class="sibling-link">🌙 음력 양력 변환기</a>
+      <a href="/calc/tools/percent/" class="sibling-link">퍼센트 계산기</a>
+      <a href="/calc/tools/discount/" class="sibling-link">할인율 계산기</a>
+      <a href="/calc/tools/gpa/" class="sibling-link">학점 계산기</a>
+      <a href="/calc/tools/naesin-grade/" class="sibling-link">내신 등급 계산기</a>
+      <a href="/calc/tools/char-count/" class="sibling-link">글자수 세기</a>
+      <a href="/calc/tools/lunar-calendar/" class="sibling-link">음력 양력 변환기</a>
     </div>
-    <div class="sibling-title">관련 가이드</div>
-    <div class="sibling-list">
-      <a href="/blog/posts/cooking-measurement-guide.html" class="sibling-link">📖 계량스푼 계량컵 변환법 2026 - 큰술·작은술·1컵을 ml·g로 정확히 …</a>
-      <a href="/blog/posts/data-unit-guide.html" class="sibling-link">📖 데이터 용량 단위 변환 2026 - MB GB TB, 1TB가 931GB로…</a>
-      <a href="/blog/posts/delivery-volumetric-weight-guide.html" class="sibling-link">📖 택배 부피무게 계산법 2026 - 가벼운 상자가 더 비싸지는 이유</a>
-      <a href="/blog/posts/unit-converter-guide.html" class="sibling-link">📖 단위변환 계산기 2026 - 평수·인치cm·파운드kg·화씨섭씨 한 번에 변…</a>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/cooking-measurement-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/cooking-measurement-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>계량스푼 계량컵 변환법 2026 - 큰술·작은술·1컵을 ml·g로 정확히 바꾸는 법</span></a>
+      <a href="/blog/posts/data-unit-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/data-unit-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>데이터 용량 단위 변환 2026 - MB GB TB, 1TB가 931GB로 보이는 이유</span></a>
+      <a href="/blog/posts/delivery-volumetric-weight-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/delivery-volumetric-weight-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>택배 부피무게 계산법 2026 - 가벼운 상자가 더 비싸지는 이유</span></a>
+      <a href="/blog/posts/unit-converter-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/unit-converter-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>단위변환 계산기 2026 - 평수·인치cm·파운드kg·화씨섭씨 한 번에 변환하는 법</span></a>
     </div>
   </div>
 </main>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
-    <span class="footer-copy">© 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
   </div>
 </footer>
+
+<script src="/assets/ds/calc-kit.js?v=d45e66d9"></script>
 <script>
 // 단위 데이터 (factor = base 단위 환산 계수). 온도는 special.
 const DATA = {
@@ -298,11 +354,10 @@ function calc(){
 fillSelect('sel-from',DATA[cat].def[0]);
 fillSelect('sel-to',DATA[cat].def[1]);
 </script>
-<script src="/assets/calc-validate.js"></script>
-<script src="/assets/calc-result-tools.js"></script>
-<script src="/assets/footer-unified.js" defer></script>
-<script src="/assets/calc-registry.js"></script>
-<script src="/assets/tools-detail-shell.js"></script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
@@ -313,7 +368,13 @@ window.ARTICLE_INFO_CONFIG = {
   category: 'tools'
 };
 </script>
-<script src="/assets/blog-article-info.js"></script>
-<script src="/assets/blog-review-footer.js"></script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "result", "required": ["in-val"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#unit-converter-next", "next": []});
+  DSCalc.placeTrust('ds-trust-col');
+</script>
+<script src="/assets/ds/prefill.js?v=fa5eb49a" defer></script>
 </body>
 </html>

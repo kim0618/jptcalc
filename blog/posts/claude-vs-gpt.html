@@ -16,43 +16,7 @@
   <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--primary:#8B5CF6;--dark-border:rgba(0,0,0,0.08)}
-    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
-    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
-    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
-    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-    .logo-icon img{width:32px;height:32px;display:block}
-    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
-    .logo-text span{color:#818CF8}
-    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
-    .header-back:hover{color:#111827}
-    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
-    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(139,92,246,0.15);color:#8B5CF6;margin-bottom:16px}
-    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
-    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
-    .post-body{font-size:15px;color:#111827;line-height:1.8}
-    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
-    .post-body p{margin-bottom:14px}
-    .post-body ul{margin:10px 0 14px 20px}
-    .post-body li{margin-bottom:8px}
-    .post-body a{color:#8B5CF6;text-decoration:none}
-    .highlight-box{background:rgba(139,92,246,0.08);border-left:4px solid #8B5CF6;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
-    .highlight-box p{margin:0;color:#5b21b6;font-size:14px}
-    .table-wrap{overflow-x:auto;margin:20px 0}
-    table{width:100%;border-collapse:collapse;font-size:14px}
-    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
-    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
-    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
-    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
-    .cta-btn{display:inline-block;padding:12px 28px;background:#8B5CF6;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
-    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
-    .footer-copy{font-size:10px;color:#6B7280}
-  </style>
+<link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -137,22 +101,31 @@
 }
   </script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.jptcalc.kr/"}, {"@type": "ListItem", "position": 2, "name": "블로그", "item": "https://www.jptcalc.kr/blog/"}, {"@type": "ListItem", "position": 3, "name": "AI·테크", "item":"https://www.jptcalc.kr/blog/?cat=AI·테크"}, {"@type": "ListItem", "position": 4, "name": "Claude vs GPT - AI 모델 성능·비용 비교 2026", "item": "https://www.jptcalc.kr/blog/posts/claude-vs-gpt.html"}]}</script>
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
 </head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="../../" class="site-logo"><div class="logo-icon"><img src="../../assets/logo.svg" alt="로고"/></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
-    <a href="../" class="header-back">← 블로그 목록</a>
-  </div>
+<body data-cat="ai" style="--cat: var(--c-ai)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories">카테고리</a><a href="/blog/" aria-current="page">블로그</a></nav>
+  </div></div>
 </header>
-<div class="post-wrap">
-  <span class="post-tag">AI·테크</span>
-  <h1>Claude vs GPT - AI 모델 성능·비용 비교 2026</h1>
-  <div class="post-meta"><span>📅 2026.03.22</span><span>·</span><span>5분 읽기</span></div>
-  <div class="post-body">
-    <p>Claude와 GPT 중 어떤 게 더 유리할까요? 코딩엔 Claude, 이미지 분석엔 GPT-5.4, 비용 효율엔 Gemini라는 말이 많은데 실제 수치로 비교해보면 용도에 따라 답이 달라집니다. 성능, 비용, 보안 정책을 항목별로 정리했습니다.</p>
 
-    <h2>Claude, GPT, Gemini - 핵심 차이부터</h2>
+<main class="ds-post ds-container">
+  <article>
+    <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/blog/">블로그</a> &rsaquo; <a href="/blog/?cat=AI/테크">AI/테크</a></div>
+    <div class="ds-post-meta"><span class="ds-post-chip">AI/테크</span><span>2026.03.22</span><span>제이퍼 계산기 편집팀</span><span>5분 읽기</span></div>
+    <h1 class="ds-post-title">Claude vs GPT - AI 모델 성능·비용 비교 2026</h1>
+    <picture><source media="(min-width: 1024px)" srcset="/assets/img/blog-thumb/claude-vs-gpt-16x9.webp" width="1280" height="720"><img class="ds-post-thumb is-cover" src="/assets/img/blog-thumb/claude-vs-gpt-3x1.webp" alt="90% 절감 캐싱 시 입력 토큰 비용" width="1440" height="480" decoding="async" fetchpriority="high"></picture>
+    <div class="ds-post-body ds-prose">
+<p>Claude와 GPT 중 어떤 게 더 유리할까요? 코딩엔 Claude, 이미지 분석엔 GPT-5.4, 비용 효율엔 Gemini라는 말이 많은데 실제 수치로 비교해보면 용도에 따라 답이 달라집니다. 성능, 비용, 보안 정책을 항목별로 정리했습니다.</p>
+    <a class="ds-post-cta" href="/calc/ai/llm-comparison/" style="--cat: var(--c-ai)"><span class="ds-icon-tile"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-cpu"></use></svg></span><span class="ds-post-cta-body"><b>LLM 비교 계산기</b><span>GPT-5.4, Claude Sonnet 4.6, Gemini 2.5 Flash 등 최신 LLM의 성능 벤치마크·응답 속도·토큰 단가를 한 화면에서 비교합니다. 2026년 기준 모델 가격과 컨텍스트 윈도우 크기가 업데이트되어 있습니다. 작업 유형(코딩·글쓰기·분석)에 따른 모델 추천도 함께 제공합니다.</span></span><span class="ds-post-cta-go">계산하기 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></span></a>
+
+    <details class="ds-post-toc"><summary>목차 (12)<svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary><ol><li><a href="#sec-1">Claude, GPT, Gemini - 핵심 차이부터</a></li><li><a href="#sec-2">그래서 뭐 써야 해</a></li><li><a href="#sec-3">Claude가 앞서는 것</a></li><li><a href="#sec-4">GPT가 앞서는 것</a></li><li><a href="#sec-5">예산이 한정돼 있다면 이렇게</a></li><li><a href="#sec-6">한국어로 쓰면 뭐가 더 자연스러워</a></li><li><a href="#sec-7">기업에서 도입할 때 이것도 봐야 한다</a></li><li><a href="#sec-8">Claude vs GPT에 대해 가장 많이 오해하는 것들</a></li><li><a href="#sec-9">모델 티어별 요금 비교 (2026년 6월 기준)</a></li><li><a href="#sec-10">실제 사용 패턴별 월 비용 추정</a></li><li><a href="#sec-11">자주 묻는 질문 (FAQ)</a></li><li><a href="#sec-12">결국 중요한 건</a></li></ol></details>
+
+
+    <h2 id="sec-1">Claude, GPT, Gemini - 핵심 차이부터</h2>
     <div class="table-wrap"><table>
       <tr><th>구분</th><th>Claude Sonnet 4.6</th><th>GPT-5.4</th><th>Gemini 2.5 Pro</th></tr>
       <tr><td>개발사</td><td>Anthropic</td><td>OpenAI</td><td>Google</td></tr>
@@ -161,15 +134,15 @@
       <tr><td>출력 요금(1M)</td><td>$15.00</td><td>$15.00</td><td>$10.00</td></tr>
       <tr><td>멀티모달</td><td>이미지 지원</td><td>이미지·음성</td><td>이미지·동영상·음성</td></tr>
     </table></div>
-    <p style="margin: 1.2em 0;">
-      👉 <a href="https://www.jptcalc.kr/calc/ai/api-token/" style="color: #2563eb; font-weight: 600;">AI 토큰 비용 계산기로 직접 계산해보기</a>
+    <p style="margin: 1.2em 0">
+      <a href="https://www.jptcalc.kr/calc/ai/api-token/" style="font-weight: 600">AI 토큰 비용 계산기로 직접 계산해보기</a>
     </p>
 
-    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+    <div class="adfit-slot ds-ad" style="text-align: center; margin: 28px 0">
       <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
       <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
     </div>
-    <h2>그래서 뭐 써야 해</h2>
+    <h2 id="sec-2">그래서 뭐 써야 해</h2>
     <div class="table-wrap"><table>
       <tr><th>용도</th><th>추천 모델</th><th>이유</th></tr>
       <tr><td>코딩·개발</td><td>Claude Sonnet 4.6</td><td>코드 이해·작성 능력 우수</td></tr>
@@ -182,7 +155,7 @@
 
     <div class="highlight-box"><p>코딩 작업은 Claude가, 멀티모달(이미지·음성)은 GPT-5.4가 상대적으로 강점을 가집니다. 실제 사용 목적에 맞게 선택하세요.</p></div>
 
-    <h2>Claude가 앞서는 것</h2>
+    <h2 id="sec-3">Claude가 앞서는 것</h2>
     <ul>
       <li>긴 문서 처리 능력 (1M 토큰 컨텍스트)</li>
       <li>코딩 및 기술 문서 작성 우수</li>
@@ -190,7 +163,7 @@
       <li>자연스럽고 인간적인 글쓰기</li>
     </ul>
 
-    <h2>GPT가 앞서는 것</h2>
+    <h2 id="sec-4">GPT가 앞서는 것</h2>
     <ul>
       <li>다양한 플러그인·통합 생태계</li>
       <li>음성 입출력 (GPT-5.4)</li>
@@ -198,14 +171,14 @@
       <li>ChatGPT 사용자 기반 대규모 실사용 검증</li>
     </ul>
 
-    <h2>예산이 한정돼 있다면 이렇게</h2>
+    <h2 id="sec-5">예산이 한정돼 있다면 이렇게</h2>
     <ul>
       <li>프로토타입 개발: 무료 티어 또는 저렴한 모델(GPT-5.4 mini, Claude Haiku 4.5)</li>
       <li>프로덕션: 품질·비용 균형 모델(Claude Sonnet 4.6, GPT-5.4 mini)</li>
       <li>고품질 작업: 플래그십 모델(Claude Opus 4.8, GPT-5.4) 선택적 사용</li>
     </ul>
 
-    <h2>한국어로 쓰면 뭐가 더 자연스러워</h2>
+    <h2 id="sec-6">한국어로 쓰면 뭐가 더 자연스러워</h2>
     <p>한국어 작업에서 AI 모델 간 체감 차이가 있습니다. Chatbot Arena(LMSYS) 한국어 리더보드를 참고하면 주요 모델의 한국어 성능 순위를 비교할 수 있습니다.</p>
     <div class="table-wrap"><table>
       <tr><th>항목</th><th>Claude Sonnet 4.6</th><th>GPT-5.4</th><th>Gemini 2.5 Pro</th></tr>
@@ -216,12 +189,12 @@
     </table></div>
     <p>실제 사용 시 한국어 품질은 프롬프트 설계에 따라 크게 달라집니다. "한국어로 자연스럽게 답변해주세요"와 같은 지시를 추가하면 모든 모델에서 한국어 품질이 개선됩니다.</p>
 
-    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+    <div class="adfit-slot ds-ad" style="text-align: center; margin: 28px 0">
       <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-88xhdLeiIK3V35kb" data-ad-width="300" data-ad-height="250"></ins>
       <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
     </div>
 
-    <h2>기업에서 도입할 때 이것도 봐야 한다</h2>
+    <h2 id="sec-7">기업에서 도입할 때 이것도 봐야 한다</h2>
     <p>기업에서 AI를 도입할 때는 성능 외에 보안 정책도 중요한 선택 기준입니다. 특히 데이터 학습 여부는 반드시 확인해야 합니다. 각 공급사 공식 문서 기준으로 비교하면 다음과 같습니다.</p>
     <div class="table-wrap"><table>
       <tr><th>항목</th><th>Anthropic (Claude)</th><th>OpenAI (GPT)</th><th>Google (Gemini)</th></tr>
@@ -232,7 +205,7 @@
     </table></div>
     <p>세 업체 모두 API를 통한 입력 데이터는 기본적으로 모델 학습에 사용하지 않습니다. 다만 무료 웹 채팅(ChatGPT 무료, Claude.ai 무료 등)은 품질 개선 목적으로 데이터가 활용될 수 있으므로, 기업 업무에는 반드시 유료 API 또는 엔터프라이즈 플랜을 사용하세요.</p>
 
-    <h2>Claude vs GPT에 대해 가장 많이 오해하는 것들</h2>
+    <h2 id="sec-8">Claude vs GPT에 대해 가장 많이 오해하는 것들</h2>
     <p>AI 모델 비교에서 자주 보이는 잘못된 통념 세 가지를 짚어봤습니다.</p>
     <h3>오해 1: "Claude는 코딩에 강하고 GPT는 창작에 강하다"</h3>
     <p>이 구분은 1~2년 전 기준으로, 지금은 격차가 크게 줄었습니다. 2026년 Chatbot Arena(LMSYS) 벤치마크 기준 코딩 부문에서 Claude Sonnet 4.6과 GPT-5.4는 비슷한 수준으로 평가됩니다. 실무에서는 프롬프트 설계 방식이 모델 자체의 성능 차이보다 결과 품질에 더 큰 영향을 미칩니다. "이 모델이 코딩에 강하다"는 평가보다 직접 테스트해보는 것이 더 신뢰할 수 있습니다.</p>
@@ -242,7 +215,7 @@
     <p>위험합니다. Claude.ai 무료 버전, ChatGPT 무료 버전에 입력한 대화는 서비스 품질 개선 목적으로 활용될 수 있습니다. 계약서 초안, 재무 데이터, 고객 정보가 담긴 내용을 무료 버전에 입력하면 데이터 보안 위반 소지가 있습니다. 기업 업무에는 반드시 유료 API 또는 엔터프라이즈 플랜을 사용하고, 각 서비스의 데이터 처리 방침을 확인하세요.</p>
     <div class="highlight-box"><p>용도와 예산에 맞는 모델 선택이 먼저입니다. "어떤 모델이 최고인가"보다 "내 태스크에 가장 적합한 모델은 무엇인가"로 질문을 바꾸세요.</p></div>
 
-    <h2>모델 티어별 요금 비교 (2026년 6월 기준)</h2>
+    <h2 id="sec-9">모델 티어별 요금 비교 (2026년 6월 기준)</h2>
     <p>실제 공개 API 요금을 기준으로 용도와 비용 구간을 정리했습니다.</p>
     <div class="table-wrap"><table>
       <tr><th>모델</th><th>입력 (1M 토큰)</th><th>출력 (1M 토큰)</th><th>적합 용도</th></tr>
@@ -255,7 +228,7 @@
     </table></div>
     <p>동일한 월 $100 예산으로 GPT-5.4 mini는 약 2,222만 출력 토큰을 처리할 수 있지만, Claude Opus 4.8은 약 400만 출력 토큰만 처리할 수 있습니다. 약 5.6배의 처리량 차이입니다. 작업 복잡도에 따라 모델을 선택하는 이유가 여기 있습니다.</p>
 
-    <h2>실제 사용 패턴별 월 비용 추정</h2>
+    <h2 id="sec-10">실제 사용 패턴별 월 비용 추정</h2>
     <p>모델 선택 전 자신의 사용 패턴을 먼저 파악하면 실수를 줄일 수 있습니다. 2026년 6월 기준 API 요금을 반영한 시나리오입니다.</p>
     <ul>
       <li><strong>1일 1만 요청, 요청당 500 출력 토큰 (Claude Sonnet 4.6):</strong> 월 출력 약 1억5천만 토큰 → 약 $2,250 (약 300만원)</li>
@@ -265,50 +238,58 @@
     </ul>
     <p>1일 1만 요청 기준으로 모델 선택에 따라 월 90만원에서 300만원까지 약 3.3배 차이가 납니다. 요청 특성을 파악하고, 모델 라우팅과 캐싱 전략을 세운 다음 API를 선택하는 것이 순서입니다.</p>
 
-    <h2>자주 묻는 질문 (FAQ)</h2>
+    <h2 id="sec-11">자주 묻는 질문 (FAQ)</h2>
 
-    <div class="faq-item">
-      <div class="faq-q">Q. Claude와 GPT 중 한국어 성능이 더 좋은 모델은 무엇인가요?</div>
-      <p class="faq-a">2026년 기준으로 Claude Sonnet 4.6과 GPT-5.4 모두 한국어 성능이 상당히 높습니다. Claude는 존댓말/반말 전환이 자연스럽고 긴 한국어 문서 처리에 강한 편이며, GPT-5.4는 다양한 한국어 데이터로 학습되어 폭넓은 주제에 대응합니다. 실무에서는 프롬프트를 어떻게 설계하느냐에 따라 결과 품질이 크게 달라지므로, 직접 테스트해보고 용도에 맞는 모델을 선택하는 것을 권장합니다.</p>
-    </div>
+    <details class="faq-item"><summary><h3 class="faq-q">Q. Claude와 GPT 중 한국어 성능이 더 좋은 모델은 무엇인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+      <div class="faq-a">2026년 기준으로 Claude Sonnet 4.6과 GPT-5.4 모두 한국어 성능이 상당히 높습니다. Claude는 존댓말/반말 전환이 자연스럽고 긴 한국어 문서 처리에 강한 편이며, GPT-5.4는 다양한 한국어 데이터로 학습되어 폭넓은 주제에 대응합니다. 실무에서는 프롬프트를 어떻게 설계하느냐에 따라 결과 품질이 크게 달라지므로, 직접 테스트해보고 용도에 맞는 모델을 선택하는 것을 권장합니다.</div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-q">Q. 기업에서 AI 모델을 도입할 때 어떤 기준으로 선택해야 하나요?</div>
-      <p class="faq-a">기업용 AI 선택 시 주요 기준은 (1) 용도에 맞는 성능(코딩, 문서 분석, 고객 응대 등), (2) 비용 구조(토큰당 요금, 월 구독료), (3) 보안·컴플라이언스(SOC 2 인증, 데이터 학습 정책, 저장 지역), (4) 기존 시스템과의 통합 용이성입니다. 코딩 중심이면 Claude, 멀티모달 활용이 많으면 GPT-5.4, Google Workspace 기반이면 Gemini가 통합 측면에서 유리합니다.</p>
-    </div>
+    <details class="faq-item"><summary><h3 class="faq-q">Q. 기업에서 AI 모델을 도입할 때 어떤 기준으로 선택해야 하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+      <div class="faq-a">기업용 AI 선택 시 주요 기준은 (1) 용도에 맞는 성능(코딩, 문서 분석, 고객 응대 등), (2) 비용 구조(토큰당 요금, 월 구독료), (3) 보안·컴플라이언스(SOC 2 인증, 데이터 학습 정책, 저장 지역), (4) 기존 시스템과의 통합 용이성입니다. 코딩 중심이면 Claude, 멀티모달 활용이 많으면 GPT-5.4, Google Workspace 기반이면 Gemini가 통합 측면에서 유리합니다.</div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-q">Q. AI에 입력한 데이터가 모델 학습에 사용되나요?</div>
-      <p class="faq-a">API를 통해 입력한 데이터는 Anthropic, OpenAI, Google 모두 기본적으로 모델 학습에 사용하지 않습니다. 다만 무료 웹 인터페이스(ChatGPT 무료 버전, Claude.ai 무료 등)로 입력한 대화는 서비스 품질 개선에 활용될 수 있습니다. 기업 기밀이나 개인정보를 다룰 때는 반드시 유료 API 또는 엔터프라이즈 플랜을 이용하고, 각 서비스의 데이터 처리 방침을 확인하세요.</p>
-    </div>
+    <details class="faq-item"><summary><h3 class="faq-q">Q. AI에 입력한 데이터가 모델 학습에 사용되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+      <div class="faq-a">API를 통해 입력한 데이터는 Anthropic, OpenAI, Google 모두 기본적으로 모델 학습에 사용하지 않습니다. 다만 무료 웹 인터페이스(ChatGPT 무료 버전, Claude.ai 무료 등)로 입력한 대화는 서비스 품질 개선에 활용될 수 있습니다. 기업 기밀이나 개인정보를 다룰 때는 반드시 유료 API 또는 엔터프라이즈 플랜을 이용하고, 각 서비스의 데이터 처리 방침을 확인하세요.</div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-q">Q. Claude와 GPT를 함께 사용하는 것도 좋은 방법인가요?</div>
-      <p class="faq-a">네, 실무에서는 여러 모델을 용도별로 병행하는 전략이 효과적입니다. 예를 들어 코드 리뷰와 기술 문서는 Claude, 이미지 분석과 멀티모달 작업은 GPT-5.4, 대량의 단순 분류 작업은 GPT-5.4 mini처럼 저렴한 모델을 쓰는 식입니다. 이를 "모델 라우팅"이라고 하며, 비용 대비 최적의 품질을 얻을 수 있습니다.</p>
-    </div>
+    <details class="faq-item"><summary><h3 class="faq-q">Q. Claude와 GPT를 함께 사용하는 것도 좋은 방법인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+      <div class="faq-a">네, 실무에서는 여러 모델을 용도별로 병행하는 전략이 효과적입니다. 예를 들어 코드 리뷰와 기술 문서는 Claude, 이미지 분석과 멀티모달 작업은 GPT-5.4, 대량의 단순 분류 작업은 GPT-5.4 mini처럼 저렴한 모델을 쓰는 식입니다. 이를 "모델 라우팅"이라고 하며, 비용 대비 최적의 품질을 얻을 수 있습니다.</div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-q">Q. Claude의 Prompt Caching 기능을 활용하면 실제로 얼마나 비용이 절감되나요?</div>
-      <p class="faq-a">Anthropic Prompt Caching은 반복되는 시스템 프롬프트나 문서 컨텍스트를 서버에 캐싱해, 재사용 시 입력 토큰 비용을 90% 절감합니다. 예를 들어 1만 토큰 시스템 프롬프트를 월 1만 번 호출하는 서비스라면, 캐싱 없이는 1억 입력 토큰(Claude Sonnet 4.6 기준 약 $300)을 청구받지만 캐싱 적용 후에는 약 $30로 줄어듭니다. 단, 캐시는 5분 이상 유지되어야 효과적이므로 짧은 세션보다 반복 호출이 많은 서비스에서 효과가 큽니다. OpenAI도 GPT-5.4에서 Prompt Caching을 지원하며, 캐시된 입력 토큰은 정가의 10분의 1(90% 할인)로 청구됩니다.</p>
-    </div>
+    <details class="faq-item"><summary><h3 class="faq-q">Q. Claude의 Prompt Caching 기능을 활용하면 실제로 얼마나 비용이 절감되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+      <div class="faq-a">Anthropic Prompt Caching은 반복되는 시스템 프롬프트나 문서 컨텍스트를 서버에 캐싱해, 재사용 시 입력 토큰 비용을 90% 절감합니다. 예를 들어 1만 토큰 시스템 프롬프트를 월 1만 번 호출하는 서비스라면, 캐싱 없이는 1억 입력 토큰(Claude Sonnet 4.6 기준 약 $300)을 청구받지만 캐싱 적용 후에는 약 $30로 줄어듭니다. 단, 캐시는 5분 이상 유지되어야 효과적이므로 짧은 세션보다 반복 호출이 많은 서비스에서 효과가 큽니다. OpenAI도 GPT-5.4에서 Prompt Caching을 지원하며, 캐시된 입력 토큰은 정가의 10분의 1(90% 할인)로 청구됩니다.</div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-q">Q. Anthropic API와 OpenAI API 중 어느 쪽이 안정성이 더 높나요?</div>
-      <p class="faq-a">두 서비스 모두 SLA 기준 99.9% 이상의 가용성을 목표로 운영됩니다. 급격한 트래픽 증가나 신규 모델 출시 직후에는 양쪽 모두 간헐적 지연이 발생하는 경우가 있습니다. 두 서비스 모두 status 페이지(status.anthropic.com, status.openai.com)를 실시간으로 제공하며 장애 이력을 공개합니다. 높은 안정성이 필요한 서비스라면 Fallback 전략으로 두 API를 모두 연동해두고, 주 API 장애 시 보조 API로 자동 전환하는 구조를 권장합니다.</p>
-    </div>
+    <details class="faq-item"><summary><h3 class="faq-q">Q. Anthropic API와 OpenAI API 중 어느 쪽이 안정성이 더 높나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+      <div class="faq-a">두 서비스 모두 SLA 기준 99.9% 이상의 가용성을 목표로 운영됩니다. 급격한 트래픽 증가나 신규 모델 출시 직후에는 양쪽 모두 간헐적 지연이 발생하는 경우가 있습니다. 두 서비스 모두 status 페이지(status.anthropic.com, status.openai.com)를 실시간으로 제공하며 장애 이력을 공개합니다. 높은 안정성이 필요한 서비스라면 Fallback 전략으로 두 API를 모두 연동해두고, 주 API 장애 시 보조 API로 자동 전환하는 구조를 권장합니다.</div>
+    </details>
 
-    <h2>결국 중요한 건</h2>
+    <h2 id="sec-12">결국 중요한 건</h2>
     <p>Claude, GPT, Gemini 중 어떤 모델이 무조건 좋다고 단정할 수 없습니다. 코딩 중심이면 Claude, 이미지·음성이 필요하면 GPT-5.4, 비용 효율이 최우선이면 Gemini나 Haiku를 고려하세요. 용도, 예산, 보안 요구사항 세 가지를 기준으로 비교 테스트한 뒤 선택하는 것이 가장 현명합니다.</p>
 
     <div class="cta-box">
       <p>AI API 비용을 달러·원화로 바로 계산해보세요.</p>
       <a href="../../calc/ai/llm-comparison/" class="cta-btn">AI 비용 계산하기</a>
     </div>
-    <p style="font-size: 13px; color: #6B7280; margin-top: 8px;">관련 계산기: <a href="https://www.jptcalc.kr/calc/ai/gpu-cloud/">GPU 클라우드 비교</a> · <a href="https://www.jptcalc.kr/calc/ai/saas-comparison/">SaaS 비용 비교</a></p>
+    <div class="review-footer"><p class="review-footer__title">검토 안내</p><p class="review-footer__text">이 글은 공공기관 공개 자료를 기준으로 작성되었으며, 정보 제공 목적입니다. AI 서비스 가격·성능은 수시로 변동됩니다. 최신 정보는 각 벤더 공식 사이트에서 확인하세요.</p></div>
+    <p class="ds-t-sub" style="font-size: var(--fs-meta); margin-top: 8px">관련 계산기: <a href="https://www.jptcalc.kr/calc/ai/gpu-cloud/">GPU 클라우드 비교</a> · <a href="https://www.jptcalc.kr/calc/ai/saas-comparison/">SaaS 비용 비교</a></p>
+    </div>
+    <aside class="article-info" aria-label="글 작성 및 검토 정보"><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">작성</span><span class="article-info__value">제이퍼 계산기 편집팀</span></div><span class="article-info__sep" aria-hidden="true">|</span><div class="article-info__item"><span class="article-info__label">최종 확인일</span><span class="article-info__value">2026.06.09</span></div></div><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">비교 기준</span><span class="article-info__value">Anthropic·OpenAI 공식 서비스 기준, 2026년</span></div></div><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">업데이트 기준</span><span class="article-info__value">2026년 기준</span></div><span class="article-info__sep" aria-hidden="true">|</span><div class="article-info__item"><span class="article-info__label">참고</span><span class="article-info__value">Anthropic·OpenAI</span></div></div><div class="article-info__calc"><span class="article-info__label">관련 계산기</span> <a href="/calc/ai/llm-comparison/">LLM 비교 계산기 &rarr;</a></div><p class="article-info__disclaimer">이 글은 정보 제공 목적으로 작성되었습니다. 실제 세금·법률·금융 판단은 관할 기관 또는 전문가에게 확인하세요.</p></aside>
+  </article>
+</main>
+
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용입니다.</p>
   </div>
-</div>
-<footer class="site-footer"><p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용입니다.</p></footer>
-  <script src="/assets/footer-unified.js" defer></script>
+</footer>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: "제이퍼 계산기 편집팀",
@@ -322,7 +303,7 @@ window.ARTICLE_INFO_CONFIG = {
 window.ARTICLE_INFO_CONFIG.relatedCalc = { name: 'LLM 비교 계산기', url: '/calc/ai/llm-comparison/' };
 window.ARTICLE_INFO_CONFIG.category = 'ai';
 </script>
-<script src="/assets/blog-article-info.js" defer></script>
-<script src="/assets/blog-review-footer.js" defer></script>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
 </body>
 </html>

@@ -18,10 +18,9 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link rel="stylesheet" href="/assets/pet-common.css" />
+<link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebApplication","name":"고양이 나이 계산기","url":"https://www.jptcalc.kr/calc/pet/cat-age/","applicationCategory":"LifestyleApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
   </script>
@@ -34,82 +33,119 @@
   </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"고양이 나이에 7을 곱하면 사람 나이가 되나요?","acceptedAnswer":{"@type":"Answer","text":"단순히 7을 곱하는 방식은 부정확합니다. 고양이는 첫 1년에 사람 약 15세까지 급격히 성장하고, 2년째에 24세가 되며, 그 이후로는 1년에 약 4세씩 천천히 나이를 먹습니다. 이 계산기는 국제 동물병원협회(AAHA)와 국제고양이수의학회가 사용하는 표준 환산식을 적용해 7배 곱셈보다 정확한 사람 나이를 알려줍니다."}},{"@type":"Question","name":"고양이는 강아지처럼 크기에 따라 나이 환산이 다른가요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 강아지는 소형견·대형견 등 크기에 따라 노화 속도가 달라 환산표가 나뉘지만, 고양이는 품종·크기에 따른 수명 차이가 크지 않아 국제 표준 환산식 하나를 모든 고양이에 동일하게 적용합니다. 다만 실내묘가 실외묘보다 평균 수명이 길어 같은 사람 나이라도 더 건강할 수 있습니다."}},{"@type":"Question","name":"우리 고양이는 몇 살부터 노령묘인가요?","acceptedAnswer":{"@type":"Answer","text":"국제 동물병원협회(AAHA) 2021년 생애 단계 기준으로 7세부터 중년기, 10~11세부터 노령기(시니어)에 접어듭니다. 노령묘는 신장 질환·갑상선 항진증·치아 질환이 늘어나므로 건강검진을 연 2회로 늘리고 신장 수치와 체중 변화를 정기적으로 확인하는 것이 좋습니다."}},{"@type":"Question","name":"사람 나이 환산은 어떤 기준으로 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"국제 표준 환산식을 사용합니다. 첫 1년을 사람 15세, 2년째를 24세로 보고, 2세 이후로는 고양이 1년당 사람 4세씩 더합니다. 입력한 개월 수까지 반영해 중간값을 보간 계산하므로, 예를 들어 1세 6개월은 약 사람 19~20세에 해당합니다."}},{"@type":"Question","name":"고양이 나이를 정확히 모르면 어떻게 추정하나요?","acceptedAnswer":{"@type":"Answer","text":"구조묘 입양 등으로 출생일을 모를 때는 치아 상태(영구치 완성 6~7개월, 마모와 치석 정도), 눈의 홍채와 수정체 혼탁, 털 윤기와 근육량으로 수의사가 대략적인 나이를 추정합니다. 추정 나이를 입력하면 사람 나이 환산과 생애 단계를 참고치로 확인할 수 있습니다."}}]}</script>
   <style>
-    /* cat-age 고유 스타일 - 공통 스타일은 /assets/pet-common.css 참조 */
-    .input-wrap{position:relative}
-    .input-wrap .unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none}
-    input[type=number]{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
-    input::placeholder{color:var(--gray-400);font-weight:400}
-    input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(244,114,182,0.15)}
-    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
-    .age-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .age-field>label{display:block;font-size:12px;font-weight:700;color:var(--gray-500);margin-bottom:7px}
-    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
-    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
-    .result-card{background:linear-gradient(135deg,#FDF2F8 0%,#FCE7F3 100%);border:1px solid rgba(244,114,182,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
-    .result-card.show{display:block}
-    .result-row+.result-row{border-top:1px solid rgba(0,0,0,0.07)}
-    .rh-value .big-num{font-size:40px;font-weight:900;line-height:1}
+    /* 페이지 고유 스타일(공통 부품 재정의는 base.css가 맡아 뺐다) */
+    .age-grid { display:grid;grid-template-columns:1fr 1fr;gap:12px }
+    .age-field>label { display:block;font-size:12px;font-weight:700;color:var(--gray-500);margin-bottom:7px }
+    .rh-value .big-num { font-size:40px;font-weight:900;line-height:1 }
+  </style>
+  <style>
+/* 반려동물 고유 부품: 비용 항목 줄(라벨 위, 입력 아래, 필드 간격) */
+.cost-item { display: flex; flex-direction: column; gap: var(--space-2); margin-bottom: var(--space-field); }
+.cost-label { font-size: var(--fs-label); font-weight: var(--fw-label); color: var(--text); }
+.cost-item .input-wrap { width: 100%; }
   </style>
 </head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
-    <nav class="header-nav">
-      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
-      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
-      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
-      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
-      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
-      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
-      <a href="/calc/pet/" class="nav-item active"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
-    </nav>
-    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
-    <button class="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
-  </div>
+<body data-cat="pet" style="--cat: var(--c-pet)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
 </header>
-<main class="page-wrap">
-  <div class="page-header">
-    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/pet/">반려동물 비용 계산기</a><span class="breadcrumb-sep">›</span><span>고양이 나이 계산기</span></div>
-    <div class="page-header-badge">🐱 국제 표준 환산식 기준</div>
-    <h1>고양이 나이 계산기</h1>
-    <p>고양이 나이를 사람 나이로 환산하고 생애 단계를 확인하세요</p>
+
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/pet/">반려동물 비용 계산기</a> &rsaquo; 고양이 나이 계산기</div>
+      <div class="page-badge">국제 표준 환산식 기준</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-paw-print"></use></svg></span>
+        <h1 class="page-title">고양이 나이 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">국제 표준 환산식 기준</span>
+          <span class="ds-trust-chip">2026.06.12 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">고양이 나이를 사람 나이로 환산하고 생애 단계를 확인하세요</p>
+    </div>
   </div>
-    <div class="card">
-      <div class="card-title">고양이 나이</div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+      <div class="field-label ds-group-label">고양이 나이</div>
       <div class="age-grid">
         <div class="age-field"><label for="c-year">나이 (년)</label><div class="input-wrap"><input type="number" id="c-year" placeholder="예) 4" min="0" max="30" oninput="calc()" /><span class="unit">년</span></div></div>
         <div class="age-field"><label for="c-month">개월 (선택)</label><div class="input-wrap"><input type="number" id="c-month" placeholder="예) 6" min="0" max="11" oninput="calc()" /><span class="unit">개월</span></div></div>
       </div>
     </div>
-    <div class="result-card" id="result">
+
+        <button type="button" class="ds-btn-calc" data-calc-submit="calc" data-result="result" data-required="c-year|c-month">계산하기</button>
+      </div>
+    </section>
+
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="result">
       <div class="result-highlight"><div class="rh-label">사람 나이로 환산하면</div><div class="rh-value"><span class="big-num" id="r-human">-</span>세</div><div class="rh-sub" id="r-stage">-</div></div>
       <div class="result-row"><span class="result-label">입력한 고양이 나이</span><span class="result-value" id="r-catage">-</span></div>
       <div class="result-row"><span class="result-label">생애 단계</span><span class="result-value" id="r-stage2">-</span></div>
       <div class="result-row"><span class="result-label" id="r-senior-label">노령기 진입</span><span class="result-value" id="r-senior">-</span></div>
       <p class="result-note">※ 국제 동물병원협회(AAHA)와 국제고양이수의학회가 사용하는 표준 환산식(1세=15세, 2세=24세, 이후 연 4세)을 기준으로 입력한 개월 수까지 반영해 계산한 참고치입니다. 같은 나이라도 품종·건강 상태·실내외 환경에 따라 실제 노화 속도는 달라질 수 있으며, 정확한 건강 상태는 동물병원 검진으로 확인하세요.</p>
-    </div>
-  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/pet/dog-age/">강아지 나이 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">사람 나이로 환산하면</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="cat-age-next">
+        <a class="ds-next-card" href="/calc/pet/dog-age/" data-next="dog-age"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-paw-print"></use></svg></span><span class="ds-next-body"><b>강아지 나이 계산기</b><span>강아지 나이를 사람 나이로 환산합니다. 소형견·중형견·대형견·초대형견 크기별 AKC 환산표를 적용해 사람 나이와 생애 단계(자견·성견·노령견)를 알려줍니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/pet/food-amount/" data-next="food-amount"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-paw-print"></use></svg></span><span class="ds-next-body"><b>사료 급여량 계산기</b><span>강아지·고양이 체중과 활동 단계를 입력하면 하루 적정 사료 급여량(g)을 계산합니다. NRC 국제 표준 에너지 공식(RER·DER)으로 개체에 맞는 급여량을 산출합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
+  </div>
+
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">국제 동물병원협회(AAHA)·국제고양이수의학회 표준 나이 환산식 기반 <a href="https://www.aaha.org" target="_blank" rel="noopener">American Animal Hospital Association 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#cat-age-s1">고양이 나이,</a><a href="#cat-age-s2">구간별 표</a><a href="#cat-age-s3">계산 예시</a><a href="#cat-age-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
     <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
     <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
   </div>
 
   <div class="guide-section">
-    <div class="guide-card">
-      <h2>고양이 나이, 7을 곱하면 안 되는 이유</h2>
-      <p>흔히 '고양이 나이 × 7 = 사람 나이'로 알려져 있지만 이는 부정확합니다. 고양이는 태어난 뒤 첫 1년 동안 사람의 약 15세 수준까지 빠르게 성장하고, 2년째에는 24세에 이릅니다. 그 이후로는 1년에 약 4세씩 천천히 나이를 먹습니다. 즉 어릴 때는 사람보다 훨씬 빠르게, 성묘가 된 뒤로는 완만하게 나이가 듭니다. 강아지와 달리 고양이는 크기·품종에 따른 노화 차이가 크지 않아 모든 고양이에 동일한 환산식을 적용합니다.</p>
+            <section class="ds-section ds-prose" aria-labelledby="cat-age-s1">
+          <div class="ds-section-head"><h2 id="cat-age-s1">고양이 나이, 7을 곱하면 안 되는 이유</h2></div>
+<p>흔히 '고양이 나이 × 7 = 사람 나이'로 알려져 있지만 이는 부정확합니다. 고양이는 태어난 뒤 첫 1년 동안 사람의 약 15세 수준까지 빠르게 성장하고, 2년째에는 24세에 이릅니다. 그 이후로는 1년에 약 4세씩 천천히 나이를 먹습니다. 즉 어릴 때는 사람보다 훨씬 빠르게, 성묘가 된 뒤로는 완만하게 나이가 듭니다. 강아지와 달리 고양이는 크기·품종에 따른 노화 차이가 크지 않아 모든 고양이에 동일한 환산식을 적용합니다.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>첫 1년 = 사람 15세</strong><span>생후 1년이면 신체적으로 사람의 사춘기 수준까지 성장합니다</span></div>
         <div class="guide-box"><strong>2세 이후 연 4세</strong><span>2세 24세를 기준으로 매년 사람 나이 4세씩 더해집니다</span></div>
         <div class="guide-box"><strong>크기 구분 없음</strong><span>강아지와 달리 품종·체격에 관계없이 같은 환산식을 씁니다</span></div>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>고양이 나이 → 사람 나이 환산표</h2>
-      <p>국제 동물병원협회(AAHA)와 국제고양이수의학회(ISFM)가 사용하는 표준 환산표입니다. 첫 1년을 사람 15세, 2년째를 24세로 보고, 이후 고양이 1년마다 사람 나이 4세씩 더해 계산합니다.</p>
-      <div class="guide-table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="cat-age-s2">
+          <div class="ds-section-head"><h2 id="cat-age-s2">고양이 나이 → 사람 나이 환산표</h2></div>
+<p>국제 동물병원협회(AAHA)와 국제고양이수의학회(ISFM)가 사용하는 표준 환산표입니다. 첫 1년을 사람 15세, 2년째를 24세로 보고, 이후 고양이 1년마다 사람 나이 4세씩 더해 계산합니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead><tr><th>고양이 나이</th><th>사람 나이</th><th>생애 단계</th></tr></thead>
           <tbody>
@@ -135,10 +171,10 @@
         </table>
       </div>
       <p>위 계산기는 이 표를 기준으로 입력한 개월 수까지 반영해 중간값을 보간 계산합니다. 예를 들어 3세 6개월은 약 사람 30세에 해당합니다.</p>
-    </div>
-    <div class="guide-card">
-      <h2>실제 고양이 나이 환산 예시</h2>
-      <h3>예시 1 - 정유진(27세) 1살 6개월 코리안숏헤어</h3>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="cat-age-s3">
+          <div class="ds-section-head"><h2 id="cat-age-s3">실제 고양이 나이 환산 예시</h2></div>
+<h3>예시 1 - 정유진(27세) 1살 6개월 코리안숏헤어</h3>
       <p>1년 6개월 된 코숏 '치즈'를 키우는 정유진씨의 경우, 사람 나이로는 약 19~20세에 해당합니다. 막 성묘에 접어드는 청년기로, 자묘용 사료를 성묘용으로 바꾸고 중성화 수술과 활동량 관리를 시작할 시점입니다.</p>
       <ul>
         <li>고양이 나이: 1세 6개월 · 생애 단계: 청년 성묘</li>
@@ -159,27 +195,45 @@
         <li>사람 나이 환산: 약 72세 · 신장·갑상선 관리 필요</li>
         <li>연 2회 검진·식이·환경 케어 강화</li>
       </ul>
-    </div>
-    <div class="guide-card">
-      <h2>생애 단계별 케어 포인트</h2>
-      <p>고양이의 사람 나이를 알면 지금 어떤 돌봄이 필요한지 가늠할 수 있습니다. 국제 동물병원협회(AAHA) 2021년 생애 단계 기준으로 단계별 관리 시점이 달라집니다.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="cat-age-s4">
+          <div class="ds-section-head"><h2 id="cat-age-s4">생애 단계별 케어 포인트</h2></div>
+<p>고양이의 사람 나이를 알면 지금 어떤 돌봄이 필요한지 가늠할 수 있습니다. 국제 동물병원협회(AAHA) 2021년 생애 단계 기준으로 단계별 관리 시점이 달라집니다.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>새끼고양이 (0~1세)</strong><span>예방접종 완료, 사회화, 자묘용 사료로 영양 집중. 성장 속도가 가장 빠른 시기입니다.</span></div>
         <div class="guide-box"><strong>청년 성묘 (1~6세)</strong><span>체중·치아 관리와 규칙적인 놀이가 핵심. 연 1회 건강검진과 중성화를 마무리하세요.</span></div>
         <div class="guide-box"><strong>중년 성묘 (7~10세)</strong><span>비만·당뇨·치아 질환이 늘어나는 시기. 신장 수치와 체중 변화를 정기적으로 확인하세요.</span></div>
         <div class="guide-box"><strong>노령묘 (10세 이상)</strong><span>신장 질환·갑상선 항진증 위험 증가. 건강검진을 연 2회로 늘리고 식이·환경을 조정하세요.</span></div>
       </div>
-    </div>
-    <div class="guide-card faq-card">
-      <h2>자주 묻는 질문</h2>
-      <div class="faq-item"><h3>고양이 나이에 7을 곱하면 사람 나이가 되나요?</h3><p>단순히 7을 곱하는 방식은 부정확합니다. 고양이는 첫 1년에 사람 약 15세까지 급격히 성장하고, 2년째에 24세가 되며, 그 이후로는 1년에 약 4세씩 천천히 나이를 먹습니다. 이 계산기는 국제 동물병원협회(AAHA)와 국제고양이수의학회가 사용하는 표준 환산식을 적용해 7배 곱셈보다 정확한 사람 나이를 알려줍니다.</p></div>
-      <div class="faq-item"><h3>고양이는 강아지처럼 크기에 따라 나이 환산이 다른가요?</h3><p>아닙니다. 강아지는 소형견·대형견 등 크기에 따라 노화 속도가 달라 환산표가 나뉘지만, 고양이는 품종·크기에 따른 수명 차이가 크지 않아 국제 표준 환산식 하나를 모든 고양이에 동일하게 적용합니다. 다만 실내묘가 실외묘보다 평균 수명이 길어 같은 사람 나이라도 더 건강할 수 있습니다.</p></div>
-      <div class="faq-item"><h3>우리 고양이는 몇 살부터 노령묘인가요?</h3><p>국제 동물병원협회(AAHA) 2021년 생애 단계 기준으로 7세부터 중년기, 10~11세부터 노령기(시니어)에 접어듭니다. 노령묘는 신장 질환·갑상선 항진증·치아 질환이 늘어나므로 건강검진을 연 2회로 늘리고 신장 수치와 체중 변화를 정기적으로 확인하는 것이 좋습니다.</p></div>
-      <div class="faq-item"><h3>사람 나이 환산은 어떤 기준으로 계산하나요?</h3><p>국제 표준 환산식을 사용합니다. 첫 1년을 사람 15세, 2년째를 24세로 보고, 2세 이후로는 고양이 1년당 사람 4세씩 더합니다. 입력한 개월 수까지 반영해 중간값을 보간 계산하므로, 예를 들어 1세 6개월은 약 사람 19~20세에 해당합니다.</p></div>
-      <div class="faq-item"><h3>고양이 나이를 정확히 모르면 어떻게 추정하나요?</h3><p>구조묘 입양 등으로 출생일을 모를 때는 치아 상태(영구치 완성 6~7개월, 마모와 치석 정도), 눈의 홍채와 수정체 혼탁, 털 윤기와 근육량으로 수의사가 대략적인 나이를 추정합니다. 추정 나이를 입력하면 사람 나이 환산과 생애 단계를 참고치로 확인할 수 있습니다.</p></div>
+        </section>
+            <section class="ds-section faq-card" aria-labelledby="cat-age-faq">
+          <div class="ds-section-head"><h2 id="cat-age-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>고양이 나이에 7을 곱하면 사람 나이가 되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>단순히 7을 곱하는 방식은 부정확합니다. 고양이는 첫 1년에 사람 약 15세까지 급격히 성장하고, 2년째에 24세가 되며, 그 이후로는 1년에 약 4세씩 천천히 나이를 먹습니다. 이 계산기는 국제 동물병원협회(AAHA)와 국제고양이수의학회가 사용하는 표준 환산식을 적용해 7배 곱셈보다 정확한 사람 나이를 알려줍니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>고양이는 강아지처럼 크기에 따라 나이 환산이 다른가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>아닙니다. 강아지는 소형견·대형견 등 크기에 따라 노화 속도가 달라 환산표가 나뉘지만, 고양이는 품종·크기에 따른 수명 차이가 크지 않아 국제 표준 환산식 하나를 모든 고양이에 동일하게 적용합니다. 다만 실내묘가 실외묘보다 평균 수명이 길어 같은 사람 나이라도 더 건강할 수 있습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>우리 고양이는 몇 살부터 노령묘인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>국제 동물병원협회(AAHA) 2021년 생애 단계 기준으로 7세부터 중년기, 10~11세부터 노령기(시니어)에 접어듭니다. 노령묘는 신장 질환·갑상선 항진증·치아 질환이 늘어나므로 건강검진을 연 2회로 늘리고 신장 수치와 체중 변화를 정기적으로 확인하는 것이 좋습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>사람 나이 환산은 어떤 기준으로 계산하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>국제 표준 환산식을 사용합니다. 첫 1년을 사람 15세, 2년째를 24세로 보고, 2세 이후로는 고양이 1년당 사람 4세씩 더합니다. 입력한 개월 수까지 반영해 중간값을 보간 계산하므로, 예를 들어 1세 6개월은 약 사람 19~20세에 해당합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>고양이 나이를 정확히 모르면 어떻게 추정하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>구조묘 입양 등으로 출생일을 모를 때는 치아 상태(영구치 완성 6~7개월, 마모와 치석 정도), 눈의 홍채와 수정체 혼탁, 털 윤기와 근육량으로 수의사가 대략적인 나이를 추정합니다. 추정 나이를 입력하면 사람 나이 환산과 생애 단계를 참고치로 확인할 수 있습니다.</p>
+            </details>
       <div class="update-note">최종 검토: 2026.06.12 · 계산 결과는 참고용입니다.</div>
-    </div>
+          </div>
+        </section>
   </div>
+    </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
   <script>
   window.TRUST_BLOCK_CONFIG = {
     standard: '국제 동물병원협회(AAHA)·국제고양이수의학회 표준 나이 환산식 기반',
@@ -194,31 +248,38 @@
     lastReviewed: '2026.06',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>
-  <div class="sibling-section">
-    <div class="sibling-title">다른 반려동물 계산기</div>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 반려동물 계산기</h2>
     <div class="sibling-list">
-      <a href="/calc/pet/dog-age/" class="sibling-link">🐶 강아지 나이</a>
-      <a href="/calc/pet/cat-age/" class="sibling-link current">🐱 고양이 나이</a>
-      <a href="/calc/pet/food-amount/" class="sibling-link">🍽️ 사료 급여량</a>
-      <a href="/calc/pet/monthly-cost/" class="sibling-link">🐕 월 생활비</a>
-      <a href="/calc/pet/adoption/" class="sibling-link">🏠 입양 초기비용</a>
-      <a href="/calc/pet/medical/" class="sibling-link">💊 의료비 예산</a>
-      <a href="/calc/pet/insurance/" class="sibling-link">🛡️ 펫보험 비교</a>
-      <a href="/calc/pet/lifetime-cost/" class="sibling-link">📊 평생 양육비</a>
+      <a href="/calc/pet/dog-age/" class="sibling-link">강아지 나이</a>
+      <a href="/calc/pet/food-amount/" class="sibling-link">사료 급여량</a>
+      <a href="/calc/pet/monthly-cost/" class="sibling-link">월 생활비</a>
+      <a href="/calc/pet/adoption/" class="sibling-link">입양 초기비용</a>
+      <a href="/calc/pet/medical/" class="sibling-link">의료비 예산</a>
+      <a href="/calc/pet/insurance/" class="sibling-link">펫보험 비교</a>
+      <a href="/calc/pet/lifetime-cost/" class="sibling-link">평생 양육비</a>
     </div>
-    <div class="sibling-title">관련 가이드</div>
-    <div class="sibling-list">
-      <a href="/blog/posts/cat-age-guide.html" class="sibling-link">📖 고양이 나이 계산법 2026 - 사람 나이 환산표와 노령묘 진입 시점 총정리</a>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/cat-age-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/cat-age-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>고양이 나이 계산법 2026 - 사람 나이 환산표와 노령묘 진입 시점 총정리</span></a>
     </div>
   </div>
 </main>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
-    <span class="footer-copy">© 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
   </div>
 </footer>
+
+<script src="/assets/ds/calc-kit.js?v=d45e66d9"></script>
 <script>
 // 국제 표준 고양이 나이 환산 (1세=15, 2세=24, 이후 연 4세)
 const SENIOR=10;            // 노령기 진입 나이 (AAHA 2021)
@@ -231,8 +292,8 @@ function humanAge(catYears){
   return 24+(catYears-2)*4;
 }
 function calc(){
-  const y=parseFloat(document.getElementById('c-year').value)||0;
-  let m=parseFloat(document.getElementById('c-month').value)||0;
+  const y=parseFloat(String(document.getElementById('c-year').value).replace(/,/g, ''))||0;
+  let m=parseFloat(String(document.getElementById('c-month').value).replace(/,/g, ''))||0;
   if(m>11)m=11; if(m<0)m=0;
   const catYears=y+m/12;
   const res=document.getElementById('result');
@@ -260,11 +321,10 @@ function calc(){
 }
 </script>
 
-<script src="/assets/calc-validate.js"></script>
-<script src="/assets/calc-result-tools.js"></script>
-<script src="/assets/footer-unified.js" defer></script>
-<script src="/assets/calc-registry.js"></script>
-<script src="/assets/pet-detail-shell.js"></script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
@@ -275,7 +335,13 @@ window.ARTICLE_INFO_CONFIG = {
   category: 'pet'
 };
 </script>
-<script src="/assets/blog-article-info.js"></script>
-<script src="/assets/blog-review-footer.js"></script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "result", "required": ["c-year|c-month"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#cat-age-next", "next": []});
+  DSCalc.placeTrust('ds-trust-col');
+</script>
+<script src="/assets/ds/prefill.js?v=fa5eb49a" defer></script>
 </body>
 </html>

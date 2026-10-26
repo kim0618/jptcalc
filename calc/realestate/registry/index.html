@@ -22,62 +22,50 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link rel="stylesheet" href="/assets/realestate-common.css" />
-  <link rel="stylesheet" href="/assets/affiliate-banner.css" />
-  <style>
-    @media (max-width: 480px) {
-      .seg-group-4 .seg-btn { min-width: calc(50% - 3px); }
-    }
-  </style>
+  <script src="/assets/vendor/html2canvas/1.4.1/html2canvas.min.js?v=e87e5507" defer></script>
+<link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+    <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
+  <link rel="stylesheet" href="/assets/affiliate-banner.css?v=7ee55b7a" />
 </head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
-    <nav class="header-nav">
-      <a href="/calc/realestate/" class="nav-item active"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
-      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
-      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
-      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
-      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
-      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
-      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
-    </nav>
-    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
-    <button class="hamburger" onclick="var m=document.querySelector('.mob-menu'); if(m)m.classList.toggle('open');" aria-label="메뉴"><span></span><span></span><span></span></button>
-  </div>
+<body data-cat="realestate" style="--cat: var(--c-realestate)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
 </header>
-<div class="mob-menu">
-  <a href="/calc/realestate/" class="mob-link active"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
-  <a href="/calc/tax/" class="mob-link"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/salary/" class="mob-link"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/finance/" class="mob-link"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
-      <a href="/calc/health/" class="mob-link"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
-      <a href="/calc/date/" class="mob-link"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
-      <a href="/calc/ai/" class="mob-link"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
-      <a href="/calc/pet/" class="mob-link"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
-  <a href="/blog/" class="mob-link">블로그</a>
-</div>
-<main class="page-wrap">
-  <div class="page-header">
-    <div class="breadcrumb"><a href="/">홈</a> &rsaquo; <a href="/calc/realestate/">부동산 계산기</a> &rsaquo; 등기비용 계산기</div>
-    <div class="page-badge">부동산 계산기</div>
-    <h1 class="page-title">등기비용 계산기</h1>
-    <p class="page-subtitle">2026년 기준 · 등록면허세·지방교육세 자동 계산</p>
-  </div>
 
-  <div class="card">
-    <div class="card-title">거래 금액</div>
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/realestate/">부동산 계산기</a> &rsaquo; 등기비용 계산기</div>
+      <div class="page-badge">부동산 계산기</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-house"></use></svg></span>
+        <h1 class="page-title">등기비용 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">부동산등기법 기준</span>
+          <span class="ds-trust-chip">2026.05.10 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">2026년 기준 · 등록면허세·지방교육세 자동 계산</p>
+    </div>
+  </div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+    <div class="field-label ds-group-label">거래 금액</div>
     <div class="field">
       <div class="field-label">부동산 거래금액 <span class="label-hint">취득가액 또는 시가표준액 중 큰 금액</span></div>
       <div class="input-wrap">
-        <input type="number" id="reg-price" placeholder="예) 50000" oninput="calcRegistry()" />
+        <input type="text" inputmode="numeric" autocomplete="off" data-ds-num data-prefill="price" id="reg-price" placeholder="예) 50000" oninput="calcRegistry()" />
         <span class="unit">만원</span>
       </div>
       <div class="converted" id="reg-price-display"></div>
@@ -85,7 +73,7 @@
   </div>
 
   <div class="card">
-    <div class="card-title">등기 유형</div>
+    <div class="field-label ds-group-label">등기 유형</div>
     <div class="seg-group seg-group-4" style="margin-bottom:0;flex-wrap:wrap">
       <button class="seg-btn active" onclick="regSelectType('매매', this)">소유권이전 (매매)</button>
       <button class="seg-btn" onclick="regSelectType('상속', this)">소유권이전 (상속)</button>
@@ -93,12 +81,42 @@
       <button class="seg-btn" onclick="regSelectType('근저당', this)">근저당권 설정</button>
     </div>
   </div>
+        <button type="button" class="ds-btn-calc" data-calc-submit="calcRegistry" data-result="reg-result" data-required="reg-price">계산하기</button>
+      </div>
+    </section>
 
-  <div class="result-card" id="reg-result">
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="reg-result">
     <div id="reg-result-content"></div>
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('reg-result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/realestate/acquisition/">취득세도 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">계산 결과</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="registry-next">
+        <a class="ds-next-card" href="/calc/realestate/acquisition/" data-next="acq"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-house"></use></svg></span><span class="ds-next-body"><b>취득세 계산기</b><span>거래금액 기준 취득세</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/realestate/brokerage/" data-next="brokerage"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-house"></use></svg></span><span class="ds-next-body"><b>중개수수료 계산기</b><span>거래금액 기준 중개보수</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
   </div>
 
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">부동산등기법, 법원행정처 기준 <a href="https://www.law.go.kr/법령/부동산등기법" target="_blank" rel="noopener">관련 법령 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
   <a class="affiliate-banner" href="https://linkmoa.kr/click.php?m=soomgo&a=A100703525&l=0000" target="_blank" rel="noopener noreferrer sponsored">
+      <span class="ds-icon-badge"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span>
       <div class="affiliate-banner__text">
         <div class="affiliate-banner__title">이사·입주청소·인테리어 견적 무료로 받기</div>
         <div class="affiliate-banner__desc">숨고에서 검증된 생활 서비스 전문가에게 무료 견적을 받아보세요</div>
@@ -107,11 +125,12 @@
     </a>
   <p class="affiliate-disclosure">※ 위 링크는 제휴 광고이며, 이용 시 제이퍼 계산기가 일정 수수료를 받을 수 있습니다. (이용자 추가 부담 없음)</p>
 
-  <div class="explain-section">
-    <button class="explain-toggle open" onclick="toggleExplain(this)">
-      등기비용 완벽 가이드 <span class="etarrow">▼</span>
-    </button>
-    <div class="explain-body show">
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#registry-guide">가이드</a><a href="#registry-s1">세율표</a><a href="#registry-s2">등기비용 계산기는</a><a href="#registry-s3">계산 방법</a><a href="#registry-s4">계산 예시</a><a href="#registry-faq">FAQ</a>
+      </nav>
+<section class="explain-section ds-section ds-prose" aria-labelledby="registry-guide">
+        <div class="ds-section-head"><h2 id="registry-guide">등기비용 완벽 가이드</h2></div>
+
       <h3>등기비용이란?</h3>
       <p>부동산 소유권 이전 및 담보 설정 시 국가에 납부하는 세금과 수수료입니다. 등기를 해야만 법적 권리가 보호됩니다.</p>
       <h3>주요 비용 항목</h3>
@@ -135,19 +154,19 @@
         <li>국민주택채권: 시가표준액 × 비율 (매매 시 필요)</li>
       </ul>
       <p style="margin-top:16px;padding:12px 16px;background:#FEF3C7;border-radius:8px;font-size:13px;color:#92400E;line-height:1.6">이 계산기의 결과는 참고용이며 법적 효력이 없습니다. 등기 비용은 거래 유형·부동산 종류·지역에 따라 달라질 수 있으므로 실제 등기 전 법무사 또는 <a href="https://www.iros.go.kr" target="_blank" rel="noopener" style="color:#92400E;font-weight:600">대법원 인터넷등기소(iros.go.kr)</a>에서 확인하세요.</p>
-    </div>
-  </div>
+      </section>
 
-  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+
+  <div class="adfit-slot ds-ad">
     <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
     <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
   </div>
 
   <div class="guide-section">
-    <div class="guide-card">
-      <h2>2026년 등기 유형별 등록면허세율표</h2>
-      <p>지방세법 제28조에 따라 등기 유형별 등록면허세는 거래금액 또는 채권금액에 아래 세율을 곱하고, 등록면허세의 20%가 지방교육세로 추가되며, 등기신청수수료 15,000원이 고정으로 붙습니다.</p>
-      <div class="guide-table-wrap">
+            <section class="ds-section ds-prose" aria-labelledby="registry-s1">
+          <div class="ds-section-head"><h2 id="registry-s1">2026년 등기 유형별 등록면허세율표</h2></div>
+<p>지방세법 제28조에 따라 등기 유형별 등록면허세는 거래금액 또는 채권금액에 아래 세율을 곱하고, 등록면허세의 20%가 지방교육세로 추가되며, 등기신청수수료 15,000원이 고정으로 붙습니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead>
             <tr>
@@ -165,19 +184,19 @@
         </table>
       </div>
       <p style="font-size:13px;color:var(--gray-600);margin-top:10px">매매·증여·상속 등기의 등록면허세는 취득세에 통합되어 별도 납부하지 않으며, 실제 별도 납부 대상은 근저당권 설정 등 일부 등기입니다. 근저당권 말소는 부동산 1개당 3,000원 정액입니다. 법무사 위임 시 수수료 20~100만원이 별도 발생합니다.</p>
-    </div>
-    <div class="guide-card">
-      <h2>등기비용 계산기는 언제 쓰나요?</h2>
-      <p>부동산 계약 후 소유권 이전 등기 시 납부해야 할 세금을 미리 파악하면 잔금 정산 시 자금 계획에 차질이 없습니다.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="registry-s2">
+          <div class="ds-section-head"><h2 id="registry-s2">등기비용 계산기는 언제 쓰나요?</h2></div>
+<p>부동산 계약 후 소유권 이전 등기 시 납부해야 할 세금을 미리 파악하면 잔금 정산 시 자금 계획에 차질이 없습니다.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>총 취득비용 산정</strong><span>취득세와 별도로 발생하는 등기비용까지 합산해 부동산 취득 시 실제 총비용을 계산합니다.</span></div>
         <div class="guide-box"><strong>등기 유형별 비교</strong><span>매매(2%)·상속(0.8%)·증여(1.5%)·근저당(0.2%) 세율 차이를 같은 금액 기준으로 비교합니다.</span></div>
         <div class="guide-box"><strong>법무사 견적 비교</strong><span>등기비용 예상액을 미리 파악하고 법무사 견적서의 항목별 금액이 적정한지 확인합니다.</span></div>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>등기비용 계산 방법 (2026년 기준)</h2>
-      <p>등기비용은 등록면허세, 지방교육세, 등기신청수수료 세 항목을 합산합니다. 지방세법 제28조에 따른 등기 유형별 세율 적용이 핵심입니다.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="registry-s3">
+          <div class="ds-section-head"><h2 id="registry-s3">등기비용 계산 방법 (2026년 기준)</h2></div>
+<p>등기비용은 등록면허세, 지방교육세, 등기신청수수료 세 항목을 합산합니다. 지방세법 제28조에 따른 등기 유형별 세율 적용이 핵심입니다.</p>
       <ul>
         <li><strong>1단계. 거래금액 확인:</strong> 취득가액 또는 시가표준액 중 큰 금액을 기준으로 합니다. 근저당권 설정의 경우 채권금액(대출액 × 120% 수준)을 입력합니다.</li>
         <li><strong>2단계. 등기 유형 선택:</strong> 소유권이전(매매 2%, 상속 0.8%, 증여 1.5%), 근저당권 설정(0.2%). 유형마다 세율이 크게 달라집니다.</li>
@@ -185,10 +204,10 @@
         <li><strong>4단계. 지방교육세·수수료 합산:</strong> 지방교육세 = 등록면허세 × 20%. 등기신청수수료는 법원 납부 고정 15,000원. 세 항목을 합산하면 최소 등기비용입니다.</li>
         <li><strong>5단계. 추가 비용 확인:</strong> 법무사 수수료(20~100만원), 인지세(1억 초과 시 15~35만원), 국민주택채권(매매 시)은 계산기 외 별도 항목입니다.</li>
       </ul>
-    </div>
-    <div class="guide-card">
-      <h2>실제 등기비용 계산 예시</h2>
-      <h3>예시 1 - 정민아(34세, 신혼부부), 3억 5천만원 아파트 매매 등기</h3>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="registry-s4">
+          <div class="ds-section-head"><h2 id="registry-s4">실제 등기비용 계산 예시</h2></div>
+<h3>예시 1 - 정민아(34세, 신혼부부), 3억 5천만원 아파트 매매 등기</h3>
       <p>경기 수원 아파트 3억 5천만원 매수. 잔금 지급 시 소유권이전 등기 비용을 사전에 파악해 자금 계획에 반영했습니다.</p>
       <ul>
         <li>등록면허세(2%): 700만원 (취득세 고지서에 통합 납부)</li>
@@ -204,20 +223,20 @@
         <li>등기신청수수료: 1.5만원</li>
         <li><strong>등기비용 합계: 49.5만원 + 법무사 수수료 약 25~40만원 = 총 약 75~90만원</strong></li>
       </ul>
-    </div>
-    <div class="guide-card">
-      <h2>이것만은 확인하세요</h2>
-      <p>등기비용에서 자주 놓치는 항목이 세 가지 있습니다. 잔금 당일 자금이 부족하지 않도록 사전에 확인하세요.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="registry-s5">
+          <div class="ds-section-head"><h2 id="registry-s5">이것만은 확인하세요</h2></div>
+<p>등기비용에서 자주 놓치는 항목이 세 가지 있습니다. 잔금 당일 자금이 부족하지 않도록 사전에 확인하세요.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>매매·상속·증여는 취득세 통합</strong><span>소유권이전 3가지 유형은 등록면허세가 취득세 고지서에 통합 납부됩니다. 계산기 수치는 세율 확인용 참고치이며 별도 고지되지 않습니다.</span></div>
         <div class="guide-box"><strong>인지세 추가 부과</strong><span>거래금액 1억 초과~10억 이하 15만원, 10억 초과 35만원의 인지세가 별도 부과됩니다. 매매계약서 작성 시 첨부하는 인지세도 미리 준비하세요.</span></div>
         <div class="guide-box"><strong>법무사 수수료 협의 가능</strong><span>법무사 수수료는 대한법무사협회 기준표 이하로 협의할 수 있습니다. 동일 거래에 여러 법무사 견적을 비교하면 10~20만원 절감이 가능합니다.</span></div>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>거래금액별 소유권이전(매매) 등기비용</h2>
-      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">이 페이지의 계산기에 실제로 값을 넣어 얻은 결과입니다.</p>
-      <div class="guide-table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="registry-s6">
+          <div class="ds-section-head"><h2 id="registry-s6">거래금액별 소유권이전(매매) 등기비용</h2></div>
+<p class="ds-table-lead">이 페이지의 계산기에 실제로 값을 넣어 얻은 결과입니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead><tr><th>거래금액</th><th>등록면허세 (2.0%)</th><th>지방교육세 (20%)</th><th>등기신청수수료</th><th>등기비용 합계</th></tr></thead>
           <tbody>
@@ -228,17 +247,37 @@
           </tbody>
         </table>
       </div>
-    </div>
-    <div class="guide-card faq-card">
-      <h2>자주 묻는 질문</h2>
-      <div class="faq-item"><h3>부동산 등기비용이란 무엇인가요?</h3><p>부동산 소유권 이전 및 담보 설정 시 국가에 납부하는 세금과 수수료입니다. 등기를 완료해야만 법적 권리가 보호되므로, 잔금 납부 후 반드시 진행해야 합니다.</p></div>
-      <div class="faq-item"><h3>등기비용의 주요 항목은 무엇인가요?</h3><p>등록면허세(거래금액 × 세율), 지방교육세(등록면허세의 20%), 등기신청수수료(법원 납부 고정 수수료 15,000원)가 핵심 항목입니다. 세 항목을 합산한 금액이 최소 등기비용입니다.</p></div>
-      <div class="faq-item"><h3>등기 유형별 세율은 어떻게 되나요?</h3><p>지방세법 제28조에 따라 소유권이전(매매) 2%, 소유권이전(상속) 0.8%, 소유권이전(증여) 1.5%, 근저당권 설정은 채권금액의 0.2%가 적용됩니다. 단 매매·증여·상속 등기의 등록면허세는 취득세에 통합되어 별도 납부하지 않으며, 실제 별도 납부는 근저당권 설정 등 일부 등기에만 해당합니다.</p></div>
-      <div class="faq-item"><h3>등기비용 외에 추가로 발생하는 비용은 무엇인가요?</h3><p>법무사 수수료는 거래금액에 따라 별도로 발생하며 통상 20~100만원입니다. 거래금액 1억 초과 시 인지세(최대 35만원)가 부과되며, 매매 시 국민주택채권 매입 비용도 발생합니다.</p></div>
-      <div class="faq-item"><h3>셀프등기(직접등기)를 하면 비용을 얼마나 절약할 수 있나요?</h3><p>법무사 수수료를 아낄 수 있어 거래금액에 따라 30~100만원 절감이 가능합니다. 셀프등기는 대법원 인터넷등기소(iros.go.kr)에서 신청서를 작성하고 필요 서류를 관할 등기소에 제출합니다. 서류 오류 시 보정 과정이 필요해 시간이 지연될 수 있으므로, 처음 등기라면 법무사에게 위임하는 것이 안전합니다.</p></div>
-      <div class="faq-item"><h3>근저당권 말소 등기 비용은 얼마인가요?</h3><p>근저당권 말소 등기의 등록면허세는 부동산 1개당 3,000원의 정액세율이 적용됩니다(지방세법 제28조 제1항). 지방교육세 600원, 등기신청수수료 3,000원을 합산하면 1건당 약 6,600원 수준입니다. 법무사에 위임하면 수수료 5~15만원이 추가되며, 대출 은행이 자행 법무사를 지정하는 경우가 많습니다.</p></div>
+        </section>
+            <section class="ds-section faq-card" aria-labelledby="registry-faq">
+          <div class="ds-section-head"><h2 id="registry-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>부동산 등기비용이란 무엇인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>부동산 소유권 이전 및 담보 설정 시 국가에 납부하는 세금과 수수료입니다. 등기를 완료해야만 법적 권리가 보호되므로, 잔금 납부 후 반드시 진행해야 합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>등기비용의 주요 항목은 무엇인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>등록면허세(거래금액 × 세율), 지방교육세(등록면허세의 20%), 등기신청수수료(법원 납부 고정 수수료 15,000원)가 핵심 항목입니다. 세 항목을 합산한 금액이 최소 등기비용입니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>등기 유형별 세율은 어떻게 되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>지방세법 제28조에 따라 소유권이전(매매) 2%, 소유권이전(상속) 0.8%, 소유권이전(증여) 1.5%, 근저당권 설정은 채권금액의 0.2%가 적용됩니다. 단 매매·증여·상속 등기의 등록면허세는 취득세에 통합되어 별도 납부하지 않으며, 실제 별도 납부는 근저당권 설정 등 일부 등기에만 해당합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>등기비용 외에 추가로 발생하는 비용은 무엇인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>법무사 수수료는 거래금액에 따라 별도로 발생하며 통상 20~100만원입니다. 거래금액 1억 초과 시 인지세(최대 35만원)가 부과되며, 매매 시 국민주택채권 매입 비용도 발생합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>셀프등기(직접등기)를 하면 비용을 얼마나 절약할 수 있나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>법무사 수수료를 아낄 수 있어 거래금액에 따라 30~100만원 절감이 가능합니다. 셀프등기는 대법원 인터넷등기소(iros.go.kr)에서 신청서를 작성하고 필요 서류를 관할 등기소에 제출합니다. 서류 오류 시 보정 과정이 필요해 시간이 지연될 수 있으므로, 처음 등기라면 법무사에게 위임하는 것이 안전합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>근저당권 말소 등기 비용은 얼마인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>근저당권 말소 등기의 등록면허세는 부동산 1개당 3,000원의 정액세율이 적용됩니다(지방세법 제28조 제1항). 지방교육세 600원, 등기신청수수료 3,000원을 합산하면 1건당 약 6,600원 수준입니다. 법무사에 위임하면 수수료 5~15만원이 추가되며, 대출 은행이 자행 법무사를 지정하는 경우가 많습니다.</p>
+            </details>
       <div class="update-note">최종 검토: 2026.04.16 · 계산 결과는 참고용입니다.</div>
+          </div>
+        </section>
+  </div>
+
     </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
   </div>
 
   <script>
@@ -255,54 +294,57 @@
     lastReviewed: '2026.05',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>
-  </div>
-  <div class="sibling-section">
-    <div class="sibling-title">다른 부동산 계산기</div>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 부동산 계산기</h2>
     <div class="sibling-list">
-      <a href="/calc/realestate/brokerage/" class="sibling-link">🏠 중개수수료</a>
-      <a href="/calc/realestate/acquisition/" class="sibling-link">📄 취득세</a>
-      <a href="/calc/realestate/conversion/" class="sibling-link">🔄 전월세 전환율</a>
-      <a href="/calc/realestate/loan/" class="sibling-link">💰 대출이자</a>
-      <a href="/calc/realestate/rental/" class="sibling-link">📊 임대수익률</a>
-      <a href="/calc/realestate/capital-gains/" class="sibling-link">📈 양도소득세</a>
-      <a href="/calc/realestate/dsr/" class="sibling-link">🔢 대출한도 (DSR)</a>
-      <a href="/calc/realestate/dti/" class="sibling-link">💵 총부채상환비율 (DTI)</a>
-      <a href="/calc/realestate/ltv/" class="sibling-link">🔑 주택담보인정비율 (LTV)</a>
-      <a href="/calc/realestate/didimdol/" class="sibling-link">🏡 디딤돌대출</a>
-      <a href="/calc/realestate/jeonse-loan/" class="sibling-link">🏘️ 전세자금대출</a>
-      <a href="/calc/realestate/gift/" class="sibling-link">🎁 증여세</a>
-      <a href="/calc/realestate/inheritance/" class="sibling-link">📜 상속세</a>
-      <a href="/calc/realestate/joint/" class="sibling-link">👥 공동명의비교</a>
-      <a href="/calc/realestate/jongbu/" class="sibling-link">🏦 종합부동산세</a>
-      <a href="/calc/realestate/property-tax-comprehensive/" class="sibling-link">💼 재산세 종합</a>
-      <a href="/calc/realestate/propertytax/" class="sibling-link">🏛️ 재산세</a>
-      <a href="/calc/realestate/pyeong/" class="sibling-link">📐 평수 변환</a>
-      <a href="/calc/realestate/registry/" class="sibling-link current">📋 등기비용</a>
+      <a href="/calc/realestate/brokerage/" class="sibling-link">중개수수료</a>
+      <a href="/calc/realestate/acquisition/" class="sibling-link">취득세</a>
+      <a href="/calc/realestate/conversion/" class="sibling-link">전월세 전환율</a>
+      <a href="/calc/realestate/loan/" class="sibling-link">대출이자</a>
+      <a href="/calc/realestate/rental/" class="sibling-link">임대수익률</a>
+      <a href="/calc/realestate/capital-gains/" class="sibling-link">양도소득세</a>
+      <a href="/calc/realestate/dsr/" class="sibling-link">대출한도 (DSR)</a>
+      <a href="/calc/realestate/dti/" class="sibling-link">총부채상환비율 (DTI)</a>
+      <a href="/calc/realestate/ltv/" class="sibling-link">주택담보인정비율 (LTV)</a>
+      <a href="/calc/realestate/didimdol/" class="sibling-link">디딤돌대출</a>
+      <a href="/calc/realestate/jeonse-loan/" class="sibling-link">전세자금대출</a>
+      <a href="/calc/realestate/gift/" class="sibling-link">증여세</a>
+      <a href="/calc/realestate/inheritance/" class="sibling-link">상속세</a>
+      <a href="/calc/realestate/joint/" class="sibling-link">공동명의비교</a>
+      <a href="/calc/realestate/jongbu/" class="sibling-link">종합부동산세</a>
+      <a href="/calc/realestate/property-tax-comprehensive/" class="sibling-link">재산세 종합</a>
+      <a href="/calc/realestate/propertytax/" class="sibling-link">재산세</a>
+      <a href="/calc/realestate/pyeong/" class="sibling-link">평수 변환</a>
     </div>
-    <div class="sibling-title">관련 가이드</div>
-    <div class="sibling-list">
-      <a href="/blog/posts/jeonse-deposit-protection-guide.html" class="sibling-link">📖 전세보증금 지키는 법 2026 - 전입신고·확정일자·전세보증금반환보증 3종…</a>
-      <a href="/blog/posts/moving-cost-guide.html" class="sibling-link">📖 이사 비용 총정리 2026 - 포장이사·반포장이사 시세부터 사다리차·입주청…</a>
-      <a href="/blog/posts/property-purchase-costs-guide.html" class="sibling-link">📖 부동산 매매 부대비용 총정리 2026 - 취득세·등기비용·중개수수료 한눈에</a>
-      <a href="/blog/posts/realestate-agent-fee.html" class="sibling-link">📖 국토교통부 중개보수 요율표 2026 - 매매 9억~15억 구간별 0.5~0…</a>
-      <a href="/blog/posts/registry-cost-guide.html" class="sibling-link">📖 부동산 등기비용 계산기 2026 - 매매 등기 총비용, 채권·인지세·법무사…</a>
-      <a href="/blog/posts/self-registry-guide.html" class="sibling-link">📖 셀프등기 하는 법 2026 - 인터넷등기소 소유권이전등기 순서·필요서류·법…</a>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/jeonse-deposit-protection-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/jeonse-deposit-protection-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>전세보증금 지키는 법 2026 - 전입신고·확정일자·전세보증금반환보증 3종세트 총정리</span></a>
+      <a href="/blog/posts/moving-cost-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/moving-cost-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>이사 비용 총정리 2026 - 포장이사·반포장이사 시세부터 사다리차·입주청소까지</span></a>
+      <a href="/blog/posts/property-purchase-costs-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/property-purchase-costs-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>부동산 매매 부대비용 총정리 2026 - 취득세·등기비용·중개수수료 한눈에</span></a>
+      <a href="/blog/posts/realestate-agent-fee.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/realestate-agent-fee-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>국토교통부 중개보수 요율표 2026 - 매매 9억~15억 구간별 0.5~0.7%, 전세 6억 이상 0.4~0.6%</span></a>
+      <a href="/blog/posts/registry-cost-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/registry-cost-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>부동산 등기비용 계산기 2026 - 매매 등기 총비용, 채권·인지세·법무사비까지</span></a>
+      <a href="/blog/posts/self-registry-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/self-registry-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>셀프등기 하는 법 2026 - 인터넷등기소 소유권이전등기 순서·필요서류·법무사비 절감액</span></a>
     </div>
   </div>
 </main>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links">
-      <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
-      <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
     </div>
-    <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
   </div>
 </footer>
 
 <div id="toast" class="toast"></div>
+
+<script src="/assets/ds/calc-kit.js?v=d45e66d9"></script>
 
 <script>
 let regType = '매매';
@@ -340,7 +382,7 @@ function fmtWon(won) {
 }
 
 function showConverted(inputEl, dispEl) {
-  const v = parseFloat(inputEl.value);
+  const v = parseFloat(String(inputEl.value).replace(/,/g, ''));
   dispEl.textContent = v > 0 ? `= ${fmt(v)}` : '';
 }
 
@@ -370,7 +412,7 @@ function saveAsImage(resultId, title) {
 }
 
 function calcRegistry() {
-  const priceMan = parseFloat(document.getElementById('reg-price').value) || 0;
+  const priceMan = parseFloat(String(document.getElementById('reg-price').value).replace(/,/g, '')) || 0;
   showConverted(document.getElementById('reg-price'), document.getElementById('reg-price-display'));
   if (!priceMan) { document.getElementById('reg-result').classList.remove('show'); return; }
 
@@ -387,7 +429,7 @@ function calcRegistry() {
   const typeLabels = { '매매': '소유권이전 (매매)', '상속': '소유권이전 (상속)', '증여': '소유권이전 (증여)', '근저당': '근저당권 설정' };
   // 매매·증여·상속은 취득세에 통합 납부 (지방세법 제20조의4)
   const mergedNote = (regType === '매매' || regType === '증여' || regType === '상속')
-    ? '<div class="result-note" style="color:#92400E;background:#FEF3C7;padding:8px 10px;border-radius:6px;margin-top:8px;font-weight:600">💡 매매·증여·상속 등기는 등록면허세가 <strong>취득세에 통합 부과</strong>됩니다. 위 금액은 법정 세율 기준 참고값이며 실제 납부는 <a href="/calc/realestate/acquisition/" style="color:#92400E;text-decoration:underline">취득세 계산기</a>에서 확인하세요.</div>'
+    ? '<div class="result-note" style="color:#92400E;background:#FEF3C7;padding:8px 10px;border-radius:6px;margin-top:8px;font-weight:600">매매·증여·상속 등기는 등록면허세가 <strong>취득세에 통합 부과</strong>됩니다. 위 금액은 법정 세율 기준 참고값이며 실제 납부는 <a href="/calc/realestate/acquisition/" style="color:#92400E;text-decoration:underline">취득세 계산기</a>에서 확인하세요.</div>'
     : '';
 
   document.getElementById('reg-result-content').innerHTML = `
@@ -405,11 +447,10 @@ function calcRegistry() {
   document.getElementById('reg-result').classList.add('show');
 }
 </script>
-<script src="/assets/calc-validate.js"></script>
-<script src="/assets/calc-result-tools.js"></script>
-<script src="/assets/calc-registry.js"></script>
-<script src="/assets/realestate-detail-shell.js"></script>
-<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
@@ -420,7 +461,14 @@ window.ARTICLE_INFO_CONFIG = {
   category: 'realestate'
 };
 </script>
-<script src="/assets/blog-article-info.js"></script>
-<script src="/assets/blog-review-footer.js"></script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "reg-result", "required": ["reg-price"], "waitText": "거래금액을 입력하면 등기비용이 계산됩니다", "nextBox": "#registry-next", "next": [{"key": "acq", "path": "/calc/realestate/acquisition/", "sub": "거래금액 기준 취득세", "params": {"price": "reg-price"}, "from": "registry"}, {"key": "brokerage", "path": "/calc/realestate/brokerage/", "sub": "거래금액 기준 중개보수", "params": {"price": "reg-price"}, "from": "registry"}]});
+  DSCalc.placeTrust('ds-trust-col');
+  (function () { const a = document.getElementById('ds-primary-next'); if (!a) return; const go = () => { const v = {}; Object.entries({"price": "reg-price"}).forEach(([k, id]) => v[k] = DSCalc.num(id)); a.href = DSCalc.link('/calc/realestate/acquisition/', v, 'registry'); }; document.addEventListener('input', go, true); go(); })();
+</script>
+<script src="/assets/ds/prefill.js?v=fa5eb49a" defer></script>
 </body>
 </html>

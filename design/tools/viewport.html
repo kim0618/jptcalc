@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>vp</title>
+<!-- 검수용(배포 제외): 최대화된 실제 크롬에서도 정확한 폭으로 보도록 iframe에 대상 페이지를 띄운다.
+     ?w=390&h=844&u=/calc/realestate/dti/&do=fill:#dti-income=5000|click:.ds-btn-calc|scroll:.ds-calc-result|y:600
+     &cookie=show(쿠키 배너 보이기) &recent=demo(최근 기록 예시) . 다 그리면 제목이 READY로 바뀐다. -->
+<style>
+  html, body { margin: 0; background: #7a7f87; }
+  iframe { display: block; border: 0; background: #fff; }
+</style>
+</head>
+<body>
+<iframe id="f" title="target"></iframe>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search), f = document.getElementById('f');
+  f.style.width = (q.get('w') || 390) + 'px'; f.style.height = (q.get('h') || 844) + 'px';
+  try {
+    if (q.get('cookie') === 'show') localStorage.removeItem('jpt_cookie_ok'); else localStorage.setItem('jpt_cookie_ok', '1');
+    if (q.get('recent') === 'demo') {
+      var now = Date.now();
+      localStorage.setItem('jpt_recent', JSON.stringify([
+        { url: '/calc/realestate/dti/', name: 'DTI 계산기', cat: 'realestate', t: now - 3600e3, summary: 'DTI 34.0%' },
+        { url: '/calc/tax/withholding/', name: '3.3% 원천징수 계산기', cat: 'tax', t: now - 90000e3, summary: '공제액 3.3만원' },
+        { url: '/calc/realestate/acquisition/', name: '취득세 계산기', cat: 'realestate', t: now - 700000e3, summary: '약 660만원' }]));
+    } else if (q.get('recent') === 'none') localStorage.removeItem('jpt_recent');
+  } catch (e) {}
+  var sleep = function (t) { return new Promise(function (r) { setTimeout(r, t); }); };
+  f.onload = async function () {
+    var w = f.contentWindow, d, steps = (q.get('do') || '').split('|').filter(Boolean);
+    try { d = f.contentDocument; } catch (e) { d = null; }
+    // 폰처럼 스크롤바가 폭을 먹지 않게(윈도우 크롬의 고정 스크롤바 15px 제외). 같은 출처일 때만
+    try { var st = d.createElement('style'); st.textContent = 'html{scrollbar-width:none}html::-webkit-scrollbar{display:none}'; d.head.appendChild(st); } catch (e) {}
+    await sleep(900);
+    for (var i = 0; d && i < steps.length; i++) {
+      var s = steps[i], k = s.indexOf(':'), op = s.slice(0, k), arg = s.slice(k + 1);
+      try {
+        if (op === 'fill') {
+          var e = arg.indexOf('='), el = d.querySelector(arg.slice(0, e)), v = arg.slice(e + 1);
+          if (el && el._flatpickr) el._flatpickr.setDate(v, true);
+          else if (el) { el.focus(); el.value = v; el.dispatchEvent(new Event('input', { bubbles: true })); el.dispatchEvent(new Event('change', { bubbles: true })); el.blur(); }
+        } else if (op === 'click') { var c = d.querySelector(arg); if (c) c.click(); }
+        else if (op === 'scroll') { var t = d.querySelector(arg); if (t) { t.scrollIntoView({ block: 'start' }); w.scrollBy(0, -64); } }
+        else if (op === 'y') { w.scrollTo(0, +arg); }
+      } catch (err) {}
+      await sleep(450);
+    }
+    await sleep(500);
+    document.title = 'READY';
+  };
+  f.src = q.get('u') || '/';
+})();
+</script>
+</body>
+</html>

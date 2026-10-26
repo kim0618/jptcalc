@@ -1,0 +1,21 @@
+/* 건강 고유 부품(옛 health-common.css 규칙을 토큰 색으로) */
+.bmi-gauge { position: relative; height: 12px; margin: var(--space-4) 0 var(--space-2); border-radius: var(--radius-sm); background: var(--blue); }
+.bmi-track { height: 100%; }
+/* 구간 5칸을 단색 조각으로(그라데이션 문법 없이): 저체중=바탕, 정상·과체중=막대 ::before/::after, 비만·고도비만=트랙 ::before/::after */
+.bmi-gauge::before, .bmi-gauge::after, .bmi-track::before, .bmi-track::after { content: ""; position: absolute; top: 0; bottom: 0; width: 20%; }
+.bmi-gauge::before { left: 20%; background: var(--ok); }
+.bmi-gauge::after { left: 40%; background: var(--warn); }
+.bmi-track::before { left: 60%; background: var(--bad); }
+.bmi-track::after { left: 80%; background: var(--bad-text); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+.bmi-needle { position: absolute; z-index: 1; top: -6px; width: 4px; height: 24px; border-radius: 2px; background: var(--text); box-shadow: 0 0 0 2px var(--surface); transform: translateX(-50%); transition: left .3s; }
+.bmi-labels { display: flex; justify-content: space-between; margin-bottom: var(--space-3); font-size: var(--fs-meta); line-height: 1.4; text-align: center; color: var(--text-sub); }
+.bmi-status { display: inline-block; margin-top: var(--space-1); padding: 2px var(--space-2); border-radius: var(--radius-sm); font-size: var(--fs-meta); font-weight: var(--fw-label); background: var(--bg); color: var(--text-sub); }
+.bmi-status.정상 { background: var(--ok-tint); color: var(--ok-text); }
+.bmi-status.저체중, .bmi-status.과체중 { background: var(--warn-tint); color: var(--warn-text); }
+.bmi-status.비만, .bmi-status.고도비만 { background: var(--bad-tint); color: var(--bad-text); }
+.activity-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2); margin-bottom: var(--space-field); }
+.activity-btn { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; min-height: var(--h-input); padding: var(--space-3); border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--surface); color: var(--text); font-family: inherit; text-align: left; cursor: pointer; }
+.activity-btn.active { border-color: var(--blue); background: var(--primary-tint); box-shadow: 0 0 0 1px var(--blue); }
+.ab-icon { display: none; }
+.ab-label { font-size: var(--fs-label); font-weight: var(--fw-label); }
+.ab-desc { font-size: var(--fs-meta); color: var(--text-sub); }

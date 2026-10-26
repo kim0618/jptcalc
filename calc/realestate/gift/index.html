@@ -22,56 +22,49 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link rel="stylesheet" href="/assets/realestate-common.css" />
+  <script src="/assets/vendor/html2canvas/1.4.1/html2canvas.min.js?v=e87e5507" defer></script>
+<link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+    <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
 </head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
-    <nav class="header-nav">
-      <a href="/calc/realestate/" class="nav-item active"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
-      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
-      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
-      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
-      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
-      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
-      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
-    </nav>
-    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
-    <button class="hamburger" onclick="var m=document.querySelector('.mob-menu'); if(m)m.classList.toggle('open');" aria-label="메뉴"><span></span><span></span><span></span></button>
-  </div>
+<body data-cat="realestate" style="--cat: var(--c-realestate)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
 </header>
-<div class="mob-menu">
-  <a href="/calc/realestate/" class="mob-link active"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
-  <a href="/calc/tax/" class="mob-link"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/salary/" class="mob-link"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/finance/" class="mob-link"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
-      <a href="/calc/health/" class="mob-link"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
-      <a href="/calc/date/" class="mob-link"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
-      <a href="/calc/ai/" class="mob-link"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
-      <a href="/calc/pet/" class="mob-link"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
-  <a href="/blog/" class="mob-link">블로그</a>
-</div>
-<main class="page-wrap">
-  <div class="page-header">
-    <div class="breadcrumb"><a href="/">홈</a> &rsaquo; <a href="/calc/realestate/">부동산 계산기</a> &rsaquo; 증여세 계산기</div>
-    <div class="page-badge">부동산 계산기</div>
-    <h1 class="page-title">증여세 계산기</h1>
-    <p class="page-subtitle">2026년 기준 · 공제 및 세율 자동 적용</p>
-  </div>
 
-  <div class="card">
-    <div class="card-title">증여 정보</div>
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/realestate/">부동산 계산기</a> &rsaquo; 증여세 계산기</div>
+      <div class="page-badge">부동산 계산기</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-house"></use></svg></span>
+        <h1 class="page-title">증여세 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">2026년 상증법 기준</span>
+          <span class="ds-trust-chip">2026.05.31 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">2026년 기준 · 공제 및 세율 자동 적용</p>
+    </div>
+  </div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+    <div class="field-label ds-group-label">증여 정보</div>
     <div class="field">
       <div class="field-label">증여재산가액 <span class="label-hint">만원 단위</span></div>
       <div class="input-wrap">
-        <input type="number" id="gift-amount" placeholder="예) 50,000" oninput="calcGift()" />
+        <input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="gift-amount" placeholder="예) 50,000" oninput="calcGift()" />
         <span class="unit">만원</span>
       </div>
       <div class="converted" id="gift-amount-display"></div>
@@ -79,7 +72,7 @@
   </div>
 
   <div class="card">
-    <div class="card-title">증여자와의 관계 (10년 합산 기준)</div>
+    <div class="field-label ds-group-label">증여자와의 관계 (10년 합산 기준)</div>
     <div class="seg-group">
       <button class="seg-btn active" onclick="giftSelectRel('배우자', this)">배우자</button>
       <button class="seg-btn" onclick="giftSelectRel('직계성인', this)">직계존비속</button>
@@ -92,21 +85,52 @@
     <div class="field" style="margin-bottom:0">
       <div class="field-label">10년 내 기증여액 <span class="label-hint">같은 증여자로부터 이미 받은 금액</span></div>
       <div class="input-wrap">
-        <input type="number" id="gift-used" placeholder="예) 0" oninput="calcGift()" />
+        <input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="gift-used" placeholder="예) 0" oninput="calcGift()" />
         <span class="unit">만원</span>
       </div>
     </div>
   </div>
+        <button type="button" class="ds-btn-calc" data-calc-submit="calcGift" data-result="gift-result" data-required="gift-amount">계산하기</button>
+      </div>
+    </section>
 
-  <div class="result-card" id="gift-result">
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="gift-result">
     <div id="gift-result-content"></div>
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('gift-result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/realestate/inheritance/">상속세도 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">계산 결과</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="gift-next">
+        <a class="ds-next-card" href="/calc/realestate/inheritance/" data-next="inh"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-house"></use></svg></span><span class="ds-next-body"><b>상속세 계산기</b><span>물려줄 때 세금 비교</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/realestate/capital-gains/" data-next="cg"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-house"></use></svg></span><span class="ds-next-body"><b>양도소득세 계산기</b><span>팔 때 세금 비교</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
   </div>
 
-  <div class="explain-section">
-    <button class="explain-toggle open" onclick="toggleExplain(this)">
-      증여세 완벽 가이드 <span class="etarrow">▼</span>
-    </button>
-    <div class="explain-body show">
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">상속세 및 증여세법 제53조~제56조 <a href="https://www.law.go.kr/법령/상속세및증여세법" target="_blank" rel="noopener">관련 법령 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#gift-guide">가이드</a><a href="#gift-s1">확인할 핵심</a><a href="#gift-s2">계산 예시</a><a href="#gift-s3">구간별 표</a><a href="#gift-faq">FAQ</a>
+      </nav>
+<section class="explain-section ds-section ds-prose" aria-labelledby="gift-guide">
+        <div class="ds-section-head"><h2 id="gift-guide">증여세 완벽 가이드</h2></div>
+
       <h3>증여세란?</h3>
       <p>타인으로부터 재산을 무상으로 받을 때 부과되는 세금입니다. <strong>증여받은 사람(수증자)</strong>이 납부합니다.</p>
       <h3>증여재산 공제한도 (10년 합산)</h3>
@@ -126,17 +150,17 @@
       </ul>
       <h3>신고 기한 내 신고 시 혜택</h3>
       <p>증여일이 속하는 달의 말일부터 <strong>3개월 이내</strong> 신고 시 산출세액의 3% 공제 혜택이 있습니다.</p>
-    </div>
-  </div>
-  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      </section>
+
+  <div class="adfit-slot ds-ad">
     <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
     <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
   </div>
 
   <div class="guide-section">
-    <div class="guide-card">
-      <h2>증여세 계산 전 반드시 확인할 핵심</h2>
-      <p>증여세는 살아있는 동안 재산을 무상으로 이전할 때 <strong>재산을 받은 사람(수증자)</strong>이 납부하는 세금입니다. 공제 한도는 10년 단위로 관리되며, 같은 증여자로부터 받은 금액은 합산 과세됩니다. 계획적으로 분산 증여하면 세금 부담을 크게 낮출 수 있습니다.</p>
+            <section class="ds-section ds-prose" aria-labelledby="gift-s1">
+          <div class="ds-section-head"><h2 id="gift-s1">증여세 계산 전 반드시 확인할 핵심</h2></div>
+<p>증여세는 살아있는 동안 재산을 무상으로 이전할 때 <strong>재산을 받은 사람(수증자)</strong>이 납부하는 세금입니다. 공제 한도는 10년 단위로 관리되며, 같은 증여자로부터 받은 금액은 합산 과세됩니다. 계획적으로 분산 증여하면 세금 부담을 크게 낮출 수 있습니다.</p>
       <div class="guide-grid">
         <div class="guide-box">
           <strong>공제 한도 요약</strong>
@@ -156,11 +180,11 @@
         </div>
       </div>
       <p class="ref-links">공식 기준 확인: <a href="https://www.nts.go.kr" target="_blank" rel="noopener">국세청 홈페이지(nts.go.kr)</a> · <a href="https://www.hometax.go.kr" target="_blank" rel="noopener">홈택스(hometax.go.kr)</a></p>
-    </div>
-    <div class="guide-card">
-      <h2>실제 계산 사례 3가지 - 증여세</h2>
-      <p>공제 한도와 10년 합산 규칙을 이해하면 납부세액이 크게 달라집니다. 아래 사례로 흐름을 확인하세요.</p>
-      <div class="guide-table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="gift-s2">
+          <div class="ds-section-head"><h2 id="gift-s2">실제 계산 사례 3가지 - 증여세</h2></div>
+<p>공제 한도와 10년 합산 규칙을 이해하면 납부세액이 크게 달라집니다. 아래 사례로 흐름을 확인하세요.</p>
+      <div class="ds-table-card">
         <table>
           <thead>
             <tr>
@@ -197,11 +221,11 @@
       </ul>
       <h3>결과 해석 방법</h3>
       <p>표시된 세액은 산출세액 기준입니다. <strong>증여받은 달 말일로부터 3개월 이내에 신고</strong>하면 산출세액의 3%를 추가 공제받습니다. 증여세는 재산을 받은 사람(수증자)이 납부합니다. 기한을 넘기면 무신고가산세(20%)가 부과되니 반드시 기한을 지키세요.</p>
-    </div>
-    <div class="guide-card">
-      <h2>증여재산가액별 증여세 (직계존비속)</h2>
-      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">구간별로 계산기를 돌려 얻은 결과를 정리했습니다.</p>
-      <div class="guide-table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="gift-s3">
+          <div class="ds-section-head"><h2 id="gift-s3">증여재산가액별 증여세 (직계존비속)</h2></div>
+<p class="ds-table-lead">구간별로 계산기를 돌려 얻은 결과를 정리했습니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead><tr><th>증여재산가액</th><th>증여재산 공제 (5,000만원)</th><th>과세표준</th><th>산출세액</th><th>납부할 증여세</th></tr></thead>
           <tbody>
@@ -212,41 +236,42 @@
           </tbody>
         </table>
       </div>
-    </div>
-    <div class="guide-card faq-card">
-      <h2>자주 묻는 질문</h2>
-      <div class="faq-item">
-        <h3>증여세 신고는 언제까지 해야 하나요?</h3>
-        <p>증여받은 날이 속하는 달의 말일부터 3개월 이내에 신고·납부해야 합니다. 기한 내 신고하면 산출세액의 3%를 신고세액공제로 돌려받는 혜택이 있습니다. 기한을 초과하면 무신고가산세(20%), 납부지연가산세가 부과되므로 반드시 기한을 지키세요.</p>
-      </div>
-      <div class="faq-item">
-        <h3>증여재산 공제 한도는 관계마다 다른가요?</h3>
-        <p>네, 10년 합산 기준으로 공제 한도가 다릅니다. 배우자 6억원, 직계존비속(성인) 5,000만원, 미성년 직계존비속 2,000만원, 기타친족(형제·사위·며느리) 1,000만원입니다. 공제 한도는 10년마다 초기화되므로, 10년 전 증여 시점을 기준으로 새 공제가 적용됩니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>부동산 증여 시 세금 기준 가액은 어떻게 결정되나요?</h3>
-        <p>원칙은 시가(실거래가·감정평가액)입니다. 시가 확인이 어려울 경우 공동주택 공시가격, 개별공시지가 등 공시가격을 사용합니다. 다만 국세청이 유사 매매사례가격을 시가로 인정하여 공시가격보다 높게 과세할 수 있으니, 증여 전에 홈택스에서 사전검토 서비스를 이용하는 것이 좋습니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>10년 이내 여러 번 증여하면 세금이 어떻게 되나요?</h3>
-        <p>같은 증여자로부터 10년 내 받은 증여재산은 모두 합산하여 과세됩니다. 예를 들어 부모가 성인 자녀에게 3년 전 3,000만원, 이번에 3,000만원을 증여하면 합산 6,000만원 중 공제 5,000만원을 제한 1,000만원에 10%를 적용해 100만원의 세금이 납부됩니다. 이미 납부한 증여세는 차감됩니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>증여세와 상속세는 어떻게 다른가요?</h3>
-        <p>증여세는 생전에 재산을 무상으로 이전할 때 수증자가 납부하고, 상속세는 사망으로 재산이 이전될 때 상속인이 납부합니다. 단, 사망 전 10년 이내(상속인) 또는 5년 이내(상속인 외) 증여한 재산은 상속재산에 합산되어 상속세가 부과될 수 있습니다. 장기적인 절세 계획을 세울 때는 증여세와 상속세를 함께 고려해야 합니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>혼인·출산 증여공제(1억원 추가)는 어떻게 적용되나요?</h3>
-        <p>2024년부터 신설된 제도로, 혼인 신고 전후 2년 이내 또는 자녀 출산 후 2년 이내에 직계존속(부모·조부모)으로부터 받는 증여에 한해 최대 1억원을 추가 공제받을 수 있습니다. 기존 직계존비속 공제(5,000만원)와 별도로 적용되어 합산 최대 1억 5,000만원까지 비과세가 가능합니다. 혼인·출산 공제는 평생 한 번만 적용되며 중복 적용은 불가합니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>아버지와 어머니가 각각 증여할 때 공제가 따로 적용되나요?</h3>
-        <p>적용되지 않습니다. 세법상 직계존속에 대한 증여재산공제는 증여자가 누구든 관계없이 수증자(받는 사람) 기준으로 직계존속 전체 합산 5,000만원(미성년자 2,000만원) 한도가 적용됩니다. 아버지에게 3,000만원, 어머니에게 3,000만원을 같은 해 받으면 합산 6,000만원에서 공제 5,000만원을 뺀 1,000만원에 10%를 적용해 100만원의 증여세가 납부됩니다.</p>
-      </div>
-    </div>
-    <p style="margin-top:16px;padding:12px 16px;background:#FEF3C7;border-radius:8px;font-size:13px;color:#92400E;line-height:1.6">이 계산기의 결과는 참고용이며 법적 효력이 없습니다. 증여세는 10년간 합산 과세·부담부증여·혼인 공제 등 개별 변수가 많으므로 반드시 세무사 또는 <a href="https://www.nts.go.kr" target="_blank" rel="noopener" style="color:#92400E;font-weight:600">국세청(nts.go.kr)</a>을 통해 확인하세요.</p>
+        </section>
+            <section class="ds-section faq-card" aria-labelledby="gift-faq">
+          <div class="ds-section-head"><h2 id="gift-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>증여세 신고는 언제까지 해야 하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>증여받은 날이 속하는 달의 말일부터 3개월 이내에 신고·납부해야 합니다. 기한 내 신고하면 산출세액의 3%를 신고세액공제로 돌려받는 혜택이 있습니다. 기한을 초과하면 무신고가산세(20%), 납부지연가산세가 부과되므로 반드시 기한을 지키세요.</p>
+            </details>
+      <details class="faq-item"><summary><h3>증여재산 공제 한도는 관계마다 다른가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>네, 10년 합산 기준으로 공제 한도가 다릅니다. 배우자 6억원, 직계존비속(성인) 5,000만원, 미성년 직계존비속 2,000만원, 기타친족(형제·사위·며느리) 1,000만원입니다. 공제 한도는 10년마다 초기화되므로, 10년 전 증여 시점을 기준으로 새 공제가 적용됩니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>부동산 증여 시 세금 기준 가액은 어떻게 결정되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>원칙은 시가(실거래가·감정평가액)입니다. 시가 확인이 어려울 경우 공동주택 공시가격, 개별공시지가 등 공시가격을 사용합니다. 다만 국세청이 유사 매매사례가격을 시가로 인정하여 공시가격보다 높게 과세할 수 있으니, 증여 전에 홈택스에서 사전검토 서비스를 이용하는 것이 좋습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>10년 이내 여러 번 증여하면 세금이 어떻게 되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>같은 증여자로부터 10년 내 받은 증여재산은 모두 합산하여 과세됩니다. 예를 들어 부모가 성인 자녀에게 3년 전 3,000만원, 이번에 3,000만원을 증여하면 합산 6,000만원 중 공제 5,000만원을 제한 1,000만원에 10%를 적용해 100만원의 세금이 납부됩니다. 이미 납부한 증여세는 차감됩니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>증여세와 상속세는 어떻게 다른가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>증여세는 생전에 재산을 무상으로 이전할 때 수증자가 납부하고, 상속세는 사망으로 재산이 이전될 때 상속인이 납부합니다. 단, 사망 전 10년 이내(상속인) 또는 5년 이내(상속인 외) 증여한 재산은 상속재산에 합산되어 상속세가 부과될 수 있습니다. 장기적인 절세 계획을 세울 때는 증여세와 상속세를 함께 고려해야 합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>혼인·출산 증여공제(1억원 추가)는 어떻게 적용되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>2024년부터 신설된 제도로, 혼인 신고 전후 2년 이내 또는 자녀 출산 후 2년 이내에 직계존속(부모·조부모)으로부터 받는 증여에 한해 최대 1억원을 추가 공제받을 수 있습니다. 기존 직계존비속 공제(5,000만원)와 별도로 적용되어 합산 최대 1억 5,000만원까지 비과세가 가능합니다. 혼인·출산 공제는 평생 한 번만 적용되며 중복 적용은 불가합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>아버지와 어머니가 각각 증여할 때 공제가 따로 적용되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>적용되지 않습니다. 세법상 직계존속에 대한 증여재산공제는 증여자가 누구든 관계없이 수증자(받는 사람) 기준으로 직계존속 전체 합산 5,000만원(미성년자 2,000만원) 한도가 적용됩니다. 아버지에게 3,000만원, 어머니에게 3,000만원을 같은 해 받으면 합산 6,000만원에서 공제 5,000만원을 뺀 1,000만원에 10%를 적용해 100만원의 증여세가 납부됩니다.</p>
+            </details>
+          </div>
+        </section>
+    <p class="ds-callout"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-circle-alert"></use></svg><span>이 계산기의 결과는 참고용이며 법적 효력이 없습니다. 증여세는 10년간 합산 과세·부담부증여·혼인 공제 등 개별 변수가 많으므로 반드시 세무사 또는 <a href="https://www.nts.go.kr" target="_blank" rel="noopener">국세청(nts.go.kr)</a>을 통해 확인하세요.</span></p>
     <div class="update-note">2026년 세법 기준으로 작성되었습니다. 공제 한도 및 세율은 변경될 수 있으니 <a href="https://www.nts.go.kr" target="_blank" rel="noopener">국세청(nts.go.kr)</a>에서 최신 내용을 확인하세요.<br>최종 검토: 2026.05.31</div>
   </div>
+    </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
   <script>
   window.TRUST_BLOCK_CONFIG = {
     standard: '상속세 및 증여세법 제53조~제56조, 2026년 1월 1일 시행 세법 기준',
@@ -263,49 +288,52 @@
     lastReviewed: '2026.05.31',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>
-  </div>
-  <div class="sibling-section">
-    <div class="sibling-title">다른 부동산 계산기</div>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 부동산 계산기</h2>
     <div class="sibling-list">
-      <a href="/calc/realestate/brokerage/" class="sibling-link">🏠 중개수수료</a>
-      <a href="/calc/realestate/acquisition/" class="sibling-link">📄 취득세</a>
-      <a href="/calc/realestate/conversion/" class="sibling-link">🔄 전월세 전환율</a>
-      <a href="/calc/realestate/loan/" class="sibling-link">💰 대출이자</a>
-      <a href="/calc/realestate/rental/" class="sibling-link">📊 임대수익률</a>
-      <a href="/calc/realestate/capital-gains/" class="sibling-link">📈 양도소득세</a>
-      <a href="/calc/realestate/dsr/" class="sibling-link">🔢 대출한도 (DSR)</a>
-      <a href="/calc/realestate/dti/" class="sibling-link">💵 총부채상환비율 (DTI)</a>
-      <a href="/calc/realestate/ltv/" class="sibling-link">🔑 주택담보인정비율 (LTV)</a>
-      <a href="/calc/realestate/didimdol/" class="sibling-link">🏡 디딤돌대출</a>
-      <a href="/calc/realestate/jeonse-loan/" class="sibling-link">🏘️ 전세자금대출</a>
-      <a href="/calc/realestate/gift/" class="sibling-link current">🎁 증여세</a>
-      <a href="/calc/realestate/inheritance/" class="sibling-link">📜 상속세</a>
-      <a href="/calc/realestate/joint/" class="sibling-link">👥 공동명의비교</a>
-      <a href="/calc/realestate/jongbu/" class="sibling-link">🏦 종합부동산세</a>
-      <a href="/calc/realestate/property-tax-comprehensive/" class="sibling-link">💼 재산세 종합</a>
-      <a href="/calc/realestate/propertytax/" class="sibling-link">🏛️ 재산세</a>
-      <a href="/calc/realestate/pyeong/" class="sibling-link">📐 평수 변환</a>
-      <a href="/calc/realestate/registry/" class="sibling-link">📋 등기비용</a>
+      <a href="/calc/realestate/brokerage/" class="sibling-link">중개수수료</a>
+      <a href="/calc/realestate/acquisition/" class="sibling-link">취득세</a>
+      <a href="/calc/realestate/conversion/" class="sibling-link">전월세 전환율</a>
+      <a href="/calc/realestate/loan/" class="sibling-link">대출이자</a>
+      <a href="/calc/realestate/rental/" class="sibling-link">임대수익률</a>
+      <a href="/calc/realestate/capital-gains/" class="sibling-link">양도소득세</a>
+      <a href="/calc/realestate/dsr/" class="sibling-link">대출한도 (DSR)</a>
+      <a href="/calc/realestate/dti/" class="sibling-link">총부채상환비율 (DTI)</a>
+      <a href="/calc/realestate/ltv/" class="sibling-link">주택담보인정비율 (LTV)</a>
+      <a href="/calc/realestate/didimdol/" class="sibling-link">디딤돌대출</a>
+      <a href="/calc/realestate/jeonse-loan/" class="sibling-link">전세자금대출</a>
+      <a href="/calc/realestate/inheritance/" class="sibling-link">상속세</a>
+      <a href="/calc/realestate/joint/" class="sibling-link">공동명의비교</a>
+      <a href="/calc/realestate/jongbu/" class="sibling-link">종합부동산세</a>
+      <a href="/calc/realestate/property-tax-comprehensive/" class="sibling-link">재산세 종합</a>
+      <a href="/calc/realestate/propertytax/" class="sibling-link">재산세</a>
+      <a href="/calc/realestate/pyeong/" class="sibling-link">평수 변환</a>
+      <a href="/calc/realestate/registry/" class="sibling-link">등기비용</a>
     </div>
-    <div class="sibling-title">관련 가이드</div>
-    <div class="sibling-list">
-      <a href="/blog/posts/gift-tax-guide.html" class="sibling-link">📖 증여세 계산 2026 - 직계존속 5천만원 공제, 세율 10~50% 실제 …</a>
-      <a href="/blog/posts/inheritance-tax-guide.html" class="sibling-link">📖 상속세 계산 2026 - 일괄공제 5억·세율 10~50%·신고기한 6개월</a>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/gift-tax-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/gift-tax-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>증여세 계산 2026 - 직계존속 5천만원 공제, 세율 10~50% 실제 예시</span></a>
+      <a href="/blog/posts/inheritance-tax-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/inheritance-tax-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>상속세 계산 2026 - 일괄공제 5억·세율 10~50%·신고기한 6개월</span></a>
     </div>
   </div>
 </main>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links">
-      <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
-      <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
     </div>
-    <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
   </div>
 </footer>
 
 <div id="toast" class="toast"></div>
+
+<script src="/assets/ds/calc-kit.js?v=d45e66d9"></script>
 
 <script>
 let giftRel = '배우자';
@@ -337,7 +365,7 @@ function fmt(man) {
 }
 
 function showConverted(inputEl, dispEl) {
-  const v = parseFloat(inputEl.value);
+  const v = parseFloat(String(inputEl.value).replace(/,/g, ''));
   dispEl.textContent = v > 0 ? `= ${fmt(v)}` : '';
 }
 
@@ -367,8 +395,8 @@ function saveAsImage(resultId, title) {
 }
 
 function calcGift() {
-  const amountMan = parseFloat(document.getElementById('gift-amount').value) || 0;
-  const usedMan   = parseFloat(document.getElementById('gift-used').value) || 0;
+  const amountMan = parseFloat(String(document.getElementById('gift-amount').value).replace(/,/g, '')) || 0;
+  const usedMan   = parseFloat(String(document.getElementById('gift-used').value).replace(/,/g, '')) || 0;
   showConverted(document.getElementById('gift-amount'), document.getElementById('gift-amount-display'));
   if (!amountMan) { document.getElementById('gift-result').classList.remove('show'); return; }
 
@@ -421,11 +449,10 @@ function calcGift() {
   document.getElementById('gift-result').classList.add('show');
 }
 </script>
-<script src="/assets/calc-validate.js"></script>
-<script src="/assets/calc-result-tools.js"></script>
-<script src="/assets/calc-registry.js"></script>
-<script src="/assets/realestate-detail-shell.js"></script>
-<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
@@ -436,7 +463,13 @@ window.ARTICLE_INFO_CONFIG = {
   category: 'realestate'
 };
 </script>
-<script src="/assets/blog-article-info.js"></script>
-<script src="/assets/blog-review-footer.js"></script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "gift-result", "required": ["gift-amount"], "waitText": "증여재산가액을 입력하면 세액이 계산됩니다", "nextBox": "#gift-next", "next": []});
+  DSCalc.placeTrust('ds-trust-col');
+</script>
+<script src="/assets/ds/prefill.js?v=fa5eb49a" defer></script>
 </body>
 </html>

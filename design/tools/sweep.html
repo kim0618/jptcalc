@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>sweep</title>
+<!-- 검수용(배포 제외): 실제 크롬에서 페이지 × 폭을 iframe으로 차례로 열고 측정한다. 끝나면 제목이 DONE, 결과는 window.RESULT(JSON).
+     잰 것: 가로 넘침, 계산기 첫 조작칸 위치, 낱말 중간 줄바꿈(한 낱말이 두 줄에 걸침), 자기 칸을 넘친 글자(잘림), 빈 큰 영역 -->
+<style>html,body{margin:0;background:#888}iframe{display:block;border:0;background:#fff}</style>
+</head>
+<body>
+<iframe id="f"></iframe>
+<script>
+(async function () {
+  var q = new URLSearchParams(location.search);
+  var pages = (await (await fetch(q.get('list') || '/design/tools/sweep-pages.json')).json());
+  var widths = (q.get('w') || '320,360,390,412').split(',').map(Number);
+  var f = document.getElementById('f'), out = [];
+  try { localStorage.setItem('jpt_cookie_ok', '1'); } catch (e) {}
+  var sleep = function (t) { return new Promise(function (r) { setTimeout(r, t); }); };
+  function load(u) { return new Promise(function (res) { f.onload = function () { res(); }; f.src = u; }); }
+  function measure(d, w, u) {
+    var r = { u: u, w: w };
+    r.overflow = d.documentElement.scrollWidth - w;
+    var fc = d.querySelector('.ds-input-card input:not([type=hidden]), .ds-input-card .seg-btn, .ds-input-card select, .ds-input-card textarea, .ds-input-card button');
+    r.first = fc ? Math.round(fc.getBoundingClientRect().top) : null;
+    // 낱말 중간 줄바꿈: 보이는 머리·라벨·버튼·카드 제목·칩의 각 낱말이 두 줄에 걸치는지
+    var broken = [];
+    d.querySelectorAll('h1,h2,h3,b,strong,label,button,.field-label,.ds-hub-body b,.ds-next-body b,.h-sit-body b,.ds-blog-card h3,.ds-post-chip,.ds-trust-chip,.seg-btn,.ds-tabbar a,.ds-crumbs,th').forEach(function (el) {
+      if (!el.offsetParent || el.closest('.ds-post-body p, .ds-prose p, td')) return;
+      var walker = d.createTreeWalker(el, NodeFilter.SHOW_TEXT), n;
+      while ((n = walker.nextNode())) {
+        var t = n.nodeValue, re = /\S+/g, m;
+        while ((m = re.exec(t))) {
+          if (m[0].length < 2) continue;
+          var rg = d.createRange(); rg.setStart(n, m.index); rg.setEnd(n, m.index + m[0].length);
+          var tops = {}; Array.prototype.forEach.call(rg.getClientRects(), function (c) { if (c.width > 1) tops[Math.round(c.top / 4)] = 1; });
+          if (Object.keys(tops).length > 1) broken.push(m[0]);
+        }
+      }
+    });
+    r.broken = Array.from(new Set(broken)).slice(0, 8);
+    // 잘림: 글자가 자기 칸 밖으로(가로 스크롤 상자·말줄임 의도 제외)
+    var clipped = [];
+    d.querySelectorAll('main *, header *, nav *').forEach(function (el) {
+      if (!el.offsetParent || el.children.length > 3) return;
+      var cs = getComputedStyle(el);
+      if (cs.textOverflow === 'ellipsis' || /auto|scroll/.test(cs.overflowX) || el.closest('.table-wrap, .ds-table-card, .ds-trust-chips, .ds-toc, .ds-blog-chips, .h-recent-list, .action-row')) return;
+      if (el.scrollWidth > el.clientWidth + 2 && cs.overflowX === 'hidden' && el.textContent.trim()) clipped.push((el.className || el.tagName).toString().slice(0, 30) + ':' + el.textContent.trim().slice(0, 16));
+    });
+    r.clipped = clipped.slice(0, 5);
+    return r;
+  }
+  for (var i = 0; i < pages.length; i++) {
+    for (var j = 0; j < widths.length; j++) {
+      f.style.width = widths[j] + 'px'; f.style.height = '844px';
+      await load(pages[i]); await sleep(700);
+      var d; try { d = f.contentDocument; var st = d.createElement('style'); st.textContent = 'html{scrollbar-width:none}html::-webkit-scrollbar{display:none}'; d.head.appendChild(st); } catch (e) { continue; }
+      await sleep(250);
+      try { out.push(measure(d, widths[j], pages[i])); } catch (e) { out.push({ u: pages[i], w: widths[j], err: String(e) }); }
+      document.title = 'RUN ' + (i + 1) + '/' + pages.length;
+    }
+  }
+  window.RESULT = JSON.stringify(out);
+  document.title = 'DONE';
+})();
+</script>
+</body>
+</html>

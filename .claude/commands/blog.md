@@ -214,10 +214,20 @@ date +"%Y-%m-%d (%a) u=%u"   # u: 1=월 2=화 3=수 4=목 5=금 6=토 7=일
 - **[2026-09-07 SERP 전수감사 14건]** 고노출·저CTR 페이지의 모바일 SERP를 직접 열어 분류했다(스크립트 방식은 `feedback_ctr_check_rank_first`). 결과: **제목은 14개 전부 검색어와 정확히 일치 → 제목 최적화는 레버가 아니다.** 정부·네이버 자체모듈이 상단을 점유한 건 age·lunar-calendar **2개뿐**. 나머지 12개는 상위가 **개인 네이버 블로그·소형 도구 사이트**(올크레딧·스쿨로직·내신닷컴·pluuug·CalcNow·잡코리아·세무회계 블로그)라 싸울 수 있는 자리인데 밀려 있다. 색인O·순위밀림 6개: dti(26,577)·pyeong(19,847)·naesin-grade-guide(12,695)·regional-health(11,024)·inheritance·bonus-pay. 헤드텀 SERP 부재 5개(롱테일로만 노출 중): naesin-grade 계산기(17,402)·withholding(13,603)·ordinary-wage(8,843)·jeonse-loan(8,505)·gpa(5,341). **상위가 네이버 블로그라는 사실이 처방을 정한다 → 네이버 블로그 피더(8/3 레버 ④, 미실행)가 구조적으로 맞는 수단**이며 폼다에서 이미 실증됐다. 제이퍼 네이버 블로그는 6월 주 166세션까지 갔다가 09-07 기준 28일 181세션(주 45)로 꺼진 상태. 대조군 raise-or-quit(CTR 6.3%)는 SERP 5번째·42회 등장 = 이기는 자리의 모습.
 - **내부링크 리프트(제목보다 순위 문제)**: 고노출·저CTR이나 제목이 이미 양호한 계산기 - salary/hourly-wage(6,117→2,374 하락 중), health/ideal-weight(4,002·1.3%), pension-welfare/national-pension(3,385·1.3%). 제목 손대지 말고 상위 글(weight-by-height-2026·raise-rate-industry 등)에서 내부링크를 추가해 순위를 페이지1로 끌어올린다.
 
+## ★ 원고 → 생성 체제 (2026-10-19 리뉴얼, 이 절이 아래 모든 경로 지시보다 우선)
+- 글은 **원고**로 쓴다: `/home/tjd618/jptcalc/design/blog-source/posts/[파일명].html` (옛 틀 그대로: 아래 "페이지 크롬"·"본문 구성 순서"·스크립트 블록 형식 유지).
+- 목록 카드도 **원고 목록** `/home/tjd618/jptcalc/design/blog-source/index.html` 에 넣는다.
+- `blog/posts/*.html`·`blog/index.html`은 **생성물**이다. 직접 고치지 말고 원고를 고친 뒤 아래 두 줄로 다시 만든다(헤더·푸터·목차·관련 계산기 CTA·썸네일·작성자/검토 안내는 생성기가 넣는다).
+  ```bash
+  node design/tools/blog_static_info.mjs design/tools/results/blog_info.json design/blog-source/posts/*.html
+  python3 -I design/tools/build_blog.py
+  ```
+- `design/`는 배포에서 빠진다(원고는 저장소에만). 배포 대상은 생성된 `blog/`.
+
 ## 사전 확인
-1. `ls /home/tjd618/jptcalc/blog/posts/` 로 기존 포스트 파일 목록 전체 확인
+1. `ls /home/tjd618/jptcalc/design/blog-source/posts/` 로 기존 원고 목록 전체 확인 (생성된 `blog/posts/`와 같은 파일 목록)
 2. `ls /home/tjd618/jptcalc/calc/` 및 하위 폴더 확인해서 사용 가능한 계산기 URL 파악
-3. `/home/tjd618/jptcalc/blog/index.html` 에서 data-cat 개수를 세서 카테고리별 글 수 확인
+3. 원고 목록 `/home/tjd618/jptcalc/design/blog-source/index.html` 에서 data-cat 개수를 세서 카테고리별 글 수 확인 (생성된 blog/index.html의 data-cat은 slug라 이름이 다름)
 4. **주제 선정 우선순위: ① 진행 중 클러스터의 위성 주제 → ② 네이버 타겟 큐 Tier 순서 → ③ 블로그 글이 아직 없는 신규 계산기(고아) → ④ 글 적은 카테고리.** "클러스터 진행 현황" 블록에 진행 중 클러스터가 있으면 그 위성을 먼저 뽑아 클러스터를 채운다. **단, 현 자동차 클러스터 소진(auto-loan) 직후에는 큐 리필을 기다리지 말고 곧장 ③(고아 계산기)으로 간다** - "클러스터 진행 현황" 참고 참조.
    - **③ 신규 계산기 미커버 우선순위**: 클러스터·큐 소진 시, 블로그 글이 0개인 신규 계산기부터 글을 쓴다. **대상 목록은 하드코딩하지 말고 `node scripts/find-orphan-calcs.mjs`를 실행해 "연결된 블로그가 없는 계산기"를 그때그때 받아온다** (계산기가 새로 추가되면 자동으로 이 목록에 잡힘). 데이터랩 검증 수요가 높은 것부터(예: 생활·도구 글자수세기·내신등급) 고른다. 각 글은 cta-box·relatedCalc·해당 detail-shell guides로 그 계산기에 유입을 연결한다. (네이버 큐 자체에는 서치어드바이저 검증 주제만 넣고, 이 신규 계산기 주제는 큐에 넣지 않는다.)
    - **🔴 공백 검출 3단 확인 (2026-08-13 신설, 앞의 두 방법만으로는 못 잡는 구멍이 있다)**: 지금까지 ①`find-orphan-calcs.mjs` ②`grep -n "guides:\[\]" assets/{cat}-detail-shell.js` 두 가지로 공백을 봤는데, **둘 다 통과하는데도 실질 공백인 유형**이 08-13에 발견됐다(`calc/salary/average-wage` - 네이버 검색어 TOP30 21위·CTR 35.1%인데 전용 글 없음). 이유는 ①이 "블로그 어디서든 본문에 URL만 링크하면 연결로 간주"하는 느슨한 기준이고, ②는 **`guides:[]`라는 문자열이 있어야 잡히는데 그 계산기는 detail-shell에 키 자체가 없어서**(엔트리 통째로 부재 → 폴백) grep에 걸릴 문자열이 아예 존재하지 않기 때문이다. 그러므로 ③ **폴더는 있는데 shell 키가 없는 계산기**를 아래로 직접 대조한다.
@@ -231,8 +241,7 @@ date +"%Y-%m-%d (%a) u=%u"   # u: 1=월 2=화 3=수 4=목 5=금 6=토 7=일
      ```
      여기 뜬 계산기는 **본문 링크가 있어도 전용 글 유무를 h2까지 열어 직접 확인**한다. 전용 글이 없으면 실질 공백이다.
 5. 기존 글과 겹치지 않는 주제를 선정하고, 큐 주제에 연결된 계산기와 본문에서 링크
-6. 기존 포스트 파일 1개 읽어서 해당 카테고리의 포맷·색상 정확히 파악
-   - **반드시 헤더·footer 크롬이 정상인 글을 템플릿으로 복사한다** (예: `dog-monthly-cost.html`). 헤더 없는 구버전 글을 베끼면 헤더 누락이 전파된다. 의심되면 `node scripts/check-post-chrome.mjs`로 후보 글 상태를 먼저 확인.
+6. 같은 카테고리 원고 1개(`design/blog-source/posts/`)를 읽어 포맷을 파악하고 그 원고를 틀로 복사한다 (예: `design/blog-source/posts/dog-monthly-cost.html`). 색은 생성기가 토큰으로 바꾸므로 원고의 색 값은 따지지 않는다.
 7. **같은 카테고리 기존 글 목록 확인** - 본문 내 교차 링크용 (2~3개 선정)
 
 ### 시의성 체크 (주제 선정 전 필수)
@@ -247,7 +256,7 @@ date +"%Y-%m-%d (%a) u=%u"   # u: 1=월 2=화 3=수 4=목 5=금 6=토 7=일
 ---
 
 ## 포스트 파일 작성 기준
-파일 위치: `/home/tjd618/jptcalc/blog/posts/[영문-소문자-하이픈].html`
+파일 위치(원고): `/home/tjd618/jptcalc/design/blog-source/posts/[영문-소문자-하이픈].html` → 생성 후 공개 주소는 `/blog/posts/[같은 파일명].html`
 
 ### head 영역
 - charset UTF-8, viewport
@@ -278,20 +287,8 @@ date +"%Y-%m-%d (%a) u=%u"   # u: 1=월 2=화 3=수 4=목 5=금 6=토 7=일
 - Pretendard 폰트 CDN
 - **Article JSON-LD** + **FAQPage JSON-LD** 모두 `<head>` 안에 배치 (아래 JSON-LD 섹션 참고)
 
-### 카테고리별 post-tag CSS 색상 및 --primary (인라인 style로 각 포스트 파일에 작성)
-- 부동산: --primary #F59E0B, post-tag background rgba(245,158,11,0.15) color #F59E0B, highlight-box background rgba(245,158,11,0.1) text-color #92400E
-- 세금: --primary #10B981, post-tag background rgba(16,185,129,0.15) color #10B981, highlight-box background rgba(16,185,129,0.08) text-color #065F46
-- 금융: --primary #6366F1, post-tag background rgba(99,102,241,0.15) color #6366F1, highlight-box background rgba(99,102,241,0.08) text-color #3730A3
-- 연봉: --primary #3B82F6, post-tag background rgba(59,130,246,0.15) color #3B82F6, highlight-box background rgba(59,130,246,0.08) text-color #1E40AF
-- 건강: --primary #10B981, post-tag background rgba(16,185,129,0.15) color #10B981, highlight-box background rgba(16,185,129,0.08) text-color #065F46
-- 반려동물: --primary #F472B6, post-tag background rgba(244,114,182,0.15) color #F472B6, highlight-box background rgba(244,114,182,0.08) text-color #9D174D
-- 날짜·D-day: --primary #F97316, post-tag background rgba(249,115,22,0.15) color #F97316, highlight-box background rgba(249,115,22,0.08) text-color #9A3412
-- AI·테크: --primary #8B5CF6, post-tag background rgba(139,92,246,0.15) color #8B5CF6, highlight-box background rgba(139,92,246,0.08) text-color #5B21B6
-- 연금·복지: --primary #0EA5E9, post-tag background rgba(14,165,233,0.15) color #0EA5E9, highlight-box background rgba(14,165,233,0.08) text-color #0C4A6E
-- 생활·도구: --primary #14B8A6, post-tag background rgba(20,184,166,0.15) color #14B8A6, highlight-box background rgba(20,184,166,0.08) text-color #0F766E
-
-cta-btn 배경색과 td.rate 색상도 각 카테고리의 --primary와 동일하게 적용한다.
-인라인 계산기 링크의 color도 반드시 해당 카테고리의 --primary 색상을 사용한다. (#2563eb 같은 임의 색상 사용 금지)
+### 색상 (2026-10-19 리뉴얼)
+- 카테고리별 post-tag·--primary·cta-btn·td.rate·인라인 링크 색을 원고에 맞춰 넣는 절차는 **폐지**. 생성기가 원고의 `<style>`을 버리고 인라인 hex 색을 토큰 클래스로 바꾼다. 원고에 색을 새로 지정하지 않는다.
 
 ---
 
@@ -301,7 +298,7 @@ cta-btn 배경색과 td.rate 색상도 각 카테고리의 --primary와 동일�
 > ⚠️ 2026-07-10 측정 기준 정정: 기존 "순수 텍스트 15,000자" + `sed 's/<[^>]*>//g' | wc -c` 는 **이중으로 틀린 지표**였다. ① `wc -c`는 바이트를 세는데 한글은 글자당 3바이트라 "자"와 어긋나고, ② tag만 지우면 `<style>`/`<script>` **내용물(CSS·JS)** 이 텍스트로 남아 실제 본문의 2~4배로 부풀려진다. 실제로 139편 전수 측정 결과 실본문 중앙값은 **6,176자**, 15,000자를 넘는 글은 4편(3%)뿐이었다. 아래 기준은 실측 분포에 맞춘 값이다.
 - **실제 본문 순수 텍스트(head·script·style·header·footer 제외) 6,000자 이상** 권장 (139편 중앙값 수준)
 - **4,000자 미만은 thin content**로 간주해 섹션을 추가해서 보강 (반드시)
-- 측정은 반드시 전용 스크립트로: `node scripts/count-chars.mjs blog/posts/파일.html` (△=6,000 미만, ✗=4,000 미만 thin). 인자 없이 실행하면 전체 분포+thin 목록.
+- 측정은 반드시 전용 스크립트로: `node scripts/count-chars.mjs design/blog-source/posts/파일.html`(원고) (△=6,000 미만, ✗=4,000 미만 thin). 인자 없이 실행하면 전체 분포+thin 목록.
 - 분량을 채우기 위한 중복·반복 문장 금지 - 내용이 없으면 새 섹션을 추가할 것
 - 6,000자를 못 채우겠으면 주제 범위를 넓히거나 시나리오를 추가
 
@@ -432,6 +429,14 @@ cta-btn 배경색과 td.rate 색상도 각 카테고리의 --primary와 동일�
 - 부모혜택 사이트의 실제 글 슬러그를 확인해서 정확한 URL 작성 (`ls /home/tjd618/bumohyetaek/src/data/articles/`)
 - 강제로 끼워 넣지 않는다. 문맥상 자연스러운 경우에만 삽입
 
+### 표지 coverText (필수, 2026-10-20 신설, 시안 D4)
+글마다 표지 문구 1행을 `design/blog-cover-text.csv`에 추가한다(열: `slug,카테고리,big,desc,evidence`, slug 순 정렬, python csv 모듈로 쓰기).
+- **big(큰 숫자/핵심어)**: 최대 12자. 본문에 그대로 있는 숫자+단위만(계산·반올림·창작 금지). 돈 단위는 붙여 쓴다("만원"·"억원", 근거 문장과는 공백만 다를 수 있음). 숫자가 없는 글만 본문의 핵심어.
+- **desc(설명)**: 최대 16자. big이 무엇인지, 숫자가 기대는 조건(나이·금액·기준연도 등)을 담는다.
+- **evidence(근거 문장)**: big이 들어 있는 본문 문장을 그대로 복사(표의 한 행이면 칸을 " | "로 잇기).
+- 날짜가 지나면 틀리는 값(오늘 기준 D-day 등)은 쓰지 않는다.
+- 행을 넣은 뒤 표지 생성: `LD_LIBRARY_PATH=$HOME/.local/emulib python3 design/tools/build_blog_covers.py [slug]` (16:9·3:1 두 장, og:image는 건드리지 않음). "최소 크기에서도 넘침" 목록에 오르면 big·desc를 줄여 다시.
+
 ### SVG 인포그래픽 (1개 필수)
 본문 핵심 데이터를 시각화하는 **인라인 SVG** 1개를 삽입한다.
 
@@ -502,7 +507,7 @@ highlight-box 바로 다음에 "이 글에서 확인할 수 있는 것" 리스�
 
 ## 페이지 크롬 (헤더·footer, 필수)
 
-모든 글은 `<body>` 바로 다음에 헤더, 스크립트 직전에 footer fallback을 넣는다. 인라인 `<style>`에 헤더·footer CSS도 함께 포함(정상 글 복사 시 자동 포함됨).
+**원고 형식이다.** 원고는 `<body>` 바로 다음에 헤더, 스크립트 직전에 footer를 넣는 옛 틀 그대로 쓴다(생성기가 이 위치를 기준으로 본문을 꺼낸다). 공개 페이지의 헤더·푸터·탭바는 생성기가 site-shell로 바꾼다.
 
 **헤더 (`<body>` 직후):**
 ```html
@@ -653,6 +658,7 @@ window.ARTICLE_INFO_CONFIG = {
 <script src="/assets/footer-unified.js" defer></script>
 <script src="/assets/blog-review-footer.js" defer></script>
 ```
+- 위 세 줄은 **원고에만** 둔다. 생성기가 작성자·검토 안내를 이 설정으로 정적 HTML로 만들고, 공개 글에서는 세 스크립트를 뺀다(공개 글에 다시 넣으면 `check-post-chrome.mjs`가 실패).
 
 ### post-meta 날짜
 오늘 날짜를 YYYY.MM.DD 형식으로 사용한다.
@@ -681,17 +687,19 @@ window.ARTICLE_INFO_CONFIG = {
 
 2026-06-29 애드센스 준비로 약한 꼬리 15편에 `robots noindex,follow` 를 걸고 sitemap·blog/index·rss 에서 뺐다. 그런데 이후 작업이 **sitemap 과 blog/index 를 통째로 다시 만들면서 15편을 전부 되살렸다**(커밋 f7bb01d 7/10, 9643af7 7/15). noindex 는 검색엔진만 막지 애드센스 심사자의 동선은 못 막으므로, 목록 카드가 살아있으면 프루닝이 무효가 된다. 2026-07-28 재차 제거함.
 
-- **blog/index.html 카드 추가·sitemap 갱신은 "새 글 1건 추가"로만 하고, 전체 재생성을 하지 말 것.**
+- **원고 목록(design/blog-source/index.html) 카드 추가·sitemap 갱신은 "새 글 1건 추가"로만 하고, 원고 목록을 통째로 다시 쓰지 말 것.** 공개 `blog/index.html`은 원고 목록에서 생성되므로 원고 목록에 없는 15편은 공개 목록에도 안 나온다.
 - 부득이 재생성했다면 반드시 `node scripts/check-noindex-excluded.mjs` 로 확인한다.
 - 대상 15편(전부 blog/posts 에 파일은 살아있고 계산기 sibling 링크도 유지됨. 삭제 금지):
   AI 7 - claude-vs-gpt · cursor-vs-copilot · ai-saas-cost-guide · ai-infra-cost-guide · saas-vs-self-build · windsurf-vs-cursor-cost-guide · ai-chatbot-subscription-comparison
   펫 4 - cat-monthly-cost · pet-cost-saving-tips · pet-senior-care-guide · dog-vs-cat-cost
   얇은 온니치 4 - salary-negotiation · income-tax-may-guide · savings-vs-deposit · loan-refinance-guide
 
-### 1. blog/index.html 카드 추가
+### 1. 원고 목록 카드 추가 → 생성
+- 대상 파일: `design/blog-source/index.html` (공개 `blog/index.html`은 직접 고치지 않는다)
 - 카드 포맷: `<a href="./posts/[파일명].html" class="post-card" data-cat="[카테고리명]">`
 - 카테고리별 tag 클래스: 부동산=tag-realestate / 세금=tag-tax / 금융=tag-finance / 연봉=tag-salary / 건강=tag-health / 연금·복지=tag-pension-welfare / 반려동물=tag-pet / 날짜·D-day=tag-date / AI·테크=tag-ai / 생활·도구=tag-tools
-- 최신 글이 목록 상단(post-grid 바로 아래)에 오도록 배치
+- 최신 글이 목록 상단(post-grid 바로 아래)에 오도록 배치 (첫 카드가 공개 목록의 대표 글이 된다)
+- 카드를 넣은 뒤 위 "원고 → 생성 체제"의 두 줄을 실행해 `blog/posts/[파일명].html`·`blog/index.html`을 만든다.
 
 ### 2. sitemap.xml 업데이트
 - `<loc>https://www.jptcalc.kr/blog/posts/[파일명].html</loc>`
@@ -710,7 +718,7 @@ window.ARTICLE_INFO_CONFIG = {
 ```
 검증 항목:
 □ 실제 본문 순수 텍스트 6,000자 이상 권장 / 4,000자 미만이면 thin이므로 반드시 보강
-  - Bash: node scripts/count-chars.mjs blog/posts/파일.html  (△=6,000 미만, ✗=4,000 미만. sed+wc -c 옛 명령은 CSS/JS 포함·바이트라 폐기)
+  - Bash: node scripts/count-chars.mjs design/blog-source/posts/파일.html  (원고로 잰다. 생성된 글은 CTA 카드·목차가 더해져 수치가 커진다. △=6,000 미만, ✗=4,000 미만)
 □ 목차형 요약 리스트 포함 여부 (도입부 직후)
 □ 반전 비교 섹션 1개 포함 여부
 □ 계산 예시 3개 이상, 수식 검산 완료, 의사결정 연결 문장 포함
@@ -726,7 +734,7 @@ window.ARTICLE_INFO_CONFIG = {
 □ CTA 계산기 URL 실제 존재 확인 (ls)
 □ 마무리 h2 제목이 "마무리"가 아닌 다른 표현인지 확인
 □ 카카오 애드핏 슬롯 2개 포함 여부 - ①상단(DAN-IE2k, 목차 직후) ②본문중간(DAN-88xhd, 중간 h2 앞, FAQ/마무리 회피). 하단 CTA엔 광고 없어야 함
-□ **공통 크롬 검증: `node scripts/check-post-chrome.mjs` 실행** (헤더·필수 스크립트 누락, 로고 공백 오타 자동 검출. 전 글 통과해야 함)
+□ **공통 크롬 검증: 생성 후 `node scripts/check-post-chrome.mjs` 실행** (생성된 blog/posts가 새 틀인지: site-shell·정적 작성자 안내·ARTICLE_INFO_CONFIG 필수, 옛 스크립트·옛 헤더가 있으면 실패. 전 글 통과해야 함)
 □ **noindex 격리 검증: `node scripts/check-noindex-excluded.mjs` 실행** (위 0번. 체제 A 15편이 sitemap·blog/index·rss 에 되살아났는지 + 체제 B 105편이 sitemap 에서 빠졌는지 양방향 검출. 종료코드 0이어야 함)
 □ **새 글에 googlebot noindex 가 안 들어갔는지 확인** (위 0번. 신규 글은 구글 색인 회복 카나리아라 반드시 색인 가능해야 함)
 □ **요율/기준표 가드: `node scripts/check-rate-tables.mjs` 실행** (정책·기준표 카테고리 9종 salary·tax·realestate·finance·auto·baby·pet·health·pension-welfare 표 누락 + 상속·증여 부결안 회귀 검출. 종료코드 0이어야 함)

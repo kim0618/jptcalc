@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>정기예금 이자 계산 - 1,000만원 연 3.5% 예치 시 세후 수령액 29만6천원 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="1,000만원을 연 3.5%로 1년 예치하면 세전 이자 35만원, 이자소득세 15.4% 공제 후 세후 29만6천원 수령. 금액·금리·기간별 실수령 이자를 지금 바로 계산해보세요." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="정기예금 이자 계산 - 1,000만원 연 3.5% 예치 시 세후 수령액 29만6천원 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="1,000만원을 연 3.5%로 1년 예치하면 세전 이자 35만원, 이자소득세 15.4% 공제 후 세후 29만6천원 수령. 금액·금리·기간별 실수령 이자를 지금 바로 계산해보세요." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/deposit-interest-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="googlebot" content="noindex, follow" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/deposit-interest-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BRSX3F10MZ');
+  </script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #6366F1;
+      --gray-400: #9CA3AF; --gray-500: #6B7280; --gray-600: #4B5563;
+      --dark-bg: #ffffff; --dark-card: #F9FAFB; --dark-border: rgba(0,0,0,0.08);
+    }
+    body { font-family: 'Pretendard', -apple-system, sans-serif; background: #ffffff; color: #111827; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+
+    .site-header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .header-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; gap: 24px; }
+    .site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .logo-icon { width: 32px; height: 32px; }
+    .logo-icon img { width: 32px; height: 32px; display: block; }
+    .logo-text { font-size: 18px; font-weight: 900; color: #111827; letter-spacing: -0.5px; }
+    .logo-text span { color: #818CF8; }
+    .header-back { margin-left: auto; font-size: 13px; font-weight: 600; color: #6B7280; text-decoration: none !important; }
+    .header-back:hover { color: #111827; }
+
+    .post-wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+    .post-tag { display: inline-block; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; background: rgba(99,102,241,0.15); color: #6366F1; margin-bottom: 16px; }
+    h1 { font-size: 26px; font-weight: 900; color: #111827; line-height: 1.35; margin-bottom: 12px; }
+    .post-meta { font-size: 13px; color: #4B5563; margin-bottom: 36px; display: flex; gap: 12px; }
+    .post-body { font-size: 15px; color: #111827; line-height: 1.8; }
+    .post-body h2 { font-size: 19px; font-weight: 800; color: #111827; margin: 40px 0 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .post-body h3 { font-size: 16px; font-weight: 700; color: #111827; margin: 24px 0 10px; }
+    .post-body p { margin-bottom: 14px; }
+    .post-body ul, .post-body ol { margin: 10px 0 14px 20px; }
+    .post-body li { margin-bottom: 8px; }
+    .post-body a { color: var(--primary); text-decoration: none !important; }
+    .post-body a:hover { text-decoration: underline; }
+    .highlight-box { background: rgba(99,102,241,0.08); border-left: 4px solid var(--primary); border-radius: 0 10px 10px 0; padding: 16px 20px; margin: 20px 0; }
+    .highlight-box p { margin: 0; color: #3730A3; font-size: 14px; }
+    .table-wrap { overflow-x: auto; margin: 20px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th { background: #F9FAFB; color: #111827; font-weight: 700; padding: 10px 14px; text-align: left; border: 1px solid rgba(0,0,0,0.08); }
+    td { padding: 10px 14px; border: 1px solid rgba(0,0,0,0.08); color: #1F2937; }
+    tr:hover td { background: rgba(0,0,0,0.02); }
+    .cta-box { background: #F9FAFB; border: 1px solid rgba(0,0,0,0.08); border-radius: 14px; padding: 24px; margin: 40px 0; text-align: center; }
+    .cta-box p { color: #374151; font-size: 14px; margin-bottom: 14px; }
+    .cta-btn { display: inline-block; padding: 12px 28px; background: #6366F1; color: #fff !important; font-size: 14px; font-weight: 800; border-radius: 10px; text-decoration: none !important; }
+    .cta-btn:hover { opacity: 0.9; }
+
+    .faq-item { background: #F9FAFB; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; padding: 20px; margin: 16px 0; }
+    .faq-q { font-weight: 800; color: #111827; margin-bottom: 8px; font-size: 15px; }
+    .faq-a { color: #374151; font-size: 14px; line-height: 1.7; margin: 0; }
+    td.rate { text-align: center; font-weight: 700; color: #6366F1; }
+    td.total-rate { text-align: center; font-weight: 700; color: #111827; }
+
+    .site-footer { border-top: 1px solid rgba(0,0,0,0.08); padding: 24px; text-align: center; }
+    .footer-copy { font-size: 10px; color: #374151; }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "정기예금 이자 계산 - 1,000만원 연 3.5% 예치 시 세후 수령액 29만6천원",
+  "description": "1,000만원을 연 3.5%로 1년 예치하면 세전 이자 35만원, 이자소득세 15.4% 공제 후 세후 29만6천원 수령. 금액·금리·기간별 실수령 이자를 지금 바로 계산해보세요.",
+  "author":{"@type":"Person","name":"Jay Kim","url":"https://www.jptcalc.kr/about.html","jobTitle":"제이퍼 계산기 운영자"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.jptcalc.kr/android-chrome-512x512.png"
+    }
+  },
+  "datePublished": "2026-03-31",
+  "dateModified": "2026-05-29",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.jptcalc.kr/blog/posts/deposit-interest-guide.html"
+  },
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "금융",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "정기예금과 적금, 같은 금리면 어느 쪽 이자가 더 많나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "정기예금이 약 2배 더 많습니다. 예금은 전체 원금에 처음부터 이자가 붙지만, 적금은 매월 분할 납입하므로 마지막 달 납입금은 1개월치 이자만 붙습니다. 목돈이 있다면 예금, 매달 모으는 것이라면 적금이 적합합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "이자가 2,000만원을 넘으면 추가 세금이 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네, 연간 이자·배당소득 합계가 2,000만원을 초과하면 금융소득종합과세 대상이 됩니다. 초과분에 대해 다른 소득과 합산하여 6~45%의 소득세가 적용될 수 있습니다. 고액 예금자는 분산 가입이나 ISA 계좌 활용을 고려하세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "예금자보호가 되는 금액 한도는?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1인당 1개 금융기관에 최대 1억원(원금+이자 합산)까지 보호됩니다. 2025년 9월 1일부터 기존 5,000만원에서 1억원으로 상향됐습니다. 2억원이 있다면 2개 기관에 1억원씩 나눠 넣으면 전액 보호받을 수 있습니다. 같은 은행 내 여러 계좌는 합산되므로 주의하세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "비대면 전용 예금이 금리가 더 높은 이유는?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "은행 입장에서 지점 운영비가 들지 않기 때문입니다. 인터넷은행(카카오뱅크, 토스뱅크)이나 시중은행의 비대면 전용 상품은 보통 0.1~0.3%p 더 높은 금리를 제공합니다. 같은 은행이라도 비대면 가입 여부에 따라 금리가 다를 수 있으니 확인하세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "정기예금 이자에 건강보험료가 추가로 부과되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "연간 금융소득(이자+배당) 합계가 1,000만원을 초과하면 건강보험 피부양자 자격을 잃을 수 있고, 지역가입자라면 이자소득이 건강보험료 부과 기준에 반영됩니다. 1,000만원 이하라면 건강보험료에는 영향이 없습니다. 은퇴 후 피부양자 자격을 유지하려면 분산 가입과 ISA 계좌를 적극 활용해야 합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "부부 명의로 나눠 가입하면 세금이 줄어드나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "금융소득종합과세 기준(연 2,000만원)이 인별로 적용되므로 명의 분산이 유리합니다. 한 명이 2,500만원 이자를 받는 것보다 부부가 1,250만원씩 나눠 받으면 종합과세를 피할 수 있습니다. 단, 자금 출처와 명의가 명확해야 하며 증여세 신고가 필요한 경우도 있으니 큰 금액은 세무사 상담을 권합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "우대금리 조건은 실제로 받기 쉬운가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "조건마다 다릅니다. '급여이체 6개월 유지' 같은 항목은 가입자 대부분이 충족하지만, '신용카드 월 30만원 사용 12개월' 같은 조건은 미충족 시 우대금리가 빠집니다. 가입 전에 본인 상황에서 채울 수 있는 조건만 골라 우대금리 기준을 산정하는 것이 안전합니다."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.jptcalc.kr/"}, {"@type": "ListItem", "position": 2, "name": "블로그", "item": "https://www.jptcalc.kr/blog/"}, {"@type": "ListItem", "position": 3, "name": "금융", "item":"https://www.jptcalc.kr/blog/?cat=금융"}, {"@type": "ListItem", "position": 4, "name": "정기예금 이자 계산 - 1,000만원 연 3.5% 예치 시 세후 수령액 29만6천원", "item": "https://www.jptcalc.kr/blog/posts/deposit-interest-guide.html"}]}</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo">
+      <div class="logo-icon"><img src="../../assets/logo.svg" alt="제이퍼 계산기 로고" /></div>
+      <span class="logo-text">제이퍼<span>계산기</span></span>
+    </a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+
+<div class="post-wrap">
+  <span class="post-tag">금융</span>
+  <h1>정기예금 이자 계산법 - 세전·세후 수령액과 금리 비교 전략</h1>
+  <div class="post-meta">
+    <span>📅 2026.03.31</span>
+    <span>·</span>
+    <span>6분 읽기</span>
+  </div>
+
+  <div class="post-body">
+    <p>결론부터 말하면, 은행이 고지한 금리 그대로 받는 사람은 없습니다. 이자의 15.4%가 세금으로 빠집니다. 5,000만원을 연 4%에 넣으면 세전 이자 200만원, 실수령은 169만원입니다. 계산법과 금리 비교 전략을 숫자로 정리했습니다.</p>
+
+    <div class="highlight-box">
+      <p><strong>이 글이 필요한 사람:</strong> 목돈을 예금에 넣으려는데 실수령 이자가 궁금한 분 / 여러 은행 금리를 비교해서 최적의 예금을 고르고 싶은 분 / 예금 이자에 붙는 세금 구조를 알고 싶은 분</p>
+    </div>
+
+    <h2>단리냐 복리냐, 이게 얼마나 차이야</h2>
+    <p>정기예금은 목돈을 한번에 넣고 만기까지 이자를 받는 구조입니다. 적금과 달리 전체 원금에 처음부터 이자가 붙어 같은 금리에서 이자가 훨씬 많습니다. 단리와 복리, 계산 방식이 다릅니다.</p>
+
+    <h3>단리 예금</h3>
+    <div class="highlight-box">
+      <p><strong>세전 이자 = 원금 x 연이율 x (가입기간/12)</strong><br />
+      예: 5,000만원 x 4% x (12/12) = <strong>200만원</strong></p>
+    </div>
+
+    <h3>월복리 예금</h3>
+    <div class="highlight-box">
+      <p><strong>만기금액 = 원금 x (1 + 연이율/12)^가입개월수</strong><br />
+      예: 5,000만원 x (1 + 0.04/12)^12 = 5,000만원 x 1.0407 = <strong>약 5,203.7만원</strong><br />
+      이자 = 약 203.7만원 (단리 대비 3.7만원 더 많음)</p>
+    </div>
+    <p>12개월 기준 단리와 월복리의 차이는 크지 않습니다. 하지만 기간이 길어질수록(24개월, 36개월) 차이가 벌어집니다.</p>
+
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+    <h2>세금이 15.4%나 나간다</h2>
+    <p>예금 이자에는 <strong>이자소득세 14% + 지방소득세 1.4% = 총 15.4%</strong>가 원천징수됩니다. 여기서 주의할 점이 하나 있는데요. 세금은 자동으로 떼이므로 직접 신고할 필요는 없지만, 계획 단계에서 이 15.4%를 빠뜨리면 실수령액이 예상보다 한참 적습니다.</p>
+    <div class="highlight-box">
+      <p><strong>세후 이자 = 세전 이자 x 0.846</strong><br />
+      예: 200만원 x 0.846 = <strong>169.2만원</strong> (세금 30.8만원)</p>
+    </div>
+
+    <p style="margin: 1.2em 0;">
+      👉 <a href="https://www.jptcalc.kr/calc/finance/deposit/" style="color: #6366F1; font-weight: 600;">예금 이자 계산기로 세후 수령액 바로 확인하기</a>
+    </p>
+
+    <h2>금리 0.5%p 차이, 실제로 얼마 달라지나</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>원금</th><th>연 3.0%</th><th>연 3.5%</th><th>연 4.0%</th><th>연 4.5%</th></tr>
+        <tr><td>1,000만원</td><td class="rate">25.4만</td><td class="rate">29.6만</td><td class="rate">33.8만</td><td class="rate">38.1만</td></tr>
+        <tr><td>3,000만원</td><td class="rate">76.1만</td><td class="rate">88.8만</td><td class="rate">101.5만</td><td class="rate">114.2만</td></tr>
+        <tr><td>5,000만원</td><td class="rate">126.9만</td><td class="rate">148.1만</td><td class="rate">169.2만</td><td class="rate">190.4만</td></tr>
+        <tr><td>1억원</td><td class="rate">253.8만</td><td class="rate">296.1만</td><td class="rate">338.4만</td><td class="rate">380.7만</td></tr>
+      </table>
+    </div>
+    <p>5,000만원 기준 금리 0.5%p 차이로 세후 이자가 약 21만원 달라집니다. 여러 은행을 비교하는 이유가 여기에 있습니다.</p>
+
+    <h2>기간 늘릴수록 이자는 비례해서 늘어난다</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>가입 기간</th><th>세전 이자</th><th>세금 (15.4%)</th><th>세후 수령 이자</th></tr>
+        <tr><td>6개월</td><td>100만원</td><td>15.4만원</td><td class="total-rate">84.6만원</td></tr>
+        <tr><td>12개월</td><td>200만원</td><td>30.8만원</td><td class="total-rate">169.2만원</td></tr>
+        <tr><td>24개월</td><td>400만원</td><td>61.6만원</td><td class="total-rate">338.4만원</td></tr>
+        <tr><td>36개월</td><td>600만원</td><td>92.4만원</td><td class="total-rate">507.6만원</td></tr>
+      </table>
+    </div>
+
+    <h2>이렇게 넣으면 이자가 더 많다</h2>
+
+    <h3>1. 시중은행 vs 저축은행 vs 인터넷은행</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>구분</th><th>금리 수준</th><th>예금자보호</th><th>특징</th></tr>
+        <tr><td>시중은행 (KB, 신한 등)</td><td class="rate">연 3.0~3.5%</td><td>1억원</td><td>안정적, 금리 낮음</td></tr>
+        <tr><td>인터넷은행 (카뱅, 토뱅)</td><td class="rate">연 3.3~3.8%</td><td>1억원</td><td>비대면, 중간 금리</td></tr>
+        <tr><td>저축은행</td><td class="rate">연 3.8~4.5%</td><td>1억원</td><td>높은 금리, 유동성 낮음</td></tr>
+        <tr><td>새마을금고·농협</td><td class="rate">연 3.5~4.3%</td><td>1억원</td><td>조합예탁금 비과세(농특세 1.4%만)</td></tr>
+      </table>
+    </div>
+    <p><a href="https://www.kdic.or.kr">예금보험공사</a>에 따르면, 모든 금융기관은 예금자보호법에 따라 <strong>1인당 1억원까지 원금과 이자가 보호</strong>됩니다(2025년 9월 1일 5,000만원에서 상향). 1억원이 넘는 목돈이라면 여러 기관에 나눠 넣는 것이 안전합니다.</p>
+
+    <h3>2. 조합 예탁금 비과세 활용</h3>
+    <p>새마을금고, 농협, 수협 등 조합 예탁금은 1인당 3,000만원까지 이자소득세(14%)와 지방소득세(1.4%)가 비과세되고 <strong>농어촌특별세 1.4%만 부과</strong>됩니다. 일반 과세(15.4%) 대비 약 14%p를 아낄 수 있습니다.</p>
+    <ul>
+      <li>5,000만원, 연 4%, 12개월 기준 (3,000만원은 조합, 2,000만원은 일반)</li>
+      <li>일반 과세 세후 이자: <strong>169.2만원</strong></li>
+      <li>조합 한도 활용 세후 이자: <strong>186만원</strong> (약 17만원 더 수령)</li>
+    </ul>
+
+    <h3>3. 금리 인상기 vs 인하기 전략</h3>
+    <ul>
+      <li><strong>금리 인상기:</strong> 단기(6개월) 예금으로 가입 후 만기 때 더 높은 금리로 재예치</li>
+      <li><strong>금리 인하기:</strong> 장기(24~36개월) 예금으로 현재 높은 금리를 오래 확보</li>
+      <li><strong>금리 방향 불확실:</strong> 사다리식 분산 - 6개월·12개월·24개월에 나눠서 가입</li>
+    </ul>
+
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-88xhdLeiIK3V35kb" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>급하다고 깨면 이만큼 손해다</h2>
+    <p>정기예금을 만기 전에 해지하면 <strong>중도해지 이율</strong>이 적용됩니다. 약정금리의 40~70% 수준으로 뚝 떨어지며, 가입 후 1개월 미만 해지 시 거의 이자가 붙지 않습니다.</p>
+    <div class="highlight-box">
+      <p><strong>급전이 필요하면 중도해지보다 예금 담보대출이 유리할 수 있습니다.</strong> 예금 담보대출 금리는 약정금리 + 1~1.5% 수준이므로, 이자 손실보다 비용이 적을 수 있습니다.</p>
+    </div>
+
+    <h2>실제 가입 사례 - 목적별 운용 전략</h2>
+    <p>같은 5,000만원이라도 자금 사용 계획에 따라 가입 방식이 달라집니다. 두 가지 가상 시나리오로 정리했습니다.</p>
+    <h3>박OO씨(34세, 결혼 자금 1년 대기)</h3>
+    <p>1년 뒤 결혼식 비용으로 쓸 5,000만원을 안전하게 묶어두려는 상황입니다. 원금 보존이 최우선이고 중도해지 가능성도 낮습니다.</p>
+    <ul>
+      <li>가입 방식: 12개월 단리 정기예금, 시중은행 비대면 상품</li>
+      <li>적용 금리: 연 3.8%</li>
+      <li>세전 이자: 5,000만원 x 3.8% = 190만원</li>
+      <li><strong>세후 수령: 190만원 x 0.846 = 약 160.7만원</strong></li>
+    </ul>
+    <p>1년 이내 사용 예정이라 장기 상품이나 저축은행 분산 가입이 오히려 번거롭습니다. 시중은행 단일 가입으로 충분하고, 사용 시점이 명확하므로 자동 재예치 옵션도 꺼두는 것이 안전합니다.</p>
+    <h3>최OO씨(48세, 노후 자금 3년 운용)</h3>
+    <p>당장 쓰지 않을 1억원을 3년 정도 묶어둘 수 있는 상황입니다. 금리 변동 리스크를 줄이면서 조합예탁금 비과세 한도까지 챙기려는 경우입니다.</p>
+    <ul>
+      <li>가입 방식: 새마을금고 3,000만원(조합예탁금 비과세) + 인터넷은행 4,000만원 + 저축은행 3,000만원</li>
+      <li>평균 금리: 연 4.1% (저축은행 4.3%, 새마을금고 4.0%, 인뱅 3.9%)</li>
+      <li>세전 이자 3년 합계: 약 1,215만원</li>
+      <li><strong>세후 수령 합계: 약 1,078만원</strong> (새마을금고 농특세 1.4% 적용)</li>
+    </ul>
+    <p>3개 기관에 분산해 새마을금고 조합예탁금 비과세 한도(3,000만원)와 저축은행 고금리를 함께 잡고, 만기 시점도 약간 어긋나게 해 재예치 타이밍 리스크를 분산했습니다. 참고로 예금자보호 한도는 2025년 9월 1억원으로 올라, 1억원 이하라면 한 기관에 넣어도 전액 보호됩니다.</p>
+    <div class="highlight-box">
+      <p>핵심: 자금 사용 시점과 금액에 따라 단일 가입과 분산 가입이 갈립니다. 1년 이내 단일 가입, 1년 초과·1억원 이상이면 분산을 검토하세요.</p>
+    </div>
+
+    <h2>가입 전에 확인할 6단계</h2>
+    <p>예금은 가입 후 변경이 어렵습니다. 아래 순서로 검토하면 후회 없이 결정할 수 있습니다.</p>
+    <ol>
+      <li><strong>1단계 - 자금 사용 시점 확정.</strong> 6개월 이내 사용 가능성이 있으면 단기 상품, 1년 이상 묶어둘 수 있으면 중·장기 상품이 유리합니다.</li>
+      <li><strong>2단계 - 금감원 금융상품통합비교공시 확인.</strong> finlife.fss.or.kr에서 은행별 현재 금리를 한눈에 비교할 수 있습니다.</li>
+      <li><strong>3단계 - 비대면 vs 대면 금리 비교.</strong> 같은 은행이라도 비대면 전용 상품이 0.1-0.3%p 높습니다. 영업점 방문 전에 앱 금리부터 확인하세요.</li>
+      <li><strong>4단계 - 조합 예탁금 비과세 한도 활용.</strong> 새마을금고·농협 조합 예탁금 3,000만원 한도가 비어있다면 농특세 1.4%만 부과되는 이 부분부터 채우는 것이 효율적입니다.</li>
+      <li><strong>5단계 - 예금자보호 한도 분산.</strong> 한 기관 1억원이 넘으면 보호 한도를 초과합니다(2025년 9월 5,000만원에서 상향). 원금+이자 합산임을 잊지 마세요.</li>
+      <li><strong>6단계 - 자동 재예치 옵션 확인.</strong> 만기 후 방치하면 보통예금 금리(0.1%)로 떨어집니다. 자동 재예치 설정 또는 만기일 알림을 설정해두세요.</li>
+    </ol>
+    <p>6단계 모두 30분이면 마무리됩니다. 1,000만원에서 0.5%p 금리 차이가 연 5만원이라는 점을 떠올리면 들이는 시간 대비 효과가 큽니다.</p>
+
+    <h2>금감원 자료로 본 예금 시장 현황</h2>
+    <p>금융감독원과 한국은행이 정기적으로 발표하는 자료를 종합하면 한국 정기예금 시장의 흐름은 다음과 같습니다.</p>
+    <ul>
+      <li><strong>가계 정기예·적금 잔액:</strong> 2025년 기준 약 1,050조원으로 사상 최대. 금리 인상기 이후 안전 자산 선호가 이어지고 있습니다.</li>
+      <li><strong>시중은행 평균 정기예금 금리:</strong> 2026년 1분기 기준 연 3.3% 수준. 저축은행은 평균 4.1%로 격차가 0.8%p 정도입니다.</li>
+      <li><strong>비대면 가입 비중:</strong> 신규 정기예금의 약 62%가 모바일·인터넷 채널로 가입. 5년 전 33% 대비 두 배 가까이 증가했습니다.</li>
+      <li><strong>예금자보호 한도 초과 가입자 비율:</strong> 2025년 9월 한도가 1억원으로 오르기 전 약 2.5%로 추산됐으며, 상향 이후에는 더 낮아진 것으로 보입니다.</li>
+    </ul>
+    <p>본인이 한 기관에 1억원 이상을 넣고 있다면 분산 가입을 우선 검토할 만합니다. 추가 금리 0.1%p보다 보호 한도 확보가 우선 순위가 높습니다.</p>
+
+    <div class="cta-box">
+      <p>원금, 금리, 기간을 입력해 예금 세후 이자를 바로 계산해보세요.</p>
+      <a href="../../calc/finance/deposit/" class="cta-btn">예금 이자 계산하기</a>
+    </div>
+    <p style="font-size:13px;color:#6B7280;margin-top:8px;">관련 계산기: <a href="https://www.jptcalc.kr/calc/finance/savings/">적금 만기 계산기</a> · <a href="https://www.jptcalc.kr/calc/finance/compound/">복리 계산기</a></p>
+
+    <h2>자주 묻는 질문 (FAQ)</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 정기예금과 적금, 같은 금리면 어느 쪽 이자가 더 많나요?</div>
+      <p class="faq-a">정기예금이 약 2배 더 많습니다. 예금은 전체 원금에 처음부터 이자가 붙지만, 적금은 매월 분할 납입하므로 마지막 달 납입금은 1개월치 이자만 붙습니다. 목돈이 있다면 예금, 매달 모으는 것이라면 적금이 적합합니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 이자가 2,000만원을 넘으면 추가 세금이 있나요?</div>
+      <p class="faq-a">네, 연간 이자·배당소득 합계가 2,000만원을 초과하면 금융소득종합과세 대상이 됩니다. 초과분에 대해 다른 소득과 합산하여 6~45%의 소득세가 적용될 수 있습니다. 고액 예금자는 분산 가입이나 ISA 계좌 활용을 고려하세요.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 예금자보호가 되는 금액 한도는?</div>
+      <p class="faq-a">1인당 1개 금융기관에 최대 1억원(원금+이자 합산)까지 보호됩니다. 2025년 9월 1일부터 기존 5,000만원에서 1억원으로 상향됐습니다. 2억원이 있다면 2개 기관에 1억원씩 나눠 넣으면 전액 보호받을 수 있습니다. 같은 은행 내 여러 계좌는 합산되므로 주의하세요.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 비대면 전용 예금이 금리가 더 높은 이유는?</div>
+      <p class="faq-a">은행 입장에서 지점 운영비가 들지 않기 때문입니다. 인터넷은행(카카오뱅크, 토스뱅크)이나 시중은행의 비대면 전용 상품은 보통 0.1~0.3%p 더 높은 금리를 제공합니다. 같은 은행이라도 비대면 가입 여부에 따라 금리가 다를 수 있으니 확인하세요.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 정기예금 이자에 건강보험료가 추가로 부과되나요?</div>
+      <p class="faq-a">연간 금융소득(이자+배당) 합계가 1,000만원을 초과하면 건강보험 피부양자 자격을 잃을 수 있고, 지역가입자라면 이자소득이 건강보험료 부과 기준에 반영됩니다. 1,000만원 이하라면 건강보험료에는 영향이 없습니다. 은퇴 후 피부양자 자격을 유지하려면 분산 가입과 ISA 계좌를 적극 활용해야 합니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 부부 명의로 나눠 가입하면 세금이 줄어드나요?</div>
+      <p class="faq-a">금융소득종합과세 기준(연 2,000만원)이 인별로 적용되므로 명의 분산이 유리합니다. 한 명이 2,500만원 이자를 받는 것보다 부부가 1,250만원씩 나눠 받으면 종합과세를 피할 수 있습니다. 단, 자금 출처와 명의가 명확해야 하며 증여세 신고가 필요한 경우도 있으니 큰 금액은 세무사 상담을 권합니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 우대금리 조건은 실제로 받기 쉬운가요?</div>
+      <p class="faq-a">조건마다 다릅니다. "급여이체 6개월 유지" 같은 항목은 가입자 대부분이 충족하지만, "신용카드 월 30만원 사용 12개월" 같은 조건은 미충족 시 우대금리가 빠집니다. 가입 전에 본인 상황에서 채울 수 있는 조건만 골라 우대금리 기준을 산정하는 것이 안전합니다.</p>
+    </div>
+
+    <h2>핵심만 뽑으면</h2>
+    <p>정기예금은 안전한 자산 운용 방법이지만, 은행마다 금리 차이가 있고 세금도 무시할 수 없습니다. 금리 0.5%p 차이가 5,000만원 기준 연 21만원의 세후 이자 차이를 만듭니다. 여러 은행 금리를 비교하고, 새마을금고·농협의 조합 예탁금 비과세 혜택(농특세 1.4%만 부과)을 활용하면 같은 원금에서 더 많이 받을 수 있습니다. 넣기 전에 계산기로 세후 수령액부터 확인하세요.</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용이며 정확한 금리는 해당 금융기관에서 확인하세요.</p>
+</footer>
+
+  <script>
+  window.ARTICLE_INFO_CONFIG = {
+    author: '제이퍼 계산기 편집팀',
+    reviewBasis: '이자소득세법, 예금자보호법 기준',
+    basisDate: '2026년 기준',
+    referenceOrg: '금융감독원·예금보험공사',
+    lastReviewed: '2026.03.31',
+    disclaimer: '이 글은 정보 제공 목적으로 작성되었습니다. 실제 예금 금리 및 세금은 금융기관·상품·가입 조건에 따라 달라지므로 해당 금융기관에서 확인하세요.',
+    relatedCalc: { name: '예금 이자 계산기', url: '/calc/finance/deposit/' },
+    category: 'finance'
+  };
+  </script>
+<script src="/assets/blog-article-info.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>

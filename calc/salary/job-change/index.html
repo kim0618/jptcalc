@@ -21,11 +21,10 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link rel="stylesheet" href="/assets/affiliate-banner.css" />
-  <link rel="stylesheet" href="/assets/salary-common.css" />
+<link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+  <link rel="stylesheet" href="/assets/affiliate-banner.css?v=7ee55b7a" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -49,59 +48,44 @@
   }
   </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"이직 시 최소 몇 % 올라야 이득인가요?","acceptedAnswer":{"@type":"Answer","text":"이직 비용(교통비 증가, 적응 기간, 복리후생 차이 등)을 고려하면 최소 10~20% 인상이 일반적 기준입니다. 실수령 기준으로 비교해야 세금 공제 후 실질 이득을 정확히 파악할 수 있습니다."}},{"@type":"Question","name":"퇴직금이 이직 판단에 영향을 주나요?","acceptedAnswer":{"@type":"Answer","text":"현 직장 퇴직금은 퇴사 시 정산되므로 이직 자체로 손해가 발생하지는 않습니다. 하지만 재직기간이 길수록 누적 퇴직금이 크므로, 장기 재직자는 이직 시기를 신중하게 판단하는 것이 좋습니다."}},{"@type":"Question","name":"복지 차이는 어떻게 환산하나요?","acceptedAnswer":{"@type":"Answer","text":"식대·교통비·자기개발비 등 비과세 복지항목은 월 금액으로 환산해 실수령에 더하면 됩니다. 예를 들어 식대 월 20만원, 교통비 월 10만원이면 실질 월 실수령에 30만원을 추가해 비교하는 것이 정확합니다."}},{"@type":"Question","name":"이직 후 수습 기간에도 같은 연봉이 적용되나요?","acceptedAnswer":{"@type":"Answer","text":"회사마다 다르지만, 일부 기업은 수습 기간(보통 3개월) 동안 계약 연봉의 80~90%만 지급하는 경우가 있습니다. 입사 전 근로계약서에서 수습 기간 급여 조건을 반드시 확인하세요. 수습 기간 급여 차감분을 연간으로 환산하면 실질 연봉이 달라질 수 있습니다."}},{"@type":"Question","name":"이직 후 연봉이 낮아도 이득인 경우가 있나요?","acceptedAnswer":{"@type":"Answer","text":"스톡옵션, 성과급 구조, 성장 가능성이 높은 회사라면 단기 연봉이 낮아도 중장기 기대수익이 더 클 수 있습니다. 재택근무·유연근무 등 근무 형태 개선이 실질적인 삶의 질 향상으로 이어지는 경우도 있으므로, 단순 실수령 비교 외에 비금전적 요소도 함께 고려하세요."}}]}</script>
-  <style>
-    /* job-change 고유 스타일 - 공통 스타일은 /assets/salary-common.css 참조 */
-    .input-wrap{position:relative}
-    .input-wrap .unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none}
-    input[type=number],input[type=text]{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
-    input[type=number]::placeholder{color:var(--gray-400);font-weight:400}
-    input[type=number]:focus,input[type=text]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(59,130,246,0.15)}
-    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
-    .seg-group{display:flex;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:18px}
-    .seg-btn{flex:1;border:none;border-radius:7px;background:transparent;padding:9px 4px;font-size:12px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap}
-    .seg-btn:hover{color:var(--gray-700)}
-    .seg-btn.active{background:var(--primary);color:#fff;font-weight:700}
-    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
-    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
-    .result-card{background:linear-gradient(135deg,#EFF6FF 0%,#DBEAFE 100%);border:1px solid rgba(59,130,246,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
-    .result-card.show{display:block}
-    .result-row+.result-row{border-top:1px solid rgba(0,0,0,0.07)}
-    .result-total-row{border-top:1px solid rgba(0,0,0,0.15)!important;margin-top:4px;padding-top:14px!important}
-    .result-total-value{font-size:24px;font-weight:900;color:var(--gray-900)}
-  </style>
 </head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
-    <nav class="header-nav">
-      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
-      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/salary/" class="nav-item active"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
-      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
-      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
-      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
-      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
-      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
-    </nav>
-    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
-    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
-  </div>
+<body data-cat="salary" style="--cat: var(--c-salary)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
 </header>
-<main class="page-wrap">
-  <div class="page-header">
-    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/salary/">이직/연봉 계산기</a><span class="breadcrumb-sep">›</span><span>이직 연봉 비교 계산기</span></div>
-    <div class="page-header-badge">💼 실수령 기준 역산</div>
-    <h1>이직 연봉 비교 계산기</h1>
-    <p>목표 실수령 증가를 위한 최소 연봉을 계산하세요</p>
+
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/salary/">이직/연봉 계산기</a> &rsaquo; 이직 연봉 비교 계산기</div>
+      <div class="page-badge">실수령 기준 역산</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-briefcase"></use></svg></span>
+        <h1 class="page-title">이직 연봉 비교 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">실수령 기준 역산</span>
+          <span class="ds-trust-chip">2026.05.06 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">목표 실수령 증가를 위한 최소 연봉을 계산하세요</p>
+    </div>
   </div>
-    <div class="card">
-      <div class="card-title">현재 상황</div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+      <div class="field-label ds-group-label">현재 상황</div>
       <div class="field">
         <div class="field-label">현재 연봉 <span class="label-hint">만원 단위</span></div>
         <div class="input-wrap">
-          <input type="number" id="s1-current" placeholder="예) 4200" oninput="calcNego()" />
+          <input type="text" inputmode="numeric" autocomplete="off" data-ds-num data-prefill="salary" id="s1-current" placeholder="예) 4200" oninput="calcNego()" />
           <span class="unit">만원</span>
         </div>
         <div class="converted" id="s1-current-conv"></div>
@@ -109,14 +93,21 @@
       <div class="field">
         <div class="field-label">목표 월 실수령 증가액 <span class="label-hint">만원 단위</span></div>
         <div class="input-wrap">
-          <input type="number" id="s1-target-raise" placeholder="예) 30" oninput="calcNego()" />
+          <input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="s1-target-raise" placeholder="예) 30" oninput="calcNego()" />
           <span class="unit">만원</span>
         </div>
         <div class="converted" id="s1-raise-conv"></div>
-        <div class="field-hint">💡 매월 손에 쥐는 돈이 이 만큼 늘길 원하는 경우</div>
+        <div class="field-hint"><svg class="ds-i ds-i-sm ds-inline-ico" aria-hidden="true"><use href="/assets/ds/icons.svg#i-info"></use></svg> 매월 손에 쥐는 돈이 이 만큼 늘길 원하는 경우</div>
       </div>
     </div>
-    <div class="result-card" id="s1-result">
+
+        <button type="button" class="ds-btn-calc" data-calc-submit="calcNego" data-result="s1-result" data-required="s1-current">계산하기</button>
+      </div>
+    </section>
+
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="s1-result">
       <div style="margin-bottom:14px;">
         <div class="result-highlight">
           <div class="rh-label">필요한 최소 연봉</div>
@@ -131,8 +122,35 @@
         <span class="result-total-value" id="s1-diff">-</span>
       </div>
       <p class="result-note">※ 부양가족 1인(본인) 기준. 세금 외 복리후생, 이직비용도 함께 고려하세요.</p>
-    </div>
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('s1-result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/salary/take-home-pay/">연봉 실수령액 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">필요한 최소 연봉</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="job-change-next">
+        <a class="ds-next-card" href="/calc/salary/take-home-pay/" data-next="take-home-pay"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-briefcase"></use></svg></span><span class="ds-next-body"><b>연봉 실수령액 계산기</b><span>세전 연봉에서 국민연금·건강·장기요양·고용보험과 근로소득세·지방소득세를 차감해 월 실수령액을 산출합니다. 부양가족 수·비과세 식대까지 반영됩니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/salary/comparison/" data-next="comparison"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-briefcase"></use></svg></span><span class="ds-next-body"><b>연봉 비교 계산기</b><span>두 연봉의 월 실수령액·연간 실수령·공제액을 표로 나란히 비교합니다. 한계세율 구간 차이에 따른 세후 효과까지 한눈에 확인됩니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
+  </div>
+
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">근로기준법·소득세법·4대보험 관련법 2026년 기준 <a href="https://www.nts.go.kr" target="_blank" rel="noopener">국세청 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
   <a class="affiliate-banner" href="https://bestmore.net/click.php?m=allcredit&a=A100703525&l=0000" target="_blank" rel="noopener noreferrer sponsored">
+      <span class="ds-icon-badge"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span>
         <div class="affiliate-banner__text">
           <div class="affiliate-banner__title">올크레딧 - 내 신용점수 무료 조회</div>
           <div class="affiliate-banner__desc">올크레딧 신용점수를 무료로 확인하고 맞춤 금융정보를 받아보세요</div>
@@ -141,25 +159,28 @@
       </a>
   <p class="affiliate-disclosure">※ 위 링크는 제휴 광고이며, 이용 시 제이퍼 계산기가 일정 수수료를 받을 수 있습니다. (이용자 추가 부담 없음)</p>
 
-  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#job-change-s1">비교</a><a href="#job-change-s2">구간별 표</a><a href="#job-change-s3">계산 예시</a><a href="#job-change-s4">확인할 핵심</a><a href="#job-change-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
     <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
     <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
   </div>
 
   <div class="guide-section">
-    <div class="guide-card">
-      <h2>이직 연봉 비교 계산기는 언제 쓰나요?</h2>
-      <p>이직 제안을 받았을 때, 현재 연봉 대비 실수령 기준으로 최소 몇 % 이상 올라야 실질적인 이득인지 판단할 때 사용합니다.</p>
+            <section class="ds-section ds-prose" aria-labelledby="job-change-s1">
+          <div class="ds-section-head"><h2 id="job-change-s1">이직 연봉 비교 계산기는 언제 쓰나요?</h2></div>
+<p>이직 제안을 받았을 때, 현재 연봉 대비 실수령 기준으로 최소 몇 % 이상 올라야 실질적인 이득인지 판단할 때 사용합니다.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>최소 인상폭</strong><span>이직 비용을 고려한 최소 연봉 인상 기준</span></div>
         <div class="guide-box"><strong>실수령 역산</strong><span>원하는 실수령액에 필요한 연봉 역산</span></div>
         <div class="guide-box"><strong>숨은 비용</strong><span>출퇴근·복지·퇴직금 차이까지 고려</span></div>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>이직 시 실수령 증가 목표별 필요 연봉 인상폭</h2>
-      <p>이 계산기는 현재 연봉과 원하는 월 실수령 증가액을 입력하면 필요한 최소 연봉을 역산합니다. 소득세 누진세 구조로 인해 고연봉 구간일수록 같은 실수령 증가에 더 많은 세전 인상이 필요합니다. 아래 표는 2026년 세율 기준 대략적인 참고값입니다.</p>
-      <div class="guide-table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="job-change-s2">
+          <div class="ds-section-head"><h2 id="job-change-s2">이직 시 실수령 증가 목표별 필요 연봉 인상폭</h2></div>
+<p>이 계산기는 현재 연봉과 원하는 월 실수령 증가액을 입력하면 필요한 최소 연봉을 역산합니다. 소득세 누진세 구조로 인해 고연봉 구간일수록 같은 실수령 증가에 더 많은 세전 인상이 필요합니다. 아래 표는 2026년 세율 기준 대략적인 참고값입니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead><tr><th>현재 연봉</th><th>현재 월 실수령</th><th>+20만원 달성 최소 연봉</th><th>필요 인상폭</th></tr></thead>
           <tbody>
@@ -171,10 +192,10 @@
         </table>
       </div>
       <p>실제 인상폭은 부양가족 수·비과세 항목에 따라 달라집니다. 정확한 역산은 위 계산기를 이용하세요.</p>
-    </div>
-    <div class="guide-card">
-      <h2>실제 계산 예시</h2>
-      <h3>예시 1 - 정아영(29세, 유통업 대리 3년차)</h3>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="job-change-s3">
+          <div class="ds-section-head"><h2 id="job-change-s3">실제 계산 예시</h2></div>
+<h3>예시 1 - 정아영(29세, 유통업 대리 3년차)</h3>
       <p>현재 연봉 3,800만원(월 실수령 약 269만원)으로 재직 중인 정아영씨는 이직 후 월 실수령이 30만원 늘어나길 원합니다. 이 조건을 충족하려면 이직 연봉이 최소 얼마여야 하는지 역산합니다.</p>
       <ul>
         <li>현재 월 실수령: 약 269만원</li>
@@ -192,20 +213,20 @@
         <li><strong>필요 인상액: 900만원 (현재 대비 약 12.9% 인상)</strong></li>
       </ul>
       <p>월 50만원 증가에 세전 900만원 인상이 필요한 것은, 7,000만원 이상 구간에서 소득세 실효세율이 크게 높아지기 때문입니다. 협상 시 이 구간의 세금 구조를 인지하고 목표값을 설정하는 것이 중요합니다.</p>
-    </div>
-    <div class="guide-card">
-      <h2>이것만은 확인하세요</h2>
-      <p>이직 연봉만 비교하면 실제 경제적 효과를 놓칩니다. 다음 세 가지를 반드시 함께 계산하세요.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="job-change-s4">
+          <div class="ds-section-head"><h2 id="job-change-s4">이것만은 확인하세요</h2></div>
+<p>이직 연봉만 비교하면 실제 경제적 효과를 놓칩니다. 다음 세 가지를 반드시 함께 계산하세요.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>복리후생 환산</strong><span>식대(월 최대 20만원), 교통비, 자기개발비, 의료비 지원 등 비과세 복지는 실수령에 직접 더해집니다. 월 30만원 복지 차이면 연간 360만원 가치이므로 반드시 환산해 비교하세요.</span></div>
         <div class="guide-box"><strong>출퇴근 비용 변화</strong><span>통근 거리가 30분 더 늘어나면 교통비와 시간 비용이 월 수만 원 추가됩니다. 연간 비용 환산 후 연봉 인상폭에서 차감해야 실질 이득을 파악할 수 있습니다.</span></div>
         <div class="guide-box"><strong>퇴직금 누적 시점</strong><span>현 직장 재직 기간이 길수록 퇴직금 누적 효과가 큽니다. 10년차 이상은 이직 시 퇴직금 정산 시점도 고려해 총 금전적 손익을 계산하세요.</span></div>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>현재 연봉별 이직 목표 연봉 (월 실수령 +30만원 목표)</h2>
-      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">아래는 위 계산기로 직접 산출한 구간별 결과입니다.</p>
-      <div class="guide-table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="job-change-s5">
+          <div class="ds-section-head"><h2 id="job-change-s5">현재 연봉별 이직 목표 연봉 (월 실수령 +30만원 목표)</h2></div>
+<p class="ds-table-lead">아래는 위 계산기로 직접 산출한 구간별 결과입니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead><tr><th>현재 연봉</th><th>현재 월 실수령액</th><th>목표 월 실수령액</th><th>연봉 인상 필요액</th><th>필요한 최소 연봉</th></tr></thead>
           <tbody>
@@ -216,17 +237,35 @@
           </tbody>
         </table>
       </div>
-    </div>
-    <div class="guide-card faq-card">
-      <h2>자주 묻는 질문</h2>
-      <div class="faq-item"><h3>이직 시 최소 몇 % 올라야 이득인가요?</h3><p>이직 비용(교통비 증가, 적응 기간, 복리후생 차이 등)을 고려하면 최소 10~20% 인상이 일반적 기준입니다. 실수령 기준으로 비교해야 세금 공제 후 실질 이득을 정확히 파악할 수 있습니다.</p></div>
-      <div class="faq-item"><h3>퇴직금이 이직 판단에 영향을 주나요?</h3><p>현 직장 퇴직금은 퇴사 시 정산되므로 이직 자체로 손해가 발생하지는 않습니다. 하지만 재직기간이 길수록 누적 퇴직금이 크므로, 장기 재직자는 이직 시기를 신중하게 판단하는 것이 좋습니다.</p></div>
-      <div class="faq-item"><h3>복지 차이는 어떻게 환산하나요?</h3><p>식대·교통비·자기개발비 등 비과세 복지항목은 월 금액으로 환산해 실수령에 더하면 됩니다. 예를 들어 식대 월 20만원, 교통비 월 10만원이면 실질 월 실수령에 30만원을 추가해 비교하는 것이 정확합니다.</p></div>
-      <div class="faq-item"><h3>이직 후 수습 기간에도 같은 연봉이 적용되나요?</h3><p>회사마다 다르지만, 일부 기업은 수습 기간(보통 3개월) 동안 계약 연봉의 80~90%만 지급하는 경우가 있습니다. 입사 전 근로계약서에서 수습 기간 급여 조건을 반드시 확인하세요. 수습 기간 급여 차감분을 연간으로 환산하면 실질 연봉이 달라질 수 있습니다.</p></div>
-      <div class="faq-item"><h3>이직 후 연봉이 낮아도 이득인 경우가 있나요?</h3><p>스톡옵션, 성과급 구조, 성장 가능성이 높은 회사라면 단기 연봉이 낮아도 중장기 기대수익이 더 클 수 있습니다. 또한 재택근무·유연근무 등 근무 형태 개선이 실질적인 삶의 질 향상으로 이어지는 경우도 있습니다. 단순 실수령 비교 외에 비금전적 요소도 함께 고려하세요.</p></div>
+        </section>
+            <section class="ds-section faq-card" aria-labelledby="job-change-faq">
+          <div class="ds-section-head"><h2 id="job-change-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>이직 시 최소 몇 % 올라야 이득인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>이직 비용(교통비 증가, 적응 기간, 복리후생 차이 등)을 고려하면 최소 10~20% 인상이 일반적 기준입니다. 실수령 기준으로 비교해야 세금 공제 후 실질 이득을 정확히 파악할 수 있습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>퇴직금이 이직 판단에 영향을 주나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>현 직장 퇴직금은 퇴사 시 정산되므로 이직 자체로 손해가 발생하지는 않습니다. 하지만 재직기간이 길수록 누적 퇴직금이 크므로, 장기 재직자는 이직 시기를 신중하게 판단하는 것이 좋습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>복지 차이는 어떻게 환산하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>식대·교통비·자기개발비 등 비과세 복지항목은 월 금액으로 환산해 실수령에 더하면 됩니다. 예를 들어 식대 월 20만원, 교통비 월 10만원이면 실질 월 실수령에 30만원을 추가해 비교하는 것이 정확합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>이직 후 수습 기간에도 같은 연봉이 적용되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>회사마다 다르지만, 일부 기업은 수습 기간(보통 3개월) 동안 계약 연봉의 80~90%만 지급하는 경우가 있습니다. 입사 전 근로계약서에서 수습 기간 급여 조건을 반드시 확인하세요. 수습 기간 급여 차감분을 연간으로 환산하면 실질 연봉이 달라질 수 있습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>이직 후 연봉이 낮아도 이득인 경우가 있나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>스톡옵션, 성과급 구조, 성장 가능성이 높은 회사라면 단기 연봉이 낮아도 중장기 기대수익이 더 클 수 있습니다. 또한 재택근무·유연근무 등 근무 형태 개선이 실질적인 삶의 질 향상으로 이어지는 경우도 있습니다. 단순 실수령 비교 외에 비금전적 요소도 함께 고려하세요.</p>
+            </details>
       <div class="update-note">최종 검토: 2026.03.24 · 계산 결과는 참고용입니다.</div>
-    </div>
+          </div>
+        </section>
   </div>
+    </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
   <script>
   window.TRUST_BLOCK_CONFIG = {
     standard: '근로기준법·소득세법·4대보험 관련법 2026년 기준',
@@ -242,42 +281,49 @@
     lastReviewed: '2026.05',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>
-  <div class="sibling-section">
-    <div class="sibling-title">다른 이직/연봉 계산기</div>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 이직/연봉 계산기</h2>
     <div class="sibling-list">
-      <a href="/calc/salary/take-home-pay/" class="sibling-link">💵 연봉 실수령액</a>
-      <a href="/calc/salary/comparison/" class="sibling-link">⚖️ 연봉 비교</a>
-      <a href="/calc/salary/hourly-wage/" class="sibling-link">⏱️ 시급·일급 변환</a>
-      <a href="/calc/salary/weekly-holiday-pay/" class="sibling-link">🗓️ 주휴수당</a>
-      <a href="/calc/salary/annual-leave-pay/" class="sibling-link">🏖️ 연차수당</a>
-      <a href="/calc/salary/ordinary-wage/" class="sibling-link">🧮 통상임금</a>
-      <a href="/calc/salary/average-wage/" class="sibling-link">📐 평균임금</a>
-      <a href="/calc/salary/premium-pay/" class="sibling-link">⏰ 가산수당</a>
-      <a href="/calc/salary/bonus-pay/" class="sibling-link">🎁 성과급 실수령</a>
-      <a href="/calc/salary/job-change/" class="sibling-link current">📊 이직 연봉 비교</a>
-      <a href="/calc/salary/raise-rate/" class="sibling-link">📈 연봉 인상률</a>
-      <a href="/calc/salary/dismissal-notice-pay/" class="sibling-link">📋 해고예고수당</a>
-      <a href="/calc/salary/severance/" class="sibling-link">📦 퇴직금</a>
-      <a href="/calc/salary/unemployment/" class="sibling-link">🛟 실업급여</a>
+      <a href="/calc/salary/take-home-pay/" class="sibling-link">연봉 실수령액</a>
+      <a href="/calc/salary/comparison/" class="sibling-link">연봉 비교</a>
+      <a href="/calc/salary/hourly-wage/" class="sibling-link">시급·일급 변환</a>
+      <a href="/calc/salary/weekly-holiday-pay/" class="sibling-link">주휴수당</a>
+      <a href="/calc/salary/annual-leave-pay/" class="sibling-link">연차수당</a>
+      <a href="/calc/salary/ordinary-wage/" class="sibling-link">통상임금</a>
+      <a href="/calc/salary/average-wage/" class="sibling-link">평균임금</a>
+      <a href="/calc/salary/premium-pay/" class="sibling-link">가산수당</a>
+      <a href="/calc/salary/bonus-pay/" class="sibling-link">성과급 실수령</a>
+      <a href="/calc/salary/raise-rate/" class="sibling-link">연봉 인상률</a>
+      <a href="/calc/salary/dismissal-notice-pay/" class="sibling-link">해고예고수당</a>
+      <a href="/calc/salary/severance/" class="sibling-link">퇴직금</a>
+      <a href="/calc/salary/unemployment/" class="sibling-link">실업급여</a>
     </div>
-    <div class="sibling-title">관련 가이드</div>
-    <div class="sibling-list">
-      <a href="/blog/posts/bonus-tax-guide.html" class="sibling-link">📖 보너스·성과급 세금 계산법 - 성과급 실수령액과 상여 원천징수 방식 (20…</a>
-      <a href="/blog/posts/minimum-wage-2026.html" class="sibling-link">📖 2026년 최저시급 10,320원 - 월급 215만원, 주휴수당 계산까지</a>
-      <a href="/blog/posts/salary-5000-takehome.html" class="sibling-link">📖 연봉 5,000만원 실수령액 - 월 352만원 맞나요? 2026년 기준</a>
-      <a href="/blog/posts/salary-negotiation.html" class="sibling-link">📖 이직 연봉 협상 전략 - 얼마나 올려야 실제로 이득일까?</a>
-      <a href="/blog/posts/salary-raise-guide.html" class="sibling-link">📖 연봉 인상률 계산법 - 3% 올랐는데 실수령 증가는 2.6~2.7%인 이유</a>
-      <a href="/blog/posts/severance-pay-guide.html" class="sibling-link">📖 퇴직금 계산 공식 2026 - 평균임금·IRP 이전·퇴직소득세 실제 예시</a>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/bonus-tax-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/bonus-tax-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>보너스·성과급 세금 계산법 - 성과급 실수령액과 상여 원천징수 방식 (2026)</span></a>
+      <a href="/blog/posts/minimum-wage-2026.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/minimum-wage-2026-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>2026년 최저시급 10,320원 - 월급 215만원, 주휴수당 계산까지</span></a>
+      <a href="/blog/posts/salary-5000-takehome.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/salary-5000-takehome-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>연봉 5,000만원 실수령액 - 월 352만원 맞나요? 2026년 기준</span></a>
+      <a href="/blog/posts/salary-negotiation.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/salary-negotiation-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>이직 연봉 협상 전략 - 얼마나 올려야 실제로 이득일까?</span></a>
+      <a href="/blog/posts/salary-raise-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/salary-raise-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>연봉 인상률 계산법 - 3% 올랐는데 실수령 증가는 2.6~2.7%인 이유</span></a>
+      <a href="/blog/posts/severance-pay-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/severance-pay-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>퇴직금 계산 공식 2026 - 평균임금·IRP 이전·퇴직소득세 실제 예시</span></a>
     </div>
   </div>
 </main>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
-    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
   </div>
 </footer>
+
+<script src="/assets/ds/calc-kit.js?v=d45e66d9"></script>
 <script>
 function fmtW(won) {
   won = Math.round(won);
@@ -347,8 +393,8 @@ function calcMonthly(annual_man, dep_count) {
 }
 
 function calcNego() {
-  const cur = parseFloat(document.getElementById('s1-current').value);
-  const raise = parseFloat(document.getElementById('s1-target-raise').value);
+  const cur = parseFloat(String(document.getElementById('s1-current').value).replace(/,/g, ''));
+  const raise = parseFloat(String(document.getElementById('s1-target-raise').value).replace(/,/g, ''));
   document.getElementById('s1-current-conv').textContent = cur > 0 ? fmtM(cur) : '';
   document.getElementById('s1-raise-conv').textContent = raise > 0 ? fmtM(raise) : '';
   const res = document.getElementById('s1-result');
@@ -376,11 +422,10 @@ function calcNego() {
 }
 </script>
 
-<script src="/assets/calc-validate.js"></script>
-<script src="/assets/calc-result-tools.js"></script>
-  <script src="/assets/footer-unified.js" defer></script>
-<script src="/assets/calc-registry.js"></script>
-<script src="/assets/salary-detail-shell.js"></script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
@@ -391,7 +436,14 @@ window.ARTICLE_INFO_CONFIG = {
   category: 'salary'
 };
 </script>
-<script src="/assets/blog-article-info.js"></script>
-<script src="/assets/blog-review-footer.js"></script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "s1-result", "required": ["s1-current"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#job-change-next", "next": [{"key": "take-home-pay", "path": "/calc/salary/take-home-pay/", "sub": "세전 연봉에서 국민연금·건강·장기요양·고용보험과 근로소득세·지방소득세를 차감해 월 실수령액을 산출합니다. 부양가족 수·비과세 식대까지 반영됩니다.", "params": {"salary": "s1-current"}, "from": "job-change"}, {"key": "comparison", "path": "/calc/salary/comparison/", "sub": "두 연봉의 월 실수령액·연간 실수령·공제액을 표로 나란히 비교합니다. 한계세율 구간 차이에 따른 세후 효과까지 한눈에 확인됩니다.", "params": {"salary": "s1-current"}, "from": "job-change"}]});
+  DSCalc.placeTrust('ds-trust-col');
+  (function () { const a = document.getElementById('ds-primary-next'); if (!a) return; const go = () => { const v = {}; Object.entries({"salary": "s1-current"}).forEach(([k, id]) => v[k] = DSCalc.num(id)); a.href = DSCalc.link('/calc/salary/take-home-pay/', v, 'job-change'); }; document.addEventListener('input', go, true); go(); })();
+</script>
+<script src="/assets/ds/prefill.js?v=fa5eb49a" defer></script>
 </body>
 </html>

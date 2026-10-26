@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>최근 사용한 계산기 | 제이퍼 계산기</title>
+  <meta name="robots" content="noindex, follow" />
+  <meta name="description" content="이 기기에서 최근 사용한 제이퍼 계산기 목록입니다. 기록은 이 기기에만 저장됩니다." />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BRSX3F10MZ');
+  </script>
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
+  <style>
+    .r-main { padding-top: var(--space-card); padding-bottom: var(--space-section); max-width: 720px; }
+    .r-main h1 { margin: 0 0 var(--space-2); font-size: var(--fs-title); font-weight: var(--fw-title); color: var(--navy); }
+    .r-lead { margin: 0 0 var(--space-4); font-size: var(--fs-meta); color: var(--text-sub); }
+    .r-list { margin: 0; padding: 0 var(--space-4); border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--surface); list-style: none; }
+    .r-list a { display: flex; align-items: center; gap: var(--space-3); min-height: 64px; padding: var(--space-2) 0; border-bottom: 1px solid var(--line); color: var(--text); text-decoration: none; }
+    .r-list li:last-child a { border-bottom: 0; }
+    .r-list .ds-cat-ico { width: 40px; height: 40px; border-radius: var(--radius-md); flex-shrink: 0; }
+    .r-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+    .r-body b { font-size: var(--fs-body); font-weight: var(--fw-title); }
+    .r-body span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: var(--fs-meta); color: var(--text-sub); }
+    .r-list .ds-chevron { width: 18px; height: 18px; color: var(--text-muted); }
+    .r-actions { display: flex; justify-content: flex-end; margin-top: var(--space-2); }
+    .r-clear { min-height: var(--h-tap); padding: 0 var(--space-2); border: 0; background: none; color: var(--blue); font: inherit; font-size: var(--fs-label); font-weight: var(--fw-label); cursor: pointer; }
+    .r-empty { padding: var(--space-section) var(--space-card); border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--surface); text-align: center; }
+    .r-empty b { display: block; font-size: var(--fs-body); font-weight: var(--fw-title); color: var(--text); }
+    .r-empty p { margin: var(--space-2) 0 var(--space-4); font-size: var(--fs-meta); color: var(--text-sub); }
+    .r-empty[hidden], .r-has[hidden] { display: none; }
+  </style>
+</head>
+<body data-cat="recent">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+  </div></div>
+</header>
+
+<main class="r-main ds-container">
+  <h1>최근 사용한 계산기</h1>
+  <p class="r-lead">최근 사용 기록은 이 기기에만 저장됩니다.</p>
+  <div class="r-has" id="r-has" hidden>
+    <ul class="r-list" id="r-list"></ul>
+    <div class="r-actions"><button type="button" class="r-clear" id="r-clear">기록 지우기</button></div>
+  </div>
+  <div class="r-empty" id="r-empty">
+    <b>최근 사용한 계산기가 없어요</b>
+    <p>계산기를 사용하면 이곳에서 다시 찾을 수 있어요.</p>
+    <a class="ds-btn-primary" href="/#situations">상황별로 찾아보기</a>
+  </div>
+</main>
+
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
+  </div>
+</footer>
+
+<script type="application/json" id="r-cats">{"realestate":{"name":"부동산","icon":"house"},"salary":{"name":"이직/연봉","icon":"briefcase"},"tools":{"name":"생활·도구","icon":"wrench"},"tax":{"name":"프리랜서 세금","icon":"receipt"},"pension-welfare":{"name":"연금·복지","icon":"shield-check"},"finance":{"name":"금융·이자","icon":"piggy-bank"},"date":{"name":"날짜·D-day","icon":"calendar-days"},"health":{"name":"건강","icon":"heart-pulse"},"ai":{"name":"AI/테크","icon":"cpu"},"pet":{"name":"반려동물","icon":"paw-print"},"auto":{"name":"자동차","icon":"car"},"baby":{"name":"출산·육아","icon":"baby"}}</script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
+<script>
+/* 최근 사용한 계산기(51): site-shell이 계산기 페이지에서 jpt_recent에 남긴 기록. 저장소를 못 쓰면 빈 화면 */
+(function () {
+  var CAT = JSON.parse(document.getElementById('r-cats').textContent);
+  function ev(name, p) { try { if (window.gtag) gtag('event', name, Object.assign({ transport_type: 'beacon' }, p || {})); } catch (e) {} }
+  function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function when(t) {
+    var d = new Date(t), now = new Date(), day = 864e5;
+    var a = new Date(d.getFullYear(), d.getMonth(), d.getDate()), b = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    var hm = pad(d.getHours()) + ':' + pad(d.getMinutes()), diff = Math.round((b - a) / day);
+    return (diff === 0 ? '오늘 ' : diff === 1 ? '어제 ' : pad(d.getMonth() + 1) + '.' + pad(d.getDate()) + ' ') + hm;
+  }
+  var list = [];
+  function load() { try { list = JSON.parse(localStorage.getItem('jpt_recent') || '[]'); } catch (e) { list = []; } }
+  function render() {
+    load();
+    var has = list.length > 0;
+    document.getElementById('r-has').hidden = !has; document.getElementById('r-empty').hidden = has;
+    document.getElementById('r-list').innerHTML = list.map(function (r) {
+      var c = CAT[r.cat] || { name: '', icon: 'calculator' };
+      var meta = [c.name, r.t ? when(r.t) : '', r.summary || ''].filter(Boolean).map(esc).join(' · ');
+      return '<li><a href="' + esc(r.url) + '"><span class="ds-cat-ico" style="--cat: var(--c-' + esc(r.cat || 'realestate') + ')"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-' + c.icon + '"></use></svg></span>' +
+        '<span class="r-body"><b>' + esc(r.name || '') + '</b><span>' + meta + '</span></span><svg class="ds-i ds-chevron" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a></li>';
+    }).join('');
+  }
+  render();
+  document.getElementById('r-list').addEventListener('click', function (e) { var a = e.target.closest('a'); if (a) ev('recent_click', { calc: a.pathname, from: 'recent' }); });
+  document.getElementById('r-clear').addEventListener('click', function () { try { localStorage.removeItem('jpt_recent'); } catch (e) {} render(); });
+})();
+</script>
+</body>
+</html>

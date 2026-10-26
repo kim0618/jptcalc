@@ -1,0 +1,362 @@
+{
+ "_note": "홈 '어떤 상황이세요?' 데이터. calcs는 계산 순서대로. path = /calc/{category}/{slug}/. 기존 calc-registry.js의 slug만 사용. inputs(2026-10-19): 시트 공통 입력. param은 계산기 입력칸의 data-prefill 이름과 같아야 하고, 그 칸이 같은 뜻일 때만 값이 넘어간다(build_home.py가 계산기마다 받는 칸을 확인해 링크에 붙임).",
+ "situations": [
+  {
+   "id": "buy-home",
+   "name": "집 살 때",
+   "desc": "세금부터 대출 한도까지",
+   "icon": "home",
+   "color": "--c-realestate",
+   "calcs": [
+    "realestate/acquisition",
+    "realestate/brokerage",
+    "realestate/registry",
+    "realestate/ltv",
+    "realestate/dsr",
+    "realestate/didimdol",
+    "realestate/joint"
+   ],
+   "illust": "/assets/img/illust/sit-buy-home.webp",
+   "inputs": [
+    {
+     "param": "price",
+     "label": "집값",
+     "unit": "만원",
+     "placeholder": "예) 60,000"
+    },
+    {
+     "param": "income",
+     "label": "연소득",
+     "unit": "만원",
+     "placeholder": "예) 5,000"
+    }
+   ]
+  },
+  {
+   "id": "rent-home",
+   "name": "전세·월세 구할 때",
+   "desc": "보증금·대출·전환율",
+   "icon": "key-round",
+   "color": "--c-realestate",
+   "calcs": [
+    "realestate/brokerage",
+    "realestate/jeonse-loan",
+    "realestate/conversion"
+   ],
+   "illust": "/assets/img/illust/sit-rent-home.webp"
+  },
+  {
+   "id": "home-loan",
+   "name": "주택 대출 알아볼 때",
+   "desc": "내 한도와 이자",
+   "icon": "landmark",
+   "color": "--c-finance",
+   "calcs": [
+    "realestate/dsr",
+    "realestate/dti",
+    "realestate/ltv",
+    "realestate/loan",
+    "realestate/didimdol"
+   ],
+   "illust": "/assets/img/illust/sit-home-loan.webp",
+   "inputs": [
+    {
+     "param": "price",
+     "label": "집값",
+     "unit": "만원",
+     "placeholder": "예) 60,000"
+    },
+    {
+     "param": "income",
+     "label": "연소득",
+     "unit": "만원",
+     "placeholder": "예) 5,000"
+    }
+   ]
+  },
+  {
+   "id": "sell-home",
+   "name": "집 팔 때·물려줄 때",
+   "desc": "양도·증여·상속세",
+   "icon": "hand-coins",
+   "color": "--c-realestate",
+   "calcs": [
+    "realestate/capital-gains",
+    "realestate/gift",
+    "realestate/inheritance"
+   ],
+   "illust": "/assets/img/illust/sit-sell-home.webp"
+  },
+  {
+   "id": "own-home",
+   "name": "집 보유 세금",
+   "desc": "재산세·종부세",
+   "icon": "receipt",
+   "color": "--c-realestate",
+   "calcs": [
+    "realestate/propertytax",
+    "realestate/jongbu",
+    "realestate/property-tax-comprehensive"
+   ],
+   "illust": "/assets/img/illust/sit-own-home.webp",
+   "inputs": [
+    {
+     "param": "price",
+     "label": "공시가격",
+     "unit": "만원",
+     "placeholder": "예) 90,000"
+    }
+   ]
+  },
+  {
+   "id": "job-change",
+   "name": "이직·연봉 협상",
+   "desc": "실제로 얼마 오르나",
+   "icon": "briefcase",
+   "color": "--c-salary",
+   "calcs": [
+    "salary/job-change",
+    "salary/take-home-pay",
+    "salary/comparison",
+    "salary/raise-rate"
+   ],
+   "illust": "/assets/img/illust/sit-job-change.webp",
+   "inputs": [
+    {
+     "param": "salary",
+     "label": "현재 연봉",
+     "unit": "만원",
+     "placeholder": "예) 4,500"
+    }
+   ]
+  },
+  {
+   "id": "pay-check",
+   "name": "월급·보너스 확인",
+   "desc": "실수령액과 수당",
+   "icon": "wallet",
+   "color": "--c-salary",
+   "calcs": [
+    "salary/take-home-pay",
+    "salary/bonus-pay",
+    "salary/ordinary-wage",
+    "salary/premium-pay",
+    "salary/weekly-holiday-pay"
+   ],
+   "illust": "/assets/img/illust/sit-pay-check.webp",
+   "inputs": [
+    {
+     "param": "salary",
+     "label": "세전 연봉",
+     "unit": "만원",
+     "placeholder": "예) 4,500"
+    }
+   ]
+  },
+  {
+   "id": "quit-job",
+   "name": "퇴사할 때",
+   "desc": "퇴직금·실업급여·연차",
+   "icon": "door-open",
+   "color": "--c-salary",
+   "calcs": [
+    "salary/severance",
+    "salary/unemployment",
+    "salary/annual-leave-pay",
+    "salary/average-wage",
+    "salary/dismissal-notice-pay"
+   ],
+   "illust": "/assets/img/illust/sit-quit-job.webp"
+  },
+  {
+   "id": "freelancer",
+   "name": "프리랜서·부업 세금",
+   "desc": "3.3%부터 종소세까지",
+   "icon": "laptop",
+   "color": "--c-tax",
+   "calcs": [
+    "tax/withholding",
+    "tax/freelancer-income",
+    "tax/income-tax",
+    "tax/vat",
+    "tax/regional-health-insurance",
+    "tax/yellow-umbrella"
+   ],
+   "illust": "/assets/img/illust/sit-freelancer.webp"
+  },
+  {
+   "id": "pregnancy",
+   "name": "임신·출산 준비",
+   "desc": "예정일과 지원금",
+   "icon": "baby",
+   "color": "--c-baby",
+   "calcs": [
+    "baby/ovulation",
+    "baby/due-date",
+    "baby/total-support",
+    "baby/first-meeting",
+    "baby/parental-leave-pay"
+   ],
+   "illust": "/assets/img/illust/sit-pregnancy.webp"
+  },
+  {
+   "id": "child-care",
+   "name": "아이 키울 때",
+   "desc": "매달 받는 수당",
+   "icon": "heart-handshake",
+   "color": "--c-baby",
+   "calcs": [
+    "baby/parental-benefit",
+    "baby/child-allowance",
+    "baby/home-care-allowance",
+    "baby/baby-months"
+   ],
+   "illust": "/assets/img/illust/sit-child-care.webp"
+  },
+  {
+   "id": "retirement",
+   "name": "노후·부모님 준비",
+   "desc": "연금과 생활비",
+   "icon": "shield-check",
+   "color": "--c-pension-welfare",
+   "calcs": [
+    "pension-welfare/national-pension",
+    "pension-welfare/basic-pension",
+    "pension-welfare/housing-pension",
+    "pension-welfare/retirement-living",
+    "pension-welfare/long-term-care"
+   ],
+   "illust": "/assets/img/illust/sit-retirement.webp"
+  },
+  {
+   "id": "buy-car",
+   "name": "차 살 때",
+   "desc": "할부·취득세·보조금",
+   "icon": "car",
+   "color": "--c-auto",
+   "calcs": [
+    "auto/auto-loan",
+    "auto/acquisition-tax",
+    "auto/used-car-tax",
+    "auto/ev-subsidy",
+    "auto/auto-tax"
+   ],
+   "illust": "/assets/img/illust/sit-buy-car.webp"
+  },
+  {
+   "id": "save-money",
+   "name": "목돈 모을 때",
+   "desc": "예적금과 정책 적금",
+   "icon": "piggy-bank",
+   "color": "--c-finance",
+   "calcs": [
+    "finance/savings",
+    "finance/deposit",
+    "finance/compound",
+    "finance/youth-leap-account",
+    "finance/youth-future-savings"
+   ],
+   "illust": "/assets/img/illust/sit-save-money.webp",
+   "inputs": [
+    {
+     "param": "monthly",
+     "label": "월 납입액",
+     "unit": "만원",
+     "placeholder": "예) 50"
+    },
+    {
+     "param": "principal",
+     "label": "예치할 목돈",
+     "unit": "만원",
+     "placeholder": "예) 1,000"
+    }
+   ]
+  },
+  {
+   "id": "adopt-pet",
+   "name": "반려동물 입양",
+   "desc": "초기·월·평생 비용",
+   "icon": "paw-print",
+   "color": "--c-pet",
+   "calcs": [
+    "pet/adoption",
+    "pet/monthly-cost",
+    "pet/insurance",
+    "pet/lifetime-cost"
+   ],
+   "illust": "/assets/img/illust/sit-adopt-pet.webp"
+  }
+ ],
+ "home_order": [
+  "buy-home",
+  "home-loan",
+  "pay-check",
+  "freelancer",
+  "quit-job",
+  "pregnancy",
+  "rent-home",
+  "retirement"
+ ],
+ "seasons": [
+  {
+   "months": [
+    1
+   ],
+   "title": "1월 부가세 확정신고",
+   "calc": "tax/vat"
+  },
+  {
+   "months": [
+    2,
+    3
+   ],
+   "title": "성과급 시즌, 실수령액 확인",
+   "calc": "salary/bonus-pay"
+  },
+  {
+   "months": [
+    5
+   ],
+   "title": "5월 종합소득세 신고",
+   "calc": "tax/income-tax"
+  },
+  {
+   "months": [
+    6
+   ],
+   "title": "6월 1일 재산세 기준일",
+   "calc": "realestate/propertytax"
+  },
+  {
+   "months": [
+    7
+   ],
+   "title": "7월 부가세 확정신고·재산세 납부",
+   "calc": "tax/vat"
+  },
+  {
+   "months": [
+    9
+   ],
+   "title": "9월 재산세 2기 납부",
+   "calc": "realestate/propertytax"
+  },
+  {
+   "months": [
+    11,
+    12
+   ],
+   "title": "종합부동산세 고지·납부",
+   "calc": "realestate/jongbu"
+  },
+  {
+   "months": [
+    4,
+    8,
+    10
+   ],
+   "title": "이번 달 많이 찾는 계산",
+   "calc": "salary/take-home-pay"
+  }
+ ]
+}

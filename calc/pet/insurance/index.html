@@ -18,10 +18,9 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link rel="stylesheet" href="/assets/pet-common.css" />
+<link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebApplication","name":"펫보험 비교 계산기","url":"https://www.jptcalc.kr/calc/pet/insurance/","applicationCategory":"LifestyleApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
   </script>
@@ -34,59 +33,57 @@
   </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"펫보험 보장률 70%면 병원비 전액의 70%를 돌려받나요?","acceptedAnswer":{"@type":"Answer","text":"보장률 70%는 보장 대상 항목에 한해 적용됩니다. 자기부담금, 면책항목, 보장한도가 있으므로 실제 환급액은 달라질 수 있습니다."}},{"@type":"Question","name":"펫보험 보험료는 나이에 따라 올라가나요?","acceptedAnswer":{"@type":"Answer","text":"대부분 갱신형 상품으로, 반려동물 나이가 많아질수록 보험료가 인상됩니다. 가입 시 나이 제한(보통 8~10세)도 있습니다."}},{"@type":"Question","name":"펫보험 없이 의료비를 직접 적립하는 것이 더 나을 수도 있나요?","acceptedAnswer":{"@type":"Answer","text":"건강한 반려동물이라면 월 보험료만큼 적립하는 것이 유리할 수 있지만, 큰 수술이나 만성질환 시 보험이 훨씬 유리합니다."}},{"@type":"Question","name":"펫보험은 몇 살까지 가입할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"대부분 생후 91일~8세(일부 10세)까지 가입 가능합니다. 나이가 많을수록 가입 가능한 상품이 줄어들고 보험료도 높아지므로, 어릴 때 가입하는 것이 선택지가 넓습니다."}},{"@type":"Question","name":"기존 질환이 있어도 펫보험에 가입되나요?","acceptedAnswer":{"@type":"Answer","text":"이미 진단받은 질환은 보장 제외 조건으로 처리되는 경우가 대부분입니다. 일부 보험사는 고지의무 위반 시 계약 해지까지 가능하므로, 가입 시 기존 병력을 정확히 알려야 합니다."}},{"@type":"Question","name":"펫보험은 보험사마다 보장 범위가 많이 다른가요?","acceptedAnswer":{"@type":"Answer","text":"네, 상당히 다릅니다. 통원만 보장, 입원·수술만 보장, 종합형 등 상품 유형이 다르고, 같은 보장률이어도 1회 보장한도와 연간 보장한도, 자기부담금 기준이 달라 실제 환급액 차이가 큽니다. 금융감독원 금융소비자정보포털(consumer.fss.or.kr)에서 보험사별 상품 비교를 확인하거나, 가입 전 2~3개 보험사의 약관을 직접 비교하는 것을 권장합니다."}},{"@type":"Question","name":"고양이도 강아지와 같은 펫보험을 가입할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네, 가입 가능합니다. 고양이용 펫보험도 강아지와 유사한 구조로 통원·입원·수술을 보장합니다. 고양이는 요로결석, 신장병, 상부 호흡기 질환 발생률이 높은 편이므로 이 항목이 약관에 포함되어 있는지 확인하는 것이 중요합니다. 보험료는 월 1~4만원 수준으로 소형견과 비슷합니다."}}]}</script>
   <style>
-    /* insurance 고유 스타일 - 공통 스타일은 /assets/pet-common.css 참조 */
-    .input-wrap{position:relative}
-    .input-wrap .unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none}
-    input[type=number],select{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
-    select{padding:12px 16px;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 5l3 3 3-3' stroke='%239CA3AF' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
-    input::placeholder{color:var(--gray-400);font-weight:400}
-    input:focus,select:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(244,114,182,0.15)}
-    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
-    .seg-group{display:flex;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:18px}
-    .seg-btn{flex:1;border:none;border-radius:7px;background:transparent;padding:9px 4px;font-size:12px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap}
-    .seg-btn.active{background:var(--primary);color:#fff;font-weight:700}
-    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
-    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
-    .result-card{background:linear-gradient(135deg,#FDF2F8 0%,#FCE7F3 100%);border:1px solid rgba(244,114,182,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
-    .result-card.show{display:block}
-    .result-row+.result-row{border-top:1px solid rgba(0,0,0,0.07)}
-    .result-total-row{border-top:1px solid rgba(0,0,0,0.15)!important;margin-top:4px;padding-top:14px!important}
-    .result-total-value{font-size:24px;font-weight:900;color:var(--gray-900)}
+/* 반려동물 고유 부품: 비용 항목 줄(라벨 위, 입력 아래, 필드 간격) */
+.cost-item { display: flex; flex-direction: column; gap: var(--space-2); margin-bottom: var(--space-field); }
+.cost-label { font-size: var(--fs-label); font-weight: var(--fw-label); color: var(--text); }
+.cost-item .input-wrap { width: 100%; }
   </style>
 </head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
-    <nav class="header-nav">
-      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
-      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
-      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
-      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
-      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
-      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
-      <a href="/calc/pet/" class="nav-item active"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
-    </nav>
-    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
-    <button class="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
-  </div>
+<body data-cat="pet" style="--cat: var(--c-pet)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
 </header>
-<main class="page-wrap">
-  <div class="page-header">
-    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/pet/">반려동물 비용 계산기</a><span class="breadcrumb-sep">›</span><span>펫보험 비교 계산기</span></div>
-    <div class="page-header-badge">🛡️ 보장률별 비교 분석</div>
-    <h1>펫보험 비교 계산기</h1>
-    <p>보험 가입 vs 미가입 시 연간 지출을 비교하세요</p>
-  </div>
-    <div class="card">
-      <div class="card-title">보험료 설정</div>
-      <div class="field"><div class="field-label">월 보험료</div><div class="input-wrap"><input type="number" id="ins-premium" placeholder="예) 5" oninput="calc()" /><span class="unit">만원</span></div><div class="field-hint">💡 소형견 1세 기준 월 2~5만원 / 중형견 3~8만원 / 고양이 1~4만원</div></div>
-      <div class="field"><div class="field-label">보장률</div><div class="seg-group" style="margin-bottom:0"><button class="seg-btn" onclick="setRate(50,this)">50%</button><button class="seg-btn active" onclick="setRate(70,this)">70%</button><button class="seg-btn" onclick="setRate(80,this)">80%</button></div></div>
-      <div class="field"><div class="field-label">연간 예상 병원비 (미보험)</div><div class="input-wrap"><input type="number" id="ins-annual" placeholder="예) 100" oninput="calc()" /><span class="unit">만원</span></div></div>
+
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/pet/">반려동물 비용 계산기</a> &rsaquo; 펫보험 비교 계산기</div>
+      <div class="page-badge">보장률별 비교 분석</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-paw-print"></use></svg></span>
+        <h1 class="page-title">펫보험 비교 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">보장률별 비교 분석</span>
+          <span class="ds-trust-chip">2026.05.12 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">보험 가입 vs 미가입 시 연간 지출을 비교하세요</p>
     </div>
-    <div class="result-card" id="result">
+  </div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+      <div class="field-label ds-group-label">보험료 설정</div>
+      <div class="field"><div class="field-label">월 보험료</div><div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ins-premium" placeholder="예) 5" oninput="calc()" /><span class="unit">만원</span></div><div class="field-hint"><svg class="ds-i ds-i-sm ds-inline-ico" aria-hidden="true"><use href="/assets/ds/icons.svg#i-info"></use></svg> 소형견 1세 기준 월 2~5만원 / 중형견 3~8만원 / 고양이 1~4만원</div></div>
+      <div class="field"><div class="field-label">보장률</div><div class="seg-group" style="margin-bottom:0"><button class="seg-btn" onclick="setRate(50,this)">50%</button><button class="seg-btn active" onclick="setRate(70,this)">70%</button><button class="seg-btn" onclick="setRate(80,this)">80%</button></div></div>
+      <div class="field"><div class="field-label">연간 예상 병원비 (미보험)</div><div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ins-annual" placeholder="예) 100" oninput="calc()" /><span class="unit">만원</span></div></div>
+    </div>
+
+        <button type="button" class="ds-btn-calc" data-calc-submit="calc" data-result="result" data-required="ins-premium">계산하기</button>
+      </div>
+    </section>
+
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="result">
       <div class="result-highlight"><div class="rh-label" id="r-type-label">보험 가입 vs 미가입 비교</div><div class="rh-value" id="r-verdict">-</div><div class="rh-sub" id="r-verdict-sub">-</div></div>
       <div class="result-row"><span class="result-label">연간 보험료</span><span class="result-value" id="r-premium">-</span></div>
       <div class="result-row"><span class="result-label">보험사 지급액 (보장률 적용)</span><span class="result-value" id="r-covered">-</span></div>
@@ -97,26 +94,56 @@
       <div class="result-row"><span class="result-label">5년 누적 차이 (단순 환산)</span><span class="result-value" id="r-5diff">-</span></div>
       <div class="result-row"><span class="result-label">손익분기 연간 병원비</span><span class="result-value" id="r-breakeven">-</span></div>
       <p class="result-note">※ 자기부담금, 면책기간, 1회/연간 보장한도, 선천성 질환 제외 등 약관 조건은 결과에 반영되지 않습니다. 보장률은 보장 대상 항목에만 적용되므로 실제 환급액은 더 낮을 수 있습니다. 5년 누적 차이는 단순 환산값이며, 갱신형 보험은 매년 보험료가 인상됩니다. 정확한 보험료·약관은 보험사 공식 채널에서 확인하세요.</p>
-    </div>
-  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/pet/lifetime-cost/">평생 양육비 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">보험 가입 vs 미가입 비교</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="insurance-next">
+        <a class="ds-next-card" href="/calc/pet/lifetime-cost/" data-next="lifetime-cost"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-paw-print"></use></svg></span><span class="ds-next-body"><b>평생 양육비 계산기</b><span>입양 초기부터 성체기·노령기(7세+)까지 단계별 비용 변화를 반영해 강아지·고양이의 생애 총비용을 예측합니다. 노령기 의료비 가중치 2~3배 반영.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/pet/dog-age/" data-next="dog-age"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-paw-print"></use></svg></span><span class="ds-next-body"><b>강아지 나이 계산기</b><span>강아지 나이를 사람 나이로 환산합니다. 소형견·중형견·대형견·초대형견 크기별 AKC 환산표를 적용해 사람 나이와 생애 단계(자견·성견·노령견)를 알려줍니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
+  </div>
+
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">2026년 기준 주요 펫보험 상품 비교 <a href="https://www.fss.or.kr" target="_blank" rel="noopener">금융감독원 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#insurance-s1">펫보험, 가입하면</a><a href="#insurance-s2">보험 가입이</a><a href="#insurance-s3">펫보험 가입</a><a href="#insurance-s4">계산 예시</a><a href="#insurance-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
     <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
     <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
   </div>
 
   <div class="guide-section">
-    <div class="guide-card">
-      <h2>펫보험, 가입하면 정말 이득일까?</h2>
-      <p>펫보험은 월 보험료를 내고 병원비의 일정 비율을 보장받는 상품입니다. 보험료, 보장률, 자기부담금, 면책기간 등을 종합적으로 비교해야 실제로 유리한지 판단할 수 있습니다.</p>
+            <section class="ds-section ds-prose" aria-labelledby="insurance-s1">
+          <div class="ds-section-head"><h2 id="insurance-s1">펫보험, 가입하면 정말 이득일까?</h2></div>
+<p>펫보험은 월 보험료를 내고 병원비의 일정 비율을 보장받는 상품입니다. 보험료, 보장률, 자기부담금, 면책기간 등을 종합적으로 비교해야 실제로 유리한지 판단할 수 있습니다.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>보장률 비교</strong><span>50%·70%·80% 보장률에 따라 본인부담금과 총 지출이 크게 달라집니다</span></div>
         <div class="guide-box"><strong>손익분기점 확인</strong><span>연간 병원비가 일정 금액 이상이면 보험 가입이 유리해집니다</span></div>
         <div class="guide-box"><strong>약관 핵심 체크</strong><span>면책기간, 보장한도, 갱신형 여부 등 약관 조건을 꼭 확인하세요</span></div>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>보험 가입이 유리해지는 손익분기점</h2>
-      <p>펫보험이 실제로 이득인지는 연간 병원비에 달려 있습니다. 월 보험료 3만원, 보장률 70% 기준으로 연간 병원비에 따른 실제 절감액을 정리하면 다음과 같습니다.</p>
-      <div class="guide-table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="insurance-s2">
+          <div class="ds-section-head"><h2 id="insurance-s2">보험 가입이 유리해지는 손익분기점</h2></div>
+<p>펫보험이 실제로 이득인지는 연간 병원비에 달려 있습니다. 월 보험료 3만원, 보장률 70% 기준으로 연간 병원비에 따른 실제 절감액을 정리하면 다음과 같습니다.</p>
+      <div class="ds-table-card">
         <table style="width:100%;border-collapse:collapse;font-size:13px;margin:12px 0">
           <thead><tr style="background:rgba(244,114,182,0.08)">
             <th style="padding:10px 12px;text-align:left;border-bottom:1px solid rgba(0,0,0,0.1)">연간 병원비</th>
@@ -133,10 +160,10 @@
         </table>
       </div>
       <p>월 3만원 기준 연간 보험료는 36만원입니다. 손익분기 = 연 보험료 ÷ 보장률 = 36 ÷ 0.7 ≈ <strong>약 51만원</strong>으로, 병원비가 이 금액을 넘으면 보험이 유리해지고, 수술이 필요한 해에는 100만원 이상 차이가 날 수 있습니다. 반대로 건강한 해에는 보험료만큼 손해를 보게 되므로, 품종별 질병 발생률과 나이를 함께 고려해야 합니다.</p>
-    </div>
-    <div class="guide-card">
-      <h2>펫보험 가입 전 확인할 약관 핵심 5가지</h2>
-      <p>같은 보장률이라도 약관 조건에 따라 실제 보장 금액은 크게 달라집니다. 가입 전에 반드시 아래 5가지를 확인하세요.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="insurance-s3">
+          <div class="ds-section-head"><h2 id="insurance-s3">펫보험 가입 전 확인할 약관 핵심 5가지</h2></div>
+<p>같은 보장률이라도 약관 조건에 따라 실제 보장 금액은 크게 달라집니다. 가입 전에 반드시 아래 5가지를 확인하세요.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>1. 면책기간</strong><span>가입 후 30~90일간은 보장이 안 됩니다. 이 기간에 발생한 질병은 보험금 청구가 불가능합니다</span></div>
         <div class="guide-box"><strong>2. 1일/1사고 보장한도</strong><span>보장률 70%라도 1회 최대 50만원 같은 한도가 있으면 수술비 200만원 중 50만원만 돌려받습니다</span></div>
@@ -144,10 +171,10 @@
         <div class="guide-box"><strong>4. 갱신 거절·보험료 인상폭</strong><span>갱신형은 매년 보험료가 오르며, 8세 이후 갱신 거절 가능성도 있습니다. 비갱신형은 초기 보험료가 높지만 인상이 없습니다</span></div>
         <div class="guide-box"><strong>5. 통원·입원·수술 구분</strong><span>통원만 보장, 수술만 보장 등 상품 유형이 다릅니다. 종합형이 보험료는 높지만 보장 범위가 넓습니다</span></div>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>실제 계산 예시</h2>
-      <h3>예시 1 - 이진아씨 말티즈 봄이 (5세, 슬개골 탈구 발생)</h3>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="insurance-s4">
+          <div class="ds-section-head"><h2 id="insurance-s4">실제 계산 예시</h2></div>
+<h3>예시 1 - 이진아씨 말티즈 봄이 (5세, 슬개골 탈구 발생)</h3>
       <p>진아씨 말티즈 봄이가 5세에 슬개골 탈구 진단을 받아 편측 수술을 했습니다. 수술비 120만원 발생. 가입 조건: 월 3만원, 보장률 70%.</p>
       <ul>
         <li>연간 보험료: 3만원 × 12 = 36만원</li>
@@ -165,19 +192,41 @@
         <li>보험 가입 시 총 지출: 60만원 + 12만원 = 72만원</li>
         <li><strong>미가입 40만원 vs 가입 72만원 - 건강한 해에는 32만원 손해. 대형견은 노령기 고관절·종양 위험으로 5~6년 후 역전 가능</strong></li>
       </ul>
-    </div>
-    <div class="guide-card faq-card">
-      <h2>자주 묻는 질문</h2>
-      <div class="faq-item"><h3>펫보험 보장률 70%면 병원비 전액의 70%를 돌려받나요?</h3><p>보장률 70%는 보장 대상 항목에 한해 적용됩니다. 자기부담금, 면책항목, 보장한도가 있으므로 실제 환급액은 달라질 수 있습니다.</p></div>
-      <div class="faq-item"><h3>펫보험 보험료는 나이에 따라 올라가나요?</h3><p>대부분 갱신형 상품으로, 반려동물 나이가 많아질수록 보험료가 인상됩니다. 가입 시 나이 제한(보통 8~10세)도 있습니다.</p></div>
-      <div class="faq-item"><h3>펫보험 없이 의료비를 직접 적립하는 것이 더 나을 수도 있나요?</h3><p>건강한 반려동물이라면 월 보험료만큼 적립하는 것이 유리할 수 있지만, 큰 수술이나 만성질환 시 보험이 훨씬 유리합니다.</p></div>
-      <div class="faq-item"><h3>펫보험은 몇 살까지 가입할 수 있나요?</h3><p>대부분 생후 91일~8세(일부 10세)까지 가입 가능합니다. 나이가 많을수록 가입 가능한 상품이 줄어들고 보험료도 높아지므로, 어릴 때 가입하는 것이 선택지가 넓습니다.</p></div>
-      <div class="faq-item"><h3>기존 질환이 있어도 펫보험에 가입되나요?</h3><p>이미 진단받은 질환은 보장 제외 조건으로 처리되는 경우가 대부분입니다. 일부 보험사는 고지의무 위반 시 계약 해지까지 가능하므로, 가입 시 기존 병력을 정확히 알려야 합니다.</p></div>
-      <div class="faq-item"><h3>펫보험은 보험사마다 보장 범위가 많이 다른가요?</h3><p>네, 상당히 다릅니다. 통원만 보장, 입원·수술만 보장, 종합형 등 상품 유형이 다르고, 같은 보장률이어도 1회 보장한도와 연간 보장한도, 자기부담금 기준이 달라 실제 환급액 차이가 큽니다. 금융감독원 금융소비자정보포털(consumer.fss.or.kr)에서 보험사별 상품 비교를 확인하거나, 가입 전 2~3개 보험사의 약관을 직접 비교하는 것을 권장합니다.</p></div>
-      <div class="faq-item"><h3>고양이도 강아지와 같은 펫보험을 가입할 수 있나요?</h3><p>네, 가입 가능합니다. 고양이용 펫보험도 강아지와 유사한 구조로 통원·입원·수술을 보장합니다. 고양이는 요로결석, 신장병, 상부 호흡기 질환 발생률이 높은 편이므로 이 항목이 약관에 포함되어 있는지 확인하는 것이 중요합니다. 보험료는 월 1~4만원 수준으로 소형견과 비슷합니다.</p></div>
+        </section>
+            <section class="ds-section faq-card" aria-labelledby="insurance-faq">
+          <div class="ds-section-head"><h2 id="insurance-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>펫보험 보장률 70%면 병원비 전액의 70%를 돌려받나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>보장률 70%는 보장 대상 항목에 한해 적용됩니다. 자기부담금, 면책항목, 보장한도가 있으므로 실제 환급액은 달라질 수 있습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>펫보험 보험료는 나이에 따라 올라가나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>대부분 갱신형 상품으로, 반려동물 나이가 많아질수록 보험료가 인상됩니다. 가입 시 나이 제한(보통 8~10세)도 있습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>펫보험 없이 의료비를 직접 적립하는 것이 더 나을 수도 있나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>건강한 반려동물이라면 월 보험료만큼 적립하는 것이 유리할 수 있지만, 큰 수술이나 만성질환 시 보험이 훨씬 유리합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>펫보험은 몇 살까지 가입할 수 있나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>대부분 생후 91일~8세(일부 10세)까지 가입 가능합니다. 나이가 많을수록 가입 가능한 상품이 줄어들고 보험료도 높아지므로, 어릴 때 가입하는 것이 선택지가 넓습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>기존 질환이 있어도 펫보험에 가입되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>이미 진단받은 질환은 보장 제외 조건으로 처리되는 경우가 대부분입니다. 일부 보험사는 고지의무 위반 시 계약 해지까지 가능하므로, 가입 시 기존 병력을 정확히 알려야 합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>펫보험은 보험사마다 보장 범위가 많이 다른가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>네, 상당히 다릅니다. 통원만 보장, 입원·수술만 보장, 종합형 등 상품 유형이 다르고, 같은 보장률이어도 1회 보장한도와 연간 보장한도, 자기부담금 기준이 달라 실제 환급액 차이가 큽니다. 금융감독원 금융소비자정보포털(consumer.fss.or.kr)에서 보험사별 상품 비교를 확인하거나, 가입 전 2~3개 보험사의 약관을 직접 비교하는 것을 권장합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>고양이도 강아지와 같은 펫보험을 가입할 수 있나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>네, 가입 가능합니다. 고양이용 펫보험도 강아지와 유사한 구조로 통원·입원·수술을 보장합니다. 고양이는 요로결석, 신장병, 상부 호흡기 질환 발생률이 높은 편이므로 이 항목이 약관에 포함되어 있는지 확인하는 것이 중요합니다. 보험료는 월 1~4만원 수준으로 소형견과 비슷합니다.</p>
+            </details>
       <div class="update-note">최종 검토: 2026.04.25 · 계산 결과는 참고용입니다.</div>
-    </div>
+          </div>
+        </section>
   </div>
+    </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
   <script>
   window.TRUST_BLOCK_CONFIG = {
     standard: '2026년 기준 주요 펫보험 상품 비교',
@@ -193,44 +242,51 @@
     lastReviewed: '2026.05',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>
-  <div class="sibling-section">
-    <div class="sibling-title">다른 반려동물 계산기</div>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 반려동물 계산기</h2>
     <div class="sibling-list">
-      <a href="/calc/pet/dog-age/" class="sibling-link">🐶 강아지 나이</a>
-      <a href="/calc/pet/cat-age/" class="sibling-link">🐱 고양이 나이</a>
-      <a href="/calc/pet/food-amount/" class="sibling-link">🍽️ 사료 급여량</a>
-      <a href="/calc/pet/monthly-cost/" class="sibling-link">🐕 월 생활비</a>
-      <a href="/calc/pet/adoption/" class="sibling-link">🏠 입양 초기비용</a>
-      <a href="/calc/pet/medical/" class="sibling-link">💊 의료비 예산</a>
-      <a href="/calc/pet/insurance/" class="sibling-link current">🛡️ 펫보험 비교</a>
-      <a href="/calc/pet/lifetime-cost/" class="sibling-link">📊 평생 양육비</a>
+      <a href="/calc/pet/dog-age/" class="sibling-link">강아지 나이</a>
+      <a href="/calc/pet/cat-age/" class="sibling-link">고양이 나이</a>
+      <a href="/calc/pet/food-amount/" class="sibling-link">사료 급여량</a>
+      <a href="/calc/pet/monthly-cost/" class="sibling-link">월 생활비</a>
+      <a href="/calc/pet/adoption/" class="sibling-link">입양 초기비용</a>
+      <a href="/calc/pet/medical/" class="sibling-link">의료비 예산</a>
+      <a href="/calc/pet/lifetime-cost/" class="sibling-link">평생 양육비</a>
     </div>
-    <div class="sibling-title">관련 가이드</div>
-    <div class="sibling-list">
-      <a href="/blog/posts/cat-lifetime-cost.html" class="sibling-link">📖 고양이 평생 양육비 2,500~4,700만원 - 15년 항목별 실비용 계산</a>
-      <a href="/blog/posts/cat-monthly-cost.html" class="sibling-link">📖 고양이 한 달 생활비, 실제로 얼마나 들까? 품종·나이별 상세 비용 정리</a>
-      <a href="/blog/posts/dog-monthly-cost.html" class="sibling-link">📖 강아지 한 달 양육비 현실적으로 얼마? 소형견·대형견 비교</a>
-      <a href="/blog/posts/dog-vs-cat-cost.html" class="sibling-link">📖 강아지 vs 고양이 - 처음 입양할 때 실제 비용은 얼마나 다를까?</a>
-      <a href="/blog/posts/pet-adoption-cost-guide.html" class="sibling-link">📖 반려동물 입양 초기 비용 총정리 - 강아지·고양이 데려오기 전 준비할 것</a>
-      <a href="/blog/posts/pet-cost-saving-tips.html" class="sibling-link">📖 반려동물 양육비 줄이는 현실적인 방법 - 월 5만원은 아낄 수 있다</a>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/cat-lifetime-cost.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/cat-lifetime-cost-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>고양이 평생 양육비 2,500~4,700만원 - 15년 항목별 실비용 계산</span></a>
+      <a href="/blog/posts/cat-monthly-cost.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/cat-monthly-cost-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>고양이 한 달 생활비, 실제로 얼마나 들까? 품종·나이별 상세 비용 정리</span></a>
+      <a href="/blog/posts/dog-monthly-cost.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/dog-monthly-cost-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>강아지 한 달 양육비 현실적으로 얼마? 소형견·대형견 비교</span></a>
+      <a href="/blog/posts/dog-vs-cat-cost.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/dog-vs-cat-cost-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>강아지 vs 고양이 - 처음 입양할 때 실제 비용은 얼마나 다를까?</span></a>
+      <a href="/blog/posts/pet-adoption-cost-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/pet-adoption-cost-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>반려동물 입양 초기 비용 총정리 - 강아지·고양이 데려오기 전 준비할 것</span></a>
+      <a href="/blog/posts/pet-cost-saving-tips.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/pet-cost-saving-tips-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>반려동물 양육비 줄이는 현실적인 방법 - 월 5만원은 아낄 수 있다</span></a>
     </div>
   </div>
 </main>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
-    <span class="footer-copy">© 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
   </div>
 </footer>
+
+<script src="/assets/ds/calc-kit.js?v=d45e66d9"></script>
 <script>
 
 function W(m){if(m===null||m===undefined||isNaN(m))return'-';m=Math.round(m);if(m===0)return'0원';if(m>=10000){const eok=Math.floor(m/10000),rem=m%10000;return eok.toLocaleString()+'억'+(rem>0?' '+rem.toLocaleString()+'만원':'원');}return m.toLocaleString()+'만원';}
 let insRate=70;
 function setRate(r,btn){insRate=r;btn.parentElement.querySelectorAll('.seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');calc();}
 function calc(){
-  const premium=parseFloat(document.getElementById('ins-premium').value)||0;
-  const annualVet=parseFloat(document.getElementById('ins-annual').value)||0;
+  const premium=parseFloat(String(document.getElementById('ins-premium').value).replace(/,/g, ''))||0;
+  const annualVet=parseFloat(String(document.getElementById('ins-annual').value).replace(/,/g, ''))||0;
   if(!premium||!annualVet){document.getElementById('result').classList.remove('show');return;}
   document.getElementById('result').classList.add('show');
   const ap=premium*12,covered=annualVet*insRate/100,copay=annualVet-covered,totalIns=ap+copay,totalNo=annualVet;
@@ -238,11 +294,11 @@ function calc(){
   const breakeven=ap/(insRate/100);
   document.getElementById('r-type-label').textContent='월 '+premium+'만원 / '+insRate+'% 보장 기준';
   if(diff>=0){
-    document.getElementById('r-verdict').textContent='✅ 보험 가입 유리';
+    document.getElementById('r-verdict').textContent='보험 가입 유리';
     document.getElementById('r-verdict-sub').textContent='연간 '+W(diff)+' 절감';
     document.getElementById('r-diff-label').textContent='연간 절감액';
   }else{
-    document.getElementById('r-verdict').textContent='⚠️ 미가입이 저렴';
+    document.getElementById('r-verdict').textContent='미가입이 저렴';
     document.getElementById('r-verdict-sub').textContent='큰 수술 발생 시에는 보험이 유리할 수 있습니다';
     document.getElementById('r-diff-label').textContent='연간 추가 지출';
   }
@@ -257,11 +313,10 @@ function calc(){
 }
 </script>
 
-<script src="/assets/calc-validate.js"></script>
-<script src="/assets/calc-result-tools.js"></script>
-<script src="/assets/footer-unified.js" defer></script>
-<script src="/assets/calc-registry.js"></script>
-<script src="/assets/pet-detail-shell.js"></script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
@@ -272,7 +327,13 @@ window.ARTICLE_INFO_CONFIG = {
   category: 'pet'
 };
 </script>
-<script src="/assets/blog-article-info.js"></script>
-<script src="/assets/blog-review-footer.js"></script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "result", "required": ["ins-premium"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#insurance-next", "next": []});
+  DSCalc.placeTrust('ds-trust-col');
+</script>
+<script src="/assets/ds/prefill.js?v=fa5eb49a" defer></script>
 </body>
 </html>

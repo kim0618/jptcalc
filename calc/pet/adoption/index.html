@@ -18,10 +18,9 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link rel="stylesheet" href="/assets/pet-common.css" />
+<link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebApplication","name":"반려동물 입양 초기비용 계산기","url":"https://www.jptcalc.kr/calc/pet/adoption/","applicationCategory":"LifestyleApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
   </script>
@@ -34,74 +33,72 @@
   </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"유기견 입양 시 비용이 전혀 없나요?","acceptedAnswer":{"@type":"Answer","text":"분양비는 0~10만원으로 매우 저렴하지만 중성화 수술비, 예방접종비, 기본 용품비는 동일하게 필요합니다. 합산 시 보통 70~90만원 수준이며, 일부 보호소 의료 지원을 받으면 30~50만원으로 줄어들 수 있습니다."}},{"@type":"Question","name":"강아지와 고양이 초기비용 차이가 있나요?","acceptedAnswer":{"@type":"Answer","text":"기본값 기준 강아지(소형견 약 179만원)가 고양이(약 166만원)보다 13만원 정도 더 들며, 목줄·하네스 불필요와 중성화 비용 차이가 주된 원인입니다."}},{"@type":"Question","name":"예방접종은 몇 회 맞아야 하나요?","acceptedAnswer":{"@type":"Answer","text":"강아지는 종합백신 5차+광견병, 고양이는 종합백신 3차가 기본이며, 전체 접종 완료까지 약 15~25만원이 소요됩니다."}},{"@type":"Question","name":"입양 초기비용 외에 매달 들어가는 비용은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"소형견 기준 월 약 17만원(연 204만원), 대형견 약 26만원(연 312만원), 고양이 약 12만원(연 144만원)이 평균이며, 자세한 항목별 계산은 월 생활비 계산기에서 확인할 수 있습니다."}},{"@type":"Question","name":"분양비 외에 숨겨진 초기비용이 있나요?","acceptedAnswer":{"@type":"Answer","text":"동물보호법 제15조와 시행령 제4조에 따라 월령 2개월 이상 개는 등록 의무가 있습니다. 시행규칙 별표 14가 정한 등록 수수료는 전국 공통으로 내장형 1만원·외장형 3천원인데, 여기에는 칩값과 시술비가 빠져 있습니다. 지자체 지원사업을 쓰면 자부담 약 1만원, 지원이 없으면 칩·시술비를 더해 5만~9만원이 듭니다. 중성화 수술은 생후 5~6개월 이후에 별도 발생하며 20~45만원 수준이므로, 첫 달 예산 외에 예비 의료비를 별도로 비축해두는 것이 좋습니다."}},{"@type":"Question","name":"반려동물 펫보험은 처음부터 가입하는 게 좋을까요?","acceptedAnswer":{"@type":"Answer","text":"펫보험은 가입 시점이 어릴수록 보험료가 낮고 보장 범위가 넓습니다. 생후 30일~6개월 사이에 가입하면 선천성 질환 면책 기간을 줄일 수 있습니다. KB펫보험 통계 기준 반려동물 연간 의료비 평균은 강아지 약 50만원, 고양이 약 40만원 수준이므로, 보험 가입 여부를 입양 초기에 검토하는 것을 권장합니다."}}]}</script>
   <style>
-    /* adoption 고유 스타일 - 공통 스타일은 /assets/pet-common.css 참조 */
-    .input-wrap{position:relative}
-    .input-wrap .unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none}
-    input[type=number],select{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
-    select{padding:12px 16px;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 5l3 3 3-3' stroke='%239CA3AF' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
-    input::placeholder{color:var(--gray-400);font-weight:400}
-    input:focus,select:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(244,114,182,0.15)}
-    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
-    .seg-group{display:flex;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:18px}
-    .seg-btn{flex:1;border:none;border-radius:7px;background:transparent;padding:9px 4px;font-size:12px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap}
-    .seg-btn.active{background:var(--primary);color:#fff;font-weight:700}
-    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
-    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
-    .result-card{background:linear-gradient(135deg,#FDF2F8 0%,#FCE7F3 100%);border:1px solid rgba(244,114,182,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
-    .result-card.show{display:block}
-    .result-row+.result-row{border-top:1px solid rgba(0,0,0,0.07)}
-    .result-total-row{border-top:1px solid rgba(0,0,0,0.15)!important;margin-top:4px;padding-top:14px!important}
-    .result-total-value{font-size:24px;font-weight:900;color:var(--gray-900)}
+/* 반려동물 고유 부품: 비용 항목 줄(라벨 위, 입력 아래, 필드 간격) */
+.cost-item { display: flex; flex-direction: column; gap: var(--space-2); margin-bottom: var(--space-field); }
+.cost-label { font-size: var(--fs-label); font-weight: var(--fw-label); color: var(--text); }
+.cost-item .input-wrap { width: 100%; }
   </style>
 </head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
-    <nav class="header-nav">
-      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
-      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
-      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
-      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
-      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
-      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
-      <a href="/calc/pet/" class="nav-item active"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
-    </nav>
-    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
-    <button class="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
-  </div>
+<body data-cat="pet" style="--cat: var(--c-pet)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
 </header>
-<main class="page-wrap">
-  <div class="page-header">
-    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/pet/">반려동물 비용 계산기</a><span class="breadcrumb-sep">›</span><span>반려동물 입양 초기비용 계산기</span></div>
-    <div class="page-header-badge">🐾 강아지·고양이 기준</div>
-    <h1>반려동물 입양 초기비용 계산기</h1>
-    <p>분양비·용품비·예방접종비 등 입양 첫 달 총 비용을 계산하세요</p>
+
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/pet/">반려동물 비용 계산기</a> &rsaquo; 반려동물 입양 초기비용 계산기</div>
+      <div class="page-badge">강아지·고양이 기준</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-paw-print"></use></svg></span>
+        <h1 class="page-title">반려동물 입양 초기비용 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">강아지·고양이 기준</span>
+          <span class="ds-trust-chip">2026.05.10 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">분양비·용품비·예방접종비 등 입양 첫 달 총 비용을 계산하세요</p>
+    </div>
   </div>
-    <div class="card">
-      <div class="card-title">반려동물 종류</div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+      <div class="field-label ds-group-label">반려동물 종류</div>
       <div class="seg-group"><button class="seg-btn active" onclick="setAnimal('dog',this)">강아지</button><button class="seg-btn" onclick="setAnimal('cat',this)">고양이</button></div>
       <div id="dog-size-group" class="seg-group"><button class="seg-btn active" onclick="setSize('small',this)">소형견</button><button class="seg-btn" onclick="setSize('medium',this)">중형견</button><button class="seg-btn" onclick="setSize('large',this)">대형견</button></div>
     </div>
     <div class="card">
-      <div class="card-title">입양/분양 방법</div>
+      <div class="field-label ds-group-label">입양/분양 방법</div>
       <div class="seg-group"><button class="seg-btn active" onclick="setAdopt('breeder',this)">브리더/펫샵</button><button class="seg-btn" onclick="setAdopt('rescue',this)">유기견 입양</button><button class="seg-btn" onclick="setAdopt('free',this)">분양(무료)</button></div>
-      <div class="field"><div class="field-label">분양/입양비</div><div class="input-wrap"><input type="number" id="adopt-fee" placeholder="예) 100" oninput="calc()" /><span class="unit">만원</span></div></div>
+      <div class="field"><div class="field-label">분양/입양비</div><div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="adopt-fee" placeholder="예) 100" oninput="calc()" /><span class="unit">만원</span></div></div>
     </div>
     <div class="card">
-      <div class="card-title">초기 용품 비용</div>
-      <div class="cost-item"><span class="cost-label">사료·간식</span><div class="input-wrap"><input type="number" id="c-food" placeholder="예) 5" oninput="calc()" /><span class="unit">만원</span></div></div>
-      <div class="cost-item"><span class="cost-label">침대·하우스</span><div class="input-wrap"><input type="number" id="c-bed" placeholder="예) 8" oninput="calc()" /><span class="unit">만원</span></div></div>
-      <div class="cost-item"><span class="cost-label">화장실·패드</span><div class="input-wrap"><input type="number" id="c-toilet" placeholder="예) 5" oninput="calc()" /><span class="unit">만원</span></div></div>
-      <div class="cost-item"><span class="cost-label">목줄·하네스</span><div class="input-wrap"><input type="number" id="c-leash" placeholder="예) 3" oninput="calc()" /><span class="unit">만원</span></div></div>
-      <div class="cost-item"><span class="cost-label">장난감·용품</span><div class="input-wrap"><input type="number" id="c-toys" placeholder="예) 3" oninput="calc()" /><span class="unit">만원</span></div></div>
-      <div class="cost-item"><span class="cost-label">초기 건강검진</span><div class="input-wrap"><input type="number" id="c-vet" placeholder="예) 10" oninput="calc()" /><span class="unit">만원</span></div></div>
-      <div class="cost-item"><span class="cost-label">예방접종</span><div class="input-wrap"><input type="number" id="c-vaccine" placeholder="예) 15" oninput="calc()" /><span class="unit">만원</span></div></div>
-      <div class="cost-item"><span class="cost-label">중성화 수술</span><div class="input-wrap"><input type="number" id="c-neuter" placeholder="예) 30" oninput="calc()" /><span class="unit">만원</span></div></div>
+      <div class="field-label ds-group-label">초기 용품 비용</div>
+      <div class="cost-item"><span class="cost-label">사료·간식</span><div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="c-food" placeholder="예) 5" oninput="calc()" /><span class="unit">만원</span></div></div>
+      <div class="cost-item"><span class="cost-label">침대·하우스</span><div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="c-bed" placeholder="예) 8" oninput="calc()" /><span class="unit">만원</span></div></div>
+      <div class="cost-item"><span class="cost-label">화장실·패드</span><div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="c-toilet" placeholder="예) 5" oninput="calc()" /><span class="unit">만원</span></div></div>
+      <div class="cost-item"><span class="cost-label">목줄·하네스</span><div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="c-leash" placeholder="예) 3" oninput="calc()" /><span class="unit">만원</span></div></div>
+      <div class="cost-item"><span class="cost-label">장난감·용품</span><div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="c-toys" placeholder="예) 3" oninput="calc()" /><span class="unit">만원</span></div></div>
+      <div class="cost-item"><span class="cost-label">초기 건강검진</span><div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="c-vet" placeholder="예) 10" oninput="calc()" /><span class="unit">만원</span></div></div>
+      <div class="cost-item"><span class="cost-label">예방접종</span><div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="c-vaccine" placeholder="예) 15" oninput="calc()" /><span class="unit">만원</span></div></div>
+      <div class="cost-item"><span class="cost-label">중성화 수술</span><div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="c-neuter" placeholder="예) 30" oninput="calc()" /><span class="unit">만원</span></div></div>
     </div>
-    <div class="result-card" id="result">
+
+        <button type="button" class="ds-btn-calc" data-calc-submit="calc" data-result="result" data-required="adopt-fee">계산하기</button>
+      </div>
+    </section>
+
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="result">
       <div class="result-highlight"><div class="rh-label" id="r-type-label">입양 첫 달 총 비용</div><div class="rh-value" id="r-total">-</div><div class="rh-sub" id="r-sub">용품+의료 -</div></div>
       <div class="result-row"><span class="result-label">분양/입양비</span><span class="result-value" id="r-adopt">-</span></div>
       <div class="result-row"><span class="result-label">사료·간식</span><span class="result-value" id="r-food">-</span></div>
@@ -114,17 +111,47 @@
       <div class="result-row"><span class="result-label">중성화 수술</span><span class="result-value" id="r-neuter">-</span></div>
       <div class="result-row result-total-row"><span class="result-total-label">첫 달 총 예산</span><span class="result-total-value" id="r-grand">-</span></div>
       <p class="result-note">※ 지역·병원·브랜드에 따라 실제 비용은 크게 달라질 수 있습니다. 중성화 수술은 생후 5~6개월 이후 시행하므로 첫 달이 아닌 별도 시점에 발생할 수 있습니다. 이 결과는 확정 비용이 아닌 예산 계획 참고용입니다.</p>
-    </div>
-  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/pet/monthly-cost/">월 생활비 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">입양 첫 달 총 비용</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="adoption-next">
+        <a class="ds-next-card" href="/calc/pet/monthly-cost/" data-next="monthly-cost"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-paw-print"></use></svg></span><span class="ds-next-body"><b>월 생활비 계산기</b><span>사료·간식·미용·용품 소모품까지 월 고정 지출을 항목별로 합산합니다. 소형견·대형견·고양이 유형별 평균 범위와 비교해 과소비 항목도 확인할 수 있습니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/pet/medical/" data-next="medical"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-paw-print"></use></svg></span><span class="ds-next-body"><b>의료비 예산 계산기</b><span>연간 예방접종·심장사상충·정기검진 비용과 나이·품종별 응급 의료비 발생 확률을 반영해 연간 적립 목표를 산출합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
+  </div>
+
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">2026년 기준 입양·분양 시장 평균 비용 <a href="https://www.animal.go.kr" target="_blank" rel="noopener">농림축산식품부 동물보호관리시스템 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#adoption-s1">구간별 표</a><a href="#adoption-s2">반려동물 입양,</a><a href="#adoption-s3">계산 방법</a><a href="#adoption-s4">계산 예시</a><a href="#adoption-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
     <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
     <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
   </div>
 
   <div class="guide-section">
-    <div class="guide-card">
-      <h2>입양 항목별 초기비용 기준표</h2>
-      <p>입양 첫 달 총비용은 강아지(소형견) 약 179만원, 고양이 약 166만원이며, 유기 입양 시 70~90만원으로 크게 줄어듭니다.</p>
-      <div class="guide-table-wrap">
+            <section class="ds-section ds-prose" aria-labelledby="adoption-s1">
+          <div class="ds-section-head"><h2 id="adoption-s1">입양 항목별 초기비용 기준표</h2></div>
+<p>입양 첫 달 총비용은 강아지(소형견) 약 179만원, 고양이 약 166만원이며, 유기 입양 시 70~90만원으로 크게 줄어듭니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead>
             <tr><th>항목</th><th>비용 (만원)</th><th>비고</th></tr>
@@ -141,29 +168,29 @@
         </table>
       </div>
       <p style="font-size:13px;color:var(--gray-600);margin-top:10px">중성화·마이크로칩은 분양 직후가 아니라 생후 5~6개월에 발생하므로 예비비로 잡아두세요. 입양 후 매달 소형견 약 17만원·대형견 약 26만원·고양이 약 12만원의 양육비가 별도로 듭니다.</p>
-    </div>
-    <div class="guide-card">
-      <h2>반려동물 입양, 초기비용은 얼마나 들까?</h2>
-      <p>반려동물을 처음 데려올 때는 분양비 외에도 예방접종, 중성화 수술, 기본 용품 구입 등 다양한 초기 비용이 발생합니다. 미리 항목별로 예산을 세워두면 부담 없이 준비할 수 있습니다.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="adoption-s2">
+          <div class="ds-section-head"><h2 id="adoption-s2">반려동물 입양, 초기비용은 얼마나 들까?</h2></div>
+<p>반려동물을 처음 데려올 때는 분양비 외에도 예방접종, 중성화 수술, 기본 용품 구입 등 다양한 초기 비용이 발생합니다. 미리 항목별로 예산을 세워두면 부담 없이 준비할 수 있습니다.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>입양 경로별 비용</strong><span>브리더·펫샵·유기견 입양에 따라 분양비가 크게 달라집니다</span></div>
         <div class="guide-box"><strong>필수 초기 용품</strong><span>침대·하우스·화장실·목줄 등 첫 달 필수 용품 비용을 파악하세요</span></div>
         <div class="guide-box"><strong>초기 의료비</strong><span>건강검진·예방접종·중성화 수술 등 초기 의료비를 빠짐없이 계획하세요</span></div>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>반려동물 입양 초기비용 계산 방법</h2>
-      <p>초기비용은 분양비·용품비·의료비 세 가지로 나뉩니다. 입양 경로와 품종에 따라 총비용이 30만원대부터 200만원 이상까지 차이가 나므로 항목별로 사전에 파악해두는 것이 중요합니다.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="adoption-s3">
+          <div class="ds-section-head"><h2 id="adoption-s3">반려동물 입양 초기비용 계산 방법</h2></div>
+<p>초기비용은 분양비·용품비·의료비 세 가지로 나뉩니다. 입양 경로와 품종에 따라 총비용이 30만원대부터 200만원 이상까지 차이가 나므로 항목별로 사전에 파악해두는 것이 중요합니다.</p>
       <ul>
         <li><strong>1단계. 입양 경로 결정:</strong> 브리더·펫샵(50~200만원), 유기동물 보호소(0~10만원), 지인 무료분양(0원). 입양 경로가 분양비를 결정하는 가장 큰 변수입니다.</li>
         <li><strong>2단계. 초기 용품 예산 산정:</strong> 침대·하우스, 화장실·패드, 목줄·하네스, 장난감 포함 소형견 기준 약 19~24만원, 고양이 기준 약 18~22만원이 소요됩니다.</li>
         <li><strong>3단계. 예방접종 비용 확인:</strong> 강아지는 종합백신 5차+광견병으로 15~25만원, 고양이는 종합백신 3차로 10~15만원이 기준입니다. 생후 6~8주부터 접종이 시작됩니다.</li>
         <li><strong>4단계. 중성화 수술 별도 계획:</strong> 중성화는 생후 5~6개월 이후 진행하므로 첫 달 예산이 아닌 별도 항목으로 편성하세요. 수컷 15~25만원, 암컷 25~45만원이 평균 범위입니다.</li>
       </ul>
-    </div>
-    <div class="guide-card">
-      <h2>실제 입양 비용 예시</h2>
-      <h3>예시 1 - 이민정(28세, 직장인), 소형견 말티즈 브리더 입양</h3>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="adoption-s4">
+          <div class="ds-section-head"><h2 id="adoption-s4">실제 입양 비용 예시</h2></div>
+<h3>예시 1 - 이민정(28세, 직장인), 소형견 말티즈 브리더 입양</h3>
       <p>서울 거주 1인 가구로 소형 말티즈를 브리더에서 입양. 분양비 100만원 외에 첫 달 필수 용품과 초기 의료비를 모두 합산해 예산을 세웠습니다.</p>
       <ul>
         <li>분양비(브리더): 100만원</li>
@@ -181,27 +208,47 @@
         <li>예방접종(보호소 지원으로 일부 절감): 5만원</li>
         <li><strong>첫 달 총 예상 비용: 36만원</strong> (보호소 중성화 지원으로 해당 항목 없음)</li>
       </ul>
-    </div>
-    <div class="guide-card">
-      <h2>이것만은 확인하세요</h2>
-      <p>입양 비용은 브리더·병원·지역별 편차가 크고, 첫 달 이후에도 추가 비용이 발생하는 항목이 있습니다. 계획 단계에서 아래 사항을 빠짐없이 확인하세요.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="adoption-s5">
+          <div class="ds-section-head"><h2 id="adoption-s5">이것만은 확인하세요</h2></div>
+<p>입양 비용은 브리더·병원·지역별 편차가 크고, 첫 달 이후에도 추가 비용이 발생하는 항목이 있습니다. 계획 단계에서 아래 사항을 빠짐없이 확인하세요.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>중성화 수술 시기</strong><span>생후 5~6개월 이후 진행하므로 첫 달 예산이 아닌 3~6개월 뒤 별도 예산 20~45만원을 준비해두세요.</span></div>
         <div class="guide-box"><strong>동물등록 의무(반려견)</strong><span>동물보호법 제15조·시행령 제4조에 따라 월령 2개월 이상 개는 등록 의무가 있습니다. 시행규칙 별표 14의 등록 수수료는 전국 공통 내장형 1만원·외장형 3천원이며 칩값·시술비는 별도입니다. 지자체 지원사업 적용 시 자부담 약 1만원, 미적용 시 5만~9만원.</span></div>
         <div class="guide-box"><strong>품종별 비용 차이</strong><span>대형견은 사료·용품·의료비가 소형견보다 1.5~2배 높습니다. 반려동물 평생 양육비용 계산기로 장기 예산도 함께 점검하세요.</span></div>
       </div>
-    </div>
-    <div class="guide-card faq-card">
-      <h2>자주 묻는 질문</h2>
-      <div class="faq-item"><h3>유기견 입양 시 비용이 전혀 없나요?</h3><p>분양비는 0~10만원으로 매우 저렴하지만 중성화 수술비, 예방접종비, 기본 용품비는 동일하게 필요합니다. 합산 시 보통 70~90만원 수준이며, 일부 보호소 의료 지원을 받으면 30~50만원으로 줄어들 수 있습니다.</p></div>
-      <div class="faq-item"><h3>강아지와 고양이 초기비용 차이가 있나요?</h3><p>기본값 기준 강아지(소형견 약 179만원)가 고양이(약 166만원)보다 13만원 정도 더 들며, 목줄·하네스 불필요와 중성화 비용 차이가 주된 원인입니다.</p></div>
-      <div class="faq-item"><h3>예방접종은 몇 회 맞아야 하나요?</h3><p>강아지는 종합백신 5차+광견병, 고양이는 종합백신 3차가 기본이며, 전체 접종 완료까지 약 15~25만원이 소요됩니다.</p></div>
-      <div class="faq-item"><h3>입양 초기비용 외에 매달 들어가는 비용은 얼마인가요?</h3><p>소형견 기준 월 약 17만원(연 204만원), 대형견 약 26만원(연 312만원), 고양이 약 12만원(연 144만원)이 평균이며, 자세한 항목별 계산은 <a href="/calc/pet/monthly-cost/">월 생활비 계산기</a>에서 확인할 수 있습니다.</p></div>
-      <div class="faq-item"><h3>분양비 외에 숨겨진 초기비용이 있나요?</h3><p>동물보호법 제15조와 시행령 제4조에 따라 월령 2개월 이상 개는 등록 의무가 있습니다. 시행규칙 별표 14가 정한 등록 수수료는 전국 공통으로 내장형 1만원·외장형 3천원인데, 여기에는 칩값과 시술비가 빠져 있습니다. 지자체 지원사업을 쓰면 자부담 약 1만원, 지원이 없으면 칩·시술비를 더해 5만~9만원이 듭니다. 중성화 수술은 생후 5~6개월 이후에 별도 발생하며 20~45만원 수준이므로, 첫 달 예산 외에 예비 의료비를 별도로 비축해두는 것이 좋습니다.</p></div>
-      <div class="faq-item"><h3>반려동물 펫보험은 처음부터 가입하는 게 좋을까요?</h3><p>펫보험은 가입 시점이 어릴수록 보험료가 낮고 보장 범위가 넓습니다. 생후 30일~6개월 사이에 가입하면 선천성 질환 면책 기간을 줄일 수 있습니다. KB펫보험 통계 기준 반려동물 연간 의료비 평균은 강아지 약 50만원, 고양이 약 40만원 수준이므로, 보험 가입 여부를 입양 초기에 검토하는 것을 권장합니다.</p></div>
+        </section>
+            <section class="ds-section faq-card" aria-labelledby="adoption-faq">
+          <div class="ds-section-head"><h2 id="adoption-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>유기견 입양 시 비용이 전혀 없나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>분양비는 0~10만원으로 매우 저렴하지만 중성화 수술비, 예방접종비, 기본 용품비는 동일하게 필요합니다. 합산 시 보통 70~90만원 수준이며, 일부 보호소 의료 지원을 받으면 30~50만원으로 줄어들 수 있습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>강아지와 고양이 초기비용 차이가 있나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>기본값 기준 강아지(소형견 약 179만원)가 고양이(약 166만원)보다 13만원 정도 더 들며, 목줄·하네스 불필요와 중성화 비용 차이가 주된 원인입니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>예방접종은 몇 회 맞아야 하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>강아지는 종합백신 5차+광견병, 고양이는 종합백신 3차가 기본이며, 전체 접종 완료까지 약 15~25만원이 소요됩니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>입양 초기비용 외에 매달 들어가는 비용은 얼마인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>소형견 기준 월 약 17만원(연 204만원), 대형견 약 26만원(연 312만원), 고양이 약 12만원(연 144만원)이 평균이며, 자세한 항목별 계산은 <a href="/calc/pet/monthly-cost/">월 생활비 계산기</a>에서 확인할 수 있습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>분양비 외에 숨겨진 초기비용이 있나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>동물보호법 제15조와 시행령 제4조에 따라 월령 2개월 이상 개는 등록 의무가 있습니다. 시행규칙 별표 14가 정한 등록 수수료는 전국 공통으로 내장형 1만원·외장형 3천원인데, 여기에는 칩값과 시술비가 빠져 있습니다. 지자체 지원사업을 쓰면 자부담 약 1만원, 지원이 없으면 칩·시술비를 더해 5만~9만원이 듭니다. 중성화 수술은 생후 5~6개월 이후에 별도 발생하며 20~45만원 수준이므로, 첫 달 예산 외에 예비 의료비를 별도로 비축해두는 것이 좋습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>반려동물 펫보험은 처음부터 가입하는 게 좋을까요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>펫보험은 가입 시점이 어릴수록 보험료가 낮고 보장 범위가 넓습니다. 생후 30일~6개월 사이에 가입하면 선천성 질환 면책 기간을 줄일 수 있습니다. KB펫보험 통계 기준 반려동물 연간 의료비 평균은 강아지 약 50만원, 고양이 약 40만원 수준이므로, 보험 가입 여부를 입양 초기에 검토하는 것을 권장합니다.</p>
+            </details>
       <div class="update-note">최종 검토: 2026.04.25 · 계산 결과는 참고용입니다.</div>
-    </div>
+          </div>
+        </section>
   </div>
+    </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
   <script>
   window.TRUST_BLOCK_CONFIG = {
     standard: '2026년 기준 입양·분양 시장 평균 비용',
@@ -216,37 +263,44 @@
     lastReviewed: '2026.05',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>
-  <div class="sibling-section">
-    <div class="sibling-title">다른 반려동물 계산기</div>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 반려동물 계산기</h2>
     <div class="sibling-list">
-      <a href="/calc/pet/dog-age/" class="sibling-link">🐶 강아지 나이</a>
-      <a href="/calc/pet/cat-age/" class="sibling-link">🐱 고양이 나이</a>
-      <a href="/calc/pet/food-amount/" class="sibling-link">🍽️ 사료 급여량</a>
-      <a href="/calc/pet/monthly-cost/" class="sibling-link">🐕 월 생활비</a>
-      <a href="/calc/pet/adoption/" class="sibling-link current">🏠 입양 초기비용</a>
-      <a href="/calc/pet/medical/" class="sibling-link">💊 의료비 예산</a>
-      <a href="/calc/pet/insurance/" class="sibling-link">🛡️ 펫보험 비교</a>
-      <a href="/calc/pet/lifetime-cost/" class="sibling-link">📊 평생 양육비</a>
+      <a href="/calc/pet/dog-age/" class="sibling-link">강아지 나이</a>
+      <a href="/calc/pet/cat-age/" class="sibling-link">고양이 나이</a>
+      <a href="/calc/pet/food-amount/" class="sibling-link">사료 급여량</a>
+      <a href="/calc/pet/monthly-cost/" class="sibling-link">월 생활비</a>
+      <a href="/calc/pet/medical/" class="sibling-link">의료비 예산</a>
+      <a href="/calc/pet/insurance/" class="sibling-link">펫보험 비교</a>
+      <a href="/calc/pet/lifetime-cost/" class="sibling-link">평생 양육비</a>
     </div>
-    <div class="sibling-title">관련 가이드</div>
-    <div class="sibling-list">
-      <a href="/blog/posts/dog-vs-cat-cost.html" class="sibling-link">📖 강아지 vs 고양이 - 처음 입양할 때 실제 비용은 얼마나 다를까?</a>
-      <a href="/blog/posts/pet-adoption-cost-guide.html" class="sibling-link">📖 반려동물 입양 초기 비용 총정리 - 강아지·고양이 데려오기 전 준비할 것</a>
-      <a href="/blog/posts/pet-registration-guide.html" class="sibling-link">📖 동물등록 안 하면 과태료 얼마 2026 - 등록방법·비용·자진신고 총정리</a>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/dog-vs-cat-cost.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/dog-vs-cat-cost-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>강아지 vs 고양이 - 처음 입양할 때 실제 비용은 얼마나 다를까?</span></a>
+      <a href="/blog/posts/pet-adoption-cost-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/pet-adoption-cost-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>반려동물 입양 초기 비용 총정리 - 강아지·고양이 데려오기 전 준비할 것</span></a>
+      <a href="/blog/posts/pet-registration-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/pet-registration-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>동물등록 안 하면 과태료 얼마 2026 - 등록방법·비용·자진신고 총정리</span></a>
     </div>
   </div>
 </main>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
-    <span class="footer-copy">© 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
   </div>
 </footer>
+
+<script src="/assets/ds/calc-kit.js?v=d45e66d9"></script>
 <script>
 
 function W(m){if(m===null||m===undefined||isNaN(m))return'-';m=Math.round(m);if(m===0)return'0원';if(m>=10000){const eok=Math.floor(m/10000),rem=m%10000;return eok.toLocaleString()+'억'+(rem>0?' '+rem.toLocaleString()+'만원':'원');}return m.toLocaleString()+'만원';}
-function gv(id){return parseFloat(document.getElementById(id).value)||0;}
+function gv(id){return parseFloat(String(document.getElementById(id).value).replace(/,/g, ''))||0;}
 let curAnimal='dog',curSize='small',curAdopt='breeder';
 const animalLabels={dog:'강아지',cat:'고양이'};
 const sizeLabels={small:'소형견',medium:'중형견',large:'대형견'};
@@ -280,11 +334,10 @@ function calc(){
 }
 </script>
 
-<script src="/assets/calc-validate.js"></script>
-<script src="/assets/calc-result-tools.js"></script>
-<script src="/assets/footer-unified.js" defer></script>
-<script src="/assets/calc-registry.js"></script>
-<script src="/assets/pet-detail-shell.js"></script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
@@ -295,7 +348,13 @@ window.ARTICLE_INFO_CONFIG = {
   category: 'pet'
 };
 </script>
-<script src="/assets/blog-article-info.js"></script>
-<script src="/assets/blog-review-footer.js"></script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "result", "required": ["adopt-fee"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#adoption-next", "next": []});
+  DSCalc.placeTrust('ds-trust-col');
+</script>
+<script src="/assets/ds/prefill.js?v=fa5eb49a" defer></script>
 </body>
 </html>

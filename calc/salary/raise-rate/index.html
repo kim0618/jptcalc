@@ -21,10 +21,9 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link rel="stylesheet" href="/assets/salary-common.css" />
+<link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -48,59 +47,44 @@
   }
   </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"연봉 5% 인상이면 실수령도 5% 늘어나나요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 소득세는 누진세 구조라 연봉이 높아질수록 세율이 올라 실수령 증가폭은 5%보다 작습니다. 고연봉 구간일수록 세금과 4대보험 부담이 비례적으로 더 늘어납니다."}},{"@type":"Question","name":"물가상승률보다 낮은 인상은 실질 삭감인가요?","acceptedAnswer":{"@type":"Answer","text":"맞습니다. 물가상승률이 3%인데 연봉 인상률이 2%라면 같은 돈으로 살 수 있는 재화와 서비스의 양이 줄어 실질 구매력은 하락합니다. 연봉 협상 시 통계청 소비자물가지수를 참고해 실질 인상 여부를 확인하는 것이 좋습니다."}},{"@type":"Question","name":"업계 평균 인상률은 어디서 확인하나요?","acceptedAnswer":{"@type":"Answer","text":"한국경영자총협회, 잡코리아, 사람인 등에서 매년 임금인상률 조사 결과를 발표합니다. 업종별·기업 규모별로 평균 인상률이 달라지므로 본인이 속한 업계 기준 자료를 확인하는 것이 좋습니다."}},{"@type":"Question","name":"연봉 협상 최적 시기는 언제인가요?","acceptedAnswer":{"@type":"Answer","text":"일반적으로 성과 평가 직후나 회계연도 시작 전이 가장 효과적입니다. 본인의 기여도가 수치로 드러난 직후에 협상하면 논거가 명확해집니다. 이직 제안을 보유한 상태에서 협상하는 것이 유리하지만, 시장 평균 인상률을 근거로 삼는 방식이 일반적으로 받아들여지기 쉽습니다."}},{"@type":"Question","name":"세전 인상률과 실수령 인상률은 왜 다른가요?","acceptedAnswer":{"@type":"Answer","text":"소득세는 누진세 구조로 연봉이 높아질수록 높은 세율이 적용됩니다. 연봉 5,000만원 이하 구간은 15% 세율이지만 8,800만원 초과분은 24%가 적용됩니다. 건강보험·국민연금·고용보험도 비례적으로 늘어나므로 세전 인상률보다 실수령 인상률이 항상 낮게 나타납니다."}}]}</script>
-  <style>
-    /* raise-rate 고유 스타일 - 공통 스타일은 /assets/salary-common.css 참조 */
-    .input-wrap{position:relative}
-    .input-wrap .unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none}
-    input[type=number],input[type=text]{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
-    input[type=number]::placeholder{color:var(--gray-400);font-weight:400}
-    input[type=number]:focus,input[type=text]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(59,130,246,0.15)}
-    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
-    .seg-group{display:flex;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:18px}
-    .seg-btn{flex:1;border:none;border-radius:7px;background:transparent;padding:9px 4px;font-size:12px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap}
-    .seg-btn:hover{color:var(--gray-700)}
-    .seg-btn.active{background:var(--primary);color:#fff;font-weight:700}
-    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
-    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
-    .result-card{background:linear-gradient(135deg,#EFF6FF 0%,#DBEAFE 100%);border:1px solid rgba(59,130,246,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
-    .result-card.show{display:block}
-    .result-row+.result-row{border-top:1px solid rgba(0,0,0,0.07)}
-    .result-total-row{border-top:1px solid rgba(0,0,0,0.15)!important;margin-top:4px;padding-top:14px!important}
-    .result-total-value{font-size:24px;font-weight:900;color:var(--gray-900)}
-  </style>
 </head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
-    <nav class="header-nav">
-      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
-      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/salary/" class="nav-item active"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
-      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
-      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
-      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
-      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
-      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
-    </nav>
-    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
-    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
-  </div>
+<body data-cat="salary" style="--cat: var(--c-salary)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
 </header>
-<main class="page-wrap">
-  <div class="page-header">
-    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/salary/">이직/연봉 계산기</a><span class="breadcrumb-sep">›</span><span>연봉 인상률 계산기</span></div>
-    <div class="page-header-badge">💼 실수령 차이 자동 계산</div>
-    <h1>연봉 인상률 계산기</h1>
-    <p>인상 전후 연봉으로 인상률과 월 실수령 차이를 확인하세요</p>
+
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/salary/">이직/연봉 계산기</a> &rsaquo; 연봉 인상률 계산기</div>
+      <div class="page-badge">실수령 차이 자동 계산</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-briefcase"></use></svg></span>
+        <h1 class="page-title">연봉 인상률 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">실수령 차이 자동 계산</span>
+          <span class="ds-trust-chip">2026.05.06 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">인상 전후 연봉으로 인상률과 월 실수령 차이를 확인하세요</p>
+    </div>
   </div>
-    <div class="card">
-      <div class="card-title">인상 전후 연봉</div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+      <div class="field-label ds-group-label">인상 전후 연봉</div>
       <div class="field">
         <div class="field-label">인상 전 연봉 <span class="label-hint">만원 단위</span></div>
         <div class="input-wrap">
-          <input type="number" id="s3-before" placeholder="예) 4000" oninput="calcRaise()" />
+          <input type="text" inputmode="numeric" autocomplete="off" data-ds-num data-prefill="salary" id="s3-before" placeholder="예) 4000" oninput="calcRaise()" />
           <span class="unit">만원</span>
         </div>
         <div class="converted" id="s3-before-conv"></div>
@@ -108,13 +92,20 @@
       <div class="field">
         <div class="field-label">인상 후 연봉 <span class="label-hint">만원 단위</span></div>
         <div class="input-wrap">
-          <input type="number" id="s3-after" placeholder="예) 4500" oninput="calcRaise()" />
+          <input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="s3-after" placeholder="예) 4500" oninput="calcRaise()" />
           <span class="unit">만원</span>
         </div>
         <div class="converted" id="s3-after-conv"></div>
       </div>
     </div>
-    <div class="result-card" id="s3-result">
+
+        <button type="button" class="ds-btn-calc" data-calc-submit="calcRaise" data-result="s3-result" data-required="s3-before">계산하기</button>
+      </div>
+    </section>
+
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="s3-result">
       <div class="raise-banner show" id="s3-banner">
         <div class="rb-label">연봉 인상률</div>
         <div class="rb-value" id="s3-pct">-</div>
@@ -128,35 +119,65 @@
         <span class="result-total-value" id="s3-monthly-diff">-</span>
       </div>
       <p class="result-note">※ 부양가족 1명(본인)·비과세 0원 기준. 월 추가 실수령액은 2026년 세금·4대보험 공제 후 예상값입니다. 누진세 구조로 인해 고연봉 구간일수록 세전 인상률 대비 실수령 증가폭이 작아집니다.</p>
-    </div>
-  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('s3-result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/salary/take-home-pay/">연봉 실수령액 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">월 추가 실수령 (예상)</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="raise-rate-next">
+        <a class="ds-next-card" href="/calc/salary/take-home-pay/" data-next="take-home-pay"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-briefcase"></use></svg></span><span class="ds-next-body"><b>연봉 실수령액 계산기</b><span>세전 연봉에서 국민연금·건강·장기요양·고용보험과 근로소득세·지방소득세를 차감해 월 실수령액을 산출합니다. 부양가족 수·비과세 식대까지 반영됩니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/salary/job-change/" data-next="job-change"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-briefcase"></use></svg></span><span class="ds-next-body"><b>이직 연봉 비교 계산기</b><span>현재 실수령을 유지하거나 넘으려면 제안 연봉이 얼마여야 하는지 역산합니다. 퇴직금 정산, 수습기간 급여 삭감도 변수로 반영됩니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
+  </div>
+
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">근로기준법·소득세법 2026년 기준 <a href="https://kostat.go.kr" target="_blank" rel="noopener">통계청 소비자물가지수 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#raise-rate-s1">연봉 인상률</a><a href="#raise-rate-s2">계산 방법</a><a href="#raise-rate-s3">계산 예시</a><a href="#raise-rate-s4">확인할 핵심</a><a href="#raise-rate-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
     <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
     <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
   </div>
 
   <div class="guide-section">
-    <div class="guide-card">
-      <h2>연봉 인상률 계산기는 언제 쓰나요?</h2>
-      <p>연봉 협상이나 연간 인상 시 인상률과 실수령 변화를 미리 확인하면 기대치를 조정하고 협상에 활용할 수 있습니다.</p>
+            <section class="ds-section ds-prose" aria-labelledby="raise-rate-s1">
+          <div class="ds-section-head"><h2 id="raise-rate-s1">연봉 인상률 계산기는 언제 쓰나요?</h2></div>
+<p>연봉 협상이나 연간 인상 시 인상률과 실수령 변화를 미리 확인하면 기대치를 조정하고 협상에 활용할 수 있습니다.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>인상률 확인</strong><span>전년 대비 인상 비율과 금액 계산</span></div>
         <div class="guide-box"><strong>실수령 차이</strong><span>인상 전후 월 실수령 변화 확인</span></div>
         <div class="guide-box"><strong>물가 반영</strong><span>물가상승률 대비 실질 인상 여부 판단</span></div>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>연봉 인상률 계산 방법</h2>
-      <p>연봉 인상률은 퍼센트만 확인하는 것으로 끝나지 않습니다. 소득세 누진세 구조로 세전 인상률과 실수령 인상률이 다르기 때문에, 아래 4단계로 확인하면 정확한 기대치를 세울 수 있습니다.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="raise-rate-s2">
+          <div class="ds-section-head"><h2 id="raise-rate-s2">연봉 인상률 계산 방법</h2></div>
+<p>연봉 인상률은 퍼센트만 확인하는 것으로 끝나지 않습니다. 소득세 누진세 구조로 세전 인상률과 실수령 인상률이 다르기 때문에, 아래 4단계로 확인하면 정확한 기대치를 세울 수 있습니다.</p>
       <ul>
         <li><strong>1단계.</strong> 세전 인상률 계산: (인상 후 연봉 - 인상 전 연봉) ÷ 인상 전 연봉 × 100으로 퍼센트를 산출합니다.</li>
         <li><strong>2단계.</strong> 월 실수령 계산: 소득세법·4대보험 요율(2026년 기준)을 반영해 각 연봉의 월 실수령액을 계산합니다. 국민연금 4.75%, 건강보험 3.595%, 장기요양 0.4725%, 고용보험 0.9%가 공제됩니다.</li>
         <li><strong>3단계.</strong> 월 추가 실수령 확인: 인상 후 월 실수령에서 인상 전 월 실수령을 빼면 실제 손에 쥐는 증가액이 나옵니다. 세전 5% 인상이라도 실수령 증가는 3~4%에 그치는 경우가 많습니다.</li>
         <li><strong>4단계.</strong> 물가 대비 실질 인상률 판단: 통계청 소비자물가지수와 비교해 구매력이 실제로 늘었는지 확인합니다. 인상률이 물가상승률 이하라면 실질 임금은 감소한 것입니다.</li>
       </ul>
-    </div>
-    <div class="guide-card">
-      <h2>실제 계산 예시</h2>
-      <h3>예시 1 - 김지수(27세, 중소 제조업 사원 2년차)</h3>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="raise-rate-s3">
+          <div class="ds-section-head"><h2 id="raise-rate-s3">실제 계산 예시</h2></div>
+<h3>예시 1 - 김지수(27세, 중소 제조업 사원 2년차)</h3>
       <p>생산관리팀에 재직 중인 김지수씨는 연봉 3,400만원에서 3,700만원으로 인상 제안을 받았습니다. 세전으로는 8.82% 인상이지만, 실제 월 실수령 변화가 얼마인지 확인합니다.</p>
       <ul>
         <li>인상 전 연봉: 3,400만원 (월 실수령 약 244만원)</li>
@@ -174,20 +195,20 @@
         <li><strong>월 추가 실수령: 약 37만원 (세전 11.54% 인상, 실수령 증가율 약 10.4%)</strong></li>
       </ul>
       <p>5,000만원 이상 구간은 소득세 부담이 커, 세전 600만원 인상에도 연간 실수령 증가는 444만원 수준에 머뭅니다. 고연봉일수록 세전·실수령 인상률 격차가 커지는 이유입니다.</p>
-    </div>
-    <div class="guide-card">
-      <h2>이것만은 확인하세요</h2>
-      <p>연봉 인상 협상 전, 이 세 가지를 놓치면 기대치와 실제 실수령이 크게 다를 수 있습니다.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="raise-rate-s4">
+          <div class="ds-section-head"><h2 id="raise-rate-s4">이것만은 확인하세요</h2></div>
+<p>연봉 인상 협상 전, 이 세 가지를 놓치면 기대치와 실제 실수령이 크게 다를 수 있습니다.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>비과세 항목 분리</strong><span>식대(월 최대 20만원)·교통비 등 비과세 수당은 연봉 계산 시 제외됩니다. 회사마다 비과세 규모가 달라 같은 연봉이라도 실수령이 달라질 수 있습니다.</span></div>
         <div class="guide-box"><strong>4대보험 상한 기준</strong><span>국민연금 부과 상한선은 월 659만원(2026년)입니다. 이 이상 구간에서는 연봉이 올라도 연금 공제액이 늘지 않아, 고연봉자의 실수령 증가폭이 상대적으로 커집니다.</span></div>
         <div class="guide-box"><strong>물가상승률 비교</strong><span>2025년 소비자물가 상승률은 약 2.3%였습니다. 인상률이 이보다 낮으면 실질 구매력이 줄어드는 것으로, 단순 인상 퍼센트만 보지 말고 물가와 비교하는 것이 중요합니다.</span></div>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>인상률별 연봉 인상액 (인상 전 4,000만원 기준)</h2>
-      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">아래 수치는 이 페이지 계산기의 실제 출력값입니다.</p>
-      <div class="guide-table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="raise-rate-s5">
+          <div class="ds-section-head"><h2 id="raise-rate-s5">인상률별 연봉 인상액 (인상 전 4,000만원 기준)</h2></div>
+<p class="ds-table-lead">아래 수치는 이 페이지 계산기의 실제 출력값입니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead><tr><th>인상 후 연봉</th><th>연봉 인상률</th><th>연간 인상액</th><th>월 추가 실수령 (예상)</th></tr></thead>
           <tbody>
@@ -198,17 +219,35 @@
           </tbody>
         </table>
       </div>
-    </div>
-    <div class="guide-card faq-card">
-      <h2>자주 묻는 질문</h2>
-      <div class="faq-item"><h3>연봉 5% 인상이면 실수령도 5% 늘어나나요?</h3><p>아닙니다. 소득세는 누진세라 연봉이 높아질수록 세율이 올라 실수령 증가폭은 5%보다 작습니다.</p></div>
-      <div class="faq-item"><h3>물가상승률보다 낮은 인상은 실질 삭감인가요?</h3><p>맞습니다. 물가상승률이 3%인데 연봉 인상률이 2%라면, 같은 돈으로 살 수 있는 재화와 서비스의 양이 줄어 실질 구매력은 하락합니다. 연봉 협상 시 통계청 소비자물가지수를 참고해 실질 인상 여부를 확인하는 것이 좋습니다.</p></div>
-      <div class="faq-item"><h3>업계 평균 인상률은 어디서 확인하나요?</h3><p>한국경영자총협회, 잡코리아, 사람인 등에서 매년 임금인상률 조사 결과를 발표합니다. 업종별·기업 규모별로 평균 인상률이 달라지므로 본인이 속한 업계 기준 자료를 확인하는 것이 좋습니다.</p></div>
-      <div class="faq-item"><h3>연봉 협상 최적 시기는 언제인가요?</h3><p>일반적으로 성과 평가 직후나 회계연도 시작 전이 가장 효과적입니다. 본인의 기여도가 수치로 드러난 직후에 협상하면 논거가 명확해집니다. 이직 제안을 보유한 상태에서 협상하는 것이 유리하지만, 시장 평균 인상률을 근거로 삼는 방식이 일반적으로 받아들여지기 쉽습니다.</p></div>
-      <div class="faq-item"><h3>세전 인상률과 실수령 인상률은 왜 다른가요?</h3><p>소득세는 누진세 구조로 연봉이 높아질수록 높은 세율이 적용됩니다. 연봉 5,000만원 이하 구간은 15% 세율이지만 8,800만원 초과분은 24%가 적용됩니다. 여기에 건강보험·국민연금·고용보험도 비례적으로 늘어나므로, 세전 인상률보다 실수령 인상률이 항상 낮게 나타납니다.</p></div>
+        </section>
+            <section class="ds-section faq-card" aria-labelledby="raise-rate-faq">
+          <div class="ds-section-head"><h2 id="raise-rate-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>연봉 5% 인상이면 실수령도 5% 늘어나나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>아닙니다. 소득세는 누진세라 연봉이 높아질수록 세율이 올라 실수령 증가폭은 5%보다 작습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>물가상승률보다 낮은 인상은 실질 삭감인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>맞습니다. 물가상승률이 3%인데 연봉 인상률이 2%라면, 같은 돈으로 살 수 있는 재화와 서비스의 양이 줄어 실질 구매력은 하락합니다. 연봉 협상 시 통계청 소비자물가지수를 참고해 실질 인상 여부를 확인하는 것이 좋습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>업계 평균 인상률은 어디서 확인하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>한국경영자총협회, 잡코리아, 사람인 등에서 매년 임금인상률 조사 결과를 발표합니다. 업종별·기업 규모별로 평균 인상률이 달라지므로 본인이 속한 업계 기준 자료를 확인하는 것이 좋습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>연봉 협상 최적 시기는 언제인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>일반적으로 성과 평가 직후나 회계연도 시작 전이 가장 효과적입니다. 본인의 기여도가 수치로 드러난 직후에 협상하면 논거가 명확해집니다. 이직 제안을 보유한 상태에서 협상하는 것이 유리하지만, 시장 평균 인상률을 근거로 삼는 방식이 일반적으로 받아들여지기 쉽습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>세전 인상률과 실수령 인상률은 왜 다른가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>소득세는 누진세 구조로 연봉이 높아질수록 높은 세율이 적용됩니다. 연봉 5,000만원 이하 구간은 15% 세율이지만 8,800만원 초과분은 24%가 적용됩니다. 여기에 건강보험·국민연금·고용보험도 비례적으로 늘어나므로, 세전 인상률보다 실수령 인상률이 항상 낮게 나타납니다.</p>
+            </details>
       <div class="update-note">최종 검토: 2026.03.24 · 계산 결과는 참고용입니다.</div>
-    </div>
+          </div>
+        </section>
   </div>
+    </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
   <script>
   window.TRUST_BLOCK_CONFIG = {
     standard: '근로기준법·소득세법 2026년 기준',
@@ -224,42 +263,49 @@
     lastReviewed: '2026.05',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>
-  <div class="sibling-section">
-    <div class="sibling-title">다른 이직/연봉 계산기</div>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 이직/연봉 계산기</h2>
     <div class="sibling-list">
-      <a href="/calc/salary/take-home-pay/" class="sibling-link">💵 연봉 실수령액</a>
-      <a href="/calc/salary/comparison/" class="sibling-link">⚖️ 연봉 비교</a>
-      <a href="/calc/salary/hourly-wage/" class="sibling-link">⏱️ 시급·일급 변환</a>
-      <a href="/calc/salary/weekly-holiday-pay/" class="sibling-link">🗓️ 주휴수당</a>
-      <a href="/calc/salary/annual-leave-pay/" class="sibling-link">🏖️ 연차수당</a>
-      <a href="/calc/salary/ordinary-wage/" class="sibling-link">🧮 통상임금</a>
-      <a href="/calc/salary/average-wage/" class="sibling-link">📐 평균임금</a>
-      <a href="/calc/salary/premium-pay/" class="sibling-link">⏰ 가산수당</a>
-      <a href="/calc/salary/bonus-pay/" class="sibling-link">🎁 성과급 실수령</a>
-      <a href="/calc/salary/job-change/" class="sibling-link">📊 이직 연봉 비교</a>
-      <a href="/calc/salary/raise-rate/" class="sibling-link current">📈 연봉 인상률</a>
-      <a href="/calc/salary/dismissal-notice-pay/" class="sibling-link">📋 해고예고수당</a>
-      <a href="/calc/salary/severance/" class="sibling-link">📦 퇴직금</a>
-      <a href="/calc/salary/unemployment/" class="sibling-link">🛟 실업급여</a>
+      <a href="/calc/salary/take-home-pay/" class="sibling-link">연봉 실수령액</a>
+      <a href="/calc/salary/comparison/" class="sibling-link">연봉 비교</a>
+      <a href="/calc/salary/hourly-wage/" class="sibling-link">시급·일급 변환</a>
+      <a href="/calc/salary/weekly-holiday-pay/" class="sibling-link">주휴수당</a>
+      <a href="/calc/salary/annual-leave-pay/" class="sibling-link">연차수당</a>
+      <a href="/calc/salary/ordinary-wage/" class="sibling-link">통상임금</a>
+      <a href="/calc/salary/average-wage/" class="sibling-link">평균임금</a>
+      <a href="/calc/salary/premium-pay/" class="sibling-link">가산수당</a>
+      <a href="/calc/salary/bonus-pay/" class="sibling-link">성과급 실수령</a>
+      <a href="/calc/salary/job-change/" class="sibling-link">이직 연봉 비교</a>
+      <a href="/calc/salary/dismissal-notice-pay/" class="sibling-link">해고예고수당</a>
+      <a href="/calc/salary/severance/" class="sibling-link">퇴직금</a>
+      <a href="/calc/salary/unemployment/" class="sibling-link">실업급여</a>
     </div>
-    <div class="sibling-title">관련 가이드</div>
-    <div class="sibling-list">
-      <a href="/blog/posts/bonus-tax-guide.html" class="sibling-link">📖 보너스·성과급 세금 계산법 - 성과급 실수령액과 상여 원천징수 방식 (20…</a>
-      <a href="/blog/posts/raise-or-quit-guide.html" class="sibling-link">📖 연봉협상 vs 이직, 인상률 몇 %부터 버티는 게 유리한가 2026</a>
-      <a href="/blog/posts/raise-rate-industry.html" class="sibling-link">📖 연봉인상률 2026 - 업종·연차별 적정 기준표와 협상 전략</a>
-      <a href="/blog/posts/salary-comparison-guide.html" class="sibling-link">📖 연봉 비교 분석법 - 동종업계 내 내 연봉 위치 파악하기</a>
-      <a href="/blog/posts/salary-negotiation.html" class="sibling-link">📖 이직 연봉 협상 전략 - 얼마나 올려야 실제로 이득일까?</a>
-      <a href="/blog/posts/salary-raise-guide.html" class="sibling-link">📖 연봉 인상률 계산법 - 3% 올랐는데 실수령 증가는 2.6~2.7%인 이유</a>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/bonus-tax-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/bonus-tax-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>보너스·성과급 세금 계산법 - 성과급 실수령액과 상여 원천징수 방식 (2026)</span></a>
+      <a href="/blog/posts/raise-or-quit-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/raise-or-quit-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>연봉협상 vs 이직, 인상률 몇 %부터 버티는 게 유리한가 2026</span></a>
+      <a href="/blog/posts/raise-rate-industry.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/raise-rate-industry-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>연봉인상률 2026 - 업종·연차별 적정 기준표와 협상 전략</span></a>
+      <a href="/blog/posts/salary-comparison-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/salary-comparison-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>연봉 비교 분석법 - 동종업계 내 내 연봉 위치 파악하기</span></a>
+      <a href="/blog/posts/salary-negotiation.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/salary-negotiation-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>이직 연봉 협상 전략 - 얼마나 올려야 실제로 이득일까?</span></a>
+      <a href="/blog/posts/salary-raise-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/salary-raise-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>연봉 인상률 계산법 - 3% 올랐는데 실수령 증가는 2.6~2.7%인 이유</span></a>
     </div>
   </div>
 </main>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
-    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
   </div>
 </footer>
+
+<script src="/assets/ds/calc-kit.js?v=d45e66d9"></script>
 <script>
 function fmtW(won) {
   won = Math.round(won);
@@ -329,8 +375,8 @@ function calcMonthly(annual_man, dep_count) {
 }
 
 function calcRaise() {
-  const before = parseFloat(document.getElementById('s3-before').value);
-  const after = parseFloat(document.getElementById('s3-after').value);
+  const before = parseFloat(String(document.getElementById('s3-before').value).replace(/,/g, ''));
+  const after = parseFloat(String(document.getElementById('s3-after').value).replace(/,/g, ''));
   document.getElementById('s3-before-conv').textContent = before > 0 ? fmtM(before) : '';
   document.getElementById('s3-after-conv').textContent = after > 0 ? fmtM(after) : '';
   const res = document.getElementById('s3-result');
@@ -350,11 +396,10 @@ function calcRaise() {
 }
 </script>
 
-<script src="/assets/calc-validate.js"></script>
-<script src="/assets/calc-result-tools.js"></script>
-  <script src="/assets/footer-unified.js" defer></script>
-<script src="/assets/calc-registry.js"></script>
-<script src="/assets/salary-detail-shell.js"></script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
@@ -365,7 +410,14 @@ window.ARTICLE_INFO_CONFIG = {
   category: 'salary'
 };
 </script>
-<script src="/assets/blog-article-info.js"></script>
-<script src="/assets/blog-review-footer.js"></script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "s3-result", "required": ["s3-before"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#raise-rate-next", "next": [{"key": "take-home-pay", "path": "/calc/salary/take-home-pay/", "sub": "세전 연봉에서 국민연금·건강·장기요양·고용보험과 근로소득세·지방소득세를 차감해 월 실수령액을 산출합니다. 부양가족 수·비과세 식대까지 반영됩니다.", "params": {"salary": "s3-after"}, "from": "raise-rate"}]});
+  DSCalc.placeTrust('ds-trust-col');
+  (function () { const a = document.getElementById('ds-primary-next'); if (!a) return; const go = () => { const v = {}; Object.entries({"salary": "s3-after"}).forEach(([k, id]) => v[k] = DSCalc.num(id)); a.href = DSCalc.link('/calc/salary/take-home-pay/', v, 'raise-rate'); }; document.addEventListener('input', go, true); go(); })();
+</script>
+<script src="/assets/ds/prefill.js?v=fa5eb49a" defer></script>
 </body>
 </html>

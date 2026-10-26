@@ -21,9 +21,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -55,79 +53,59 @@
     {"@type":"Question","name":"부부 기준으로 계산하려면 어떻게 하나요?","acceptedAnswer":{"@type":"Answer","text":"희망 월 생활비를 부부 합산으로 입력하고, 예상 월 연금도 두 사람의 합산 금액을 입력하세요. 통계청 기준 부부 가구 월 생활비는 1인 가구의 약 1.5~1.7배 수준입니다."}}
   ]}
   </script>
-  <link rel="stylesheet" href="/assets/pension-welfare-common.css" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
   <style>
-    /* retirement-living 고유 스타일 */
-    input[type=number]{width:100%;border:1.5px solid var(--gray-200);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:var(--gray-50);outline:none;transition:border-color .18s;-moz-appearance:textfield}
-    input[type=number]::placeholder{color:var(--gray-400);font-weight:400}
-    input[type=number]:focus{border-color:var(--primary);background:#fff}
-    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
-    .input-wrap{position:relative;display:flex;align-items:center;overflow:visible;}
-    .input-wrap input{padding-right:48px;}
-    .input-wrap .unit{position:absolute;right:14px;font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none;}
-    .converted{font-size:12px;color:var(--primary);margin-top:4px;font-weight:600;}
-    .seg-group{display:flex;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:14px;}
-    .seg-btn{flex:1;border:none;border-radius:7px;background:transparent;padding:9px 6px;font-size:13px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap;}
-    .seg-btn:hover{color:var(--gray-700);}
-    .seg-btn.active{background:var(--primary);color:#fff;font-weight:700;}
-    .result-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--gray-100);font-size:14px;}
-    .result-row:last-child{border-bottom:none;}
-    .result-label{color:var(--gray-600);font-weight:500;}
-    .result-value{font-weight:700;color:var(--gray-900);}
-    .result-total-row{margin-top:4px;padding-top:14px;border-top:2px solid rgba(14,165,233,0.3)!important;border-bottom:none!important;}
-    .result-total-label{font-size:15px;font-weight:800;color:var(--gray-800);}
-    .result-total-value{font-size:20px;font-weight:900;color:var(--primary);}
-    .result-card{background:#fff;border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:var(--shadow-md);border:2px solid rgba(14,165,233,0.3);display:none;}
-    .result-card.show{display:block;}
-    .result-section-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin:14px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--gray-100);}
-    .highlight-box{background:rgba(14,165,233,0.06);border:1px solid rgba(14,165,233,0.2);border-radius:12px;padding:16px;text-align:center;margin-bottom:14px;}
-    .hb-label{font-size:12px;font-weight:700;color:var(--gray-500);margin-bottom:4px;}
-    .hb-value{font-size:28px;font-weight:900;color:var(--primary);}
-    .hb-sub{font-size:12px;color:var(--gray-500);margin-top:4px;}
-    .sim-note{font-size:11px;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.25);border-radius:8px;padding:10px 12px;color:#92400E;line-height:1.7;}
-    .trust-block{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:10px;padding:12px 14px;margin-top:4px;}
-    .trust-block p{font-size:11px;color:var(--gray-500);line-height:1.7;}
-    .trust-block strong{color:var(--gray-700);}
-  .bf-entry{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px;padding:11px 14px;border-radius:10px;border:1px solid var(--gray-200);background:var(--gray-50);color:var(--gray-700);font-size:13px;font-weight:700;text-decoration:none}
-.bf-entry:hover{border-color:var(--primary);color:var(--primary)}
-</style>
+    /* 페이지 고유 스타일(공통 부품 재정의는 base.css가 맡아 뺐다) */
+    .highlight-box { background:rgba(14,165,233,0.06);border:1px solid rgba(14,165,233,0.2);border-radius:12px;padding:16px;text-align:center;margin-bottom:14px; }
+    .hb-label { font-size:12px;font-weight:700;color:var(--gray-500);margin-bottom:4px; }
+    .hb-value { font-size:28px;font-weight:900;color:var(--primary); }
+    .hb-sub { font-size:12px;color:var(--gray-500);margin-top:4px; }
+    .sim-note { font-size:11px;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.25);border-radius:8px;padding:10px 12px;color:#92400E;line-height:1.7; }
+    .trust-block { background:var(--gray-50);border:1px solid var(--gray-200);border-radius:10px;padding:12px 14px;margin-top:4px; }
+    .trust-block p { font-size:11px;color:var(--gray-500);line-height:1.7; }
+    .trust-block strong { color:var(--gray-700); }
+    .bf-entry { display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px;padding:11px 14px;border-radius:10px;border:1px solid var(--gray-200);background:var(--gray-50);color:var(--gray-700);font-size:13px;font-weight:700;text-decoration:none }
+    .bf-entry:hover { border-color:var(--primary);color:var(--primary) }
+  </style>
 </head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
-    <nav class="header-nav">
-      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
-      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
-      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
-      <a href="/calc/pension-welfare/" class="nav-item active"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
-      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
-      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
-      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
-    </nav>
-    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
-    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
-  </div>
+<body data-cat="pension-welfare" style="--cat: var(--c-pension-welfare)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
 </header>
-<main class="page-wrap">
-  <div class="page-header">
-    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/pension-welfare/">연금·복지 계산기</a><span class="breadcrumb-sep">›</span><span>노후 생활비 계산기</span></div>
-    <div class="page-header-badge">&#127968; 노후 준비 시뮬레이션</div>
-    <h1>노후 생활비 계산기</h1>
-    <p>은퇴 나이와 희망 생활비를 입력하면 물가상승률을 반영한 필요 총 자금을 계산합니다</p>
-  </div>
 
-  <div class="card">
-    <div class="card-title">노후 생활비 시뮬레이션</div>
-
-    <div class="info-box">
-      <span class="info-icon">&#128161;</span>
-      <p>입력하신 값을 기반으로 시뮬레이션합니다. 실제 필요 금액은 개인 생활 수준과 건강 상태에 따라 다를 수 있습니다.</p>
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/pension-welfare/">연금·복지 계산기</a> &rsaquo; 노후 생활비 계산기</div>
+      <div class="page-badge">노후 준비 시뮬레이션</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span>
+        <h1 class="page-title">노후 생활비 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">노후 준비 시뮬레이션</span>
+          <span class="ds-trust-chip">2026.04.25 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">은퇴 나이와 희망 생활비를 입력하면 물가상승률을 반영한 필요 총 자금을 계산합니다</p>
     </div>
+  </div>
+</div>
 
-    <!-- 나이 입력 -->
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+    <div class="field-label ds-group-label">노후 생활비 시뮬레이션</div>
+
+    
+
+    
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
       <div class="field">
         <div class="field-label">현재 나이</div>
@@ -162,51 +140,59 @@
       </div>
     </div>
 
-    <!-- 희망 월 생활비 -->
+    
     <div class="field">
       <div class="field-label">희망 월 생활비 <span class="label-hint">(현재 가치 기준)</span></div>
       <div class="input-wrap">
-        <input type="number" id="monthlyExpense" placeholder="예) 250" oninput="onInput()" />
+        <input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="monthlyExpense" placeholder="예) 250" oninput="onInput()" />
         <span class="unit">만원</span>
       </div>
       <div class="converted" id="monthlyExpenseConverted"></div>
     </div>
 
-    <!-- 보유 자산 -->
+    
     <div class="field">
       <div class="field-label">현재 보유 자산 <span class="label-hint">(은퇴 시 사용 가능 자산)</span></div>
       <div class="input-wrap">
-        <input type="number" id="currentAssets" placeholder="0" oninput="onInput()" />
+        <input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="currentAssets" placeholder="0" oninput="onInput()" />
         <span class="unit">만원</span>
       </div>
       <div class="converted" id="currentAssetsConverted"></div>
       <div class="field-hint">부동산 제외 금융자산 기준 권장</div>
     </div>
 
-    <!-- 예상 월 연금 -->
+    
     <div class="field">
       <div class="field-label">예상 월 연금 수령액 <span class="label-hint">(국민연금 + 퇴직연금 합산)</span></div>
       <div class="input-wrap">
-        <input type="number" id="monthlyPension" placeholder="0" oninput="onInput()" />
+        <input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="monthlyPension" placeholder="0" oninput="onInput()" />
         <span class="unit">만원</span>
       </div>
       <div class="converted" id="monthlyPensionConverted"></div>
     </div>
 
-    <!-- 기타 월 수입 -->
+    
     <div class="field">
       <div class="field-label">기타 월 수입 <span class="label-hint">(임대소득, 부업 등)</span></div>
       <div class="input-wrap">
-        <input type="number" id="otherIncome" placeholder="0" oninput="onInput()" />
+        <input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="otherIncome" placeholder="0" oninput="onInput()" />
         <span class="unit">만원</span>
       </div>
     </div>
 
     <button onclick="calculate()" style="width:100%;padding:14px;background:var(--primary);color:#fff;border:none;border-radius:12px;font-size:16px;font-weight:800;cursor:pointer;font-family:inherit;margin-top:4px;display:none;">노후 자금 계산하기</button>
   </div>
+<div class="info-box">
+      <span class="info-icon"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-info"></use></svg></span>
+      <p>입력하신 값을 기반으로 시뮬레이션합니다. 실제 필요 금액은 개인 생활 수준과 건강 상태에 따라 다를 수 있습니다.</p>
+    </div>
+        <button type="button" class="ds-btn-calc" data-calc-submit="onInput" data-result="resultCard" data-required="monthlyExpense">계산하기</button>
+      </div>
+    </section>
 
-  <!-- 결과 카드 -->
-  <div class="result-card" id="resultCard">
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="resultCard">
 
     <div class="highlight-box">
       <div class="hb-label">추가로 준비해야 할 금액</div>
@@ -255,27 +241,56 @@
     </div>
   
     <a class="bf-entry" href="/calc/pension-welfare/#sec-guide">&#129517; 부모님이 받을 수 있는 다른 혜택 진단하기 &rarr;</a>
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('resultCard')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/pension-welfare/national-pension/">국민연금 수령액 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">추가 준비 필요액</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="retirement-living-next">
+        <a class="ds-next-card" href="/calc/pension-welfare/national-pension/" data-next="national-pension"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span><span class="ds-next-body"><b>국민연금 수령액 계산기</b><span>가입기간과 평균 소득월액을 입력하면 국민연금공단 산식(소득대체율 40% 기준)으로 예상 연금을 추정합니다. 조기 수령 시 연 6% 감액, 연기 수령 시 연 7.2% 증액 시뮬레이션도 함께 확인할 수 있습니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/pension-welfare/housing-pension/" data-next="housing-pension"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span><span class="ds-next-body"><b>주택연금(역모기지) 계산기</b><span>집값과 나이를 입력하면 한국주택금융공사 2026년 월지급금 예시표를 기준으로 종신지급 정액형 예상 월 수령액을 보간 계산합니다. 부부 가입 시 연소자 나이를 자동 반영하고 연·10년 누적 수령액까지 보여줍니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
   </div>
 
-  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">통계청 가계동향조사(2023)·생명표(2023) 기준 시뮬레이션 <a href="https://www.nps.or.kr" target="_blank" rel="noopener">국민연금공단 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#retirement-living-s1">노후 생활비</a><a href="#retirement-living-s2">구간별 표</a><a href="#retirement-living-s3">입력값과 결과</a><a href="#retirement-living-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
     <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
     <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
   </div>
 
   <div class="guide-section">
-    <div class="guide-card">
-      <h2>노후 생활비 계산, 이것만 알면 됩니다</h2>
-      <p>노후 자금은 단순히 월 생활비에 기간을 곱하는 것이 아닙니다. 물가상승률을 반영하면 같은 생활을 유지하는 데 필요한 금액이 해마다 늘어나며, 연금·자산으로 충당 가능한 부분을 빼야 실제 부족분이 나옵니다.</p>
+            <section class="ds-section ds-prose" aria-labelledby="retirement-living-s1">
+          <div class="ds-section-head"><h2 id="retirement-living-s1">노후 생활비 계산, 이것만 알면 됩니다</h2></div>
+<p>노후 자금은 단순히 월 생활비에 기간을 곱하는 것이 아닙니다. 물가상승률을 반영하면 같은 생활을 유지하는 데 필요한 금액이 해마다 늘어나며, 연금·자산으로 충당 가능한 부분을 빼야 실제 부족분이 나옵니다.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>물가 반영 필수</strong><span>연 2.5% 기준 20년 후 생활비는 현재의 약 1.64배로 증가합니다</span></div>
         <div class="guide-box"><strong>국민연금 평균 수령액</strong><span>2025년 7월 기준 월 약 68만원 (20년 이상 가입자는 약 112만원) - 평균만으로 생활비 전액 충당은 어렵습니다</span></div>
         <div class="guide-box"><strong>3층 연금 구조</strong><span>국민연금 + 퇴직연금(IRP) + 개인연금을 조합해 준비하세요</span></div>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>은퇴 나이별 월 필요 생활비 참고표</h2>
-      <p>통계청 가계동향조사(2023) 기준 연령대별 월 평균 소비지출입니다. 은퇴 후 희망 생활비 입력 시 참고하세요.</p>
-      <div class="guide-table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="retirement-living-s2">
+          <div class="ds-section-head"><h2 id="retirement-living-s2">은퇴 나이별 월 필요 생활비 참고표</h2></div>
+<p>통계청 가계동향조사(2023) 기준 연령대별 월 평균 소비지출입니다. 은퇴 후 희망 생활비 입력 시 참고하세요.</p>
+      <div class="ds-table-card">
         <table>
           <thead><tr><th>연령대</th><th>월 평균 소비지출</th><th>주거비 비중</th><th>의료비 비중</th></tr></thead>
           <tbody>
@@ -286,10 +301,10 @@
         </table>
       </div>
       <p style="font-size:12px;color:var(--gray-500);margin-top:8px">※ 1인 가구 기준이며, 부부 가구는 1.5~1.7배 수준입니다. 의료비 비중은 나이가 들수록 높아집니다.</p>
-    </div>
-    <div class="guide-card">
-      <h2>입력값과 결과 해석</h2>
-      <h3>입력 시 확인 포인트</h3>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="retirement-living-s3">
+          <div class="ds-section-head"><h2 id="retirement-living-s3">입력값과 결과 해석</h2></div>
+<h3>입력 시 확인 포인트</h3>
       <ul>
         <li><strong>희망 월 생활비</strong>는 현재 가치 기준으로 입력합니다. 계산기가 물가상승률을 자동 반영해 은퇴 시점 금액으로 환산합니다.</li>
         <li><strong>보유 자산</strong>은 은퇴 시 실제 사용 가능한 금융자산(예금·펀드·주식 등) 기준으로 입력하세요. 거주 부동산은 제외를 권장합니다.</li>
@@ -298,32 +313,35 @@
       </ul>
       <h3>결과 해석 방법</h3>
       <p>추가 준비 필요액 = 물가 반영 총 필요 자금 - 연금·기타수입 충당 가능 금액 - 보유 자산. 결과가 0원이면 현재 계획으로 충분하다는 의미이며, 양수이면 해당 금액만큼 추가 저축이 필요합니다. 연금 수입은 물가 연동 없이 현재 금액 기준으로 계산하므로, 실제로는 연금도 일부 물가 반영되어 결과보다 부담이 다소 줄어들 수 있습니다.</p>
-    </div>
-    <div class="guide-card faq-card">
-      <h2>자주 묻는 질문</h2>
-      <div class="faq-item">
-        <h3>노후 준비는 몇 살부터 시작해야 하나요?</h3>
-        <p>빠를수록 유리합니다. 30대에 시작하면 복리 효과를 최대한 누릴 수 있습니다. 같은 목표 금액을 달성하기 위해 30대에 월 30만원이면 충분한 것이 40대에는 월 60만원 이상이 필요할 수 있습니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>국민연금으로 노후 생활이 가능한가요?</h3>
-        <p>2025년 7월 기준 국민연금 노령연금 평균 수령액은 월 약 68만원이며, 20년 이상 가입한 완전노령연금 수급자는 평균 약 112만원 수준입니다. 평균치만으로는 생활비 전액을 충당하기 어렵습니다. 국민연금은 노후 소득의 기반으로 활용하되, 퇴직연금(IRP)·개인연금·부동산 수입 등을 추가로 준비해야 안정적인 노후가 가능합니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>IRP(개인형 퇴직연금)는 노후 준비에 얼마나 도움이 되나요?</h3>
-        <p>IRP는 연간 최대 900만원까지 세액공제(최대 148만5천원)를 받을 수 있어 절세 효과가 뛰어납니다. 55세 이후 연금으로 수령하면 연금소득세(3.3~5.5%)만 납부하므로, 일시금 수령보다 세금 부담이 크게 줄어듭니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>물가상승률은 어떤 값을 넣어야 하나요?</h3>
-        <p>한국은행 물가 안정 목표는 연 2%이며, 최근 10년 평균 소비자물가 상승률은 약 2.3%입니다. 보수적으로 2.5~3%를 적용하면 안전한 계획을 세울 수 있습니다. 의료비·교육비 등 특정 항목은 일반 물가보다 빠르게 오를 수 있습니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>부부 기준으로 계산하려면 어떻게 하나요?</h3>
-        <p>희망 월 생활비를 부부 합산으로 입력하고, 예상 월 연금도 두 사람의 합산 금액을 입력하세요. 통계청 기준 부부 가구 월 생활비는 1인 가구의 약 1.5~1.7배 수준입니다.</p>
-      </div>
+        </section>
+            <section class="ds-section faq-card" aria-labelledby="retirement-living-faq">
+          <div class="ds-section-head"><h2 id="retirement-living-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>노후 준비는 몇 살부터 시작해야 하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>빠를수록 유리합니다. 30대에 시작하면 복리 효과를 최대한 누릴 수 있습니다. 같은 목표 금액을 달성하기 위해 30대에 월 30만원이면 충분한 것이 40대에는 월 60만원 이상이 필요할 수 있습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>국민연금으로 노후 생활이 가능한가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>2025년 7월 기준 국민연금 노령연금 평균 수령액은 월 약 68만원이며, 20년 이상 가입한 완전노령연금 수급자는 평균 약 112만원 수준입니다. 평균치만으로는 생활비 전액을 충당하기 어렵습니다. 국민연금은 노후 소득의 기반으로 활용하되, 퇴직연금(IRP)·개인연금·부동산 수입 등을 추가로 준비해야 안정적인 노후가 가능합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>IRP(개인형 퇴직연금)는 노후 준비에 얼마나 도움이 되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>IRP는 연간 최대 900만원까지 세액공제(최대 148만5천원)를 받을 수 있어 절세 효과가 뛰어납니다. 55세 이후 연금으로 수령하면 연금소득세(3.3~5.5%)만 납부하므로, 일시금 수령보다 세금 부담이 크게 줄어듭니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>물가상승률은 어떤 값을 넣어야 하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>한국은행 물가 안정 목표는 연 2%이며, 최근 10년 평균 소비자물가 상승률은 약 2.3%입니다. 보수적으로 2.5~3%를 적용하면 안전한 계획을 세울 수 있습니다. 의료비·교육비 등 특정 항목은 일반 물가보다 빠르게 오를 수 있습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>부부 기준으로 계산하려면 어떻게 하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>희망 월 생활비를 부부 합산으로 입력하고, 예상 월 연금도 두 사람의 합산 금액을 입력하세요. 통계청 기준 부부 가구 월 생활비는 1인 가구의 약 1.5~1.7배 수준입니다.</p>
+            </details>
       <div class="update-note">통계청 가계동향조사(2023), 생명표(2023) 기준입니다. 개인 상황에 따라 필요 금액이 달라질 수 있으며, 정확한 노후 계획은 전문 재무설계사와 상담을 권장합니다.</div>
-    </div>
+          </div>
+        </section>
   </div>
+    </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
   <script>
   window.TRUST_BLOCK_CONFIG = {
     standard: '통계청 가계동향조사(2023)·생명표(2023) 기준 시뮬레이션',
@@ -340,43 +358,42 @@
     lastReviewed: '2026.04.25',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>
-  <div class="sibling-section">
-    <div class="sibling-title">다른 연금·복지 계산기</div>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 연금·복지 계산기</h2>
     <div class="sibling-list">
-      <a href="/calc/pension-welfare/national-pension/" class="sibling-link">🏛 국민연금 수령액</a>
-      <a href="/calc/pension-welfare/basic-pension/" class="sibling-link">💰 기초연금 수급 판정</a>
-      <a href="/calc/pension-welfare/housing-pension/" class="sibling-link">🏠 주택연금(역모기지)</a>
-      <a href="/calc/pension-welfare/retirement-living/" class="sibling-link current">🏡 노후 생활비</a>
-      <a href="/calc/pension-welfare/pension-tax/" class="sibling-link">💰 연금소득세</a>
-      <a href="/calc/pension-welfare/long-term-care/" class="sibling-link">🏥 장기요양 비용</a>
+      <a href="/calc/pension-welfare/national-pension/" class="sibling-link">국민연금 수령액</a>
+      <a href="/calc/pension-welfare/basic-pension/" class="sibling-link">기초연금 수급 판정</a>
+      <a href="/calc/pension-welfare/housing-pension/" class="sibling-link">주택연금(역모기지)</a>
+      <a href="/calc/pension-welfare/pension-tax/" class="sibling-link">연금소득세</a>
+      <a href="/calc/pension-welfare/long-term-care/" class="sibling-link">장기요양 비용</a>
     </div>
-    <div class="sibling-title">관련 가이드</div>
-    <div class="sibling-list">
-      <a href="/blog/posts/irp-vs-pension-savings.html" class="sibling-link">📖 IRP vs 연금저축 - 한도 900만원 어떻게 나눌까? 세액공제·인출·수…</a>
-      <a href="/blog/posts/long-term-care-grade-application.html" class="sibling-link">📖 장기요양 등급 신청 절차 - 거부당하지 않는 방문조사 준비법 2026</a>
-      <a href="/blog/posts/national-pension-guide.html" class="sibling-link">📖 국민연금 수령액 계산 - 소득 300만원 20년 납부 시 월 65만원, 3…</a>
-      <a href="/blog/posts/national-pension-voluntary.html" class="sibling-link">📖 국민연금 임의가입 가성비 - 전업주부 월 9만원 내고 노후 22만원 받기</a>
-      <a href="/blog/posts/retirement-living-cost.html" class="sibling-link">📖 노후 생활비 얼마면 될까 - 30년 준비 자금 계산법과 월별 전략</a>
-      <a href="/blog/posts/retirement-living-late-start.html" class="sibling-link">📖 40대·50대 노후 준비 늦었을까 - 시작 나이별 월 저축 목표와 3가지 …</a>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/irp-vs-pension-savings.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/irp-vs-pension-savings-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>IRP vs 연금저축 - 한도 900만원 어떻게 나눌까? 세액공제·인출·수령 비교 2026</span></a>
+      <a href="/blog/posts/long-term-care-grade-application.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/long-term-care-grade-application-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>장기요양 등급 신청 절차 - 거부당하지 않는 방문조사 준비법 2026</span></a>
+      <a href="/blog/posts/national-pension-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/national-pension-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>국민연금 수령액 계산 - 소득 300만원 20년 납부 시 월 65만원, 30년이면 98만원</span></a>
+      <a href="/blog/posts/national-pension-voluntary.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/national-pension-voluntary-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>국민연금 임의가입 가성비 - 전업주부 월 9만원 내고 노후 22만원 받기</span></a>
+      <a href="/blog/posts/retirement-living-cost.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/retirement-living-cost-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>노후 생활비 얼마면 될까 - 30년 준비 자금 계산법과 월별 전략</span></a>
+      <a href="/blog/posts/retirement-living-late-start.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/retirement-living-late-start-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>40대·50대 노후 준비 늦었을까 - 시작 나이별 월 저축 목표와 3가지 시나리오</span></a>
     </div>
   </div>
-
 </main>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links">
-      <a href="/">홈</a>
-      <a href="/about.html">소개</a>
-      <a href="/privacy.html">개인정보처리방침</a>
-      <a href="/terms.html">이용약관</a>
-      <a href="/contact.html">문의하기</a>
-      <a href="/disclaimer.html">면책조항</a>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
     </div>
-    <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용 시뮬레이션이며 실제 금융 상담을 대체하지 않습니다.</p>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용 시뮬레이션이며 실제 금융 상담을 대체하지 않습니다.</p>
   </div>
 </footer>
+
+<script src="/assets/ds/calc-kit.js?v=d45e66d9"></script>
 
 <script>
 function fmt(n) {
@@ -389,7 +406,7 @@ function fmtShort(n) {
   if (n >= 10000) return Math.round(n / 10000) + '만원';
   return n.toLocaleString('ko-KR') + '원';
 }
-function getVal(id) { return parseFloat(document.getElementById(id).value) || 0; }
+function getVal(id) { return parseFloat(String(document.getElementById(id).value).replace(/,/g, '')) || 0; }
 
 function onInput() {
   const convIds = ['monthlyExpense','currentAssets','monthlyPension'];
@@ -465,11 +482,10 @@ function toggleExplain(btn) {
   btn.nextElementSibling.classList.toggle('show');
 }
 </script>
-<script src="/assets/calc-registry.js"></script>
-<script src="/assets/pension-welfare-detail-shell.js" defer></script>
-<script src="/assets/footer-unified.js" defer></script>
-<script src="/assets/calc-validate.js"></script>
-<script src="/assets/calc-result-tools.js"></script>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
@@ -480,7 +496,13 @@ window.ARTICLE_INFO_CONFIG = {
   category: 'pension-welfare'
 };
 </script>
-<script src="/assets/blog-article-info.js"></script>
-<script src="/assets/blog-review-footer.js"></script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "resultCard", "required": ["monthlyExpense"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#retirement-living-next", "next": []});
+  DSCalc.placeTrust('ds-trust-col');
+</script>
+<script src="/assets/ds/prefill.js?v=fa5eb49a" defer></script>
 </body>
 </html>
