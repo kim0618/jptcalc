@@ -23,9 +23,7 @@
     gtag('js', new Date());
     gtag('config', 'G-BRSX3F10MZ');
   </script>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -102,87 +100,33 @@
   ]
 }
 </script>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --primary: #F59E0B;
-      --gray-400: #9CA3AF; --gray-500: #6B7280; --gray-600: #4B5563;
-      --dark-bg: #ffffff; --dark-card: #F9FAFB; --dark-border: rgba(0,0,0,0.08);
-    }
-    body { font-family: 'Pretendard', -apple-system, sans-serif; background: #ffffff; color: #111827; min-height: 100vh; -webkit-font-smoothing: antialiased; }
-    .site-header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.08); }
-    .header-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; gap: 24px; }
-    .site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
-    .logo-icon { width: 32px; height: 32px; }
-    .logo-icon img { width: 32px; height: 32px; display: block; }
-    .logo-text { font-size: 18px; font-weight: 900; color: #111827; letter-spacing: -0.5px; }
-    .logo-text span { color: #818CF8; }
-    .header-back { margin-left: auto; font-size: 13px; font-weight: 600; color: #6B7280; text-decoration: none !important; }
-    .header-back:hover { color: #111827; }
-    .post-wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
-    .post-tag { display: inline-block; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; background: rgba(245,158,11,0.15); color: #F59E0B; margin-bottom: 16px; }
-    h1 { font-size: 26px; font-weight: 900; color: #111827; line-height: 1.35; margin-bottom: 12px; }
-    .post-meta { font-size: 13px; color: #4B5563; margin-bottom: 36px; display: flex; gap: 12px; }
-    .post-body { font-size: 15px; color: #111827; line-height: 1.8; }
-    .post-body h2 { font-size: 19px; font-weight: 800; color: #111827; margin: 40px 0 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.08); }
-    .post-body h3 { font-size: 16px; font-weight: 700; color: #111827; margin: 24px 0 10px; }
-    .post-body p { margin-bottom: 14px; }
-    .post-body ul, .post-body ol { margin: 10px 0 14px 20px; }
-    .post-body li { margin-bottom: 8px; }
-    .post-body a { color: #F59E0B; text-decoration: none !important; }
-    .post-body a:hover { text-decoration: underline !important; }
-    .highlight-box { background: rgba(245,158,11,0.1); border-left: 4px solid var(--primary); border-radius: 0 10px 10px 0; padding: 16px 20px; margin: 20px 0; }
-    .highlight-box p { margin: 0; color: #92400E; font-size: 14px; }
-    .table-wrap { overflow-x: auto; margin: 20px 0; }
-    table { width: 100%; border-collapse: collapse; font-size: 14px; }
-    th { background: #F9FAFB; color: #111827; font-weight: 700; padding: 10px 14px; text-align: left; border: 1px solid rgba(0,0,0,0.08); }
-    td { padding: 10px 14px; border: 1px solid rgba(0,0,0,0.08); color: #1F2937; }
-    tr:hover td { background: rgba(0,0,0,0.02); }
-    td.highlight { font-weight: 700; color: #F59E0B; }
-    td.danger { font-weight: 700; color: #EF4444; }
-    td.good { font-weight: 700; color: #10B981; }
-    td.rate { font-weight: 700; color: #F59E0B; }
-    .cta-box { background: #F9FAFB; border: 1px solid rgba(0,0,0,0.08); border-radius: 14px; padding: 24px; margin: 40px 0; text-align: center; }
-    .cta-box p { color: #374151; font-size: 14px; margin-bottom: 14px; }
-    .cta-btn { display: inline-block; padding: 12px 28px; background: #F59E0B; color: #fff !important; font-size: 14px; font-weight: 800; border-radius: 10px; text-decoration: none !important; }
-    .cta-btn:hover { opacity: 0.9; }
-    .faq-item { background: #F9FAFB; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; padding: 20px; margin: 16px 0; }
-    .faq-q { font-weight: 800; color: #111827; margin-bottom: 8px; font-size: 15px; }
-    .faq-a { color: #374151; font-size: 14px; line-height: 1.7; margin: 0; }
-    .scenario-box { background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 12px; padding: 20px 24px; margin: 20px 0; }
-    .scenario-box .scenario-label { font-size: 11px; font-weight: 800; color: #92400E; margin-bottom: 6px; letter-spacing: 0.5px; }
-    .scenario-box .scenario-name { font-size: 15px; font-weight: 800; color: #111827; margin-bottom: 10px; }
-    .scenario-box p { font-size: 14px; color: #374151; margin-bottom: 8px; }
-    .scenario-box p:last-child { margin-bottom: 0; }
-    .result-summary { background: #F9FAFB; border-radius: 8px; padding: 12px 16px; margin-top: 12px; font-size: 13px; color: #111827; font-weight: 700; border-left: 3px solid #F59E0B; }
-    @media (max-width: 640px) { h1 { font-size: 21px; } .post-body h2 { font-size: 17px; } }
-  </style>
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
 </head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo">
-      <div class="logo-icon"><img src="../../assets/logo.svg" alt="제이퍼 계산기 로고" /></div>
-      <div class="logo-text">제이퍼<span>계산기</span></div>
-    </a>
-    <a href="/blog/" class="header-back">← 블로그 목록</a>
-  </div>
+<body data-cat="realestate" style="--cat: var(--c-realestate)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories">카테고리</a><a href="/blog/" aria-current="page">블로그</a></nav>
+  </div></div>
 </header>
-<main class="post-wrap">
-  <span class="post-tag">부동산</span>
-  <h1>아파트 평수 완전 해석 - 전용·공급·계약면적 차이와 실사용 크기 비교</h1>
-  <div class="post-meta">
-    <span>📅 2026.05.26</span>
-    <span>⏱ 25분 읽기</span>
-  </div>
 
-  <div class="post-body">
+<main class="ds-post ds-container">
+  <article>
+    <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/blog/">블로그</a> &rsaquo; <a href="/blog/?cat=부동산">부동산</a></div>
+    <div class="ds-post-meta"><span class="ds-post-chip">부동산</span><span>2026.05.26</span><span>제이퍼 계산기 편집팀</span><span>25분 읽기</span></div>
+    <h1 class="ds-post-title">아파트 평수 완전 해석 - 전용·공급·계약면적 차이와 실사용 크기 비교</h1>
+    <picture><source media="(min-width: 1024px)" srcset="/assets/img/blog-thumb/apartment-area-guide-16x9.webp" width="1280" height="720"><img class="ds-post-thumb is-cover" src="/assets/img/blog-thumb/apartment-area-guide-3x1.webp" alt="84㎡ 34평 아파트 실제 법적 면적" width="1440" height="480" decoding="async" fetchpriority="high"></picture>
+    <div class="ds-post-body ds-prose">
+<p>혹시 "34평 아파트"를 계약하러 갔다가 등기부등본에 "84㎡"라고 적혀 있어서 당황한 적 있으신가요? 34평이면 112㎡여야 할 것 같은데, 실제 법적 면적은 84㎡입니다. 이 차이는 분양 광고에서 쓰는 면적과 등기부에 기재되는 면적이 다른 기준을 쓰기 때문입니다. 전용면적, 공급면적, 계약면적, 서비스면적 - 같은 집 하나에 면적 숫자가 네 가지씩 붙습니다. 어떤 숫자가 언제 중요한지 정리했습니다.</p>
+    <a class="ds-post-cta" href="/calc/realestate/pyeong/" style="--cat: var(--c-realestate)"><span class="ds-icon-tile"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-house"></use></svg></span><span class="ds-post-cta-body"><b>평수 변환 계산기</b><span>평 ↔ m² 단위 환산</span></span><span class="ds-post-cta-go">계산하기 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></span></a>
 
-    <p>혹시 "34평 아파트"를 계약하러 갔다가 등기부등본에 "84㎡"라고 적혀 있어서 당황한 적 있으신가요? 34평이면 112㎡여야 할 것 같은데, 실제 법적 면적은 84㎡입니다. 이 차이는 분양 광고에서 쓰는 면적과 등기부에 기재되는 면적이 다른 기준을 쓰기 때문입니다. 전용면적, 공급면적, 계약면적, 서비스면적 - 같은 집 하나에 면적 숫자가 네 가지씩 붙습니다. 어떤 숫자가 언제 중요한지 정리했습니다.</p>
+    <details class="ds-post-toc"><summary>목차 (9)<svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary><ol><li><a href="#sec-1">1평은 몇 ㎡인가 - 변환 공식과 환산표</a></li><li><a href="#sec-2">전용·공급·계약·서비스면적 - 네 가지 면적의 정확한 정의</a></li><li><a href="#sec-3">&quot;34평형&quot;의 실체 - 분양 광고 평수가 만드는 착시</a></li><li><a href="#sec-4">국민주택 기준 85㎡ - 세금과 청약이 갈리는 지점</a></li><li><a href="#sec-5">&quot;84㎡&quot;인데 아파트와 오피스텔은 실사용이 이렇게나 다르다</a></li><li><a href="#sec-6">인테리어 견적에서 어떤 면적 기준을 써야 하나</a></li><li><a href="#sec-7">아파트 면적 관련 헷갈리는 실전 사례들</a></li><li><a href="#sec-8">자주 묻는 질문</a></li><li><a href="#sec-9">평수는 숫자가 아니라 기준을 먼저 확인하는 것</a></li></ol></details>
+
 
     <div class="highlight-box"><p>이 글은 <strong>아파트 분양·매매·전세 계약을 앞두고 '34평형'과 '84㎡'의 차이가 헷갈리는 분</strong>에게 필요합니다. 취득세·종부세 기준이 되는 85㎡, 청약 면적 기준, 인테리어 견적에 써야 할 면적이 각각 다릅니다. 한 번 정리해두면 계약서·등기부·광고에서 다른 숫자를 봐도 당황하지 않습니다.</p></div>
 
-    <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+    <ul class="ds-bg-sub" style="padding: 16px 20px 16px 36px; border-radius: var(--radius-md); margin: 16px 0; font-size: var(--fs-label); line-height: 1.8">
       <li>평 ↔ ㎡ 변환 공식과 17평~50평 구간별 환산표</li>
       <li>전용·공급·계약·서비스면적의 정확한 정의와 사용 기준</li>
       <li>"34평형"인데 실사용이 25평인 이유 - 분양 평수의 착시 구조</li>
@@ -191,7 +135,7 @@
       <li>인테리어 견적에서 어떤 면적 기준을 써야 하는가</li>
     </ul>
 
-    <h2>1평은 몇 ㎡인가 - 변환 공식과 환산표</h2>
+    <h2 id="sec-1">1평은 몇 ㎡인가 - 변환 공식과 환산표</h2>
 
     <p>1평은 정확히 3.30579㎡입니다. 반대로 1㎡는 0.3025평입니다. 이 수치는 1평의 유래에서 나옵니다. 조선 시대 도량형 단위인 "자(尺)" 기준으로 가로·세로 각 6자의 정사각형 넓이가 1평인데, 6자는 약 1.8182m(정확히는 60/33m)이므로 그 제곱인 3.30579㎡가 됩니다.</p>
 
@@ -218,16 +162,17 @@
 
     <p>표에서 한 가지 주목할 점이 있습니다. 아파트 광고에서 "84㎡형"이라 부르는 유형의 전용면적은 84㎡인데, 이를 평수로 환산하면 25.4평입니다. "34평형"이 아닙니다. 34평에 해당하는 ㎡는 112㎡이며, 이것은 공급면적 기준입니다. 이 혼동의 구조를 이해하려면 면적 종류를 먼저 알아야 합니다.</p>
 
-    <div class="cta-box" style="margin:20px 0;padding:16px 20px;text-align:left;border-radius:10px">
-      <p style="margin-bottom:10px">평수와 ㎡를 빠르게 상호 변환하고, 공급·전용·서비스면적을 한 번에 계산하세요.</p>
+    <div class="cta-box" style="margin: 20px 0; padding: 16px 20px; text-align: left; border-radius: var(--radius-md)">
+      <p style="margin-bottom: 10px">평수와 ㎡를 빠르게 상호 변환하고, 공급·전용·서비스면적을 한 번에 계산하세요.</p>
       <a href="../../calc/realestate/pyeong/" class="cta-btn">평수 변환 계산기</a>
     </div>
+    <div class="review-footer"><p class="review-footer__title">검토 안내</p><p class="review-footer__text">이 글은 공공기관 공개 자료를 기준으로 작성되었으며, 정보 제공 목적입니다. 실제 거래·계약 전 관할 기관 또는 공인중개사에게 확인하세요.</p></div>
 
-    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+    <div class="adfit-slot ds-ad" style="text-align: center; margin: 28px 0">
       <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
       <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
     </div>
-    <h2>전용·공급·계약·서비스면적 - 네 가지 면적의 정확한 정의</h2>
+    <h2 id="sec-2">전용·공급·계약·서비스면적 - 네 가지 면적의 정확한 정의</h2>
 
     <p>같은 아파트 한 채를 보더라도 면적 숫자가 맥락에 따라 달라집니다. 네 가지 면적 개념을 정확히 구분해야 매물 광고, 청약 공고, 계약서, 등기부를 제대로 읽을 수 있습니다.</p>
 
@@ -259,7 +204,7 @@
       </table>
     </div>
 
-    <h2>"34평형"의 실체 - 분양 광고 평수가 만드는 착시</h2>
+    <h2 id="sec-3">"34평형"의 실체 - 분양 광고 평수가 만드는 착시</h2>
 
     <div class="scenario-box">
       <div class="scenario-label">계산 시나리오 A</div>
@@ -268,45 +213,45 @@
       <p>계약서를 확인해보니 전용면적 84.99㎡, 공급면적 112.68㎡, 계약면적 130.45㎡로 기재되어 있었습니다.</p>
       <p>실제 평수 환산: 전용 84.99㎡ = <strong>25.7평</strong> / 공급 112.68㎡ = <strong>34.1평</strong> / 계약 130.45㎡ = <strong>39.5평</strong></p>
       <div class="result-summary">광고의 "34평"은 공급면적 기준입니다. 실생활 공간(전용면적)은 25.7평, 발코니 확장 포함 시 약 29~30평입니다. 등기부등본에는 84.99㎡만 기재됩니다.</div>
-      <p style="margin-top:10px;font-size:13px;color:#6B7280">취득세는 거래가액 기준으로 부과되며, 국민주택 규모(전용 85㎡ 이하) 여부에 따라 농어촌특별세와 부가세 면제 여부가 달라집니다. 전용 84.99㎡는 국민주택 규모에 해당해 농특세·부가세 면제 혜택을 받습니다.</p>
+      <p class="ds-t-sub" style="margin-top: 10px; font-size: var(--fs-meta)">취득세는 거래가액 기준으로 부과되며, 국민주택 규모(전용 85㎡ 이하) 여부에 따라 농어촌특별세와 부가세 면제 여부가 달라집니다. 전용 84.99㎡는 국민주택 규모에 해당해 농특세·부가세 면제 혜택을 받습니다.</p>
     </div>
 
     <p>이처럼 분양 광고의 평수 표기는 공급면적을 기준으로 하기 때문에, "34평형"이라는 표현은 실제 사용 가능한 공간 크기를 과장해서 보여줍니다. 전용면적만 놓고 보면 같은 집이 "25평"에 불과합니다. 부동산 매물을 비교할 때는 반드시 전용면적 기준으로 통일해서 비교해야 합니다.</p>
 
-    <div style="margin:24px 0;overflow-x:auto">
+    <div style="margin: 24px 0; overflow-x: auto">
     <svg role="img" width="100%" viewBox="0 0 680 220" xmlns="http://www.w3.org/2000/svg">
       <title>전용 84㎡ 아파트의 면적별 크기 비교</title>
-      <rect width="680" height="220" rx="12" fill="#F9FAFB"/>
-      <text x="24" y="34" font-size="13" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">전용 84㎡ 아파트 - 면적별 비교 (같은 집, 다른 숫자)</text>
+      <rect width="680" height="220" rx="12" style="fill: var(--bg)"/>
+      <text x="24" y="34" font-size="13" font-weight="800" font-family="Pretendard,sans-serif" style="fill: var(--text)">전용 84㎡ 아파트 - 면적별 비교 (같은 집, 다른 숫자)</text>
       <!-- 전용면적 -->
-      <text x="24" y="72" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">전용면적 (등기부 기준)</text>
-      <rect x="180" y="57" width="200" height="22" rx="3" fill="#F59E0B"/>
-      <text x="388" y="72" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">84㎡ = 25.4평</text>
+      <text x="24" y="72" font-size="12" font-family="Pretendard,sans-serif" style="fill: var(--text-sub)">전용면적 (등기부 기준)</text>
+      <rect x="180" y="57" width="200" height="22" rx="3" style="fill: var(--warn)"/>
+      <text x="388" y="72" font-size="12" font-weight="700" font-family="Pretendard,sans-serif" style="fill: var(--text)">84㎡ = 25.4평</text>
       <!-- 발코니 확장 -->
-      <text x="24" y="108" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">발코니 확장 후 실사용</text>
-      <rect x="180" y="93" width="200" height="22" rx="3" fill="#F59E0B" opacity="0.6"/>
-      <rect x="380" y="93" width="33" height="22" rx="3" fill="#F59E0B" opacity="0.3"/>
-      <text x="421" y="108" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">98㎡ ≈ 29.6평</text>
+      <text x="24" y="108" font-size="12" font-family="Pretendard,sans-serif" style="fill: var(--text-sub)">발코니 확장 후 실사용</text>
+      <rect x="180" y="93" width="200" height="22" rx="3" opacity="0.6" style="fill: var(--warn)"/>
+      <rect x="380" y="93" width="33" height="22" rx="3" opacity="0.3" style="fill: var(--warn)"/>
+      <text x="421" y="108" font-size="12" font-weight="700" font-family="Pretendard,sans-serif" style="fill: var(--text)">98㎡ ≈ 29.6평</text>
       <!-- 공급면적 -->
-      <text x="24" y="144" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">공급면적 (광고 34평 기준)</text>
-      <rect x="180" y="129" width="200" height="22" rx="3" fill="#F59E0B" opacity="0.5"/>
-      <rect x="380" y="129" width="69" height="22" rx="3" fill="#D1D5DB"/>
-      <text x="457" y="144" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">113㎡ = 34.2평</text>
+      <text x="24" y="144" font-size="12" font-family="Pretendard,sans-serif" style="fill: var(--text-sub)">공급면적 (광고 34평 기준)</text>
+      <rect x="180" y="129" width="200" height="22" rx="3" opacity="0.5" style="fill: var(--warn)"/>
+      <rect x="380" y="129" width="69" height="22" rx="3" style="fill: var(--line)"/>
+      <text x="457" y="144" font-size="12" font-weight="700" font-family="Pretendard,sans-serif" style="fill: var(--text)">113㎡ = 34.2평</text>
       <!-- 계약면적 -->
-      <text x="24" y="180" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">계약면적 (분양가 기준)</text>
-      <rect x="180" y="165" width="200" height="22" rx="3" fill="#F59E0B" opacity="0.4"/>
-      <rect x="380" y="165" width="110" height="22" rx="3" fill="#D1D5DB"/>
-      <text x="498" y="180" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">130㎡ = 39.3평</text>
-      <text x="24" y="208" font-size="10" fill="#9CA3AF" font-family="Pretendard,sans-serif">※ 주황색 막대가 전용면적(실사용 기준). 회색은 공용 포함 추가분.</text>
+      <text x="24" y="180" font-size="12" font-family="Pretendard,sans-serif" style="fill: var(--text-sub)">계약면적 (분양가 기준)</text>
+      <rect x="180" y="165" width="200" height="22" rx="3" opacity="0.4" style="fill: var(--warn)"/>
+      <rect x="380" y="165" width="110" height="22" rx="3" style="fill: var(--line)"/>
+      <text x="498" y="180" font-size="12" font-weight="700" font-family="Pretendard,sans-serif" style="fill: var(--text)">130㎡ = 39.3평</text>
+      <text x="24" y="208" font-size="10" font-family="Pretendard,sans-serif" style="fill: var(--text-muted)">※ 주황색 막대가 전용면적(실사용 기준). 회색은 공용 포함 추가분.</text>
     </svg>
     </div>
 
-    <h2>국민주택 기준 85㎡ - 세금과 청약이 갈리는 지점</h2>
+    <h2 id="sec-4">국민주택 기준 85㎡ - 세금과 청약이 갈리는 지점</h2>
 
     <p>주택법 제2조제6호에 따라 전용면적 85㎡ 이하 주택을 "국민주택 규모"로 분류합니다. 다만 같은 호 괄호가 예외를 두는데, <strong>수도권을 제외한 도시지역이 아닌 읍·면 지역은 100㎡ 이하</strong>까지 국민주택 규모로 봅니다. 이 기준이 중요한 이유는 세금, 청약, 부가세, 관리비에 걸쳐 다양한 차이를 만들기 때문입니다.</p>
 
     <h3>취득세와 세율</h3>
-    <p>주택을 취득할 때 국민주택 규모(85㎡)를 넘으면 농어촌특별세 면제가 사라져 취득가액의 0.2%가 추가됩니다. 반면 생애 최초 주택 구입 취득세 감면은 흔한 오해와 달리 <strong>면적과 무관</strong>하며, 취득가액 12억원 이하이면 적용됩니다. 취득세 계산의 자세한 내용은 <a href="../posts/acquisition-tax-2026.html" style="color:#F59E0B;">2026년 취득세 완전 정리</a>에서 확인할 수 있습니다.</p>
+    <p>주택을 취득할 때 국민주택 규모(85㎡)를 넘으면 농어촌특별세 면제가 사라져 취득가액의 0.2%가 추가됩니다. 반면 생애 최초 주택 구입 취득세 감면은 흔한 오해와 달리 <strong>면적과 무관</strong>하며, 취득가액 12억원 이하이면 적용됩니다. 취득세 계산의 자세한 내용은 <a href="../posts/acquisition-tax-2026.html">2026년 취득세 완전 정리</a>에서 확인할 수 있습니다.</p>
 
     <h3>청약 시 물량 분류</h3>
     <p>공공주택 청약에서 국민주택 유형과 민영주택 유형이 구분됩니다. 85㎡ 이하 공공주택 청약에는 청약저축 납입 금액과 납입 횟수가 중요하게 작용합니다. 85㎡를 0.01㎡라도 초과하면 국민주택 유형에서 민영주택으로 분류가 달라집니다.</p>
@@ -319,16 +264,16 @@
       <div class="scenario-name">박성민 씨 (34세, 생애 최초 주택 구입): 84㎡ vs 86㎡ 비교</div>
       <p>분양가 5억 5,000만원짜리 전용 84㎡ 아파트(국민주택 규모)를 생애 최초로 구입한 경우, 취득세는 본세 1%(550만원)에 지방교육세 0.1%(55만원)를 합쳐 605만원입니다. 국민주택 규모이므로 농어촌특별세는 면제됩니다. 생애 최초 주택 구입 취득세 감면(200만원 한도)을 적용받으면 405만원으로 줄어듭니다.</p>
       <p>같은 분양가 5억 5,000만원의 전용 86㎡ 아파트는 국민주택 규모를 넘어 두 가지가 달라집니다. 첫째, 신축 분양이라면 건물분에 부가가치세가 붙습니다(건물분 비중 절반 가정 시 대략 2,750만원). 둘째, 농어촌특별세 면제가 사라져 취득가액의 0.2%인 110만원이 더해집니다(농어촌특별세법 제5조제1항제6호). 취득세 본세 550만원과 지방교육세 55만원은 84㎡와 동일한데, 취득세 과세표준에는 <strong>부가가치세가 들어가지 않기 때문입니다</strong>(지방세법 시행령 제18조제2항제4호가 부가가치세를 사실상취득가격에서 명시적으로 제외합니다). 합계 715만원이고, 생애 최초 감면 200만원을 빼면 515만원입니다.</p>
-      <p style="font-size:13px;color:#6B7280">참고로 생애 최초 취득세 감면(지방세특례제한법 제36조의3)에는 <strong>전용면적 요건이 없습니다.</strong> 무주택·거주 목적·취득가액 12억원 이하·유상거래 요건만 맞으면 86㎡ 아파트도 200만원 감면을 받습니다. 60㎡ 이하 요건이 붙는 것은 300만원 감면(제1항 제1호)이고, 그마저 아파트는 제외됩니다.</p>
+      <p class="ds-t-sub" style="font-size: var(--fs-meta)">참고로 생애 최초 취득세 감면(지방세특례제한법 제36조의3)에는 <strong>전용면적 요건이 없습니다.</strong> 무주택·거주 목적·취득가액 12억원 이하·유상거래 요건만 맞으면 86㎡ 아파트도 200만원 감면을 받습니다. 60㎡ 이하 요건이 붙는 것은 300만원 감면(제1항 제1호)이고, 그마저 아파트는 제외됩니다.</p>
       <div class="result-summary">84㎡ vs 86㎡ 차이 2㎡로 취득세 차액은 농어촌특별세 110만원뿐이지만, 신축 분양이라면 건물분 부가세 약 2,000만~3,000만원대가 별도로 얹힙니다. 합산하면 2㎡ 차이가 2,000만원대 후반을 좌우하는 셈입니다.</div>
     </div>
 
-    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+    <div class="adfit-slot ds-ad" style="text-align: center; margin: 28px 0">
       <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-88xhdLeiIK3V35kb" data-ad-width="300" data-ad-height="250"></ins>
       <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
     </div>
 
-    <h2>"84㎡"인데 아파트와 오피스텔은 실사용이 이렇게나 다르다</h2>
+    <h2 id="sec-5">"84㎡"인데 아파트와 오피스텔은 실사용이 이렇게나 다르다</h2>
 
     <p>여기서 함정이 있습니다. 아파트 84㎡와 오피스텔 84㎡는 같은 숫자이지만 실사용 면적이 크게 다릅니다.</p>
 
@@ -356,12 +301,12 @@
       <p>매물 B: 오피스텔 광고 84㎡ (전용률 58%) / 월세 95만원</p>
       <p>오피스텔 실제 전용면적: 84㎡ × 58% = 48.7㎡ = 14.7평</p>
       <div class="result-summary">오피스텔은 광고 면적이 아파트보다 42% 크지만, 실사용(전용) 면적은 아파트가 59㎡로 오피스텔(48.7㎡)보다 약 21% 더 넓습니다. 월세도 10만원 더 저렴합니다.</div>
-      <p style="margin-top:10px;font-size:13px;color:#6B7280">오피스텔 계약 시 반드시 건축물대장이나 등기부등본에서 전용면적을 확인해야 합니다. "광고 84㎡"는 공급면적 기준일 가능성이 높습니다.</p>
+      <p class="ds-t-sub" style="margin-top: 10px; font-size: var(--fs-meta)">오피스텔 계약 시 반드시 건축물대장이나 등기부등본에서 전용면적을 확인해야 합니다. "광고 84㎡"는 공급면적 기준일 가능성이 높습니다.</p>
     </div>
 
-    <p>오피스텔은 아파트와 달리 주거공용면적 산정 기준이 법으로 명확히 정해져 있지 않아 시행사마다 전용률 표기가 들쭉날쭉한 편입니다. 같은 임대료를 내더라도 오피스텔보다 아파트(비슷한 공급면적 기준)의 실사용 효율이 높은 경우가 많은 이유입니다. 전세·월세 매물을 비교할 때는 <a href="../posts/jeonse-vs-wolse.html" style="color:#F59E0B;">전세 vs 월세 비용 분석</a>과 함께 전용면적 기준 면적 비교를 반드시 병행해야 합니다.</p>
+    <p>오피스텔은 아파트와 달리 주거공용면적 산정 기준이 법으로 명확히 정해져 있지 않아 시행사마다 전용률 표기가 들쭉날쭉한 편입니다. 같은 임대료를 내더라도 오피스텔보다 아파트(비슷한 공급면적 기준)의 실사용 효율이 높은 경우가 많은 이유입니다. 전세·월세 매물을 비교할 때는 <a href="../posts/jeonse-vs-wolse.html">전세 vs 월세 비용 분석</a>과 함께 전용면적 기준 면적 비교를 반드시 병행해야 합니다.</p>
 
-    <h2>인테리어 견적에서 어떤 면적 기준을 써야 하나</h2>
+    <h2 id="sec-6">인테리어 견적에서 어떤 면적 기준을 써야 하나</h2>
 
     <p>인테리어 업계의 실무 기준을 먼저 말하겠습니다. 대부분의 인테리어 업체는 전용면적을 기준으로 공사 범위를 산정합니다. 단, 발코니 확장을 포함한 경우에는 확장 면적을 더한 실측 면적으로 계산합니다.</p>
 
@@ -395,7 +340,7 @@
 
     <p>견적서를 받을 때는 어떤 면적 기준인지 반드시 확인하세요. 일부 업체에서 "84㎡ 기준 3,000만원"이라고 제시하더라도, 84㎡가 공급면적(34평)인지 전용면적(25평)인지에 따라 실제 공사 범위와 최종 금액이 크게 달라집니다.</p>
 
-    <h2>아파트 면적 관련 헷갈리는 실전 사례들</h2>
+    <h2 id="sec-7">아파트 면적 관련 헷갈리는 실전 사례들</h2>
 
     <h3>사례 1 - 등기부 면적과 실측 면적이 다른 경우</h3>
     <p>아파트 준공 연도에 따라 발코니 일부가 전용면적에 산입되어 있는 구형 아파트가 있습니다. 2005년 이전 준공 아파트 중 일부는 발코니를 전용면적에 포함해 등기한 사례가 있어, 같은 시기 같은 평형이라도 전용면적이 다를 수 있습니다. 매물 비교 시 단지 이름의 "몇 평형"보다 등기부등본의 전용면적을 기준으로 비교하는 것이 정확합니다.</p>
@@ -406,52 +351,60 @@
     <h3>사례 3 - 재건축·재개발 조합원 분양권의 면적 표기</h3>
     <p>재건축 조합원 분양은 "59B", "84A" 같이 같은 전용면적이어도 세부 타입으로 나뉩니다. 같은 84㎡여도 A타입은 3베이(방향), B타입은 4베이인 경우 구조가 다릅니다. 전용면적은 같아도 발코니 서비스면적 크기, 창문 수, 채광 조건이 달라 체감 크기가 다를 수 있습니다. 재건축 분양권을 선택할 때는 전용면적 외에 타입별 평면도를 꼭 비교하세요.</p>
 
-    <p>재산세는 공시가격을 기준으로 납부하며, 면적 자체가 세금에 직접 영향을 주지는 않습니다. 하지만 면적이 커질수록 공시가격이 올라 결국 보유세 부담도 늘어납니다. 보유 중인 아파트의 재산세 계산은 <a href="../posts/property-tax-guide.html" style="color:#F59E0B;">2026년 재산세 가이드</a>를 참고하세요.</p>
+    <p>재산세는 공시가격을 기준으로 납부하며, 면적 자체가 세금에 직접 영향을 주지는 않습니다. 하지만 면적이 커질수록 공시가격이 올라 결국 보유세 부담도 늘어납니다. 보유 중인 아파트의 재산세 계산은 <a href="../posts/property-tax-guide.html">2026년 재산세 가이드</a>를 참고하세요.</p>
 
     <div class="cta-box">
       <p>평수와 ㎡를 상호 변환하고, 전용·공급·서비스면적을 한 번에 계산해보세요.</p>
       <a href="../../calc/realestate/pyeong/" class="cta-btn">평수 변환 계산기 사용하기</a>
     </div>
-    <p style="font-size:13px;color:#6B7280;margin-top:8px;">관련 계산기: <a href="../../calc/realestate/acquisition/" style="color:#F59E0B;">취득세 계산기</a> · <a href="../../calc/realestate/propertytax/" style="color:#F59E0B;">재산세 계산기</a></p>
+    <p class="ds-t-sub" style="font-size: var(--fs-meta); margin-top: 8px">관련 계산기: <a href="../../calc/realestate/acquisition/">취득세 계산기</a> · <a href="../../calc/realestate/propertytax/">재산세 계산기</a></p>
 
-    <h2>자주 묻는 질문</h2>
+    <h2 id="sec-8">자주 묻는 질문</h2>
 
-    <div class="faq-item">
-      <p class="faq-q">Q. 1평은 정확히 몇 제곱미터(㎡)인가요?</p>
-      <p class="faq-a">1평은 정확히 3.30579㎡입니다. 역으로 1㎡는 0.3025평입니다. 평은 한국 전통 면적 단위로 가로·세로 각 6자(尺, 약 1.818m)의 정사각형 넓이에서 유래했습니다. 부동산업계에서 아직 널리 쓰이지만, 건축법·분양 공고·등기부등본에서는 ㎡가 법정 단위입니다. 분양 광고의 평수 표기는 공급면적을 3.30579로 나눈 값이 대부분이므로, 실사용 면적(전용면적)과는 7~10평 정도 차이가 나는 경우가 일반적입니다.</p>
-    </div>
+    <details class="faq-item"><summary><h3 class="faq-q">Q. 1평은 정확히 몇 제곱미터(㎡)인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+      <div class="faq-a">1평은 정확히 3.30579㎡입니다. 역으로 1㎡는 0.3025평입니다. 평은 한국 전통 면적 단위로 가로·세로 각 6자(尺, 약 1.818m)의 정사각형 넓이에서 유래했습니다. 부동산업계에서 아직 널리 쓰이지만, 건축법·분양 공고·등기부등본에서는 ㎡가 법정 단위입니다. 분양 광고의 평수 표기는 공급면적을 3.30579로 나눈 값이 대부분이므로, 실사용 면적(전용면적)과는 7~10평 정도 차이가 나는 경우가 일반적입니다.</div>
+    </details>
 
-    <div class="faq-item">
-      <p class="faq-q">Q. 전용면적, 공급면적, 계약면적이 각각 무엇인가요?</p>
-      <p class="faq-a">전용면적은 거실·방·주방·화장실 등 실제 생활 공간만 포함하며 등기부등본에 기재되는 법적 면적입니다. 공급면적은 전용면적에 계단·복도·엘리베이터 홀 등 층별 공용 공간(주거공용면적)을 더한 것입니다. 계약면적은 공급면적에 관리실·기계실·주차장 출입구 등 단지 전체 공용 공간(기타공용면적)까지 더한 면적입니다. 분양 광고에서 '34평형'이라 하면 보통 공급면적 기준이며, 등기부나 취득세 신고 시에는 전용면적을 씁니다. 같은 '34평형' 아파트라도 전용면적은 25~26평에 불과한 경우가 대부분입니다.</p>
-    </div>
+    <details class="faq-item"><summary><h3 class="faq-q">Q. 전용면적, 공급면적, 계약면적이 각각 무엇인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+      <div class="faq-a">전용면적은 거실·방·주방·화장실 등 실제 생활 공간만 포함하며 등기부등본에 기재되는 법적 면적입니다. 공급면적은 전용면적에 계단·복도·엘리베이터 홀 등 층별 공용 공간(주거공용면적)을 더한 것입니다. 계약면적은 공급면적에 관리실·기계실·주차장 출입구 등 단지 전체 공용 공간(기타공용면적)까지 더한 면적입니다. 분양 광고에서 '34평형'이라 하면 보통 공급면적 기준이며, 등기부나 취득세 신고 시에는 전용면적을 씁니다. 같은 '34평형' 아파트라도 전용면적은 25~26평에 불과한 경우가 대부분입니다.</div>
+    </details>
 
-    <div class="faq-item">
-      <p class="faq-q">Q. 국민주택 규모 85㎡의 의미는 무엇이고, 어떤 혜택이 있나요?</p>
-      <p class="faq-a">국민주택 규모란 주택법 제2조제6호상 전용면적 85㎡(약 25.7평) 이하인 주택을 말합니다. 단 수도권을 제외한 도시지역이 아닌 읍·면 지역은 100㎡ 이하까지 포함됩니다. 이 기준에 해당하면 다양한 세제 혜택을 받을 수 있습니다. 취득 시에는 취득세 감면 혜택이 적용될 수 있고, 청약 시에는 국민주택 공급 물량에 우선 신청 가능합니다. 조세특례제한법 제106조제1항제4호에 따라 국민주택 규모 이하 신축 분양·건설용역에는 부가가치세가 면제됩니다. 85㎡ 기준선은 서울 등 인기 지역 아파트 거래에서 특히 자주 마주치는 기준으로, 실수요 거래의 상당 비중이 이 기준 이하에 몰려 있습니다.</p>
-    </div>
+    <details class="faq-item"><summary><h3 class="faq-q">Q. 국민주택 규모 85㎡의 의미는 무엇이고, 어떤 혜택이 있나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+      <div class="faq-a">국민주택 규모란 주택법 제2조제6호상 전용면적 85㎡(약 25.7평) 이하인 주택을 말합니다. 단 수도권을 제외한 도시지역이 아닌 읍·면 지역은 100㎡ 이하까지 포함됩니다. 이 기준에 해당하면 다양한 세제 혜택을 받을 수 있습니다. 취득 시에는 취득세 감면 혜택이 적용될 수 있고, 청약 시에는 국민주택 공급 물량에 우선 신청 가능합니다. 조세특례제한법 제106조제1항제4호에 따라 국민주택 규모 이하 신축 분양·건설용역에는 부가가치세가 면제됩니다. 85㎡ 기준선은 서울 등 인기 지역 아파트 거래에서 특히 자주 마주치는 기준으로, 실수요 거래의 상당 비중이 이 기준 이하에 몰려 있습니다.</div>
+    </details>
 
-    <div class="faq-item">
-      <p class="faq-q">Q. 인테리어 견적 시 면적은 어떤 기준으로 계산하나요?</p>
-      <p class="faq-a">인테리어 업계에서는 전용면적을 기준으로 견적을 산출하는 것이 일반적입니다. 도배, 마루, 페인트는 전용면적 기준, 에어컨·조명은 실측 면적 기준으로 계산합니다. 예를 들어 전용 84㎡ 아파트의 전체 인테리어(철거·도배·마루·주방·욕실 리모델링 포함) 비용은 2026년 기준 5,000만~8,500만원 수준입니다. 발코니를 확장한 경우 실면적이 약 12~16㎡ 늘어나므로 마루·도배 면적도 그만큼 증가합니다. 견적서를 받을 때 어떤 면적 기준인지 반드시 확인하세요. 공급면적 기준으로 낮게 제시한 후 추가 비용을 청구하는 사례가 있습니다.</p>
-    </div>
+    <details class="faq-item"><summary><h3 class="faq-q">Q. 인테리어 견적 시 면적은 어떤 기준으로 계산하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+      <div class="faq-a">인테리어 업계에서는 전용면적을 기준으로 견적을 산출하는 것이 일반적입니다. 도배, 마루, 페인트는 전용면적 기준, 에어컨·조명은 실측 면적 기준으로 계산합니다. 예를 들어 전용 84㎡ 아파트의 전체 인테리어(철거·도배·마루·주방·욕실 리모델링 포함) 비용은 2026년 기준 5,000만~8,500만원 수준입니다. 발코니를 확장한 경우 실면적이 약 12~16㎡ 늘어나므로 마루·도배 면적도 그만큼 증가합니다. 견적서를 받을 때 어떤 면적 기준인지 반드시 확인하세요. 공급면적 기준으로 낮게 제시한 후 추가 비용을 청구하는 사례가 있습니다.</div>
+    </details>
 
-    <div class="faq-item">
-      <p class="faq-q">Q. 같은 84㎡라도 아파트와 오피스텔은 실사용 공간이 다른가요?</p>
-      <p class="faq-a">크게 다릅니다. 아파트 84㎡는 전용면적이므로 실사용 공간이 84㎡ 그대로입니다. 그러나 오피스텔에서 '84㎡'라고 표기할 경우, 이것이 전용면적인지 공급면적인지 확인이 필요합니다. 오피스텔의 전용률은 보통 50~65%로, 만약 공급면적 84㎡ 기준이라면 실제 전용면적은 42~55㎡에 불과합니다. 아파트 59㎡(17.8평) 소형보다 실사용이 좁을 수 있습니다. 오피스텔 계약 전 반드시 전용면적을 기준으로 크기를 비교하고, 건축물대장이나 등기부등본의 전용면적 항목을 직접 확인해야 합니다.</p>
-    </div>
+    <details class="faq-item"><summary><h3 class="faq-q">Q. 같은 84㎡라도 아파트와 오피스텔은 실사용 공간이 다른가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+      <div class="faq-a">크게 다릅니다. 아파트 84㎡는 전용면적이므로 실사용 공간이 84㎡ 그대로입니다. 그러나 오피스텔에서 '84㎡'라고 표기할 경우, 이것이 전용면적인지 공급면적인지 확인이 필요합니다. 오피스텔의 전용률은 보통 50~65%로, 만약 공급면적 84㎡ 기준이라면 실제 전용면적은 42~55㎡에 불과합니다. 아파트 59㎡(17.8평) 소형보다 실사용이 좁을 수 있습니다. 오피스텔 계약 전 반드시 전용면적을 기준으로 크기를 비교하고, 건축물대장이나 등기부등본의 전용면적 항목을 직접 확인해야 합니다.</div>
+    </details>
 
-    <h2>평수는 숫자가 아니라 기준을 먼저 확인하는 것</h2>
+    <h2 id="sec-9">평수는 숫자가 아니라 기준을 먼저 확인하는 것</h2>
 
     <p>이 글에서 핵심은 하나입니다. "34평형"이라는 숫자 뒤에 어떤 면적 기준이 붙어 있는지가 먼저입니다. 전용면적이면 실제 사용 공간, 공급면적이면 거기서 약 7~10평을 빼야 실사용 크기가 나옵니다.</p>
 
     <p>1평 = 3.30579㎡라는 공식은 단순하지만, 그 공식이 어떤 면적 수치에 적용되는지가 핵심입니다. 분양 광고, 청약 공고, 등기부, 인테리어 견적서, 임대차 계약서 - 각각 쓰는 면적 기준이 다릅니다. 비교 대상을 동일 기준으로 맞추지 않으면 잘못된 결정을 내리기 쉽습니다.</p>
 
     <p>오피스텔 "84㎡"와 아파트 "84㎡"의 실사용 차이가 최대 37%까지 벌어질 수 있다는 사실, 국민주택 기준 85㎡ 초과 시 신축 분양에 부가세 10%가 추가된다는 사실은 평수 1~2개 차이가 수천만원 단위의 비용 차이를 만들 수 있다는 의미입니다. 매물을 비교할 때 아래 평수 변환 계산기에서 전용면적 기준으로 통일해 비교해보세요.</p>
-
-  </div>
+    </div>
+    <aside class="article-info" aria-label="글 작성 및 검토 정보"><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">작성</span><span class="article-info__value">제이퍼 계산기 편집팀</span></div><span class="article-info__sep" aria-hidden="true">|</span><div class="article-info__item"><span class="article-info__label">최종 검토일</span><span class="article-info__value">2026.08.24</span></div></div><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">검토 기준</span><span class="article-info__value">주택법, 건축법, 부동산 거래 실무 기준, 2026년 기준</span></div></div><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">적용 기준</span><span class="article-info__value">2026년 기준</span></div><span class="article-info__sep" aria-hidden="true">|</span><div class="article-info__item"><span class="article-info__label">참고 기관</span><span class="article-info__value">국토교통부(주택법), 국세청(조세특례제한법·지방세법)</span></div></div><div class="article-info__calc"><span class="article-info__label">관련 계산기</span> <a href="/calc/realestate/pyeong/">평수 변환 계산기 &rarr;</a></div><p class="article-info__disclaimer">본 내용은 참고용이며, 실제 면적 측정과 세금 계산은 공인된 전문가 또는 관련 기관에 문의하세요.</p></aside>
+  </article>
 </main>
 
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
+  </div>
+</footer>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: "제이퍼 계산기 편집팀",
@@ -464,8 +417,7 @@ window.ARTICLE_INFO_CONFIG = {
   category: 'realestate'
 };
 </script>
-<script src="/assets/blog-article-info.js"></script>
-<script src="/assets/footer-unified.js" defer></script>
-<script src="/assets/blog-review-footer.js" defer></script>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
 </body>
 </html>

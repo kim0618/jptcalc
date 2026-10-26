@@ -1,0 +1,8 @@
+# 검수 캡처·임시 산출물(파일은 로컬에 둔다, 배포는 .deploy-filter가 별도로 막음)
+design/step-*/
+design/test-final/
+design/review-final/
+design/tools/results/**/*.png
+design/tmp*/
+**/_raw/
+**/__pycache__/

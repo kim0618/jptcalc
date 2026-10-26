@@ -22,11 +22,10 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link rel="stylesheet" href="/assets/affiliate-banner.css" />
-  <link rel="stylesheet" href="/assets/auto-common.css" />
+<link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+  <link rel="stylesheet" href="/assets/affiliate-banner.css?v=7ee55b7a" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -51,44 +50,48 @@
   </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"전기차 보조금은 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"전기차 보조금은 국고보조금 + 지자체 보조금으로 구성되며, 차량 가격에서 이를 빼면 실구매가가 됩니다. 국고보조금은 차종 등급별 대표액(중·대형 최대 580만원, 소형·경형 530만원)에 차량가격 구간계수를 곱해 정해집니다. 예를 들어 4,900만원 중·대형 전기차에 노후차 전환지원금 100만원과 지자체 보조금 200만원을 더하면 총 880만원을 지원받아 실구매가는 약 4,020만원입니다."}},{"@type":"Question","name":"차량 가격에 따라 보조금이 줄어드나요?","acceptedAnswer":{"@type":"Answer","text":"네. 2026년 기준 차량가격 5,300만원 미만은 국고보조금 100%, 5,300만원 이상 8,500만원 미만은 50%, 8,500만원 이상은 국고보조금이 지원되지 않습니다. 예를 들어 국고 대표액이 580만원이어도 6,000만원 차량은 50%인 290만원만 지원됩니다. 차량가격 구간은 매년 조정되므로(2025·2026년 5,300만원으로 동결, 2027년 5,000만원으로 인하 예정) 구매 시점 기준을 확인해야 합니다."}},{"@type":"Question","name":"노후차 전환지원금은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"노후차 전환지원금은 출고 3년 이상 된 내연기관차를 폐차하거나 매각한 뒤 전기차를 구매할 때 추가로 지원되는 100만원입니다. 국고보조금 지원 대상 차량(차량가격 8,500만원 미만)에 한해 더해집니다. 하이브리드차 구매나 가족 간 명의 이전 등은 제외되며, 정확한 요건은 무공해차 통합누리집(ev.or.kr)에서 확인해야 합니다."}},{"@type":"Question","name":"지자체 보조금은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"지자체 보조금은 지역·차종·예산 상황에 따라 천차만별이며, 2026년부터 지자체는 국비 대비 최소 30%를 편성하도록 되어 있습니다. 서울·수도권은 상대적으로 적고(통상 100만원대), 충남·경북·경남·제주 등 지방은 더 높아 국비와 합치면 1,000만원대까지 가능한 경우도 있습니다. 예산이 소진되면 지급이 마감되므로, 정확한 금액과 잔여 예산은 무공해차 통합누리집(ev.or.kr)에서 지역·차종별로 조회한 뒤 입력하세요."}},{"@type":"Question","name":"2026년 전기차 국고보조금은 최대 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"2026년 전기승용차 국고보조금은 중·대형 최대 580만원, 소형·경형 530만원이며, 노후차 전환지원금 100만원을 더하면 최대 680만원입니다. 여기에 지자체 보조금이 별도로 추가됩니다. 다만 이는 차량가격 5,300만원 미만·성능 요건을 모두 충족할 때의 최대치이며, 실제 금액은 차량 모델의 주행거리·에너지효율과 지자체 예산에 따라 달라집니다."}}]}</script>
   <style>
-    input[type=number]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(239,68,68,0.15)}
-    .result-card{background:linear-gradient(135deg,#FEF2F2 0%,#FEE2E2 100%);border:1px solid rgba(239,68,68,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
-    .result-card.show{display:block}
-    .result-highlight{background:rgba(239,68,68,0.1);border-radius:12px;padding:16px;margin-bottom:16px;text-align:center}
-    .rh-label{font-size:12px;color:var(--gray-500);margin-bottom:4px}
-    .rh-value{font-size:28px;font-weight:900;color:var(--primary)}
-    .rh-sub{font-size:12px;color:var(--gray-500);margin-top:2px}
+    /* 페이지 고유 스타일(공통 부품 재정의는 base.css가 맡아 뺐다) */
+    .rh-label { font-size:12px;color:var(--gray-500);margin-bottom:4px }
+    .rh-value { font-size:28px;font-weight:900;color:var(--primary) }
+    .rh-sub { font-size:12px;color:var(--gray-500);margin-top:2px }
   </style>
 </head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
-    <nav class="header-nav">
-      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
-      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/tools/" class="nav-item"><span class="nav-dot" style="background:#14B8A6;"></span>생활·도구</a>
-      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
-      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
-      <a href="/calc/auto/" class="nav-item active"><span class="nav-dot" style="background:#EF4444;"></span>자동차</a>
-    </nav>
-    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
-    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
-  </div>
+<body data-cat="auto" style="--cat: var(--c-auto)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
 </header>
-<main class="page-wrap">
-  <div class="page-header">
-    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/auto/">자동차 계산기</a><span class="breadcrumb-sep">›</span><span>전기차 보조금 계산기</span></div>
-    <div class="page-header-badge">⚡ 2026 국고·지자체 보조금·실구매가</div>
-    <h1>전기차 보조금 계산기</h1>
-    <p>차량 가격·차종·지역으로 국고·지자체 보조금과 실구매가를 계산하세요</p>
+
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/auto/">자동차 계산기</a> &rsaquo; 전기차 보조금 계산기</div>
+      <div class="page-badge">2026 국고·지자체 보조금·실구매가</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-car"></use></svg></span>
+        <h1 class="page-title">전기차 보조금 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">2026 국고·지자체 보조금·실구매가</span>
+          <span class="ds-trust-chip">2026.06.22 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">차량 가격·차종·지역으로 국고·지자체 보조금과 실구매가를 계산하세요</p>
+    </div>
   </div>
-    <div class="card">
-      <div class="card-title">차량 정보</div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+      <div class="field-label ds-group-label">차량 정보</div>
       <div class="field">
         <div class="field-label">차량 가격 <span class="label-hint">보조금 전 판매가격 (만원)</span></div>
-        <div class="input-wrap"><input type="number" id="car-price" min="0" placeholder="예) 4900" oninput="calc()" /><span class="unit">만원</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="car-price" min="0" placeholder="예) 4900" oninput="calc()" /><span class="unit">만원</span></div>
         <div class="converted" id="car-display"></div>
       </div>
       <div class="field">
@@ -107,10 +110,17 @@
       </div>
       <div class="field">
         <div class="field-label">지자체 보조금 <span class="label-hint">지역·차종별 상이, ev.or.kr 조회 후 입력 (만원)</span></div>
-        <div class="input-wrap"><input type="number" id="local" min="0" placeholder="예) 200" oninput="calc()" /><span class="unit">만원</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="local" min="0" placeholder="예) 200" oninput="calc()" /><span class="unit">만원</span></div>
       </div>
     </div>
-    <div class="result-card" id="result">
+
+        <button type="button" class="ds-btn-calc" data-calc-submit="calc" data-result="result" data-required="car-price">계산하기</button>
+      </div>
+    </section>
+
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="result">
       <div class="result-highlight">
         <div class="rh-label">총 보조금</div>
         <div class="rh-value" id="r-total">-</div>
@@ -124,9 +134,35 @@
         <span class="result-total-value" id="r-real">-</span>
       </div>
       <p class="result-note" id="r-note">※ 국고보조금은 차량가격 구간계수(5,300만 미만 100%·8,500만 미만 50%·이상 0%)를 반영한 추정치입니다. 실제 보조금은 차량 모델의 성능·효율 등급과 지자체 예산·소진 상황에 따라 달라지므로, 최종 금액은 무공해차 통합누리집(ev.or.kr)에서 확인하세요.</p>
-</div>
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/auto/ev-charging/">전기차 충전비 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
 
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">총 보조금</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="ev-subsidy-next">
+        <a class="ds-next-card" href="/calc/auto/ev-charging/" data-next="ev-charging"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-car"></use></svg></span><span class="ds-next-body"><b>전기차 충전비 계산기</b><span>배터리 용량·충전율로 충전비를 계산하고, 같은 거리 내연차 유류비와 비교합니다. 2026년 완속·급속 충전 요금을 반영합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/auto/fuel-cost/" data-next="fuel-cost"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-car"></use></svg></span><span class="ds-next-body"><b>유류비 계산기</b><span>주행 거리·연비·유가로 유류비와 필요 연료량, 1km당 비용을 계산합니다. 휘발유·경유·LPG 유종별로 비교할 수 있습니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
+  </div>
+
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">환경부 2026년 전기차 구매보조금 지침 (국고 + 지자체) <a href="https://www.ev.or.kr" target="_blank" rel="noopener">무공해차 통합누리집 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
   <a class="affiliate-banner" href="https://bestmore.net/click.php?m=allcredit&a=A100703525&l=0000" target="_blank" rel="noopener noreferrer sponsored">
+      <span class="ds-icon-badge"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span>
         <div class="affiliate-banner__text">
           <div class="affiliate-banner__title">전기차 할부 전 내 신용점수부터 확인하세요</div>
           <div class="affiliate-banner__desc">올크레딧에서 무료 신용점수 조회 (할부 금리 우대 조건)</div>
@@ -135,15 +171,18 @@
       </a>
   <p class="affiliate-disclosure">※ 위 링크는 제휴 광고이며, 이용 시 제이퍼 계산기가 일정 수수료를 받을 수 있습니다. (이용자 추가 부담 없음)</p>
 
-  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#ev-subsidy-s1">전기차 보조금,</a><a href="#ev-subsidy-s2">구간별 표</a><a href="#ev-subsidy-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
     <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
     <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
   </div>
 
   <div class="guide-section">
-    <div class="guide-card">
-      <h2>전기차 보조금, 이렇게 정해진다</h2>
-      <p>전기차를 사면 국가(국고)와 지방자치단체에서 보조금을 받아 실제 구매가를 낮출 수 있습니다. 국고보조금은 차종 등급별 대표액에 차량가격 구간계수를 곱해 정해지고, 여기에 노후차 전환지원금과 지자체 보조금이 더해집니다. 차량가격이 높을수록 국고보조금이 줄거나 사라지는 구조입니다.</p>
+            <section class="ds-section ds-prose" aria-labelledby="ev-subsidy-s1">
+          <div class="ds-section-head"><h2 id="ev-subsidy-s1">전기차 보조금, 이렇게 정해진다</h2></div>
+<p>전기차를 사면 국가(국고)와 지방자치단체에서 보조금을 받아 실제 구매가를 낮출 수 있습니다. 국고보조금은 차종 등급별 대표액에 차량가격 구간계수를 곱해 정해지고, 여기에 노후차 전환지원금과 지자체 보조금이 더해집니다. 차량가격이 높을수록 국고보조금이 줄거나 사라지는 구조입니다.</p>
       <div class="guide-grid">
         <div class="guide-box">
           <strong>국고보조금</strong>
@@ -163,11 +202,11 @@
         </div>
       </div>
       <p class="ref-links">보조금 조회: <a href="https://www.ev.or.kr" target="_blank" rel="noopener">무공해차 통합누리집(ev.or.kr)</a></p>
-    </div>
-    <div class="guide-card">
-      <h2>2026년 전기승용차 국고보조금 구간표</h2>
-      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">국고보조금 = 차종 등급별 대표액 × 차량가격 구간계수. 노후차 전환지원금 100만원은 국고 지원 대상 차량에 추가됩니다.</p>
-      <div class="table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="ev-subsidy-s2">
+          <div class="ds-section-head"><h2 id="ev-subsidy-s2">2026년 전기승용차 국고보조금 구간표</h2></div>
+<p class="ds-table-lead">국고보조금 = 차종 등급별 대표액 × 차량가격 구간계수. 노후차 전환지원금 100만원은 국고 지원 대상 차량에 추가됩니다.</p>
+      <div class="ds-table-card">
       <table class="rate-table">
         <thead>
           <tr><th>차량 가격</th><th>구간계수</th><th>중·대형 (580만)</th><th>소형·경형 (530만)</th></tr>
@@ -193,11 +232,11 @@
         </tbody>
       </table>
       <p class="ref-links">* 지자체 보조금은 예시값이며 지역·예산별로 다릅니다. 정확한 금액은 ev.or.kr에서 조회하세요.</p>
-    </div>
-    <div class="guide-card">
-      <h2>차량가격별 전기차 보조금·실구매가 (중·대형·지자체 300만)</h2>
-      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">구간별로 계산기를 돌려 얻은 결과를 정리했습니다.</p>
-      <div class="guide-table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="ev-subsidy-s3">
+          <div class="ds-section-head"><h2 id="ev-subsidy-s3">차량가격별 전기차 보조금·실구매가 (중·대형·지자체 300만)</h2></div>
+<p class="ds-table-lead">구간별로 계산기를 돌려 얻은 결과를 정리했습니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead><tr><th>차량 가격</th><th>국고보조금 (구간 100%)</th><th>노후차 전환지원금</th><th>총 보조금</th><th>실구매가 (차량가 − 보조금)</th></tr></thead>
           <tbody>
@@ -208,32 +247,35 @@
           </tbody>
         </table>
       </div>
-    </div>
-    <div class="guide-card faq-card">
-      <h2>자주 묻는 질문</h2>
-      <div class="faq-item">
-        <h3>전기차 보조금은 어떻게 계산하나요?</h3>
-        <p>전기차 보조금은 국고보조금 + 지자체 보조금으로 구성되며, 차량 가격에서 이를 빼면 실구매가가 됩니다. 국고보조금은 차종 등급별 대표액(중·대형 최대 580만원, 소형·경형 530만원)에 차량가격 구간계수를 곱해 정해집니다. 예를 들어 4,900만원 중·대형 전기차에 노후차 전환지원금 100만원과 지자체 보조금 200만원을 더하면 총 880만원을 지원받아 실구매가는 약 4,020만원입니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>차량 가격에 따라 보조금이 줄어드나요?</h3>
-        <p>네. 2026년 기준 차량가격 5,300만원 미만은 국고보조금 100%, 5,300만원 이상 8,500만원 미만은 50%, 8,500만원 이상은 국고보조금이 지원되지 않습니다. 예를 들어 국고 대표액이 580만원이어도 6,000만원 차량은 50%인 290만원만 지원됩니다. 차량가격 구간은 매년 조정되므로(2025·2026년 5,300만원으로 동결, 2027년 5,000만원으로 인하 예정) 구매 시점 기준을 확인해야 합니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>노후차 전환지원금은 무엇인가요?</h3>
-        <p>노후차 전환지원금은 출고 3년 이상 된 내연기관차를 폐차하거나 매각한 뒤 전기차를 구매할 때 추가로 지원되는 100만원입니다. 국고보조금 지원 대상 차량(차량가격 8,500만원 미만)에 한해 더해집니다. 하이브리드차 구매나 가족 간 명의 이전 등은 제외되며, 정확한 요건은 무공해차 통합누리집(ev.or.kr)에서 확인해야 합니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>지자체 보조금은 얼마인가요?</h3>
-        <p>지자체 보조금은 지역·차종·예산 상황에 따라 천차만별이며, 2026년부터 지자체는 국비 대비 최소 30%를 편성하도록 되어 있습니다. 서울·수도권은 상대적으로 적고(통상 100만원대), 충남·경북·경남·제주 등 지방은 더 높아 국비와 합치면 1,000만원대까지 가능한 경우도 있습니다. 예산이 소진되면 지급이 마감되므로, 정확한 금액과 잔여 예산은 무공해차 통합누리집(ev.or.kr)에서 지역·차종별로 조회한 뒤 입력하세요.</p>
-      </div>
-      <div class="faq-item">
-        <h3>2026년 전기차 국고보조금은 최대 얼마인가요?</h3>
-        <p>2026년 전기승용차 국고보조금은 중·대형 최대 580만원, 소형·경형 530만원이며, 노후차 전환지원금 100만원을 더하면 최대 680만원입니다. 여기에 지자체 보조금이 별도로 추가됩니다. 다만 이는 차량가격 5,300만원 미만·성능 요건을 모두 충족할 때의 최대치이며, 실제 금액은 차량 모델의 주행거리·에너지효율과 지자체 예산에 따라 달라집니다.</p>
-      </div>
-    </div>
+        </section>
+            <section class="ds-section faq-card" aria-labelledby="ev-subsidy-faq">
+          <div class="ds-section-head"><h2 id="ev-subsidy-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>전기차 보조금은 어떻게 계산하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>전기차 보조금은 국고보조금 + 지자체 보조금으로 구성되며, 차량 가격에서 이를 빼면 실구매가가 됩니다. 국고보조금은 차종 등급별 대표액(중·대형 최대 580만원, 소형·경형 530만원)에 차량가격 구간계수를 곱해 정해집니다. 예를 들어 4,900만원 중·대형 전기차에 노후차 전환지원금 100만원과 지자체 보조금 200만원을 더하면 총 880만원을 지원받아 실구매가는 약 4,020만원입니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>차량 가격에 따라 보조금이 줄어드나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>네. 2026년 기준 차량가격 5,300만원 미만은 국고보조금 100%, 5,300만원 이상 8,500만원 미만은 50%, 8,500만원 이상은 국고보조금이 지원되지 않습니다. 예를 들어 국고 대표액이 580만원이어도 6,000만원 차량은 50%인 290만원만 지원됩니다. 차량가격 구간은 매년 조정되므로(2025·2026년 5,300만원으로 동결, 2027년 5,000만원으로 인하 예정) 구매 시점 기준을 확인해야 합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>노후차 전환지원금은 무엇인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>노후차 전환지원금은 출고 3년 이상 된 내연기관차를 폐차하거나 매각한 뒤 전기차를 구매할 때 추가로 지원되는 100만원입니다. 국고보조금 지원 대상 차량(차량가격 8,500만원 미만)에 한해 더해집니다. 하이브리드차 구매나 가족 간 명의 이전 등은 제외되며, 정확한 요건은 무공해차 통합누리집(ev.or.kr)에서 확인해야 합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>지자체 보조금은 얼마인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>지자체 보조금은 지역·차종·예산 상황에 따라 천차만별이며, 2026년부터 지자체는 국비 대비 최소 30%를 편성하도록 되어 있습니다. 서울·수도권은 상대적으로 적고(통상 100만원대), 충남·경북·경남·제주 등 지방은 더 높아 국비와 합치면 1,000만원대까지 가능한 경우도 있습니다. 예산이 소진되면 지급이 마감되므로, 정확한 금액과 잔여 예산은 무공해차 통합누리집(ev.or.kr)에서 지역·차종별로 조회한 뒤 입력하세요.</p>
+            </details>
+      <details class="faq-item"><summary><h3>2026년 전기차 국고보조금은 최대 얼마인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>2026년 전기승용차 국고보조금은 중·대형 최대 580만원, 소형·경형 530만원이며, 노후차 전환지원금 100만원을 더하면 최대 680만원입니다. 여기에 지자체 보조금이 별도로 추가됩니다. 다만 이는 차량가격 5,300만원 미만·성능 요건을 모두 충족할 때의 최대치이며, 실제 금액은 차량 모델의 주행거리·에너지효율과 지자체 예산에 따라 달라집니다.</p>
+            </details>
+          </div>
+        </section>
     <div class="update-note">최종 검토: 2026.06.22 · 전기차 보조금은 환경부 지침·지자체 예산 기준이며, 정확한 금액과 잔여 예산은 <a href="https://www.ev.or.kr" target="_blank" rel="noopener">무공해차 통합누리집(ev.or.kr)</a>에서 확인하세요.</div>
   </div>
+    </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
   <script>
   window.TRUST_BLOCK_CONFIG = {
     standard: '환경부 2026년 전기차 구매보조금 지침 (국고 + 지자체)',
@@ -249,42 +291,49 @@
     lastReviewed: '2026.06.22',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>
-  <div class="sibling-section">
-    <div class="sibling-title">다른 자동차 계산기</div>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 자동차 계산기</h2>
     <div class="sibling-list">
-      <a href="/calc/auto/auto-loan/" class="sibling-link">💳 자동차 할부</a>
-      <a href="/calc/auto/auto-tax/" class="sibling-link">🚙 자동차세</a>
-      <a href="/calc/auto/acquisition-tax/" class="sibling-link">📄 자동차 취득세</a>
-      <a href="/calc/auto/ev-charging/" class="sibling-link">🔌 전기차 충전비</a>
-      <a href="/calc/auto/used-car-tax/" class="sibling-link">🔁 중고차 취득세</a>
-      <a href="/calc/auto/fuel-cost/" class="sibling-link">⛽ 유류비</a>
-      <a href="/calc/auto/ev-subsidy/" class="sibling-link current">⚡ 전기차 보조금</a>
+      <a href="/calc/auto/auto-loan/" class="sibling-link">자동차 할부</a>
+      <a href="/calc/auto/auto-tax/" class="sibling-link">자동차세</a>
+      <a href="/calc/auto/acquisition-tax/" class="sibling-link">자동차 취득세</a>
+      <a href="/calc/auto/ev-charging/" class="sibling-link">전기차 충전비</a>
+      <a href="/calc/auto/used-car-tax/" class="sibling-link">중고차 취득세</a>
+      <a href="/calc/auto/fuel-cost/" class="sibling-link">유류비</a>
     </div>
-    <div class="sibling-title">관련 가이드</div>
-    <div class="sibling-list">
-      <a href="/blog/posts/car-acquisition-tax-guide.html" class="sibling-link">📖 자동차 취득세 계산 2026 - 7% 세율·개별소비세 5%·경차 면제·전기…</a>
-      <a href="/blog/posts/car-tax-guide.html" class="sibling-link">📖 자동차세 계산기 2026 - 배기량·차령 감면·연납 할인 한눈에 정리</a>
-      <a href="/blog/posts/ev-subsidy-guide.html" class="sibling-link">📖 전기차 보조금 2026 총정리 - 국고 최대 680만원·지자체·실구매가 계…</a>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/car-acquisition-tax-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/car-acquisition-tax-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>자동차 취득세 계산 2026 - 7% 세율·개별소비세 5%·경차 면제·전기차 감면 총정리</span></a>
+      <a href="/blog/posts/car-tax-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/car-tax-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>자동차세 계산기 2026 - 배기량·차령 감면·연납 할인 한눈에 정리</span></a>
+      <a href="/blog/posts/ev-subsidy-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/ev-subsidy-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>전기차 보조금 2026 총정리 - 국고 최대 680만원·지자체·실구매가 계산법</span></a>
     </div>
   </div>
 </main>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
-    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
   </div>
 </footer>
+
+<script src="/assets/ds/calc-kit.js?v=d45e66d9"></script>
 <script>
 let grade='big', trans=1;
 function Ww(w){return Math.round(w).toLocaleString()+'원';}
 function setGrade(g,btn){grade=g;document.querySelectorAll('#grade-group .seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');calc();}
 function setTrans(t,btn){trans=t;document.querySelectorAll('#trans-group .seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');calc();}
-function showConverted(inputEl,dispEl){const v=parseFloat(inputEl.value);if(!v||v<=0){dispEl.textContent='';return;}dispEl.textContent=v>=10000?'= '+(v/10000).toFixed(2)+'억원':'= '+v.toLocaleString()+'만원';}
+function showConverted(inputEl,dispEl){const v=parseFloat(String(inputEl.value).replace(/,/g, ''));if(!v||v<=0){dispEl.textContent='';return;}dispEl.textContent=v>=10000?'= '+(v/10000).toFixed(2)+'억원':'= '+v.toLocaleString()+'만원';}
 
 function calc(){
-  const car=(parseFloat(document.getElementById('car-price').value)||0)*10000;
-  const local=Math.max(0,(parseFloat(document.getElementById('local').value)||0)*10000);
+  const car=(parseFloat(String(document.getElementById('car-price').value).replace(/,/g, ''))||0)*10000;
+  const local=Math.max(0,(parseFloat(String(document.getElementById('local').value).replace(/,/g, ''))||0)*10000);
   showConverted(document.getElementById('car-price'),document.getElementById('car-display'));
   const res=document.getElementById('result');
   if(car<=0){res.classList.remove('show');return;}
@@ -311,11 +360,10 @@ function calc(){
 }
 </script>
 
-<script src="/assets/calc-validate.js"></script>
-<script src="/assets/calc-result-tools.js"></script>
-  <script src="/assets/footer-unified.js"></script>
-<script src="/assets/calc-registry.js"></script>
-<script src="/assets/auto-detail-shell.js"></script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
@@ -326,7 +374,13 @@ window.ARTICLE_INFO_CONFIG = {
   category: 'auto'
 };
 </script>
-<script src="/assets/blog-article-info.js"></script>
-<script src="/assets/blog-review-footer.js"></script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "result", "required": ["car-price"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#ev-subsidy-next", "next": []});
+  DSCalc.placeTrust('ds-trust-col');
+</script>
+<script src="/assets/ds/prefill.js?v=fa5eb49a" defer></script>
 </body>
 </html>

@@ -21,10 +21,9 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link rel="stylesheet" href="/assets/finance-common.css" />
+<link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -49,49 +48,48 @@
   </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"장병내일준비적금 정부 매칭지원금은 얼마나 받나요?","acceptedAnswer":{"@type":"Answer","text":"2024년부터 매칭지원금이 납입 원금의 100%로 지원됩니다. 만기 전역(소집해제)으로 적금을 만기 해지하면 내가 납입한 원금과 같은 금액을 정부가 추가로 지급합니다. 예를 들어 18개월간 원금 990만원을 모으면 매칭지원금 990만원이 더해져 매칭만으로 1,980만원이 됩니다."}},{"@type":"Question","name":"월 얼마까지 납입할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"개인별 월 납입한도는 55만원입니다(2025년 40만원에서 상향). 계좌별로는 월 30만원까지이며 1인 최대 2계좌까지 개설할 수 있고, 납입한도는 5만원 단위로 조정합니다. 매칭지원금도 납입 원금 기준이므로 한도를 채워 납입할수록 매칭 금액이 커집니다."}},{"@type":"Question","name":"적금 이자에 세금이 붙나요?","acceptedAnswer":{"@type":"Answer","text":"장병내일준비적금은 이자소득세 15.4%가 면제되는 비과세 상품입니다. 일반 적금은 이자에서 15.4%를 떼지만, 이 적금은 은행 이자 전액을 그대로 받습니다. 비과세 혜택은 2026년 12월 31일까지 가입한 계좌에 적용됩니다."}},{"@type":"Question","name":"누가 가입할 수 있고 기간은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"현역병, 상근예비역, 사회복무요원, 대체복무요원이 가입 대상입니다. 가입(납입) 기간은 최소 1개월에서 최대 24개월까지이며, 남은 복무기간만큼 납입할 수 있습니다. 기본금리는 은행별로 차이가 있으나 대체로 연 5% 안팎입니다."}},{"@type":"Question","name":"중도 해지하면 매칭지원금을 받나요?","acceptedAnswer":{"@type":"Answer","text":"정부 매칭지원금은 만기 전역(소집해제) 시 만기 해지하는 경우에만 지급됩니다. 복무 중 중도 해지하면 그동안 납입한 원금과 은행 이자는 돌려받지만 매칭지원금은 받지 못합니다. 따라서 가능하면 만기까지 유지하는 것이 유리합니다."}},{"@type":"Question","name":"예전에 있던 1% 이자지원금은 지금도 받나요?","acceptedAnswer":{"@type":"Answer","text":"과거 운영하던 1% 이자지원금(은행 이자에 더해 국가가 1%p를 보태주던 제도)은 2023년 12월 31일까지 납입된 금액에만 적용되었고, 이후 매칭지원금 100%로 통합되며 신규 가입분에는 적용되지 않습니다. 본 계산기는 현행 기준(원금 + 비과세 은행이자 + 매칭 100%)으로 계산합니다."}}]}</script>
   <style>
-    input[type=number]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(99,102,241,0.15)}
-    .result-card{background:linear-gradient(135deg,#EEF2FF 0%,#E0E7FF 100%);border:1px solid rgba(99,102,241,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
-    .result-card.show{display:block}
-    .result-highlight{background:rgba(99,102,241,0.1);border-radius:12px;padding:16px;margin-bottom:16px;text-align:center}
-    .rh-label{font-size:12px;color:var(--gray-500);margin-bottom:4px}
-    .rh-value{font-size:28px;font-weight:900;color:var(--primary)}
-    .rh-sub{font-size:12px;color:var(--gray-500);margin-top:2px}
-    .result-warn{background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);border-radius:12px;padding:14px 16px;color:#B91C1C;font-size:13px;font-weight:600;text-align:center;margin-top:12px;display:none}
-    .match-row .result-value{color:#6366F1;font-weight:800}
-    .field-hint{font-size:12px;color:var(--gray-500);margin-top:6px}
+    /* 페이지 고유 스타일(공통 부품 재정의는 base.css가 맡아 뺐다) */
+    .rh-label { font-size:12px;color:var(--gray-500);margin-bottom:4px }
+    .rh-value { font-size:28px;font-weight:900;color:var(--primary) }
+    .rh-sub { font-size:12px;color:var(--gray-500);margin-top:2px }
   </style>
 </head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
-    <nav class="header-nav">
-      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
-      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/finance/" class="nav-item active"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
-      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
-      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
-      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
-      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
-      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
-    </nav>
-    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
-    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
-  </div>
+<body data-cat="finance" style="--cat: var(--c-finance)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
 </header>
-<main class="page-wrap">
-  <div class="page-header">
-    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/finance/">금융·이자 계산기</a><span class="breadcrumb-sep">›</span><span>장병내일준비적금 계산기</span></div>
-    <div class="page-header-badge">🎖️ 정부 매칭 100% · 비과세 만기 수령액</div>
-    <h1>장병내일준비적금 계산기</h1>
-    <p>월 납입액과 복무(납입) 개월수를 넣으면 매칭지원금까지 합친 만기 수령액을 계산하세요</p>
+
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/finance/">금융·이자 계산기</a> &rsaquo; 장병내일준비적금 계산기</div>
+      <div class="page-badge">정부 매칭 100% · 비과세 만기 수령액</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-piggy-bank"></use></svg></span>
+        <h1 class="page-title">장병내일준비적금 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">정부 매칭 100% · 비과세 만기 수령액</span>
+          <span class="ds-trust-chip">2026.06.16 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">월 납입액과 복무(납입) 개월수를 넣으면 매칭지원금까지 합친 만기 수령액을 계산하세요</p>
+    </div>
   </div>
-    <div class="card">
-      <div class="card-title">납입 조건 입력</div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+      <div class="field-label ds-group-label">납입 조건 입력</div>
       <div class="field">
         <div class="field-label">월 납입액</div>
-        <div class="input-wrap"><input type="number" id="i-monthly" min="0" max="55" step="1" placeholder="예) 55" oninput="calc()" /><span class="unit">만원</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num data-prefill="monthly" id="i-monthly" min="0" max="55" step="1" placeholder="예) 55" oninput="calc()" /><span class="unit">만원</span></div>
         <div class="field-hint">개인별 월 한도 55만원 (계좌별 30만원, 5만원 단위)</div>
       </div>
       <div class="field">
@@ -106,7 +104,13 @@
       </div>
     </div>
 
-    <div class="result-card" id="result">
+        <button type="button" class="ds-btn-calc" data-calc-submit="calc" data-result="result" data-required="i-monthly">계산하기</button>
+      </div>
+    </section>
+
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="result">
       <div class="result-highlight">
         <div class="rh-label">만기 수령액</div>
         <div class="rh-value" id="r-total">-</div>
@@ -121,17 +125,47 @@
       </div>
       <p class="result-note">※ 만기 수령액 = 납입 원금 + 비과세 은행이자 + 정부 매칭지원금(원금 100%). 매칭지원금은 만기 전역 시에만 지급됩니다.</p>
       <div class="result-warn" id="r-warn"></div>
-    </div>
-  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/finance/savings/">적금 만기 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">만기 수령액</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="jangbyeong-savings-next">
+        <a class="ds-next-card" href="/calc/finance/savings/" data-next="savings"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-piggy-bank"></use></svg></span><span class="ds-next-body"><b>적금 만기 계산기</b><span>월 납입액·기간·금리를 입력하면 만기 수령액과 실효수익률을 계산합니다. 적금은 표시 금리의 약 절반이 실효수익률이 되는 이유를 숫자로 확인할 수 있습니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/finance/deposit/" data-next="deposit"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-piggy-bank"></use></svg></span><span class="ds-next-body"><b>예금 이자 계산기</b><span>원금과 연이율, 예치 기간을 입력하면 세전 이자와 이자소득세 15.4% 공제 후 세후 수령액을 동시에 산출합니다. 여러 은행 금리 비교 시 실수령액 기준으로 확인할 수 있습니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
+  </div>
+
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">병무청·국방부 장병내일준비적금 안내 기준 (매칭 100%·월 55만원·비과세) <a href="https://www.mma.go.kr" target="_blank" rel="noopener">병무청 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#jangbyeong-savings-s1">구간별 표</a><a href="#jangbyeong-savings-s2">장병내일준비적금, 왜</a><a href="#jangbyeong-savings-s3">계산 방법</a><a href="#jangbyeong-savings-s4">계산 예시</a><a href="#jangbyeong-savings-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
     <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
     <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
   </div>
 
   <div class="guide-section">
-    <div class="guide-card">
-      <h2>2026년 장병내일준비적금 혜택 기준표</h2>
-      <p>장병내일준비적금은 만기 전역 시 납입 원금의 100%를 정부가 매칭지원하고 이자는 전액 비과세됩니다. 2025년부터 개인별 월 납입한도가 40만원에서 55만원으로 상향됐습니다.</p>
-      <div class="guide-table-wrap">
+            <section class="ds-section ds-prose" aria-labelledby="jangbyeong-savings-s1">
+          <div class="ds-section-head"><h2 id="jangbyeong-savings-s1">2026년 장병내일준비적금 혜택 기준표</h2></div>
+<p>장병내일준비적금은 만기 전역 시 납입 원금의 100%를 정부가 매칭지원하고 이자는 전액 비과세됩니다. 2025년부터 개인별 월 납입한도가 40만원에서 55만원으로 상향됐습니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead>
             <tr>
@@ -150,19 +184,19 @@
         </table>
       </div>
       <p style="font-size:13px;color:var(--gray-600);margin-top:10px">매칭지원금은 만기 전역(소집해제) 시에만 지급되며, 복무 중 중도 해지하면 원금과 은행 이자만 돌려받습니다. 과거 1% 이자지원금은 2023년 말 종료되고 매칭지원금 100%로 통합됐습니다.</p>
-    </div>
-    <div class="guide-card">
-      <h2>장병내일준비적금, 왜 일반 적금보다 유리할까</h2>
-      <p>장병내일준비적금은 현역병·상근예비역·사회복무요원·대체복무요원이 복무 기간 동안 가입할 수 있는 정책형 적금입니다. 일반 적금과 가장 크게 다른 점은 세 가지입니다. 첫째, 만기 전역 시 납입 원금의 100%를 정부가 매칭지원금으로 더 얹어줍니다. 둘째, 이자소득세 15.4%가 면제되는 비과세 상품이라 은행 이자를 전액 받습니다. 셋째, 기본금리 자체가 연 5% 안팎으로 시중 적금보다 높게 설정되어 있습니다. 결과적으로 같은 돈을 모아도 전역할 때 받는 금액이 두 배 가까이 불어납니다.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="jangbyeong-savings-s2">
+          <div class="ds-section-head"><h2 id="jangbyeong-savings-s2">장병내일준비적금, 왜 일반 적금보다 유리할까</h2></div>
+<p>장병내일준비적금은 현역병·상근예비역·사회복무요원·대체복무요원이 복무 기간 동안 가입할 수 있는 정책형 적금입니다. 일반 적금과 가장 크게 다른 점은 세 가지입니다. 첫째, 만기 전역 시 납입 원금의 100%를 정부가 매칭지원금으로 더 얹어줍니다. 둘째, 이자소득세 15.4%가 면제되는 비과세 상품이라 은행 이자를 전액 받습니다. 셋째, 기본금리 자체가 연 5% 안팎으로 시중 적금보다 높게 설정되어 있습니다. 결과적으로 같은 돈을 모아도 전역할 때 받는 금액이 두 배 가까이 불어납니다.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>정부 매칭지원금</strong><span>2024년부터 납입 원금의 100% (만기 전역 시 지급)</span></div>
         <div class="guide-box"><strong>비과세 혜택</strong><span>이자소득세 15.4% 면제 (2026.12.31 가입분까지)</span></div>
         <div class="guide-box"><strong>납입 한도</strong><span>개인별 월 55만원 · 계좌별 30만원 · 5만원 단위</span></div>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>만기 수령액 계산 방법</h2>
-      <p>장병내일준비적금의 만기 수령액은 세 부분으로 나뉩니다. 아래 순서대로 입력하면 원금·이자·매칭지원금을 한눈에 확인할 수 있습니다.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="jangbyeong-savings-s3">
+          <div class="ds-section-head"><h2 id="jangbyeong-savings-s3">만기 수령액 계산 방법</h2></div>
+<p>장병내일준비적금의 만기 수령액은 세 부분으로 나뉩니다. 아래 순서대로 입력하면 원금·이자·매칭지원금을 한눈에 확인할 수 있습니다.</p>
       <ul>
         <li><strong>1단계.</strong> 월 납입액을 입력합니다. 개인별 한도는 월 55만원이며, 매칭지원금도 원금 기준이므로 한도를 채울수록 유리합니다.</li>
         <li><strong>2단계.</strong> 남은 복무기간에 맞춰 납입 개월수(최대 24개월)를 입력합니다.</li>
@@ -170,10 +204,10 @@
         <li><strong>4단계.</strong> 은행 이자 = 월 납입액 × 연이율 × (개월수 × (개월수+1) ÷ 2) ÷ 12 (적립식 단리). 비과세라 세금 공제가 없습니다.</li>
         <li><strong>5단계.</strong> 정부 매칭지원금 = 납입 원금 × 100%. 만기 수령액 = 원금 + 이자 + 매칭지원금으로 자동 합산됩니다.</li>
       </ul>
-    </div>
-    <div class="guide-card">
-      <h2>실제 만기 수령액 계산 예시</h2>
-      <h3>예시 1 - 김도현(20세, 육군 현역병) 한도까지 18개월 납입</h3>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="jangbyeong-savings-s4">
+          <div class="ds-section-head"><h2 id="jangbyeong-savings-s4">실제 만기 수령액 계산 예시</h2></div>
+<h3>예시 1 - 김도현(20세, 육군 현역병) 한도까지 18개월 납입</h3>
       <p>월 55만원을 18개월간 납입하고 만기 전역하는 경우입니다. 기본금리는 연 5%로 가정합니다.</p>
       <ul>
         <li>납입 원금: 55만원 × 18개월 = 990만원</li>
@@ -198,21 +232,21 @@
         <li>정부 매칭지원금: 660만원 × 100% = 660만원</li>
         <li><strong>만기 수령액: 660만 + 17.9만 + 660만 ≈ 1,338만원</strong></li>
       </ul>
-    </div>
-    <div class="guide-card">
-      <h2>가입 전 알아둘 점</h2>
-      <p>혜택이 큰 만큼 매칭지원금을 온전히 받으려면 조건을 지켜야 합니다.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="jangbyeong-savings-s5">
+          <div class="ds-section-head"><h2 id="jangbyeong-savings-s5">가입 전 알아둘 점</h2></div>
+<p>혜택이 큰 만큼 매칭지원금을 온전히 받으려면 조건을 지켜야 합니다.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>만기 유지가 핵심</strong><span>정부 매칭지원금은 만기 전역(소집해제) 시에만 지급됩니다. 중도 해지하면 원금과 은행 이자는 받지만 매칭은 받지 못합니다.</span></div>
         <div class="guide-box"><strong>한도는 5만원 단위</strong><span>개인별 월 55만원·계좌별 30만원이며, 1인 2계좌까지 개설할 수 있습니다. 한도 상향은 복무 중 1회만 변경 가능합니다.</span></div>
         <div class="guide-box"><strong>은행별 금리 차이</strong><span>14개 시중은행에서 가입할 수 있고 기본금리·우대금리가 은행마다 다릅니다. 자동이체·카드 실적 등 우대 조건을 비교해 보세요.</span></div>
         <div class="guide-box"><strong>1% 이자지원금은 종료</strong><span>과거의 국가 1% 이자지원금은 2023년 말 납입분까지만 적용되고 매칭 100%로 통합됐습니다. 신규 가입분에는 매칭지원금만 적용됩니다.</span></div>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>월 납입액별 장병내일준비적금 만기액 (18개월·금리 5%)</h2>
-      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">구간별로 계산기를 돌려 얻은 결과를 정리했습니다.</p>
-      <div class="guide-table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="jangbyeong-savings-s6">
+          <div class="ds-section-head"><h2 id="jangbyeong-savings-s6">월 납입액별 장병내일준비적금 만기액 (18개월·금리 5%)</h2></div>
+<p class="ds-table-lead">구간별로 계산기를 돌려 얻은 결과를 정리했습니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead><tr><th>월 납입액</th><th>납입 원금 (월납입 × 개월)</th><th>정부 매칭지원금 (원금 100%)</th><th>만기 수령액</th></tr></thead>
           <tbody>
@@ -222,18 +256,38 @@
           </tbody>
         </table>
       </div>
-    </div>
-    <div class="guide-card faq-card">
-      <h2>자주 묻는 질문</h2>
-      <div class="faq-item"><h3>장병내일준비적금 정부 매칭지원금은 얼마나 받나요?</h3><p>2024년부터 매칭지원금이 납입 원금의 100%로 지원됩니다. 만기 전역(소집해제)으로 적금을 만기 해지하면 내가 납입한 원금과 같은 금액을 정부가 추가로 지급합니다. 예를 들어 18개월간 원금 990만원을 모으면 매칭지원금 990만원이 더해져 매칭만으로 1,980만원이 됩니다.</p></div>
-      <div class="faq-item"><h3>월 얼마까지 납입할 수 있나요?</h3><p>개인별 월 납입한도는 55만원입니다(2025년 40만원에서 상향). 계좌별로는 월 30만원까지이며 1인 최대 2계좌까지 개설할 수 있고, 납입한도는 5만원 단위로 조정합니다. 매칭지원금도 납입 원금 기준이므로 한도를 채워 납입할수록 매칭 금액이 커집니다.</p></div>
-      <div class="faq-item"><h3>적금 이자에 세금이 붙나요?</h3><p>장병내일준비적금은 이자소득세 15.4%가 면제되는 비과세 상품입니다. 일반 적금은 이자에서 15.4%를 떼지만, 이 적금은 은행 이자 전액을 그대로 받습니다. 비과세 혜택은 2026년 12월 31일까지 가입한 계좌에 적용됩니다.</p></div>
-      <div class="faq-item"><h3>누가 가입할 수 있고 기간은 얼마인가요?</h3><p>현역병, 상근예비역, 사회복무요원, 대체복무요원이 가입 대상입니다. 가입(납입) 기간은 최소 1개월에서 최대 24개월까지이며, 남은 복무기간만큼 납입할 수 있습니다. 기본금리는 은행별로 차이가 있으나 대체로 연 5% 안팎입니다.</p></div>
-      <div class="faq-item"><h3>중도 해지하면 매칭지원금을 받나요?</h3><p>정부 매칭지원금은 만기 전역(소집해제) 시 만기 해지하는 경우에만 지급됩니다. 복무 중 중도 해지하면 그동안 납입한 원금과 은행 이자는 돌려받지만 매칭지원금은 받지 못합니다. 따라서 가능하면 만기까지 유지하는 것이 유리합니다.</p></div>
-      <div class="faq-item"><h3>예전에 있던 1% 이자지원금은 지금도 받나요?</h3><p>과거 운영하던 1% 이자지원금(은행 이자에 더해 국가가 1%p를 보태주던 제도)은 2023년 12월 31일까지 납입된 금액에만 적용되었고, 이후 매칭지원금 100%로 통합되며 신규 가입분에는 적용되지 않습니다. 본 계산기는 현행 기준(원금 + 비과세 은행이자 + 매칭 100%)으로 계산합니다.</p></div>
+        </section>
+            <section class="ds-section faq-card" aria-labelledby="jangbyeong-savings-faq">
+          <div class="ds-section-head"><h2 id="jangbyeong-savings-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>장병내일준비적금 정부 매칭지원금은 얼마나 받나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>2024년부터 매칭지원금이 납입 원금의 100%로 지원됩니다. 만기 전역(소집해제)으로 적금을 만기 해지하면 내가 납입한 원금과 같은 금액을 정부가 추가로 지급합니다. 예를 들어 18개월간 원금 990만원을 모으면 매칭지원금 990만원이 더해져 매칭만으로 1,980만원이 됩니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>월 얼마까지 납입할 수 있나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>개인별 월 납입한도는 55만원입니다(2025년 40만원에서 상향). 계좌별로는 월 30만원까지이며 1인 최대 2계좌까지 개설할 수 있고, 납입한도는 5만원 단위로 조정합니다. 매칭지원금도 납입 원금 기준이므로 한도를 채워 납입할수록 매칭 금액이 커집니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>적금 이자에 세금이 붙나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>장병내일준비적금은 이자소득세 15.4%가 면제되는 비과세 상품입니다. 일반 적금은 이자에서 15.4%를 떼지만, 이 적금은 은행 이자 전액을 그대로 받습니다. 비과세 혜택은 2026년 12월 31일까지 가입한 계좌에 적용됩니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>누가 가입할 수 있고 기간은 얼마인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>현역병, 상근예비역, 사회복무요원, 대체복무요원이 가입 대상입니다. 가입(납입) 기간은 최소 1개월에서 최대 24개월까지이며, 남은 복무기간만큼 납입할 수 있습니다. 기본금리는 은행별로 차이가 있으나 대체로 연 5% 안팎입니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>중도 해지하면 매칭지원금을 받나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>정부 매칭지원금은 만기 전역(소집해제) 시 만기 해지하는 경우에만 지급됩니다. 복무 중 중도 해지하면 그동안 납입한 원금과 은행 이자는 돌려받지만 매칭지원금은 받지 못합니다. 따라서 가능하면 만기까지 유지하는 것이 유리합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>예전에 있던 1% 이자지원금은 지금도 받나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>과거 운영하던 1% 이자지원금(은행 이자에 더해 국가가 1%p를 보태주던 제도)은 2023년 12월 31일까지 납입된 금액에만 적용되었고, 이후 매칭지원금 100%로 통합되며 신규 가입분에는 적용되지 않습니다. 본 계산기는 현행 기준(원금 + 비과세 은행이자 + 매칭 100%)으로 계산합니다.</p>
+            </details>
       <div class="update-note">최종 검토: 2026.06.16 · 계산 결과는 참고용입니다.</div>
-    </div>
+          </div>
+        </section>
   </div>
+    </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
   <script>
   window.TRUST_BLOCK_CONFIG = {
     standard: '병무청·국방부 장병내일준비적금 안내 기준 (매칭 100%·월 55만원·비과세)',
@@ -250,41 +304,48 @@
     lastReviewed: '2026.06.16',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>
-  <div class="sibling-section">
-    <div class="sibling-title">다른 금융·이자 계산기</div>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 금융·이자 계산기</h2>
     <div class="sibling-list">
-      <a href="/calc/finance/deposit/" class="sibling-link">💰 예금 이자</a>
-      <a href="/calc/finance/savings/" class="sibling-link">📈 적금 만기</a>
-      <a href="/calc/finance/compound/" class="sibling-link">📊 복리 계산</a>
-      <a href="/calc/finance/loan-repayment/" class="sibling-link">🏠 대출 상환</a>
-      <a href="/calc/finance/investment/" class="sibling-link">📉 투자 수익률</a>
-      <a href="/calc/finance/stock-average/" class="sibling-link">⚖️ 주식 평단가</a>
-      <a href="/calc/finance/jangbyeong-savings/" class="sibling-link current">🎖️ 장병내일준비적금</a>
-      <a href="/calc/finance/youth-leap-account/" class="sibling-link">🚀 청년도약계좌</a>
-      <a href="/calc/finance/youth-future-savings/" class="sibling-link">💳 청년미래적금</a>
+      <a href="/calc/finance/deposit/" class="sibling-link">예금 이자</a>
+      <a href="/calc/finance/savings/" class="sibling-link">적금 만기</a>
+      <a href="/calc/finance/compound/" class="sibling-link">복리 계산</a>
+      <a href="/calc/finance/loan-repayment/" class="sibling-link">대출 상환</a>
+      <a href="/calc/finance/investment/" class="sibling-link">투자 수익률</a>
+      <a href="/calc/finance/stock-average/" class="sibling-link">주식 평단가</a>
+      <a href="/calc/finance/youth-leap-account/" class="sibling-link">청년도약계좌</a>
+      <a href="/calc/finance/youth-future-savings/" class="sibling-link">청년미래적금</a>
     </div>
-    <div class="sibling-title">관련 가이드</div>
-    <div class="sibling-list">
-      <a href="/blog/posts/jangbyeong-savings-guide.html" class="sibling-link">📖 장병내일준비적금 만기 수령액 2026 - 정부 매칭 100% 비과세 계산 …</a>
-      <a href="/blog/posts/military-salary-guide.html" class="sibling-link">📖 군인 월급 계급별 봉급표 2026 - 이병~병장 실수령액과 전역 목돈 전략</a>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/jangbyeong-savings-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/jangbyeong-savings-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>장병내일준비적금 만기 수령액 2026 - 정부 매칭 100% 비과세 계산 총정리</span></a>
+      <a href="/blog/posts/military-salary-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/military-salary-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>군인 월급 계급별 봉급표 2026 - 이병~병장 실수령액과 전역 목돈 전략</span></a>
     </div>
   </div>
 </main>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
-    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
   </div>
 </footer>
+
+<script src="/assets/ds/calc-kit.js?v=d45e66d9"></script>
 <script>
 function won(v){return Math.round(v).toLocaleString()+'원';}
 function calc(){
   const res=document.getElementById('result');
   const warn=document.getElementById('r-warn');
-  const monthlyMan=parseFloat(document.getElementById('i-monthly').value)||0;
-  const n=parseInt(document.getElementById('i-months').value)||0;
-  const rate=parseFloat(document.getElementById('i-rate').value)||0;
+  const monthlyMan=parseFloat(String(document.getElementById('i-monthly').value).replace(/,/g, ''))||0;
+  const n=parseInt(String(document.getElementById('i-months').value).replace(/,/g, ''))||0;
+  const rate=parseFloat(String(document.getElementById('i-rate').value).replace(/,/g, ''))||0;
   if(monthlyMan<=0||n<=0){res.classList.remove('show');return;}
   res.classList.add('show');
   // 한도 안내 경고 (계산은 입력값 그대로 수행)
@@ -308,11 +369,10 @@ function calc(){
 }
 </script>
 
-<script src="/assets/calc-validate.js"></script>
-<script src="/assets/calc-result-tools.js"></script>
-  <script src="/assets/footer-unified.js"></script>
-<script src="/assets/calc-registry.js"></script>
-<script src="/assets/finance-detail-shell.js"></script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
@@ -323,7 +383,14 @@ window.ARTICLE_INFO_CONFIG = {
   category: 'finance'
 };
 </script>
-<script src="/assets/blog-article-info.js"></script>
-<script src="/assets/blog-review-footer.js"></script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "result", "required": ["i-monthly"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#jangbyeong-savings-next", "next": [{"key": "savings", "path": "/calc/finance/savings/", "sub": "월 납입액·기간·금리를 입력하면 만기 수령액과 실효수익률을 계산합니다. 적금은 표시 금리의 약 절반이 실효수익률이 되는 이유를 숫자로 확인할 수 있습니다.", "params": {"monthly": "i-monthly"}, "from": "jangbyeong-savings"}]});
+  DSCalc.placeTrust('ds-trust-col');
+  (function () { const a = document.getElementById('ds-primary-next'); if (!a) return; const go = () => { const v = {}; Object.entries({"monthly": "i-monthly"}).forEach(([k, id]) => v[k] = DSCalc.num(id)); a.href = DSCalc.link('/calc/finance/savings/', v, 'jangbyeong-savings'); }; document.addEventListener('input', go, true); go(); })();
+</script>
+<script src="/assets/ds/prefill.js?v=fa5eb49a" defer></script>
 </body>
 </html>

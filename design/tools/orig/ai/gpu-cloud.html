@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GPU 클라우드 비용 비교 계산기 - AWS·GCP·Azure 비교 | 제이퍼 계산기</title>
+  <meta name="description" content="A100, H100, L4 GPU 클라우드 비용을 AWS, GCP, Azure 기준으로 비교 계산합니다. 시간당·일·월 비용 자동 환산." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/ai/gpu-cloud/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="GPU 클라우드 비용 비교 계산기 | 제이퍼 계산기" />
+  <meta property="og:description" content="A100, H100, L4 GPU 클라우드 비용을 AWS, GCP, Azure 기준으로 비교 계산합니다. 시간당·일·월 비용 자동 환산." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/ai/gpu-cloud/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="GPU 클라우드 비용 비교 계산기 | 제이퍼 계산기" />
+  <meta name="twitter:description" content="A100, H100, L4 GPU 클라우드 비용을 AWS, GCP, Azure 기준으로 비교 계산합니다. 시간당·일·월 비용 자동 환산." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/ai-common.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"GPU 클라우드 비용 비교 계산기","url":"https://www.jptcalc.kr/calc/ai/gpu-cloud/","applicationCategory":"BusinessApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+    {"@type":"ListItem","position":2,"name":"AI / 테크 비용 계산기","item":"https://www.jptcalc.kr/calc/ai/"},
+    {"@type":"ListItem","position":3,"name":"GPU 클라우드 비용 비교 계산기","item":"https://www.jptcalc.kr/calc/ai/gpu-cloud/"}
+  ]}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"스팟 인스턴스는 얼마나 저렴한가요?","acceptedAnswer":{"@type":"Answer","text":"온디맨드 대비 50~70% 저렴하지만, 수요에 따라 중단될 수 있어 학습보다는 추론이나 배치 작업에 적합합니다."}},{"@type":"Question","name":"A100과 H100 중 어느 것을 선택해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"H100은 A100 대비 2~3배 빠른 학습 성능을 제공하지만 시간당 비용도 높습니다. 총 비용은 작업 시간까지 고려해야 합니다."}},{"@type":"Question","name":"예약 인스턴스는 얼마나 할인되나요?","acceptedAnswer":{"@type":"Answer","text":"1년 약정 시 약 30~40%, 3년 약정 시 최대 60%까지 할인됩니다. 장기 운영이 확실한 경우 유리합니다."}},{"@type":"Question","name":"리전(지역)에 따라 GPU 가격이 달라지나요?","acceptedAnswer":{"@type":"Answer","text":"네, 같은 벤더라도 리전에 따라 가격이 10~20% 이상 차이날 수 있습니다. AWS us-east-1(버지니아)이 ap-northeast-2(서울)보다 GPU 가격이 낮은 경우가 많습니다. 한국 내 데이터 보관 규제가 없다면 저렴한 리전을 선택하는 것이 비용 절감에 유리하며, 데이터 전송(egress) 비용도 함께 계산해야 합니다."}},{"@type":"Question","name":"클라우드 GPU와 온프레미스 서버 중 어느 쪽이 경제적인가요?","acceptedAnswer":{"@type":"Answer","text":"연간 사용 시간이 4,000시간(하루 약 11시간) 이상이면 GPU 서버 직접 구매가 더 저렴할 수 있습니다. H100 GPU 1장은 약 3~4만 달러 수준이며 3년 감가 기준 월 환산 시 클라우드 온디맨드보다 낮아집니다. 반면 간헐적 학습 작업이나 초기 스타트업이라면 초기 투자 없이 유연하게 사용할 수 있는 클라우드가 적합합니다."}}]}</script>
+  <style>
+    /* gpu-cloud 고유 스타일 */
+    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
+    input[type=number]{-moz-appearance:textfield}
+    .result-card{background:#fff;border:2px solid rgba(139,92,246,0.3);border-radius:16px;padding:24px;margin-top:8px;display:none;box-shadow:0 4px 16px rgba(0,0,0,0.06)}
+    .result-card.show{display:block}
+    .result-summary{display:flex;gap:12px;margin-bottom:18px}
+    .summary-chip{flex:1;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:12px;padding:12px 14px;text-align:center}
+    .summary-chip .chip-label{font-size:11px;font-weight:600;color:var(--gray-400);margin-bottom:4px}
+    .summary-chip .chip-value{font-size:15px;font-weight:800;color:var(--gray-900)}
+    .gpu-table{width:100%;border-collapse:separate;border-spacing:0;font-size:13px}
+    .gpu-table thead th{background:var(--gray-50);padding:10px 12px;font-size:11px;font-weight:700;color:var(--gray-500);text-transform:uppercase;letter-spacing:0.3px;border-bottom:1px solid var(--gray-200);text-align:center}
+    .gpu-table thead th:first-child{border-radius:10px 0 0 0}
+    .gpu-table thead th:last-child{border-radius:0 10px 0 0}
+    .gpu-table tbody td{padding:12px;color:var(--gray-700);font-weight:600;border-bottom:1px solid var(--gray-100);text-align:center}
+    .gpu-table tbody tr:last-child td{border-bottom:none}
+    .gpu-table tbody tr.best-row{background:rgba(139,92,246,0.06)}
+    .gpu-table tbody tr.best-row td:first-child{color:var(--primary);font-weight:800}
+    .gpu-table .best-badge{display:inline-block;background:var(--primary);color:#fff;font-size:9px;font-weight:800;padding:2px 6px;border-radius:6px;margin-left:4px;vertical-align:middle}
+    .gpu-table .krw-cell{color:var(--gray-900);font-weight:800}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+      <a href="/calc/ai/" class="nav-item active"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/ai/">AI / 테크 비용 계산기</a><span class="breadcrumb-sep">›</span><span>GPU 클라우드 비용 비교 계산기</span></div>
+    <div class="page-header-badge">💻 2026년 6월 확인 기준 · 온디맨드 가격</div>
+    <h1>GPU 클라우드 비용 비교 계산기</h1>
+    <p>AWS·GCP·Azure GPU 클라우드 비용을 한눈에 비교하세요</p>
+  </div>
+    <div class="card">
+      <div class="card-title">GPU 클라우드 비용 비교</div>
+      <div class="info-box"><span class="info-icon">💡</span><p>동일 GPU(A100 80GB, H100 80GB) 기준으로 AWS, GCP, Azure의 시간당/월간 비용을 비교합니다.</p></div>
+      <div class="field">
+        <div class="field-label"><span>GPU 종류</span></div>
+        <div class="seg-group"><button class="seg-btn active" onclick="setGpu('a100',this)">A100 80GB</button><button class="seg-btn" onclick="setGpu('h100',this)">H100 80GB</button><button class="seg-btn" onclick="setGpu('l4',this)">L4 24GB</button></div>
+      </div>
+      <div class="field">
+        <div class="field-label"><span>일일 사용 시간</span></div>
+        <div class="input-wrap"><input type="number" id="gpu-hours" placeholder="예) 8" oninput="calc()"><span class="unit">시간/일</span></div>
+      </div>
+      <div class="field">
+        <div class="field-label"><span>GPU 수량</span></div>
+        <div class="input-wrap"><input type="number" id="gpu-count" placeholder="예) 1" min="1" oninput="calc()"><span class="unit">개</span></div>
+      </div>
+      <div class="field">
+        <div class="field-label"><span>환율</span></div>
+        <div class="input-wrap"><input type="number" id="gpu-exchange" placeholder="예) 1450" oninput="calc()"><span class="unit">원/달러</span></div>
+      </div>
+    </div>
+    <div class="result-card" id="result"><div id="result-content"></div></div>
+  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>GPU 클라우드 비용 비교 계산기는 언제 쓰나요?</h2>
+      <p>AI 모델 학습이나 추론을 위해 GPU 클라우드를 선택할 때, AWS·GCP·Azure 간 비용 차이를 미리 비교하면 수백만 원을 절약할 수 있습니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>GPU 선택</strong><span>A100, H100, L4 등 용도에 맞는 GPU 선택 기준</span></div>
+        <div class="guide-box"><strong>벤더 비교</strong><span>동일 GPU 기준 AWS·GCP·Azure 가격 차이 확인</span></div>
+        <div class="guide-box"><strong>비용 절감</strong><span>스팟 인스턴스·예약 인스턴스 활용 시 50~70% 절감</span></div>
+      </div>
+    </div>
+    <div class="guide-card">
+      <h2>GPU 클라우드 비용 계산 원리</h2>
+      <p>GPU 클라우드 비용은 시간당 단가 × GPU 수량 × 사용 시간으로 계산됩니다. 2026년 9월 확인 기준 A100 온디맨드 단가는 GPU 1장 환산으로 AWS $2.74/h(p4d.24xlarge 8장 $21.96), GCP $3.67/h(a2-highgpu-1g, 40GB), Azure $3.67/h(NC24ads A100 v4, 80GB)이며, 리전과 약정 조건에 따라 달라집니다. 같은 $3.67라도 GCP는 40GB, Azure는 80GB라 VRAM이 빠듯하면 Azure 쪽이 유리합니다. H100은 A100보다 비싸지만 학습 속도가 2~3배 빠르기 때문에 실제 작업 시간과 총 비용을 함께 계산해야 유리한 선택을 할 수 있습니다. 각 벤더 공식 가격 페이지에서 최신 단가를 반드시 재확인하세요.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>온디맨드 단가</strong><span>A100 기준 벤더별 $2.74~$3.67/h (GPU 1장 환산, 2026년 9월 확인). AI 특화 플랫폼은 $1.99부터</span></div>
+        <div class="guide-box"><strong>월 비용 산출</strong><span>시간당 단가 × 수량 × 일일 사용 시간 × 30일로 계산. 계산기에 입력하면 자동 환산됩니다</span></div>
+        <div class="guide-box"><strong>절감 옵션 비교</strong><span>스팟 인스턴스 50~70% 할인, 1년 예약 약정 30~40% 할인 - 작업 패턴에 따라 선택</span></div>
+      </div>
+    </div>
+    <div class="guide-card">
+      <h2>실제 계산 예시</h2>
+      <h3>예시 1 - 박주원(34세, AI 스타트업 개발자)</h3>
+      <p>모델 파인튜닝 작업으로 A100 2개를 하루 12시간씩 사용합니다. 벤더별 월 비용(30일 기준, 환율 1,360원/$)은 다음과 같습니다.</p>
+      <ul>
+        <li>AWS: $2.74 × 2 × 12시간 × 30일 = <strong>$1,973/월</strong> (약 268만원)</li>
+        <li>GCP: $3.67 × 2 × 12 × 30 = <strong>$2,642/월</strong> (약 359만원)</li>
+        <li>Azure: $3.67 × 2 × 12 × 30 = <strong>$2,642/월</strong> (약 359만원)</li>
+        <li><strong>최저가(AWS) 선택 시 월 $669, 연 $8,028 차이가 납니다.</strong> AWS는 8장 묶음(p4d.24xlarge)만 제공하므로 2장만 쓰려면 GCP·Azure가 현실적이고, 이 경우 두 벤더 단가가 같아 VRAM이 큰 Azure(80GB)가 유리합니다</li>
+      </ul>
+      <h3>예시 2 - 최민지(28세, ML 엔지니어)</h3>
+      <p>챗봇 추론 서비스에 L4 24GB 1개를 하루 4시간씩 상시 운영합니다. L4는 추론 전용으로 A100 대비 비용 효율이 높습니다.</p>
+      <ul>
+        <li>AWS: $0.81 × 1 × 4 × 30 = <strong>$97.2/월</strong> (약 14만원)</li>
+        <li>GCP: $0.70 × 1 × 4 × 30 = <strong>$84/월</strong> (약 12만원)</li>
+        <li>Azure: $0.65 × 1 × 4 × 30 = <strong>$78/월</strong> (약 11만원)</li>
+        <li><strong>벤더 간 최대 월 $19 차이. 추론 서비스에는 A100보다 L4가 비용 효율적입니다</strong></li>
+      </ul>
+    </div>
+    <div class="guide-card">
+      <h2>이것만은 확인하세요</h2>
+      <p>GPU 클라우드 비용은 리전, 약정 방식, 네트워크 전송 비용에 따라 실제 청구액이 달라집니다. 예산 수립 전 아래 항목을 반드시 점검하세요.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>리전별 가격 차이</strong><span>동일 GPU라도 리전에 따라 10~20% 차이. 데이터 규제가 없다면 저렴한 리전 활용 검토</span></div>
+        <div class="guide-box"><strong>네트워크 전송 비용</strong><span>데이터 egress에 GB당 $0.05~0.09 추가 청구. 대용량 모델 이동 시 별도 계산 필요</span></div>
+        <div class="guide-box"><strong>가격 수시 변동</strong><span>클라우드 GPU 가격은 수시 변경. 계약 전 각 벤더 공식 가격 페이지에서 최신 단가 재확인</span></div>
+      </div>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>스팟 인스턴스는 얼마나 저렴한가요?</h3><p>온디맨드 대비 50~70% 저렴하지만, 수요에 따라 중단될 수 있어 학습보다는 추론이나 배치 작업에 적합합니다.</p></div>
+      <div class="faq-item"><h3>A100과 H100 중 어느 것을 선택해야 하나요?</h3><p>H100은 A100 대비 2~3배 빠른 학습 성능을 제공하지만 시간당 비용도 높습니다. 총 비용은 작업 시간까지 고려해야 합니다.</p></div>
+      <div class="faq-item"><h3>예약 인스턴스는 얼마나 할인되나요?</h3><p>1년 약정 시 약 30~40%, 3년 약정 시 최대 60%까지 할인됩니다. 장기 운영이 확실한 경우 유리합니다.</p></div>
+      <div class="faq-item"><h3>리전(지역)에 따라 GPU 가격이 달라지나요?</h3><p>네, 같은 벤더라도 리전에 따라 가격이 10~20% 이상 차이날 수 있습니다. AWS us-east-1(버지니아)이 ap-northeast-2(서울)보다 GPU 가격이 낮은 경우가 많습니다. 한국 내 데이터 보관 규제가 없다면 저렴한 리전을 선택하는 것이 비용 절감에 유리하며, 데이터 전송(egress) 비용도 함께 계산해야 합니다.</p></div>
+      <div class="faq-item"><h3>클라우드 GPU와 온프레미스 서버 중 어느 쪽이 경제적인가요?</h3><p>연간 사용 시간이 4,000시간(하루 약 11시간) 이상이면 GPU 서버 직접 구매가 더 저렴할 수 있습니다. H100 GPU 1장은 약 3~4만 달러 수준이며 3년 감가 기준 월 환산 시 클라우드 온디맨드보다 낮아집니다. 반면 간헐적 학습 작업이나 초기 스타트업이라면 초기 투자 없이 유연하게 사용할 수 있는 클라우드가 적합합니다.</p></div>
+      <div class="update-note">최종 검토: 2026.06.09 · 가격은 각 벤더 공식 사이트 기준이며 변동될 수 있습니다.</div>
+    </div>
+  </div>
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '2026년 6월 기준 AWS/GCP/Azure 공식 가격표',
+    appliedFrom: '2026년 6월',
+    exceptions: [
+      '클라우드 가격은 리전·약정 조건에 따라 다르며 수시로 변경됩니다',
+      '스팟 인스턴스·예약 인스턴스 할인은 별도 확인이 필요합니다',
+    ],
+    references: [
+      { name: 'AWS 가격(aws.amazon.com/pricing)', url: 'https://aws.amazon.com/pricing' },
+      { name: 'GCP 가격(cloud.google.com/pricing)', url: 'https://cloud.google.com/pricing' },
+    ],
+    lastReviewed: '2026.06',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 AI / 테크 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/ai/api-token/" class="sibling-link">⚡ API 토큰 비용</a>
+      <a href="/calc/ai/gpu-cloud/" class="sibling-link current">💻 GPU 클라우드</a>
+      <a href="/calc/ai/saas-comparison/" class="sibling-link">⚖️ SaaS vs 자체구축</a>
+      <a href="/calc/ai/llm-comparison/" class="sibling-link">📊 LLM 비교표</a>
+      <a href="/calc/ai/infra-forecast/" class="sibling-link">🚀 인프라 예측</a>
+    </div>
+    <div class="sibling-title">관련 가이드</div>
+    <div class="sibling-list">
+      <a href="/blog/posts/ai-infra-cost-guide.html" class="sibling-link">📖 AI 서비스 운영 비용, 월 얼마나 들까? 인프라 비용 예측 가이드</a>
+      <a href="/blog/posts/chatgpt-api-cost.html" class="sibling-link">📖 ChatGPT API 비용 계산 - 토큰 요금 완전 정리</a>
+      <a href="/blog/posts/claude-vs-gpt.html" class="sibling-link">📖 Claude vs GPT - AI 모델 성능·비용 비교 2026</a>
+      <a href="/blog/posts/cursor-vs-copilot.html" class="sibling-link">📖 Cursor vs GitHub Copilot - AI 코딩 도구, 실제 생…</a>
+      <a href="/blog/posts/gpu-cloud-comparison.html" class="sibling-link">📖 GPU 클라우드 서버 비용 비교 - AWS vs GCP vs Azure v…</a>
+      <a href="/blog/posts/saas-vs-self-build.html" class="sibling-link">📖 SaaS vs 자체구축 비용 비교 - TCO·손익분기점 계산법</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script>
+
+const GPU={a100:{name:'A100',aws:2.74,gcp:3.67,azure:3.67},h100:{name:'H100 80GB',aws:5.12,gcp:4.58,azure:4.28},l4:{name:'L4 24GB',aws:0.81,gcp:0.70,azure:0.65}};
+let gpuType='a100';
+function fmtUsd(v){return '$'+v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function fmtKrw(v){v=Math.round(v);if(v>=100000000)return Math.floor(v/100000000).toLocaleString()+'억 '+Math.floor((v%100000000)/10000).toLocaleString()+'만원';if(v>=10000)return Math.floor(v/10000).toLocaleString()+'만 '+(v%10000).toLocaleString()+'원';return v.toLocaleString()+'원';}
+function setGpu(t,btn){gpuType=t;btn.parentElement.querySelectorAll('.seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');calc();}
+function calc(){
+  const h=parseFloat(document.getElementById('gpu-hours').value)||0;
+  const cnt=parseInt(document.getElementById('gpu-count').value)||1;
+  const ex=parseFloat(document.getElementById('gpu-exchange').value)||1450;
+  if(!h){document.getElementById('result').classList.remove('show');return;}
+  const g=GPU[gpuType];
+  const ps=[{name:'AWS',hr:g.aws},{name:'GCP',hr:g.gcp},{name:'Azure',hr:g.azure}];
+  const mn=Math.min(...ps.map(p=>p.hr));
+  const mx=Math.max(...ps.map(p=>p.hr));
+  const hourWarn=(h>24)?`<div class="result-note" style="color:#DC2626;font-weight:700;margin-bottom:8px">⚠ 일일 사용 시간이 24시간을 초과합니다. 입력값을 확인해 주세요.</div>`:'';
+  let tbl=`<div style="overflow-x:auto;-webkit-overflow-scrolling:touch"><table class="gpu-table"><thead><tr><th>클라우드</th><th>시간당<br>합계</th><th>일 비용</th><th>월 비용</th><th>월(원화)</th><th>연 비용</th></tr></thead><tbody>`;
+  ps.forEach(p=>{
+    const hrTotal=p.hr*cnt, d=hrTotal*h, m=d*30, y=d*365, isBest=p.hr===mn;
+    tbl+=`<tr class="${isBest?'best-row':''}"><td>${p.name}${isBest?'<span class="best-badge">최저가</span>':''}</td><td>${fmtUsd(hrTotal)}</td><td>${fmtUsd(d)}</td><td>${fmtUsd(m)}</td><td class="krw-cell">${fmtKrw(m*ex)}</td><td>${fmtUsd(y)}</td></tr>`;
+  });
+  tbl+='</tbody></table></div>';
+  const monthDiff=(mx-mn)*h*cnt*30;
+  const yearDiff=monthDiff*365/30;
+  const savingNote=(mx>mn)?`<div class="result-note" style="margin-top:10px"><strong>💰 최저가 선택 시 절감액</strong> · 최고가 대비 월 ${fmtUsd(monthDiff)} (${fmtKrw(monthDiff*ex)}) / 연 ${fmtUsd(yearDiff)} (${fmtKrw(yearDiff*ex)})</div>`:'';
+  document.getElementById('result-content').innerHTML=`${hourWarn}<div class="result-summary"><div class="summary-chip"><div class="chip-label">GPU</div><div class="chip-value">${g.name} × ${cnt}개</div></div><div class="summary-chip"><div class="chip-label">일 사용</div><div class="chip-value">${h}시간</div></div><div class="summary-chip"><div class="chip-label">환율</div><div class="chip-value">${ex.toLocaleString()}원/$</div></div></div>${tbl}${savingNote}<div class="result-note">* 온디맨드 가격 기준 · 시간당 단가는 GPU 1개 기준 AWS $${g.aws.toFixed(2)} / GCP $${g.gcp.toFixed(2)} / Azure $${g.azure.toFixed(2)}<br>* 스팟 인스턴스 사용 시 50~70% 절감 가능 · 1년 예약 시 약 30~40% 할인 · 월=30일·연=365일 가정</div>`;
+  document.getElementById('result').classList.add('show');
+}
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/calc-registry.js"></script>
+<script src="/assets/ai-detail-shell.js"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '2026년 6월 기준 공식 가격·스펙',
+  basisDate: '2026년 6월',
+  referenceOrg: '각 서비스 공식 페이지',
+  lastReviewed: '2026.06.09',
+  category: 'ai'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/blog-review-footer.js"></script>
+</body>
+</html>

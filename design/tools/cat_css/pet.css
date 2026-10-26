@@ -1,0 +1,4 @@
+/* 반려동물 고유 부품: 비용 항목 줄(라벨 위, 입력 아래, 필드 간격) */
+.cost-item { display: flex; flex-direction: column; gap: var(--space-2); margin-bottom: var(--space-field); }
+.cost-label { font-size: var(--fs-label); font-weight: var(--fw-label); color: var(--text); }
+.cost-item .input-wrap { width: 100%; }

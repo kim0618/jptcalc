@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DTI 계산기 2026 - 총부채상환비율 무료 계산 | 제이퍼 계산기</title>
+  <meta name="description" content="DTI(총부채상환비율)를 무료로 계산하세요. 연소득 대비 주택담보대출 원리금과 기타대출 이자 합산 비율을 자동 계산하고 규제지역별 대출 한도를 확인합니다." />
+  <meta name="keywords" content="DTI계산기,총부채상환비율,DTI,주택담보대출한도,규제지역,DTI계산법" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/realestate/dti/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DTI 계산기 2026 - 총부채상환비율 무료 계산 | 제이퍼 계산기" />
+  <meta property="og:description" content="DTI(총부채상환비율)를 무료로 계산하세요. 연소득 대비 주담대 원리금과 기타대출 이자 비율을 자동 계산합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/realestate/dti/" />
+  <meta property="og:site_name" content="제이퍼 계산기" /><meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DTI 계산기 2026 - 총부채상환비율 무료 계산 | 제이퍼 계산기" />
+  <meta name="twitter:description" content="DTI(총부채상환비율)를 무료로 계산하세요. 연소득 대비 주담대 원리금과 기타대출 이자 비율을 자동 계산합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"DTI 계산기","url":"https://www.jptcalc.kr/calc/realestate/dti/","description":"DTI(총부채상환비율)를 연소득 대비 주담대 원리금과 기타대출 이자 비율로 자동 계산합니다.","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"inLanguage":"ko-KR"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},{"@type":"ListItem","position":2,"name":"부동산 계산기","item":"https://www.jptcalc.kr/calc/realestate/"},{"@type":"ListItem","position":3,"name":"DTI 계산기","item":"https://www.jptcalc.kr/calc/realestate/dti/"}]}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"DTI란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"DTI(총부채상환비율)는 연 소득 대비 주택담보대출의 연간 원리금 상환액과 기타 대출의 연간 이자 상환액을 합산한 비율입니다. 계산식은 (주담대 연간 원리금 + 기타대출 연간 이자) ÷ 연소득 × 100 입니다. 투기지역·투기과열지구는 40%, 조정대상지역은 50%, 그 외 수도권은 60% 이하를 충족해야 합니다(은행업감독규정 별표6, 수도권 아파트 담보대출 기준)."}},{"@type":"Question","name":"DTI와 DSR은 어떻게 다른가요?","acceptedAnswer":{"@type":"Answer","text":"가장 큰 차이는 기타 대출의 반영 방식입니다. DTI는 주택담보대출은 원리금 전체, 기타 대출(신용대출·카드론 등)은 이자만 합산합니다. 반면 DSR은 주담대를 포함한 모든 대출의 원금과 이자를 전부 합산하기 때문에 일반적으로 DSR이 DTI보다 더 보수적인(엄격한) 지표입니다. 현재 은행권 대출 심사는 DSR이 핵심 기준이지만, DTI도 규제지역에서 함께 적용됩니다."}},{"@type":"Question","name":"지역별 DTI 기준은 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"투기지역·투기과열지구는 DTI 40%, 조정대상지역은 50%, 투기·투기과열·조정대상을 제외한 수도권은 60%가 적용됩니다. 비수도권 아파트는 이 표의 적용 대상이 아니라 LTV·DSR이 실질 기준입니다. 디딤돌·보금자리론 등 정책 모기지는 DSR 대신 DTI 60% 기준이 적용되어 한도가 상대적으로 넉넉한 편입니다. 규제지역 지정은 정부 정책에 따라 변동되므로 대출 전 해당 금융기관에 확인이 필요합니다."}},{"@type":"Question","name":"기타 대출은 왜 이자만 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"DTI는 주택을 사기 위한 주택담보대출의 상환 부담을 핵심으로 보고, 다른 대출은 이자 부담만 보조적으로 반영하도록 설계된 지표입니다. 따라서 신용대출·카드론·자동차 할부 등 기타 대출은 연간 이자만 분자에 더합니다. 원금까지 모두 더하는 DSR과 구분되는 지점입니다."}},{"@type":"Question","name":"DTI로 최대 대출 한도를 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"최대 가능 주담대 연간 원리금 = (연소득 × 지역별 DTI 기준) − 기타대출 연간 이자 입니다. 예를 들어 연소득 5,000만원, 조정대상지역(DTI 50%), 기타대출 연 이자 200만원이면 최대 주담대 원리금은 5,000×0.5 − 200 = 2,300만원/년입니다. 이 원리금을 만기·금리로 환산하면 대출 원금 한도를 가늠할 수 있습니다."}},{"@type":"Question","name":"DTI와 LTV는 함께 적용되나요?","acceptedAnswer":{"@type":"Answer","text":"네. LTV(주택담보인정비율)는 주택 가격 대비 빌릴 수 있는 한도를 정하고, DTI는 소득 대비 갚을 수 있는 한도를 정합니다. 두 기준을 모두 통과해야 하며, 여기에 DSR까지 더해 세 가지 중 가장 낮은 한도가 실제 대출 가능액이 됩니다."}},{"@type": "Question", "name": "지방(비수도권) 아파트도 DTI 40~60% 규제를 받나요?", "acceptedAnswer": {"@type": "Answer", "text": "은행업감독규정 별표6의 DTI 표는 각주에서 적용 대상을 \"해당 지역 소재 아파트 담보대출\"로, 60% 열을 \"투기지역·투기과열지구·조정대상지역을 제외한 수도권\"으로 한정하고 있습니다. 따라서 비수도권 아파트 담보대출은 이 표의 비율이 직접 적용되지 않고, 실무에서는 LTV 70%와 DSR 40%(1금융권)가 한도를 정합니다. 다만 은행이 자체 심사 기준으로 DTI를 참고할 수 있고, 지방이라도 조정대상지역으로 지정되면 50%가 적용되므로 대출 전 해당 지역의 규제 지정 여부를 확인하세요."}},{"@type": "Question", "name": "연봉 5,000만원이면 DTI 기준으로 얼마까지 빌릴 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "기타대출이 없다면 연간 원리금 상한은 투기·투기과열지구 2,000만원, 조정대상지역 2,500만원, 그 외 수도권 3,000만원입니다. 이를 만기 30년·연 4.0% 원리금균등으로 환산하면 대출 원금은 각각 약 3.5억·4.4억·5.2억원입니다. 신용대출 이자가 연 200만원 있으면 상한이 1,800만·2,300만·2,800만원으로 줄고 환산 원금도 약 3.1억·4.0억·4.9억원이 됩니다. 실제 한도는 여기에 LTV(규제지역 40%, 수도권 금액한도)와 DSR 40%를 함께 적용한 뒤 가장 낮은 값입니다."}},{"@type": "Question", "name": "서울 아파트는 DTI 몇 %가 적용되나요?", "acceptedAnswer": {"@type": "Answer", "text": "40%입니다. 2025년 10·15 대책으로 서울 25개 자치구 전체가 투기과열지구와 조정대상지역에 동시 지정됐고(강남·서초·송파·용산은 기존 유지), 두 지정이 겹치면 더 낮은 투기과열지구 기준 40%가 적용됩니다. 같은 대책으로 경기 과천·광명·성남 분당·수정·중원·수원 영통·장안·팔달·안양 동안·용인 수지·의왕·하남도 40% 대상이 됐습니다. 규제지역은 이후 추가 지정이나 해제가 있을 수 있으니 국토교통부 공고로 현재 지정 상태를 확인하세요."}}]}</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/affiliate-banner.css" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css" />
+  <link rel="stylesheet" href="/assets/ds/base.css" />
+</head>
+<body data-cat="realestate" style="--cat: var(--c-realestate)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
+</header>
+
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/realestate/">부동산 계산기</a> &rsaquo; DTI 계산기</div>
+      <div class="page-badge">부동산 계산기</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-house"></use></svg></span>
+        <h1 class="page-title">DTI 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">2026.4.1 시행 기준</span>
+          <span class="ds-trust-chip">2026.10.12 검토</span>
+          <span class="ds-trust-chip">은행업감독규정 별표6</span>
+        </div>
+      </div>
+      <p class="page-subtitle">총부채상환비율 · 연소득 대비 주담대 원리금 + 기타대출 이자</p>
+    </div>
+  </div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+        <div class="card">
+          <div class="field">
+            <div class="field-label">연소득 <span class="label-hint">세전 연간 소득</span></div>
+            <div class="input-wrap">
+              <input type="text" inputmode="numeric" autocomplete="off" data-ds-num data-prefill="income" id="dti-income" placeholder="예) 5000" oninput="calcDti()" />
+              <span class="unit">만원</span>
+            </div>
+            <div class="converted" id="dti-income-display"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="field">
+            <div class="field-label">주택담보대출 연간 원리금 <span class="label-hint">원금+이자 포함</span></div>
+            <div class="input-wrap">
+              <input type="text" inputmode="numeric" autocomplete="off" data-ds-num data-prefill="mortgage" id="dti-mortgage" placeholder="예) 1500" oninput="calcDti()" />
+              <span class="unit">만원</span>
+            </div>
+          </div>
+          <div class="field">
+            <div class="field-label">기타대출 연간 이자 <span class="label-hint">신용대출·카드론 등, 이자만</span></div>
+            <div class="input-wrap">
+              <input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="dti-other-interest" placeholder="예) 200" oninput="calcDti()" />
+              <span class="unit">만원</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="field-label">적용 지역 (DTI 기준)</div>
+          <div class="seg-group">
+            <button class="seg-btn active" onclick="dtiSelectType('규제지역', 40, this)">규제지역 <b>40%</b></button>
+            <button class="seg-btn" onclick="dtiSelectType('조정대상지역', 50, this)">조정대상지역 <b>50%</b></button>
+            <button class="seg-btn" onclick="dtiSelectType('그 외 수도권', 60, this)">그 외 수도권 <b>60%</b></button>
+          </div>
+        </div>
+        <button type="button" class="ds-btn-calc" data-calc-submit="dtiSubmit">계산하기</button>
+      </div>
+    </section>
+
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card" id="dti-result">
+        <div id="dti-result-content"></div>
+      </div>
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">DTI</span><span class="ds-result-number">--%</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="dti-next">
+        <a class="ds-next-card" href="/calc/realestate/dsr/" data-next="dsr"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-house"></use></svg></span><span class="ds-next-body"><b>DSR 계산기</b><span>대출 상환 부담</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/realestate/ltv/" data-next="ltv"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-house"></use></svg></span><span class="ds-next-body"><b>LTV 계산기</b><span>담보가치 기준 한도</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+      <h2 class="ds-col-title">관련 계산기</h2>
+      <div class="ds-next ds-related">
+        <a class="ds-next-card" href="/calc/realestate/dsr/"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-house"></use></svg></span><span class="ds-next-body"><b>대출한도(DSR) 계산기</b></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/realestate/loan/"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-house"></use></svg></span><span class="ds-next-body"><b>대출이자 계산기</b></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/realestate/acquisition/"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-house"></use></svg></span><span class="ds-next-body"><b>취득세 계산기</b></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+    </section>
+  </div>
+
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">은행업감독규정 별표6 <a href="https://www.law.go.kr/행정규칙/은행업감독규정" target="_blank" rel="noopener">관련 법령 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+      <a class="affiliate-banner" href="https://bestmore.net/click.php?m=allcredit&a=A100703525&l=0000" target="_blank" rel="noopener noreferrer sponsored">
+        <span class="ds-icon-badge"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span>
+        <div class="affiliate-banner__text">
+          <div class="affiliate-banner__title">대출 전 내 신용점수부터 확인하세요</div>
+          <div class="affiliate-banner__desc">올크레딧에서 무료 신용점수 조회</div>
+        </div>
+        <span class="affiliate-banner__cta">신용점수 확인하기 →</span>
+      </a>
+      <p class="affiliate-disclosure">※ 위 링크는 제휴 광고이며, 이용 시 제이퍼 계산기가 일정 수수료를 받을 수 있습니다. (이용자 추가 부담 없음)</p>
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#dti-guide"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-book-open"></use></svg>가이드</a><a href="#dti-regions"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-map-pin"></use></svg>지역별 기준</a><a href="#dti-vs"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-scale"></use></svg>DTI vs DSR</a><a href="#dti-limit"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-table-2"></use></svg>한도표</a><a href="#dti-faq"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-circle-help"></use></svg>FAQ</a>
+      </nav>
+      <section class="explain-section ds-section ds-prose" aria-labelledby="dti-guide">
+        <div class="ds-section-head"><span class="ds-icon-badge"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-book-open"></use></svg></span><h2 id="dti-guide">DTI 완벽 가이드</h2></div>
+        <h3>DTI란?</h3>
+        <p>총부채상환비율(DTI)은 연 소득 대비 주택담보대출의 연간 원리금과 기타 대출의 연간 이자를 합산한 비율입니다. 소득으로 빚을 감당할 수 있는지를 보는 상환 능력 지표입니다.</p>
+
+        <h3>DTI 계산 공식</h3>
+        <div class="ds-formula" role="img" aria-label="DTI(%) = (주담대 연간 원리금 + 기타대출 연간 이자) ÷ 연 소득 × 100">
+          <span class="ds-formula-lhs">DTI(%) =</span>
+          <span class="ds-frac"><span class="ds-frac-num">주담대 연간 원리금 + 기타대출 연간 이자</span><span class="ds-frac-den">연 소득</span></span>
+          <span class="ds-formula-tail">× 100</span>
+        </div>
+        <ul class="ds-formula-caption">
+          <li>DTI(%) = (주담대 연간 원리금 + 기타대출 연간 이자) ÷ 연 소득 × 100</li>
+          <li>주택담보대출은 <strong>원금+이자</strong>, 기타 대출은 <strong>이자만</strong> 합산</li>
+        </ul>
+
+        <h3 id="dti-regions">지역별 적용 기준</h3>
+        <div class="ds-tiles" id="dti-region-tiles">
+          <div class="ds-tile is-active" data-limit="40"><span class="ds-tile-flag"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-check"></use></svg>지금 선택</span><b>40%</b><span><strong>규제지역</strong> (투기지역·투기과열지구): DTI 40% 이하</span></div>
+          <div class="ds-tile" data-limit="50"><span class="ds-tile-flag"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-check"></use></svg>지금 선택</span><b>50%</b><span><strong>조정대상지역</strong>: DTI 50% 이하</span></div>
+          <div class="ds-tile" data-limit="60"><span class="ds-tile-flag"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-check"></use></svg>지금 선택</span><b>60%</b><span><strong>그 외 수도권</strong>(투기·투기과열·조정대상 제외): DTI 60% 이하</span></div>
+        </div>
+        <p class="ds-region-note">규제지역 = 투기지역·투기과열지구(서울 전역 등) / 60%는 투기·투기과열·조정대상을 뺀 수도권 아파트 / 비수도권 아파트는 DTI 표 적용 대상이 아니라 LTV·DSR이 기준 / 정책모기지(디딤돌·보금자리)는 60% 기준</p>
+        <ul class="ds-note-list">
+          <li><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-info"></use></svg><span><strong>비수도권(지방) 아파트</strong>: 위 DTI 표의 적용 대상이 아니며 LTV·DSR이 실질 기준(은행업감독규정 별표6 각주)</span></li>
+          <li><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-info"></use></svg><span>디딤돌·보금자리론 등 정책 모기지: DSR 대신 DTI 60% 기준</span></li>
+        </ul>
+
+        <h3 id="dti-vs">DTI vs DSR 차이</h3>
+        <table class="ds-compare">
+          <thead><tr><th scope="col">구분</th><th scope="col">DTI</th><th scope="col">DSR</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">기타 대출 반영과 한도</th><td class="is-diff">DTI: 기타 대출은 <strong>이자만</strong> 반영 → 상대적으로 한도가 넉넉</td><td class="is-diff">DSR: 기타 대출도 <strong>원금+이자 전부</strong> 반영 → 더 보수적</td></tr>
+            <tr><th scope="row">주택담보대출</th><td>원금+이자</td><td>원금+이자</td></tr>
+          </tbody>
+        </table>
+        <ul class="ds-note-list">
+          <li><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-scale"></use></svg><span>실제 한도는 DTI·DSR·LTV 중 가장 낮은 기준이 결정</span></li>
+        </ul>
+      </section>
+
+      <div class="guide-section">
+        <section class="ds-section ds-prose" aria-labelledby="dti-core">
+          <div class="ds-section-head"><span class="ds-icon-badge"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-list-checks"></use></svg></span><h2 id="dti-core">DTI 계산 전 반드시 확인할 핵심</h2></div>
+          <p>DTI(총부채상환비율)는 <strong>주택담보대출의 연간 원리금</strong>과 <strong>기타 대출의 연간 이자</strong>를 더해 연 소득으로 나눈 비율입니다. DSR과 가장 크게 다른 점은 기타 대출(신용대출·카드론 등)을 <strong>이자만</strong> 반영한다는 것입니다. 그래서 같은 부채라도 DTI가 DSR보다 한도가 넉넉하게 나옵니다. 투기지역·투기과열지구는 40%, 조정대상지역은 50%, 그 외 수도권은 60%가 적용됩니다(은행업감독규정 별표6, 2026.4.1 시행 고시 기준). 이 표는 수도권 아파트 담보대출을 대상으로 하며, 비수도권 아파트는 LTV·DSR이 실질 기준입니다.</p>
+          <ol class="ds-steps">
+            <li><span class="ds-step-no">1</span><div><strong>주담대는 원리금 전체</strong><span>새로 받을 주택담보대출은 원금과 이자를 합한 연간 상환액 전체가 분자에 들어갑니다. 만기·금리에 따라 연 원리금이 달라집니다.</span></div></li>
+            <li><span class="ds-step-no">2</span><div><strong>기타 대출은 이자만</strong><span>신용대출·카드론·자동차 할부 등 기타 대출은 연간 이자만 더합니다. 원금 상환액은 DTI 분자에 포함되지 않습니다.</span></div></li>
+            <li><span class="ds-step-no">3</span><div><strong>계산 예시</strong><span>연소득 5,000만원, 주담대 연 원리금 1,500만원, 기타대출 연 이자 200만원: DTI = (1,500+200)÷5,000 × 100 = 34% → 규제지역 40% 기준 적격.</span></div></li>
+            <li><span class="ds-step-no">4</span><div><strong>DTI·DSR·LTV 동시 적용</strong><span>실제 대출 한도는 DTI, DSR, LTV 세 기준 중 가장 낮은 값으로 결정됩니다. 한 가지만 통과해도 다른 기준에서 막힐 수 있습니다.</span></div></li>
+          </ol>
+          <p class="ds-refs"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-landmark"></use></svg>공식 기준 확인: <a href="https://www.fss.or.kr" target="_blank" rel="noopener">금융감독원(fss.or.kr)</a> · <a href="https://www.fsc.go.kr" target="_blank" rel="noopener">금융위원회(fsc.go.kr)</a></p>
+        </section>
+
+        <section class="ds-section ds-prose" aria-labelledby="dti-scn">
+          <div class="ds-section-head"><span class="ds-icon-badge"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-users"></use></svg></span><h2 id="dti-scn">시나리오별 DTI 계산 예시</h2></div>
+          <p>DTI는 주담대 원리금에 기타대출 이자만 더해 소득으로 나눕니다. 지역별 기준에 따라 적격 여부가 달라집니다.</p>
+          <div class="ds-table-card">
+            <table>
+              <thead><tr><th>상황</th><th>연소득 / 상환액</th><th>DTI / 판정</th></tr></thead>
+              <tbody>
+                <tr><td><strong>수도권 비규제지역 직장인</strong></td><td>연 5,000만원 / 주담대 원리금 2,400만원 + 기타이자 150만원</td><td><span class="ds-pill is-ok"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-check"></use></svg>51.0% ✓ 그 외 수도권 60% 가능</span></td></tr>
+                <tr><td><strong>조정대상지역 직장인</strong></td><td>연 6,000만원 / 주담대 원리금 2,500만원 + 기타이자 200만원</td><td><span class="ds-pill is-ok"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-check"></use></svg>45.0% ✓ 조정 50% 가능</span></td></tr>
+                <tr><td><strong>규제지역 신규 매수</strong></td><td>연 7,000만원 / 주담대 원리금 2,800만원 + 기타이자 300만원</td><td><span class="ds-pill is-bad"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-x"></use></svg>44.3% ✗ 규제 40% 초과</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>입력 시 자주 헷갈리는 부분</h3>
+          <ul>
+            <li><strong>소득</strong>은 세전 연봉 또는 사업자의 종합소득세 신고 소득 기준입니다. 세후 금액이 아닙니다.</li>
+            <li><strong>주택담보대출</strong>은 원금+이자를 합한 연간 원리금(월 납입액 × 12)을 입력합니다.</li>
+            <li><strong>기타 대출</strong>은 이자만 입력합니다. 신용대출 2,000만원·금리 6%라면 연 이자 120만원만 더합니다.</li>
+            <li>DTI를 통과해도 DSR(원금까지 합산)에서 막힐 수 있으니 두 지표를 함께 확인하세요.</li>
+          </ul>
+          <h3>결과 해석 방법</h3>
+          <p><strong>규제지역 40% 이하</strong>: 투기·투기과열지구 기준 충족 / <strong>조정대상지역 50% 이하</strong>: 조정지역 기준 충족 / <strong>그 외 수도권 60% 이하</strong>: 투기·투기과열·조정대상을 제외한 수도권 기준 충족. DTI를 낮추려면 기타 대출 이자를 줄이거나(소액 신용대출 상환), 주담대 만기를 늘려 연간 원리금을 낮추는 것이 효과적입니다.</p>
+        </section>
+
+        <section class="ds-section ds-prose" aria-labelledby="dti-limit">
+          <div class="ds-section-head"><span class="ds-icon-badge"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-table-2"></use></svg></span><h2 id="dti-limit">연소득별 DTI 최대 한도표 - 연봉으로 역산한 주담대 원리금과 대출 원금</h2></div>
+          <p>DTI 기준으로 빌릴 수 있는 <strong>연간 원리금 상한</strong>은 연소득 × DTI 비율입니다. 아래 표는 기타대출이 없을 때의 상한과, 그 원리금을 <strong>만기 30년·연 4.0% 원리금균등</strong>으로 환산한 대출 원금입니다(1억원당 연 원리금 약 573만원 기준). 기타대출 이자가 있으면 그만큼 상한에서 빠집니다.</p>
+          <div class="ds-table-card">
+            <table id="dti-limit-table" class="ds-limit-table">
+              <thead><tr><th>연소득</th><th data-col="40">40% <small>(투기·투기과열)</small></th><th data-col="50">50% <small>(조정대상)</small></th><th data-col="60">60% <small>(그 외 수도권·정책모기지)</small></th></tr></thead>
+              <tbody>
+                <tr data-income="3000"><td class="ds-inc">3,000만원</td><td>1,200만원 <small>/ 약 2.1억</small></td><td>1,500만원 <small>/ 약 2.6억</small></td><td>1,800만원 <small>/ 약 3.1억</small></td></tr>
+                <tr data-income="4000"><td class="ds-inc">4,000만원</td><td>1,600만원 <small>/ 약 2.8억</small></td><td>2,000만원 <small>/ 약 3.5억</small></td><td>2,400만원 <small>/ 약 4.2억</small></td></tr>
+                <tr data-income="5000"><td class="ds-inc">5,000만원</td><td>2,000만원 <small>/ 약 3.5억</small></td><td>2,500만원 <small>/ 약 4.4억</small></td><td>3,000만원 <small>/ 약 5.2억</small></td></tr>
+                <tr data-income="6000"><td class="ds-inc">6,000만원</td><td>2,400만원 <small>/ 약 4.2억</small></td><td>3,000만원 <small>/ 약 5.2억</small></td><td>3,600만원 <small>/ 약 6.3억</small></td></tr>
+                <tr data-income="7000"><td class="ds-inc">7,000만원</td><td>2,800만원 <small>/ 약 4.9억</small></td><td>3,500만원 <small>/ 약 6.1억</small></td><td>4,200만원 <small>/ 약 7.3억</small></td></tr>
+                <tr data-income="8000"><td class="ds-inc">8,000만원</td><td>3,200만원 <small>/ 약 5.6억</small></td><td>4,000만원 <small>/ 약 7.0억</small></td><td>4,800만원 <small>/ 약 8.4억</small></td></tr>
+                <tr data-income="10000"><td class="ds-inc">1억원</td><td>4,000만원 <small>/ 약 7.0억</small></td><td>5,000만원 <small>/ 약 8.7억</small></td><td>6,000만원 <small>/ 약 10.5억</small></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="ds-table-caption">각 칸은 "연간 원리금 상한 / 30년·4.0% 환산 대출 원금"입니다. 예를 들어 연소득 5,000만원에 신용대출 이자가 연 200만원 있으면 투기과열지구 상한은 2,000만원이 아니라 1,800만원이고, 환산 원금은 약 3.1억원(월 상환 약 150만원)으로 줄어듭니다. 금리가 4.0%보다 높거나 만기가 짧으면 같은 원리금으로 빌릴 수 있는 원금은 더 작아집니다. <strong>이 표는 DTI만 본 값이라 실제 한도는 LTV(규제지역 40%·수도권 금액한도 6억/4억/2억)와 DSR 40%까지 통과한 뒤의 최저값입니다.</strong></p>
+          <p class="ds-table-cta"><a href="/calc/realestate/dsr/" id="dti-limit-dsr">DSR로 확인하기 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a></p>
+        </section>
+
+        <div class="adfit-slot ds-ad">
+          <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
+          <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+        </div>
+
+        <section class="ds-section ds-band ds-prose" aria-labelledby="dti-law">
+          <div class="ds-section-head"><span class="ds-icon-badge"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-scale"></use></svg></span><h2 id="dti-law">DTI 규제의 법적 근거와 적용 범위 - 은행업감독규정 별표6</h2></div>
+          <p>DTI 비율은 법률이 아니라 금융위원회 고시인 <strong>은행업감독규정 별표6 제3호가목</strong> "주택담보대출에 대한 총부채상환비율의 적용" 표에 들어 있습니다(2026년 3월 18일 개정, 4월 1일 시행). 이 표를 그대로 읽으면 흔히 알려진 "규제지역 40 / 조정 50 / 비규제 60"과 세 군데가 다릅니다.</p>
+          <div class="ds-facts">
+            <div class="ds-fact"><span class="ds-icon-badge"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-building-2"></use></svg></span><div><strong>아파트 담보대출에만 적용</strong><span>표의 각주 1)은 적용 대상을 "해당 지역 소재 아파트(주상복합 포함) 담보대출"로 한정합니다. 단독·다세대·오피스텔 담보대출은 이 표의 DTI 비율이 직접 적용되지 않고 은행 자체 기준과 DSR이 적용됩니다.</span></div></div>
+            <div class="ds-fact"><span class="ds-icon-badge"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-map-pin"></use></svg></span><div><strong>60%는 "수도권"에만</strong><span>각주 2)는 60% 열을 "투기지역·투기과열지구·조정대상지역을 제외한 수도권"으로 명시합니다. 비수도권(지방) 아파트는 이 표가 적용 대상으로 적시하지 않아, 실무에서는 LTV 70%와 DSR 40%가 한도를 정합니다.</span></div></div>
+            <div class="ds-fact"><span class="ds-icon-badge"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-landmark"></use></svg></span><div><strong>서울 전역은 40%</strong><span>2025년 10·15 대책으로 서울 25개 자치구 전체와 경기 12곳(과천·광명·성남 분당·수정·중원·수원 영통·장안·팔달·안양 동안·용인 수지·의왕·하남)이 투기과열지구와 조정대상지역에 동시 지정됐습니다. 두 지정이 겹치면 더 낮은 투기과열지구 기준 40%가 적용됩니다. 이후 추가 지정·해제가 있을 수 있어 국토교통부 공고 확인이 필요합니다.</span></div></div>
+            <div class="ds-fact"><span class="ds-icon-badge"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-percent"></use></svg></span><div><strong>DSR과 항상 함께</strong><span>DTI를 통과해도 모든 가계대출 원리금을 합산하는 DSR 40%(1금융권)가 별도로 적용됩니다. 수도권·규제지역 주담대는 스트레스 금리 3.0%p가 가산된 금리로 DSR을 계산하므로, DTI 한도보다 DSR 한도가 먼저 걸리는 경우가 대부분입니다.</span></div></div>
+          </div>
+          <p class="ds-refs"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-file-text"></use></svg>원문: 국가법령정보센터 행정규칙 「은행업감독규정」 별표6 · <a href="https://www.law.go.kr/행정규칙/은행업감독규정" target="_blank" rel="noopener">law.go.kr</a> / 규제지역 지정: <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148950973" target="_blank" rel="noopener">정책브리핑 10·15 대책(2025.10.15)</a></p>
+        </section>
+
+        <section class="ds-section faq-card" aria-labelledby="dti-faq">
+          <div class="ds-section-head"><span class="ds-icon-badge"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-circle-help"></use></svg></span><h2 id="dti-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+            <details class="faq-item"><summary><h3>DTI란 무엇인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>DTI(총부채상환비율)는 연 소득 대비 주택담보대출의 연간 원리금 상환액과 기타 대출의 연간 이자 상환액을 합산한 비율입니다. 계산식은 (주담대 연간 원리금 + 기타대출 연간 이자) ÷ 연소득 × 100 입니다. 투기지역·투기과열지구는 40%, 조정대상지역은 50%, 그 외 수도권은 60% 이하를 충족해야 합니다(은행업감독규정 별표6, 수도권 아파트 담보대출 기준).</p>
+            </details>
+            <details class="faq-item"><summary><h3>DTI와 DSR은 어떻게 다른가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>가장 큰 차이는 기타 대출의 반영 방식입니다. DTI는 주택담보대출은 원리금 전체, 기타 대출(신용대출·카드론 등)은 이자만 합산합니다. 반면 DSR은 주담대를 포함한 모든 대출의 원금과 이자를 전부 합산하기 때문에 일반적으로 DSR이 DTI보다 더 보수적인(엄격한) 지표입니다. 현재 은행권 대출 심사는 DSR이 핵심 기준이지만, DTI도 규제지역에서 함께 적용됩니다.</p>
+            </details>
+            <details class="faq-item"><summary><h3>지역별 DTI 기준은 어떻게 되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>투기지역·투기과열지구는 DTI 40%, 조정대상지역은 50%, 투기·투기과열·조정대상을 제외한 수도권은 60%가 적용됩니다. 비수도권 아파트는 이 표의 적용 대상이 아니라 LTV·DSR이 실질 기준입니다. 디딤돌·보금자리론 등 정책 모기지는 DSR 대신 DTI 60% 기준이 적용되어 한도가 상대적으로 넉넉한 편입니다. 규제지역 지정은 정부 정책에 따라 변동되므로 대출 전 해당 금융기관에 확인이 필요합니다.</p>
+            </details>
+            <details class="faq-item"><summary><h3>기타 대출은 왜 이자만 계산하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>DTI는 주택을 사기 위한 주택담보대출의 상환 부담을 핵심으로 보고, 다른 대출은 이자 부담만 보조적으로 반영하도록 설계된 지표입니다. 따라서 신용대출·카드론·자동차 할부 등 기타 대출은 연간 이자만 분자에 더합니다. 원금까지 모두 더하는 DSR과 구분되는 지점입니다.</p>
+            </details>
+            <details class="faq-item"><summary><h3>DTI로 최대 대출 한도를 어떻게 계산하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>최대 가능 주담대 연간 원리금 = (연소득 × 지역별 DTI 기준) − 기타대출 연간 이자 입니다. 예를 들어 연소득 5,000만원, 조정대상지역(DTI 50%), 기타대출 연 이자 200만원이면 최대 주담대 원리금은 5,000×0.5 − 200 = 2,300만원/년입니다. 이 원리금을 만기·금리로 환산하면 대출 원금 한도를 가늠할 수 있습니다.</p>
+            </details>
+            <details class="faq-item"><summary><h3>DTI와 LTV는 함께 적용되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>네. LTV(주택담보인정비율)는 주택 가격 대비 빌릴 수 있는 한도를 정하고, DTI는 소득 대비 갚을 수 있는 한도를 정합니다. 두 기준을 모두 통과해야 하며, 여기에 DSR까지 더해 세 가지 중 가장 낮은 한도가 실제 대출 가능액이 됩니다. <a href="/calc/realestate/dsr/">DSR 계산기</a>도 함께 확인해 보세요.</p>
+            </details>
+            <details class="faq-item"><summary><h3>지방(비수도권) 아파트도 DTI 40~60% 규제를 받나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>은행업감독규정 별표6의 DTI 표는 각주에서 적용 대상을 "해당 지역 소재 아파트 담보대출"로, 60% 열을 "투기지역·투기과열지구·조정대상지역을 제외한 수도권"으로 한정하고 있습니다. 따라서 비수도권 아파트 담보대출은 이 표의 비율이 직접 적용되지 않고, 실무에서는 LTV 70%와 DSR 40%(1금융권)가 한도를 정합니다. 다만 은행이 자체 심사 기준으로 DTI를 참고할 수 있고, 지방이라도 조정대상지역으로 지정되면 50%가 적용되므로 대출 전 해당 지역의 규제 지정 여부를 확인하세요.</p>
+            </details>
+            <details class="faq-item"><summary><h3>연봉 5,000만원이면 DTI 기준으로 얼마까지 빌릴 수 있나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>기타대출이 없다면 연간 원리금 상한은 투기·투기과열지구 2,000만원, 조정대상지역 2,500만원, 그 외 수도권 3,000만원입니다. 이를 만기 30년·연 4.0% 원리금균등으로 환산하면 대출 원금은 각각 약 3.5억·4.4억·5.2억원입니다. 신용대출 이자가 연 200만원 있으면 상한이 1,800만·2,300만·2,800만원으로 줄고 환산 원금도 약 3.1억·4.0억·4.9억원이 됩니다. 실제 한도는 여기에 LTV(규제지역 40%, 수도권 금액한도)와 DSR 40%를 함께 적용한 뒤 가장 낮은 값입니다.</p>
+            </details>
+            <details class="faq-item"><summary><h3>서울 아파트는 DTI 몇 %가 적용되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>40%입니다. 2025년 10·15 대책으로 서울 25개 자치구 전체가 투기과열지구와 조정대상지역에 동시 지정됐고(강남·서초·송파·용산은 기존 유지), 두 지정이 겹치면 더 낮은 투기과열지구 기준 40%가 적용됩니다. 같은 대책으로 경기 과천·광명·성남 분당·수정·중원·수원 영통·장안·팔달·안양 동안·용인 수지·의왕·하남도 40% 대상이 됐습니다. 규제지역은 이후 추가 지정이나 해제가 있을 수 있으니 국토교통부 공고로 현재 지정 상태를 확인하세요.</p>
+            </details>
+          </div>
+        </section>
+
+        <p class="ds-callout"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-circle-alert"></use></svg><span>이 계산기의 결과는 참고용이며 법적 효력이 없습니다. 실제 대출 한도는 금융기관별 심사 기준·스트레스 금리·규제지역 지정·소득 산정 방식에 따라 달라지므로 대출 전 해당 은행 또는 <a href="https://www.fss.or.kr" target="_blank" rel="noopener">금융감독원(fss.or.kr)</a>에서 확인하세요.</span></p>
+        <div class="update-note">2026년 금융규제 기준으로 작성되었습니다. DTI 기준 및 규제지역 지정은 변경될 수 있으니 <a href="https://www.fss.or.kr" target="_blank" rel="noopener">금융감독원(fss.or.kr)</a>에서 최신 내용을 확인하세요.<br>최종 검토: 2026.10</div>
+      </div>
+  </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col">
+      <div class="ds-side-card">
+        <h2><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-book-open"></use></svg>관련 블로그</h2>
+        <div class="ds-list">
+          <a class="ds-list-item" href="/blog/posts/didimdol-loan-guide.html"><span class="ds-list-body"><span class="ds-list-title">디딤돌 대출 계산기 2026 - 한도·금리 계산법과 생애첫주택·신생아 특례…</span></span><svg class="ds-i ds-chevron" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+          <a class="ds-list-item" href="/blog/posts/mortgage-dsr-guide.html"><span class="ds-list-body"><span class="ds-list-title">주택담보대출 한도 2026 - DSR·LTV 계산법과 소득별 실제 한도</span></span><svg class="ds-i ds-chevron" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '은행업감독규정 별표6 제3호가목(금융위원회 고시, 2026.4.1 시행), 금융위원회 가계부채 관리방안',
+    appliedFrom: '수도권 아파트 담보대출 DTI (투기·투기과열 40% / 조정대상 50% / 그 외 수도권 60%), 2025.10·15 대책 규제지역 지정 반영',
+    exceptions: [
+      '디딤돌·보금자리론 등 정책 모기지는 DTI 60% 별도 기준이 적용됩니다',
+      '규제지역 지정 여부는 정부 정책에 따라 수시로 변동됩니다(2025.10.16 서울 전역·경기 12곳 지정)',
+    '비수도권 아파트와 아파트 외 주택은 별표6 DTI 표의 직접 적용 대상이 아니며 LTV·DSR이 기준입니다',
+      '금융기관별 자체 심사 기준이 상이하므로 실제 한도는 직접 확인이 필요합니다',
+    ],
+    references: [
+      { name: '금융감독원(fss.or.kr)', url: 'https://www.fss.or.kr' },
+      { name: '금융소비자포털(fine.fss.or.kr)', url: 'https://fine.fss.or.kr' },
+      { name: '금융위원회(fsc.go.kr)', url: 'https://www.fsc.go.kr' },
+    ],
+    lastReviewed: '2026.10',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
+
+  <div class="sibling-section ds-section">
+    <div class="sibling-title">다른 부동산 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/realestate/brokerage/" class="sibling-link">중개수수료</a>
+      <a href="/calc/realestate/acquisition/" class="sibling-link">취득세</a>
+      <a href="/calc/realestate/conversion/" class="sibling-link">전월세 전환율</a>
+      <a href="/calc/realestate/loan/" class="sibling-link">대출이자</a>
+      <a href="/calc/realestate/rental/" class="sibling-link">임대수익률</a>
+      <a href="/calc/realestate/capital-gains/" class="sibling-link">양도소득세</a>
+      <a href="/calc/realestate/dsr/" class="sibling-link">대출한도 (DSR)</a>
+      <a href="/calc/realestate/dti/" class="sibling-link current">총부채상환비율 (DTI)</a>
+      <a href="/calc/realestate/ltv/" class="sibling-link">주택담보인정비율 (LTV)</a>
+      <a href="/calc/realestate/didimdol/" class="sibling-link">디딤돌대출</a>
+      <a href="/calc/realestate/jeonse-loan/" class="sibling-link">전세자금대출</a>
+      <a href="/calc/realestate/gift/" class="sibling-link">증여세</a>
+      <a href="/calc/realestate/inheritance/" class="sibling-link">상속세</a>
+      <a href="/calc/realestate/joint/" class="sibling-link">공동명의비교</a>
+      <a href="/calc/realestate/jongbu/" class="sibling-link">종합부동산세</a>
+      <a href="/calc/realestate/property-tax-comprehensive/" class="sibling-link">재산세 종합</a>
+      <a href="/calc/realestate/propertytax/" class="sibling-link">재산세</a>
+      <a href="/calc/realestate/pyeong/" class="sibling-link">평수 변환</a>
+      <a href="/calc/realestate/registry/" class="sibling-link">등기비용</a>
+    </div>
+    <div class="sibling-title">관련 가이드</div>
+    <div class="sibling-list">
+      <a href="/blog/posts/didimdol-loan-guide.html" class="sibling-link">디딤돌 대출 계산기 2026 - 한도·금리 계산법과 생애첫주택·신생아 특례…</a>
+      <a href="/blog/posts/mortgage-dsr-guide.html" class="sibling-link">주택담보대출 한도 2026 - DSR·LTV 계산법과 소득별 실제 한도</a>
+    </div>
+  </div>
+</main>
+
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
+  </div>
+</footer>
+
+
+<div id="toast" class="toast"></div>
+
+<script src="/assets/ds/calc-kit.js"></script>
+
+<script>
+let dtiType = '규제지역';
+let dtiLimit = 40;
+
+function dtiSelectType(type, limit, btn) {
+  dtiType = type;
+  dtiLimit = limit;
+  document.querySelectorAll('.seg-btn[onclick^="dtiSelectType"]').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  dtiSyncGuide();
+  calcDti();
+}
+
+function fmt(man) {
+  if (!man && man !== 0) return '-';
+  if (isNaN(man)) return '-';
+  const won = Math.round(man) * 10000;
+  if (won >= 100000000) {
+    const uk  = Math.floor(won / 100000000);
+    const rem = Math.round((won % 100000000) / 10000);
+    return rem > 0 ? `${uk}억 ${rem.toLocaleString()}만원` : `${uk}억원`;
+  }
+  return `${Math.round(man).toLocaleString()}만원`;
+}
+
+function showConverted(inputEl, dispEl) {
+  const v = parseFloat(String(inputEl.value).replace(/,/g, ''));
+  dispEl.textContent = v > 0 ? `= ${fmt(v)}` : '';
+}
+
+function toggleExplain(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('show');
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+function saveAsImage(resultId, title) {
+  const el = document.getElementById(resultId);
+  if (!el.classList.contains('show')) { showToast('먼저 계산을 해주세요'); return; }
+  showToast('이미지 저장 중...');
+  html2canvas(el, { scale: 2, useCORS: true }).then(canvas => {
+    const link = document.createElement('a');
+    link.download = `부동산계산기_${title}.png`;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+    showToast('이미지가 저장되었습니다');
+  }).catch(() => showToast('저장 실패 - 다시 시도해주세요'));
+}
+
+/* 입력칸은 천 단위 콤마로 보인다(site-shell.js). 계산에는 콤마를 뺀 숫자만 쓴다(calc-kit.js) */
+const dtiNum = id => DSCalc.num(id);
+
+/* 가이드 시각화 동기화: 선택 지역 타일, 한도표의 가까운 연소득 행·선택 열 (B4) */
+function dtiSyncGuide() {
+  document.querySelectorAll('#dti-region-tiles .ds-tile').forEach(t => t.classList.toggle('is-active', Number(t.dataset.limit) === dtiLimit));
+  DSCalc.tableNear('#dti-limit-table', dtiNum('dti-income'), { 40: 1, 50: 2, 60: 3 }[dtiLimit]);
+}
+
+function calcDti() {
+  const income   = dtiNum('dti-income');
+  const mortgage = dtiNum('dti-mortgage');
+  const other    = dtiNum('dti-other-interest');
+  if (income || mortgage || other) dtiStarted = true;
+  showConverted(document.getElementById('dti-income'), document.getElementById('dti-income-display'));
+  dtiSyncGuide();
+  // 필수값(연소득·주담대 원리금)이 다 차기 전에는 판정하지 않는다: 회색 "--%" 대기 카드 (시안 검수 메모)
+  if (!income || !mortgage) { document.getElementById('dti-result').classList.remove('show'); dtiNext(income, mortgage); dtiBar(); return; }
+
+  const numerator = mortgage + other;
+  const dti = income > 0 ? (numerator / income * 100) : 0;
+  const isOk = dti <= dtiLimit;
+  const maxMortgage = Math.max(income * (dtiLimit / 100) - other, 0);
+  const room = income * dtiLimit / 100 - numerator;   // 음수면 초과액
+  const v = DSCalc.verdict(dti, dtiLimit);
+
+  document.getElementById('dti-result-content').innerHTML = DSCalc.result({
+    label: `내 DTI · ${dtiType} 기준 ${dtiLimit}%`,
+    value: `${dti.toFixed(1)}%`,
+    verdict: v,
+    gauge: { value: dti, limit: dtiLimit, label: `한도 ${dtiLimit}%`, aria: `DTI ${dti.toFixed(1)}%, 한도 ${dtiLimit}%` },
+    // 구성 막대: 한도 금액(초과면 상환 합계)을 100으로 놓고 주담대 원리금 / 기타 이자 / 한도까지 여유
+    comp: { parts: [[mortgage, 'm'], [other, 'o'], [Math.max(room, 0), 'r']], legend: ['주담대 원리금', '기타 이자', '한도까지 여유'],
+            aria: `주담대 원리금 ${fmt(mortgage)}, 기타 이자 ${fmt(other)}, 한도까지 여유 ${fmt(Math.max(room, 0))}` },
+    hint: isOk ? '' : `주담대 원리금을 연 ${fmt(-room)} 줄이면 한도 이내입니다.`,
+    rows: [
+      ['연 상환 합계', fmt(numerator)],
+      ['한도까지 여유', `연 ${fmt(Math.abs(room))}${isOk ? '' : ' 초과'}`, !isOk],
+      ['주담대 원리금 최대', `연 ${fmt(Math.round(maxMortgage))}`]
+    ],
+    note: `* ${dtiType} 기준 DTI ${dtiLimit}% 적용 / 기타대출은 이자만 반영 / 실제 한도는 DSR·LTV와 함께 금융기관 확인`,
+    actions: { copy: 'dti-result', primary: { href: dtiDsrHref(income, mortgage), label: 'DSR도 계산' } }
+  });
+  document.getElementById('dti-result').classList.add('show');
+  DSCalc.copyBtn('dti-result');
+  dtiNext(income, mortgage);
+  dtiBar(dti, v);
+}
+
+/* 이어서 계산(시안 11): DSR은 입력값을 쿼리로 넘겨 자동 입력(B3), LTV는 집값이 필요해 값 없이 연결 */
+const dtiDsrHref = (income, mortgage) => DSCalc.link('/calc/realestate/dsr/', { income, mortgage }, 'dti');
+function dtiNext(income, mortgage) {
+  DSCalc.next('#dti-next', income > 0
+    ? { dsr: { href: dtiDsrHref(income, mortgage), title: `내 연소득 ${fmt(income)}으로 DSR 바로 계산`, sub: '입력값을 그대로 가져옵니다', prefilled: true },
+        ltv: { title: 'LTV로 대출 한도 확인', sub: '담보가치 기준 한도 계산' } }
+    : { dsr: { href: dtiDsrHref(0, 0), title: 'DSR 계산기', sub: '대출 상환 부담', prefilled: false },
+        ltv: { title: 'LTV 계산기', sub: '담보가치 기준 한도' } });
+}
+
+/* "계산하기": 입력할 때마다 이미 계산되므로 확인용. 비어 있으면 빈 칸으로, 차 있으면 결과로 */
+function dtiSubmit() {
+  calcDti();
+  // 빈 칸마다 그 칸 아래 안내(포커스 없이, 첫 칸으로 스크롤)
+  DSCalc.clearNeeds(document.querySelector('.ds-input-card'));
+  const empties = ['dti-income', 'dti-mortgage'].map(id => document.getElementById(id)).filter(el => !dtiNum(el.id));
+  if (empties.length) { empties.forEach((el, i) => DSCalc.need(el, null, i > 0)); return; }
+  const card = document.getElementById('dti-result');
+  if (card.getBoundingClientRect().top > innerHeight * 0.6 || card.getBoundingClientRect().top < 0) card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+document.addEventListener('DOMContentLoaded', () => DSCalc.copyBtn('dti-result'));
+
+/* 하단 결과 바(B2): 판정·숫자는 필수값(연소득·주담대 원리금)이 다 찼을 때만 */
+let dtiStarted = false;
+function dtiBar(dti, v) {
+  DSCalc.bar({
+    started: dtiStarted, required: [document.getElementById('dti-income'), document.getElementById('dti-mortgage')],
+    label: 'DTI', value: dti == null ? null : `${dti.toFixed(1)}%`, verdict: v,
+    target: document.getElementById('dti-result'), waitText: '값을 모두 입력하면 DTI가 계산됩니다'
+  });
+}
+
+/* 작성·검토 정보·신뢰성 정보는 늦게 그려지므로 나타나는 대로 아래 칸으로 옮긴다(calc-kit.js) */
+DSCalc.placeTrust('ds-trust-col');
+</script>
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+<script src="/assets/calc-registry.js"></script>
+<script src="/assets/ds/site-shell.js"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '은행업감독규정 별표6 DTI 기준 2026년(2026.4.1 시행)',
+  basisDate: '2026년 기준',
+  referenceOrg: '금융위원회·금융감독원',
+  lastReviewed: '2026.10.12',
+  category: 'realestate'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/blog-review-footer.js"></script>
+<script src="/assets/ds/prefill.js" defer></script>
+</body>
+</html>

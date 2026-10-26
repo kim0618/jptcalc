@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4대보험 vs 3.3% 비교 계산기 - 프리랜서 세금 계산기 | jptcalc</title>
+  <meta name="description" content="동일 급여 기준 4대보험 직장인과 3.3% 프리랜서의 실수령액·세금·보험료를 비교 계산합니다. 어느 쪽이 유리한지 확인하세요." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/tax/insurance-comparison/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="4대보험 vs 3.3% 비교 계산기 | jptcalc" />
+  <meta property="og:description" content="동일 급여 기준 4대보험 직장인과 3.3% 프리랜서의 실수령액·세금·보험료를 비교 계산합니다. 어느 쪽이 유리한지 확인하세요." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/tax/insurance-comparison/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4대보험 vs 3.3% 비교 계산기 | jptcalc" />
+  <meta name="twitter:description" content="동일 급여 기준 4대보험 직장인과 3.3% 프리랜서의 실수령액·세금·보험료를 비교 계산합니다. 어느 쪽이 유리한지 확인하세요." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"4대보험 vs 3.3% 비교 계산기",
+    "url":"https://www.jptcalc.kr/calc/tax/insurance-comparison/",
+    "applicationCategory":"FinanceApplication",
+    "operatingSystem":"All",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+      {"@type":"ListItem","position":2,"name":"프리랜서 세금 계산기","item":"https://www.jptcalc.kr/calc/tax/"},
+      {"@type":"ListItem","position":3,"name":"4대보험 vs 3.3% 비교 계산기","item":"https://www.jptcalc.kr/calc/tax/insurance-comparison/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"보험료까지 포함하면 직장인과 프리랜서 중 어느 쪽이 실제로 더 유리한가요?","acceptedAnswer":{"@type":"Answer","text":"월 200~500만원 구간에서 보험료를 모두 반영하면 직장인이 실질적으로 더 유리한 경우가 많습니다. 퇴직금과 실업급여를 포함하면 차이는 더 커집니다."}},{"@type":"Question","name":"프리랜서도 국민연금·건강보험을 내야 하나요?","acceptedAnswer":{"@type":"Answer","text":"네. 소득이 있으면 지역가입자로 국민연금(9.5%)과 건강보험(7.19%)에 가입해야 합니다. 직장인과 달리 전액 본인이 부담합니다."}},{"@type":"Question","name":"직장인에서 프리랜서 전환 시 단가를 얼마나 올려야 하나요?","acceptedAnswer":{"@type":"Answer","text":"보험료 차이(약 30~50만원/월)와 퇴직금 상당액(월급의 8.3%)을 합산해 최소 15~20% 이상 높은 단가를 책정해야 실질적으로 손해를 보지 않습니다. 월 300만원 직장인 기준 최소 360~380만원 이상을 받아야 합니다."}},{"@type":"Question","name":"2026년 국민연금 요율은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"2026년 국민연금은 개혁에 따라 전체 9%에서 9.5%로 인상됩니다. 직장인 근로자 부담은 4.75%, 지역가입자(프리랜서)는 9.5%를 전액 본인이 납부합니다."}}]}</script>
+  <link rel="stylesheet" href="/assets/tax-common.css" />
+  <style>
+    /* insurance-comparison 고유 스타일 - 공통 스타일은 /assets/tax-common.css 참조 */
+    .input-wrap { position: relative; }
+    .input-wrap .unit { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); font-size: 13px; font-weight: 600; color: var(--gray-500); pointer-events: none; }
+    input[type=number],input[type=text]{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
+    input[type=number]::placeholder{color:var(--gray-400);font-weight:400}
+    input[type=number]:focus,input[type=text]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(16,185,129,0.15)}
+    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
+    .seg-group{display:flex;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:18px}
+    .seg-btn{flex:1;border:none;border-radius:7px;background:transparent;padding:9px 4px;font-size:12px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap}
+    .seg-btn:hover{color:var(--gray-700)}
+    .seg-btn.active{background:var(--primary);color:#fff;font-weight:700}
+    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
+    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
+    .result-card{background:linear-gradient(135deg,#ECFDF5 0%,#D1FAE5 100%);border:1px solid rgba(16,185,129,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-row+.result-row{border-top:1px solid rgba(0,0,0,0.07)}
+    .result-total-row{border-top:1px solid rgba(0,0,0,0.15)!important;margin-top:4px;padding-top:14px!important}
+    .result-total-value{font-size:24px;font-weight:900;color:var(--gray-900)}
+    .compare-cols{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
+    .compare-col{background:rgba(0,0,0,0.02);border:1px solid var(--dark-border);border-radius:12px;padding:16px}
+    .compare-col.highlight{border-color:rgba(16,185,129,0.3);background:rgba(16,185,129,0.06)}
+    .compare-col-title{font-size:12px;font-weight:800;color:var(--gray-400);margin-bottom:12px;display:flex;align-items:center;gap:6px}
+    .compare-col.highlight .compare-col-title{color:var(--primary)}
+    .compare-row{display:flex;justify-content:space-between;padding:6px 0}
+    .compare-row+.compare-row{border-top:1px solid rgba(0,0,0,0.05)}
+    .compare-key{font-size:12px;color:var(--gray-500);font-weight:500}
+    .compare-val{font-size:12px;font-weight:700;color:var(--gray-700)}
+    .compare-total{margin-top:8px;padding-top:10px;border-top:1px solid rgba(0,0,0,0.1)}
+    .compare-total .compare-val{font-size:17px;font-weight:900;color:var(--gray-900)}
+    @media(max-width:767px){.compare-cols{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item active"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+    </nav>
+    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
+    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/tax/">프리랜서 세금 계산기</a><span class="breadcrumb-sep">›</span><span>4대보험 vs 3.3% 비교 계산기</span></div>
+    <div class="page-header-badge">&#128101; 직장인 vs 프리랜서</div>
+    <h1>4대보험 vs 3.3% 비교 계산기</h1>
+    <p>동일 급여 기준으로 4대보험 직장인과 3.3% 프리랜서의 실수령액을 비교합니다</p>
+  </div>
+  <div class="card">
+    <div class="card-title">4대보험 직장인 vs 3.3% 프리랜서 비교</div>
+    <div class="info-box">
+      <span class="info-icon">&#128161;</span>
+      <p>동일 급여 기준으로 4대보험 직장인과 3.3% 프리랜서의 <strong>실수령액·세금·보험료</strong>를 비교합니다.</p>
+    </div>
+    <div class="field">
+      <div class="field-label"><span>월 급여 (세전)</span> <span class="label-hint">만원 단위</span></div>
+      <div class="input-wrap">
+        <input type="number" id="cmp-salary" placeholder="예)300" oninput="calcCompare()">
+        <span class="unit">만원</span>
+      </div>
+      <div class="converted" id="cmp-salary-display"></div>
+    </div>
+    <div class="field">
+      <div class="field-label"><span>부양가족 수 (본인 포함)</span></div>
+      <div class="input-wrap">
+        <input type="number" id="cmp-family" placeholder="예) 1" min="1" max="10" oninput="calcCompare()">
+        <span class="unit">명</span>
+      </div>
+    </div>
+    <div class="result-card" id="cmp-result"><div id="cmp-result-content"></div></div>
+  </div>
+  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>보험료까지 포함한 실질 비교가 왜 중요한가요?</h2>
+      <p>3.3%만 공제되는 프리랜서는 당장 실수령이 높아 보이지만, 연말 종합소득세 추가납부와 지역가입자 국민연금·건강보험을 합산하면 실질 차이가 크게 줄거나 역전됩니다. 이 계산기는 보험료와 세금을 모두 포함한 종합 비교를 제공합니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>직장인 공제 (월)</strong><span>국민연금 4.75% + 건강보험 3.595% + 장기요양 0.47% + 고용보험 0.9% + 소득세. 사용자가 절반 부담.</span></div>
+        <div class="guide-box"><strong>프리랜서 부담 (월+연)</strong><span>원천징수 3.3% + 종합소득세 추가 + 국민연금 9.5%(전액) + 건강보험 7.19%(전액). 지역가입자로 전액 본인 부담.</span></div>
+        <div class="guide-box"><strong>직장인 숨은 혜택</strong><span>퇴직금(월급 8.3% 상당), 실업급여, 산재보험, 배우자·자녀의 피부양자 등록 가능.</span></div>
+        <div class="guide-box"><strong>프리랜서 장점</strong><span>계약 단가를 높게 책정할 수 있으며, 경비 처리로 세 부담 절감. 노란우산공제 가입 가능.</span></div>
+      </div>
+    </div>
+    <div class="guide-card">
+      <h2>월 급여별 직장인 vs 프리랜서 실질 비교</h2>
+      <p>보험료와 세금을 모두 포함한 종합 비교입니다. 프리랜서 보험료는 소득 기준 추정치이며, 재산 보유 시 건강보험이 더 높아질 수 있습니다.</p>
+      <div class="guide-table-wrap">
+        <table>
+          <thead>
+            <tr><th>월 급여</th><th>직장인 실수령</th><th>프리랜서 실질 소득</th><th>차이</th><th>비고</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>200만원</td><td>약 173만원</td><td>약 162만원</td><td class="text-warning">직장인 +11만원</td><td>프리 보험료 약 34만원*</td></tr>
+            <tr><td>300만원</td><td>약 249만원</td><td>약 242만원</td><td class="text-warning">직장인 +7만원</td><td>프리 보험료 약 51만원*</td></tr>
+            <tr><td>500만원</td><td>약 399만원</td><td>약 396만원</td><td class="text-warning">직장인 +3만원</td><td>소득 높을수록 격차 축소</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:12px;color:var(--gray-500);margin-top:8px">※ 2026년 요율 기준, 부양가족 1명(본인), 경비율 60% 가정. 직장인 퇴직금·실업급여 미포함.<br>* 프리랜서 보험료는 세전 수입 기준 추정치입니다. 실제 부과는 경비 차감 후 소득금액 기준이므로 실제 납부액은 이보다 낮을 수 있습니다.</p>
+      <h3>2026년 적용 보험료율</h3>
+      <div class="guide-table-wrap">
+        <table>
+          <thead>
+            <tr><th>항목</th><th>직장인 (근로자 부담)</th><th>프리랜서 (지역가입)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>국민연금</td><td>4.75% (사용자도 4.75%)</td><td>9.5% (전액 본인)</td></tr>
+            <tr><td>건강보험</td><td>3.595%</td><td>7.19% (전액 본인)</td></tr>
+            <tr><td>장기요양</td><td>건강보험의 13.14%</td><td>건강보험의 13.14%</td></tr>
+            <tr><td>고용보험</td><td>0.9%</td><td>미가입 (실업급여 없음)</td></tr>
+            <tr><td>국민연금 상한</td><td colspan="2">기준소득월액 659만원 (2026년)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="guide-card">
+      <h2>월 급여별 4대보험 vs 3.3% 비교 (부양가족 1명)</h2>
+      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">아래 수치는 이 페이지 계산기의 실제 출력값입니다.</p>
+      <div class="guide-table-wrap">
+        <table>
+          <thead><tr><th>월 급여</th><th>국민연금 (4.75%)</th><th>건강보험 (3.595%)</th><th>소득세+지방세</th><th>월 실수령</th></tr></thead>
+          <tbody>
+            <tr><td>200만원</td><td>- 9만 5,000원</td><td>- 7만 2,000원</td><td>- 7만 5,000원</td><td>173만 1,000원</td></tr>
+            <tr><td>300만원</td><td>- 14만 3,000원</td><td>- 10만 8,000원</td><td>- 21만 2,000원</td><td>249만 6,000원</td></tr>
+            <tr><td>400만원</td><td>- 19만원</td><td>- 14만 4,000원</td><td>- 35만 7,000원</td><td>325만 4,000원</td></tr>
+            <tr><td>500만원</td><td>- 23만 8,000원</td><td>- 18만원</td><td>- 51만 4,000원</td><td>400만 1,000원</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>보험료까지 포함하면 어느 쪽이 실제로 더 유리한가요?</h3><p>월 급여 기준 200~500만원 대에서는 보험료를 모두 반영하면 직장인이 실질적으로 더 유리한 경우가 많습니다. 다만 퇴직금(월급의 8.3%)과 실업급여를 포함하면 차이가 더 커집니다. 반면 프리랜서는 계약 단가를 높게 책정하면 역전도 가능합니다.</p></div>
+      <div class="faq-item"><h3>프리랜서도 국민연금·건강보험을 내야 하나요?</h3><p>네. 소득이 있으면 지역가입자로 국민연금과 건강보험에 의무 가입해야 합니다. 직장인과 달리 사용자 부담분 없이 전액 본인이 납부합니다. 2026년 기준 국민연금 9.5%, 건강보험 7.19%가 소득에서 부과됩니다.</p></div>
+      <div class="faq-item"><h3>4대보험 직장인의 사용자 부담분은 얼마인가요?</h3><p>2026년 기준 사용자는 국민연금 4.75%, 건강보험 3.595%, 장기요양 건강보험의 13.14%, 고용보험 0.9%를 추가로 부담합니다. 월급 300만원 기준 사용자 부담분은 약 29만원으로, 이 금액만큼 회사가 인건비를 추가 지출합니다.</p></div>
+      <div class="faq-item"><h3>퇴직금을 포함하면 실질 차이가 얼마나 달라지나요?</h3><p>1년 이상 근무한 직장인은 연봉의 약 8.3%(1개월분)에 해당하는 퇴직금을 받습니다. 월 300만원 기준 월 25만원 상당이 적립됩니다. 이를 포함하면 직장인의 실질 총 보상은 약 274만원으로, 프리랜서 대비 30만원 이상 차이가 납니다.</p></div>
+      <div class="faq-item"><h3>직장인에서 프리랜서로 전환할 때 계약 단가는 얼마나 올려야 하나요?</h3><p>보험료 차이(약 30~50만원/월)와 퇴직금 상당액(월급의 8.3%)을 합산해 최소 15~20% 이상 높은 단가를 책정해야 실질적으로 손해를 보지 않습니다. 월 300만원 직장인이 프리랜서 전환 시, 실질 동등 수준을 위해 최소 360~380만원 이상을 받아야 합니다.</p></div>
+      <div class="faq-item"><h3>계산기의 프리랜서 종합소득세는 어떻게 추정하나요?</h3><p>경비율 60%를 적용해 소득금액을 산출하고, 인적공제 후 종합소득세 누진세율을 적용합니다. 실제 세액은 적용 경비율, 기타 소득공제·세액공제에 따라 달라집니다. 정확한 종합소득세 추정은 종합소득세 계산기를 이용하세요.</p></div>
+      <div class="update-note">최종 검토: 2026.04.24 · 계산 결과는 참고용입니다.</div>
+    </div>
+  </div>
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '국민건강보험법·국민연금법·고용보험법·산업재해보상보험법 2026년 요율 기준',
+    appliedFrom: '2026년 기준',
+    exceptions: [
+      '국민연금은 2025년 개혁으로 매년 0.5%p 인상 중 (2025년 4.5%→2026년 4.75%)',
+      '국민연금 기준소득월액 상한액: 659만원(2026년), 초과분은 상한액 기준 산정',
+      '건강보험 지역가입자는 소득 외 재산·자동차도 부과 기준에 포함될 수 있음',
+      '사업장 규모·업종에 따라 고용보험·산재보험 요율이 달라질 수 있습니다',
+    ],
+    references: [
+      { name: '국민건강보험공단(nhis.or.kr)', url: 'https://www.nhis.or.kr' },
+      { name: '국민연금공단(nps.or.kr)', url: 'https://www.nps.or.kr' },
+    ],
+    lastReviewed: '2026.04.24',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 프리랜서 세금 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/tax/withholding/" class="sibling-link">💲 3.3% 원천징수</a>
+      <a href="/calc/tax/income-tax/" class="sibling-link">📈 종합소득세</a>
+      <a href="/calc/tax/vat/" class="sibling-link">📄 부가가치세</a>
+      <a href="/calc/tax/insurance-comparison/" class="sibling-link current">👥 4대보험 비교</a>
+      <a href="/calc/tax/freelancer-income/" class="sibling-link">💰 월 순수입</a>
+      <a href="/calc/tax/medical-expense/" class="sibling-link">🏥 의료비 세액공제</a>
+      <a href="/calc/tax/regional-health-insurance/" class="sibling-link">🏥 지역가입자 건강보험료</a>
+      <a href="/calc/tax/copay-ceiling/" class="sibling-link">💊 본인부담상한제 환급</a>
+      <a href="/calc/tax/yellow-umbrella/" class="sibling-link">🪙 노란우산공제</a>
+      <a href="/calc/tax/four-insurance/" class="sibling-link">🏢 4대보험료</a>
+    </div>
+    <div class="sibling-title">관련 가이드</div>
+    <div class="sibling-list">
+      <a href="/blog/posts/four-insurance-vs-33-comparison.html" class="sibling-link">📖 4대보험 vs 3.3% 실수령액 비교 - 월 300만원이면 27만원 차이</a>
+      <a href="/blog/posts/freelancer-insurance-guide.html" class="sibling-link">📖 프리랜서 4대보험, 직장인이랑 뭐가 다를까? 지역가입자 보험료 계산법</a>
+      <a href="/blog/posts/freelancer-tax-refund.html" class="sibling-link">📖 프리랜서 3.3% 원천징수 환급 - 5월 종소세 신고로 돌려받는 법</a>
+      <a href="/blog/posts/health-insurance-dependent-guide.html" class="sibling-link">📖 건강보험 피부양자 탈락 기준 2026 - 소득·재산 기준과 탈락 후 보험료…</a>
+      <a href="/blog/posts/income-tax-deduction.html" class="sibling-link">📖 종합소득세 공제 항목 체크리스트 2026 - 소득공제·세액공제 빠짐없이</a>
+      <a href="/blog/posts/social-insurance-guide.html" class="sibling-link">📖 4대보험료 2026 - 월급 300만원이면 매달 29만원 빠진다</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+<script>
+function fmtWon(won) {
+  won = Math.round(won);
+  if (Math.abs(won) >= 100000000) {
+    const e = Math.floor(Math.abs(won)/100000000), r = Math.abs(won)%100000000;
+    const s = won<0?'-':'';
+    return r===0 ? s+e.toLocaleString()+'억원' : s+e.toLocaleString()+'억 '+Math.floor(r/10000).toLocaleString()+'만원';
+  }
+  if (Math.abs(won) >= 10000) {
+    const m = Math.floor(Math.abs(won)/10000), r = Math.abs(won)%10000;
+    const s = won<0?'-':'';
+    return r===0 ? s+m.toLocaleString()+'만원' : s+m.toLocaleString()+'만 '+r.toLocaleString()+'원';
+  }
+  return won.toLocaleString()+'원';
+}
+function fmt(man) {
+  if (man===0) return '0원';
+  return fmtWon(Math.round(man*10000));
+}
+function showConverted(input, display) {
+  if (!display) return;
+  const v = parseFloat(input.value);
+  display.textContent = (!v||v===0) ? '' : '= '+fmtWon(v*10000);
+}
+function setActive(parent, btn, sel) {
+  parent.querySelectorAll(sel||'.seg-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+function getIncomeTax(t) {
+  if (t<=1400)   return {tax:t*0.06, rate:'6%'};
+  if (t<=5000)   return {tax:t*0.15-126, rate:'15%'};
+  if (t<=8800)   return {tax:t*0.24-576, rate:'24%'};
+  if (t<=15000)  return {tax:t*0.35-1544, rate:'35%'};
+  if (t<=30000)  return {tax:t*0.38-1994, rate:'38%'};
+  if (t<=50000)  return {tax:t*0.40-2594, rate:'40%'};
+  if (t<=100000) return {tax:t*0.42-3594, rate:'42%'};
+  return {tax:t*0.45-6594, rate:'45%'};
+}
+
+function rnd(v) { return Math.round(v * 10) / 10; }
+
+function calcCompare() {
+  const salary = parseFloat(document.getElementById('cmp-salary').value) || 0;
+  const family = Math.max(parseInt(document.getElementById('cmp-family').value) || 1, 1);
+  showConverted(document.getElementById('cmp-salary'), document.getElementById('cmp-salary-display'));
+  if (!salary) { document.getElementById('cmp-result').classList.remove('show'); return; }
+
+  // 2026년 요율
+  const P_EMP = 0.0475;  // 국민연금 근로자 4.75% (2026년 개혁 1차 인상)
+  const P_LOCAL = 0.095; // 국민연금 지역가입 9.5% (전액 본인)
+  const P_CAP = 659;     // 기준소득월액 상한 659만원 (2026년 기준)
+  const H_EMP = 0.03595; // 건강보험 근로자 3.595%
+  const H_LOCAL = 0.0719;// 건강보험 지역가입 7.19% (전액 본인)
+  const LTC = 0.1314;    // 장기요양 건강보험료의 13.14%
+  const EMPLOY = 0.009;  // 고용보험 0.9%
+
+  // === 직장인 ===
+  const pension = Math.min(salary, P_CAP) * P_EMP;
+  const health = salary * H_EMP;
+  const ltc = health * LTC;
+  const employ = salary * EMPLOY;
+  const annual = salary * 12;
+  const ed = annual<=500?annual*0.70:annual<=1500?350+(annual-500)*0.40:annual<=4500?750+(annual-1500)*0.15:annual<=10000?1200+(annual-4500)*0.05:Math.min(1475+(annual-10000)*0.02,2000);
+  const {tax:annTax} = getIncomeTax(Math.max(annual - ed - 150*family, 0));
+  const mTax = Math.max(Math.round(annTax/12*100)/100, 0);
+  const mLocal = mTax * 0.10;
+  const empNet = salary - pension - health - ltc - employ - mTax - mLocal;
+
+  // === 프리랜서 ===
+  const flWh = salary * 0.033;
+  const {tax:flAnnTax} = getIncomeTax(Math.max(annual*0.40 - 150*family, 0));
+  const flAdd = (Math.max(flAnnTax, 0) * 1.10 - annual * 0.033) / 12;
+  const flPension = Math.min(salary, P_CAP) * P_LOCAL;
+  const flHealth = salary * H_LOCAL;
+  const flLtc = flHealth * LTC;
+  const flNetReal = salary - flWh - flAdd - flPension - flHealth - flLtc;
+
+  const diff = flNetReal - empNet;
+  const empBetter = diff < 0;
+  const addSign = flAdd >= 0 ? '- ' : '+ ';
+  const addColor = flAdd > 0 ? 'color:#EF4444' : 'color:#10B981';
+
+  document.getElementById('cmp-result-content').innerHTML = `
+    <div class="compare-cols">
+      <div class="compare-col ${empBetter ? 'highlight' : ''}">
+        <div class="compare-col-title">&#128101; 4대보험 직장인</div>
+        <div class="compare-row"><span class="compare-key">국민연금 (4.75%)</span><span class="compare-val">- ${fmt(rnd(pension))}</span></div>
+        <div class="compare-row"><span class="compare-key">건강보험 (3.595%)</span><span class="compare-val">- ${fmt(rnd(health))}</span></div>
+        <div class="compare-row"><span class="compare-key">장기요양 (0.47%)</span><span class="compare-val">- ${fmt(rnd(ltc))}</span></div>
+        <div class="compare-row"><span class="compare-key">고용보험 (0.9%)</span><span class="compare-val">- ${fmt(rnd(employ))}</span></div>
+        <div class="compare-row"><span class="compare-key">소득세+지방세</span><span class="compare-val">- ${fmt(rnd(mTax+mLocal))}</span></div>
+        <div class="compare-total compare-row"><span class="compare-key" style="font-weight:700;color:var(--gray-900)">월 실수령</span><span class="compare-val" style="font-size:17px;font-weight:900">${fmt(rnd(empNet))}</span></div>
+      </div>
+      <div class="compare-col ${!empBetter ? 'highlight' : ''}">
+        <div class="compare-col-title">&#128176; 3.3% 프리랜서 (추정)</div>
+        <div class="compare-row"><span class="compare-key">원천징수 (3.3%)</span><span class="compare-val">- ${fmt(rnd(flWh))}</span></div>
+        <div class="compare-row"><span class="compare-key">종소세 추가납부/월</span><span class="compare-val" style="${addColor}">${addSign}${fmt(rnd(Math.abs(flAdd)))}</span></div>
+        <div class="compare-row"><span class="compare-key">국민연금 지역가입 (9.5%)</span><span class="compare-val">- ${fmt(rnd(flPension))}</span></div>
+        <div class="compare-row"><span class="compare-key">건강+요양 지역가입</span><span class="compare-val">- ${fmt(rnd(flHealth+flLtc))}</span></div>
+        <div class="compare-total compare-row"><span class="compare-key" style="font-weight:700;color:var(--gray-900)">월 실질 소득</span><span class="compare-val" style="font-size:17px;font-weight:900">${fmt(rnd(flNetReal))}</span></div>
+      </div>
+    </div>
+    <div class="result-row" style="margin-top:12px">
+      <span class="result-label">종합 비교 (보험료 포함)</span>
+      <span class="result-value" style="font-weight:800;color:${empBetter?'#3B82F6':'#10B981'}">${empBetter?'직장인 월 +':'프리랜서 월 +'}${fmt(rnd(Math.abs(diff)))} 유리</span>
+    </div>
+    <div class="result-note">* 프리랜서 종소세: 경비율 60% 단순 가정 / 지역가입 보험료: 소득 기준 추정(재산 미포함)<br>* 직장인 추가 혜택: 퇴직금(월급 8.3%), 실업급여, 산재보험 별도 미포함</div>`;
+  document.getElementById('cmp-result').classList.add('show');
+}
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/calc-registry.js"></script>
+<script src="/assets/tax-detail-shell.js"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '소득세법·부가가치세법 2026년 기준',
+  basisDate: '2026년 귀속',
+  referenceOrg: '국세청',
+  lastReviewed: '2026.04.24',
+  category: 'tax'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/blog-review-footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>데이터 용량 단위 변환 2026 - MB GB TB, 1TB가 931GB로 보이는 이유 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="KB MB GB TB 데이터 용량 단위 변환과 1TB SSD가 931GB로 표시되는 이유, 100Mbps 인터넷이 12.5MB/s인 이유까지 2026년 기준으로 정리. 넷플릭스 시청 시간, 파일 다운로드 시간 계산 예시 포함." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="데이터 용량 단위 변환 2026 - MB GB TB, 1TB가 931GB로 보이는 이유 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="KB MB GB TB 데이터 용량 단위 변환과 1TB SSD가 931GB로 표시되는 이유, 100Mbps 인터넷이 12.5MB/s인 이유까지 2026년 기준으로 정리. 넷플릭스 시청 시간, 파일 다운로드 시간 계산 예시 포함." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/data-unit-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/data-unit-guide.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#14B8A6;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(20,184,166,0.15);color:#14B8A6;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:24px 0 10px}
+    .post-body p{margin-bottom:14px}
+    .post-body ul{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#14B8A6;text-decoration:none}
+    .highlight-box{background:rgba(20,184,166,0.08);border-left:4px solid #14B8A6;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#0F766E;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    td.rate{color:#14B8A6;font-weight:700}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#14B8A6;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .faq-item{border:1px solid #E5E7EB;border-radius:10px;margin:12px 0}
+    .faq-q{font-weight:700;padding:14px 18px;font-size:15px;cursor:pointer;background:#F9FAFB;border-radius:10px}
+    .faq-a{padding:14px 18px;font-size:14px;color:#4B5563;line-height:1.75;border-top:1px solid #E5E7EB}
+    .adfit-slot{text-align:center;margin:28px 0}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "데이터 용량 단위 변환 2026 - MB GB TB, 1TB가 931GB로 보이는 이유",
+  "description": "KB MB GB TB 데이터 용량 단위 변환과 1TB SSD가 931GB로 표시되는 이유, 100Mbps 인터넷이 12.5MB/s인 이유까지 2026년 기준으로 정리. 넷플릭스 시청 시간, 파일 다운로드 시간 계산 예시 포함.",
+  "author": {"@type": "Organization", "name": "제이퍼 계산기", "url": "https://www.jptcalc.kr"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr",
+    "logo": {"@type": "ImageObject", "url": "https://www.jptcalc.kr/android-chrome-512x512.png"}
+  },
+  "datePublished": "2026-08-25",
+  "dateModified": "2026-08-25",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.jptcalc.kr/blog/posts/data-unit-guide.html"},
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "생활·도구",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "1TB SSD를 샀는데 왜 탐색기에는 931GB로 뜨나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "저장장치 제조사는 1TB를 10진법으로 1,000,000,000,000바이트(1조 바이트)로 표기하지만, 윈도우 탐색기는 2진법 기준(1GB = 1,073,741,824바이트)으로 용량을 계산해서 보여줍니다. 1,000,000,000,000 ÷ 1,073,741,824 = 약 931.3이므로 931GB로 표시되는 것입니다. 데이터가 사라진 것이 아니라 같은 바이트 수를 다른 자로 잰 결과입니다. 여기에 EFI·복구 파티션이 1~2GB, 제조사 공장 복구 이미지가 있으면 10~20GB가 더 빠집니다. 참고로 맥(macOS)은 2009년부터 제조사와 같은 10진법을 써서 같은 드라이브를 그대로 1TB로 표시합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "100Mbps 인터넷인데 다운로드 속도가 왜 12.5MB/s밖에 안 나오나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "통신사가 광고하는 인터넷 속도 Mbps는 초당 메가비트(megabit)이고, 다운로드 관리자나 브라우저가 보여주는 MB/s는 초당 메가바이트(megabyte)입니다. 1바이트는 8비트이므로 Mbps 숫자를 8로 나눠야 실제 체감하는 MB/s가 나옵니다. 100Mbps는 100 ÷ 8 = 12.5MB/s가 이론상 최대 속도이며, 이마저도 회선 혼잡이나 서버 상태에 따라 더 낮게 나올 수 있습니다. 속도가 느려진 게 아니라 단위 자체가 8배 차이 나는 것입니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "데이터 요금제 5GB로 넷플릭스를 얼마나 볼 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "넷플릭스 고객센터가 공개한 화질 설정별 소비량은 SD 최대 1GB, HD 최대 3GB, 4K 최대 7GB입니다. 이 값은 평균이 아니라 상한선이라, 데이터 5GB 요금제라면 SD로 최소 약 5시간, HD로 최소 약 1시간 40분은 볼 수 있다는 뜻입니다. 다만 모바일 앱은 기준이 따로 있어서, 넷플릭스는 자동 설정에서 데이터 1GB당 약 4시간, 데이터 절약 모드에서는 약 6시간을 볼 수 있다고 안내합니다. 폰으로만 본다면 5GB로 20시간 안팎도 가능하니 위 표는 가장 보수적인 하한선으로 보시면 됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "사진 1,000장을 저장하려면 용량이 얼마나 필요한가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "스마트폰으로 찍은 일반 JPG 사진은 보통 장당 3~6MB이므로 1,000장이면 약 3~6GB가 필요합니다. 반면 미러리스·DSLR 카메라의 RAW 파일은 센서 화소수에 따라 장당 약 25~45MB로 훨씬 커서, 같은 1,000장이라도 약 25~45GB가 필요할 수 있습니다. 4K 동영상은 1분에 약 190MB(요즘 스마트폰 기본값인 HEVC 코덱)에서 400MB(호환성 우선 H.264 코덱)를 차지해 사진보다 훨씬 빠르게 용량을 소진합니다. 정확한 필요 용량은 촬영 포맷과 해상도를 먼저 확인해야 계산할 수 있습니다."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+  {"@type":"ListItem","position":2,"name":"블로그","item":"https://www.jptcalc.kr/blog/"},
+  {"@type":"ListItem","position":3,"name":"생활·도구","item":"https://www.jptcalc.kr/blog/?cat=생활·도구"},
+  {"@type":"ListItem","position":4,"name":"데이터 용량 단위 변환 2026 - MB GB TB, 1TB가 931GB로 보이는 이유","item":"https://www.jptcalc.kr/blog/posts/data-unit-guide.html"}
+]}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <div class="logo-icon"><img src="../../assets/logo.svg" alt="제이퍼 계산기 로고" /></div>
+      <span class="logo-text">제이퍼<span>계산기</span></span>
+    </a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+
+<div class="post-wrap">
+  <span class="post-tag">생활·도구</span>
+  <h1>데이터 용량 단위 변환 2026 - MB GB TB, 1TB가 931GB로 보이는 이유</h1>
+  <div class="post-meta">
+    <span>2026.08.25</span>
+    <span>제이퍼 계산기 편집팀</span>
+  </div>
+
+  <div class="post-body">
+
+    <p>새 노트북을 사고 탐색기를 열어보면 분명 "1TB"라고 써 있었는데 실제로는 "931GB"로 뜹니다. 고장 난 것도, 속은 것도 아닙니다. 데이터 용량 단위는 우리가 매일 쓰는 다른 단위와 계산 방식 자체가 다릅니다.</p>
+    <p>이 글은 KB·MB·GB·TB가 어떻게 이어지는지, 왜 저장장치 용량과 화면에 뜨는 숫자가 다른지, 그리고 인터넷 속도 Mbps가 왜 체감 다운로드 속도의 8분의 1처럼 느껴지는지까지 한 번에 정리합니다. 계산 과정을 그대로 보여드리니 직접 검산해보셔도 좋습니다.</p>
+
+    <div class="highlight-box">
+      <p>새 저장장치를 사고 용량이 줄어든 것 같아 당황하신 분, 인터넷 속도가 광고와 다르다고 느끼신 분, 데이터 요금제로 동영상을 얼마나 볼 수 있는지 계산이 필요한 분에게 도움이 되는 글입니다.</p>
+    </div>
+
+    <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+      <li>KB·MB·GB·TB 단위 환산표 (2진법 1024 기준 vs 10진법 1000 기준)</li>
+      <li>1TB SSD가 931GB로 표시되는 계산 과정 그대로 검산</li>
+      <li>100Mbps 인터넷이 12.5MB/s인 이유 - 비트와 바이트의 8배 함정</li>
+      <li>넷플릭스 화질별 시간당 데이터 사용량과 요금제별 시청 가능 시간</li>
+      <li>사진·동영상·문서 파일당 평균 용량표</li>
+      <li>4GB 파일을 100Mbps로 받으면 몇 분 걸리는지 직접 계산</li>
+    </ul>
+
+    <!-- ① 상단 애드핏 슬롯: 목차 직후 -->
+    <div class="adfit-slot">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>KB MB GB TB, 1024씩 커지는 데이터 단위</h2>
+    <p>데이터 용량은 길이나 무게와 달리 10이 아니라 2를 기준으로 커집니다. 컴퓨터가 이진법으로 동작하기 때문입니다. 1바이트(byte)는 8비트(bit)이고, 그 위 단위부터는 1024(2의 10제곱)씩 곱해집니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>단위</th>
+            <th>2진법 기준(컴퓨터 실제 계산)</th>
+            <th>10진법 기준(제조사 표기)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1KB</td><td class="rate">1,024바이트</td><td>1,000바이트</td></tr>
+          <tr><td>1MB</td><td class="rate">1,024KB (1,048,576바이트)</td><td>1,000,000바이트</td></tr>
+          <tr><td>1GB</td><td class="rate">1,024MB (약 10.7억 바이트)</td><td>1,000,000,000바이트</td></tr>
+          <tr><td>1TB</td><td class="rate">1,024GB (약 1조 995억 바이트)</td><td>1,000,000,000,000바이트</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>국제전기기술위원회(IEC)는 1998년 12월 이 둘을 구분하려고 KiB·MiB·GiB(키비바이트·메비바이트·기비바이트)라는 이진법 전용 명칭을 채택했고, 1999년 1월 IEC 60027-2 개정으로 발행했습니다(현행 표준은 IEC 80000-13). 하지만 실제로는 윈도우 탐색기가 여전히 "GB"라는 이름으로 이진법(1024 기준) 계산 결과를 보여주고, 저장장치 제조사는 상자에 10진법(1000 기준) 숫자를 인쇄합니다. 같은 이름, 다른 계산법이 만나는 지점에서 혼란이 생깁니다.</p>
+    <p>참고로 맥(macOS)은 사정이 다릅니다. 2009년 스노우 레퍼드부터 제조사와 같은 10진법으로 바꿔서, 같은 1TB 드라이브를 윈도우는 931GB로, 맥은 약 1TB로 표시합니다. 아래 이야기는 윈도우 기준이라고 보시면 됩니다.</p>
+
+    <h2>1TB SSD가 931GB로 보이는 이유 - 여기서 함정이 있다</h2>
+    <p>제조사가 말하는 1TB는 정확히 1,000,000,000,000바이트(1조 바이트)입니다. 이 숫자 자체는 거짓이 아닙니다. 문제는 윈도우 탐색기가 용량을 표시할 때 1GB를 1,073,741,824바이트(2의 30제곱, 이진법 기준)로 나눠서 계산한다는 데 있습니다.</p>
+    <p>직접 검산해보겠습니다. 1,000,000,000,000 ÷ 1,073,741,824 = 약 931.32. 소수점을 버리면 화면에 뜨는 숫자와 정확히 같은 931GB가 나옵니다. 즉 용량이 실제로 사라진 게 아니라, 같은 데이터를 다른 자로 재서 숫자가 작아 보이는 것입니다.</p>
+    <p>오해를 하나 짚고 가겠습니다. 데이터가 69GB만큼 없어진 게 아닙니다. 바이트 수는 처음부터 끝까지 1조 개 그대로이고, 그걸 1,000으로 나눠 부르느냐 1,024로 나눠 부르느냐에 따라 화면의 숫자가 1000에서 931로 바뀔 뿐입니다. 자를 바꿔 잰 것이지 물건이 줄어든 게 아닙니다. 같은 방식으로 512GB 제품은 약 476GB, 2TB 제품은 약 1.81TB로 표시됩니다.</p>
+    <p>여기에 하나가 더 있습니다. 윈도우를 설치하면 EFI 시스템 파티션과 복구 파티션이 자리를 차지합니다. 직접 설치한 경우라면 이 몫이 대략 1~2GB라 C드라이브가 928GB 내외로 잡히지만, 제조사가 공장 복구 이미지를 따로 넣어둔 완제품 노트북은 그 파티션만 10~20GB를 먹어 910GB대까지 내려가기도 합니다.</p>
+
+    <h2>100Mbps 인터넷이 12.5MB/s인 이유 - 여기서도 함정이 있다</h2>
+    <p>통신사가 광고하는 "100Mbps"의 M은 메가비트(megabit)입니다. 반면 다운로드 관리자나 브라우저 하단에 뜨는 속도는 대개 메가바이트(MB/s) 기준입니다. 1바이트는 8비트이므로, 광고 속도를 8로 나눠야 실제 체감 속도가 나옵니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>회선 속도(Mbps)</th>
+            <th>이론상 최대 다운로드 속도(MB/s)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>100Mbps</td><td class="rate">12.5MB/s</td></tr>
+          <tr><td>200Mbps</td><td class="rate">25MB/s</td></tr>
+          <tr><td>500Mbps</td><td class="rate">62.5MB/s</td></tr>
+          <tr><td>1Gbps(1,000Mbps)</td><td class="rate">125MB/s</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>"100Mbps인데 왜 이렇게 느리지"라고 생각했다면, 속도가 실제로 8분의 1로 줄어든 게 아니라 애초에 단위가 8배 차이 나는 서로 다른 숫자를 비교하고 있었던 것입니다. 여기에 실제 회선은 서버 상태·와이파이 신호·프로토콜 오버헤드 때문에 이론값에 조금 못 미치므로, 100Mbps 회선에서 실제 10~12MB/s 정도가 나온다면 정상 범위입니다.</p>
+
+    <!-- ② 본문중간 애드핏 슬롯: 중간 h2 직전 -->
+    <div class="adfit-slot">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-88xhdLeiIK3V35kb" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>시나리오 1 - 노트북 구매자 이OO씨, 1TB SSD의 진짜 실사용 용량</h2>
+    <p>이OO씨(28세)는 "1TB SSD" 노트북을 새로 샀습니다. 첫 부팅 후 탐색기를 열어보니 C드라이브 전체 용량이 916GB로 표시됩니다.</p>
+    <p><strong>제조사 표기:</strong> 1TB = 1,000,000,000,000바이트</p>
+    <p><strong>이진법 환산(931GB):</strong> 1,000,000,000,000 ÷ 1,073,741,824 = 약 931.3GB</p>
+    <p><strong>실사용 가능 용량(916GB):</strong> 931.3GB에서 EFI·복구 파티션과 제조사 공장 복구 이미지 약 15GB가 추가로 빠진 값</p>
+    <p>이OO씨가 "84GB나 어디 갔지"라고 걱정할 필요는 없습니다. 84GB 중 69GB는 표기 기준이 달라 숫자만 바뀐 것이고, 나머지 15GB만 실제로 파티션이 쓰고 있는 몫입니다. 다만 이 사실을 모르면 용량이 부족해 보여 불필요하게 더 큰 제품을 사는 경우가 있습니다. 완제품 노트북은 표기 용량의 약 92%, 직접 조립하거나 윈도우를 새로 설치한 경우는 약 93%를 실사용 용량으로 잡으면 대체로 맞습니다.</p>
+
+    <h2>시나리오 2 - 재택근무자 박OO씨, 4GB 파일을 100Mbps로 받는 시간</h2>
+    <p>박OO씨(35세)는 회사에서 보내온 4GB짜리 영상 편집 소스 파일을 100Mbps 인터넷으로 다운로드하려 합니다.</p>
+    <p>여기서 기준을 하나로 맞추는 게 중요합니다. 회선 속도의 M은 10진법(100만)이므로, 파일 크기도 10진법으로 통일해서 계산해야 합니다. 이진법 파일 크기와 10진법 전송 속도를 섞으면 답이 어긋납니다.</p>
+    <p><strong>파일 크기 환산:</strong> 4GB = 40억 바이트</p>
+    <p><strong>이론상 다운로드 속도:</strong> 100Mbps ÷ 8 = 12.5MB/s = 초당 1,250만 바이트</p>
+    <p><strong>소요 시간:</strong> 40억 ÷ 1,250만 = 320초 = 정확히 5분 20초</p>
+    <p>다운로드 관리자에 "6분 남음"이라고 떠도 이상한 게 아닙니다. 회선 혼잡·서버 상태·와이파이 신호에 따라 실제 속도는 이론값에 못 미치고, 여기에 TCP/IP 헤더 같은 프로토콜 오버헤드가 몇 퍼센트 항상 붙습니다. 100Mbps 회선에서 10~12MB/s가 나온다면 정상 범위이고, 그러면 실제로는 5분 30초에서 6분 40초쯤 걸립니다. 회선을 2배(200Mbps)로 올리면 이론상 소요 시간은 정확히 절반인 2분 40초로 줄어듭니다.</p>
+
+    <h2>시나리오 3 - 직장인 최OO씨, 데이터 5GB로 출퇴근길 넷플릭스 보기</h2>
+    <p>최OO씨(31세)는 매달 데이터 5GB가 제공되는 요금제를 씁니다. 출퇴근길 지하철에서 넷플릭스를 보면 한 달에 얼마나 볼 수 있을지 계산해보겠습니다. 넷플릭스 고객센터가 공개한 화질 설정별 소비량은 SD <strong>최대</strong> 1GB, HD <strong>최대</strong> 3GB, 4K <strong>최대</strong> 7GB입니다. "최대"라는 점이 중요합니다. 이 숫자는 상한선이지 평균이 아닙니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>화질</th>
+            <th>시간당 데이터(최대)</th>
+            <th>5GB로 시청 가능 시간(최소)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>SD (표준화질)</td><td class="rate">최대 1GB</td><td>약 5시간</td></tr>
+          <tr><td>HD (고화질)</td><td class="rate">최대 3GB</td><td>약 1시간 40분</td></tr>
+          <tr><td>4K (초고화질)</td><td class="rate">최대 7GB</td><td>약 43분</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin:24px 0;overflow-x:auto">
+    <svg role="img" width="100%" viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg">
+      <title>데이터 5GB로 화질별 넷플릭스 시청 가능 시간 비교</title>
+      <rect width="680" height="200" rx="12" fill="#F9FAFB"/>
+      <text x="24" y="34" font-size="13" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">데이터 5GB로 볼 수 있는 넷플릭스 시간 (화질 설정별 최대 소비 기준)</text>
+
+      <text x="24" y="76" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">SD</text>
+      <rect x="90" y="63" width="480" height="20" rx="4" fill="#14B8A6"/>
+      <text x="578" y="78" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">5시간</text>
+
+      <text x="24" y="116" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">HD</text>
+      <rect x="90" y="103" width="160" height="20" rx="4" fill="#14B8A6" opacity="0.65"/>
+      <text x="258" y="118" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">1시간 40분</text>
+
+      <text x="24" y="156" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">4K</text>
+      <rect x="90" y="143" width="69" height="20" rx="4" fill="#14B8A6" opacity="0.4"/>
+      <text x="167" y="158" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">43분</text>
+
+      <text x="24" y="188" font-size="11" fill="#9CA3AF" font-family="Pretendard,sans-serif">※ 막대 길이는 시청 가능 시간(분)에 비례 / 넷플릭스가 공개한 화질별 최대 소비량으로 역산한 하한선</text>
+    </svg>
+    </div>
+
+    <p>같은 5GB인데 화질만 낮춰도 시청 시간이 7배 차이 납니다. "그래서 뭐가 달라지는데"라면, 4K로 보면 43분 만에 데이터가 바닥나 이동 중 영상이 끊기지만, SD로 낮추면 왕복 통근시간을 다 채우고도 여유가 남습니다. 데이터가 부족한 달에는 앱 설정에서 화질을 낮추는 것이 요금제를 올리는 것보다 훨씬 빠른 해결책입니다.</p>
+    <p>한 가지 덧붙이면, 위 표는 웹브라우저와 TV의 화질 설정 기준입니다. 폰으로만 본다면 실제 소비는 이보다 훨씬 적습니다. 넷플릭스는 모바일 앱에 대해 자동 설정 기준 데이터 1GB당 약 4시간, 데이터 절약 모드에서는 약 6시간을 볼 수 있다고 따로 안내합니다. 최OO씨처럼 지하철에서 폰으로만 보는 경우라면 5GB로 20시간 안팎까지 가능하니, 위 표는 최악의 경우를 가정한 하한선이라고 이해하시면 됩니다.</p>
+
+    <h2>사진·동영상·문서, 실생활 파일 용량은 얼마나 될까</h2>
+    <p>단위를 알아도 실제 파일이 얼마나 되는지 감이 없으면 소용이 없습니다. 자주 다루는 파일 종류별 평균 용량을 정리했습니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>파일 종류</th>
+            <th>평균 용량</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>스마트폰 사진(JPG)</td><td class="rate">3~6MB</td><td>기종·화소수에 따라 차이</td></tr>
+          <tr><td>미러리스·DSLR RAW 사진</td><td class="rate">25~45MB</td><td>센서 화소수가 클수록 증가</td></tr>
+          <tr><td>카카오톡 동영상(1분)</td><td class="rate">약 15~25MB</td><td>전송 시 자동 압축 적용</td></tr>
+          <tr><td>4K 동영상(1분, 원본)</td><td class="rate">약 190~400MB</td><td>HEVC 190MB / H.264 350~400MB</td></tr>
+          <tr><td>MP3 음악 1곡(4분)</td><td class="rate">약 4~10MB</td><td>비트레이트 128~320kbps 기준</td></tr>
+          <tr><td>일반 문서(PDF·워드 10페이지)</td><td class="rate">약 1~3MB</td><td>이미지 포함 시 증가</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>이 표로 시나리오 4를 계산해보겠습니다. 사진작가 준비생 한OO씨(26세)는 여행 가서 RAW 사진 1,000장을 찍었습니다. 장당 평균 35MB로 잡으면 1,000 × 35MB = 35,000MB = 약 34.2GB(35,000 ÷ 1,024)입니다. 64GB SD카드 하나로는 여유 있게 담을 수 있지만, 여기에 백업용 사본까지 만든다면 약 68GB 이상의 저장공간이 필요합니다. 스마트폰 일반 사진 1,000장(장당 4MB 가정)이라면 4,000MB, 약 3.9GB에 그쳐 같은 1,000장이라도 차이가 9배에 가깝습니다. <a href="../posts/unit-converter-guide.html" style="color:#14B8A6;">평·인치 같은 다른 실생활 단위 변환</a>도 원리는 같지만, 데이터 단위만 유독 1024를 기준으로 커진다는 점이 다릅니다.</p>
+
+    <p>메일 첨부파일 용량 제한(보통 25MB)에 걸린다면, 압축 프로그램으로 사진 여러 장을 하나의 zip 파일로 묶어 용량을 줄이는 방법이 있습니다. 글자수를 세거나 문서 분량을 점검할 때는 <a href="../posts/char-count-guide.html" style="color:#14B8A6;">글자수 세기 가이드</a>도 함께 참고하면 파일 용량과 별개로 내용 분량까지 관리할 수 있습니다.</p>
+
+    <div class="cta-box">
+      <p>1TB가 몇 GiB인지, 100Mb가 몇 MB인지<br>제이퍼 단위변환 계산기 데이터 탭에서 바로 확인해보세요.</p>
+      <a href="../../calc/tools/unit-converter/" class="cta-btn">단위변환 계산기 바로가기 →</a>
+    </div>
+    <p style="font-size:13px;color:#6B7280;margin-top:8px;text-align:center">데이터 탭에서 비트·바이트·KB·MB·GB·TB와 1,024 기준 KiB·MiB·GiB·TiB를 양방향 환산</p>
+
+    <h2>자주 나오는 질문</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 1TB SSD를 샀는데 왜 탐색기에는 931GB로 뜨나요?</div>
+      <div class="faq-a">저장장치 제조사는 1TB를 10진법으로 1,000,000,000,000바이트(1조 바이트)로 표기하지만, 윈도우 탐색기는 2진법 기준(1GB = 1,073,741,824바이트)으로 용량을 계산해서 보여줍니다. 1,000,000,000,000 ÷ 1,073,741,824 = 약 931.3이므로 931GB로 표시되는 것입니다. 데이터가 사라진 것이 아니라 같은 바이트 수를 다른 자로 잰 결과입니다. 여기에 EFI·복구 파티션이 1~2GB, 제조사 공장 복구 이미지가 있으면 10~20GB가 더 빠집니다. 참고로 맥(macOS)은 2009년부터 제조사와 같은 10진법을 써서 같은 드라이브를 그대로 1TB로 표시합니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 100Mbps 인터넷인데 다운로드 속도가 왜 12.5MB/s밖에 안 나오나요?</div>
+      <div class="faq-a">통신사가 광고하는 인터넷 속도 Mbps는 초당 메가비트(megabit)이고, 다운로드 관리자나 브라우저가 보여주는 MB/s는 초당 메가바이트(megabyte)입니다. 1바이트는 8비트이므로 Mbps 숫자를 8로 나눠야 실제 체감하는 MB/s가 나옵니다. 100Mbps는 100 ÷ 8 = 12.5MB/s가 이론상 최대 속도이며, 이마저도 회선 혼잡이나 서버 상태에 따라 더 낮게 나올 수 있습니다. 속도가 느려진 게 아니라 단위 자체가 8배 차이 나는 것입니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 데이터 요금제 5GB로 넷플릭스를 얼마나 볼 수 있나요?</div>
+      <div class="faq-a">넷플릭스 고객센터가 공개한 화질 설정별 소비량은 SD 최대 1GB, HD 최대 3GB, 4K 최대 7GB입니다. 이 값은 평균이 아니라 상한선이라, 데이터 5GB 요금제라면 SD로 최소 약 5시간, HD로 최소 약 1시간 40분은 볼 수 있다는 뜻입니다. 다만 모바일 앱은 기준이 따로 있어서, 넷플릭스는 자동 설정에서 데이터 1GB당 약 4시간, 데이터 절약 모드에서는 약 6시간을 볼 수 있다고 안내합니다. 폰으로만 본다면 5GB로 20시간 안팎도 가능하니 위 표는 가장 보수적인 하한선으로 보시면 됩니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 사진 1,000장을 저장하려면 용량이 얼마나 필요한가요?</div>
+      <div class="faq-a">스마트폰으로 찍은 일반 JPG 사진은 보통 장당 3~6MB이므로 1,000장이면 약 3~6GB가 필요합니다. 반면 미러리스·DSLR 카메라의 RAW 파일은 센서 화소수에 따라 장당 약 25~45MB로 훨씬 커서, 같은 1,000장이라도 약 25~45GB가 필요할 수 있습니다. 4K 동영상은 1분에 약 190MB(요즘 스마트폰 기본값인 HEVC 코덱)에서 400MB(호환성 우선 H.264 코덱)를 차지해 사진보다 훨씬 빠르게 용량을 소진합니다. 정확한 필요 용량은 촬영 포맷과 해상도를 먼저 확인해야 계산할 수 있습니다.</div>
+    </div>
+
+    <h2>결국 기준 두 개만 구분하면 끝난다</h2>
+    <p>데이터 용량에서 혼란이 생기는 이유는 단 두 가지입니다. 저장 용량은 제조사(10진법)와 운영체제(2진법)의 계산 기준이 다르고, 인터넷 속도는 통신사(비트)와 사용자 체감(바이트)의 단위 자체가 다릅니다. 둘 다 8배 안팎의 차이를 만들지만, 어느 쪽도 실제로 손해를 본 것은 아닙니다.</p>
+    <p>핵심 숫자 하나만 기억하면 됩니다. 1TB는 931GB로, 100Mbps는 12.5MB/s로 보인다는 것입니다. 이 두 변환만 알면 앞으로 새 저장장치를 사거나 인터넷 요금제를 고를 때 광고 숫자와 실제 화면 숫자가 달라도 당황할 일이 없습니다. 정확한 환산이 필요할 때는 단위변환 계산기에 숫자만 넣으면 즉시 확인할 수 있습니다.</p>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-copy">© 2026 제이퍼 계산기. All rights reserved.</div>
+</footer>
+
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "IEC 60027-2/80000-13 이진 접두어 표준, 넷플릭스 고객센터 공개 자료, 2026년 기준",
+  basisDate: "2026년 기준",
+  referenceOrg: "국가기술표준원(kats.go.kr)",
+  lastReviewed: '2026.08.25',
+  disclaimer: "본 내용은 참고용이며, 실제 저장장치 실사용 용량과 인터넷 속도는 제품·환경에 따라 달라질 수 있습니다.",
+  relatedCalc: { name: '단위변환 계산기', url: '/calc/tools/unit-converter/' },
+  category: 'tools'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>

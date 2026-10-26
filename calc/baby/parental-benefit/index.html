@@ -22,10 +22,9 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link rel="stylesheet" href="/assets/baby-common.css" />
+  <link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -50,40 +49,45 @@
   </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"2026년 부모급여는 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"2026년 부모급여는 만 0세(0~11개월) 월 100만원, 만 1세(12~23개월) 월 50만원입니다. 출생부터 24개월간 모두 받으면 0세 1,200만원, 1세 600만원으로 총 1,800만원을 지원받습니다."}},{"@type":"Question","name":"어린이집에 다니면 부모급여를 못 받나요?","acceptedAnswer":{"@type":"Answer","text":"어린이집을 이용하면 부모급여 대신 보육료 바우처가 우선 지원됩니다. 만 0세는 보육료 바우처 금액이 부모급여(100만원)보다 적어 그 차액이 현금으로 지급되고, 만 1세는 보육료 바우처로 전액 대체되어 현금 지급이 없습니다. 가정에서 양육하면 전액 현금으로 받습니다."}},{"@type":"Question","name":"부모급여와 아동수당을 같이 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네, 부모급여와 아동수당은 별개 제도로 중복 지급됩니다. 만 0~1세 시기에는 부모급여(0세 100만·1세 50만)와 아동수당(월 10만원)을 함께 받습니다. 24개월부터는 부모급여가 끝나고 가정양육수당 또는 보육료로 전환됩니다."}},{"@type":"Question","name":"부모급여는 언제까지 신청해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"출생일로부터 60일 이내에 신청하면 출생일이 속한 달까지 소급해서 받을 수 있습니다. 60일이 지나 신청하면 신청한 달부터만 지급되므로, 출생신고와 함께 복지로·정부24 또는 주민센터에서 빠르게 신청하는 것이 좋습니다."}},{"@type":"Question","name":"부모급여는 소득에 따라 달라지나요?","acceptedAnswer":{"@type":"Answer","text":"부모급여는 소득·재산과 무관하게 모든 영아 가구에 동일하게 지급됩니다. 만 0세 월 100만원, 만 1세 월 50만원으로 정액이며, 소득 심사가 없습니다."}}]}</script>
   <style>
-    .result-card{background:linear-gradient(135deg,#F7FEE7 0%,#ECFCCB 100%);border:1px solid rgba(132,204,22,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
-    .result-card.show{display:block}
-    .result-highlight{background:rgba(132,204,22,0.12);border-radius:12px;padding:16px;margin-bottom:16px;text-align:center}
-    .rh-label{font-size:12px;color:var(--gray-500);margin-bottom:4px}
-    .rh-value{font-size:28px;font-weight:900;color:#4D7C0F}
-    .rh-sub{font-size:12px;color:var(--gray-500);margin-top:4px}
+    /* 페이지 고유 스타일(공통 부품 재정의는 base.css가 맡아 뺐다) */
+    .rh-label { font-size:12px;color:var(--gray-500);margin-bottom:4px }
+    .rh-value { font-size:28px;font-weight:900;color:#4D7C0F }
+    .rh-sub { font-size:12px;color:var(--gray-500);margin-top:4px }
   </style>
 </head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
-    <nav class="header-nav">
-      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
-      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
-      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
-      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
-      <a href="/calc/baby/" class="nav-item active"><span class="nav-dot" style="background:#84CC16;"></span>출산·육아</a>
-    </nav>
-    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
-    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
-  </div>
+<body data-cat="baby" style="--cat: var(--c-baby)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
 </header>
-<main class="page-wrap">
-  <div class="page-header">
-    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/baby/">출산·육아 계산기</a><span class="breadcrumb-sep">›</span><span>부모급여 계산기</span></div>
-    <div class="page-header-badge">🍼 2026년 기준</div>
-    <h1>부모급여 계산기</h1>
-    <p>자녀 생년월로 부모급여 월 지급액과 앞으로 받을 총액을 계산하세요</p>
+
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/baby/">출산·육아 계산기</a> &rsaquo; 부모급여 계산기</div>
+      <div class="page-badge">2026년 기준</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-baby"></use></svg></span>
+        <h1 class="page-title">부모급여 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">2026년 기준</span>
+          <span class="ds-trust-chip">2026.06.24 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">자녀 생년월로 부모급여 월 지급액과 앞으로 받을 총액을 계산하세요</p>
+    </div>
   </div>
-    <div class="card">
-      <div class="card-title">자녀 정보</div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+      <div class="field-label ds-group-label">자녀 정보</div>
       <div class="field">
         <div class="field-label">자녀 출생 연월</div>
         <div class="input-wrap"><input type="month" id="birth-month" oninput="calc()" /></div>
@@ -97,7 +101,14 @@
         </div>
       </div>
     </div>
-    <div class="result-card" id="result">
+
+        <button type="button" class="ds-btn-calc" data-calc-submit="calc" data-result="result" data-required="birth-month">계산하기</button>
+      </div>
+    </section>
+
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="result">
       <div class="result-highlight">
         <div class="rh-label">이번 달 부모급여</div>
         <div class="rh-value" id="r-monthly">-</div>
@@ -110,18 +121,47 @@
         <span class="result-total-value" id="r-total">-</span>
       </div>
       <p class="result-note" id="r-note">※ 2026년 기준, 가정 양육 시 현금 지급액입니다. 어린이집 이용 시 보육료 바우처가 우선 지원됩니다. 소득·재산과 무관하게 정액 지급됩니다.</p>
-    </div>
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/baby/home-care-allowance/">가정양육수당 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
 
-  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">이번 달 부모급여</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="parental-benefit-next">
+        <a class="ds-next-card" href="/calc/baby/home-care-allowance/" data-next="home-care-allowance"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-baby"></use></svg></span><span class="ds-next-body"><b>가정양육수당 계산기</b><span>가정에서 키우는 만 24~86개월 자녀의 양육수당(일반·농어촌·장애아동 단가)과 잔여 총액을 계산합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/baby/child-allowance/" data-next="child-allowance"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-baby"></use></svg></span><span class="ds-next-body"><b>아동수당 계산기</b><span>자녀 생년월로 2026년 만 9세 미만 확대된 아동수당(월 10만원)의 잔여 수령액과 총 수령액을 계산합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
+  </div>
+
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">2026년 부모급여(만 0세 월 100만원·만 1세 월 50만원, 소득무관 정액) <a href="https://www.bokjiro.go.kr" target="_blank" rel="noopener">복지로 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#parental-benefit-s1">구간별 표</a><a href="#parental-benefit-s2">부모급여, 이렇게</a><a href="#parental-benefit-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
     <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
     <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
   </div>
 
   <div class="guide-section">
-    <div class="guide-card">
-      <h2>2026년 부모급여 지급액표</h2>
-      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">부모급여는 소득·재산과 무관하게 영아 가구에 정액으로 지급됩니다(2026년 기준).</p>
-      <div class="guide-table-wrap">
+            <section class="ds-section ds-prose" aria-labelledby="parental-benefit-s1">
+          <div class="ds-section-head"><h2 id="parental-benefit-s1">2026년 부모급여 지급액표</h2></div>
+<p class="ds-table-lead">부모급여는 소득·재산과 무관하게 영아 가구에 정액으로 지급됩니다(2026년 기준).</p>
+      <div class="ds-table-card">
       <table class="rate-table">
         <thead>
           <tr><th>구분</th><th>월 지급액</th><th>연 환산</th></tr>
@@ -139,10 +179,10 @@
         <li>어린이집 이용: 보육료 바우처가 우선 지원됩니다. 만 0세는 바우처보다 부모급여가 많아 차액이 현금 지급되고, 만 1세는 보육료 바우처로 전액 대체됩니다.</li>
       </ul>
       <p>24개월(만 2세)부터는 부모급여가 종료되고, 가정에서 양육하면 가정양육수당, 어린이집·유치원을 이용하면 보육료·유아학비로 전환됩니다.</p>
-    </div>
-    <div class="guide-card">
-      <h2>부모급여, 이렇게 챙기세요</h2>
-      <p>부모급여는 2022년 이후 출생 영아를 양육하는 가구에 지급됩니다. 출생일로부터 60일 이내에 신청하면 출생월까지 소급 적용되지만, 늦으면 신청한 달부터만 받으므로 출생신고와 함께 신청하는 것이 좋습니다.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="parental-benefit-s2">
+          <div class="ds-section-head"><h2 id="parental-benefit-s2">부모급여, 이렇게 챙기세요</h2></div>
+<p>부모급여는 2022년 이후 출생 영아를 양육하는 가구에 지급됩니다. 출생일로부터 60일 이내에 신청하면 출생월까지 소급 적용되지만, 늦으면 신청한 달부터만 받으므로 출생신고와 함께 신청하는 것이 좋습니다.</p>
       <div class="guide-grid">
         <div class="guide-box">
           <strong>신청 방법</strong>
@@ -158,32 +198,35 @@
         </div>
       </div>
       <p class="ref-links">참고: <a href="https://www.bokjiro.go.kr" target="_blank" rel="noopener">복지로(bokjiro.go.kr)</a> · <a href="https://www.mohw.go.kr" target="_blank" rel="noopener">보건복지부</a></p>
-    </div>
-    <div class="guide-card faq-card">
-      <h2>자주 묻는 질문</h2>
-      <div class="faq-item">
-        <h3>2026년 부모급여는 얼마인가요?</h3>
-        <p>2026년 부모급여는 만 0세(0~11개월) 월 100만원, 만 1세(12~23개월) 월 50만원입니다. 출생부터 24개월간 모두 받으면 0세 1,200만원, 1세 600만원으로 총 1,800만원을 지원받습니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>어린이집에 다니면 부모급여를 못 받나요?</h3>
-        <p>어린이집을 이용하면 부모급여 대신 보육료 바우처가 우선 지원됩니다. 만 0세는 보육료 바우처 금액이 부모급여(100만원)보다 적어 그 차액이 현금으로 지급되고, 만 1세는 보육료 바우처로 전액 대체되어 현금 지급이 없습니다. 가정에서 양육하면 전액 현금으로 받습니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>부모급여와 아동수당을 같이 받을 수 있나요?</h3>
-        <p>네, 부모급여와 아동수당은 별개 제도로 중복 지급됩니다. 만 0~1세 시기에는 부모급여(0세 100만·1세 50만)와 아동수당(월 10만원)을 함께 받습니다. 24개월부터는 부모급여가 끝나고 가정양육수당 또는 보육료로 전환됩니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>부모급여는 언제까지 신청해야 하나요?</h3>
-        <p>출생일로부터 60일 이내에 신청하면 출생일이 속한 달까지 소급해서 받을 수 있습니다. 60일이 지나 신청하면 신청한 달부터만 지급되므로, 출생신고와 함께 복지로·정부24 또는 주민센터에서 빠르게 신청하는 것이 좋습니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>부모급여는 소득에 따라 달라지나요?</h3>
-        <p>부모급여는 소득·재산과 무관하게 모든 영아 가구에 동일하게 지급됩니다. 만 0세 월 100만원, 만 1세 월 50만원으로 정액이며, 소득 심사가 없습니다.</p>
-      </div>
-    </div>
+        </section>
+            <section class="ds-section faq-card" aria-labelledby="parental-benefit-faq">
+          <div class="ds-section-head"><h2 id="parental-benefit-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>2026년 부모급여는 얼마인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>2026년 부모급여는 만 0세(0~11개월) 월 100만원, 만 1세(12~23개월) 월 50만원입니다. 출생부터 24개월간 모두 받으면 0세 1,200만원, 1세 600만원으로 총 1,800만원을 지원받습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>어린이집에 다니면 부모급여를 못 받나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>어린이집을 이용하면 부모급여 대신 보육료 바우처가 우선 지원됩니다. 만 0세는 보육료 바우처 금액이 부모급여(100만원)보다 적어 그 차액이 현금으로 지급되고, 만 1세는 보육료 바우처로 전액 대체되어 현금 지급이 없습니다. 가정에서 양육하면 전액 현금으로 받습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>부모급여와 아동수당을 같이 받을 수 있나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>네, 부모급여와 아동수당은 별개 제도로 중복 지급됩니다. 만 0~1세 시기에는 부모급여(0세 100만·1세 50만)와 아동수당(월 10만원)을 함께 받습니다. 24개월부터는 부모급여가 끝나고 가정양육수당 또는 보육료로 전환됩니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>부모급여는 언제까지 신청해야 하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>출생일로부터 60일 이내에 신청하면 출생일이 속한 달까지 소급해서 받을 수 있습니다. 60일이 지나 신청하면 신청한 달부터만 지급되므로, 출생신고와 함께 복지로·정부24 또는 주민센터에서 빠르게 신청하는 것이 좋습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>부모급여는 소득에 따라 달라지나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>부모급여는 소득·재산과 무관하게 모든 영아 가구에 동일하게 지급됩니다. 만 0세 월 100만원, 만 1세 월 50만원으로 정액이며, 소득 심사가 없습니다.</p>
+            </details>
+          </div>
+        </section>
     <div class="update-note">최종 검토: 2026.06.24 · 부모급여 금액·기준은 <a href="https://www.bokjiro.go.kr" target="_blank" rel="noopener">복지로</a>·보건복지부 공고를 따릅니다.</div>
   </div>
+    </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
   <script>
   window.TRUST_BLOCK_CONFIG = {
     standard: '2026년 부모급여(만 0세 월 100만원·만 1세 월 50만원, 소득무관 정액)',
@@ -199,37 +242,44 @@
     lastReviewed: '2026.06.24',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>
-  <div class="sibling-section">
-    <div class="sibling-title">다른 출산·육아 계산기</div>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 출산·육아 계산기</h2>
     <div class="sibling-list">
-      <a href="/calc/baby/ovulation/" class="sibling-link">🥚 배란일·가임기</a>
-      <a href="/calc/baby/due-date/" class="sibling-link">🤰 출산예정일·임신주수</a>
-      <a href="/calc/baby/baby-months/" class="sibling-link">👶 아기 개월수</a>
-      <a href="/calc/baby/parental-benefit/" class="sibling-link current">🍼 부모급여</a>
-      <a href="/calc/baby/child-allowance/" class="sibling-link">👛 아동수당</a>
-      <a href="/calc/baby/first-meeting/" class="sibling-link">🎁 첫만남이용권</a>
-      <a href="/calc/baby/home-care-allowance/" class="sibling-link">🏠 가정양육수당</a>
-      <a href="/calc/baby/total-support/" class="sibling-link">💰 출산 지원금 통합</a>
-      <a href="/calc/baby/parental-leave-pay/" class="sibling-link">🧑‍🍼 육아휴직급여</a>
+      <a href="/calc/baby/ovulation/" class="sibling-link">배란일·가임기</a>
+      <a href="/calc/baby/due-date/" class="sibling-link">출산예정일·임신주수</a>
+      <a href="/calc/baby/baby-months/" class="sibling-link">아기 개월수</a>
+      <a href="/calc/baby/child-allowance/" class="sibling-link">아동수당</a>
+      <a href="/calc/baby/first-meeting/" class="sibling-link">첫만남이용권</a>
+      <a href="/calc/baby/home-care-allowance/" class="sibling-link">가정양육수당</a>
+      <a href="/calc/baby/total-support/" class="sibling-link">출산 지원금 통합</a>
+      <a href="/calc/baby/parental-leave-pay/" class="sibling-link">육아휴직급여</a>
     </div>
-    <div class="sibling-title">관련 가이드</div>
-    <div class="sibling-list">
-      <a href="/blog/posts/baby-months-guide.html" class="sibling-link">📖 아기 개월수 계산법 2026 - 만 월령부터 영유아 검진 8차 시기까지 완…</a>
-      <a href="/blog/posts/birth-registration-guide.html" class="sibling-link">📖 출생신고 방법 2026 - 기한 1개월 계산법, 온라인 신고, 과태료보다 …</a>
-      <a href="/blog/posts/child-allowance-guide.html" class="sibling-link">📖 아동수당 2026 완전정리 - 만 9세 미만 확대, 지역별 최대 13만원까지</a>
-      <a href="/blog/posts/childbirth-support-guide.html" class="sibling-link">📖 출산 지원금 총정리 2026 - 첫만남이용권·부모급여·아동수당·양육수당 합…</a>
-      <a href="/blog/posts/due-date-guide.html" class="sibling-link">📖 출산예정일 계산법 2026 - 네겔레 법칙·임신 주수·삼분기 완전정리</a>
-      <a href="/blog/posts/first-meeting-voucher-guide.html" class="sibling-link">📖 첫만남이용권 사용법 2026 - 사용처·사용기한 2년·잔액 소진까지 완전정리</a>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/baby-months-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/baby-months-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>아기 개월수 계산법 2026 - 만 월령부터 영유아 검진 8차 시기까지 완전정리</span></a>
+      <a href="/blog/posts/birth-registration-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/birth-registration-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>출생신고 방법 2026 - 기한 1개월 계산법, 온라인 신고, 과태료보다 무서운 손해</span></a>
+      <a href="/blog/posts/child-allowance-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/child-allowance-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>아동수당 2026 완전정리 - 만 9세 미만 확대, 지역별 최대 13만원까지</span></a>
+      <a href="/blog/posts/childbirth-support-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/childbirth-support-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>출산 지원금 총정리 2026 - 첫만남이용권·부모급여·아동수당·양육수당 합치면 얼마</span></a>
+      <a href="/blog/posts/due-date-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/due-date-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>출산예정일 계산법 2026 - 네겔레 법칙·임신 주수·삼분기 완전정리</span></a>
+      <a href="/blog/posts/first-meeting-voucher-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/first-meeting-voucher-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>첫만남이용권 사용법 2026 - 사용처·사용기한 2년·잔액 소진까지 완전정리</span></a>
     </div>
   </div>
 </main>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
-    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
   </div>
 </footer>
+
+<script src="/assets/ds/calc-kit.js?v=d45e66d9"></script>
 <script>
 let care='home';
 function Won(w){return Math.round(w).toLocaleString()+'원';}
@@ -265,11 +315,10 @@ function calc(){
 }
 </script>
 
-<script src="/assets/calc-validate.js"></script>
-<script src="/assets/calc-result-tools.js"></script>
-<script src="/assets/footer-unified.js"></script>
-<script src="/assets/calc-registry.js"></script>
-<script src="/assets/baby-detail-shell.js"></script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
@@ -280,7 +329,13 @@ window.ARTICLE_INFO_CONFIG = {
   category: 'baby'
 };
 </script>
-<script src="/assets/blog-article-info.js"></script>
-<script src="/assets/blog-review-footer.js"></script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "result", "required": ["birth-month"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#parental-benefit-next", "next": []});
+  DSCalc.placeTrust('ds-trust-col');
+</script>
+<script src="/assets/ds/prefill.js?v=fa5eb49a" defer></script>
 </body>
 </html>

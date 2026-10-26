@@ -109,7 +109,7 @@
 
   // 쿠키 동의 배너 로드
   var cc = document.createElement('script');
-  cc.src = '/assets/cookie-consent.js';
+  cc.src = '/assets/cookie-consent.js?v=6898ebae';
   cc.defer = true;
   document.body.appendChild(cc);
 })();

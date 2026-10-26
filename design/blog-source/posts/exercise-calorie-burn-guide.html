@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>운동 칼로리 소모량 계산법 2026 - MET 공식과 체중별 걷기·러닝·줄넘기 소모 칼로리표 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="운동 칼로리 소모량은 MET × 체중(kg) × 시간(h)로 계산합니다. 2024년판 Compendium 원문값으로 체중 50·70·90kg별 걷기·러닝·줄넘기 소모량과, 가만히 있어도 쓰는 몫을 뺀 실제 추가 소모량을 비교했습니다." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="운동 칼로리 소모량 계산법 2026 - MET 공식과 체중별 걷기·러닝·줄넘기 소모 칼로리표 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="운동 칼로리 소모량은 MET × 체중(kg) × 시간(h)로 계산합니다. 2024년판 Compendium 원문값으로 체중 50·70·90kg별 걷기·러닝·줄넘기 소모량과, 가만히 있어도 쓰는 몫을 뺀 실제 추가 소모량을 비교했습니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/exercise-calorie-burn-guide.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/exercise-calorie-burn-guide.html" />
+  <link rel="stylesheet" href="/assets/affiliate-banner.css" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#10B981;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(16,185,129,0.15);color:#10B981;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:24px 0 10px}
+    .post-body p{margin-bottom:14px}
+    .post-body ul{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#10B981;text-decoration:none}
+    .highlight-box{background:rgba(16,185,129,0.08);border-left:4px solid #10B981;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#065F46;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    td.rate{color:#10B981;font-weight:700}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#10B981;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .faq-item{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:12px;padding:20px;margin:16px 0}
+    .faq-q{font-weight:800;color:#111827;margin-bottom:8px;font-size:15px}
+    .faq-a{color:#374151;font-size:14px;line-height:1.7;margin:0}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "운동 칼로리 소모량 계산법 2026 - MET 공식과 체중별 걷기·러닝·줄넘기 소모 칼로리표",
+  "description": "운동 칼로리 소모량은 MET × 체중(kg) × 시간(h)로 계산합니다. 2024년판 Compendium 원문값으로 체중 50·70·90kg별 걷기·러닝·줄넘기 소모량과, 가만히 있어도 쓰는 몫을 뺀 실제 추가 소모량을 비교했습니다.",
+  "author": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.jptcalc.kr/android-chrome-512x512.png"
+    }
+  },
+  "datePublished": "2026-10-15",
+  "dateModified": "2026-10-15",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.jptcalc.kr/blog/posts/exercise-calorie-burn-guide.html"
+  },
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "건강",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "70kg인 사람이 1시간 걸으면 몇 kcal를 쓰나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "속도에 따라 266~385kcal로 갈립니다. 2024년판 Compendium에서 시속 4.5~5.5km 걷기는 3.8 MET이라 3.8 × 70 × 1 = 266kcal, 시속 5.6~6.3km 빠른 걷기는 4.8 MET이라 336kcal, 시속 6.4~7.1km 아주 빠른 걷기는 5.5 MET이라 385kcal입니다. 이 숫자에는 가만히 앉아 있어도 쓰이는 70kcal(1 MET × 70kg × 1시간)가 들어 있으므로, 걷기 때문에 추가로 쓴 양은 각각 196·266·315kcal입니다. 식단 계획에 반영한다면 앞의 큰 숫자보다 뒤의 숫자를 쓰는 편이 안전합니다. 속도를 모르겠다면 걷기 앱이나 러닝머신에 표시된 평균 속도를 위 표의 구간에 대입하세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "헬스장에서 웨이트 트레이닝 1시간이면 몇 kcal인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "70kg 기준 245~420kcal로 폭이 큽니다. 2024년판 원문에서 여러 종목을 8~15회씩 반복하는 일반적인 저항운동은 3.5 MET(1시간 245kcal), 스쿼트·데드리프트처럼 느리거나 폭발적으로 하는 운동은 5.0 MET(350kcal), 고강도 웨이트와 보디빌딩은 6.0 MET(420kcal)입니다. 같은 1시간이라도 세트 사이에 쉬는 시간이 길수록 낮은 쪽에 가깝습니다. 이 사이트 계산기의 헬스 기본값 5.0은 이 가운데 중간 값이라, 쉬엄쉬엄 했다면 3.5로 낮춰 계산하는 편이 현실에 가깝습니다(필자 판단)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "계산기 결과와 운동 기기·앱에 찍힌 숫자가 다르면 어느 쪽이 맞나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "둘 다 정답이 아닙니다. Compendium 공식 사이트가 스스로 이 표는 개인의 정밀한 에너지 소비를 구하려고 만든 것이 아니라고 밝히고 있고, 계산기 안내문도 개인차에 따라 ±20% 오차를 적어 두었습니다. 70kg 30분 조깅이 약 262~298kcal 범위(추가분 기준과 총량 기준)로 나온다는 점만 봐도 숫자 하나로 단정할 수 없습니다. 중요한 것은 한 가지 도구를 계속 쓰면서 추세를 보는 것입니다. 기기와 계산기의 차이가 20% 안쪽이면 정상 범위로 보고, 식사량 조절에는 낮은 쪽 숫자를 기준으로 삼으세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "주 5회 30분 조깅이면 한 달에 지방이 몇 kg 빠지나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "이 사이트 계산기는 주 5회 한 달(4.345주)을 21.7회로 계산합니다. 70kg이 시속 8km 조깅(계산기 기본값 8.3 MET)을 30분 하면 회당 291kcal, 한 달 약 6,311kcal이고 지방 1kg을 7,700kcal로 환산하면 약 0.8kg입니다. 원문 값 8.5 MET을 쓰면 회당 297.5kcal, 한 달 6,463kcal로 역시 0.8kg 안팎입니다. 다만 이 환산은 식사량이 그대로이고 몸이 운동에 적응하지 않는다는 가정이 붙은 단순화입니다. 위 계산기에서 체중을 입력한 뒤 운동 종류와 시간을 고르면 본인 숫자가 바로 나옵니다."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.jptcalc.kr/"}, {"@type": "ListItem", "position": 2, "name": "블로그", "item": "https://www.jptcalc.kr/blog/"}, {"@type": "ListItem", "position": 3, "name": "건강", "item": "https://www.jptcalc.kr/blog/?cat=건강"}, {"@type": "ListItem", "position": 4, "name": "운동 칼로리 소모량 계산법 2026 - MET 공식과 체중별 걷기·러닝·줄넘기 소모 칼로리표", "item": "https://www.jptcalc.kr/blog/posts/exercise-calorie-burn-guide.html"}]}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo"><div class="logo-icon"><img src="../../assets/logo.svg" alt="로고"/></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+<div class="post-wrap">
+  <span class="post-tag">건강</span>
+  <h1>운동 칼로리 소모량 계산법 2026 - MET 공식과 체중별 걷기·러닝·줄넘기 소모 칼로리표</h1>
+  <div class="post-meta"><span>📅 2026.10.15</span><span>·</span><span>22분 읽기</span></div>
+  <div class="post-body">
+    <p>70kg인 사람이 시속 8km로 30분 조깅을 하면 8.5 × 70 × 0.5 = 297.5kcal를 썼다고 계산됩니다. 그런데 이 숫자 안에는 같은 30분을 소파에 앉아 있었어도 쓰였을 약 35kcal가 이미 들어 있습니다. 운동 덕에 늘어난 몫은 262.5kcal입니다. 운동 칼로리 계산이 어떻게 만들어지는지, 어디까지 믿어도 되는지를 원문 표와 함께 따라가 봅니다.</p>
+
+    <div class="highlight-box"><p>이 글은 운동 후 소모 칼로리를 직접 계산해 보고 싶은 분, <strong>'운동한 만큼 더 먹어도 되는지'</strong> 따져 보려는 분, 체중이 빠지면서 같은 운동의 소모량이 줄어드는 이유가 궁금한 분에게 필요합니다.</p></div>
+
+    <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+      <li>MET × 체중(kg) × 시간(h) 공식이 나온 근거와 50·70·90kg별 30분 소모량 비교표</li>
+      <li>시속 3.2km 걷기(2.8 MET)부터 시속 11.3km 달리기(11.0 MET)까지 2024년판 원문 속도별 MET</li>
+      <li>천천히 뛰기(3.3 MET)보다 빨리 걷기(4.8 MET)가 더 많이 태우는 원문 행</li>
+      <li>걷기는 소모량의 26%, 줄넘기는 9%가 '가만히 있어도 쓰는 몫'이라는 계산</li>
+      <li>90kg에서 80kg이 되면 같은 45분 조깅의 소모가 574kcal에서 510kcal로 11% 줄어드는 과정</li>
+      <li>이 사이트 계산기 값과 2024년판 원문 값이 다른 종목 9개의 차이(최대 36%)</li>
+    </ul>
+
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>계산식은 한 줄입니다 - MET × 체중 × 시간</h2>
+    <p>운동 소모 칼로리의 표준 자료는 <a href="https://pacompendium.com/adult-compendium/" target="_blank" rel="noopener" style="color:#10B981;">Compendium of Physical Activities</a>입니다. 1989년에 처음 만들어져 1993년·2000년·2011년에 발간됐고, 2024년 1월 Journal of Sport and Health Science에 네 번째 판이 실렸습니다. 이 표는 활동마다 MET이라는 강도 값을 붙입니다. 1 MET은 안정 시 에너지 소비로 산소 3.5ml/kg/분을 기준으로 삼습니다.</p>
+    <p>kcal로 옮기는 과정은 단순합니다. 3.5ml × 60분 = 210ml(0.21L)이고, 공식 사이트의 환산에서 산소 1L는 약 5kcal이므로 0.21 × 5 = 1.05kcal입니다. 체중 1kg이 1시간 가만히 있을 때 쓰는 에너지가 약 1kcal라는 뜻이고, 그래서 아래 공식이 나옵니다.</p>
+    <div class="highlight-box"><p><strong>소모 칼로리(kcal) ≈ MET × 체중(kg) × 시간(h)</strong><br>예) 70kg, 시속 8km 조깅(8.5 MET) 30분 = 8.5 × 70 × 0.5 = <strong>297.5kcal</strong></p></div>
+    <p>체중이 곱해지기 때문에 같은 운동도 사람마다 숫자가 다릅니다. 아래는 2024년판 원문의 MET으로 계산한 30분 소모량입니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>운동 (원문 MET)</th><th>50kg</th><th>70kg</th><th>90kg</th></tr>
+      <tr><td>빠른 걷기 시속 5.6~6.3km (4.8)</td><td>120kcal</td><td class="rate">168kcal</td><td>216kcal</td></tr>
+      <tr><td>자전거 시속 16~19km (6.8)</td><td>170kcal</td><td class="rate">238kcal</td><td>306kcal</td></tr>
+      <tr><td>달리기 시속 8.0~8.4km (8.5)</td><td>213kcal</td><td class="rate">298kcal</td><td>383kcal</td></tr>
+      <tr><td>달리기 시속 9.7~10.1km (9.3)</td><td>233kcal</td><td class="rate">326kcal</td><td>419kcal</td></tr>
+      <tr><td>줄넘기 일반 (11.0)</td><td>275kcal</td><td class="rate">385kcal</td><td>495kcal</td></tr>
+    </table></div>
+    <p>90kg은 50kg의 1.8배(90÷50)를 쓰고, 이 비율은 모든 종목에서 똑같습니다. 친구와 소모량을 비교하는 일이 별 의미가 없는 이유입니다. 비교할 대상은 어제의 내 숫자뿐입니다.</p>
+
+    <h2>속도가 MET을 정합니다 - 원문 표의 걷기와 달리기</h2>
+    <p>걷기와 달리기는 속도 구간마다 MET이 따로 적혀 있습니다. 원문의 mph 구간을 km/h로 옮기고 70kg 30분 기준으로 계산했습니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>활동 (원문 구간)</th><th>시속</th><th>MET</th><th>70kg 30분</th></tr>
+      <tr><td>걷기 2.0~2.4mph</td><td>3.2~3.9km</td><td>2.8</td><td>98kcal</td></tr>
+      <tr><td>걷기 2.8~3.4mph</td><td>4.5~5.5km</td><td>3.8</td><td>133kcal</td></tr>
+      <tr><td>걷기 3.5~3.9mph</td><td>5.6~6.3km</td><td>4.8</td><td class="rate">168kcal</td></tr>
+      <tr><td>걷기 4.0~4.4mph</td><td>6.4~7.1km</td><td>5.5</td><td>193kcal</td></tr>
+      <tr><td>조깅 2.6~3.7mph</td><td>4.2~6.0km</td><td>3.3</td><td>116kcal</td></tr>
+      <tr><td>달리기 4.3~4.8mph</td><td>6.9~7.7km</td><td>7.8</td><td>273kcal</td></tr>
+      <tr><td>달리기 5.0~5.2mph</td><td>8.0~8.4km</td><td>8.5</td><td class="rate">298kcal</td></tr>
+      <tr><td>달리기 6.0~6.3mph</td><td>9.7~10.1km</td><td>9.3</td><td>326kcal</td></tr>
+      <tr><td>달리기 7mph</td><td>11.3km</td><td>11.0</td><td>385kcal</td></tr>
+    </table></div>
+    <p>여기서 흥미로운 대목이 있습니다. 같은 5km를 뛴다고 해 보겠습니다. 시속 8km면 37분 30초가 걸려 8.5 × 70 × 0.625 = 371.9kcal, 시속 10km면 30분이라 9.3 × 70 × 0.5 = 325.5kcal입니다. 빨리 뛰면 시간당 소모는 늘지만 거리 1km당 소모는 74.4kcal에서 65.1kcal로 오히려 줄어듭니다. 원문 값이 속도 구간 단위라 근사치이긴 하지만, 칼로리가 목표라면 속도를 올리기보다 거리나 시간을 늘리는 쪽이 계산상 유리하다는 뜻입니다(필자 판단이며 심폐 단련 효과는 별개입니다).</p>
+
+    <h2>천천히 뛰는 것보다 빨리 걷는 쪽이 더 태웁니다</h2>
+    <p>조깅이 걷기보다 무조건 많이 태울 것 같지만 원문 표는 다르게 말합니다. 위 표처럼 시속 4.2~6.0km의 조깅은 3.3 MET이고, 시속 5.6~6.3km의 빠른 걷기는 4.8 MET입니다. 70kg이 30분 하면 조깅 116kcal, 걷기 168kcal로 52kcal 차이가 납니다.</p>
+    <p>두 구간의 속도가 시속 5.6~6.0km에서 겹치므로 완전히 같은 속도의 비교는 아닙니다. 그래도 1.5 MET이라는 격차는 '뛰면 더 쓴다'는 통념이 속도가 어느 선을 넘은 뒤에야 성립한다는 걸 보여 줍니다. 무릎이 걱정되어 달리기를 망설이는 분이라면, 시속 6km 안팎으로 힘차게 걷는 쪽이 칼로리 면에서 손해가 아닙니다.</p>
+
+    <h2>'태운 칼로리'에는 가만히 있어도 쓰는 몫이 들어 있습니다</h2>
+    <p>MET은 안정 시를 1로 둔 배수입니다. 2024년판 원문에서도 앉아서 TV 보기(07020)와 조용히 앉아 있기(07021)가 1.0 MET입니다. 4.8 MET 걷기는 안정 시의 4.8배를 쓴다는 뜻이고, 그중 1배는 걷지 않고 앉아 있었어도 쓰였을 에너지입니다. 운동 덕분에 추가로 쓴 양은 (MET − 1)입니다. 70kg 30분 기준으로 나눠 보겠습니다. 안정 시 몫은 1 × 70 × 0.5 = 35kcal입니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>운동 (70kg 30분)</th><th>MET</th><th>공식 총량</th><th>추가분 (MET−1)</th><th>안정 시 몫 비중</th></tr>
+      <tr><td>걷기 시속 4.5~5.5km</td><td>3.8</td><td>133kcal</td><td class="rate">98kcal</td><td>26%</td></tr>
+      <tr><td>빠른 걷기 시속 5.6~6.3km</td><td>4.8</td><td>168kcal</td><td class="rate">133kcal</td><td>21%</td></tr>
+      <tr><td>달리기 시속 8.0~8.4km</td><td>8.5</td><td>298kcal</td><td class="rate">263kcal</td><td>12%</td></tr>
+      <tr><td>줄넘기 일반</td><td>11.0</td><td>385kcal</td><td class="rate">350kcal</td><td>9%</td></tr>
+    </table></div>
+    <div style="margin:24px 0;overflow-x:auto">
+<svg role="img" width="100%" viewBox="0 0 680 230" xmlns="http://www.w3.org/2000/svg">
+  <title>운동 30분 소모 칼로리 중 안정 시 몫과 추가분 (70kg)</title>
+  <rect width="680" height="230" rx="12" fill="#F9FAFB"/>
+  <text x="24" y="34" font-size="14" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">30분 소모 칼로리 구성 (70kg, 막대 1kcal = 0.8px)</text>
+  <text x="24" y="76" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">걷기 3.8</text>
+  <rect x="118" y="60" width="28" height="22" fill="#D1D5DB"/><rect x="146" y="60" width="78.4" height="22" fill="#10B981" opacity="0.85"/>
+  <text x="232" y="76" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">133kcal</text>
+  <text x="24" y="116" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">빠른 걷기 4.8</text>
+  <rect x="118" y="100" width="28" height="22" fill="#D1D5DB"/><rect x="146" y="100" width="106.4" height="22" fill="#10B981" opacity="0.85"/>
+  <text x="260" y="116" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">168kcal</text>
+  <text x="24" y="156" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">달리기 8.5</text>
+  <rect x="118" y="140" width="28" height="22" fill="#D1D5DB"/><rect x="146" y="140" width="210" height="22" fill="#10B981" opacity="0.85"/>
+  <text x="364" y="156" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">298kcal</text>
+  <text x="24" y="196" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">줄넘기 11.0</text>
+  <rect x="118" y="180" width="28" height="22" fill="#D1D5DB"/><rect x="146" y="180" width="280" height="22" fill="#10B981" opacity="0.85"/>
+  <text x="434" y="196" font-size="12" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">385kcal</text>
+  <rect x="520" y="62" width="14" height="14" fill="#D1D5DB"/><text x="540" y="74" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">안정 시 몫 35kcal</text>
+  <rect x="520" y="88" width="14" height="14" fill="#10B981" opacity="0.85"/><text x="540" y="100" font-size="12" fill="#6B7280" font-family="Pretendard,sans-serif">추가분</text>
+</svg>
+</div>
+    <p>느린 운동일수록 총량이 부풀려지는 비율이 큽니다. 걷기는 1 ÷ 3.8 = 26%가 안정 시 몫이고 줄넘기는 1 ÷ 11 = 9%입니다. 70kg이 1시간 걸어 266kcal를 썼다고 계산해도 걷기가 만든 몫은 196kcal입니다. 식단에서 '운동 덕에 비어 가는 칼로리'를 따질 때는 뒤의 숫자가 정직합니다.</p>
+
+        <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-88xhdLeiIK3V35kb" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>시나리오 1 - 퇴근 후 30분 걷기, 한 달이면 얼마</h2>
+    <p>70kg 직장인 A씨가 평일 5일, 4주(20회) 동안 퇴근길에 시속 6km로 30분을 걷는다고 하겠습니다. 회당 4.8 × 70 × 0.5 = 168kcal이고 20회면 3,360kcal입니다. 지방 1kg을 7,700kcal로 환산하면 3,360 ÷ 7,700 = 0.44kg입니다.</p>
+    <p>추가분(3.8 MET)으로 다시 계산하면 회당 133kcal, 20회 2,660kcal, 0.35kg입니다. 같은 걷기가 0.44kg이 될 수도 0.35kg이 될 수도 있습니다. 한 달 걷기로 체중이 400g 안팎 빠질 수 있다는 정도가 현실적인 기대치이고, 그래서 걷기의 가치는 칼로리보다 꾸준히 이어가는 데 있습니다.</p>
+
+    <h2>시나리오 2 - 90kg이 80kg이 되면 같은 운동이 11% 줄어듭니다</h2>
+    <p>90kg 남성이 시속 8km로 45분(0.75시간) 조깅을 합니다. 8.5 × 90 × 0.75 = 573.75kcal입니다. 열심히 빼서 80kg이 되면 같은 조깅은 8.5 × 80 × 0.75 = 510kcal이고, 63.75kcal(11.1%)가 줄어듭니다. 대조군으로 55kg 여성이 같은 45분을 뛰면 8.5 × 55 × 0.75 = 350.6kcal로, 90kg 남성의 61%(350.6÷573.75)입니다.</p>
+    <p>그래서 감량 중에는 같은 운동을 해도 체중계가 느려진 것처럼 느껴질 수 있습니다. 운동이 약해진 게 아니라 곱해지는 체중이 줄었기 때문입니다. 소모량을 유지하려면 시간을 약 12.5% 늘리면 됩니다(90÷80 = 1.125).</p>
+
+    <h2>시나리오 3 - 1시간 달리고 나서 밥 몇 공기</h2>
+    <p>70kg이 시속 10km로 1시간을 달리면 9.3 × 70 × 1 = 651kcal이고, 이 사이트 계산기가 쓰는 환산(밥 1공기 300kcal)으로 2.2공기입니다. 추가분(8.3 MET)으로 보면 581kcal, 1.9공기입니다. 달리고 돌아와 밥 두 공기에 반찬까지 먹으면 소모량을 거의 되돌린 셈이라는 뜻입니다.</p>
+
+    <h2>운동한 만큼 더 먹으면 이중으로 셉니다</h2>
+    <p>칼로리 계산기의 활동 수준 선택지에는 이미 운동 빈도가 들어 있습니다. 이 사이트 <a href="../../calc/health/calories/" style="color:#10B981;">칼로리 계산기</a>에서 '보통 운동(주 3~5회)'은 기초대사량에 1.55를 곱합니다. 기초대사량이 1,600kcal인 사람이면 하루 유지 칼로리는 1,600 × 1.55 = 2,480kcal이고, 기초대사량을 넘는 880kcal에 일상 활동과 음식 소화, 주 3~5회 운동의 하루 평균이 이미 들어 있습니다.</p>
+    <p>여기에 오늘 조깅 297.5kcal를 또 얹어 2,777kcal를 '오늘 먹어도 되는 양'으로 잡으면 같은 운동을 두 번 센 셈입니다. 규칙은 간단합니다. 평소 선택한 빈도대로 운동했다면 유지 칼로리가 곧 기준이고, 평소보다 운동을 늘린 날의 추가분만 따로 더합니다(필자 판단).</p>
+    <p>운동 소모량과 식단 전체를 함께 보려면 <a href="../posts/bmr-calories.html" style="color:#10B981;">기초대사량 계산법</a>과 <a href="../posts/diet-calorie-guide.html" style="color:#10B981;">다이어트 칼로리 계산법</a>을, 내장지방이 목적이라면 유산소 비중을 다룬 <a href="../posts/visceral-fat-guide.html" style="color:#10B981;">내장지방 줄이는 법</a>을 이어서 보세요. 근력 운동의 소모량이 작아 보여도 근육을 지키는 역할은 <a href="../posts/sarcopenia-guide.html" style="color:#10B981;">근감소증 가이드</a>에서 따로 다룹니다.</p>
+
+    <h2>계산기 기본값과 2024년판 원문이 다른 종목</h2>
+    <p>이 사이트 칼로리 계산기의 운동 목록 18종 중 원문과 대조가 분명한 종목을 2024년판 표와 맞춰 보았습니다. 자전거(6.8), 줄넘기(11.0), 배드민턴(5.5), 골프 걷기(4.3), 헬스(5.0)는 원문과 같고, 아래 9개는 다릅니다. 수영·등산·댄스·청소는 원문에 강도별 행이 여러 개라 하나로 대응시키지 않았습니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>종목</th><th>계산기 MET</th><th>2024년판 원문 MET</th><th>70kg 30분 (계산기 → 원문)</th><th>차이</th></tr>
+      <tr><td>걷기 시속 4.8km</td><td>3.5</td><td>3.8 (2.8~3.4mph)</td><td>123 → 133kcal</td><td>+9%</td></tr>
+      <tr><td>빠른 걷기 시속 5.6km</td><td>4.3</td><td>4.8 (3.5~3.9mph)</td><td>151 → 168kcal</td><td>+12%</td></tr>
+      <tr><td>조깅 시속 8km</td><td>8.3</td><td>8.5 (5.0~5.2mph)</td><td>291 → 298kcal</td><td>+2%</td></tr>
+      <tr><td>달리기 시속 10km</td><td>9.8</td><td>9.3 (6.0~6.3mph)</td><td>343 → 326kcal</td><td>−5%</td></tr>
+      <tr><td>요가 하타</td><td>2.5</td><td>2.3</td><td>88 → 81kcal</td><td>−8%</td></tr>
+      <tr><td>필라테스</td><td>3.0</td><td>2.8 (general)</td><td>105 → 98kcal</td><td>−7%</td></tr>
+      <tr><td>테니스 단식</td><td>7.3</td><td>8.0</td><td>256 → 280kcal</td><td>+10%</td></tr>
+      <tr><td>농구 시합</td><td>6.5</td><td>8.0 (game)</td><td>228 → 280kcal</td><td class="rate">+23%</td></tr>
+      <tr><td>축구 시합</td><td>7.0</td><td>9.5 (competitive)</td><td>245 → 333kcal</td><td class="rate">+36%</td></tr>
+    </table></div>
+    <p>대부분 ±12% 안쪽이라 계산기의 ±20% 안내 범위에 들어갑니다. 벗어나는 것은 구기 종목 둘입니다. 농구 시합은 원문보다 23% 낮고, 축구는 원문에 캐주얼(7.0)과 시합(9.5)이 따로 있는데 계산기 값 7.0이 캐주얼 쪽이라 시합으로 보면 36% 낮습니다. 실제 경기를 뛰었다면 계산기 결과에 농구는 약 1.23배, 축구는 약 1.36배를 곱해 읽으면 원문과 맞습니다. 위 표의 원문 값은 이 글 작성일(2026-10-15)에 공식 사이트에서 확인한 값이고, 같은 종목이라도 강도 설명이 달라 어느 행에 대응시키느냐에 따라 값이 바뀔 수 있다는 점은 감안하세요.</p>
+
+    <h2>표값은 평균입니다 - 공식 사이트가 밝힌 한계</h2>
+    <p>Compendium 공식 사이트의 '보정 MET' 페이지는 이 표가 개인 단위의 정밀한 에너지 소비를 구하려고 만든 것이 아니라고 적고 있습니다. 원래는 역학·감시 연구에서 여러 신체활동 설문의 강도를 표준화하려고 만든 도구인데, 그 범위를 넘어 칼로리 계산에 널리 쓰이게 됐다는 설명입니다. 같은 페이지는 체중·키·나이·성별을 반영한 보정 MET을 별도로 제공합니다. 인용된 연구(Kozey 등)에서는 표준 MET이 실측 안정 대사량 기준의 값보다 낮게 나온 경우가 89%, 강도 분류가 어긋난 경우가 12.2%였고, 과체중·고령·저체력·여성에서 어긋남이 더 컸다고 합니다. 이 페이지의 예시표(7종목)에서도 표준 MET은 에너지 소비를 모두 보정값보다 낮게 잡았습니다.</p>
+    <p>정리하면 오차는 한 방향이 아닙니다. 총량 기준 값에는 안정 시 몫이 섞여 있어 '추가 소모'로는 많게 읽히고, 표준 MET 자체는 개인에 따라 낮게 잡힐 수도 있습니다. 70kg 30분 조깅은 추가분 기준 약 263kcal에서 총량 기준 약 298kcal 사이로 읽는 것이 정직하고, 계산기 안내처럼 여기에 ±20%를 덧붙이면 대략 210~360kcal의 범위가 됩니다.</p>
+
+    <div class="cta-box">
+      <p>체중을 넣고 운동 종류와 시간을 고르면 소모 칼로리·밥 환산·월 누적이 바로 나옵니다. 위 표 값과 비교해 보세요.</p>
+      <a href="../../calc/health/calories/" class="cta-btn">운동 칼로리 계산하기</a>
+    </div>
+    <p style="font-size:13px;color:#6B7280;margin-top:8px;">관련 계산기: <a href="https://www.jptcalc.kr/calc/health/bmr/">기초대사량 계산기</a> · <a href="https://www.jptcalc.kr/calc/health/body-fat/">체지방률 계산기</a> · <a href="https://www.jptcalc.kr/calc/health/ideal-weight/">적정 체중 계산기</a></p>
+    <p style="font-size:13px;color:#6B7280;margin-top:16px;">참고 자료: <a href="https://pacompendium.com/adult-compendium/" target="_blank" rel="noopener">Compendium of Physical Activities 2024 Adult Compendium</a> · <a href="https://pacompendium.com/corrected-mets/" target="_blank" rel="noopener">Compendium 보정 MET(Corrected METs) 안내</a></p>
+
+    <h2>운동 칼로리에 자주 나오는 질문</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 70kg인 사람이 1시간 걸으면 몇 kcal를 쓰나요?</div>
+      <p class="faq-a">속도에 따라 266~385kcal로 갈립니다. 2024년판 Compendium에서 시속 4.5~5.5km 걷기는 3.8 MET이라 3.8 × 70 × 1 = 266kcal, 시속 5.6~6.3km 빠른 걷기는 4.8 MET이라 336kcal, 시속 6.4~7.1km 아주 빠른 걷기는 5.5 MET이라 385kcal입니다. 이 숫자에는 가만히 앉아 있어도 쓰이는 70kcal(1 MET × 70kg × 1시간)가 들어 있으므로, 걷기 때문에 추가로 쓴 양은 각각 196·266·315kcal입니다. 식단 계획에 반영한다면 앞의 큰 숫자보다 뒤의 숫자를 쓰는 편이 안전합니다. 속도를 모르겠다면 걷기 앱이나 러닝머신에 표시된 평균 속도를 위 표의 구간에 대입하세요.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 헬스장에서 웨이트 트레이닝 1시간이면 몇 kcal인가요?</div>
+      <p class="faq-a">70kg 기준 245~420kcal로 폭이 큽니다. 2024년판 원문에서 여러 종목을 8~15회씩 반복하는 일반적인 저항운동은 3.5 MET(1시간 245kcal), 스쿼트·데드리프트처럼 느리거나 폭발적으로 하는 운동은 5.0 MET(350kcal), 고강도 웨이트와 보디빌딩은 6.0 MET(420kcal)입니다. 같은 1시간이라도 세트 사이에 쉬는 시간이 길수록 낮은 쪽에 가깝습니다. 이 사이트 계산기의 헬스 기본값 5.0은 이 가운데 중간 값이라, 쉬엄쉬엄 했다면 3.5로 낮춰 계산하는 편이 현실에 가깝습니다(필자 판단).</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 계산기 결과와 운동 기기·앱에 찍힌 숫자가 다르면 어느 쪽이 맞나요?</div>
+      <p class="faq-a">둘 다 정답이 아닙니다. Compendium 공식 사이트가 스스로 이 표는 개인의 정밀한 에너지 소비를 구하려고 만든 것이 아니라고 밝히고 있고, 계산기 안내문도 개인차에 따라 ±20% 오차를 적어 두었습니다. 70kg 30분 조깅이 약 262~298kcal 범위(추가분 기준과 총량 기준)로 나온다는 점만 봐도 숫자 하나로 단정할 수 없습니다. 중요한 것은 한 가지 도구를 계속 쓰면서 추세를 보는 것입니다. 기기와 계산기의 차이가 20% 안쪽이면 정상 범위로 보고, 식사량 조절에는 낮은 쪽 숫자를 기준으로 삼으세요.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 주 5회 30분 조깅이면 한 달에 지방이 몇 kg 빠지나요?</div>
+      <p class="faq-a">이 사이트 계산기는 주 5회 한 달(4.345주)을 21.7회로 계산합니다. 70kg이 시속 8km 조깅(계산기 기본값 8.3 MET)을 30분 하면 회당 291kcal, 한 달 약 6,311kcal이고 지방 1kg을 7,700kcal로 환산하면 약 0.8kg입니다. 원문 값 8.5 MET을 쓰면 회당 297.5kcal, 한 달 6,463kcal로 역시 0.8kg 안팎입니다. 다만 이 환산은 식사량이 그대로이고 몸이 운동에 적응하지 않는다는 가정이 붙은 단순화입니다. 위 계산기에서 체중을 입력한 뒤 운동 종류와 시간을 고르면 본인 숫자가 바로 나옵니다.</p>
+    </div>
+
+    <h2>한 줄 요약 - 계산 전에 챙길 숫자 세 가지</h2>
+    <p>첫째는 공식입니다. MET × 체중(kg) × 시간(h)이고, 70kg 시속 8km 30분 조깅은 297.5kcal입니다. 둘째는 범위입니다. 그 안에 가만히 있어도 쓰는 35kcal가 들어 있으니 운동 덕에 늘어난 몫은 약 263kcal이고, 걷기 같은 느린 운동일수록 이 차이가 큽니다. 셋째는 이중 계산입니다. 활동 수준에 운동 빈도를 이미 넣었다면 운동량을 또 더하지 마세요.</p>
+    <p>칼로리 숫자는 한 번 계산해 두면 정확하다고 믿기 쉽지만, 표값은 평균이고 체중이 변하면 같이 변합니다. 계산기로 오늘 운동의 범위를 확인하고, 한 달 뒤 체중이 바뀌면 다시 넣어 보세요. 70kg 30분 조깅이 약 263~298kcal라는 기억만 가지고 계셔도 대부분의 판단은 충분합니다.</p>
+  </div>
+</div>
+<footer class="site-footer"><p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용이며 정확한 진단은 의사에게 문의하세요.</p></footer>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "Compendium of Physical Activities 2024 Adult Compendium(Journal of Sport and Health Science, 2024.1) · Compendium 보정 MET(Corrected METs) 안내",
+  basisDate: "2026년 기준",
+  referenceOrg: "Compendium of Physical Activities",
+  lastReviewed: '2026.10.15',
+  disclaimer: "본 내용은 참고용이며 정확한 진단은 의사에게 문의하세요.",
+  relatedCalc: { name: '칼로리 계산기', url: '/calc/health/calories/' },
+  category: 'health'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>

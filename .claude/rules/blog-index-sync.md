@@ -1,6 +1,14 @@
-# /blog/index.html 동기화 규칙
+# 블로그 목록 동기화 규칙 (원고 목록 → 생성)
 
-블로그 글을 추가하거나 카테고리를 신규 생성할 때 `/blog/index.html`을 반드시 함께 수정.
+**2026-10-19 리뉴얼부터 고치는 파일은 원고 목록 `design/blog-source/index.html`이다.** 공개 `/blog/index.html`은 생성물이라 직접 고치지 않는다.
+블로그 글을 추가하거나 카테고리를 신규 생성할 때 원고 목록을 아래 형식으로 수정한 뒤 생성한다.
+
+```bash
+node design/tools/blog_static_info.mjs design/tools/results/blog_info.json design/blog-source/posts/*.html
+python3 -I design/tools/build_blog.py
+```
+- 원고 목록 첫 카드가 공개 목록의 대표 글이 되고, 인기글(feat-card) 6개가 "많이 읽은 글"이 된다.
+- 공개 목록의 필터·썸네일·색은 생성기가 정한다(아래 tag CSS는 원고 목록 안에서만 쓰이는 옛 형식).
 
 ## 새 글 추가 시 - 포스트 카드 삽입
 
@@ -29,7 +37,9 @@
 
 기존 버튼 목록 뒤에 추가. `data-filter` 값 = `data-cat` 값과 반드시 일치.
 
-### 2. tag CSS 추가 (line ~65-73 영역)
+### 2. tag CSS 추가 (원고 목록 line ~65-73 영역)
+
+신규 카테고리면 `design/tools/build_blog.py`의 `OLD`(옛 이름 → slug) 표와 `convert_calc.py`의 `CATS`에도 추가해야 공개 목록 필터에 나온다.
 
 ```css
 .tag-{slug} { background: rgba(R,G,B,0.15); color: #{HEX}; }

@@ -79,7 +79,9 @@ window.ARTICLE_INFO_CONFIG = {
 - `category`: slug 사용 (`category-registry.md` 참고)
 - `relatedCalc`: 글과 연관된 계산기 1개 지정
 
-## 필수 스크립트 include (</body> 직전)
+## 필수 스크립트 include (</body> 직전, **원고에만**)
+
+2026-10-19 리뉴얼부터 아래 세 줄은 원고(`design/blog-source/posts/`)에만 둔다. 생성기(`design/tools/build_blog.py`)가 작성자·검토 안내를 정적 HTML로 넣고 공개 글에서는 세 스크립트를 빼며, 공개 글은 `/assets/ds/site-shell.js`만 쓴다.
 
 ```html
 <script src="/assets/footer-unified.js"></script>
@@ -118,6 +120,14 @@ window.ARTICLE_INFO_CONFIG = {
 </div>
 ```
 
+## 표지 coverText (필수, 2026-10-20 신설, 시안 D4)
+글마다 표지 문구 1행을 `design/blog-cover-text.csv`에 추가한다(열: `slug,카테고리,big,desc,evidence`, slug 순 정렬, python csv 모듈로 쓰기).
+- **big(큰 숫자/핵심어)**: 최대 12자. 본문에 그대로 있는 숫자+단위만(계산·반올림·창작 금지). 돈 단위는 붙여 쓴다("만원"·"억원", 근거 문장과는 공백만 다를 수 있음). 숫자가 없는 글만 본문의 핵심어.
+- **desc(설명)**: 최대 16자. big이 무엇인지, 숫자가 기대는 조건(나이·금액·기준연도 등)을 담는다.
+- **evidence(근거 문장)**: big이 들어 있는 본문 문장을 그대로 복사(표의 한 행이면 칸을 " | "로 잇기).
+- 날짜가 지나면 틀리는 값(오늘 기준 D-day 등)은 쓰지 않는다.
+- 행을 넣은 뒤 표지 생성: `LD_LIBRARY_PATH=$HOME/.local/emulib python3 design/tools/build_blog_covers.py [slug]` (16:9·3:1 두 장, og:image는 건드리지 않음). "최소 크기에서도 넘침" 목록에 오르면 big·desc를 줄여 다시.
+
 ## 교차 링크
 
 - 본문 내 계산기 링크: 상대경로 `../../calc/{slug}/계산기명/`
@@ -126,6 +136,7 @@ window.ARTICLE_INFO_CONFIG = {
 
 ## 파일 경로
 
-`/blog/posts/{kebab-case-title}.html`
+원고: `/design/blog-source/posts/{kebab-case-title}.html` (여기에 쓴다)
+공개(생성물): `/blog/posts/{kebab-case-title}.html` (직접 고치지 않는다. 원고 수정 후 `python3 -I design/tools/build_blog.py`)
 - 소문자 + 하이픈만 사용
 - 한글 제목을 영문 kebab-case로 변환

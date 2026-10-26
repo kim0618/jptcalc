@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>요일 계산기 - 특정 날짜 무슨 요일? 과거·미래 즉시 확인 | 제이퍼 계산기</title>
+  <meta name="description" content="생일·기념일·계약 만료일이 무슨 요일인지 1초 확인. 과거·미래 어떤 날짜든 정확한 요일을 알려주고, 같은 달 동일 요일 목록과 ISO 주차까지 함께 표시. 회원가입 없이 무료." />
+  <meta name="keywords" content="요일계산기,요일확인,날짜요일,무슨요일,요일찾기" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/date/weekday/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="요일 계산기 - 특정 날짜 무슨 요일? 과거·미래 즉시 확인 | 제이퍼 계산기" />
+  <meta property="og:description" content="생일·기념일·계약 만료일이 무슨 요일인지 1초 확인. 과거·미래 어떤 날짜든 정확한 요일을 알려주고, 같은 달 동일 요일 목록과 ISO 주차까지 함께 표시. 회원가입 없이 무료." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/date/weekday/" />
+  <meta property="og:site_name" content="jptcalc" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="요일 계산기 - 특정 날짜 무슨 요일? 과거·미래 즉시 확인 | 제이퍼 계산기" />
+  <meta name="twitter:description" content="생일·기념일·계약 만료일이 무슨 요일인지 1초 확인. 과거·미래 어떤 날짜든 정확한 요일을 알려주고, 같은 달 동일 요일 목록과 ISO 주차까지 함께 표시. 회원가입 없이 무료." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"요일 계산기","url":"https://www.jptcalc.kr/calc/date/weekday/","description":"생일·기념일·계약 만료일이 무슨 요일인지 1초 확인. 과거·미래 어떤 날짜든 정확한 요일을 알려주고, 같은 달 동일 요일 목록과 ISO 주차까지 함께 표시. 회원가입 없이 무료.","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"inLanguage":"ko-KR"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},{"@type":"ListItem","position":2,"name":"날짜·D-day 계산기","item":"https://www.jptcalc.kr/calc/date/"},{"@type":"ListItem","position":3,"name":"요일 계산기"}]}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"과거 날짜의 요일도 계산할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네, 과거와 미래 어떤 날짜든 정확하게 요일을 계산할 수 있습니다. 그레고리력(양력) 기준이며, 1582년 이전 역사적 날짜는 실제 달력과 다를 수 있습니다."}},{"@type":"Question","name":"같은 달의 동일 요일 목록은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"선택한 날짜가 속한 달에서 같은 요일에 해당하는 모든 날짜를 표시합니다. 예를 들어 수요일을 선택하면 그 달의 모든 수요일 날짜와 함께 몇 번째 수요일인지도 확인할 수 있습니다."}},{"@type":"Question","name":"윤년 2월 29일도 정확히 계산되나요?","acceptedAnswer":{"@type":"Answer","text":"네, 윤년 여부를 자동으로 판별하여 2월 29일의 요일도 정확하게 계산합니다. 4년마다 돌아오는 윤년 날짜도 정상 처리됩니다."}},{"@type":"Question","name":"ISO 주차란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"ISO 8601 기준 주차로, 그 해의 첫 번째 목요일이 포함된 주를 1주차로 정의합니다. 12월 말 날짜가 다음 해 1주차에 해당하거나, 1월 초 날짜가 전년도 주차에 속하는 경우 연도를 구분해 표시합니다."}},{"@type":"Question","name":"음력 날짜의 요일도 계산할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"이 계산기는 양력(그레고리력)만 지원합니다. 음력 날짜를 알고 있다면 먼저 양력으로 변환한 뒤 입력해야 합니다. 음력을 양력으로 변환하려면 한국천문연구원(kasi.re.kr)의 천문력 서비스를 이용하면 정확한 날짜를 확인할 수 있습니다. 설날이나 추석 날짜처럼 음력 기념일이 매년 달라지는 이유도 이 변환 과정에서 비롯됩니다."}},{"@type":"Question","name":"같은 요일이 1년에 몇 번 있나요?","acceptedAnswer":{"@type":"Answer","text":"평년에는 각 요일이 52회 또는 53회 있습니다. 365일을 7로 나누면 52주 + 1일이 남으므로, 해의 첫째 날 요일과 마지막 날 요일 중 하나가 53번 반복됩니다. 윤년(366일)에는 두 요일이 53번 나타납니다. 예를 들어 2026년 1월 1일이 목요일이면 목요일과 금요일이 각 53회, 나머지 요일은 52회입니다."}}]}</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/date-common.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <style>
+    input[type=date],.flatpickr-input{width:100%;border:1.5px solid var(--gray-200);border-radius:12px;padding:13px 16px;font-size:15px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:#fff;outline:none;transition:border-color .18s,box-shadow .18s}
+    input[type=date]:focus,.flatpickr-input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(249,115,22,0.15)}
+    .flatpickr-day.selected,.flatpickr-day.selected:hover{background:var(--primary);border-color:var(--primary)}
+    .flatpickr-day.today{border-color:var(--primary)}
+    .flatpickr-months .flatpickr-month{height:36px}
+    .flatpickr-current-month .flatpickr-monthDropdown-months,.flatpickr-current-month input.cur-year{font-size:14px;font-weight:700}
+    .calc-btn{width:100%;border:none;border-radius:12px;padding:14px;font-size:15px;font-weight:700;color:#fff;background:var(--primary);cursor:pointer;transition:all .18s;font-family:inherit;margin-top:4px}
+    .calc-btn:hover{opacity:.9;transform:translateY(-1px)}
+    .result-card{background:linear-gradient(135deg,#FFF7ED 0%,#FFEDD5 100%);border:1px solid rgba(249,115,22,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .weekday-display{text-align:center;padding:24px}
+    .weekday-date{font-size:13px;color:var(--gray-500);margin-bottom:8px}
+    .weekday-name{font-size:48px;font-weight:900;color:var(--primary);margin-bottom:8px}
+    .weekday-full{font-size:15px;color:var(--gray-700);font-weight:600}
+  </style>
+</head>
+<body>
+<header class="site-header"><div class="header-inner"><a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="로고" style="width:32px;height:32px;display:block" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a><nav class="header-nav"><a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B"></span>부동산</a><a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981"></span>프리랜서 세금</a><a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6"></span>이직/연봉</a><a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1"></span>금융·이자</a><a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981"></span>건강</a><a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9"></span>연금·복지</a><a href="/calc/date/" class="nav-item active"><span class="nav-dot" style="background:#F97316"></span>날짜·D-day</a><a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6"></span>AI/테크</a><a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6"></span>반려동물</a></nav><div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div><button class="hamburger" onclick="document.querySelector('.header-nav').classList.toggle('show')" aria-label="메뉴"><span></span><span></span><span></span></button></div></header>
+<main class="page-wrap">
+  <div class="page-header"><div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/date/">날짜·D-day 계산기</a><span class="breadcrumb-sep">›</span><span>요일 계산기</span></div>
+    <div class="page-header-badge">📆 무료 온라인 계산기</div><h1>요일 계산기</h1><p>과거·미래 어떤 날짜든 요일을 정확하게 확인합니다</p></div>
+  <div class="card"><div class="card-title">특정 날짜의 요일</div><div class="field"><div class="field-label">날짜 선택</div><input type="date" id="weekday-date" /></div><button class="calc-btn" onclick="calcWeekday()">요일 확인하기</button></div>
+  <div class="result-card" id="weekday-result" aria-live="polite"><div class="weekday-display"><div class="weekday-date" id="weekday-date-str"></div><div class="weekday-name" id="weekday-name"></div><div class="weekday-full" id="weekday-full"></div></div><div id="weekday-info" style="margin-top:8px"></div><div class="result-note">※ 그레고리력(양력) 기준으로 계산됩니다. 1582년 이전 역사적 날짜는 실제 달력과 다를 수 있습니다.</div></div>
+
+  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>요일 계산 활용 가이드</h2>
+      <p>특정 날짜의 요일을 빠르게 확인할 수 있습니다. 생일, 기념일, 공휴일 등 과거나 미래 어떤 날짜든 정확한 요일을 계산합니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>생일 요일 확인</strong><span>내가 태어난 날이 무슨 요일이었는지, 다음 생일이 무슨 요일인지 확인하세요.</span></div>
+        <div class="guide-box"><strong>공휴일·기념일</strong><span>명절, 공휴일, 결혼기념일 등이 무슨 요일에 해당하는지 미리 확인합니다.</span></div>
+        <div class="guide-box"><strong>일정 계획</strong><span>특정 날짜의 요일을 확인하여 여행, 행사, 약속 일정을 계획하세요.</span></div>
+      </div>
+    </div>
+    <div class="guide-card">
+      <h2>요일 계산 방법</h2>
+      <p>요일 계산기는 그레고리력(양력) 기반으로 날짜를 입력하면 해당 요일을 즉시 알려줍니다. 내부적으로 특정 기준일로부터의 날짜 차이를 7로 나눈 나머지로 요일을 결정합니다. 1582년 이전 역사적 날짜는 율리우스력에서 그레고리력으로 전환된 영향으로 실제 달력과 다를 수 있습니다. 입력 가능한 범위는 1900년부터 2200년까지이며, 그 외 날짜는 오류 메시지가 표시됩니다.</p>
+      <ul>
+        <li><strong>1단계.</strong> 날짜 입력란에 연·월·일을 선택합니다. 과거나 미래 어떤 날짜든 입력 가능합니다.</li>
+        <li><strong>2단계.</strong> "요일 확인하기" 버튼을 누르면 해당 요일이 큰 글씨로 표시됩니다.</li>
+        <li><strong>3단계.</strong> 결과 화면에서 해당 달의 같은 요일 목록과 ISO 주차 번호도 함께 확인할 수 있습니다.</li>
+        <li><strong>4단계.</strong> 오늘 날짜와의 차이(몇 일 전/후)도 자동으로 표시됩니다.</li>
+      </ul>
+    </div>
+    <div class="guide-card">
+      <h2>실제 활용 예시</h2>
+      <h3>예시 1 - 생일·기념일 요일 미리 확인</h3>
+      <p>최민서(29세)는 내년 생일(2027년 3월 15일)이 무슨 요일인지 미리 확인하고 싶었습니다. 월요일이라면 당일 파티 대신 주말에 모임을 잡는 편이 낫기 때문입니다. 특히 생일 선물 약속이나 식당 예약을 미리 해두려면 요일 확인이 필수입니다.</p>
+      <ul>
+        <li>날짜 입력: 2027-03-15</li>
+        <li>결과: 월요일</li>
+        <li>같은 달 월요일: 1일, 8일, 15일, 22일, 29일 (총 5회)</li>
+        <li><strong>생일이 월요일임을 미리 파악해 주말인 3월 13일(토) 모임으로 일정 조정</strong></li>
+      </ul>
+      <h3>예시 2 - 계약 만료일 요일 확인</h3>
+      <p>박지훈(35세)은 임대차 계약 만료일인 2026년 8월 31일이 무슨 요일인지 확인하고 싶었습니다. 이사 일정을 잡고 이삿짐센터를 미리 예약하기 위해서였습니다.</p>
+      <ul>
+        <li>날짜 입력: 2026-08-31</li>
+        <li>결과: 월요일 (2026년 8월의 5번째 월요일)</li>
+        <li>ISO 주차: 2026년 36주차</li>
+        <li><strong>월요일임을 확인하고 주말 이사(8월 29일 토요일)로 이삿짐센터 사전 예약을 완료했습니다. 주말에는 이삿짐센터 예약이 빨리 차는 만큼 요일을 미리 확인하는 것이 중요합니다</strong></li>
+      </ul>
+    </div>
+    <div class="guide-card">
+      <h2>이것만은 확인하세요</h2>
+      <p>요일 계산기 사용 시 아래 사항을 알아두면 더 정확하게 활용할 수 있습니다.</p>
+      <ul>
+        <li><strong>음력 날짜는 지원하지 않습니다.</strong> 음력으로 날짜를 생각하고 있다면 먼저 양력으로 변환한 뒤 입력해야 합니다. 음력 변환은 한국천문연구원(kasi.re.kr) 천문력 서비스를 활용할 수 있습니다.</li>
+        <li><strong>1582년 이전 날짜는 주의가 필요합니다.</strong> 그레고리력 도입 전의 역사적 날짜는 계산기 결과와 실제 당시 달력이 다를 수 있습니다. 역사적 사실 검증 목적이라면 별도 확인이 필요합니다.</li>
+        <li><strong>ISO 주차와 연도 표기 차이를 확인하세요.</strong> 12월 말이나 1월 초 날짜는 ISO 기준 연도가 실제 연도와 다르게 표시될 수 있습니다. 예: 2026년 1월 1일은 ISO 기준 2025년 1주차에 해당합니다.</li>
+      </ul>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>과거 날짜의 요일도 계산할 수 있나요?</h3><p>네, 과거와 미래 어떤 날짜든 정확하게 요일을 계산할 수 있습니다. 그레고리력(양력) 기준이며, 1582년 이전 역사적 날짜는 실제 달력과 다를 수 있습니다.</p></div>
+      <div class="faq-item"><h3>같은 달의 동일 요일 목록은 무엇인가요?</h3><p>선택한 날짜가 속한 달에서 같은 요일에 해당하는 모든 날짜를 표시합니다. 예를 들어 수요일을 선택하면 그 달의 모든 수요일 날짜와 함께 몇 번째 수요일인지도 확인할 수 있습니다.</p></div>
+      <div class="faq-item"><h3>윤년 2월 29일도 정확히 계산되나요?</h3><p>네, 윤년 여부를 자동으로 판별하여 2월 29일의 요일도 정확하게 계산합니다. 4년마다 돌아오는 윤년 날짜도 정상 처리됩니다.</p></div>
+      <div class="faq-item"><h3>ISO 주차란 무엇인가요?</h3><p>ISO 8601 기준 주차로, 그 해의 첫 번째 목요일이 포함된 주를 1주차로 정의합니다. 12월 말 날짜가 다음 해 1주차에 해당하거나, 1월 초 날짜가 전년도 주차에 속하는 경우 연도를 구분해 표시합니다.</p></div>
+      <div class="faq-item"><h3>음력 날짜의 요일도 계산할 수 있나요?</h3><p>이 계산기는 양력(그레고리력)만 지원합니다. 음력 날짜를 알고 있다면 먼저 양력으로 변환한 뒤 입력해야 합니다. 음력을 양력으로 변환하려면 한국천문연구원(kasi.re.kr)의 천문력 서비스를 이용하면 정확한 날짜를 확인할 수 있습니다. 설날이나 추석 날짜처럼 음력 기념일이 매년 달라지는 이유도 이 변환 과정에서 비롯됩니다.</p></div>
+      <div class="faq-item"><h3>같은 요일이 1년에 몇 번 있나요?</h3><p>평년에는 각 요일이 52회 또는 53회 있습니다. 365일을 7로 나누면 52주 + 1일이 남으므로, 해의 첫째 날 요일과 마지막 날 요일 중 하나가 53번 반복됩니다. 윤년(366일)에는 두 요일이 53번 나타납니다. 예를 들어 2026년 1월 1일이 목요일이면 목요일과 금요일이 각 53회, 나머지 요일은 52회입니다.</p></div>
+    </div>
+  </div>
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: 'ISO 8601 기준 요일 계산',
+    appliedFrom: '상시',
+    exceptions: [
+      '과거 날짜의 경우 역사적 달력 개혁(율리우스력→그레고리력) 전환이 반영되지 않습니다',
+    ],
+    references: [
+      { name: '한국천문연구원(kasi.re.kr)', url: 'https://www.kasi.re.kr' },
+    ],
+    lastReviewed: '2026.05',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
+
+  <div class="sibling-section">
+    <div class="sibling-title">다른 날짜 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/date/dday/" class="sibling-link">📆 D-day</a>
+      <a href="/calc/date/date-difference/" class="sibling-link">📏 날짜 차이</a>
+      <a href="/calc/date/date-add/" class="sibling-link">➕ 날짜 더하기/빼기</a>
+      <a href="/calc/date/age/" class="sibling-link">🎂 만 나이</a>
+      <a href="/calc/date/weekday/" class="sibling-link current">📅 요일 계산</a>
+    </div>
+    <div class="sibling-title">관련 가이드</div>
+    <div class="sibling-list">
+      <a href="/blog/posts/annual-leave-guide.html" class="sibling-link">📖 직장인 연차 일수와 수당 - 입사 1년 미만도 11일 생긴다</a>
+      <a href="/blog/posts/weekday-calculator-guide.html" class="sibling-link">📖 특정 날짜의 요일 계산법 - 과거·미래 날짜 요일 바로 확인하기</a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer"><div class="footer-inner"><div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div><span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span></div></footer>
+<script>
+var KO_DAYS=['일요일','월요일','화요일','수요일','목요일','금요일','토요일'];
+var KO_DAYS_SHORT=['일','월','화','수','목','금','토'];
+var WEEK_COLORS=['#EF4444','#6B7280','#6B7280','#6B7280','#6B7280','#6B7280','#3B82F6'];
+function parseDate(str){if(!str)return null;var p=str.split('-');return new Date(+p[0],+p[1]-1,+p[2])}
+function koDateStr(d){return d.getFullYear()+'년 '+(d.getMonth()+1)+'월 '+d.getDate()+'일'}
+function today(){var n=new Date();return new Date(n.getFullYear(),n.getMonth(),n.getDate())}
+function toDateStr(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function diffDays(a,b){return Math.round((b-a)/86400000)}
+function isoWeek(d){
+  var tmp=new Date(d.getTime());
+  tmp.setDate(tmp.getDate()+3-((tmp.getDay()+6)%7));
+  var ys=new Date(tmp.getFullYear(),0,1);
+  return{week:Math.floor((tmp-ys)/604800000)+1,year:tmp.getFullYear()};
+}
+function calcWeekday(){
+  var d=parseDate(document.getElementById('weekday-date').value);
+  if(!d){alert('날짜를 입력해주세요.');return}
+  var dy=d.getFullYear();
+  if(dy<1900||dy>2200){alert('1900년~2200년 사이의 날짜를 입력해주세요.');return}
+  var dow=d.getDay();var color=WEEK_COLORS[dow];var tod=today();var diff=diffDays(tod,d);
+  var diffStr='';if(diff===0)diffStr='(오늘)';else if(diff>0)diffStr='(오늘로부터 '+diff+'일 후)';else diffStr='(오늘로부터 '+Math.abs(diff)+'일 전)';
+  document.getElementById('weekday-date-str').textContent=koDateStr(d)+' '+diffStr;
+  var nameEl=document.getElementById('weekday-name');nameEl.textContent=KO_DAYS_SHORT[dow]+'요일';nameEl.style.color=color;
+  document.getElementById('weekday-full').textContent=KO_DAYS[dow];
+  var year=d.getFullYear(),month=d.getMonth();
+  var sameList=[];
+  for(var day=1;day<=31;day++){var t=new Date(year,month,day);if(t.getMonth()!==month)break;if(t.getDay()===dow)sameList.push(t.getDate())}
+  var nthInMonth=sameList.indexOf(d.getDate())+1;
+  var isLeap=new Date(year,1,29).getMonth()===1;
+  var yearStart=new Date(year,0,1);
+  var dayOfYear=Math.round((d-yearStart)/86400000)+1;
+  var totalDays=isLeap?366:365;
+  var iso=isoWeek(d);
+  var isoLabel=iso.year===year?iso.year+'년 '+iso.week+'주차':iso.year+'년 '+iso.week+'주차 ('+iso.year+'년 기준)';
+  document.getElementById('weekday-info').innerHTML=
+    '<div class="result-row"><span class="result-label">월의 순서</span><span class="result-value">'+year+'년 '+(month+1)+'월의 '+nthInMonth+'번째 '+KO_DAYS[dow]+'</span></div>'+
+    '<div class="result-row"><span class="result-label">이 달의 '+KO_DAYS[dow]+' 목록</span><span class="result-value">'+sameList.map(function(x){return x+'일'+(x===d.getDate()?'(선택)':'')}).join(', ')+'</span></div>'+
+    '<div class="result-row"><span class="result-label">이 달의 '+KO_DAYS[dow]+' 수</span><span class="result-value">'+sameList.length+'회</span></div>'+
+    '<div class="result-row"><span class="result-label">연중 일수</span><span class="result-value">'+year+'년의 '+dayOfYear+'번째 날 (전체 '+totalDays+'일 중)</span></div>'+
+    '<div class="result-row result-total-row"><span class="result-total-label">ISO 주차</span><span class="result-total-value">'+isoLabel+'</span></div>';
+  document.getElementById('weekday-result').classList.add('show');
+}
+(function(){
+  document.getElementById('weekday-date').value=toDateStr(today());
+  var el=document.getElementById('weekday-date');
+  if(el)el.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();calcWeekday()}});
+})();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
+<script>document.querySelectorAll('input[type=date]').forEach(function(el){flatpickr(el,{locale:'ko',dateFormat:'Y-m-d',disableMobile:true,monthSelectorType:'dropdown',allowInput:true})});</script>
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/calc-registry.js"></script>
+<script src="/assets/date-detail-shell.js"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '그레고리력 기반 날짜 계산',
+  basisDate: '상시',
+  referenceOrg: '한국천문연구원',
+  lastReviewed: '2026.05.07',
+  category: 'date'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/blog-review-footer.js"></script>
+</body>
+</html>

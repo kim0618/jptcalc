@@ -23,9 +23,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
 
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
 
   <script type="application/ld+json">
   {
@@ -58,86 +56,70 @@
     {"@type":"Question","name":"이 계산기 결과가 실제 수령액과 같나요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 이 계산기는 한국주택금융공사 2026년 월지급금 예시표를 보간한 참고용 추정치입니다. 실제 금액은 정확한 나이(생년월일), 감정평가액, 지급방식·지급유형에 따라 달라지므로, 정확한 금액은 한국주택금융공사(☎1688-8114) 또는 공사 홈페이지 예상연금조회에서 확인하세요."}}
   ]}
   </script>
-
-  <link rel="stylesheet" href="/assets/pension-welfare-common.css" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
   <style>
-    input[type=number]{width:100%;border:1.5px solid var(--gray-200);border-radius:10px;padding:12px 56px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:var(--gray-50);outline:none;transition:border-color .18s;-moz-appearance:textfield}
-    input[type=number]::placeholder{color:var(--gray-400);font-weight:400}
-    input[type=number]:focus{border-color:var(--primary);background:#fff}
-    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
-    .input-wrap{position:relative;display:flex;align-items:center;}
-    .input-wrap input{padding-right:50px;}
-    .input-wrap .unit{position:absolute;right:14px;font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none;}
-    .converted{font-size:12px;color:var(--primary);margin-top:4px;font-weight:600;min-height:18px;}
-    .seg-group{display:flex;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:14px;}
-    .seg-btn{flex:1;border:none;border-radius:7px;background:transparent;padding:9px 6px;font-size:13px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap;}
-    .seg-btn:hover{color:var(--gray-700);}
-    .seg-btn.active{background:var(--primary);color:#fff;font-weight:700;}
-    .calc-btn{width:100%;padding:14px;background:var(--primary);color:#fff;border:none;border-radius:12px;font-size:16px;font-weight:800;cursor:pointer;font-family:inherit;transition:opacity .15s;margin-top:4px;}
-    .calc-btn:hover{opacity:0.9;}
-    .result-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--gray-100);font-size:14px;}
-    .result-row:last-child{border-bottom:none;}
-    .result-label{color:var(--gray-600);font-weight:500;}
-    .result-value{font-weight:700;color:var(--gray-900);}
-    .result-section-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin:16px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--gray-100);}
-    .verdict-box{text-align:center;padding:22px 20px;margin-bottom:16px;border-radius:14px;background:rgba(14,165,233,0.07);border:2px solid rgba(14,165,233,0.28);}
-    .verdict-box.fail{background:rgba(239,68,68,0.06);border-color:rgba(239,68,68,0.2);}
-    .verdict-label{font-size:13px;font-weight:700;margin-bottom:6px;color:#075985;}
-    .verdict-box.fail .verdict-label{color:#991B1B;}
-    .verdict-amount{font-size:30px;font-weight:900;margin-bottom:4px;color:var(--primary);}
-    .verdict-box.fail .verdict-amount{font-size:22px;color:#EF4444;}
-    .verdict-sub{font-size:12px;color:var(--gray-500);}
-    .warning-box{background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.3);border-radius:10px;padding:13px 15px;font-size:12px;color:#92400E;line-height:1.7;margin-top:12px;}
-    .official-link-box{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;}
-    .official-link{flex:1;min-width:140px;display:flex;align-items:center;justify-content:center;gap:8px;padding:11px 14px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:700;transition:opacity .15s;}
-    .official-link:hover{opacity:0.85;}
-    .official-link.primary{background:rgba(14,165,233,0.1);border:1px solid rgba(14,165,233,0.3);color:var(--primary);}
-    .official-link.secondary{background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.3);color:#047857;}
-    .rate-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
-    .rate-table th{padding:8px 10px;text-align:center;font-size:11px;font-weight:700;color:var(--gray-500);background:var(--gray-50);border-bottom:1px solid var(--gray-200);}
-    .rate-table th:first-child{text-align:left;}
-    .rate-table td{padding:9px 10px;border-bottom:1px solid var(--gray-100);color:var(--gray-700);text-align:center;}
-    .rate-table tbody tr:last-child td{border-bottom:none;}
-    .rate-table td:first-child{font-weight:600;color:var(--gray-800);text-align:left;}
-    .badge-year{display:inline-block;background:rgba(14,165,233,0.12);color:var(--primary);font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:6px;vertical-align:middle;}
-  .bf-entry{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px;padding:11px 14px;border-radius:10px;border:1px solid var(--gray-200);background:var(--gray-50);color:var(--gray-700);font-size:13px;font-weight:700;text-decoration:none}
-.bf-entry:hover{border-color:var(--primary);color:var(--primary)}
-</style>
+    /* 페이지 고유 스타일(공통 부품 재정의는 base.css가 맡아 뺐다) */
+    .calc-btn { width:100%;padding:14px;background:var(--primary);color:#fff;border:none;border-radius:12px;font-size:16px;font-weight:800;cursor:pointer;font-family:inherit;transition:opacity .15s;margin-top:4px; }
+    .calc-btn:hover { opacity:0.9; }
+    .verdict-box { text-align:center;padding:22px 20px;margin-bottom:16px;border-radius:14px;background:rgba(14,165,233,0.07);border:2px solid rgba(14,165,233,0.28); }
+    .verdict-box.fail { background:rgba(239,68,68,0.06);border-color:rgba(239,68,68,0.2); }
+    .verdict-label { font-size:13px;font-weight:700;margin-bottom:6px;color:#075985; }
+    .verdict-box.fail .verdict-label { color:#991B1B; }
+    .verdict-amount { font-size:30px;font-weight:900;margin-bottom:4px;color:var(--primary); }
+    .verdict-box.fail .verdict-amount { font-size:22px;color:#EF4444; }
+    .verdict-sub { font-size:12px;color:var(--gray-500); }
+    .warning-box { background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.3);border-radius:10px;padding:13px 15px;font-size:12px;color:#92400E;line-height:1.7;margin-top:12px; }
+    .official-link-box { display:flex;gap:10px;flex-wrap:wrap;margin-top:12px; }
+    .official-link { flex:1;min-width:140px;display:flex;align-items:center;justify-content:center;gap:8px;padding:11px 14px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:700;transition:opacity .15s; }
+    .official-link:hover { opacity:0.85; }
+    .official-link.primary { background:rgba(14,165,233,0.1);border:1px solid rgba(14,165,233,0.3);color:var(--primary); }
+    .official-link.secondary { background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.3);color:#047857; }
+    .rate-table { width:100%;border-collapse:collapse;font-size:13px;margin-top:8px; }
+    .rate-table th { padding:8px 10px;text-align:center;font-size:11px;font-weight:700;color:var(--gray-500);background:var(--gray-50);border-bottom:1px solid var(--gray-200); }
+    .rate-table th:first-child { text-align:left; }
+    .rate-table td { padding:9px 10px;border-bottom:1px solid var(--gray-100);color:var(--gray-700);text-align:center; }
+    .rate-table tbody tr:last-child td { border-bottom:none; }
+    .rate-table td:first-child { font-weight:600;color:var(--gray-800);text-align:left; }
+    .badge-year { display:inline-block;background:rgba(14,165,233,0.12);color:var(--primary);font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:6px;vertical-align:middle; }
+    .bf-entry { display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px;padding:11px 14px;border-radius:10px;border:1px solid var(--gray-200);background:var(--gray-50);color:var(--gray-700);font-size:13px;font-weight:700;text-decoration:none }
+    .bf-entry:hover { border-color:var(--primary);color:var(--primary) }
+  </style>
 </head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
-    <nav class="header-nav">
-      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
-      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
-      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
-      <a href="/calc/pension-welfare/" class="nav-item active"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
-      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
-      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
-      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
-    </nav>
-    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
-    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
-  </div>
+<body data-cat="pension-welfare" style="--cat: var(--c-pension-welfare)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
 </header>
 
-<main class="page-wrap">
-  <div class="page-header">
-    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/pension-welfare/">연금·복지 계산기</a><span class="breadcrumb-sep">›</span><span>주택연금(역모기지) 계산기</span></div>
-    <div class="page-header-badge">🏠 종신지급 정액형 · 2026년 예시표 기준</div>
-    <h1>주택연금(역모기지) 계산기</h1>
-    <p>집값과 나이를 입력하면 한국주택금융공사 월지급금 예시표를 기준으로 예상 월 수령액을 계산합니다.</p>
-  </div>
-
-  <div class="card">
-    <div class="card-title">기본 정보</div>
-    <div class="info-box">
-      <span class="info-icon">&#128161;</span>
-      <p>주택연금은 내 집에 계속 살면서 집을 담보로 매달 연금을 받는 제도입니다. 월지급금은 <strong>가입자 나이</strong>와 <strong>주택가격</strong>으로 정해지며, 나이가 많고 집값이 비쌀수록 많이 받습니다.</p>
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/pension-welfare/">연금·복지 계산기</a> &rsaquo; 주택연금(역모기지) 계산기</div>
+      <div class="page-badge">종신지급 정액형 · 2026년 예시표 기준</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span>
+        <h1 class="page-title">주택연금(역모기지) 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">종신지급 정액형 · 2026년 예시표 기준</span>
+          <span class="ds-trust-chip">2026.06.08 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">집값과 나이를 입력하면 한국주택금융공사 월지급금 예시표를 기준으로 예상 월 수령액을 계산합니다.</p>
     </div>
+  </div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+    <div class="field-label ds-group-label">기본 정보</div>
+    
 
     <div class="field">
       <div class="field-label">가구 유형</div>
@@ -169,16 +151,24 @@
     <div class="field">
       <div class="field-label">주택가격 <span class="label-hint">(시세·감정평가액)</span></div>
       <div class="input-wrap">
-        <input type="number" id="inpPrice" placeholder="예: 50000" oninput="onPriceInput()" />
+        <input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="inpPrice" placeholder="예: 50000" oninput="onPriceInput()" />
         <span class="unit">만원</span>
       </div>
       <div class="converted" id="priceConverted"></div>
       <div class="field-hint">공시가격 12억원 이하 주택이 가입 대상입니다. 예시표는 1억~12억원 기준입니다.</div>
     </div>
   </div>
+<div class="info-box">
+      <span class="info-icon"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-info"></use></svg></span>
+      <p>주택연금은 내 집에 계속 살면서 집을 담보로 매달 연금을 받는 제도입니다. 월지급금은 <strong>가입자 나이</strong>와 <strong>주택가격</strong>으로 정해지며, 나이가 많고 집값이 비쌀수록 많이 받습니다.</p>
+    </div>
+        <button type="button" class="ds-btn-calc" data-calc-submit="calculate" data-result="resultCard" data-required="inpPrice">계산하기</button>
+      </div>
+    </section>
 
-  <!-- 결과 카드 -->
-  <div class="result-card" id="resultCard">
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="resultCard">
 
     <div id="verdictBox" class="verdict-box">
       <div class="verdict-label" id="vLabel">예상 월 수령액</div>
@@ -224,9 +214,29 @@
     </div>
   
     <a class="bf-entry" href="/calc/pension-welfare/#sec-guide">&#129517; 부모님이 받을 수 있는 다른 혜택 진단하기 &rarr;</a>
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('resultCard')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/pension-welfare/retirement-living/">노후 생활비 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">계산 결과</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="housing-pension-next">
+        <a class="ds-next-card" href="/calc/pension-welfare/retirement-living/" data-next="retirement-living"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span><span class="ds-next-body"><b>노후 생활비 계산기</b><span>현재 월 생활비와 은퇴 연령, 예상 수명을 입력하면 물가상승률(연 2~3%)을 반영해 은퇴 후 필요 총자금을 산출합니다. 국민연금·퇴직연금·개인연금 수령액을 차감한 뒤 실질 부족분까지 한 번에 볼 수 있습니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/pension-welfare/basic-pension/" data-next="basic-pension"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span><span class="ds-next-body"><b>기초연금 수급 판정 계산기</b><span>근로·사업소득과 금융·부동산 재산을 넣으면 소득인정액을 산출해 수급 가능성을 바로 판정합니다. 2026년 선정기준액(단독 247만원, 부부 395.2만원) 기준으로 감액 여부와 예상 수령액까지 보여줍니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
   </div>
 
-  <!-- 월지급금 예시표 -->
+  <div class="ds-calc-extra">
+    <!-- 월지급금 예시표 -->
   <div class="card" style="margin-top:0;">
     <div class="card-title">2026년 주택연금 월지급금 예시표 <span class="badge-year">종신·정액형</span></div>
     <p style="font-size:13px;color:var(--gray-600);margin:0 0 4px;">종신지급방식 · 정액형 · 부부 중 연소자 기준 (단위: 만원/월)</p>
@@ -255,26 +265,37 @@
     </div>
     <p style="font-size:12px;color:var(--gray-500);margin-top:8px">※ 한국주택금융공사 2026년 3월 1일 적용 예시표. 75세·80세 고가주택 구간은 월지급금 한도로 동일액이 적용됩니다.</p>
   </div>
+  </div>
 
-  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">한국주택금융공사 2026년 3월 1일 적용 월지급금 예시표(종신지급방식·정액형·부부 중 연소자 기준) <a href="https://www.hf.go.kr/ko/sub03/sub03_01_01_02.do" target="_blank" rel="noopener">한국주택금융공사 월지급금 예시 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#housing-pension-s1">주택연금, 이것만</a><a href="#housing-pension-s2">계산 예시</a><a href="#housing-pension-s3">구간별 표</a><a href="#housing-pension-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
     <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
     <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
   </div>
 
   <div class="guide-section">
-    <div class="guide-card">
-      <h2>주택연금, 이것만 알면 됩니다</h2>
-      <p>주택연금(역모기지)은 만 55세 이상이 소유한 집을 한국주택금융공사에 담보로 맡기고, 그 집에 계속 살면서 매달 평생 연금을 받는 제도입니다. 집을 팔지 않고도 노후 생활비를 확보할 수 있다는 점이 핵심입니다.</p>
+            <section class="ds-section ds-prose" aria-labelledby="housing-pension-s1">
+          <div class="ds-section-head"><h2 id="housing-pension-s1">주택연금, 이것만 알면 됩니다</h2></div>
+<p>주택연금(역모기지)은 만 55세 이상이 소유한 집을 한국주택금융공사에 담보로 맡기고, 그 집에 계속 살면서 매달 평생 연금을 받는 제도입니다. 집을 팔지 않고도 노후 생활비를 확보할 수 있다는 점이 핵심입니다.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>가입 조건</strong><span>부부 중 연소자가 만 55세 이상, 공시가격 12억원 이하 주택을 보유하면 신청할 수 있습니다</span></div>
         <div class="guide-box"><strong>월지급금 결정 방식</strong><span>가입 시점의 나이와 주택가격으로 월지급금이 확정되며, 나이가 많고 집값이 비쌀수록 더 많이 받습니다</span></div>
         <div class="guide-box"><strong>평생 거주 보장</strong><span>집값이 떨어지거나 받은 연금 총액이 집값을 넘어도 평생 거주가 보장되며, 부족분을 자녀가 갚지 않습니다</span></div>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>나이·집값별 월 수령액 예시</h2>
-      <p>종신지급 정액형 기준으로 구체적인 인물 사례를 살펴보겠습니다. 모두 2026년 예시표를 보간한 추정치입니다.</p>
-      <div class="guide-table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="housing-pension-s2">
+          <div class="ds-section-head"><h2 id="housing-pension-s2">나이·집값별 월 수령액 예시</h2></div>
+<p>종신지급 정액형 기준으로 구체적인 인물 사례를 살펴보겠습니다. 모두 2026년 예시표를 보간한 추정치입니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead><tr><th>가입자</th><th>조건</th><th>예상 월 수령액</th></tr></thead>
           <tbody>
@@ -286,11 +307,11 @@
         </table>
       </div>
       <p style="font-size:12px;color:var(--gray-500);margin-top:8px">※ 부부 가입은 연소자 나이로 산정되므로, 배우자가 어리면 같은 집값이어도 월 수령액이 줄어듭니다.</p>
-    </div>
-    <div class="guide-card">
-      <h2>가입 나이별 주택연금 월 지급금 (주택가격 5억·종신)</h2>
-      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">위 계산기에 대표 조건을 입력해 나온 실제 계산값입니다.</p>
-      <div class="guide-table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="housing-pension-s3">
+          <div class="ds-section-head"><h2 id="housing-pension-s3">가입 나이별 주택연금 월 지급금 (주택가격 5억·종신)</h2></div>
+<p class="ds-table-lead">위 계산기에 대표 조건을 입력해 나온 실제 계산값입니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead><tr><th>가입 나이</th><th>월 수령액</th><th>연 수령액 (월×12)</th><th>10년 누적 수령액</th></tr></thead>
           <tbody>
@@ -302,31 +323,34 @@
           </tbody>
         </table>
       </div>
-    </div>
-    <div class="guide-card faq-card">
-      <h2>자주 묻는 질문</h2>
-      <div class="faq-item">
-        <h3>주택연금은 몇 살부터 가입할 수 있나요?</h3>
-        <p>부부 중 연소자(나이가 적은 사람)가 만 55세 이상이면 가입할 수 있습니다. 월지급금은 이 연소자 나이를 기준으로 산정되므로, 부부 가입 시 배우자가 어리면 그만큼 월 수령액이 줄어듭니다. 가입 가능 주택은 공시가격 12억원 이하입니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>집값이 같아도 나이가 많으면 더 많이 받나요?</h3>
-        <p>네. 주택연금은 가입자 나이가 많을수록 월지급금이 늘어납니다. 예를 들어 3억원 주택 기준 종신지급 정액형은 55세 약 47만원, 65세 약 76만원, 75세 약 114만원으로 나이가 많을수록 월 수령액이 커집니다(2026년 예시표 기준).</p>
-      </div>
-      <div class="faq-item">
-        <h3>종신지급 정액형이 무엇인가요?</h3>
-        <p>종신지급방식은 가입자가 평생 매달 일정 금액을 받는 방식이고, 정액형은 매월 받는 금액이 변하지 않는 유형입니다. 집값이 오르거나 내려도 월지급금은 그대로 유지됩니다. 이 계산기는 가장 보편적인 종신지급 정액형을 기준으로 계산합니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>집값이 오르면 월 수령액도 오르나요?</h3>
-        <p>가입 후에는 집값이 올라도 월지급금이 자동으로 늘지 않습니다. 월지급금은 가입 시점의 주택가격과 나이로 확정되기 때문입니다. 다만 한국주택금융공사가 매년 월지급금 예시표를 조정하므로, 가입 시기에 따라 동일 조건이라도 금액이 달라질 수 있습니다(2026년 3월 평균 3.13% 인상).</p>
-      </div>
-      <div class="faq-item">
-        <h3>이 계산기 결과가 실제 수령액과 같나요?</h3>
-        <p>아닙니다. 이 계산기는 한국주택금융공사 2026년 월지급금 예시표를 보간한 참고용 추정치입니다. 실제 금액은 정확한 나이(생년월일), 감정평가액, 지급방식·지급유형에 따라 달라지므로, 정확한 금액은 한국주택금융공사(☎1688-8114) 또는 공사 홈페이지 예상연금조회에서 확인하세요.</p>
-      </div>
+        </section>
+            <section class="ds-section faq-card" aria-labelledby="housing-pension-faq">
+          <div class="ds-section-head"><h2 id="housing-pension-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>주택연금은 몇 살부터 가입할 수 있나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>부부 중 연소자(나이가 적은 사람)가 만 55세 이상이면 가입할 수 있습니다. 월지급금은 이 연소자 나이를 기준으로 산정되므로, 부부 가입 시 배우자가 어리면 그만큼 월 수령액이 줄어듭니다. 가입 가능 주택은 공시가격 12억원 이하입니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>집값이 같아도 나이가 많으면 더 많이 받나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>네. 주택연금은 가입자 나이가 많을수록 월지급금이 늘어납니다. 예를 들어 3억원 주택 기준 종신지급 정액형은 55세 약 47만원, 65세 약 76만원, 75세 약 114만원으로 나이가 많을수록 월 수령액이 커집니다(2026년 예시표 기준).</p>
+            </details>
+      <details class="faq-item"><summary><h3>종신지급 정액형이 무엇인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>종신지급방식은 가입자가 평생 매달 일정 금액을 받는 방식이고, 정액형은 매월 받는 금액이 변하지 않는 유형입니다. 집값이 오르거나 내려도 월지급금은 그대로 유지됩니다. 이 계산기는 가장 보편적인 종신지급 정액형을 기준으로 계산합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>집값이 오르면 월 수령액도 오르나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>가입 후에는 집값이 올라도 월지급금이 자동으로 늘지 않습니다. 월지급금은 가입 시점의 주택가격과 나이로 확정되기 때문입니다. 다만 한국주택금융공사가 매년 월지급금 예시표를 조정하므로, 가입 시기에 따라 동일 조건이라도 금액이 달라질 수 있습니다(2026년 3월 평균 3.13% 인상).</p>
+            </details>
+      <details class="faq-item"><summary><h3>이 계산기 결과가 실제 수령액과 같나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>아닙니다. 이 계산기는 한국주택금융공사 2026년 월지급금 예시표를 보간한 참고용 추정치입니다. 실제 금액은 정확한 나이(생년월일), 감정평가액, 지급방식·지급유형에 따라 달라지므로, 정확한 금액은 한국주택금융공사(1688-8114) 또는 공사 홈페이지 예상연금조회에서 확인하세요.</p>
+            </details>
       <div class="update-note">한국주택금융공사 2026년 3월 1일 적용 월지급금 예시표(종신지급·정액형) 기준 간이 계산기입니다. 월지급금 예시표는 매년 조정되며, 정확한 금액은 한국주택금융공사(hf.go.kr) 예상연금조회에서 확인하세요.</div>
+          </div>
+        </section>
+  </div>
+
     </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
   </div>
 
   <script>
@@ -348,38 +372,38 @@
     lastReviewed: '2026.06.08',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
 
-  <div class="sibling-section">
-    <div class="sibling-title">다른 연금·복지 계산기</div>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 연금·복지 계산기</h2>
     <div class="sibling-list">
-      <a href="/calc/pension-welfare/national-pension/" class="sibling-link">🏛 국민연금 수령액</a>
-      <a href="/calc/pension-welfare/basic-pension/" class="sibling-link">💰 기초연금 수급 판정</a>
-      <a href="/calc/pension-welfare/housing-pension/" class="sibling-link current">🏠 주택연금(역모기지)</a>
-      <a href="/calc/pension-welfare/retirement-living/" class="sibling-link">🏡 노후 생활비</a>
-      <a href="/calc/pension-welfare/pension-tax/" class="sibling-link">💰 연금소득세</a>
-      <a href="/calc/pension-welfare/long-term-care/" class="sibling-link">🏥 장기요양 비용</a>
+      <a href="/calc/pension-welfare/national-pension/" class="sibling-link">국민연금 수령액</a>
+      <a href="/calc/pension-welfare/basic-pension/" class="sibling-link">기초연금 수급 판정</a>
+      <a href="/calc/pension-welfare/retirement-living/" class="sibling-link">노후 생활비</a>
+      <a href="/calc/pension-welfare/pension-tax/" class="sibling-link">연금소득세</a>
+      <a href="/calc/pension-welfare/long-term-care/" class="sibling-link">장기요양 비용</a>
     </div>
-    <div class="sibling-title">관련 가이드</div>
-    <div class="sibling-list">
-      <a href="/blog/posts/housing-pension-guide.html" class="sibling-link">📖 주택연금 수령액 - 나이·집값별 월 얼마 받나, 종신지급 예시표 2026</a>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/housing-pension-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/housing-pension-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>주택연금 수령액 - 나이·집값별 월 얼마 받나, 종신지급 예시표 2026</span></a>
     </div>
   </div>
 </main>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links">
-      <a href="/">홈</a>
-      <a href="/about.html">소개</a>
-      <a href="/privacy.html">개인정보처리방침</a>
-      <a href="/terms.html">이용약관</a>
-      <a href="/contact.html">문의하기</a>
-      <a href="/disclaimer.html">면책조항</a>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
     </div>
-    <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 금액은 한국주택금융공사(☎1688-8114)에서 확인하세요.</p>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 금액은 한국주택금융공사(1688-8114)에서 확인하세요.</p>
   </div>
 </footer>
+
+<script src="/assets/ds/calc-kit.js?v=d45e66d9"></script>
 
 <script>
 // 한국주택금융공사 2026.03.01 적용 월지급금 예시표 (종신지급·정액형, 부부 중 연소자 기준)
@@ -406,7 +430,7 @@ function selectHousehold(type, btn) {
 }
 
 function onPriceInput() {
-  const val = parseInt(document.getElementById('inpPrice').value) || 0;
+  const val = parseInt(String(document.getElementById('inpPrice').value).replace(/,/g, '')) || 0;
   document.getElementById('priceConverted').textContent = val > 0 ? fmtShort(val * 10000) : '';
   calculate();
 }
@@ -451,9 +475,9 @@ function lookupPayment(age, priceEok) {
 }
 
 function calculate() {
-  const ageSelf = parseInt(document.getElementById('inpAge').value) || 0;
-  const ageSpouse = parseInt(document.getElementById('inpSpouseAge').value) || 0;
-  const priceManwon = parseInt(document.getElementById('inpPrice').value) || 0;
+  const ageSelf = parseInt(String(document.getElementById('inpAge').value).replace(/,/g, '')) || 0;
+  const ageSpouse = parseInt(String(document.getElementById('inpSpouseAge').value).replace(/,/g, '')) || 0;
+  const priceManwon = parseInt(String(document.getElementById('inpPrice').value).replace(/,/g, '')) || 0;
 
   const card = document.getElementById('resultCard');
   if (!ageSelf || !priceManwon) {
@@ -509,11 +533,10 @@ function calculate() {
   document.getElementById('rPrice').textContent = priceLabel;
 }
 </script>
-<script src="/assets/calc-registry.js"></script>
-<script src="/assets/pension-welfare-detail-shell.js" defer></script>
-<script src="/assets/footer-unified.js" defer></script>
-<script src="/assets/calc-validate.js"></script>
-<script src="/assets/calc-result-tools.js"></script>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
@@ -526,7 +549,13 @@ window.ARTICLE_INFO_CONFIG = {
   guides: [{ title: '주택연금 수령액 - 나이·집값별 월 얼마 받나, 종신지급 예시표 2026', url: '/blog/posts/housing-pension-guide.html' }]
 };
 </script>
-<script src="/assets/blog-article-info.js"></script>
-<script src="/assets/blog-review-footer.js"></script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "resultCard", "required": ["inpPrice"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#housing-pension-next", "next": []});
+  DSCalc.placeTrust('ds-trust-col');
+</script>
+<script src="/assets/ds/prefill.js?v=fa5eb49a" defer></script>
 </body>
 </html>

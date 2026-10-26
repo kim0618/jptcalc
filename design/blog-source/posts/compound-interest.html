@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>복리의 힘과 72법칙 - 돈이 2배 되는 시간 계산 | 제이퍼 계산기 블로그</title>
+  <meta name="description" content="복리 투자의 힘과 72법칙으로 돈이 2배 되는 시간을 계산하는 방법. 단리와 복리의 차이를 실제 예시로 설명합니다." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="복리의 힘과 72법칙 - 돈이 2배 되는 시간 계산 | 제이퍼 계산기 블로그" />
+  <meta property="og:description" content="복리 투자의 힘과 72법칙으로 돈이 2배 되는 시간을 계산하는 방법. 단리와 복리의 차이를 실제 예시로 설명합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/blog/posts/compound-interest.html" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="googlebot" content="noindex, follow" />
+  <link rel="canonical" href="https://www.jptcalc.kr/blog/posts/compound-interest.html" />
+  <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#6366F1;--dark-border:rgba(0,0,0,0.08)}
+    body{font-family:'Pretendard',-apple-system,sans-serif;background:#fff;color:#111827;-webkit-font-smoothing:antialiased}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--dark-border)}
+    .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:24px}
+    .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-icon img{width:32px;height:32px;display:block}
+    .logo-text{font-size:18px;font-weight:900;color:#111827;letter-spacing:-0.5px}
+    .logo-text span{color:#818CF8}
+    .header-back{margin-left:auto;font-size:13px;font-weight:600;color:#6B7280;text-decoration:none}
+    .header-back:hover{color:#111827}
+    .post-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .post-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(99,102,241,0.15);color:#6366F1;margin-bottom:16px}
+    h1{font-size:26px;font-weight:900;color:#111827;line-height:1.35;margin-bottom:12px}
+    .post-meta{font-size:13px;color:#6B7280;margin-bottom:36px;display:flex;gap:12px}
+    .post-body{font-size:15px;color:#111827;line-height:1.8}
+    .post-body h2{font-size:19px;font-weight:800;color:#111827;margin:40px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--dark-border)}
+    .post-body p{margin-bottom:14px}
+    .post-body ul{margin:10px 0 14px 20px}
+    .post-body li{margin-bottom:8px}
+    .post-body a{color:#6366F1;text-decoration:none}
+    .highlight-box{background:rgba(99,102,241,0.08);border-left:4px solid #6366F1;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0}
+    .highlight-box p{margin:0;color:#3730a3;font-size:14px}
+    .table-wrap{overflow-x:auto;margin:20px 0}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th{background:#F3F4F6;color:#111827;font-weight:700;padding:10px 14px;text-align:left;border:1px solid var(--dark-border)}
+    td{padding:10px 14px;border:1px solid var(--dark-border);color:#1F2937}
+    .cta-box{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:14px;padding:24px;margin:40px 0;text-align:center}
+    .cta-box p{color:#374151;font-size:14px;margin-bottom:14px}
+    .cta-btn{display:inline-block;padding:12px 28px;background:#6366F1;color:#fff !important;font-size:14px;font-weight:800;border-radius:10px;text-decoration:none !important}
+    .post-body h3{font-size:16px;font-weight:700;color:#111827;margin:24px 0 10px}
+    .faq-item{background:#F9FAFB;border:1px solid var(--dark-border);border-radius:12px;padding:20px;margin:16px 0}
+    .faq-q{font-weight:800;color:#111827;margin-bottom:8px;font-size:15px}
+    .faq-a{color:#374151;font-size:14px;line-height:1.7;margin:0}
+    td.highlight{color:#4338CA;font-weight:700}
+    .site-footer{border-top:1px solid var(--dark-border);padding:24px;text-align:center}
+    .footer-copy{font-size:10px;color:#6B7280}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "복리의 힘과 72법칙 - 돈이 2배 되는 시간 계산",
+  "description": "복리 투자의 힘과 72법칙으로 돈이 2배 되는 시간을 계산하는 방법. 단리와 복리의 차이를 실제 예시로 설명합니다.",
+  "author":{"@type":"Person","name":"Jay Kim","url":"https://www.jptcalc.kr/about.html","jobTitle":"제이퍼 계산기 운영자"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "제이퍼 계산기",
+    "url": "https://www.jptcalc.kr",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.jptcalc.kr/android-chrome-512x512.png"
+    }
+  },
+  "datePublished": "2026-03-18",
+  "dateModified": "2026-07-24",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.jptcalc.kr/blog/posts/compound-interest.html"
+  },
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "금융",
+  "inLanguage": "ko"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "은행 예금도 복리인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "정기예금은 기본적으로 단리 상품입니다. 다만 만기 이자를 원금에 합쳐 다시 예치(복리 예치)하거나, 복리 예금 상품에 가입하면 복리 효과를 누릴 수 있습니다. 시중은행에서 복리 예금 상품을 별도로 판매하기도 합니다. 예를 들어 연 3% 단리 예금을 3년 예치하면 이자가 원금의 9%지만, 매년 이자를 재예치하는 복리 방식이면 약 9.27%로 늘어나 3년만 지나도 차이가 벌어지기 시작합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "72법칙은 어떤 수익률에서도 정확한가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "연 6~10% 범위에서 오차가 1% 이내로 가장 정확합니다. 금리가 낮을수록(1~2%), 높을수록(20% 이상) 오차가 커집니다. 예를 들어 연 2%에서는 72법칙이 36년을 제시하지만 실제로는 35.0년으로 1년가량 차이가 납니다. 정밀한 계산이 필요하다면 실제 복리 계산기를 사용하는 것이 좋습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "물가 상승률을 고려하면 실질 복리 효과가 줄어드나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "맞습니다. 명목 수익률에서 물가 상승률(인플레이션)을 뺀 것이 실질 수익률입니다. 예금 연 3% - 물가 상승률 2% = 실질 1%. 장기적으로 물가를 이기는 수익률을 추구해야 자산이 실질적으로 불어납니다. 주식·채권 분산 투자가 장기적으로 예금보다 높은 실질 수익률을 기대할 수 있는 이유입니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "복리 계산 시 세금을 고려해야 하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "금융감독원에 따르면 일반 예금·적금 이자에는 15.4% 이자소득세가 원천징수됩니다. 실질 복리 수익률은 세후 기준으로 계산해야 합니다. 예를 들어 연 4% 예금의 세후 수익률은 4% × (1 − 0.154) = 약 3.38%로 낮아집니다. ISA 계좌 내 운용 수익은 비과세(일정 한도)이므로 장기 복리 투자 시 ISA를 활용하면 세후 수익률을 높일 수 있습니다."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.jptcalc.kr/"}, {"@type": "ListItem", "position": 2, "name": "블로그", "item": "https://www.jptcalc.kr/blog/"}, {"@type": "ListItem", "position": 3, "name": "금융", "item": "https://www.jptcalc.kr/blog/?cat=금융"}, {"@type": "ListItem", "position": 4, "name": "복리의 힘과 72법칙 - 돈이 2배 되는 시간 계산", "item": "https://www.jptcalc.kr/blog/posts/compound-interest.html"}]}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo"><div class="logo-icon"><img src="../../assets/logo.svg" alt="로고"/></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+<div class="post-wrap">
+  <span class="post-tag">금융</span>
+  <h1>복리의 힘과 72법칙 - 돈이 2배 되는 시간 계산</h1>
+  <div class="post-meta"><span>📅 2026.03.18</span><span>·</span><span>16분 읽기</span></div>
+  <div class="post-body">
+    <p>1,000만원을 연 10%로 30년간 단리로 굴리면 4,000만원입니다. 같은 조건에서 복리로 굴리면 1억 7,449만원입니다. 4.4배 차이. 이 차이를 만드는 것은 수익률이 아니라 시간입니다. 72법칙과 시작 시기별 비교로 복리의 실제 위력을 봅니다.</p>
+
+    <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+      <li>단리 vs 복리: 연 5%, 30년 투자 시 차이는 1,822만원</li>
+      <li>수익률별 30년 복리 결과 비교 (3%·5%·7%·10%)</li>
+      <li>72법칙 - 연이율별 원금 2배 도달 기간</li>
+      <li>월 30만원 투자 시 시작 나이별 65세 자산 비교</li>
+      <li>세금·수수료·인플레이션이 복리 수익을 얼마나 줄이는가</li>
+      <li>예금 vs ETF: 같은 원금 30년 후 실질 차이</li>
+    </ul>
+
+    <h2>단리와 복리, 뭐가 다른 건데</h2>
+    <ul>
+      <li><strong>단리</strong>: 원금에만 이자가 붙습니다. 1,000만원 × 연 5% = 매년 50만원씩 고정</li>
+      <li><strong>복리</strong>: 원금 + 이자에 다시 이자가 붙습니다. 1년 차 이자 50만원이 2년 차부터 원금에 포함되어 이자가 불어납니다</li>
+    </ul>
+
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+    <h2>1,000만원 투자 시 연도별 성장 비교 (연 5%)</h2>
+    <div class="table-wrap"><table>
+      <tr><th>기간</th><th>단리 잔액</th><th>복리 잔액</th><th>차이</th></tr>
+      <tr><td>10년</td><td>1,500만원</td><td>1,629만원</td><td>129만원</td></tr>
+      <tr><td>20년</td><td>2,000만원</td><td>2,653만원</td><td>653만원</td></tr>
+      <tr><td>30년</td><td>2,500만원</td><td class="highlight">4,322만원</td><td class="highlight">1,822만원</td></tr>
+      <tr><td>40년</td><td>3,000만원</td><td class="highlight">7,040만원</td><td class="highlight">4,040만원</td></tr>
+    </table></div>
+    <p style="margin: 1.2em 0;">
+      👉 <a href="https://www.jptcalc.kr/calc/finance/compound/" style="color: #6366F1; font-weight: 600;">복리 계산기로 직접 계산해보기</a>
+    </p>
+
+    <h2>수익률별 30년 후 비교 (원금 1,000만원)</h2>
+    <div class="table-wrap"><table>
+      <tr><th>연 수익률</th><th>단리 결과</th><th>복리 결과</th><th>복리 배율</th></tr>
+      <tr><td>3%</td><td>1,900만원</td><td>2,427만원</td><td>2.4배</td></tr>
+      <tr><td>5%</td><td>2,500만원</td><td>4,322만원</td><td>4.3배</td></tr>
+      <tr><td>7%</td><td>3,100만원</td><td>7,612만원</td><td>7.6배</td></tr>
+      <tr><td>10%</td><td>4,000만원</td><td class="highlight">17,449만원</td><td class="highlight">17.4배</td></tr>
+    </table></div>
+
+    <div style="margin:24px 0;overflow-x:auto">
+    <svg role="img" width="100%" viewBox="0 0 680 210" xmlns="http://www.w3.org/2000/svg">
+      <title>연 수익률별 30년 복리 배율 비교 (원금 1,000만원)</title>
+      <rect width="680" height="210" rx="12" fill="#F9FAFB"/>
+      <text x="24" y="34" font-size="14" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">연 수익률별 30년 복리 배율 (원금 1,000만원)</text>
+      <text x="24" y="72" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">연 3%</text>
+      <rect x="90" y="58" width="59" height="22" rx="4" fill="#6366F1" opacity="0.45"/>
+      <text x="157" y="74" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">2.4배</text>
+      <text x="24" y="106" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">연 5%</text>
+      <rect x="90" y="92" width="106" height="22" rx="4" fill="#6366F1" opacity="0.6"/>
+      <text x="204" y="108" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">4.3배</text>
+      <text x="24" y="140" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">연 7%</text>
+      <rect x="90" y="126" width="188" height="22" rx="4" fill="#6366F1" opacity="0.78"/>
+      <text x="286" y="142" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">7.6배</text>
+      <text x="24" y="174" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">연 10%</text>
+      <rect x="90" y="160" width="430" height="22" rx="4" fill="#6366F1"/>
+      <text x="528" y="176" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">17.4배</text>
+      <text x="24" y="200" font-size="11" fill="#9CA3AF" font-family="Pretendard,sans-serif">※ 같은 30년·같은 원금인데 수익률 차이가 복리로 증폭됩니다.</text>
+    </svg>
+    </div>
+
+    <div class="highlight-box"><p>연 10% 복리로 30년 투자하면 원금이 약 17.4배가 됩니다. 수익률보다 <strong>시간</strong>이 복리의 핵심입니다.</p></div>
+
+    <h2>72법칙 - 돈이 2배 되는 시간 계산</h2>
+    <p>복리 투자에서 원금이 2배가 되는 기간을 간단히 구하는 법칙입니다.</p>
+    <p><strong>2배 되는 연수 ≈ 72 ÷ 연이율(%)</strong></p>
+    <div class="table-wrap"><table>
+      <tr><th>연이율</th><th>2배 되는 시간</th><th>실제 계산값</th></tr>
+      <tr><td>2%</td><td>36년</td><td>35.0년</td></tr>
+      <tr><td>3%</td><td>24년</td><td>23.4년</td></tr>
+      <tr><td>4%</td><td>18년</td><td>17.7년</td></tr>
+      <tr><td>6%</td><td>12년</td><td>11.9년</td></tr>
+      <tr><td>8%</td><td>9년</td><td>9.0년</td></tr>
+      <tr><td>10%</td><td>7.2년</td><td>7.3년</td></tr>
+      <tr><td>12%</td><td>6년</td><td>6.1년</td></tr>
+    </table></div>
+    <p>예금 연 3%라면 24년 후 원금이 2배가 됩니다. 주식형 ETF 장기 평균 수익률을 연 7%로 가정하면 약 10년마다 자산이 2배씩 늘어납니다.</p>
+
+    <h2>복리 공식, 손으로 직접 검산하는 법</h2>
+    <p>복리 계산은 공식 하나면 검산됩니다. <strong>미래 금액 = 원금 × (1 + 수익률)<sup>기간</sup></strong>입니다. 예를 들어 500만원을 연 7%로 20년 굴리면 500만원 × 1.07<sup>20</sup> = 500만원 × 3.87 = 약 1,935만원입니다. 1.07을 20번 곱한 값이 약 3.87이라는 뜻이라, 원금이 20년 만에 약 3.9배가 됩니다.</p>
+    <p>여기서 놓치기 쉬운 게 이자를 <strong>얼마나 자주 얹느냐</strong>입니다. 같은 연 6%라도 1년에 한 번 얹는 연복리와 매달 얹는 월복리는 결과가 다릅니다. 1,000만원을 연 6%로 10년 굴린 경우를 비교하면 이렇습니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>방식</th><th>계산식</th><th>10년 후 금액</th></tr>
+      <tr><td>단리</td><td>1,000 × (1 + 0.06 × 10)</td><td>1,600만원</td></tr>
+      <tr><td>연복리</td><td>1,000 × 1.06<sup>10</sup></td><td>1,791만원</td></tr>
+      <tr><td>월복리</td><td>1,000 × (1 + 0.06/12)<sup>120</sup></td><td class="highlight">1,819만원</td></tr>
+    </table></div>
+    <p>같은 금리·같은 기간인데 월복리가 연복리보다 약 28만원 많습니다. 이자를 자주 재투자할수록 복리 효과가 조금씩 커진다는 뜻입니다. 그래서 표면 금리가 같은 예금·적금이라면 이자 지급(복리 적용) 주기가 짧은 쪽이 유리합니다. 참고로 원금이 3배가 되는 시점은 '115법칙'(115 ÷ 연이율)으로 어림할 수 있는데, 연 6%라면 약 19.2년으로 실제값 18.9년과 거의 맞아떨어집니다.</p>
+
+    <h2>시작 시기가 얼마나 중요한가 - 월 30만원 연 5% 복리</h2>
+    <p>같은 금액을 투자해도 시작 시기에 따라 65세 시점 자산이 크게 달라집니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>시작 나이</th><th>투자 기간</th><th>총 납입</th><th>65세 자산 (세전)</th></tr>
+      <tr><td>25세</td><td>40년</td><td>1억 4,400만원</td><td class="highlight">약 4억 5,800만원</td></tr>
+      <tr><td>35세</td><td>30년</td><td>1억 800만원</td><td>약 2억 5,000만원</td></tr>
+      <tr><td>45세</td><td>20년</td><td>7,200만원</td><td>약 1억 2,300만원</td></tr>
+    </table></div>
+    <p>25세에 시작하면 35세 시작보다 납입액이 3,600만원 더 많지만, 65세 자산은 2억원 이상 더 많습니다. 10년 일찍 시작하는 것이 납입액 증가보다 훨씬 큰 효과를 가져옵니다.</p>
+
+    <h2>숫자로 보는 실제 사례 - 세 사람의 복리</h2>
+    <p>표만 보면 복리가 남의 이야기처럼 느껴집니다. 나이도 직업도 다른 세 사람의 실제 계산으로 옮겨보면 체감이 달라집니다. 아래 금액은 모두 검산을 거친 값입니다.</p>
+
+    <div style="background:#F5F3FF;border:1px solid rgba(99,102,241,0.2);border-radius:12px;padding:20px 24px;margin:20px 0">
+      <div style="font-weight:700;color:#3730A3;font-size:15px;margin-bottom:10px">이지현(30세, 간호사) - 목돈 2,000만원을 20년 묵히면</div>
+      <p style="margin-bottom:8px;font-size:14px;color:#374151">결혼 자금으로 쓰려다 미룬 목돈 2,000만원을 연 6% 상품에 20년 예치한다고 해봅니다. 단리라면 2,000만원 × (1 + 6% × 20) = 4,400만원입니다. 복리라면 2,000만원 × 1.06<sup>20</sup> = 약 6,414만원. 같은 원금, 같은 금리, 같은 기간인데 복리가 2,014만원 더 많습니다.</p>
+      <p style="margin:0;font-size:14px;color:#374151">이 2,014만원은 이지현씨가 추가로 한 일 없이, 이자에 이자가 붙는 것만으로 생긴 차이입니다. 목돈일수록, 기간이 길수록 이 격차는 눈덩이처럼 커집니다.</p>
+    </div>
+
+    <div style="background:#F5F3FF;border:1px solid rgba(99,102,241,0.2);border-radius:12px;padding:20px 24px;margin:20px 0">
+      <div style="font-weight:700;color:#3730A3;font-size:15px;margin-bottom:10px">박민우(40세, 자영업) - 늦게 시작해도 늦지 않다</div>
+      <p style="margin-bottom:8px;font-size:14px;color:#374151">"마흔이면 늦은 거 아닌가" 싶지만 숫자는 다르게 말합니다. 박민우씨가 월 50만원씩 연 5% 상품에 25년(65세까지) 적립하면 총 납입 원금은 1억 5,000만원입니다. 복리로 불어난 65세 자산은 약 2억 9,776만원으로, 원금의 거의 2배이고 순수하게 불어난 이자만 약 1억 4,776만원입니다.</p>
+      <p style="margin:0;font-size:14px;color:#374151">핵심은 이겁니다. 시작이 늦었다면 기간 대신 매달 넣는 금액을 늘려 벌충할 수 있습니다. 목표 시점 자금이 정해져 있다면 <a href="../posts/five-year-seed-money.html" style="color:#6366F1;">5년에 1억 모으기 시뮬레이션</a>으로 필요한 월 납입액을 먼저 계산해보는 편이 좋습니다.</p>
+    </div>
+
+    <div style="background:#F5F3FF;border:1px solid rgba(99,102,241,0.2);border-radius:12px;padding:20px 24px;margin:20px 0">
+      <div style="font-weight:700;color:#3730A3;font-size:15px;margin-bottom:10px">최유나(27세, 회사원) - 세금이 떼어가는 몫까지 계산하면</div>
+      <p style="margin-bottom:8px;font-size:14px;color:#374151">최유나씨가 월 40만원을 연 5% 상품에 20년 넣으면 세전으로는 약 1억 6,441만원이 됩니다. 원금 9,600만원에 이자가 약 6,841만원 붙은 결과입니다. 그런데 이자에는 15.4% 이자소득세가 붙어 약 1,054만원이 빠져나가, 실제 손에 쥐는 세후 금액은 약 1억 5,388만원입니다.</p>
+      <p style="margin:0;font-size:14px;color:#374151">세전 숫자만 보고 계획하면 1,000만원 넘게 어긋납니다. 뒤에서 볼 ISA 계좌를 활용하면 이 세금의 상당 부분을 아낄 수 있습니다.</p>
+    </div>
+
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-88xhdLeiIK3V35kb" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+    <h2>복리를 실생활에 써먹는 법</h2>
+    <h3>연금저축·IRP - 세액공제 + 복리</h3>
+    <p>납입 시 세액공제(총급여 5,500만원 이하 16.5%, 초과 시 13.2%)를 받고, 운용 수익에 대한 과세를 연금 수령 시까지 이연합니다. 과세 이연 자체가 복리 효과를 높여주는 구조입니다. 둘의 인출 조건과 수령 세금 차이가 궁금하다면 <a href="../posts/irp-vs-pension-savings.html" style="color:#6366F1;">IRP vs 연금저축 비교</a> 글에서 자세히 확인할 수 있습니다.</p>
+    <h3>배당 재투자 ETF (DRIP)</h3>
+    <p>배당금을 현금으로 받지 않고 자동으로 같은 ETF를 매수하도록 설정하면 복리 효과가 극대화됩니다. 국내 ETF 중 분배금 자동 재투자 기능을 제공하는 상품을 활용하세요.</p>
+    <h3>이자의 즉시 재투자</h3>
+    <p>예금·적금 만기 이자를 다시 원금에 합쳐 재예치하면 단순 연장보다 더 많은 이자를 받습니다. 매번 귀찮더라도 이자를 소비하지 않고 재투자하는 습관이 장기적으로 가장 큰 차이를 만듭니다.</p>
+
+    <h2>복리 수익을 조용히 갉아먹는 3가지</h2>
+    <p>명목 수익률만 보고 복리를 계획하면 실제 손에 쥐는 돈과 차이가 납니다. 세금·수수료·물가를 반영한 실질 수익률로 계획해야 장기 목표에 맞는 판단을 할 수 있습니다.</p>
+
+    <h3>1. 이자소득세 15.4%</h3>
+    <p>예금·적금 이자에는 이자소득세 14% + 지방소득세 1.4% = 15.4%가 원천징수됩니다. 연 3% 예금의 세후 실질 수익률은 3% × (1 - 0.154) = 약 2.54%입니다. 72법칙 기준 원금이 2배 되는 시간이 24년에서 28.3년으로 늘어납니다. 이 문제를 해결하는 방법이 ISA(개인종합자산관리계좌)입니다. ISA 계좌 내 운용 수익은 200만원(서민형 400만원)까지 비과세이고, 초과분은 9.9% 분리과세로 일반 예금보다 세금 부담이 절반 수준입니다. 한도와 유형별 차이는 <a href="../posts/isa-guide.html" style="color:#6366F1;">ISA 계좌 비과세 한도 정리</a> 글에 자세히 담았습니다.</p>
+
+    <h3>2. 운용 수수료 (ETF·펀드 총보수)</h3>
+    <p>연 수익률 7% ETF라도 총보수(TER)가 연 0.5%라면 실질 수익률은 6.5%입니다. 0.5%p 차이가 작아 보이지만 1,000만원을 30년 운용할 경우 복리 효과로 차이가 약 1,000만원에 달합니다. 국내 지수 ETF의 총보수는 0.05~0.15% 수준인 반면, 해외 운용 액티브 펀드는 1~1.5%까지 올라갑니다. 장기 투자일수록 수수료가 복리로 불어나므로 총보수 0.2% 이하 패시브 ETF를 우선 검토해야 합니다.</p>
+
+    <h3>3. 물가 상승률 (인플레이션)</h3>
+    <p>한국은행 통계 기준 최근 10년간 국내 평균 물가 상승률은 연 약 2.2%입니다. 명목 수익률 연 3% 예금의 실질 수익률 = 3% - 2.2% = 0.8%입니다. 72법칙 기준 실질 구매력이 2배가 되려면 90년이 걸립니다. 즉 연 3% 예금만으로는 자산의 실질 구매력이 거의 증가하지 않습니다. 물가를 뛰어넘으려면 주식형 ETF, 부동산, 물가연동채권 등 실질 수익률이 상대적으로 높은 자산 비중이 필요합니다.</p>
+    <div class="highlight-box"><p>세후·수수료 차감·인플레 반영 후 실질 수익률이 연 1% 이상이어야 장기 복리에서 의미가 있습니다. 예금 금리 연 3% 이하 시기에는 세금과 물가를 고려하면 복리 효과가 사실상 0에 가깝습니다.</p></div>
+
+    <h2>같은 납입액, 다른 결과 - 투자 방식이 만드는 30년의 차이</h2>
+    <p>두 사람 모두 35세, 매달 여유 자금 50만원을 65세까지 30년간 투자합니다. 납입 금액은 동일하고 투자 방식만 다릅니다.</p>
+    <div class="table-wrap"><table>
+      <tr><th>구분</th><th>A씨 - 정기예금 중심</th><th>B씨 - 국내외 지수 ETF</th></tr>
+      <tr><td>월 납입</td><td>50만원</td><td>50만원</td></tr>
+      <tr><td>명목 수익률</td><td>연 3.2%</td><td>연 7.0% (장기 평균 가정)</td></tr>
+      <tr><td>세후 실질 수익률</td><td>약 2.7%</td><td>약 5.9%</td></tr>
+      <tr><td>30년 납입 원금 합계</td><td>1억 8,000만원</td><td>1억 8,000만원</td></tr>
+      <tr><td>30년 후 자산 (세후 추정)</td><td>약 2억 7,700만원</td><td class="highlight">약 4억 9,300만원</td></tr>
+    </table></div>
+    <p>두 사람이 납입한 원금은 동일합니다. 차이를 만드는 것은 수익률 3.2%p 격차가 30년 복리로 불어난 결과이며, 약 2억 1,600만원 차이가 납니다. B씨가 매달 더 많이 납입한 것도, 더 리스크를 감수한 것도 아닙니다. 단지 더 높은 기대 수익률 자산에 꾸준히 투자했을 뿐입니다.</p>
+    <p>단, B씨의 ETF 투자는 중간에 -30~50% 수준의 급락을 경험할 수 있습니다. 2008년 금융위기 당시 코스피는 고점 대비 약 54% 하락했고, 2020년 코로나 쇼크에서는 35% 빠졌습니다. 이 구간에서 매도하지 않고 유지하는 것이 장기 복리 효과를 지키는 핵심입니다. 장기 투자에서는 종목 선택보다 <strong>팔지 않는 것</strong>이 더 중요한 이유입니다.</p>
+
+    <div class="cta-box">
+      <p>원금·금리·기간을 입력해 복리 수익을 직접 계산해보세요.</p>
+      <a href="../../calc/finance/compound/" class="cta-btn">복리 계산하기</a>
+    </div>
+    <p style="font-size: 13px; color: #6B7280; margin-top: 8px;">관련 계산기: <a href="https://www.jptcalc.kr/calc/finance/deposit/">예금 이자 계산기</a> · <a href="https://www.jptcalc.kr/calc/finance/savings/">적금 만기 계산기</a></p>
+
+    <h2>자주 묻는 질문 (FAQ)</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 은행 예금도 복리인가요?</div>
+      <p class="faq-a">정기예금은 기본적으로 단리 상품입니다. 다만 만기 이자를 원금에 합쳐 다시 예치(복리 예치)하거나, 복리 예금 상품에 가입하면 복리 효과를 누릴 수 있습니다. 시중은행에서 복리 예금 상품을 별도로 판매하기도 합니다. 예를 들어 연 3% 단리 예금을 3년 예치하면 이자가 원금의 9%지만, 매년 이자를 재예치하는 복리 방식이면 약 9.27%로 늘어나 3년만 지나도 차이가 벌어지기 시작합니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 72법칙은 어떤 수익률에서도 정확한가요?</div>
+      <p class="faq-a">연 6~10% 범위에서 오차가 1% 이내로 가장 정확합니다. 금리가 낮을수록(1~2%), 높을수록(20% 이상) 오차가 커집니다. 예를 들어 연 2%에서는 72법칙이 36년을 제시하지만 실제로는 35.0년으로 1년가량 차이가 납니다. 정밀한 계산이 필요하다면 실제 복리 계산기를 사용하는 것이 좋습니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 물가 상승률을 고려하면 실질 복리 효과가 줄어드나요?</div>
+      <p class="faq-a">맞습니다. 명목 수익률에서 물가 상승률(인플레이션)을 뺀 것이 실질 수익률입니다. 예금 연 3% - 물가 상승률 2% = 실질 1%. 장기적으로 물가를 이기는 수익률을 추구해야 자산이 실질적으로 불어납니다. 주식·채권 분산 투자가 장기적으로 예금보다 높은 실질 수익률을 기대할 수 있는 이유입니다.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q. 복리 계산 시 세금을 고려해야 하나요?</div>
+      <p class="faq-a"><a href="https://www.fss.or.kr">금융감독원</a>에 따르면 일반 예금·적금 이자에는 15.4% 이자소득세가 원천징수됩니다. 실질 복리 수익률은 세후 기준으로 계산해야 합니다. 예를 들어 연 4% 예금의 세후 수익률은 4% × (1 − 0.154) = 약 3.38%로 낮아집니다. ISA 계좌 내 운용 수익은 비과세(일정 한도)이므로 장기 복리 투자 시 ISA를 활용하면 세후 수익률을 높일 수 있습니다.</p>
+    </div>
+
+    <h2>핵심만 뽑으면</h2>
+    <p>복리의 핵심은 하나입니다. 시간입니다. 수익률 1~2% 차이보다 10년 일찍 시작하는 것이 훨씬 큽니다. 지금 당장 큰 금액이 없어도 됩니다. 연금저축·IRP로 세제 혜택 먼저 챙기고, 이자와 배당을 소비하지 않고 재투자하는 습관 하나면 됩니다. 개인적으로는 수익률 좇기보다 자동이체 설정이 더 강력한 복리 전략이라고 봅니다.</p>
+  </div>
+</div>
+<footer class="site-footer"><p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 내용은 참고용입니다.</p></footer>
+  <script src="/assets/footer-unified.js" defer></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "복리 계산 원칙·금융수학 기준, 2026년",
+  lastReviewed: '2026.07.24'
+};
+</script>
+<script>
+window.ARTICLE_INFO_CONFIG.relatedCalc = { name: '복리 계산기', url: '/calc/finance/compound/' };
+window.ARTICLE_INFO_CONFIG.category = 'finance';
+</script>
+<script src="/assets/blog-article-info.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>

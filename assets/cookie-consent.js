@@ -24,8 +24,8 @@
   var bar = document.createElement('div');
   bar.id = 'jpt-cookie-bar';
   bar.innerHTML =
-    '<p>이 사이트는 사용자 경험 개선 및 광고 제공을 위해 쿠키를 사용합니다. ' +
-    '<a href="/privacy.html">개인정보처리방침</a></p>' +
+    '<p>서비스 개선과 광고를 위해 쿠키를 사용합니다 ' +
+    '<a href="/privacy.html" aria-label="쿠키 사용 자세히 보기(개인정보처리방침)">자세히</a></p>' +
     '<button id="jpt-cookie-ok">동의</button>';
   document.body.appendChild(bar);
 

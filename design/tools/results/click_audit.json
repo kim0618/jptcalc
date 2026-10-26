@@ -1,0 +1,7334 @@
+[
+ {
+  "key": "ai/api-token",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"환율 (USD/KRW)\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "AI API 토큰 비용 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/ai/gpu-cloud/",
+  "bb_scroll": -0.0,
+  "clicks": 13,
+  "kind": "calc",
+  "sec": 19.0,
+  "ext_hold": []
+ },
+ {
+  "key": "ai/gpu-cloud",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"일일 사용 시간\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "GPU 클라우드 비용 비교 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/ai/api-token/",
+  "bb_scroll": -0.0,
+  "clicks": 16,
+  "kind": "calc",
+  "sec": 20.5,
+  "ext_hold": []
+ },
+ {
+  "key": "ai/infra-forecast",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"LLM API 비용\", \"클라우드 서버 (컴퓨팅)\", \"데이터베이스\", \"스토리지 (S3/GCS)\", \"CDN / 네트워크\", \"모니터링\", \"기타 SaaS\" 중 한 칸 이상 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "AI 인프라 월비용 예측 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/ai/llm-comparison/",
+  "bb_scroll": 0,
+  "clicks": 13,
+  "kind": "calc",
+  "sec": 20.7,
+  "ext_hold": []
+ },
+ {
+  "key": "ai/llm-comparison",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": false,
+  "c_buttons": [],
+  "c_next": "/calc/ai/infra-forecast/",
+  "clicks": 13,
+  "kind": "calc",
+  "sec": 13.7,
+  "ext_hold": []
+ },
+ {
+  "key": "ai/saas-comparison",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"월 API 호출 수\" 칸을 입력해 주세요.",
+  "ba_scroll": 508,
+  "dl": [
+   "AI SaaS vs 자체구축 비용 비교.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/ai/api-token/",
+  "bb_scroll": 508,
+  "clicks": 12,
+  "kind": "calc",
+  "sec": 19.0,
+  "ext_hold": []
+ },
+ {
+  "key": "auto/acquisition-tax",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"공장도가격\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "자동차 취득세 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/auto/auto-tax/",
+  "bb_scroll": -0.0,
+  "clicks": 18,
+  "kind": "calc",
+  "sec": 18.7,
+  "ext_hold": []
+ },
+ {
+  "key": "auto/auto-loan",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"차량 가격\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "자동차 할부 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/auto/auto-tax/",
+  "bb_scroll": 0,
+  "clicks": 15,
+  "kind": "calc",
+  "sec": 16.8,
+  "ext_hold": []
+ },
+ {
+  "key": "auto/auto-tax",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"전체 삭제\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"배기량\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "자동차세 계산기.png",
+   "자동차세 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/auto/acquisition-tax/",
+  "bb_scroll": 0,
+  "clicks": 22,
+  "kind": "calc",
+  "sec": 18.2,
+  "ext_hold": []
+ },
+ {
+  "key": "auto/ev-charging",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"1개 남음\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"배터리 용량\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "전기차 충전비 계산기 - 내연차 유류비 비교.png",
+   "전기차 충전비 계산기 - 내연차 유류비 비교.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장",
+   "저장·공유",
+   "저장",
+   "복사",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/auto/fuel-cost/",
+  "bb_scroll": 0,
+  "clicks": 15,
+  "kind": "calc",
+  "sec": 20.9,
+  "ext_hold": []
+ },
+ {
+  "key": "auto/ev-subsidy",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"차량 가격\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "전기차 보조금 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/auto/ev-charging/",
+  "bb_scroll": 0,
+  "clicks": 15,
+  "kind": "calc",
+  "sec": 17.5,
+  "ext_hold": []
+ },
+ {
+  "key": "auto/fuel-cost",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"1개 남음\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"주행 거리\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "유류비 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/auto/ev-charging/",
+  "bb_scroll": 0,
+  "clicks": 15,
+  "kind": "calc",
+  "sec": 17.6,
+  "ext_hold": []
+ },
+ {
+  "key": "auto/used-car-tax",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"기준가격\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "중고차 취득세 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/auto/auto-tax/",
+  "bb_scroll": -0.0,
+  "clicks": 13,
+  "kind": "calc",
+  "sec": 17.1,
+  "ext_hold": []
+ },
+ {
+  "key": "baby/baby-months",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"아기 출생일\" 칸을 입력해 주세요.",
+  "ba_scroll": 439,
+  "dl": [
+   "아기 개월수 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/baby/parental-benefit/",
+  "bb_scroll": 439,
+  "clicks": 11,
+  "kind": "calc",
+  "sec": 16.2,
+  "ext_hold": []
+ },
+ {
+  "key": "baby/child-allowance",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"자녀 출생 연월\" 칸을 입력해 주세요.",
+  "ba_scroll": 439,
+  "dl": [
+   "아동수당 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/baby/parental-benefit/",
+  "bb_scroll": 439,
+  "clicks": 11,
+  "kind": "calc",
+  "sec": 16.3,
+  "ext_hold": []
+ },
+ {
+  "key": "baby/due-date",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"마지막 생리 시작일\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "출산예정일 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/baby/total-support/",
+  "bb_scroll": -0.0,
+  "clicks": 13,
+  "kind": "calc",
+  "sec": 16.5,
+  "ext_hold": []
+ },
+ {
+  "key": "baby/first-meeting",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"전체 삭제\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": false,
+  "c_buttons": [],
+  "c_next": "/calc/baby/total-support/",
+  "dl": [
+   "첫만남이용권 계산기.png"
+  ],
+  "clicks": 23,
+  "kind": "calc",
+  "sec": 14.7,
+  "ext_hold": []
+ },
+ {
+  "key": "baby/home-care-allowance",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"자녀 출생 연월\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "가정양육수당 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/baby/parental-benefit/",
+  "bb_scroll": 0,
+  "clicks": 14,
+  "kind": "calc",
+  "sec": 18.3,
+  "ext_hold": []
+ },
+ {
+  "key": "baby/ovulation",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"1개 남음\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"마지막 생리 시작일\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "배란일 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/baby/due-date/",
+  "bb_scroll": -0.0,
+  "clicks": 16,
+  "kind": "calc",
+  "sec": 17.8,
+  "ext_hold": []
+ },
+ {
+  "key": "baby/parental-benefit",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"자녀 출생 연월\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "부모급여 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/baby/home-care-allowance/",
+  "bb_scroll": 0,
+  "clicks": 13,
+  "kind": "calc",
+  "sec": 17.1,
+  "ext_hold": []
+ },
+ {
+  "key": "baby/parental-leave-pay",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"월 통상임금\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "육아휴직급여 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/baby/total-support/",
+  "bb_scroll": -0.0,
+  "clicks": 16,
+  "kind": "calc",
+  "sec": 17.1,
+  "ext_hold": []
+ },
+ {
+  "key": "baby/total-support",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"전체 삭제\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": false,
+  "dl": [
+   "출산 지원금 통합 계산기.png",
+   "출산 지원금 통합 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/baby/first-meeting/",
+  "clicks": 22,
+  "kind": "calc",
+  "sec": 16.2,
+  "ext_hold": []
+ },
+ {
+  "key": "date/age",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"생년월일\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "만 나이 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/date/weekday/",
+  "bb_scroll": -0.0,
+  "clicks": 18,
+  "kind": "calc",
+  "sec": 20.9,
+  "ext_hold": []
+ },
+ {
+  "key": "date/date-add",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"년\", \"월\", \"일\" 중 한 칸 이상 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "날짜 더하기_빼기 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/date/dday/",
+  "bb_scroll": -0.0,
+  "clicks": 18,
+  "kind": "calc",
+  "sec": 23.1,
+  "ext_hold": []
+ },
+ {
+  "key": "date/date-difference",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"전체 삭제\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "default",
+  "ba_scroll": -0.0,
+  "dl": [
+   "날짜 차이 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/date/dday/",
+  "bb_scroll": -0.0,
+  "clicks": 24,
+  "kind": "calc",
+  "sec": 23.1,
+  "ext_hold": []
+ },
+ {
+  "key": "date/dday",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"전체 삭제\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "default",
+  "ba_scroll": -0.0,
+  "dl": [
+   "D-day 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/date/date-difference/",
+  "bb_scroll": -0.0,
+  "clicks": 23,
+  "kind": "calc",
+  "sec": 18.9,
+  "ext_hold": []
+ },
+ {
+  "key": "date/weekday",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"전체 삭제\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "default",
+  "ba_scroll": 416,
+  "dl": [
+   "요일 계산기.png",
+   "요일 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/date/age/",
+  "bb_scroll": 416,
+  "clicks": 23,
+  "kind": "calc",
+  "sec": 18.7,
+  "ext_hold": []
+ },
+ {
+  "key": "finance/compound",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"원금\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "복리 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/finance/deposit/?principal=1000&from=compound",
+  "bb_scroll": 0,
+  "clicks": 17,
+  "kind": "calc",
+  "sec": 16.9,
+  "ext_hold": []
+ },
+ {
+  "key": "finance/deposit",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"예치금액\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "예금 이자 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/finance/compound/?principal=1000&from=deposit",
+  "bb_scroll": -0.0,
+  "clicks": 19,
+  "kind": "calc",
+  "sec": 17.4,
+  "ext_hold": []
+ },
+ {
+  "key": "finance/investment",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"매입 금액\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "투자 수익률 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/finance/compound/",
+  "bb_scroll": -0.0,
+  "clicks": 14,
+  "kind": "calc",
+  "sec": 16.6,
+  "ext_hold": []
+ },
+ {
+  "key": "finance/jangbyeong-savings",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"월 납입액\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "장병내일준비적금 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/finance/savings/?monthly=55&from=jangbyeong-savings",
+  "bb_scroll": -0.0,
+  "clicks": 14,
+  "kind": "calc",
+  "sec": 16.8,
+  "ext_hold": []
+ },
+ {
+  "key": "finance/loan-repayment",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"대출 원금\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "대출 상환 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/finance/investment/",
+  "bb_scroll": 0,
+  "clicks": 21,
+  "kind": "calc",
+  "sec": 17.5,
+  "ext_hold": []
+ },
+ {
+  "key": "finance/savings",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"월 납입액\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "적금 만기금액 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/finance/youth-leap-account/?monthly=30&from=savings",
+  "bb_scroll": -0.0,
+  "clicks": 19,
+  "kind": "calc",
+  "sec": 17.3,
+  "ext_hold": []
+ },
+ {
+  "key": "finance/stock-average",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"현재 평단가\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "주식 평단가 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/finance/investment/",
+  "bb_scroll": -0.0,
+  "clicks": 16,
+  "kind": "calc",
+  "sec": 17.1,
+  "ext_hold": []
+ },
+ {
+  "key": "finance/youth-future-savings",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"월 납입액\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "청년미래적금 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/finance/youth-leap-account/?monthly=50&from=youth-future-savings",
+  "bb_scroll": -0.0,
+  "clicks": 13,
+  "kind": "calc",
+  "sec": 17.4,
+  "ext_hold": []
+ },
+ {
+  "key": "finance/youth-leap-account",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"월 납입액\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "청년도약계좌 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/finance/youth-future-savings/?monthly=70&from=youth-leap-account",
+  "bb_scroll": 0,
+  "clicks": 14,
+  "kind": "calc",
+  "sec": 16.9,
+  "ext_hold": []
+ },
+ {
+  "key": "health/bmi",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"키\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "BMI 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/health/body-fat/",
+  "bb_scroll": -0.0,
+  "clicks": 14,
+  "kind": "calc",
+  "sec": 16.9,
+  "ext_hold": []
+ },
+ {
+  "key": "health/bmr",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"나이\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "기초대사량 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/health/calories/",
+  "bb_scroll": -0.0,
+  "clicks": 16,
+  "kind": "calc",
+  "sec": 18.7,
+  "ext_hold": []
+ },
+ {
+  "key": "health/body-fat",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"키\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "체지방률 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/health/bmi/",
+  "bb_scroll": -0.0,
+  "clicks": 16,
+  "kind": "calc",
+  "sec": 18.1,
+  "ext_hold": []
+ },
+ {
+  "key": "health/calories",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"전체 삭제\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"나이\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "칼로리 소모 계산기 - 운동별 칼로리 소모량 (참고).png",
+   "칼로리 소모 계산기 - 운동별 칼로리 소모량 (참고).png",
+   "칼로리 소모 계산기 - 운동별 칼로리 소모량 (참고).png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장",
+   "저장·공유",
+   "저장",
+   "복사",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/health/bmr/",
+  "bb_scroll": -0.0,
+  "clicks": 23,
+  "kind": "calc",
+  "sec": 20.9,
+  "ext_hold": []
+ },
+ {
+  "key": "health/ideal-weight",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"키\" 칸을 입력해 주세요.",
+  "ba_scroll": 486,
+  "dl": [
+   "적정체중 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/health/bmi/",
+  "bb_scroll": 486,
+  "clicks": 15,
+  "kind": "calc",
+  "sec": 16.9,
+  "ext_hold": []
+ },
+ {
+  "key": "pension-welfare/basic-pension",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"전체 삭제\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"월 근로소득\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "기초연금 수급 판정 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/pension-welfare/national-pension/",
+  "bb_scroll": -0.0,
+  "clicks": 23,
+  "kind": "calc",
+  "sec": 18.3,
+  "ext_hold": []
+ },
+ {
+  "key": "pension-welfare/housing-pension",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"주택가격\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "주택연금(역모기지) 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/pension-welfare/retirement-living/",
+  "bb_scroll": -0.0,
+  "clicks": 14,
+  "kind": "calc",
+  "sec": 16.7,
+  "ext_hold": []
+ },
+ {
+  "key": "pension-welfare/long-term-care",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"전체 삭제\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": false,
+  "dl": [
+   "장기요양 본인부담금 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/pension-welfare/retirement-living/",
+  "clicks": 31,
+  "kind": "calc",
+  "sec": 17.3,
+  "ext_hold": []
+ },
+ {
+  "key": "pension-welfare/national-pension",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"70세 (+36%)\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"월 평균 기준소득월액\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "국민연금 수령액 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/pension-welfare/basic-pension/",
+  "bb_scroll": 0,
+  "clicks": 26,
+  "kind": "calc",
+  "sec": 31.5,
+  "ext_hold": []
+ },
+ {
+  "key": "pension-welfare/pension-tax",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [
+   "bb: 입력 뒤 계산 버튼이 숨는 모드(입력칸 없음) → 결과 글자만 비교"
+  ],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"연간 사적연금 수령액\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "연금소득세 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/pension-welfare/national-pension/",
+  "clicks": 19,
+  "kind": "calc",
+  "sec": 27.3,
+  "ext_hold": []
+ },
+ {
+  "key": "pension-welfare/retirement-living",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"희망 월 생활비\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "노후 생활비 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/pension-welfare/national-pension/",
+  "bb_scroll": -0.0,
+  "clicks": 12,
+  "kind": "calc",
+  "sec": 16.3,
+  "ext_hold": []
+ },
+ {
+  "key": "pet/adoption",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"분양/입양비\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "반려동물 입양 초기비용 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/pet/monthly-cost/",
+  "bb_scroll": -0.0,
+  "clicks": 22,
+  "kind": "calc",
+  "sec": 25.5,
+  "ext_hold": []
+ },
+ {
+  "key": "pet/cat-age",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"나이 (년)\", \"개월 (선택)\" 중 한 칸 이상 입력해 주세요.",
+  "ba_scroll": 412,
+  "dl": [
+   "고양이 나이 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/pet/dog-age/",
+  "bb_scroll": 412,
+  "clicks": 12,
+  "kind": "calc",
+  "sec": 16.4,
+  "ext_hold": []
+ },
+ {
+  "key": "pet/dog-age",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"나이 (년)\", \"개월 (선택)\" 중 한 칸 이상 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "강아지 나이 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/pet/cat-age/",
+  "bb_scroll": -0.0,
+  "clicks": 16,
+  "kind": "calc",
+  "sec": 16.7,
+  "ext_hold": []
+ },
+ {
+  "key": "pet/food-amount",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"체중감량 중\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"체중\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "강아지 고양이 사료 급여량 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/pet/dog-age/",
+  "bb_scroll": -0.0,
+  "clicks": 21,
+  "kind": "calc",
+  "sec": 17.4,
+  "ext_hold": []
+ },
+ {
+  "key": "pet/insurance",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"월 보험료\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "펫보험 비교 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/pet/lifetime-cost/",
+  "bb_scroll": -0.0,
+  "clicks": 18,
+  "kind": "calc",
+  "sec": 18.3,
+  "ext_hold": []
+ },
+ {
+  "key": "pet/lifetime-cost",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "빈 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "반려동물 평생 양육비용 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/pet/insurance/",
+  "bb_scroll": -0.0,
+  "clicks": 17,
+  "kind": "calc",
+  "sec": 17.4,
+  "ext_hold": []
+ },
+ {
+  "key": "pet/medical",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "값을 한 칸 이상 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "반려동물 의료비 예산 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/pet/monthly-cost/",
+  "bb_scroll": -0.0,
+  "clicks": 18,
+  "kind": "calc",
+  "sec": 17.2,
+  "ext_hold": []
+ },
+ {
+  "key": "pet/monthly-cost",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "빈 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "반려동물 월 생활비 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/pet/adoption/",
+  "bb_scroll": -0.0,
+  "clicks": 17,
+  "kind": "calc",
+  "sec": 17.0,
+  "ext_hold": []
+ },
+ {
+  "key": "realestate/acquisition",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"취득가액\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "취득세 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/realestate/ltv/?price=90000&from=acquisition",
+  "bb_scroll": -0.0,
+  "clicks": 27,
+  "kind": "calc",
+  "sec": 34.4,
+  "ext_hold": []
+ },
+ {
+  "key": "realestate/brokerage",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"거래금액\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "부동산 중개수수료 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/realestate/acquisition/?price=50000&from=brokerage",
+  "bb_scroll": -0.0,
+  "clicks": 25,
+  "kind": "calc",
+  "sec": 25.8,
+  "ext_hold": []
+ },
+ {
+  "key": "realestate/capital-gains",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"양도가액\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "양도소득세 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/realestate/gift/",
+  "bb_scroll": -0.0,
+  "clicks": 28,
+  "kind": "calc",
+  "sec": 41.6,
+  "ext_hold": []
+ },
+ {
+  "key": "realestate/conversion",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"전세금\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "전월세전환 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/realestate/brokerage/",
+  "bb_scroll": -0.0,
+  "clicks": 16,
+  "kind": "calc",
+  "sec": 17.8,
+  "ext_hold": []
+ },
+ {
+  "key": "realestate/didimdol",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"아니오\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"주택가격\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "디딤돌대출 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/realestate/ltv/?price=40000&from=didimdol",
+  "bb_scroll": -0.0,
+  "clicks": 22,
+  "kind": "calc",
+  "sec": 19.3,
+  "ext_hold": []
+ },
+ {
+  "key": "realestate/dsr",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"연소득\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "DSR 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "ext_hold": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css",
+   "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2/Pretendard-Black.woff2",
+   "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2/Pretendard-Bold.woff2",
+   "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2/Pretendard-ExtraBold.woff2",
+   "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2/Pretendard-Medium.woff2",
+   "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2/Pretendard-Regular.woff2",
+   "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2/Pretendard-SemiBold.woff2",
+   "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "c_next": "/calc/realestate/dti/?income=6000&mortgage=1200&from=dsr",
+  "bb_scroll": -0.0,
+  "clicks": 19,
+  "kind": "calc",
+  "sec": 17.9
+ },
+ {
+  "key": "realestate/gift",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"증여재산가액\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "증여세 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/realestate/inheritance/",
+  "bb_scroll": -0.0,
+  "clicks": 19,
+  "kind": "calc",
+  "sec": 17.0,
+  "ext_hold": []
+ },
+ {
+  "key": "realestate/inheritance",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"총 상속재산\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "상속세 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/realestate/gift/",
+  "bb_scroll": -0.0,
+  "clicks": 17,
+  "kind": "calc",
+  "sec": 17.3,
+  "ext_hold": []
+ },
+ {
+  "key": "realestate/jeonse-loan",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"임차보증금\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "전세자금대출 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/realestate/conversion/",
+  "bb_scroll": 0,
+  "clicks": 18,
+  "kind": "calc",
+  "sec": 17.5,
+  "ext_hold": []
+ },
+ {
+  "key": "realestate/joint",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"공시가격\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "공동명의 절세 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/realestate/jongbu/?price=150000&from=joint",
+  "bb_scroll": -0.0,
+  "clicks": 17,
+  "kind": "calc",
+  "sec": 18.2,
+  "ext_hold": []
+ },
+ {
+  "key": "realestate/jongbu",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"공시가격 합산\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "종합부동산세 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/realestate/property-tax-comprehensive/?price=120000&from=jongbu",
+  "bb_scroll": -0.0,
+  "clicks": 19,
+  "kind": "calc",
+  "sec": 18.0,
+  "ext_hold": []
+ },
+ {
+  "key": "realestate/loan",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"대출금액\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "대출이자 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/realestate/dsr/",
+  "bb_scroll": 0,
+  "clicks": 17,
+  "kind": "calc",
+  "sec": 19.3,
+  "ext_hold": []
+ },
+ {
+  "key": "realestate/ltv",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"주택 가격\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "LTV 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/realestate/dsr/",
+  "bb_scroll": 0,
+  "clicks": 17,
+  "kind": "calc",
+  "sec": 16.9,
+  "ext_hold": []
+ },
+ {
+  "key": "realestate/property-tax-comprehensive",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"공시가격\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "보유세 종합 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/realestate/jongbu/?price=100000&from=property-tax-comprehensive",
+  "bb_scroll": -0.0,
+  "clicks": 18,
+  "kind": "calc",
+  "sec": 17.8,
+  "ext_hold": []
+ },
+ {
+  "key": "realestate/propertytax",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"공시가격\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "재산세 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/realestate/property-tax-comprehensive/?price=50000&from=propertytax",
+  "bb_scroll": 0,
+  "clicks": 19,
+  "kind": "calc",
+  "sec": 17.2,
+  "ext_hold": []
+ },
+ {
+  "key": "realestate/registry",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"부동산 거래금액\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "등기비용 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/realestate/acquisition/?price=50000&from=registry",
+  "bb_scroll": -0.0,
+  "clicks": 19,
+  "kind": "calc",
+  "sec": 17.4,
+  "ext_hold": []
+ },
+ {
+  "key": "realestate/rental",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"매입가격\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "임대수익률 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/realestate/acquisition/?price=50000&from=rental",
+  "bb_scroll": -0.0,
+  "clicks": 14,
+  "kind": "calc",
+  "sec": 17.8,
+  "ext_hold": []
+ },
+ {
+  "key": "salary/annual-leave-pay",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"월 통상임금\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "연차수당 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/salary/dismissal-notice-pay/?monthly=300&from=annual-leave-pay",
+  "bb_scroll": 0,
+  "clicks": 13,
+  "kind": "calc",
+  "sec": 16.4,
+  "ext_hold": []
+ },
+ {
+  "key": "salary/average-wage",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"직전 3개월 월평균 임금\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "평균임금 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/salary/severance/",
+  "bb_scroll": 0,
+  "clicks": 12,
+  "kind": "calc",
+  "sec": 16.3,
+  "ext_hold": []
+ },
+ {
+  "key": "salary/bonus-pay",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"성과급(상여금) 금액\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "성과급 실수령 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/salary/take-home-pay/",
+  "bb_scroll": 0,
+  "clicks": 15,
+  "kind": "calc",
+  "sec": 16.9,
+  "ext_hold": []
+ },
+ {
+  "key": "salary/comparison",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"세전 연봉\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "연봉 비교 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/salary/take-home-pay/?salary=4500&from=comparison",
+  "bb_scroll": -0.0,
+  "clicks": 12,
+  "kind": "calc",
+  "sec": 17.4,
+  "ext_hold": []
+ },
+ {
+  "key": "salary/dismissal-notice-pay",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"통상시급\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "해고예고수당 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/salary/severance/",
+  "bb_scroll": -0.0,
+  "clicks": 16,
+  "kind": "calc",
+  "sec": 17.7,
+  "ext_hold": []
+ },
+ {
+  "key": "salary/hourly-wage",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"10시간\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"연봉\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "시급·일급 변환 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/salary/take-home-pay/?salary=3600&from=hourly-wage",
+  "bb_scroll": 0,
+  "clicks": 22,
+  "kind": "calc",
+  "sec": 25.4,
+  "ext_hold": []
+ },
+ {
+  "key": "salary/job-change",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"현재 연봉\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "이직 연봉 비교 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/salary/take-home-pay/?salary=4200&from=job-change",
+  "bb_scroll": 0,
+  "clicks": 13,
+  "kind": "calc",
+  "sec": 16.4,
+  "ext_hold": []
+ },
+ {
+  "key": "salary/ordinary-wage",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"기본급\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "통상임금 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/salary/premium-pay/",
+  "bb_scroll": 0,
+  "clicks": 13,
+  "kind": "calc",
+  "sec": 16.5,
+  "ext_hold": []
+ },
+ {
+  "key": "salary/premium-pay",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"통상시급\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "가산수당 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/salary/ordinary-wage/",
+  "bb_scroll": -0.0,
+  "clicks": 15,
+  "kind": "calc",
+  "sec": 17.3,
+  "ext_hold": []
+ },
+ {
+  "key": "salary/raise-rate",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"인상 전 연봉\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "연봉 인상률 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/salary/take-home-pay/?salary=4500&from=raise-rate",
+  "bb_scroll": -0.0,
+  "clicks": 13,
+  "kind": "calc",
+  "sec": 17.3,
+  "ext_hold": []
+ },
+ {
+  "key": "salary/severance",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"퇴직 직전 3개월 평균 월급여\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "퇴직금 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/salary/unemployment/?monthly=350&from=severance",
+  "bb_scroll": -0.0,
+  "clicks": 14,
+  "kind": "calc",
+  "sec": 17.9,
+  "ext_hold": []
+ },
+ {
+  "key": "salary/take-home-pay",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"세전 연봉\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "연봉 실수령액 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/salary/job-change/?salary=4800&from=take-home-pay",
+  "bb_scroll": -0.0,
+  "clicks": 22,
+  "kind": "calc",
+  "sec": 17.6,
+  "ext_hold": []
+ },
+ {
+  "key": "salary/unemployment",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"이직 전 3개월 평균 월급여\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "실업급여 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/salary/severance/",
+  "bb_scroll": 0,
+  "clicks": 21,
+  "kind": "calc",
+  "sec": 17.3,
+  "ext_hold": []
+ },
+ {
+  "key": "salary/weekly-holiday-pay",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"시급\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "주휴수당 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/salary/annual-leave-pay/",
+  "bb_scroll": 0,
+  "clicks": 18,
+  "kind": "calc",
+  "sec": 16.9,
+  "ext_hold": []
+ },
+ {
+  "key": "tax/copay-ceiling",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"연간 본인부담 의료비\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "본인부담상한제 환급금 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/tax/medical-expense/",
+  "bb_scroll": -0.0,
+  "clicks": 16,
+  "kind": "calc",
+  "sec": 17.0,
+  "ext_hold": []
+ },
+ {
+  "key": "tax/four-insurance",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"월 급여 (세전) 만원 단위\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "4대보험료 계산기 2026.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/tax/insurance-comparison/?salary_m=300&from=four-insurance",
+  "bb_scroll": -0.0,
+  "clicks": 13,
+  "kind": "calc",
+  "sec": 16.9,
+  "ext_hold": []
+ },
+ {
+  "key": "tax/freelancer-income",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"월 평균 수입 (세전) 만원 단위\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "프리랜서 월 순수입 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/tax/withholding/",
+  "bb_scroll": 0,
+  "clicks": 19,
+  "kind": "calc",
+  "sec": 18.0,
+  "ext_hold": []
+ },
+ {
+  "key": "tax/income-tax",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"연간 총수입 (세전) 만원 단위\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "종합소득세 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/tax/withholding/",
+  "bb_scroll": 0,
+  "clicks": 17,
+  "kind": "calc",
+  "sec": 17.6,
+  "ext_hold": []
+ },
+ {
+  "key": "tax/insurance-comparison",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"월 급여 (세전) 만원 단위\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "4대보험 vs 3.3% 비교 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/tax/four-insurance/?salary_m=300&from=insurance-comparison",
+  "bb_scroll": 0,
+  "clicks": 11,
+  "kind": "calc",
+  "sec": 18.2,
+  "ext_hold": []
+ },
+ {
+  "key": "tax/medical-expense",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"총급여액\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "의료비 세액공제 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/tax/copay-ceiling/",
+  "bb_scroll": -0.0,
+  "clicks": 14,
+  "kind": "calc",
+  "sec": 16.9,
+  "ext_hold": []
+ },
+ {
+  "key": "tax/regional-health-insurance",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"연 소득금액\", \"재산세 과세표준 합계\" 중 한 칸 이상 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "지역가입자 건강보험료 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/tax/four-insurance/",
+  "bb_scroll": 0,
+  "clicks": 12,
+  "kind": "calc",
+  "sec": 17.6,
+  "ext_hold": []
+ },
+ {
+  "key": "tax/vat",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"연간 매출액 공급가액 기준 (부가세 제외) · 연간 합계\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "부가가치세 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/tax/income-tax/",
+  "bb_scroll": -0.0,
+  "clicks": 19,
+  "kind": "calc",
+  "sec": 31.3,
+  "ext_hold": []
+ },
+ {
+  "key": "tax/withholding",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"계약 금액 (세전) 단위 선택\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "3.3% 원천징수 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/tax/freelancer-income/",
+  "bb_scroll": 0,
+  "clicks": 20,
+  "kind": "calc",
+  "sec": 17.2,
+  "ext_hold": []
+ },
+ {
+  "key": "tax/yellow-umbrella",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"연 사업·근로소득\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "노란우산공제 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/tax/income-tax/",
+  "bb_scroll": -0.0,
+  "clicks": 13,
+  "kind": "calc",
+  "sec": 16.7,
+  "ext_hold": []
+ },
+ {
+  "key": "tools/char-count",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"전체 삭제\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": false,
+  "dl": [
+   "글자수 세기.png",
+   "글자수 세기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "저장·공유",
+   "저장",
+   "복사",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/tools/gpa/",
+  "clicks": 20,
+  "kind": "calc",
+  "sec": 15.8,
+  "ext_hold": []
+ },
+ {
+  "key": "tools/discount",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"정가\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "할인율 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/tools/percent/",
+  "bb_scroll": -0.0,
+  "clicks": 16,
+  "kind": "calc",
+  "sec": 17.8,
+  "ext_hold": []
+ },
+ {
+  "key": "tools/gpa",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"과목 삭제\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "빈 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "학점 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/tools/naesin-grade/",
+  "bb_scroll": 0,
+  "clicks": 21,
+  "kind": "calc",
+  "sec": 19.5,
+  "ext_hold": []
+ },
+ {
+  "key": "tools/lunar-calendar",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"전체 삭제\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "default",
+  "ba_scroll": -0.0,
+  "dl": [
+   "음력 양력 변환기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/tools/percent/",
+  "bb_scroll": 0,
+  "clicks": 23,
+  "kind": "calc",
+  "sec": 20.1,
+  "ext_hold": []
+ },
+ {
+  "key": "tools/naesin-grade",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"과목 삭제\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"내 석차 (등수)\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "내신 등급 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/tools/gpa/",
+  "bb_scroll": -0.0,
+  "clicks": 21,
+  "kind": "calc",
+  "sec": 17.8,
+  "ext_hold": []
+ },
+ {
+  "key": "tools/percent",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"감소 (−)\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"전체 값\" 칸을 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "퍼센트 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/tools/discount/",
+  "bb_scroll": -0.0,
+  "clicks": 18,
+  "kind": "calc",
+  "sec": 17.4,
+  "ext_hold": []
+ },
+ {
+  "key": "tools/unit-converter",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"변환할 값\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "단위 변환기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/tools/percent/",
+  "bb_scroll": 0,
+  "clicks": 19,
+  "kind": "calc",
+  "sec": 19.0,
+  "ext_hold": []
+ },
+ {
+  "key": "/",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 button\"전체 15개\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 7,
+  "kind": "page",
+  "sec": 9.9,
+  "ext_hold": []
+ },
+ {
+  "key": "/404.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 button\"카테고리\"",
+  "clicks": 5,
+  "kind": "page",
+  "sec": 3.3,
+  "ext": [],
+  "ext_hold": []
+ },
+ {
+  "key": "/about.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 button\"카테고리\"",
+  "ext": [
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+  ],
+  "clicks": 5,
+  "kind": "page",
+  "sec": 4.3,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [
+   "390 button\"부동산\" → http://127.0.0.1:49703/blog/?cat=%EB%B6%80%EB%8F%99%EC%82%B0",
+   "390 button\"이직/연봉\" → http://127.0.0.1:49703/blog/?cat=%EC%9D%B4%EC%A7%81%2F%EC%97%B0%EB%B4%89",
+   "390 button\"생활·도구\" → http://127.0.0.1:49703/blog/?cat=%EC%83%9D%ED%99%9C%C2%B7%EB%8F%84%EA%B5%AC",
+   "390 button\"프리랜서 세금\" → http://127.0.0.1:49703/blog/?cat=%ED%94%84%EB%A6%AC%EB%9E%9C%EC%84%9C%20%EC%84%B8%EA%B8%88",
+   "390 button\"연금·복지\" → http://127.0.0.1:49703/blog/?cat=%EC%97%B0%EA%B8%88%C2%B7%EB%B3%B5%EC%A7%80",
+   "390 button\"금융·이자\" → http://127.0.0.1:49703/blog/?cat=%EA%B8%88%EC%9C%B5%C2%B7%EC%9D%B4%EC%9E%90",
+   "390 button\"날짜·D-day\" → http://127.0.0.1:49703/blog/?cat=%EB%82%A0%EC%A7%9C%C2%B7D-day",
+   "390 button\"건강\" → http://127.0.0.1:49703/blog/?cat=%EA%B1%B4%EA%B0%95",
+   "390 button\"AI/테크\" → http://127.0.0.1:49703/blog/?cat=AI%2F%ED%85%8C%ED%81%AC",
+   "390 button\"반려동물\" → http://127.0.0.1:49703/blog/?cat=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC",
+   "390 button\"자동차\" → http://127.0.0.1:49703/blog/?cat=%EC%9E%90%EB%8F%99%EC%B0%A8",
+   "390 button\"출산·육아\" → http://127.0.0.1:49703/blog/?cat=%EC%B6%9C%EC%82%B0%C2%B7%EC%9C%A1%EC%95%84",
+   "1280 button\"부동산\" → http://127.0.0.1:49703/blog/?cat=%EB%B6%80%EB%8F%99%EC%82%B0",
+   "1280 button\"이직/연봉\" → http://127.0.0.1:49703/blog/?cat=%EC%9D%B4%EC%A7%81%2F%EC%97%B0%EB%B4%89",
+   "1280 button\"생활·도구\" → http://127.0.0.1:49703/blog/?cat=%EC%83%9D%ED%99%9C%C2%B7%EB%8F%84%EA%B5%AC",
+   "1280 button\"프리랜서 세금\" → http://127.0.0.1:49703/blog/?cat=%ED%94%84%EB%A6%AC%EB%9E%9C%EC%84%9C%20%EC%84%B8%EA%B8%88",
+   "1280 button\"연금·복지\" → http://127.0.0.1:49703/blog/?cat=%EC%97%B0%EA%B8%88%C2%B7%EB%B3%B5%EC%A7%80",
+   "1280 button\"금융·이자\" → http://127.0.0.1:49703/blog/?cat=%EA%B8%88%EC%9C%B5%C2%B7%EC%9D%B4%EC%9E%90",
+   "1280 button\"날짜·D-day\" → http://127.0.0.1:49703/blog/?cat=%EB%82%A0%EC%A7%9C%C2%B7D-day",
+   "1280 button\"건강\" → http://127.0.0.1:49703/blog/?cat=%EA%B1%B4%EA%B0%95",
+   "1280 button\"AI/테크\" → http://127.0.0.1:49703/blog/?cat=AI%2F%ED%85%8C%ED%81%AC",
+   "1280 button\"반려동물\" → http://127.0.0.1:49703/blog/?cat=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC",
+   "1280 button\"자동차\" → http://127.0.0.1:49703/blog/?cat=%EC%9E%90%EB%8F%99%EC%B0%A8",
+   "1280 button\"출산·육아\" → http://127.0.0.1:49703/blog/?cat=%EC%B6%9C%EC%82%B0%C2%B7%EC%9C%A1%EC%95%84"
+  ],
+  "step": "1280 button\"+156개의 글 더 보기\"",
+  "ext": [
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 32,
+  "kind": "page",
+  "sec": 25.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/acquisition-tax-2026.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 지방·인구감소지역 주택 취득세는 최근 어떻게 바뀌\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 37,
+  "kind": "page",
+  "sec": 13.1,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/ai-chatbot-subscription-comparison.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 무료 ChatGPT만 써도 충분한 사용자는 어떤 \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 37,
+  "kind": "page",
+  "sec": 13.0,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/ai-infra-cost-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. API 비용 알람을 받으려면 어떻게 설정해야 하나\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 37,
+  "kind": "page",
+  "sec": 13.1,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/ai-saas-cost-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. AI 도구가 너무 빠르게 바뀌는데 어떻게 선택해야\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 27,
+  "kind": "page",
+  "sec": 11.8,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/annual-leave-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 5인 미만 사업장도 연차가 적용되나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/apartment-area-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 같은 84㎡라도 아파트와 오피스텔은 실사용 공간이\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 13.0,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/apartment-officetel-rental-comparison.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"빌라나 다가구주택 임대는 아파트·오피스텔보다 수익률이 \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 37,
+  "kind": "page",
+  "sec": 13.2,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/auto-loan-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 선수금은 얼마나 넣는 게 유리한가요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.2,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/average-wage-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 평균임금이 아무리 높아도 산재 휴업급여가 계속 늘\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.6,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/baby-months-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 국가 영유아 건강검진은 언제, 몇 차까지 받나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/basic-pension-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"기초연금 수급 중 재산이 늘거나 소득이 변하면 어떻게 \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.8,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/birth-registration-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 출생신고를 하면 자동으로 부모급여나 첫만남이용권도\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.6,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/blood-pressure-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 커피를 마시면 혈압이 오르나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 39,
+  "kind": "page",
+  "sec": 13.2,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/blood-sugar-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 당뇨병 전단계에서 정상으로 다시 돌아갈 수 있나요\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 39,
+  "kind": "page",
+  "sec": 13.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/bmi-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 표준체중과 정상 BMI 범위로 계산한 체중이 다른\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 45,
+  "kind": "page",
+  "sec": 14.0,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/bmr-calories.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. BMR과 TDEE의 차이가 무엇인가요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 41,
+  "kind": "page",
+  "sec": 13.3,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/body-fat-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 체중이 변하지 않는데 체지방이 줄었다는 게 가능한\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 25,
+  "kind": "page",
+  "sec": 11.7,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/bonus-tax-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 스톡옵션 행사 차익이나 성과 인센티브도 보너스와 \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 45,
+  "kind": "page",
+  "sec": 14.1,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/cagr-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 적금이나 예금도 CAGR로 표시할 수 있나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/capital-gains-tax.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 양도소득세 신고 기한은 언제인가요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/car-acquisition-tax-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 신차 실구매가에는 취득세 말고 또 무엇이 드나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/car-depreciation-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 감가상각과 자동차세·취득세는 어떤 관계가 있나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 29,
+  "kind": "page",
+  "sec": 12.0,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/car-inspection-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 종합검사와 정기검사는 뭐가 다르고, 제가 어떤 걸\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 29,
+  "kind": "page",
+  "sec": 12.1,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/car-insurance-grade-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 소액 사고는 보험처리와 자비 처리 중 무엇이 유리\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/car-maintenance-cost-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 신차 대신 중고차를 사면 유지비가 확실히 줄어드나\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/car-ownership-transfer-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 중고차 취득세와 이전등록 수수료는 같은 건가요? \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.8,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/car-scrap-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 폐차하면 냈던 자동차세를 돌려받을 수 있나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 27,
+  "kind": "page",
+  "sec": 12.1,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/car-tax-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 자동차세는 언제 납부하고, 안 내면 어떻게 되나요\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.6,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/cat-age-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 고양이 나이를 정확히 모르면 어떻게 추정하나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 12.7,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/cat-lifetime-cost.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 고양이 입양 후 첫 해가 비용이 가장 많이 드나요\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 41,
+  "kind": "page",
+  "sec": 13.3,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/cat-monthly-cost.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 고양이 병원비가 갑자기 늘어나는 나이나 시기가 있\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/char-count-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"입력한 자소서 내용이 서버에 저장되지는 않나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 39,
+  "kind": "page",
+  "sec": 13.1,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/chatgpt-api-cost.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 한국어 서비스에서 토큰 비용이 더 많이 드는 이유\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 37,
+  "kind": "page",
+  "sec": 12.9,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/child-allowance-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 아동수당은 어떻게, 언제까지 신청해야 하나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 12.7,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/childbirth-support-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 출산 지원금 통합 계산기로 정확히 뭘 확인할 수 \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/cholesterol-levels-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 콜레스테롤 약(스타틴)을 시작하면 평생 먹어야 하\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 41,
+  "kind": "page",
+  "sec": 13.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/claude-vs-gpt.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. Anthropic API와 OpenAI API 중\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 43,
+  "kind": "page",
+  "sec": 13.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/compound-interest.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 복리 계산 시 세금을 고려해야 하나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 39,
+  "kind": "page",
+  "sec": 13.2,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/comprehensive-income-tax.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 연금저축으로 세금을 줄이려면 얼마나 납입해야 하나\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 43,
+  "kind": "page",
+  "sec": 13.9,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/consumption-expiry-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 소비기한이 하루 지난 식품, 먹어도 되나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.6,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/cooking-measurement-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 베이킹은 그램(g) 단위가 정확한데 왜 컵·큰술로\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.2,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/copay-ceiling-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"본인부담상한제 계산기로 미리 계산하면 실제 환급액과 맞\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 12.8,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/cursor-vs-copilot.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. VS Code에서 Cursor와 Copilot을 \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.2,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/data-unit-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 사진 1,000장을 저장하려면 용량이 얼마나 필요\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.6,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/date-add-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 두 날짜 사이의 기간을 구하고 싶으면 어떻게 하나\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/date-difference.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 시작일을 포함해서 세나요, 제외하고 세나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 37,
+  "kind": "page",
+  "sec": 12.7,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/dday-counter.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. D-day가 음수(D+N)로 표시되면 무슨 뜻인가\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 12.8,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/delivery-volumetric-weight-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 택배 상자 규격을 잴 때 주의할 점은 무엇인가요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 25,
+  "kind": "page",
+  "sec": 11.6,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/deposit-interest-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 우대금리 조건은 실제로 받기 쉬운가요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 43,
+  "kind": "page",
+  "sec": 13.7,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/deposit-protection-limit-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 한도가 1억원으로 올랐으니 이제 분산 예치는 안 \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/didimdol-loan-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 계산기에는 무엇을 입력해야 하나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 12.8,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/diet-calorie-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 나이가 들면 기초대사량이 낮아지는 게 맞나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 29,
+  "kind": "page",
+  "sec": 12.6,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/disabled-car-tax-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 국가유공자·보훈보상대상자인데 이 장애인 감면도 받\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 29,
+  "kind": "page",
+  "sec": 12.2,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/discount-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 현금영수증 소득공제나 적립금 차감도 할인율에 포함\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 39,
+  "kind": "page",
+  "sec": 13.0,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/dividend-yield-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 배당수익률이 높은 종목이 항상 좋은 투자인가요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.9,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/dog-age-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 강아지 나이를 정확히 모르면 어떻게 추정하나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/dog-lifetime-cost.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 펫보험을 가입하면 실제로 얼마나 절약되나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 49,
+  "kind": "page",
+  "sec": 14.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/dog-monthly-cost.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 강아지 양육비에서 가장 큰 비중을 차지하는 항목은\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 37,
+  "kind": "page",
+  "sec": 13.2,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/dog-vs-cat-cost.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 1인 가구라면 강아지와 고양이 중 어느 쪽이 더 \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 27,
+  "kind": "page",
+  "sec": 11.9,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/due-date-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 쌍둥이도 출산예정일 계산 방식이 같나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.1,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/elementary-school-enrollment-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"이사를 하면 배정 학교가 자동으로 바뀌나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/emergency-fund-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 비상금 통장을 급여 통장과 따로 분리해야 하나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 39,
+  "kind": "page",
+  "sec": 13.3,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/ev-charging-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 배터리를 항상 10~80% 구간만 충전해야 하나요\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/ev-subsidy-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 청년이나 차상위계층, 다자녀 가구는 보조금을 더 \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 37,
+  "kind": "page",
+  "sec": 13.3,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/exercise-calorie-burn-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 주 5회 30분 조깅이면 한 달에 지방이 몇 kg\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 39,
+  "kind": "page",
+  "sec": 13.1,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/first-meeting-voucher-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 첫만남이용권 잔액은 어떻게 확인하나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/five-year-seed-money.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 5년 1억을 모은 다음 단계는 어떻게 잡아야 하나\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.6,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/food-amount-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 체중이 갑자기 늘거나 줄면 며칠 만에 급여량을 조\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 27,
+  "kind": "page",
+  "sec": 12.1,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/four-insurance-vs-33-comparison.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 4대보험 vs 3.3% 중 어떤 게 유리한지 직접\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.7,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/freelancer-insurance-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 건강보험 지역가입자 보험료를 줄이는 방법이 있나요\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.8,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/freelancer-tax-refund.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 프리랜서도 퇴직금이나 4대보험을 받을 수 있나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 37,
+  "kind": "page",
+  "sec": 12.9,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/fuel-cost-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 유가가 100원 오르면 출퇴근 거리별로 부담이 얼\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.3,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/gift-tax-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 결혼하거나 아이를 낳으면 증여세 공제를 더 받을 \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 12.7,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/gpa-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 취업할 때 학점이 3.5 이상이면 유리한가요, 차\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/gpu-cloud-comparison.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 스타트업 크레딧 프로그램은 어떻게 신청하나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 37,
+  "kind": "page",
+  "sec": 13.1,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/health-checkup-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 위내시경과 위장조영술 중 어느 쪽을 선택하는 게 \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 41,
+  "kind": "page",
+  "sec": 13.9,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/health-insurance-dependent-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 피부양자 탈락 직후 건강보험료를 줄이는 방법이 있\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 29,
+  "kind": "page",
+  "sec": 12.3,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/holding-tax-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"보유세 계산에서 2주택자는 어떻게 달라지나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 39,
+  "kind": "page",
+  "sec": 13.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/holiday-2026.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 공휴일에 근무하면 실제로 얼마를 받게 되나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 23,
+  "kind": "page",
+  "sec": 11.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/home-care-allowance-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 자녀가 여러 명이면 가정양육수당을 각각 받을 수 \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 12.7,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/hourly-wage-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 연봉 시급 환산 결과를 연봉 협상에 활용할 수 있\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.2,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/housing-pension-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"내 나이와 집값으로 실제 얼마 받는지 어떻게 확인하나요\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.7,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/hwangap-chilsun-age-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"칠순·팔순·미수·구순도 같은 방식으로 계산하나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/ideal-weight.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 나이가 들면 적정 체중도 변하나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 37,
+  "kind": "page",
+  "sec": 13.0,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/income-tax-deduction.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 연금저축 세액공제를 받고 중간에 해지하면 어떻게 \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 39,
+  "kind": "page",
+  "sec": 13.1,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/income-tax-may-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 성실신고확인대상 사업자는 신고 기한이 다른가요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/inheritance-tax-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 사전 증여한 재산도 상속세에 합산되나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 39,
+  "kind": "page",
+  "sec": 13.1,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/irp-vs-pension-savings.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"IRP에 퇴직금을 이전하면 세금이 줄어드나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/isa-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 서민형 ISA 자격이 되는지 모를 때는 어떻게 확\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 12.7,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/jangbyeong-savings-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 예전에 있던 1% 이자지원금은 지금도 받나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/jeonse-conversion-rate.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 임대수익률 계산기로 전월세 전환 효과도 확인할 수\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 12.6,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/jeonse-deposit-protection-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 이사한 지 시간이 꽤 지났는데 확정일자를 지금이라\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/jeonse-loan-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 대출 한도만큼 최대로 받는 게 항상 유리한가요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.7,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/jeonse-vs-wolse.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 전세자금대출을 받으면 전세가 더 불리해지나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 39,
+  "kind": "page",
+  "sec": 14.1,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/joint-ownership-tax-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"배우자가 이미 다른 주택을 보유한 경우 공동명의가 불리\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.6,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/jongbu-tax-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 일시적 2주택인데 종부세가 중과되나?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/korean-age-system.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 빠른 생일(1~2월생)이면 나이 계산이 달라지나요\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 37,
+  "kind": "page",
+  "sec": 13.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/liver-enzyme-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 내가 지방간 위험군인지 집에서 먼저 가늠할 방법이\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 37,
+  "kind": "page",
+  "sec": 13.3,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/llm-api-price-comparison.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 토큰 단가 외에 숨겨진 비용 요소가 있나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.1,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/loan-refinance-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 변동금리에서 고정금리로 갈아탈 수 있나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 13.0,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/loan-repayment.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 고정금리에서 변동금리로 갈아탈 수 있나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 43,
+  "kind": "page",
+  "sec": 13.6,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/long-term-care-cost-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 재가급여와 시설급여 중 어떤 걸 선택해야 할지 모\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 12.6,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/long-term-care-grade-application.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 방문조사 당일 어떻게 준비해야 등급이 잘 나오나요\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 45,
+  "kind": "page",
+  "sec": 14.1,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/lunar-calendar-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"설날과 추석은 왜 매년 양력 날짜가 다른가요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.2,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/margin-markup-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 제이퍼 퍼센트 계산기로 마진율과 마크업률을 구할 \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 29,
+  "kind": "page",
+  "sec": 12.2,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/maternity-leave-pay-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 출산전후휴가급여는 언제, 어떻게 신청하나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.2,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/medical-expense-deduction-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 의료비 계산기로 미리 계산하면 환급액이 정확하게 \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 63,
+  "kind": "page",
+  "sec": 15.7,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/medical-expense-items-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 65세 이상 부모님 치과 임플란트 비용은 얼마까지\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 49,
+  "kind": "page",
+  "sec": 14.3,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/military-discharge-date.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 입대 연기는 최대 몇 번까지 가능한가요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/military-salary-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"장병내일준비적금을 봉급 전액으로 넣어도 되나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.8,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/minimum-wage-2026.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 식비, 교통비 등 수당도 최저임금에 포함되나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 37,
+  "kind": "page",
+  "sec": 12.8,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/mortgage-dsr-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 집값이 감정가와 실거래가 중 어느 쪽을 기준으로 \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 12.7,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/moving-cost-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 서울시 청년 이사비 지원은 신청하면 다 받을 수 \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 29,
+  "kind": "page",
+  "sec": 12.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/moving-day-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"포장이사 대신 반포장·셀프이사면 손없는날 비용 차이가 \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 29,
+  "kind": "page",
+  "sec": 13.1,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/naesin-achievement-grade-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"성취도 분할점수는 모든 학교가 동일한가요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.2,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/naesin-grade-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"5등급제로 바뀌면서 1등급이 4%에서 10%로 늘었는데\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/national-pension-40years.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"회사가 보험료를 절반 납부해주는데 내가 따로 관리할 게\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/national-pension-additional-payment.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"추납하면 무조건 이득인가요? 손해 보는 경우는 없나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 43,
+  "kind": "page",
+  "sec": 13.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/national-pension-early-receipt.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"국민연금 가입기간이 10년이 안 되면 조기수령이 아예 \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 41,
+  "kind": "page",
+  "sec": 14.8,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/national-pension-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"국민연금과 퇴직연금(IRP)을 동시에 받으면 세금이 어\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 29,
+  "kind": "page",
+  "sec": 12.7,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/national-pension-income-tax.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"70세 부모님이 국민연금을 받는데, 자녀가 부양가족 공\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 12.7,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/national-pension-payment-exemption.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"납부예외를 신청 안 하고 그냥 보험료를 안 내면 어떻게\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.6,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/national-pension-voluntary.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"임의가입과 임의계속가입은 어떻게 다른가요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 51,
+  "kind": "page",
+  "sec": 14.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/nontaxable-allowance-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"회사에서 비과세 수당 구성을 바꿔주지 않으면 개인이 할\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 37,
+  "kind": "page",
+  "sec": 13.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/ordinary-wage-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 급여명세서에서 어떤 항목이 통상임금에 포함되는지 \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 29,
+  "kind": "page",
+  "sec": 12.0,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/ovulation-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 생리 중이나 생리 직후에도 임신이 될 수 있나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 12.6,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/parental-benefit-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 부모급여 계산기로 정확히 뭘 알 수 있나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 37,
+  "kind": "page",
+  "sec": 13.6,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/parental-leave-pay.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 육아휴직급여는 전액 매달 받나요, 일부는 나중에 \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 29,
+  "kind": "page",
+  "sec": 12.0,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/parental-work-reduction-pay-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 회사가 근로시간 단축 신청을 거부할 수도 있나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/passport-expiry-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 만 18세 미만 자녀의 여권 유효기간은 어른과 다\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 12.6,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/paternity-leave-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 배우자 출산휴가 급여는 어떻게, 언제 신청하나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 13.6,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/pension-tax-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"연금 수령 중 사망하면 남은 연금은 어떻게 되나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 12.7,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/pension-withdrawal-strategy.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"퇴직금이 작을수록 일시금과 연금 세금 차이가 줄어드나요\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 12.9,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/percent-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 연봉 인상률을 어떻게 계산하나요? 제시받은 인상 \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 37,
+  "kind": "page",
+  "sec": 13.0,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/pet-adoption-cost-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 반려동물 보험은 언제 가입하는 것이 가장 좋나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 39,
+  "kind": "page",
+  "sec": 13.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/pet-cost-saving-tips.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 셀프 미용 도구는 뭘 사야 하나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 29,
+  "kind": "page",
+  "sec": 12.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/pet-funeral-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"공설 동물장묘시설을 이용하면 더 저렴한가요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.2,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/pet-insurance.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 고양이도 펫보험에 가입할 수 있나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 39,
+  "kind": "page",
+  "sec": 13.8,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/pet-medical-cost.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 기왕증이 있으면 펫보험 가입이 안 되나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/pet-neutering-cost-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"중성화 수술 전후로 준비해야 할 것은 무엇인가요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 29,
+  "kind": "page",
+  "sec": 12.1,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/pet-registration-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"동물등록 비용을 지원받을 수 있나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 29,
+  "kind": "page",
+  "sec": 12.2,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/pet-senior-care-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 노령 반려동물을 위한 환경 개선에는 어떤 것들이 \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/pet-travel-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"고양이도 반려동물 동반 열차를 탈 수 있나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/postpartum-care-center-cost-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 서울형 안심 산후조리원은 아무나 이용할 수 있나요\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 14.2,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/prepayment-fee-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 이 사이트의 대출 상환 계산기로 중도상환수수료도 \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 12.7,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/property-purchase-costs-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 부대비용은 잔금일에 한꺼번에 다 나가나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.3,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/property-tax-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 재산세 납부 기한을 놓치면 어떻게 되나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 12.8,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/property-tax-second-payment-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 공동명의 아파트도 배우자 몫까지 제가 한 번에 카\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 12.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/raise-or-quit-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"연봉 인상률이 물가상승률보다 낮으면 실질적으로 손해인가\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 13.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/raise-rate-industry.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 연봉인상률 협상 때 어떤 자료를 근거로 제시해야 \"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 12.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/realestate-agent-fee.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 중개수수료는 누가 내나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 37,
+  "kind": "page",
+  "sec": 12.9,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/realestate-tax-timing.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"재산세 납부 후 집을 팔면 이미 낸 세금을 돌려받을 수\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 41,
+  "kind": "page",
+  "sec": 15.0,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/regional-health-insurance-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"지역가입자 건강보험료를 줄이는 방법이 있나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.9,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/registry-cost-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 부동산 등기는 언제까지 해야 하나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 12.7,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/rental-yield-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"공실이 6개월 이상 지속되면 실질수익률에 얼마나 영향을\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 13.1,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/rental-yield-valuation.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"임대수익률 역산 계산기, 직접 만들어서 쓰는 방법이 있\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.8,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/resignation-dday-checklist.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 퇴사 후 국민연금은 어떻게 처리해야 하나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 13.0,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/retirement-age-date-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"65세로 정년이 늘어난다는 뉴스가 많던데, 지금 계산법\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 29,
+  "kind": "page",
+  "sec": 12.9,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/retirement-living-cost.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"노후 의료비는 별도로 얼마나 준비해야 하나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.8,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/retirement-living-late-start.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"노후 생활비 계산기에 어떤 수치를 넣어야 현실적인 결과\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 47,
+  "kind": "page",
+  "sec": 15.7,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/saas-vs-self-build.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 자체구축 후 다시 SaaS로 돌아가는 경우도 있나\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 13.7,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/salary-5000-takehome.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 국민연금 납부액이 올라가면 나중에 더 받게 되나요\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 43,
+  "kind": "page",
+  "sec": 14.1,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/salary-comparison-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 내 연봉이 업계 상위 몇 %인지 알 수 있나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 43,
+  "kind": "page",
+  "sec": 14.3,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/salary-negotiation.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 현재 연봉을 회사에 알려야 하나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.8,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/salary-raise-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 연봉 인상 적용 시점(1월 vs 7월)이 왜 중요\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 37,
+  "kind": "page",
+  "sec": 12.8,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/sarcopenia-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. BMI가 정상인데 근감소증 위험이 있나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 37,
+  "kind": "page",
+  "sec": 14.2,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/savings-maturity-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 적금도 예금자보호 대상인가요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 14.1,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/savings-vs-deposit.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 이자소득이 많으면 종합소득세 신고 대상이 되나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 12.8,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/self-registry-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 전자신청과 방문신청 중 어떤 게 더 쉬운가요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 13.3,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/severance-pay-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 회사가 퇴직금을 안 주면 어떻게 하나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 41,
+  "kind": "page",
+  "sec": 13.7,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/single-household-retirement-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"노후 준비가 늦은 50대 1인 가구는 어떻게 해야 하나\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.7,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/social-insurance-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 퇴직 후 건강보험료는 어떻게 되나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 13.0,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/stock-average-price-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 평단가 계산에 매수 수수료와 세금도 넣어야 하나요\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 27,
+  "kind": "page",
+  "sec": 12.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/subscription-score-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 청약에 당첨됐다가 계약을 포기하면 통장을 다시 쓸\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 29,
+  "kind": "page",
+  "sec": 12.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/suneung-dday-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"수능 일정이 바뀌면 이 글의 D-day도 달라지나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 29,
+  "kind": "page",
+  "sec": 13.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/unemployment-benefit-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 조기 재취업 수당은 실업급여와 별도로 신청해야 하\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 39,
+  "kind": "page",
+  "sec": 14.3,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/unit-converter-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 27인치 모니터는 24인치보다 화면이 얼마나 큰가\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 13.1,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/vat-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 부가세 환급 조건과 처리 기간은 어떻게 되나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 41,
+  "kind": "page",
+  "sec": 14.6,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/visceral-fat-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 체지방률 계산기와 인바디 결과가 다른 이유는 무엇\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.6,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/weekday-calculator-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 납부기한이 공휴일과 겹칠 때 연체 가산세는 면제되\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 41,
+  "kind": "page",
+  "sec": 13.8,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/weight-by-height-2026.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 내 표준체중 범위와 목표 체중을 계산기로 바로 확\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 29,
+  "kind": "page",
+  "sec": 12.6,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/windsurf-vs-cursor-cost-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"여러 도구를 동시에 쓰는 게 비효율적인가요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 39,
+  "kind": "page",
+  "sec": 13.6,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/withholding-tax-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 프리랜서 수입 외에 근로소득도 있으면 어떻게 신고\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 41,
+  "kind": "page",
+  "sec": 13.8,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/youth-future-savings-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 도약계좌를 유지하는 게 나을까요, 미래적금으로 갈\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.3,
+  "ext_hold": []
+ },
+ {
+  "key": "/calc/ai/",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"인프라 비용 예측은 왜 실제와 차이가 나나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 19,
+  "kind": "page",
+  "sec": 11.0,
+  "ext_hold": []
+ },
+ {
+  "key": "/calc/auto/",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"전기차가 내연차보다 운영비가 얼마나 저렴한가요?\"",
+  "ext": [
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 19,
+  "kind": "page",
+  "sec": 12.2,
+  "ext_hold": []
+ },
+ {
+  "key": "/calc/baby/",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"육아휴직급여는 2026년에 얼마인가요?\"",
+  "ext": [
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 27,
+  "kind": "page",
+  "sec": 12.3,
+  "ext_hold": []
+ },
+ {
+  "key": "/calc/date/",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"임대차 계약 만료일 계산 시 주의할 점이 있나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 19,
+  "kind": "page",
+  "sec": 11.2,
+  "ext_hold": []
+ },
+ {
+  "key": "/calc/finance/",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"DSR과 LTV는 대출 한도를 어떻게 다르게 제한하나요\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 27,
+  "kind": "page",
+  "sec": 11.9,
+  "ext_hold": []
+ },
+ {
+  "key": "/calc/health/",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"기초대사량이 낮으면 어떻게 올릴 수 있나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 21,
+  "kind": "page",
+  "sec": 11.3,
+  "ext_hold": []
+ },
+ {
+  "key": "/calc/pension-welfare/",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"기초연금 소득인정액은 어떻게 계산하나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 19,
+  "kind": "page",
+  "sec": 11.1,
+  "ext_hold": []
+ },
+ {
+  "key": "/calc/pet/",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"반려동물 병원비가 비싼 이유는 무엇인가요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 21,
+  "kind": "page",
+  "sec": 11.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/calc/realestate/",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"종합부동산세 기본공제는 얼마인가요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 29,
+  "kind": "page",
+  "sec": 12.2,
+  "ext_hold": []
+ },
+ {
+  "key": "/calc/salary/",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"시급·일급·주급을 연봉으로 환산할 때 주의할 점은?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 29,
+  "kind": "page",
+  "sec": 12.3,
+  "ext_hold": []
+ },
+ {
+  "key": "/calc/tax/",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"프리랜서가 놓치기 쉬운 공제 항목에는 어떤 게 있나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 27,
+  "kind": "page",
+  "sec": 11.9,
+  "ext_hold": []
+ },
+ {
+  "key": "/calc/tools/",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"생활·도구 계산기는 무료인가요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 25,
+  "kind": "page",
+  "sec": 11.8,
+  "ext_hold": []
+ },
+ {
+  "key": "/contact.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 button\"카테고리\"",
+  "ext": [
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+  ],
+  "clicks": 5,
+  "kind": "page",
+  "sec": 3.3,
+  "ext_hold": []
+ },
+ {
+  "key": "/disclaimer.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 button\"카테고리\"",
+  "ext": [
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+  ],
+  "clicks": 5,
+  "kind": "page",
+  "sec": 3.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/privacy.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 button\"카테고리\"",
+  "ext": [
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+  ],
+  "clicks": 5,
+  "kind": "page",
+  "sec": 3.4,
+  "ext_hold": []
+ },
+ {
+  "key": "/recent/",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 button\"기록 지우기\"",
+  "ext": [
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 7,
+  "kind": "page",
+  "sec": 9.6,
+  "ext_hold": []
+ },
+ {
+  "key": "/terms.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 button\"카테고리\"",
+  "ext": [
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+  ],
+  "clicks": 5,
+  "kind": "page",
+  "sec": 3.4,
+  "ext_hold": []
+ }
+]

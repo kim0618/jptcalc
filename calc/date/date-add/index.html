@@ -29,72 +29,128 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link rel="stylesheet" href="/assets/date-common.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+<link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
+  <link rel="stylesheet" href="/assets/vendor/flatpickr/4.6.13/flatpickr.min.css?v=1b34a425" />
   <style>
-    input[type=date],input[type=number],.flatpickr-input{width:100%;border:1.5px solid var(--gray-200);border-radius:12px;padding:13px 16px;font-size:15px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:#fff;outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
-    .flatpickr-day.selected,.flatpickr-day.selected:hover{background:var(--primary);border-color:var(--primary)}
-    .flatpickr-day.today{border-color:var(--primary)}
-    .flatpickr-months .flatpickr-month{height:36px}
-    .flatpickr-current-month .flatpickr-monthDropdown-months,.flatpickr-current-month input.cur-year{font-size:14px;font-weight:700}
-    input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none}
-    input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(249,115,22,0.15)}
-    .input-wrap{position:relative}
-    .input-wrap .unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:12px;font-weight:600;color:var(--gray-400);pointer-events:none}
-    .seg-group{display:flex;background:var(--gray-100);border-radius:10px;padding:3px;gap:3px;margin-bottom:16px}
-    .seg-btn{flex:1;border:none;border-radius:8px;background:transparent;padding:9px 4px;font-size:13px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap}
-    .seg-btn.active{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,0.08);font-weight:700}
-    .calc-btn{width:100%;border:none;border-radius:12px;padding:14px;font-size:15px;font-weight:700;color:#fff;background:var(--primary);cursor:pointer;transition:all .18s;font-family:inherit;margin-top:4px}
-    .calc-btn:hover{opacity:.9;transform:translateY(-1px)}
-    .result-card{background:linear-gradient(135deg,#FFF7ED 0%,#FFEDD5 100%);border:1px solid rgba(249,115,22,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
-    .result-card.show{display:block}
-    .result-highlight{background:rgba(249,115,22,0.1);border-radius:12px;padding:16px;margin-bottom:16px;text-align:center}
-    .rh-label{font-size:12px;color:var(--gray-500);margin-bottom:4px}
-    .rh-value{font-size:24px;font-weight:900;color:var(--primary)}
-    .rh-sub{font-size:12px;color:var(--gray-500);margin-top:2px}
-    .result-total-row{border-top:2px solid rgba(249,115,22,0.3)!important;margin-top:4px;padding-top:14px!important}
-    .result-total-label{font-size:14px;font-weight:700;color:var(--gray-900)}
-    .result-total-value{font-size:20px;font-weight:900;color:var(--primary)}
+    /* 페이지 고유 스타일(공통 부품 재정의는 base.css가 맡아 뺐다) */
+    .flatpickr-day.selected, .flatpickr-day.selected:hover { background:var(--primary);border-color:var(--primary) }
+    .flatpickr-day.today { border-color:var(--primary) }
+    .flatpickr-months .flatpickr-month { height:36px }
+    .flatpickr-current-month .flatpickr-monthDropdown-months { font-size:14px;font-weight:700 }
+    .calc-btn { width:100%;border:none;border-radius:12px;padding:14px;font-size:15px;font-weight:700;color:#fff;background:var(--primary);cursor:pointer;transition:all .18s;font-family:inherit;margin-top:4px }
+    .calc-btn:hover { opacity:.9;transform:translateY(-1px) }
+    .rh-label { font-size:12px;color:var(--gray-500);margin-bottom:4px }
+    .rh-value { font-size:24px;font-weight:900;color:var(--primary) }
+    .rh-sub { font-size:12px;color:var(--gray-500);margin-top:2px }
+  </style>
+  <style>
+/* 날짜 고유 결과 상자: 원본 그라데이션 대신 공용 결과 상자(.result-highlight)로. 변환기가 클래스를 덧붙인다 */
+.dday-display, .ymd-highlight { text-align: left; }
+.dday-label, .ymd-label { font-weight: var(--fw-meta); }
+.dday-number, .ymd-value { font-weight: var(--fw-result); }
+.dday-title, .ymd-sub { margin: 0; }
   </style>
 </head>
-<body>
-<header class="site-header"><div class="header-inner"><a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="로고" style="width:32px;height:32px;display:block" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a><nav class="header-nav"><a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B"></span>부동산</a><a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981"></span>프리랜서 세금</a><a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6"></span>이직/연봉</a><a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1"></span>금융·이자</a><a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981"></span>건강</a><a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9"></span>연금·복지</a><a href="/calc/date/" class="nav-item active"><span class="nav-dot" style="background:#F97316"></span>날짜·D-day</a><a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6"></span>AI/테크</a><a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6"></span>반려동물</a></nav><div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div><button class="hamburger" onclick="document.querySelector('.header-nav').classList.toggle('show')" aria-label="메뉴"><span></span><span></span><span></span></button></div></header>
-<main class="page-wrap">
-  <div class="page-header"><div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/date/">날짜·D-day 계산기</a><span class="breadcrumb-sep">›</span><span>날짜 더하기/빼기</span></div>
-    <div class="page-header-badge">➕ 무료 온라인 계산기</div><h1>날짜 더하기/빼기 계산기</h1><p>특정 날짜에서 년, 월, 일을 더하거나 빼서 결과 날짜를 계산합니다</p></div>
-  <div class="card"><div class="card-title">날짜 더하기 / 빼기</div><div class="field"><div class="field-label">시작 날짜</div><input type="date" id="add-start" /></div><div class="field"><div class="field-label">연산</div><div class="seg-group"><button class="seg-btn active" id="add-op-plus" onclick="setAddOp('+',this)">+ 더하기</button><button class="seg-btn" id="add-op-minus" onclick="setAddOp('-',this)">- 빼기</button></div></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:16px"><div><div class="field-label" style="margin-bottom:6px">년</div><div class="input-wrap"><input type="number" id="add-years" value="0" min="0" /><span class="unit">년</span></div></div><div><div class="field-label" style="margin-bottom:6px">월</div><div class="input-wrap"><input type="number" id="add-months" value="0" min="0" /><span class="unit">월</span></div></div><div><div class="field-label" style="margin-bottom:6px">일</div><div class="input-wrap"><input type="number" id="add-days" value="0" min="0" /><span class="unit">일</span></div></div></div><button class="calc-btn" onclick="calcAdd()">결과 날짜 계산하기</button></div>
-  <div class="result-card" id="add-result" aria-live="polite"><div class="result-highlight"><div class="rh-label" id="add-op-label">더한 결과</div><div class="rh-value" id="add-result-date"></div><div class="rh-sub" id="add-result-weekday"></div></div><div id="add-detail"></div><div class="result-note">※ 월 단위 계산 시 해당 월에 날짜가 없으면 그 달의 마지막 날로 자동 조정됩니다 (예: 1월 31일 +1개월 = 2월 28일). 년 → 월 → 일 순서로 계산됩니다.</div></div>
+<body data-cat="date" style="--cat: var(--c-date)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
+</header>
 
-  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/date/">날짜·D-day 계산기</a> &rsaquo; 날짜 더하기/빼기</div>
+      <div class="page-badge">무료 온라인 계산기</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-calendar-days"></use></svg></span>
+        <h1 class="page-title">날짜 더하기/빼기 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">무료 온라인 계산기</span>
+          <span class="ds-trust-chip">2026.05.08 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">특정 날짜에서 년, 월, 일을 더하거나 빼서 결과 날짜를 계산합니다</p>
+    </div>
+  </div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card"><div class="field-label ds-group-label">날짜 더하기 / 빼기</div><div class="field"><div class="field-label">시작 날짜</div><input type="date" id="add-start" /></div><div class="field"><div class="field-label">연산</div><div class="seg-group"><button class="seg-btn active" id="add-op-plus" onclick="setAddOp('+',this)">+ 더하기</button><button class="seg-btn" id="add-op-minus" onclick="setAddOp('-',this)">- 빼기</button></div></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:16px"><div><div class="field-label" style="margin-bottom:6px">년</div><div class="input-wrap"><input type="number" id="add-years" value="0" min="0" /><span class="unit">년</span></div></div><div><div class="field-label" style="margin-bottom:6px">월</div><div class="input-wrap"><input type="number" id="add-months" value="0" min="0" /><span class="unit">월</span></div></div><div><div class="field-label" style="margin-bottom:6px">일</div><div class="input-wrap"><input type="number" id="add-days" value="0" min="0" /><span class="unit">일</span></div></div></div></div>
+
+        <button type="button" class="ds-btn-calc" data-calc-submit="calcAdd" data-result="add-result" data-required="add-start,add-years|add-months|add-days">결과 날짜 계산하기</button>
+      </div>
+    </section>
+
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="add-result" aria-live="polite"><div class="result-highlight"><div class="rh-label" id="add-op-label">더한 결과</div><div class="rh-value" id="add-result-date"></div><div class="rh-sub" id="add-result-weekday"></div></div><div id="add-detail"></div><div class="result-note">※ 월 단위 계산 시 해당 월에 날짜가 없으면 그 달의 마지막 날로 자동 조정됩니다 (예: 1월 31일 +1개월 = 2월 28일). 년 → 월 → 일 순서로 계산됩니다.</div>
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('add-result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/date/dday/">D-day 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">더한 결과</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="date-add-next">
+        <a class="ds-next-card" href="/calc/date/dday/" data-next="dday"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-calendar-days"></use></svg></span><span class="ds-next-body"><b>D-day 계산기</b><span>목표 날짜까지 남은 일수를 실시간으로 계산합니다. 시험·계약 만료·결혼식 등 여러 D-day를 저장해 한 번에 관리할 수 있습니다. 시작일 포함 여부와 공휴일 제외 옵션도 지원합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/date/date-difference/" data-next="date-difference"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-calendar-days"></use></svg></span><span class="ds-next-body"><b>날짜 차이 계산기</b><span>두 날짜 사이의 차이를 일수·주수·개월수·년수로 계산합니다. 근로기준법 기준 근속기간 산정, 임대차 계약 잔여기간 확인 등에 활용됩니다. 윤년도 자동으로 반영됩니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
+  </div>
+
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">그레고리력(양력) 기반 날짜 계산 <a href="https://www.kasi.re.kr" target="_blank" rel="noopener">한국천문연구원 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#date-add-s1">가이드</a><a href="#date-add-s2">날짜 연산</a><a href="#date-add-s3">계산 예시</a><a href="#date-add-s4">주의할 점</a><a href="#date-add-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
     <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
     <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
   </div>
 
   <div class="guide-section">
-    <div class="guide-card">
-      <h2>날짜 더하기/빼기 활용 가이드</h2>
-      <p>특정 날짜에서 년, 월, 일을 더하거나 빼서 결과 날짜를 정확하게 계산합니다. 계약 만료일, 복무 기간, 신고 기한 등을 파악할 때 유용합니다.</p>
+            <section class="ds-section ds-prose" aria-labelledby="date-add-s1">
+          <div class="ds-section-head"><h2 id="date-add-s1">날짜 더하기/빼기 활용 가이드</h2></div>
+<p>특정 날짜에서 년, 월, 일을 더하거나 빼서 결과 날짜를 정확하게 계산합니다. 계약 만료일, 복무 기간, 신고 기한 등을 파악할 때 유용합니다.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>계약 만료일</strong><span>계약 시작일에서 계약 기간을 더해 만료일을 정확히 산출합니다.</span></div>
         <div class="guide-box"><strong>복무 기간 계산</strong><span>입대일에서 복무 기간을 더하면 전역 예정일을 확인할 수 있습니다.</span></div>
         <div class="guide-box"><strong>신고·납부 기한</strong><span>기준일에서 법정 기한을 더해 정확한 마감일을 계산하세요.</span></div>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>날짜 연산 처리 원리</h2>
-      <p>이 계산기는 그레고리력(양력) 기반으로 년 → 월 → 일 순서로 순차 계산합니다. 한국천문연구원 역법 기준과 동일하게 윤년 및 말일 처리를 자동 반영합니다.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="date-add-s2">
+          <div class="ds-section-head"><h2 id="date-add-s2">날짜 연산 처리 원리</h2></div>
+<p>이 계산기는 그레고리력(양력) 기반으로 년 → 월 → 일 순서로 순차 계산합니다. 한국천문연구원 역법 기준과 동일하게 윤년 및 말일 처리를 자동 반영합니다.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>순차 계산 순서</strong><span>년 → 월 → 일 순서로 각 단위를 독립적으로 처리합니다. 예를 들어 2025년 1월 31일에 1년 1개월 1일을 더하면 2026년 3월 1일이 됩니다.</span></div>
         <div class="guide-box"><strong>말일 자동 조정</strong><span>1월 31일 +1개월 = 2월 28일(윤년은 29일). 해당 월에 없는 날짜는 그 달의 마지막 날로 자동 조정됩니다. 3월 31일 +1개월 = 4월 30일도 같은 원리입니다.</span></div>
         <div class="guide-box"><strong>윤년 자동 반영</strong><span>2월 29일이 포함된 계산은 윤년 여부(4년마다 한 번)를 자동으로 판단합니다. 2024년은 윤년, 2026년은 평년으로 2026년 2월은 28일까지입니다.</span></div>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>실제 계산 예시</h2>
-      <h3>예시 1 - 이주원(34세, 직장인) 전세 계약 만료일 계산</h3>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="date-add-s3">
+          <div class="ds-section-head"><h2 id="date-add-s3">실제 계산 예시</h2></div>
+<h3>예시 1 - 이주원(34세, 직장인) 전세 계약 만료일 계산</h3>
       <p>이주원 씨의 전세 계약 시작일은 2024년 2월 15일이고 계약기간은 2년(24개월)입니다. 계약 갱신 통보 기한(만료 2개월 전)도 함께 확인하려 합니다.</p>
       <ul>
         <li>계약 만료일: 2024년 2월 15일 + 2년 = 2026년 2월 15일 (일요일)</li>
@@ -109,26 +165,46 @@
         <li>오늘(2026년 5월 8일) 기준 전역까지: 약 286일 남음</li>
         <li><strong>전역 후 첫 직장 입사 목표가 2027년 3월이라면 약 28일 여유가 생깁니다</strong></li>
       </ul>
-    </div>
-    <div class="guide-card">
-      <h2>날짜 계산 시 주의사항</h2>
-      <p>계산기 결과는 그레고리력 기준의 산술적 결과입니다. 법적·행정적 기한에 적용할 때는 아래 사항을 추가로 확인하세요.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="date-add-s4">
+          <div class="ds-section-head"><h2 id="date-add-s4">날짜 계산 시 주의사항</h2></div>
+<p>계산기 결과는 그레고리력 기준의 산술적 결과입니다. 법적·행정적 기한에 적용할 때는 아래 사항을 추가로 확인하세요.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>공휴일·휴일 처리</strong><span>법정 기한이 토요일·공휴일에 해당하면 다음 영업일로 자동 연장되는 경우가 많습니다. 세금 신고·납부 기한, 법원 서류 제출 기한은 반드시 해당 기관에 확인하세요.</span></div>
         <div class="guide-box"><strong>음력 날짜 미지원</strong><span>이 계산기는 양력만 지원합니다. 음력 날짜는 한국천문연구원(kasi.re.kr) 역법 서비스에서 양력으로 변환한 뒤 입력하세요.</span></div>
         <div class="guide-box"><strong>계약 기간 기산점</strong><span>계약서에 따라 시작일 당일 포함 여부가 다를 수 있습니다. 예를 들어 "2024년 2월 15일부터 2년"이 시작일 포함인지 다음 날부터인지 계약서 원문을 확인해야 합니다.</span></div>
       </div>
-    </div>
-    <div class="guide-card faq-card">
-      <h2>자주 묻는 질문</h2>
-      <div class="faq-item"><h3>날짜 더하기/빼기 계산기는 어떤 상황에 유용한가요?</h3><p>계약 만료일, 군 복무 전역 예정일, 세금 신고·납부 기한 등을 계산할 때 유용합니다. 시작일에서 계약 기간만큼 더하거나, 기준일에서 법정 기한을 더해 정확한 마감일을 산출할 수 있습니다.</p></div>
-      <div class="faq-item"><h3>월 단위 계산 시 말일은 어떻게 처리되나요?</h3><p>1월 31일에 1개월을 더하면 2월 28일(또는 윤년의 경우 29일)로 계산됩니다. 해당 월에 그 날짜가 존재하지 않으면 자동으로 그 달의 마지막 날로 조정됩니다.</p></div>
-      <div class="faq-item"><h3>년, 월, 일을 동시에 더할 수 있나요?</h3><p>네, 세 가지를 동시에 입력하면 년 → 월 → 일 순서로 순차 계산됩니다. 각 단위를 0으로 두면 해당 단위는 계산에서 제외됩니다.</p></div>
-      <div class="faq-item"><h3>빼기 계산도 가능한가요?</h3><p>네, 연산을 '빼기'로 전환하면 입력한 기간만큼 과거 날짜를 계산합니다. 예를 들어 오늘에서 100일을 빼면 100일 전 날짜를 확인할 수 있습니다.</p></div>
-      <div class="faq-item"><h3>음력 날짜로도 계산할 수 있나요?</h3><p>이 계산기는 그레고리력(양력) 기준으로만 동작합니다. 음력 날짜 계산은 한국천문연구원 역법 서비스(kasi.re.kr)에서 제공하는 음력 변환 도구를 이용하는 것이 정확합니다. 음력 날짜를 양력으로 변환한 뒤 이 계산기에 입력하면 이후 날짜 연산이 가능합니다. 기일이나 음력 명절(추석·설) 등 매년 날짜가 달라지는 경우는 해당 연도 변환값을 따로 확인해야 합니다.</p></div>
-      <div class="faq-item"><h3>법정 기한 계산 시 주의할 점이 있나요?</h3><p>법정 기한이 토요일·공휴일인 경우 다음 영업일로 자동 연장되는 경우가 많습니다. 세금 신고·납부, 계약 기한, 법원 제출 기한 등은 이 계산기로 결과 날짜를 먼저 확인한 뒤, 해당 날짜가 휴일이면 다음 영업일을 확인해야 합니다. 공휴일 정보는 인사혁신처 공휴일 자료를 참고하세요.</p></div>
-    </div>
+        </section>
+            <section class="ds-section faq-card" aria-labelledby="date-add-faq">
+          <div class="ds-section-head"><h2 id="date-add-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>날짜 더하기/빼기 계산기는 어떤 상황에 유용한가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>계약 만료일, 군 복무 전역 예정일, 세금 신고·납부 기한 등을 계산할 때 유용합니다. 시작일에서 계약 기간만큼 더하거나, 기준일에서 법정 기한을 더해 정확한 마감일을 산출할 수 있습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>월 단위 계산 시 말일은 어떻게 처리되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>1월 31일에 1개월을 더하면 2월 28일(또는 윤년의 경우 29일)로 계산됩니다. 해당 월에 그 날짜가 존재하지 않으면 자동으로 그 달의 마지막 날로 조정됩니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>년, 월, 일을 동시에 더할 수 있나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>네, 세 가지를 동시에 입력하면 년 → 월 → 일 순서로 순차 계산됩니다. 각 단위를 0으로 두면 해당 단위는 계산에서 제외됩니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>빼기 계산도 가능한가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>네, 연산을 '빼기'로 전환하면 입력한 기간만큼 과거 날짜를 계산합니다. 예를 들어 오늘에서 100일을 빼면 100일 전 날짜를 확인할 수 있습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>음력 날짜로도 계산할 수 있나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>이 계산기는 그레고리력(양력) 기준으로만 동작합니다. 음력 날짜 계산은 한국천문연구원 역법 서비스(kasi.re.kr)에서 제공하는 음력 변환 도구를 이용하는 것이 정확합니다. 음력 날짜를 양력으로 변환한 뒤 이 계산기에 입력하면 이후 날짜 연산이 가능합니다. 기일이나 음력 명절(추석·설) 등 매년 날짜가 달라지는 경우는 해당 연도 변환값을 따로 확인해야 합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>법정 기한 계산 시 주의할 점이 있나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>법정 기한이 토요일·공휴일인 경우 다음 영업일로 자동 연장되는 경우가 많습니다. 세금 신고·납부, 계약 기한, 법원 제출 기한 등은 이 계산기로 결과 날짜를 먼저 확인한 뒤, 해당 날짜가 휴일이면 다음 영업일을 확인해야 합니다. 공휴일 정보는 인사혁신처 공휴일 자료를 참고하세요.</p>
+            </details>
+          </div>
+        </section>
   </div>
+    </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
   <script>
   window.TRUST_BLOCK_CONFIG = {
     standard: '그레고리력(양력) 기반 날짜 계산',
@@ -143,27 +219,39 @@
     lastReviewed: '2026.05',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
 
-  <div class="sibling-section">
-    <div class="sibling-title">다른 날짜 계산기</div>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 날짜 계산기</h2>
     <div class="sibling-list">
-      <a href="/calc/date/dday/" class="sibling-link">📆 D-day</a>
-      <a href="/calc/date/date-difference/" class="sibling-link">📏 날짜 차이</a>
-      <a href="/calc/date/date-add/" class="sibling-link current">➕ 날짜 더하기/빼기</a>
-      <a href="/calc/date/age/" class="sibling-link">🎂 만 나이</a>
-      <a href="/calc/date/weekday/" class="sibling-link">📅 요일 계산</a>
+      <a href="/calc/date/dday/" class="sibling-link">D-day</a>
+      <a href="/calc/date/date-difference/" class="sibling-link">날짜 차이</a>
+      <a href="/calc/date/age/" class="sibling-link">만 나이</a>
+      <a href="/calc/date/weekday/" class="sibling-link">요일 계산</a>
     </div>
-    <div class="sibling-title">관련 가이드</div>
-    <div class="sibling-list">
-      <a href="/blog/posts/consumption-expiry-guide.html" class="sibling-link">📖 소비기한 계산법 2026 - 유통기한과 뭐가 다른가, 우유는 왜 아직 안 …</a>
-      <a href="/blog/posts/date-add-guide.html" class="sibling-link">📖 날짜 더하기·빼기 계산법 - 계약 만료일·법정 기한에서 실수 없는 방법</a>
-      <a href="/blog/posts/military-discharge-date.html" class="sibling-link">📖 군대 전역일 계산법 2026 - 입대일 + 복무기간 - 1일, 육군 18·…</a>
-      <a href="/blog/posts/retirement-age-date-guide.html" class="sibling-link">📖 정년퇴직일 계산법 2026 - 만 60세 법정 정년, 내 퇴직일은 정확히 …</a>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/consumption-expiry-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/consumption-expiry-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>소비기한 계산법 2026 - 유통기한과 뭐가 다른가, 우유는 왜 아직 안 바뀌었나</span></a>
+      <a href="/blog/posts/date-add-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/date-add-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>날짜 더하기·빼기 계산법 - 계약 만료일·법정 기한에서 실수 없는 방법</span></a>
+      <a href="/blog/posts/military-discharge-date.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/military-discharge-date-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>군대 전역일 계산법 2026 - 입대일 + 복무기간 - 1일, 육군 18·해군 20·공군 21개월</span></a>
+      <a href="/blog/posts/retirement-age-date-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/retirement-age-date-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>정년퇴직일 계산법 2026 - 만 60세 법정 정년, 내 퇴직일은 정확히 언제?</span></a>
     </div>
   </div>
 </main>
-<footer class="site-footer"><div class="footer-inner"><div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div><span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span></div></footer>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
+  </div>
+</footer>
+
+<script src="/assets/ds/calc-kit.js?v=d45e66d9"></script>
 <script>
 var KO_DAYS=['일요일','월요일','화요일','수요일','목요일','금요일','토요일'];
 var WEEK_COLORS=['#EF4444','#6B7280','#6B7280','#6B7280','#6B7280','#6B7280','#3B82F6'];
@@ -179,9 +267,9 @@ function calcAdd(){
   if(!start){alert('시작 날짜를 입력해주세요.');return}
   var sy=start.getFullYear();
   if(sy<1900||sy>2200){alert('1900년~2200년 사이의 날짜를 입력해주세요.');return}
-  var years=Math.max(0,parseInt(document.getElementById('add-years').value)||0);
-  var months=Math.max(0,parseInt(document.getElementById('add-months').value)||0);
-  var days=Math.max(0,parseInt(document.getElementById('add-days').value)||0);
+  var years=Math.max(0,parseInt(String(document.getElementById('add-years').value).replace(/,/g, ''))||0);
+  var months=Math.max(0,parseInt(String(document.getElementById('add-months').value).replace(/,/g, ''))||0);
+  var days=Math.max(0,parseInt(String(document.getElementById('add-days').value).replace(/,/g, ''))||0);
   if(years===0&&months===0&&days===0){alert('년, 월, 일 중 하나 이상 입력해주세요.');return}
   var result=new Date(start);var sign=addOp==='+'?1:-1;
   var totalMonths=sign*years*12+sign*months;
@@ -213,14 +301,13 @@ function calcAdd(){
 })();
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
-<script>document.querySelectorAll('input[type=date]').forEach(function(el){flatpickr(el,{locale:'ko',dateFormat:'Y-m-d',disableMobile:true,monthSelectorType:'dropdown',allowInput:true})});</script>
-<script src="/assets/calc-validate.js"></script>
-<script src="/assets/calc-result-tools.js"></script>
-<script src="/assets/footer-unified.js" defer></script>
-<script src="/assets/calc-registry.js"></script>
-<script src="/assets/date-detail-shell.js"></script>
+<script src="/assets/vendor/flatpickr/4.6.13/flatpickr.min.js?v=1eeab1cb"></script>
+<script src="/assets/vendor/flatpickr/4.6.13/l10n/ko.js?v=a9c2b216"></script>
+<script>document.querySelectorAll('input[type=date]').forEach(function(el){flatpickr(el,{locale:'ko',dateFormat:'Y-m-d',altInput:true,altFormat:'Y.m.d',onReady:function(d,s,fp){if(fp.altInput){fp.altInput.setAttribute('inputmode','decimal');fp.altInput.placeholder='예) 2024.03.15'}},parseDate:function(s){var m=String(s).match(/(\d{4})\D+(\d{1,2})\D+(\d{1,2})/);return m?new Date(+m[1],m[2]-1,+m[3]):undefined},disableMobile:true,monthSelectorType:'dropdown',allowInput:true})});</script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
@@ -231,7 +318,13 @@ window.ARTICLE_INFO_CONFIG = {
   category: 'date'
 };
 </script>
-<script src="/assets/blog-article-info.js"></script>
-<script src="/assets/blog-review-footer.js"></script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "add-result", "required": ["add-start", "add-years|add-months|add-days"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#date-add-next", "next": []});
+  DSCalc.placeTrust('ds-trust-col');
+</script>
+<script src="/assets/ds/prefill.js?v=fa5eb49a" defer></script>
 </body>
 </html>

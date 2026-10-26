@@ -22,10 +22,9 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link rel="stylesheet" href="/assets/auto-common.css" />
+<link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -50,42 +49,45 @@
   </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"자동차세는 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"비영업용 승용차 자동차세는 배기량(cc) × cc당 세액으로 계산합니다. cc당 세액은 1,000cc 이하 80원, 1,600cc 이하 140원, 1,600cc 초과 200원입니다. 여기에 지방교육세 30%가 더해집니다. 예를 들어 2,000cc 차량은 2,000 × 200 = 40만원이 본세이고, 지방교육세 12만원을 더해 연세액은 약 52만원이지만, 차령에 따라 경감됩니다."}},{"@type":"Question","name":"차령(연식)에 따라 자동차세가 줄어드나요?","acceptedAnswer":{"@type":"Answer","text":"네. 비영업용 승용차는 차령 3년(최초 등록일이 속한 해를 1년으로 셈)부터 매년 5%씩 자동차세 본세가 경감되며, 12년차 이상은 최대 50%까지 경감됩니다. 예를 들어 2,000cc 차량(본세 40만원)이 차령 6년이면 20% 경감되어 본세가 32만원, 지방교육세 9만 6천원을 더해 연세액 약 41만 6천원입니다. 전기차 정액분과 영업용에는 차령 경감이 적용되지 않습니다."}},{"@type":"Question","name":"1월에 자동차세를 한꺼번에 내면 얼마나 할인되나요?","acceptedAnswer":{"@type":"Answer","text":"자동차세를 1월에 연납(선납)하면 2026년 기준 남은 기간분에 대해 공제율 5%가 적용되어 실질 약 4.58% 할인됩니다. 연세액 41만 6천원인 경우 1월 연납 시 약 1만 9천원이 할인됩니다. 1월 외에도 3월(약 3.77%), 6월(약 2.50%), 9월(약 1.25%)에 연납할 수 있으며, 늦게 신청할수록 할인율이 줄어듭니다. 신청은 위택스(wetax.go.kr)나 관할 지자체에서 합니다."}},{"@type":"Question","name":"전기차·수소차 자동차세는 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"전기차·수소차는 배기량이 없어 정액으로 부과됩니다. 비영업용은 연 10만원, 영업용은 연 2만원이며, 여기에 지방교육세 30%가 더해져 비영업용 실제 연세액은 13만원입니다. 차령 경감은 적용되지 않습니다. 연세액 13만원은 10만원을 초과하므로 6월·12월 2회로 분할 부과됩니다."}},{"@type":"Question","name":"자동차세는 언제 납부하나요?","acceptedAnswer":{"@type":"Answer","text":"정기분 자동차세는 1기분(과세기준일 6월 1일, 납기 6월 16~30일)과 2기분(과세기준일 12월 1일, 납기 12월 16~31일)으로 나누어 부과됩니다. 다만 연세액이 10만원 이하이면 6월에 전액 일괄 부과됩니다. 미리 한꺼번에 내고 할인받으려면 1·3·6·9월에 연납을 신청하면 됩니다."}}]}</script>
   <style>
-    input[type=number]:focus,select:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(239,68,68,0.15)}
-    .result-card{background:linear-gradient(135deg,#FEF2F2 0%,#FEE2E2 100%);border:1px solid rgba(239,68,68,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
-    .result-card.show{display:block}
-    .result-highlight{background:rgba(239,68,68,0.1);border-radius:12px;padding:16px;margin-bottom:16px;text-align:center}
-    .rh-label{font-size:12px;color:var(--gray-500);margin-bottom:4px}
-    .rh-value{font-size:28px;font-weight:900;color:var(--primary)}
-    .rh-sub{font-size:12px;color:var(--gray-500);margin-top:2px}
-    .field-sel{width:100%;padding:12px 14px;border:1px solid var(--gray-200);border-radius:10px;font-size:15px;font-family:inherit;background:#fff;color:var(--gray-900)}
+    /* 페이지 고유 스타일(공통 부품 재정의는 base.css가 맡아 뺐다) */
+    .rh-label { font-size:12px;color:var(--gray-500);margin-bottom:4px }
+    .rh-value { font-size:28px;font-weight:900;color:var(--primary) }
+    .rh-sub { font-size:12px;color:var(--gray-500);margin-top:2px }
   </style>
 </head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
-    <nav class="header-nav">
-      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
-      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/tools/" class="nav-item"><span class="nav-dot" style="background:#14B8A6;"></span>생활·도구</a>
-      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
-      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
-      <a href="/calc/auto/" class="nav-item active"><span class="nav-dot" style="background:#EF4444;"></span>자동차</a>
-    </nav>
-    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
-    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
-  </div>
+<body data-cat="auto" style="--cat: var(--c-auto)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
 </header>
-<main class="page-wrap">
-  <div class="page-header">
-    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/auto/">자동차 계산기</a><span class="breadcrumb-sep">›</span><span>자동차세 계산기</span></div>
-    <div class="page-header-badge">🚙 2026 배기량·차령·연납 반영</div>
-    <h1>자동차세 계산기</h1>
-    <p>배기량과 등록연도로 자동차세·지방교육세·차령 경감·연납 할인을 계산하세요</p>
+
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/auto/">자동차 계산기</a> &rsaquo; 자동차세 계산기</div>
+      <div class="page-badge">2026 배기량·차령·연납 반영</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-car"></use></svg></span>
+        <h1 class="page-title">자동차세 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">2026 배기량·차령·연납 반영</span>
+          <span class="ds-trust-chip">2026.06.22 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">배기량과 등록연도로 자동차세·지방교육세·차령 경감·연납 할인을 계산하세요</p>
+    </div>
   </div>
-    <div class="card">
-      <div class="card-title">차량 정보</div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+      <div class="field-label ds-group-label">차량 정보</div>
       <div class="field">
         <div class="field-label">연료 / 차종</div>
         <div class="seg-group" style="margin-bottom:0" id="fuel-group">
@@ -127,7 +129,14 @@
         </select>
       </div>
     </div>
-    <div class="result-card" id="result">
+
+        <button type="button" class="ds-btn-calc" data-calc-submit="calc" data-result="result" data-required="cc,reg-year">계산하기</button>
+      </div>
+    </section>
+
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="result">
       <div class="result-highlight">
         <div class="rh-label" id="rh-label">연세액 (자동차세 + 지방교육세)</div>
         <div class="rh-value" id="r-annual">-</div>
@@ -141,18 +150,46 @@
         <span class="result-total-value" id="r-total">-</span>
       </div>
       <p class="result-note" id="r-note">※ 정기분은 6월(1기)·12월(2기) 분할 부과되며, 연세액 10만원 이하는 6월에 일괄 부과됩니다. 이 결과는 참고용 추정치이며, 실제 부과액은 위택스·관할 지자체에서 확인하세요.</p>
-</div>
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/auto/acquisition-tax/">자동차 취득세 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
 
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">연세액 (자동차세 + 지방교육세)</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
 
-  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="auto-tax-next">
+        <a class="ds-next-card" href="/calc/auto/acquisition-tax/" data-next="acquisition-tax"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-car"></use></svg></span><span class="ds-next-body"><b>자동차 취득세 계산기</b><span>공장도가격으로 신차 취득세와 개별소비세·교육세·부가세, 신차 실구매가를 한 번에 계산합니다. 전기차·경차 감면을 반영합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/auto/used-car-tax/" data-next="used-car-tax"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-car"></use></svg></span><span class="ds-next-body"><b>중고차 취득세 계산기</b><span>기준가격·제작연도로 중고차 명의이전 취득세를 시가표준액(경과연수별 잔가율) 기준으로 계산합니다. 실거래가·경차 면제를 반영합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
+  </div>
+
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">지방세법 제127~128조·시행령 제122조②(차령)·제125조⑥(연납 이자율 5%) <a href="https://www.wetax.go.kr" target="_blank" rel="noopener">위택스 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#auto-tax-s1">자동차세, 이렇게</a><a href="#auto-tax-s2">구간별 표</a><a href="#auto-tax-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
     <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
     <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
   </div>
 
   <div class="guide-section">
-    <div class="guide-card">
-      <h2>자동차세, 이렇게 계산된다</h2>
-      <p>비영업용 승용차 자동차세는 배기량(cc)에 cc당 세액을 곱해 본세를 구하고, 여기에 지방교육세 30%를 더합니다. 차령(최초 등록일이 속한 해를 1년으로 센 사용연수)이 3년 이상이면 본세가 매년 5%씩 경감되며, 1월에 미리 한꺼번에 내면(연납) 추가로 할인받을 수 있습니다. 전기차·수소차는 배기량이 없어 정액으로 부과됩니다.</p>
+            <section class="ds-section ds-prose" aria-labelledby="auto-tax-s1">
+          <div class="ds-section-head"><h2 id="auto-tax-s1">자동차세, 이렇게 계산된다</h2></div>
+<p>비영업용 승용차 자동차세는 배기량(cc)에 cc당 세액을 곱해 본세를 구하고, 여기에 지방교육세 30%를 더합니다. 차령(최초 등록일이 속한 해를 1년으로 센 사용연수)이 3년 이상이면 본세가 매년 5%씩 경감되며, 1월에 미리 한꺼번에 내면(연납) 추가로 할인받을 수 있습니다. 전기차·수소차는 배기량이 없어 정액으로 부과됩니다.</p>
       <div class="guide-grid">
         <div class="guide-box">
           <strong>본세 = 배기량 × cc당 세액</strong>
@@ -172,11 +209,11 @@
         </div>
       </div>
       <p class="ref-links">신청·조회: <a href="https://www.wetax.go.kr" target="_blank" rel="noopener">위택스(wetax.go.kr)</a></p>
-    </div>
-    <div class="guide-card">
-      <h2>2026년 자동차세 배기량별 cc당 세액표</h2>
-      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">비영업용 승용차는 배기량 1cc당 80~200원, 전기·수소차는 배기량이 없어 정액(비영업 연 10만원)으로 부과됩니다.</p>
-      <div class="table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="auto-tax-s2">
+          <div class="ds-section-head"><h2 id="auto-tax-s2">2026년 자동차세 배기량별 cc당 세액표</h2></div>
+<p class="ds-table-lead">비영업용 승용차는 배기량 1cc당 80~200원, 전기·수소차는 배기량이 없어 정액(비영업 연 10만원)으로 부과됩니다.</p>
+      <div class="ds-table-card">
       <table class="rate-table">
         <thead>
           <tr><th>배기량 구간</th><th>비영업용 (원/cc)</th><th>영업용 (원/cc)</th></tr>
@@ -192,11 +229,11 @@
       </table>
       </div>
       <p style="font-size:12px;color:var(--gray-500);margin-top:8px">※ 위 본세에 지방교육세 30%가 추가됩니다. 영업용·전기차에는 차령 경감이 적용되지 않습니다.</p>
-    </div>
-    <div class="guide-card">
-      <h2>차령별 경감율표 (비영업용 승용)</h2>
-      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">차령은 최초 등록일(차령기산일)이 속한 해를 1년으로 셉니다. 1~6월에 등록했다면 2024년 등록 차가 2026년에 차령 3년(5% 경감)이고, 7~12월에 등록했다면 1기분은 1년 적게 셉니다(지방세법 시행령 제122조②). 12년 이상은 50%로 고정됩니다.</p>
-      <div class="table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="auto-tax-s3">
+          <div class="ds-section-head"><h2 id="auto-tax-s3">차령별 경감율표 (비영업용 승용)</h2></div>
+<p class="ds-table-lead">차령은 최초 등록일(차령기산일)이 속한 해를 1년으로 셉니다. 1~6월에 등록했다면 2024년 등록 차가 2026년에 차령 3년(5% 경감)이고, 7~12월에 등록했다면 1기분은 1년 적게 셉니다(지방세법 시행령 제122조②). 12년 이상은 50%로 고정됩니다.</p>
+      <div class="ds-table-card">
       <table class="rate-table">
         <thead>
           <tr><th>차령</th><th>경감율</th><th>차령</th><th>경감율</th></tr>
@@ -224,11 +261,11 @@
         </tbody>
       </table>
       <p class="ref-links">* 위 수치는 참고용 추정치입니다. 실제 부과액은 cc 정확값·과세 기산일에 따라 소폭 달라질 수 있습니다.</p>
-    </div>
-    <div class="guide-card">
-      <h2>배기량별 자동차세 (비영업용·2021년 1~6월 등록)</h2>
-      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">아래 수치는 이 페이지 계산기의 실제 출력값입니다.</p>
-      <div class="guide-table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="auto-tax-s4">
+          <div class="ds-section-head"><h2 id="auto-tax-s4">배기량별 자동차세 (비영업용·2021년 1~6월 등록)</h2></div>
+<p class="ds-table-lead">아래 수치는 이 페이지 계산기의 실제 출력값입니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead><tr><th>배기량</th><th>자동차세 본세 (2026년 차령 6년 20% 경감)</th><th>지방교육세 (본세의 30%)</th><th>연세액 (자동차세 + 지방교육세)</th></tr></thead>
           <tbody>
@@ -240,32 +277,35 @@
           </tbody>
         </table>
       </div>
-    </div>
-    <div class="guide-card faq-card">
-      <h2>자주 묻는 질문</h2>
-      <div class="faq-item">
-        <h3>자동차세는 어떻게 계산하나요?</h3>
-        <p>비영업용 승용차 자동차세는 배기량(cc) × cc당 세액으로 계산합니다. cc당 세액은 1,000cc 이하 80원, 1,600cc 이하 140원, 1,600cc 초과 200원입니다. 여기에 지방교육세 30%가 더해집니다. 예를 들어 2,000cc 차량은 2,000 × 200 = 40만원이 본세이고, 지방교육세 12만원을 더해 연세액은 약 52만원이지만, 차령에 따라 경감됩니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>차령(연식)에 따라 자동차세가 줄어드나요?</h3>
-        <p>네. 비영업용 승용차는 차령 3년(최초 등록일이 속한 해를 1년으로 셈)부터 매년 5%씩 자동차세 본세가 경감되며, 12년차 이상은 최대 50%까지 경감됩니다. 예를 들어 2,000cc 차량(본세 40만원)이 차령 6년이면 20% 경감되어 본세가 32만원, 지방교육세 9만 6천원을 더해 연세액 약 41만 6천원입니다. 전기차 정액분과 영업용에는 차령 경감이 적용되지 않습니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>1월에 자동차세를 한꺼번에 내면 얼마나 할인되나요?</h3>
-        <p>자동차세를 1월에 연납(선납)하면 2026년 기준 남은 기간분에 대해 공제율 5%가 적용되어 실질 약 4.58% 할인됩니다. 연세액 41만 6천원인 경우 1월 연납 시 약 1만 9천원이 할인됩니다. 1월 외에도 3월(약 3.77%), 6월(약 2.50%), 9월(약 1.25%)에 연납할 수 있으며, 늦게 신청할수록 할인율이 줄어듭니다. 신청은 위택스(wetax.go.kr)나 관할 지자체에서 합니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>전기차·수소차 자동차세는 얼마인가요?</h3>
-        <p>전기차·수소차는 배기량이 없어 정액으로 부과됩니다. 비영업용은 연 10만원, 영업용은 연 2만원이며, 여기에 지방교육세 30%가 더해져 비영업용 실제 연세액은 13만원입니다. 차령 경감은 적용되지 않습니다. 연세액 13만원은 10만원을 초과하므로 6월·12월 2회로 분할 부과됩니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>자동차세는 언제 납부하나요?</h3>
-        <p>정기분 자동차세는 1기분(과세기준일 6월 1일, 납기 6월 16~30일)과 2기분(과세기준일 12월 1일, 납기 12월 16~31일)으로 나누어 부과됩니다. 다만 연세액이 10만원 이하이면 6월에 전액 일괄 부과됩니다. 미리 한꺼번에 내고 할인받으려면 1·3·6·9월에 연납을 신청하면 됩니다.</p>
-      </div>
-    </div>
+        </section>
+            <section class="ds-section faq-card" aria-labelledby="auto-tax-faq">
+          <div class="ds-section-head"><h2 id="auto-tax-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>자동차세는 어떻게 계산하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>비영업용 승용차 자동차세는 배기량(cc) × cc당 세액으로 계산합니다. cc당 세액은 1,000cc 이하 80원, 1,600cc 이하 140원, 1,600cc 초과 200원입니다. 여기에 지방교육세 30%가 더해집니다. 예를 들어 2,000cc 차량은 2,000 × 200 = 40만원이 본세이고, 지방교육세 12만원을 더해 연세액은 약 52만원이지만, 차령에 따라 경감됩니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>차령(연식)에 따라 자동차세가 줄어드나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>네. 비영업용 승용차는 차령 3년(최초 등록일이 속한 해를 1년으로 셈)부터 매년 5%씩 자동차세 본세가 경감되며, 12년차 이상은 최대 50%까지 경감됩니다. 예를 들어 2,000cc 차량(본세 40만원)이 차령 6년이면 20% 경감되어 본세가 32만원, 지방교육세 9만 6천원을 더해 연세액 약 41만 6천원입니다. 전기차 정액분과 영업용에는 차령 경감이 적용되지 않습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>1월에 자동차세를 한꺼번에 내면 얼마나 할인되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>자동차세를 1월에 연납(선납)하면 2026년 기준 남은 기간분에 대해 공제율 5%가 적용되어 실질 약 4.58% 할인됩니다. 연세액 41만 6천원인 경우 1월 연납 시 약 1만 9천원이 할인됩니다. 1월 외에도 3월(약 3.77%), 6월(약 2.50%), 9월(약 1.25%)에 연납할 수 있으며, 늦게 신청할수록 할인율이 줄어듭니다. 신청은 위택스(wetax.go.kr)나 관할 지자체에서 합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>전기차·수소차 자동차세는 얼마인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>전기차·수소차는 배기량이 없어 정액으로 부과됩니다. 비영업용은 연 10만원, 영업용은 연 2만원이며, 여기에 지방교육세 30%가 더해져 비영업용 실제 연세액은 13만원입니다. 차령 경감은 적용되지 않습니다. 연세액 13만원은 10만원을 초과하므로 6월·12월 2회로 분할 부과됩니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>자동차세는 언제 납부하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>정기분 자동차세는 1기분(과세기준일 6월 1일, 납기 6월 16~30일)과 2기분(과세기준일 12월 1일, 납기 12월 16~31일)으로 나누어 부과됩니다. 다만 연세액이 10만원 이하이면 6월에 전액 일괄 부과됩니다. 미리 한꺼번에 내고 할인받으려면 1·3·6·9월에 연납을 신청하면 됩니다.</p>
+            </details>
+          </div>
+        </section>
     <div class="update-note">최종 검토: 2026.10.12 · 자동차세 세율·연납 공제율은 지방세법 기준이며, 정확한 부과액은 <a href="https://www.wetax.go.kr" target="_blank" rel="noopener">위택스(wetax.go.kr)</a>에서 확인하세요.</div>
   </div>
+    </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
   <script>
   window.TRUST_BLOCK_CONFIG = {
     standard: '지방세법 제127~128조·시행령 제122조②(차령)·제125조⑥(연납 이자율 5%)',
@@ -281,35 +321,42 @@
     lastReviewed: '2026.10.12',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>
-  <div class="sibling-section">
-    <div class="sibling-title">다른 자동차 계산기</div>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 자동차 계산기</h2>
     <div class="sibling-list">
-      <a href="/calc/auto/auto-loan/" class="sibling-link">💳 자동차 할부</a>
-      <a href="/calc/auto/auto-tax/" class="sibling-link current">🚙 자동차세</a>
-      <a href="/calc/auto/acquisition-tax/" class="sibling-link">📄 자동차 취득세</a>
-      <a href="/calc/auto/ev-charging/" class="sibling-link">🔌 전기차 충전비</a>
-      <a href="/calc/auto/used-car-tax/" class="sibling-link">🔁 중고차 취득세</a>
-      <a href="/calc/auto/fuel-cost/" class="sibling-link">⛽ 유류비</a>
-      <a href="/calc/auto/ev-subsidy/" class="sibling-link">⚡ 전기차 보조금</a>
+      <a href="/calc/auto/auto-loan/" class="sibling-link">자동차 할부</a>
+      <a href="/calc/auto/acquisition-tax/" class="sibling-link">자동차 취득세</a>
+      <a href="/calc/auto/ev-charging/" class="sibling-link">전기차 충전비</a>
+      <a href="/calc/auto/used-car-tax/" class="sibling-link">중고차 취득세</a>
+      <a href="/calc/auto/fuel-cost/" class="sibling-link">유류비</a>
+      <a href="/calc/auto/ev-subsidy/" class="sibling-link">전기차 보조금</a>
     </div>
-    <div class="sibling-title">관련 가이드</div>
-    <div class="sibling-list">
-      <a href="/blog/posts/car-acquisition-tax-guide.html" class="sibling-link">📖 자동차 취득세 계산 2026 - 7% 세율·개별소비세 5%·경차 면제·전기…</a>
-      <a href="/blog/posts/car-inspection-guide.html" class="sibling-link">📖 자동차 정기검사 비용·주기·과태료 총정리 2026 - 신차 최초검사, 4년…</a>
-      <a href="/blog/posts/car-insurance-grade-guide.html" class="sibling-link">📖 자동차보험 할인할증등급 계산법 2026 - 소액 사고 보험처리하면 3년간 …</a>
-      <a href="/blog/posts/car-maintenance-cost-guide.html" class="sibling-link">📖 자동차 유지비 계산법 2026 - 세금·보험료·유류비·감가상각 3년 총정리</a>
-      <a href="/blog/posts/car-ownership-transfer-guide.html" class="sibling-link">📖 자동차 명의이전 방법 2026 - 이전등록 기한 15일, 넘기면 과태료 아…</a>
-      <a href="/blog/posts/car-scrap-guide.html" class="sibling-link">📖 자동차 폐차 절차·비용·세금 환급 2026 - 말소등록 1개월 안 하면 과…</a>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/car-acquisition-tax-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/car-acquisition-tax-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>자동차 취득세 계산 2026 - 7% 세율·개별소비세 5%·경차 면제·전기차 감면 총정리</span></a>
+      <a href="/blog/posts/car-inspection-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/car-inspection-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>자동차 정기검사 비용·주기·과태료 총정리 2026 - 신차 최초검사, 4년 아니라 5년입니다</span></a>
+      <a href="/blog/posts/car-insurance-grade-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/car-insurance-grade-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>자동차보험 할인할증등급 계산법 2026 - 소액 사고 보험처리하면 3년간 얼마 손해일까</span></a>
+      <a href="/blog/posts/car-maintenance-cost-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/car-maintenance-cost-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>자동차 유지비 계산법 2026 - 세금·보험료·유류비·감가상각 3년 총정리</span></a>
+      <a href="/blog/posts/car-ownership-transfer-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/car-ownership-transfer-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>자동차 명의이전 방법 2026 - 이전등록 기한 15일, 넘기면 과태료 아니라 범칙금입니다</span></a>
+      <a href="/blog/posts/car-scrap-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/car-scrap-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>자동차 폐차 절차·비용·세금 환급 2026 - 말소등록 1개월 안 하면 과태료입니다</span></a>
     </div>
   </div>
 </main>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
-    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
   </div>
 </footer>
+
+<script src="/assets/ds/calc-kit.js?v=d45e66d9"></script>
 <script>
 let fuel='gas', biz=0;
 function Ww(w){return Math.round(w).toLocaleString()+'원';}
@@ -317,9 +364,9 @@ function setFuel(f,btn){fuel=f;document.querySelectorAll('#fuel-group .seg-btn')
 function setBiz(b,btn){biz=b;document.querySelectorAll('#biz-group .seg-btn').forEach(x=>x.classList.remove('active'));btn.classList.add('active');calc();}
 
 function calc(){
-  const cc=parseFloat(document.getElementById('cc').value)||0;
-  const regYear=parseInt(document.getElementById('reg-year').value)||0;
-  const prepayMonth=parseInt(document.getElementById('prepay').value)||0;
+  const cc=parseFloat(String(document.getElementById('cc').value).replace(/,/g, ''))||0;
+  const regYear=parseInt(String(document.getElementById('reg-year').value).replace(/,/g, ''))||0;
+  const prepayMonth=parseInt(String(document.getElementById('prepay').value).replace(/,/g, ''))||0;
   const res=document.getElementById('result');
   const ageDisp=document.getElementById('age-display');
   const TAX_YEAR=2026;
@@ -339,7 +386,7 @@ function calc(){
   }
   // 차령 경감 (비영업용 승용 + 내연만) - 지방세법 제127조①2호, 시행령 제122조②
   // 차령 n = 과세연도 - 기산일 연도 + 1 (기산일 7~12월이면 1기분만 +1 없음), 각 기분세액 = A/2 × (1 - 5%×(n-2)), n은 12 상한
-  const half=parseInt(document.getElementById('reg-half').value)||1;
+  const half=parseInt(String(document.getElementById('reg-half').value).replace(/,/g, ''))||1;
   let n1=0, n2=0, f1=1, f2=1;
   const fac=n=>n>=3 ? 1-0.05*(Math.min(n,12)-2) : 1;
   const validYear = regYear>=1990 && regYear<=TAX_YEAR;
@@ -402,11 +449,10 @@ function calc(){
 }
 </script>
 
-<script src="/assets/calc-validate.js"></script>
-<script src="/assets/calc-result-tools.js"></script>
-  <script src="/assets/footer-unified.js"></script>
-<script src="/assets/calc-registry.js"></script>
-<script src="/assets/auto-detail-shell.js"></script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
@@ -417,7 +463,13 @@ window.ARTICLE_INFO_CONFIG = {
   category: 'auto'
 };
 </script>
-<script src="/assets/blog-article-info.js"></script>
-<script src="/assets/blog-review-footer.js"></script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "result", "required": ["cc", "reg-year"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#auto-tax-next", "next": []});
+  DSCalc.placeTrust('ds-trust-col');
+</script>
+<script src="/assets/ds/prefill.js?v=fa5eb49a" defer></script>
 </body>
 </html>

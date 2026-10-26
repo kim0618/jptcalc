@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>프리랜서 월 순수입 계산기 | jptcalc</title>
+  <meta name="description" content="프리랜서 월 순수입을 자동 계산합니다. 3.3% 원천징수, 종합소득세 추가납부, 국민연금, 건강보험료를 모두 반영한 실제 순수입과 실수령 비율을 확인하세요. 2026년 공개 기준을 바탕으로 한 무료 계산기." />
+  <meta name="keywords" content="프리랜서순수입,프리랜서실수령액,프리랜서월수입,프리랜서세금계산,프리랜서보험료" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/tax/freelancer-income/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="프리랜서 월 순수입 계산기 | jptcalc" />
+  <meta property="og:description" content="3.3% 원천징수·종소세·국민연금·건강보험 모두 반영한 프리랜서 실제 월 순수입을 계산합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/tax/freelancer-income/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="프리랜서 월 순수입 계산기 | jptcalc" />
+  <meta name="twitter:description" content="3.3% 원천징수·종소세·국민연금·건강보험 모두 반영한 프리랜서 실제 월 순수입을 계산합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"프리랜서 월 순수입 계산기","url":"https://www.jptcalc.kr/calc/tax/freelancer-income/","description":"3.3% 원천징수·종소세·국민연금·건강보험 모두 반영한 프리랜서 실제 월 순수입을 계산합니다.","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"inLanguage":"ko-KR"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},{"@type":"ListItem","position":2,"name":"프리랜서 세금 계산기","item":"https://www.jptcalc.kr/calc/tax/"},{"@type":"ListItem","position":3,"name":"프리랜서 월 순수입 계산기","item":"https://www.jptcalc.kr/calc/tax/freelancer-income/"}]}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"월 400만원 벌면 실제로 얼마 남나요?","acceptedAnswer":{"@type":"Answer","text":"경비율 60% 국민연금·건강보험 모두 납부 기준으로 약 360만원(실수령 90%)입니다. 경비율이 낮거나 재산이 많으면 줄어들고, 배우자 피부양자 등록 시 380만원까지 늘릴 수 있습니다."}},{"@type":"Question","name":"피부양자면 건강보험료를 안 내도 되나요?","acceptedAnswer":{"@type":"Answer","text":"배우자 등 직장가입자의 피부양자로 등록되어 있다면 건강보험료를 별도로 내지 않습니다. 연 소득 2,000만원 초과 또는 재산세 과세표준 5.4억원 초과 시 자격이 상실됩니다."}},{"@type":"Question","name":"국민연금 납부예외는 언제 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"실업·폐업·소득 감소 등으로 납부가 어려운 경우 국민연금공단에 납부예외를 신청할 수 있습니다. 단, 예외 기간은 가입기간에 포함되지 않아 수급 연금액이 줄어듭니다."}},{"@type":"Question","name":"실수령 비율이 보통 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"프리랜서는 모든 사회보험을 본인이 전액 부담하므로 보통 85~91% 수준입니다. 경비율이 낮거나 고소득 구간 진입 시 80% 이하로 떨어질 수 있으며, 직장인 대비 퇴직금·실업급여 미포함이라는 추가 차이가 있습니다."}},{"@type":"Question","name":"계산기에 반영되는 항목은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"3.3% 원천징수, 종합소득세 월 환산(경비율·인적공제·누진세율 반영), 지방소득세 10%, 국민연금 지역가입 9.5%(상한 659만원), 건강보험 지역가입 7.19%, 장기요양보험 13.14%가 모두 반영됩니다."}}]}</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BRSX3F10MZ');
+  </script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/tax-common.css" />
+  <style>
+    /* freelancer-income 고유 스타일 - 공통 스타일은 /assets/tax-common.css 참조 */
+    .input-wrap { position: relative; }
+    .input-wrap .unit { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); font-size: 13px; font-weight: 600; color: var(--gray-500); pointer-events: none; }
+    input[type=number],input[type=text]{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
+    input[type=number]::placeholder{color:var(--gray-400);font-weight:400}
+    input[type=number]:focus,input[type=text]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(16,185,129,0.15)}
+    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
+    .seg-group{display:flex;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:18px}
+    .seg-btn{flex:1;border:none;border-radius:7px;background:transparent;padding:9px 4px;font-size:12px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap}
+    .seg-btn:hover{color:var(--gray-700)}
+    .seg-btn.active{background:var(--primary);color:#fff;font-weight:700}
+    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
+    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
+    .result-card{background:linear-gradient(135deg,#ECFDF5 0%,#D1FAE5 100%);border:1px solid rgba(16,185,129,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
+    .result-card.show{display:block}
+    .result-row+.result-row{border-top:1px solid rgba(0,0,0,0.07)}
+    .result-total-row{border-top:1px solid rgba(0,0,0,0.15)!important;margin-top:4px;padding-top:14px!important}
+    .result-total-value{font-size:24px;font-weight:900;color:var(--gray-900)}
+    .ad-inline{background:rgba(0,0,0,0.02);border:1px dashed rgba(0,0,0,0.08);border-radius:12px;padding:16px;text-align:center;margin:16px 0;display:none}
+    .ad-inline.show{display:block}
+    .ad-inline-text{font-size:11px;color:var(--gray-400)}
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div>
+      <span class="logo-text">제이퍼<span>계산기</span></span>
+    </a>
+    <nav class="header-nav">
+      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
+      <a href="/calc/tax/" class="nav-item active"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
+      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
+      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
+      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
+      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
+      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
+      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
+      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
+    </nav>
+    <div class="header-cta">
+      <a href="/blog/" class="btn-blog">블로그</a>
+    </div>
+    <button class="hamburger" onclick="document.querySelector('.header-nav').classList.toggle('open')" aria-label="메뉴">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main class="page-wrap">
+  <div class="page-header">
+    <div class="breadcrumb">
+      <a href="/">홈</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/calc/tax/">프리랜서 세금 계산기</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>프리랜서 월 순수입</span>
+    </div>
+    <div class="page-header-badge">&#128176; 2026 공개 기준 반영</div>
+    <h1>프리랜서 월 순수입 계산기</h1>
+    <p>3.3% 원천징수 + 종소세 + 국민연금 + 건강보험을 모두 반영한 실제 순수입을 계산합니다.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">프리랜서 월 순수입 계산</div>
+    <div class="info-box">
+      <span class="info-icon">&#128161;</span>
+      <p>3.3% 원천징수 + 종소세 추가납부 + 국민연금 + 건강보험을 모두 반영한 <strong>실제 순수입</strong>을 계산합니다.</p>
+    </div>
+    <div class="field">
+      <div class="field-label"><span>월 평균 수입 (세전)</span> <span class="label-hint">만원 단위</span></div>
+      <div class="input-wrap">
+        <input type="number" id="net-monthly" placeholder="예)400" oninput="calcNetIncome()">
+        <span class="unit">만원</span>
+      </div>
+      <div class="converted" id="net-monthly-display"></div>
+    </div>
+    <div class="field">
+      <div class="field-label"><span>경비율</span></div>
+      <div class="seg-group">
+        <button class="seg-btn active" onclick="setNetExpense(0.60,this)">단순 60%</button>
+        <button class="seg-btn" onclick="setNetExpense(0.40,this)">기준 40%</button>
+        <button class="seg-btn" onclick="setNetExpense(0.20,this)">자체 20%</button>
+      </div>
+      <div style="font-size:11px;color:var(--gray-500);margin-top:4px;">※ 경비율은 업종·소득 규모에 따라 다릅니다. 단순경비율(60%)은 소규모 프리랜서 참고용이며, 실제 경비율은 국세청 업종코드 기준으로 다를 수 있습니다.</div>
+    </div>
+    <div class="field">
+      <div class="field-label"><span>국민연금 납부 여부</span></div>
+      <div class="seg-group">
+        <button class="seg-btn active" onclick="setNetPension(true,this)">납부 중</button>
+        <button class="seg-btn" onclick="setNetPension(false,this)">납부예외 / 미가입</button>
+      </div>
+    </div>
+    <div class="field">
+      <div class="field-label"><span>건강보험 지역가입</span></div>
+      <div class="seg-group">
+        <button class="seg-btn active" onclick="setNetHealth(true,this)">지역가입</button>
+        <button class="seg-btn" onclick="setNetHealth(false,this)">피부양자</button>
+      </div>
+      <div style="font-size:11px;color:var(--gray-500);margin-top:4px;">※ 지역가입자 보험료는 소득 외 재산·자동차도 반영됩니다. 여기서는 소득 기준만 추정하며 실제 고지액과 차이가 있을 수 있습니다.</div>
+    </div>
+    <div class="result-card" id="net-result"><div id="net-result-content"></div></div>
+  </div>
+
+  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+
+  <div class="guide-section">
+    <div class="guide-card">
+      <h2>왜 3.3% 원천징수만으로 순수입을 알 수 없나요?</h2>
+      <p>3.3%는 선납 세금의 일부일 뿐, 프리랜서의 실제 부담은 종합소득세 추가납부와 지역가입 국민연금·건강보험까지 합산해야 정확합니다. 소득이 많을수록 세율 구간이 올라가고, 보험료도 비례해 증가하므로 월 수입 대비 실수령 비율이 70~90% 수준으로 떨어집니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>세금 항목</strong><span>월별 3.3% 원천징수 + 연말 종합소득세 추가납부(경비율 반영 후 누진세율)</span></div>
+        <div class="guide-box"><strong>국민연금</strong><span>지역가입자 9.5% 전액 본인 부담. 월 소득 41~659만원 범위에서 부과 (2026년 상한).</span></div>
+        <div class="guide-box"><strong>건강보험</strong><span>지역가입자 7.19% 전액 본인 부담 + 장기요양 13.14%. 재산 보유 시 추가 부담.</span></div>
+        <div class="guide-box"><strong>실수령 비율</strong><span>일반적으로 월 200만원 수준 91%, 월 500만원 수준 89%, 월 1,000만원 수준 80% 미만으로 감소.</span></div>
+      </div>
+    </div>
+    <div class="guide-card">
+      <h2>월 수입별 프리랜서 순수입 참고 표</h2>
+      <p>경비율 60%, 인적공제 150만원(본인), 국민연금·건강보험 모두 납부 기준입니다. 경비율이 낮거나 재산이 많을수록 순수입은 더 낮아집니다.</p>
+      <div class="guide-table-wrap">
+        <table>
+          <thead>
+            <tr><th>월 수입 (세전)</th><th>원천징수</th><th>종소세 월환산</th><th>연금+건강+요양</th><th>월 순수입</th><th>비율</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>200만원</td><td>6.6만</td><td style="color:#10B981">환급 2.1만</td><td>13.6만</td><td><strong>181.9만원</strong></td><td>91.0%</td></tr>
+            <tr><td>300만원</td><td>9.9만</td><td style="color:#10B981">환급 2.8만</td><td>20.4만</td><td><strong>272.5만원</strong></td><td>90.8%</td></tr>
+            <tr><td>400만원</td><td>13.2만</td><td style="color:#10B981">환급 0.4만</td><td>27.2만</td><td><strong>360.0만원</strong></td><td>90.0%</td></tr>
+            <tr><td>500만원</td><td>16.5만</td><td>2.9만</td><td>34.0만</td><td><strong>446.6만원</strong></td><td>89.3%</td></tr>
+            <tr><td>800만원</td><td>26.4만</td><td>12.8만</td><td>54.4만</td><td><strong>706.4만원</strong></td><td>88.3%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:12px;color:var(--gray-500);margin-top:8px">※ 2026년 요율(국민연금 9.5%, 건강보험 7.19%, 장기요양 13.14%) 기준. 월 200~400만원 구간은 원천징수 3.3%가 실제 세액보다 많아 종소세 환급이 발생할 수 있습니다.</p>
+      <h3>순수입을 늘리는 실용 팁</h3>
+      <ul>
+        <li><strong>경비 증빙 철저히</strong>: 장비, 소프트웨어, 통신비, 업무 교통비 등을 세금계산서·카드로 지출하면 경비율이 높아져 과세표준과 건강보험료 부과 기준이 동시에 낮아집니다.</li>
+        <li><strong>노란우산공제 가입</strong>: 월 5~100만원 납입, 연 300~500만원 소득공제. 과세표준 감소로 종소세와 건강보험 모두 절감됩니다.</li>
+        <li><strong>연금저축·IRP 납입</strong>: 연 700만원까지 세액공제(12~15%). 연간 84~105만원 세금 절감.</li>
+        <li><strong>배우자 직장가입자 피부양자 등록</strong>: 소득 기준 충족 시 건강보험료 면제 가능. 월 10~30만원 이상 절감.</li>
+      </ul>
+    </div>
+    <div class="guide-card">
+      <h2>월 수입별 프리랜서 실수령 (단순경비 60%)</h2>
+      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">위 계산기에 대표 조건을 입력해 나온 실제 계산값입니다.</p>
+      <div class="guide-table-wrap">
+        <table>
+          <thead><tr><th>월 평균 수입</th><th>3.3% 원천징수</th><th>국민연금 지역가입 (9.5%)</th><th>월 순수입</th><th>실수령 비율</th></tr></thead>
+          <tbody>
+            <tr><td>200만원</td><td>- 6만 6,000원</td><td>- 7만 6,000원</td><td>181만 4,000원</td><td>90.7%</td></tr>
+            <tr><td>300만원</td><td>- 9만 9,000원</td><td>- 11만 4,000원</td><td>271만 7,000원</td><td>90.6%</td></tr>
+            <tr><td>500만원</td><td>- 16만 5,000원</td><td>- 19만원</td><td>445만 3,000원</td><td>89.1%</td></tr>
+            <tr><td>800만원</td><td>- 26만 4,000원</td><td>- 30만 4,000원</td><td>704만 4,000원</td><td>88.0%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="guide-card faq-card">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq-item"><h3>월 400만원 벌면 실제로 얼마 남나요?</h3><p>경비율 60%·국민연금·건강보험 모두 납부 기준으로 약 360만원(실수령 90%)입니다. 경비율이 낮거나 재산이 많으면 순수입이 더 줄어듭니다. 반대로 배우자 피부양자 등록 등을 활용하면 380만원까지 올릴 수 있습니다.</p></div>
+      <div class="faq-item"><h3>피부양자면 건강보험료를 안 내도 되나요?</h3><p>배우자 등 직장가입자의 피부양자로 등록되어 있다면 건강보험료를 별도로 내지 않습니다. 단, 연 소득 2,000만원 초과 또는 재산세 과세표준 5.4억원 초과 시 피부양자 자격이 상실됩니다. 본 계산기에서 "피부양자" 선택 시 건강보험료 0원으로 처리됩니다.</p></div>
+      <div class="faq-item"><h3>국민연금 납부예외는 언제 가능한가요?</h3><p>실업·폐업·소득 감소 등으로 납부가 어려운 경우 국민연금공단에 납부예외를 신청할 수 있습니다. 예외 기간은 가입기간에 포함되지 않으므로 수급 연금액이 줄어드는 단점이 있습니다. 본 계산기에서 "납부예외"는 단기 참고용입니다.</p></div>
+      <div class="faq-item"><h3>경비율은 어떻게 선택하나요?</h3><p>국세청이 업종별로 고시하는 단순경비율·기준경비율을 참고합니다. 연 수입 2,400만원 이하 소규모 프리랜서는 대부분 단순경비율(60% 내외), 초과 시 기준경비율(20~40%)이 적용됩니다. 장부를 직접 기장하면 실제 지출 기준으로 더 높게 처리 가능합니다.</p></div>
+      <div class="faq-item"><h3>계산기에 반영되는 항목은 무엇인가요?</h3><p>① 3.3% 원천징수, ② 종합소득세 월 환산(경비율·인적공제·누진세율 반영), ③ 지방소득세 10%, ④ 국민연금 지역가입 9.5%(상한 659만원), ⑤ 건강보험 지역가입 7.19%, ⑥ 장기요양보험 건강보험의 13.14%가 모두 반영됩니다. 부가가치세는 사업자등록 여부에 따라 별도 계산이 필요합니다.</p></div>
+      <div class="faq-item"><h3>실수령 비율이 낮은 편인데 정상인가요?</h3><p>프리랜서는 모든 사회보험을 본인이 전액 부담하므로 직장인(사용자 분담) 대비 비율이 낮습니다. 일반적으로 85~91% 수준이며, 경비율이 낮거나 고소득 구간에 진입하면 80% 이하로 떨어질 수 있습니다. 월 수입이 같은 직장인은 퇴직금과 실업급여까지 받으므로 실질 격차는 더 큽니다.</p></div>
+      <div class="update-note">최종 검토: 2026.04.24 · 계산 결과는 참고용입니다.</div>
+    </div>
+  </div>
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '소득세법 제19조·제127조, 국민연금법 제88조, 국민건강보험법 제69조 (2026년 요율)',
+    appliedFrom: '2026년 귀속 (국민연금 9.5%·건강보험 7.19% 지역가입자 기준)',
+    exceptions: [
+      '경비 처리 범위에 따라 실제 납부세액과 보험료가 크게 달라질 수 있습니다',
+      '국민연금 기준소득월액 상한액은 659만원(2026년)으로, 초과분은 상한액 기준 산정',
+      '건강보험 지역가입자는 소득 외 재산·자동차도 부과 기준에 포함',
+      '배우자 직장가입자의 피부양자로 등록된 경우 건강보험료 면제 가능',
+    ],
+    references: [
+      { name: '국세청(nts.go.kr)', url: 'https://www.nts.go.kr' },
+      { name: '국민연금공단(nps.or.kr)', url: 'https://www.nps.or.kr' },
+      { name: '국민건강보험공단(nhis.or.kr)', url: 'https://www.nhis.or.kr' },
+    ],
+    lastReviewed: '2026.04.24',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 프리랜서 세금 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/tax/withholding/" class="sibling-link">💲 3.3% 원천징수</a>
+      <a href="/calc/tax/income-tax/" class="sibling-link">📈 종합소득세</a>
+      <a href="/calc/tax/vat/" class="sibling-link">📄 부가가치세</a>
+      <a href="/calc/tax/insurance-comparison/" class="sibling-link">👥 4대보험 비교</a>
+      <a href="/calc/tax/freelancer-income/" class="sibling-link current">💰 월 순수입</a>
+      <a href="/calc/tax/medical-expense/" class="sibling-link">🏥 의료비 세액공제</a>
+      <a href="/calc/tax/regional-health-insurance/" class="sibling-link">🏥 지역가입자 건강보험료</a>
+      <a href="/calc/tax/copay-ceiling/" class="sibling-link">💊 본인부담상한제 환급</a>
+      <a href="/calc/tax/yellow-umbrella/" class="sibling-link">🪙 노란우산공제</a>
+      <a href="/calc/tax/four-insurance/" class="sibling-link">🏢 4대보험료</a>
+    </div>
+    <div class="sibling-title">관련 가이드</div>
+    <div class="sibling-list">
+      <a href="/blog/posts/four-insurance-vs-33-comparison.html" class="sibling-link">📖 4대보험 vs 3.3% 실수령액 비교 - 월 300만원이면 27만원 차이</a>
+      <a href="/blog/posts/freelancer-insurance-guide.html" class="sibling-link">📖 프리랜서 4대보험, 직장인이랑 뭐가 다를까? 지역가입자 보험료 계산법</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
+    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+  </div>
+</footer>
+
+<script>
+function fmtWon(won) {
+  won = Math.round(won);
+  if (Math.abs(won) >= 100000000) {
+    const e = Math.floor(Math.abs(won)/100000000), r = Math.abs(won)%100000000;
+    const s = won<0?'-':'';
+    return r===0 ? s+e.toLocaleString()+'억원' : s+e.toLocaleString()+'억 '+Math.floor(r/10000).toLocaleString()+'만원';
+  }
+  if (Math.abs(won) >= 10000) {
+    const m = Math.floor(Math.abs(won)/10000), r = Math.abs(won)%10000;
+    const s = won<0?'-':'';
+    return r===0 ? s+m.toLocaleString()+'만원' : s+m.toLocaleString()+'만 '+r.toLocaleString()+'원';
+  }
+  return won.toLocaleString()+'원';
+}
+function fmt(man) {
+  if (man===0) return '0원';
+  return fmtWon(Math.round(man*10000));
+}
+function showConverted(input, display) {
+  if (!display) return;
+  const v = parseFloat(input.value);
+  display.textContent = (!v||v===0) ? '' : '= '+fmtWon(v*10000);
+}
+function setActive(parent, btn, sel) {
+  parent.querySelectorAll(sel||'.seg-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+}
+function getIncomeTax(t) {
+  if (t<=1400)   return {tax:t*0.06, rate:'6%'};
+  if (t<=5000)   return {tax:t*0.15-126, rate:'15%'};
+  if (t<=8800)   return {tax:t*0.24-576, rate:'24%'};
+  if (t<=15000)  return {tax:t*0.35-1544, rate:'35%'};
+  if (t<=30000)  return {tax:t*0.38-1994, rate:'38%'};
+  if (t<=50000)  return {tax:t*0.40-2594, rate:'40%'};
+  if (t<=100000) return {tax:t*0.42-3594, rate:'42%'};
+  return {tax:t*0.45-6594, rate:'45%'};
+}
+
+let netExpense=0.60, netPension=true, netHealth=true;
+function setNetExpense(r,btn){netExpense=r; setActive(btn.closest('.seg-group'),btn); calcNetIncome();}
+function setNetPension(v,btn){netPension=v; setActive(btn.closest('.seg-group'),btn); calcNetIncome();}
+function setNetHealth(v,btn){netHealth=v; setActive(btn.closest('.seg-group'),btn); calcNetIncome();}
+function calcNetIncome() {
+  const m = parseFloat(document.getElementById('net-monthly').value) || 0;
+  showConverted(document.getElementById('net-monthly'), document.getElementById('net-monthly-display'));
+  if (!m) { document.getElementById('net-result').classList.remove('show'); return; }
+
+  // 2026년 요율
+  const PENSION_LOCAL = 0.095;   // 지역가입 9.5% (전액 본인)
+  const PENSION_CAP = 659;      // 기준소득월액 상한 (만원, 2026년)
+  const PENSION_FLOOR = 41;     // 기준소득월액 하한
+  const HEALTH_LOCAL = 0.0719;  // 건강보험 지역가입 7.19% (전액 본인)
+  const LTC_RATIO = 0.1314;     // 장기요양 = 건강보험 × 13.14%
+
+  const wh = m * 0.033;
+  const annual = m * 12;
+  const income = annual * (1 - netExpense);
+  const taxable = Math.max(income - 150, 0);
+  const {tax:annTax} = getIncomeTax(taxable);
+  const addTax = (Math.max(annTax, 0) * 1.10 - annual * 0.033) / 12;
+
+  const pensionBase = Math.min(Math.max(income / 12, PENSION_FLOOR), PENSION_CAP);
+  const pensionPay = netPension ? pensionBase * PENSION_LOCAL : 0;
+
+  const healthPay = netHealth ? (income / 12) * HEALTH_LOCAL : 0;
+  const ltcPay = netHealth ? healthPay * LTC_RATIO : 0;
+
+  const totalDed = wh + addTax + pensionPay + healthPay + ltcPay;
+  const net = m - totalDed;
+  const r = v => Math.round(v * 10) / 10;
+
+  document.getElementById('net-result-content').innerHTML = `
+    <div class="result-row"><span class="result-label">월 수입 (세전)</span><span class="result-value">${fmt(m)}</span></div>
+    <div class="result-row"><span class="result-label">3.3% 원천징수</span><span class="result-value">- ${fmt(r(wh))}</span></div>
+    <div class="result-row"><span class="result-label">종소세 추가납부 (월환산)</span><span class="result-value" style="${addTax>0?'color:#EF4444':'color:#10B981'}">${addTax>0?'- '+fmt(r(addTax)):'+ '+fmt(r(Math.abs(addTax)))}</span></div>
+    ${netPension?`<div class="result-row"><span class="result-label">국민연금 지역가입 (9.5%)</span><span class="result-value">- ${fmt(r(pensionPay))}</span></div>`:''}
+    ${netHealth?`<div class="result-row"><span class="result-label">건강+요양 지역가입 (7.19% + 0.94%)</span><span class="result-value">- ${fmt(r(healthPay+ltcPay))}</span></div>`:''}
+    <div class="result-row result-total-row">
+      <span class="result-total-label">월 순수입</span>
+      <span class="result-total-value">${fmt(r(net))}</span>
+    </div>
+    <div class="result-row"><span class="result-label">실수령 비율</span><span class="result-value" style="font-weight:800;color:${net/m>=0.85?'#10B981':net/m>=0.70?'#F59E0B':'#EF4444'}">${(net/m*100).toFixed(1)}%</span></div>
+    <div class="result-note">* 추정치 - 경비율 ${Math.round(netExpense*100)}%, 인적공제 150만원 가정<br>* 지역가입 보험료는 소득 기준 추정 (재산·자동차 미반영)<br>* 정확한 세액은 홈택스 또는 세무사에게 문의</div>`;
+  document.getElementById('net-result').classList.add('show');
+  var adEl = document.getElementById('ad-net'); if (adEl) adEl.classList.add('show');
+}
+</script>
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+  <script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/calc-registry.js"></script>
+<script src="/assets/tax-detail-shell.js"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '소득세법·부가가치세법 2026년 기준',
+  basisDate: '2026년 귀속',
+  referenceOrg: '국세청',
+  lastReviewed: '2026.04.24',
+  category: 'tax'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/blog-review-footer.js"></script>
+</body>
+</html>

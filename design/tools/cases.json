@@ -1,0 +1,570 @@
+{
+ "salary/premium-pay": {
+  "a": [
+   [
+    "set",
+    "#hourly",
+    "12000"
+   ],
+   [
+    "set",
+    "#ot",
+    "10"
+   ],
+   [
+    "set",
+    "#night",
+    "4"
+   ]
+  ],
+  "b": [
+   [
+    "set",
+    "#hourly",
+    "20000"
+   ],
+   [
+    "set",
+    "#ot",
+    "20"
+   ],
+   [
+    "set",
+    "#hol",
+    "8"
+   ]
+  ]
+ },
+ "tax/medical-expense": {
+  "a": [
+   [
+    "set",
+    "#salary",
+    "5000"
+   ],
+   [
+    "set",
+    "#other",
+    "300"
+   ]
+  ],
+  "b": [
+   [
+    "set",
+    "#salary",
+    "3000"
+   ],
+   [
+    "set",
+    "#infertility",
+    "200"
+   ],
+   [
+    "set",
+    "#other",
+    "100"
+   ]
+  ]
+ },
+ "auto/used-car-tax": {
+  "a": [
+   [
+    "set",
+    "#base-price",
+    "3000"
+   ],
+   [
+    "set",
+    "#make-year",
+    "2023"
+   ],
+   [
+    "set",
+    "#declared",
+    "1500"
+   ]
+  ],
+  "b": [
+   [
+    "click",
+    ".seg-btn:nth-child(2)"
+   ],
+   [
+    "set",
+    "#base-price",
+    "2000"
+   ],
+   [
+    "set",
+    "#make-year",
+    "2019"
+   ],
+   [
+    "set",
+    "#declared",
+    "900"
+   ]
+  ]
+ },
+ "tools/gpa": {
+  "a": [
+   [
+    "set",
+    ".gpa-row:nth-child(1) .g-grade",
+    "A+"
+   ],
+   [
+    "set",
+    ".gpa-row:nth-child(1) .g-credit",
+    "3"
+   ],
+   [
+    "set",
+    ".gpa-row:nth-child(2) .g-grade",
+    "B+"
+   ],
+   [
+    "set",
+    ".gpa-row:nth-child(2) .g-credit",
+    "3"
+   ],
+   [
+    "set",
+    ".gpa-row:nth-child(3) .g-grade",
+    "A0"
+   ],
+   [
+    "set",
+    ".gpa-row:nth-child(3) .g-credit",
+    "2"
+   ]
+  ],
+  "b": [
+   [
+    "click",
+    ".scale-btn[data-scale='4.3']"
+   ],
+   [
+    "set",
+    ".gpa-row:nth-child(1) .g-grade",
+    "B0"
+   ],
+   [
+    "set",
+    ".gpa-row:nth-child(1) .g-credit",
+    "3"
+   ],
+   [
+    "set",
+    ".gpa-row:nth-child(2) .g-grade",
+    "A+"
+   ],
+   [
+    "set",
+    ".gpa-row:nth-child(2) .g-credit",
+    "1"
+   ],
+   [
+    "set",
+    ".gpa-row:nth-child(3) .g-grade",
+    "C+"
+   ],
+   [
+    "set",
+    ".gpa-row:nth-child(3) .g-credit",
+    "3"
+   ],
+   [
+    "set",
+    ".gpa-row:nth-child(4) .g-credit",
+    "2"
+   ]
+  ]
+ },
+ "tools/lunar-calendar": {
+  "a": [
+   [
+    "set",
+    "#in-y",
+    "2024"
+   ],
+   [
+    "set",
+    "#in-m",
+    "3"
+   ],
+   [
+    "set",
+    "#in-d",
+    "15"
+   ]
+  ],
+  "b": [
+   [
+    "click",
+    ".mode-btn[data-mode='l2s']"
+   ],
+   [
+    "set",
+    "#in-y",
+    "2025"
+   ],
+   [
+    "set",
+    "#in-m",
+    "8"
+   ],
+   [
+    "set",
+    "#in-d",
+    "15"
+   ]
+  ]
+ },
+ "date/dday": {
+  "a": [
+   [
+    "set",
+    "#dday-title",
+    "수능"
+   ],
+   [
+    "set",
+    "#dday-target",
+    "2026-11-19"
+   ]
+  ],
+  "b": [
+   [
+    "set",
+    "#dday-title",
+    "결혼기념일"
+   ],
+   [
+    "set",
+    "#dday-target",
+    "2024-03-15"
+   ]
+  ]
+ },
+ "date/date-difference": {
+  "a": [
+   [
+    "set",
+    "#diff-start",
+    "2024-03-15"
+   ],
+   [
+    "set",
+    "#diff-end",
+    "2026-10-19"
+   ]
+  ],
+  "b": [
+   [
+    "set",
+    "#diff-start",
+    "2023-07-01"
+   ],
+   [
+    "set",
+    "#diff-end",
+    "2026-01-31"
+   ],
+   [
+    "click",
+    "#diff-include-start"
+   ]
+  ]
+ },
+ "date/date-add": {
+  "a": [
+   [
+    "set",
+    "#add-start",
+    "2024-01-31"
+   ],
+   [
+    "set",
+    "#add-months",
+    "1"
+   ],
+   [
+    "set",
+    "#add-days",
+    "10"
+   ]
+  ],
+  "b": [
+   [
+    "set",
+    "#add-start",
+    "2026-10-19"
+   ],
+   [
+    "click",
+    "#add-op-minus"
+   ],
+   [
+    "set",
+    "#add-years",
+    "1"
+   ],
+   [
+    "set",
+    "#add-months",
+    "2"
+   ],
+   [
+    "set",
+    "#add-days",
+    "100"
+   ]
+  ]
+ },
+ "date/age": {
+  "a": [
+   [
+    "set",
+    "#age-birth",
+    "1990-05-20"
+   ],
+   [
+    "set",
+    "#age-base",
+    "2026-10-19"
+   ]
+  ],
+  "b": [
+   [
+    "set",
+    "#age-birth",
+    "2000-12-31"
+   ],
+   [
+    "set",
+    "#age-base",
+    "2026-01-31"
+   ]
+  ]
+ },
+ "date/weekday": {
+  "a": [
+   [
+    "set",
+    "#weekday-date",
+    "2024-03-15"
+   ]
+  ],
+  "b": [
+   [
+    "set",
+    "#weekday-date",
+    "2027-02-28"
+   ]
+  ]
+ },
+ "realestate/capital-gains": {
+  "a": [
+   [
+    "set",
+    "#yd-sale",
+    "90000"
+   ],
+   [
+    "set",
+    "#yd-buy",
+    "50000"
+   ],
+   [
+    "set",
+    "#yd-buy-date",
+    "2018-03-15"
+   ],
+   [
+    "set",
+    "#yd-sale-date",
+    "2026-10-19"
+   ]
+  ],
+  "b": [
+   [
+    "set",
+    "#yd-sale",
+    "120000"
+   ],
+   [
+    "set",
+    "#yd-buy",
+    "80000"
+   ],
+   [
+    "set",
+    "#yd-buy-date",
+    "2024-07-01"
+   ],
+   [
+    "set",
+    "#yd-sale-date",
+    "2026-01-31"
+   ]
+  ]
+ },
+ "health/bmi": {
+  "b": [
+   [
+    "set",
+    "#bmi-height",
+    "158.5"
+   ],
+   [
+    "set",
+    "#bmi-weight",
+    "72.3"
+   ]
+  ]
+ },
+ "health/body-fat": {
+  "b": [
+   [
+    "click",
+    "button[onclick^=\"setBfSex('female'\"]"
+   ],
+   [
+    "set",
+    "#bf-height",
+    "162"
+   ],
+   [
+    "set",
+    "#bf-weight",
+    "58"
+   ],
+   [
+    "set",
+    "#bf-waist",
+    "72"
+   ],
+   [
+    "set",
+    "#bf-neck",
+    "32"
+   ],
+   [
+    "set",
+    "#bf-hip",
+    "94"
+   ]
+  ]
+ },
+ "health/ideal-weight": {
+  "b": [
+   [
+    "click",
+    "button[onclick^=\"setIwSex('female'\"]"
+   ],
+   [
+    "set",
+    "#iw-height",
+    "160"
+   ],
+   [
+    "set",
+    "#iw-weight",
+    "48"
+   ]
+  ]
+ },
+ "health/bmr": {
+  "b": [
+   [
+    "click",
+    "button[onclick^=\"setBmrSex('female'\"]"
+   ],
+   [
+    "set",
+    "#bmr-age",
+    "47"
+   ],
+   [
+    "set",
+    "#bmr-height",
+    "163"
+   ],
+   [
+    "set",
+    "#bmr-weight",
+    "61"
+   ],
+   [
+    "set",
+    "#bmr-activity",
+    "1.725"
+   ]
+  ]
+ },
+ "health/calories": {
+  "b": [
+   [
+    "click",
+    "button[onclick^=\"setCalSex('female'\"]"
+   ],
+   [
+    "set",
+    "#cal-age",
+    "38"
+   ],
+   [
+    "set",
+    "#cal-height",
+    "165"
+   ],
+   [
+    "set",
+    "#cal-weight",
+    "70"
+   ],
+   [
+    "click",
+    "button[onclick^=\"setActivity(1.725\"]"
+   ],
+   [
+    "set",
+    "#ex-min",
+    "45"
+   ]
+  ]
+ },
+ "baby/ovulation": {
+  "b": [
+   [
+    "set",
+    "#lmp",
+    "2023-07-01"
+   ],
+   [
+    "set",
+    "#cycle",
+    "35"
+   ]
+  ]
+ },
+ "realestate/joint": {
+  "b": [
+   [
+    "click",
+    "main .seg-group .seg-btn:nth-child(2)"
+   ],
+   [
+    "set",
+    "#joint-price",
+    "300000"
+   ],
+   [
+    "set",
+    "#joint-ratio",
+    "70"
+   ]
+  ]
+ }
+}

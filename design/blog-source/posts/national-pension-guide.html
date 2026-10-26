@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>국민연금 수령액 계산 - 소득 300만원 20년 납부 시 월 65만원, 30년이면 98만원 | 제이퍼 계산기 블로그</title>
+<meta name="description" content="국민연금 수령액은 가입기간과 소득에 따라 달라집니다. 월 소득 300만원 20년 납부면 약 65만원, 30년이면 98만원. 조기수령 vs 연기수령 손익분기점과 2025년 연금개혁(소득대체율 43%) 반영 시나리오를 비교했습니다.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="국민연금 수령액 계산 - 소득 300만원 20년 납부 시 월 65만원, 30년이면 98만원 | 제이퍼 계산기 블로그">
+<meta property="og:description" content="국민연금 수령액은 가입기간과 소득에 따라 달라집니다. 월 소득 300만원 20년 납부면 약 65만원, 30년이면 98만원. 조기수령 vs 연기수령 손익분기점과 2025년 연금개혁(소득대체율 43%) 반영 시나리오를 비교했습니다.">
+<meta property="og:url" content="https://www.jptcalc.kr/blog/posts/national-pension-guide.html">
+<meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png">
+<meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png">
+  <meta name="googlebot" content="noindex, follow" />
+<link rel="canonical" href="https://www.jptcalc.kr/blog/posts/national-pension-guide.html">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "국민연금 수령액 계산 - 소득 300만원 20년 납부 시 월 65만원, 30년이면 98만원",
+  "description": "국민연금 수령액은 가입기간과 소득에 따라 달라집니다. 월 소득 300만원 20년 납부면 약 65만원, 30년이면 98만원. 조기수령 vs 연기수령 손익분기점과 2025년 연금개혁(소득대체율 43%) 반영 시나리오를 비교했습니다.",
+  "author": { "@type": "Organization", "name": "제이퍼 계산기", "url": "https://www.jptcalc.kr" },
+  "publisher": { "@type": "Organization", "name": "제이퍼 계산기", "url": "https://www.jptcalc.kr", "logo": { "@type": "ImageObject", "url": "https://www.jptcalc.kr/android-chrome-512x512.png" } },
+  "datePublished": "2026-04-22",
+  "dateModified": "2026-07-28",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.jptcalc.kr/blog/posts/national-pension-guide.html" },
+  "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
+  "articleSection": "연금·복지",
+  "inLanguage": "ko"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "국민연금을 최소 몇 년 납부해야 받을 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "국민연금은 최소 10년(120개월) 이상 납부해야 노령연금을 받을 수 있습니다. 국민연금법 제61조에 따르면 가입기간이 10년 미만이면 수급 연령이 되어도 연금 형태로 지급되지 않고, 납부한 보험료에 이자를 더한 '반환일시금'으로만 돌려받습니다. 10년을 채웠다면 연금 수령 자격이 생기지만 가입기간이 짧을수록 수령액이 줄어들므로, 납부 공백이 있다면 추납 제도를 활용해 기간을 채우는 것이 유리합니다. 추납 시 현재 기준소득월액을 기준으로 보험료를 내므로, 소득이 높을 때 추납하면 수령액 산정 시 평균소득이 낮아질 수 있어 추납 시기도 전략적으로 판단해야 합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "직장을 옮기거나 프리랜서로 일한 기간도 국민연금 가입기간에 포함되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "직장을 이직한 경우라도 연속해서 국민연금에 가입되어 있으면 가입기간은 그대로 합산됩니다. 직장을 그만두고 프리랜서로 일하거나 사업을 한 경우에는 지역가입자로 전환되는데, 이때 보험료를 계속 납부하면 가입기간이 유지됩니다. 문제는 직장 사이 공백 기간에 납부를 중단했을 때입니다. 이 기간은 납부예외 처리가 되어 가입기간에 산입되지 않습니다. 납부예외 기간은 나중에 '추납' 제도를 통해 소급 납부할 수 있습니다. 국민연금공단(nps.or.kr)의 '내 연금 알아보기' 서비스에서 지금까지의 가입기간과 납부 이력을 무료로 확인할 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "국민연금 수령액이 소득에 비례한다면 고소득자는 무조건 더 많이 받나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "꼭 그렇지는 않습니다. 국민연금 수령액 공식에는 전체 가입자의 평균소득(A값)이 포함되어 있어, 소득이 낮을수록 납부한 보험료 대비 수령 비율이 높아집니다. 이것이 국민연금의 소득재분배 기능입니다. 또한 기준소득월액에 상한(2025.7~2026.6 적용 월 637만원)이 있어 이보다 소득이 높아도 637만원 기준으로만 계산됩니다. 즉, 월소득 637만원인 사람과 1,000만원인 사람의 수령액은 동일합니다. 반면 실질 수익률 면에서는 저소득자가 더 유리하므로, 국민연금은 고소득자보다 저소득자에게 상대적으로 더 좋은 노후 안전망 역할을 합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "국민연금과 퇴직연금(IRP)을 동시에 받으면 세금이 어떻게 되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "국민연금은 공적연금으로 종합과세 대상입니다. 연간 수령액에서 연금소득공제를 차감한 후 종합소득에 합산해 세율이 적용됩니다. IRP나 연금저축 같은 사적연금은 연간 1,500만원 이하라면 분리과세(3.3~5.5%)를 선택할 수 있습니다. 두 가지를 동시에 수령하면 국민연금이 종합소득을 높여 전체 세율이 올라갈 수 있습니다. 예를 들어 국민연금 연 960만원과 IRP 연금 연 1,200만원을 동시에 받는 경우, IRP의 분리과세 여부를 검토해야 하며 사적연금 합계가 1,500만원을 초과하면 종합과세가 강제 적용됩니다. 수령 시작 전에 세무사나 국민연금공단 상담을 통해 연간 수령액 수준을 조정하는 전략이 필요합니다."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.jptcalc.kr/"}, {"@type": "ListItem", "position": 2, "name": "블로그", "item": "https://www.jptcalc.kr/blog/"}, {"@type": "ListItem", "position": 3, "name": "연금·복지", "item": "https://www.jptcalc.kr/blog/?cat=연금·복지"}, {"@type": "ListItem", "position": 4, "name": "국민연금 수령액 계산 - 소득 300만원 20년 납부 시 월 65만원, 30년이면 98만원", "item": "https://www.jptcalc.kr/blog/posts/national-pension-guide.html"}]}</script>
+<style>
+  :root { --primary: #0EA5E9; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Pretendard', -apple-system, sans-serif; color: #111827; background: #fff; line-height: 1.7; }
+  .container { max-width: 780px; margin: 0 auto; padding: 24px 20px 60px; }
+  h1 { font-size: clamp(22px, 4vw, 30px); font-weight: 800; line-height: 1.35; margin-bottom: 12px; }
+  h2 { font-size: clamp(18px, 3vw, 22px); font-weight: 700; margin: 40px 0 14px; color: #111827; }
+  h3 { font-size: 16px; font-weight: 700; margin: 24px 0 10px; color: #1F2937; }
+  p { margin-bottom: 14px; font-size: 15px; line-height: 1.8; color: #374151; }
+  .post-tag { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; margin-bottom: 14px; background: rgba(14,165,233,0.15); color: #0EA5E9; }
+  .post-meta { font-size: 13px; color: #9CA3AF; margin-bottom: 28px; }
+  .highlight-box { background: rgba(14,165,233,0.08); border-left: 4px solid #0EA5E9; border-radius: 8px; padding: 16px 20px; margin: 20px 0; color: #0C4A6E; font-size: 14px; line-height: 1.7; }
+  .table-wrap { overflow-x: auto; margin: 20px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { background: #0EA5E9; color: #fff; padding: 10px 12px; text-align: center; font-weight: 700; }
+  td { padding: 9px 12px; border-bottom: 1px solid #E5E7EB; text-align: center; }
+  tr:nth-child(even) td { background: #F0F9FF; }
+  td.label { text-align: left; font-weight: 600; color: #1F2937; }
+  td.rate { color: #0EA5E9; font-weight: 700; }
+  .scenario-box { background: #F9FAFB; border: 1px solid #E5E7EB; border-radius: 12px; padding: 20px 24px; margin: 20px 0; }
+  .scenario-box h3 { margin-top: 0; }
+  .scenario-box .result { background: #0EA5E9; color: #fff; border-radius: 8px; padding: 12px 16px; font-weight: 700; font-size: 15px; margin-top: 12px; }
+  .cta-box { background: #F0F9FF; border: 1px solid #BAE6FD; border-radius: 12px; padding: 20px 24px; margin: 32px 0; text-align: center; }
+  .cta-box p { color: #0C4A6E; margin-bottom: 12px; font-weight: 600; }
+  .cta-btn { display: inline-block; background: #0EA5E9; color: #fff; font-weight: 700; font-size: 15px; padding: 12px 28px; border-radius: 8px; text-decoration: none; }
+  .faq-item { border: 1px solid #E5E7EB; border-radius: 10px; padding: 18px 20px; margin: 14px 0; }
+  .faq-q { font-weight: 700; font-size: 15px; color: #111827; margin-bottom: 8px; }
+  .faq-q::before { content: "Q. "; color: #0EA5E9; }
+  .faq-a { font-size: 14px; color: #374151; line-height: 1.75; }
+  .faq-a::before { content: "A. "; font-weight: 700; color: #0EA5E9; }
+  .warning-box { background: #FFF7ED; border-left: 4px solid #F97316; border-radius: 8px; padding: 14px 18px; margin: 16px 0; font-size: 14px; color: #7C2D12; }
+    .site-header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .header-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; gap: 24px; }
+    .site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .logo-icon img { width: 32px; height: 32px; display: block; }
+    .logo-text { font-size: 18px; font-weight: 900; color: #111827; letter-spacing: -0.5px; }
+    .logo-text span { color: #818CF8; }
+    .header-back { margin-left: auto; font-size: 13px; font-weight: 600; color: #6B7280; text-decoration: none; }
+    .header-back:hover { color: #111827; }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../../" class="site-logo">
+      <div class="logo-icon"><img src="../../assets/logo.svg" alt="로고" /></div>
+      <span class="logo-text">제이퍼<span>계산기</span></span>
+    </a>
+    <a href="../" class="header-back">← 블로그 목록</a>
+  </div>
+</header>
+
+<div class="container">
+  <span class="post-tag">연금·복지</span>
+  <h1>국민연금 예상 수령액 계산법 - 납입 기간·소득별 얼마나 받나</h1>
+  <div class="post-meta">📅 2026.04.22 · ⏱ 21분 읽기</div>
+
+  <p>매달 월급에서 국민연금 보험료가 빠져나갈 때 '나중에 얼마나 받을 수 있을까' 계산해본 적 있으신가요. 월 소득 300만원으로 20년을 납부하면 예상 수령액은 약 <strong>월 65만원</strong>입니다. 30년이면 98만원, 40년을 꽉 채워야 131만원이 됩니다. 많다고 느끼는지 적다고 느끼는지는 사람마다 다르겠지만, 숫자를 알고 준비하는 것과 모르고 막연히 기대하는 것은 노후 설계에서 큰 차이를 만듭니다.</p>
+  <p>2025년 국민연금법 개정으로 2026년 1월 1일부터 소득대체율이 41.5%에서 43%로 1.5%p 인상되었고, 보험료율도 9.5%에서 매년 0.5%p씩 단계 인상되어 2033년 13%에 도달합니다. 이 글의 모든 수치는 개혁 후 기준(소득대체율 43%, 2025년 A값 309만원)으로 재계산했습니다.</p>
+  <p>국민연금 수령액은 두 가지 축이 결정합니다. 하나는 가입기간, 하나는 납부 기간 중 평균 소득입니다. 소득·납부기간별 예상 수령액표, 조기·연기 수령의 손익분기 계산, 국민연금에 붙는 세금까지 한 페이지에 모았습니다.</p>
+
+  <div class="highlight-box">
+    이 글이 필요한 분: 국민연금 예상 수령액을 미리 파악하고 싶은 40~50대 직장인 / 조기·연기 수령 중 어느 쪽이 유리한지 고민 중인 분 / 납부 공백이 있어 추납 여부를 검토 중인 분
+  </div>
+
+  <ul style="background:#F9FAFB;padding:16px 20px 16px 36px;border-radius:10px;margin:16px 0;font-size:14px;color:#374151;line-height:1.8">
+    <li>월 소득 200~500만원 × 납부기간 20~40년 예상 수령액 비교표</li>
+    <li>조기연금(최대 30% 감액)과 연기연금(최대 36% 증액)의 손익분기점 계산</li>
+    <li>시나리오 3개 - 다른 소득·납부기간의 실제 예상 금액</li>
+    <li>국민연금에 부과되는 연금소득세 - 공제 후 실수령액 예시</li>
+    <li>납부 공백을 메우는 추납 제도 활용법</li>
+  </ul>
+
+  <h2>가입기간 × 소득, 이 두 가지가 다 결정한다</h2>
+  <p>국민연금 수령액(기본연금액)은 크게 두 가지 변수로 결정됩니다. 첫 번째는 <strong>가입기간</strong>입니다. 납부한 기간이 길수록 수령액이 비례해서 늘어납니다. 두 번째는 <strong>납부 기간 중 평균 기준소득월액(B값)</strong>입니다. 소득이 높을수록 수령액도 올라가지만, 공식에 전체 가입자 평균소득(A값)도 포함되어 있어 소득이 낮을수록 납부 대비 수령 비율이 높아지는 소득재분배 효과가 있습니다.</p>
+  <p>국민연금법 제51조에 따른 기본연금액 산정 공식을 간략하게 표현하면 다음과 같습니다.</p>
+
+  <div class="highlight-box">
+    기본연금액(월) = 소득대체율(43%) × (A값 + B값)/2 × (가입기간/40년)<br>
+    - A값: 2025년 기준 전체 가입자 평균소득월액 약 309만원 (2025.7~2026.6 적용)<br>
+    - B값: 본인의 가입기간 중 평균 기준소득월액<br>
+    - 소득대체율: 2026년 기준 43% (2025년 연금개혁으로 41.5%에서 1.5%p 인상)
+  </div>
+
+  <p>예를 들어 월 소득 300만원으로 40년을 가득 채우면 소득대체율 43%가 그대로 적용되어 약 <strong>월 131만원</strong>을 받습니다. 20년이라면 약 65만원입니다. 기준소득월액 상한(2025.7~2026.6 적용 637만원)이 있어 그 이상의 소득은 637만원으로 동일하게 산정됩니다. 보험료율은 2026년 1월부터 단계 인상이 시작되어 2026년은 9.5%(직장가입자는 근로자와 사업주가 각 4.75%씩 부담)이며, 매년 0.5%p씩 올라 2033년 13%에 도달합니다.</p>
+
+  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-IE2keARtehW1pRBT" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+  <h2>내 수령액, 표에서 바로 찾기</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>월 평균소득</th>
+          <th>20년 납부</th>
+          <th>25년 납부</th>
+          <th>30년 납부</th>
+          <th>40년 납부</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="label">200만원</td>
+          <td><strong>55만원</strong></td>
+          <td>68만원</td>
+          <td>82만원</td>
+          <td class="rate">109만원</td>
+        </tr>
+        <tr>
+          <td class="label">300만원</td>
+          <td><strong>65만원</strong></td>
+          <td>82만원</td>
+          <td>98만원</td>
+          <td class="rate">131만원</td>
+        </tr>
+        <tr>
+          <td class="label">400만원</td>
+          <td><strong>76만원</strong></td>
+          <td>95만원</td>
+          <td>114만원</td>
+          <td class="rate">152만원</td>
+        </tr>
+        <tr>
+          <td class="label">500만원</td>
+          <td><strong>87만원</strong></td>
+          <td>109만원</td>
+          <td>130만원</td>
+          <td class="rate">174만원</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:13px;color:#6B7280;margin-top:6px">※ 2025년 A값 309만원, 소득대체율 43%(2026.1.1 시행 개혁분) 기준 간이 계산. 실제 수령액은 납부 이력·물가연동 등에 따라 달라집니다.</p>
+
+  <div style="margin:24px 0;overflow-x:auto">
+  <svg role="img" width="100%" viewBox="0 0 680 220" xmlns="http://www.w3.org/2000/svg">
+    <title>국민연금 납입기간별 예상 수령액 비교 (월소득 300만원 기준)</title>
+    <rect width="680" height="220" rx="12" fill="#F9FAFB"/>
+    <text x="24" y="34" font-size="13" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">납입기간별 예상 수령액 (월소득 300만원 기준)</text>
+    <!-- 20년 -->
+    <text x="24" y="72" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">20년</text>
+    <rect x="90" y="58" width="189" height="22" rx="4" fill="#0EA5E9" opacity="0.5"/>
+    <text x="286" y="74" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">65만원</text>
+    <!-- 25년 -->
+    <text x="24" y="112" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">25년</text>
+    <rect x="90" y="98" width="237" height="22" rx="4" fill="#0EA5E9" opacity="0.65"/>
+    <text x="334" y="114" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">82만원</text>
+    <!-- 30년 -->
+    <text x="24" y="152" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">30년</text>
+    <rect x="90" y="138" width="283" height="22" rx="4" fill="#0EA5E9" opacity="0.8"/>
+    <text x="380" y="154" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">98만원</text>
+    <!-- 40년 -->
+    <text x="24" y="192" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">40년</text>
+    <rect x="90" y="178" width="378" height="22" rx="4" fill="#0EA5E9"/>
+    <text x="476" y="194" font-size="13" font-weight="700" fill="#111827" font-family="Pretendard,sans-serif">131만원</text>
+  </svg>
+  </div>
+
+  <p>표를 보면 한 가지 사실이 눈에 띕니다. 가입기간 10년이 늘 때마다 수령액이 약 33만원씩 증가합니다(월소득 300만원 기준). 30년에서 40년으로 10년을 더 납부하면 98만원에서 131만원으로 33만원이 늘어납니다. 연간으로 396만원, 은퇴 후 20년을 산다고 하면 총 7,920만원의 차이입니다. 납부 기간을 늘리는 것, 그 자체가 강력한 노후 투자입니다.</p>
+
+  <h2>직장인 3명의 예상 수령액 실계산</h2>
+
+  <div class="scenario-box">
+    <h3>시나리오 1 - 이정수씨(55세, 월급여 280만원)</h3>
+    <p>이씨는 28세에 취업해 현재까지 27년 중 공백 5년을 제외하고 실제 가입기간이 22년입니다. 1971년생으로 수급개시연령은 65세(1969년생 이후 적용)이므로, 65세까지 10년을 더 납부할 계획입니다.</p>
+    <p><strong>현재 22년 가입 기준 예상 수령액:</strong><br>
+    0.43 × (309만 + 280만) / 2 × (22/40) = <strong>약 70만원/월</strong></p>
+    <p><strong>10년 더 납부해 32년을 채운다면:</strong><br>
+    0.43 × (309만 + 280만) / 2 × (32/40) = <strong>약 101만원/월</strong></p>
+    <div class="result">10년 더 납부 시 수령액 차이: +31만원/월 → 은퇴 후 20년간 누적 7,440만원 추가 수령</div>
+    <p style="margin-top:12px;font-size:14px;color:#374151">이씨가 남은 10년간(2026~2035년) 납부할 보험료는 단계 인상 반영 10년 평균 11.6%(근로자 부담 5.8%) 기준, 280만원 × 5.8% × 12개월 × 10년 = <strong>약 1,949만원</strong>입니다. 수령액 증가분(7,440만원) 대비 보험료 납부액(1,949만원)의 비율은 약 3.8배. 납부를 멈추지 않는 것이 합리적입니다.</p>
+  </div>
+
+  <div class="scenario-box">
+    <h3>시나리오 2 - 박민수씨(50세, 월급여 450만원)</h3>
+    <p>박씨는 30세에 직장생활을 시작해 가입기간이 20년입니다. 1976년생으로 수급개시연령은 65세(1969년생 이후 적용)이므로, 65세까지 15년을 더 납부하면 총 35년 가입이 됩니다.</p>
+    <p><strong>현재 20년 기준 예상 수령액:</strong><br>
+    0.43 × (309만 + 450만) / 2 × (20/40) = <strong>약 82만원/월</strong></p>
+    <p><strong>35년을 채운다면:</strong><br>
+    0.43 × (309만 + 450만) / 2 × (35/40) = <strong>약 143만원/월</strong></p>
+    <div class="result">15년 추가 납부 효과: +61만원/월 → 은퇴 후 20년간 누적 1억 4,640만원 추가 수령</div>
+    <p style="margin-top:12px;font-size:14px;color:#374151">박씨 입장에서 국민연금은 "의무 납부"가 아니라 가장 안전한 노후 투자 상품입니다. 원금 대비 수익률, 물가 연동, 사망 시까지 지급 보장이라는 세 가지 조건을 동시에 충족하는 금융 상품은 없습니다.</p>
+  </div>
+
+  <div class="scenario-box">
+    <h3>시나리오 3 - 최희진씨(40세, 월급여 350만원, 15년 납부 후 퇴직 예정)</h3>
+    <p>최씨는 45세에 퇴직 예정입니다. 이후 프리랜서로 전환하면 지역가입자가 되는데, 이때 보험료 납부를 계속할지 납부예외를 신청할지 고민 중입니다.</p>
+    <p><strong>45세 퇴직 후 납부 중단(가입 15년):</strong><br>
+    0.43 × (309만 + 350만) / 2 × (15/40) = <strong>약 53만원/월</strong> (65세부터)</p>
+    <p><strong>지역가입자로 계속 납부해 30년 채울 경우:</strong><br>
+    0.43 × (309만 + 350만) / 2 × (30/40) = <strong>약 106만원/월</strong> (65세부터)</p>
+    <div class="result">지역가입자로 15년 추가 납부 시 수령액 두 배 차이: 53만원 → 106만원</div>
+    <p style="margin-top:12px;font-size:14px;color:#374151">여기서 주의할 점이 하나 있는데요. 지역가입자는 보험료 전액을 본인이 부담합니다. 최씨가 납부를 시작하는 시점은 45세가 되는 2031년인데, 이때 이미 보험료율이 12%까지 올라 있고 2033년부터는 13%로 고정됩니다. 즉 15년(2031~2045년) 평균 요율은 약 12.9%로, 월 소득 350만원 기준 평균 보험료는 약 45만원/월(시작 42만원 → 종착 45만 5천원)입니다. 15년간 총 납부액은 약 8,130만원. 수령액 증가분(53만원/월 × 20년 = 1억 2,720만원)과 비교하면 약 1.6배를 돌려받는 셈이라 납부가 유리합니다. 단, 퇴직 후 수입이 불안정한 시기에 매달 42만~45만 5천원의 납부가 현실적인지 먼저 따져봐야 합니다.</p>
+  </div>
+
+    <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-88xhdLeiIK3V35kb" data-ad-width="300" data-ad-height="250"></ins>
+      <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+    </div>
+
+  <h2>연기연금이 항상 유리하다는 건 함정이다</h2>
+  <p>국민연금은 1969년생 이후라면 만 65세부터 받을 수 있습니다(출생연도별 단계적 상향으로 1961~1964년생은 63세, 1965~1968년생은 64세). 여기에 두 가지 선택지가 더 있습니다. 하나는 <strong>조기노령연금</strong>(최대 5년 앞당겨 수령, 1년당 6% 감액), 다른 하나는 <strong>연기연금</strong>(최대 5년 늦춰 수령, 1년당 7.2% 증액)입니다. 많은 분들이 "연기할수록 유리하다"고 알고 있는데, 정말 그럴까요?</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>수령 시기</th>
+          <th>감·증액률</th>
+          <th>월 수령액</th>
+          <th>정상 대비<br>손익분기 나이</th>
+          <th>비고</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="label">조기수령 (60세, 5년 조기)</td>
+          <td>-30%</td>
+          <td>70만원</td>
+          <td>76.7세</td>
+          <td>76세 이전 사망 시 조기가 유리</td>
+        </tr>
+        <tr>
+          <td class="label">정상수령 (65세)</td>
+          <td>기준</td>
+          <td class="rate">100만원</td>
+          <td>-</td>
+          <td>기준점</td>
+        </tr>
+        <tr>
+          <td class="label">연기수령 (70세, 5년 연기)</td>
+          <td>+36%</td>
+          <td>136만원</td>
+          <td>83.9세</td>
+          <td>84세 이후 생존 시 연기가 유리</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:13px;color:#6B7280;margin-top:6px">※ 정상수령액 100만원/월 기준 손익분기 계산. 물가연동·이자는 제외한 단순 비교.</p>
+
+  <p>손익분기점을 계산해봤습니다. 조기 vs 정상 비교에서는, 60~65세 5년간 조기수령으로 선취하는 금액이 70만원 × 60개월 = 4,200만원입니다. 65세 이후에는 매월 30만원씩 정상수령이 앞서기 시작하므로, 손익분기는 4,200 ÷ 30 = 140개월(11.7년) 뒤, 즉 <strong>76.7세</strong>부터 정상수령이 역전합니다. 76세 이전에 사망하면 조기수령이 오히려 더 많이 받은 셈이 됩니다.</p>
+  <p>연기 vs 정상 비교는 더 극적입니다. 65~70세 5년간 정상수령으로 선취하는 금액이 100만원 × 60개월 = 6,000만원입니다. 70세 이후 매월 36만원씩 연기수령이 앞서므로, 손익분기는 6,000 ÷ 36 = 166.7개월(13.9년) 뒤, 즉 <strong>83.9세</strong>부터 연기수령이 유리해집니다.</p>
+
+  <div class="warning-box">
+    국가데이터처(구 통계청) 2024년 생명표 기준 한국 남성 기대수명은 80.8세, 여성은 86.6세입니다. 남성 평균 기대수명이 83.9세 손익분기점에 못 미칩니다. 통계적으로 남성에게는 연기연금이 항상 유리하지 않을 수 있습니다. 건강 상태, 가계 현금흐름, 배우자와의 나이 차이 등을 함께 고려해야 합니다.
+  </div>
+
+  <p>답은 간단합니다. 건강하고 장수 가능성이 높다면 연기, 건강이 좋지 않거나 은퇴 후 현금이 필요하다면 조기 또는 정상 수령이 합리적입니다. "연기연금이 무조건 유리하다"는 공식은 없습니다.</p>
+
+  <h2>받기 시작하면 세금은 얼마나 빠지나</h2>
+  <p>국민연금은 공적연금으로 분류되어 수령 시 종합과세 대상입니다. 다만 연금소득공제가 적용되므로 전체 수령액이 모두 과세되지는 않습니다. 소득세법 제47조의2에 따른 공제 구조는 다음과 같습니다.</p>
+  <div class="highlight-box">
+    연금소득공제(소득세법 제47조의2, 한도 900만원)<br>
+    - 350만원 이하: 전액 공제<br>
+    - 350만~700만원: 350만원 + (초과분 × 40%)<br>
+    - 700만~1,400만원: 490만원 + (초과분 × 20%)<br>
+    - 1,400만원 초과: 630만원 + (초과분 × 10%)
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>연간 수령액</th>
+          <th>월 수령액</th>
+          <th>연금소득공제</th>
+          <th>과세소득</th>
+          <th>대략 세금</th>
+          <th>실효 세율</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="label">780만원</td>
+          <td>65만원</td>
+          <td>506만원</td>
+          <td>274만원</td>
+          <td>약 7만원</td>
+          <td class="rate">1.0%</td>
+        </tr>
+        <tr>
+          <td class="label">1,176만원</td>
+          <td>98만원</td>
+          <td>585만원</td>
+          <td>591만원</td>
+          <td>약 26만원</td>
+          <td class="rate">2.3%</td>
+        </tr>
+        <tr>
+          <td class="label">1,572만원</td>
+          <td>131만원</td>
+          <td>647만원</td>
+          <td>925만원</td>
+          <td>약 47만원</td>
+          <td class="rate">3.0%</td>
+        </tr>
+        <tr>
+          <td class="label">2,088만원</td>
+          <td>174만원</td>
+          <td>699만원</td>
+          <td>1,389만원</td>
+          <td>약 74만원</td>
+          <td class="rate">3.5%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:13px;color:#6B7280;margin-top:6px">※ 국민연금 단독 수령 + 기본 인적공제(150만원) 가정. 다른 소득과 합산·부양가족·세액공제 등에 따라 세금은 달라집니다.</p>
+
+  <p>월 65만원(연 780만원)을 수령하면 연금소득공제 후 과세소득이 274만원으로 줄어들고, 인적공제까지 거치면 실효 세율이 1.0% 수준입니다. 월 174만원(연 2,088만원) 수준에서도 공제와 기본공제를 거치면 실효 세율이 3.5% 수준에 머뭅니다. 여기서 주의할 점이 하나 있는데요. 국민연금 외에 IRP나 연금저축에서 연금을 받는 분이라면, 사적연금 합계가 연간 1,500만원을 넘는 순간 분리과세(3.3~5.5%)가 불가능해져 전체 세부담이 크게 올라갈 수 있습니다. 이 부분은 <a href="../posts/pension-tax-guide.html" style="color:#0EA5E9;">연금소득세 세율·실수령액 비교 가이드</a>에서 더 자세히 다뤘습니다.</p>
+
+  <h2>납부 공백이 있다면 추납부터 확인하세요</h2>
+  <p>직장을 그만두거나 사업이 어려워 보험료 납부를 중단한 기간(납부예외 기간)이 있다면, '추납' 제도를 통해 소급해서 납부할 수 있습니다. 추납은 신청 당시의 기준소득월액을 기준으로 보험료를 산정하므로, 소득이 높은 시기에 추납하면 평균소득이 올라가 유리한 면이 있습니다. 반면 납부 총액이 많아지면 수익률 계산을 따져봐야 합니다.</p>
+  <p>전업주부나 학생처럼 의무가입 대상이 아닌 분들도 '임의가입'으로 국민연금에 가입할 수 있습니다. 이 경우 최소 기준소득월액(2025.7~2026.6 적용 40만원)을 기준으로 월 3만 8,000원(2026년 보험료율 9.5%)만 납부해도 가입기간이 쌓입니다. 보험료율 단계 인상에 따라 부담은 매년 조금씩 늘어납니다. 소득이 없는 기간에도 가입기간을 늘릴 수 있는 방법입니다. 국민연금공단(nps.or.kr) 또는 가까운 지사에서 신청할 수 있습니다.</p>
+
+  <div class="highlight-box">
+    납부예외 기간 추납 체크리스트<br>
+    - 납부예외 기간이 있는지 국민연금공단 '내 연금 알아보기'에서 확인<br>
+    - 추납 시 현재 기준소득월액 기준으로 보험료 산정됨을 인지<br>
+    - 추납은 분할 납부 가능 (최대 60회)<br>
+    - 가입 기간 10년 미만이라면 추납으로 10년 충족 여부 최우선 검토
+  </div>
+
+  <p>노후 생활비 전체 그림을 함께 보고 싶다면 <a href="../posts/retirement-living-cost.html" style="color:#0EA5E9;">노후 생활비 30년 준비 자금 계산법</a>과 <a href="../posts/retirement-living-late-start.html" style="color:#0EA5E9;">40·50대 늦은 노후 준비 전략</a>을 같이 읽어보면 국민연금 수령액을 어떻게 활용할지 더 명확해집니다.</p>
+
+  <a href="https://www.bumohyetaek.kr/guide/national-pension-reform-2026" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:14px;background:#F0FDF4;border:1px solid #BBF7D0;border-radius:12px;padding:16px 20px;margin:20px 0;text-decoration:none;">
+    <span style="font-size:28px;line-height:1">👨‍👩‍👧</span>
+    <div style="flex:1;min-width:0">
+      <div style="font-size:11px;font-weight:700;color:#10B981;margin-bottom:3px;letter-spacing:0.3px">부모님께도 알려드리세요</div>
+      <div style="font-size:14px;font-weight:700;color:#111827;line-height:1.4">2026년 국민연금 개혁 핵심 정리 - 보험료율 인상과 소득대체율 변경</div>
+    </div>
+    <span style="font-size:18px;color:#10B981;flex-shrink:0">→</span>
+  </a>
+
+  <div class="cta-box">
+    <p>내 납입 기간과 소득을 직접 입력해서 예상 수령액을 바로 계산해보세요.</p>
+    <a href="../../calc/pension-welfare/national-pension/" class="cta-btn">국민연금 수령액 계산기 →</a>
+  </div>
+  <p style="font-size:13px;color:#6B7280;margin-top:8px">관련: <a href="../../calc/pension-welfare/pension-tax/" style="color:#0EA5E9;">연금소득세 계산기</a> · <a href="../../calc/pension-welfare/retirement-living/" style="color:#0EA5E9;">노후 생활비 계산기</a></p>
+
+  <div class="faq-item">
+    <div class="faq-q">국민연금을 최소 몇 년 납부해야 받을 수 있나요?</div>
+    <div class="faq-a">국민연금은 최소 10년(120개월) 이상 납부해야 노령연금을 받을 수 있습니다. 국민연금법 제61조에 따르면 가입기간이 10년 미만이면 수급 연령이 되어도 연금 형태로 지급되지 않고, 납부한 보험료에 이자를 더한 '반환일시금'으로만 돌려받습니다. 10년을 채웠다면 연금 수령 자격이 생기지만 가입기간이 짧을수록 수령액이 줄어들므로, 납부 공백이 있다면 추납 제도를 활용해 기간을 채우는 것이 유리합니다. 추납 시 현재 기준소득월액을 기준으로 보험료를 내므로, 소득이 높을 때 추납하면 수령액 산정 시 평균소득이 낮아질 수 있어 추납 시기도 전략적으로 판단해야 합니다.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">직장을 옮기거나 프리랜서로 일한 기간도 국민연금 가입기간에 포함되나요?</div>
+    <div class="faq-a">직장을 이직한 경우라도 연속해서 국민연금에 가입되어 있으면 가입기간은 그대로 합산됩니다. 직장을 그만두고 프리랜서로 일하거나 사업을 한 경우에는 지역가입자로 전환되는데, 이때 보험료를 계속 납부하면 가입기간이 유지됩니다. 문제는 직장 사이 공백 기간에 납부를 중단했을 때입니다. 이 기간은 납부예외 처리가 되어 가입기간에 산입되지 않습니다. 납부예외 기간은 나중에 '추납' 제도를 통해 소급 납부할 수 있습니다. 국민연금공단(nps.or.kr)의 '내 연금 알아보기' 서비스에서 지금까지의 가입기간과 납부 이력을 무료로 확인할 수 있습니다.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">국민연금 수령액이 소득에 비례한다면 고소득자는 무조건 더 많이 받나요?</div>
+    <div class="faq-a">꼭 그렇지는 않습니다. 국민연금 수령액 공식에는 전체 가입자의 평균소득(A값)이 포함되어 있어, 소득이 낮을수록 납부한 보험료 대비 수령 비율이 높아집니다. 이것이 국민연금의 소득재분배 기능입니다. 또한 기준소득월액에 상한(2025.7~2026.6 적용 월 637만원)이 있어 이보다 소득이 높아도 637만원 기준으로만 계산됩니다. 즉, 월소득 637만원인 사람과 1,000만원인 사람의 수령액은 동일합니다. 반면 실질 수익률 면에서는 저소득자가 더 유리하므로, 국민연금은 고소득자보다 저소득자에게 상대적으로 더 좋은 노후 안전망 역할을 합니다.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">국민연금과 퇴직연금(IRP)을 동시에 받으면 세금이 어떻게 되나요?</div>
+    <div class="faq-a">국민연금은 공적연금으로 종합과세 대상입니다. 연간 수령액에서 연금소득공제를 차감한 후 종합소득에 합산해 세율이 적용됩니다. IRP나 연금저축 같은 사적연금은 연간 1,500만원 이하라면 분리과세(3.3~5.5%)를 선택할 수 있습니다. 두 가지를 동시에 수령하면 국민연금이 종합소득을 높여 전체 세율이 올라갈 수 있습니다. 예를 들어 국민연금 연 960만원과 IRP 연금 연 1,200만원을 동시에 받는 경우, IRP의 분리과세 여부를 검토해야 하며 사적연금 합계가 1,500만원을 초과하면 종합과세가 강제 적용됩니다. 수령 시작 전에 세무사나 국민연금공단 상담을 통해 연간 수령액 수준을 조정하는 전략이 필요합니다.</div>
+  </div>
+
+  <h2>결국 중요한 건 이 두 숫자다</h2>
+  <p>국민연금 수령액을 결정하는 건 딱 두 가지입니다. 얼마를 벌었느냐(소득), 그리고 얼마나 오래 납부했느냐(기간). 월 소득 300만원으로 30년을 채우면 <strong>월 98만원</strong>입니다. 40년이면 131만원입니다. 많다고 느끼면 다행이고, 적다고 느끼면 지금 당장 퇴직연금·개인연금과 함께 조합을 설계해야 합니다.</p>
+  <p>조기·연기 선택에 대해서는 이렇게 정리합니다. 건강이 좋고 장수 가능성이 높다면 연기연금이 유리하지만, 손익분기점이 83.9세라는 사실을 잊지 마세요. 남성 평균 기대수명(80.8세)에는 아직 못 미치는 나이입니다. 무조건 연기가 아니라, 본인의 건강 상태와 현금흐름을 따져서 결정해야 합니다.</p>
+  <p>납부 기간 중 공백이 있다면 추납을 먼저 검토하세요. 특히 10년 미만인 분들에게는 추납이 노후 소득을 만드는 가장 효율적인 방법입니다. 정확한 예상 수령액은 국민연금공단 '내 연금 알아보기'나 아래 계산기에서 확인할 수 있습니다.</p>
+</div>
+
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: "제이퍼 계산기 편집팀",
+  reviewBasis: "국민연금법 제51조, 국민연금공단 연금산정 기준",
+  basisDate: "2026년 기준",
+  referenceOrg: "국민연금공단(nps.or.kr)",
+  lastReviewed: '2026.07.28',
+  disclaimer: "본 내용은 참고용이며 실제 수령액은 국민연금공단 공식 자료 기준으로 확인하시기 바랍니다.",
+  relatedCalc: { name: '국민연금 수령액 계산기', url: '/calc/pension-welfare/national-pension/' },
+  category: 'pension-welfare'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/blog-review-footer.js" defer></script>
+</body>
+</html>

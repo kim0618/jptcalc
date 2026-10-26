@@ -1,0 +1,5 @@
+/* 날짜 고유 결과 상자: 원본 그라데이션 대신 공용 결과 상자(.result-highlight)로. 변환기가 클래스를 덧붙인다 */
+.dday-display, .ymd-highlight { text-align: left; }
+.dday-label, .ymd-label { font-weight: var(--fw-meta); }
+.dday-number, .ymd-value { font-weight: var(--fw-result); }
+.dday-title, .ymd-sub { margin: 0; }

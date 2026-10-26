@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>기초대사량 계산기 - BMR·활동별 칼로리 계산 | jptcalc</title>
+  <meta name="description" content="기초대사량(BMR) 계산기. Mifflin-St Jeor 공식으로 하루 최소 필요 열량과 활동별 칼로리 소모량을 계산합니다." />
+  <meta name="keywords" content="기초대사량계산기,BMR계산기,칼로리계산,하루열량계산" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/health/bmr/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="기초대사량 계산기 - BMR 계산" />
+  <meta property="og:description" content="Mifflin-St Jeor 공식으로 기초대사량과 활동별 칼로리를 계산합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/health/bmr/" />
+  <meta property="og:site_name" content="jptcalc" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="기초대사량 계산기 - BMR·활동별 칼로리 계산 | jptcalc" />
+  <meta name="twitter:description" content="Mifflin-St Jeor 공식으로 기초대사량과 활동별 칼로리를 계산합니다." />
+  <meta name="twitter:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"기초대사량 계산기","url":"https://www.jptcalc.kr/calc/health/bmr/","description":"기초대사량(BMR) 계산기. Mifflin-St Jeor 공식으로 하루 최소 필요 열량과 활동별 칼로리 소모량을 계산합니다.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"inLanguage":"ko-KR"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},{"@type":"ListItem","position":2,"name":"건강 계산기","item":"https://www.jptcalc.kr/calc/health/"},{"@type":"ListItem","position":3,"name":"기초대사량 계산기"}]}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"기초대사량보다 적게 먹으면 안 되나요?","acceptedAnswer":{"@type":"Answer","text":"기초대사량 이하로 칼로리를 섭취하면 신체가 에너지 절약 모드에 들어가 대사율이 떨어지고, 근육 손실이 발생할 수 있습니다. 건강한 다이어트를 위해서는 기초대사량 이상을 섭취하되 TDEE보다 300~500kcal 적게 먹는 것이 권장됩니다."}},{"@type":"Question","name":"기초대사량을 높이려면 어떻게 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"근력 운동으로 근육량을 늘리는 것이 가장 효과적입니다. 충분한 단백질 섭취, 규칙적인 식사, 충분한 수면도 기초대사량 유지에 도움이 됩니다. 나이가 들수록 BMR이 감소하므로 꾸준한 근력 운동이 중요합니다."}},{"@type":"Question","name":"Mifflin-St Jeor 공식과 Harris-Benedict 공식의 차이는?","acceptedAnswer":{"@type":"Answer","text":"Harris-Benedict 공식은 1919년에 개발된 전통적 공식이고, Mifflin-St Jeor 공식은 1990년에 발표된 개정 공식입니다. 연구에 따르면 Mifflin-St Jeor 공식이 현대인의 BMR을 더 정확하게 예측합니다."}},{"@type":"Question","name":"기초대사량이 다이어트 계획에 어떻게 활용되나요?","acceptedAnswer":{"@type":"Answer","text":"BMR에 활동 계수를 곱하면 TDEE(하루 총 소모 열량)가 나옵니다. 체중 감량 목표라면 TDEE보다 300~500kcal 적게 섭취하면 주당 0.3~0.45kg 감량이 가능합니다. 단, BMR 미만으로 섭취하면 기초대사량 자체가 낮아지는 요요 현상에 빠질 수 있어, BMR 이상은 반드시 유지하는 것이 중요합니다. 구체적인 식단 계획은 영양사 또는 의사와 상담하는 것을 권장합니다."}},{"@type":"Question","name":"나이가 들면 기초대사량이 얼마나 줄어드나요?","acceptedAnswer":{"@type":"Answer","text":"일반적으로 30세 이후 10년마다 BMR이 2~3% 감소하는 것으로 알려져 있습니다. 20대 후반과 40대 초반을 비교하면 같은 체중·키라도 하루 70~100kcal 정도 적게 소모합니다. 1년으로 환산하면 약 2.5~3.5kg에 해당하는 열량 차이입니다. 나이에 따른 BMR 감소를 완화하는 가장 효과적인 방법은 근력 운동으로 근육량을 유지하는 것입니다."}}]}</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/affiliate-banner.css" />
+  <link rel="stylesheet" href="/assets/health-common.css" />
+  <style>
+    input[type=number]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(16,185,129,0.15)}.result-card{background:linear-gradient(135deg,#ECFDF5 0%,#D1FAE5 100%);border:1px solid rgba(16,185,129,0.25)}
+.seo-card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:16px}
+.seo-card h2{font-size:18px;font-weight:900;color:var(--gray-900);margin-bottom:12px}
+.seo-card h3{font-size:14px;font-weight:700;color:var(--gray-700);margin:16px 0 8px}
+.seo-card h3:first-of-type{margin-top:0}
+.seo-card p{font-size:13px;color:var(--gray-600);line-height:1.8;margin-bottom:8px}
+.seo-card ul{padding-left:20px;margin:8px 0}
+.seo-card li{font-size:13px;color:var(--gray-600);line-height:1.8}
+  </style>
+</head>
+<body>
+<header class="site-header"><div class="header-inner"><a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="로고" style="width:32px;height:32px;display:block" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a><nav class="header-nav"><a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B"></span>부동산</a><a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981"></span>프리랜서 세금</a><a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6"></span>이직/연봉</a><a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1"></span>금융·이자</a><a href="/calc/health/" class="nav-item active"><span class="nav-dot" style="background:#10B981"></span>건강</a><a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9"></span>연금·복지</a><a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316"></span>날짜·D-day</a><a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6"></span>AI/테크</a><a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6"></span>반려동물</a></nav><div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div><button class="hamburger" onclick="document.querySelector('.header-nav').classList.toggle('show')" aria-label="메뉴"><span></span><span></span><span></span></button></div></header>
+<main class="page-wrap">
+  <div class="page-header"><div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/health/">건강 계산기</a><span class="breadcrumb-sep">›</span><span>기초대사량 계산기</span></div><div class="page-header-badge">🔥 무료 온라인 계산기</div><h1>기초대사량 계산기</h1><p>Mifflin-St Jeor 공식으로 하루 최소 필요 열량을 계산합니다</p></div>
+
+  <div class="card"><div class="card-title">기본 정보</div><div class="seg-group" id="bmr-sex"><button class="seg-btn active" onclick="setBmrSex('male',this)">남성</button><button class="seg-btn" onclick="setBmrSex('female',this)">여성</button></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px"><div class="field" style="margin-bottom:0"><div class="field-label">나이</div><div class="input-wrap"><input type="number" id="bmr-age" placeholder="예) 25" min="1" max="120" step="1" inputmode="numeric" oninput="calcBmr()" /><span class="unit">세</span></div></div><div class="field" style="margin-bottom:0"><div class="field-label">키</div><div class="input-wrap"><input type="number" id="bmr-height" placeholder="예) 170" min="50" max="250" step="0.1" inputmode="decimal" oninput="calcBmr()" /><span class="unit">cm</span></div></div><div class="field" style="margin-bottom:0"><div class="field-label">체중</div><div class="input-wrap"><input type="number" id="bmr-weight" placeholder="예) 65" min="10" max="500" step="0.1" inputmode="decimal" oninput="calcBmr()" /><span class="unit">kg</span></div></div></div><div class="field" style="margin-top:12px;margin-bottom:0"><div class="field-label">활동 수준</div><select id="bmr-activity" onchange="calcBmr()" style="width:100%;padding:12px;border:1px solid var(--gray-200);border-radius:10px;font-size:14px;background:#fff"><option value="1.2">활동 거의 없음 (좌식 생활, 운동 안 함)</option><option value="1.375">가벼운 활동 (주 1~3회 가벼운 운동)</option><option value="1.55" selected>보통 활동 (주 3~5회 운동)</option><option value="1.725">활발한 활동 (주 6~7회 운동)</option><option value="1.9">매우 활발 (매일 격렬+신체노동)</option></select></div><div id="bmr-input-warn" style="display:none;font-size:12px;color:#EF4444;margin-top:8px"></div></div>
+  <div class="result-card" id="s1-result"><div class="result-highlight"><div class="rh-label">기초대사량 (BMR)</div><div class="rh-value" id="bmr-value">-</div><div class="rh-sub">하루 최소 필요 열량</div></div><div class="result-row" style="background:rgba(16,185,129,0.08);border-radius:8px;padding:10px 12px;margin:8px 0"><span class="result-label" style="font-weight:700">선택한 활동 수준 TDEE</span><span class="result-value" id="bmr-tdee" style="font-weight:900;color:#10B981">-</span></div><div style="font-size:12px;color:var(--gray-500);margin:8px 0 4px;font-weight:600">활동 수준별 비교</div><div class="result-row"><span class="result-label">활동 거의 없음 (×1.2)</span><span class="result-value" id="bmr-sed">-</span></div><div class="result-row"><span class="result-label">가벼운 활동 (×1.375)</span><span class="result-value" id="bmr-light">-</span></div><div class="result-row"><span class="result-label">보통 활동 (×1.55)</span><span class="result-value" id="bmr-mod">-</span></div><div class="result-row"><span class="result-label">활발한 활동 (×1.725)</span><span class="result-value" id="bmr-active">-</span></div><div class="result-row"><span class="result-label">매우 활발 (×1.9)</span><span class="result-value" id="bmr-very">-</span></div><div style="font-size:12px;color:var(--gray-500);margin:14px 0 4px;font-weight:600">선택한 활동 수준 기준 권장 칼로리</div><div class="result-row"><span class="result-label" style="color:#3B82F6">체중 감량 (-500 kcal)</span><span class="result-value" id="bmr-cut">-</span></div><div class="result-row"><span class="result-label" style="color:#10B981">현재 체중 유지</span><span class="result-value" id="bmr-maint">-</span></div><div class="result-row result-total-row"><span class="result-total-label" style="color:#F59E0B">체중 증량 (+300 kcal)</span><span class="result-total-value" id="bmr-bulk">-</span></div><p class="result-note">※ Mifflin-St Jeor 공식 기준. 권장 칼로리는 일반적인 기준이며 의료 전문가 상담 후 적용하세요.</p></div>
+  <a class="affiliate-banner" href="https://bestmore.net/click.php?m=iherb&a=A100703525&l=0000" target="_blank" rel="noopener noreferrer sponsored">
+      <div class="affiliate-banner__text">
+        <div class="affiliate-banner__title">운동·다이어트엔 단백질·영양제, 아이허브에서</div>
+        <div class="affiliate-banner__desc">프로틴·비타민·건강식품을 합리적인 가격에 만나보세요</div>
+      </div>
+      <span class="affiliate-banner__cta">아이허브 보기 →</span>
+    </a>
+  <p class="affiliate-disclosure">※ 위 링크는 제휴 광고이며, 이용 시 제이퍼 계산기가 일정 수수료를 받을 수 있습니다. (이용자 추가 부담 없음)</p>
+
+  <div class="seo-card"><h2>기초대사량 계산기 이용 안내</h2><h3>기초대사량(BMR)이란?</h3><p>기초대사량은 아무것도 하지 않고 가만히 있을 때 생명 유지에 필요한 최소 에너지량입니다. Mifflin-St Jeor 공식이 현재 가장 정확한 BMR 계산법입니다.</p></div>
+
+  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+
+  <section class="guide-section seo-card">
+    <h2>기초대사량(BMR) 가이드</h2>
+    <h3>기초대사량이란?</h3>
+    <p>기초대사량(Basal Metabolic Rate)은 생명 유지에 필요한 최소 에너지량으로, 심장 박동, 호흡, 체온 유지, 세포 활동 등에 사용됩니다. 하루 총 에너지 소모의 약 60~75%를 차지합니다.</p>
+    <h3>BMR에 영향을 미치는 요인</h3>
+    <ul>
+      <li>근육량: 근육이 많을수록 BMR이 높습니다</li>
+      <li>나이: 나이가 들수록 BMR이 감소합니다</li>
+      <li>성별: 일반적으로 남성이 여성보다 BMR이 높습니다</li>
+      <li>체온: 체온이 1도 상승하면 BMR이 약 13% 증가합니다</li>
+      <li>호르몬: 갑상선 호르몬이 BMR에 큰 영향을 줍니다</li>
+    </ul>
+    <h3>Mifflin-St Jeor 공식</h3>
+    <p>본 계산기는 현재 가장 정확하다고 평가받는 Mifflin-St Jeor 공식을 사용합니다. 남성: 10 x 체중(kg) + 6.25 x 키(cm) - 5 x 나이 + 5, 여성: 10 x 체중(kg) + 6.25 x 키(cm) - 5 x 나이 - 161.</p>
+    <h3>TDEE(총 에너지 소비량)와 권장 칼로리</h3>
+    <p>TDEE는 BMR에 활동 계수를 곱한 값으로 하루 실제 소모 열량을 의미합니다. 체중 감량은 TDEE 대비 약 500kcal 적게(주당 약 0.45kg 감량 목표), 체중 증량은 TDEE 대비 약 300kcal 많게 섭취하는 것이 일반적 기준입니다. 단, 감량 시에도 BMR 미만으로는 떨어지지 않도록 본 계산기는 자동 보정합니다.</p>
+    <h3>활동 계수 선택 가이드</h3>
+    <ul>
+      <li>1.2 - 사무직 좌식 생활, 운동 거의 없음</li>
+      <li>1.375 - 주 1~3회 가벼운 운동(산책, 가벼운 조깅)</li>
+      <li>1.55 - 주 3~5회 중강도 운동(러닝, 헬스 등)</li>
+      <li>1.725 - 주 6~7회 운동, 직업적 신체 활동 동반</li>
+      <li>1.9 - 매일 격렬한 운동 + 신체 노동(현장직, 운동선수)</li>
+    </ul>
+  </section>
+
+  <div class="guide-card">
+    <h2>활동계수(PAL) 기준표</h2>
+    <p>하루 총 에너지 소모량(TDEE)은 기초대사량(BMR)에 활동계수를 곱해 구하며, 좌식 생활 ×1.2부터 매우 활발 ×1.9까지 5단계로 나뉩니다.</p>
+    <div class="guide-table-wrap">
+      <table>
+        <thead>
+          <tr><th>활동계수</th><th>활동 수준</th><th>적용 대상</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>×1.2</td><td>활동 거의 없음</td><td>사무직 좌식 생활, 운동 거의 안 함</td></tr>
+          <tr><td>×1.375</td><td>가벼운 활동</td><td>주 1~3회 가벼운 운동</td></tr>
+          <tr><td>×1.55</td><td>보통 활동</td><td>주 3~5회 중강도 운동</td></tr>
+          <tr><td>×1.725</td><td>활발한 활동</td><td>주 6~7회 운동, 신체활동 직업</td></tr>
+          <tr><td>×1.9</td><td>매우 활발</td><td>매일 격렬한 운동 + 신체 노동</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:13px;color:var(--gray-600);margin-top:10px">예: BMR 1,500kcal인 사람이 보통 활동(×1.55)이면 TDEE는 약 2,325kcal입니다. 다이어트는 TDEE-300~500kcal, 벌크업은 TDEE+300kcal를 기준으로 잡습니다.</p>
+  </div>
+
+  <section class="guide-section seo-card">
+    <h2>기초대사량 계산 방법 (Mifflin-St Jeor)</h2>
+    <p>아래 3가지 핵심 요소를 이해하면 BMR 결과를 더 정확하게 해석할 수 있습니다.</p>
+    <div class="guide-grid">
+      <div class="guide-box"><strong>BMR 공식 (남성)</strong><span>10 × 체중(kg) + 6.25 × 키(cm) - 5 × 나이 + 5. 예: 38세 남성 80kg 175cm → 1,709 kcal</span></div>
+      <div class="guide-box"><strong>BMR 공식 (여성)</strong><span>10 × 체중(kg) + 6.25 × 키(cm) - 5 × 나이 - 161. 예: 28세 여성 56kg 163cm → 1,278 kcal</span></div>
+      <div class="guide-box"><strong>TDEE 계산</strong><span>BMR × 활동계수(1.2~1.9) = 하루 실제 소모 열량. 다이어트는 TDEE 대비 300~500kcal 감량이 일반적 기준입니다.</span></div>
+    </div>
+  </section>
+
+  <section class="guide-section seo-card">
+    <h2>실제 계산 예시</h2>
+    <h3>예시 1 - 이민지(28세, 여성, 키 163cm, 체중 56kg, 주 3회 운동)</h3>
+    <p>민지씨는 현재 체중에서 3kg 감량을 목표로 하루 권장 칼로리를 알고 싶습니다.</p>
+    <ul>
+      <li>BMR 계산: 10×56 + 6.25×163 - 5×28 - 161 = 560 + 1,018.75 - 140 - 161 = 1,278 kcal</li>
+      <li>TDEE (활동계수 1.375 적용): 1,278 × 1.375 = 1,757 kcal</li>
+      <li>감량 목표 하루 섭취 열량: 1,757 - 500 = 1,257 kcal</li>
+      <li><strong>결과: 하루 1,257 kcal 섭취 시 주당 약 0.45kg 감량 가능. BMR(1,278) 이상 유지 필수</strong></li>
+    </ul>
+    <h3>예시 2 - 박동현(38세, 남성, 키 175cm, 체중 80kg, 주 5회 운동)</h3>
+    <p>동현씨는 체중을 유지하면서 근육량을 늘리고 싶어 하루 권장 칼로리를 확인합니다.</p>
+    <ul>
+      <li>BMR 계산: 10×80 + 6.25×175 - 5×38 + 5 = 800 + 1,093.75 - 190 + 5 = 1,709 kcal</li>
+      <li>TDEE (활동계수 1.55 적용): 1,709 × 1.55 = 2,649 kcal</li>
+      <li>근육 증량 목표 하루 섭취: 2,649 + 300 = 2,949 kcal</li>
+      <li><strong>결과: 하루 2,949 kcal, 단백질 체중 1kg당 1.6~2.2g(128~176g) 섭취 권장</strong></li>
+    </ul>
+  </section>
+
+  <section class="guide-section seo-card">
+    <h2>이것만은 확인하세요</h2>
+    <p>BMR 계산 결과를 식단 계획에 활용할 때 주의해야 할 사항입니다. 전문의 상담을 권장합니다.</p>
+    <div class="guide-grid">
+      <div class="guide-box"><strong>BMR 미만 섭취 금지</strong><span>기초대사량 이하로 먹으면 대사율이 낮아지고 근육이 손실됩니다. 다이어트 중에도 BMR 이상은 반드시 섭취하세요.</span></div>
+      <div class="guide-box"><strong>활동계수 과대 선택 주의</strong><span>자신의 활동량을 실제보다 높게 선택하면 TDEE가 과대 계산됩니다. 운동 빈도보다 일상 활동량 전체를 보수적으로 판단하세요.</span></div>
+      <div class="guide-box"><strong>전문의 상담 권장</strong><span>BMR 수치가 예상보다 크게 낮거나 높은 경우, 또는 호르몬 이상이 의심되면 의료 전문가의 상담을 받는 것이 좋습니다.</span></div>
+    </div>
+  </section>
+
+  <section class="guide-section seo-card faq-card">
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-item">
+      <h3>기초대사량보다 적게 먹으면 안 되나요?</h3>
+      <p>기초대사량 이하로 칼로리를 섭취하면 신체가 에너지 절약 모드에 들어가 대사율이 떨어지고, 근육 손실이 발생할 수 있습니다. 건강한 다이어트를 위해서는 기초대사량 이상을 섭취하되 TDEE보다 300~500kcal 적게 먹는 것이 권장됩니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>기초대사량을 높이려면 어떻게 해야 하나요?</h3>
+      <p>근력 운동으로 근육량을 늘리는 것이 가장 효과적입니다. 나이가 들수록 BMR이 줄어드므로 꾸준한 근력 운동이 중요합니다. 충분한 단백질 섭취와 규칙적인 식사도 대사율 유지에 도움이 됩니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Mifflin-St Jeor 공식과 Harris-Benedict 공식의 차이는?</h3>
+      <p>Harris-Benedict 공식은 1919년에 개발된 전통적 공식이고, Mifflin-St Jeor 공식은 1990년에 발표된 개정 공식입니다. 연구에 따르면 Mifflin-St Jeor 공식이 현대인의 BMR을 더 정확하게 예측합니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>기초대사량이 다이어트 계획에 어떻게 활용되나요?</h3>
+      <p>BMR에 활동 계수를 곱하면 TDEE(하루 총 소모 열량)가 나옵니다. 체중 감량 목표라면 TDEE보다 300~500kcal 적게 섭취하면 주당 0.3~0.45kg 감량이 가능합니다. 단, BMR 미만으로 섭취하면 기초대사량 자체가 낮아지는 요요 현상에 빠질 수 있어, BMR 이상은 반드시 유지하는 것이 중요합니다. 구체적인 식단 계획은 영양사 또는 의사와 상담하는 것을 권장합니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>나이가 들면 기초대사량이 얼마나 줄어드나요?</h3>
+      <p>일반적으로 30세 이후 10년마다 BMR이 2~3% 감소하는 것으로 알려져 있습니다. 20대 후반과 40대 초반을 비교하면 같은 체중·키라도 하루 70~100kcal 정도 적게 소모합니다. 1년으로 환산하면 약 2.5~3.5kg에 해당하는 열량 차이입니다. 나이에 따른 BMR 감소를 완화하는 가장 효과적인 방법은 근력 운동으로 근육량을 유지하는 것입니다.</p>
+    </div>
+    <div class="update-note" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:10px 14px;margin-top:14px;font-size:12px;color:#6B7280">최종 검토: 2026.04.15 · 이 계산기는 건강 참고용이며 의료 진단을 대체하지 않습니다. 식단 조절이나 운동 계획은 의료 전문가와 상담하세요.</div>
+  </section>
+
+  <div class="update-note" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:10px 14px;margin-bottom:16px;font-size:12px;color:#6B7280">이 계산기는 건강 참고용이며 의료 진단을 대체하지 않습니다. 식단 조절이나 운동 계획은 의료 전문가와 상담하세요.</div>
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: 'Harris-Benedict 공식·Mifflin-St Jeor 공식 기반',
+    appliedFrom: '참고용 계산',
+    exceptions: [
+      '기초대사량은 연령·건강 상태·호르몬에 따라 개인차가 있습니다',
+      '의료적 진단을 대체하지 않으며 전문의 상담을 권장합니다',
+    ],
+    references: [
+      { name: '보건복지부(mohw.go.kr)', url: 'https://www.mohw.go.kr' },
+      { name: '한국영양학회(kns.or.kr)', url: 'https://www.kns.or.kr' },
+    ],
+    lastReviewed: '2026.05',
+  };
+  </script>
+  <script src="/assets/trust-block.js"></script>
+  <div class="sibling-section">
+    <div class="sibling-title">다른 건강 계산기</div>
+    <div class="sibling-list">
+      <a href="/calc/health/bmi/" class="sibling-link">📏 BMI</a>
+      <a href="/calc/health/bmr/" class="sibling-link current">🔥 기초대사량</a>
+      <a href="/calc/health/body-fat/" class="sibling-link">💪 체지방률</a>
+      <a href="/calc/health/calories/" class="sibling-link">🏃 칼로리 소모</a>
+      <a href="/calc/health/ideal-weight/" class="sibling-link">⚖️ 적정체중</a>
+    </div>
+    <div class="sibling-title">관련 가이드</div>
+    <div class="sibling-list">
+      <a href="/blog/posts/blood-sugar-guide.html" class="sibling-link">📖 공복혈당 정상수치 2026 - 당화혈색소(HbA1c) 당뇨병 전단계 진단기준</a>
+      <a href="/blog/posts/bmi-guide.html" class="sibling-link">📖 한국인 BMI 기준 - 18.5~22.9 정상, 25 이상 비만 (BMI …</a>
+      <a href="/blog/posts/bmr-calories.html" class="sibling-link">📖 기초대사량(BMR)과 하루 필요 칼로리 계산법</a>
+      <a href="/blog/posts/body-fat-guide.html" class="sibling-link">📖 체지방률 정상 범위와 측정 방법 - 체중이 같아도 몸매가 다른 이유</a>
+      <a href="/blog/posts/cholesterol-levels-guide.html" class="sibling-link">📖 콜레스테롤 정상수치 - LDL·HDL·중성지방 기준과 건강검진 결과 단계별…</a>
+      <a href="/blog/posts/diet-calorie-guide.html" class="sibling-link">📖 다이어트 목표 칼로리 계산법 - 기초대사량(BMR)부터 TDEE까지</a>
+    </div>
+  </div>
+
+</main>
+<footer class="site-footer"><div class="footer-inner"><div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div><span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span></div></footer>
+
+<script>
+var bmrSex='male';
+function setBmrSex(s,btn){bmrSex=s;btn.parentElement.querySelectorAll('.seg-btn').forEach(function(b){b.classList.remove('active')});btn.classList.add('active');calcBmr()}
+function calcBmr(){
+  var age=parseFloat(document.getElementById('bmr-age').value);
+  var h=parseFloat(document.getElementById('bmr-height').value);
+  var w=parseFloat(document.getElementById('bmr-weight').value);
+  var act=parseFloat(document.getElementById('bmr-activity').value)||1.55;
+  var res=document.getElementById('s1-result');
+  var warn=document.getElementById('bmr-input-warn');
+  warn.style.display='none';warn.textContent='';
+  if(!isFinite(age)||!isFinite(h)||!isFinite(w)||age<=0||h<=0||w<=0){res.classList.remove('show');return}
+  if(age<1||age>120){warn.textContent='나이는 1~120세 범위로 입력하세요.';warn.style.display='block';res.classList.remove('show');return}
+  if(h<50||h>250){warn.textContent='키는 50~250cm 범위로 입력하세요.';warn.style.display='block';res.classList.remove('show');return}
+  if(w<10||w>500){warn.textContent='체중은 10~500kg 범위로 입력하세요.';warn.style.display='block';res.classList.remove('show');return}
+  res.classList.add('show');
+  var bmr=10*w+6.25*h-5*age+(bmrSex==='male'?5:-161);
+  var fmt=function(v){return Math.round(v).toLocaleString()+' kcal'};
+  document.getElementById('bmr-value').textContent=fmt(bmr);
+  document.getElementById('bmr-sed').textContent=fmt(bmr*1.2);
+  document.getElementById('bmr-light').textContent=fmt(bmr*1.375);
+  document.getElementById('bmr-mod').textContent=fmt(bmr*1.55);
+  document.getElementById('bmr-active').textContent=fmt(bmr*1.725);
+  document.getElementById('bmr-very').textContent=fmt(bmr*1.9);
+  var tdee=bmr*act;
+  document.getElementById('bmr-tdee').textContent=fmt(tdee);
+  // 권장 칼로리: 감량은 BMR 이하로 떨어지지 않도록 가드
+  var cut=Math.max(tdee-500, bmr);
+  document.getElementById('bmr-cut').textContent=fmt(cut);
+  document.getElementById('bmr-maint').textContent=fmt(tdee);
+  document.getElementById('bmr-bulk').textContent=fmt(tdee+300);
+}
+</script>
+
+
+<script src="/assets/calc-validate.js"></script>
+<script src="/assets/calc-result-tools.js"></script>
+<script src="/assets/footer-unified.js" defer></script>
+<script src="/assets/calc-registry.js"></script>
+<script src="/assets/health-detail-shell.js"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '건강 관련 공식 기준표·학술 자료',
+  basisDate: '2026년 기준',
+  referenceOrg: '질병관리청·보건복지부',
+  lastReviewed: '2026.05.12',
+  category: 'health'
+};
+</script>
+<script src="/assets/blog-article-info.js"></script>
+<script src="/assets/blog-review-footer.js"></script>
+</body>
+</html>

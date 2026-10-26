@@ -23,9 +23,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
 
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
 
   <script type="application/ld+json">
   {
@@ -58,75 +56,63 @@
     {"@type":"Question","name":"이 계산기 결과가 실제 고지서와 같나요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 이 계산기는 2026년 기준 보험료율·점수당 금액·재산 부과점수표를 적용한 참고용 추정치입니다. 실제 보험료는 소득 평가 방식(연금·근로소득 일부만 반영 등), 임차보증금 평가, 세대 합산, 임의계속가입 여부 등에 따라 달라질 수 있습니다. 정확한 금액은 국민건강보험공단(☎1577-1000) 또는 공단 홈페이지 보험료 모의계산에서 확인하세요."}}
   ]}
   </script>
-
-  <link rel="stylesheet" href="/assets/tax-common.css" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
   <style>
-    input[type=number]{width:100%;border:1.5px solid var(--gray-200);border-radius:10px;padding:12px 56px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:var(--gray-50);outline:none;transition:border-color .18s;-moz-appearance:textfield}
-    input[type=number]::placeholder{color:var(--gray-400);font-weight:400}
-    input[type=number]:focus{border-color:var(--primary);background:#fff}
-    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
-    .input-wrap{position:relative;display:flex;align-items:center;}
-    .input-wrap input{padding-right:50px;}
-    .input-wrap .unit{position:absolute;right:14px;font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none;}
-    .converted{font-size:12px;color:var(--primary);margin-top:4px;font-weight:600;min-height:18px;}
-    .result-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--gray-100);font-size:14px;}
-    .result-row:last-child{border-bottom:none;}
-    .result-label{color:var(--gray-600);font-weight:500;}
-    .result-value{font-weight:700;color:var(--gray-900);}
-    .result-section-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin:16px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--gray-100);}
-    .verdict-box{text-align:center;padding:22px 20px;margin-bottom:16px;border-radius:14px;background:rgba(16,185,129,0.07);border:2px solid rgba(16,185,129,0.28);}
-    .verdict-label{font-size:13px;font-weight:700;margin-bottom:6px;color:#065F46;}
-    .verdict-amount{font-size:30px;font-weight:900;margin-bottom:4px;color:var(--primary);}
-    .verdict-sub{font-size:12px;color:var(--gray-500);}
-    .warning-box{background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.3);border-radius:10px;padding:13px 15px;font-size:12px;color:#92400E;line-height:1.7;margin-top:12px;}
-    .official-link-box{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;}
-    .official-link{flex:1;min-width:140px;display:flex;align-items:center;justify-content:center;gap:8px;padding:11px 14px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:700;transition:opacity .15s;}
-    .official-link:hover{opacity:0.85;}
-    .official-link.primary{background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);color:#047857;}
-    .official-link.secondary{background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.3);color:#2563EB;}
-    .rate-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
-    .rate-table th{padding:8px 10px;text-align:center;font-size:11px;font-weight:700;color:var(--gray-500);background:var(--gray-50);border-bottom:1px solid var(--gray-200);}
-    .rate-table th:first-child{text-align:left;}
-    .rate-table td{padding:9px 10px;border-bottom:1px solid var(--gray-100);color:var(--gray-700);text-align:center;}
-    .rate-table tbody tr:last-child td{border-bottom:none;}
-    .rate-table td:first-child{font-weight:600;color:var(--gray-800);text-align:left;}
-    .badge-year{display:inline-block;background:rgba(16,185,129,0.12);color:#047857;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:6px;vertical-align:middle;}
+    /* 페이지 고유 스타일(공통 부품 재정의는 base.css가 맡아 뺐다) */
+    .verdict-box { text-align:center;padding:22px 20px;margin-bottom:16px;border-radius:14px;background:rgba(16,185,129,0.07);border:2px solid rgba(16,185,129,0.28); }
+    .verdict-label { font-size:13px;font-weight:700;margin-bottom:6px;color:#065F46; }
+    .verdict-amount { font-size:30px;font-weight:900;margin-bottom:4px;color:var(--primary); }
+    .verdict-sub { font-size:12px;color:var(--gray-500); }
+    .warning-box { background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.3);border-radius:10px;padding:13px 15px;font-size:12px;color:#92400E;line-height:1.7;margin-top:12px; }
+    .official-link-box { display:flex;gap:10px;flex-wrap:wrap;margin-top:12px; }
+    .official-link { flex:1;min-width:140px;display:flex;align-items:center;justify-content:center;gap:8px;padding:11px 14px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:700;transition:opacity .15s; }
+    .official-link:hover { opacity:0.85; }
+    .official-link.primary { background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);color:#047857; }
+    .official-link.secondary { background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.3);color:#2563EB; }
+    .rate-table { width:100%;border-collapse:collapse;font-size:13px;margin-top:8px; }
+    .rate-table th { padding:8px 10px;text-align:center;font-size:11px;font-weight:700;color:var(--gray-500);background:var(--gray-50);border-bottom:1px solid var(--gray-200); }
+    .rate-table th:first-child { text-align:left; }
+    .rate-table td { padding:9px 10px;border-bottom:1px solid var(--gray-100);color:var(--gray-700);text-align:center; }
+    .rate-table tbody tr:last-child td { border-bottom:none; }
+    .rate-table td:first-child { font-weight:600;color:var(--gray-800);text-align:left; }
+    .badge-year { display:inline-block;background:rgba(16,185,129,0.12);color:#047857;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:6px;vertical-align:middle; }
   </style>
 </head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
-    <nav class="header-nav">
-      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
-      <a href="/calc/tax/" class="nav-item active"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
-      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
-      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
-      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
-      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
-      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
-    </nav>
-    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
-    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
-  </div>
+<body data-cat="tax" style="--cat: var(--c-tax)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
 </header>
 
-<main class="page-wrap">
-  <div class="page-header">
-    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/tax/">프리랜서 세금 계산기</a><span class="breadcrumb-sep">›</span><span>지역가입자 건강보험료 계산기</span></div>
-    <div class="page-header-badge">🏥 지역가입자 · 2026년 기준</div>
-    <h1>지역가입자 건강보험료 계산기</h1>
-    <p>연소득과 재산세 과세표준을 입력하면 지역가입자 건강보험료와 장기요양보험료를 계산합니다.</p>
-  </div>
-
-  <div class="card">
-    <div class="card-title">소득·재산 정보</div>
-    <div class="info-box">
-      <span class="info-icon">&#128161;</span>
-      <p>지역가입자 보험료는 <strong>소득보험료 + 재산보험료</strong>로 산정됩니다. 소득은 정률(7.19%), 재산은 1억 공제 후 부과점수표로 환산합니다. <strong>자동차는 2024년 2월부터 제외</strong>됩니다.</p>
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/tax/">프리랜서 세금 계산기</a> &rsaquo; 지역가입자 건강보험료 계산기</div>
+      <div class="page-badge">지역가입자 · 2026년 기준</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-receipt"></use></svg></span>
+        <h1 class="page-title">지역가입자 건강보험료 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">지역가입자 · 2026년 기준</span>
+          <span class="ds-trust-chip">2026.06.08 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">연소득과 재산세 과세표준을 입력하면 지역가입자 건강보험료와 장기요양보험료를 계산합니다.</p>
     </div>
+  </div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+    <div class="field-label ds-group-label">소득·재산 정보</div>
+    
 
     <div class="field">
       <div class="field-label">연 소득금액 <span class="label-hint">(평가 후 기준)</span></div>
@@ -148,9 +134,17 @@
       <div class="field-hint">재산세 과세표준 기준. 기본공제 1억원을 뺀 금액에만 부과점수가 매겨집니다. 전세보증금은 별도 평가됩니다.</div>
     </div>
   </div>
+<div class="info-box">
+      <span class="info-icon"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-info"></use></svg></span>
+      <p>지역가입자 보험료는 <strong>소득보험료 + 재산보험료</strong>로 산정됩니다. 소득은 정률(7.19%), 재산은 1억 공제 후 부과점수표로 환산합니다. <strong>자동차는 2024년 2월부터 제외</strong>됩니다.</p>
+    </div>
+        <button type="button" class="ds-btn-calc" data-calc-submit="calculate" data-result="resultCard" data-required="inpIncome|inpProperty">계산하기</button>
+      </div>
+    </section>
 
-  <!-- 결과 카드 -->
-  <div class="result-card" id="resultCard">
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="resultCard">
 
     <div id="verdictBox" class="verdict-box">
       <div class="verdict-label">예상 월 납부액 (건강 + 장기요양)</div>
@@ -210,9 +204,38 @@
       <a href="https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do" target="_blank" rel="noopener" class="official-link primary">&#127973; 건강보험공단 보험료 모의계산 ↗</a>
       <a href="/calc/tax/insurance-comparison/" class="official-link secondary">&#128101; 4대보험 vs 3.3% 비교 →</a>
     </div>
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('resultCard')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/tax/four-insurance/">4대보험료 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">계산 결과</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="regional-health-insurance-next">
+        <a class="ds-next-card" href="/calc/tax/four-insurance/" data-next="four-insurance"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-receipt"></use></svg></span><span class="ds-next-body"><b>4대보험료 계산기</b><span>월급에서 빠지는 국민연금·건강보험·장기요양·고용보험을 한 번에 계산합니다. 근로자·사용자 부담분 구분. 국민연금 상한(659만원) 자동 적용. 2026년 최신 요율.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/tax/insurance-comparison/" data-next="insurance-comparison"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-receipt"></use></svg></span><span class="ds-next-body"><b>4대보험 비교 계산기</b><span>같은 매출일 때 직장가입자(회사 분담)와 지역가입자(전액 본인 부담) 보험료·세금을 나란히 비교합니다. 프리랜서 전환·복귀 의사결정에 유용합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
   </div>
 
-  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">국민건강보험법 시행령 별표4(재산 부과점수표) <a href="https://www.nhis.or.kr" target="_blank" rel="noopener">국민건강보험공단 보험료 모의계산 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#regional-health-insurance-s1">지역가입자 건강보험료,</a><a href="#regional-health-insurance-s2">계산 예시</a><a href="#regional-health-insurance-s3">구간별 표</a><a href="#regional-health-insurance-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
     <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
     <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
   </div>
@@ -250,19 +273,19 @@
   </div>
 
   <div class="guide-section">
-    <div class="guide-card">
-      <h2>지역가입자 건강보험료, 이렇게 정해집니다</h2>
-      <p>직장가입자는 회사와 보험료를 절반씩 나누지만, 지역가입자는 보험료를 전액 본인이 부담합니다. 프리랜서·자영업자·은퇴자·무직자가 대표적인 지역가입자입니다. 보험료는 소득과 재산을 합산해 산정합니다.</p>
+            <section class="ds-section ds-prose" aria-labelledby="regional-health-insurance-s1">
+          <div class="ds-section-head"><h2 id="regional-health-insurance-s1">지역가입자 건강보험료, 이렇게 정해집니다</h2></div>
+<p>직장가입자는 회사와 보험료를 절반씩 나누지만, 지역가입자는 보험료를 전액 본인이 부담합니다. 프리랜서·자영업자·은퇴자·무직자가 대표적인 지역가입자입니다. 보험료는 소득과 재산을 합산해 산정합니다.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>소득보험료</strong><span>연소득에 7.19%를 곱해 12로 나눈 정률 방식입니다. 사업·이자·배당소득은 100%, 근로소득·연금소득은 50%만 평가해 합산합니다</span></div>
         <div class="guide-box"><strong>재산보험료</strong><span>재산세 과세표준에서 1억원을 공제한 금액을 부과점수표(60등급)로 환산해 점수당 211.5원을 곱합니다</span></div>
         <div class="guide-box"><strong>장기요양보험료</strong><span>건강보험료에 13.14%를 곱해 함께 부과됩니다. 노인장기요양보험 재원으로 쓰입니다</span></div>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>소득·재산별 월 보험료 예시</h2>
-      <p>구체적인 인물 사례로 살펴보겠습니다. 모두 2026년 기준 추정치이며, 건강보험료와 장기요양보험료를 합한 월 납부액입니다.</p>
-      <div class="guide-table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="regional-health-insurance-s2">
+          <div class="ds-section-head"><h2 id="regional-health-insurance-s2">소득·재산별 월 보험료 예시</h2></div>
+<p>구체적인 인물 사례로 살펴보겠습니다. 모두 2026년 기준 추정치이며, 건강보험료와 장기요양보험료를 합한 월 납부액입니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead><tr><th>가입자</th><th>조건</th><th>월 납부액</th></tr></thead>
           <tbody>
@@ -274,11 +297,11 @@
         </table>
       </div>
       <p style="font-size:12px;color:var(--gray-500);margin-top:8px">※ 재산금액은 재산세 과세표준 기준이며, 1억원 공제 후 점수가 매겨집니다.</p>
-    </div>
-    <div class="guide-card">
-      <h2>연 소득별 지역가입자 건강보험료 (재산 과표 3억 기준)</h2>
-      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">아래는 위 계산기로 직접 산출한 구간별 결과입니다.</p>
-      <div class="guide-table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="regional-health-insurance-s3">
+          <div class="ds-section-head"><h2 id="regional-health-insurance-s3">연 소득별 지역가입자 건강보험료 (재산 과표 3억 기준)</h2></div>
+<p class="ds-table-lead">아래는 위 계산기로 직접 산출한 구간별 결과입니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead><tr><th>연 소득금액</th><th>재산 부과점수</th><th>건강보험료 소계</th><th>장기요양보험료 (건강보험료 × 13.14%)</th><th>월 납부 합계</th></tr></thead>
           <tbody>
@@ -290,31 +313,34 @@
           </tbody>
         </table>
       </div>
-    </div>
-    <div class="guide-card faq-card">
-      <h2>자주 묻는 질문</h2>
-      <div class="faq-item">
-        <h3>지역가입자 건강보험료는 어떻게 계산되나요?</h3>
-        <p>지역가입자 건강보험료는 소득보험료와 재산보험료를 더해 산정합니다. 소득보험료는 연소득에 보험료율(2026년 7.19%)을 곱해 12로 나눈 정률 방식이고, 재산보험료는 재산세 과세표준에서 기본공제 1억원을 뺀 금액을 재산 부과점수표(60등급)로 환산한 뒤 점수당 금액(2026년 211.5원)을 곱합니다. 여기에 장기요양보험료(건강보험료의 13.14%)가 더해집니다. 자동차는 2024년 2월부터 부과 대상에서 제외되었습니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>소득이 없어도 건강보험료를 내야 하나요?</h3>
-        <p>네. 지역가입자는 소득이 없어도 월별 보험료 하한액인 20,160원(2026년, 소득보험료 부분)을 부담합니다. 연소득이 336만원 이하인 세대는 이 하한액이 적용되고, 336만원을 초과하면 연소득에 7.19%를 곱한 정률 보험료가 부과됩니다. 여기에 재산이 있으면 재산보험료가, 그리고 장기요양보험료가 추가됩니다. 따라서 소득과 재산이 전혀 없어도 건강보험료와 장기요양보험료를 합쳐 월 약 2만 2,800원이 최소 부담액입니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>재산이 1억원 이하면 재산보험료가 0원인가요?</h3>
-        <p>그렇습니다. 2024년 2월 개편으로 모든 지역가입자에게 재산 기본공제 1억원이 적용됩니다. 재산세 과세표준 합계가 1억원 이하이면 공제 후 남는 금액이 없어 재산보험료가 0원입니다. 예를 들어 공시가격이 반영된 재산세 과세표준이 1억 5,000만원이면 1억원을 공제한 5,000만원에 대해서만 부과점수를 매깁니다. 이 개편으로 재산보험료를 내던 지역가입자의 약 37%가 재산보험료를 내지 않게 되었습니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>자동차도 건강보험료에 포함되나요?</h3>
-        <p>아닙니다. 과거에는 4,000만원 이상 자동차에 보험료가 부과되었지만, 2024년 2월부터 자동차는 지역가입자 건강보험료 부과 대상에서 완전히 제외되었습니다. 따라서 차량 가액이나 배기량과 무관하게 자동차 때문에 건강보험료가 오르는 일은 없습니다. 현재 지역가입자 보험료는 소득과 재산(주택·토지·건축물·선박·항공기)만 반영합니다.</p>
-      </div>
-      <div class="faq-item">
-        <h3>이 계산기 결과가 실제 고지서와 같나요?</h3>
-        <p>아닙니다. 이 계산기는 2026년 기준 보험료율·점수당 금액·재산 부과점수표를 적용한 참고용 추정치입니다. 실제 보험료는 소득 평가 방식(연금·근로소득 일부만 반영 등), 임차보증금 평가, 세대 합산, 임의계속가입 여부 등에 따라 달라질 수 있습니다. 정확한 금액은 국민건강보험공단(☎1577-1000) 또는 공단 홈페이지 보험료 모의계산에서 확인하세요.</p>
-      </div>
+        </section>
+            <section class="ds-section faq-card" aria-labelledby="regional-health-insurance-faq">
+          <div class="ds-section-head"><h2 id="regional-health-insurance-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>지역가입자 건강보험료는 어떻게 계산되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>지역가입자 건강보험료는 소득보험료와 재산보험료를 더해 산정합니다. 소득보험료는 연소득에 보험료율(2026년 7.19%)을 곱해 12로 나눈 정률 방식이고, 재산보험료는 재산세 과세표준에서 기본공제 1억원을 뺀 금액을 재산 부과점수표(60등급)로 환산한 뒤 점수당 금액(2026년 211.5원)을 곱합니다. 여기에 장기요양보험료(건강보험료의 13.14%)가 더해집니다. 자동차는 2024년 2월부터 부과 대상에서 제외되었습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>소득이 없어도 건강보험료를 내야 하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>네. 지역가입자는 소득이 없어도 월별 보험료 하한액인 20,160원(2026년, 소득보험료 부분)을 부담합니다. 연소득이 336만원 이하인 세대는 이 하한액이 적용되고, 336만원을 초과하면 연소득에 7.19%를 곱한 정률 보험료가 부과됩니다. 여기에 재산이 있으면 재산보험료가, 그리고 장기요양보험료가 추가됩니다. 따라서 소득과 재산이 전혀 없어도 건강보험료와 장기요양보험료를 합쳐 월 약 2만 2,800원이 최소 부담액입니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>재산이 1억원 이하면 재산보험료가 0원인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>그렇습니다. 2024년 2월 개편으로 모든 지역가입자에게 재산 기본공제 1억원이 적용됩니다. 재산세 과세표준 합계가 1억원 이하이면 공제 후 남는 금액이 없어 재산보험료가 0원입니다. 예를 들어 공시가격이 반영된 재산세 과세표준이 1억 5,000만원이면 1억원을 공제한 5,000만원에 대해서만 부과점수를 매깁니다. 이 개편으로 재산보험료를 내던 지역가입자의 약 37%가 재산보험료를 내지 않게 되었습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>자동차도 건강보험료에 포함되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>아닙니다. 과거에는 4,000만원 이상 자동차에 보험료가 부과되었지만, 2024년 2월부터 자동차는 지역가입자 건강보험료 부과 대상에서 완전히 제외되었습니다. 따라서 차량 가액이나 배기량과 무관하게 자동차 때문에 건강보험료가 오르는 일은 없습니다. 현재 지역가입자 보험료는 소득과 재산(주택·토지·건축물·선박·항공기)만 반영합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>이 계산기 결과가 실제 고지서와 같나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>아닙니다. 이 계산기는 2026년 기준 보험료율·점수당 금액·재산 부과점수표를 적용한 참고용 추정치입니다. 실제 보험료는 소득 평가 방식(연금·근로소득 일부만 반영 등), 임차보증금 평가, 세대 합산, 임의계속가입 여부 등에 따라 달라질 수 있습니다. 정확한 금액은 국민건강보험공단(1577-1000) 또는 공단 홈페이지 보험료 모의계산에서 확인하세요.</p>
+            </details>
       <div class="update-note">국민건강보험법 시행령 별표4(재산 부과점수표), 2026년 보험료율 7.19%·점수당 금액 211.5원·장기요양보험료율 13.14% 기준 간이 계산기입니다. 보험료율과 점수당 금액은 매년 변경되며, 정확한 금액은 국민건강보험공단(nhis.or.kr)에서 확인하세요.</div>
+          </div>
+        </section>
+  </div>
+
     </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
   </div>
 
   <script>
@@ -334,42 +360,42 @@
     lastReviewed: '2026.06.08',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
 
-  <div class="sibling-section">
-    <div class="sibling-title">다른 프리랜서 세금 계산기</div>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 프리랜서 세금 계산기</h2>
     <div class="sibling-list">
-      <a href="/calc/tax/withholding/" class="sibling-link">💲 3.3% 원천징수</a>
-      <a href="/calc/tax/income-tax/" class="sibling-link">📈 종합소득세</a>
-      <a href="/calc/tax/vat/" class="sibling-link">📄 부가가치세</a>
-      <a href="/calc/tax/insurance-comparison/" class="sibling-link">👥 4대보험 비교</a>
-      <a href="/calc/tax/freelancer-income/" class="sibling-link">💰 월 순수입</a>
-      <a href="/calc/tax/medical-expense/" class="sibling-link">🏥 의료비 세액공제</a>
-      <a href="/calc/tax/regional-health-insurance/" class="sibling-link current">🏥 지역가입자 건강보험료</a>
-      <a href="/calc/tax/copay-ceiling/" class="sibling-link">💊 본인부담상한제 환급</a>
-      <a href="/calc/tax/yellow-umbrella/" class="sibling-link">🪙 노란우산공제</a>
-      <a href="/calc/tax/four-insurance/" class="sibling-link">🏢 4대보험료</a>
+      <a href="/calc/tax/withholding/" class="sibling-link">3.3% 원천징수</a>
+      <a href="/calc/tax/income-tax/" class="sibling-link">종합소득세</a>
+      <a href="/calc/tax/vat/" class="sibling-link">부가가치세</a>
+      <a href="/calc/tax/insurance-comparison/" class="sibling-link">4대보험 비교</a>
+      <a href="/calc/tax/freelancer-income/" class="sibling-link">월 순수입</a>
+      <a href="/calc/tax/medical-expense/" class="sibling-link">의료비 세액공제</a>
+      <a href="/calc/tax/copay-ceiling/" class="sibling-link">본인부담상한제 환급</a>
+      <a href="/calc/tax/yellow-umbrella/" class="sibling-link">노란우산공제</a>
+      <a href="/calc/tax/four-insurance/" class="sibling-link">4대보험료</a>
     </div>
-    <div class="sibling-title">관련 가이드</div>
-    <div class="sibling-list">
-      <a href="/blog/posts/regional-health-insurance-guide.html" class="sibling-link">📖 지역가입자 건강보험료 2026 - 프리랜서·자영업자·은퇴자 월 보험료 계산법</a>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/regional-health-insurance-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/regional-health-insurance-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>지역가입자 건강보험료 2026 - 프리랜서·자영업자·은퇴자 월 보험료 계산법</span></a>
     </div>
   </div>
 </main>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links">
-      <a href="/">홈</a>
-      <a href="/about.html">소개</a>
-      <a href="/privacy.html">개인정보처리방침</a>
-      <a href="/terms.html">이용약관</a>
-      <a href="/contact.html">문의하기</a>
-      <a href="/disclaimer.html">면책조항</a>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
     </div>
-    <p class="footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 보험료는 국민건강보험공단(☎1577-1000)에서 확인하세요.</p>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 보험료는 국민건강보험공단(1577-1000)에서 확인하세요.</p>
   </div>
 </footer>
+
+<script src="/assets/ds/calc-kit.js?v=d45e66d9"></script>
 
 <script>
 // 2026년 지역가입자 건강보험료 기준값
@@ -399,7 +425,7 @@ function propScore(taxBaseMan) {
 }
 
 function onNumInput(el, convertedId) {
-  const val = parseInt(el.value) || 0;
+  const val = parseInt(String(el.value).replace(/,/g, '')) || 0;
   document.getElementById(convertedId).textContent = val > 0 ? fmtShort(val * 10000) : '';
   calculate();
 }
@@ -453,11 +479,10 @@ function calculate() {
   card.classList.add('show');
 }
 </script>
-<script src="/assets/calc-registry.js"></script>
-<script src="/assets/tax-detail-shell.js" defer></script>
-<script src="/assets/footer-unified.js" defer></script>
-<script src="/assets/calc-validate.js"></script>
-<script src="/assets/calc-result-tools.js"></script>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
@@ -469,7 +494,13 @@ window.ARTICLE_INFO_CONFIG = {
   category: 'tax'
 };
 </script>
-<script src="/assets/blog-article-info.js"></script>
-<script src="/assets/blog-review-footer.js"></script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "resultCard", "required": ["inpIncome|inpProperty"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#regional-health-insurance-next", "next": []});
+  DSCalc.placeTrust('ds-trust-col');
+</script>
+<script src="/assets/ds/prefill.js?v=fa5eb49a" defer></script>
 </body>
 </html>

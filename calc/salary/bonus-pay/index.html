@@ -22,10 +22,9 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link rel="stylesheet" href="/assets/salary-common.css" />
+<link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -51,74 +50,57 @@
   </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"성과급 실수령액은 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"성과급 원천징수 소득세는 성과급을 지급대상기간 월수로 나눠 월평균으로 환산한 뒤 간이세액표로 계산합니다(소득세법 제136조제1항). 일회성 성과급은 그 해 1월부터 받는 달까지가 지급대상기간입니다. 여기에 지방소득세(소득세의 10%)와 고용보험(성과급의 0.9%)을 빼면 실수령액이 됩니다. 예를 들어 월 과세급여 300만원인 사람이 12월에 일회성 성과급 200만원을 받으면 200만원을 12개월로 나눠 월평균 약 316.7만원으로 환산해 계산하므로, 소득세 약 164,280원, 지방소득세 16,430원, 고용보험 18,000원이 빠져 실수령은 약 1,801,290원입니다."}},{"@type":"Question","name":"성과급에도 4대보험이 빠지나요?","acceptedAnswer":{"@type":"Answer","text":"항목별로 다릅니다. 고용보험(0.9%)은 성과급을 받는 달에 바로 부과됩니다. 반면 국민연금은 매년 7월 기준소득월액을 정할 때 전년도 총보수에 성과급이 반영되고, 건강보험은 다음 해 4월 보수총액 정산 때 반영되므로 성과급 받는 달에는 즉시 공제되지 않습니다. 그래서 성과급 받는 달 명세서에서 당장 빠지는 것은 소득세·지방소득세·고용보험 위주입니다. 본 계산기는 이 세 가지를 차감합니다."}},{"@type":"Question","name":"정기상여와 일회성 성과급은 세금이 다른가요?","acceptedAnswer":{"@type":"Answer","text":"둘 다 지급대상기간 월수로 나눠 월평균으로 환산해 계산하지만, 지급대상기간 길이가 다릅니다. 일회성 성과급(부정기)은 그 해 1월부터 받는 달까지가 지급대상기간이라 연말에 받으면 최대 12개월로 분산돼 세금이 적게 빠집니다. 분기 PI 같은 정기상여는 지급대상기간이 3개월로 짧아 월평균이 커지므로 오히려 더 많이 빠집니다. 같은 600만원이라도 12월 일회성 성과급은 약 16.8%, 3개월 분기 PI는 약 19.4% 차감되는 식으로 차이가 납니다."}},{"@type":"Question","name":"왜 성과급에서 세금이 이렇게 많이 빠지나요?","acceptedAnswer":{"@type":"Answer","text":"성과급도 근로소득세 누진 구조를 따릅니다. 성과급을 지급대상기간 월수로 나눈 월평균이 평소 월급에 더해지면서 세율 구간이 올라가, 평소 월급보다 높은 세율이 성과급 부분에 적용됩니다. 특히 지급대상기간이 짧은 정기상여나 회사가 당월 합산으로 원천징수하는 경우 체감 세율이 더 높아집니다. 다만 이는 원천징수 시점의 임시 금액이며, 1년치 총소득 기준으로 다음 해 2월 연말정산에서 다시 계산해 정산합니다."}},{"@type":"Question","name":"원천징수된 성과급 세금을 연말정산에서 돌려받나요?","acceptedAnswer":{"@type":"Answer","text":"연간 총소득과 각종 공제를 합산해 최종 세액을 다시 계산하므로, 원천징수 시점에 많이 떼였다면 일부를 환급받을 수 있고 반대로 부족했다면 추가 납부합니다. 성과급을 한 번에 받든 나눠 받든 연 단위 총세금 자체는 동일하지만, 받는 시점의 현금 흐름은 크게 달라집니다. 의료비·교육비·기부금 등 공제가 많으면 환급 가능성이 커집니다."}}]}</script>
   <style>
-    /* bonus-pay 고유 스타일 - 공통 스타일은 /assets/salary-common.css 참조 */
-    .input-wrap{position:relative}
-    .input-wrap .unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:13px;font-weight:600;color:var(--gray-500);pointer-events:none}
-    input[type=number]{width:100%;border:1px solid rgba(0,0,0,0.1);border-radius:10px;padding:12px 48px 12px 16px;font-size:16px;font-weight:600;font-family:'Pretendard',sans-serif;color:var(--gray-900);background:rgba(0,0,0,0.03);outline:none;transition:border-color .18s,box-shadow .18s;-moz-appearance:textfield}
-    input[type=number]::placeholder{color:var(--gray-400);font-weight:400}
-    input[type=number]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(59,130,246,0.15)}
-    input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}
-    .card{background:var(--dark-card);border:1px solid var(--dark-border);border-radius:16px;padding:24px;margin-bottom:14px}
-    .card-title{font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:var(--gray-500);margin-bottom:18px}
-    .mode-toggle{display:flex;gap:6px;background:rgba(0,0,0,0.04);border-radius:12px;padding:4px;margin-bottom:18px}
-    .mode-btn{flex:1;border:none;background:transparent;padding:10px 8px;border-radius:9px;font-size:13px;font-weight:700;font-family:'Pretendard',sans-serif;color:var(--gray-500);cursor:pointer;transition:all .15s}
-    .mode-btn.active{background:#fff;color:var(--primary);box-shadow:0 1px 3px rgba(0,0,0,0.1)}
-    .field-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    @media(max-width:520px){.field-grid{grid-template-columns:1fr}}
-    .result-card{background:linear-gradient(135deg,#EFF6FF 0%,#DBEAFE 100%);border:1px solid rgba(59,130,246,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
-    .result-card.show{display:block}
-    .result-row+.result-row{border-top:1px solid rgba(0,0,0,0.07)}
-    .result-sub-title{font-size:11px;font-weight:800;letter-spacing:0.6px;color:var(--gray-500);margin:18px 0 8px}
-    .result-hero{text-align:center;padding:4px 0 16px;border-bottom:1px solid rgba(0,0,0,0.1);margin-bottom:8px}
-    .result-hero-label{font-size:12px;font-weight:700;color:var(--gray-500);margin-bottom:4px}
-    .result-hero-value{font-size:32px;font-weight:900;color:var(--primary);line-height:1.1}
-    .result-hero-sub{font-size:12px;color:var(--gray-500);margin-top:6px}
-    .result-minus{color:#DC2626}
+    /* 페이지 고유 스타일(공통 부품 재정의는 base.css가 맡아 뺐다) */
+    .mode-toggle { display:flex;gap:6px;background:rgba(0,0,0,0.04);border-radius:12px;padding:4px;margin-bottom:18px }
+    .mode-btn { flex:1;border:none;background:transparent;padding:10px 8px;border-radius:9px;font-size:13px;font-weight:700;font-family:'Pretendard',sans-serif;color:var(--gray-500);cursor:pointer;transition:all .15s }
+    .mode-btn.active { background:#fff;color:var(--primary);box-shadow:0 1px 3px rgba(0,0,0,0.1) }
   </style>
 </head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
-    <nav class="header-nav">
-      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
-      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/salary/" class="nav-item active"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/finance/" class="nav-item"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
-      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
-      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
-      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
-      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
-      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
-    </nav>
-    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
-    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
-  </div>
+<body data-cat="salary" style="--cat: var(--c-salary)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
 </header>
-<main class="page-wrap">
-  <div class="page-header">
-    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/salary/">이직/연봉 계산기</a><span class="breadcrumb-sep">›</span><span>성과급 실수령 계산기</span></div>
-    <div class="page-header-badge">📌 국세청 간이세액표 상여 원천징수 (지급대상기간 월평균 방식)</div>
-    <h1>성과급 실수령 계산기</h1>
-    <p>월급과 성과급을 입력하면 빠지는 세금을 빼고 실제 받는 금액을 계산합니다</p>
+
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/salary/">이직/연봉 계산기</a> &rsaquo; 성과급 실수령 계산기</div>
+      <div class="page-badge">국세청 간이세액표 상여 원천징수 (지급대상기간 월평균 방식)</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-briefcase"></use></svg></span>
+        <h1 class="page-title">성과급 실수령 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">국세청 간이세액표 상여 원천징수 (지급대상기간 월평균 방식)</span>
+          <span class="ds-trust-chip">2026.09.04 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">월급과 성과급을 입력하면 빠지는 세금을 빼고 실제 받는 금액을 계산합니다</p>
+    </div>
   </div>
-    <div class="card">
-      <div class="card-title">상여 유형</div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+      <div class="field-label ds-group-label">상여 유형</div>
       <div class="mode-toggle">
         <button type="button" class="mode-btn active" id="mode-irregular-btn" onclick="setBonusMode('irregular')">일회성 성과급 (부정기)</button>
         <button type="button" class="mode-btn" id="mode-regular-btn" onclick="setBonusMode('regular')">정기상여 (분기 PI 등)</button>
       </div>
-      <div class="info-box">
-        <span class="info-icon">📌</span>
-        <p id="mode-desc"><strong>일회성 성과급·명절 보너스</strong>는 그 해 1월부터 받는 달까지를 지급대상기간으로 보고, 성과급을 그 월수로 나눠 월평균으로 환산해 과세합니다(소득세법 제136조제1항). 단 그 해에 이미 상여를 받았다면 직전 상여를 받은 달의 다음 달부터가 지급대상기간이므로, 이 계산기의 결과는 그 해 첫 상여 기준입니다.</p>
-      </div>
+      
     </div>
     <div class="card">
-      <div class="card-title">금액 입력</div>
+      <div class="field-label ds-group-label">금액 입력</div>
       <div class="field">
         <div class="field-label">성과급(상여금) 금액 <span class="label-hint">세전, 만원</span></div>
         <div class="input-wrap">
-          <input type="number" id="bonus" placeholder="예) 300" oninput="calcBonus()" />
+          <input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="bonus" placeholder="예) 300" oninput="calcBonus()" />
           <span class="unit">만원</span>
         </div>
         <div class="converted" id="bonus-conv"></div>
@@ -126,7 +108,7 @@
       <div class="field">
         <div class="field-label">월 과세급여 (상여 외) <span class="label-hint">비과세 제외 월급, 만원</span></div>
         <div class="input-wrap">
-          <input type="number" id="salary" placeholder="예) 400" oninput="calcBonus()" />
+          <input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="salary" placeholder="예) 400" oninput="calcBonus()" />
           <span class="unit">만원</span>
         </div>
         <div class="converted" id="salary-conv"></div>
@@ -166,7 +148,17 @@
         </div>
       </div>
     </div>
-    <div class="result-card" id="result">
+<div class="info-box">
+        <span class="info-icon"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-info"></use></svg></span>
+        <p id="mode-desc"><strong>일회성 성과급·명절 보너스</strong>는 그 해 1월부터 받는 달까지를 지급대상기간으로 보고, 성과급을 그 월수로 나눠 월평균으로 환산해 과세합니다(소득세법 제136조제1항). 단 그 해에 이미 상여를 받았다면 직전 상여를 받은 달의 다음 달부터가 지급대상기간이므로, 이 계산기의 결과는 그 해 첫 상여 기준입니다.</p>
+      </div>
+        <button type="button" class="ds-btn-calc" data-calc-submit="calcBonus" data-result="result" data-required="bonus">계산하기</button>
+      </div>
+    </section>
+
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="result">
       <div class="result-hero">
         <div class="result-hero-label">성과급 실수령액</div>
         <div class="result-hero-value" id="r-net">-</div>
@@ -178,26 +170,56 @@
       <div class="result-row"><span class="result-label">고용보험 (0.9%)</span><span class="result-value result-minus" id="r-emp">-</span></div>
       <div class="result-row"><span class="result-label">차감 합계</span><span class="result-value result-minus" id="r-dedu">-</span></div>
       <div id="notice" class="result-note" style="margin-top:12px;"></div>
-    </div>
-  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/salary/take-home-pay/">연봉 실수령액 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">계산 결과</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="bonus-pay-next">
+        <a class="ds-next-card" href="/calc/salary/take-home-pay/" data-next="take-home-pay"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-briefcase"></use></svg></span><span class="ds-next-body"><b>연봉 실수령액 계산기</b><span>세전 연봉에서 국민연금·건강·장기요양·고용보험과 근로소득세·지방소득세를 차감해 월 실수령액을 산출합니다. 부양가족 수·비과세 식대까지 반영됩니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/salary/hourly-wage/" data-next="hourly-wage"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-briefcase"></use></svg></span><span class="ds-next-body"><b>시급·일급 변환 계산기</b><span>연봉·월급·주급·일급·시급을 상호 환산합니다. 주휴수당 포함 월 209시간 기준과 2026년 최저시급 10,320원 적용 여부를 선택할 수 있습니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
+  </div>
+
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">국세청 근로소득 간이세액표(소득세법 시행령 별표2 <a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?mi=6583&cntntsId=7862" target="_blank" rel="noopener">국세청 근로소득 간이세액표 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#bonus-pay-s1">성과급 실수령</a><a href="#bonus-pay-s2">성과급 세금</a><a href="#bonus-pay-s3">성과급에 4대보험은</a><a href="#bonus-pay-s4">계산 예시</a><a href="#bonus-pay-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
     <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
     <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
   </div>
 
   <div class="guide-section">
-    <div class="guide-card">
-      <h2>성과급 실수령 계산기는 언제 쓰나요?</h2>
-      <p>성과급·상여금은 월급과 세금 매기는 방식이 달라, 같은 금액이라도 실수령액이 평소 월급 비율과 다릅니다. 명세서를 열었을 때 "성과급에서 세금이 얼마나 빠졌지?" 싶을 때, 국세청 간이세액표 상여 원천징수 방식으로 빠진 세금을 항목별로 확인하고 협상·자금 계획에 쓰기 위한 계산기입니다.</p>
+            <section class="ds-section ds-prose" aria-labelledby="bonus-pay-s1">
+          <div class="ds-section-head"><h2 id="bonus-pay-s1">성과급 실수령 계산기는 언제 쓰나요?</h2></div>
+<p>성과급·상여금은 월급과 세금 매기는 방식이 달라, 같은 금액이라도 실수령액이 평소 월급 비율과 다릅니다. 명세서를 열었을 때 "성과급에서 세금이 얼마나 빠졌지?" 싶을 때, 국세청 간이세액표 상여 원천징수 방식으로 빠진 세금을 항목별로 확인하고 협상·자금 계획에 쓰기 위한 계산기입니다.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>성과급 협상 전</strong><span>제시받은 성과급의 세후 실수령을 미리 확인</span></div>
         <div class="guide-box"><strong>명절·연말 보너스</strong><span>일회성 보너스에서 빠지는 세금 항목별 확인</span></div>
         <div class="guide-box"><strong>분기 PI·인센티브</strong><span>정기상여는 지급대상기간 방식으로 세금 절감 확인</span></div>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>성과급 세금 계산 원리</h2>
-      <p>성과급 원천징수 소득세는 국세청 근로소득 간이세액표를 기준으로, 성과급을 <strong>지급대상기간 월수로 나눠 월평균으로 환산</strong>한 뒤 계산합니다(소득세법 제136조제1항). 일회성 성과급처럼 지급대상기간이 따로 없으면 그 해 1월부터 받는 달까지를 지급대상기간으로 봅니다.</p>
-      <div class="table-wrap"><table>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="bonus-pay-s2">
+          <div class="ds-section-head"><h2 id="bonus-pay-s2">성과급 세금 계산 원리</h2></div>
+<p>성과급 원천징수 소득세는 국세청 근로소득 간이세액표를 기준으로, 성과급을 <strong>지급대상기간 월수로 나눠 월평균으로 환산</strong>한 뒤 계산합니다(소득세법 제136조제1항). 일회성 성과급처럼 지급대상기간이 따로 없으면 그 해 1월부터 받는 달까지를 지급대상기간으로 봅니다.</p>
+      <div class="ds-table-card"><table>
         <tr><th>상여 유형</th><th>예시</th><th>지급대상기간(월수 n)</th></tr>
         <tr><td>부정기상여</td><td>명절 보너스·일회성 성과급·격려금</td><td>그 해 1월 ~ 받는 달 (예: 12월 지급이면 12개월)</td></tr>
         <tr><td>정기상여</td><td>분기 PI·반기 인센티브 등 지급 시기 고정</td><td>해당 지급대상기간 (예: 분기 PI=3개월)</td></tr>
@@ -208,21 +230,21 @@
         <li>고용보험 = 성과급 × 0.9% (받는 달 즉시 공제)</li>
       </ul>
       <p>월수 n이 클수록(예: 연말 일회성 성과급은 12개월) 월평균이 작아져 누진 점프가 완화되고, n이 짧을수록(예: 분기 PI 3개월) 월평균이 커져 세금이 더 빠집니다. 회사에 따라 성과급을 그 달 급여에 단순 합산(당월 합산)해 더 많이 원천징수하기도 하지만, 어느 방식이든 다음 해 연말정산에서 정산됩니다.</p>
-    </div>
-    <div class="guide-card">
-      <h2>성과급에 4대보험은 어떻게 적용되나</h2>
-      <p>성과급도 근로소득이라 4대보험 대상이지만, 받는 달 명세서에서 당장 빠지는지는 항목마다 다릅니다.</p>
-      <div class="table-wrap"><table>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="bonus-pay-s3">
+          <div class="ds-section-head"><h2 id="bonus-pay-s3">성과급에 4대보험은 어떻게 적용되나</h2></div>
+<p>성과급도 근로소득이라 4대보험 대상이지만, 받는 달 명세서에서 당장 빠지는지는 항목마다 다릅니다.</p>
+      <div class="ds-table-card"><table>
         <tr><th>항목</th><th>성과급 받는 달 즉시 공제?</th><th>반영 시점</th></tr>
         <tr><td>고용보험 (0.9%)</td><td class="rate">즉시 공제</td><td>지급한 달 바로 부과</td></tr>
         <tr><td>국민연금</td><td>아니오</td><td>매년 7월 기준소득월액 결정에 반영</td></tr>
         <tr><td>건강보험·장기요양</td><td>아니오</td><td>다음 해 4월 보수총액 정산에 반영</td></tr>
       </table></div>
       <div class="highlight-box">그래서 성과급 받는 달 통장에서 당장 빠지는 돈은 근로소득세·지방소득세·고용보험 위주입니다. 국민연금·건강보험은 시차를 두고 정산되므로, 본 계산기는 즉시 공제되는 세 항목을 기준으로 실수령을 계산합니다.</div>
-    </div>
-    <div class="guide-card">
-      <h2>실제 계산 예시</h2>
-      <h3>예시 1 - 박서준(29세) 월 과세급여 300만, 연말 일회성 성과급 200만</h3>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="bonus-pay-s4">
+          <div class="ds-section-head"><h2 id="bonus-pay-s4">실제 계산 예시</h2></div>
+<h3>예시 1 - 박서준(29세) 월 과세급여 300만, 연말 일회성 성과급 200만</h3>
       <p>박서준 씨는 월 과세급여 300만원을 받는데 12월에 일회성 성과급 200만원을 받았습니다(부양가족 본인 1명, 지급대상기간 1~12월 = 12개월).</p>
       <ul>
         <li>월평균 환산 = 300만 + 200만÷12 ≈ 316.7만 기준</li>
@@ -243,16 +265,16 @@
         <li>실수령 = 600만 − 1,166,200 = <strong>4,833,800원</strong> (약 19.4% 차감)</li>
       </ul>
       <p>같은 600만원이라도 지급대상기간 3개월인 분기 PI(19.4% 차감)는, 1~12월 전체에 분산되는 연말 일회성 성과급(약 16.8% 차감)보다 더 많이 빠집니다. 지급대상기간이 짧을수록 월평균이 커지기 때문입니다.</p>
-    </div>
-    <div class="guide-card">
-      <h2>원천징수와 연말정산</h2>
-      <p>성과급에서 빠진 세금은 <strong>원천징수 시점의 임시 금액</strong>입니다. 1년치 총소득과 각종 공제를 합산해 다음 해 2월 연말정산에서 최종 세액을 다시 계산하므로, 많이 떼였다면 일부를 환급받고 부족했다면 추가 납부합니다.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="bonus-pay-s5">
+          <div class="ds-section-head"><h2 id="bonus-pay-s5">원천징수와 연말정산</h2></div>
+<p>성과급에서 빠진 세금은 <strong>원천징수 시점의 임시 금액</strong>입니다. 1년치 총소득과 각종 공제를 합산해 다음 해 2월 연말정산에서 최종 세액을 다시 계산하므로, 많이 떼였다면 일부를 환급받고 부족했다면 추가 납부합니다.</p>
       <div class="highlight-box">성과급을 한 번에 받든 나눠 받든 연 단위 총세금은 같습니다. 다만 받는 시점의 현금 흐름은 크게 다르므로, 카드값·대출 상환 일정이 빠듯하다면 분할 지급이 실질적으로 유리할 수 있습니다.</div>
-    </div>
-    <div class="guide-card">
-      <h2>성과급별 실수령액 (월 과세급여 300만·부양 1명)</h2>
-      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">아래 수치는 이 페이지 계산기의 실제 출력값입니다.</p>
-      <div class="guide-table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="bonus-pay-s6">
+          <div class="ds-section-head"><h2 id="bonus-pay-s6">성과급별 실수령액 (월 과세급여 300만·부양 1명)</h2></div>
+<p class="ds-table-lead">아래 수치는 이 페이지 계산기의 실제 출력값입니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead><tr><th>성과급</th><th>근로소득세</th><th>차감 합계</th><th>성과급 실수령액</th></tr></thead>
           <tbody>
@@ -263,17 +285,35 @@
           </tbody>
         </table>
       </div>
-    </div>
-    <div class="guide-card faq-card">
-      <h2>자주 묻는 질문</h2>
-      <div class="faq-item"><h3>성과급 실수령액은 어떻게 계산하나요?</h3><p>성과급 원천징수 소득세는 성과급을 지급대상기간 월수로 나눠 월평균으로 환산한 뒤 간이세액표로 계산합니다(소득세법 제136조제1항). 일회성 성과급은 그 해 1월부터 받는 달까지가 지급대상기간입니다. 여기에 지방소득세(소득세의 10%)와 고용보험(성과급의 0.9%)을 빼면 실수령액이 됩니다. 예를 들어 월 과세급여 300만원인 사람이 12월에 일회성 성과급 200만원을 받으면 200만원을 12개월로 나눠 월평균 약 316.7만원으로 환산해 계산하므로, 소득세 약 164,280원, 지방소득세 16,430원, 고용보험 18,000원이 빠져 실수령은 약 1,801,290원입니다.</p></div>
-      <div class="faq-item"><h3>성과급에도 4대보험이 빠지나요?</h3><p>항목별로 다릅니다. 고용보험(0.9%)은 성과급을 받는 달에 바로 부과됩니다. 반면 국민연금은 매년 7월 기준소득월액을 정할 때 전년도 총보수에 성과급이 반영되고, 건강보험은 다음 해 4월 보수총액 정산 때 반영되므로 성과급 받는 달에는 즉시 공제되지 않습니다. 그래서 성과급 받는 달 명세서에서 당장 빠지는 것은 소득세·지방소득세·고용보험 위주입니다. 본 계산기는 이 세 가지를 차감합니다.</p></div>
-      <div class="faq-item"><h3>정기상여와 일회성 성과급은 세금이 다른가요?</h3><p>둘 다 지급대상기간 월수로 나눠 월평균으로 환산해 계산하지만, 지급대상기간 길이가 다릅니다. 일회성 성과급(부정기)은 그 해 1월부터 받는 달까지가 지급대상기간이라 연말에 받으면 최대 12개월로 분산돼 세금이 적게 빠집니다. 분기 PI 같은 정기상여는 지급대상기간이 3개월로 짧아 월평균이 커지므로 오히려 더 많이 빠집니다. 같은 600만원이라도 12월 일회성 성과급은 약 16.8%, 3개월 분기 PI는 약 19.4% 차감되는 식으로 차이가 납니다.</p></div>
-      <div class="faq-item"><h3>왜 성과급에서 세금이 이렇게 많이 빠지나요?</h3><p>성과급도 근로소득세 누진 구조를 따릅니다. 성과급을 지급대상기간 월수로 나눈 월평균이 평소 월급에 더해지면서 세율 구간이 올라가, 평소 월급보다 높은 세율이 성과급 부분에 적용됩니다. 특히 지급대상기간이 짧은 정기상여나 회사가 당월 합산으로 원천징수하는 경우 체감 세율이 더 높아집니다. 다만 이는 원천징수 시점의 임시 금액이며, 1년치 총소득 기준으로 다음 해 2월 연말정산에서 다시 계산해 정산합니다.</p></div>
-      <div class="faq-item"><h3>원천징수된 성과급 세금을 연말정산에서 돌려받나요?</h3><p>연간 총소득과 각종 공제를 합산해 최종 세액을 다시 계산하므로, 원천징수 시점에 많이 떼였다면 일부를 환급받을 수 있고 반대로 부족했다면 추가 납부합니다. 성과급을 한 번에 받든 나눠 받든 연 단위 총세금 자체는 동일하지만, 받는 시점의 현금 흐름은 크게 달라집니다. 의료비·교육비·기부금 등 공제가 많으면 환급 가능성이 커집니다.</p></div>
+        </section>
+            <section class="ds-section faq-card" aria-labelledby="bonus-pay-faq">
+          <div class="ds-section-head"><h2 id="bonus-pay-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>성과급 실수령액은 어떻게 계산하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>성과급 원천징수 소득세는 성과급을 지급대상기간 월수로 나눠 월평균으로 환산한 뒤 간이세액표로 계산합니다(소득세법 제136조제1항). 일회성 성과급은 그 해 1월부터 받는 달까지가 지급대상기간입니다. 여기에 지방소득세(소득세의 10%)와 고용보험(성과급의 0.9%)을 빼면 실수령액이 됩니다. 예를 들어 월 과세급여 300만원인 사람이 12월에 일회성 성과급 200만원을 받으면 200만원을 12개월로 나눠 월평균 약 316.7만원으로 환산해 계산하므로, 소득세 약 164,280원, 지방소득세 16,430원, 고용보험 18,000원이 빠져 실수령은 약 1,801,290원입니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>성과급에도 4대보험이 빠지나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>항목별로 다릅니다. 고용보험(0.9%)은 성과급을 받는 달에 바로 부과됩니다. 반면 국민연금은 매년 7월 기준소득월액을 정할 때 전년도 총보수에 성과급이 반영되고, 건강보험은 다음 해 4월 보수총액 정산 때 반영되므로 성과급 받는 달에는 즉시 공제되지 않습니다. 그래서 성과급 받는 달 명세서에서 당장 빠지는 것은 소득세·지방소득세·고용보험 위주입니다. 본 계산기는 이 세 가지를 차감합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>정기상여와 일회성 성과급은 세금이 다른가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>둘 다 지급대상기간 월수로 나눠 월평균으로 환산해 계산하지만, 지급대상기간 길이가 다릅니다. 일회성 성과급(부정기)은 그 해 1월부터 받는 달까지가 지급대상기간이라 연말에 받으면 최대 12개월로 분산돼 세금이 적게 빠집니다. 분기 PI 같은 정기상여는 지급대상기간이 3개월로 짧아 월평균이 커지므로 오히려 더 많이 빠집니다. 같은 600만원이라도 12월 일회성 성과급은 약 16.8%, 3개월 분기 PI는 약 19.4% 차감되는 식으로 차이가 납니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>왜 성과급에서 세금이 이렇게 많이 빠지나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>성과급도 근로소득세 누진 구조를 따릅니다. 성과급을 지급대상기간 월수로 나눈 월평균이 평소 월급에 더해지면서 세율 구간이 올라가, 평소 월급보다 높은 세율이 성과급 부분에 적용됩니다. 특히 지급대상기간이 짧은 정기상여나 회사가 당월 합산으로 원천징수하는 경우 체감 세율이 더 높아집니다. 다만 이는 원천징수 시점의 임시 금액이며, 1년치 총소득 기준으로 다음 해 2월 연말정산에서 다시 계산해 정산합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>원천징수된 성과급 세금을 연말정산에서 돌려받나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>연간 총소득과 각종 공제를 합산해 최종 세액을 다시 계산하므로, 원천징수 시점에 많이 떼였다면 일부를 환급받을 수 있고 반대로 부족했다면 추가 납부합니다. 성과급을 한 번에 받든 나눠 받든 연 단위 총세금 자체는 동일하지만, 받는 시점의 현금 흐름은 크게 달라집니다. 의료비·교육비·기부금 등 공제가 많으면 환급 가능성이 커집니다.</p>
+            </details>
       <div class="update-note">최종 검토: 2026.06.15 · 계산 결과는 참고용입니다.</div>
-    </div>
+          </div>
+        </section>
   </div>
+    </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
   <script>
   window.TRUST_BLOCK_CONFIG = {
     standard: '국세청 근로소득 간이세액표(소득세법 시행령 별표2, 2026.2.27. 개정) + 2026년 고용보험료율',
@@ -290,37 +330,44 @@
     lastReviewed: '2026.09.04',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>
-  <div class="sibling-section">
-    <div class="sibling-title">다른 이직/연봉 계산기</div>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 이직/연봉 계산기</h2>
     <div class="sibling-list">
-      <a href="/calc/salary/take-home-pay/" class="sibling-link">💵 연봉 실수령액</a>
-      <a href="/calc/salary/comparison/" class="sibling-link">⚖️ 연봉 비교</a>
-      <a href="/calc/salary/hourly-wage/" class="sibling-link">⏱️ 시급·일급 변환</a>
-      <a href="/calc/salary/weekly-holiday-pay/" class="sibling-link">🗓️ 주휴수당</a>
-      <a href="/calc/salary/annual-leave-pay/" class="sibling-link">🏖️ 연차수당</a>
-      <a href="/calc/salary/ordinary-wage/" class="sibling-link">🧮 통상임금</a>
-      <a href="/calc/salary/average-wage/" class="sibling-link">📐 평균임금</a>
-      <a href="/calc/salary/premium-pay/" class="sibling-link">⏰ 가산수당</a>
-      <a href="/calc/salary/bonus-pay/" class="sibling-link current">🎁 성과급 실수령</a>
-      <a href="/calc/salary/job-change/" class="sibling-link">📊 이직 연봉 비교</a>
-      <a href="/calc/salary/raise-rate/" class="sibling-link">📈 연봉 인상률</a>
-      <a href="/calc/salary/dismissal-notice-pay/" class="sibling-link">📋 해고예고수당</a>
-      <a href="/calc/salary/severance/" class="sibling-link">📦 퇴직금</a>
-      <a href="/calc/salary/unemployment/" class="sibling-link">🛟 실업급여</a>
+      <a href="/calc/salary/take-home-pay/" class="sibling-link">연봉 실수령액</a>
+      <a href="/calc/salary/comparison/" class="sibling-link">연봉 비교</a>
+      <a href="/calc/salary/hourly-wage/" class="sibling-link">시급·일급 변환</a>
+      <a href="/calc/salary/weekly-holiday-pay/" class="sibling-link">주휴수당</a>
+      <a href="/calc/salary/annual-leave-pay/" class="sibling-link">연차수당</a>
+      <a href="/calc/salary/ordinary-wage/" class="sibling-link">통상임금</a>
+      <a href="/calc/salary/average-wage/" class="sibling-link">평균임금</a>
+      <a href="/calc/salary/premium-pay/" class="sibling-link">가산수당</a>
+      <a href="/calc/salary/job-change/" class="sibling-link">이직 연봉 비교</a>
+      <a href="/calc/salary/raise-rate/" class="sibling-link">연봉 인상률</a>
+      <a href="/calc/salary/dismissal-notice-pay/" class="sibling-link">해고예고수당</a>
+      <a href="/calc/salary/severance/" class="sibling-link">퇴직금</a>
+      <a href="/calc/salary/unemployment/" class="sibling-link">실업급여</a>
     </div>
-    <div class="sibling-title">관련 가이드</div>
-    <div class="sibling-list">
-      <a href="/blog/posts/bonus-tax-guide.html" class="sibling-link">📖 보너스·성과급 세금 계산법 - 성과급 실수령액과 상여 원천징수 방식 (20…</a>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/bonus-tax-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/bonus-tax-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>보너스·성과급 세금 계산법 - 성과급 실수령액과 상여 원천징수 방식 (2026)</span></a>
     </div>
   </div>
 </main>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
-    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
   </div>
 </footer>
+
+<script src="/assets/ds/calc-kit.js?v=d45e66d9"></script>
 <script>
 function comma(n){ return Math.round(n).toLocaleString() + '원'; }
 function fmtMan(man){ return comma(man*10000); }
@@ -337,10 +384,10 @@ function setBonusMode(m){
   calcBonus();
 }
 function calcBonus(){
-  const bonus = (parseFloat(document.getElementById('bonus').value) || 0) * 10000;
-  const salary = (parseFloat(document.getElementById('salary').value) || 0) * 10000;
-  const dep = Math.max(1, parseInt(document.getElementById('dep').value) || 1);
-  const ch = Math.max(0, parseInt(document.getElementById('children').value) || 0);
+  const bonus = (parseFloat(String(document.getElementById('bonus').value).replace(/,/g, '')) || 0) * 10000;
+  const salary = (parseFloat(String(document.getElementById('salary').value).replace(/,/g, '')) || 0) * 10000;
+  const dep = Math.max(1, parseInt(String(document.getElementById('dep').value).replace(/,/g, '')) || 1);
+  const ch = Math.max(0, parseInt(String(document.getElementById('children').value).replace(/,/g, '')) || 0);
   document.getElementById('bonus-conv').textContent = bonus > 0 ? fmtMan(bonus/10000) : '';
   document.getElementById('salary-conv').textContent = salary > 0 ? fmtMan(salary/10000) + ' (비과세 제외 월급)' : '';
   const res = document.getElementById('result');
@@ -350,9 +397,9 @@ function calcBonus(){
   // 지급대상기간 월수 n: 부정기=1월~지급월, 정기=지급대상기간
   let n;
   if (bonusMode === 'regular') {
-    n = Math.max(1, parseInt(document.getElementById('period').value) || 1);
+    n = Math.max(1, parseInt(String(document.getElementById('period').value).replace(/,/g, '')) || 1);
   } else {
-    n = Math.max(1, parseInt(document.getElementById('paymonth').value) || 12);
+    n = Math.max(1, parseInt(String(document.getElementById('paymonth').value).replace(/,/g, '')) || 12);
   }
   const avg = salary + bonus / n;
   let incomeTax = (tax(avg, dep, ch) - tax(salary, dep, ch)) * n;
@@ -374,12 +421,11 @@ function calcBonus(){
 }
 </script>
 
-<script src="/assets/calc-validate.js"></script>
-<script src="/assets/calc-result-tools.js"></script>
-  <script src="/assets/footer-unified.js" defer></script>
-<script src="/assets/calc-registry.js"></script>
-<script src="/assets/salary-tax-table.js"></script>
-<script src="/assets/salary-detail-shell.js"></script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/salary-tax-table.js?v=2875fe71"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
@@ -390,7 +436,13 @@ window.ARTICLE_INFO_CONFIG = {
   category: 'salary'
 };
 </script>
-<script src="/assets/blog-article-info.js"></script>
-<script src="/assets/blog-review-footer.js"></script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "result", "required": ["bonus"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#bonus-pay-next", "next": []});
+  DSCalc.placeTrust('ds-trust-col');
+</script>
+<script src="/assets/ds/prefill.js?v=fa5eb49a" defer></script>
 </body>
 </html>

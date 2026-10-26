@@ -21,10 +21,9 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link rel="stylesheet" href="/assets/finance-common.css" />
+<link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -50,46 +49,48 @@
   </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"예금 이자에 세금이 얼마나 붙나요?","acceptedAnswer":{"@type":"Answer","text":"이자소득세 15.4%(소득세 14% + 지방소득세 1.4%)가 원천징수됩니다. 비과세 종합저축이나 ISA 계좌를 활용하면 세금을 줄일 수 있습니다."}},{"@type":"Question","name":"예금 금리가 같으면 어디에 넣어도 같은가요?","acceptedAnswer":{"@type":"Answer","text":"금리가 같더라도 이자 지급 방식(만기일시 지급, 월이자 지급)에 따라 실수령액이 달라질 수 있습니다. 복리 상품인지 단리 상품인지도 확인하세요."}},{"@type":"Question","name":"중도 해지하면 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"약정 기간 전에 해지하면 중도해지 금리가 적용되어 약정 금리보다 크게 낮아집니다. 가입 전 중도해지 금리를 꼭 확인하세요."}},{"@type":"Question","name":"예금과 적금 중 어느 쪽이 이자가 더 많나요?","acceptedAnswer":{"@type":"Answer","text":"같은 금리라면 예금이 더 많습니다. 예금은 전액을 처음부터 예치하지만, 적금은 매월 분할 납입하므로 마지막 납입금은 1개월 치 이자만 받기 때문입니다."}},{"@type":"Question","name":"금융소득종합과세 대상이 되면 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"연간 이자·배당 소득 합계가 2천만원을 초과하면 다른 소득과 합산하여 종합소득세로 과세됩니다. 고액 예금자는 분산 가입이나 ISA 활용을 검토하세요. 종합과세 시 최고 세율이 45%에 달할 수 있어 절세 전략이 중요합니다."}},{"@type":"Question","name":"저축은행 예금도 안전한가요?","acceptedAnswer":{"@type":"Answer","text":"예금보험공사(KDIC) 보호 대상 저축은행이라면 시중은행과 동일하게 1인당 1억원(원금+이자)까지 보호됩니다(2025년 9월 5,000만원에서 상향). 다만 일부 부실 저축은행은 영업정지 후 보험금 지급까지 1~2개월이 걸릴 수 있고, 1억원 초과분은 보호되지 않습니다. 저축은행 이용 시 KDIC 홈페이지에서 예금보험 가입 여부를 확인하고, 1억원 한도 안에서 분산 가입하는 것이 안전합니다."}},{"@type":"Question","name":"예금 가입 후 시중 금리가 더 오르면 어떻게 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"일반 정기예금은 가입 시점 약정 금리가 만기까지 유지되므로 금리가 올라도 변경되지 않습니다. 다만 일부 상품은 \"금리상승 옵션부 정기예금\"으로 일정 기간마다 금리를 재조정합니다. 단기적으로 큰 금리 인상이 예상되면 만기를 짧게(3~6개월) 설정해 재가입 기회를 노리거나, 분할 예치(예: 1·3·6개월씩 나눠 가입) 전략을 활용할 수 있습니다. 금리 변동이 잦은 시기에는 한국은행 기준금리 발표 일정을 함께 확인하세요."}}]}</script>
   <style>
-    input[type=number]:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(99,102,241,0.15)}
-    .result-card{background:linear-gradient(135deg,#EEF2FF 0%,#E0E7FF 100%);border:1px solid rgba(99,102,241,0.25);border-radius:16px;padding:24px;margin-top:8px;display:none}
-    .result-card.show{display:block}
-    .result-highlight{background:rgba(99,102,241,0.1);border-radius:12px;padding:16px;margin-bottom:16px;text-align:center}
-    .rh-label{font-size:12px;color:var(--gray-500);margin-bottom:4px}
-    .rh-value{font-size:28px;font-weight:900;color:var(--primary)}
-    .rh-sub{font-size:12px;color:var(--gray-500);margin-top:2px}
+    /* 페이지 고유 스타일(공통 부품 재정의는 base.css가 맡아 뺐다) */
+    .rh-label { font-size:12px;color:var(--gray-500);margin-bottom:4px }
+    .rh-value { font-size:28px;font-weight:900;color:var(--primary) }
+    .rh-sub { font-size:12px;color:var(--gray-500);margin-top:2px }
   </style>
 </head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="/" class="site-logo"><div class="logo-icon"><img src="/assets/logo.svg" alt="제이퍼 계산기 로고" style="width:32px;height:32px;display:block;" /></div><span class="logo-text">제이퍼<span>계산기</span></span></a>
-    <nav class="header-nav">
-      <a href="/calc/realestate/" class="nav-item"><span class="nav-dot" style="background:#F59E0B;"></span>부동산</a>
-      <a href="/calc/tax/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>프리랜서 세금</a>
-      <a href="/calc/salary/" class="nav-item"><span class="nav-dot" style="background:#3B82F6;"></span>이직/연봉</a>
-      <a href="/calc/finance/" class="nav-item active"><span class="nav-dot" style="background:#6366F1;"></span>금융·이자</a>
-      <a href="/calc/health/" class="nav-item"><span class="nav-dot" style="background:#10B981;"></span>건강</a>
-      <a href="/calc/pension-welfare/" class="nav-item"><span class="nav-dot" style="background:#0EA5E9;"></span>연금·복지</a>
-      <a href="/calc/date/" class="nav-item"><span class="nav-dot" style="background:#F97316;"></span>날짜·D-day</a>
-      <a href="/calc/ai/" class="nav-item"><span class="nav-dot" style="background:#8B5CF6;"></span>AI/테크</a>
-      <a href="/calc/pet/" class="nav-item"><span class="nav-dot" style="background:#F472B6;"></span>반려동물</a>
-    </nav>
-    <div class="header-cta"><a href="/blog/" class="btn-blog">블로그</a></div>
-    <button class="hamburger" onclick="document.querySelector('.mob-menu').classList.toggle('open')" aria-label="메뉴"><span></span><span></span><span></span></button>
-  </div>
+<body data-cat="finance" style="--cat: var(--c-finance)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
 </header>
-<main class="page-wrap">
-  <div class="page-header">
-    <div class="breadcrumb"><a href="/">홈</a><span class="breadcrumb-sep">›</span><a href="/calc/finance/">금융·이자 계산기</a><span class="breadcrumb-sep">›</span><span>예금 이자 계산기</span></div>
-    <div class="page-header-badge">🏦 이자소득세 15.4% 기준 적용</div>
-    <h1>예금 이자 계산기</h1>
-    <p>예치금액·금리·기간으로 세후 이자와 만기 수령액을 계산하세요</p>
+
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/finance/">금융·이자 계산기</a> &rsaquo; 예금 이자 계산기</div>
+      <div class="page-badge">이자소득세 15.4% 기준 적용</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-piggy-bank"></use></svg></span>
+        <h1 class="page-title">예금 이자 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">이자소득세 15.4% 기준 적용</span>
+          <span class="ds-trust-chip">2026.05.11 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">예치금액·금리·기간으로 세후 이자와 만기 수령액을 계산하세요</p>
+    </div>
   </div>
-    <div class="card">
-      <div class="card-title">예금 정보</div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+      <div class="field-label ds-group-label">예금 정보</div>
       <div class="field">
         <div class="field-label">예치금액 <span class="label-hint">만원 단위</span></div>
-        <div class="input-wrap"><input type="number" id="dep-amount" min="0" placeholder="예) 1000" oninput="calc()" /><span class="unit">만원</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num data-prefill="principal" id="dep-amount" min="0" placeholder="예) 1000" oninput="calc()" /><span class="unit">만원</span></div>
         <div class="converted" id="dep-display"></div>
       </div>
       <div class="field">
@@ -106,7 +107,14 @@
         </div>
       </div>
     </div>
-    <div class="result-card" id="result">
+
+        <button type="button" class="ds-btn-calc" data-calc-submit="calc" data-result="result" data-required="dep-amount">계산하기</button>
+      </div>
+    </section>
+
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="result">
       <div class="result-highlight">
         <div class="rh-label">세후 이자</div>
         <div class="rh-value" id="dep-net-interest">-</div>
@@ -120,27 +128,56 @@
         <span class="result-total-value" id="dep-total">-</span>
       </div>
       <p class="result-note">※ 이자소득세 15.4% (소득세 14% + 지방소득세 1.4%) 적용. 비과세 종합저축·ISA 등은 세율이 다를 수 있습니다.</p>
-</div>
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/finance/compound/">복리 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
 
-  <div class="adfit-slot" style="text-align:center;margin:28px 0">
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">세후 이자</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="deposit-next">
+        <a class="ds-next-card" href="/calc/finance/compound/" data-next="compound"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-piggy-bank"></use></svg></span><span class="ds-next-body"><b>복리 계산기</b><span>연복리·월복리·일복리 설정을 지원합니다. 원금·금리·기간에 따라 자산이 몇 배로 불어나는지, 단리와 격차가 얼마나 벌어지는지 10년·20년·30년 단위로 비교합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/finance/savings/" data-next="savings"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-piggy-bank"></use></svg></span><span class="ds-next-body"><b>적금 만기 계산기</b><span>월 납입액·기간·금리를 입력하면 만기 수령액과 실효수익률을 계산합니다. 적금은 표시 금리의 약 절반이 실효수익률이 되는 이유를 숫자로 확인할 수 있습니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
+  </div>
+
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">이자소득세 15.4%(소득세 14% + 지방소득세 1.4%) 원천징수, 예금자보호법 <a href="https://fine.fss.or.kr" target="_blank" rel="noopener">금융소비자포털 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#deposit-s1">정기예금 이자</a><a href="#deposit-s2">비교</a><a href="#deposit-s3">입력값과 결과</a><a href="#deposit-s4">구간별 표</a><a href="#deposit-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
     <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
     <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
   </div>
 
   <div class="guide-section">
-    <div class="guide-card">
-      <h2>정기예금 이자 계산, 이것만 알면 됩니다</h2>
-      <p>정기예금은 일정 금액을 약정 기간 동안 예치하고 만기에 원금과 이자를 수령하는 금융 상품입니다. 금리가 높을수록, 예치 기간이 길수록 이자가 많아지지만, 이자소득세 15.4%가 원천징수되므로 세후 수령액을 반드시 확인해야 합니다.</p>
+            <section class="ds-section ds-prose" aria-labelledby="deposit-s1">
+          <div class="ds-section-head"><h2 id="deposit-s1">정기예금 이자 계산, 이것만 알면 됩니다</h2></div>
+<p>정기예금은 일정 금액을 약정 기간 동안 예치하고 만기에 원금과 이자를 수령하는 금융 상품입니다. 금리가 높을수록, 예치 기간이 길수록 이자가 많아지지만, 이자소득세 15.4%가 원천징수되므로 세후 수령액을 반드시 확인해야 합니다.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>단리 이자 계산</strong><span>원금 x 금리 x 기간으로 이자를 계산합니다</span></div>
         <div class="guide-box"><strong>이자소득세 15.4%</strong><span>소득세 14% + 지방소득세 1.4% 원천징수</span></div>
         <div class="guide-box"><strong>예금자 보호</strong><span>1인당 1억 원까지 예금자보호법 적용(2025년 9월 상향)</span></div>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>예치 금액·기간별 세후 이자 비교</h2>
-      <p>연 3.5% 단리 기준, 이자소득세 15.4% 차감 후 실제 수령하는 이자를 비교합니다.</p>
-      <div class="guide-table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="deposit-s2">
+          <div class="ds-section-head"><h2 id="deposit-s2">예치 금액·기간별 세후 이자 비교</h2></div>
+<p>연 3.5% 단리 기준, 이자소득세 15.4% 차감 후 실제 수령하는 이자를 비교합니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead><tr><th>예치 금액</th><th>6개월</th><th>12개월</th><th>24개월</th></tr></thead>
           <tbody>
@@ -151,10 +188,10 @@
         </table>
       </div>
       <p style="font-size:12px;color:var(--gray-500);margin-top:8px">※ 실제 이자는 금융기관별 금리에 따라 다릅니다. 위 표는 연 3.5% 단리, 이자소득세 15.4% 적용 기준 참고 수치입니다.</p>
-    </div>
-    <div class="guide-card">
-      <h2>입력값과 결과 해석</h2>
-      <h3>입력 시 확인 포인트</h3>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="deposit-s3">
+          <div class="ds-section-head"><h2 id="deposit-s3">입력값과 결과 해석</h2></div>
+<h3>입력 시 확인 포인트</h3>
       <ul>
         <li><strong>예치 금액</strong>은 실제 예금에 넣을 원금을 입력합니다. 이자를 포함한 만기 수령액이 아닙니다.</li>
         <li><strong>금리</strong>는 금융기관에서 제시한 연 이율(세전)을 입력하세요. 우대금리 조건이 있다면 충족 여부를 확인한 뒤 입력하는 것이 정확합니다.</li>
@@ -163,11 +200,11 @@
       </ul>
       <h3>결과 해석 방법</h3>
       <p>만기 수령액 = 원금 + 세전 이자 - 이자소득세. 세전 이자와 세후 이자의 차이를 확인하고, 실제 가입 전 금융기관의 상품 설명서에서 이자 계산 방식(단리/복리)과 이자 지급 시점을 꼭 확인하세요.</p>
-    </div>
-    <div class="guide-card">
-      <h2>예금 상품 유형별 기준표</h2>
-      <p>2026년 기준 시중에서 자주 쓰는 정기예금·파킹통장·고금리 특판 상품을 유형별로 비교했습니다. 금리만 보고 결정하면 자금 회수 시점·세제 혜택을 놓칠 수 있어 유형별 특성을 함께 확인하세요.</p>
-      <div class="guide-table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="deposit-s4">
+          <div class="ds-section-head"><h2 id="deposit-s4">예금 상품 유형별 기준표</h2></div>
+<p>2026년 기준 시중에서 자주 쓰는 정기예금·파킹통장·고금리 특판 상품을 유형별로 비교했습니다. 금리만 보고 결정하면 자금 회수 시점·세제 혜택을 놓칠 수 있어 유형별 특성을 함께 확인하세요.</p>
+      <div class="ds-table-card">
         <table>
           <thead><tr><th>상품 유형</th><th>금리 수준</th><th>특징·주의점</th></tr></thead>
           <tbody>
@@ -181,10 +218,10 @@
         </table>
       </div>
       <p>금융감독원 "금융상품한눈에"(finlife.fss.or.kr)에서 가입 시점의 최신 금리를 확인할 수 있습니다.</p>
-    </div>
-    <div class="guide-card">
-      <h2>실제 활용 예시</h2>
-      <h3>예시 1 - 김OO씨(40세, 비상금 5천만원 단기 운용)</h3>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="deposit-s5">
+          <div class="ds-section-head"><h2 id="deposit-s5">실제 활용 예시</h2></div>
+<h3>예시 1 - 김OO씨(40세, 비상금 5천만원 단기 운용)</h3>
       <p>김OO씨는 6개월 안에 자녀 학자금으로 쓸 5천만원을 안전하게 굴리고 싶습니다. 시중은행 6개월 정기예금 연 3.2%로 가입한다고 가정합니다.</p>
       <ul>
         <li>원금: 5,000만원</li>
@@ -201,20 +238,20 @@
         <li><strong>총 세후 이자: 약 323만원 (세금 절감 27만원)</strong></li>
       </ul>
       <p>비과세 종합저축은 65세 이상·장애인·국가유공자 등 자격을 충족해야 가입 가능하며, 1인당 5,000만원이 한도입니다. 한도 안에서는 다른 금융기관에도 분산해 예금자 보호를 받을 수 있습니다.</p>
-    </div>
-    <div class="guide-card">
-      <h2>가입 전 확인 사항</h2>
-      <p>예금은 안전 자산이지만 금리만 보고 가입하면 손해를 볼 수 있는 변수들이 있습니다.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="deposit-s6">
+          <div class="ds-section-head"><h2 id="deposit-s6">가입 전 확인 사항</h2></div>
+<p>예금은 안전 자산이지만 금리만 보고 가입하면 손해를 볼 수 있는 변수들이 있습니다.</p>
       <div class="guide-grid">
         <div class="guide-box"><strong>예금자보호 한도</strong><span>예금보험공사 보호 한도는 금융기관별 1억원입니다(2025년 9월 5,000만원에서 상향). 큰 금액은 여러 은행에 분산 가입해야 전액 보호받습니다.</span></div>
         <div class="guide-box"><strong>중도해지 페널티</strong><span>중도해지 시 약정 금리의 10~50%만 지급되는 상품이 많습니다. 자금 회수 시점이 불확실하면 짧은 만기·파킹통장 활용을 검토하세요.</span></div>
         <div class="guide-box"><strong>금융소득종합과세</strong><span>연간 이자·배당 2천만원 초과 시 종합소득세로 합산 과세됩니다. 고액 자산가는 분산 가입과 ISA 활용으로 한도 관리가 필요합니다.</span></div>
       </div>
-    </div>
-    <div class="guide-card">
-      <h2>예치금액별 예금 만기 수령액 (연 3.5%·12개월)</h2>
-      <p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">이 페이지의 계산기에 실제로 값을 넣어 얻은 결과입니다.</p>
-      <div class="guide-table-wrap">
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="deposit-s7">
+          <div class="ds-section-head"><h2 id="deposit-s7">예치금액별 예금 만기 수령액 (연 3.5%·12개월)</h2></div>
+<p class="ds-table-lead">이 페이지의 계산기에 실제로 값을 넣어 얻은 결과입니다.</p>
+      <div class="ds-table-card">
         <table>
           <thead><tr><th>예치금액</th><th>세전 이자</th><th>이자소득세 (15.4%)</th><th>만기 수령액</th></tr></thead>
           <tbody>
@@ -225,19 +262,41 @@
           </tbody>
         </table>
       </div>
-    </div>
-    <div class="guide-card faq-card">
-      <h2>자주 묻는 질문</h2>
-      <div class="faq-item"><h3>예금 이자에 세금이 얼마나 붙나요?</h3><p>이자소득세 15.4%(소득세 14% + 지방소득세 1.4%)가 원천징수됩니다. 비과세 종합저축이나 ISA 계좌를 활용하면 세금을 줄일 수 있습니다.</p></div>
-      <div class="faq-item"><h3>예금 금리가 같으면 어디에 넣어도 같은가요?</h3><p>금리가 같더라도 이자 지급 방식(만기일시 지급, 월이자 지급)에 따라 실수령액이 달라질 수 있습니다. 복리 상품인지 단리 상품인지도 확인하세요.</p></div>
-      <div class="faq-item"><h3>중도 해지하면 어떻게 되나요?</h3><p>약정 기간 전에 해지하면 중도해지 금리가 적용되어 약정 금리보다 크게 낮아집니다. 가입 전 중도해지 금리를 꼭 확인하세요.</p></div>
-      <div class="faq-item"><h3>예금과 적금 중 어느 쪽이 이자가 더 많나요?</h3><p>같은 금리라면 예금이 더 많습니다. 예금은 전액을 처음부터 예치하지만, 적금은 매월 분할 납입하므로 마지막 납입금은 1개월 치 이자만 받기 때문입니다.</p></div>
-      <div class="faq-item"><h3>금융소득종합과세 대상이 되면 어떻게 되나요?</h3><p>연간 이자·배당 소득 합계가 2천만원을 초과하면 다른 소득과 합산하여 종합소득세로 과세됩니다. 고액 예금자는 분산 가입이나 ISA 활용을 검토하세요. 종합과세 시 최고 세율이 45%에 달할 수 있어 절세 전략이 중요합니다.</p></div>
-      <div class="faq-item"><h3>저축은행 예금도 안전한가요?</h3><p>예금보험공사(KDIC) 보호 대상 저축은행이라면 시중은행과 동일하게 1인당 1억원(원금+이자)까지 보호됩니다(2025년 9월 5,000만원에서 상향). 다만 일부 부실 저축은행은 영업정지 후 보험금 지급까지 1~2개월이 걸릴 수 있고, 1억원 초과분은 보호되지 않습니다. 저축은행 이용 시 KDIC 홈페이지에서 예금보험 가입 여부를 확인하고, 1억원 한도 안에서 분산 가입하는 것이 안전합니다.</p></div>
-      <div class="faq-item"><h3>예금 가입 후 시중 금리가 더 오르면 어떻게 해야 하나요?</h3><p>일반 정기예금은 가입 시점 약정 금리가 만기까지 유지되므로 금리가 올라도 변경되지 않습니다. 다만 일부 상품은 "금리상승 옵션부 정기예금"으로 일정 기간마다 금리를 재조정합니다. 단기적으로 큰 금리 인상이 예상되면 만기를 짧게(3~6개월) 설정해 재가입 기회를 노리거나, 분할 예치(예: 1·3·6개월씩 나눠 가입) 전략을 활용할 수 있습니다. 금리 변동이 잦은 시기에는 한국은행 기준금리 발표 일정을 함께 확인하세요.</p></div>
+        </section>
+            <section class="ds-section faq-card" aria-labelledby="deposit-faq">
+          <div class="ds-section-head"><h2 id="deposit-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>예금 이자에 세금이 얼마나 붙나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>이자소득세 15.4%(소득세 14% + 지방소득세 1.4%)가 원천징수됩니다. 비과세 종합저축이나 ISA 계좌를 활용하면 세금을 줄일 수 있습니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>예금 금리가 같으면 어디에 넣어도 같은가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>금리가 같더라도 이자 지급 방식(만기일시 지급, 월이자 지급)에 따라 실수령액이 달라질 수 있습니다. 복리 상품인지 단리 상품인지도 확인하세요.</p>
+            </details>
+      <details class="faq-item"><summary><h3>중도 해지하면 어떻게 되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>약정 기간 전에 해지하면 중도해지 금리가 적용되어 약정 금리보다 크게 낮아집니다. 가입 전 중도해지 금리를 꼭 확인하세요.</p>
+            </details>
+      <details class="faq-item"><summary><h3>예금과 적금 중 어느 쪽이 이자가 더 많나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>같은 금리라면 예금이 더 많습니다. 예금은 전액을 처음부터 예치하지만, 적금은 매월 분할 납입하므로 마지막 납입금은 1개월 치 이자만 받기 때문입니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>금융소득종합과세 대상이 되면 어떻게 되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>연간 이자·배당 소득 합계가 2천만원을 초과하면 다른 소득과 합산하여 종합소득세로 과세됩니다. 고액 예금자는 분산 가입이나 ISA 활용을 검토하세요. 종합과세 시 최고 세율이 45%에 달할 수 있어 절세 전략이 중요합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>저축은행 예금도 안전한가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>예금보험공사(KDIC) 보호 대상 저축은행이라면 시중은행과 동일하게 1인당 1억원(원금+이자)까지 보호됩니다(2025년 9월 5,000만원에서 상향). 다만 일부 부실 저축은행은 영업정지 후 보험금 지급까지 1~2개월이 걸릴 수 있고, 1억원 초과분은 보호되지 않습니다. 저축은행 이용 시 KDIC 홈페이지에서 예금보험 가입 여부를 확인하고, 1억원 한도 안에서 분산 가입하는 것이 안전합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>예금 가입 후 시중 금리가 더 오르면 어떻게 해야 하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>일반 정기예금은 가입 시점 약정 금리가 만기까지 유지되므로 금리가 올라도 변경되지 않습니다. 다만 일부 상품은 "금리상승 옵션부 정기예금"으로 일정 기간마다 금리를 재조정합니다. 단기적으로 큰 금리 인상이 예상되면 만기를 짧게(3~6개월) 설정해 재가입 기회를 노리거나, 분할 예치(예: 1·3·6개월씩 나눠 가입) 전략을 활용할 수 있습니다. 금리 변동이 잦은 시기에는 한국은행 기준금리 발표 일정을 함께 확인하세요.</p>
+            </details>
       <div class="update-note">최종 검토: 2026.04.13 · 금리는 금융기관별로 다르며 수시로 변동됩니다. 가입 전 해당 금융기관에서 최신 금리를 확인하세요.</div>
-    </div>
+          </div>
+        </section>
   </div>
+    </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
   <script>
   window.TRUST_BLOCK_CONFIG = {
     standard: '이자소득세 15.4%(소득세 14% + 지방소득세 1.4%) 원천징수, 예금자보호법',
@@ -254,46 +313,53 @@
     lastReviewed: '2026.05',
   };
   </script>
-  <script src="/assets/trust-block.js"></script>
-  <div class="sibling-section">
-    <div class="sibling-title">다른 금융·이자 계산기</div>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 금융·이자 계산기</h2>
     <div class="sibling-list">
-      <a href="/calc/finance/deposit/" class="sibling-link current">💰 예금 이자</a>
-      <a href="/calc/finance/savings/" class="sibling-link">📈 적금 만기</a>
-      <a href="/calc/finance/compound/" class="sibling-link">📊 복리 계산</a>
-      <a href="/calc/finance/loan-repayment/" class="sibling-link">🏠 대출 상환</a>
-      <a href="/calc/finance/investment/" class="sibling-link">📉 투자 수익률</a>
-      <a href="/calc/finance/stock-average/" class="sibling-link">⚖️ 주식 평단가</a>
-      <a href="/calc/finance/jangbyeong-savings/" class="sibling-link">🎖️ 장병내일준비적금</a>
-      <a href="/calc/finance/youth-leap-account/" class="sibling-link">🚀 청년도약계좌</a>
-      <a href="/calc/finance/youth-future-savings/" class="sibling-link">💳 청년미래적금</a>
+      <a href="/calc/finance/savings/" class="sibling-link">적금 만기</a>
+      <a href="/calc/finance/compound/" class="sibling-link">복리 계산</a>
+      <a href="/calc/finance/loan-repayment/" class="sibling-link">대출 상환</a>
+      <a href="/calc/finance/investment/" class="sibling-link">투자 수익률</a>
+      <a href="/calc/finance/stock-average/" class="sibling-link">주식 평단가</a>
+      <a href="/calc/finance/jangbyeong-savings/" class="sibling-link">장병내일준비적금</a>
+      <a href="/calc/finance/youth-leap-account/" class="sibling-link">청년도약계좌</a>
+      <a href="/calc/finance/youth-future-savings/" class="sibling-link">청년미래적금</a>
     </div>
-    <div class="sibling-title">관련 가이드</div>
-    <div class="sibling-list">
-      <a href="/blog/posts/cagr-guide.html" class="sibling-link">📖 CAGR(연평균 성장률)로 투자 수익률 제대로 비교하는 법</a>
-      <a href="/blog/posts/compound-interest.html" class="sibling-link">📖 복리의 힘과 72법칙 - 돈이 2배 되는 시간 계산</a>
-      <a href="/blog/posts/deposit-interest-guide.html" class="sibling-link">📖 정기예금 이자 계산 - 1,000만원 연 3.5% 예치 시 세후 수령액 2…</a>
-      <a href="/blog/posts/deposit-protection-limit-guide.html" class="sibling-link">📖 예금자보호 한도 1억원 - 2025년 9월 상향 후 분산 예치 전략 총정리</a>
-      <a href="/blog/posts/dividend-yield-guide.html" class="sibling-link">📖 배당수익률 계산법 2026 - 코스피는 반토막났는데 내 배당주는 왜 다를까</a>
-      <a href="/blog/posts/emergency-fund-guide.html" class="sibling-link">📖 비상금 통장 전략 - 얼마나, 어디에 모아야 할까?</a>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/cagr-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/cagr-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>CAGR(연평균 성장률)로 투자 수익률 제대로 비교하는 법</span></a>
+      <a href="/blog/posts/compound-interest.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/compound-interest-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>복리의 힘과 72법칙 - 돈이 2배 되는 시간 계산</span></a>
+      <a href="/blog/posts/deposit-interest-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/deposit-interest-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>정기예금 이자 계산 - 1,000만원 연 3.5% 예치 시 세후 수령액 29만6천원</span></a>
+      <a href="/blog/posts/deposit-protection-limit-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/deposit-protection-limit-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>예금자보호 한도 1억원 - 2025년 9월 상향 후 분산 예치 전략 총정리</span></a>
+      <a href="/blog/posts/dividend-yield-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/dividend-yield-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>배당수익률 계산법 2026 - 코스피는 반토막났는데 내 배당주는 왜 다를까</span></a>
+      <a href="/blog/posts/emergency-fund-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/emergency-fund-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>비상금 통장 전략 - 얼마나, 어디에 모아야 할까?</span></a>
     </div>
   </div>
 </main>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links"><a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a><a href="/blog/">블로그</a></div>
-    <span class="footer-copy">&copy; 2026 제이퍼 계산기. 계산 결과는 참고용이며 법적 효력이 없습니다.</span>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
   </div>
 </footer>
+
+<script src="/assets/ds/calc-kit.js?v=d45e66d9"></script>
 <script>
 
 let period=6;
 function Ww(w){return Math.round(w).toLocaleString()+'원';}
 function setPeriod(m,btn){period=m;document.querySelectorAll('#dep-period-group .seg-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');calc();}
-function showConverted(inputEl,dispEl){const v=parseFloat(inputEl.value);if(!v||v<=0){dispEl.textContent='';return;}dispEl.textContent=v>=10000?'= '+(v/10000).toFixed(2)+'억원':'= '+v.toLocaleString()+'만원';}
+function showConverted(inputEl,dispEl){const v=parseFloat(String(inputEl.value).replace(/,/g, ''));if(!v||v<=0){dispEl.textContent='';return;}dispEl.textContent=v>=10000?'= '+(v/10000).toFixed(2)+'억원':'= '+v.toLocaleString()+'만원';}
 function calc(){
-  const a=parseFloat(document.getElementById('dep-amount').value)||0;
-  const r=parseFloat(document.getElementById('dep-rate').value)||0;
+  const a=parseFloat(String(document.getElementById('dep-amount').value).replace(/,/g, ''))||0;
+  const r=parseFloat(String(document.getElementById('dep-rate').value).replace(/,/g, ''))||0;
   showConverted(document.getElementById('dep-amount'),document.getElementById('dep-display'));
   const res=document.getElementById('result');
   if(a<=0||r<=0){res.classList.remove('show');return;}
@@ -312,11 +378,10 @@ function calc(){
 calc();
 </script>
 
-<script src="/assets/calc-validate.js"></script>
-<script src="/assets/calc-result-tools.js"></script>
-  <script src="/assets/footer-unified.js"></script>
-<script src="/assets/calc-registry.js"></script>
-<script src="/assets/finance-detail-shell.js"></script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
+<script src="/assets/calc-registry.js?v=d25870c6"></script>
+<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
@@ -327,7 +392,14 @@ window.ARTICLE_INFO_CONFIG = {
   category: 'finance'
 };
 </script>
-<script src="/assets/blog-article-info.js"></script>
-<script src="/assets/blog-review-footer.js"></script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "result", "required": ["dep-amount"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#deposit-next", "next": [{"key": "compound", "path": "/calc/finance/compound/", "sub": "연복리·월복리·일복리 설정을 지원합니다. 원금·금리·기간에 따라 자산이 몇 배로 불어나는지, 단리와 격차가 얼마나 벌어지는지 10년·20년·30년 단위로 비교합니다.", "params": {"principal": "dep-amount"}, "from": "deposit"}]});
+  DSCalc.placeTrust('ds-trust-col');
+  (function () { const a = document.getElementById('ds-primary-next'); if (!a) return; const go = () => { const v = {}; Object.entries({"principal": "dep-amount"}).forEach(([k, id]) => v[k] = DSCalc.num(id)); a.href = DSCalc.link('/calc/finance/compound/', v, 'deposit'); }; document.addEventListener('input', go, true); go(); })();
+</script>
+<script src="/assets/ds/prefill.js?v=fa5eb49a" defer></script>
 </body>
 </html>
