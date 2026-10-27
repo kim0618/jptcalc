@@ -17,7 +17,12 @@
   // 보낸 계산기 이름: from 파라미터 → 없으면 referrer 경로 → 없으면 일반 문구
   var NAMES = { dti: 'DTI 계산기', dsr: 'DSR 계산기', ltv: 'LTV 계산기', didimdol: '디딤돌대출 계산기', loan: '대출이자 계산기', acquisition: '취득세 계산기', acq: '취득세 계산기',
     brokerage: '중개수수료 계산기', registry: '등기비용 계산기', rental: '임대수익률 계산기', didimdol: '디딤돌대출 계산기',
-    joint: '공동명의 계산기', jongbu: '종합부동산세 계산기', 'property-tax-comprehensive': '재산세 종합 계산기', propertytax: '재산세 계산기' };
+    joint: '공동명의 계산기', jongbu: '종합부동산세 계산기', 'property-tax-comprehensive': '재산세 종합 계산기', propertytax: '재산세 계산기',
+    // 부동산 밖에서 값을 보내는 계산기(10/27, 빠져 있어 '이전 계산기'로 나오던 것). 이름은 각 페이지 h1
+    compound: '복리 계산기', deposit: '예금 이자 계산기', 'jangbyeong-savings': '장병내일준비적금 계산기', savings: '적금 만기금액 계산기',
+    'youth-future-savings': '청년미래적금 계산기', 'youth-leap-account': '청년도약계좌 계산기', 'annual-leave-pay': '연차수당 계산기',
+    comparison: '연봉 비교 계산기', 'hourly-wage': '시급·일급 변환 계산기', 'job-change': '이직 연봉 비교 계산기', 'raise-rate': '연봉 인상률 계산기',
+    severance: '퇴직금 계산기', 'take-home-pay': '연봉 실수령액 계산기', 'four-insurance': '4대보험료 계산기', 'insurance-comparison': '4대보험 vs 3.3% 비교 계산기' };
   function sourceName() {
     var f = params.get('from');
     if (f && NAMES[f]) return NAMES[f];

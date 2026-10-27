@@ -22,6 +22,22 @@
 
   function icon(n) { return window.DS ? DS.icon(n, 'ds-i-sm') : ''; }
 
+  // 이어서 계산 카드 문구: 실제로 넘기는 칸 이름으로 "공시가격을 가져옵니다"(10/27, 이전 문구 '입력값을 그대로'는 일부만 넘기는데도 전부처럼 읽혔다)
+  // 칸 이름 = 입력칸이 속한 .field의 .field-label 맨 앞 글자(맨 앞이 태그면 그 태그 글자)에서 괄호를 뺀 것. 단위·보조 안내는 뒤에 붙어 있어 빠진다. 못 찾으면 '입력값'
+  function carryName(id) {
+    var el = document.getElementById(id), f = el && el.closest('.field'), l = f && f.querySelector('.field-label');
+    if (!l) return '';
+    var t = l.firstChild && l.firstChild.nodeType === 3 && l.firstChild.nodeValue.trim() ? l.firstChild.nodeValue : (l.firstElementChild ? l.firstElementChild.textContent : '');
+    return t.replace(/\([^)]*\)/g, '').replace(/\s+/g, ' ').trim();
+  }
+  function carryText(ids) {
+    var names = ids.map(carryName).filter(function (t, i, a) { return t && a.indexOf(t) === i; });
+    var t = names.length && names.length === ids.length ? names.join('·') : '입력값';
+    var code = t.charCodeAt(t.length - 1) - 0xAC00;
+    var josa = code >= 0 && code <= 11171 ? (code % 28 ? '을' : '를') : '을(를)';
+    return t + josa + ' 가져옵니다';
+  }
+
   function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
 
   // 판정 3종 (brief 시안 검수 메모, 2026-10-16 확정): 값이 낮을수록 좋은 비율(DTI·DSR)
@@ -188,7 +204,7 @@
         Object.keys(n.params || {}).forEach(function (k) { vals[k] = num(n.params[k]); });
         var carry = done && Object.keys(vals).some(function (k) { return vals[k] > 0; });
         var c = { href: carry ? link(n.path, vals, n.from) : n.path };
-        if (n.params) c.sub = carry ? '입력값을 그대로 가져옵니다' : n.sub;
+        if (n.params) c.sub = carry ? carryText(Object.keys(vals).filter(function (k) { return vals[k] > 0; }).map(function (k) { return n.params[k]; })) : n.sub;
         var x = {}; x[n.key] = c; next(o.nextBox || '.ds-calc-next .ds-next', x);
       });
     };
@@ -382,5 +398,5 @@
   document.addEventListener('DOMContentLoaded', dateAll);
   window.addEventListener('load', dateAll);
 
-  window.DSCalc = { auto: auto, submit: submit, need: need, clearNeeds: clearNeeds, placeTrust: placeTrust,  num: num, verdict: verdict, result: result, link: link, next: next, copy: copy, copyBtn: copyBtn, tableNear: tableNear, bar: bar };
+  window.DSCalc = { carryText: carryText, auto: auto, submit: submit, need: need, clearNeeds: clearNeeds, placeTrust: placeTrust,  num: num, verdict: verdict, result: result, link: link, next: next, copy: copy, copyBtn: copyBtn, tableNear: tableNear, bar: bar };
 })();

@@ -232,7 +232,7 @@
 
   // ── 배포 데이터(/assets/ds/*.json, build_home.py가 생성): 상황 시트·헤더 메뉴 공용. 처음 필요할 때 한 번 받는다 ──
   var DATA = {};
-  var DS_DATA_V = {"situations": "58b8af97", "cat-menu": "b65e6fe8"};   // 메뉴 데이터 캐시 버전(design/tools/asset_version.py가 파일 내용 해시로 채움)
+  var DS_DATA_V = {"situations": "6aa9fb31", "cat-menu": "b65e6fe8"};   // 메뉴 데이터 캐시 버전(design/tools/asset_version.py가 파일 내용 해시로 채움)
   function load(name, ok, fail) {
     var d = DATA[name];
     if (d && d.v) return ok(d.v);

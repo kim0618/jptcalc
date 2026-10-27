@@ -1,6 +1,6 @@
 [
  {
-  "key": "date/age",
+  "key": "realestate/property-tax-comprehensive",
   "fail": [],
   "errors": [],
   "dialogs": [],
@@ -14,10 +14,10 @@
   ],
   "button": true,
   "a": "hint",
-  "a_hint": "\"생년월일\" 칸을 입력해 주세요.",
+  "a_hint": "\"공시가격\" 칸을 입력해 주세요.",
   "ba_scroll": -0.0,
   "dl": [
-   "만 나이 계산기.png"
+   "보유세 종합 계산기.png"
   ],
   "img_ok": true,
   "c_buttons": [
@@ -28,95 +28,11 @@
    "결과공유",
    "이미지저장"
   ],
-  "c_next": "/calc/date/weekday/",
+  "c_next": "/calc/realestate/jongbu/?price=100000&from=property-tax-comprehensive",
   "bb_scroll": -0.0,
   "clicks": 18,
   "kind": "calc",
-  "sec": 22.4,
-  "ext_hold": []
- },
- {
-  "key": "realestate/dsr",
-  "fail": [],
-  "errors": [],
-  "dialogs": [],
-  "notes": [],
-  "step": "390 button\"닫기\"",
-  "ext": [
-   "http://t1.kakaocdn.net/kas/static/ba.min.js",
-   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
-   "https://www.googletagmanager.com/gtag/js"
-  ],
-  "button": true,
-  "a": "hint",
-  "a_hint": "\"연소득\" 칸을 입력해 주세요.",
-  "ba_scroll": -0.0,
-  "dl": [
-   "DSR 계산기.png"
-  ],
-  "img_ok": true,
-  "c_buttons": [
-   "결과 복사",
-   "저장·공유",
-   "저장",
-   "기록",
-   "결과공유",
-   "이미지저장"
-  ],
-  "ext_hold": [
-   "http://t1.kakaocdn.net/kas/static/ba.min.js",
-   "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css",
-   "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2/Pretendard-Black.woff2",
-   "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2/Pretendard-Bold.woff2",
-   "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2/Pretendard-ExtraBold.woff2",
-   "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2/Pretendard-Medium.woff2",
-   "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2/Pretendard-Regular.woff2",
-   "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2/Pretendard-SemiBold.woff2",
-   "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js",
-   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-   "https://www.googletagmanager.com/gtag/js"
-  ],
-  "c_next": "/calc/realestate/dti/?income=6000&mortgage=1200&from=dsr",
-  "bb_scroll": -0.0,
-  "clicks": 19,
-  "kind": "calc",
-  "sec": 20.4
- },
- {
-  "key": "salary/annual-leave-pay",
-  "fail": [],
-  "errors": [],
-  "dialogs": [],
-  "notes": [],
-  "step": "390 button\"닫기\"",
-  "ext": [
-   "http://t1.kakaocdn.net/kas/static/ba.min.js",
-   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
-   "https://www.googletagmanager.com/gtag/js"
-  ],
-  "button": true,
-  "a": "hint",
-  "a_hint": "\"월 통상임금\" 칸을 입력해 주세요.",
-  "ba_scroll": 0,
-  "dl": [
-   "연차수당 계산기.png"
-  ],
-  "img_ok": true,
-  "c_buttons": [
-   "결과 복사",
-   "저장·공유",
-   "저장",
-   "기록",
-   "결과공유",
-   "이미지저장"
-  ],
-  "c_next": "/calc/salary/dismissal-notice-pay/?monthly=300&from=annual-leave-pay",
-  "bb_scroll": 0,
-  "clicks": 13,
-  "kind": "calc",
-  "sec": 18.4,
+  "sec": 17.9,
   "ext_hold": []
  }
 ]

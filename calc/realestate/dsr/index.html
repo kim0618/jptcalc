@@ -374,7 +374,7 @@
 
 <div id="toast" class="toast"></div>
 
-<script src="/assets/ds/calc-kit.js?v=d45e66d9"></script>
+<script src="/assets/ds/calc-kit.js?v=dc94d136"></script>
 <script>
 let dsrType = '은행권';
 
@@ -480,7 +480,7 @@ function calcDsr() {
 const dsrDtiHref = (income, mortgage) => DSCalc.link('/calc/realestate/dti/', { income, mortgage }, 'dsr');
 function dsrNext(income, mortgage) {
   DSCalc.next('#dsr-next', income > 0
-    ? { dti: { href: dsrDtiHref(income, mortgage), title: `내 연소득 ${fmt(income)}으로 DTI 바로 계산`, sub: '입력값을 그대로 가져옵니다', prefilled: true },
+    ? { dti: { href: dsrDtiHref(income, mortgage), title: 'DTI 계산기', sub: '주담대 원리금 + 기타대출 이자 비율', prefilled: false },  // 11/9 DTI hold판 복원 후: title `내 연소득 ${fmt(income)}으로 DTI 바로 계산`, sub: DSCalc.carryText(['dsr-income','dsr-mortgage']), prefilled: true
         ltv: { title: 'LTV로 대출 한도 확인', sub: '담보가치 기준 한도 계산' } }
     : { dti: { href: dsrDtiHref(0, 0), title: 'DTI 계산기', sub: '주담대 원리금 + 기타대출 이자 비율', prefilled: false },
         ltv: { title: 'LTV 계산기', sub: '담보가치 기준 한도' } });
@@ -512,7 +512,7 @@ DSCalc.placeTrust('ds-trust-col');
 <script src="/assets/calc-validate.js?v=80f1784e"></script>
 <script src="/assets/calc-result-tools.js?v=25a4281d"></script>
 <script src="/assets/calc-registry.js?v=d25870c6"></script>
-<script src="/assets/ds/site-shell.js?v=52f5ae02"></script>
+<script src="/assets/ds/site-shell.js?v=925ff966"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
@@ -525,6 +525,6 @@ window.ARTICLE_INFO_CONFIG = {
 </script>
 <script src="/assets/blog-article-info.js?v=81c529db"></script>
 <script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
-<script src="/assets/ds/prefill.js?v=fa5eb49a" defer></script>
+<script src="/assets/ds/prefill.js?v=7d81b350" defer></script>
 </body>
 </html>

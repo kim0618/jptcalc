@@ -32,7 +32,7 @@
   "bb_scroll": -0.0,
   "clicks": 13,
   "kind": "calc",
-  "sec": 19.0,
+  "sec": 19.1,
   "ext_hold": []
  },
  {
@@ -68,7 +68,7 @@
   "bb_scroll": -0.0,
   "clicks": 16,
   "kind": "calc",
-  "sec": 20.5,
+  "sec": 18.5,
   "ext_hold": []
  },
  {
@@ -104,7 +104,7 @@
   "bb_scroll": 0,
   "clicks": 13,
   "kind": "calc",
-  "sec": 20.7,
+  "sec": 17.8,
   "ext_hold": []
  },
  {
@@ -125,7 +125,7 @@
   "c_next": "/calc/ai/infra-forecast/",
   "clicks": 13,
   "kind": "calc",
-  "sec": 13.7,
+  "sec": 13.4,
   "ext_hold": []
  },
  {
@@ -161,7 +161,7 @@
   "bb_scroll": 508,
   "clicks": 12,
   "kind": "calc",
-  "sec": 19.0,
+  "sec": 18.4,
   "ext_hold": []
  },
  {
@@ -197,7 +197,7 @@
   "bb_scroll": -0.0,
   "clicks": 18,
   "kind": "calc",
-  "sec": 18.7,
+  "sec": 19.2,
   "ext_hold": []
  },
  {
@@ -233,7 +233,7 @@
   "bb_scroll": 0,
   "clicks": 15,
   "kind": "calc",
-  "sec": 16.8,
+  "sec": 16.9,
   "ext_hold": []
  },
  {
@@ -270,7 +270,7 @@
   "bb_scroll": 0,
   "clicks": 22,
   "kind": "calc",
-  "sec": 18.2,
+  "sec": 18.3,
   "ext_hold": []
  },
  {
@@ -313,7 +313,7 @@
   "bb_scroll": 0,
   "clicks": 15,
   "kind": "calc",
-  "sec": 20.9,
+  "sec": 18.9,
   "ext_hold": []
  },
  {
@@ -349,7 +349,7 @@
   "bb_scroll": 0,
   "clicks": 15,
   "kind": "calc",
-  "sec": 17.5,
+  "sec": 17.8,
   "ext_hold": []
  },
  {
@@ -385,7 +385,7 @@
   "bb_scroll": 0,
   "clicks": 15,
   "kind": "calc",
-  "sec": 17.6,
+  "sec": 16.5,
   "ext_hold": []
  },
  {
@@ -421,7 +421,7 @@
   "bb_scroll": -0.0,
   "clicks": 13,
   "kind": "calc",
-  "sec": 17.1,
+  "sec": 17.7,
   "ext_hold": []
  },
  {
@@ -457,7 +457,7 @@
   "bb_scroll": 439,
   "clicks": 11,
   "kind": "calc",
-  "sec": 16.2,
+  "sec": 16.9,
   "ext_hold": []
  },
  {
@@ -493,7 +493,7 @@
   "bb_scroll": 439,
   "clicks": 11,
   "kind": "calc",
-  "sec": 16.3,
+  "sec": 16.7,
   "ext_hold": []
  },
  {
@@ -529,7 +529,7 @@
   "bb_scroll": -0.0,
   "clicks": 13,
   "kind": "calc",
-  "sec": 16.5,
+  "sec": 16.6,
   "ext_hold": []
  },
  {
@@ -553,7 +553,7 @@
   ],
   "clicks": 23,
   "kind": "calc",
-  "sec": 14.7,
+  "sec": 14.0,
   "ext_hold": []
  },
  {
@@ -589,7 +589,7 @@
   "bb_scroll": 0,
   "clicks": 14,
   "kind": "calc",
-  "sec": 18.3,
+  "sec": 16.7,
   "ext_hold": []
  },
  {
@@ -661,7 +661,7 @@
   "bb_scroll": 0,
   "clicks": 13,
   "kind": "calc",
-  "sec": 17.1,
+  "sec": 16.6,
   "ext_hold": []
  },
  {
@@ -697,7 +697,7 @@
   "bb_scroll": -0.0,
   "clicks": 16,
   "kind": "calc",
-  "sec": 17.1,
+  "sec": 16.8,
   "ext_hold": []
  },
  {
@@ -730,7 +730,7 @@
   "c_next": "/calc/baby/first-meeting/",
   "clicks": 22,
   "kind": "calc",
-  "sec": 16.2,
+  "sec": 16.0,
   "ext_hold": []
  },
  {
@@ -802,7 +802,7 @@
   "bb_scroll": -0.0,
   "clicks": 18,
   "kind": "calc",
-  "sec": 23.1,
+  "sec": 23.8,
   "ext_hold": []
  },
  {
@@ -822,6 +822,7 @@
   "a": "default",
   "ba_scroll": -0.0,
   "dl": [
+   "날짜 차이 계산기.png",
    "날짜 차이 계산기.png"
   ],
   "img_ok": true,
@@ -837,7 +838,7 @@
   "bb_scroll": -0.0,
   "clicks": 24,
   "kind": "calc",
-  "sec": 23.1,
+  "sec": 21.5,
   "ext_hold": []
  },
  {
@@ -872,7 +873,7 @@
   "bb_scroll": -0.0,
   "clicks": 23,
   "kind": "calc",
-  "sec": 18.9,
+  "sec": 18.5,
   "ext_hold": []
  },
  {
@@ -908,7 +909,7 @@
   "bb_scroll": 416,
   "clicks": 23,
   "kind": "calc",
-  "sec": 18.7,
+  "sec": 18.6,
   "ext_hold": []
  },
  {
@@ -944,7 +945,7 @@
   "bb_scroll": 0,
   "clicks": 17,
   "kind": "calc",
-  "sec": 16.9,
+  "sec": 17.0,
   "ext_hold": []
  },
  {
@@ -980,7 +981,7 @@
   "bb_scroll": -0.0,
   "clicks": 19,
   "kind": "calc",
-  "sec": 17.4,
+  "sec": 17.2,
   "ext_hold": []
  },
  {
@@ -1124,7 +1125,7 @@
   "bb_scroll": -0.0,
   "clicks": 19,
   "kind": "calc",
-  "sec": 17.3,
+  "sec": 17.0,
   "ext_hold": []
  },
  {
@@ -1160,7 +1161,7 @@
   "bb_scroll": -0.0,
   "clicks": 16,
   "kind": "calc",
-  "sec": 17.1,
+  "sec": 16.6,
   "ext_hold": []
  },
  {
@@ -1196,7 +1197,7 @@
   "bb_scroll": -0.0,
   "clicks": 13,
   "kind": "calc",
-  "sec": 17.4,
+  "sec": 16.6,
   "ext_hold": []
  },
  {
@@ -1232,7 +1233,7 @@
   "bb_scroll": 0,
   "clicks": 14,
   "kind": "calc",
-  "sec": 16.9,
+  "sec": 16.8,
   "ext_hold": []
  },
  {
@@ -1268,7 +1269,7 @@
   "bb_scroll": -0.0,
   "clicks": 14,
   "kind": "calc",
-  "sec": 16.9,
+  "sec": 16.5,
   "ext_hold": []
  },
  {
@@ -1304,7 +1305,7 @@
   "bb_scroll": -0.0,
   "clicks": 16,
   "kind": "calc",
-  "sec": 18.7,
+  "sec": 18.0,
   "ext_hold": []
  },
  {
@@ -1340,7 +1341,7 @@
   "bb_scroll": -0.0,
   "clicks": 16,
   "kind": "calc",
-  "sec": 18.1,
+  "sec": 17.1,
   "ext_hold": []
  },
  {
@@ -1361,7 +1362,6 @@
   "a_hint": "\"나이\" 칸을 입력해 주세요.",
   "ba_scroll": -0.0,
   "dl": [
-   "칼로리 소모 계산기 - 운동별 칼로리 소모량 (참고).png",
    "칼로리 소모 계산기 - 운동별 칼로리 소모량 (참고).png",
    "칼로리 소모 계산기 - 운동별 칼로리 소모량 (참고).png"
   ],
@@ -1384,7 +1384,7 @@
   "bb_scroll": -0.0,
   "clicks": 23,
   "kind": "calc",
-  "sec": 20.9,
+  "sec": 21.0,
   "ext_hold": []
  },
  {
@@ -1420,7 +1420,7 @@
   "bb_scroll": 486,
   "clicks": 15,
   "kind": "calc",
-  "sec": 16.9,
+  "sec": 16.8,
   "ext_hold": []
  },
  {
@@ -1441,6 +1441,7 @@
   "a_hint": "\"월 근로소득\" 칸을 입력해 주세요.",
   "ba_scroll": -0.0,
   "dl": [
+   "기초연금 수급 판정 계산기.png",
    "기초연금 수급 판정 계산기.png"
   ],
   "img_ok": true,
@@ -1456,7 +1457,7 @@
   "bb_scroll": -0.0,
   "clicks": 23,
   "kind": "calc",
-  "sec": 18.3,
+  "sec": 18.6,
   "ext_hold": []
  },
  {
@@ -1492,7 +1493,7 @@
   "bb_scroll": -0.0,
   "clicks": 14,
   "kind": "calc",
-  "sec": 16.7,
+  "sec": 16.6,
   "ext_hold": []
  },
  {
@@ -1524,7 +1525,7 @@
   "c_next": "/calc/pension-welfare/retirement-living/",
   "clicks": 31,
   "kind": "calc",
-  "sec": 17.3,
+  "sec": 16.9,
   "ext_hold": []
  },
  {
@@ -1560,7 +1561,7 @@
   "bb_scroll": 0,
   "clicks": 26,
   "kind": "calc",
-  "sec": 31.5,
+  "sec": 31.2,
   "ext_hold": []
  },
  {
@@ -1597,7 +1598,7 @@
   "c_next": "/calc/pension-welfare/national-pension/",
   "clicks": 19,
   "kind": "calc",
-  "sec": 27.3,
+  "sec": 27.1,
   "ext_hold": []
  },
  {
@@ -1669,7 +1670,7 @@
   "bb_scroll": -0.0,
   "clicks": 22,
   "kind": "calc",
-  "sec": 25.5,
+  "sec": 25.3,
   "ext_hold": []
  },
  {
@@ -1705,7 +1706,7 @@
   "bb_scroll": 412,
   "clicks": 12,
   "kind": "calc",
-  "sec": 16.4,
+  "sec": 16.3,
   "ext_hold": []
  },
  {
@@ -1741,7 +1742,7 @@
   "bb_scroll": -0.0,
   "clicks": 16,
   "kind": "calc",
-  "sec": 16.7,
+  "sec": 16.5,
   "ext_hold": []
  },
  {
@@ -1777,7 +1778,7 @@
   "bb_scroll": -0.0,
   "clicks": 21,
   "kind": "calc",
-  "sec": 17.4,
+  "sec": 17.3,
   "ext_hold": []
  },
  {
@@ -1813,7 +1814,7 @@
   "bb_scroll": -0.0,
   "clicks": 18,
   "kind": "calc",
-  "sec": 18.3,
+  "sec": 16.9,
   "ext_hold": []
  },
  {
@@ -1849,7 +1850,7 @@
   "bb_scroll": -0.0,
   "clicks": 17,
   "kind": "calc",
-  "sec": 17.4,
+  "sec": 17.2,
   "ext_hold": []
  },
  {
@@ -1885,7 +1886,7 @@
   "bb_scroll": -0.0,
   "clicks": 18,
   "kind": "calc",
-  "sec": 17.2,
+  "sec": 16.9,
   "ext_hold": []
  },
  {
@@ -1921,7 +1922,7 @@
   "bb_scroll": -0.0,
   "clicks": 17,
   "kind": "calc",
-  "sec": 17.0,
+  "sec": 17.1,
   "ext_hold": []
  },
  {
@@ -1957,7 +1958,7 @@
   "bb_scroll": -0.0,
   "clicks": 27,
   "kind": "calc",
-  "sec": 34.4,
+  "sec": 34.1,
   "ext_hold": []
  },
  {
@@ -1993,7 +1994,7 @@
   "bb_scroll": -0.0,
   "clicks": 25,
   "kind": "calc",
-  "sec": 25.8,
+  "sec": 27.0,
   "ext_hold": []
  },
  {
@@ -2029,7 +2030,7 @@
   "bb_scroll": -0.0,
   "clicks": 28,
   "kind": "calc",
-  "sec": 41.6,
+  "sec": 39.7,
   "ext_hold": []
  },
  {
@@ -2065,7 +2066,7 @@
   "bb_scroll": -0.0,
   "clicks": 16,
   "kind": "calc",
-  "sec": 17.8,
+  "sec": 17.5,
   "ext_hold": []
  },
  {
@@ -2101,7 +2102,7 @@
   "bb_scroll": -0.0,
   "clicks": 22,
   "kind": "calc",
-  "sec": 19.3,
+  "sec": 17.7,
   "ext_hold": []
  },
  {
@@ -2150,7 +2151,7 @@
   "bb_scroll": -0.0,
   "clicks": 19,
   "kind": "calc",
-  "sec": 17.9
+  "sec": 17.6
  },
  {
   "key": "realestate/gift",
@@ -2185,7 +2186,7 @@
   "bb_scroll": -0.0,
   "clicks": 19,
   "kind": "calc",
-  "sec": 17.0,
+  "sec": 16.9,
   "ext_hold": []
  },
  {
@@ -2221,7 +2222,7 @@
   "bb_scroll": -0.0,
   "clicks": 17,
   "kind": "calc",
-  "sec": 17.3,
+  "sec": 19.2,
   "ext_hold": []
  },
  {
@@ -2257,7 +2258,7 @@
   "bb_scroll": 0,
   "clicks": 18,
   "kind": "calc",
-  "sec": 17.5,
+  "sec": 17.2,
   "ext_hold": []
  },
  {
@@ -2293,7 +2294,7 @@
   "bb_scroll": -0.0,
   "clicks": 17,
   "kind": "calc",
-  "sec": 18.2,
+  "sec": 18.4,
   "ext_hold": []
  },
  {
@@ -2329,7 +2330,7 @@
   "bb_scroll": -0.0,
   "clicks": 19,
   "kind": "calc",
-  "sec": 18.0,
+  "sec": 17.2,
   "ext_hold": []
  },
  {
@@ -2365,7 +2366,7 @@
   "bb_scroll": 0,
   "clicks": 17,
   "kind": "calc",
-  "sec": 19.3,
+  "sec": 17.2,
   "ext_hold": []
  },
  {
@@ -2401,12 +2402,15 @@
   "bb_scroll": 0,
   "clicks": 17,
   "kind": "calc",
-  "sec": 16.9,
+  "sec": 17.3,
   "ext_hold": []
  },
  {
   "key": "realestate/property-tax-comprehensive",
-  "fail": [],
+  "fail": [
+   "ba: 결과 불일치\n      기대 공시가격10억원──재산세──재산세과세표준(×60%)6억원재산세177만원도시지역분(과세표준×0.14%)84만원지방교육세(재산세×20%)35만원──종합부동산세──기본공제-9억원(2주택이하)종부세과세표준6,000만원종부세산출세액30만원재산세중복분공제-14만원종합부동산세16만\n      실제 공시가격10억원──재산세──재산세과세표준(×60%)6억원재산세177만원도시지역분(과세표준×0.14%)84만원지방교육세(재산세×20%)35만원──종합부동산세──기본공제-9억원(2주택이하)종부세과세표준6,000만원종부세산출세액30만원재산세중복분공제-14만원종합부동산세16만",
+   "bb: 결과 불일치\n      기대 공시가격20억원──재산세──재산세과세표준(×45%)9억원재산세297만원도시지역분(과세표준×0.14%)126만원지방교육세(재산세×20%)59만원──종합부동산세──기본공제-12억원(1세대1주택)종부세과세표준4억8,000만원종부세산출세액276만원재산세중복분공제-86만원종합부\n      실제 공시가격20억원──재산세──재산세과세표준(×45%)9억원재산세297만원도시지역분(과세표준×0.14%)126만원지방교육세(재산세×20%)59만원──종합부동산세──기본공제-12억원(1세대1주택)종부세과세표준4억8,000만원종부세산출세액276만원재산세중복분공제-86만원종합부"
+  ],
   "errors": [],
   "dialogs": [],
   "notes": [],
@@ -2437,7 +2441,7 @@
   "bb_scroll": -0.0,
   "clicks": 18,
   "kind": "calc",
-  "sec": 17.8,
+  "sec": 17.3,
   "ext_hold": []
  },
  {
@@ -2473,7 +2477,7 @@
   "bb_scroll": 0,
   "clicks": 19,
   "kind": "calc",
-  "sec": 17.2,
+  "sec": 18.4,
   "ext_hold": []
  },
  {
@@ -2509,7 +2513,7 @@
   "bb_scroll": -0.0,
   "clicks": 19,
   "kind": "calc",
-  "sec": 17.4,
+  "sec": 17.7,
   "ext_hold": []
  },
  {
@@ -2545,7 +2549,7 @@
   "bb_scroll": -0.0,
   "clicks": 14,
   "kind": "calc",
-  "sec": 17.8,
+  "sec": 17.2,
   "ext_hold": []
  },
  {
@@ -2581,7 +2585,7 @@
   "bb_scroll": 0,
   "clicks": 13,
   "kind": "calc",
-  "sec": 16.4,
+  "sec": 17.5,
   "ext_hold": []
  },
  {
@@ -2617,7 +2621,7 @@
   "bb_scroll": 0,
   "clicks": 12,
   "kind": "calc",
-  "sec": 16.3,
+  "sec": 17.4,
   "ext_hold": []
  },
  {
@@ -2653,7 +2657,7 @@
   "bb_scroll": 0,
   "clicks": 15,
   "kind": "calc",
-  "sec": 16.9,
+  "sec": 17.0,
   "ext_hold": []
  },
  {
@@ -2689,7 +2693,7 @@
   "bb_scroll": -0.0,
   "clicks": 12,
   "kind": "calc",
-  "sec": 17.4,
+  "sec": 16.4,
   "ext_hold": []
  },
  {
@@ -2725,7 +2729,7 @@
   "bb_scroll": -0.0,
   "clicks": 16,
   "kind": "calc",
-  "sec": 17.7,
+  "sec": 17.6,
   "ext_hold": []
  },
  {
@@ -2761,7 +2765,7 @@
   "bb_scroll": 0,
   "clicks": 22,
   "kind": "calc",
-  "sec": 25.4,
+  "sec": 25.8,
   "ext_hold": []
  },
  {
@@ -2797,7 +2801,7 @@
   "bb_scroll": 0,
   "clicks": 13,
   "kind": "calc",
-  "sec": 16.4,
+  "sec": 16.6,
   "ext_hold": []
  },
  {
@@ -2833,7 +2837,7 @@
   "bb_scroll": 0,
   "clicks": 13,
   "kind": "calc",
-  "sec": 16.5,
+  "sec": 17.7,
   "ext_hold": []
  },
  {
@@ -2869,7 +2873,7 @@
   "bb_scroll": -0.0,
   "clicks": 15,
   "kind": "calc",
-  "sec": 17.3,
+  "sec": 17.5,
   "ext_hold": []
  },
  {
@@ -2905,7 +2909,7 @@
   "bb_scroll": -0.0,
   "clicks": 13,
   "kind": "calc",
-  "sec": 17.3,
+  "sec": 16.8,
   "ext_hold": []
  },
  {
@@ -2941,7 +2945,7 @@
   "bb_scroll": -0.0,
   "clicks": 14,
   "kind": "calc",
-  "sec": 17.9,
+  "sec": 16.6,
   "ext_hold": []
  },
  {
@@ -2977,7 +2981,7 @@
   "bb_scroll": -0.0,
   "clicks": 22,
   "kind": "calc",
-  "sec": 17.6,
+  "sec": 18.7,
   "ext_hold": []
  },
  {
@@ -3013,7 +3017,7 @@
   "bb_scroll": 0,
   "clicks": 21,
   "kind": "calc",
-  "sec": 17.3,
+  "sec": 17.6,
   "ext_hold": []
  },
  {
@@ -3049,7 +3053,7 @@
   "bb_scroll": 0,
   "clicks": 18,
   "kind": "calc",
-  "sec": 16.9,
+  "sec": 17.1,
   "ext_hold": []
  },
  {
@@ -3085,7 +3089,7 @@
   "bb_scroll": -0.0,
   "clicks": 16,
   "kind": "calc",
-  "sec": 17.0,
+  "sec": 17.4,
   "ext_hold": []
  },
  {
@@ -3121,7 +3125,7 @@
   "bb_scroll": -0.0,
   "clicks": 13,
   "kind": "calc",
-  "sec": 16.9,
+  "sec": 16.7,
   "ext_hold": []
  },
  {
@@ -3157,7 +3161,7 @@
   "bb_scroll": 0,
   "clicks": 19,
   "kind": "calc",
-  "sec": 18.0,
+  "sec": 17.2,
   "ext_hold": []
  },
  {
@@ -3193,7 +3197,7 @@
   "bb_scroll": 0,
   "clicks": 17,
   "kind": "calc",
-  "sec": 17.6,
+  "sec": 18.0,
   "ext_hold": []
  },
  {
@@ -3229,7 +3233,7 @@
   "bb_scroll": 0,
   "clicks": 11,
   "kind": "calc",
-  "sec": 18.2,
+  "sec": 16.5,
   "ext_hold": []
  },
  {
@@ -3265,7 +3269,7 @@
   "bb_scroll": -0.0,
   "clicks": 14,
   "kind": "calc",
-  "sec": 16.9,
+  "sec": 17.0,
   "ext_hold": []
  },
  {
@@ -3301,7 +3305,7 @@
   "bb_scroll": 0,
   "clicks": 12,
   "kind": "calc",
-  "sec": 17.6,
+  "sec": 16.5,
   "ext_hold": []
  },
  {
@@ -3337,7 +3341,7 @@
   "bb_scroll": -0.0,
   "clicks": 19,
   "kind": "calc",
-  "sec": 31.3,
+  "sec": 30.7,
   "ext_hold": []
  },
  {
@@ -3373,7 +3377,7 @@
   "bb_scroll": 0,
   "clicks": 20,
   "kind": "calc",
-  "sec": 17.2,
+  "sec": 17.1,
   "ext_hold": []
  },
  {
@@ -3427,7 +3431,6 @@
   ],
   "button": false,
   "dl": [
-   "글자수 세기.png",
    "글자수 세기.png"
   ],
   "img_ok": true,
@@ -3478,7 +3481,7 @@
   "bb_scroll": -0.0,
   "clicks": 16,
   "kind": "calc",
-  "sec": 17.8,
+  "sec": 17.6,
   "ext_hold": []
  },
  {
@@ -3514,7 +3517,7 @@
   "bb_scroll": 0,
   "clicks": 21,
   "kind": "calc",
-  "sec": 19.5,
+  "sec": 20.2,
   "ext_hold": []
  },
  {
@@ -3549,7 +3552,7 @@
   "bb_scroll": 0,
   "clicks": 23,
   "kind": "calc",
-  "sec": 20.1,
+  "sec": 21.8,
   "ext_hold": []
  },
  {
@@ -3585,7 +3588,7 @@
   "bb_scroll": -0.0,
   "clicks": 21,
   "kind": "calc",
-  "sec": 17.8,
+  "sec": 17.7,
   "ext_hold": []
  },
  {
@@ -3621,7 +3624,7 @@
   "bb_scroll": -0.0,
   "clicks": 18,
   "kind": "calc",
-  "sec": 17.4,
+  "sec": 19.0,
   "ext_hold": []
  },
  {
@@ -3657,7 +3660,7 @@
   "bb_scroll": 0,
   "clicks": 19,
   "kind": "calc",
-  "sec": 19.0,
+  "sec": 17.7,
   "ext_hold": []
  },
  {
@@ -3675,7 +3678,7 @@
   ],
   "clicks": 7,
   "kind": "page",
-  "sec": 9.9,
+  "sec": 9.7,
   "ext_hold": []
  },
  {
@@ -3687,7 +3690,7 @@
   "step": "1280 button\"카테고리\"",
   "clicks": 5,
   "kind": "page",
-  "sec": 3.3,
+  "sec": 3.2,
   "ext": [],
   "ext_hold": []
  },
@@ -3703,7 +3706,7 @@
   ],
   "clicks": 5,
   "kind": "page",
-  "sec": 4.3,
+  "sec": 3.3,
   "ext_hold": []
  },
  {
@@ -3712,39 +3715,39 @@
   "errors": [],
   "dialogs": [],
   "notes": [
-   "390 button\"부동산\" → http://127.0.0.1:49703/blog/?cat=%EB%B6%80%EB%8F%99%EC%82%B0",
-   "390 button\"이직/연봉\" → http://127.0.0.1:49703/blog/?cat=%EC%9D%B4%EC%A7%81%2F%EC%97%B0%EB%B4%89",
-   "390 button\"생활·도구\" → http://127.0.0.1:49703/blog/?cat=%EC%83%9D%ED%99%9C%C2%B7%EB%8F%84%EA%B5%AC",
-   "390 button\"프리랜서 세금\" → http://127.0.0.1:49703/blog/?cat=%ED%94%84%EB%A6%AC%EB%9E%9C%EC%84%9C%20%EC%84%B8%EA%B8%88",
-   "390 button\"연금·복지\" → http://127.0.0.1:49703/blog/?cat=%EC%97%B0%EA%B8%88%C2%B7%EB%B3%B5%EC%A7%80",
-   "390 button\"금융·이자\" → http://127.0.0.1:49703/blog/?cat=%EA%B8%88%EC%9C%B5%C2%B7%EC%9D%B4%EC%9E%90",
-   "390 button\"날짜·D-day\" → http://127.0.0.1:49703/blog/?cat=%EB%82%A0%EC%A7%9C%C2%B7D-day",
-   "390 button\"건강\" → http://127.0.0.1:49703/blog/?cat=%EA%B1%B4%EA%B0%95",
-   "390 button\"AI/테크\" → http://127.0.0.1:49703/blog/?cat=AI%2F%ED%85%8C%ED%81%AC",
-   "390 button\"반려동물\" → http://127.0.0.1:49703/blog/?cat=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC",
-   "390 button\"자동차\" → http://127.0.0.1:49703/blog/?cat=%EC%9E%90%EB%8F%99%EC%B0%A8",
-   "390 button\"출산·육아\" → http://127.0.0.1:49703/blog/?cat=%EC%B6%9C%EC%82%B0%C2%B7%EC%9C%A1%EC%95%84",
-   "1280 button\"부동산\" → http://127.0.0.1:49703/blog/?cat=%EB%B6%80%EB%8F%99%EC%82%B0",
-   "1280 button\"이직/연봉\" → http://127.0.0.1:49703/blog/?cat=%EC%9D%B4%EC%A7%81%2F%EC%97%B0%EB%B4%89",
-   "1280 button\"생활·도구\" → http://127.0.0.1:49703/blog/?cat=%EC%83%9D%ED%99%9C%C2%B7%EB%8F%84%EA%B5%AC",
-   "1280 button\"프리랜서 세금\" → http://127.0.0.1:49703/blog/?cat=%ED%94%84%EB%A6%AC%EB%9E%9C%EC%84%9C%20%EC%84%B8%EA%B8%88",
-   "1280 button\"연금·복지\" → http://127.0.0.1:49703/blog/?cat=%EC%97%B0%EA%B8%88%C2%B7%EB%B3%B5%EC%A7%80",
-   "1280 button\"금융·이자\" → http://127.0.0.1:49703/blog/?cat=%EA%B8%88%EC%9C%B5%C2%B7%EC%9D%B4%EC%9E%90",
-   "1280 button\"날짜·D-day\" → http://127.0.0.1:49703/blog/?cat=%EB%82%A0%EC%A7%9C%C2%B7D-day",
-   "1280 button\"건강\" → http://127.0.0.1:49703/blog/?cat=%EA%B1%B4%EA%B0%95",
-   "1280 button\"AI/테크\" → http://127.0.0.1:49703/blog/?cat=AI%2F%ED%85%8C%ED%81%AC",
-   "1280 button\"반려동물\" → http://127.0.0.1:49703/blog/?cat=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC",
-   "1280 button\"자동차\" → http://127.0.0.1:49703/blog/?cat=%EC%9E%90%EB%8F%99%EC%B0%A8",
-   "1280 button\"출산·육아\" → http://127.0.0.1:49703/blog/?cat=%EC%B6%9C%EC%82%B0%C2%B7%EC%9C%A1%EC%95%84"
+   "390 button\"부동산\" → http://127.0.0.1:52047/blog/?cat=%EB%B6%80%EB%8F%99%EC%82%B0",
+   "390 button\"이직/연봉\" → http://127.0.0.1:52047/blog/?cat=%EC%9D%B4%EC%A7%81%2F%EC%97%B0%EB%B4%89",
+   "390 button\"생활·도구\" → http://127.0.0.1:52047/blog/?cat=%EC%83%9D%ED%99%9C%C2%B7%EB%8F%84%EA%B5%AC",
+   "390 button\"프리랜서 세금\" → http://127.0.0.1:52047/blog/?cat=%ED%94%84%EB%A6%AC%EB%9E%9C%EC%84%9C%20%EC%84%B8%EA%B8%88",
+   "390 button\"연금·복지\" → http://127.0.0.1:52047/blog/?cat=%EC%97%B0%EA%B8%88%C2%B7%EB%B3%B5%EC%A7%80",
+   "390 button\"금융·이자\" → http://127.0.0.1:52047/blog/?cat=%EA%B8%88%EC%9C%B5%C2%B7%EC%9D%B4%EC%9E%90",
+   "390 button\"날짜·D-day\" → http://127.0.0.1:52047/blog/?cat=%EB%82%A0%EC%A7%9C%C2%B7D-day",
+   "390 button\"건강\" → http://127.0.0.1:52047/blog/?cat=%EA%B1%B4%EA%B0%95",
+   "390 button\"AI/테크\" → http://127.0.0.1:52047/blog/?cat=AI%2F%ED%85%8C%ED%81%AC",
+   "390 button\"반려동물\" → http://127.0.0.1:52047/blog/?cat=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC",
+   "390 button\"자동차\" → http://127.0.0.1:52047/blog/?cat=%EC%9E%90%EB%8F%99%EC%B0%A8",
+   "390 button\"출산·육아\" → http://127.0.0.1:52047/blog/?cat=%EC%B6%9C%EC%82%B0%C2%B7%EC%9C%A1%EC%95%84",
+   "1280 button\"부동산\" → http://127.0.0.1:52047/blog/?cat=%EB%B6%80%EB%8F%99%EC%82%B0",
+   "1280 button\"이직/연봉\" → http://127.0.0.1:52047/blog/?cat=%EC%9D%B4%EC%A7%81%2F%EC%97%B0%EB%B4%89",
+   "1280 button\"생활·도구\" → http://127.0.0.1:52047/blog/?cat=%EC%83%9D%ED%99%9C%C2%B7%EB%8F%84%EA%B5%AC",
+   "1280 button\"프리랜서 세금\" → http://127.0.0.1:52047/blog/?cat=%ED%94%84%EB%A6%AC%EB%9E%9C%EC%84%9C%20%EC%84%B8%EA%B8%88",
+   "1280 button\"연금·복지\" → http://127.0.0.1:52047/blog/?cat=%EC%97%B0%EA%B8%88%C2%B7%EB%B3%B5%EC%A7%80",
+   "1280 button\"금융·이자\" → http://127.0.0.1:52047/blog/?cat=%EA%B8%88%EC%9C%B5%C2%B7%EC%9D%B4%EC%9E%90",
+   "1280 button\"날짜·D-day\" → http://127.0.0.1:52047/blog/?cat=%EB%82%A0%EC%A7%9C%C2%B7D-day",
+   "1280 button\"건강\" → http://127.0.0.1:52047/blog/?cat=%EA%B1%B4%EA%B0%95",
+   "1280 button\"AI/테크\" → http://127.0.0.1:52047/blog/?cat=AI%2F%ED%85%8C%ED%81%AC",
+   "1280 button\"반려동물\" → http://127.0.0.1:52047/blog/?cat=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC",
+   "1280 button\"자동차\" → http://127.0.0.1:52047/blog/?cat=%EC%9E%90%EB%8F%99%EC%B0%A8",
+   "1280 button\"출산·육아\" → http://127.0.0.1:52047/blog/?cat=%EC%B6%9C%EC%82%B0%C2%B7%EC%9C%A1%EC%95%84"
   ],
-  "step": "1280 button\"+156개의 글 더 보기\"",
+  "step": "1280 button\"+157개의 글 더 보기\"",
   "ext": [
    "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
    "https://www.googletagmanager.com/gtag/js"
   ],
   "clicks": 32,
   "kind": "page",
-  "sec": 25.5,
+  "sec": 22.6,
   "ext_hold": []
  },
  {
@@ -3762,7 +3765,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 13.1,
+  "sec": 13.0,
   "ext_hold": []
  },
  {
@@ -3779,7 +3782,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 13.0,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -3796,7 +3799,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 13.1,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -3813,7 +3816,7 @@
   ],
   "clicks": 27,
   "kind": "page",
-  "sec": 11.8,
+  "sec": 11.7,
   "ext_hold": []
  },
  {
@@ -3831,7 +3834,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.5,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -3849,7 +3852,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 13.0,
+  "sec": 12.7,
   "ext_hold": []
  },
  {
@@ -3867,7 +3870,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 13.2,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -3903,7 +3906,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -3921,7 +3924,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -3939,7 +3942,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -3957,7 +3960,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -3975,7 +3978,7 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 13.2,
+  "sec": 12.9,
   "ext_hold": []
  },
  {
@@ -3993,7 +3996,7 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 13.4,
+  "sec": 13.2,
   "ext_hold": []
  },
  {
@@ -4011,7 +4014,7 @@
   ],
   "clicks": 45,
   "kind": "page",
-  "sec": 14.0,
+  "sec": 13.7,
   "ext_hold": []
  },
  {
@@ -4029,7 +4032,7 @@
   ],
   "clicks": 41,
   "kind": "page",
-  "sec": 13.3,
+  "sec": 13.1,
   "ext_hold": []
  },
  {
@@ -4047,7 +4050,7 @@
   ],
   "clicks": 25,
   "kind": "page",
-  "sec": 11.7,
+  "sec": 11.6,
   "ext_hold": []
  },
  {
@@ -4065,7 +4068,7 @@
   ],
   "clicks": 45,
   "kind": "page",
-  "sec": 14.1,
+  "sec": 13.8,
   "ext_hold": []
  },
  {
@@ -4083,7 +4086,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.5,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -4119,7 +4122,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.5,
+  "sec": 13.1,
   "ext_hold": []
  },
  {
@@ -4155,7 +4158,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.1,
+  "sec": 12.0,
   "ext_hold": []
  },
  {
@@ -4173,7 +4176,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.5,
+  "sec": 12.0,
   "ext_hold": []
  },
  {
@@ -4191,7 +4194,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.5,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -4209,7 +4212,25 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 12.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/car-rental-vs-installment-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 내 견적서로 이 비교를 직접 해보려면 어떻게 하나\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -4227,7 +4248,7 @@
   ],
   "clicks": 27,
   "kind": "page",
-  "sec": 12.1,
+  "sec": 11.8,
   "ext_hold": []
  },
  {
@@ -4245,7 +4266,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 12.7,
   "ext_hold": []
  },
  {
@@ -4263,7 +4284,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.7,
+  "sec": 12.5,
   "ext_hold": []
  },
  {
@@ -4281,7 +4302,7 @@
   ],
   "clicks": 41,
   "kind": "page",
-  "sec": 13.3,
+  "sec": 13.2,
   "ext_hold": []
  },
  {
@@ -4298,7 +4319,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.5,
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -4316,7 +4337,7 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 13.1,
+  "sec": 12.9,
   "ext_hold": []
  },
  {
@@ -4334,7 +4355,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 12.9,
+  "sec": 13.0,
   "ext_hold": []
  },
  {
@@ -4352,7 +4373,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.7,
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -4370,7 +4391,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.5,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -4388,7 +4409,7 @@
   ],
   "clicks": 41,
   "kind": "page",
-  "sec": 13.5,
+  "sec": 13.4,
   "ext_hold": []
  },
  {
@@ -4441,7 +4462,7 @@
   ],
   "clicks": 43,
   "kind": "page",
-  "sec": 13.9,
+  "sec": 13.8,
   "ext_hold": []
  },
  {
@@ -4459,7 +4480,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -4477,7 +4498,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.2,
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -4495,7 +4516,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 12.9,
   "ext_hold": []
  },
  {
@@ -4512,7 +4533,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.2,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -4530,7 +4551,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -4548,7 +4569,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.5,
   "ext_hold": []
  },
  {
@@ -4566,7 +4587,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 12.7,
+  "sec": 12.9,
   "ext_hold": []
  },
  {
@@ -4584,7 +4605,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -4602,7 +4623,7 @@
   ],
   "clicks": 25,
   "kind": "page",
-  "sec": 11.6,
+  "sec": 11.8,
   "ext_hold": []
  },
  {
@@ -4638,7 +4659,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.5,
   "ext_hold": []
  },
  {
@@ -4674,7 +4695,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -4692,7 +4713,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.2,
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -4710,7 +4731,7 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 13.0,
+  "sec": 13.1,
   "ext_hold": []
  },
  {
@@ -4728,7 +4749,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.9,
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -4764,7 +4785,7 @@
   ],
   "clicks": 49,
   "kind": "page",
-  "sec": 14.4,
+  "sec": 14.2,
   "ext_hold": []
  },
  {
@@ -4782,7 +4803,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 13.2,
+  "sec": 13.0,
   "ext_hold": []
  },
  {
@@ -4799,7 +4820,7 @@
   ],
   "clicks": 27,
   "kind": "page",
-  "sec": 11.9,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -4817,7 +4838,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.1,
+  "sec": 12.5,
   "ext_hold": []
  },
  {
@@ -4853,7 +4874,7 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 13.3,
+  "sec": 14.0,
   "ext_hold": []
  },
  {
@@ -4871,7 +4892,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.5,
+  "sec": 12.7,
   "ext_hold": []
  },
  {
@@ -4907,7 +4928,7 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 13.1,
+  "sec": 13.3,
   "ext_hold": []
  },
  {
@@ -4925,7 +4946,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -4943,7 +4964,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 12.5,
   "ext_hold": []
  },
  {
@@ -4997,7 +5018,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -5015,7 +5036,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 12.9,
+  "sec": 13.1,
   "ext_hold": []
  },
  {
@@ -5033,7 +5054,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.3,
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -5051,7 +5072,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.7,
+  "sec": 12.5,
   "ext_hold": []
  },
  {
@@ -5069,7 +5090,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.5,
+  "sec": 12.7,
   "ext_hold": []
  },
  {
@@ -5105,7 +5126,7 @@
   ],
   "clicks": 41,
   "kind": "page",
-  "sec": 13.9,
+  "sec": 13.7,
   "ext_hold": []
  },
  {
@@ -5159,7 +5180,7 @@
   ],
   "clicks": 23,
   "kind": "page",
-  "sec": 11.4,
+  "sec": 11.6,
   "ext_hold": []
  },
  {
@@ -5177,7 +5198,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.7,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -5195,7 +5216,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.2,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -5213,7 +5234,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.7,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -5249,7 +5270,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 13.0,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -5267,7 +5288,7 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 13.1,
+  "sec": 13.2,
   "ext_hold": []
  },
  {
@@ -5284,7 +5305,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -5302,7 +5323,7 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 13.1,
+  "sec": 13.2,
   "ext_hold": []
  },
  {
@@ -5338,7 +5359,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.7,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -5374,7 +5395,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 12.7,
   "ext_hold": []
  },
  {
@@ -5392,7 +5413,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.5,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -5428,7 +5449,7 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 14.1,
+  "sec": 13.2,
   "ext_hold": []
  },
  {
@@ -5446,7 +5467,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 12.7,
   "ext_hold": []
  },
  {
@@ -5464,7 +5485,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -5482,7 +5503,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 13.4,
+  "sec": 13.0,
   "ext_hold": []
  },
  {
@@ -5500,7 +5521,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 13.3,
+  "sec": 13.4,
   "ext_hold": []
  },
  {
@@ -5518,7 +5539,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.1,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -5553,7 +5574,7 @@
   ],
   "clicks": 43,
   "kind": "page",
-  "sec": 13.6,
+  "sec": 13.7,
   "ext_hold": []
  },
  {
@@ -5571,7 +5592,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -5589,7 +5610,7 @@
   ],
   "clicks": 45,
   "kind": "page",
-  "sec": 14.1,
+  "sec": 14.2,
   "ext_hold": []
  },
  {
@@ -5607,7 +5628,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.2,
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -5643,7 +5664,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.2,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -5661,7 +5682,7 @@
   ],
   "clicks": 63,
   "kind": "page",
-  "sec": 15.7,
+  "sec": 15.8,
   "ext_hold": []
  },
  {
@@ -5679,7 +5700,7 @@
   ],
   "clicks": 49,
   "kind": "page",
-  "sec": 14.3,
+  "sec": 14.5,
   "ext_hold": []
  },
  {
@@ -5697,7 +5718,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.5,
   "ext_hold": []
  },
  {
@@ -5715,7 +5736,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 12.9,
   "ext_hold": []
  },
  {
@@ -5733,7 +5754,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 13.2,
   "ext_hold": []
  },
  {
@@ -5751,7 +5772,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.7,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -5769,7 +5790,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.5,
   "ext_hold": []
  },
  {
@@ -5787,7 +5808,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 13.1,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -5805,7 +5826,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.2,
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -5823,7 +5844,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -5841,7 +5862,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -5859,7 +5880,7 @@
   ],
   "clicks": 43,
   "kind": "page",
-  "sec": 13.5,
+  "sec": 13.8,
   "ext_hold": []
  },
  {
@@ -5877,7 +5898,7 @@
   ],
   "clicks": 41,
   "kind": "page",
-  "sec": 14.8,
+  "sec": 13.6,
   "ext_hold": []
  },
  {
@@ -5895,7 +5916,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.7,
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -5913,7 +5934,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.7,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -5931,7 +5952,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 13.5,
   "ext_hold": []
  },
  {
@@ -5949,7 +5970,7 @@
   ],
   "clicks": 51,
   "kind": "page",
-  "sec": 14.5,
+  "sec": 14.3,
   "ext_hold": []
  },
  {
@@ -5967,7 +5988,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 13.4,
+  "sec": 12.9,
   "ext_hold": []
  },
  {
@@ -6021,7 +6042,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 13.6,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -6057,7 +6078,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.5,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -6075,7 +6096,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -6093,7 +6114,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 13.6,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -6111,7 +6132,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.7,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -6129,7 +6150,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.9,
+  "sec": 12.7,
   "ext_hold": []
  },
  {
@@ -6147,7 +6168,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 13.0,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -6165,7 +6186,7 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 13.5,
+  "sec": 13.1,
   "ext_hold": []
  },
  {
@@ -6182,7 +6203,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 11.9,
   "ext_hold": []
  },
  {
@@ -6200,7 +6221,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.2,
+  "sec": 12.0,
   "ext_hold": []
  },
  {
@@ -6218,7 +6239,7 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 13.8,
+  "sec": 13.1,
   "ext_hold": []
  },
  {
@@ -6236,7 +6257,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -6254,7 +6275,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.1,
+  "sec": 12.0,
   "ext_hold": []
  },
  {
@@ -6272,7 +6293,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.2,
+  "sec": 12.1,
   "ext_hold": []
  },
  {
@@ -6289,7 +6310,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -6325,7 +6346,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 14.2,
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -6361,7 +6382,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.3,
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -6379,7 +6400,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -6397,7 +6418,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.5,
+  "sec": 12.7,
   "ext_hold": []
  },
  {
@@ -6415,7 +6436,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 13.4,
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -6433,7 +6454,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.5,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -6451,7 +6472,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 12.9,
+  "sec": 13.8,
   "ext_hold": []
  },
  {
@@ -6469,7 +6490,7 @@
   ],
   "clicks": 41,
   "kind": "page",
-  "sec": 15.0,
+  "sec": 13.2,
   "ext_hold": []
  },
  {
@@ -6487,7 +6508,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.9,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -6505,7 +6526,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.7,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -6523,7 +6544,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 13.1,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -6541,7 +6562,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -6559,7 +6580,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 13.0,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -6577,7 +6598,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.9,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -6595,7 +6616,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -6613,7 +6634,7 @@
   ],
   "clicks": 47,
   "kind": "page",
-  "sec": 15.7,
+  "sec": 14.0,
   "ext_hold": []
  },
  {
@@ -6630,7 +6651,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 13.7,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -6648,7 +6669,7 @@
   ],
   "clicks": 43,
   "kind": "page",
-  "sec": 14.1,
+  "sec": 13.6,
   "ext_hold": []
  },
  {
@@ -6666,7 +6687,7 @@
   ],
   "clicks": 43,
   "kind": "page",
-  "sec": 14.3,
+  "sec": 13.5,
   "ext_hold": []
  },
  {
@@ -6683,7 +6704,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -6719,7 +6740,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 14.2,
+  "sec": 13.0,
   "ext_hold": []
  },
  {
@@ -6737,7 +6758,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 14.1,
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -6754,7 +6775,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 12.7,
   "ext_hold": []
  },
  {
@@ -6772,7 +6793,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 13.3,
+  "sec": 12.5,
   "ext_hold": []
  },
  {
@@ -6790,7 +6811,7 @@
   ],
   "clicks": 41,
   "kind": "page",
-  "sec": 13.7,
+  "sec": 13.3,
   "ext_hold": []
  },
  {
@@ -6808,7 +6829,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.7,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -6826,7 +6847,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 13.0,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -6844,7 +6865,7 @@
   ],
   "clicks": 27,
   "kind": "page",
-  "sec": 12.5,
+  "sec": 11.8,
   "ext_hold": []
  },
  {
@@ -6862,7 +6883,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 11.9,
   "ext_hold": []
  },
  {
@@ -6880,7 +6901,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 13.5,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -6898,7 +6919,7 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 14.3,
+  "sec": 13.2,
   "ext_hold": []
  },
  {
@@ -6916,7 +6937,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 13.1,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -6934,7 +6955,7 @@
   ],
   "clicks": 41,
   "kind": "page",
-  "sec": 14.6,
+  "sec": 13.7,
   "ext_hold": []
  },
  {
@@ -6952,7 +6973,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -6970,7 +6991,7 @@
   ],
   "clicks": 41,
   "kind": "page",
-  "sec": 13.8,
+  "sec": 13.4,
   "ext_hold": []
  },
  {
@@ -6988,7 +7009,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -7005,7 +7026,7 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 13.6,
+  "sec": 13.2,
   "ext_hold": []
  },
  {
@@ -7023,7 +7044,7 @@
   ],
   "clicks": 41,
   "kind": "page",
-  "sec": 13.8,
+  "sec": 13.4,
   "ext_hold": []
  },
  {
@@ -7041,7 +7062,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.3,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -7059,7 +7080,7 @@
   ],
   "clicks": 19,
   "kind": "page",
-  "sec": 11.0,
+  "sec": 10.9,
   "ext_hold": []
  },
  {
@@ -7075,7 +7096,7 @@
   ],
   "clicks": 19,
   "kind": "page",
-  "sec": 12.2,
+  "sec": 12.0,
   "ext_hold": []
  },
  {
@@ -7091,7 +7112,7 @@
   ],
   "clicks": 27,
   "kind": "page",
-  "sec": 12.3,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -7109,7 +7130,7 @@
   ],
   "clicks": 19,
   "kind": "page",
-  "sec": 11.2,
+  "sec": 11.0,
   "ext_hold": []
  },
  {
@@ -7127,7 +7148,7 @@
   ],
   "clicks": 27,
   "kind": "page",
-  "sec": 11.9,
+  "sec": 11.8,
   "ext_hold": []
  },
  {
@@ -7145,7 +7166,7 @@
   ],
   "clicks": 21,
   "kind": "page",
-  "sec": 11.3,
+  "sec": 11.1,
   "ext_hold": []
  },
  {
@@ -7163,7 +7184,7 @@
   ],
   "clicks": 19,
   "kind": "page",
-  "sec": 11.1,
+  "sec": 10.9,
   "ext_hold": []
  },
  {
@@ -7181,7 +7202,7 @@
   ],
   "clicks": 21,
   "kind": "page",
-  "sec": 11.4,
+  "sec": 11.1,
   "ext_hold": []
  },
  {
@@ -7199,7 +7220,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.2,
+  "sec": 12.0,
   "ext_hold": []
  },
  {
@@ -7217,7 +7238,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.3,
+  "sec": 12.1,
   "ext_hold": []
  },
  {
@@ -7283,7 +7304,7 @@
   ],
   "clicks": 5,
   "kind": "page",
-  "sec": 3.4,
+  "sec": 3.2,
   "ext_hold": []
  },
  {
@@ -7298,7 +7319,7 @@
   ],
   "clicks": 5,
   "kind": "page",
-  "sec": 3.4,
+  "sec": 3.5,
   "ext_hold": []
  },
  {
@@ -7313,7 +7334,7 @@
   ],
   "clicks": 7,
   "kind": "page",
-  "sec": 9.6,
+  "sec": 9.4,
   "ext_hold": []
  },
  {
@@ -7328,7 +7349,7 @@
   ],
   "clicks": 5,
   "kind": "page",
-  "sec": 3.4,
+  "sec": 3.2,
   "ext_hold": []
  }
 ]

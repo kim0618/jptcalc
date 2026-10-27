@@ -147,10 +147,15 @@ def convert(cat, slug):
         if unit.strip() in ('만원', '원') and idm and 'type="number"' in tag and 'step="0.' not in tag and not raw_read(idm.group(1)):
             i = idm.group(1); money.append(i)
             tag = tag.replace('type="number"', 'type="text" inputmode="numeric" autocomplete="off" data-ds-num')
-            if i in c.get('prefill', {}) and 'data-prefill' not in tag:
-                tag = tag.replace(f'id="{i}"', f'data-prefill="{c["prefill"][i]}" id="{i}"')
         return tag + m.group(2)
     inp = re.sub(r'(<input[^>]*>)(\s*<span class="unit">([^<]*)</span>)', money_input, inp)
+    # 값 받기 표시는 콤마 변환과 별개: 원본이 값을 그대로 읽어 콤마에서 빠진 칸(four-insurance inpSalary)도 받아야 한다(10/27)
+    def prefill_input(m):
+        tag = m.group(0); idm = re.search(r'id="([^"]+)"', tag)
+        if idm and idm.group(1) in c.get('prefill', {}) and 'data-prefill' not in tag:
+            tag = tag.replace(f'id="{idm.group(1)}"', f'data-prefill="{c["prefill"][idm.group(1)]}" id="{idm.group(1)}"')
+        return tag
+    inp = re.sub(r'<input[^>]*>', prefill_input, inp)
     # 원본 자체 계산 버튼(date 5종 .calc-btn): 공용 계산 버튼으로 바꾸고 문구는 원문 그대로 둔다
     own_btn = re.search(r'<button class="calc-btn" onclick="([A-Za-z_]\w*)\(\)">([^<]*)</button>', inp)
     btn_text = '계산하기'
