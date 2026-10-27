@@ -332,10 +332,15 @@
       var t = el;
       while (t.children.length === 1 && t.children[0].textContent.trim() === t.textContent.trim()) t = t.children[0];
       t.style.fontSize = '';
-      var w = el.parentElement.clientWidth, s = el.scrollWidth;
+      // 칸 폭은 부모의 안쪽 여백을 뺀 내용 폭(clientWidth는 padding 포함이라, 여백 안으로 넘쳐도 들어간다고 봤다. 10/27 프리랜서 순수입 PC 46px 넘침)
+      var p = el.parentElement, ps = getComputedStyle(p);
+      var w = p.clientWidth - parseFloat(ps.paddingLeft) - parseFloat(ps.paddingRight), s = el.scrollWidth;
       if (!w || s <= w + 1) return;
       var base = parseFloat(getComputedStyle(t).fontSize), min = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--fs-label')) || 14;
-      t.style.fontSize = Math.max(min, Math.floor(base * w / s * 10) / 10) + 'px';
+      var size = Math.max(min, Math.floor(base * w / s * 10) / 10);
+      t.style.fontSize = size + 'px';
+      // 글자 폭이 크기에 정확히 비례하지 않아(자간·숫자 폭 반올림) 1~3px 남을 수 있다: 다시 재서 들어갈 때까지 조금씩
+      for (var i = 0; i < 8 && size > min && el.scrollWidth > w + 1; i++) { size = Math.max(min, size - 0.5); t.style.fontSize = size + 'px'; }
     });
     if (fitMo) fitMo.takeRecords();   // 방금 바꾼 글자 크기로 다시 깨지 않게
   }

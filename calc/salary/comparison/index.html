@@ -297,7 +297,7 @@
   </div>
 </footer>
 
-<script src="/assets/ds/calc-kit.js?v=dc94d136"></script>
+<script src="/assets/ds/calc-kit.js?v=806eb872"></script>
 <script>
 
 function fmtW(won){won=Math.round(won);if(isNaN(won)||won===0)return'-';if(Math.abs(won)>=100000000){const uk=Math.floor(Math.abs(won)/100000000)*Math.sign(won);const rem=Math.round((Math.abs(won)%100000000)/10000);return rem>0?uk.toLocaleString()+'억 '+rem.toLocaleString()+'만원':uk.toLocaleString()+'억원';}if(Math.abs(won)>=10000){const man=Math.floor(Math.abs(won)/10000)*Math.sign(won);const rem=Math.round(Math.abs(won)%10000);return rem>=1000?man.toLocaleString()+'만 '+rem.toLocaleString()+'원':man.toLocaleString()+'만원';}return won.toLocaleString()+'원';}
