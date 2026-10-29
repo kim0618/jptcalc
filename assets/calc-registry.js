@@ -171,6 +171,11 @@ window.CALC_REGISTRY = {
         "name": "연봉 실수령액"
       },
       {
+        "slug": "year-end-tax",
+        "icon": "🧾",
+        "name": "연말정산"
+      },
+      {
         "slug": "comparison",
         "icon": "⚖️",
         "name": "연봉 비교"

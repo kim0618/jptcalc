@@ -302,8 +302,8 @@
    "months": [
     1
    ],
-   "title": "1월 부가세 확정신고",
-   "calc": "tax/vat"
+   "title": "1월 연말정산, 환급액 미리 확인",
+   "calc": "salary/year-end-tax"
   },
   {
    "months": [

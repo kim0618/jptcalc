@@ -7,6 +7,7 @@
     "실수령·비교",
     [
      "take-home-pay",
+     "year-end-tax",
      "bonus-pay",
      "hourly-wage"
     ]
@@ -239,6 +240,19 @@
      },
      {
       "to": "unemployment"
+     }
+    ]
+   },
+   "year-end-tax": {
+    "prefill": {
+     "ye-salary": "salary"
+    },
+    "next": [
+     {
+      "to": "take-home-pay",
+      "carry": {
+       "salary": "ye-salary"
+      }
      }
     ]
    }

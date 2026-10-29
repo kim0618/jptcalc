@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>연말정산 계산기 2026 - 환급액·추가납부 미리 계산 (2026년 귀속) | 제이퍼 계산기</title>
+  <meta name="description" content="총급여와 원천징수된 소득세만 넣으면 2026년 귀속 연말정산 환급액·추가납부액을 바로 계산합니다. 부양가족·신용카드·의료비·교육비·월세·연금저축까지 2026년 개정 세법(자녀 9세 기준, 카드 자녀 한도) 반영." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/salary/year-end-tax/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="연말정산 계산기 2026 - 환급액·추가납부 미리 계산 (2026년 귀속) | 제이퍼 계산기" />
+  <meta property="og:description" content="총급여와 원천징수된 소득세만 넣으면 2026년 귀속 연말정산 환급액·추가납부액을 바로 계산합니다. 부양가족·신용카드·의료비·교육비·월세·연금저축까지 2026년 개정 세법(자녀 9세 기준, 카드 자녀 한도) 반영." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/salary/year-end-tax/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=1ff0325a" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"연말정산 계산기","url":"https://www.jptcalc.kr/calc/salary/year-end-tax/","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+    {"@type":"ListItem","position":2,"name":"이직/연봉 계산기","item":"https://www.jptcalc.kr/calc/salary/"},
+    {"@type":"ListItem","position":3,"name":"연말정산 계산기","item":"https://www.jptcalc.kr/calc/salary/year-end-tax/"}
+  ]}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"연말정산 환급액은 어떻게 계산되나요?","acceptedAnswer":{"@type":"Answer","text":"1년 동안 회사가 월급에서 떼어 낸 소득세(기납부세액)와 연말정산으로 확정한 1년치 세금(결정세액)의 차이입니다. 결정세액은 총급여에서 근로소득공제와 소득공제를 빼 과세표준을 구하고, 6~45% 세율로 산출세액을 낸 뒤 세액공제를 빼서 정합니다. 결정세액이 기납부세액보다 적으면 차액과 그 10%인 지방소득세를 돌려받고, 많으면 더 냅니다."}},{"@type":"Question","name":"2026년 귀속 연말정산에서 달라진 점은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"자녀세액공제 대상 나이가 8세 이상에서 9세 이상으로 바뀌었고 2017년생은 대상에서 빠집니다(소득세법 부칙 2026.4.21.). 신용카드 소득공제 한도는 20세 이하 자녀가 있으면 늘어나 총급여 7천만원 이하는 자녀 1명 350만원, 2명 이상 400만원이 됩니다. 월세 세액공제는 주소가 다른 배우자도 추가로 받을 수 있게 됐고, 초등 1~2학년 예체능 학원비가 교육비 공제에 들어갑니다."}},{"@type":"Question","name":"기납부세액은 어디서 확인하나요?","acceptedAnswer":{"@type":"Answer","text":"근로소득 원천징수영수증의 '기납부세액' 소득세 칸, 또는 1월~12월 급여명세서의 소득세를 모두 더한 금액입니다. 아직 12월 급여를 받기 전이라면 지금까지 낸 금액에 남은 달 예상분을 더해 넣으세요. 이 계산기에 비워 두면 2026년 근로소득 간이세액표로 1년치를 추정합니다."}},{"@type":"Question","name":"신용카드는 얼마나 써야 공제를 받나요?","acceptedAnswer":{"@type":"Answer","text":"카드·체크카드·현금영수증 사용액 합계가 총급여의 25%를 넘어야 넘는 부분부터 공제됩니다. 총급여 4,000만원이면 1,000만원까지는 공제가 없습니다. 넘는 부분은 신용카드 15%, 체크카드·현금영수증 30%, 전통시장·대중교통 40%, 도서·공연·박물관·영화·체육시설 30%(총급여 7천만원 이하)로 공제합니다."}},{"@type":"Question","name":"자녀세액공제는 몇 살부터 받나요?","acceptedAnswer":{"@type":"Answer","text":"2026년 귀속분은 9세 이상 20세 이하 기본공제대상 자녀가 대상이고 2017년생은 제외됩니다. 실제로는 2006년~2016년생 자녀입니다. 1명 25만원, 2명 55만원, 3명부터 1명당 40만원이 더해집니다. 2026년에 출산·입양했다면 첫째 30만원, 둘째 50만원, 셋째 이상 70만원을 따로 공제합니다."}},{"@type":"Question","name":"표준세액공제와 특별세액공제 중 무엇이 적용되나요?","acceptedAnswer":{"@type":"Answer","text":"건강·고용보험료 소득공제, 주택자금 공제, 보험료·의료비·교육비·기부금 세액공제, 월세 세액공제를 하나도 신청하지 않으면 13만원 표준세액공제를 받습니다. 하나라도 신청하면 표준세액공제는 받을 수 없습니다. 이 계산기는 두 방식을 모두 계산해 세금이 적은 쪽을 결과로 보여줍니다."}},{"@type":"Question","name":"월세 세액공제는 누가 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"연말 기준 무주택 세대의 세대주(세대주가 받지 않으면 세대원)로 총급여 8천만원 이하인 근로자가, 국민주택규모 또는 기준시가 4억원 이하 주택에 살며 주민등록 주소와 임대차계약 주소가 같을 때 받습니다. 월세의 15%(총급여 5,500만원 이하 17%)를 연 1,000만원 한도로 공제합니다."}},{"@type":"Question","name":"의료비는 얼마부터 공제되나요?","acceptedAnswer":{"@type":"Answer","text":"1년 의료비가 총급여의 3%를 넘는 부분부터 15%를 공제합니다. 총급여 4,000만원이면 120만원을 넘는 금액부터입니다. 부양가족 일반 의료비는 연 700만원 한도이고, 본인·6세 이하·65세 이상·장애인 의료비는 한도가 없습니다. 미숙아·선천성이상아는 20%, 난임시술비는 30%입니다."}}]}</script>
+  <style>
+    /* 페이지 고유: 접는 입력 묶음(details). 색·간격은 토큰만 쓴다 */
+    .ye-sec > summary { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); min-height: var(--h-tap); padding: 0; cursor: pointer; list-style: none; }
+    .ye-sec > summary::-webkit-details-marker { display: none; }
+    .ye-sec > summary span { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+    .ye-sec > summary b { font-size: var(--fs-body); font-weight: var(--fw-title); color: var(--text); }
+    .ye-sec > summary small { font-size: var(--fs-meta); color: var(--text-sub); }
+    .ye-sec > summary .ds-faq-chev { flex-shrink: 0; transition: transform .2s; color: var(--text-sub); }
+    .ye-sec[open] > summary .ds-faq-chev { transform: rotate(180deg); }
+    .ye-sec[open] > summary { margin-bottom: var(--space-3); }
+    .ye-tips { margin: var(--space-3) 0 0; padding-left: 1.2em; font-size: var(--fs-label); color: var(--text-sub); }
+    .ye-tips li { margin: 4px 0; }
+  </style>
+</head>
+<body data-cat="salary" style="--cat: var(--c-salary)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
+</header>
+
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/salary/">이직/연봉 계산기</a> &rsaquo; 연말정산 계산기</div>
+      <div class="page-badge">2026년 귀속 세법 반영</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-briefcase"></use></svg></span>
+        <h1 class="page-title">연말정산 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">2026년 귀속</span>
+          <span class="ds-trust-chip">2026.10.29 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">총급여와 이미 낸 소득세로 2026년 귀속 연말정산 환급액·추가납부액을 미리 계산하세요</p>
+    </div>
+  </div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+      <div class="field-label ds-group-label">급여와 이미 낸 세금</div>
+      <div class="field">
+        <div class="field-label"><span>총급여 (연간, 비과세 제외)</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num data-prefill="salary" id="ye-salary" placeholder="예) 4,500" oninput="calcYE()" /><span class="unit">만원</span></div>
+        <div class="field-hint">근로소득 원천징수영수증의 총급여(식대 등 비과세 제외). 연봉에서 비과세 수당을 뺀 금액입니다.</div>
+      </div>
+      <div class="field">
+        <div class="field-label"><span>기납부세액 (소득세, 선택)</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-paid" placeholder="비우면 자동 추정" oninput="calcYE()" /><span class="unit">만원</span></div>
+        <div class="field-hint">1~12월 급여명세서 소득세 합계. 비우면 2026년 간이세액표로 추정합니다.</div>
+      </div>
+    </div>
+    <details class="card ye-sec">
+      <summary><span><b>부양가족</b><small>본인 외 기본공제 150만원씩</small></span><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+      <div class="field">
+        <div class="field-label"><span>배우자</span></div>
+        <div class="seg-group" data-seg="spouse"><button type="button" class="seg-btn active" data-v="0" onclick="yeSeg('spouse',this)">없음·소득 있음</button><button type="button" class="seg-btn" data-v="1" onclick="yeSeg('spouse',this)">공제대상 배우자</button></div>
+        <div class="field-hint">연 소득금액 100만원 이하(근로소득만 있으면 총급여 500만원 이하)일 때 공제대상입니다.</div>
+      </div>      <div class="field">
+        <div class="field-label"><span>부모님 등 직계존속 (60세 이상)</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-parents" placeholder="예) 0" oninput="calcYE()" /><span class="unit">명</span></div>
+        
+      </div>      <div class="field">
+        <div class="field-label"><span>자녀 (20세 이하)</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-children" placeholder="예) 0" oninput="calcYE()" /><span class="unit">명</span></div>
+        <div class="field-hint">2006년 이후 출생, 소득금액 100만원 이하. 카드 공제 자녀 한도에도 쓰입니다.</div>
+      </div>      <div class="field">
+        <div class="field-label"><span>그중 자녀세액공제 대상</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-childcredit" placeholder="예) 0" oninput="calcYE()" /><span class="unit">명</span></div>
+        <div class="field-hint">2026년분은 9세 이상: 2006~2016년생(2017년생 제외).</div>
+      </div>      <div class="field">
+        <div class="field-label"><span>그 밖의 부양가족</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-others" placeholder="예) 0" oninput="calcYE()" /><span class="unit">명</span></div>
+        <div class="field-hint">20세 이하·60세 이상 형제자매 등</div>
+      </div>      <div class="field">
+        <div class="field-label"><span>부양가족 중 70세 이상</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-elderly" placeholder="예) 0" oninput="calcYE()" /><span class="unit">명</span></div>
+        <div class="field-hint">경로우대 1명당 100만원 추가</div>
+      </div>      <div class="field">
+        <div class="field-label"><span>본인·부양가족 중 장애인</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-disabled" placeholder="예) 0" oninput="calcYE()" /><span class="unit">명</span></div>
+        <div class="field-hint">1명당 200만원 추가</div>
+      </div>      <div class="field">
+        <div class="field-label"><span>2026년 출산·입양</span></div>
+        <div class="seg-group" data-seg="birth"><button type="button" class="seg-btn active" data-v="0" onclick="yeSeg('birth',this)">없음</button><button type="button" class="seg-btn" data-v="1" onclick="yeSeg('birth',this)">첫째</button><button type="button" class="seg-btn" data-v="2" onclick="yeSeg('birth',this)">둘째</button><button type="button" class="seg-btn" data-v="3" onclick="yeSeg('birth',this)">셋째 이상</button></div>
+        
+      </div>      <div class="field">
+        <div class="field-label"><span>한부모·부녀자</span></div>
+        <div class="seg-group" data-seg="status"><button type="button" class="seg-btn active" data-v="0" onclick="yeSeg('status',this)">해당 없음</button><button type="button" class="seg-btn" data-v="single" onclick="yeSeg('status',this)">한부모 (100만원)</button><button type="button" class="seg-btn" data-v="woman" onclick="yeSeg('status',this)">부녀자 (50만원)</button></div>
+        <div class="field-hint">부녀자는 근로소득금액 3천만원 이하 여성만 해당합니다.</div>
+      </div>      <div class="field">
+        <div class="field-label"><span>2026년 혼인신고</span></div>
+        <div class="seg-group" data-seg="marriage"><button type="button" class="seg-btn active" data-v="0" onclick="yeSeg('marriage',this)">아니오</button><button type="button" class="seg-btn" data-v="1" onclick="yeSeg('marriage',this)">예 (50만원)</button></div>
+        <div class="field-hint">2026년 12월 31일 이전 혼인신고, 생애 1회</div>
+      </div>
+    </details>
+    <details class="card ye-sec">
+      <summary><span><b>4대보험·주택자금</b><small>비우면 2026년 요율로 추정</small></span><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+      <div class="field">
+        <div class="field-label"><span>국민연금 (본인 부담)</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-pension" placeholder="비우면 자동 추정" oninput="calcYE()" /><span class="unit">만원</span></div>
+        
+      </div>      <div class="field">
+        <div class="field-label"><span>건강보험 + 장기요양보험</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-health" placeholder="비우면 자동 추정" oninput="calcYE()" /><span class="unit">만원</span></div>
+        
+      </div>      <div class="field">
+        <div class="field-label"><span>고용보험</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-emp" placeholder="비우면 자동 추정" oninput="calcYE()" /><span class="unit">만원</span></div>
+        
+      </div>      <div class="field">
+        <div class="field-label"><span>주택임차차입금 원리금 상환액</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-loan" placeholder="예) 0" oninput="calcYE()" /><span class="unit">만원</span></div>
+        <div class="field-hint">무주택 세대주, 전세대출 원리금. 40% 공제</div>
+      </div>      <div class="field">
+        <div class="field-label"><span>주택청약종합저축 납입액</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-sub" placeholder="예) 0" oninput="calcYE()" /><span class="unit">만원</span></div>
+        <div class="field-hint">총급여 7천만원 이하 무주택 세대주·배우자, 연 300만원까지 40%. 주택자금과 합쳐 400만원 한도</div>
+      </div>
+    </details>
+    <details class="card ye-sec">
+      <summary><span><b>신용카드·체크카드</b><small>총급여 25% 초과분부터 공제</small></span><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+      <div class="field">
+        <div class="field-label"><span>신용카드</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-credit" placeholder="예) 0" oninput="calcYE()" /><span class="unit">만원</span></div>
+        <div class="field-hint">15% 공제</div>
+      </div>      <div class="field">
+        <div class="field-label"><span>체크카드·현금영수증</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-debit" placeholder="예) 0" oninput="calcYE()" /><span class="unit">만원</span></div>
+        <div class="field-hint">30% 공제</div>
+      </div>      <div class="field">
+        <div class="field-label"><span>전통시장</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-market" placeholder="예) 0" oninput="calcYE()" /><span class="unit">만원</span></div>
+        <div class="field-hint">40% 공제</div>
+      </div>      <div class="field">
+        <div class="field-label"><span>대중교통</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-transit" placeholder="예) 0" oninput="calcYE()" /><span class="unit">만원</span></div>
+        <div class="field-hint">40% 공제</div>
+      </div>      <div class="field">
+        <div class="field-label"><span>도서·공연·박물관·영화·체육시설</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-culture" placeholder="예) 0" oninput="calcYE()" /><span class="unit">만원</span></div>
+        <div class="field-hint">총급여 7천만원 이하 30%. 7천만원 초과면 신용카드로 계산</div>
+      </div>
+    </details>
+    <details class="card ye-sec">
+      <summary><span><b>연금저축·보험료</b><small>세액공제 12~15%</small></span><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+      <div class="field">
+        <div class="field-label"><span>연금저축 납입액</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-saving" placeholder="예) 0" oninput="calcYE()" /><span class="unit">만원</span></div>
+        <div class="field-hint">연 600만원까지</div>
+      </div>      <div class="field">
+        <div class="field-label"><span>IRP·퇴직연금 납입액</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-irp" placeholder="예) 0" oninput="calcYE()" /><span class="unit">만원</span></div>
+        <div class="field-hint">연금저축과 합쳐 900만원까지</div>
+      </div>      <div class="field">
+        <div class="field-label"><span>보장성 보험료</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-protect" placeholder="예) 0" oninput="calcYE()" /><span class="unit">만원</span></div>
+        <div class="field-hint">연 100만원까지 12%</div>
+      </div>      <div class="field">
+        <div class="field-label"><span>장애인전용 보장성 보험료</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-insdis" placeholder="예) 0" oninput="calcYE()" /><span class="unit">만원</span></div>
+        <div class="field-hint">연 100만원까지 15%</div>
+      </div>
+    </details>
+    <details class="card ye-sec">
+      <summary><span><b>의료비</b><small>총급여 3% 초과분부터 15%</small></span><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+      <div class="field">
+        <div class="field-label"><span>부양가족 일반 의료비</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-medgen" placeholder="예) 0" oninput="calcYE()" /><span class="unit">만원</span></div>
+        <div class="field-hint">연 700만원 한도</div>
+      </div>      <div class="field">
+        <div class="field-label"><span>본인·6세 이하·65세 이상·장애인 의료비</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-medsp" placeholder="예) 0" oninput="calcYE()" /><span class="unit">만원</span></div>
+        <div class="field-hint">한도 없음</div>
+      </div>      <div class="field">
+        <div class="field-label"><span>미숙아·선천성이상아 의료비</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-medpre" placeholder="예) 0" oninput="calcYE()" /><span class="unit">만원</span></div>
+        <div class="field-hint">20% 공제</div>
+      </div>      <div class="field">
+        <div class="field-label"><span>난임시술비</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-medinf" placeholder="예) 0" oninput="calcYE()" /><span class="unit">만원</span></div>
+        <div class="field-hint">30% 공제</div>
+      </div>
+    </details>
+    <details class="card ye-sec">
+      <summary><span><b>교육비</b><small>15% 세액공제</small></span><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+      <div class="field">
+        <div class="field-label"><span>본인 교육비</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-eduself" placeholder="예) 0" oninput="calcYE()" /><span class="unit">만원</span></div>
+        <div class="field-hint">대학원·직업훈련 포함, 한도 없음</div>
+      </div>      <div class="field">
+        <div class="field-label"><span>취학 전·초중고 자녀 교육비 합계</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-edukid" placeholder="예) 0" oninput="calcYE()" /><span class="unit">만원</span></div>
+        <div class="field-hint">1명당 300만원 한도. 초등 1~2학년 예체능 학원비 포함(2026년~)</div>
+      </div>      <div class="field">
+        <div class="field-label"><span>그 자녀 수</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-edukidn" placeholder="예) 0" oninput="calcYE()" /><span class="unit">명</span></div>
+        
+      </div>      <div class="field">
+        <div class="field-label"><span>대학생 자녀·배우자 교육비 합계</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-educol" placeholder="예) 0" oninput="calcYE()" /><span class="unit">만원</span></div>
+        <div class="field-hint">1명당 900만원 한도</div>
+      </div>      <div class="field">
+        <div class="field-label"><span>그 대학생 수</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-educoln" placeholder="예) 0" oninput="calcYE()" /><span class="unit">명</span></div>
+        
+      </div>
+    </details>
+    <details class="card ye-sec">
+      <summary><span><b>기부금·월세</b><small>기부 15~30%, 월세 15~17%</small></span><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+      <div class="field">
+        <div class="field-label"><span>특례기부금 (국가·재난 등)</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-donsp" placeholder="예) 0" oninput="calcYE()" /><span class="unit">만원</span></div>
+        
+      </div>      <div class="field">
+        <div class="field-label"><span>일반기부금 (종교단체 외)</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-dongen" placeholder="예) 0" oninput="calcYE()" /><span class="unit">만원</span></div>
+        
+      </div>      <div class="field">
+        <div class="field-label"><span>종교단체 기부금</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-donrel" placeholder="예) 0" oninput="calcYE()" /><span class="unit">만원</span></div>
+        
+      </div>      <div class="field">
+        <div class="field-label"><span>월세 (연간 합계)</span></div>
+        <div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="ye-rent" placeholder="예) 0" oninput="calcYE()" /><span class="unit">만원</span></div>
+        <div class="field-hint">무주택 세대주, 총급여 8천만원 이하, 연 1,000만원 한도</div>
+      </div>
+    </details>
+        <button type="button" class="ds-btn-calc" data-calc-submit="calcYE" data-result="ye-result" data-required="ye-salary">계산하기</button>
+      </div>
+    </section>
+
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="ye-result">
+        <div class="result-highlight"><div class="rh-label" id="ye-r-label">예상 환급액</div><div class="rh-value" id="ye-r-main">-</div><div class="rh-sub" id="ye-r-sub">-</div></div>
+        <div id="ye-r-rows"></div>
+        <ul class="ye-tips" id="ye-r-tips"></ul>
+        <p class="result-note">2026년 귀속 현행 세법 기준 참고치입니다(2026.10.29 확인). 주택담보대출 이자, 중소기업 취업자 감면, 고향사랑기부금, 근무지 2곳 이상은 반영하지 않습니다. 국회에 제출된 2026년 세법개정안은 통과 전이라 넣지 않았습니다.</p>
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('ye-result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/tax/medical-expense/">의료비 공제 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">예상 환급액</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">총급여를 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="year-end-tax-next">
+        <a class="ds-next-card" href="/calc/salary/take-home-pay/" data-next="take-home-pay"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-briefcase"></use></svg></span><span class="ds-next-body"><b>연봉 실수령액 계산기</b><span>월급에서 떼는 4대보험·소득세(간이세액표)를 확인합니다</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/tax/medical-expense/" data-next="medical-expense"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-receipt"></use></svg></span><span class="ds-next-body"><b>의료비 세액공제 계산기</b><span>의료비 공제액만 따로 자세히 계산합니다</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+    </section>
+  </div>
+
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">소득세법(2025.12.23·2026.4.21 개정) 제47조~제61조, 조세특례제한법 제87조·제92조·제95조의2·제126조의2(2025.12.23 개정) <a href="https://www.law.go.kr/법령/소득세법" target="_blank" rel="noopener">관련 법령 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#year-end-tax-s1">계산 순서</a><a href="#year-end-tax-s2">2026 달라진 점</a><a href="#year-end-tax-s3">공제·세율표</a><a href="#year-end-tax-s4">계산 예시</a><a href="#year-end-tax-s5">개정 추진 중</a><a href="#year-end-tax-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+
+  <div class="guide-section">
+            <section class="ds-section ds-prose" aria-labelledby="year-end-tax-s1">
+          <div class="ds-section-head"><h2 id="year-end-tax-s1">연말정산은 이 순서로 계산됩니다</h2></div>
+<p>연말정산은 1년 동안 월급에서 미리 뗀 소득세(기납부세액)를 실제 1년치 세금(결정세액)과 맞추는 절차입니다. 결정세액이 기납부세액보다 적으면 돌려받고, 많으면 2월 급여에서 더 냅니다. 지방소득세는 소득세의 10%라 함께 움직입니다.</p>
+      <ol>
+        <li>총급여 - 근로소득공제 = 근로소득금액</li>
+        <li>근로소득금액 - 인적공제 - 국민연금 - 건강·고용보험 - 주택자금 - 신용카드 공제 = 과세표준</li>
+        <li>과세표준 × 세율(6~45%) = 산출세액</li>
+        <li>산출세액 - 근로소득·자녀·연금계좌·보험료·의료비·교육비·기부금·월세 세액공제 = 결정세액</li>
+        <li>결정세액 - 기납부세액 = 환급(마이너스) 또는 추가 납부(플러스), 여기에 지방소득세 10%</li>
+      </ol>
+      <p>건강·고용보험 소득공제, 주택자금 공제, 특별세액공제(보험료·의료비·교육비·기부금), 월세 세액공제를 하나도 받지 않으면 대신 표준세액공제 13만원을 받습니다. 계산기는 두 경우를 모두 계산해 유리한 쪽을 보여줍니다. 주택청약·신용카드 소득공제와 자녀·연금저축 세액공제는 어느 쪽이든 받습니다.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="year-end-tax-s2">
+          <div class="ds-section-head"><h2 id="year-end-tax-s2">2026년 귀속에서 달라진 점</h2></div>
+<p class="ds-table-lead">2027년 1~2월 연말정산에 적용되는 개정 내용입니다. 모두 이미 공포된 법령 기준입니다.</p>
+      <div class="ds-table-card">
+        <table>
+          <thead><tr><th>항목</th><th>2025년 귀속</th><th>2026년 귀속</th><th>근거</th></tr></thead>
+          <tbody>
+            <tr><td>자녀세액공제 대상 나이</td><td>8세 이상</td><td>9세 이상(2017년생 제외)</td><td>소득세법 부칙 2026.4.21. 제2조</td></tr>
+            <tr><td>신용카드 공제 기본한도 (총급여 7천만원 이하)</td><td>300만원</td><td>자녀 1명 350만원, 2명 이상 400만원</td><td>조특법 제126조의2⑩</td></tr>
+            <tr><td>신용카드 공제 기본한도 (7천만원 초과)</td><td>250만원</td><td>자녀 1명 275만원, 2명 이상 300만원</td><td>조특법 제126조의2⑩</td></tr>
+            <tr><td>월세 세액공제</td><td>세대주(또는 세대원) 1명</td><td>주소가 다른 배우자도 추가 공제(부부 합산 1,000만원)</td><td>조특법 제95조의2②</td></tr>
+            <tr><td>교육비 세액공제</td><td>취학 전 아동 학원비</td><td>초등 1~2학년 예체능 학원·체육시설 수강료 추가</td><td>소득세법 제59조의4③</td></tr>
+          </tbody>
+        </table>
+      </div>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="year-end-tax-s3">
+          <div class="ds-section-head"><h2 id="year-end-tax-s3">2026년 공제·세율표</h2></div>
+<p style="font-size:14px;color:var(--gray-600);margin-bottom:12px">과세표준 1,400만원까지 6%, 5,000만원까지 15%이고, 근로소득세액공제는 총급여 3,300만원 이하 74만원이 한도입니다.</p>
+      <h3>종합소득세율 (소득세법 제55조)</h3>
+      <div class="ds-table-card">
+        <table>
+          <thead><tr><th>과세표준</th><th>세율</th><th>누진 정액</th></tr></thead>
+          <tbody>
+            <tr><td>1,400만원 이하</td><td>6%</td><td>-</td></tr>
+            <tr><td>1,400만원 ~ 5,000만원</td><td>15%</td><td>84만원 + 초과분</td></tr>
+            <tr><td>5,000만원 ~ 8,800만원</td><td>24%</td><td>624만원 + 초과분</td></tr>
+            <tr><td>8,800만원 ~ 1억5천만원</td><td>35%</td><td>1,536만원 + 초과분</td></tr>
+            <tr><td>1억5천만원 ~ 3억원</td><td>38%</td><td>3,706만원 + 초과분</td></tr>
+            <tr><td>3억원 ~ 5억원</td><td>40%</td><td>9,406만원 + 초과분</td></tr>
+            <tr><td>5억원 ~ 10억원</td><td>42%</td><td>1억7,406만원 + 초과분</td></tr>
+            <tr><td>10억원 초과</td><td>45%</td><td>3억8,406만원 + 초과분</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>근로소득공제 (소득세법 제47조, 한도 2,000만원)</h3>
+      <div class="ds-table-card">
+        <table>
+          <thead><tr><th>총급여</th><th>공제액</th></tr></thead>
+          <tbody>
+            <tr><td>500만원 이하</td><td>총급여의 70%</td></tr>
+            <tr><td>500만원 ~ 1,500만원</td><td>350만원 + 초과분 40%</td></tr>
+            <tr><td>1,500만원 ~ 4,500만원</td><td>750만원 + 초과분 15%</td></tr>
+            <tr><td>4,500만원 ~ 1억원</td><td>1,200만원 + 초과분 5%</td></tr>
+            <tr><td>1억원 초과</td><td>1,475만원 + 초과분 2%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>주요 세액공제 (2026년 귀속)</h3>
+      <div class="ds-table-card">
+        <table>
+          <thead><tr><th>항목</th><th>공제율·금액</th><th>한도·조건</th></tr></thead>
+          <tbody>
+            <tr><td>근로소득세액공제</td><td>산출세액 130만원 이하 55%, 초과분 30%</td><td>총급여 3,300만원 이하 74만원 ~ 1억2천만원 초과 최저 20만원</td></tr>
+            <tr><td>자녀세액공제</td><td>1명 25만원 · 2명 55만원 · 3명부터 1명당 40만원 추가</td><td>9세 이상 20세 이하(2017년생 제외)</td></tr>
+            <tr><td>출산·입양</td><td>첫째 30만원 · 둘째 50만원 · 셋째 이상 70만원</td><td>2026년 출산·입양</td></tr>
+            <tr><td>연금저축·IRP</td><td>15%(총급여 5,500만원 이하) / 12%</td><td>연금저축 600만원, 합계 900만원</td></tr>
+            <tr><td>보장성 보험료</td><td>12%(장애인전용 15%)</td><td>각 연 100만원</td></tr>
+            <tr><td>의료비</td><td>15%(미숙아 20%, 난임 30%)</td><td>총급여 3% 초과분, 일반 부양가족 700만원</td></tr>
+            <tr><td>교육비</td><td>15%</td><td>취학 전·초중고 1명 300만원, 대학생 900만원, 본인 무제한</td></tr>
+            <tr><td>기부금</td><td>15%(1천만원 초과분 30%)</td><td>일반기부금 근로소득금액의 30%(종교 10%)</td></tr>
+            <tr><td>월세</td><td>17%(총급여 5,500만원 이하) / 15%</td><td>총급여 8천만원 이하, 연 1,000만원</td></tr>
+            <tr><td>혼인</td><td>50만원</td><td>2026년 혼인신고, 생애 1회</td></tr>
+            <tr><td>표준세액공제</td><td>13만원</td><td>특별공제·월세를 신청하지 않을 때</td></tr>
+          </tbody>
+        </table>
+      </div>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="year-end-tax-s4">
+          <div class="ds-section-head"><h2 id="year-end-tax-s4">실제 계산 예시</h2></div>
+<p class="ds-table-lead">위 계산기에 아래 값을 넣어 나온 결과입니다. 기납부세액은 2026년 간이세액표 추정치입니다.</p>
+      <h3>예시 1 - 김민수(31세), 미혼, 총급여 3,500만원, 월세</h3>
+      <p>혼자 사는 무주택 세대주로 월세 60만원(연 720만원)을 냅니다. 신용카드 1,200만원, 체크카드 300만원, 대중교통 60만원을 쓰고 연금저축에 300만원을 넣었습니다.</p>
+      <ul>
+<li>근로소득금액: 24,500,000원 (근로소득공제 10,500,000원)</li><li>과세표준: 17,971,416원 → 산출세액 1,435,712원</li><li>세액공제 합계: 1,435,712원 (공제 2,398,000원 중 산출세액까지만 인정)</li><li>결정세액 0원 - 기납부세액(추정) 794,640원</li>
+        <li><strong>결과: 환급 약 874,100원</strong> (지방소득세 포함)</li>
+      </ul>
+      <h3>예시 2 - 이수진(38세), 맞벌이, 총급여 6,000만원, 자녀 2명</h3>
+      <p>배우자도 소득이 있어 자녀 2명(2016년생·2019년생)을 이수진씨가 공제받습니다. 자녀세액공제는 9세 이상인 2016년생 1명만 해당합니다. 카드 2,600만원(전통시장 100만원 포함), 자녀 의료비 200만원, 초등 교육비 400만원, 보장성 보험 100만원, IRP 300만원입니다.</p>
+      <ul>
+<li>근로소득금액: 47,250,000원 (근로소득공제 12,750,000원)</li><li>과세표준: 34,269,570원 → 산출세액 3,880,436원</li><li>세액공제 합계: 2,020,000원</li><li>결정세액 1,860,430원 - 기납부세액(추정) 2,604,240원</li>
+        <li><strong>결과: 환급 약 818,190원</strong> (지방소득세 포함)</li>
+      </ul>
+      <h3>예시 3 - 박정호(52세), 총급여 4,000만원, 70대 어머니 부양</h3>
+      <p>72세 어머니를 부양가족으로 올렸고 어머니 병원비 300만원(65세 이상이라 한도 없음)을 냈습니다. 신용카드 1,500만원, 일반기부금 100만원입니다.</p>
+      <ul>
+<li>근로소득금액: 28,750,000원 (근로소득공제 11,250,000원)</li><li>과세표준: 20,113,047원 → 산출세액 1,756,957원</li><li>세액공제 합계: 1,104,000원</li><li>결정세액 652,950원 - 기납부세액(추정) 1,010,760원</li>
+        <li><strong>결과: 환급 약 393,590원</strong> (지방소득세 포함)</li>
+      </ul>
+
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="year-end-tax-s5">
+          <div class="ds-section-head"><h2 id="year-end-tax-s5">국회 심사 중인 개정안 (계산에 미반영)</h2></div>
+<p>정부가 2026년 9월 1일 국무회의에서 확정해 국회에 내기로 한 세법개정안에는 아래 내용이 들어 있습니다. 국회를 통과하지 않았고 적용 시기도 정해지지 않아 계산에는 넣지 않았습니다. 12월 국회 의결 후 2026년 귀속분에 적용되는 항목이 있으면 반영합니다.</p>
+      <ul>
+        <li>배우자·부양가족 기본공제 소득기준: 소득금액 100만원 → 300만원, 총급여 500만원 → 750만원</li>
+        <li>월세 세액공제 한도 1,000만원 → 1,200만원, 15~34세 청년 공제율 추가</li>
+        <li>15~34세 청년 IRP 납입액 15% 추가 공제</li>
+        <li>혼인·출산 세액공제를 재정지원 방식으로 전환</li>
+        <li>신용카드 대중교통 추가공제 폐지·기본공제 일원화</li>
+      </ul>
+        </section>
+            <section class="ds-section faq-card" aria-labelledby="year-end-tax-faq">
+          <div class="ds-section-head"><h2 id="year-end-tax-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>연말정산 환급액은 어떻게 계산되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>1년 동안 회사가 월급에서 떼어 낸 소득세(기납부세액)와 연말정산으로 확정한 1년치 세금(결정세액)의 차이입니다. 결정세액은 총급여에서 근로소득공제와 소득공제를 빼 과세표준을 구하고, 6~45% 세율로 산출세액을 낸 뒤 세액공제를 빼서 정합니다. 결정세액이 기납부세액보다 적으면 차액과 그 10%인 지방소득세를 돌려받고, 많으면 더 냅니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>2026년 귀속 연말정산에서 달라진 점은 무엇인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>자녀세액공제 대상 나이가 8세 이상에서 9세 이상으로 바뀌었고 2017년생은 대상에서 빠집니다(소득세법 부칙 2026.4.21.). 신용카드 소득공제 한도는 20세 이하 자녀가 있으면 늘어나 총급여 7천만원 이하는 자녀 1명 350만원, 2명 이상 400만원이 됩니다. 월세 세액공제는 주소가 다른 배우자도 추가로 받을 수 있게 됐고, 초등 1~2학년 예체능 학원비가 교육비 공제에 들어갑니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>기납부세액은 어디서 확인하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>근로소득 원천징수영수증의 '기납부세액' 소득세 칸, 또는 1월~12월 급여명세서의 소득세를 모두 더한 금액입니다. 아직 12월 급여를 받기 전이라면 지금까지 낸 금액에 남은 달 예상분을 더해 넣으세요. 이 계산기에 비워 두면 2026년 근로소득 간이세액표로 1년치를 추정합니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>신용카드는 얼마나 써야 공제를 받나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>카드·체크카드·현금영수증 사용액 합계가 총급여의 25%를 넘어야 넘는 부분부터 공제됩니다. 총급여 4,000만원이면 1,000만원까지는 공제가 없습니다. 넘는 부분은 신용카드 15%, 체크카드·현금영수증 30%, 전통시장·대중교통 40%, 도서·공연·박물관·영화·체육시설 30%(총급여 7천만원 이하)로 공제합니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>자녀세액공제는 몇 살부터 받나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>2026년 귀속분은 9세 이상 20세 이하 기본공제대상 자녀가 대상이고 2017년생은 제외됩니다. 실제로는 2006년~2016년생 자녀입니다. 1명 25만원, 2명 55만원, 3명부터 1명당 40만원이 더해집니다. 2026년에 출산·입양했다면 첫째 30만원, 둘째 50만원, 셋째 이상 70만원을 따로 공제합니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>표준세액공제와 특별세액공제 중 무엇이 적용되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>건강·고용보험료 소득공제, 주택자금 공제, 보험료·의료비·교육비·기부금 세액공제, 월세 세액공제를 하나도 신청하지 않으면 13만원 표준세액공제를 받습니다. 하나라도 신청하면 표준세액공제는 받을 수 없습니다. 이 계산기는 두 방식을 모두 계산해 세금이 적은 쪽을 결과로 보여줍니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>월세 세액공제는 누가 받을 수 있나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>연말 기준 무주택 세대의 세대주(세대주가 받지 않으면 세대원)로 총급여 8천만원 이하인 근로자가, 국민주택규모 또는 기준시가 4억원 이하 주택에 살며 주민등록 주소와 임대차계약 주소가 같을 때 받습니다. 월세의 15%(총급여 5,500만원 이하 17%)를 연 1,000만원 한도로 공제합니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>의료비는 얼마부터 공제되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>1년 의료비가 총급여의 3%를 넘는 부분부터 15%를 공제합니다. 총급여 4,000만원이면 120만원을 넘는 금액부터입니다. 부양가족 일반 의료비는 연 700만원 한도이고, 본인·6세 이하·65세 이상·장애인 의료비는 한도가 없습니다. 미숙아·선천성이상아는 20%, 난임시술비는 30%입니다.</p>
+            </details>
+      <div class="update-note">최종 검토: 2026.10.29 · 계산 결과는 참고용입니다.</div>
+          </div>
+        </section>
+  </div>
+    </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '소득세법(법률 제21221호·제21548호)·조세특례제한법(법률 제21223호) 2026년 귀속 현행 규정',
+    appliedFrom: '2026년 1월 1일 ~ 12월 31일 소득 (2027년 1~2월 연말정산)',
+    exceptions: [
+      '주택담보대출 이자, 중소기업 취업자 감면, 고향사랑기부금, 근무지 2곳 이상은 반영하지 않습니다',
+      '국회 심사 중인 2026년 세법개정안은 통과 후 적용 여부를 확인해 반영합니다',
+      '기납부세액·4대보험을 비우면 2026년 간이세액표·요율로 추정합니다',
+    ],
+    references: [
+      { name: '소득세법(국가법령정보센터)', url: 'https://www.law.go.kr/법령/소득세법' },
+      { name: '조세특례제한법(국가법령정보센터)', url: 'https://www.law.go.kr/법령/조세특례제한법' },
+      { name: '국세청 연말정산 안내', url: 'https://www.nts.go.kr' },
+    ],
+    lastReviewed: '2026.10',
+  };
+  </script>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
+  <div class="sibling-section">
+    <h2 class="sibling-title">다른 이직/연봉 계산기</h2>
+    <div class="sibling-list">
+      <a href="/calc/salary/take-home-pay/" class="sibling-link">연봉 실수령액</a>
+      <a href="/calc/salary/comparison/" class="sibling-link">연봉 비교</a>
+      <a href="/calc/salary/hourly-wage/" class="sibling-link">시급·일급 변환</a>
+      <a href="/calc/salary/weekly-holiday-pay/" class="sibling-link">주휴수당</a>
+      <a href="/calc/salary/annual-leave-pay/" class="sibling-link">연차수당</a>
+      <a href="/calc/salary/ordinary-wage/" class="sibling-link">통상임금</a>
+      <a href="/calc/salary/average-wage/" class="sibling-link">평균임금</a>
+      <a href="/calc/salary/premium-pay/" class="sibling-link">가산수당</a>
+      <a href="/calc/salary/bonus-pay/" class="sibling-link">성과급 실수령</a>
+      <a href="/calc/salary/job-change/" class="sibling-link">이직 연봉 비교</a>
+      <a href="/calc/salary/raise-rate/" class="sibling-link">연봉 인상률</a>
+      <a href="/calc/salary/dismissal-notice-pay/" class="sibling-link">해고예고수당</a>
+      <a href="/calc/salary/severance/" class="sibling-link">퇴직금</a>
+      <a href="/calc/salary/unemployment/" class="sibling-link">실업급여</a>
+    </div>
+  </div>
+</main>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
+  </div>
+</footer>
+
+<script src="/assets/ds/calc-kit.js?v=806eb872"></script>
+<script src="/assets/salary-tax-table.js?v=2875fe71"></script>
+<script>
+// ===== YE-ENGINE START (2026년 귀속 근로소득 연말정산, 금액 단위: 원) =====
+// 근거: data-points §66 (소득세법 2025.12.23·2026.4.21 개정, 조특법 2025.12.23 개정, 각 시행령 2026.2.27 개정)
+const YE = (function () {
+  const MAN = 10000;
+  // 구간표: [하한, 하한까지의 누적액, 초과분 율]
+  const bracket = (T, x) => { let r = T[0]; for (const t of T) if (x > t[0]) r = t; return r[1] + (x - r[0]) * r[2]; };
+  // 근로소득공제 (소법 §47, 한도 2천만원)
+  const EARN_DED = [[0, 0, 0.70], [500 * MAN, 350 * MAN, 0.40], [1500 * MAN, 750 * MAN, 0.15], [4500 * MAN, 1200 * MAN, 0.05], [10000 * MAN, 1475 * MAN, 0.02]];
+  // 종합소득세율 (소법 §55)
+  const RATE = [[0, 0, 0.06], [1400 * MAN, 84 * MAN, 0.15], [5000 * MAN, 624 * MAN, 0.24], [8800 * MAN, 1536 * MAN, 0.35],
+    [15000 * MAN, 3706 * MAN, 0.38], [30000 * MAN, 9406 * MAN, 0.40], [50000 * MAN, 17406 * MAN, 0.42], [100000 * MAN, 38406 * MAN, 0.45]];
+
+  function earnedDeduction(sal) { return Math.min(Math.min(bracket(EARN_DED, sal), sal), 2000 * MAN); }
+  function taxOn(base) { return base > 0 ? bracket(RATE, base) : 0; }
+
+  // 근로소득세액공제 (소법 §59)
+  function earnedCredit(calcTax, sal) {
+    const c = calcTax <= 130 * MAN ? calcTax * 0.55 : 71.5 * MAN + (calcTax - 130 * MAN) * 0.30;
+    let lim;
+    if (sal <= 3300 * MAN) lim = 74 * MAN;
+    else if (sal <= 7000 * MAN) lim = Math.max(74 * MAN - (sal - 3300 * MAN) * 0.008, 66 * MAN);
+    else if (sal <= 12000 * MAN) lim = Math.max(66 * MAN - (sal - 7000 * MAN) / 2, 50 * MAN);
+    else lim = Math.max(50 * MAN - (sal - 12000 * MAN) / 2, 20 * MAN);
+    return Math.min(c, lim);
+  }
+
+  // 신용카드 등 소득공제 (조특 §126조의2, 2026 사용분)
+  function cardDeduction(sal, c, kids) {
+    const low = sal <= 7000 * MAN;
+    const market = c.market || 0, transit = c.transit || 0, debit = c.debit || 0;
+    // 총급여 7천만원 초과면 문화체육 30% 구분이 없어 결제수단 기준(신용 15%)으로 본다
+    const culture = low ? (c.culture || 0) : 0;
+    const credit = (c.credit || 0) + (low ? 0 : (c.culture || 0));
+    const total = market + transit + culture + debit + credit;
+    const min = sal * 0.25;
+    if (total <= min) return { ded: 0, total, min };
+    const gross = market * 0.4 + transit * 0.4 + culture * 0.3 + debit * 0.3 + credit * 0.15;
+    let d6;
+    if (min <= credit) d6 = min * 0.15;
+    else if (min <= credit + debit + culture) d6 = credit * 0.15 + (min - credit) * 0.30;
+    else d6 = credit * 0.15 + (debit + culture) * 0.30 + (min - credit - debit - culture) * 0.40;
+    const ded = Math.max(gross - d6, 0);
+    const k = Math.min(kids || 0, 2);
+    const base = low ? [300, 350, 400][k] * MAN : [250, 275, 300][k] * MAN;
+    if (ded <= base) return { ded, total, min, base };
+    const extraSrc = market * 0.4 + transit * 0.4 + (low ? culture * 0.3 : 0);
+    const extraCap = low ? 300 * MAN : 200 * MAN;
+    const extra = Math.min(ded - base, Math.min(extraSrc, extraCap));
+    return { ded: base + extra, total, min, base, extra };
+  }
+
+  // 의료비 세액공제 (소법 §59조의4②)
+  function medicalCredit(sal, m) {
+    const th = sal * 0.03;
+    const gen = m.general || 0, sp = m.special || 0, pre = m.preemie || 0, inf = m.infertility || 0;
+    let short = Math.max(th - gen, 0);
+    const g = Math.min(Math.max(gen - th, 0), 700 * MAN);
+    const s = Math.max(sp - short, 0); short = Math.max(short - sp, 0);
+    const p = Math.max(pre - short, 0); short = Math.max(short - pre, 0);
+    const i = Math.max(inf - short, 0);
+    return (g + s) * 0.15 + p * 0.20 + i * 0.30;
+  }
+
+  // 기부금 세액공제 (소법 §59조의4④): 특례 → 일반 순서, 1천만원 초과분 30%
+  function donationCredit(incomeAmt, d) {
+    const sp = Math.min(d.special || 0, incomeAmt);
+    const rest = Math.max(incomeAmt - sp, 0);
+    const non = d.general || 0, rel = d.religious || 0;
+    const lim = rel > 0 ? rest * 0.10 + Math.min(rest * 0.20, non) : rest * 0.30;
+    const gen = Math.min(non + rel, lim);
+    const base = sp + gen;
+    return Math.min(base, 1000 * MAN) * 0.15 + Math.max(base - 1000 * MAN, 0) * 0.30;
+  }
+
+  function run(o, itemized) {
+    const sal = o.salary;
+    const earnDed = earnedDeduction(sal);
+    const earnInc = sal - earnDed;
+    // 인적공제 (§50·51, 합계는 근로소득금액 한도)
+    const nBasic = 1 + (o.spouse ? 1 : 0) + (o.parents || 0) + (o.children || 0) + (o.otherDeps || 0);
+    let personal = nBasic * 150 * MAN + (o.elderly70 || 0) * 100 * MAN + (o.disabled || 0) * 200 * MAN;
+    if (o.singleParent) personal += 100 * MAN;
+    else if (o.woman && earnInc <= 3000 * MAN) personal += 50 * MAN;
+    personal = Math.min(personal, earnInc);
+    const pension = o.insPension || 0;
+    // 건강·고용보험과 주택임차차입금은 특별소득공제(소법 §52)라 표준세액공제와 같이 못 받는다.
+    // 주택청약(조특 §87②)은 특별소득공제가 아니라 표준세액공제와 함께 받는다(소법 §59조의4⑨1호). 두 공제 합계 400만원 한도
+    const special = itemized ? (o.insHealth || 0) + (o.insEmp || 0) : 0;
+    const loan = itemized ? (o.rentLoanRepay || 0) * 0.40 : 0;
+    const sub = sal <= 7000 * MAN ? Math.min(o.subscription || 0, 300 * MAN) * 0.40 : 0;
+    const housing = Math.min(loan + sub, 400 * MAN);
+    const card = cardDeduction(sal, o.card || {}, o.cardKids != null ? o.cardKids : (o.children || 0));
+    const base = Math.max(earnInc - personal - pension - special - housing - card.ded, 0);
+    const calcTax = taxOn(base);
+
+    const cEarn = earnedCredit(calcTax, sal);
+    const nc = o.childCredit || 0;
+    let cChild = nc === 0 ? 0 : nc === 1 ? 25 * MAN : nc === 2 ? 55 * MAN : 55 * MAN + (nc - 2) * 40 * MAN;
+    cChild += (o.birth1 ? 30 * MAN : 0) + (o.birth2 ? 50 * MAN : 0) + (o.birth3 ? 70 * MAN : 0);
+    const save = Math.min(o.pensionSaving || 0, 600 * MAN);
+    const pAcc = Math.min(save + (o.irp || 0), 900 * MAN);
+    const cPension = pAcc * (sal <= 5500 * MAN ? 0.15 : 0.12);
+    const cMarriage = o.marriage ? 50 * MAN : 0;
+    let cIns = 0, cMed = 0, cEdu = 0, cDon = 0, cRent = 0, cStd = 0;
+    if (itemized) {
+      cIns = Math.min(o.insProtect || 0, 100 * MAN) * 0.12 + Math.min(o.insDisabled || 0, 100 * MAN) * 0.15;
+      cMed = medicalCredit(sal, o.medical || {});
+      const e = o.edu || {};
+      const k12 = Math.min(e.k12 || 0, (e.k12Count || 0) * 300 * MAN);
+      const col = Math.min(e.college || 0, (e.collegeCount || 0) * 900 * MAN);
+      cEdu = ((e.self || 0) + k12 + col) * 0.15;
+      cDon = donationCredit(earnInc, o.donation || {});
+      if (sal <= 8000 * MAN) cRent = Math.min(o.rent || 0, 1000 * MAN) * (sal <= 5500 * MAN ? 0.17 : 0.15);
+    } else {
+      cStd = 13 * MAN;
+    }
+    const credits = cEarn + cChild + cPension + cMarriage + cIns + cMed + cEdu + cDon + cRent + cStd;
+    const decided = Math.max(calcTax - credits, 0);
+    return { itemized, sal, earnDed, earnInc, personal, pension, special, housing, card, base, calcTax,
+      cEarn, cChild, cPension, cMarriage, cIns, cMed, cEdu, cDon, cRent, cStd, credits, decided,
+      lostCredit: Math.max(credits - calcTax, 0) };
+  }
+
+  // 간이세액표로 기납부세액(연간) 추정: 공용 /assets/salary-tax-table.js (소득령 별표2, 2026.2.27 개정)
+  function estimatePaid(sal, depCount, childCount) { return JPT_simplifiedTax(sal / 12, depCount, childCount) * 12; }
+  // 4대보험 근로자 부담분 추정 (take-home-pay와 같은 2026 요율)
+  // 국민연금 기준소득월액 상·하한: 2026.1~6월 40만~637만, 7~12월 41만~659만 (data-points §2.8)
+  function estimateIns(sal) {
+    const m = sal / 12;
+    const clamp = (lo, hi) => m > 0 ? Math.min(Math.max(m, lo), hi) : 0;
+    const pension = (clamp(400000, 6370000) * 6 + clamp(410000, 6590000) * 6) * 0.0475;
+    const health = m * 0.03595;
+    return { pension, health: (health + health * 0.1314) * 12, emp: m * 0.009 * 12 };
+  }
+
+  function calc(o) {
+    const A = run(o, true), B = run(o, false);
+    const best = B.decided < A.decided ? B : A;
+    const f10 = x => Math.floor(x / 10) * 10;  // 국세·지방세 10원 미만 절사
+    const decided = f10(best.decided), paid = f10(o.paidTax || 0);
+    const localDecided = f10(decided * 0.1), localPaid = f10(paid * 0.1);
+    return { best, itemizedRun: A, standardRun: B, decided, paid, diff: decided - paid, local: localDecided - localPaid,
+      total: (decided - paid) + (localDecided - localPaid) };
+  }
+  return { calc, run, estimatePaid, estimateIns, cardDeduction, medicalCredit, donationCredit, earnedCredit, earnedDeduction, taxOn };
+})();
+// ===== YE-ENGINE END =====
+
+const YE_SEG = { spouse: '0', birth: '0', status: '0', marriage: '0' };
+function yeSeg(name, btn) {
+  YE_SEG[name] = btn.dataset.v;
+  btn.parentElement.querySelectorAll('.seg-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  calcYE();
+}
+// 만원 입력 → 원. 빈칸은 null
+function yeIn(id) { const v = String(document.getElementById(id).value).replace(/,/g, '').trim(); if (v === '') return null; const n = parseFloat(v); return isFinite(n) && n >= 0 ? n : null; }
+function yeWon(id) { const n = yeIn(id); return n == null ? 0 : n * 10000; }
+function yeCnt(id) { const n = yeIn(id); return n == null ? 0 : Math.floor(n); }
+function yeFmt(won) { const a = Math.abs(Math.round(won)); return a.toLocaleString('ko-KR') + '원'; }
+
+function calcYE() {
+  const res = document.getElementById('ye-result');
+  const salMan = yeIn('ye-salary');
+  if (!salMan) { res.classList.remove('show'); return; }
+  const sal = salMan * 10000;
+  const children = yeCnt('ye-children');
+  const childCredit = Math.min(yeCnt('ye-childcredit'), children);
+  const spouse = YE_SEG.spouse === '1';
+  const est = YE.estimateIns(sal);
+  const insP = yeIn('ye-pension'), insH = yeIn('ye-health'), insE = yeIn('ye-emp');
+  const depCount = 1 + (spouse ? 1 : 0) + yeCnt('ye-parents') + children + yeCnt('ye-others');
+  const paidIn = yeIn('ye-paid');
+  const paidEst = paidIn == null;
+  const o = {
+    salary: sal,
+    paidTax: paidEst ? YE.estimatePaid(sal, depCount, childCredit) : paidIn * 10000,
+    spouse, parents: yeCnt('ye-parents'), children, otherDeps: yeCnt('ye-others'),
+    elderly70: yeCnt('ye-elderly'), disabled: yeCnt('ye-disabled'),
+    singleParent: YE_SEG.status === 'single', woman: YE_SEG.status === 'woman',
+    childCredit, birth1: YE_SEG.birth === '1', birth2: YE_SEG.birth === '2', birth3: YE_SEG.birth === '3',
+    marriage: YE_SEG.marriage === '1',
+    insPension: insP == null ? est.pension : insP * 10000,
+    insHealth: insH == null ? est.health : insH * 10000,
+    insEmp: insE == null ? est.emp : insE * 10000,
+    rentLoanRepay: yeWon('ye-loan'), subscription: yeWon('ye-sub'),
+    card: { credit: yeWon('ye-credit'), debit: yeWon('ye-debit'), market: yeWon('ye-market'), transit: yeWon('ye-transit'), culture: yeWon('ye-culture') },
+    cardKids: children,
+    pensionSaving: yeWon('ye-saving'), irp: yeWon('ye-irp'),
+    insProtect: yeWon('ye-protect'), insDisabled: yeWon('ye-insdis'),
+    medical: { general: yeWon('ye-medgen'), special: yeWon('ye-medsp'), preemie: yeWon('ye-medpre'), infertility: yeWon('ye-medinf') },
+    edu: { self: yeWon('ye-eduself'), k12: yeWon('ye-edukid'), k12Count: yeCnt('ye-edukidn'), college: yeWon('ye-educol'), collegeCount: yeCnt('ye-educoln') },
+    donation: { special: yeWon('ye-donsp'), general: yeWon('ye-dongen'), religious: yeWon('ye-donrel') },
+    rent: yeWon('ye-rent'),
+  };
+  const r = YE.calc(o), b = r.best;
+  res.classList.add('show');
+  const refund = r.total < 0;
+  document.getElementById('ye-r-label').textContent = refund ? '예상 환급액' : (r.total === 0 ? '정산 결과' : '예상 추가 납부액');
+  document.getElementById('ye-r-main').textContent = yeFmt(r.total);
+  document.getElementById('ye-r-sub').textContent = '소득세 ' + (r.diff < 0 ? '환급 ' : '납부 ') + yeFmt(r.diff) + ' + 지방소득세 ' + (r.local < 0 ? '환급 ' : '납부 ') + yeFmt(r.local);
+  const ded = b.personal + b.pension + b.special + b.housing + b.card.ded;
+  const rows = [
+    ['총급여', yeFmt(sal)],
+    ['근로소득공제', yeFmt(b.earnDed)],
+    ['근로소득금액', yeFmt(b.earnInc)],
+    ['소득공제 합계', yeFmt(ded)],
+    ['  인적공제', yeFmt(b.personal)],
+    ['  국민연금·건강·고용보험', yeFmt(b.pension + b.special)],
+    ['  신용카드 등', yeFmt(b.card.ded)],
+    ['과세표준', yeFmt(b.base)],
+    ['산출세액', yeFmt(b.calcTax)],
+    [b.lostCredit > 0 ? '세액공제 합계 (산출세액 한도)' : '세액공제 합계', yeFmt(Math.min(b.credits, b.calcTax))],
+    ['  근로소득세액공제', yeFmt(b.cEarn)],
+    ['  자녀·출산', yeFmt(b.cChild)],
+    ['  연금저축·IRP', yeFmt(b.cPension)],
+    [b.itemized ? '  보험·의료·교육·기부·월세' : '  표준세액공제', yeFmt(b.itemized ? b.cIns + b.cMed + b.cEdu + b.cDon + b.cRent : b.cStd)],
+    ['결정세액', yeFmt(r.decided)],
+    ['기납부세액' + (paidEst ? ' (간이세액표 추정)' : ''), yeFmt(r.paid)],
+  ];
+  if (b.housing > 0) rows.splice(7, 0, ['  주택자금·청약', yeFmt(b.housing)]);
+  if (b.cMarriage > 0) rows.splice(rows.length - 2, 0, ['  혼인', yeFmt(b.cMarriage)]);
+  document.getElementById('ye-r-rows').innerHTML = rows.map(([l, v]) => '<div class="result-row"><span class="result-label">' + l.replace(/^  /, '· ') + '</span><span class="result-value">' + v + '</span></div>').join('');
+  const tips = [];
+  tips.push(b.itemized ? '특별공제가 표준세액공제(13만원)보다 유리해 특별공제로 계산했습니다.' : '특별공제 합계가 작아 표준세액공제 13만원으로 계산했습니다.');
+  if (b.card.total > 0 && b.card.ded === 0) tips.push('카드 사용액이 총급여의 25%(' + yeFmt(b.card.min) + ')를 넘지 않아 카드 공제가 0원입니다.');
+  if (o.rent === 0 && sal <= 80000000) tips.push('무주택 세대주가 월세를 냈다면 월세의 ' + (sal <= 55000000 ? '17' : '15') + '%(연 1,000만원 한도)를 공제받을 수 있습니다.');
+  if (o.pensionSaving + o.irp === 0) tips.push('연금저축·IRP에 납입하면 900만원까지 ' + (sal <= 55000000 ? '15' : '12') + '%를 세액공제받습니다.');
+  if (b.lostCredit > 0) tips.push('세액공제 ' + yeFmt(b.lostCredit) + '은 산출세액을 넘어 사라집니다. 맞벌이라면 부양가족·의료비를 배우자 쪽으로 옮겨 보세요.');
+  if (paidEst) tips.push('기납부세액은 추정치입니다. 원천징수영수증의 실제 금액을 넣으면 정확해집니다.');
+  document.getElementById('ye-r-tips').innerHTML = tips.slice(0, 4).map(t => '<li>' + t + '</li>').join('');
+}
+</script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
+<script src="/assets/calc-registry.js?v=9128ce54"></script>
+<script src="/assets/ds/site-shell.js?v=408d3666"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '소득세법·조세특례제한법 2026년 귀속 현행 규정',
+  basisDate: '2026년 귀속',
+  referenceOrg: '국세청·국가법령정보센터',
+  lastReviewed: '2026.10.29',
+  category: 'salary'
+};
+</script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  DSCalc.auto({"card": "ye-result", "required": ["ye-salary"], "waitText": "총급여를 입력하면 계산됩니다", "nextBox": "#year-end-tax-next", "next": []});
+  DSCalc.placeTrust('ds-trust-col');
+</script>
+<script src="/assets/ds/prefill.js?v=7d81b350" defer></script>
+</body>
+</html>

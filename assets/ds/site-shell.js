@@ -90,7 +90,7 @@
     if (INDEX) return cb();
     if (window.CALC_REGISTRY) { INDEX = buildIndex(); return cb(); }
     var s = document.createElement('script');
-    s.src = '/assets/calc-registry.js?v=d25870c6';
+    s.src = '/assets/calc-registry.js?v=9128ce54';
     s.onload = function () { INDEX = buildIndex(); cb(); };
     document.head.appendChild(s);
   }
@@ -232,7 +232,7 @@
 
   // ── 배포 데이터(/assets/ds/*.json, build_home.py가 생성): 상황 시트·헤더 메뉴 공용. 처음 필요할 때 한 번 받는다 ──
   var DATA = {};
-  var DS_DATA_V = {"situations": "6aa9fb31", "cat-menu": "b65e6fe8"};   // 메뉴 데이터 캐시 버전(design/tools/asset_version.py가 파일 내용 해시로 채움)
+  var DS_DATA_V = {"situations": "6aa9fb31", "cat-menu": "c21c9c97"};   // 메뉴 데이터 캐시 버전(design/tools/asset_version.py가 파일 내용 해시로 채움)
   function load(name, ok, fail) {
     var d = DATA[name];
     if (d && d.v) return ok(d.v);
