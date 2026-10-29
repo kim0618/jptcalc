@@ -24,6 +24,8 @@ DESC = {}
 for k, _, _ in CATS:
     for slug, d in re.findall(r'<a class="calc-hub-card" href="/calc/' + k + r'/([a-z0-9-]+)/">.*?<div class="calc-hub-desc">(.*?)</div>', git(f'calc/{k}/index.html'), re.S):
         DESC[f'{k}/{slug}'] = tx(d)
+# a74cc04 이후 계산기 기능이 바뀐 곳만 덮어쓴다(2026-10-29 내신: 5등급제 추가)
+DESC['tools/naesin-grade'] = '석차와 수강자 수로 내신 등급(5등급제·9등급제)을 환산하고, 과목별 등급·학점으로 전과목 평균 내신등급(가중평균)까지 계산합니다.'
 
 def new_head(s, extra=''):
     h = s[s.index('<head>') + 6:s.index('</head>')]

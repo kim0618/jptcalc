@@ -32,7 +32,7 @@
     "logo": {"@type": "ImageObject", "url": "https://www.jptcalc.kr/android-chrome-512x512.png"}
   },
   "datePublished": "2026-06-11",
-  "dateModified": "2026-09-09",
+  "dateModified": "2026-10-29",
   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.jptcalc.kr/blog/posts/naesin-grade-guide.html"},
   "image": "https://www.jptcalc.kr/android-chrome-512x512.png",
   "articleSection": "생활·도구",
@@ -49,7 +49,7 @@
       "name": "내신 등급은 석차로 어떻게 계산하나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "먼저 석차백분율을 구합니다. 공식은 석차백분율 = (석차 + 동석차 인원 − 1) ÷ 수강자 수 × 100입니다. 동석차가 없으면 석차 ÷ 수강자 수 × 100과 같습니다. 이 백분율을 등급 기준표에 대입합니다. 예를 들어 250명 수강 과목에서 9등이면 9 ÷ 250 × 100 = 3.6%로, 9등급제에서는 상위 4% 이내라 1등급, 5등급제에서도 상위 10% 이내라 1등급입니다. 같은 석차라도 적용되는 등급제에 따라 등급이 달라질 수 있으니 본인 학년의 기준을 먼저 확인해야 합니다."
+        "text": "먼저 석차백분율(석차 ÷ 수강자 수 × 100)로 대략의 위치를 봅니다. 실제 등급은 수강자 수에 등급별 누적 비율을 곱해 반올림한 인원으로 끊습니다. 예를 들어 250명 수강 과목에서 9등이면 석차백분율은 3.6%이고, 9등급제 1등급은 250 × 4% = 10명, 5등급제 1등급은 250 × 10% = 25명까지라 두 제도 모두 1등급입니다. 동점자가 등급 경계에 걸치면 중간석차(석차 + (동석차 인원 − 1) ÷ 2)로 다시 판정합니다. 같은 석차라도 등급제에 따라 등급이 달라질 수 있으니 본인 학년의 기준을 먼저 확인해야 합니다."
       }
     },
     {
@@ -88,7 +88,7 @@
 ]}
   </script>
   <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
-  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=1ff0325a" />
 </head>
 <body data-cat="tools" style="--cat: var(--c-tools)">
 <header id="ds-site-header" class="ds-header">
@@ -101,12 +101,12 @@
 <main class="ds-post ds-container">
   <article>
     <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/blog/">블로그</a> &rsaquo; <a href="/blog/?cat=생활·도구">생활·도구</a></div>
-    <div class="ds-post-meta"><span class="ds-post-chip">생활·도구</span><span>2026.06.11</span><span>제이퍼 계산기 편집팀</span><span>24분 읽기</span></div>
+    <div class="ds-post-meta"><span class="ds-post-chip">생활·도구</span><span>2026.06.11</span><span>제이퍼 계산기 편집팀</span><span>25분 읽기</span></div>
     <h1 class="ds-post-title">내신등급 계산기 보는 법 2026 - 석차백분율·9등급제·5등급제 환산 총정리</h1>
     <picture><source media="(min-width: 1024px)" srcset="/assets/img/blog-thumb/naesin-grade-guide-16x9.webp" width="1280" height="720"><img class="ds-post-thumb is-cover" src="/assets/img/blog-thumb/naesin-grade-guide-3x1.webp" alt="상위 10% 5등급제 1등급 커트라인" width="1440" height="480" decoding="async" fetchpriority="high"></picture>
     <div class="ds-post-body ds-prose">
 <p>기말고사 성적표를 받아 들고 가장 먼저 하는 일은 거의 똑같습니다. "그래서 내 등급이 몇 등급이지?" 석차는 적혀 있는데 등급은 한 학기가 다 지나서야 나오니, 시험 직후에는 직접 환산해보는 수밖에 없습니다. 그런데 2025학년도부터 등급제가 바뀌면서 이 계산이 학년마다 달라졌습니다.</p>
-    <a class="ds-post-cta" href="/calc/tools/naesin-grade/" style="--cat: var(--c-tools)"><span class="ds-icon-tile"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-wrench"></use></svg></span><span class="ds-post-cta-body"><b>내신 등급 계산기</b><span>석차와 수강자 수로 내신 등급(9등급제)을 환산하고, 과목별 등급·이수단위로 전과목 평균 내신등급(가중평균)까지 계산합니다.</span></span><span class="ds-post-cta-go">계산하기 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></span></a>
+    <a class="ds-post-cta" href="/calc/tools/naesin-grade/" style="--cat: var(--c-tools)"><span class="ds-icon-tile"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-wrench"></use></svg></span><span class="ds-post-cta-body"><b>내신 등급 계산기</b><span>석차와 수강자 수로 내신 등급(5등급제·9등급제)을 환산하고, 과목별 등급·학점으로 전과목 평균 내신등급(가중평균)까지 계산합니다.</span></span><span class="ds-post-cta-go">계산하기 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></span></a>
 
     <details class="ds-post-toc"><summary>목차 (9)<svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary><ol><li><a href="#sec-1">석차백분율부터 - 모든 내신 등급의 출발점</a></li><li><a href="#sec-2">9등급제와 5등급제 - 2026년 내 학년은 어디에 있나</a></li><li><a href="#sec-3">실제 석차로 따져보는 등급 환산 시나리오</a></li><li><a href="#sec-4">1등급이 4%에서 10%로 늘었는데 더 불리해졌다는 말, 진짜일까</a></li><li><a href="#sec-5">전과목 평균 내신등급 - 가중평균이 핵심이다</a></li><li><a href="#sec-6">등급별 백분율을 알아야 지원선이 보인다</a></li><li><a href="#sec-7">자소서·일정 관리까지 함께 챙기기</a></li><li><a href="#sec-8">자주 묻는 질문</a></li><li><a href="#sec-9">한 줄 요약 - 석차백분율 먼저, 그다음 내 학년 기준표</a></li></ol></details>
 
@@ -131,16 +131,16 @@
     <h2 id="sec-1">석차백분율부터 - 모든 내신 등급의 출발점</h2>
     <p>내신 등급은 점수가 아니라 석차백분율로 정해집니다. 90점을 받아도 그 과목 평균이 88점이면 등급이 낮고, 70점을 받아도 다들 60점대면 등급이 높습니다. 절대 점수가 아니라 같은 과목을 들은 학생들 사이에서의 상대 위치가 등급을 결정합니다. 그래서 첫 단계는 무조건 석차백분율 계산입니다.</p>
     <p>공식은 다음과 같습니다.</p>
-    <div class="highlight-box"><p><strong>석차백분율 = (석차 + 동석차 인원 − 1) ÷ 수강자 수 × 100</strong><br>동석차가 없으면 (석차 ÷ 수강자 수 × 100)과 같습니다.</p></div>
+    <div class="highlight-box"><p><strong>석차백분율 = 석차 ÷ 수강자 수 × 100</strong><br>등급을 실제로 끊는 기준은 인원입니다. 등급별 누적 인원 = 수강자 수 × 누적 비율(반올림)이고, 내 석차가 이 인원 안에 들면 그 등급입니다.</p></div>
     <p>여기서 수강자 수는 그 과목을 들은 전체 학생 수입니다. 같은 학년 전체가 아니라 해당 과목 수강자 기준이라는 점이 중요합니다. 선택과목처럼 일부만 듣는 과목은 모집단 자체가 작아져서, 같은 석차라도 등급이 크게 달라집니다.</p>
-    <p>예를 들어 한 과목을 250명이 들었고 내가 9등이라면, 9 ÷ 250 × 100 = 3.6%입니다. 이 3.6%를 등급 기준표의 어느 구간에 들어가는지 보면 등급이 나옵니다. 핵심은 간단합니다. 백분율을 먼저 구하고, 그다음 표에 대입한다.</p>
+    <p>예를 들어 한 과목을 250명이 들었고 내가 9등이라면, 9 ÷ 250 × 100 = 3.6%입니다. 이 3.6%를 등급 기준표의 어느 구간에 들어가는지 보면 대부분 등급이 나옵니다. 다만 교육부훈령 「학교생활기록 작성 및 관리지침」 별표 9는 "등급별 누적 학생수는 수강자수와 누적 등급비율을 곱한 값을 반올림하여 계산한다"고 정합니다. 그래서 경계에서는 백분율과 등급이 어긋날 수 있습니다. 25명이 듣는 과목에서 3등이면 백분율은 12%지만, 5등급제 1등급 인원이 25 × 10% = 2.5를 반올림한 3명이라 1등급입니다. 수강자가 적은 선택과목일수록 이 반올림 효과가 큽니다.</p>
 
     <h3>동석차(공동 등수)일 때가 진짜 함정</h3>
-    <p>가장 많이 틀리는 부분이 동점자 처리입니다. 시험은 동점이 자주 나오고, 동점이면 석차도 공동으로 매겨집니다. 이때 공식의 "+ 동석차 인원 − 1"이 작동합니다.</p>
-    <p>3명이 공동 5등이라고 합시다(즉 5등, 5등, 5등). 이 세 명의 석차백분율은 모두 (5 + 3 − 1) ÷ 수강자 수 × 100으로 계산합니다. 수강자가 200명이면 (5 + 3 − 1) ÷ 200 × 100 = 7 ÷ 200 × 100 = 3.5%입니다. 공동 등수에서는 가장 불리한(아래) 위치를 기준으로 잡기 때문에, 동점자가 많을수록 백분율이 살짝 올라갑니다. 이 처리를 빼먹고 단순히 5 ÷ 200으로 계산하면 2.5%가 나와서 실제와 1%포인트 차이가 생기고, 등급 경계에 걸쳐 있으면 등급 자체가 바뀝니다.</p>
+    <p>가장 많이 틀리는 부분이 동점자 처리입니다. 지침은 동점자 모두에게 "해당 순위의 최상의 석차"를 주고 괄호 안에 동점자 수를 적게 합니다. 성적표에 "5(3)"이라고 나오면 3명이 공동 5등이라는 뜻입니다.</p>
+    <p>동점자 전원이 한 등급 안에 들어가면 그 등급을 그대로 받습니다. 등급 경계에 걸칠 때만 중간석차를 씁니다. 2026학년도 학교생활기록부 기재요령의 계산식은 중간석차 = 석차 + (동석차 인원 − 1) ÷ 2, 중간석차백분율 = 중간석차 ÷ 수강자 수 × 100입니다. 기재요령 예시로 96명 과목에서 1등 동점자가 19명이면 1등급 정원(9.6 → 10명)보다 많습니다. 중간석차 1 + (19 − 1) ÷ 2 = 10, 중간석차백분율 10 ÷ 96 × 100 = 10.42%로 10%를 넘으므로 19명 모두 2등급이고 1등급은 한 명도 없습니다. 반대로 120명 과목에서 2등 동점자가 15명이면 중간석차 9, 7.5%라 15명 모두 1등급입니다. 동점자를 "가장 아래 위치"로 계산하면 첫 예시는 맞지만 둘째 예시를 2등급으로 잘못 판정하게 됩니다.</p>
 
     <p style="margin: 1.2em 0">석차와 인원만 넣으면 동석차까지 반영해 자동 환산: <a href="../../calc/tools/naesin-grade/" style="font-weight: 600">내신 등급 계산기 → 석차백분율·등급 한 번에 확인</a></p>
-    <p class="ds-t-sub" style="font-size: var(--fs-meta); margin-top: -8px">계산기가 보여주는 등급은 9등급제 기준입니다. 5등급제(고1·고2)라면 계산기가 알려주는 석차백분율만 확인하고, 등급은 아래 비교표로 직접 대입하세요.</p>
+    <p class="ds-t-sub" style="font-size: var(--fs-meta); margin-top: -8px">계산기에서 5등급제(고1·고2)와 9등급제(고3)를 골라 쓸 수 있고, 인원 반올림과 중간석차 규정까지 반영합니다.</p>
 
     <h2 id="sec-2">9등급제와 5등급제 - 2026년 내 학년은 어디에 있나</h2>
     <p>여기서부터가 2026년의 핵심입니다. 교육부의 2028 대입제도 개편 확정안(2023년 10월 시안 발표, 12월 27일 확정)에 따라 고교 내신 평가가 기존 9등급 상대평가에서 5등급 상대평가로 전환됐고, 적용은 2025학년도 고1부터 단계적으로 시작됐습니다.</p>
@@ -277,7 +277,7 @@
     <div class="cta-box">
       <p>석차·인원만 넣으면 석차백분율과 등급, 전과목 평균 내신등급까지 한 번에</p>
       <a href="../../calc/tools/naesin-grade/" class="cta-btn">내신 등급 계산기 바로가기</a>
-      <p class="ds-t-sub" style="font-size: var(--fs-meta); margin-top: 8px">석차 환산 모드와 과목별 평균(가중평균) 모드를 모두 지원합니다. 단, 등급 환산은 9등급제 기준이니 5등급제(고1·고2)는 석차백분율만 참고해 위 비교표에 대입하세요.</p>
+      <p class="ds-t-sub" style="font-size: var(--fs-meta); margin-top: 8px">석차 환산 모드와 과목별 평균(가중평균) 모드를 모두 지원하고, 5등급제(고1·고2)와 9등급제(고3)를 골라 계산합니다.</p>
     </div>
 
     <div class="formda-box ds-bg-sub" style="border: 1px solid var(--line); border-radius: var(--radius-md); padding: 18px 20px; margin: 32px 0">
@@ -289,7 +289,7 @@
     <h2 id="sec-8">자주 묻는 질문</h2>
 
     <details class="faq-item"><summary><h3 class="faq-q">내신 등급은 석차로 어떻게 계산하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
-      <div class="faq-a">먼저 석차백분율을 구합니다. 공식은 석차백분율 = (석차 + 동석차 인원 − 1) ÷ 수강자 수 × 100입니다. 동석차가 없으면 석차 ÷ 수강자 수 × 100과 같습니다. 이 백분율을 등급 기준표에 대입합니다. 예를 들어 250명 수강 과목에서 9등이면 9 ÷ 250 × 100 = 3.6%로, 9등급제에서는 상위 4% 이내라 1등급, 5등급제에서도 상위 10% 이내라 1등급입니다. 같은 석차라도 적용되는 등급제에 따라 등급이 달라질 수 있으니 본인 학년의 기준을 먼저 확인해야 합니다.</div>
+      <div class="faq-a">먼저 석차백분율(석차 ÷ 수강자 수 × 100)로 대략의 위치를 봅니다. 실제 등급은 수강자 수에 등급별 누적 비율을 곱해 반올림한 인원으로 끊습니다. 예를 들어 250명 수강 과목에서 9등이면 석차백분율은 3.6%이고, 9등급제 1등급은 250 × 4% = 10명, 5등급제 1등급은 250 × 10% = 25명까지라 두 제도 모두 1등급입니다. 동점자가 등급 경계에 걸치면 중간석차(석차 + (동석차 인원 − 1) ÷ 2)로 다시 판정합니다. 같은 석차라도 등급제에 따라 등급이 달라질 수 있으니 본인 학년의 기준을 먼저 확인해야 합니다.</div>
     </details>
 
     <details class="faq-item"><summary><h3 class="faq-q">2026년에 내 학년은 9등급제인가요, 5등급제인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
@@ -308,7 +308,7 @@
     <p>가장 기억해야 할 숫자 하나만 꼽으면, 1등급 커트라인이 9등급제 4%에서 5등급제 10%로 바뀌었다는 사실입니다. 이 차이 때문에 같은 "250명 중 25등(석차백분율 10%)"이 고3은 2등급, 고1·고2는 1등급으로 갈립니다. 내신 등급을 환산할 때는 무조건 석차백분율(석차 ÷ 수강자 수 × 100, 동석차는 +인원−1 보정)을 먼저 구하고, 본인 학년에 맞는 등급 기준표에 대입하는 순서를 지키면 됩니다.</p>
     <p>전과목 평균은 단순 평균이 아니라 이수단위 가중평균이라는 점, 그리고 5등급제 등급 숫자가 좋아 보여도 같은 등급 안 경쟁이 치열해졌다는 점까지 함께 기억하면 성적표를 더 정확하게 읽을 수 있습니다. 시험이 끝난 직후 석차만 알면, 등급과 평균은 계산기로 10초면 확인됩니다. 기말고사 성적표를 받은 그날, 숫자를 직접 넣어 내 위치를 객관적으로 점검해보시기 바랍니다.</p>
     </div>
-    <aside class="article-info" aria-label="글 작성 및 검토 정보"><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">작성</span><span class="article-info__value">제이퍼 계산기 편집팀</span></div><span class="article-info__sep" aria-hidden="true">|</span><div class="article-info__item"><span class="article-info__label">최종 검토일</span><span class="article-info__value">2026.09.09</span></div></div><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">검토 기준</span><span class="article-info__value">교육부 2028 대입제도 개편안(2023년 확정)·고교 내신 등급 산출 기준, 2026년 기준</span></div></div><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">적용 기준</span><span class="article-info__value">2026년 기준</span></div><span class="article-info__sep" aria-hidden="true">|</span><div class="article-info__item"><span class="article-info__label">참고 기관</span><span class="article-info__value">교육부, 한국대학교육협의회</span></div></div><div class="article-info__calc"><span class="article-info__label">관련 계산기</span> <a href="/calc/tools/naesin-grade/">내신 등급 계산기 &rarr;</a></div><p class="article-info__disclaimer">본 내용은 참고용이며, 등급제 적용 학년과 세부 산출 기준은 재학 중인 학교와 교육부 최신 공지를 반드시 확인하세요.</p></aside>
+    <aside class="article-info" aria-label="글 작성 및 검토 정보"><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">작성</span><span class="article-info__value">제이퍼 계산기 편집팀</span></div><span class="article-info__sep" aria-hidden="true">|</span><div class="article-info__item"><span class="article-info__label">최종 검토일</span><span class="article-info__value">2026.10.29</span></div></div><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">검토 기준</span><span class="article-info__value">교육부 2028 대입제도 개편안(2023년 확정)·고교 내신 등급 산출 기준, 2026년 기준</span></div></div><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">적용 기준</span><span class="article-info__value">2026년 기준</span></div><span class="article-info__sep" aria-hidden="true">|</span><div class="article-info__item"><span class="article-info__label">참고 기관</span><span class="article-info__value">교육부, 한국대학교육협의회</span></div></div><div class="article-info__calc"><span class="article-info__label">관련 계산기</span> <a href="/calc/tools/naesin-grade/">내신 등급 계산기 &rarr;</a></div><p class="article-info__disclaimer">본 내용은 참고용이며, 등급제 적용 학년과 세부 산출 기준은 재학 중인 학교와 교육부 최신 공지를 반드시 확인하세요.</p></aside>
   </article>
 </main>
 
@@ -330,7 +330,7 @@ window.ARTICLE_INFO_CONFIG = {
   reviewBasis: "교육부 2028 대입제도 개편안(2023년 확정)·고교 내신 등급 산출 기준, 2026년 기준",
   basisDate: "2026년 기준",
   referenceOrg: "교육부, 한국대학교육협의회",
-  lastReviewed: '2026.09.09',
+  lastReviewed: '2026.10.29',
   disclaimer: "본 내용은 참고용이며, 등급제 적용 학년과 세부 산출 기준은 재학 중인 학교와 교육부 최신 공지를 반드시 확인하세요.",
   relatedCalc: { name: '내신 등급 계산기', url: '/calc/tools/naesin-grade/' },
   category: 'tools'

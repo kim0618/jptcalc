@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>내신 등급 계산기 - 석차로 등급 환산·전과목 평균 등급 | 제이퍼</title>
-  <meta name="description" content="석차와 전체 인원을 넣으면 석차백분율과 내신 등급(9등급제)을 환산합니다. 과목별 등급과 이수단위로 전과목 평균 내신등급(가중평균)까지 계산하는 무료 내신 등급 계산기." />
+  <meta name="description" content="석차와 수강자 수를 넣으면 2026년 고1·고2 5등급제, 고3 9등급제 내신 등급을 학생부 기준(인원 반올림·중간석차)대로 환산합니다. 과목별 등급과 학점으로 전과목 평균 내신등급(가중평균)까지 계산하는 무료 내신 등급 계산기." />
   <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://www.jptcalc.kr/calc/tools/naesin-grade/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="내신 등급 계산기 - 석차로 등급 환산·전과목 평균 등급 | 제이퍼" />
-  <meta property="og:description" content="석차·인원으로 내신 등급(9등급제) 환산, 과목별 등급·이수단위로 전과목 평균 내신등급 계산. 무료." />
+  <meta property="og:description" content="석차·인원으로 내신 등급(고1·고2 5등급제, 고3 9등급제) 환산, 과목별 등급·학점으로 전과목 평균 내신등급 계산. 무료." />
   <meta property="og:url" content="https://www.jptcalc.kr/calc/tools/naesin-grade/" />
   <meta property="og:site_name" content="제이퍼 계산기" />
   <meta property="og:locale" content="ko_KR" />
@@ -20,7 +20,7 @@
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
   <link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
   <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
-  <link rel="stylesheet" href="/assets/ds/base.css?v=d0b8aed9" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=1ff0325a" />
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebApplication","name":"내신 등급 계산기","url":"https://www.jptcalc.kr/calc/tools/naesin-grade/","applicationCategory":"EducationApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
   </script>
@@ -31,7 +31,7 @@
     {"@type":"ListItem","position":3,"name":"내신 등급 계산기","item":"https://www.jptcalc.kr/calc/tools/naesin-grade/"}
   ]}
   </script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"내신 등급은 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"먼저 석차백분율을 구합니다. 석차백분율 = (석차 + 동석차 인원 − 1) ÷ 수강자 수 × 100입니다. 이 백분율을 9등급제 기준표에 대입해 등급을 매깁니다. 예를 들어 100명 중 10등이면 10%로 2등급입니다."}},{"@type":"Question","name":"내신 9등급제 비율 기준은 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"누적 비율 기준으로 1등급 상위 4% 이내, 2등급 11%, 3등급 23%, 4등급 40%, 5등급 60%, 6등급 77%, 7등급 89%, 8등급 96%, 9등급 100%입니다. 본인의 석차백분율이 해당 구간에 들어가는 첫 등급이 내신 등급입니다."}},{"@type":"Question","name":"전과목 평균 내신등급은 어떻게 구하나요?","acceptedAnswer":{"@type":"Answer","text":"과목별 등급에 이수단위를 곱한 값을 모두 더한 뒤 총 이수단위로 나누는 가중평균입니다. (과목1 등급 × 단위 + 과목2 등급 × 단위 + …) ÷ 총 이수단위입니다. 단위가 큰 과목일수록 평균에 더 크게 반영됩니다."}},{"@type":"Question","name":"동석차(공동 등수)가 있으면 등급이 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"공동 석차일 때는 가장 낮은 위치를 기준으로 계산합니다. 석차백분율 = (석차 + 동석차 인원 − 1) ÷ 수강자 수 × 100을 사용합니다. 예를 들어 3명이 공동 1등이면 (1 + 3 − 1) ÷ 인원으로 계산해 같은 등급을 받습니다."}},{"@type":"Question","name":"내신 등급은 낮을수록 좋은 건가요?","acceptedAnswer":{"@type":"Answer","text":"네. 1등급이 가장 높고 9등급이 가장 낮습니다. 평균 내신등급도 숫자가 작을수록 우수합니다. 학생부교과전형 등 수시에서는 보통 전과목 또는 국영수사과 평균 등급을 반영하므로, 반영 과목 기준을 확인해 입력하세요."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"내신 등급은 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"수강자 수에 등급별 누적 비율을 곱해 반올림하면 등급마다 몇 등까지인지(누적 인원)가 정해지고, 내 석차가 처음 들어가는 등급이 내 등급입니다. 5등급제에서 수강자가 178명이면 1등급은 17.8을 반올림한 18등까지, 2등급은 60.52를 반올림한 61등까지입니다. 석차백분율(석차 ÷ 수강자 수 × 100)은 위치를 가늠하는 참고값이고, 경계에서는 반올림 때문에 백분율과 등급이 어긋날 수 있습니다."}},{"@type":"Question","name":"2026년에 내 학년은 5등급제인가요, 9등급제인가요?","acceptedAnswer":{"@type":"Answer","text":"2026년 고1·고2는 2022 개정 교육과정을 적용받아 5등급제이고, 고3은 2015 개정 교육과정을 적용받아 9등급제입니다. 학교생활기록 작성 및 관리지침 부칙(제504호)이 바뀐 기준을 고1은 2025년 3월, 고2는 2026년 3월, 고3은 2027년 3월부터 순서대로 적용하도록 정했기 때문입니다. 성적표 석차등급이 1~5로 나오면 5등급제, 1~9로 나오면 9등급제입니다."}},{"@type":"Question","name":"5등급제와 9등급제 비율 기준은 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"석차누적비율 기준으로 5등급제는 1등급 10% 이하, 2등급 34% 이하, 3등급 66% 이하, 4등급 90% 이하, 5등급 100%입니다. 9등급제는 1등급 4%, 2등급 11%, 3등급 23%, 4등급 40%, 5등급 60%, 6등급 77%, 7등급 89%, 8등급 96%, 9등급 100% 이하입니다. 두 기준 모두 수강자 수에 이 비율을 곱해 반올림한 인원으로 등급을 나눕니다."}},{"@type":"Question","name":"동석차(공동 등수)가 있으면 등급이 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"동점자는 모두 그 순위의 가장 높은 석차를 받고 괄호 안에 동점자 수가 적힙니다. 동점자 전원이 한 등급 안에 들어가면 그 등급을 그대로 받고, 등급 경계에 걸치면 중간석차백분율로 등급을 정합니다. 중간석차 = 석차 + (동석차 인원 − 1) ÷ 2, 중간석차백분율 = 중간석차 ÷ 수강자 수 × 100입니다. 기재요령 예시처럼 96명 중 1등 동점자가 19명이면 중간석차 10, 중간석차백분율 10.42%라 19명 모두 2등급입니다."}},{"@type":"Question","name":"수강자가 적은 과목도 석차등급이 나오나요?","acceptedAnswer":{"@type":"Answer","text":"5등급제(2022 개정 교육과정)에서는 석차등급을 산출하는 과목이라도 수강자가 5명 이하이면 석차등급란에 등급 대신 ‘ㆍ’을 입력합니다(학교생활기록 작성 및 관리지침 제15조제10항). 이 계산기도 5등급제에서 수강자 5명 이하이면 등급을 표시하지 않습니다. 수강자가 적을수록 반올림 영향이 커서, 25명 과목에서는 3등(12%)도 5등급제 1등급이 됩니다."}},{"@type":"Question","name":"진로선택 과목도 석차등급이 나오나요?","acceptedAnswer":{"@type":"Answer","text":"학년에 따라 다릅니다. 고3(2015 개정 교육과정)은 진로선택 과목에 석차등급을 산출하지 않고 성취도(A·B·C)만 적습니다. 고1·고2(2022 개정 교육과정)는 진로선택 과목도 5등급이 나오고, 사회·과학 융합선택 9과목, 체육·예술 교과, 과학탐구실험, 교양만 석차등급이 없습니다."}},{"@type":"Question","name":"전과목 평균 내신등급은 어떻게 구하나요?","acceptedAnswer":{"@type":"Answer","text":"과목별 등급에 학점(2015 개정 교육과정은 단위수)을 곱한 값을 모두 더한 뒤 총 학점으로 나누는 가중평균입니다. (과목1 등급 × 학점 + 과목2 등급 × 학점 + …) ÷ 총 학점입니다. 학점이 큰 과목일수록 평균에 더 크게 반영되고, 석차등급이 없는 과목(진로선택 성취도만 있는 과목, 체육·예술, 교양 등)은 빼고 계산합니다."}},{"@type":"Question","name":"내신 등급은 낮을수록 좋은 건가요?","acceptedAnswer":{"@type":"Answer","text":"네. 1등급이 가장 높고 마지막 등급(5등급제는 5등급, 9등급제는 9등급)이 가장 낮습니다. 평균 내신등급도 숫자가 작을수록 우수합니다. 다만 5등급제 2등급(상위 34%까지)과 9등급제 2등급(상위 11%까지)은 위치가 전혀 다르므로 두 제도의 등급 숫자를 그대로 비교하면 안 됩니다."}}]}</script>
   <style>
     /* 페이지 고유 스타일(공통 부품 재정의는 base.css가 맡아 뺐다) */
     .mode-group { display:flex;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:4px }
@@ -65,13 +65,13 @@
   <div class="ds-container ds-hero-inner">
     <div class="page-header">
       <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/tools/">생활·도구 계산기</a> &rsaquo; 내신 등급 계산기</div>
-      <div class="page-badge">9등급제 · 평균 등급</div>
+      <div class="page-badge">5등급제·9등급제 · 평균 등급</div>
       <div class="ds-title-row">
         <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-wrench"></use></svg></span>
         <h1 class="page-title">내신 등급 계산기</h1>
         <div class="ds-trust-chips" aria-label="기준 정보">
-          <span class="ds-trust-chip">9등급제 · 평균 등급</span>
-          <span class="ds-trust-chip">2026.06.09 검토</span>
+          <span class="ds-trust-chip">5·9등급제</span>
+          <span class="ds-trust-chip">2026.10.29 검토</span>
         </div>
       </div>
       <p class="page-subtitle">석차로 내신 등급을 환산하고, 전과목 평균 내신등급까지 계산하세요</p>
@@ -91,6 +91,12 @@
         <button class="mode-btn" data-mode="avg" onclick="setMode('avg',this)">전과목 평균 등급</button>
       </div>
       <div class="mode-hint" id="mode-hint">석차와 수강자 수를 넣으면 석차백분율과 내신 등급을 환산합니다. 예) 100명 중 10등</div>
+      <div class="field-label ds-group-label" style="margin-top:14px">등급제</div>
+      <div class="mode-group">
+        <button class="mode-btn active" data-sys="5" onclick="setSys(5,this)">5등급제 · 고1·고2</button>
+        <button class="mode-btn" data-sys="9" onclick="setSys(9,this)">9등급제 · 고3</button>
+      </div>
+      <div class="mode-hint" id="sys-hint">2025년 이후 입학생(2022 개정 교육과정)은 5등급제입니다. 성적표 석차등급이 1~5로 나오면 5등급제입니다.</div>
     </div>
 
     <div class="card" id="card-rank">
@@ -99,12 +105,12 @@
         <div class="ng-field"><label for="in-rank">내 석차 (등수)</label><div class="input-wrap"><input type="number" id="in-rank" min="1" placeholder="예) 10" oninput="calc()" /><span class="unit">등</span></div></div>
         <div class="ng-field"><label for="in-total">수강자 수</label><div class="input-wrap"><input type="number" id="in-total" min="1" placeholder="예) 100" oninput="calc()" /><span class="unit">명</span></div></div>
       </div>
-      <div class="ng-field" style="margin-top:12px"><label for="in-tie">동석차 인원 <span class="label-hint">(공동 등수, 없으면 1)</span></label><div class="input-wrap"><input type="number" id="in-tie" min="1" value="1" placeholder="1" oninput="calc()" /><span class="unit">명</span></div></div>
+      <div class="ng-field" style="margin-top:12px"><label for="in-tie">동석차 인원 <span class="label-hint">(성적표 석차 괄호 안 숫자, 없으면 1)</span></label><div class="input-wrap"><input type="number" id="in-tie" min="1" value="1" placeholder="1" oninput="calc()" /><span class="unit">명</span></div></div>
     </div>
 
     <div class="card" id="card-avg" style="display:none">
       <div class="field-label ds-group-label">과목 입력</div>
-      <div class="ng-head"><span>과목명 (선택)</span><span>등급</span><span>이수단위</span><span></span></div>
+      <div class="ng-head"><span>과목명 (선택)</span><span>등급</span><span>학점(단위)</span><span></span></div>
       <div id="rows"></div>
       <button class="add-row-btn" type="button" onclick="addRow()">+ 과목 추가</button>
     </div>
@@ -119,7 +125,8 @@
       <div class="result-highlight"><div class="rh-label" id="r-label">내신 등급</div><div class="rh-value"><span class="big-num" id="r-main">-</span><span class="grade-mark" id="r-mark">등급</span></div><div class="rh-sub" id="r-sub">-</div></div>
       <div class="result-row"><span class="result-label" id="r-d1-label">석차백분율</span><span class="result-value" id="r-d1">-</span></div>
       <div class="result-row"><span class="result-label" id="r-d2-label">구간</span><span class="result-value" id="r-d2">-</span></div>
-      <p class="result-note">9등급제 누적 비율 기준(1등급 4% · 2등급 11% · 3등급 23% · 4등급 40% · 5등급 60% · 6등급 77% · 7등급 89% · 8등급 96% · 9등급 100%)으로 산출한 참고치입니다. 학교·전형별 반영 과목과 산정 방식은 다를 수 있습니다.</p>
+      <div class="result-row"><span class="result-label" id="r-d3-label">등급 기준 인원</span><span class="result-value" id="r-d3">-</span></div>
+      <p class="result-note" id="r-note">5등급제 누적 비율(1등급 10% · 2등급 34% · 3등급 66% · 4등급 90% · 5등급 100%)에 수강자 수를 곱해 반올림한 인원으로 산출한 참고치입니다. 학교·전형별 반영 과목과 산정 방식은 다를 수 있습니다.</p>
         <div class="ds-result-actions">
           <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
           <a class="ds-btn-primary" id="ds-primary-next" href="/calc/tools/gpa/">학점 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
@@ -143,13 +150,13 @@
 
   <section class="ds-basis" aria-labelledby="ds-h-basis">
     <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
-    <div class="ds-basis-card">고등학교 석차등급 9등급제 누적 비율 기준 <a href="https://www.moe.go.kr" target="_blank" rel="noopener">교육부 학교생활기록부 기재요령 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+    <div class="ds-basis-card">학교생활기록 작성 및 관리지침(교육부훈령 제555호, 2026.3.1. 시행) 별표 9 석차등급 기준·중간석차 규정 <a href="https://star.moe.go.kr/web/contents/m21100.do" target="_blank" rel="noopener">2026학년도 학교생활기록부 기재요령(고등학교) 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
   </section>
 
   <div class="ds-calc-flow">
 
       <nav class="ds-toc" aria-label="이 페이지 내용">
-        <a href="#naesin-grade-s1">내신 등급,</a><a href="#naesin-grade-s2">계산 예시</a><a href="#naesin-grade-s3">내신 등급에서</a><a href="#naesin-grade-s4">구간별 표</a><a href="#naesin-grade-faq">FAQ</a>
+        <a href="#naesin-grade-s1">등급 정하는 법</a><a href="#naesin-grade-s2">법령 근거</a><a href="#naesin-grade-s3">인원표</a><a href="#naesin-grade-s4">계산 예시</a><a href="#naesin-grade-s5">알아둘 점</a><a href="#naesin-grade-s6">석차별 표</a><a href="#naesin-grade-faq">FAQ</a>
       </nav>
 <div class="adfit-slot ds-ad">
     <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
@@ -159,66 +166,135 @@
   <div class="guide-section">
             <section class="ds-section ds-prose" aria-labelledby="naesin-grade-s1">
           <div class="ds-section-head"><h2 id="naesin-grade-s1">내신 등급, 이렇게 정해집니다</h2></div>
-<p>고등학교 내신(석차등급)은 같은 과목을 들은 학생들 사이의 상대적 위치로 매겨집니다. 먼저 석차백분율을 구하고, 그 값을 9등급제 비율 기준에 대입합니다. 석차백분율 = (석차 + 동석차 인원 − 1) ÷ 수강자 수 × 100이며, 동석차(공동 등수)가 있으면 가장 낮은 위치를 기준으로 계산합니다.</p>
+<p>고등학교 석차등급은 같은 과목을 들은 학생 사이의 순위로 매깁니다. 순서는 두 단계입니다. 먼저 수강자 수에 등급별 누적 비율을 곱해 반올림한 값을 그 등급까지의 누적 인원으로 정하고, 다음으로 내 석차가 처음 들어가는 등급을 받습니다. 석차백분율(석차 ÷ 수강자 수 × 100)은 내 위치를 가늠하는 값이지만, 등급을 나누는 기준은 반올림한 인원입니다.</p>
+<p>2026년에는 학년마다 등급제가 다릅니다. 2025년 이후 입학해 2022 개정 교육과정을 적용받는 <strong>고1·고2는 5등급제</strong>, 2024년에 입학해 2015 개정 교육과정을 적용받는 <strong>고3은 9등급제</strong>입니다.</p>
+<h3>5등급제 (2026년 고1·고2)</h3>
       <div class="ds-table-card">
         <table>
-          <thead><tr><th>등급</th><th>누적 비율(상위)</th><th>해당 구간</th></tr></thead>
+          <thead><tr><th>등급</th><th>석차누적비율</th><th>등급 비율</th></tr></thead>
           <tbody>
-            <tr><td>1등급</td><td>4% 이내</td><td>~ 4%</td></tr>
-            <tr><td>2등급</td><td>11% 이내</td><td>4 ~ 11%</td></tr>
-            <tr><td>3등급</td><td>23% 이내</td><td>11 ~ 23%</td></tr>
-            <tr><td>4등급</td><td>40% 이내</td><td>23 ~ 40%</td></tr>
-            <tr><td>5등급</td><td>60% 이내</td><td>40 ~ 60%</td></tr>
-            <tr><td>6등급</td><td>77% 이내</td><td>60 ~ 77%</td></tr>
-            <tr><td>7등급</td><td>89% 이내</td><td>77 ~ 89%</td></tr>
-            <tr><td>8등급</td><td>96% 이내</td><td>89 ~ 96%</td></tr>
-            <tr><td>9등급</td><td>100%</td><td>96 ~ 100%</td></tr>
+            <tr><td>1등급</td><td>10% 이하</td><td>10%</td></tr>
+            <tr><td>2등급</td><td>10% 초과 ~ 34% 이하</td><td>24%</td></tr>
+            <tr><td>3등급</td><td>34% 초과 ~ 66% 이하</td><td>32%</td></tr>
+            <tr><td>4등급</td><td>66% 초과 ~ 90% 이하</td><td>24%</td></tr>
+            <tr><td>5등급</td><td>90% 초과 ~ 100% 이하</td><td>10%</td></tr>
+          </tbody>
+        </table>
+      </div>
+<h3>9등급제 (2026년 고3)</h3>
+      <div class="ds-table-card">
+        <table>
+          <thead><tr><th>등급</th><th>석차누적비율</th><th>등급 비율</th></tr></thead>
+          <tbody>
+            <tr><td>1등급</td><td>4% 이하</td><td>4%</td></tr>
+            <tr><td>2등급</td><td>4% 초과 ~ 11% 이하</td><td>7%</td></tr>
+            <tr><td>3등급</td><td>11% 초과 ~ 23% 이하</td><td>12%</td></tr>
+            <tr><td>4등급</td><td>23% 초과 ~ 40% 이하</td><td>17%</td></tr>
+            <tr><td>5등급</td><td>40% 초과 ~ 60% 이하</td><td>20%</td></tr>
+            <tr><td>6등급</td><td>60% 초과 ~ 77% 이하</td><td>17%</td></tr>
+            <tr><td>7등급</td><td>77% 초과 ~ 89% 이하</td><td>12%</td></tr>
+            <tr><td>8등급</td><td>89% 초과 ~ 96% 이하</td><td>7%</td></tr>
+            <tr><td>9등급</td><td>96% 초과 ~ 100% 이하</td><td>4%</td></tr>
           </tbody>
         </table>
       </div>
         </section>
             <section class="ds-section ds-prose" aria-labelledby="naesin-grade-s2">
-          <div class="ds-section-head"><h2 id="naesin-grade-s2">실제 내신 등급 계산 예시</h2></div>
-<h3>예시 1 - 박서준, 100명 중 10등</h3>
-      <p>수강자 100명인 수학 과목에서 10등이라면 석차백분율은 10 ÷ 100 × 100 = 10%입니다. 10%는 2등급 구간(4~11%)에 들어가므로 수학 내신은 2등급입니다.</p>
+          <div class="ds-section-head"><h2 id="naesin-grade-s2">법령 원문 근거</h2></div>
+<p>석차등급 기준은 교육부훈령 「학교생활기록 작성 및 관리지침」(제555호, 2026.3.1. 시행) 별표 9와, 17개 시도교육청이 펴낸 「2026학년도 학교생활기록부 기재요령(고등학교)」에 있습니다. 이 계산기는 아래 규정을 그대로 옮겼습니다.</p>
       <ul>
-        <li>석차백분율: 10 ÷ 100 × 100 = 10%</li>
-        <li>내신 등급: 2등급</li>
-      </ul>
-      <h3>예시 2 - 김하늘, 공동 1등 (동석차 3명)</h3>
-      <p>250명 중 3명이 공동 1등이면 석차백분율 = (1 + 3 − 1) ÷ 250 × 100 = 1.2%로, 1등급(4% 이내)입니다. 공동 등수는 가장 낮은 위치를 기준으로 해도 같은 등급을 받습니다.</p>
-      <ul>
-        <li>석차백분율: (1 + 3 − 1) ÷ 250 × 100 = 1.2%</li>
-        <li>내신 등급: 1등급</li>
-      </ul>
-      <h3>예시 3 - 이도윤, 전과목 평균 등급</h3>
-      <p>국어 1등급(4단위), 수학 2등급(4단위), 영어 1등급(3단위), 한국사 3등급(2단위)이면 (1×4 + 2×4 + 1×3 + 3×2) ÷ 13 = 21 ÷ 13 ≈ 1.62등급입니다. 단위가 큰 과목의 영향이 더 큽니다.</p>
-      <ul>
-        <li>가중합: 1×4 + 2×4 + 1×3 + 3×2 = 21</li>
-        <li>평균 등급: 21 ÷ 13단위 ≈ 1.62등급</li>
+        <li><strong>등급 인원(별표 9 라목 4)</strong>: "등급별 누적 학생수는 수강자수와 누적 등급비율을 곱한 값을 반올림하여 계산한다." 기재요령은 수강자 178명이면 5등급제 1등급 18명, 2등급 누적 61명이라는 예시를 듭니다.</li>
+        <li><strong>동점자(별표 9 라목 5)·6))</strong>: 동점자에게는 "해당 순위의 최상의 석차를 부여"하고, 동점자가 "등급경계에 있는 경우 중간석차를 적용한 중간석차백분율에 의하여 등급을 부여"합니다. 기재요령의 계산식은 중간석차 = 석차 + (동석차 인원수 − 1) ÷ 2, 중간석차백분율 = 중간석차 ÷ 수강자수 × 100이고, "등급 범위 내에서 생기는 동점자에게는 적용하지 않는다"고 적혀 있습니다.</li>
+        <li><strong>적용 학년(부칙 제504호 제2조)</strong>: 2022 개정 교육과정에 따른 변경 사항은 고등학교 1학년 2025년 3월 1일, 2학년 2026년 3월 1일, 3학년 2027년 3월 1일부터 차례로 적용되고, 적용되지 않는 학년은 종전 규정(9등급제)을 따릅니다.</li>
+        <li><strong>수강자 5명 이하(제15조제10항)</strong>: 석차등급을 산출하는 과목 중 수강자가 5명 이하이면 석차등급란에 등급 대신 ‘ㆍ’을 입력합니다.</li>
+        <li><strong>석차등급이 없는 과목</strong>: 2022 개정 교육과정은 사회·과학 융합선택 9과목, 체육·예술 교과(군), 과학탐구실험, 교양 교과에 석차등급을 적지 않습니다(제15조제4항, 교육부 2028 대입제도 개편 확정안). 2015 개정 교육과정은 진로선택 과목과 과학탐구실험, 체육·예술 일반선택에 석차등급이 없습니다.</li>
       </ul>
         </section>
             <section class="ds-section ds-prose" aria-labelledby="naesin-grade-s3">
-          <div class="ds-section-head"><h2 id="naesin-grade-s3">내신 등급에서 알아둘 점</h2></div>
-<h3>전과목 vs 반영 과목</h3>
-      <p>학생부교과전형은 보통 전과목 또는 국어·영어·수학·사회·과학 평균 등급을 반영합니다. 대학·전형마다 반영 과목과 가중치가 다르므로, 평균 등급을 낼 때 본인이 지원할 전형의 반영 과목만 입력하면 더 정확합니다.</p>
-      <h3>이수단위의 의미</h3>
-      <p>이수단위는 그 과목의 주당 수업 시수(학점)로, 평균 등급에서 가중치 역할을 합니다. 단위가 큰 주요 과목(국영수)이 평균에 더 크게 반영되므로, 단위가 큰 과목의 등급 관리가 평균에 유리합니다.</p>
-      <h3>진로선택과목</h3>
-      <p>진로선택과목은 석차등급(1~9) 대신 성취도(A·B·C)로 표기되어 일반적인 등급 평균에는 포함하지 않는 경우가 많습니다. 이 계산기에는 석차등급이 매겨지는 일반선택·공통과목 위주로 입력하세요.</p>
+          <div class="ds-section-head"><h2 id="naesin-grade-s3">수강자 수별 등급 누적 인원</h2></div>
+<p class="ds-table-lead">수강자 수 × 누적 비율을 반올림한 값입니다. 내 석차가 이 숫자 이하이면 그 등급입니다(동점자가 경계에 걸치면 중간석차로 다시 판정).</p>
+<h3>5등급제 (고1·고2, 각 등급 누적 등수)</h3>
+      <div class="ds-table-card">
+        <table>
+          <thead><tr><th>수강자 수</th><th>1등급</th><th>2등급</th><th>3등급</th><th>4등급</th><th>5등급</th></tr></thead>
+          <tbody>
+            <tr><td>25명</td><td>3</td><td>9</td><td>17</td><td>23</td><td>25</td></tr>
+            <tr><td>30명</td><td>3</td><td>10</td><td>20</td><td>27</td><td>30</td></tr>
+            <tr><td>100명</td><td>10</td><td>34</td><td>66</td><td>90</td><td>100</td></tr>
+            <tr><td>150명</td><td>15</td><td>51</td><td>99</td><td>135</td><td>150</td></tr>
+            <tr><td>200명</td><td>20</td><td>68</td><td>132</td><td>180</td><td>200</td></tr>
+            <tr><td>250명</td><td>25</td><td>85</td><td>165</td><td>225</td><td>250</td></tr>
+            <tr><td>300명</td><td>30</td><td>102</td><td>198</td><td>270</td><td>300</td></tr>
+          </tbody>
+        </table>
+      </div>
+<h3>9등급제 (고3, 각 등급 누적 등수)</h3>
+      <div class="ds-table-card">
+        <table>
+          <thead><tr><th>수강자 수</th><th>1등급</th><th>2등급</th><th>3등급</th><th>4등급</th><th>5등급</th><th>6등급</th><th>7등급</th><th>8등급</th><th>9등급</th></tr></thead>
+          <tbody>
+            <tr><td>25명</td><td>1</td><td>3</td><td>6</td><td>10</td><td>15</td><td>19</td><td>22</td><td>24</td><td>25</td></tr>
+            <tr><td>30명</td><td>1</td><td>3</td><td>7</td><td>12</td><td>18</td><td>23</td><td>27</td><td>29</td><td>30</td></tr>
+            <tr><td>100명</td><td>4</td><td>11</td><td>23</td><td>40</td><td>60</td><td>77</td><td>89</td><td>96</td><td>100</td></tr>
+            <tr><td>150명</td><td>6</td><td>17</td><td>35</td><td>60</td><td>90</td><td>116</td><td>134</td><td>144</td><td>150</td></tr>
+            <tr><td>200명</td><td>8</td><td>22</td><td>46</td><td>80</td><td>120</td><td>154</td><td>178</td><td>192</td><td>200</td></tr>
+            <tr><td>250명</td><td>10</td><td>28</td><td>58</td><td>100</td><td>150</td><td>193</td><td>223</td><td>240</td><td>250</td></tr>
+            <tr><td>300명</td><td>12</td><td>33</td><td>69</td><td>120</td><td>180</td><td>231</td><td>267</td><td>288</td><td>300</td></tr>
+          </tbody>
+        </table>
+      </div>
         </section>
             <section class="ds-section ds-prose" aria-labelledby="naesin-grade-s4">
-          <div class="ds-section-head"><h2 id="naesin-grade-s4">수강자 수·석차별 내신 등급 (9등급제·동석차 1명)</h2></div>
+          <div class="ds-section-head"><h2 id="naesin-grade-s4">실제 내신 등급 계산 예시</h2></div>
+<h3>예시 1 - 박서준(고2), 수학 100명 중 10등</h3>
+      <p>5등급제 1등급 누적 인원은 100 × 10% = 10명입니다. 10등은 10명 안에 들어가므로 1등급입니다. 같은 100명 중 10등이 9등급제를 적용받는 고3이었다면 1등급 4명, 2등급 누적 11명이라 2등급입니다.</p>
+      <ul>
+        <li>석차백분율: 10 ÷ 100 × 100 = 10%</li>
+        <li>5등급제(고2): 1등급 / 9등급제(고3): 2등급</li>
+      </ul>
+      <h3>예시 2 - 김하늘(고1), 수강자 25명 과목에서 3등</h3>
+      <p>석차백분율은 3 ÷ 25 × 100 = 12%로 10%를 넘지만, 1등급 누적 인원은 25 × 10% = 2.5를 반올림한 3명입니다. 3등까지 1등급이므로 김하늘 학생은 1등급입니다. 백분율만 보고 2등급이라고 판단하면 틀리는 경우로, 수강자가 적은 선택과목에서 자주 생깁니다.</p>
+      <ul>
+        <li>1등급 누적 인원: 25 × 10% = 2.5 → 3명</li>
+        <li>내신 등급: 1등급 (석차백분율 12%)</li>
+      </ul>
+      <h3>예시 3 - 동점자가 등급 경계에 걸친 경우 (기재요령 예시)</h3>
+      <p>수강자 96명 과목에서 1등 동점자가 19명이면, 정상이라면 1등급은 10명(9.6을 반올림)인데 동점자가 그보다 많습니다. 중간석차 = 1 + (19 − 1) ÷ 2 = 10, 중간석차백분율 = 10 ÷ 96 × 100 = 10.42%로 10%를 넘으므로 19명 모두 2등급이 되고 1등급은 한 명도 없습니다. 반대로 120명 과목에서 1등 1명, 2등 동점자 15명이면 중간석차 = 2 + (15 − 1) ÷ 2 = 9, 9 ÷ 120 × 100 = 7.5%라 16명 모두 1등급입니다.</p>
+      <ul>
+        <li>96명, 1등 19명: 중간석차백분율 10.42% → 전원 2등급</li>
+        <li>120명, 2등 15명: 중간석차백분율 7.5% → 전원 1등급</li>
+      </ul>
+      <h3>예시 4 - 이도윤(고2), 전과목 평균 등급</h3>
+      <p>국어 1등급(4학점), 수학 2등급(4학점), 영어 1등급(3학점), 한국사 3등급(2학점)이면 (1×4 + 2×4 + 1×3 + 3×2) ÷ 13 = 21 ÷ 13 ≈ 1.62등급입니다. 학점이 큰 과목의 영향이 더 큽니다.</p>
+      <ul>
+        <li>가중합: 1×4 + 2×4 + 1×3 + 3×2 = 21</li>
+        <li>평균 등급: 21 ÷ 13학점 ≈ 1.62등급</li>
+      </ul>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="naesin-grade-s5">
+          <div class="ds-section-head"><h2 id="naesin-grade-s5">내신 등급에서 알아둘 점</h2></div>
+<h3>전과목 vs 반영 과목</h3>
+      <p>학생부교과전형은 보통 전과목 또는 국어·영어·수학·사회·과학 평균 등급을 반영합니다. 대학·전형마다 반영 과목과 가중치가 다르므로, 평균 등급을 낼 때 본인이 지원할 전형의 반영 과목만 입력하면 더 정확합니다.</p>
+      <h3>학점(단위수)의 의미</h3>
+      <p>2022 개정 교육과정(고1·고2)은 과목 이수량을 학점으로, 2015 개정 교육과정(고3)은 단위수로 적습니다. 평균 등급에서는 둘 다 가중치 역할을 하므로, 학점이 큰 주요 과목(국영수)의 등급이 평균에 더 크게 반영됩니다.</p>
+      <h3>진로선택과목</h3>
+      <p>고3(2015 개정 교육과정)의 진로선택과목은 석차등급 없이 성취도(A·B·C)만 나오므로 평균 등급에 넣지 않습니다. 고1·고2(2022 개정 교육과정)는 진로선택과목도 5등급이 나오므로 평균에 포함합니다. 이때도 사회·과학 융합선택 9과목은 석차등급이 없습니다.</p>
+      <h3>5등급제와 9등급제 등급 숫자는 다르다</h3>
+      <p>5등급제 2등급은 상위 34%까지, 9등급제 2등급은 상위 11%까지입니다. 같은 "2등급"이라도 위치가 크게 다르므로, 선배 입시 결과(9등급제)와 내 등급(5등급제)을 숫자 그대로 비교하지 마세요.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="naesin-grade-s6">
+          <div class="ds-section-head"><h2 id="naesin-grade-s6">석차별 내신 등급 (5등급제·9등급제, 동석차 1명)</h2></div>
 <p class="ds-table-lead">이 페이지의 계산기에 실제로 값을 넣어 얻은 결과입니다.</p>
       <div class="ds-table-card">
         <table>
-          <thead><tr><th>석차 / 수강자 수</th><th>석차백분율</th><th>내신 등급</th></tr></thead>
+          <thead><tr><th>석차 / 수강자 수</th><th>석차백분율</th><th>5등급제(고1·고2)</th><th>9등급제(고3)</th></tr></thead>
           <tbody>
-            <tr><td>5등 / 100명</td><td>5.00%</td><td>2등급</td></tr>
-            <tr><td>11등 / 100명</td><td>11.00%</td><td>2등급</td></tr>
-            <tr><td>23등 / 100명</td><td>23.00%</td><td>3등급</td></tr>
-            <tr><td>40등 / 100명</td><td>40.00%</td><td>4등급</td></tr>
-            <tr><td>60등 / 100명</td><td>60.00%</td><td>5등급</td></tr>
+            <tr><td>3등 / 25명</td><td>12.00%</td><td>1등급</td><td>2등급</td></tr>
+            <tr><td>10등 / 100명</td><td>10.00%</td><td>1등급</td><td>2등급</td></tr>
+            <tr><td>25등 / 250명</td><td>10.00%</td><td>1등급</td><td>2등급</td></tr>
+            <tr><td>34등 / 100명</td><td>34.00%</td><td>2등급</td><td>4등급</td></tr>
+            <tr><td>100등 / 300명</td><td>33.33%</td><td>2등급</td><td>4등급</td></tr>
+            <tr><td>60등 / 150명</td><td>40.00%</td><td>3등급</td><td>4등급</td></tr>
           </tbody>
         </table>
       </div>
@@ -227,21 +303,30 @@
           <div class="ds-section-head"><h2 id="naesin-grade-faq">자주 묻는 질문</h2></div>
           <div class="ds-faq">
 <details class="faq-item"><summary><h3>내신 등급은 어떻게 계산하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
-              <p>먼저 석차백분율을 구합니다. 석차백분율 = (석차 + 동석차 인원 − 1) ÷ 수강자 수 × 100입니다. 이 백분율을 9등급제 기준표에 대입해 등급을 매깁니다. 예를 들어 100명 중 10등이면 10%로 2등급입니다.</p>
+              <p>수강자 수에 등급별 누적 비율을 곱해 반올림하면 등급마다 몇 등까지인지(누적 인원)가 정해지고, 내 석차가 처음 들어가는 등급이 내 등급입니다. 5등급제에서 수강자가 178명이면 1등급은 17.8을 반올림한 18등까지, 2등급은 60.52를 반올림한 61등까지입니다. 석차백분율(석차 ÷ 수강자 수 × 100)은 위치를 가늠하는 참고값이고, 경계에서는 반올림 때문에 백분율과 등급이 어긋날 수 있습니다.</p>
             </details>
-      <details class="faq-item"><summary><h3>내신 9등급제 비율 기준은 어떻게 되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
-              <p>누적 비율 기준으로 1등급 상위 4% 이내, 2등급 11%, 3등급 23%, 4등급 40%, 5등급 60%, 6등급 77%, 7등급 89%, 8등급 96%, 9등급 100%입니다. 본인의 석차백분율이 해당 구간에 들어가는 첫 등급이 내신 등급입니다.</p>
+<details class="faq-item"><summary><h3>2026년에 내 학년은 5등급제인가요, 9등급제인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>2026년 고1·고2는 2022 개정 교육과정을 적용받아 5등급제이고, 고3은 2015 개정 교육과정을 적용받아 9등급제입니다. 학교생활기록 작성 및 관리지침 부칙(제504호)이 바뀐 기준을 고1은 2025년 3월, 고2는 2026년 3월, 고3은 2027년 3월부터 순서대로 적용하도록 정했기 때문입니다. 성적표 석차등급이 1~5로 나오면 5등급제, 1~9로 나오면 9등급제입니다.</p>
             </details>
-      <details class="faq-item"><summary><h3>전과목 평균 내신등급은 어떻게 구하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
-              <p>과목별 등급에 이수단위를 곱한 값을 모두 더한 뒤 총 이수단위로 나누는 가중평균입니다. (과목1 등급 × 단위 + 과목2 등급 × 단위 + …) ÷ 총 이수단위입니다. 단위가 큰 과목일수록 평균에 더 크게 반영됩니다.</p>
+<details class="faq-item"><summary><h3>5등급제와 9등급제 비율 기준은 어떻게 되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>석차누적비율 기준으로 5등급제는 1등급 10% 이하, 2등급 34% 이하, 3등급 66% 이하, 4등급 90% 이하, 5등급 100%입니다. 9등급제는 1등급 4%, 2등급 11%, 3등급 23%, 4등급 40%, 5등급 60%, 6등급 77%, 7등급 89%, 8등급 96%, 9등급 100% 이하입니다. 두 기준 모두 수강자 수에 이 비율을 곱해 반올림한 인원으로 등급을 나눕니다.</p>
             </details>
-      <details class="faq-item"><summary><h3>동석차(공동 등수)가 있으면 등급이 어떻게 되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
-              <p>공동 석차일 때는 가장 낮은 위치를 기준으로 계산합니다. 석차백분율 = (석차 + 동석차 인원 − 1) ÷ 수강자 수 × 100을 사용합니다. 예를 들어 3명이 공동 1등이면 (1 + 3 − 1) ÷ 인원으로 계산해 같은 등급을 받습니다.</p>
+<details class="faq-item"><summary><h3>동석차(공동 등수)가 있으면 등급이 어떻게 되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>동점자는 모두 그 순위의 가장 높은 석차를 받고 괄호 안에 동점자 수가 적힙니다. 동점자 전원이 한 등급 안에 들어가면 그 등급을 그대로 받고, 등급 경계에 걸치면 중간석차백분율로 등급을 정합니다. 중간석차 = 석차 + (동석차 인원 − 1) ÷ 2, 중간석차백분율 = 중간석차 ÷ 수강자 수 × 100입니다. 기재요령 예시처럼 96명 중 1등 동점자가 19명이면 중간석차 10, 중간석차백분율 10.42%라 19명 모두 2등급입니다.</p>
             </details>
-      <details class="faq-item"><summary><h3>내신 등급은 낮을수록 좋은 건가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
-              <p>네. 1등급이 가장 높고 9등급이 가장 낮습니다. 평균 내신등급도 숫자가 작을수록 우수합니다. 학생부교과전형 등 수시에서는 보통 전과목 또는 국영수사과 평균 등급을 반영하므로, 반영 과목 기준을 확인해 입력하세요.</p>
+<details class="faq-item"><summary><h3>수강자가 적은 과목도 석차등급이 나오나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>5등급제(2022 개정 교육과정)에서는 석차등급을 산출하는 과목이라도 수강자가 5명 이하이면 석차등급란에 등급 대신 ‘ㆍ’을 입력합니다(학교생활기록 작성 및 관리지침 제15조제10항). 이 계산기도 5등급제에서 수강자 5명 이하이면 등급을 표시하지 않습니다. 수강자가 적을수록 반올림 영향이 커서, 25명 과목에서는 3등(12%)도 5등급제 1등급이 됩니다.</p>
             </details>
-      <div class="update-note">최종 검토: 2026.06.09 · 계산 결과는 참고용입니다.</div>
+<details class="faq-item"><summary><h3>진로선택 과목도 석차등급이 나오나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>학년에 따라 다릅니다. 고3(2015 개정 교육과정)은 진로선택 과목에 석차등급을 산출하지 않고 성취도(A·B·C)만 적습니다. 고1·고2(2022 개정 교육과정)는 진로선택 과목도 5등급이 나오고, 사회·과학 융합선택 9과목, 체육·예술 교과, 과학탐구실험, 교양만 석차등급이 없습니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>전과목 평균 내신등급은 어떻게 구하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>과목별 등급에 학점(2015 개정 교육과정은 단위수)을 곱한 값을 모두 더한 뒤 총 학점으로 나누는 가중평균입니다. (과목1 등급 × 학점 + 과목2 등급 × 학점 + …) ÷ 총 학점입니다. 학점이 큰 과목일수록 평균에 더 크게 반영되고, 석차등급이 없는 과목(진로선택 성취도만 있는 과목, 체육·예술, 교양 등)은 빼고 계산합니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>내신 등급은 낮을수록 좋은 건가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>네. 1등급이 가장 높고 마지막 등급(5등급제는 5등급, 9등급제는 9등급)이 가장 낮습니다. 평균 내신등급도 숫자가 작을수록 우수합니다. 다만 5등급제 2등급(상위 34%까지)과 9등급제 2등급(상위 11%까지)은 위치가 전혀 다르므로 두 제도의 등급 숫자를 그대로 비교하면 안 됩니다.</p>
+            </details>
+      <div class="update-note">최종 검토: 2026.10.29 · 계산 결과는 참고용입니다.</div>
           </div>
         </section>
   </div>
@@ -253,16 +338,18 @@
 
   <script>
   window.TRUST_BLOCK_CONFIG = {
-    standard: '고등학교 석차등급 9등급제 누적 비율 기준',
-    appliedFrom: '상시',
+    standard: '학교생활기록 작성 및 관리지침 별표 9 석차등급(5등급제·9등급제), 등급 인원 반올림·중간석차 규정',
+    appliedFrom: '2026학년도 (5등급제: 고1·고2, 9등급제: 고3)',
     exceptions: [
-      '진로선택과목(성취도 A·B·C)은 석차등급 평균에 포함하지 않습니다',
+      '5등급제에서 수강자 5명 이하 과목은 석차등급을 산출하지 않습니다(지침 제15조제10항)',
+      '석차등급이 없는 과목(고3 진로선택, 사회·과학 융합선택 9과목, 체육·예술, 과학탐구실험, 교양)은 평균에서 뺍니다',
       '대학·전형별 반영 과목·가중치는 다를 수 있어 참고용입니다',
     ],
     references: [
-      { name: '교육부 학교생활기록부 기재요령', url: 'https://www.moe.go.kr' },
+      { name: '학교생활기록 작성 및 관리지침(교육부훈령 제555호)', url: 'https://www.law.go.kr/행정규칙/학교생활기록작성및관리지침' },
+      { name: '2026학년도 학교생활기록부 기재요령(고등학교)', url: 'https://star.moe.go.kr/web/contents/m21100.do' },
     ],
-    lastReviewed: '2026.06',
+    lastReviewed: '2026.10',
   };
   </script>
   <script src="/assets/trust-block.js?v=ac07516f"></script>
@@ -300,31 +387,59 @@
 <script src="/assets/ds/calc-kit.js?v=806eb872"></script>
 <script>
 let mode='rank';
-// 9등급제 누적 비율 상한 → 등급
-const CUTS=[[4,1],[11,2],[23,3],[40,4],[60,5],[77,6],[89,7],[96,8],[100,9]];
-const RANGE=['~ 4%','4 ~ 11%','11 ~ 23%','23 ~ 40%','40 ~ 60%','60 ~ 77%','77 ~ 89%','89 ~ 96%','96 ~ 100%'];
-function gradeOf(pct){ for(const [c,g] of CUTS){ if(pct<=c) return g; } return 9; }
+let sys=5;
+// 석차누적비율 상한(%) - 학교생활기록 작성 및 관리지침 별표 9 (5등급: 2022 개정 교육과정, 9등급: 2015 개정 교육과정)
+const SYS_CUTS={5:[10,34,66,90,100],9:[4,11,23,40,60,77,89,96,100]};
+const SYS_NOTE={
+  5:'5등급제 누적 비율(1등급 10% · 2등급 34% · 3등급 66% · 4등급 90% · 5등급 100%)에 수강자 수를 곱해 반올림한 인원으로 산출한 참고치입니다. 학교·전형별 반영 과목과 산정 방식은 다를 수 있습니다.',
+  9:'9등급제 누적 비율(1등급 4% · 2등급 11% · 3등급 23% · 4등급 40% · 5등급 60% · 6등급 77% · 7등급 89% · 8등급 96% · 9등급 100%)에 수강자 수를 곱해 반올림한 인원으로 산출한 참고치입니다. 학교·전형별 반영 과목과 산정 방식은 다를 수 있습니다.'
+};
+const SYS_HINT={
+  5:'2025년 이후 입학생(2022 개정 교육과정)은 5등급제입니다. 성적표 석차등급이 1~5로 나오면 5등급제입니다.',
+  9:'2024년 입학생(2026년 고3, 2015 개정 교육과정)까지는 9등급제입니다. 성적표 석차등급이 1~9로 나오면 9등급제입니다.'
+};
+function rangeText(cuts,g){ return (g===1?'~ ':cuts[g-2]+' ~ ')+cuts[g-1]+'%'; }
+// 등급별 누적 인원 = 수강자수 × 누적비율, 반올림
+function cumCounts(cuts,total){ return cuts.map(c=>Math.round(total*c/100)); }
+function gradeAtPos(counts,pos){ for(let i=0;i<counts.length;i++){ if(pos<=counts[i]) return i+1; } return counts.length; }
+function gradeOfPct(cuts,pct){ for(let i=0;i<cuts.length;i++){ if(pct<=cuts[i]+1e-9) return i+1; } return cuts.length; }
 function fmt(n,d){ const p=Math.pow(10,d); return (Math.round(n*p)/p).toLocaleString('ko-KR',{minimumFractionDigits:d,maximumFractionDigits:d}); }
+
+function setSys(s,btn){
+  sys=s;
+  document.querySelectorAll('.mode-btn[data-sys]').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('sys-hint').textContent=SYS_HINT[s];
+  document.getElementById('r-note').textContent=SYS_NOTE[s];
+  document.querySelectorAll('.g-grade').forEach(sel=>{
+    const v=Math.min(parseInt(sel.value,10)||1,s);
+    sel.innerHTML=gradeOpts(s); sel.value=String(v);
+  });
+  calc();
+}
 
 function setMode(m,btn){
   mode=m;
-  document.querySelectorAll('.mode-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.mode-btn[data-mode]').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   document.getElementById('card-rank').style.display = m==='rank'?'block':'none';
   document.getElementById('card-avg').style.display = m==='avg'?'block':'none';
   document.getElementById('mode-hint').textContent = m==='rank'
     ? '석차와 수강자 수를 넣으면 석차백분율과 내신 등급을 환산합니다. 예) 100명 중 10등'
-    : '과목별 등급(1~9)과 이수단위를 넣으면 전과목 평균 내신등급(가중평균)을 계산합니다.';
+    : '과목별 등급과 학점(2015 교육과정은 단위수)을 넣으면 전과목 평균 내신등급(가중평균)을 계산합니다.';
   calc();
 }
 
 // 평균 등급 행
-function rowHtml(){
+function gradeOpts(s){
   let opts='';
-  for(let g=1;g<=9;g++) opts+=`<option value="${g}">${g}등급</option>`;
+  for(let g=1;g<=s;g++) opts+=`<option value="${g}">${g}등급</option>`;
+  return opts;
+}
+function rowHtml(){
   return `<div class="ng-row">`+
     `<input type="text" class="g-name" placeholder="예) 국어" />`+
-    `<select class="g-grade" onchange="calc()">${opts}</select>`+
+    `<select class="g-grade" onchange="calc()">${gradeOpts(sys)}</select>`+
     `<input type="number" class="g-unit" placeholder="단위" min="1" max="10" oninput="calc()" />`+
     `<button class="g-del" type="button" onclick="delRow(this)" aria-label="과목 삭제">×</button>`+
   `</div>`;
@@ -344,18 +459,35 @@ function calc(){
     const total=parseFloat(String(document.getElementById('in-total').value).replace(/,/g, ''));
     let tie=parseFloat(String(document.getElementById('in-tie').value).replace(/,/g, '')); if(!isFinite(tie)||tie<1) tie=1;
     if(!isFinite(rank)||!isFinite(total)||rank<1||total<1||rank>total){res.classList.remove('show');return;}
-    const cum=Math.min(rank+tie-1, total);  // 동석차 과입력 시 누적 위치가 전체 인원을 넘지 않도록 클램프
-    const pct=cum/total*100;
-    const g=gradeOf(pct);
+    const cuts=SYS_CUTS[sys], counts=cumCounts(cuts,total);
+    const last=Math.min(rank+tie-1, total);  // 동석차 과입력 시 마지막 위치가 전체 인원을 넘지 않도록 클램프
+    const gTop=gradeAtPos(counts,rank), gBot=gradeAtPos(counts,last);
+    // 동점자가 등급경계에 걸칠 때만 중간석차백분율 적용(등급 범위 안의 동점자는 그대로)
+    const useMid = tie>1 && gTop!==gBot;
+    const mid = rank+(last-rank)/2;
+    const pct = (useMid?mid:rank)/total*100;
+    const g = useMid ? gradeOfPct(cuts,pct) : gTop;
     res.classList.add('show');
-    document.getElementById('r-label').textContent='내신 등급';
-    document.getElementById('r-main').textContent=g;
+    document.getElementById('r-label').textContent=sys+'등급제 내신 등급';
     document.getElementById('r-mark').textContent='등급';
-    document.getElementById('r-sub').textContent='수강자 '+total.toLocaleString('ko-KR')+'명 중 '+rank.toLocaleString('ko-KR')+'등';
-    document.getElementById('r-d1-label').textContent='석차백분율';
-    document.getElementById('r-d1').textContent=fmt(pct,2)+'%';
+    document.getElementById('r-sub').textContent='수강자 '+total.toLocaleString('ko-KR')+'명 중 '+rank.toLocaleString('ko-KR')+'등'+(tie>1?' (동석차 '+tie+'명)':'');
+    document.getElementById('r-d1-label').textContent=useMid?'중간석차백분율':'석차백분율';
+    document.getElementById('r-d1').textContent=fmt(pct,2)+'%'+(useMid?' (중간석차 '+fmt(mid,1)+'등)':'');
+    if(sys===5 && total<=5){
+      // 지침 제15조제10항: 석차등급 산출 과목 중 수강자 5명 이하는 석차등급 미입력
+      document.getElementById('r-main').textContent='미산출';
+      document.getElementById('r-mark').textContent='';
+      document.getElementById('r-d2-label').textContent='석차등급';
+      document.getElementById('r-d2').textContent='산출 안 함 (수강자 5명 이하)';
+      document.getElementById('r-d3-label').textContent='등급 기준 인원';
+      document.getElementById('r-d3').textContent='-';
+      return;
+    }
+    document.getElementById('r-main').textContent=g;
     document.getElementById('r-d2-label').textContent=g+'등급 구간';
-    document.getElementById('r-d2').textContent=RANGE[g-1];
+    document.getElementById('r-d2').textContent=rangeText(cuts,g);
+    document.getElementById('r-d3-label').textContent=g+'등급 기준 인원';
+    document.getElementById('r-d3').textContent=counts[g-1].toLocaleString('ko-KR')+'등까지 ('+total.toLocaleString('ko-KR')+'명×'+cuts[g-1]+'%)';
   } else {
     let totUnit=0, totWeighted=0, count=0;
     document.querySelectorAll('.ng-row').forEach(r=>{
@@ -370,11 +502,13 @@ function calc(){
     document.getElementById('r-label').textContent='평균 내신등급';
     document.getElementById('r-main').textContent=fmt(avg,2);
     document.getElementById('r-mark').textContent='등급';
-    document.getElementById('r-sub').textContent='반영 '+count+'과목 · 총 '+fmt(totUnit,0)+'단위';
+    document.getElementById('r-sub').textContent='반영 '+count+'과목 · 총 '+fmt(totUnit,0)+'학점(단위)';
     document.getElementById('r-d1-label').textContent='등급 × 단위 합';
     document.getElementById('r-d1').textContent=fmt(totWeighted,0);
-    document.getElementById('r-d2-label').textContent='총 이수단위';
-    document.getElementById('r-d2').textContent=fmt(totUnit,0)+'단위';
+    document.getElementById('r-d2-label').textContent='총 학점(단위)';
+    document.getElementById('r-d2').textContent=fmt(totUnit,0);
+    document.getElementById('r-d3-label').textContent='등급제';
+    document.getElementById('r-d3').textContent=sys+'등급제 (1등급이 가장 높음)';
   }
 }
 // 초기 평균 모드 행 4개
@@ -387,10 +521,10 @@ for(let i=0;i<4;i++) addRow();
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
-  reviewBasis: '고등학교 석차등급 9등급제·가중평균',
-  basisDate: '상시 적용',
-  referenceOrg: '교육부 학교생활기록부 기재요령',
-  lastReviewed: '2026.06.09',
+  reviewBasis: '학교생활기록 작성 및 관리지침 별표 9·2026학년도 학교생활기록부 기재요령',
+  basisDate: '2026학년도 기준',
+  referenceOrg: '교육부·17개 시도교육청',
+  lastReviewed: '2026.10.29',
   category: 'tools'
 };
 </script>

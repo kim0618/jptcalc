@@ -1059,7 +1059,7 @@ body.h-sheet-open { overflow: hidden; }
   .ds-nav-cat-head { display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-2); color: var(--text); text-decoration: none; }
   .ds-nav-cat-head .ds-cat-ico { width: 36px; height: 36px; border-radius: var(--radius-md); flex-shrink: 0; }
   .ds-nav-cat-head .ds-cat-ico .ds-i { width: 20px; height: 20px; }
-  .ds-nav-cat-head span { display: flex; flex-direction: column; min-width: 0; }
+  .ds-nav-cat-head > span:not(.ds-cat-ico) { display: flex; flex-direction: column; min-width: 0; }  /* 아이콘 칸(span.ds-cat-ico)까지 잡으면 가운데 정렬이 풀린다 */
   .ds-nav-cat-head b { font-size: var(--fs-body); font-weight: var(--fw-title); white-space: nowrap; }
   .ds-nav-cat-head small { font-size: var(--fs-meta); color: var(--text-sub); }
   .ds-nav-cats ul { margin: 0; padding: 0; list-style: none; }
