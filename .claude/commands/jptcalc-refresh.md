@@ -100,6 +100,17 @@ jptcalc.kr의 **세율·보험요율·기준값**을 정기 점검해 항상 최
 ### Step 4: 사용자 보고 + 승인 대기
 
 ```
+### 회귀 검사 (Phase 6, 2026-10-29 신설, 계산기 JS를 고쳤으면 필수)
+요율표 가드(`check-rate-tables.mjs`)는 "숫자가 파일에 있는가"만 본다. **고친 숫자가 출력에 의도대로 반영됐는지, 다른 계산기는 그대로인지**는 회귀 검사로 본다.
+```bash
+cd ~/jptcalc && python3 serve.py &   # 로컬 4000
+cd ~/.claude/tools/calc-runner && export PW_EXEC=$(ls ~/.cache/ms-playwright/chromium-1223/chrome-linux*/chrome)
+node snapshot.mjs --check            # 105개 계산기 304건, 약 6분. 달라진 결과만 -/+ 출력
+```
+- 달라진 항목이 **이번에 고친 계산기·고친 방향과 일치**하면 `node snapshot.mjs --save`로 기준값을 갱신하고 결과 보고에 "회귀 검사: 의도한 N건만 변경"으로 적는다.
+- 고치지 않은 계산기가 달라졌으면 **공용 JS(간이세액표 `salary-tax-table.js` 등) 연쇄 영향**이거나 사고다. 원인을 찾기 전에 배포하지 않는다.
+- 변경 0건인 월초 회전도 `--check`를 한 번 돌려 "회귀 0"을 기록한다(배포본과 로컬이 같다는 확인도 겸함).
+
 ## 변경 발견 항목
 
 ### 1. 2026년 최저임금
