@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>요리 계량 변환기 - 컵·큰술·작은술을 g으로, 재료별 무게 환산 | 제이퍼</title>
+  <meta name="description" content="밀가루·설탕·버터·간장 등 재료 23종의 1컵·1큰술·1작은술 무게(g)를 바로 환산합니다. g을 큰술로 거꾸로 바꾸고, 한국 컵(200ml)과 미국 컵(236.6ml)을 골라 계산할 수 있습니다." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/tools/cooking-measure/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="요리 계량 변환기 - 컵·큰술·작은술을 g으로, 재료별 무게 환산 | 제이퍼" />
+  <meta property="og:description" content="재료별 컵·큰술·작은술 ↔ 그램 환산. 한국 컵·미국 컵 선택, 미국 농무부(USDA) 자료 기준." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/tools/cooking-measure/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=1ff0325a" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"요리 계량 변환기","url":"https://www.jptcalc.kr/calc/tools/cooking-measure/","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},
+    {"@type":"ListItem","position":2,"name":"생활·도구 계산기","item":"https://www.jptcalc.kr/calc/tools/"},
+    {"@type":"ListItem","position":3,"name":"요리 계량 변환기","item":"https://www.jptcalc.kr/calc/tools/cooking-measure/"}
+  ]}
+  </script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "밀가루 1컵은 몇 그램인가요?", "acceptedAnswer": {"@type": "Answer", "text": "한국 계량컵(200ml)에 중력분 밀가루를 담으면 약 106g입니다. 미국 농무부(USDA) 자료의 밀가루 1컵(약 236.6ml) 125g을 200ml로 환산한 값입니다. 미국 레시피의 1컵이라면 125g을 그대로 쓰면 됩니다. 체에 치거나 눌러 담으면 무게가 달라지므로 정확한 베이킹에는 저울을 권합니다."}}, {"@type": "Question", "name": "설탕 1큰술은 몇 그램인가요?", "acceptedAnswer": {"@type": "Answer", "text": "백설탕 1큰술(15ml)은 약 12.7g, 1작은술(5ml)은 약 4.2g입니다. USDA 자료의 설탕 1컵 200g(약 236.6ml)에서 구한 밀도로 계산했습니다. 같은 1큰술이라도 소금은 약 18.5g, 꿀은 약 21.5g으로 재료마다 무게가 다릅니다."}}, {"@type": "Question", "name": "한국 1컵과 미국 1컵은 얼마나 다른가요?", "acceptedAnswer": {"@type": "Answer", "text": "국내 레시피 대부분은 1컵을 200ml로 쓰고, 미국 레시피의 1컵(cup)은 약 236.6ml입니다. 미국 컵이 약 18% 큽니다. 해외 레시피를 한국 계량컵으로 그대로 따라 하면 재료가 15% 남짓 적게 들어가므로, 위 변환기에서 컵 기준을 미국으로 바꿔 계산하세요."}}, {"@type": "Question", "name": "그램(g)을 큰술로 바꾸려면 어떻게 하나요?", "acceptedAnswer": {"@type": "Answer", "text": "단위에서 g을 고르고 무게를 넣으면 큰술·작은술·컵으로 거꾸로 환산됩니다. 예를 들어 버터 50g은 약 3.5큰술, 설탕 100g은 약 7.9큰술입니다. 계산식은 무게(g) ÷ 재료 밀도(g/ml) ÷ 15ml입니다."}}, {"@type": "Question", "name": "계산 결과가 실제 무게와 다를 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "다를 수 있습니다. 같은 재료도 담는 방식에 따라 무게가 크게 바뀝니다. USDA 자료에서도 흑설탕 1컵은 그냥 담으면 145g, 꾹 눌러 담으면 220g입니다. 이 변환기는 USDA 기준 담는 방식의 평균값이라, 가루를 소복이 쌓거나 눌러 담으면 결과보다 무거워집니다."}}]}</script>
+  <style>
+    /* 페이지 고유 스타일(공통 부품 재정의는 base.css가 맡아 뺐다) */
+    .cat-group { display:flex;flex-wrap:wrap;background:rgba(0,0,0,0.03);border:1px solid var(--dark-border);border-radius:10px;padding:3px;gap:2px;margin-bottom:4px }
+    .cat-btn { flex:1 1 auto;border:none;border-radius:7px;background:transparent;padding:10px 6px;font-size:13px;font-weight:600;color:var(--gray-500);cursor:pointer;transition:all .18s;font-family:inherit;white-space:nowrap }
+    .cat-btn.active { background:var(--primary);color:#fff;font-weight:700 }
+    .conv-row { display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:end }
+    .conv-field>label { display:block;font-size:12px;font-weight:700;color:var(--gray-500);margin-bottom:7px }
+    .cm-ing-select { margin-top:8px }
+    .rh-value .big-num { font-size:36px;font-weight:900;line-height:1.1;word-break:break-all }
+    .all-units { margin-top:8px }
+    .all-units-title { font-size:11px;font-weight:800;letter-spacing:0.5px;text-transform:uppercase;color:var(--gray-500);margin:18px 0 8px }
+    .au-row { display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid rgba(0,0,0,0.06);font-size:14px }
+    .au-row:last-child { border-bottom:none }
+    .au-unit { color:var(--gray-600);font-weight:500 }
+    .au-val { font-weight:700;color:var(--gray-900);word-break:break-all;text-align:right;padding-left:10px }
+    @media (max-width:480px) {
+  .conv-row { gap:6px }
+  .cat-btn { flex:1 1 calc(33% - 2px) }
+}
+  </style>
+</head>
+<body data-cat="tools" style="--cat: var(--c-tools)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
+</header>
+
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/tools/">생활·도구 계산기</a> &rsaquo; 요리 계량 변환기</div>
+      <div class="page-badge">재료 23종 · USDA 자료 기준</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-wrench"></use></svg></span>
+        <h1 class="page-title">요리 계량 변환기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">USDA 자료 기준</span>
+          <span class="ds-trust-chip">2026.11.02 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">재료와 양을 고르면 컵·큰술·작은술과 그램(g)을 양방향으로 바로 환산합니다</p>
+    </div>
+  </div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+      <div class="field-label ds-group-label"><label for="cm-ing">재료</label></div>
+      <div class="cat-group"><button type="button" class="cat-btn active" data-ing="flour" onclick="pickIng('flour')">밀가루</button><button type="button" class="cat-btn" data-ing="sugar" onclick="pickIng('sugar')">설탕</button><button type="button" class="cat-btn" data-ing="butter" onclick="pickIng('butter')">버터</button><button type="button" class="cat-btn" data-ing="salt" onclick="pickIng('salt')">소금</button><button type="button" class="cat-btn" data-ing="soysauce" onclick="pickIng('soysauce')">간장</button><button type="button" class="cat-btn" data-ing="water" onclick="pickIng('water')">물</button></div>
+      <select id="cm-ing" class="cm-ing-select" onchange="pickIng(this.value)" aria-label="재료 전체 목록"><optgroup label="가루"><option value="flour" selected>밀가루(중력분)</option><option value="cakeflour">박력분</option><option value="breadflour">강력분</option><option value="cornstarch">옥수수전분</option><option value="cocoa">코코아가루</option><option value="bakingpowder">베이킹파우더</option></optgroup><optgroup label="당류"><option value="sugar">설탕(백설탕)</option><option value="brownsugar">흑설탕(꾹 눌러 담기)</option><option value="honey">꿀</option><option value="syrup">물엿·콘시럽</option></optgroup><optgroup label="액체"><option value="water">물</option><option value="milk">우유</option><option value="soysauce">간장(양조간장)</option><option value="vinegar">식초</option></optgroup><optgroup label="기름·지방"><option value="oil">식용유(대두유)</option><option value="sesameoil">참기름</option><option value="oliveoil">올리브유</option><option value="butter">버터</option></optgroup><optgroup label="양념·기타"><option value="salt">소금(고운 소금)</option><option value="mayo">마요네즈</option><option value="ketchup">케첩</option><option value="sesame">통깨</option><option value="rice">쌀(단립종 멥쌀)</option></optgroup></select>
+    </div>
+    <div class="card">
+      <div class="field-label ds-group-label">양</div>
+      <div class="conv-row">
+        <div class="conv-field"><label for="cm-val">얼마나</label><div class="input-wrap"><input type="number" id="cm-val" inputmode="decimal" placeholder="예) 1" oninput="calc()" /></div></div>
+        <div class="conv-field"><label for="cm-unit">단위</label>
+          <select id="cm-unit" onchange="calc()"><option value="cup" selected>컵</option><option value="tbsp">큰술</option><option value="tsp">작은술</option><option value="ml">ml</option><option value="g">g (무게)</option></select>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="field-label ds-group-label">컵 기준</div>
+      <div class="seg-group" role="group" aria-label="컵 기준"><button type="button" class="seg-btn active" data-cup="200" onclick="setCup(200,this)"><b>한국 컵</b>200ml</button><button type="button" class="seg-btn" data-cup="236.588" onclick="setCup(236.588,this)"><b>미국 컵</b>약 236.6ml</button></div>
+    </div>
+
+        <button type="button" class="ds-btn-calc" data-calc-submit="calc" data-result="result" data-required="cm-val">계산하기</button>
+      </div>
+    </section>
+
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="result">
+      <div class="result-highlight"><div class="rh-label" id="r-label">결과</div><div class="rh-value"><span class="big-num" id="r-main">-</span></div><div class="rh-sub" id="r-sub">-</div></div>
+      <div class="all-units">
+        <div class="all-units-title">전체 단위로 한눈에</div>
+        <div id="r-all"></div>
+      </div>
+      <p class="result-note">미국 농무부(USDA) 자료의 재료별 1컵 무게로 계산했습니다. 가루를 소복이 쌓거나 꾹 눌러 담으면 실제 무게는 결과보다 무거워집니다. 종이컵·소주잔은 제품마다 달라 근사값입니다.</p>
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/tools/unit-converter/">단위 변환 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">결과</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="cooking-measure-next">
+        <a class="ds-next-card" href="/calc/tools/unit-converter/" data-next="unit-converter"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-wrench"></use></svg></span><span class="ds-next-body"><b>단위 변환기</b><span>길이·무게·넓이·부피·온도를 한 번에 변환합니다. 값을 넣으면 인치·평·근·돈·℉ 등 같은 종류의 모든 단위로 동시에 환산됩니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/tools/percent/" data-next="percent"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-wrench"></use></svg></span><span class="ds-next-body"><b>퍼센트 계산기</b><span>전체의 몇 %, 한 값이 다른 값의 몇 %, 두 값 사이의 증감률, X% 증가·감소한 값까지 네 가지 비율 계산을 한 화면에서 처리합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
+  </div>
+
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">미국 농무부 FoodData Central(SR Legacy) 재료별 1컵 무게 <a href="https://fdc.nal.usda.gov/" target="_blank" rel="noopener">USDA FoodData Central 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#cooking-measure-s1">재료별 무게표</a><a href="#cooking-measure-s2">계산 예시</a><a href="#cooking-measure-s3">알아두면 좋은</a><a href="#cooking-measure-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+
+  <div class="guide-section">
+            <section class="ds-section ds-prose" aria-labelledby="cooking-measure-s1">
+          <div class="ds-section-head"><h2 id="cooking-measure-s1">재료별 1컵·1큰술·1작은술 무게표</h2></div>
+<p>같은 1컵이라도 밀가루는 약 106g, 설탕은 약 169g, 꿀은 약 287g으로 재료마다 무게가 다릅니다. 아래 표는 미국 농무부(USDA) 식품 데이터베이스가 공개한 재료별 "1컵(약 236.6ml) = 몇 g" 값을 한국 계량 단위(1컵 200ml, 1큰술 15ml, 1작은술 5ml)로 환산한 것으로, 위 변환기와 같은 숫자입니다.</p>
+      <div class="ds-table-card">
+        <table>
+          <thead><tr><th>재료</th><th>1컵(200ml)</th><th>1큰술(15ml)</th><th>1작은술(5ml)</th></tr></thead>
+          <tbody>
+            <tr><td>밀가루(중력분)</td><td>106g</td><td>7.9g</td><td>2.6g</td></tr>
+            <tr><td>박력분</td><td>116g</td><td>8.7g</td><td>2.9g</td></tr>
+            <tr><td>강력분</td><td>116g</td><td>8.7g</td><td>2.9g</td></tr>
+            <tr><td>옥수수전분</td><td>108g</td><td>8.1g</td><td>2.7g</td></tr>
+            <tr><td>코코아가루</td><td>73g</td><td>5.5g</td><td>1.8g</td></tr>
+            <tr><td>베이킹파우더</td><td>187g</td><td>14g</td><td>4.7g</td></tr>
+            <tr><td>설탕(백설탕)</td><td>169g</td><td>12.7g</td><td>4.2g</td></tr>
+            <tr><td>흑설탕(꾹 눌러 담기)</td><td>186g</td><td>13.9g</td><td>4.6g</td></tr>
+            <tr><td>꿀</td><td>287g</td><td>21.5g</td><td>7.2g</td></tr>
+            <tr><td>물엿·콘시럽</td><td>288g</td><td>21.6g</td><td>7.2g</td></tr>
+            <tr><td>물</td><td>200g</td><td>15g</td><td>5g</td></tr>
+            <tr><td>우유</td><td>206g</td><td>15.5g</td><td>5.2g</td></tr>
+            <tr><td>간장(양조간장)</td><td>216g</td><td>16.2g</td><td>5.4g</td></tr>
+            <tr><td>식초</td><td>201g</td><td>15.1g</td><td>5g</td></tr>
+            <tr><td>식용유(대두유)</td><td>184g</td><td>13.8g</td><td>4.6g</td></tr>
+            <tr><td>참기름</td><td>184g</td><td>13.8g</td><td>4.6g</td></tr>
+            <tr><td>올리브유</td><td>183g</td><td>13.7g</td><td>4.6g</td></tr>
+            <tr><td>버터</td><td>192g</td><td>14.4g</td><td>4.8g</td></tr>
+            <tr><td>소금(고운 소금)</td><td>247g</td><td>18.5g</td><td>6.2g</td></tr>
+            <tr><td>마요네즈</td><td>186g</td><td>13.9g</td><td>4.6g</td></tr>
+            <tr><td>케첩</td><td>203g</td><td>15.2g</td><td>5.1g</td></tr>
+            <tr><td>통깨</td><td>122g</td><td>9.1g</td><td>3g</td></tr>
+            <tr><td>쌀(단립종 멥쌀)</td><td>169g</td><td>12.7g</td><td>4.2g</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>흑설탕은 꾹 눌러 담은 기준, 쌀은 씻기 전 생쌀(단립종) 기준입니다. 된장·고춧가루처럼 USDA 자료에 같은 제품이 없는 재료는 넣지 않았습니다.</p>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="cooking-measure-s2">
+          <div class="ds-section-head"><h2 id="cooking-measure-s2">상황별 계산 예시</h2></div>
+<h3>예시 1 - 미국 레시피 "밀가루 1컵"을 한국 계량컵으로</h3>
+      <p>미국 레시피의 밀가루 1컵은 약 236.6ml라 125g입니다. 한국 계량컵(200ml)에 그대로 담으면 약 106g만 들어가 약 19g(15% 남짓)이 부족합니다. 변환기에서 컵 기준을 "미국 컵"으로 바꾸고 밀가루 1컵을 넣으면 125g이 나오니, 저울로 125g을 재거나 한국 컵으로 약 1.2컵을 담으면 됩니다.</p>
+      <ul>
+        <li>125g ÷ 236.6ml ≈ 0.528g/ml</li>
+        <li>200ml × 0.528 ≈ 106g, 125 − 106 ≈ 19g 부족</li>
+      </ul>
+      <h3>예시 2 - 설탕 100g을 저울 없이</h3>
+      <p>단위를 g으로 고르고 설탕 100을 넣으면 약 7.9큰술이 나옵니다. 8큰술을 뜨면 약 101g으로 목표와 1g 차이입니다. 작은술로만 뜨면 약 24번을 떠야 하니 큰술부터 채우는 편이 빠르고 오차도 덜 쌓입니다.</p>
+      <ul>
+        <li>설탕 1큰술 ≈ 12.7g, 100 ÷ 12.7 ≈ 7.9큰술</li>
+        <li>설탕 1작은술 ≈ 4.2g, 100 ÷ 4.2 ≈ 24번</li>
+      </ul>
+      <h3>예시 3 - 버터 50g은 몇 큰술</h3>
+      <p>버터 1큰술은 약 14.4g이라 50g은 약 3.5큰술입니다. 3큰술(약 43g)을 넣고 반 큰술(작은술 1개 반)을 더하면 약 50g이 됩니다.</p>
+      <ul>
+        <li>50 ÷ 14.4 ≈ 3.5큰술</li>
+        <li>3큰술 ≈ 43g + 반 큰술 ≈ 7g ≈ 50g</li>
+      </ul>
+        </section>
+            <section class="ds-section ds-prose" aria-labelledby="cooking-measure-s3">
+          <div class="ds-section-head"><h2 id="cooking-measure-s3">알아두면 좋은 계량 상식</h2></div>
+<h3>"1컵"은 나라마다 다르다</h3>
+      <p>국내 레시피 대부분은 1컵을 200ml로 쓰고, 미국 레시피의 1컵(cup)은 약 236.6ml입니다. 큰술(15ml)과 작은술(5ml)은 미국 값(약 14.8ml·4.9ml)과 거의 같아 차이가 작지만, 컵은 18% 차이가 납니다. 요리용 종이컵은 약 180ml로 한국 계량컵보다 조금 작습니다.</p>
+      <h3>담는 방식이 무게를 바꾼다</h3>
+      <p>같은 1컵이라도 가루를 체에 쳐서 살살 담으면 가볍고, 꾹 눌러 담으면 무겁습니다. USDA 자료에서 흑설탕 1컵은 그냥 담으면 145g, 눌러 담으면 220g으로 50% 넘게 차이 납니다. 가루는 소복하게 쌓지 말고 윗면을 평평하게 깎아 담아야 이 변환기의 값과 가까워집니다. 정확도가 중요한 베이킹이라면 저울로 그램을 재는 것이 가장 확실합니다. 계량 단위 전반은 <a href="/blog/posts/cooking-measurement-guide.html">계량스푼 계량컵 변환법 가이드</a>에 정리해 두었습니다.</p>
+        </section>
+            <section class="ds-section faq-card" aria-labelledby="cooking-measure-faq">
+          <div class="ds-section-head"><h2 id="cooking-measure-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+      <details class="faq-item"><summary><h3>밀가루 1컵은 몇 그램인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>한국 계량컵(200ml)에 중력분 밀가루를 담으면 약 106g입니다. 미국 농무부(USDA) 자료의 밀가루 1컵(약 236.6ml) 125g을 200ml로 환산한 값입니다. 미국 레시피의 1컵이라면 125g을 그대로 쓰면 됩니다. 체에 치거나 눌러 담으면 무게가 달라지므로 정확한 베이킹에는 저울을 권합니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>설탕 1큰술은 몇 그램인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>백설탕 1큰술(15ml)은 약 12.7g, 1작은술(5ml)은 약 4.2g입니다. USDA 자료의 설탕 1컵 200g(약 236.6ml)에서 구한 밀도로 계산했습니다. 같은 1큰술이라도 소금은 약 18.5g, 꿀은 약 21.5g으로 재료마다 무게가 다릅니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>한국 1컵과 미국 1컵은 얼마나 다른가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>국내 레시피 대부분은 1컵을 200ml로 쓰고, 미국 레시피의 1컵(cup)은 약 236.6ml입니다. 미국 컵이 약 18% 큽니다. 해외 레시피를 한국 계량컵으로 그대로 따라 하면 재료가 15% 남짓 적게 들어가므로, 위 변환기에서 컵 기준을 미국으로 바꿔 계산하세요.</p>
+            </details>
+      <details class="faq-item"><summary><h3>그램(g)을 큰술로 바꾸려면 어떻게 하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>단위에서 g을 고르고 무게를 넣으면 큰술·작은술·컵으로 거꾸로 환산됩니다. 예를 들어 버터 50g은 약 3.5큰술, 설탕 100g은 약 7.9큰술입니다. 계산식은 무게(g) ÷ 재료 밀도(g/ml) ÷ 15ml입니다.</p>
+            </details>
+      <details class="faq-item"><summary><h3>계산 결과가 실제 무게와 다를 수 있나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>다를 수 있습니다. 같은 재료도 담는 방식에 따라 무게가 크게 바뀝니다. USDA 자료에서도 흑설탕 1컵은 그냥 담으면 145g, 꾹 눌러 담으면 220g입니다. 이 변환기는 USDA 기준 담는 방식의 평균값이라, 가루를 소복이 쌓거나 눌러 담으면 결과보다 무거워집니다.</p>
+            </details>
+      <div class="update-note">미국 농무부 FoodData Central(SR Legacy) 기준 · 최종 검토: 2026.11.02 · 계산 결과는 참고용입니다.</div>
+          </div>
+        </section>
+  </div>
+    </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '미국 농무부 FoodData Central(SR Legacy) 재료별 1컵 무게, 국내 레시피 통용 계량 단위(1컵 200ml·1큰술 15ml·1작은술 5ml)',
+    appliedFrom: '상시',
+    exceptions: [
+      '가루를 소복이 쌓거나 눌러 담으면 실제 무게는 결과보다 무겁습니다',
+      '종이컵(약 180ml)·소주잔(약 50ml)은 제품마다 달라 근사값입니다',
+      '미국 컵은 236.588ml(미국 관용 컵 정의값)로 계산합니다',
+    ],
+    references: [
+      { name: 'USDA FoodData Central', url: 'https://fdc.nal.usda.gov/' },
+    ],
+    lastReviewed: '2026.11',
+  };
+  </script>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 생활·도구 계산기</h2>
+    <div class="sibling-list">
+      <a href="/calc/tools/percent/" class="sibling-link">퍼센트 계산기</a>
+      <a href="/calc/tools/unit-converter/" class="sibling-link">단위 변환기</a>
+      <a href="/calc/tools/discount/" class="sibling-link">할인율 계산기</a>
+      <a href="/calc/tools/gpa/" class="sibling-link">학점 계산기</a>
+      <a href="/calc/tools/naesin-grade/" class="sibling-link">내신 등급 계산기</a>
+      <a href="/calc/tools/char-count/" class="sibling-link">글자수 세기</a>
+      <a href="/calc/tools/lunar-calendar/" class="sibling-link">음력 양력 변환기</a>
+    </div>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/cooking-measurement-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/cooking-measurement-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>계량스푼 계량컵 변환법 2026 - 큰술·작은술·1컵을 ml·g로 정확히 바꾸는 법</span></a>
+    </div>
+  </div>
+</main>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
+  </div>
+</footer>
+
+<script src="/assets/ds/calc-kit.js?v=806eb872"></script>
+<script>
+// 재료 밀도(g/ml) = USDA FoodData Central SR Legacy "1 cup = N g" ÷ 236.588ml (data-points §72). [키, 이름, 밀도, FDC ID]
+const ING = [["flour", "밀가루(중력분)", 0.5283, 168894], ["cakeflour", "박력분", 0.5791, 169723], ["breadflour", "강력분", 0.5791, 168896], ["cornstarch", "옥수수전분", 0.541, 169698], ["cocoa", "코코아가루", 0.3635, 169593], ["bakingpowder", "베이킹파우더", 0.9333, 172803], ["sugar", "설탕(백설탕)", 0.8454, 169655], ["brownsugar", "흑설탕(꾹 눌러 담기)", 0.9299, 168833], ["honey", "꿀", 1.4329, 169640], ["syrup", "물엿·콘시럽", 1.4413, 168837], ["water", "물", 1.0009, 173647], ["milk", "우유", 1.0313, 171265], ["soysauce", "간장(양조간장)", 1.0778, 174277], ["vinegar", "식초", 1.006, 172237], ["oil", "식용유(대두유)", 0.9214, 171411], ["sesameoil", "참기름", 0.9214, 171016], ["oliveoil", "올리브유", 0.913, 171413], ["butter", "버터", 0.9595, 173410], ["salt", "소금(고운 소금)", 1.2342, 173468], ["mayo", "마요네즈", 0.9299, 171009], ["ketchup", "케첩", 1.0144, 168556], ["sesame", "통깨", 0.6087, 170150], ["rice", "쌀(단립종 멥쌀)", 0.8454, 168931]];
+const SPOON = { tbsp:15, tsp:5 };          // 국내 레시피 통용 기준(ml)
+let ing = 'flour', cupMl = 200;
+const ingOf = k => ING.find(x => x[0] === k);
+function fmt(n, d){
+  if(!isFinite(n)) return '-';
+  return n.toLocaleString('ko-KR', { maximumFractionDigits: d, minimumFractionDigits: 0 });
+}
+const fmtG = g => fmt(g, g < 100 ? 1 : 0) + 'g';
+function pickIng(k){
+  ing = k;
+  document.getElementById('cm-ing').value = k;
+  document.querySelectorAll('.cat-btn[data-ing]').forEach(b => b.classList.toggle('active', b.dataset.ing === k));
+  calc();
+}
+function setCup(ml, btn){
+  cupMl = ml;
+  document.querySelectorAll('.seg-btn[data-cup]').forEach(b => b.classList.toggle('active', b === btn));
+  calc();
+}
+function unitName(u){ return u === 'cup' ? (cupMl === 200 ? '컵' : '컵(미국)') : u === 'tbsp' ? '큰술' : u === 'tsp' ? '작은술' : u; }
+function calc(){
+  const raw = document.getElementById('cm-val').value;
+  const res = document.getElementById('result');
+  const v = parseFloat(raw);
+  if(raw === '' || !isFinite(v) || v <= 0){ res.classList.remove('show'); return; }
+  const unit = document.getElementById('cm-unit').value;
+  const [, name, d] = ingOf(ing);
+  const ml = unit === 'g' ? v / d : unit === 'cup' ? v * cupMl : unit === 'ml' ? v : v * SPOON[unit];
+  const g = ml * d;
+  res.classList.add('show');
+  const inTxt = fmt(v, 2) + (unit === 'g' ? 'g' : unit === 'ml' ? 'ml' : unitName(unit));
+  document.getElementById('r-label').textContent = name + ' ' + inTxt + ' =';
+  if(unit === 'g'){
+    const tb = ml / 15;
+    document.getElementById('r-main').textContent = '약 ' + fmt(tb, 1) + '큰술';
+    document.getElementById('r-sub').textContent = '부피 약 ' + fmt(ml, 1) + 'ml · 컵으로 약 ' + fmt(ml / cupMl, 2) + unitName('cup');
+  } else {
+    document.getElementById('r-main').textContent = '약 ' + fmtG(g);
+    document.getElementById('r-sub').textContent = '부피 ' + fmt(ml, 1) + 'ml · 밀도 ' + fmt(d, 3) + 'g/ml';
+  }
+  const rows = [
+    ['무게', fmtG(g), unit !== 'g'],
+    [unitName('cup') + ' (' + (cupMl === 200 ? '200' : '약 236.6') + 'ml)', fmt(ml / cupMl, 2) + '컵', unit === 'cup'],
+    ['큰술 (15ml)', fmt(ml / 15, 1) + '큰술', unit === 'tbsp' || unit === 'g'],
+    ['작은술 (5ml)', fmt(ml / 5, 1) + '작은술', unit === 'tsp'],
+    ['ml', fmt(ml, 1) + 'ml', unit === 'ml'],
+    ['종이컵 (약 180ml)', '약 ' + fmt(ml / 180, 2) + '개', false],
+    ['소주잔 (약 50ml)', '약 ' + fmt(ml / 50, 1) + '잔', false],
+  ];
+  document.getElementById('r-all').innerHTML = rows.map(r => `<div class="au-row"><span class="au-unit">${r[0]}</span><span class="au-val"${r[2] ? ' style="color:var(--primary)"' : ''}>${r[1]}</span></div>`).join('');
+}
+</script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
+<script src="/assets/calc-registry.js?v=b859b628"></script>
+<script src="/assets/ds/site-shell.js?v=395f4f16"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '미국 농무부 FoodData Central(SR Legacy) 재료별 계량 무게',
+  basisDate: '상시 적용',
+  referenceOrg: '미국 농무부(USDA)',
+  lastReviewed: '2026.11.02',
+  category: 'tools'
+};
+</script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "result", "required": ["cm-val"], "waitText": "양을 입력하면 계산됩니다", "nextBox": "#cooking-measure-next", "next": []});
+  DSCalc.placeTrust('ds-trust-col');
+</script>
+<script src="/assets/ds/prefill.js?v=7d81b350" defer></script>
+</body>
+</html>

@@ -1534,10 +1534,10 @@
     "sub": "전체의 몇 %, 한 값이 다른 값의 몇 %, 두 값 사이의 증감률, X% 증가·감소한 값까지 네 가지 비율 계산을 한 화면에서 처리합니다."
    },
    {
-    "key": "discount",
-    "path": "/calc/tools/discount/",
-    "title": "할인율 계산기",
-    "sub": "할인가·할인율·정가를 서로 역산하고, 20% 후 10% 같은 중복할인의 실질 할인율과 최종 결제 금액을 계산합니다."
+    "key": "cooking-measure",
+    "path": "/calc/tools/cooking-measure/",
+    "title": "요리 계량 변환기",
+    "sub": "재료와 양을 고르면 컵·큰술·작은술과 그램(g)을 양방향으로 환산합니다. 밀가루·설탕·버터·간장 등 23종, 한국 컵(200ml)·미국 컵(236.6ml) 선택, 미국 농무부(USDA) 자료 기준."
    }
   ],
   "primary": [
@@ -1986,6 +1986,26 @@
   ],
   "required": [
    "infra-api|infra-compute|infra-db|infra-storage|infra-cdn|infra-monitor|infra-misc"
+  ]
+ },
+ "tools/cooking-measure": {
+  "next": [
+   {
+    "key": "unit-converter",
+    "path": "/calc/tools/unit-converter/",
+    "title": "단위 변환기",
+    "sub": "길이·무게·넓이·부피·온도를 한 번에 변환합니다. 값을 넣으면 인치·평·근·돈·℉ 등 같은 종류의 모든 단위로 동시에 환산됩니다."
+   },
+   {
+    "key": "percent",
+    "path": "/calc/tools/percent/",
+    "title": "퍼센트 계산기",
+    "sub": "전체의 몇 %, 한 값이 다른 값의 몇 %, 두 값 사이의 증감률, X% 증가·감소한 값까지 네 가지 비율 계산을 한 화면에서 처리합니다."
+   }
+  ],
+  "primary": [
+   "단위 변환",
+   "/calc/tools/unit-converter/"
   ]
  }
 }

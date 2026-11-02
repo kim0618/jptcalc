@@ -490,6 +490,11 @@ window.CALC_REGISTRY = {
         "name": "단위 변환기"
       },
       {
+        "slug": "cooking-measure",
+        "icon": "🥄",
+        "name": "요리 계량 변환기"
+      },
+      {
         "slug": "discount",
         "icon": "🏷️",
         "name": "할인율 계산기"

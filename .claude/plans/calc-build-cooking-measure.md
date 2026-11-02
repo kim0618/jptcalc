@@ -64,3 +64,10 @@
 - 사이트 내부 효과만 계산: 주 51명 × 25% = 주 약 13PV(월 약 55PV), 수익 기준 월 100원 안팎(현 월 PV 약 5,600에 수익 1만원 미만 비례).
 - **대신 할 것**: 계량 글 재료 표를 원문 값으로 정정·확장(설탕 1컵 200g 의심, 출처 없음). 블로그 1위 글의 숫자 정확도가 계산기보다 가치가 큼.
 - **재검토 조건**: 계량 글이 주 100명 이상으로 크거나, 정정 후 글 내부 단위변환기 클릭이 주 10명 이상 나오면 다시 판단.
+
+## 2026-11-02 사용자 결정으로 착수·완료 (미커밋·미배포)
+- 데이터: USDA SR Legacy CSV 직접 파싱, 23종(data-points §72). 한국 1컵 200ml는 정부 원문 미확보 → "국내 레시피 통용 기준"으로 표기.
+- 계산기 `/calc/tools/cooking-measure/`(unit-converter 틀 복제, 재료 칩 6+전체 select, 양+단위(컵·큰술·작은술·ml·g 역산), 한국/미국 컵 seg). 독립 계산 690조합 일치, calc-runner 사례 6건 저장·tools 27건 회귀 0, 첫 조작칸 208px(원본 unit-converter와 동일, 그룹 제목 페이지 기준 ≤240 통과).
+- 연결: registry(js·json), plan.json(g1·next, unit-converter next 두 번째=cooking-measure), make_cfg→conv_cfg, cat-menu count 8, 허브 12곳 nav 8, tools 허브 행·JSON-LD, orig 허브 카드, 홈(106개·생활·도구 8개·설명), llms(106종), sitemap, inject-sibling, asset_version 재스탬프.
+- 블로그 cooking-measurement-guide 표·SVG·시나리오3·FAQ·출처 전면 정정 + 계산기 링크 3곳.
+- **측정**: 배포 1주 뒤 계량 글 blog_calc_click 사용자 비율 5% → 25% 이상이면 적중. 4주 뒤 계산기 자체 랜딩.

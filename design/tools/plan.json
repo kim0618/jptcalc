@@ -1017,6 +1017,7 @@
      "percent",
      "discount",
      "unit-converter",
+     "cooking-measure",
      "lunar-calendar"
     ]
    ],
@@ -1058,7 +1059,7 @@
       "to": "percent"
      },
      {
-      "to": "discount"
+      "to": "cooking-measure"
      }
     ]
    },
@@ -1099,6 +1100,16 @@
      },
      {
       "to": "naesin-grade"
+     }
+    ]
+   },
+   "cooking-measure": {
+    "next": [
+     {
+      "to": "unit-converter"
+     },
+     {
+      "to": "percent"
      }
     ]
    }
