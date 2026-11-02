@@ -1085,7 +1085,7 @@
    "naesin-grade": {
     "next": [
      {
-      "to": "gpa"
+      "to": "date/dday"
      },
      {
       "to": "char-count"
