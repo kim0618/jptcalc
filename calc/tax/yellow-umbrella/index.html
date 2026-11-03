@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>노란우산공제 계산기 - 소득공제 한도·절세액 (2026) | 제이퍼 계산기</title>
-  <meta name="description" content="연 소득과 납입액을 입력하면 노란우산공제 소득공제 한도와 예상 절세액을 계산합니다. 소득 4천만원 이하 600만원·1억원 이하 400만원·1억원 초과 200만원 한도. 2026년 종합소득세 세율 기준." />
+  <meta name="description" content="연 소득과 납입액을 입력하면 노란우산공제 소득공제 한도와 예상 절세액을 계산합니다. 사업소득금액 4천만원 이하 600만원·6천만원 이하 500만원·1억원 이하 400만원·1억원 초과 200만원 한도. 2026년 종합소득세 세율 기준." />
   <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://www.jptcalc.kr/calc/tax/yellow-umbrella/" />
   <meta property="og:type" content="website" />
@@ -50,7 +50,7 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
     {"@type":"Question","name":"노란우산공제란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"노란우산공제는 소기업·소상공인 대표자와 프리랜서(사업소득자)의 노후 소득 안정을 위해 중소기업중앙회가 운영하는 공제 상품입니다. 매달 납입한 공제금을 소득공제로 받아 세금을 줄이면서 목돈도 마련할 수 있습니다. 연간 최대 600만원(소득 4천만원 이하 기준)을 소득에서 공제받아 종합소득세를 줄일 수 있으며, 폐업·노령 등 사유 발생 시 원금과 이자를 함께 수령합니다."}},
-    {"@type":"Question","name":"노란우산공제 소득공제 한도는 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"2026년 기준 소득공제 한도는 사업소득(또는 근로소득)에 따라 다릅니다. 소득 4,000만원 이하이면 연 최대 600만원, 4,000만원 초과~1억원 이하이면 연 최대 400만원, 1억원 초과이면 연 최대 200만원까지 공제됩니다. 납입액이 한도보다 많아도 공제는 한도까지만 적용됩니다."}},
+    {"@type":"Question","name":"노란우산공제 소득공제 한도는 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"2026년 기준 소득공제 한도는 사업소득(또는 근로소득)에 따라 다릅니다. 사업소득금액 4,000만원 이하이면 연 최대 600만원, 4,000만원 초과~6,000만원 이하이면 연 최대 500만원, 6,000만원 초과~1억원 이하이면 연 최대 400만원, 1억원 초과이면 연 최대 200만원까지 공제됩니다. 납입액이 한도보다 많아도 공제는 한도까지만 적용됩니다."}},
     {"@type":"Question","name":"노란우산공제로 얼마나 절세할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"절세액은 소득 수준에 따라 크게 다릅니다. 연 소득 3,000만원 프리랜서가 연 600만원을 납입하면 약 99만원(지방소득세 포함)을 절세할 수 있습니다. 연 소득 5,500만원이면 납입 400만원 기준 약 101만원, 연 소득 1.5억원이면 납입 200만원 기준 약 77만원입니다. 세율 구간이 높을수록 절세 효과도 커지는 구조입니다."}},
     {"@type":"Question","name":"노란우산공제는 누가 가입할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"소기업·소상공인 대표자(개인사업자 및 소기업 법인 대표)와 부동산 임대업을 제외한 사업소득이 있는 프리랜서가 가입할 수 있습니다. 직장인(근로소득만 있는 경우)은 원칙적으로 가입 대상이 아닙니다. 가입은 중소기업중앙회 또는 제휴 은행·카드사에서 신청할 수 있으며, 월 5만원~100만원(최대) 범위에서 납입액을 정할 수 있습니다."}},
     {"@type":"Question","name":"중도 해지하면 불이익이 있나요?","acceptedAnswer":{"@type":"Answer","text":"10년 미만에 임의해지하면 공제받은 소득공제액이 기타소득으로 과세됩니다. 즉, 그간 절세받은 세금을 다시 내야 할 수 있어 손실이 발생합니다. 다만 폐업, 사망, 질병·부상에 의한 퇴임 등 법정 사유로 해지하는 경우에는 기타소득 과세 없이 원금과 이자를 수령할 수 있습니다. 10년 이상 유지한 경우 임의해지에도 불이익이 없습니다."}}
@@ -120,7 +120,7 @@
     
 
     <div class="field">
-      <div class="field-label">연 사업·근로소득 <span class="label-hint">(세전 연 소득)</span></div>
+      <div class="field-label">연 사업소득금액 <span class="label-hint">(수입 − 필요경비, 법인 대표는 근로소득금액)</span></div>
       <div class="input-wrap">
         <input type="number" id="inpIncome" placeholder="예: 4000" oninput="onNumInput(this,'incomeConverted')" />
         <span class="unit">만원</span>
@@ -150,7 +150,7 @@
   </div>
 <div class="info-box">
       <span class="info-icon"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-info"></use></svg></span>
-      <p>소득 구간에 따라 공제 한도가 달라집니다. <strong>4천만원 이하 600만원 / 1억원 이하 400만원 / 1억원 초과 200만원</strong>이 적용됩니다.</p>
+      <p>소득 구간에 따라 공제 한도가 달라집니다. <strong>4천만원 이하 600만원 / 6천만원 이하 500만원 / 1억원 이하 400만원 / 1억원 초과 200만원</strong>이 적용됩니다.</p>
     </div>
         <button type="button" class="ds-btn-calc" data-calc-submit="calculate" data-result="resultCard" data-required="inpIncome,inpPayment">계산하기</button>
       </div>
@@ -242,7 +242,8 @@
       </thead>
       <tbody>
         <tr><td>4,000만원 이하</td><td class="highlight">600만원</td><td>약 50만원</td></tr>
-        <tr><td>4,000만원 초과 ~ 1억원 이하</td><td class="highlight">400만원</td><td>약 33만원</td></tr>
+        <tr><td>4,000만원 초과 ~ 6,000만원 이하</td><td class="highlight">500만원</td><td>약 42만원</td></tr>
+        <tr><td>6,000만원 초과 ~ 1억원 이하</td><td class="highlight">400만원</td><td>약 33만원</td></tr>
         <tr><td>1억원 초과</td><td class="highlight">200만원</td><td>약 17만원</td></tr>
       </tbody>
     </table>
@@ -255,7 +256,7 @@
           <div class="ds-section-head"><h2 id="yellow-umbrella-s1">노란우산공제, 이것만 알면 됩니다</h2></div>
 <p>프리랜서와 개인사업자는 직장인과 달리 퇴직금·실업급여가 없습니다. 노란우산공제는 이들을 위한 소득공제 혜택이 있는 사회안전망 상품으로, 매달 납입하면서 세금도 줄이고 노후 자금도 마련할 수 있습니다.</p>
       <div class="guide-grid">
-        <div class="guide-box"><strong>소득이 낮을수록 공제 한도가 큼</strong><span>연 소득 4천만원 이하라면 600만원까지 공제받아 절세 효과가 가장 큽니다. 연봉 환산 약 3,300만원 이하 프리랜서가 해당됩니다</span></div>
+        <div class="guide-box"><strong>소득이 낮을수록 공제 한도가 큼</strong><span>사업소득금액 4천만원 이하라면 600만원까지 공제받습니다. 한도는 4천만·6천만·1억원을 넘을 때마다 500·400·200만원으로 줄어듭니다</span></div>
         <div class="guide-box"><strong>복리 이자 + 소득공제 이중 혜택</strong><span>납입금에 연 복리 이자가 붙는 동시에 매년 소득공제를 받아 절세 효과를 누릴 수 있습니다. 이자소득세도 비과세됩니다</span></div>
         <div class="guide-box"><strong>임의해지 주의</strong><span>10년 미만에 임의해지하면 공제받은 금액이 기타소득으로 과세됩니다. 폐업·사망·질병 등 법정 사유 해지는 불이익 없습니다</span></div>
       </div>
@@ -268,7 +269,7 @@
           <thead><tr><th>가입자</th><th>연 소득</th><th>연 납입액</th><th>공제 한도</th><th>예상 절세액</th></tr></thead>
           <tbody>
             <tr><td>김OO씨 (프리랜서)</td><td>3,000만원</td><td>600만원</td><td>600만원</td><td>약 99만원</td></tr>
-            <tr><td>박OO씨 (개인사업자)</td><td>5,500만원</td><td>400만원</td><td>400만원</td><td>약 101만원</td></tr>
+            <tr><td>박OO씨 (개인사업자)</td><td>5,500만원</td><td>400만원</td><td>500만원</td><td>약 101만원</td></tr>
             <tr><td>이OO씨 (소기업 대표)</td><td>8,000만원</td><td>400만원</td><td>400만원</td><td>약 106만원</td></tr>
             <tr><td>최OO씨 (고소득 사업자)</td><td>1억 5천만원</td><td>500만원</td><td>200만원</td><td>약 77만원</td></tr>
           </tbody>
@@ -284,8 +285,8 @@
           <thead><tr><th>연 사업소득</th><th>연 소득 구간</th><th>소득공제 한도</th><th>공제 적용 금액</th><th>연간 절세액 (소득세+지방소득세)</th></tr></thead>
           <tbody>
             <tr><td>3,000만원</td><td>4천만원 이하</td><td>600만원</td><td>500만원</td><td>83만원</td></tr>
-            <tr><td>5,000만원</td><td>4천만~1억원</td><td>400만원</td><td>400만원 (한도 적용)</td><td>66만원</td></tr>
-            <tr><td>8,000만원</td><td>4천만~1억원</td><td>400만원</td><td>400만원 (한도 적용)</td><td>106만원</td></tr>
+            <tr><td>5,000만원</td><td>4천만~6천만원</td><td>500만원</td><td>500만원</td><td>83만원</td></tr>
+            <tr><td>8,000만원</td><td>6천만~1억원</td><td>400만원</td><td>400만원 (한도 적용)</td><td>106만원</td></tr>
             <tr><td>1억 2,000만원</td><td>1억원 초과</td><td>200만원</td><td>200만원 (한도 적용)</td><td>77만원</td></tr>
           </tbody>
         </table>
@@ -298,7 +299,7 @@
               <p>노란우산공제는 소기업·소상공인 대표자와 프리랜서(사업소득자)의 노후 소득 안정을 위해 중소기업중앙회가 운영하는 공제 상품입니다. 매달 납입한 공제금을 소득공제로 받아 세금을 줄이면서 목돈도 마련할 수 있습니다. 연간 최대 600만원(소득 4천만원 이하 기준)을 소득에서 공제받아 종합소득세를 줄일 수 있으며, 폐업·노령 등 사유 발생 시 원금과 이자를 함께 수령합니다.</p>
             </details>
       <details class="faq-item"><summary><h3>노란우산공제 소득공제 한도는 얼마인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
-              <p>2026년 기준 소득공제 한도는 사업소득(또는 근로소득)에 따라 다릅니다. 소득 4,000만원 이하이면 연 최대 600만원, 4,000만원 초과~1억원 이하이면 연 최대 400만원, 1억원 초과이면 연 최대 200만원까지 공제됩니다. 납입액이 한도보다 많아도 공제는 한도까지만 적용됩니다.</p>
+              <p>2026년 기준 소득공제 한도는 사업소득(또는 근로소득)에 따라 다릅니다. 사업소득금액 4,000만원 이하이면 연 최대 600만원, 4,000만원 초과~6,000만원 이하이면 연 최대 500만원, 6,000만원 초과~1억원 이하이면 연 최대 400만원, 1억원 초과이면 연 최대 200만원까지 공제됩니다. 납입액이 한도보다 많아도 공제는 한도까지만 적용됩니다.</p>
             </details>
       <details class="faq-item"><summary><h3>노란우산공제로 얼마나 절세할 수 있나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
               <p>절세액은 소득 수준에 따라 크게 다릅니다. 연 소득 3,000만원 프리랜서가 연 600만원을 납입하면 약 99만원(지방소득세 포함)을 절세할 수 있습니다. 연 소득 5,500만원이면 납입 400만원 기준 약 101만원, 연 소득 1.5억원이면 납입 200만원 기준 약 77만원입니다. 세율 구간이 높을수록 절세 효과도 커지는 구조입니다.</p>
@@ -322,7 +323,7 @@
 
   <script>
   window.TRUST_BLOCK_CONFIG = {
-    standard: '조세특례제한법 제86조의3, 2026년 노란우산공제 소득공제 한도(4천만원 이하 600만원·1억원 이하 400만원·1억원 초과 200만원) 기준',
+    standard: '조세특례제한법 제86조의3, 2026년 노란우산공제 소득공제 한도(4천만원 이하 600만원·6천만원 이하 500만원·1억원 이하 400만원·1억원 초과 200만원) 기준',
     appliedFrom: '2026년 기준',
     exceptions: [
       '기본공제(150만원)만 적용한 단순 추정치이며, 실제 공제 항목이 많을수록 절세액이 달라집니다',
@@ -392,12 +393,14 @@ const TAX_BRACKETS = [
 // 공제 한도 (소득 만원 기준)
 const DEDUCT_LIMIT = [
   { threshold: 4000,  limit: 600 },
+  { threshold: 6000,  limit: 500 },
   { threshold: 10000, limit: 400 },
   { threshold: Infinity, limit: 200 }
 ];
 const TIER_LABEL = [
   { threshold: 4000,  label: '4천만원 이하' },
-  { threshold: 10000, label: '4천만~1억원' },
+  { threshold: 6000,  label: '4천만~6천만원' },
+  { threshold: 10000, label: '6천만~1억원' },
   { threshold: Infinity, label: '1억원 초과' }
 ];
 const BASIC_DEDUCT = 150; // 기본공제 (만원)
