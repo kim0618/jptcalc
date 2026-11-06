@@ -11,7 +11,10 @@ const { chromium } = await import(PW);
 const [arg, out] = process.argv.slice(2);
 if (!arg || !out) { console.error('usage: law-render.mjs <법령명|URL> <out>'); process.exit(1); }
 const url = arg.startsWith('http') ? arg : `https://www.law.go.kr/법령/${arg}`;
-const b = await chromium.launch({ executablePath: process.env.HOME + '/.cache/ms-playwright/chromium-1223/chrome-linux64/chrome' });
+// 설치된 chromium-NNNN 중 가장 높은 버전을 쓴다(버전 고정 경로는 playwright 갱신 때마다 깨졌다, 2026-11-06)
+const pwDir = process.env.HOME + '/.cache/ms-playwright';
+const chromeDir = fs.readdirSync(pwDir).filter(d => /^chromium-\d+$/.test(d)).sort((a, b) => +b.split('-')[1] - +a.split('-')[1])[0];
+const b = await chromium.launch({ executablePath: `${pwDir}/${chromeDir}/chrome-linux64/chrome` });
 const p = await b.newPage();
 await p.goto(url, { waitUntil: 'networkidle', timeout: 60000 });
 await p.waitForTimeout(3000);

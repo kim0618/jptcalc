@@ -3271,4 +3271,15 @@
 - **가정값(법령 아님)**: 채권최고액 120%, 채권 즉시매도 할인율 5·10%, 법무사 30만원. 글에서 가정임을 명시.
 - **확인일**: 2026-11-05 (law.go.kr 렌더 원문, 별표는 HWP 직접 파싱)
 - **검색 패턴**: `채권최고액|근저당 설정 비용|국민주택채권 매입`
-- **영향 페이지**: blog/posts/mortgage-lien-setup-cost-guide.html, blog/posts/registry-cost-guide.html·property-purchase-costs-guide.html·self-registry-guide.html·calc/realestate/registry/index.html(2026-11-05 정정 완료), ⚠️loan-refinance-guide.html·loan-repayment.html(RECHECK 대기)
+- **영향 페이지**: blog/posts/mortgage-lien-setup-cost-guide.html, blog/posts/registry-cost-guide.html·property-purchase-costs-guide.html·self-registry-guide.html·calc/realestate/registry/index.html(2026-11-05 정정 완료), loan-refinance-guide.html·loan-repayment.html(2026-11-06 정정 완료, 대환대출 인프라 상품 특약은 미확인)
+
+## 75. 건강보험 임의계속가입·피부양자 사업소득 요건 (2026-11-06 신규, health-insurance-dependent-guide 2단계)
+- **대상**: 사용관계가 끝난 사람 중 퇴직 전 18개월간 직장가입자 자격 통산 1년 이상(국민건강보험법 제110조제1항, 시행규칙 제62조). 피부양자 탈락 자체는 사유 아님.
+- **신청기한**: 지역가입자가 된 뒤 최초로 고지받은 지역보험료의 납부기한에서 2개월이 지나기 전(법 제110조제1항). 신청 후 첫 직장가입자 보험료를 납부기한부터 2개월 지나도록 안 내면 자격 유지 불가(같은 조 제2항 단서).
+- **기간**: 사용관계가 끝난 날의 다음 날부터 36개월 이내(시행령 제77조제1항).
+- **보험료**: 보수월액 = 보수월액보험료가 산정된 최근 12개월 보수월액 평균(법 제110조③), 보수월액보험료 전액 본인 부담(같은 조 ⑤). **단 「보험료 경감고시」(보건복지부고시 제2025-221호, 2026.1.1 시행) 제9조: 임의계속가입자 보수월액보험료의 100분의 50 경감 → 실제 부담은 재직 시 본인 몫 수준.** ⚠️⑤만 보고 "두 배"라 쓰면 오류(2026-11-06 1단계가 실제로 그렇게 썼다가 2단계에서 정정).
+- **피부양자 사업소득 요건**: 시행규칙 별표 1의2(개정 2025.4.23) 제1호가목 합산소득 연 2천만원 이하 + 나목 사업소득이 없을 것. 단 사업자등록이 없는 경우(주택임대소득이 있는 경우는 제외)·등록장애인·상이등급 국가유공자·보훈보상대상자는 사업소득 합계 연 500만원 이하면 없는 것으로 봄. 두 요건은 별개라 사업소득 600만원이면 합산이 낮아도 탈락. 임대소득은 소득세법 제19조 사업소득(시행령 제41조제1항제3호).
+- **확인일**: 2026-11-06 (law.go.kr 렌더 원문: 법·시행령·시행규칙 본문, 별표 1의2 PDF, 행정규칙 「보험료 경감고시」)
+- **검색 패턴**: `임의계속가입|임의계속|사업소득이 연 500만원|500만원 이하`
+- **영향 페이지**: blog/posts/health-insurance-dependent-guide.html(정정 완료), ⚠️regional-health-insurance-guide·freelancer-insurance-guide·social-insurance-guide·resignation-dday-checklist(RECHECK 대기)
+
