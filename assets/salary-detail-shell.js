@@ -61,6 +61,12 @@
       quick:['1일 평균임금 = 최근 3개월 임금총액 ÷ 그 기간 총일수, 상여금·연차수당은 연간액의 3/12이 산입됩니다.','산정된 평균임금이 통상임금보다 적으면 통상임금을 평균임금으로 합니다(근로기준법 제2조 제2항).','산재 휴업급여는 원칙 평균임금의 70%지만, 저소득자는 90%로, 요양이 3일 이내면 미지급됩니다.','2026년 최고 보상기준 268,299원을 넘으면 평균임금이 아무리 높아도 휴업급여는 하루 187,809원으로 고정됩니다.'],
       related:[['/calc/salary/severance/','퇴직금','📦'],['/calc/salary/ordinary-wage/','통상임금','⏱️'],['/calc/salary/unemployment/','실업급여','🛟']],
       guides:[['/blog/posts/average-wage-guide.html','평균임금 계산법 2026 - 산재 휴업급여 얼마 받는지 계산하기'],['/blog/posts/severance-pay-guide.html','퇴직금 계산법과 지급 기준 완벽 정리 2026'],['/blog/posts/unemployment-benefit-guide.html','실업급여 수급 자격과 계산법 완벽 가이드']]
+    },
+    '/calc/salary/year-end-tax/': {
+      key:'year-end-tax',
+      quick:['환급액 = 기납부세액 - 결정세액이고, 지방소득세 10%가 따로 붙습니다.','신용카드는 소득공제라 100만원당 환급이 작고, 연금저축·IRP는 세액공제라 15%(총급여 5,500만원 초과 12%)가 돌아옵니다.','세액공제 합계가 산출세액을 넘으면 초과분은 사라집니다(소득세법 제61조).'],
+      related:[['/calc/salary/take-home-pay/','연봉 실수령액','💵'],['/calc/tax/medical-expense/','의료비 세액공제','🏥'],['/calc/salary/severance/','퇴직금','📦']],
+      guides:[['/blog/posts/year-end-tax-refund-guide.html','연말정산 환급액 계산법 2026 - 카드 100만원은 약 2.5만원, 연금저축 100만원은 16.5만원'],['/blog/posts/year-end-tax-2026-changes.html','연말정산 2026년 귀속 달라진 점 - 자녀세액공제 9세·카드 자녀 한도·월세 배우자 공제']]
     }
   };
   let cfg=pages[path];
