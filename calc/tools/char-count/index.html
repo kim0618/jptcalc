@@ -265,6 +265,8 @@ function count(){
   document.getElementById('c-word').textContent = fmt(words);
   document.getElementById('c-line').textContent = fmt(lines);
   document.getElementById('c-wongo').textContent = fmt(wongo);
+  // 결과 바를 쓰지 않는 실시간 계산기라 site-shell이 calc_complete를 못 보낸다(2026-11-09): 처음 글자가 세어질 때 1회
+  if (withSpace > 0 && !count.done && window.DS) { count.done = true; DS.ga('calc_complete', { calc: location.pathname.replace(/index\.html$/, ''), cat: 'tools' }); }
 }
 function clearText(){ const el=document.getElementById('text'); el.value=''; el.focus(); count(); }
 count();

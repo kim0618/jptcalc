@@ -18,7 +18,7 @@ out = sys.argv[1]; base = sys.argv[2] if len(sys.argv) > 2 else 'http://localhos
 os.chdir(SITE)
 posts = sorted(glob.glob('blog/posts/*.html'))
 if not os.environ.get('ALL_POSTS'): posts = posts[::max(1, len(posts) // 20)][:20]   # ALL_POSTS=1이면 글 전부(배포 전 기준)
-EXCEPT = ('calc/realestate/dti/', 'calc/realestate/pyeong/')   # 11/9까지 main 판(옛 디자인) 유지 - 승인된 예외
+EXCEPT = ()   # dti·pyeong 예외는 2026-11-09 리뉴얼 판 복원으로 해제
 PAGES = (['/', '/blog/', '/404.html', '/recent/'] + [f'/{x}.html' for x in ('about', 'contact', 'disclaimer', 'privacy', 'terms')]
          + sorted('/' + p[:-10] for p in glob.glob('calc/*/index.html'))
          + sorted('/' + p[:-10] for p in glob.glob('calc/*/*/index.html') if not p.startswith(EXCEPT))

@@ -146,6 +146,8 @@ node /home/tjd618/.claude/analytics/ai-table-effect.mjs
 
 ## 주의사항
 
+- **GA4 숫자는 운영 외 트래픽을 뺀 값이다(2026-11-09부터).** `report.mjs`·`ai-table-effect.mjs`는 `~/.claude/analytics/ga-clean.mjs`를 거쳐 로컬·사설 IP 호스트(localhost, 에뮬레이터 10.0.2.2 등)와 확인된 스팸 리퍼러(`SPAM_SOURCES`, 현재 aocr.org)를 제외한다. 2026-10 jptcalc 리뉴얼 작업 중 로컬 서버가 같은 GA 속성으로 page_view 1,972건을 보내 전후 비교가 뒤집혔던 일이 계기다. 원본 숫자가 필요하면 `GA_RAW=1 node ...`. 새 분석 스크립트를 만들면 `cleanAnalytics(analyticsData)` 한 줄을 붙인다. 참여 0초로 몰려 들어오는 새 리퍼러를 보면 `SPAM_SOURCES`에 추가
+
 - **credentials.json은 절대 공유/커밋 금지** (이미 `.claude/analytics/`에 저장됨)
 - API 할당량은 무료 티어 내에서 충분 (일일 수백 회 호출 가능)
 - 데이터는 GA4/서치콘솔 처리 지연으로 **2~3일 전 데이터까지만 안정적**

@@ -3,8 +3,8 @@
 # 끝에 검사 3개: 8 on* 속성 구문 검사(onattr_check.py) → 9 한 줄 검사(oneline_check.py, 10/22, 약 4분) → 10 클릭 검사(click_audit.py, 실제 크롬, 약 15분). 하나라도 실패하면 종료코드 1
 #   클릭 검사만 빼려면 SKIP_CLICK=1 bash design/tools/build_all.sh (작업 중 빠른 재생성용. 배포 전 build_all은 반드시 SKIP_CLICK 없이)
 # 작업본 루트에서: bash design/tools/build_all.sh      (끝에 바뀐 파일 수를 알려 준다. 두 번째 실행은 0이어야 정상)
-# 생성기 없는 페이지(직접 고치는 대상): 부동산 계산기 17개와 부동산 허브(calc/realestate/), dti·pyeong(11/9까지 main 판).
-#   이 페이지들은 아래 단계 중 inject-sibling(하단 목록)과 asset_version(?v=)만 손댄다(dti·pyeong은 ?v=만).
+# 생성기 없는 페이지(직접 고치는 대상): 부동산 계산기 17개와 부동산 허브(calc/realestate/), dti·pyeong(11/9 리뉴얼 판 복원 완료).
+#   이 페이지들은 아래 단계 중 inject-sibling(하단 목록)과 asset_version(?v=)만 손댄다(dti·pyeong도 11/9부터 동일).
 # 표지 그림(build_blog_covers.py)은 그림 생성이라 여기 넣지 않는다(새 글이 생기면 따로 먼저 돌린다).
 set -euo pipefail
 cd "$(dirname "$0")/../.."

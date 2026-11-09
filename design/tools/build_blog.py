@@ -486,7 +486,17 @@ body = f'''<body data-cat="404">
 </body>
 </html>
 '''
-open(os.path.join(SITE, '404.html'), 'w', encoding='utf-8').write(stamp_html(s[:s.index('<head>') + 6] + new_head(s) + '</head>\n' + strip_emoji(body)))
+# 404에도 GA(2026-11-09): 깨진 링크로 들어온 주소(page_location)와 그 앞 페이지(page_referrer)를 GA에서 보려고. 광고 태그는 넣지 않는다
+GA_404 = """  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BRSX3F10MZ');
+  </script>
+"""
+open(os.path.join(SITE, '404.html'), 'w', encoding='utf-8').write(stamp_html(s[:s.index('<head>') + 6] + new_head(s) + GA_404 + '</head>\n' + strip_emoji(body)))
 import collections
 tc = collections.Counter('상황' if p['thumb'][0].startswith('sit-') else '카테고리' for p in posts.values())
 print('썸네일', dict(tc), collections.Counter(p['thumb'][0] for p in posts.values()).most_common(40))

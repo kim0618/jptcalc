@@ -480,7 +480,7 @@ function calcDsr() {
 const dsrDtiHref = (income, mortgage) => DSCalc.link('/calc/realestate/dti/', { income, mortgage }, 'dsr');
 function dsrNext(income, mortgage) {
   DSCalc.next('#dsr-next', income > 0
-    ? { dti: { href: dsrDtiHref(income, mortgage), title: 'DTI 계산기', sub: '주담대 원리금 + 기타대출 이자 비율', prefilled: false },  // 11/9 DTI hold판 복원 후: title `내 연소득 ${fmt(income)}으로 DTI 바로 계산`, sub: DSCalc.carryText(['dsr-income','dsr-mortgage']), prefilled: true
+    ? { dti: { href: dsrDtiHref(income, mortgage), title: `내 연소득 ${fmt(income)}으로 DTI 바로 계산`, sub: DSCalc.carryText(['dsr-income','dsr-mortgage']), prefilled: true },  // 11/9 DTI 리뉴얼 판 복원으로 값 넘기기 다시 켬
         ltv: { title: 'LTV로 대출 한도 확인', sub: '담보가치 기준 한도 계산' } }
     : { dti: { href: dsrDtiHref(0, 0), title: 'DTI 계산기', sub: '주담대 원리금 + 기타대출 이자 비율', prefilled: false },
         ltv: { title: 'LTV 계산기', sub: '담보가치 기준 한도' } });

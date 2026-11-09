@@ -70,7 +70,7 @@ for(const cat of Object.keys(REG)){
     const fp=`${dir}/${slug}/index.html`;
     if(!fs.existsSync(fp))continue;
     let html=fs.readFileSync(fp,'utf8');
-    // 옛 디자인 페이지(새 틀 site-shell.js가 없는 main 판: dti·pyeong 11/9까지)는 바이트 그대로 둔다
+    // 옛 디자인 페이지(새 틀 site-shell.js가 없는 페이지)는 바이트 그대로 둔다(dti·pyeong은 11/9 리뉴얼 판 복원, 지금은 0개)
     if(!html.includes('/assets/ds/site-shell.js')){skip++;continue;}
     const cm=html.match(re);
     const block=genBlock(cat,slug,cm&&cm[1]);

@@ -2,7 +2,7 @@
 파일 내용이 안 바뀌면 값도 그대로. 외부 주소(GA·애드센스·애드핏)와 파비콘·manifest·이미지는 건드리지 않는다.
 - vendorize(html)(2026-10-26): 외부 CDN 라이브러리·웹폰트(Pretendard·flatpickr·html2canvas)를 /assets/vendor/{이름}/{버전}/ 로 바꾸고
   jsdelivr preconnect·dns-prefetch 줄을 지운다. stamp_html이 먼저 부르므로 생성기는 따로 할 일 없음.
-  dti·pyeong(11/9까지 main 판)은 단독 실행에서 건너뛴다(?v=만).
+  (dti·pyeong 예외는 2026-11-09 리뉴얼 판 복원과 함께 해제)
 - stamp_html(html): <link href="/assets/….css"> · <script src="/assets/….js">의 ?v= 를 지금 파일 내용으로 맞춘다(주소 말고는 한 글자도 안 바꿈)
 - stamp_sources(): 공용 JS 안에서 실행 중에 부르는 주소(site-shell.js의 calc-registry.js·cookie-consent.js·메뉴 JSON, footer-unified.js의 cookie-consent.js, calc-result-tools.js의 html2canvas)를 먼저 맞춘다.
   이 파일들이 바뀌면 자기 해시도 바뀌므로 HTML보다 먼저 돌린다.
@@ -66,6 +66,6 @@ if __name__ == '__main__':
     stamp_sources(); changed = 0
     for p in site_pages():
         s = open(p, encoding='utf-8').read()
-        n = stamp_html(s, vendor=not re.search(r'calc/realestate/(dti|pyeong)/index\.html$', p))
+        n = stamp_html(s)
         if n != s: open(p, 'w', encoding='utf-8').write(n); changed += 1
     print('?v= 갱신', changed, '파일 /', len(site_pages()))
