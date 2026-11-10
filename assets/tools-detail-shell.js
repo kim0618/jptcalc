@@ -6,7 +6,7 @@
   const pages={
     '/calc/tools/char-count/':{key:'char-count',quick:[],related:[],guides:[['/blog/posts/char-count-guide.html','글자수 세기 완벽 가이드 2026 - 공백 포함·제외·byte·원고지 매수 총정리']]},
     '/calc/tools/naesin-grade/':{key:'naesin-grade',quick:[],related:[],guides:[['/blog/posts/naesin-achievement-grade-guide.html','성취평가제 A~E 완전정리 2026 - 절대평가인데 석차등급은 왜 낮게 나올까'],['/blog/posts/naesin-grade-guide.html','내신등급 계산기 보는 법 2026 - 석차백분율·9등급제·5등급제 환산 총정리']]},
-    '/calc/tools/discount/':{key:'discount',quick:[],related:[],guides:[['/blog/posts/discount-guide.html','할인율 계산 완벽 가이드 2026 - 할인가·역산·중복할인 실질 할인율 총정리']]},
+    '/calc/tools/discount/':{key:'discount',quick:[],related:[],guides:[['/blog/posts/bogo-deal-unit-price-guide.html','1+1 2+1 할인율 계산 2026 - 1+1은 50%인데 2+1은 33%뿐인 이유'],['/blog/posts/discount-guide.html','할인율 계산 완벽 가이드 2026 - 할인가·역산·중복할인 실질 할인율 총정리']]},
     '/calc/tools/gpa/':{key:'gpa',quick:[],related:[],guides:[['/blog/posts/gpa-guide.html','학점 계산기 완벽 가이드 2026 - 4.5·4.3·4.0 평점 계산과 GPA 올리는 법']]},
     '/calc/tools/percent/':{key:'percent',quick:[],related:[],guides:[['/blog/posts/margin-markup-guide.html','마진율 계산법 2026 - 원가에 30% 붙였는데 마진은 23%인 이유'],['/blog/posts/percent-guide.html','퍼센트 계산 완벽 가이드 2026 - 증감률·퍼센트 포인트·할인가 한 번에']]},
     '/calc/tools/unit-converter/':{key:'unit-converter',quick:[],related:[],guides:[['/blog/posts/delivery-volumetric-weight-guide.html','택배 부피무게 계산법 2026 - 가벼운 상자가 더 비싸지는 이유'],['/blog/posts/data-unit-guide.html','데이터 용량 단위 변환 2026 - MB GB TB, 1TB가 931GB로 보이는 이유'],['/blog/posts/cooking-measurement-guide.html','계량스푼 계량컵 변환법 2026 - 큰술·작은술·1컵을 ml·g로 정확히 바꾸는 법'],['/blog/posts/unit-converter-guide.html','단위변환 계산기 2026 - 평수·인치cm·파운드kg·화씨섭씨 한 번에 변환하는 법']]},
