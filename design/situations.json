@@ -166,7 +166,15 @@
     "salary/average-wage",
     "salary/dismissal-notice-pay"
    ],
-   "illust": "/assets/img/illust/sit-quit-job.webp"
+   "illust": "/assets/img/illust/sit-quit-job.webp",
+   "inputs": [
+    {
+     "param": "avgwage",
+     "label": "최근 3개월 평균 월급",
+     "unit": "만원",
+     "placeholder": "예) 350"
+    }
+   ]
   },
   {
    "id": "freelancer",
@@ -182,7 +190,15 @@
     "tax/regional-health-insurance",
     "tax/yellow-umbrella"
    ],
-   "illust": "/assets/img/illust/sit-freelancer.webp"
+   "illust": "/assets/img/illust/sit-freelancer.webp",
+   "inputs": [
+    {
+     "param": "revenue",
+     "label": "연 수입(매출)",
+     "unit": "만원",
+     "placeholder": "예) 5,000"
+    }
+   ]
   },
   {
    "id": "pregnancy",
@@ -241,7 +257,15 @@
     "auto/ev-subsidy",
     "auto/auto-tax"
    ],
-   "illust": "/assets/img/illust/sit-buy-car.webp"
+   "illust": "/assets/img/illust/sit-buy-car.webp",
+   "inputs": [
+    {
+     "param": "carprice",
+     "label": "차량 가격",
+     "unit": "만원",
+     "placeholder": "예) 3,000"
+    }
+   ]
   },
   {
    "id": "save-money",

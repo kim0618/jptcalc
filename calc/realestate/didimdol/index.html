@@ -26,7 +26,7 @@
 <link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
   <link rel="stylesheet" href="/assets/affiliate-banner.css?v=7ee55b7a" />
     <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
-  <link rel="stylesheet" href="/assets/ds/base.css?v=1ff0325a" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=2cd6ea57" />
 </head>
 <body data-cat="realestate" style="--cat: var(--c-realestate)">
 <header id="ds-site-header" class="ds-header">
@@ -74,7 +74,7 @@
     <div class="field">
       <div class="field-label">주택가격 <span class="label-hint">매매가 (KB시세·실거래가 기준)</span></div>
       <div class="input-wrap">
-        <input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="dd-price" placeholder="예) 40000" oninput="calcDidimdol()" />
+        <input type="text" inputmode="numeric" autocomplete="off" data-ds-num data-prefill="price" id="dd-price" placeholder="예) 40000" oninput="calcDidimdol()" />
         <span class="unit">만원</span>
       </div>
       <div class="converted" id="dd-price-display"></div>
@@ -590,7 +590,7 @@ ddFillTypes();
 <script src="/assets/calc-validate.js?v=80f1784e"></script>
 <script src="/assets/calc-result-tools.js?v=25a4281d"></script>
 <script src="/assets/calc-registry.js?v=b859b628"></script>
-<script src="/assets/ds/site-shell.js?v=395f4f16"></script>
+<script src="/assets/ds/site-shell.js?v=585fce95"></script>
 <script>
 window.ARTICLE_INFO_CONFIG = {
   author: '제이퍼 계산기 편집팀',
@@ -603,7 +603,7 @@ window.ARTICLE_INFO_CONFIG = {
 </script>
 <script src="/assets/blog-article-info.js?v=81c529db"></script>
 <script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
-<script src="/assets/ds/prefill.js?v=7d81b350" defer></script>
+<script src="/assets/ds/prefill.js?v=6cc70a47" defer></script>
 <script>
   // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
   DSCalc.auto({"card": "dd-result", "required": ["dd-price", "dd-income"], "waitText": "주택가격과 연소득을 입력하면 한도가 계산됩니다", "nextBox": "#didimdol-next", "next": [{"key": "ltv", "path": "/calc/realestate/ltv/", "sub": "주택가격 기준 한도", "params": {"price": "dd-price"}, "from": "didimdol"}, {"key": "dsr", "path": "/calc/realestate/dsr/", "sub": "연소득 기준 대출 한도", "params": {"income": "dd-income"}, "from": "didimdol"}]});

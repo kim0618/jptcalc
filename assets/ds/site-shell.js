@@ -232,7 +232,7 @@
 
   // ── 배포 데이터(/assets/ds/*.json, build_home.py가 생성): 상황 시트·헤더 메뉴 공용. 처음 필요할 때 한 번 받는다 ──
   var DATA = {};
-  var DS_DATA_V = {"situations": "6aa9fb31", "cat-menu": "365b21b2"};   // 메뉴 데이터 캐시 버전(design/tools/asset_version.py가 파일 내용 해시로 채움)
+  var DS_DATA_V = {"situations": "b8e011eb", "cat-menu": "365b21b2"};   // 메뉴 데이터 캐시 버전(design/tools/asset_version.py가 파일 내용 해시로 채움)
   function load(name, ok, fail) {
     var d = DATA[name];
     if (d && d.v) return ok(d.v);
@@ -256,8 +256,14 @@
   function sitRelink() {
     var s = SD.situations[sitCur];
     sheet.querySelectorAll('.h-steps a').forEach(function (a, i) { a.href = sitHref(s.steps[i]); });
-    sheet.querySelector('.h-sheet-cta').href = sitHref(s.steps[0]);
+    var cta = sheet.querySelector('.h-sheet-cta');
+    cta.href = sitHref(s.steps[+(cta.getAttribute('data-step-idx') || 0)]);
+    // 상황 공통 입력값을 이 탭 안에서 기억한다: 입력칸이 없는 단계(예: DSR엔 집값 칸 없음)를 지나도 값이 끊기지 않게
+    var keep = {};
+    (s.inputs || []).forEach(function (i) { var el = document.getElementById('h-in-' + i.param), v = el ? String(el.value || '').replace(/[^\d.]/g, '') : ''; if (v) keep[i.param] = v; });
+    if (Object.keys(keep).length) sitStore(sitCur, keep);
   }
+  function sitStore(id, v) { try { if (v) sessionStorage.setItem('jpt_sit_' + id, JSON.stringify(v)); return JSON.parse(sessionStorage.getItem('jpt_sit_' + id) || '{}'); } catch (e) { return {}; } }
   function sitBuild() {
     sheet = document.createElement('div');
     sheet.className = 'h-sheet'; sheet.id = 'h-sheet'; sheet.hidden = true;
@@ -278,10 +284,11 @@
       sitRelink(); ga('situation_step_click', { situation_id: sitCur, step: +a.getAttribute('data-step'), calc: a.pathname });
     });
     var cta = sheet.querySelector('.h-sheet-cta');
-    cta.addEventListener('click', function () { sitRelink(); ga('situation_step_click', { situation_id: sitCur, step: 1, calc: cta.pathname, via: 'cta' }); });
+    cta.addEventListener('click', function () { sitRelink(); ga('situation_step_click', { situation_id: sitCur, step: +(cta.getAttribute('data-step-idx') || 0) + 1, calc: cta.pathname, via: 'cta' }); });
   }
-  function sitRender(id) {
-    var s = SD.situations[id], box = sheet.querySelector('.h-sheet-inputs'); sitCur = id;
+  // opts(계산기 안 입구에서 열 때만): cur = 지금 보는 계산기 경로(단계 강조), vals = 그 계산기에 입력한 값(시트 입력칸에 미리 채움)
+  function sitRender(id, opts) {
+    var s = SD.situations[id], box = sheet.querySelector('.h-sheet-inputs'); sitCur = id; opts = opts || {};
     sheet.querySelector('#h-sheet-img').src = s.illust;
     sheet.querySelector('#h-sheet-title').textContent = s.name;
     sheet.querySelector('#h-sheet-desc').textContent = s.desc;
@@ -290,17 +297,25 @@
       return '<div><label for="h-in-' + i.param + '">' + esc(i.label) + '</label><div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="h-in-' + i.param + '" placeholder="' + esc(i.placeholder || '') + '"><span class="unit">' + esc(i.unit) + '</span></div></div>';
     }).join('') + (s.inputs.length ? '<p class="field-hint">입력하면 아래 계산기에 자동으로 채워져요</p>' : '');
     sheet.querySelector('.h-steps').innerHTML = s.steps.map(function (st, i) {
-      return '<li><a href="' + st.path + '" data-step="' + (i + 1) + '"><span class="h-step-no">' + (i + 1) + '</span><span class="h-step-body"><b>' + esc(st.name) + '</b><span>' + esc(st.desc) + '</span></span>' + icon('chevron-right') + '</a></li>';
+      var cur = opts.cur === st.path;
+      return '<li' + (cur ? ' class="is-current"' : '') + '><a href="' + st.path + '" data-step="' + (i + 1) + '"' + (cur ? ' aria-current="page"' : '') + '><span class="h-step-no">' + (i + 1) + '</span><span class="h-step-body"><b>' + esc(st.name) + '</b><span>' + (cur ? '지금 보고 있는 계산기' : esc(st.desc)) + '</span></span>' + icon('chevron-right') + '</a></li>';
     }).join('');
-    sheet.querySelector('.h-sheet-cta').textContent = '1단계 ' + s.steps[0].name + '부터 계산하기';
+    Object.keys(opts.vals || {}).forEach(function (k) { var el = document.getElementById('h-in-' + k); if (el) el.value = Number(opts.vals[k]).toLocaleString('ko-KR'); });
+    // 계산기 안에서 열면 맨 아래 버튼은 '다음 단계'로(1단계부터 다시 하라고 하지 않는다)
+    var ci = -1; s.steps.forEach(function (st, i) { if (st.path === opts.cur) ci = i; });
+    var nx = ci >= 0 && ci + 1 < s.steps.length ? ci + 1 : 0;
+    sheet.querySelector('.h-sheet-cta').textContent = ci >= 0 && nx ? (nx + 1) + '단계 ' + s.steps[nx].name + ' 계산하기' : '1단계 ' + s.steps[0].name + '부터 계산하기';
+    sheet.querySelector('.h-sheet-cta').setAttribute('data-step-idx', nx);
     sitRelink();
   }
   // id: 상황, push: 해시 기록을 새로 남길지, from: GA4 출처(home/header), fallback: 데이터를 못 받으면 갈 주소
-  function sitOpen(id, push, from, fallback) {
+  var sitOpts = null;   // 계산기 안 입구에서 연 경우의 opts(뒤로가기로 다시 열 때도 유지)
+  function sitOpen(id, push, from, fallback, opts) {
+    if (opts) sitOpts = opts;
     load('situations', function (d) {
       SD = d; if (!SD.situations[id]) return;
       if (!sheet) sitBuild();
-      sitRender(id); sitFocus = document.activeElement;
+      sitRender(id, sitOpts && sitOpts.id === id ? sitOpts : null); sitFocus = document.activeElement;
       sheet.hidden = false; document.body.classList.add('h-sheet-open');
       if (push) history.pushState({ sheet: id }, '', '#s=' + id);
       // 터치 기기는 입력칸에 자동 포커스하지 않는다(열자마자 키보드가 올라오던 것, 10/21). 데스크톱은 첫 칸으로
@@ -332,6 +347,41 @@
     sitOpen(sitHash[1], false);
   }
   if (PAGE.type === 'home') load('situations', function () {});   // 홈 카드는 누르자마자 열리게 미리 받는다
+
+  // ── 계산기 안 상황 입구(2026-11-12 시안 1-1): 이 계산기가 속한 상황을 '이어서 계산' 아래 한 줄로 보여주고, 누르면 같은 상황 시트를 연다 ──
+  //   홈 카드·시트는 그대로. 상황 고르기: 상황 시트에서 넘어왔으면(from=sit-id) 그 상황, 아니면 situations.json order에서 이 계산기를 포함한 첫 상황
+  //   켜는 범위는 상황 단위(SIT_STRIP_ON)로 단계적으로 넓힌다. 켠 상황에 속한 계산기 전부에 붙는다
+  var SIT_STRIP_ON = ['buy-home', 'home-loan', 'job-change', 'save-money', 'own-home', 'quit-job', 'freelancer', 'buy-car'];   // 1-2: 값 넘기기가 이미 되는 상황, 1-4(11/12): 퇴사·프리랜서·차 살 때 값 전달 추가
+  if (PAGE.type === 'calc') load('situations', function (d) {
+    var has = function (id) { return SIT_STRIP_ON.indexOf(id) >= 0 && d.situations[id] && d.situations[id].steps.some(function (st) { return st.path === path; }); };
+    var from = ''; try { from = (new URLSearchParams(location.search).get('from') || '').replace(/^sit-/, ''); } catch (e) {}
+    var id = has(from) ? from : (d.order || []).filter(has)[0];
+    var box = document.querySelector('.ds-calc-next');
+    if (!id || !box || box.querySelector('.ds-sit-strip')) return;
+    var s = d.situations[id], idx = 0;
+    s.steps.forEach(function (st, i) { if (st.path === path) idx = i; });
+    var a = document.createElement('a');
+    a.className = 'ds-sit-strip'; a.href = location.pathname + location.search + '#s=' + id;
+    a.innerHTML = icon('map-pin') +
+      '<span class="ds-sit-strip-body"><b>' + esc(s.name) + '</b><span>' + s.steps.length + '단계 중 ' + (idx + 1) + '단계</span></span>' +
+      '<span class="ds-sit-dots" aria-hidden="true">' + s.steps.map(function (st, i) { return '<i' + (i === idx ? ' class="is-on"' : '') + '></i>'; }).join('') + '</span>' +
+      '<span class="ds-sit-strip-go">전체 순서' + icon('chevron-right') + '</span>';
+    a.setAttribute('aria-label', s.name + ' ' + s.steps.length + '단계 중 ' + (idx + 1) + '단계, 전체 순서 보기');
+    box.appendChild(a);
+    a.addEventListener('click', function (e) {
+      if (e.button || e.metaKey || e.ctrlKey || e.shiftKey) return;
+      e.preventDefault();
+      // 이 계산기에 입력한 값 중 상황 공통 입력(집값 등)과 같은 이름(data-prefill)인 것만 시트로 가져간다
+      // 앞 단계에서 기억해 둔 값 위에, 이 계산기에 지금 입력된 값을 덮는다
+      var vals = sitStore(id);
+      (s.inputs || []).forEach(function (i) {
+        var el = document.querySelector('[data-prefill="' + i.param + '"]');
+        var v = el ? String(el.value || '').replace(/[^\d.]/g, '') : '';
+        if (v) vals[i.param] = v;
+      });
+      sitOpen(id, true, 'calc', null, { id: id, cur: path, vals: vals });
+    });
+  });
 
   // ── 헤더 펼침 메뉴(H2, 데스크톱): 클릭으로 열고 닫기, 한 번에 하나. 바깥 클릭·ESC·같은 버튼 다시 누르기로 닫힘 ──
   var navOpen = null, dim = null;
@@ -876,6 +926,7 @@
       // 새 '결과 복사'가 숨긴 원본 '복사'를 스크립트로 한 번 더 누르므로 사람이 누른 클릭만 센다
       if (e.isTrusted && cp && /복사/.test(cp.textContent) && cp.closest('main, .ds-calc, .action-row')) ga('result_copy', base);
       var a = t.closest('a[href*="/calc/"]');
+      if (a && a.classList.contains('ds-sit-strip')) a = null;   // 상황 입구는 시트를 여는 버튼이라 이어서 계산 클릭이 아니다(situation_open으로 따로 센다)
       if (a && a.closest('.ds-calc-next, .ds-next, #ds-primary-next, .ds-result-actions, .jcalc-next')) {
         ga('next_calc_click', Object.assign({ to: calcPath(a.getAttribute('href')), slot: a.id === 'ds-primary-next' ? 'primary' : a.closest('.ds-related') ? 'related' : 'next' }, base));
       }

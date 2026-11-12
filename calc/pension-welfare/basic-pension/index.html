@@ -57,7 +57,7 @@
   ]}
   </script>
   <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
-  <link rel="stylesheet" href="/assets/ds/base.css?v=1ff0325a" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=2cd6ea57" />
   <style>
     /* 페이지 고유 스타일(공통 부품 재정의는 base.css가 맡아 뺐다) */
     .calc-btn { width:100%;padding:14px;background:var(--primary);color:#fff;border:none;border-radius:12px;font-size:16px;font-weight:800;cursor:pointer;font-family:inherit;transition:opacity .15s;margin-top:4px; }
@@ -300,7 +300,7 @@
     <section class="ds-calc-next" aria-labelledby="ds-h-next">
       <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
       <div class="ds-next" id="basic-pension-next">
-        <a class="ds-next-card" href="/calc/pension-welfare/national-pension/" data-next="national-pension"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span><span class="ds-next-body"><b>국민연금 수령액 계산기</b><span>가입기간과 평균 소득월액을 입력하면 국민연금공단 산식(소득대체율 40% 기준)으로 예상 연금을 추정합니다. 조기 수령 시 연 6% 감액, 연기 수령 시 연 7.2% 증액 시뮬레이션도 함께 확인할 수 있습니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/pension-welfare/national-pension/" data-next="national-pension"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span><span class="ds-next-body"><b>국민연금 수령액 계산기</b><span>가입기간과 평균 소득월액을 입력하면 국민연금공단 산식(2026년 소득대체율 43%, 가입 연도별 비례상수 반영)으로 예상 연금을 추정합니다. 조기 수령 시 연 6% 감액, 연기 수령 시 연 7.2% 증액 시뮬레이션도 함께 확인할 수 있습니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
         <a class="ds-next-card" href="/calc/pension-welfare/housing-pension/" data-next="housing-pension"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span><span class="ds-next-body"><b>주택연금(역모기지) 계산기</b><span>집값과 나이를 입력하면 한국주택금융공사 2026년 월지급금 예시표를 기준으로 종신지급 정액형 예상 월 수령액을 보간 계산합니다. 부부 가입 시 연소자 나이를 자동 반영하고 연·10년 누적 수령액까지 보여줍니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
       </div>
 
@@ -581,7 +581,7 @@ function calculate() {
 }
 </script>
 <script src="/assets/calc-registry.js?v=b859b628"></script>
-<script src="/assets/ds/site-shell.js?v=395f4f16"></script>
+<script src="/assets/ds/site-shell.js?v=585fce95"></script>
 <script src="/assets/calc-validate.js?v=80f1784e"></script>
 <script src="/assets/calc-result-tools.js?v=25a4281d"></script>
 <script>
@@ -603,6 +603,6 @@ window.ARTICLE_INFO_CONFIG = {
   DSCalc.auto({"card": "resultCard", "required": ["inpWorkIncome"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#basic-pension-next", "next": []});
   DSCalc.placeTrust('ds-trust-col');
 </script>
-<script src="/assets/ds/prefill.js?v=7d81b350" defer></script>
+<script src="/assets/ds/prefill.js?v=6cc70a47" defer></script>
 </body>
 </html>

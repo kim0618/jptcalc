@@ -48,7 +48,7 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"2026년 4대보험 요율은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"근로자 부담 요율은 국민연금 4.75%, 건강보험 3.595%, 장기요양(건강보험료의 13.14%), 고용보험 0.9%입니다. 국민연금은 2025년 개혁으로 근로자 부담분이 매년 0.25%p씩 인상되며 2026년에 4.75%가 적용됩니다. 사용자도 같은 비율로 추가 부담합니다."}},{"@type":"Question","name":"국민연금 상한액이 있나요?","acceptedAnswer":{"@type":"Answer","text":"네. 2026년 7월부터 기준소득월액 상한은 659만원, 하한은 41만원입니다. 월급이 700만원이어도 659만원에 4.75%를 적용해 313,025원이 최대입니다. 상한과 하한은 매년 7월 조정됩니다."}},{"@type":"Question","name":"비과세 수당은 4대보험에서 제외되나요?","acceptedAnswer":{"@type":"Answer","text":"네. 식대 월 20만원, 자가운전보조금 월 20만원 등 법정 비과세 수당은 4대보험 과세 기준에서 제외됩니다. 급여명세서에 비과세 항목이 있다면 그만큼 차감한 과세 급여로 4대보험이 계산됩니다."}},{"@type":"Question","name":"회사(사용자)는 4대보험을 얼마나 부담하나요?","acceptedAnswer":{"@type":"Answer","text":"국민연금·건강보험·장기요양·고용보험은 근로자와 동일한 비율로 사용자도 납부합니다. 여기에 고용안정·직업능력개발 분담금(업종·규모별 0.25~0.85%)과 산재보험(전액 사용자, 업종별 요율 상이)이 추가됩니다. 결과적으로 실제 인건비는 명목 급여보다 약 15~20% 높습니다."}},{"@type":"Question","name":"4대보험 외에 실수령액에 영향을 주는 항목은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"소득세(지방소득세 포함)가 가장 크게 영향을 줍니다. 소득세는 부양가족 수·비과세 항목에 따라 달라지며 연말정산으로 최종 정산됩니다. 정확한 실수령액은 연봉 실수령액 계산기를 이용하세요."}}]}</script>
   <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
-  <link rel="stylesheet" href="/assets/ds/base.css?v=1ff0325a" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=2cd6ea57" />
   <style>
     /* 페이지 고유 스타일(공통 부품 재정의는 base.css가 맡아 뺐다) */
     .verdict-box { text-align: center; padding: 22px 20px; margin-bottom: 16px; border-radius: 14px; background: rgba(16,185,129,0.07); border: 2px solid rgba(16,185,129,0.28); }
@@ -579,7 +579,7 @@ function calculate() {
 </script>
 
 <script src="/assets/calc-registry.js?v=b859b628"></script>
-<script src="/assets/ds/site-shell.js?v=395f4f16"></script>
+<script src="/assets/ds/site-shell.js?v=585fce95"></script>
 <script src="/assets/calc-validate.js?v=80f1784e"></script>
 <script src="/assets/calc-result-tools.js?v=25a4281d"></script>
 <script>
@@ -601,6 +601,6 @@ window.ARTICLE_INFO_CONFIG = {
   DSCalc.placeTrust('ds-trust-col');
   (function () { const a = document.getElementById('ds-primary-next'); if (!a) return; const go = () => { const v = {}; Object.entries({"salary_m": "inpSalary"}).forEach(([k, id]) => v[k] = DSCalc.num(id)); a.href = DSCalc.link('/calc/tax/insurance-comparison/', v, 'four-insurance'); }; document.addEventListener('input', go, true); go(); })();
 </script>
-<script src="/assets/ds/prefill.js?v=7d81b350" defer></script>
+<script src="/assets/ds/prefill.js?v=6cc70a47" defer></script>
 </body>
 </html>

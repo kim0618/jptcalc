@@ -47,7 +47,7 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"국민연금 최소 수령 조건은 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"최소 10년(120개월) 이상 납부해야 합니다. 미만이면 60세 이후 반환일시금으로 받습니다. 10년을 채운 경우 65세(1969년생 이후)부터 평생 월 연금으로 수령합니다."}},{"@type":"Question","name":"국민연금 조기수령하면 얼마나 줄어드나요?","acceptedAnswer":{"@type":"Answer","text":"1년 일찍 받을 때마다 연금액이 6%씩 감액됩니다. 5년 일찍(60세) 수령하면 30% 감액된 금액을 평생 받습니다. 반대로 최대 5년 연기하면 1년당 7.2%, 최대 36% 증액됩니다."}},{"@type":"Question","name":"국민연금과 기초연금을 동시에 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"원칙적으로 동시 수령 가능합니다. 단, 국민연금 수령액이 기준연금액(2026년 349,700원)의 150%를 초과하면 기초연금이 일부 감액될 수 있습니다."}},{"@type":"Question","name":"이 계산기 결과가 실제 수령액과 같나요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 매년 변하는 A값, 가입 연도별 소득 재평가율, 부양가족 연금 등이 실제 계산에 반영되므로 차이가 있을 수 있습니다. 정확한 예상 연금액은 국민연금공단 홈페이지에서 확인하세요."}},{"@type":"Question","name":"소득대체율 43%는 무슨 의미인가요?","acceptedAnswer":{"@type":"Answer","text":"40년 가입 기준으로 가입 기간 평균 소득의 43%를 목표 연금액으로 설정한다는 의미입니다. 2025년 국민연금법 개정으로 2026년 1월 1일부터 41.5%에서 43%로 1.5%p 인상되었습니다. 보험료율도 같은 시점부터 매년 0.5%p씩 단계 인상되어 2033년 13%에 도달합니다."}},{"@type":"Question","name":"2025년 이전에 보험료를 낸 기간도 소득대체율 43%로 계산되나요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 43%(비례상수 1.29)는 2026년 이후 가입기간에 적용됩니다. 1988~1998년 가입기간은 70%(2.4), 1999~2007년은 60%(1.8), 2008년은 50%(1.5)이고 그 뒤 매년 0.5%p씩 내려가 2025년은 41.5%(1.245)입니다. 기본연금액은 각 기간의 비례상수를 가입월수 비중만큼 반영해 계산하므로, 2000년대에 가입한 기간이 길면 전체 소득대체율이 43%보다 높아집니다. 근거는 국민연금법 제51조①과 부칙 제20조입니다."}},{"@type":"Question","name":"가입 시작 연도를 넣으면 결과가 얼마나 달라지나요?","acceptedAnswer":{"@type":"Answer","text":"기준소득월액 300만원·30년 가입 기준으로 전 기간 43%는 월 약 99만 9천원, 2000년부터 가입하면 월 약 114만 2천원, 2010년부터 가입하면 월 약 102만 7천원입니다. 이 계산기는 입력한 해부터 쉬지 않고 가입했다고 보고 연도별 비례상수를 가입월수로 가중합니다. 중간에 쉰 기간이 있거나 연도별 소득이 크게 달랐다면 국민연금공단 예상연금 조회 결과와 차이가 납니다."}}]}</script>
   <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
-  <link rel="stylesheet" href="/assets/ds/base.css?v=1ff0325a" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=2cd6ea57" />
   <style>
     /* 페이지 고유 스타일(공통 부품 재정의는 base.css가 맡아 뺐다) */
     .highlight-box { background:rgba(14,165,233,0.06);border:1px solid rgba(14,165,233,0.2);border-radius:12px;padding:16px;text-align:center;margin-bottom:14px; }
@@ -614,7 +614,7 @@ function calculate() {
 }
 </script>
 <script src="/assets/calc-registry.js?v=b859b628"></script>
-<script src="/assets/ds/site-shell.js?v=395f4f16"></script>
+<script src="/assets/ds/site-shell.js?v=585fce95"></script>
 <script src="/assets/calc-validate.js?v=80f1784e"></script>
 <script src="/assets/calc-result-tools.js?v=25a4281d"></script>
 <script>
@@ -639,6 +639,6 @@ window.ARTICLE_INFO_CONFIG = {
   DSCalc.auto({"card": "resultCard", "required": ["inpIncome"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#national-pension-next", "next": []});
   DSCalc.placeTrust('ds-trust-col');
 </script>
-<script src="/assets/ds/prefill.js?v=7d81b350" defer></script>
+<script src="/assets/ds/prefill.js?v=6cc70a47" defer></script>
 </body>
 </html>

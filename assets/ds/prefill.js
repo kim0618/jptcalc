@@ -26,9 +26,10 @@
   function sourceName() {
     var f = params.get('from');
     if (f && NAMES[f]) return NAMES[f];
-    // 홈 상황 시트(A2)에서 온 값: from=sit-{상황 id} (이름은 design/situations.json과 같게)
+    // 상황 시트(A2)에서 온 값: from=sit-{상황 id} (이름은 design/situations.json과 같게)
     var SIT = {"buy-home": "집 살 때", "rent-home": "전세·월세 구할 때", "home-loan": "주택 대출 알아볼 때", "sell-home": "집 팔 때·물려줄 때", "own-home": "집 보유 세금", "job-change": "이직·연봉 협상", "pay-check": "월급·보너스 확인", "quit-job": "퇴사할 때", "freelancer": "프리랜서·부업 세금", "pregnancy": "임신·출산 준비", "child-care": "아이 키울 때", "retirement": "노후·부모님 준비", "buy-car": "차 살 때", "save-money": "목돈 모을 때", "adopt-pet": "반려동물 입양"};
-    if (f && /^sit-/.test(f) && SIT[f.slice(4)]) return "홈 '" + SIT[f.slice(4)] + "'";
+    // 홈 카드와 계산기 안 입구 둘 다 같은 시트에서 오므로 '홈'이라 하지 않는다(2026-11-12)
+    if (f && /^sit-/.test(f) && SIT[f.slice(4)]) return "'" + SIT[f.slice(4)] + "' 흐름";
     var m = document.referrer && document.referrer.match(/\/calc\/[^/]+\/([^/?#]+)\//);
     return m && NAMES[m[1]] ? NAMES[m[1]] : '이전 계산기';
   }

@@ -26,6 +26,12 @@ for k, _, _ in CATS:
         DESC[f'{k}/{slug}'] = tx(d)
 # a74cc04 이후 계산기 기능이 바뀐 곳만 덮어쓴다(2026-10-29 내신: 5등급제 추가)
 DESC['tools/naesin-grade'] = '석차와 수강자 수로 내신 등급(5등급제·9등급제)을 환산하고, 과목별 등급·학점으로 전과목 평균 내신등급(가중평균)까지 계산합니다.'
+# 2026-11-12: 옛 소개문이 현행 계산기와 어긋난 3건(국민연금 43%·REPLACE_RATE, 노란우산 DEDUCT_LIMIT 600/500/400/200, 평생양육비는 단계별 월비용 입력). orig 허브·conv_cfg와 같은 문장
+DESC['pension-welfare/national-pension'] = DESC['pension-welfare/national-pension'].replace('국민연금공단 산식(소득대체율 40% 기준)으로', '국민연금공단 산식(2026년 소득대체율 43%, 가입 연도별 비례상수 반영)으로')
+DESC['tax/yellow-umbrella'] = DESC['tax/yellow-umbrella'].replace('소득 4천만원 이하 500만원·1억원 이하 300만원·1억원 초과 200만원 한도.', '사업소득금액 4천만원 이하 600만원·6천만원 이하 500만원·1억원 이하 400만원·1억원 초과 200만원 한도.')
+DESC['pet/lifetime-cost'] = DESC['pet/lifetime-cost'].replace('입양 초기부터 성체기·노령기(7세+)까지 단계별 비용 변화를 반영해 강아지·고양이의 생애 총비용을 예측합니다. 노령기 의료비 가중치 2~3배 반영.', '입양 초기비용과 청소년기·성체기·노령기(7세~) 월 비용을 기간별로 합산해 강아지·고양이의 생애 총비용을 예측합니다. 평균 월비용 환산까지 보여줍니다.')
+for _k, _bad in [('pension-welfare/national-pension', '40% 기준'), ('tax/yellow-umbrella', '1억원 이하 300만원'), ('pet/lifetime-cost', '가중치 2~3배')]:
+    assert _bad not in DESC[_k], _k   # 원문이 바뀌어 치환이 안 먹으면 여기서 멈춘다
 
 def new_head(s, extra=''):
     h = s[s.index('<head>') + 6:s.index('</head>')]

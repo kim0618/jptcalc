@@ -55,7 +55,7 @@
   ]}
   </script>
   <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
-  <link rel="stylesheet" href="/assets/ds/base.css?v=1ff0325a" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=2cd6ea57" />
   <style>
     /* 페이지 고유 스타일(공통 부품 재정의는 base.css가 맡아 뺐다) */
     .rh-box { text-align:center;padding:14px 0 12px;margin-bottom:14px;border-bottom:1px solid rgba(0,0,0,0.06); }
@@ -259,7 +259,7 @@
     <section class="ds-calc-next" aria-labelledby="ds-h-next">
       <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
       <div class="ds-next" id="pension-tax-next">
-        <a class="ds-next-card" href="/calc/pension-welfare/national-pension/" data-next="national-pension"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span><span class="ds-next-body"><b>국민연금 수령액 계산기</b><span>가입기간과 평균 소득월액을 입력하면 국민연금공단 산식(소득대체율 40% 기준)으로 예상 연금을 추정합니다. 조기 수령 시 연 6% 감액, 연기 수령 시 연 7.2% 증액 시뮬레이션도 함께 확인할 수 있습니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/pension-welfare/national-pension/" data-next="national-pension"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span><span class="ds-next-body"><b>국민연금 수령액 계산기</b><span>가입기간과 평균 소득월액을 입력하면 국민연금공단 산식(2026년 소득대체율 43%, 가입 연도별 비례상수 반영)으로 예상 연금을 추정합니다. 조기 수령 시 연 6% 감액, 연기 수령 시 연 7.2% 증액 시뮬레이션도 함께 확인할 수 있습니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
         <a class="ds-next-card" href="/calc/pension-welfare/retirement-living/" data-next="retirement-living"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span><span class="ds-next-body"><b>노후 생활비 계산기</b><span>현재 월 생활비와 은퇴 연령, 예상 수명을 입력하면 물가상승률(연 2~3%)을 반영해 은퇴 후 필요 총자금을 산출합니다. 국민연금·퇴직연금·개인연금 수령액을 차감한 뒤 실질 부족분까지 한 번에 볼 수 있습니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
       </div>
 
@@ -604,7 +604,7 @@ function toggleExplain(btn) {
 }
 </script>
 <script src="/assets/calc-registry.js?v=b859b628"></script>
-<script src="/assets/ds/site-shell.js?v=395f4f16"></script>
+<script src="/assets/ds/site-shell.js?v=585fce95"></script>
 <script src="/assets/calc-validate.js?v=80f1784e"></script>
 <script src="/assets/calc-result-tools.js?v=25a4281d"></script>
 <script>
@@ -624,6 +624,6 @@ window.ARTICLE_INFO_CONFIG = {
   DSCalc.auto({"card": "resultCard", "required": ["annualPension"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#pension-tax-next", "next": []});
   DSCalc.placeTrust('ds-trust-col');
 </script>
-<script src="/assets/ds/prefill.js?v=7d81b350" defer></script>
+<script src="/assets/ds/prefill.js?v=6cc70a47" defer></script>
 </body>
 </html>

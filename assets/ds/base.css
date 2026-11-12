@@ -383,6 +383,19 @@ html body .action-row .ds-dup { display: none; }
 .ds-next-body b { font-size: var(--fs-label); font-weight: var(--fw-title); color: var(--navy); word-break: keep-all; overflow-wrap: anywhere; }
 .ds-next-body span { font-size: var(--fs-meta); font-weight: var(--fw-meta); color: var(--text-sub); }
 .ds-next-card > .ds-i:last-child { color: var(--text-muted); }
+/* 계산기 안 상황 입구(2026-11-12 시안): '이어서 계산' 카드 아래 한 줄. 카드보다 한 단계 낮은 무게(틴트 면, 그림자 없음) */
+.ds-sit-strip { display: flex; align-items: center; gap: var(--space-3); min-height: 52px; margin-top: var(--space-3); padding: var(--space-2) var(--space-4); border-radius: var(--radius-md); background: var(--primary-tint); color: var(--text); text-decoration: none; }
+.ds-sit-strip > .ds-i:first-child { width: 18px; height: 18px; flex-shrink: 0; color: var(--blue); }
+.ds-sit-strip-body { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.ds-sit-strip-body b { font-size: var(--fs-label); font-weight: var(--fw-title); color: var(--navy); word-break: keep-all; }
+.ds-sit-strip-body span { font-size: var(--fs-meta); font-weight: var(--fw-meta); color: var(--text-sub); font-variant-numeric: tabular-nums; }
+.ds-sit-dots { display: flex; gap: var(--space-1); flex-shrink: 0; }
+.ds-sit-dots i { width: 6px; height: 6px; border-radius: 50%; background: color-mix(in srgb, var(--blue) 22%, transparent); }
+.ds-sit-dots i.is-on { width: 16px; border-radius: 3px; background: var(--blue); }
+.ds-sit-strip-go { display: inline-flex; align-items: center; flex-shrink: 0; font-size: var(--fs-meta); font-weight: var(--fw-label); color: var(--primary); }
+.ds-sit-strip-go .ds-i { width: 16px; height: 16px; }
+@media (hover: hover) { .ds-sit-strip:hover .ds-sit-strip-go { text-decoration: underline; } }
+@media (max-width: 359px) { .ds-sit-dots { display: none; } }
 html body .result-card .jcalc-next { display: none; }
 .ds-basis { margin-top: var(--space-section); }
 .ds-block-title { margin: 0 0 var(--space-3); font-size: var(--fs-section); font-weight: var(--fw-section); color: var(--navy); }
@@ -1023,6 +1036,10 @@ h1, h2, h3, h4, summary, label, button, th, b, strong, .field-label, .seg-btn, .
 .h-sit-body b, .h-season-body b, .h-title { word-break: keep-all; }
 .h-step-body span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: var(--fs-meta); color: var(--text-sub); }
 .h-steps .ds-i { width: 18px; height: 18px; color: var(--text-muted); flex-shrink: 0; }
+/* 계산기 안 입구로 열었을 때 지금 보는 단계 */
+.h-steps li.is-current a { border-color: var(--blue); background: var(--primary-tint); }
+.h-steps li.is-current .h-step-no { background: var(--blue); color: var(--surface); }
+.h-steps li.is-current .h-step-body span { color: var(--primary); font-weight: var(--fw-label); }
 .h-sheet-cta { display: flex; align-items: center; justify-content: center; width: 100%; min-height: var(--h-btn); }
 body.h-sheet-open { overflow: hidden; }
 @media (min-width: 1024px) {

@@ -202,24 +202,30 @@
      {
       "to": "unemployment"
      }
-    ]
+    ],
+    "prefill": {
+     "aw-monthly": "avgwage"
+    }
    },
    "severance": {
     "next": [
      {
       "to": "unemployment",
       "carry": {
-       "monthly": "rt-monthly"
+       "avgwage": "rt-monthly"
       }
      },
      {
       "to": "average-wage"
      }
-    ]
+    ],
+    "prefill": {
+     "rt-monthly": "avgwage"
+    }
    },
    "unemployment": {
     "prefill": {
-     "ue-monthly": "monthly"
+     "ue-monthly": "avgwage"
     },
     "next": [
      {
@@ -313,7 +319,10 @@
      {
       "to": "yellow-umbrella"
      }
-    ]
+    ],
+    "prefill": {
+     "inc-revenue": "revenue"
+    }
    },
    "vat": {
     "next": [
@@ -323,7 +332,10 @@
      {
       "to": "withholding"
      }
-    ]
+    ],
+    "prefill": {
+     "vat-sales": "revenue"
+    }
    },
    "freelancer-income": {
     "next": [
@@ -942,7 +954,10 @@
      {
       "to": "acquisition-tax"
      }
-    ]
+    ],
+    "prefill": {
+     "car-price": "carprice"
+    }
    },
    "auto-tax": {
     "next": [
@@ -1002,7 +1017,10 @@
      {
       "to": "fuel-cost"
      }
-    ]
+    ],
+    "prefill": {
+     "car-price": "carprice"
+    }
    }
   }
  },

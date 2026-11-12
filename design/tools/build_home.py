@@ -31,6 +31,31 @@ DESC = {}
 for k, _, _ in CATS:
     for slug, d in re.findall(r'<a class="calc-hub-card" href="/calc/' + k + r'/([a-z0-9-]+)/">.*?<div class="calc-hub-desc">(.*?)</div>', git(f'calc/{k}/index.html'), re.S):
         DESC[f'{k}/{slug}'] = tx(d)
+# 옛 허브 설명 중 현행과 어긋난 것(2026-11-12 정정): 매매 등기는 등록면허세 없음(지방세법 제23조1호), LTV 금액한도는 집값 구간별(10·15 대책)
+DESC.update({'realestate/registry': '인지세·등기수수료·근저당 세금', 'realestate/ltv': '집값 대비 대출 한도·구간별 금액한도'})
+# 시트 단계 설명은 한 줄(부동산 허브처럼 짧게). 허브 소개문(60~120자)은 시트에서 잘리고 연도 숫자가 낡는다 → 숫자 없는 짧은 설명(2026-11-12)
+DESC.update({
+    'salary/take-home-pay': '4대보험·세금 뗀 월 실수령액', 'salary/bonus-pay': '성과급·상여금 세후 금액', 'salary/ordinary-wage': '통상시급과 수당 단가',
+    'salary/premium-pay': '연장·야간·휴일 근로수당', 'salary/weekly-holiday-pay': '시급·근무시간별 주휴수당',
+    'tax/withholding': '3.3% 떼고 실제 입금액', 'tax/freelancer-income': '보험료·경비 뺀 월 순수입', 'tax/income-tax': '5월 신고 예상 세액·환급',
+    'tax/vat': '일반·간이과세자 부가세', 'tax/regional-health-insurance': '소득·재산 기준 월 보험료', 'tax/yellow-umbrella': '소득공제 한도와 절세액',
+    'salary/severance': '평균임금 기준 퇴직금', 'salary/unemployment': '하루 지급액과 받는 기간', 'salary/annual-leave-pay': '미사용 연차 보상액',
+    'salary/average-wage': '직전 3개월로 1일 평균임금', 'salary/dismissal-notice-pay': '예고 없는 해고 시 30일분',
+    'baby/ovulation': '배란 예상일과 가임기', 'baby/due-date': '출산예정일과 임신 주수', 'baby/total-support': '취학 전까지 지원금 합계',
+    'baby/first-meeting': '출생 순위별 바우처 금액', 'baby/parental-leave-pay': '휴직 기간 월별 급여',
+    'pension-welfare/national-pension': '예상 연금과 조기·연기 수령', 'pension-welfare/basic-pension': '소득인정액으로 수급 판정',
+    'pension-welfare/housing-pension': '집값·나이별 월 수령액', 'pension-welfare/retirement-living': '은퇴 후 필요 자금과 부족분',
+    'pension-welfare/long-term-care': '등급별 한도와 본인부담금',
+    'salary/job-change': '실수령 지키는 제안 연봉 역산', 'salary/comparison': '두 연봉의 세후 차이', 'salary/raise-rate': '인상률과 월 실수령 증가액',
+    'baby/parental-benefit': '0~1세 매달 받는 금액', 'baby/child-allowance': '남은 수령액과 총액', 'baby/home-care-allowance': '가정 양육 시 수당과 잔여액',
+    'baby/baby-months': '개월수와 영유아 검진 시기',
+    'auto/auto-loan': '월 납입금과 총 이자', 'auto/acquisition-tax': '신차 취득세와 실구매가', 'auto/used-car-tax': '중고차 명의이전 취득세',
+    'auto/ev-subsidy': '국고·지자체 보조금과 실구매가', 'auto/auto-tax': '배기량·차령별 연 자동차세',
+    'finance/savings': '만기 수령액과 실효수익률', 'finance/deposit': '세후 이자 수령액', 'finance/compound': '기간별 복리 불어나는 크기',
+    'finance/youth-leap-account': '정부기여금 포함 5년 만기액', 'finance/youth-future-savings': '정부기여금 포함 3년 만기액',
+    'pet/adoption': '분양·접종·용품 첫 비용', 'pet/monthly-cost': '사료·미용·용품 월 지출', 'pet/insurance': '가입 vs 미가입 10년 비용',
+    'pet/lifetime-cost': '단계별 생애 총비용',
+})
 
 # ── 원본 홈의 글(유지) ──
 def short(name): return re.sub(r'\s*계산기$', '', name)
