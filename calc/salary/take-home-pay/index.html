@@ -161,8 +161,8 @@
     <section class="ds-calc-next" aria-labelledby="ds-h-next">
       <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
       <div class="ds-next" id="take-home-pay-next">
-        <a class="ds-next-card" href="/calc/salary/job-change/" data-next="job-change"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-briefcase"></use></svg></span><span class="ds-next-body"><b>이직 연봉 비교 계산기</b><span>현재 실수령을 유지하거나 넘으려면 제안 연봉이 얼마여야 하는지 역산합니다. 퇴직금 정산, 수습기간 급여 삭감도 변수로 반영됩니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
-        <a class="ds-next-card" href="/calc/salary/raise-rate/" data-next="raise-rate"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-briefcase"></use></svg></span><span class="ds-next-body"><b>연봉 인상률 계산기</b><span>이전 연봉과 새 연봉을 넣으면 인상률(%)과 월 실수령 증가액이 산출됩니다. 과표 구간이 바뀔 때 세후 인상 폭이 줄어드는 현상도 확인할 수 있습니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/salary/job-change/" data-next="job-change"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-briefcase"></use></svg></span><span class="ds-next-body"><b>이직 연봉 비교 계산기</b><span>이직 제안 연봉의 실수령 비교</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/salary/year-end-tax/" data-next="year-end-tax"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-briefcase"></use></svg></span><span class="ds-next-body"><b>연말정산 계산기</b><span>연말정산 환급·추가 납부 예상</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
       </div>
 
     </section>
@@ -559,7 +559,7 @@ window.ARTICLE_INFO_CONFIG = {
 <script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
 <script>
   // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
-  DSCalc.auto({"card": "s0-result", "required": ["s0-salary"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#take-home-pay-next", "next": [{"key": "job-change", "path": "/calc/salary/job-change/", "sub": "현재 실수령을 유지하거나 넘으려면 제안 연봉이 얼마여야 하는지 역산합니다. 퇴직금 정산, 수습기간 급여 삭감도 변수로 반영됩니다.", "params": {"salary": "s0-salary"}, "from": "take-home-pay"}, {"key": "raise-rate", "path": "/calc/salary/raise-rate/", "sub": "이전 연봉과 새 연봉을 넣으면 인상률(%)과 월 실수령 증가액이 산출됩니다. 과표 구간이 바뀔 때 세후 인상 폭이 줄어드는 현상도 확인할 수 있습니다.", "params": {"salary": "s0-salary"}, "from": "take-home-pay"}]});
+  DSCalc.auto({"card": "s0-result", "required": ["s0-salary"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#take-home-pay-next", "next": [{"key": "job-change", "path": "/calc/salary/job-change/", "sub": "이직 제안 연봉의 실수령 비교", "params": {"salary": "s0-salary"}, "from": "take-home-pay"}, {"key": "year-end-tax", "path": "/calc/salary/year-end-tax/", "sub": "연말정산 환급·추가 납부 예상", "params": {"salary": "s0-salary"}, "from": "take-home-pay"}]});
   DSCalc.placeTrust('ds-trust-col');
   (function () { const a = document.getElementById('ds-primary-next'); if (!a) return; const go = () => { const v = {}; Object.entries({"salary": "s0-salary"}).forEach(([k, id]) => v[k] = DSCalc.num(id)); a.href = DSCalc.link('/calc/salary/job-change/', v, 'take-home-pay'); }; document.addEventListener('input', go, true); go(); })();
 </script>

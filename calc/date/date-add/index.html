@@ -262,21 +262,23 @@ function today(){var n=new Date();return new Date(n.getFullYear(),n.getMonth(),n
 function toDateStr(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
 function diffDays(a,b){return Math.round((b-a)/86400000)}
 function setAddOp(op,btn){addOp=op;btn.parentElement.querySelectorAll('.seg-btn').forEach(function(b){b.classList.remove('active')});btn.classList.add('active')}
+var addSilent=false;
+function addWarn(m){if(addSilent){document.getElementById('add-result').classList.remove('show')}else{alert(m)}}
 function calcAdd(){
   var start=parseDate(document.getElementById('add-start').value);
-  if(!start){alert('시작 날짜를 입력해주세요.');return}
+  if(!start){addWarn('시작 날짜를 입력해주세요.');return}
   var sy=start.getFullYear();
-  if(sy<1900||sy>2200){alert('1900년~2200년 사이의 날짜를 입력해주세요.');return}
+  if(sy<1900||sy>2200){addWarn('1900년~2200년 사이의 날짜를 입력해주세요.');return}
   var years=Math.max(0,parseInt(String(document.getElementById('add-years').value).replace(/,/g, ''))||0);
   var months=Math.max(0,parseInt(String(document.getElementById('add-months').value).replace(/,/g, ''))||0);
   var days=Math.max(0,parseInt(String(document.getElementById('add-days').value).replace(/,/g, ''))||0);
-  if(years===0&&months===0&&days===0){alert('년, 월, 일 중 하나 이상 입력해주세요.');return}
+  if(years===0&&months===0&&days===0){addWarn('년, 월, 일 중 하나 이상 입력해주세요.');return}
   var result=new Date(start);var sign=addOp==='+'?1:-1;
   var totalMonths=sign*years*12+sign*months;
   if(totalMonths!==0){var dayOfMonth=result.getDate();result.setDate(1);result.setMonth(result.getMonth()+totalMonths);var lastDay=new Date(result.getFullYear(),result.getMonth()+1,0).getDate();result.setDate(Math.min(dayOfMonth,lastDay))}
   result.setDate(result.getDate()+sign*days);
   var ry=result.getFullYear();
-  if(ry<1900||ry>2200){alert('결과 날짜가 유효 범위(1900~2200년)를 벗어납니다. 입력값을 줄여주세요.');return}
+  if(ry<1900||ry>2200){addWarn('결과 날짜가 유효 범위(1900~2200년)를 벗어납니다. 입력값을 줄여주세요.');return}
   var opLabel=addOp==='+'?'더한':'뺀';
   var totalDays=Math.abs(diffDays(start,result));var dow=result.getDay();var weekdayColor=WEEK_COLORS[dow];
   var tod=today();var diffFromToday=diffDays(tod,result);
@@ -298,6 +300,14 @@ function calcAdd(){
   document.getElementById('add-start').value=toDateStr(today());
   var ids=['add-start','add-years','add-months','add-days'];
   ids.forEach(function(id){var el=document.getElementById(id);if(el)el.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();calcAdd()}})});
+  // 입력하는 즉시 계산(2026-11-12): 버튼을 눌러야만 결과가 나와 시작한 사람의 절반이 결과를 못 봤다. 입력 중에는 경고창을 띄우지 않는다
+  var live=function(){
+    var has=['add-years','add-months','add-days'].some(function(id){return (parseInt(document.getElementById(id).value)||0)>0});
+    if(!has||!parseDate(document.getElementById('add-start').value)){document.getElementById('add-result').classList.remove('show');return}
+    addSilent=true;try{calcAdd()}finally{addSilent=false}
+  };
+  ids.forEach(function(id){var el=document.getElementById(id);if(el){el.addEventListener('input',live);el.addEventListener('change',live)}});
+  document.querySelectorAll('#add-op-plus, #add-op-minus').forEach(function(b){b.addEventListener('click',function(){setTimeout(live,0)})});
 })();
 </script>
 

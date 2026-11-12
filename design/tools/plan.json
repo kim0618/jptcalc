@@ -58,7 +58,7 @@
       }
      },
      {
-      "to": "raise-rate",
+      "to": "year-end-tax",
       "carry": {
        "salary": "s0-salary"
       }
@@ -370,10 +370,10 @@
    "regional-health-insurance": {
     "next": [
      {
-      "to": "four-insurance"
+      "to": "insurance-comparison"
      },
      {
-      "to": "insurance-comparison"
+      "to": "income-tax"
      }
     ]
    },
@@ -970,7 +970,7 @@
       "to": "auto-tax"
      },
      {
-      "to": "acquisition-tax"
+      "to": "auto-loan"
      }
     ]
    },
@@ -1066,10 +1066,10 @@
    "lunar-calendar": {
     "next": [
      {
-      "to": "percent"
+      "to": "date/dday"
      },
      {
-      "to": "discount"
+      "to": "date/age"
      }
     ]
    },
@@ -1172,10 +1172,10 @@
    "age": {
     "next": [
      {
-      "to": "weekday"
+      "to": "dday"
      },
      {
-      "to": "dday"
+      "to": "date-difference"
      }
     ]
    },

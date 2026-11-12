@@ -42,7 +42,7 @@
         <h1 class="page-title">전월세전환 계산기</h1>
         <div class="ds-trust-chips" aria-label="기준 정보">
           <span class="ds-trust-chip">주택임대차보호법 기준</span>
-          <span class="ds-trust-chip">2026.09.04 검토</span>
+          <span class="ds-trust-chip">2026.11.12 검토</span>
         </div>
       </div>
       <p class="page-subtitle">전월세 전환율 적용 · 전세↔월세 상호 환산</p>
@@ -161,7 +161,7 @@
           </tbody>
         </table>
       </div>
-      <p style="font-size:13px;color:var(--gray-600);margin-top:10px">법정 전환율 상한은 한국은행 기준금리 + 대통령령으로 정하는 비율(2%)이며, 연 10%를 넘을 수 없습니다(주택임대차보호법 제7조의2). 상한을 초과한 전환은 무효가 될 수 있으므로 계약 전 현재 기준금리를 확인하세요.</p>
+      <p style="font-size:13px;color:var(--gray-600);margin-top:10px">법정 전환율 상한은 한국은행 기준금리 + 대통령령으로 정하는 비율(2%)이며, 연 10%를 넘을 수 없습니다(주택임대차보호법 제7조의2). 2026년 11월 기준금리 3.00%로는 상한이 연 5.0%라, 위 표의 5.5%·6.0%는 보증금을 월세로 바꿀 때 적용할 수 없는 비율입니다(시장 시세 비교용). 기준금리가 바뀌면 상한도 함께 바뀌니 계약 전 확인하세요.</p>
         </section>
             <section class="ds-section ds-prose" aria-labelledby="conversion-s2">
           <div class="ds-section-head"><h2 id="conversion-s2">전월세 전환율 계산이 필요한 순간</h2></div>
@@ -211,16 +211,16 @@
       </div>
         </section>
             <section class="ds-section ds-prose" aria-labelledby="conversion-s6">
-          <div class="ds-section-head"><h2 id="conversion-s6">전세금별 월세 전환 (보증금 5,000만·전환율 5.5%)</h2></div>
+          <div class="ds-section-head"><h2 id="conversion-s6">전세금별 월세 전환 (보증금 5,000만·전환율 5.0%, 현재 법정 상한)</h2></div>
 <p class="ds-table-lead">대표 입력값을 넣어 계산기가 산출한 결과를 표로 정리했습니다.</p>
       <div class="ds-table-card">
         <table>
           <thead><tr><th>전세금</th><th>보증금 차액</th><th>월세</th></tr></thead>
           <tbody>
-            <tr><td>1억원</td><td>5,000만원</td><td>22만 9천원/월</td></tr>
-            <tr><td>2억원</td><td>1억 5,000만원</td><td>68만 8천원/월</td></tr>
-            <tr><td>3억원</td><td>2억 5,000만원</td><td>114만 6천원/월</td></tr>
-            <tr><td>5억원</td><td>4억 5,000만원</td><td>206만 3천원/월</td></tr>
+            <tr><td>1억원</td><td>5,000만원</td><td>20만 8천원/월</td></tr>
+            <tr><td>2억원</td><td>1억 5,000만원</td><td>62만 5천원/월</td></tr>
+            <tr><td>3억원</td><td>2억 5,000만원</td><td>104만 2천원/월</td></tr>
+            <tr><td>5억원</td><td>4억 5,000만원</td><td>187만 5천원/월</td></tr>
           </tbody>
         </table>
       </div>
@@ -266,7 +266,7 @@
       { name: '한국은행 기준금리(bok.or.kr)', url: 'https://www.bok.or.kr' },
       { name: '국토교통부(molit.go.kr)', url: 'https://www.molit.go.kr' },
     ],
-    lastReviewed: '2026.09.04',
+    lastReviewed: '2026.11.12',
   };
   </script>
   <script src="/assets/trust-block.js?v=ac07516f"></script>
@@ -352,8 +352,12 @@ function calcConversion() {
   const rateInput = parseFloat(String(document.getElementById('conv-rate').value).replace(/,/g, ''));
   const rate = rateInput / 100;
   if (!rate || rate < 0) { resultEl.classList.remove('show'); return; }
-  const warn = rateInput > 10
-    ? '<div class="result-note" style="color:#DC2626;font-weight:600;background:rgba(220,38,38,0.08);padding:8px 10px;border-radius:6px;margin-top:8px">법정 상한(연 10%)을 초과한 전환율입니다. 주택임대차보호법상 무효가 될 수 있습니다.</div>'
+  // 법정 상한 = min(연 10%, 한국은행 기준금리 + 2%) (주택임대차보호법 제7조의2, 시행령 제9조). 기준금리 3.00%(2026-08-27, data-points §4.7) → 5.0%
+  const BASE_RATE = 3.00;
+  const LEGAL_CAP = Math.min(10, BASE_RATE + 2);
+  // 상한은 보증금을 월차임으로 전환할 때(전세 → 월세) 적용된다
+  const warn = convDir === 'to-monthly' && rateInput > LEGAL_CAP
+    ? '<div class="result-note" style="color:#DC2626;font-weight:600;background:rgba(220,38,38,0.08);padding:8px 10px;border-radius:6px;margin-top:8px">법정 상한(연 ' + LEGAL_CAP.toFixed(1) + '% = 기준금리 ' + BASE_RATE.toFixed(2) + '% + 2%)을 넘는 전환율입니다. 보증금을 월세로 바꿀 때 상한을 넘는 월세는 받을 수 없습니다(주택임대차보호법 제7조의2).</div>'
     : '';
   let html = '';
   if (convDir === 'to-monthly') {
@@ -387,7 +391,7 @@ window.ARTICLE_INFO_CONFIG = {
   reviewBasis: '부동산 관련 법령 2026년 기준',
   basisDate: '2026년 기준',
   referenceOrg: '국토교통부·대법원',
-  lastReviewed: '2026.09.04',
+  lastReviewed: '2026.11.12',
   category: 'realestate'
 };
 </script>

@@ -145,8 +145,8 @@
     <section class="ds-calc-next" aria-labelledby="ds-h-next">
       <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
       <div class="ds-next" id="youth-leap-account-next">
-        <a class="ds-next-card" href="/calc/finance/youth-future-savings/" data-next="youth-future-savings"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-piggy-bank"></use></svg></span><span class="ds-next-body"><b>청년미래적금 계산기</b><span>유형(일반형 6%·우대형 12%)과 월 납입액을 넣으면 정부기여금·비과세 이자를 합산한 3년 만기 수령액과 일반 과세적금 환산 수익률을 계산합니다. 우대형 월 50만원 가입 시 약 2,265만원으로 체감 연 19%대입니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
-        <a class="ds-next-card" href="/calc/finance/savings/" data-next="savings"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-piggy-bank"></use></svg></span><span class="ds-next-body"><b>적금 만기 계산기</b><span>월 납입액·기간·금리를 입력하면 만기 수령액과 실효수익률을 계산합니다. 적금은 표시 금리의 약 절반이 실효수익률이 되는 이유를 숫자로 확인할 수 있습니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/finance/youth-future-savings/" data-next="youth-future-savings"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-piggy-bank"></use></svg></span><span class="ds-next-body"><b>청년미래적금 계산기</b><span>청년미래적금과 만기액 비교</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/finance/savings/" data-next="savings"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-piggy-bank"></use></svg></span><span class="ds-next-body"><b>적금 만기 계산기</b><span>일반 적금이면 얼마인지</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
       </div>
 
     </section>
@@ -405,7 +405,7 @@ window.ARTICLE_INFO_CONFIG = {
 <script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
 <script>
   // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
-  DSCalc.auto({"card": "result", "required": ["i-monthly"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#youth-leap-account-next", "next": [{"key": "youth-future-savings", "path": "/calc/finance/youth-future-savings/", "sub": "유형(일반형 6%·우대형 12%)과 월 납입액을 넣으면 정부기여금·비과세 이자를 합산한 3년 만기 수령액과 일반 과세적금 환산 수익률을 계산합니다. 우대형 월 50만원 가입 시 약 2,265만원으로 체감 연 19%대입니다.", "params": {"monthly": "i-monthly"}, "from": "youth-leap-account"}, {"key": "savings", "path": "/calc/finance/savings/", "sub": "월 납입액·기간·금리를 입력하면 만기 수령액과 실효수익률을 계산합니다. 적금은 표시 금리의 약 절반이 실효수익률이 되는 이유를 숫자로 확인할 수 있습니다.", "params": {"monthly": "i-monthly"}, "from": "youth-leap-account"}]});
+  DSCalc.auto({"card": "result", "required": ["i-monthly"], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#youth-leap-account-next", "next": [{"key": "youth-future-savings", "path": "/calc/finance/youth-future-savings/", "sub": "청년미래적금과 만기액 비교", "params": {"monthly": "i-monthly"}, "from": "youth-leap-account"}, {"key": "savings", "path": "/calc/finance/savings/", "sub": "일반 적금이면 얼마인지", "params": {"monthly": "i-monthly"}, "from": "youth-leap-account"}]});
   DSCalc.placeTrust('ds-trust-col');
   (function () { const a = document.getElementById('ds-primary-next'); if (!a) return; const go = () => { const v = {}; Object.entries({"monthly": "i-monthly"}).forEach(([k, id]) => v[k] = DSCalc.num(id)); a.href = DSCalc.link('/calc/finance/youth-future-savings/', v, 'youth-leap-account'); }; document.addEventListener('input', go, true); go(); })();
 </script>
