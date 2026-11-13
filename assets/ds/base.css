@@ -395,7 +395,9 @@ html body .action-row .ds-dup { display: none; }
 .ds-sit-strip-go { display: inline-flex; align-items: center; flex-shrink: 0; font-size: var(--fs-meta); font-weight: var(--fw-label); color: var(--primary); }
 .ds-sit-strip-go .ds-i { width: 16px; height: 16px; }
 @media (hover: hover) { .ds-sit-strip:hover .ds-sit-strip-go { text-decoration: underline; } }
-@media (max-width: 359px) { .ds-sit-dots { display: none; } }
+/* 단계 점은 입구 폭이 좁으면 뺀다: 휴대폰 320과 데스크톱 오른쪽 열(308px)에서 상황 이름이 두 줄로 꺾이던 것(11/12). 화면 폭이 아니라 입구 폭 기준 */
+.ds-sit-strip { container-type: inline-size; }
+@container (max-width: 300px) { .ds-sit-dots { display: none; } }   /* 안쪽 폭 기준: 휴대폰 390은 326px(점 표시), 320은 256px·데스크톱 열은 276px(숨김) */
 html body .result-card .jcalc-next { display: none; }
 .ds-basis { margin-top: var(--space-section); }
 .ds-block-title { margin: 0 0 var(--space-3); font-size: var(--fs-section); font-weight: var(--fw-section); color: var(--navy); }

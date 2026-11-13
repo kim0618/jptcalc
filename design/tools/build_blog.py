@@ -30,7 +30,15 @@ DESC['tools/naesin-grade'] = '석차와 수강자 수로 내신 등급(5등급�
 DESC['pension-welfare/national-pension'] = DESC['pension-welfare/national-pension'].replace('국민연금공단 산식(소득대체율 40% 기준)으로', '국민연금공단 산식(2026년 소득대체율 43%, 가입 연도별 비례상수 반영)으로')
 DESC['tax/yellow-umbrella'] = DESC['tax/yellow-umbrella'].replace('소득 4천만원 이하 500만원·1억원 이하 300만원·1억원 초과 200만원 한도.', '사업소득금액 4천만원 이하 600만원·6천만원 이하 500만원·1억원 이하 400만원·1억원 초과 200만원 한도.')
 DESC['pet/lifetime-cost'] = DESC['pet/lifetime-cost'].replace('입양 초기부터 성체기·노령기(7세+)까지 단계별 비용 변화를 반영해 강아지·고양이의 생애 총비용을 예측합니다. 노령기 의료비 가중치 2~3배 반영.', '입양 초기비용과 청소년기·성체기·노령기(7세~) 월 비용을 기간별로 합산해 강아지·고양이의 생애 총비용을 예측합니다. 평균 월비용 환산까지 보여줍니다.')
-for _k, _bad in [('pension-welfare/national-pension', '40% 기준'), ('tax/yellow-umbrella', '1억원 이하 300만원'), ('pet/lifetime-cost', '가중치 2~3배')]:
+# 2차(같은 날): 복리는 입력 기간 하나의 결과만(10·20·30년 비교·단리 결과 없음), Mifflin-St Jeor는 1990년 발표(계산기 본문과 같게), 펫보험은 월 보험료·연간 병원비 입력에 5년 누적·손익분기 연간 병원비
+DESC['finance/compound'] = DESC['finance/compound'].replace('원금·금리·기간에 따라 자산이 몇 배로 불어나는지, 단리와 격차가 얼마나 벌어지는지 10년·20년·30년 단위로 비교합니다.', '원금·금리·기간을 넣으면 최종 금액과 수익·총 수익률을 계산하고, 단리·72법칙 같은 지표도 예시로 비교합니다.')
+DESC['health/bmr'] = DESC['health/bmr'].replace('가장 정확한 Mifflin-St Jeor 공식(2005년)으로', 'Mifflin-St Jeor 공식(1990년 발표)으로')
+DESC['pet/insurance'] = DESC['pet/insurance'].replace('월 보험료와 자기부담금·보장한도를 입력해 보험 가입 시와 미가입 시의 10년 누적 비용을 비교합니다. 손익분기점 나이도 함께 표시됩니다.', '월 보험료와 연간 예상 병원비를 넣으면 보험 가입 시와 미가입 시의 연간 지출과 5년 누적 차이를 비교합니다. 보험이 이득이 되는 연간 병원비(손익분기)도 함께 표시됩니다.')
+# 3차(같은 날): 계산기에 없는 기능을 말하던 소개문 35건. 표는 design/tools/desc_fix.json(옛 문장 → 새 문장, 사이트 전체에 같은 치환을 적용함)
+for _old, _new in json.load(open(os.path.join(T, 'desc_fix.json'), encoding='utf-8')):
+    for _k in DESC:
+        if _old in DESC[_k]: DESC[_k] = DESC[_k].replace(_old, _new)
+for _k, _bad in [('pension-welfare/national-pension', '40% 기준'), ('tax/yellow-umbrella', '1억원 이하 300만원'), ('pet/lifetime-cost', '가중치 2~3배'), ('finance/compound', '30년 단위로 비교'), ('health/bmr', '(2005년)'), ('pet/insurance', '10년 누적')]:
     assert _bad not in DESC[_k], _k   # 원문이 바뀌어 치환이 안 먹으면 여기서 멈춘다
 
 def new_head(s, extra=''):

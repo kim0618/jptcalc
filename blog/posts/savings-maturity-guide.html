@@ -100,7 +100,7 @@
   </script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.jptcalc.kr/"}, {"@type": "ListItem", "position": 2, "name": "블로그", "item": "https://www.jptcalc.kr/blog/"}, {"@type": "ListItem", "position": 3, "name": "금융", "item": "https://www.jptcalc.kr/blog/?cat=금융"}, {"@type": "ListItem", "position": 4, "name": "적금 만기 수령액 계산 - 이자 세금 15.4% 제외 실수령액 확인", "item": "https://www.jptcalc.kr/blog/posts/savings-maturity-guide.html"}]}</script>
   <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
-  <link rel="stylesheet" href="/assets/ds/base.css?v=2cd6ea57" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=64bd9b22" />
 </head>
 <body data-cat="finance" style="--cat: var(--c-finance)">
 <header id="ds-site-header" class="ds-header">
@@ -118,7 +118,7 @@
     <picture><source media="(min-width: 1024px)" srcset="/assets/img/blog-thumb/savings-maturity-guide-16x9.webp" width="1280" height="720"><img class="ds-post-thumb is-cover" src="/assets/img/blog-thumb/savings-maturity-guide-3x1.webp" alt="15.4% 적금 이자 원천징수 세율" width="1440" height="480" decoding="async" fetchpriority="high"></picture>
     <div class="ds-post-body ds-prose">
 <p>적금 만기 수령액은 생각보다 적습니다. 이자에도 세금이 붙기 때문입니다. 연 4% 적금이라고 해서 납입 총액의 4%를 이자로 받는 게 아니라는 것도 많은 분이 모릅니다. 매달 나눠 넣는 구조라 실질 이자율은 약정금리의 절반 수준이고, 거기서 15.4%가 또 빠집니다. 내가 실제로 얼마를 받는지, 어떻게 하면 조금이라도 더 받을 수 있는지 정리했습니다.</p>
-    <a class="ds-post-cta" href="/calc/finance/savings/" style="--cat: var(--c-finance)"><span class="ds-icon-tile"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-piggy-bank"></use></svg></span><span class="ds-post-cta-body"><b>적금 만기 계산기</b><span>월 납입액·기간·금리를 입력하면 만기 수령액과 실효수익률을 계산합니다. 적금은 표시 금리의 약 절반이 실효수익률이 되는 이유를 숫자로 확인할 수 있습니다.</span></span><span class="ds-post-cta-go">계산하기 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></span></a>
+    <a class="ds-post-cta" href="/calc/finance/savings/" style="--cat: var(--c-finance)"><span class="ds-icon-tile"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-piggy-bank"></use></svg></span><span class="ds-post-cta-body"><b>적금 만기 계산기</b><span>월 납입액·기간·금리를 입력하면 총 납입 원금, 세전 이자, 이자소득세(15.4%)를 뺀 세후 만기 수령액을 계산합니다. 적금 이자가 표시 금리보다 적게 느껴지는 이유를 숫자로 확인할 수 있습니다.</span></span><span class="ds-post-cta-go">계산하기 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></span></a>
 
     <details class="ds-post-toc"><summary>목차 (8)<svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary><ol><li><a href="#sec-1">왜 이자가 이렇게 적을까?</a></li><li><a href="#sec-2">이자에서 15.4%가 빠진다고?</a></li><li><a href="#sec-3">금액별로 실제로 얼마 받나? (연 4%, 12개월, 단리)</a></li><li><a href="#sec-4">오래 넣을수록 이자가 확 달라진다 (월 50만원, 연 4%, 단리)</a></li><li><a href="#sec-5">우대금리, 챙기면 최대 0.8%p 더 받는다</a></li><li><a href="#sec-6">중도해지하면 이자가 얼마나 줄까?</a></li><li><a href="#sec-7">자주 묻는 질문 (FAQ)</a></li><li><a href="#sec-8">한줄 요약</a></li></ol></details>
 
@@ -282,6 +282,6 @@
   };
   </script>
 <script src="/assets/calc-registry.js?v=b859b628"></script>
-<script src="/assets/ds/site-shell.js?v=585fce95"></script>
+<script src="/assets/ds/site-shell.js?v=f9632873"></script>
 </body>
 </html>

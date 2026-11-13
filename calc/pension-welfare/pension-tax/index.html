@@ -48,14 +48,14 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
     {"@type":"Question","name":"IRP와 연금저축의 연금소득세는 같나요?","acceptedAnswer":{"@type":"Answer","text":"네, 동일합니다. IRP(개인형 퇴직연금)와 연금저축펀드·연금저축보험 모두 세액공제 받은 납입금과 운용수익 인출 시 동일한 연금소득세율(3.3~5.5%)이 적용됩니다. 단, 세액공제 받지 않은 납입금(추가 납입분)은 비과세입니다."}},
-    {"@type":"Question","name":"연금 수령 기간이 짧을수록 세금이 더 많나요?","acceptedAnswer":{"@type":"Answer","text":"수령 기간 자체가 세율에 영향을 주지는 않지만, 10년 미만으로 수령하면 퇴직소득세 이연분에 1.1배 가산세율이 적용될 수 있습니다. 또한 짧은 기간에 몰아서 받으면 연간 수령액이 1,500만원을 초과할 확률이 높아져 세율이 올라갑니다."}},
-    {"@type":"Question","name":"퇴직금을 IRP에 넣으면 연금소득세가 절약되나요?","acceptedAnswer":{"@type":"Answer","text":"네. 퇴직금을 IRP로 이전한 뒤 연금으로 수령하면, 퇴직소득세의 70%(10년 미만 수령) 또는 60%(10년 이상 수령)만 납부합니다. 퇴직금을 즉시 수령하는 것보다 세금을 최대 40%까지 절약할 수 있습니다."}},
+    {"@type":"Question","name":"연금 수령 기간이 짧을수록 세금이 더 많나요?","acceptedAnswer":{"@type":"Answer","text":"수령 기간 자체가 나이별 연금소득세율(3.3~5.5%)을 바꾸지는 않습니다. 다만 이연된 퇴직소득을 연금으로 받을 때는 연금 실제 수령연차가 10년 이하이면 70%, 10년 초과 20년 이하이면 60%, 20년 초과이면 50%만 원천징수하므로 짧게 몰아 받을수록 감면 폭이 작습니다. 또한 세액공제를 받은 납입금에서 짧은 기간에 몰아서 받으면 연간 수령액이 1,500만원을 초과할 확률이 높아져 종합과세 대상이 됩니다."}},
+    {"@type":"Question","name":"퇴직금을 IRP에 넣으면 연금소득세가 절약되나요?","acceptedAnswer":{"@type":"Answer","text":"네. 퇴직금을 IRP로 이전한 뒤 연금으로 수령하면, 연금 실제 수령연차가 10년 이하인 해에는 퇴직소득세의 70%, 10년 초과 20년 이하인 해에는 60%, 20년 초과인 해에는 50%만 납부합니다(소득세법 제129조 제1항 제5호의3). 퇴직금을 즉시 수령하는 것보다 세금을 30%에서 50%까지 줄일 수 있습니다."}},
     {"@type":"Question","name":"55세 전에 연금을 인출하면 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"만 55세 이전에 중도 인출하면 연금소득세가 아닌 기타소득세 16.5%가 부과됩니다. 연금소득세(3.3~5.5%)보다 훨씬 높으므로, 가급적 55세 이후 연금 형태로 수령하는 것이 유리합니다."}},
     {"@type":"Question","name":"연금 수령 시 건강보험료에 영향이 있나요?","acceptedAnswer":{"@type":"Answer","text":"분리과세를 선택하면 건강보험료 산정에 포함되지 않습니다. 종합과세를 선택하면 다른 소득과 합산되어 건강보험료가 올라갈 수 있으므로, 세금뿐 아니라 건강보험료까지 고려해 유리한 쪽을 선택하세요."}}
   ]}
   </script>
   <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
-  <link rel="stylesheet" href="/assets/ds/base.css?v=2cd6ea57" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=64bd9b22" />
   <style>
     /* 페이지 고유 스타일(공통 부품 재정의는 base.css가 맡아 뺐다) */
     .rh-box { text-align:center;padding:14px 0 12px;margin-bottom:14px;border-bottom:1px solid rgba(0,0,0,0.06); }
@@ -260,9 +260,14 @@
       <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
       <div class="ds-next" id="pension-tax-next">
         <a class="ds-next-card" href="/calc/pension-welfare/national-pension/" data-next="national-pension"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span><span class="ds-next-body"><b>국민연금 수령액 계산기</b><span>가입기간과 평균 소득월액을 입력하면 국민연금공단 산식(2026년 소득대체율 43%, 가입 연도별 비례상수 반영)으로 예상 연금을 추정합니다. 조기 수령 시 연 6% 감액, 연기 수령 시 연 7.2% 증액 시뮬레이션도 함께 확인할 수 있습니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
-        <a class="ds-next-card" href="/calc/pension-welfare/retirement-living/" data-next="retirement-living"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span><span class="ds-next-body"><b>노후 생활비 계산기</b><span>현재 월 생활비와 은퇴 연령, 예상 수명을 입력하면 물가상승률(연 2~3%)을 반영해 은퇴 후 필요 총자금을 산출합니다. 국민연금·퇴직연금·개인연금 수령액을 차감한 뒤 실질 부족분까지 한 번에 볼 수 있습니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/pension-welfare/retirement-living/" data-next="retirement-living"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span><span class="ds-next-body"><b>노후 생활비 계산기</b><span>현재 월 생활비와 은퇴 연령, 예상 수명을 입력하면 물가상승률(연 2~3%)을 반영해 은퇴 후 필요 총자금을 산출합니다. 예상 연금 수령액과 기타 월 수입, 현재 보유 자산을 반영해 실질 부족분까지 한 번에 볼 수 있습니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
       </div>
-
+      <h2 class="ds-col-title">관련 계산기</h2>
+      <div class="ds-next ds-related">
+        <a class="ds-next-card" href="/calc/pension-welfare/basic-pension/"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span><span class="ds-next-body"><b>기초연금 수급 판정 계산기</b></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/pension-welfare/housing-pension/"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span><span class="ds-next-body"><b>주택연금(역모기지) 계산기</b></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/pension-welfare/long-term-care/"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span><span class="ds-next-body"><b>장기요양 비용 계산기</b></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
     </section>
   </div>
 
@@ -363,10 +368,10 @@
               <p>네, 동일합니다. IRP(개인형 퇴직연금)와 연금저축펀드·연금저축보험 모두 세액공제 받은 납입금과 운용수익 인출 시 동일한 연금소득세율(3.3~5.5%)이 적용됩니다. 단, 세액공제 받지 않은 납입금(추가 납입분)은 비과세입니다.</p>
             </details>
       <details class="faq-item"><summary><h3>연금 수령 기간이 짧을수록 세금이 더 많나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
-              <p>수령 기간 자체가 세율에 영향을 주지는 않지만, 10년 미만으로 수령하면 퇴직소득세 이연분에 1.1배 가산세율이 적용될 수 있습니다. 또한 짧은 기간에 몰아서 받으면 연간 수령액이 1,500만원을 초과할 확률이 높아져 세율이 올라갑니다.</p>
+              <p>수령 기간 자체가 나이별 연금소득세율(3.3~5.5%)을 바꾸지는 않습니다. 다만 이연된 퇴직소득을 연금으로 받을 때는 연금 실제 수령연차가 10년 이하이면 70%, 10년 초과 20년 이하이면 60%, 20년 초과이면 50%만 원천징수하므로 짧게 몰아 받을수록 감면 폭이 작습니다. 또한 세액공제를 받은 납입금에서 짧은 기간에 몰아서 받으면 연간 수령액이 1,500만원을 초과할 확률이 높아져 종합과세 대상이 됩니다.</p>
             </details>
       <details class="faq-item"><summary><h3>퇴직금을 IRP에 넣으면 연금소득세가 절약되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
-              <p>네. 퇴직금을 IRP로 이전한 뒤 연금으로 수령하면, 퇴직소득세의 70%(10년 미만 수령) 또는 60%(10년 이상 수령)만 납부합니다. 퇴직금을 즉시 수령하는 것보다 세금을 최대 40%까지 절약할 수 있습니다.</p>
+              <p>네. 퇴직금을 IRP로 이전한 뒤 연금으로 수령하면, 연금 실제 수령연차가 10년 이하인 해에는 퇴직소득세의 70%, 10년 초과 20년 이하인 해에는 60%, 20년 초과인 해에는 50%만 납부합니다(소득세법 제129조 제1항 제5호의3). 퇴직금을 즉시 수령하는 것보다 세금을 30%에서 50%까지 줄일 수 있습니다.</p>
             </details>
       <details class="faq-item"><summary><h3>55세 전에 연금을 인출하면 어떻게 되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
               <p>만 55세 이전에 중도 인출하면 연금소득세가 아닌 기타소득세 16.5%가 부과됩니다. 연금소득세(3.3~5.5%)보다 훨씬 높으므로, 가급적 55세 이후 연금 형태로 수령하는 것이 유리합니다.</p>
@@ -402,22 +407,23 @@
   </script>
   <script src="/assets/trust-block.js?v=ac07516f"></script>
   <div class="sibling-section ds-section">
-    <h2 class="sibling-title">다른 연금·복지 계산기</h2>
+    <div class="sibling-title">다른 연금·복지 계산기</div>
     <div class="sibling-list">
       <a href="/calc/pension-welfare/national-pension/" class="sibling-link">국민연금 수령액</a>
       <a href="/calc/pension-welfare/basic-pension/" class="sibling-link">기초연금 수급 판정</a>
       <a href="/calc/pension-welfare/housing-pension/" class="sibling-link">주택연금(역모기지)</a>
       <a href="/calc/pension-welfare/retirement-living/" class="sibling-link">노후 생활비</a>
+      <a href="/calc/pension-welfare/pension-tax/" class="sibling-link current">연금소득세</a>
       <a href="/calc/pension-welfare/long-term-care/" class="sibling-link">장기요양 비용</a>
     </div>
-    <h2 class="sibling-title">관련 가이드</h2>
-    <div class="sibling-list sibling-guides">
-      <a href="/blog/posts/irp-vs-pension-savings.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/irp-vs-pension-savings-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>IRP vs 연금저축 - 한도 900만원 어떻게 나눌까? 세액공제·인출·수령 비교 2026</span></a>
-      <a href="/blog/posts/national-pension-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/national-pension-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>국민연금 수령액 계산 - 소득 300만원 20년 납부 시 월 65만원, 30년이면 98만원</span></a>
-      <a href="/blog/posts/national-pension-income-tax.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/national-pension-income-tax-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>국민연금 연금소득세 완전 정리 - 수령액별 실제 세금 계산과 절세 전략</span></a>
-      <a href="/blog/posts/national-pension-voluntary.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/national-pension-voluntary-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>국민연금 임의가입 가성비 - 전업주부 월 9만원 내고 노후 22만원 받기</span></a>
-      <a href="/blog/posts/pension-tax-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/pension-tax-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>IRP 연금소득세 55세 5.5%·70세 4.4% - 분리과세 vs 종합과세 어느 쪽이 유리한가</span></a>
-      <a href="/blog/posts/pension-withdrawal-strategy.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/pension-withdrawal-strategy-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>퇴직연금 일시금 vs 연금 수령 세금 비교 - 2026년 3단계 감면으로 퇴직소득세 30~50% 줄이기</span></a>
+    <div class="sibling-title">관련 가이드</div>
+    <div class="sibling-list">
+      <a href="/blog/posts/irp-vs-pension-savings.html" class="sibling-link">IRP vs 연금저축 - 한도 900만원 어떻게 나눌까? 세액공제·인출·수…</a>
+      <a href="/blog/posts/national-pension-guide.html" class="sibling-link">국민연금 수령액 계산 - 소득 300만원 20년 납부 시 월 65만원, 3…</a>
+      <a href="/blog/posts/national-pension-income-tax.html" class="sibling-link">국민연금 연금소득세 완전 정리 - 수령액별 실제 세금 계산과 절세 전략</a>
+      <a href="/blog/posts/national-pension-voluntary.html" class="sibling-link">국민연금 임의가입 가성비 - 전업주부 월 9만원 내고 노후 22만원 받기</a>
+      <a href="/blog/posts/pension-tax-guide.html" class="sibling-link">IRP 연금소득세 55세 5.5%·70세 4.4% - 분리과세 vs 종합과…</a>
+      <a href="/blog/posts/pension-withdrawal-strategy.html" class="sibling-link">퇴직연금 일시금 vs 연금 수령 세금 비교 - 2026년 3단계 감면으로 …</a>
     </div>
   </div>
 </main>
@@ -604,7 +610,7 @@ function toggleExplain(btn) {
 }
 </script>
 <script src="/assets/calc-registry.js?v=b859b628"></script>
-<script src="/assets/ds/site-shell.js?v=585fce95"></script>
+<script src="/assets/ds/site-shell.js?v=f9632873"></script>
 <script src="/assets/calc-validate.js?v=80f1784e"></script>
 <script src="/assets/calc-result-tools.js?v=25a4281d"></script>
 <script>

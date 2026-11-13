@@ -51,7 +51,7 @@
   </script>
 <link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
   <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
-  <link rel="stylesheet" href="/assets/ds/base.css?v=2cd6ea57" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=64bd9b22" />
 </head>
 <body data-cat="auto" style="--cat: var(--c-auto)">
 <header id="ds-site-header" class="ds-header">
@@ -83,7 +83,7 @@
       <section class="ds-hub-group" data-group="g1" aria-labelledby="hub-g1">
         <h2 class="ds-hub-group-title" id="hub-g1">할부·금융</h2>
         <div class="ds-hub-list">
-          <a class="ds-hub-row" id="calc-auto-loan" href="/calc/auto/auto-loan/"><span class="ds-hub-body"><b>자동차 할부</b><span>차량 가격·선수금·금리·기간을 입력하면 월 납입금과 총 이자를 계산합니다. 유예할부(잔존가치)를 설정하면 월 납입금이 얼마나 낮아지는지도 비교할 수 있습니다.</span></span><span class="ds-badge-pop">인기</span><svg class="ds-i ds-chevron" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+          <a class="ds-hub-row" id="calc-auto-loan" href="/calc/auto/auto-loan/"><span class="ds-hub-body"><b>자동차 할부</b><span>차량 가격·선수금·금리·기간을 입력하면 월 납입금과 총 이자를 계산합니다. 유예할부(잔존가치)를 넣어 월 납입금을 낮춘 경우도 계산할 수 있습니다.</span></span><span class="ds-badge-pop">인기</span><svg class="ds-i ds-chevron" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
         </div>
       </section>
       <section class="ds-hub-group" data-group="g2" aria-labelledby="hub-g2">
@@ -98,8 +98,8 @@
         <h2 class="ds-hub-group-title" id="hub-g3">전기차·운영</h2>
         <div class="ds-hub-list">
           <a class="ds-hub-row" id="calc-ev-charging" href="/calc/auto/ev-charging/"><span class="ds-hub-body"><b>전기차 충전비</b><span>배터리 용량·충전율로 충전비를 계산하고, 같은 거리 내연차 유류비와 비교합니다. 2026년 완속·급속 충전 요금을 반영합니다.</span></span><svg class="ds-i ds-chevron" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
-          <a class="ds-hub-row" id="calc-fuel-cost" href="/calc/auto/fuel-cost/"><span class="ds-hub-body"><b>유류비</b><span>주행 거리·연비·유가로 유류비와 필요 연료량, 1km당 비용을 계산합니다. 휘발유·경유·LPG 유종별로 비교할 수 있습니다.</span></span><svg class="ds-i ds-chevron" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
-          <a class="ds-hub-row" id="calc-ev-subsidy" href="/calc/auto/ev-subsidy/"><span class="ds-hub-body"><b>전기차 보조금</b><span>차량 가격·차종·지역으로 2026년 전기차 국고·지자체 보조금과 실구매가를 계산합니다. 차량가 구간별 차등과 전환지원금을 반영합니다.</span></span><span class="ds-badge-pop">인기</span><svg class="ds-i ds-chevron" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+          <a class="ds-hub-row" id="calc-fuel-cost" href="/calc/auto/fuel-cost/"><span class="ds-hub-body"><b>유류비</b><span>주행 거리·연비·유가로 유류비와 필요 연료량, 1km당 비용을 계산합니다. 휘발유·경유·LPG 유종을 고르면 유가 기본값이 채워집니다.</span></span><svg class="ds-i ds-chevron" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+          <a class="ds-hub-row" id="calc-ev-subsidy" href="/calc/auto/ev-subsidy/"><span class="ds-hub-body"><b>전기차 보조금</b><span>차량 가격·차종 등급으로 2026년 전기차 국고 보조금을 계산하고, 지자체 보조금(직접 입력)을 더해 실구매가를 계산합니다. 차량가 구간별 차등과 전환지원금을 반영합니다.</span></span><span class="ds-badge-pop">인기</span><svg class="ds-i ds-chevron" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
         </div>
       </section>
     </div>
@@ -311,7 +311,7 @@
 <div class="toast" id="toast"></div>
 
 <script src="/assets/calc-registry.js?v=b859b628"></script>
-<script src="/assets/ds/site-shell.js?v=585fce95"></script>
+<script src="/assets/ds/site-shell.js?v=f9632873"></script>
 <script>
 /* 상황 탭(C1·C2): 고른 그룹만 보이기. 옛 주소의 #계산기·?tab=계산기는 그 줄로 이동해 강조 */
 (function () {

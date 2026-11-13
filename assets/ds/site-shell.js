@@ -232,7 +232,7 @@
 
   // ── 배포 데이터(/assets/ds/*.json, build_home.py가 생성): 상황 시트·헤더 메뉴 공용. 처음 필요할 때 한 번 받는다 ──
   var DATA = {};
-  var DS_DATA_V = {"situations": "b8e011eb", "cat-menu": "365b21b2"};   // 메뉴 데이터 캐시 버전(design/tools/asset_version.py가 파일 내용 해시로 채움)
+  var DS_DATA_V = {"situations": "8544dfb8", "cat-menu": "365b21b2"};   // 메뉴 데이터 캐시 버전(design/tools/asset_version.py가 파일 내용 해시로 채움)
   function load(name, ok, fail) {
     var d = DATA[name];
     if (d && d.v) return ok(d.v);
@@ -263,6 +263,7 @@
     (s.inputs || []).forEach(function (i) { var el = document.getElementById('h-in-' + i.param), v = el ? String(el.value || '').replace(/[^\d.]/g, '') : ''; if (v) keep[i.param] = v; });
     if (Object.keys(keep).length) sitStore(sitCur, keep);
   }
+  function sitLast(id) { try { if (id) sessionStorage.setItem('jpt_sit_last', id); return sessionStorage.getItem('jpt_sit_last') || ''; } catch (e) { return ''; } }   // 흐름 중 이어서 계산 카드 등으로 from이 빠져도 같은 상황을 잇는다(11/12)
   function sitStore(id, v) { try { if (v) sessionStorage.setItem('jpt_sit_' + id, JSON.stringify(v)); return JSON.parse(sessionStorage.getItem('jpt_sit_' + id) || '{}'); } catch (e) { return {}; } }
   function sitBuild() {
     sheet = document.createElement('div');
@@ -314,6 +315,7 @@
     if (opts) sitOpts = opts;
     load('situations', function (d) {
       SD = d; if (!SD.situations[id]) return;
+      sitLast(id);
       if (!sheet) sitBuild();
       sitRender(id, sitOpts && sitOpts.id === id ? sitOpts : null); sitFocus = document.activeElement;
       sheet.hidden = false; document.body.classList.add('h-sheet-open');
@@ -351,11 +353,13 @@
   // ── 계산기 안 상황 입구(2026-11-12 시안 1-1): 이 계산기가 속한 상황을 '이어서 계산' 아래 한 줄로 보여주고, 누르면 같은 상황 시트를 연다 ──
   //   홈 카드·시트는 그대로. 상황 고르기: 상황 시트에서 넘어왔으면(from=sit-id) 그 상황, 아니면 situations.json order에서 이 계산기를 포함한 첫 상황
   //   켜는 범위는 상황 단위(SIT_STRIP_ON)로 단계적으로 넓힌다. 켠 상황에 속한 계산기 전부에 붙는다
-  var SIT_STRIP_ON = ['buy-home', 'home-loan', 'job-change', 'save-money', 'own-home', 'quit-job', 'freelancer', 'buy-car'];   // 1-2: 값 넘기기가 이미 되는 상황, 1-4(11/12): 퇴사·프리랜서·차 살 때 값 전달 추가
+  var SIT_STRIP_ON = ['buy-home', 'home-loan', 'pay-check', 'freelancer', 'quit-job', 'pregnancy', 'rent-home', 'retirement', 'sell-home', 'own-home', 'job-change', 'child-care', 'buy-car', 'save-money', 'adopt-pet'];   // 1-2·1-4(11/12): 값 넘기는 8개 → 같은 날 15개 전부(값 없는 상황은 순서 안내만). 끄려면 여기서 뺀다
   if (PAGE.type === 'calc') load('situations', function (d) {
     var has = function (id) { return SIT_STRIP_ON.indexOf(id) >= 0 && d.situations[id] && d.situations[id].steps.some(function (st) { return st.path === path; }); };
     var from = ''; try { from = (new URLSearchParams(location.search).get('from') || '').replace(/^sit-/, ''); } catch (e) {}
-    var id = has(from) ? from : (d.order || []).filter(has)[0];
+    var last = sitLast();
+    if (has(from)) sitLast(from);   // 시트 버튼·홈 카드로 들어온 상황
+    var id = has(from) ? from : has(last) ? last : (d.order || []).filter(has)[0];
     var box = document.querySelector('.ds-calc-next');
     if (!id || !box || box.querySelector('.ds-sit-strip')) return;
     var s = d.situations[id], idx = 0;
@@ -368,6 +372,13 @@
       '<span class="ds-sit-strip-go">전체 순서' + icon('chevron-right') + '</span>';
     a.setAttribute('aria-label', s.name + ' ' + s.steps.length + '단계 중 ' + (idx + 1) + '단계, 전체 순서 보기');
     box.appendChild(a);
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (en) {
+        if (!en.some(function (x) { return x.isIntersecting; })) return;
+        io.disconnect(); ga('situation_strip_view', { situation_id: id, step: idx + 1 });
+      }, { threshold: 0.6 });
+      io.observe(a);
+    }
     a.addEventListener('click', function (e) {
       if (e.button || e.metaKey || e.ctrlKey || e.shiftKey) return;
       e.preventDefault();

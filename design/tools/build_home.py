@@ -37,11 +37,11 @@ DESC.update({'realestate/registry': '인지세·등기수수료·근저당 세�
 DESC.update({
     'salary/take-home-pay': '4대보험·세금 뗀 월 실수령액', 'salary/bonus-pay': '성과급·상여금 세후 금액', 'salary/ordinary-wage': '통상시급과 수당 단가',
     'salary/premium-pay': '연장·야간·휴일 근로수당', 'salary/weekly-holiday-pay': '시급·근무시간별 주휴수당',
-    'tax/withholding': '3.3% 떼고 실제 입금액', 'tax/freelancer-income': '보험료·경비 뺀 월 순수입', 'tax/income-tax': '5월 신고 예상 세액·환급',
+    'tax/withholding': '3.3% 떼고 실제 입금액', 'tax/freelancer-income': '세금·보험료 뺀 월 순수입', 'tax/income-tax': '5월 신고 예상 세액·환급',
     'tax/vat': '일반·간이과세자 부가세', 'tax/regional-health-insurance': '소득·재산 기준 월 보험료', 'tax/yellow-umbrella': '소득공제 한도와 절세액',
     'salary/severance': '평균임금 기준 퇴직금', 'salary/unemployment': '하루 지급액과 받는 기간', 'salary/annual-leave-pay': '미사용 연차 보상액',
     'salary/average-wage': '직전 3개월로 1일 평균임금', 'salary/dismissal-notice-pay': '예고 없는 해고 시 30일분',
-    'baby/ovulation': '배란 예상일과 가임기', 'baby/due-date': '출산예정일과 임신 주수', 'baby/total-support': '취학 전까지 지원금 합계',
+    'baby/ovulation': '배란 예상일과 가임기', 'baby/due-date': '출산예정일과 임신 주수', 'baby/total-support': '출생 후 정부 지원금 합계',
     'baby/first-meeting': '출생 순위별 바우처 금액', 'baby/parental-leave-pay': '휴직 기간 월별 급여',
     'pension-welfare/national-pension': '예상 연금과 조기·연기 수령', 'pension-welfare/basic-pension': '소득인정액으로 수급 판정',
     'pension-welfare/housing-pension': '집값·나이별 월 수령액', 'pension-welfare/retirement-living': '은퇴 후 필요 자금과 부족분',
@@ -51,9 +51,9 @@ DESC.update({
     'baby/baby-months': '개월수와 영유아 검진 시기',
     'auto/auto-loan': '월 납입금과 총 이자', 'auto/acquisition-tax': '신차 취득세와 실구매가', 'auto/used-car-tax': '중고차 명의이전 취득세',
     'auto/ev-subsidy': '국고·지자체 보조금과 실구매가', 'auto/auto-tax': '배기량·차령별 연 자동차세',
-    'finance/savings': '만기 수령액과 실효수익률', 'finance/deposit': '세후 이자 수령액', 'finance/compound': '기간별 복리 불어나는 크기',
+    'finance/savings': '세후 만기 수령액', 'finance/deposit': '세후 이자 수령액', 'finance/compound': '기간별 복리 불어나는 크기',
     'finance/youth-leap-account': '정부기여금 포함 5년 만기액', 'finance/youth-future-savings': '정부기여금 포함 3년 만기액',
-    'pet/adoption': '분양·접종·용품 첫 비용', 'pet/monthly-cost': '사료·미용·용품 월 지출', 'pet/insurance': '가입 vs 미가입 10년 비용',
+    'pet/adoption': '분양·접종·용품 첫 비용', 'pet/monthly-cost': '사료·미용·용품 월 지출', 'pet/insurance': '가입 vs 미가입 손익분기',
     'pet/lifetime-cost': '단계별 생애 총비용',
 })
 

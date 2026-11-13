@@ -544,19 +544,19 @@
         <a class="calc-hub-card" href="/calc/salary/comparison/">
           <div class="calc-hub-icon">⚖️</div>
           <div class="calc-hub-name">연봉 비교</div>
-          <div class="calc-hub-desc">두 연봉의 월 실수령액·연간 실수령·공제액을 표로 나란히 비교합니다. 한계세율 구간 차이에 따른 세후 효과까지 한눈에 확인됩니다.</div>
+          <div class="calc-hub-desc">두 연봉의 월 실수령액·연간 실수령·공제액·실수령률을 표로 나란히 비교하고 월 차액을 보여줍니다.</div>
           <div class="calc-hub-arrow">계산하기 →</div>
         </a>
         <a class="calc-hub-card" href="/calc/salary/job-change/">
           <div class="calc-hub-icon">📊</div>
           <div class="calc-hub-name">이직 연봉 비교</div>
-          <div class="calc-hub-desc">현재 실수령을 유지하거나 넘으려면 제안 연봉이 얼마여야 하는지 역산합니다. 퇴직금 정산, 수습기간 급여 삭감도 변수로 반영됩니다.</div>
+          <div class="calc-hub-desc">현재 실수령을 유지하거나 넘으려면 제안 연봉이 얼마여야 하는지 역산합니다. 목표로 하는 월 실수령 증가액을 넣어 필요한 인상률도 확인할 수 있습니다.</div>
           <div class="calc-hub-arrow">계산하기 →</div>
         </a>
         <a class="calc-hub-card" href="/calc/salary/raise-rate/">
           <div class="calc-hub-icon">📈</div>
           <div class="calc-hub-name">연봉 인상률</div>
-          <div class="calc-hub-desc">이전 연봉과 새 연봉을 넣으면 인상률(%)과 월 실수령 증가액이 산출됩니다. 과표 구간이 바뀔 때 세후 인상 폭이 줄어드는 현상도 확인할 수 있습니다.</div>
+          <div class="calc-hub-desc">이전 연봉과 새 연봉을 넣으면 인상률(%)과 월 실수령 증가액이 산출됩니다. 세전 인상분보다 세후 증가액이 작은 이유를 숫자로 확인할 수 있습니다.</div>
           <div class="calc-hub-arrow">계산하기 →</div>
         </a>
       </div>
@@ -568,7 +568,7 @@
         <a class="calc-hub-card" href="/calc/salary/hourly-wage/">
           <div class="calc-hub-icon">⏱️</div>
           <div class="calc-hub-name">시급·일급 변환</div>
-          <div class="calc-hub-desc">연봉·월급·주급·일급·시급을 상호 환산합니다. 주휴수당 포함 월 209시간 기준과 2026년 최저시급 10,320원 적용 여부를 선택할 수 있습니다.</div>
+          <div class="calc-hub-desc">연봉 또는 시급을 넣으면 월급·일급·시급(또는 연봉)으로 환산합니다. 주휴수당 포함 월 209시간 기준이며 2026년 최저시급 10,320원과 자동 비교합니다.</div>
           <div class="calc-hub-arrow">계산하기 →</div>
         </a>
         <a class="calc-hub-card" href="/calc/salary/weekly-holiday-pay/">
@@ -604,7 +604,7 @@
         <a class="calc-hub-card" href="/calc/salary/bonus-pay/">
           <div class="calc-hub-icon">🎁</div>
           <div class="calc-hub-name">성과급 실수령</div>
-          <div class="calc-hub-desc">성과급·상여금에서 근로소득세·지방소득세·고용보험을 빼고 실수령액을 계산합니다. 일회성 성과급(당월 합산)과 정기상여(지급대상기간) 방식을 모두 지원하며 국세청 간이세액표 기준입니다.</div>
+          <div class="calc-hub-desc">성과급·상여금에서 근로소득세·지방소득세·고용보험을 빼고 실수령액을 계산합니다. 부정기 성과급과 정기상여 모두 지급대상기간으로 나눠 과세하는 방식이며 국세청 간이세액표 기준입니다.</div>
           <div class="calc-hub-arrow">계산하기 →</div>
         </a>
         <a class="calc-hub-card" href="/calc/salary/dismissal-notice-pay/">
@@ -616,13 +616,13 @@
         <a class="calc-hub-card" href="/calc/salary/severance/">
           <div class="calc-hub-icon">📦</div>
           <div class="calc-hub-name">퇴직금</div>
-          <div class="calc-hub-desc">근로기준법 기준 '평균임금 × 30일 × 재직일수/365' 공식을 적용합니다. 입사일·퇴사일을 입력하면 DB형·DC형 차이까지 비교할 수 있습니다.</div>
+          <div class="calc-hub-desc">근로기준법 기준 '평균임금 × 30일 × 재직일수/365' 공식을 적용합니다. 입사일·퇴사일과 직전 3개월 급여·연간 상여금을 넣으면 법정 퇴직금을 계산합니다.</div>
           <div class="calc-hub-arrow">계산하기 →</div>
         </a>
         <a class="calc-hub-card" href="/calc/salary/unemployment/">
           <div class="calc-hub-icon">🛟</div>
           <div class="calc-hub-name">실업급여</div>
-          <div class="calc-hub-desc">평균임금의 60%, 1일 상한 68,100원, 나이·가입기간별 120~270일 수급기간을 자동 산정합니다. 구직급여 첫 지급일 예측도 제공합니다.</div>
+          <div class="calc-hub-desc">평균임금의 60%, 1일 상한 68,100원, 나이·가입기간별 120~270일 수급기간을 자동 산정합니다. 월 환산액과 총 수급액도 함께 보여줍니다.</div>
           <div class="calc-hub-arrow">계산하기 →</div>
         </a>
       </div>
