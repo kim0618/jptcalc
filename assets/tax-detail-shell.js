@@ -12,7 +12,7 @@
       key:'income-tax',
       quick:['프리랜서 소득은 사업소득으로 분류되어 종합소득세 신고 대상입니다.','경비율(단순·기준)에 따라 과세표준이 크게 달라질 수 있습니다.','기납부한 3.3% 원천징수 세액은 종합소득세에서 공제됩니다.','소득공제·세액공제 항목을 빠짐없이 반영하면 절세 효과를 높일 수 있습니다.'],
       related:[['/calc/tax/yellow-umbrella/','노란우산공제 계산기','🪙'],['/calc/tax/withholding/','3.3% 원천징수 계산기','💲'],['/calc/tax/freelancer-income/','월 순수입 계산기','💰']],
-      guides:[['/blog/posts/comprehensive-income-tax.html','종합소득세 신고 완벽 가이드 2026'],['/blog/posts/income-tax-deduction.html','종합소득세 공제 항목 총정리 - 놓치면 손해']]
+      guides:[['/blog/posts/income-tax-interim-prepayment-guide.html','소득세 중간예납 - 11월 30일까지, 고지서 기준과 추계신고'],['/blog/posts/comprehensive-income-tax.html','종합소득세 신고 완벽 가이드 2026'],['/blog/posts/income-tax-deduction.html','종합소득세 공제 항목 총정리 - 놓치면 손해']]
     },
     '/calc/tax/vat/': {
       key:'vat',
