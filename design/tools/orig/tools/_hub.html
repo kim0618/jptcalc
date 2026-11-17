@@ -30,11 +30,14 @@
     "inLanguage": "ko-KR",
     "hasPart": [
       { "@type": "WebApplication", "name": "퍼센트 계산기", "url": "https://www.jptcalc.kr/calc/tools/percent/" },
+      { "@type": "WebApplication", "name": "비율 계산기", "url": "https://www.jptcalc.kr/calc/tools/ratio/" },
       { "@type": "WebApplication", "name": "단위 변환기", "url": "https://www.jptcalc.kr/calc/tools/unit-converter/" },
       { "@type": "WebApplication", "name": "요리 계량 변환기", "url": "https://www.jptcalc.kr/calc/tools/cooking-measure/" },
       { "@type": "WebApplication", "name": "할인율 계산기", "url": "https://www.jptcalc.kr/calc/tools/discount/" },
+      { "@type": "WebApplication", "name": "마진율 계산기", "url": "https://www.jptcalc.kr/calc/tools/margin/" },
       { "@type": "WebApplication", "name": "학점 계산기", "url": "https://www.jptcalc.kr/calc/tools/gpa/" },
       { "@type": "WebApplication", "name": "내신 등급 계산기", "url": "https://www.jptcalc.kr/calc/tools/naesin-grade/" },
+      { "@type": "WebApplication", "name": "성취도 계산기", "url": "https://www.jptcalc.kr/calc/tools/achievement-grade/" },
       { "@type": "WebApplication", "name": "글자수 세기", "url": "https://www.jptcalc.kr/calc/tools/char-count/" },
       { "@type": "WebApplication", "name": "음력 양력 변환기", "url": "https://www.jptcalc.kr/calc/tools/lunar-calendar/" }
     ],
@@ -90,7 +93,7 @@
       {
         "@type": "Question",
         "name": "내신 등급은 어떻게 매겨지나요?",
-        "acceptedAnswer": { "@type": "Answer", "text": "석차백분율 = (석차 + 동석차 − 1) ÷ 수강자 수 × 100을 9등급제에 대입합니다. 1등급 4%·2등급 11%·3등급 23% 순이며, 내신 등급 계산기는 전과목 평균 등급(이수단위 가중평균)도 함께 계산합니다." }
+        "acceptedAnswer": { "@type": "Answer", "text": "수강자 수에 등급별 누적 비율을 곱해 반올림한 인원으로 등급을 나눕니다. 2026년 고1·고2는 5등급제(1등급 10%·2등급 34%·3등급 66%), 고3은 9등급제(1등급 4%·2등급 11%·3등급 23%)이고, 동점자가 등급 경계에 걸치면 중간석차로 판정합니다. 내신 등급 계산기는 전과목 평균 등급(학점 가중평균)도 함께 계산합니다." }
       },
       {
         "@type": "Question",
@@ -396,10 +399,13 @@
     <div class="msl-title">생활·도구 계산기</div>
     <div class="msl-calc-list">
       <a class="msl-calc-btn" href="/calc/tools/percent/"><span class="msl-calc-dot"></span>퍼센트 계산기</a>
+      <a class="msl-calc-btn" href="/calc/tools/ratio/"><span class="msl-calc-dot"></span>비율 계산기</a>
       <a class="msl-calc-btn" href="/calc/tools/unit-converter/"><span class="msl-calc-dot"></span>단위 변환기</a>
       <a class="msl-calc-btn" href="/calc/tools/discount/"><span class="msl-calc-dot"></span>할인율 계산기</a>
+      <a class="msl-calc-btn" href="/calc/tools/margin/"><span class="msl-calc-dot"></span>마진율 계산기</a>
       <a class="msl-calc-btn" href="/calc/tools/gpa/"><span class="msl-calc-dot"></span>학점 계산기</a>
       <a class="msl-calc-btn" href="/calc/tools/naesin-grade/"><span class="msl-calc-dot"></span>내신 등급 계산기</a>
+      <a class="msl-calc-btn" href="/calc/tools/achievement-grade/"><span class="msl-calc-dot"></span>성취도 계산기</a>
       <a class="msl-calc-btn" href="/calc/tools/char-count/"><span class="msl-calc-dot"></span>글자수 세기</a>
       <a class="msl-calc-btn" href="/calc/tools/lunar-calendar/"><span class="msl-calc-dot"></span>음력 양력 변환기</a>
     </div>
@@ -516,10 +522,22 @@
           <div class="calc-hub-desc">전체의 몇 %, 한 값이 다른 값의 몇 %, 두 값 사이의 증감률, X% 증가·감소한 값까지 네 가지 비율 계산을 한 화면에서 처리합니다.</div>
           <div class="calc-hub-arrow">계산하기 →</div>
         </a>
+        <a class="calc-hub-card" href="/calc/tools/ratio/">
+          <div class="calc-hub-icon">➗</div>
+          <div class="calc-hub-name">비율 계산기</div>
+          <div class="calc-hub-desc">12:18 같은 비율을 2:3으로 간단히 하고, 금액을 비율대로 나누며, 비례식의 x와 해상도의 화면 비율(16:9 등)을 계산합니다.</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
         <a class="calc-hub-card" href="/calc/tools/discount/">
           <div class="calc-hub-icon">🏷️</div>
           <div class="calc-hub-name">할인율 계산기</div>
           <div class="calc-hub-desc">할인가·할인율·정가를 서로 역산하고, 20% 후 10% 같은 중복할인의 실질 할인율과 최종 결제 금액을 계산합니다.</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
+        <a class="calc-hub-card" href="/calc/tools/margin/">
+          <div class="calc-hub-icon">💹</div>
+          <div class="calc-hub-name">마진율 계산기</div>
+          <div class="calc-hub-desc">원가·판매가로 마진율과 마크업률을, 목표 마진율로 판매가를 계산합니다. 판매 수수료와 부가세를 넣으면 실제로 남는 이익과 이익이 0이 되는 할인율까지 나옵니다.</div>
           <div class="calc-hub-arrow">계산하기 →</div>
         </a>
         <a class="calc-hub-card" href="/calc/tools/unit-converter/">
@@ -555,6 +573,12 @@
           <div class="calc-hub-icon">🏫</div>
           <div class="calc-hub-name">내신 등급 계산기</div>
           <div class="calc-hub-desc">석차와 수강자 수로 내신 등급(5등급제·9등급제)을 환산하고, 과목별 등급·학점으로 전과목 평균 내신등급(가중평균)까지 계산합니다.</div>
+          <div class="calc-hub-arrow">계산하기 →</div>
+        </a>
+        <a class="calc-hub-card" href="/calc/tools/achievement-grade/">
+          <div class="calc-hub-icon">🅰️</div>
+          <div class="calc-hub-name">성취도 계산기</div>
+          <div class="calc-hub-desc">중간·기말 점수와 수행평가를 반영비율대로 합산해 원점수를 구하고 성취도 A~E(체육·예술·과학탐구실험은 A~C)를 판정합니다. 중학교·고1·고2·고3 기준을 나눠 교육부 훈령 별표 9대로 계산합니다.</div>
           <div class="calc-hub-arrow">계산하기 →</div>
         </a>
         <a class="calc-hub-card" href="/calc/tools/char-count/">
@@ -644,7 +668,7 @@
       </div>
       <div class="hub-faq-item">
         <div class="hub-faq-q">내신 등급은 어떻게 매겨지나요?</div>
-        <p class="hub-faq-a">석차백분율 = (석차 + 동석차 − 1) ÷ 수강자 수 × 100을 9등급제에 대입합니다. 1등급 4%·2등급 11%·3등급 23% 순이며, 내신 등급 계산기는 전과목 평균 등급(이수단위 가중평균)도 함께 계산합니다.</p>
+        <p class="hub-faq-a">수강자 수에 등급별 누적 비율을 곱해 반올림한 인원으로 등급을 나눕니다. 2026년 고1·고2는 5등급제(1등급 10%·2등급 34%·3등급 66%), 고3은 9등급제(1등급 4%·2등급 11%·3등급 23%)이고, 동점자가 등급 경계에 걸치면 중간석차로 판정합니다. 내신 등급 계산기는 전과목 평균 등급(학점 가중평균)도 함께 계산합니다.</p>
       </div>
       <div class="hub-faq-item">
         <div class="hub-faq-q">자소서 글자수는 공백 포함으로 세나요?</div>

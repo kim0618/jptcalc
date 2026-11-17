@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>마진율 계산기 - 원가·판매가로 마진율과 마크업, 목표 마진 판매가 계산 | 제이퍼</title>
+  <meta name="description" content="원가와 판매가로 마진율(판매가 대비)과 마크업률(원가 대비)을 계산하고, 목표 마진율에 맞는 판매가를 거꾸로 구합니다. 판매 수수료와 부가세를 넣으면 실제로 남는 이익과 손익분기 할인율까지 보여줍니다." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/tools/margin/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="마진율 계산기" />
+  <meta property="og:description" content="원가·판매가로 마진율과 마크업률을, 목표 마진율로 판매가를 계산합니다. 수수료·부가세 반영." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/tools/margin/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=9112fd1c" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "마진율 계산기", "url": "https://www.jptcalc.kr/calc/tools/margin/", "description": "원가·판매가로 마진율과 마크업률을, 목표 마진율로 판매가를 계산합니다. 수수료·부가세 반영.", "applicationCategory": "UtilityApplication", "operatingSystem": "All", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "KRW"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.jptcalc.kr/"}, {"@type": "ListItem", "position": 2, "name": "생활·도구 계산기", "item": "https://www.jptcalc.kr/calc/tools/"}, {"@type": "ListItem", "position": 3, "name": "마진율 계산기", "item": "https://www.jptcalc.kr/calc/tools/margin/"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "마진율과 마크업률은 어떻게 다른가요?", "acceptedAnswer": {"@type": "Answer", "text": "마진율은 이익을 판매가로, 마크업률은 이익을 원가로 나눈 값입니다. 원가 10,000원을 13,000원에 팔면 마크업률은 30%, 마진율은 23.08%입니다. 거래처가 말하는 \"마진 30%\"가 어느 쪽인지 먼저 확인해야 가격이 맞습니다."}}, {"@type": "Question", "name": "마진 30%를 남기려면 판매가를 얼마로 해야 하나요?", "acceptedAnswer": {"@type": "Answer", "text": "판매가 = 원가 ÷ (1 - 0.3)입니다. 원가 10,000원이면 약 14,286원입니다. 원가에 1.3을 곱한 13,000원은 마진율이 23.08%에 그칩니다."}}, {"@type": "Question", "name": "부가세 포함 가격으로 팔면 마진율이 어떻게 되나요?", "acceptedAnswer": {"@type": "Answer", "text": "판매가 안의 부가세 10%는 매출이 아니므로 판매가를 1.1로 나눈 공급가액으로 마진율을 계산합니다. 14,286원에 부가세가 포함돼 있으면 매출은 약 12,987원이고 마진율은 23.0%로 내려갑니다. 마진 30%를 지키려면 표시 가격을 약 15,714원으로 해야 합니다."}}, {"@type": "Question", "name": "판매 수수료는 어떻게 반영하나요?", "acceptedAnswer": {"@type": "Answer", "text": "오픈마켓·배달앱·카드 수수료는 고객이 낸 금액에 붙는다고 보고 이익에서 뺍니다. 목표 마진율을 지키는 판매가는 원가 ÷ (1 - 목표 마진율 - 수수료율)입니다. 부가세까지 포함해 팔면 수수료율에 1.1을 곱해 넣습니다."}}, {"@type": "Question", "name": "할인하면 이익이 언제 0이 되나요?", "acceptedAnswer": {"@type": "Answer", "text": "수수료·부가세가 없으면 마진율만큼 할인할 때 이익이 0원입니다. 수수료가 있으면 계산기가 수수료 감소분까지 반영한 손익분기 할인율을 보여줍니다. 그보다 크게 할인하면 팔수록 손실입니다."}}]}</script>
+  <style>
+/* 마진율 계산기 고유 부품(토큰만 사용) */
+.mg-modes { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.mg-modes .seg-btn { flex: 1 1 calc(50% - var(--space-2)); border: 1px solid var(--line); border-radius: var(--radius-md); min-height: var(--h-seg); }
+.mg-modes .seg-btn:first-child { border-left: 1px solid var(--line); }
+.mg-modes .seg-btn.active { border-color: var(--blue); background: var(--primary-tint); color: var(--text); }
+.mg-hint { margin-top: var(--space-2); font-size: var(--fs-meta); color: var(--text-sub); }
+.mg-warn { margin-top: var(--space-2); font-size: var(--fs-meta); color: var(--warn-text); }
+.mg-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2); }
+.mg-grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-2); }
+.mg-grid .field, .mg-grid3 .field { margin-bottom: 0; }
+.mg-grid, .mg-grid3 { margin-bottom: var(--space-3); }
+.mg-gap { margin-top: var(--space-3); }
+  </style>
+</head>
+<body data-cat="tools" style="--cat: var(--c-tools)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
+</header>
+
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/tools/">생활·도구 계산기</a> &rsaquo; 마진율 계산기</div>
+      <div class="page-badge">판매가 대비 이익률 기준</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-wrench"></use></svg></span>
+        <h1 class="page-title">마진율 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">수수료·부가세 반영</span>
+          <span class="ds-trust-chip">2026.11.17 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">원가·판매가로 마진율과 마크업을, 목표 마진율로 판매가를 계산합니다</p>
+    </div>
+  </div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+      <div class="field-label ds-group-label">무엇을 구할까요</div>
+      <div class="mg-modes" id="mg-mode" role="group" aria-label="계산 방식"><button type="button" class="seg-btn active" data-mode="rate" onclick="setMgMode('rate',this)">판매가로 마진율 보기</button><button type="button" class="seg-btn" data-mode="price" onclick="setMgMode('price',this)">목표 마진율로 판매가</button></div>
+    </div>
+    <div class="card">
+      <div class="field"><div class="field-label">원가 <span class="label-hint">매입가·재료비</span></div><div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="mg-cost" placeholder="예) 10000" oninput="calcMg()" aria-label="원가" /><span class="unit">원</span></div></div>
+      <div id="mg-in-rate"><div class="field"><div class="field-label">판매가 <span class="label-hint">고객에게 받는 가격</span></div><div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="mg-price" placeholder="예) 13000" oninput="calcMg()" aria-label="판매가" /><span class="unit">원</span></div></div></div>
+      <div id="mg-in-price" style="display:none"><div class="field"><div class="field-label">목표 마진율 <span class="label-hint">판매가 대비</span></div><div class="input-wrap"><input type="number" step="0.1" inputmode="decimal" id="mg-target" placeholder="예) 30" oninput="calcMg()" aria-label="목표 마진율" /><span class="unit">%</span></div></div></div>
+    </div>
+    <div class="card">
+      <div class="field-label ds-group-label">판매가에 부가세가</div>
+      <div class="seg-group" id="mg-vat" role="group" aria-label="부가세"><button type="button" class="seg-btn active" onclick="setMgVat(0,this)"><b>포함 안 됨</b>면세·별도</button><button type="button" class="seg-btn" onclick="setMgVat(1,this)"><b>포함됨</b>10%</button></div>
+      <div class="field" style="margin-top:var(--space-3)"><div class="field-label">판매 수수료 <span class="label-hint">선택 · 오픈마켓·카드·배달앱</span></div><div class="input-wrap"><input type="number" step="0.1" inputmode="decimal" id="mg-fee" placeholder="없으면 비워 두세요" oninput="calcMg()" aria-label="판매 수수료" /><span class="unit">%</span></div></div>
+      <div id="mg-warn" class="mg-warn" style="display:none"></div>
+    </div>
+
+        <button type="button" class="ds-btn-calc" data-calc-submit="submitMg" data-result="mg-result" data-required="">계산하기</button>
+      </div>
+    </section>
+
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="mg-result"><div class="result-highlight"><div class="rh-label" id="mg-label">마진율</div><div class="rh-value" id="mg-main">-</div><div class="rh-sub" id="mg-sub">-</div></div>
+        <div id="mg-rows"></div>
+        <p class="result-note" id="mg-note">※ 마진율 = 이익 ÷ 매출(부가세 제외), 마크업률 = 이익 ÷ 원가. 수수료는 고객이 낸 금액 기준으로 계산했습니다.</p>
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('mg-result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/tools/discount/">할인율 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">마진율</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">원가와 판매가를 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="margin-next">
+        <a class="ds-next-card" href="/calc/tools/discount/" data-next="discount"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-wrench"></use></svg></span><span class="ds-next-body"><b>할인율 계산기</b><span>정가·할인가·할인율을 서로 역산하고, 중복 할인의 실제 할인율과 최종 결제 금액을 계산합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/tax/vat/" data-next="vat"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-receipt"></use></svg></span><span class="ds-next-body"><b>부가가치세 계산기</b><span>부가세 포함 금액을 공급가액과 부가세로 나누고, 간이·일반과세자 신고 납부세액을 계산합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
+  </div>
+
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">마진율 = (매출 - 원가 - 수수료) ÷ 매출, 마크업률 = 이익 ÷ 원가. 부가세 포함 판매가는 공급가액 = 판매가 ÷ 1.1(부가가치세법 제30조 세율 10%)로 나눠 계산</div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#margin-s1">마진·마크업</a><a href="#margin-s2">목표 마진 판매가</a><a href="#margin-s3">수수료·부가세</a><a href="#margin-s4">할인 한계</a><a href="#margin-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+
+  <div class="guide-section">
+        <section class="ds-section ds-prose" aria-labelledby="margin-s1">
+          <div class="ds-section-head"><h2 id="margin-s1">마진율과 마크업률은 나누는 값이 다릅니다</h2></div>
+<p>둘 다 분자는 이익(판매가 - 원가)인데, 마진율은 판매가로, 마크업률은 원가로 나눕니다. 원가 10,000원짜리를 13,000원에 팔면 이익 3,000원은 원가의 30%이지만 판매가의 23.08%입니다. 판매가가 원가보다 크기 때문에 이익이 있는 한 마진율은 항상 마크업률보다 작습니다.</p>
+      <ul>
+        <li><strong>마진율</strong> = 이익 ÷ 판매가 = 마크업 ÷ (1 + 마크업)</li>
+        <li><strong>마크업률</strong> = 이익 ÷ 원가 = 마진율 ÷ (1 - 마진율)</li>
+      </ul>
+      <div class="ds-table-card"><table><thead><tr><th>원가에 얹은 비율 (마크업)</th><th>원가 10,000원일 때 판매가</th><th>실제 마진율</th></tr></thead><tbody><tr><td>10%</td><td>11,000원</td><td>9.09%</td></tr><tr><td>20%</td><td>12,000원</td><td>16.67%</td></tr><tr><td>30%</td><td>13,000원</td><td>23.08%</td></tr><tr><td>50%</td><td>15,000원</td><td>33.33%</td></tr><tr><td>100%</td><td>20,000원</td><td>50.00%</td></tr></tbody></table></div>
+        </section>
+        <section class="ds-section ds-prose" aria-labelledby="margin-s2">
+          <div class="ds-section-head"><h2 id="margin-s2">목표 마진율로 판매가를 정할 때는 나눕니다</h2></div>
+<p>판매가의 30%를 이익으로 남기려면 원가가 판매가의 70%여야 합니다. 그래서 판매가 = 원가 ÷ (1 - 목표 마진율)입니다. 원가에 1.3을 곱하는 방식은 마크업 30%라 마진율은 23.08%에 그칩니다.</p>
+      <div class="ds-table-card"><table><thead><tr><th>목표 마진율</th><th>필요한 마크업</th><th>원가 10,000원일 때 판매가</th></tr></thead><tbody><tr><td>10%</td><td>11.11%</td><td>11,111원</td></tr><tr><td>20%</td><td>25.00%</td><td>12,500원</td></tr><tr><td>30%</td><td>42.86%</td><td>14,286원</td></tr><tr><td>40%</td><td>66.67%</td><td>16,667원</td></tr><tr><td>50%</td><td>100.00%</td><td>20,000원</td></tr></tbody></table></div>
+      <p>목표 마진율이 높을수록 필요한 마크업은 빠르게 커집니다. 마진율 50%를 남기려면 원가의 두 배를 받아야 합니다.</p>
+        </section>
+        <section class="ds-section ds-prose" aria-labelledby="margin-s3">
+          <div class="ds-section-head"><h2 id="margin-s3">수수료와 부가세를 넣으면 판매가가 달라집니다</h2></div>
+<p>오픈마켓·배달앱 수수료나 카드 수수료는 고객이 낸 금액에 붙고, 과세 사업자의 판매가에 들어 있는 부가세(10%)는 내 매출이 아닙니다. 계산기는 두 가지를 빼고 남는 이익으로 마진율을 계산합니다.</p>
+      <ul>
+        <li>수수료만 있을 때: 판매가 = 원가 ÷ (1 - 목표 마진율 - 수수료율). 원가 10,000원, 목표 20%, 수수료 10%면 14,286원입니다.</li>
+        <li>부가세 포함 가격으로 팔 때: 매출(공급가액) = 원가 ÷ (1 - 목표 마진율)이고, 표시 가격은 여기에 1.1을 곱합니다. 원가 10,000원, 목표 30%면 매출 14,286원, 표시 가격 15,714원입니다.</li>
+        <li>둘 다 있을 때: 매출 = 원가 ÷ (1 - 목표 마진율 - 수수료율 × 1.1), 표시 가격 = 매출 × 1.1.</li>
+      </ul>
+        </section>
+        <section class="ds-section ds-prose" aria-labelledby="margin-s4">
+          <div class="ds-section-head"><h2 id="margin-s4">얼마까지 할인하면 이익이 0이 될까</h2></div>
+<p>할인율은 판매가에 곱해지므로, 수수료·부가세가 없을 때는 마진율만큼 할인하면 판매가가 원가와 같아져 이익이 0원이 됩니다. 마진율 23.08%(원가 10,000원, 판매가 13,000원)인 상품은 23.08%를 넘게 할인하면 손실입니다.</p>
+      <p>수수료가 있으면 할인할수록 수수료도 함께 줄어 계산이 달라집니다. 계산기의 "이익이 0이 되는 할인율"은 1 - 원가 ÷ (매출 - 수수료)로 수수료까지 반영한 한계선입니다. 쿠폰이나 할인 행사를 정하기 전에 이 숫자를 먼저 확인하세요.</p>
+        </section>
+        <section class="ds-section faq-card" aria-labelledby="margin-faq">
+          <div class="ds-section-head"><h2 id="margin-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>마진율과 마크업률은 어떻게 다른가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>마진율은 이익을 판매가로, 마크업률은 이익을 원가로 나눈 값입니다. 원가 10,000원을 13,000원에 팔면 마크업률은 30%, 마진율은 23.08%입니다. 거래처가 말하는 "마진 30%"가 어느 쪽인지 먼저 확인해야 가격이 맞습니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>마진 30%를 남기려면 판매가를 얼마로 해야 하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>판매가 = 원가 ÷ (1 - 0.3)입니다. 원가 10,000원이면 약 14,286원입니다. 원가에 1.3을 곱한 13,000원은 마진율이 23.08%에 그칩니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>부가세 포함 가격으로 팔면 마진율이 어떻게 되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>판매가 안의 부가세 10%는 매출이 아니므로 판매가를 1.1로 나눈 공급가액으로 마진율을 계산합니다. 14,286원에 부가세가 포함돼 있으면 매출은 약 12,987원이고 마진율은 23.0%로 내려갑니다. 마진 30%를 지키려면 표시 가격을 약 15,714원으로 해야 합니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>판매 수수료는 어떻게 반영하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>오픈마켓·배달앱·카드 수수료는 고객이 낸 금액에 붙는다고 보고 이익에서 뺍니다. 목표 마진율을 지키는 판매가는 원가 ÷ (1 - 목표 마진율 - 수수료율)입니다. 부가세까지 포함해 팔면 수수료율에 1.1을 곱해 넣습니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>할인하면 이익이 언제 0이 되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>수수료·부가세가 없으면 마진율만큼 할인할 때 이익이 0원입니다. 수수료가 있으면 계산기가 수수료 감소분까지 반영한 손익분기 할인율을 보여줍니다. 그보다 크게 할인하면 팔수록 손실입니다.</p>
+            </details>
+      <div class="update-note">최종 검토: 2026.11.17 · 계산 결과는 참고용입니다.</div>
+          </div>
+        </section>
+  </div>
+
+    </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: "판매가 대비 이익률(마진율)과 원가 대비 이익률(마크업률) 계산식, 부가가치세법 제30조 세율 10%",
+    appliedFrom: "2026년 기준",
+    exceptions: [
+      "면세 사업자는 \"부가세 포함 안 됨\"을 고르세요",
+      "매입 부가세 공제·배송비·광고비는 원가에 직접 더해 넣으세요"
+    ],
+    references: [{"name": "국가법령정보센터 부가가치세법(law.go.kr)", "url": "https://www.law.go.kr/법령/부가가치세법"}],
+    lastReviewed: '2026.11.17',
+  };
+  </script>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 생활·도구 계산기</h2>
+    <div class="sibling-list">
+      <a href="/calc/tools/percent/" class="sibling-link">퍼센트 계산기</a>
+      <a href="/calc/tools/ratio/" class="sibling-link">비율 계산기</a>
+      <a href="/calc/tools/unit-converter/" class="sibling-link">단위 변환기</a>
+      <a href="/calc/tools/cooking-measure/" class="sibling-link">요리 계량 변환기</a>
+      <a href="/calc/tools/discount/" class="sibling-link">할인율 계산기</a>
+      <a href="/calc/tools/gpa/" class="sibling-link">학점 계산기</a>
+      <a href="/calc/tools/naesin-grade/" class="sibling-link">내신 등급 계산기</a>
+      <a href="/calc/tools/achievement-grade/" class="sibling-link">성취도 계산기</a>
+      <a href="/calc/tools/char-count/" class="sibling-link">글자수 세기</a>
+      <a href="/calc/tools/lunar-calendar/" class="sibling-link">음력 양력 변환기</a>
+    </div>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/margin-markup-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/margin-markup-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>마진율 계산법 2026 - 원가에 30% 붙였는데 마진은 23%인 이유</span></a>
+    </div>
+  </div>
+</main>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
+  </div>
+</footer>
+
+<script src="/assets/ds/calc-kit.js?v=806eb872"></script>
+<script>
+/* 마진율 계산기(블로그 margin-markup-guide와 같은 식): 마진율 = 이익/매출, 마크업 = 이익/원가
+   목표 마진율 m, 수수료율 f(고객 결제금액 기준), 부가세 포함이면 k=1.1: 공급가 S = 원가 ÷ (1 - m - f×k), 표시 판매가 = S×k
+   이익이 0이 되는 할인율 = 1 - 원가 ÷ (S - 수수료) (data-points §94) */
+var mgMode='rate',mgVat=0;
+function mgNum(id){var v=parseFloat(String(document.getElementById(id).value).replace(/,/g,''));return isFinite(v)?v:NaN}
+function mgWon(n){return Math.round(n).toLocaleString('ko-KR')+'원'}
+function mgPct(n){return (Math.round(n*100)/100).toFixed(2)+'%'}
+function mgRow(l,v){return '<div class="result-row"><span class="result-label">'+l+'</span><span class="result-value">'+v+'</span></div>'}
+function setMgMode(m,btn){mgMode=m;document.querySelectorAll('#mg-mode .seg-btn').forEach(function(b){b.classList.toggle('active',b===btn)});
+  document.getElementById('mg-in-rate').style.display=m==='rate'?'':'none';document.getElementById('mg-in-price').style.display=m==='price'?'':'none';
+  var mgL=m==='rate'?'마진율':'목표 마진 판매가';document.getElementById('mg-label').textContent=mgL;var mgG=document.querySelector('.ds-result-empty .ds-result-label');if(mgG)mgG.textContent=mgL;var mgM=document.querySelector('.ds-result-empty .ds-ghost-msg');if(mgM)mgM.textContent=m==='rate'?'원가와 판매가를 입력하면 계산됩니다':'원가와 목표 마진율을 입력하면 계산됩니다';document.getElementById('mg-result').classList.remove('show');calcMg()}
+function setMgVat(v,btn){mgVat=v;btn.parentElement.querySelectorAll('.seg-btn').forEach(function(b){b.classList.toggle('active',b===btn)});calcMg()}
+function calcMg(){
+  var res=document.getElementById('mg-result'),warn=document.getElementById('mg-warn');warn.style.display='none';
+  var cost=mgNum('mg-cost'),f=mgNum('mg-fee');f=f>0?f/100:0;var k=mgVat?1.1:1;
+  if(!(cost>0)){res.classList.remove('show');return}
+  var P,S,m;
+  if(mgMode==='rate'){P=mgNum('mg-price');if(!(P>0)){res.classList.remove('show');return}S=P/k}
+  else{m=mgNum('mg-target');if(!isFinite(m)){res.classList.remove('show');return}m/=100;
+    var den=1-m-f*k;if(!(m<1)||den<=0){warn.textContent='목표 마진율과 수수료를 더한 값이 100%를 넘어 판매가를 정할 수 없습니다.';warn.style.display='block';res.classList.remove('show');return}
+    S=cost/den;P=S*k}
+  var fee=P*f,profit=S-cost-fee,margin=profit/S*100,markup=profit/cost*100,be=(1-cost/(S-fee))*100;
+  var rows=[];
+  if(mgMode==='price')rows.push(mgRow('표시 판매가',mgWon(P)+(mgVat?' (부가세 포함)':'')));
+  else rows.push(mgRow('판매가',mgWon(P)+(mgVat?' (부가세 포함)':'')));
+  if(mgVat)rows.push(mgRow('매출 (부가세 제외)',mgWon(S)+' · 부가세 '+mgWon(P-S)));
+  if(fee>0)rows.push(mgRow('판매 수수료 ('+(f*100).toFixed(1)+'%)','- '+mgWon(fee)));
+  rows.push(mgRow('원가','- '+mgWon(cost)));
+  rows.push(mgRow('남는 이익',mgWon(profit)));
+  rows.push(mgRow('마크업률 (원가 대비)',mgPct(markup)));
+  rows.push(mgRow('이익이 0이 되는 할인율',be>0?mgPct(be)+'까지 할인 가능':'지금도 손실'));
+  if(profit<0){warn.textContent='판매가가 원가와 수수료를 합한 금액보다 낮아 손실입니다.';warn.style.display='block'}
+  document.getElementById('mg-main').textContent=mgMode==='rate'?mgPct(margin):mgWon(P);
+  document.getElementById('mg-sub').textContent=mgMode==='rate'?'개당 이익 '+mgWon(profit)+' · 마크업 '+mgPct(markup):'마진율 '+mgPct(margin)+' · 원가에 '+mgPct(markup)+' 얹은 값';
+  document.getElementById('mg-rows').innerHTML=rows.join('');res.classList.add('show');
+}
+function submitMg(){
+  var id=!(mgNum('mg-cost')>0)?'mg-cost':mgMode==='rate'?'mg-price':'mg-target';
+  if(!isFinite(mgNum(id))&&window.DSCalc&&DSCalc.need){DSCalc.need(document.getElementById(id),'값을 입력해 주세요.');return}
+  calcMg();
+}
+</script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
+<script src="/assets/calc-registry.js?v=ec2fa08f"></script>
+<script src="/assets/ds/site-shell.js?v=ffeb3ffa"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: "마진율·마크업 계산식, 부가가치세법 세율 10%",
+  basisDate: '2026년 기준',
+  referenceOrg: "제이퍼 계산기 편집팀",
+  lastReviewed: '2026.11.17',
+  category: 'tools'
+};
+</script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "mg-result", "required": [], "waitText": "원가와 판매가를 입력하면 계산됩니다", "nextBox": "#margin-next", "next": []});
+  DSCalc.placeTrust('ds-trust-col');
+</script>
+<script src="/assets/ds/prefill.js?v=6cc70a47" defer></script>
+</body>
+</html>

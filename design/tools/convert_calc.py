@@ -232,7 +232,8 @@ def convert(cat, slug):
         inner = g[g.index('>') + 1:-len('</div>')]
         if h2m: inner = inner.replace(h2m.group(0), '', 1)
         sid = f'{slug}-faq' if is_faq else f'{slug}-s{n}'
-        lbl = 'FAQ' if is_faq else short(title)
+        tm = re.match(r'<div class="guide-card[^"]*"[^>]*\sdata-toc="([^"]+)"', g)   # 목차 라벨 직접 지정(2026-11-16, 손으로 고친 공개본 라벨 보존)
+        lbl = 'FAQ' if is_faq else (tm.group(1) if tm else short(title))
         if lbl not in [t[1] for t in toc]: toc.append((sid, lbl))
         elif is_faq: toc.append((sid, lbl))
         inner = inner.replace('<div class="guide-table-wrap">', '<div class="ds-table-card">').replace('<div class="table-wrap">', '<div class="ds-table-card">')
@@ -272,7 +273,8 @@ def convert(cat, slug):
     else:
         log.append('신뢰 설정 없음')
     rest = rest.replace('@@EXPLAIN@@', ('\n' + explain_html + '\n') if explain_html else '')
-    faq_t = [t for t in toc if t[1] == 'FAQ']; mid = [t for t in toc if t[1] not in ('FAQ', '가이드')][:4]
+    faq_t = [t for t in toc if t[1] == 'FAQ']; mid = [t for t in toc if t[1] not in ('FAQ', '가이드')]
+    if 'data-toc="' not in s: mid = mid[:4]   # 라벨을 직접 지정한 페이지는 목차를 다 보여 준다(2026-11-16)
     toc = [t for t in toc if t[1] == '가이드'][:1] + mid + faq_t[:1]
     toc_html = '      <nav class="ds-toc" aria-label="이 페이지 내용">\n        ' + ''.join(f'<a href="#{i}">{l}</a>' for i, l in toc) + '\n      </nav>\n' if len(toc) >= 2 else ''
     flow = '  <div class="ds-calc-flow">\n' + ('  ' + aff + '\n' if aff else '') + '\n' + toc_html + rest.strip()

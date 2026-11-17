@@ -33,7 +33,8 @@
       { "@type": "WebApplication", "name": "기초대사량 계산기", "url": "https://www.jptcalc.kr/calc/health/bmr/" },
       { "@type": "WebApplication", "name": "체지방률 계산기", "url": "https://www.jptcalc.kr/calc/health/body-fat/" },
       { "@type": "WebApplication", "name": "칼로리 소모 계산기", "url": "https://www.jptcalc.kr/calc/health/calories/" },
-      { "@type": "WebApplication", "name": "적정체중 계산기", "url": "https://www.jptcalc.kr/calc/health/ideal-weight/" }
+      { "@type": "WebApplication", "name": "적정체중 계산기", "url": "https://www.jptcalc.kr/calc/health/ideal-weight/" },
+      { "@type": "WebApplication", "name": "건강검진 수치 판정 계산기", "url": "https://www.jptcalc.kr/calc/health/checkup-result/" }
     ],
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -104,7 +105,7 @@
   </script>
   <link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
   <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
-  <link rel="stylesheet" href="/assets/ds/base.css?v=64bd9b22" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=9112fd1c" />
 </head>
 <body data-cat="health" style="--cat: var(--c-health)">
 <header id="ds-site-header" class="ds-header">
@@ -117,7 +118,7 @@
 <div class="ds-container ds-hub">
   <aside class="ds-hub-nav" aria-label="카테고리">
     <h2>카테고리</h2>
-    <nav><a href="/calc/realestate/" style="--cat: var(--c-realestate)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-house"></use></svg></span>부동산<em>19</em></a><a href="/calc/salary/" style="--cat: var(--c-salary)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-briefcase"></use></svg></span>이직/연봉<em>15</em></a><a href="/calc/tools/" style="--cat: var(--c-tools)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-wrench"></use></svg></span>생활·도구<em>8</em></a><a href="/calc/tax/" style="--cat: var(--c-tax)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-receipt"></use></svg></span>프리랜서 세금<em>10</em></a><a href="/calc/pension-welfare/" style="--cat: var(--c-pension-welfare)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span>연금·복지<em>6</em></a><a href="/calc/finance/" style="--cat: var(--c-finance)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-piggy-bank"></use></svg></span>금융·이자<em>9</em></a><a href="/calc/date/" style="--cat: var(--c-date)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-calendar-days"></use></svg></span>날짜·D-day<em>5</em></a><a href="/calc/health/" aria-current="page" style="--cat: var(--c-health)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-heart-pulse"></use></svg></span>건강<em>5</em></a><a href="/calc/ai/" style="--cat: var(--c-ai)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-cpu"></use></svg></span>AI/테크<em>5</em></a><a href="/calc/pet/" style="--cat: var(--c-pet)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-paw-print"></use></svg></span>반려동물<em>8</em></a><a href="/calc/auto/" style="--cat: var(--c-auto)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-car"></use></svg></span>자동차<em>7</em></a><a href="/calc/baby/" style="--cat: var(--c-baby)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-baby"></use></svg></span>출산·육아<em>9</em></a></nav>
+    <nav><a href="/calc/realestate/" style="--cat: var(--c-realestate)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-house"></use></svg></span>부동산<em>20</em></a><a href="/calc/salary/" style="--cat: var(--c-salary)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-briefcase"></use></svg></span>이직/연봉<em>15</em></a><a href="/calc/tools/" style="--cat: var(--c-tools)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-wrench"></use></svg></span>생활·도구<em>11</em></a><a href="/calc/tax/" style="--cat: var(--c-tax)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-receipt"></use></svg></span>프리랜서 세금<em>10</em></a><a href="/calc/pension-welfare/" style="--cat: var(--c-pension-welfare)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span>연금·복지<em>6</em></a><a href="/calc/finance/" style="--cat: var(--c-finance)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-piggy-bank"></use></svg></span>금융·이자<em>10</em></a><a href="/calc/date/" style="--cat: var(--c-date)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-calendar-days"></use></svg></span>날짜·D-day<em>5</em></a><a href="/calc/health/" aria-current="page" style="--cat: var(--c-health)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-heart-pulse"></use></svg></span>건강<em>6</em></a><a href="/calc/ai/" style="--cat: var(--c-ai)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-cpu"></use></svg></span>AI/테크<em>5</em></a><a href="/calc/pet/" style="--cat: var(--c-pet)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-paw-print"></use></svg></span>반려동물<em>8</em></a><a href="/calc/auto/" style="--cat: var(--c-auto)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-car"></use></svg></span>자동차<em>7</em></a><a href="/calc/baby/" style="--cat: var(--c-baby)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-baby"></use></svg></span>출산·육아<em>9</em></a></nav>
   </aside>
 
   <main class="ds-hub-main">
@@ -146,6 +147,12 @@
         <div class="ds-hub-list">
           <a class="ds-hub-row" id="calc-bmr" href="/calc/health/bmr/"><span class="ds-hub-body"><b>기초대사량</b><span>Mifflin-St Jeor 공식(1990년 발표)으로 기초대사량을 계산하고, 활동 수준에 따른 일일 필요 칼로리(TDEE)도 함께 제공합니다.</span></span><span class="ds-badge-pop">인기</span><svg class="ds-i ds-chevron" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
           <a class="ds-hub-row" id="calc-calories" href="/calc/health/calories/"><span class="ds-hub-body"><b>칼로리 소모</b><span>걷기·달리기·수영·자전거 등 운동 종목별로 체중과 시간을 입력해 소모 칼로리를 계산합니다. 소모 칼로리를 밥 공기·지방 감량량으로 환산하고, 하루 유지 칼로리와 감량 목표 칼로리도 함께 보여줍니다.</span></span><span class="ds-badge-pop">인기</span><svg class="ds-i ds-chevron" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        </div>
+      </section>
+      <section class="ds-hub-group" data-group="g3" aria-labelledby="hub-g3">
+        <h2 class="ds-hub-group-title" id="hub-g3">검진 결과</h2>
+        <div class="ds-hub-list">
+          <a class="ds-hub-row" id="calc-checkup-result" href="/calc/health/checkup-result/"><span class="ds-hub-body"><b>건강검진 수치 판정</b><span>검진 결과지의 혈압·공복혈당·콜레스테롤·AST·ALT·감마지티피·혈색소 수치를 넣으면 보건복지부 고시 판정기준으로 정상A·정상B(경계)·질환의심 구간을 항목별로 확인합니다.</span></span><svg class="ds-i ds-chevron" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
         </div>
       </section>
     </div>
@@ -381,8 +388,8 @@
 </footer>
 <div class="toast" id="toast"></div>
 
-<script src="/assets/calc-registry.js?v=b859b628"></script>
-<script src="/assets/ds/site-shell.js?v=f9632873"></script>
+<script src="/assets/calc-registry.js?v=ec2fa08f"></script>
+<script src="/assets/ds/site-shell.js?v=ffeb3ffa"></script>
 <script>
 /* 상황 탭(C1·C2): 고른 그룹만 보이기. 옛 주소의 #계산기·?tab=계산기는 그 줄로 이동해 강조 */
 (function () {

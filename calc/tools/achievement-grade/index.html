@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>성취도 계산기 - 지필·수행 반영비율로 원점수와 내신 성취도 A~E 계산 | 제이퍼</title>
+  <meta name="description" content="중간·기말 점수와 수행평가를 반영비율대로 합산해 원점수를 구하고, 교육부 학교생활기록 작성 및 관리지침 기준으로 성취도 A~E(체육·예술·과학탐구실험은 A~C)를 판정합니다. 중학교·고1·고2·고3 기준을 나눠 계산합니다." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/tools/achievement-grade/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="성취도 계산기" />
+  <meta property="og:description" content="지필·수행 점수를 넣으면 원점수와 성취도 A~E를 학년·과목 기준대로 바로 계산합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/tools/achievement-grade/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=9112fd1c" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"성취도 계산기","url":"https://www.jptcalc.kr/calc/tools/achievement-grade/","description":"중간·기말 점수와 수행평가를 반영비율대로 합산해 원점수를 구하고, 교육부 학교생활기록 작성 및 관리지침 기준으로 성취도 A~E(체육·예술·과학탐구실험은 A~C)를 판정합니다. 중학교·고1·고2·고3 기준을 나눠 계산합니다.","applicationCategory":"EducationalApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"inLanguage":"ko-KR"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.jptcalc.kr/"},{"@type":"ListItem","position":2,"name":"생활·도구 계산기","item":"https://www.jptcalc.kr/calc/tools/"},{"@type":"ListItem","position":3,"name":"성취도 계산기","item":"https://www.jptcalc.kr/calc/tools/achievement-grade/"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"성취도 A~E는 몇 점부터인가요?","acceptedAnswer":{"@type":"Answer","text":"교육부훈령 「학교생활기록 작성 및 관리지침」 별표 9 기준으로 원점수(성취율) 90% 이상 A, 80% 이상 90% 미만 B, 70% 이상 80% 미만 C, 60% 이상 70% 미만 D입니다. E는 학년·과목에 따라 다릅니다. 중학교와 고3, 고1·고2 선택과목은 60% 미만이 E이고, 고1·고2 공통과목은 40% 이상 60% 미만이 E입니다."}},{"@type":"Question","name":"고1 공통과목에서 40점 미만이면 성취도가 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"2022 개정 교육과정을 적용받는 고1·고2 공통과목은 성취율 40% 미만을 별도로 둡니다. 지침은 \"성취율40% 미도달자 중 최소 성취수준 보장지도 이수 시 성취도 ‘E’ 부여\"라고 정하고 있어, 보장지도를 이수해야 E가 부여됩니다. 과학탐구실험도 같은 방식으로 40% 미만은 보장지도 이수 시 C입니다."}},{"@type":"Question","name":"원점수는 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"정기시험(지필)과 수행평가를 반영비율대로 환산해 더한 합계를 소수 셋째 자리에서 반올림해 소수 둘째 자리까지 구하고, 그 합계를 다시 소수 첫째 자리에서 반올림해 정수로 만든 값이 원점수입니다. 예를 들어 중간 85점(30%), 기말 78점(30%), 수행 36/40점(40%)이면 25.5 + 23.4 + 36 = 84.9이고 원점수는 85점입니다."}},{"@type":"Question","name":"체육·음악·미술은 왜 A·B·C만 나오나요?","acceptedAnswer":{"@type":"Answer","text":"지침이 체육·예술 교과(목)는 3단계로 평정하도록 정했기 때문입니다. 원점수 80% 이상 A, 60% 이상 80% 미만 B, 60% 미만 C입니다. 고1·고2의 과학탐구실험도 A·B·C 3단계이지만 C가 40% 이상 60% 미만이고, 고3은 진로선택 과목도 A·B·C 3단계입니다."}},{"@type":"Question","name":"학교 성적표의 성취도가 계산 결과와 다를 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"고등학교는 다를 수 있습니다. 지침은 \"기준 성취율에 따른 분할점수를 과목별로 학교가 설정할 수 있다\"고 정하고 있어, 학교가 추정분할점수를 쓰면 A의 기준이 90점이 아닐 수 있습니다. 학교가 공지한 분할점수가 있으면 계산기의 \"학교 분할점수\" 칸에 넣어 다시 계산하세요."}}]}</script>
+  <style>
+/* 성취도 계산기 고유 부품(토큰만 사용) */
+.ag-head, .ag-row { display: grid; grid-template-columns: minmax(0, 0.9fr) repeat(3, minmax(0, 1fr)); gap: var(--space-2); align-items: center; }
+.ag-head { margin-bottom: var(--space-1); font-size: var(--fs-meta); color: var(--text-sub); }
+.ag-row { margin-bottom: var(--space-2); }
+.ag-row-name { font-size: var(--fs-label); font-weight: var(--fw-label); color: var(--text); word-break: keep-all; }
+.ag-row .input-wrap input { min-width: 0; padding-left: var(--space-2); padding-right: var(--space-1); }
+.ag-types { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.ag-types .seg-btn { flex: 1 1 calc(50% - var(--space-2)); border: 1px solid var(--line); border-radius: var(--radius-md); min-height: var(--h-seg); }
+.ag-types .seg-btn:first-child { border-left: 1px solid var(--line); }
+.ag-types .seg-btn.active { border-color: var(--blue); background: var(--primary-tint); color: var(--text); }
+.ag-warn { margin-top: var(--space-1); font-size: var(--fs-meta); color: var(--warn-text); }
+.ag-cut summary { cursor: pointer; }
+.ag-cut-note { margin: var(--space-2) 0; font-size: var(--fs-meta); color: var(--text-sub); }
+.ag-cut-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2); }
+.ag-band { display: block; font-size: var(--fs-meta); color: var(--text-sub); }
+  </style>
+</head>
+<body data-cat="tools" style="--cat: var(--c-tools)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
+</header>
+
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/tools/">생활·도구 계산기</a> &rsaquo; 성취도 계산기</div>
+      <div class="page-badge">교육부 훈령 별표 9 기준</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-wrench"></use></svg></span>
+        <h1 class="page-title">성취도 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">교육부 훈령 제555호</span>
+          <span class="ds-trust-chip">2026.11.16 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">지필·수행 점수를 반영비율대로 합산해 원점수와 성취도 A~E를 계산합니다</p>
+    </div>
+  </div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+      <div class="field-label ds-group-label">학교·학년</div>
+      <div class="seg-group" id="ag-level-group" role="group" aria-label="학교·학년"><button type="button" class="seg-btn" onclick="setLevel('mid',this)"><b>중학교</b>전 학년</button><button type="button" class="seg-btn active" onclick="setLevel('h12',this)"><b>고1·고2</b>2022 개정</button><button type="button" class="seg-btn" onclick="setLevel('h3',this)"><b>고3</b>2015 개정</button></div>
+    </div>
+    <div class="card">
+      <div class="field-label ds-group-label">과목 유형</div>
+      <div class="ag-types" id="ag-type-group" role="group" aria-label="과목 유형"></div>
+    </div>
+    <div class="card">
+      <div class="field-label ds-group-label">시험·수행평가</div>
+      <div class="ag-head"><span></span><span>받은 점수</span><span>만점</span><span>반영비율(%)</span></div>
+      <div class="ag-row"><div class="ag-row-name">중간고사</div><div class="input-wrap"><input type="number" id="ag-s1" placeholder="85" min="0" max="1000" step="0.01" inputmode="decimal" oninput="calcAch()" aria-label="중간고사 받은 점수" /></div><div class="input-wrap"><input type="number" id="ag-m1" placeholder="100" min="1" max="1000" step="0.01" inputmode="decimal" oninput="calcAch()" aria-label="중간고사 만점" /></div><div class="input-wrap"><input type="number" id="ag-r1" placeholder="30" min="0" max="100" step="0.1" inputmode="decimal" oninput="calcAch()" aria-label="중간고사 반영비율" /></div></div>
+      <div class="ag-row"><div class="ag-row-name">기말고사</div><div class="input-wrap"><input type="number" id="ag-s2" placeholder="78" min="0" max="1000" step="0.01" inputmode="decimal" oninput="calcAch()" aria-label="기말고사 받은 점수" /></div><div class="input-wrap"><input type="number" id="ag-m2" placeholder="100" min="1" max="1000" step="0.01" inputmode="decimal" oninput="calcAch()" aria-label="기말고사 만점" /></div><div class="input-wrap"><input type="number" id="ag-r2" placeholder="30" min="0" max="100" step="0.1" inputmode="decimal" oninput="calcAch()" aria-label="기말고사 반영비율" /></div></div>
+      <div class="ag-row"><div class="ag-row-name">수행평가</div><div class="input-wrap"><input type="number" id="ag-s3" placeholder="36" min="0" max="1000" step="0.01" inputmode="decimal" oninput="calcAch()" aria-label="수행평가 받은 점수" /></div><div class="input-wrap"><input type="number" id="ag-m3" placeholder="40" min="1" max="1000" step="0.01" inputmode="decimal" oninput="calcAch()" aria-label="수행평가 만점" /></div><div class="input-wrap"><input type="number" id="ag-r3" placeholder="40" min="0" max="100" step="0.1" inputmode="decimal" oninput="calcAch()" aria-label="수행평가 반영비율" /></div></div>
+      <div class="ag-row"><div class="ag-row-name">기타</div><div class="input-wrap"><input type="number" id="ag-s4" placeholder="" min="0" max="1000" step="0.01" inputmode="decimal" oninput="calcAch()" aria-label="기타 받은 점수" /></div><div class="input-wrap"><input type="number" id="ag-m4" placeholder="" min="1" max="1000" step="0.01" inputmode="decimal" oninput="calcAch()" aria-label="기타 만점" /></div><div class="input-wrap"><input type="number" id="ag-r4" placeholder="" min="0" max="100" step="0.1" inputmode="decimal" oninput="calcAch()" aria-label="기타 반영비율" /></div></div>
+      <div id="ag-ratio-warn" class="ag-warn" style="display:none"></div>
+      <div class="field" style="margin:var(--space-3) 0 0"><div class="field-label">원점수를 이미 알면 (위 칸 대신)</div><div class="input-wrap"><input type="number" id="ag-raw" placeholder="예) 87" min="0" max="100" step="1" inputmode="numeric" oninput="calcAch()" /><span class="unit">점</span></div></div>
+    </div>
+    <details class="card ag-cut"><summary class="field-label ds-group-label">학교 분할점수가 따로 있으면</summary>
+      <p class="ag-cut-note">고등학교는 과목별 분할점수를 학교가 정할 수 있습니다. 성적표 안내의 하한 점수를 넣으면 그 기준으로 판정합니다.</p>
+      <div class="ag-cut-grid" id="ag-cut-grid"></div>
+    </details>
+
+        <button type="button" class="ds-btn-calc" data-calc-submit="submitAch" data-result="ag-result" data-required="">계산하기</button>
+      </div>
+    </section>
+
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="ag-result"><div class="result-highlight"><div class="rh-label">성취도</div><div class="rh-value" id="ag-grade">-</div><div class="rh-sub" id="ag-sub">-</div></div>
+        <div class="result-row"><span class="result-label">환산 점수 합계</span><span class="result-value" id="ag-total">-</span></div>
+        <div class="result-row"><span class="result-label">원점수</span><span class="result-value" id="ag-rawv">-</span></div>
+        <div class="result-row"><span class="result-label">적용 기준</span><span class="result-value" id="ag-basis">-</span></div>
+        <div class="result-row result-total-row"><span class="result-total-label" id="ag-next-label">다음 성취도까지</span><span class="result-total-value" id="ag-next">-</span></div>
+        <div id="ag-bands"></div>
+        <p class="result-note">※ 교육부훈령 「학교생활기록 작성 및 관리지침」 별표 9 기준입니다. 고등학교는 과목별 분할점수를 학교가 정할 수 있어 성적표의 성취도와 다를 수 있습니다.</p>
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('ag-result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/tools/naesin-grade/">내신 등급 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">성취도</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">점수를 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="achievement-grade-next">
+        <a class="ds-next-card" href="/calc/tools/naesin-grade/" data-next="naesin-grade"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-wrench"></use></svg></span><span class="ds-next-body"><b>내신 등급 계산기</b><span>석차와 수강자 수로 석차등급(고1·고2 5등급제, 고3 9등급제)을 계산합니다. 같은 과목의 성취도와 석차등급을 함께 확인할 수 있습니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/tools/percent/" data-next="percent"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-wrench"></use></svg></span><span class="ds-next-body"><b>퍼센트 계산기</b><span>전체의 몇 %, 한 값이 다른 값의 몇 %, 두 값 사이의 증감률, X% 증가·감소한 값까지 네 가지 비율 계산을 한 화면에서 처리합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
+  </div>
+
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">교육부훈령 「학교생활기록 작성 및 관리지침」 제555호(2026.3.1. 시행) 별표 9 「교과학습발달상황 평가 및 관리」 <a href="https://www.law.go.kr/행정규칙/학교생활기록%20작성%20및%20관리지침" target="_blank" rel="noopener">지침 원문 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#achievement-grade-s1">성취도 기준표</a><a href="#achievement-grade-s2">원점수 계산법</a><a href="#achievement-grade-s3">계산 예시</a><a href="#achievement-grade-s4">알아둘 점</a><a href="#achievement-grade-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+
+  <div class="guide-section">
+        <section class="ds-section ds-prose" aria-labelledby="achievement-grade-s1">
+          <div class="ds-section-head"><h2 id="achievement-grade-s1">2026년 성취도 기준표 (학년·과목별)</h2></div>
+<p>성취도는 원점수(성취율)로 정해지며, 2026년에는 2022 개정 교육과정을 적용받는 고1·고2와 2015 개정 교육과정의 고3이 E·C 구간에서 서로 다른 기준을 씁니다.</p>
+      <div class="ds-table-card">
+        <table>
+          <thead><tr><th>구분</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr></thead>
+          <tbody>
+            <tr><td>중학교 (체육·예술 제외)</td><td>90% 이상</td><td>80~90% 미만</td><td>70~80% 미만</td><td>60~70% 미만</td><td>60% 미만</td></tr>
+            <tr><td>고1·고2 공통과목</td><td>90% 이상</td><td>80~90% 미만</td><td>70~80% 미만</td><td>60~70% 미만</td><td>40~60% 미만</td></tr>
+            <tr><td>고1·고2 선택과목</td><td>90% 이상</td><td>80~90% 미만</td><td>70~80% 미만</td><td>60~70% 미만</td><td>60% 미만</td></tr>
+            <tr><td>고3 (3단계 과목 제외)</td><td>90% 이상</td><td>80~90% 미만</td><td>70~80% 미만</td><td>60~70% 미만</td><td>60% 미만</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="ds-table-card">
+        <table>
+          <thead><tr><th>3단계(A·B·C) 과목</th><th>A</th><th>B</th><th>C</th></tr></thead>
+          <tbody>
+            <tr><td>중학교 체육·음악·미술</td><td>80% 이상</td><td>60~80% 미만</td><td>60% 미만</td></tr>
+            <tr><td>고1·고2 체육·예술 교과(군)</td><td>80% 이상</td><td>60~80% 미만</td><td>60% 미만</td></tr>
+            <tr><td>고1·고2 과학탐구실험</td><td>80% 이상</td><td>60~80% 미만</td><td>40~60% 미만</td></tr>
+            <tr><td>고3 과학탐구실험·체육·예술 일반선택·진로선택</td><td>80% 이상</td><td>60~80% 미만</td><td>60% 미만</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>고1·고2 공통과목과 과학탐구실험에서 성취율 40% 미만인 학생은 최소 성취수준 보장지도를 이수하면 각각 E, C를 받습니다. 2027년 3월부터는 고3도 2022 개정 기준으로 바뀝니다.</p>
+        </section>
+        <section class="ds-section ds-prose" aria-labelledby="achievement-grade-s2">
+          <div class="ds-section-head"><h2 id="achievement-grade-s2">원점수는 이렇게 계산합니다</h2></div>
+<p>지침 별표 9는 원점수 산출을 두 번의 반올림으로 정합니다.</p>
+      <ul>
+        <li><strong>1단계 환산 점수.</strong> 영역별로 받은 점수 ÷ 만점 × 반영비율을 구합니다.</li>
+        <li><strong>2단계 합계.</strong> 영역별 환산 점수 합계를 소수 셋째 자리에서 반올림해 소수 둘째 자리까지 구합니다.</li>
+        <li><strong>3단계 원점수.</strong> 그 합계를 소수 첫째 자리에서 반올림해 정수로 만듭니다. 성취도는 이 원점수로 판정합니다.</li>
+        <li><strong>과목평균.</strong> 원점수로 계산하고 소수 둘째 자리에서 반올림해 소수 첫째 자리까지 적습니다.</li>
+      </ul>
+      <p>그래서 환산 합계 89.5점은 원점수 90점으로 A가 되고, 89.49점은 원점수 89점으로 B가 됩니다.</p>
+        </section>
+        <section class="ds-section ds-prose" aria-labelledby="achievement-grade-s3">
+          <div class="ds-section-head"><h2 id="achievement-grade-s3">실제 계산 예시</h2></div>
+<h3>예시 1 - 정하린(고1, 통합과학 공통과목)</h3>
+      <p>중간고사 85점(반영 30%), 기말고사 78점(30%), 수행평가 40점 만점에 36점(40%)입니다.</p>
+      <ul>
+        <li>환산 점수: 85 × 0.3 = 25.5, 78 × 0.3 = 23.4, 36 ÷ 40 × 40 = 36</li>
+        <li>합계 84.9점 → 원점수 85점</li>
+        <li><strong>결과: 성취도 B(80% 이상 90% 미만). A까지 원점수 5점</strong></li>
+      </ul>
+      <h3>예시 2 - 문지호(고2, 선택과목 확률과 통계)</h3>
+      <p>중간고사 52점(35%), 기말고사 41점(35%), 수행평가 30점 만점에 18점(30%)입니다.</p>
+      <ul>
+        <li>환산 점수: 52 × 0.35 = 18.2, 41 × 0.35 = 14.35, 18 ÷ 30 × 30 = 18</li>
+        <li>합계 50.55점 → 원점수 51점</li>
+        <li><strong>결과: 성취도 E(선택과목은 60% 미만 E). D까지 원점수 9점</strong></li>
+      </ul>
+      <h3>예시 3 - 같은 점수를 고1 공통과목에서 받았다면</h3>
+      <p>원점수 51점이 고1·고2 공통과목이면 E 구간은 40% 이상 60% 미만이라 결과는 똑같이 E입니다. 다만 원점수가 38점이었다면 공통과목에서는 성취율 40% 미만이라 최소 성취수준 보장지도 대상이 되고, 이수해야 E가 부여됩니다. 선택과목에서는 38점도 바로 E입니다.</p>
+        </section>
+        <section class="ds-section ds-prose" aria-labelledby="achievement-grade-s4">
+          <div class="ds-section-head"><h2 id="achievement-grade-s4">계산 결과에서 알아둘 점</h2></div>
+<p>성적표의 성취도와 계산 결과가 다를 때 확인할 부분을 정리했습니다.</p>
+      <div class="guide-grid">
+        <div class="guide-box"><strong>고등학교 분할점수는 학교가 정할 수 있습니다</strong><span>지침은 기준 성취율에 따른 분할점수를 과목별로 학교가 설정할 수 있게 하고, 추정분할점수는 교육정보시스템(나이스)으로 산출하게 합니다. 학교가 공지한 하한 점수가 있으면 "학교 분할점수" 칸에 넣으세요.</span></div>
+        <div class="guide-box"><strong>성취도와 석차등급은 따로 계산됩니다</strong><span>성취도는 원점수만으로, 석차등급은 같은 과목 수강생 사이의 석차로 정해집니다. 성취도 A여도 석차등급은 2등급 이하가 나올 수 있습니다.</span></div>
+        <div class="guide-box"><strong>반영비율 합은 100%여야 합니다</strong><span>영역별 반영비율을 더해 100%가 아니면 원점수가 100점 만점으로 나오지 않습니다. 계산기는 합이 100%가 아니면 안내 문구를 보여 줍니다.</span></div>
+        <div class="guide-box"><strong>성취도만 나오는 과목도 있습니다</strong><span>체육·예술 교과(군), 과학탐구실험, 사회·과학 융합선택 과목 등은 석차등급 없이 성취도만 학교생활기록부에 기재됩니다.</span></div>
+      </div>
+        </section>
+        <section class="ds-section faq-card" aria-labelledby="achievement-grade-faq">
+          <div class="ds-section-head"><h2 id="achievement-grade-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>성취도 A~E는 몇 점부터인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>교육부훈령 「학교생활기록 작성 및 관리지침」 별표 9 기준으로 원점수(성취율) 90% 이상 A, 80% 이상 90% 미만 B, 70% 이상 80% 미만 C, 60% 이상 70% 미만 D입니다. E는 학년·과목에 따라 다릅니다. 중학교와 고3, 고1·고2 선택과목은 60% 미만이 E이고, 고1·고2 공통과목은 40% 이상 60% 미만이 E입니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>고1 공통과목에서 40점 미만이면 성취도가 어떻게 되나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>2022 개정 교육과정을 적용받는 고1·고2 공통과목은 성취율 40% 미만을 별도로 둡니다. 지침은 "성취율40% 미도달자 중 최소 성취수준 보장지도 이수 시 성취도 ‘E’ 부여"라고 정하고 있어, 보장지도를 이수해야 E가 부여됩니다. 과학탐구실험도 같은 방식으로 40% 미만은 보장지도 이수 시 C입니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>원점수는 어떻게 계산하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>정기시험(지필)과 수행평가를 반영비율대로 환산해 더한 합계를 소수 셋째 자리에서 반올림해 소수 둘째 자리까지 구하고, 그 합계를 다시 소수 첫째 자리에서 반올림해 정수로 만든 값이 원점수입니다. 예를 들어 중간 85점(30%), 기말 78점(30%), 수행 36/40점(40%)이면 25.5 + 23.4 + 36 = 84.9이고 원점수는 85점입니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>체육·음악·미술은 왜 A·B·C만 나오나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>지침이 체육·예술 교과(목)는 3단계로 평정하도록 정했기 때문입니다. 원점수 80% 이상 A, 60% 이상 80% 미만 B, 60% 미만 C입니다. 고1·고2의 과학탐구실험도 A·B·C 3단계이지만 C가 40% 이상 60% 미만이고, 고3은 진로선택 과목도 A·B·C 3단계입니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>학교 성적표의 성취도가 계산 결과와 다를 수 있나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>고등학교는 다를 수 있습니다. 지침은 "기준 성취율에 따른 분할점수를 과목별로 학교가 설정할 수 있다"고 정하고 있어, 학교가 추정분할점수를 쓰면 A의 기준이 90점이 아닐 수 있습니다. 학교가 공지한 분할점수가 있으면 계산기의 "학교 분할점수" 칸에 넣어 다시 계산하세요.</p>
+            </details>
+          </div>
+        </section>
+  </div>
+
+    </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: '교육부훈령 「학교생활기록 작성 및 관리지침」 별표 9 교과학습발달상황 평가 및 관리',
+    appliedFrom: '제555호, 2026년 3월 1일 시행 (2022 개정 기준은 고1 2025년, 고2 2026년, 고3 2027년부터 순차 적용)',
+    exceptions: [
+      '고등학교는 기준 성취율에 따른 분할점수를 과목별로 학교가 정할 수 있어 성적표와 다를 수 있습니다',
+      '고1·고2 공통과목·과학탐구실험의 성취율 40% 미만은 최소 성취수준 보장지도 이수 시 E(과학탐구실험은 C)가 부여됩니다',
+      '석차등급은 성취도와 별도로 석차 순으로 정해집니다(내신 등급 계산기)',
+    ],
+    references: [
+      { name: '국가법령정보센터 학교생활기록 작성 및 관리지침(law.go.kr)', url: 'https://www.law.go.kr/행정규칙/학교생활기록%20작성%20및%20관리지침' },
+      { name: '학생부종합지원센터 학교생활기록부 기재요령(star.moe.go.kr)', url: 'https://star.moe.go.kr' },
+    ],
+    lastReviewed: '2026.11.16',
+  };
+  </script>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 생활·도구 계산기</h2>
+    <div class="sibling-list">
+      <a href="/calc/tools/percent/" class="sibling-link">퍼센트 계산기</a>
+      <a href="/calc/tools/ratio/" class="sibling-link">비율 계산기</a>
+      <a href="/calc/tools/unit-converter/" class="sibling-link">단위 변환기</a>
+      <a href="/calc/tools/cooking-measure/" class="sibling-link">요리 계량 변환기</a>
+      <a href="/calc/tools/discount/" class="sibling-link">할인율 계산기</a>
+      <a href="/calc/tools/margin/" class="sibling-link">마진율 계산기</a>
+      <a href="/calc/tools/gpa/" class="sibling-link">학점 계산기</a>
+      <a href="/calc/tools/naesin-grade/" class="sibling-link">내신 등급 계산기</a>
+      <a href="/calc/tools/char-count/" class="sibling-link">글자수 세기</a>
+      <a href="/calc/tools/lunar-calendar/" class="sibling-link">음력 양력 변환기</a>
+    </div>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/naesin-achievement-grade-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/naesin-achievement-grade-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>성취평가제 A~E 완전정리 2026 - 절대평가인데 석차등급은 왜 낮게 나올까</span></a>
+    </div>
+  </div>
+</main>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
+  </div>
+</footer>
+
+<script src="/assets/ds/calc-kit.js?v=806eb872"></script>
+<script>
+/* 성취도 구간: 교육부훈령 「학교생활기록 작성 및 관리지침」 제555호 별표 9 (현행: 제4조 다목3)·라목3), 고3은 종전 제477호 별표 9 라목(3), data-points §92)
+   cuts = [A 하한, B 하한, C 하한, D 하한, (E 하한)] 성취율(원점수) %. floor = 이 값 미만은 "보장지도" 구간 */
+var AG_TYPES={
+  mid:[{k:'mid5',name:'일반 과목',sub:'A~E 5단계',grades:['A','B','C','D','E'],cuts:[90,80,70,60]},
+       {k:'mid3',name:'체육·음악·미술',sub:'A~C 3단계',grades:['A','B','C'],cuts:[80,60]}],
+  h12:[{k:'h12c',name:'공통과목',sub:'E 40~60%',grades:['A','B','C','D','E'],cuts:[90,80,70,60],floor:40},
+       {k:'h12s',name:'선택과목',sub:'E 60% 미만',grades:['A','B','C','D','E'],cuts:[90,80,70,60]},
+       {k:'h12x',name:'과학탐구실험',sub:'C 40~60%',grades:['A','B','C'],cuts:[80,60],floor:40},
+       {k:'h12a',name:'체육·예술',sub:'A~C 3단계',grades:['A','B','C'],cuts:[80,60]}],
+  h3:[{k:'h3n',name:'일반 과목',sub:'A~E 5단계',grades:['A','B','C','D','E'],cuts:[90,80,70,60]},
+      {k:'h3t',name:'3단계 과목',sub:'진로선택·과탐실험·체육·예술',grades:['A','B','C'],cuts:[80,60]}]
+};
+var AG_LEVEL_NAME={mid:'중학교',h12:'고1·고2(2022 개정)',h3:'고3(2015 개정)'};
+var agLevel='h12',agType=AG_TYPES.h12[0];
+function agR(v,d){var p=Math.pow(10,d);return Math.round(v*p+1e-7)/p}
+/* 영역 [{s,m,r}] → {total, raw}. 합계는 소수 셋째 자리 반올림(둘째 자리까지), 원점수는 합계를 소수 첫째 자리에서 반올림 */
+function agRaw(parts){
+  var sum=0;parts.forEach(function(p){sum+=p.s/p.m*p.r});
+  var total=agR(sum,2);
+  return {total:total,raw:agR(total,0)};
+}
+/* 원점수 + 과목 유형 (+ 학교 분할점수) → {grade, low, next, nextGap} */
+function agJudge(raw,type,custom){
+  var cuts=custom&&custom.length===type.cuts.length?custom:type.cuts;
+  for(var i=0;i<cuts.length;i++){if(raw>=cuts[i])return {grade:type.grades[i],idx:i,cuts:cuts,nextGap:i===0?0:cuts[i-1]-raw,nextGrade:i===0?null:type.grades[i-1]}}
+  var last=type.grades[type.grades.length-1];
+  if(type.floor!=null&&raw<type.floor)return {grade:last,below:true,idx:type.grades.length-1,cuts:cuts,nextGap:type.floor-raw,nextGrade:last+' 구간('+type.floor+'점)'};
+  return {grade:last,idx:type.grades.length-1,cuts:cuts,nextGap:cuts[cuts.length-1]-raw,nextGrade:type.grades[type.grades.length-2]};
+}
+function agNum(id){var el=document.getElementById(id);if(!el)return NaN;var t=String(el.value).replace(/,/g,'').trim();return t===''?NaN:parseFloat(t)}
+function renderTypes(){
+  var box=document.getElementById('ag-type-group');
+  box.innerHTML=AG_TYPES[agLevel].map(function(t,i){return '<button type="button" class="seg-btn'+(t===agType?' active':'')+'" data-k="'+t.k+'" onclick="setType('+i+',this)"><b>'+t.name+'</b>'+t.sub+'</button>'}).join('');
+  var g=document.getElementById('ag-cut-grid');
+  g.innerHTML=agType.grades.slice(0,-1).map(function(gr,i){return '<div class="field" style="margin-bottom:0"><div class="field-label">'+gr+' 하한</div><div class="input-wrap"><input type="number" id="ag-c'+i+'" placeholder="'+agType.cuts[i]+'" min="0" max="100" step="0.01" inputmode="decimal" oninput="calcAch()" /><span class="unit">점</span></div></div>'}).join('');
+}
+function setLevel(l,btn){agLevel=l;agType=AG_TYPES[l][0];btn.parentElement.querySelectorAll('.seg-btn').forEach(function(b){b.classList.remove('active')});btn.classList.add('active');renderTypes();calcAch()}
+function setType(i,btn){agType=AG_TYPES[agLevel][i];renderTypes();calcAch()}
+function agParts(){
+  var out=[];
+  for(var i=1;i<=4;i++){var s=agNum('ag-s'+i),m=agNum('ag-m'+i),r=agNum('ag-r'+i);if(isFinite(s)&&isFinite(m)&&isFinite(r)&&m>0)out.push({s:s,m:m,r:r,i:i})}
+  return out;
+}
+function calcAch(){
+  var res=document.getElementById('ag-result'),warn=document.getElementById('ag-ratio-warn');
+  warn.style.display='none';warn.textContent='';
+  var direct=agNum('ag-raw'),total,raw;
+  if(isFinite(direct)){raw=agR(direct,0);total=null}
+  else{
+    var parts=agParts();
+    if(!parts.length){res.classList.remove('show');return}
+    var rs=agR(parts.reduce(function(a,p){return a+p.r},0),2);
+    var over=parts.filter(function(p){return p.s>p.m});
+    if(over.length){warn.textContent='받은 점수가 만점보다 큰 칸이 있습니다.';warn.style.display='block'}
+    else if(rs!==100){warn.textContent='반영비율 합계가 '+rs+'%입니다. 100%가 되도록 입력하면 원점수가 100점 만점으로 계산됩니다.';warn.style.display='block'}
+    var o=agRaw(parts);total=o.total;raw=o.raw;
+  }
+  if(raw<0||raw>100){res.classList.remove('show');warn.textContent='원점수는 0~100점 사이여야 합니다.';warn.style.display='block';return}
+  var custom=[];for(var i=0;i<agType.cuts.length;i++){var c=agNum('ag-c'+i);if(isFinite(c))custom.push(c)}
+  var useCustom=custom.length===agType.cuts.length&&custom.every(function(v,i){return i===0||v<custom[i-1]});
+  var j=agJudge(raw,agType,useCustom?custom:null);
+  res.classList.add('show');
+  document.getElementById('ag-grade').textContent=j.grade;
+  document.getElementById('ag-sub').textContent=j.below?'성취율 '+(agType.floor)+'% 미만: 최소 성취수준 보장지도 이수 시 '+j.grade+' 부여':'원점수 '+raw+'점 · '+agType.name;
+  document.getElementById('ag-total').textContent=total==null?'직접 입력':total.toFixed(2)+'점';
+  document.getElementById('ag-rawv').textContent=raw+'점';
+  document.getElementById('ag-basis').textContent=AG_LEVEL_NAME[agLevel]+' '+agType.name+(useCustom?' · 학교 분할점수':'');
+  document.getElementById('ag-next-label').textContent=j.nextGrade?j.nextGrade+'까지':'최고 성취도';
+  document.getElementById('ag-next').textContent=j.nextGrade?'원점수 '+agR(j.nextGap,2)+'점':'A';
+  var cuts=j.cuts,g=agType.grades;
+  document.getElementById('ag-bands').innerHTML=g.map(function(gr,i){
+    var band=i===0?cuts[0]+'점 이상':i<cuts.length?cuts[i]+'점 이상 '+cuts[i-1]+'점 미만':(agType.floor!=null?agType.floor+'점 이상 ':'')+cuts[cuts.length-1]+'점 미만';
+    return '<div class="result-row"><span class="result-label">'+gr+(gr===j.grade?' (내 성취도)':'')+'</span><span class="result-value">'+band+'</span></div>';
+  }).join('');
+}
+function submitAch(){
+  if(!isFinite(agNum('ag-raw'))&&!agParts().length&&window.DSCalc&&DSCalc.need){DSCalc.need(document.getElementById('ag-s1'),'점수·만점·반영비율을 한 줄 이상 입력하거나 원점수를 넣어 주세요.');return}
+  calcAch();
+}
+renderTypes();
+</script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
+<script src="/assets/calc-registry.js?v=ec2fa08f"></script>
+<script src="/assets/ds/site-shell.js?v=ffeb3ffa"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: '교육부훈령 학교생활기록 작성 및 관리지침 별표 9',
+  basisDate: '2026학년도 기준',
+  referenceOrg: '교육부',
+  lastReviewed: '2026.11.16',
+  category: 'tools'
+};
+</script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "ag-result", "required": [], "waitText": "점수를 입력하면 계산됩니다", "nextBox": "#achievement-grade-next", "next": []});
+  DSCalc.placeTrust('ds-trust-col');
+</script>
+<script src="/assets/ds/prefill.js?v=6cc70a47" defer></script>
+</body>
+</html>

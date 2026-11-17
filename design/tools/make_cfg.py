@@ -17,6 +17,7 @@ for slug, spec in plan['pages'].items():
         nm, ds = (desc if tcat == cat else hub_desc(tcat)).get(tgt, (tgt, '')); names[tgt] = nm
         item = {'key': tgt, 'path': f'/calc/{tcat}/{tgt}/', 'title': nm if nm.endswith(('계산기', '변환기', '세기')) else nm + ('기' if nm.endswith('계산') else ' 계산기'), 'sub': ds}
         if n.get('carry'): item['params'] = n['carry']
+        if n.get('sub'): item['sub'] = n['sub']   # 카드별 짧은 설명(2026-11-16, 11/12 공개본 직접 수정분을 계획 파일로 옮김)
         nx.append(item)
     c = cfg.get(f'{cat}/{slug}', {})
     c['next'] = nx

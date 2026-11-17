@@ -66,7 +66,7 @@
       key:'year-end-tax',
       quick:['환급액 = 기납부세액 - 결정세액이고, 지방소득세 10%가 따로 붙습니다.','신용카드는 소득공제라 100만원당 환급이 작고, 연금저축·IRP는 세액공제라 15%(총급여 5,500만원 초과 12%)가 돌아옵니다.','세액공제 합계가 산출세액을 넘으면 초과분은 사라집니다(소득세법 제61조).'],
       related:[['/calc/salary/take-home-pay/','연봉 실수령액','💵'],['/calc/tax/medical-expense/','의료비 세액공제','🏥'],['/calc/salary/severance/','퇴직금','📦']],
-      guides:[['/blog/posts/year-end-tax-refund-guide.html','연말정산 환급액 계산법 2026 - 카드 100만원은 약 2.5만원, 연금저축 100만원은 16.5만원'],['/blog/posts/year-end-tax-2026-changes.html','연말정산 2026년 귀속 달라진 점 - 자녀세액공제 9세·카드 자녀 한도·월세 배우자 공제']]
+      guides:[['/blog/posts/year-end-withholding-receipt-guide.html','원천징수영수증 보는 법 2026 - 결정세액·기납부세액·차감징수세액 읽는 순서와 발급 기한'],['/blog/posts/year-end-tax-refund-guide.html','연말정산 환급액 계산법 2026 - 카드 100만원은 약 2.5만원, 연금저축 100만원은 16.5만원'],['/blog/posts/year-end-tax-2026-changes.html','연말정산 2026년 귀속 달라진 점 - 자녀세액공제 9세·카드 자녀 한도·월세 배우자 공제']]
     }
   };
   let cfg=pages[path];

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>비율 계산기 - 비율 간단히·금액 비율로 나누기·비례식·화면 비율 | 제이퍼</title>
+  <meta name="description" content="12:18 같은 비율을 2:3으로 간단히 하고, 전체 금액을 3:2처럼 비율대로 나누며, 비례식 A:B = C:x의 x와 가로·세로 해상도의 화면 비율(16:9 등)을 계산합니다." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/tools/ratio/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="비율 계산기" />
+  <meta property="og:description" content="비율 간단히, 금액을 비율대로 나누기, 비례식 x 구하기, 화면 비율을 한 번에 계산합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/tools/ratio/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=9112fd1c" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "비율 계산기", "url": "https://www.jptcalc.kr/calc/tools/ratio/", "description": "비율 간단히, 금액을 비율대로 나누기, 비례식 x 구하기, 화면 비율을 한 번에 계산합니다.", "applicationCategory": "UtilityApplication", "operatingSystem": "All", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "KRW"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.jptcalc.kr/"}, {"@type": "ListItem", "position": 2, "name": "생활·도구 계산기", "item": "https://www.jptcalc.kr/calc/tools/"}, {"@type": "ListItem", "position": 3, "name": "비율 계산기", "item": "https://www.jptcalc.kr/calc/tools/ratio/"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "비율은 어떻게 간단히 하나요?", "acceptedAnswer": {"@type": "Answer", "text": "모든 항을 최대공약수로 나눕니다. 12:18은 6으로 나눠 2:3입니다. 소수가 있으면 10, 100 등을 곱해 정수로 만든 뒤 약분합니다. 1.5:2.5는 3:5입니다."}}, {"@type": "Question", "name": "금액을 비율대로 나누는 공식은 무엇인가요?", "acceptedAnswer": {"@type": "Answer", "text": "내 몫 = 전체 금액 × 내 비율 ÷ 비율의 합입니다. 100만원을 3:2로 나누면 100만 × 3 ÷ 5 = 60만원과 40만원입니다. 원 단위가 남으면 계산기가 합계를 맞춰 1원씩 나눠 줍니다."}}, {"@type": "Question", "name": "비례식에서 x는 어떻게 구하나요?", "acceptedAnswer": {"@type": "Answer", "text": "A:B = C:x에서 x = B × C ÷ A입니다. 3:5 = 12:x라면 x = 5 × 12 ÷ 3 = 20입니다."}}, {"@type": "Question", "name": "1920×1080은 몇 대 몇인가요?", "acceptedAnswer": {"@type": "Answer", "text": "최대공약수 120으로 나누면 16:9입니다. 1280×720, 2560×1440, 3840×2160도 모두 16:9입니다. 세로 영상인 1080×1920은 9:16입니다."}}, {"@type": "Question", "name": "비율과 퍼센트는 어떻게 다른가요?", "acceptedAnswer": {"@type": "Answer", "text": "비율은 두 값 이상의 크기 관계(2:3)를, 퍼센트는 전체를 100으로 봤을 때의 크기(40%와 60%)를 말합니다. 이 계산기는 비율 간단히에서 각 항의 비중을 %로 함께 보여주고, \"A는 B의 몇 %\" 같은 계산은 퍼센트 계산기에서 할 수 있습니다."}}]}</script>
+  <style>
+/* 비율 계산기 고유 부품(토큰만 사용) */
+.rt-modes { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.rt-modes .seg-btn { flex: 1 1 calc(50% - var(--space-2)); border: 1px solid var(--line); border-radius: var(--radius-md); min-height: var(--h-seg); }
+.rt-modes .seg-btn:first-child { border-left: 1px solid var(--line); }
+.rt-modes .seg-btn.active { border-color: var(--blue); background: var(--primary-tint); color: var(--text); }
+.rt-hint { margin-top: var(--space-2); font-size: var(--fs-meta); color: var(--text-sub); }
+.rt-warn { margin-top: var(--space-2); font-size: var(--fs-meta); color: var(--warn-text); }
+.rt-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2); }
+.rt-grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-2); }
+.rt-grid .field, .rt-grid3 .field { margin-bottom: 0; }
+.rt-grid, .rt-grid3 { margin-bottom: var(--space-3); }
+.rt-gap { margin-top: var(--space-3); }
+#rt-in-total[style*="none"] + #rt-in-abc .rt-gap { margin-top: 0; }
+  </style>
+</head>
+<body data-cat="tools" style="--cat: var(--c-tools)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
+</header>
+
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/tools/">생활·도구 계산기</a> &rsaquo; 비율 계산기</div>
+      <div class="page-badge">약분·배분·비례식·화면비</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-wrench"></use></svg></span>
+        <h1 class="page-title">비율 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">네 가지 비율 계산</span>
+          <span class="ds-trust-chip">2026.11.17 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">비율 간단히·금액 나누기·비례식·화면 비율을 계산합니다</p>
+    </div>
+  </div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+      <div class="field-label ds-group-label">무엇을 계산할까요</div>
+      <div class="rt-modes" id="rt-mode" role="group" aria-label="계산 방식"><button type="button" class="seg-btn active" data-mode="simp" onclick="setRtMode('simp',this)">비율 간단히</button><button type="button" class="seg-btn" data-mode="split" onclick="setRtMode('split',this)">금액 비율로 나누기</button><button type="button" class="seg-btn" data-mode="prop" onclick="setRtMode('prop',this)">비례식 x 구하기</button><button type="button" class="seg-btn" data-mode="screen" onclick="setRtMode('screen',this)">화면 비율</button></div>
+    </div>
+    <div class="card">
+      <div id="rt-in-total" style="display:none"><div class="field"><div class="field-label">나눌 전체 금액</div><div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="rt-total" placeholder="예) 1000000" oninput="calcRt()" aria-label="나눌 전체 금액" /><span class="unit">원</span></div></div></div>
+      <div id="rt-in-abc"><div class="field-label rt-gap">비율 <span class="label-hint">세 번째 칸은 선택</span></div><div class="rt-grid3"><div class="field"><div class="field-label">A</div><div class="input-wrap"><input type="number" step="any" inputmode="decimal" id="rt-a" placeholder="예) 12" oninput="calcRt()" aria-label="A" /></div></div><div class="field"><div class="field-label">B</div><div class="input-wrap"><input type="number" step="any" inputmode="decimal" id="rt-b" placeholder="예) 18" oninput="calcRt()" aria-label="B" /></div></div><div class="field"><div class="field-label">C</div><div class="input-wrap"><input type="number" step="any" inputmode="decimal" id="rt-c" placeholder="선택" oninput="calcRt()" aria-label="C" /></div></div></div></div>
+      <div id="rt-in-prop" style="display:none"><div class="field-label">A : B = C : x</div><div class="rt-grid3"><div class="field"><div class="field-label">A</div><div class="input-wrap"><input type="number" step="any" inputmode="decimal" id="rt-p1" placeholder="예) 3" oninput="calcRt()" aria-label="A" /></div></div><div class="field"><div class="field-label">B</div><div class="input-wrap"><input type="number" step="any" inputmode="decimal" id="rt-p2" placeholder="예) 5" oninput="calcRt()" aria-label="B" /></div></div><div class="field"><div class="field-label">C</div><div class="input-wrap"><input type="number" step="any" inputmode="decimal" id="rt-p3" placeholder="예) 12" oninput="calcRt()" aria-label="C" /></div></div></div></div>
+      <div id="rt-in-screen" style="display:none"><div class="rt-grid"><div class="field"><div class="field-label">가로</div><div class="input-wrap"><input type="number" step="1" inputmode="numeric" id="rt-w" placeholder="예) 1920" oninput="calcRt()" aria-label="가로" /><span class="unit">px</span></div></div><div class="field"><div class="field-label">세로</div><div class="input-wrap"><input type="number" step="1" inputmode="numeric" id="rt-h" placeholder="예) 1080" oninput="calcRt()" aria-label="세로" /><span class="unit">px</span></div></div></div><div class="field"><div class="field-label">바꿀 가로 길이 <span class="label-hint">같은 비율의 세로 구하기</span></div><div class="input-wrap"><input type="number" step="any" inputmode="decimal" id="rt-nw" placeholder="선택 · 예) 1280" oninput="calcRt()" aria-label="바꿀 가로 길이" /></div></div></div>
+      <div id="rt-warn" class="rt-warn" style="display:none"></div>
+    </div>
+
+        <button type="button" class="ds-btn-calc" data-calc-submit="submitRt" data-result="rt-result" data-required="">계산하기</button>
+      </div>
+    </section>
+
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="rt-result"><div class="result-highlight"><div class="rh-label" id="rt-label">가장 간단한 비율</div><div class="rh-value" id="rt-main">-</div><div class="rh-sub" id="rt-sub">-</div></div>
+        <div id="rt-rows"></div>
+        <p class="result-note" id="rt-note">※ 소수 비율은 소수 넷째 자리까지 정수로 바꿔 약분합니다. 금액 나누기는 원 단위로 나누고 남는 원은 소수점이 큰 쪽부터 1원씩 더해 합계를 맞춥니다.</p>
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('rt-result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/tools/percent/">퍼센트 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">가장 간단한 비율</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">값을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="ratio-next">
+        <a class="ds-next-card" href="/calc/tools/percent/" data-next="percent"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-wrench"></use></svg></span><span class="ds-next-body"><b>퍼센트 계산기</b><span>전체의 몇 %, 한 값이 다른 값의 몇 %, 증감률, X% 늘리거나 줄인 값까지 퍼센트 계산을 한 화면에서 처리합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/tools/unit-converter/" data-next="unit-converter"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-wrench"></use></svg></span><span class="ds-next-body"><b>단위 변환기</b><span>길이·무게·넓이·부피·온도를 한 번에 변환합니다. 축척으로 구한 길이를 다른 단위로 바꿀 때 씁니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
+  </div>
+
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">비율 간단히 = 각 항을 최대공약수로 나눔, 비례식 A:B = C:x에서 x = B × C ÷ A (외항의 곱 = 내항의 곱)</div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#ratio-s1">비율 간단히</a><a href="#ratio-s2">금액 나누기</a><a href="#ratio-s3">비례식</a><a href="#ratio-s4">화면 비율</a><a href="#ratio-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+
+  <div class="guide-section">
+        <section class="ds-section ds-prose" aria-labelledby="ratio-s1">
+          <div class="ds-section-head"><h2 id="ratio-s1">비율을 가장 간단하게 만드는 법</h2></div>
+<p>비율은 각 항을 같은 수로 나눠도 뜻이 같습니다. 그래서 모든 항을 최대공약수로 나누면 가장 간단한 정수비가 됩니다. 12:18은 최대공약수 6으로 나눠 2:3이고, 24:36:60은 12로 나눠 2:3:5입니다.</p>
+      <ul>
+        <li>소수가 섞이면 먼저 10의 거듭제곱을 곱해 정수로 만듭니다. 1.5:2.5는 10을 곱한 15:25를 5로 나눠 3:5입니다.</li>
+        <li>각 항의 비중(%)은 그 항 ÷ 전체 합입니다. 2:3이면 40%와 60%입니다.</li>
+        <li>"A는 B의 몇 %"처럼 한 값을 다른 값과 비교하는 계산은 퍼센트 계산기에서 바로 할 수 있습니다.</li>
+      </ul>
+        </section>
+        <section class="ds-section ds-prose" aria-labelledby="ratio-s2">
+          <div class="ds-section-head"><h2 id="ratio-s2">전체 금액을 비율대로 나누기</h2></div>
+<p>동업 수익, 공동 구매 대금, 모임 회비처럼 금액을 정해진 비율로 나눌 때는 전체 금액 × (내 비율 ÷ 비율의 합)입니다. 100만원을 3:2로 나누면 60만원과 40만원입니다.</p>
+      <p>나누어떨어지지 않으면 원 단위가 남습니다. 100원을 1:1:1로 나누면 33.33원씩이라 각각 33원을 주면 1원이 남습니다. 계산기는 각자 몫을 원 단위로 내린 뒤, 남은 원을 소수점 아래가 큰 사람부터 1원씩 더해 합계가 정확히 전체 금액과 같게 맞춥니다.</p>
+        </section>
+        <section class="ds-section ds-prose" aria-labelledby="ratio-s3">
+          <div class="ds-section-head"><h2 id="ratio-s3">비례식 A:B = C:x 에서 x 구하기</h2></div>
+<p>비례식에서는 바깥쪽 두 수의 곱과 안쪽 두 수의 곱이 같습니다. A:B = C:x이면 A × x = B × C이므로 x = B × C ÷ A입니다.</p>
+      <ul>
+        <li>레시피 늘리기: 2인분에 간장 3큰술이면 5인분은 2:3 = 5:x, x = 7.5큰술입니다.</li>
+        <li>지도 축척: 1:50,000 지도에서 4cm는 1:50,000 = 4:x, x = 200,000cm = 2km입니다.</li>
+        <li>속도·시간: 3시간에 180km를 갔다면 5시간에는 3:180 = 5:x, x = 300km입니다.</li>
+      </ul>
+        </section>
+        <section class="ds-section ds-prose" aria-labelledby="ratio-s4">
+          <div class="ds-section-head"><h2 id="ratio-s4">해상도로 보는 화면 비율</h2></div>
+<p class="ds-table-lead">가로·세로 픽셀을 최대공약수로 나눈 값입니다.</p>
+<div class="ds-table-card"><table><thead><tr><th>이름</th><th>해상도</th><th>비율</th><th>소수 비율</th></tr></thead><tbody><tr><td>HD</td><td>1280 × 720</td><td>16:9</td><td>1.78 : 1</td></tr><tr><td>FHD</td><td>1920 × 1080</td><td>16:9</td><td>1.78 : 1</td></tr><tr><td>QHD</td><td>2560 × 1440</td><td>16:9</td><td>1.78 : 1</td></tr><tr><td>4K UHD</td><td>3840 × 2160</td><td>16:9</td><td>1.78 : 1</td></tr><tr><td>XGA 모니터</td><td>1024 × 768</td><td>4:3</td><td>1.33 : 1</td></tr><tr><td>울트라와이드</td><td>3440 × 1440</td><td>43:18</td><td>2.39 : 1</td></tr><tr><td>세로 쇼츠·릴스</td><td>1080 × 1920</td><td>9:16</td><td>0.56 : 1</td></tr></tbody></table></div>
+      <p>2560×1080이나 3440×1440처럼 약분한 값이 64:27, 43:18로 나오는 해상도는 흔히 21:9 울트라와이드라고 부릅니다. 영상이나 이미지 크기를 바꿀 때는 계산기의 "바꿀 가로 길이"에 원하는 가로를 넣으면 비율을 지키는 세로 길이를 알려줍니다.</p>
+        </section>
+        <section class="ds-section faq-card" aria-labelledby="ratio-faq">
+          <div class="ds-section-head"><h2 id="ratio-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>비율은 어떻게 간단히 하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>모든 항을 최대공약수로 나눕니다. 12:18은 6으로 나눠 2:3입니다. 소수가 있으면 10, 100 등을 곱해 정수로 만든 뒤 약분합니다. 1.5:2.5는 3:5입니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>금액을 비율대로 나누는 공식은 무엇인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>내 몫 = 전체 금액 × 내 비율 ÷ 비율의 합입니다. 100만원을 3:2로 나누면 100만 × 3 ÷ 5 = 60만원과 40만원입니다. 원 단위가 남으면 계산기가 합계를 맞춰 1원씩 나눠 줍니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>비례식에서 x는 어떻게 구하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>A:B = C:x에서 x = B × C ÷ A입니다. 3:5 = 12:x라면 x = 5 × 12 ÷ 3 = 20입니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>1920×1080은 몇 대 몇인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>최대공약수 120으로 나누면 16:9입니다. 1280×720, 2560×1440, 3840×2160도 모두 16:9입니다. 세로 영상인 1080×1920은 9:16입니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>비율과 퍼센트는 어떻게 다른가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>비율은 두 값 이상의 크기 관계(2:3)를, 퍼센트는 전체를 100으로 봤을 때의 크기(40%와 60%)를 말합니다. 이 계산기는 비율 간단히에서 각 항의 비중을 %로 함께 보여주고, "A는 B의 몇 %" 같은 계산은 퍼센트 계산기에서 할 수 있습니다.</p>
+            </details>
+      <div class="update-note">최종 검토: 2026.11.17 · 계산 결과는 참고용입니다.</div>
+          </div>
+        </section>
+  </div>
+
+    </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: "최대공약수 약분, 비례식(외항의 곱 = 내항의 곱), 비율 배분 계산식",
+    appliedFrom: "수학 계산식 (기준일 영향 없음)",
+    exceptions: [
+      "소수 비율은 소수 넷째 자리까지만 반영합니다",
+      "금액 나누기는 원 단위로 나눠 남는 원을 배분합니다"
+    ],
+    references: [],
+    lastReviewed: '2026.11.17',
+  };
+  </script>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 생활·도구 계산기</h2>
+    <div class="sibling-list">
+      <a href="/calc/tools/percent/" class="sibling-link">퍼센트 계산기</a>
+      <a href="/calc/tools/unit-converter/" class="sibling-link">단위 변환기</a>
+      <a href="/calc/tools/cooking-measure/" class="sibling-link">요리 계량 변환기</a>
+      <a href="/calc/tools/discount/" class="sibling-link">할인율 계산기</a>
+      <a href="/calc/tools/margin/" class="sibling-link">마진율 계산기</a>
+      <a href="/calc/tools/gpa/" class="sibling-link">학점 계산기</a>
+      <a href="/calc/tools/naesin-grade/" class="sibling-link">내신 등급 계산기</a>
+      <a href="/calc/tools/achievement-grade/" class="sibling-link">성취도 계산기</a>
+      <a href="/calc/tools/char-count/" class="sibling-link">글자수 세기</a>
+      <a href="/calc/tools/lunar-calendar/" class="sibling-link">음력 양력 변환기</a>
+    </div>
+  </div>
+</main>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
+  </div>
+</footer>
+
+<script src="/assets/ds/calc-kit.js?v=806eb872"></script>
+<script>
+/* 비율 계산기: 약분(최대공약수), 금액 배분(최대 잔여 방식으로 원 단위 합계 맞춤), 비례식 x = B×C/A, 화면 비율(가로·세로 약분)
+   퍼센트 계산기와 겹치지 않게 "A는 B의 몇 %"는 넣지 않음 (data-points §94) */
+var rtMode='simp';
+var RT_NAMED={'16:9':'16:9 (HD·FHD·4K)','4:3':'4:3 (구형 모니터·태블릿)','3:2':'3:2 (사진·노트북)','1:1':'1:1 (정사각형)','9:16':'9:16 (세로 영상)','21:9':'21:9 (울트라와이드)','43:18':'약 21:9 (울트라와이드 3440×1440)','64:27':'약 21:9 (2560×1080)','16:10':'16:10 (노트북·모니터)','5:4':'5:4','4:5':'4:5 (인스타 세로)'};
+function rtNum(id){var v=parseFloat(String(document.getElementById(id).value).replace(/,/g,''));return isFinite(v)?v:NaN}
+function rtGcd(a,b){a=Math.abs(a);b=Math.abs(b);while(b){var t=b;b=a%b;a=t}return a}
+function rtDec(x){var s=String(x);if(s.indexOf('e')>=0)return 4;var i=s.indexOf('.');return i<0?0:Math.min(s.length-i-1,4)}
+function rtInts(v){var d=Math.max.apply(null,v.map(rtDec)),m=Math.pow(10,d);return v.map(function(x){return Math.round(x*m)})}
+function rtSimplify(v){var n=rtInts(v),g=n.reduce(function(a,b){return rtGcd(a,b)});return g?n.map(function(x){return x/g}):n}
+function rtF(n,d){return n.toLocaleString('ko-KR',{maximumFractionDigits:d==null?4:d})}
+function rtRow(l,v){return '<div class="result-row"><span class="result-label">'+l+'</span><span class="result-value">'+v+'</span></div>'}
+function setRtMode(m,btn){rtMode=m;document.querySelectorAll('#rt-mode .seg-btn').forEach(function(b){b.classList.toggle('active',b===btn)});
+  document.getElementById('rt-in-total').style.display=m==='split'?'':'none';document.getElementById('rt-in-abc').style.display=(m==='simp'||m==='split')?'':'none';
+  document.getElementById('rt-in-prop').style.display=m==='prop'?'':'none';document.getElementById('rt-in-screen').style.display=m==='screen'?'':'none';
+  var rtL={simp:'가장 간단한 비율',split:'비율대로 나눈 금액',prop:'x 값',screen:'화면 비율'}[m];document.getElementById('rt-label').textContent=rtL;var rtG=document.querySelector('.ds-result-empty .ds-result-label');if(rtG)rtG.textContent=rtL;
+  document.getElementById('rt-result').classList.remove('show');calcRt()}
+function rtVals(){var v=[rtNum('rt-a'),rtNum('rt-b')],c=rtNum('rt-c');if(isFinite(c))v.push(c);return v}
+function calcRt(){
+  var res=document.getElementById('rt-result'),warn=document.getElementById('rt-warn');warn.style.display='none';
+  var main,sub,rows=[],L='ABC';
+  if(rtMode==='simp'||rtMode==='split'){
+    var v=rtVals();if(v.length<2||v.some(function(x){return !isFinite(x)})){res.classList.remove('show');return}
+    if(v.some(function(x){return x<=0})){warn.textContent='비율은 0보다 큰 수로 입력하세요.';warn.style.display='block';res.classList.remove('show');return}
+    var s=rtSimplify(v),sum=v.reduce(function(a,b){return a+b},0);
+    if(rtMode==='simp'){
+      main=s.join(' : ');sub=v.map(function(x){return rtF(x)}).join(' : ')+' → 최대공약수로 나눈 값';
+      v.forEach(function(x,i){rows.push(rtRow(L[i]+'의 비중',rtF(x/sum*100,2)+'%'))});
+      rows.push(rtRow('소수 비율',v.map(function(x){return rtF(x/v[v.length-1],3)}).join(' : ')));
+    } else {
+      var T=rtNum('rt-total');if(!(T>0)){res.classList.remove('show');return}
+      T=Math.round(T);var raw=v.map(function(x){return T*x/sum}),fl=raw.map(Math.floor),left=T-fl.reduce(function(a,b){return a+b},0);
+      var ord=raw.map(function(x,i){return [x-Math.floor(x),i]}).sort(function(a,b){return b[0]-a[0]});
+      for(var j=0;j<left;j++)fl[ord[j][1]]++;
+      main=fl.map(function(x){return rtF(x)+'원'}).join(' / ');sub='전체 '+rtF(T)+'원을 '+s.join(':')+'로 나눔';
+      fl.forEach(function(x,i){rows.push(rtRow(L[i]+' ('+rtF(v[i])+')',rtF(x)+'원 · '+rtF(v[i]/sum*100,2)+'%'))});
+      rows.push(rtRow('합계 확인',rtF(fl.reduce(function(a,b){return a+b},0))+'원'));
+    }
+  } else if(rtMode==='prop'){
+    var a=rtNum('rt-p1'),b=rtNum('rt-p2'),c=rtNum('rt-p3');
+    if(![a,b,c].every(isFinite)){res.classList.remove('show');return}
+    if(a===0){warn.textContent='A가 0이면 x를 구할 수 없습니다.';warn.style.display='block';res.classList.remove('show');return}
+    var x=b*c/a;main='x = '+rtF(x);sub=rtF(a)+' : '+rtF(b)+' = '+rtF(c)+' : '+rtF(x);
+    rows.push(rtRow('계산',rtF(b)+' × '+rtF(c)+' ÷ '+rtF(a)));
+    rows.push(rtRow('배율 (C ÷ A)',rtF(c/a)+'배'));
+  } else {
+    var w=rtNum('rt-w'),h=rtNum('rt-h');
+    if(!(w>0)||!(h>0)){res.classList.remove('show');return}
+    var r=rtSimplify([w,h]),key=r.join(':');
+    main=RT_NAMED[key]||key;sub=rtF(w)+' × '+rtF(h)+' · 가로가 세로의 '+rtF(w/h,3)+'배';
+    rows.push(rtRow('약분한 비율',r.join(' : ')));
+    rows.push(rtRow('소수 비율',rtF(w/h,2)+' : 1'));
+    var nw=rtNum('rt-nw');if(nw>0)rows.push(rtRow('가로 '+rtF(nw)+'일 때 세로',rtF(nw*h/w,2)));
+  }
+  document.getElementById('rt-main').textContent=main;document.getElementById('rt-sub').textContent=sub;
+  document.getElementById('rt-rows').innerHTML=rows.join('');res.classList.add('show');
+}
+function submitRt(){
+  var ids={simp:['rt-a','rt-b'],split:['rt-total','rt-a','rt-b'],prop:['rt-p1','rt-p2','rt-p3'],screen:['rt-w','rt-h']}[rtMode];
+  for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(!el.value&&window.DSCalc&&DSCalc.need){DSCalc.need(el,'값을 입력해 주세요.');return}}
+  calcRt();
+}
+</script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
+<script src="/assets/calc-registry.js?v=ec2fa08f"></script>
+<script src="/assets/ds/site-shell.js?v=ffeb3ffa"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: "비율·비례식 계산식",
+  basisDate: '2026년 기준',
+  referenceOrg: "제이퍼 계산기 편집팀",
+  lastReviewed: '2026.11.17',
+  category: 'tools'
+};
+</script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "rt-result", "required": [], "waitText": "값을 입력하면 계산됩니다", "nextBox": "#ratio-next", "next": []});
+  DSCalc.placeTrust('ds-trust-col');
+</script>
+<script src="/assets/ds/prefill.js?v=6cc70a47" defer></script>
+</body>
+</html>

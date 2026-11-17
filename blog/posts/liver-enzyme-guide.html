@@ -98,7 +98,7 @@
   </script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.jptcalc.kr/"}, {"@type": "ListItem", "position": 2, "name": "블로그", "item": "https://www.jptcalc.kr/blog/"}, {"@type": "ListItem", "position": 3, "name": "건강", "item": "https://www.jptcalc.kr/blog/?cat=건강"}, {"@type": "ListItem", "position": 4, "name": "간수치 정상범위 2026 - AST·ALT·감마지티피 건강검진 판정기준과 수치가 높은 원인", "item": "https://www.jptcalc.kr/blog/posts/liver-enzyme-guide.html"}]}</script>
   <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
-  <link rel="stylesheet" href="/assets/ds/base.css?v=64bd9b22" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=9112fd1c" />
 </head>
 <body data-cat="health" style="--cat: var(--c-health)">
 <header id="ds-site-header" class="ds-header">
@@ -116,7 +116,7 @@
     <picture><source media="(min-width: 1024px)" srcset="/assets/img/blog-thumb/liver-enzyme-guide-16x9.webp" width="1280" height="720"><img class="ds-post-thumb is-cover" src="/assets/img/blog-thumb/liver-enzyme-guide-3x1.webp" alt="AST 40 이하 간수치 AST 정상 기준" width="1440" height="480" decoding="async" fetchpriority="high"></picture>
     <div class="ds-post-body ds-prose">
 <p>AST 229. 건강검진 결과지에 이 숫자가 찍힌 36세 남성은 간기능 이상 통보를 받고 소화기내과를 찾았습니다. 초음파에서 경도의 지방간도 보였지만, 수치를 끌어올린 주범은 검진 1주쯤 전에 시작한 근력 운동이었고, 약 3주 뒤 재검에서 AST는 19로 내려와 있었습니다. 대한간학회가 임상교육증례로 공개한 실제 사례입니다. 간수치는 간 하나만 가리키는 숫자가 아닙니다. 이 글에서는 결과지의 AST·ALT·감마지티피 세 숫자를 어떻게 읽어야 하는지, 어디까지가 정상이고 어디부터 병원에 가야 하는지 풀어 봅니다.</p>
-    <a class="ds-post-cta" href="/calc/health/bmi/" style="--cat: var(--c-health)"><span class="ds-icon-tile"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-heart-pulse"></use></svg></span><span class="ds-post-cta-body"><b>BMI 계산기</b><span>키와 체중만 입력하면 대한비만학회 기준(정상 18.5~22.9, 비만 25 이상)으로 자동 판정합니다. WHO 기준과 한국 기준 차이도 함께 안내합니다.</span></span><span class="ds-post-cta-go">계산하기 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></span></a>
+    <a class="ds-post-cta" href="/calc/health/checkup-result/" style="--cat: var(--c-health)"><span class="ds-icon-tile"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-heart-pulse"></use></svg></span><span class="ds-post-cta-body"><b>건강검진 수치 판정 계산기</b><span></span></span><span class="ds-post-cta-go">계산하기 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></span></a>
 
     <details class="ds-post-toc"><summary>목차 (10)<svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary><ol><li><a href="#sec-1">AST 229의 정체 - 간이 아니라 근육이었던 36세 남성</a></li><li><a href="#sec-2">결과지의 간수치 3개 - 정상A·정상B·질환의심 판정표</a></li><li><a href="#sec-3">AST와 ALT 중 누가 더 높은가 - 원인을 좁히는 패턴표</a></li><li><a href="#sec-4">시나리오 1 - 43세 사무직 박OO씨, ALT만 44로 경계에 걸렸다</a></li><li><a href="#sec-5">시나리오 2 - 51세 김OO씨, 매일 소주 1병에 AST 62·감마지티피 210</a></li><li><a href="#sec-6">시나리오 3 - 38세 이OO씨(여성), 감마지티피 41 - 남성이었다면 정상</a></li><li><a href="#sec-7">정상이라 안심했는데 - 간수치가 놓치는 것들</a></li><li><a href="#sec-8">지방간의 새 이름 MASLD - 위험인자 5개 중 몇 개에 해당하나</a></li><li><a href="#sec-9">간수치에 자주 나오는 질문</a></li><li><a href="#sec-10">체크리스트 - 간수치 결과지를 받으면 이 순서로</a></li></ol></details>
 
@@ -210,6 +210,8 @@
     </div>
 
     <p>표 하나를 더 대조해야 합니다. 질병관리청 국가건강정보포털 「간기능검사」 문서가 제시한 참고범위는 AST 0~40, ALT 0~40 IU/L입니다. 이 참고범위로는 ALT 38이 정상 안쪽이지만 검진 판정에서는 ALT 36부터 정상B이므로, 같은 숫자가 결과지에서는 경계로 표시됩니다. 질병관리청은 참고범위가 검사실마다 조금씩 다르니 검사를 시행한 검사실이 제시한 참고범위를 기준으로 평가하라고 안내합니다. 이 차이를 알아 두면 "병원에선 정상이라던데 결과지엔 왜 B죠?"라는 혼란이 풀립니다. 한 가지 더, 고시 표의 감마지티피 정상A에는 남성 11, 여성 8이라는 하한이 붙어 있는데 그보다 낮은 값에 대한 판정 구간은 표에 없습니다. 위 그래프에서 왼쪽 끝이 비어 있는 이유입니다.</p>
+
+    <p><a href="../../calc/health/checkup-result/" style="font-weight: 600">건강검진 수치 판정 계산기에 내 AST·ALT·감마지티피를 넣고 구간 확인하기</a></p>
 
     <h2 id="sec-3">AST와 ALT 중 누가 더 높은가 - 원인을 좁히는 패턴표</h2>
     <p>AST는 간세포뿐 아니라 심장·근육·혈구에도 있고, ALT는 주로 간에만 있습니다. 그래서 두 숫자의 높낮이와 감마지티피의 동반 여부를 함께 보면 원인의 방향이 좁혀집니다. 아래 표는 질병관리청 국가건강정보포털과 대한간학회 증례 해설에서 정리한 패턴입니다.</p>
@@ -310,7 +312,7 @@
     <p>AST 40, ALT 35, 감마지티피 남 63·여 35. 이 값들이 정상A의 상한선입니다. 숫자를 넘겼다면 첫째, 최근 2주 안의 운동·음주·복용 약을 확인합니다. 둘째, AST와 ALT 중 어느 쪽이 높은지, 감마지티피가 함께 올랐는지 봅니다. 셋째, 혈당·중성지방·허리둘레가 함께 걸려 있는지 확인합니다.</p>
     <p>AST 229에서 시작해 재검 3주 만에 19로 내려온 증례가 말해 주듯, 간수치는 한 번의 숫자로 결론을 내리는 검사가 아닙니다. 반대로 숫자가 정상이어도 위험인자가 여럿이면 초음파 상담 대상입니다. 질환의심 구간(AST 51 이상, ALT 46 이상, 감마지티피 남 78 이상·여 46 이상)에 들어갔다면 원인이 짐작되더라도 전문 의료기관에서 추적검사를 받으세요. BMI부터 확인해 두는 것이 가장 빠른 첫걸음입니다.</p>
     </div>
-    <aside class="article-info" aria-label="글 작성 및 검토 정보"><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">작성</span><span class="article-info__value">제이퍼 계산기 편집팀</span></div><span class="article-info__sep" aria-hidden="true">|</span><div class="article-info__item"><span class="article-info__label">최종 검토일</span><span class="article-info__value">2026.09.21</span></div></div><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">참고 기준</span><span class="article-info__value">보건복지부고시 건강검진 실시기준(제2026-6호) 별표 4 · 질병관리청 국가건강정보포털 간기능검사 · 2025 대한간학회 대사이상지방간질환 진료 가이드라인 · 대한간학회 임상교육증례(2021)</span></div></div><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">기준 시점</span><span class="article-info__value">2026년 기준</span></div><span class="article-info__sep" aria-hidden="true">|</span><div class="article-info__item"><span class="article-info__label">참고 기관</span><span class="article-info__value">대한간학회·질병관리청</span></div></div><div class="article-info__calc"><span class="article-info__label">관련 계산기</span> <a href="/calc/health/bmi/">BMI 계산기 &rarr;</a></div><p class="article-info__disclaimer">본 내용은 참고용이며 정확한 진단은 의사에게 문의하세요.</p></aside>
+    <aside class="article-info" aria-label="글 작성 및 검토 정보"><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">작성</span><span class="article-info__value">제이퍼 계산기 편집팀</span></div><span class="article-info__sep" aria-hidden="true">|</span><div class="article-info__item"><span class="article-info__label">최종 검토일</span><span class="article-info__value">2026.09.21</span></div></div><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">참고 기준</span><span class="article-info__value">보건복지부고시 건강검진 실시기준(제2026-6호) 별표 4 · 질병관리청 국가건강정보포털 간기능검사 · 2025 대한간학회 대사이상지방간질환 진료 가이드라인 · 대한간학회 임상교육증례(2021)</span></div></div><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">기준 시점</span><span class="article-info__value">2026년 기준</span></div><span class="article-info__sep" aria-hidden="true">|</span><div class="article-info__item"><span class="article-info__label">참고 기관</span><span class="article-info__value">대한간학회·질병관리청</span></div></div><div class="article-info__calc"><span class="article-info__label">관련 계산기</span> <a href="/calc/health/checkup-result/">건강검진 수치 판정 계산기 &rarr;</a></div><p class="article-info__disclaimer">본 내용은 참고용이며 정확한 진단은 의사에게 문의하세요.</p></aside>
   </article>
 </main>
 
@@ -334,11 +336,11 @@ window.ARTICLE_INFO_CONFIG = {
   referenceOrg: "대한간학회·질병관리청",
   lastReviewed: '2026.09.21',
   disclaimer: "본 내용은 참고용이며 정확한 진단은 의사에게 문의하세요.",
-  relatedCalc: { name: 'BMI 계산기', url: '/calc/health/bmi/' },
+  relatedCalc: { name: '건강검진 수치 판정 계산기', url: '/calc/health/checkup-result/' },
   category: 'health'
 };
 </script>
-<script src="/assets/calc-registry.js?v=b859b628"></script>
-<script src="/assets/ds/site-shell.js?v=f9632873"></script>
+<script src="/assets/calc-registry.js?v=ec2fa08f"></script>
+<script src="/assets/ds/site-shell.js?v=ffeb3ffa"></script>
 </body>
 </html>

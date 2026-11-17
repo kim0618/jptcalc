@@ -32,7 +32,7 @@
   "bb_scroll": -0.0,
   "clicks": 13,
   "kind": "calc",
-  "sec": 19.1,
+  "sec": 27.4,
   "ext_hold": []
  },
  {
@@ -68,7 +68,7 @@
   "bb_scroll": -0.0,
   "clicks": 16,
   "kind": "calc",
-  "sec": 18.5,
+  "sec": 28.8,
   "ext_hold": []
  },
  {
@@ -104,7 +104,7 @@
   "bb_scroll": 0,
   "clicks": 13,
   "kind": "calc",
-  "sec": 17.8,
+  "sec": 27.0,
   "ext_hold": []
  },
  {
@@ -125,7 +125,7 @@
   "c_next": "/calc/ai/infra-forecast/",
   "clicks": 13,
   "kind": "calc",
-  "sec": 13.4,
+  "sec": 20.7,
   "ext_hold": []
  },
  {
@@ -161,7 +161,7 @@
   "bb_scroll": 508,
   "clicks": 12,
   "kind": "calc",
-  "sec": 18.4,
+  "sec": 27.9,
   "ext_hold": []
  },
  {
@@ -197,7 +197,7 @@
   "bb_scroll": -0.0,
   "clicks": 18,
   "kind": "calc",
-  "sec": 19.2,
+  "sec": 18.4,
   "ext_hold": []
  },
  {
@@ -233,7 +233,7 @@
   "bb_scroll": 0,
   "clicks": 15,
   "kind": "calc",
-  "sec": 16.9,
+  "sec": 18.6,
   "ext_hold": []
  },
  {
@@ -270,7 +270,7 @@
   "bb_scroll": 0,
   "clicks": 22,
   "kind": "calc",
-  "sec": 18.3,
+  "sec": 19.4,
   "ext_hold": []
  },
  {
@@ -313,7 +313,7 @@
   "bb_scroll": 0,
   "clicks": 15,
   "kind": "calc",
-  "sec": 18.9,
+  "sec": 22.5,
   "ext_hold": []
  },
  {
@@ -332,7 +332,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"차량 가격\" 칸을 입력해 주세요.",
-  "ba_scroll": 0,
+  "ba_scroll": -0.0,
   "dl": [
    "전기차 보조금 계산기.png"
   ],
@@ -346,10 +346,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/auto/ev-charging/",
-  "bb_scroll": 0,
+  "bb_scroll": -0.0,
   "clicks": 15,
   "kind": "calc",
-  "sec": 17.8,
+  "sec": 17.6,
   "ext_hold": []
  },
  {
@@ -385,7 +385,7 @@
   "bb_scroll": 0,
   "clicks": 15,
   "kind": "calc",
-  "sec": 16.5,
+  "sec": 17.9,
   "ext_hold": []
  },
  {
@@ -421,7 +421,7 @@
   "bb_scroll": -0.0,
   "clicks": 13,
   "kind": "calc",
-  "sec": 17.7,
+  "sec": 18.1,
   "ext_hold": []
  },
  {
@@ -440,7 +440,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"아기 출생일\" 칸을 입력해 주세요.",
-  "ba_scroll": 439,
+  "ba_scroll": 470,
   "dl": [
    "아기 개월수 계산기.png"
   ],
@@ -454,10 +454,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/baby/parental-benefit/",
-  "bb_scroll": 439,
+  "bb_scroll": 470,
   "clicks": 11,
   "kind": "calc",
-  "sec": 16.9,
+  "sec": 17.3,
   "ext_hold": []
  },
  {
@@ -476,7 +476,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"자녀 출생 연월\" 칸을 입력해 주세요.",
-  "ba_scroll": 439,
+  "ba_scroll": 470,
   "dl": [
    "아동수당 계산기.png"
   ],
@@ -490,10 +490,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/baby/parental-benefit/",
-  "bb_scroll": 439,
+  "bb_scroll": 470,
   "clicks": 11,
   "kind": "calc",
-  "sec": 16.7,
+  "sec": 16.8,
   "ext_hold": []
  },
  {
@@ -526,10 +526,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/baby/total-support/",
-  "bb_scroll": -0.0,
+  "bb_scroll": 0,
   "clicks": 13,
   "kind": "calc",
-  "sec": 16.6,
+  "sec": 17.7,
   "ext_hold": []
  },
  {
@@ -553,7 +553,7 @@
   ],
   "clicks": 23,
   "kind": "calc",
-  "sec": 14.0,
+  "sec": 14.7,
   "ext_hold": []
  },
  {
@@ -589,7 +589,7 @@
   "bb_scroll": 0,
   "clicks": 14,
   "kind": "calc",
-  "sec": 16.7,
+  "sec": 17.6,
   "ext_hold": []
  },
  {
@@ -625,7 +625,7 @@
   "bb_scroll": -0.0,
   "clicks": 16,
   "kind": "calc",
-  "sec": 17.8,
+  "sec": 19.2,
   "ext_hold": []
  },
  {
@@ -661,7 +661,7 @@
   "bb_scroll": 0,
   "clicks": 13,
   "kind": "calc",
-  "sec": 16.6,
+  "sec": 18.5,
   "ext_hold": []
  },
  {
@@ -697,7 +697,7 @@
   "bb_scroll": -0.0,
   "clicks": 16,
   "kind": "calc",
-  "sec": 16.8,
+  "sec": 18.0,
   "ext_hold": []
  },
  {
@@ -715,7 +715,6 @@
   ],
   "button": false,
   "dl": [
-   "출산 지원금 통합 계산기.png",
    "출산 지원금 통합 계산기.png"
   ],
   "img_ok": true,
@@ -730,7 +729,7 @@
   "c_next": "/calc/baby/first-meeting/",
   "clicks": 22,
   "kind": "calc",
-  "sec": 16.0,
+  "sec": 19.4,
   "ext_hold": []
  },
  {
@@ -762,11 +761,11 @@
    "결과공유",
    "이미지저장"
   ],
-  "c_next": "/calc/date/weekday/",
+  "c_next": "/calc/date/dday/",
   "bb_scroll": -0.0,
   "clicks": 18,
   "kind": "calc",
-  "sec": 20.9,
+  "sec": 24.3,
   "ext_hold": []
  },
  {
@@ -802,7 +801,7 @@
   "bb_scroll": -0.0,
   "clicks": 18,
   "kind": "calc",
-  "sec": 23.8,
+  "sec": 26.4,
   "ext_hold": []
  },
  {
@@ -838,7 +837,7 @@
   "bb_scroll": -0.0,
   "clicks": 24,
   "kind": "calc",
-  "sec": 21.5,
+  "sec": 23.7,
   "ext_hold": []
  },
  {
@@ -873,7 +872,7 @@
   "bb_scroll": -0.0,
   "clicks": 23,
   "kind": "calc",
-  "sec": 18.5,
+  "sec": 20.9,
   "ext_hold": []
  },
  {
@@ -891,9 +890,8 @@
   ],
   "button": true,
   "a": "default",
-  "ba_scroll": 416,
+  "ba_scroll": 446,
   "dl": [
-   "요일 계산기.png",
    "요일 계산기.png"
   ],
   "img_ok": true,
@@ -906,10 +904,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/date/age/",
-  "bb_scroll": 416,
+  "bb_scroll": 446,
   "clicks": 23,
   "kind": "calc",
-  "sec": 18.6,
+  "sec": 19.2,
   "ext_hold": []
  },
  {
@@ -928,7 +926,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"원금\" 칸을 입력해 주세요.",
-  "ba_scroll": 0,
+  "ba_scroll": -0.0,
   "dl": [
    "복리 계산기.png"
   ],
@@ -942,10 +940,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/finance/deposit/?principal=1000&from=compound",
-  "bb_scroll": 0,
+  "bb_scroll": -0.0,
   "clicks": 17,
   "kind": "calc",
-  "sec": 17.0,
+  "sec": 17.6,
   "ext_hold": []
  },
  {
@@ -981,7 +979,7 @@
   "bb_scroll": -0.0,
   "clicks": 19,
   "kind": "calc",
-  "sec": 17.2,
+  "sec": 17.8,
   "ext_hold": []
  },
  {
@@ -1017,7 +1015,7 @@
   "bb_scroll": -0.0,
   "clicks": 14,
   "kind": "calc",
-  "sec": 16.6,
+  "sec": 17.2,
   "ext_hold": []
  },
  {
@@ -1053,7 +1051,7 @@
   "bb_scroll": -0.0,
   "clicks": 14,
   "kind": "calc",
-  "sec": 16.8,
+  "sec": 18.2,
   "ext_hold": []
  },
  {
@@ -1072,7 +1070,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"대출 원금\" 칸을 입력해 주세요.",
-  "ba_scroll": 0,
+  "ba_scroll": -0.0,
   "dl": [
    "대출 상환 계산기.png"
   ],
@@ -1086,10 +1084,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/finance/investment/",
-  "bb_scroll": 0,
+  "bb_scroll": -0.0,
   "clicks": 21,
   "kind": "calc",
-  "sec": 17.5,
+  "sec": 17.9,
   "ext_hold": []
  },
  {
@@ -1125,7 +1123,7 @@
   "bb_scroll": -0.0,
   "clicks": 19,
   "kind": "calc",
-  "sec": 17.0,
+  "sec": 18.1,
   "ext_hold": []
  },
  {
@@ -1144,7 +1142,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"현재 평단가\" 칸을 입력해 주세요.",
-  "ba_scroll": -0.0,
+  "ba_scroll": 0,
   "dl": [
    "주식 평단가 계산기.png"
   ],
@@ -1158,10 +1156,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/finance/investment/",
-  "bb_scroll": -0.0,
+  "bb_scroll": 0,
   "clicks": 16,
   "kind": "calc",
-  "sec": 16.6,
+  "sec": 18.0,
   "ext_hold": []
  },
  {
@@ -1195,9 +1193,9 @@
   ],
   "c_next": "/calc/finance/youth-leap-account/?monthly=50&from=youth-future-savings",
   "bb_scroll": -0.0,
-  "clicks": 13,
+  "clicks": 14,
   "kind": "calc",
-  "sec": 16.6,
+  "sec": 17.3,
   "ext_hold": []
  },
  {
@@ -1233,7 +1231,7 @@
   "bb_scroll": 0,
   "clicks": 14,
   "kind": "calc",
-  "sec": 16.8,
+  "sec": 17.2,
   "ext_hold": []
  },
  {
@@ -1269,7 +1267,7 @@
   "bb_scroll": -0.0,
   "clicks": 14,
   "kind": "calc",
-  "sec": 16.5,
+  "sec": 17.5,
   "ext_hold": []
  },
  {
@@ -1303,9 +1301,9 @@
   ],
   "c_next": "/calc/health/calories/",
   "bb_scroll": -0.0,
-  "clicks": 16,
+  "clicks": 17,
   "kind": "calc",
-  "sec": 18.0,
+  "sec": 20.4,
   "ext_hold": []
  },
  {
@@ -1341,7 +1339,7 @@
   "bb_scroll": -0.0,
   "clicks": 16,
   "kind": "calc",
-  "sec": 17.1,
+  "sec": 18.6,
   "ext_hold": []
  },
  {
@@ -1362,6 +1360,7 @@
   "a_hint": "\"나이\" 칸을 입력해 주세요.",
   "ba_scroll": -0.0,
   "dl": [
+   "칼로리 소모 계산기 - 운동별 칼로리 소모량 (참고).png",
    "칼로리 소모 계산기 - 운동별 칼로리 소모량 (참고).png",
    "칼로리 소모 계산기 - 운동별 칼로리 소모량 (참고).png"
   ],
@@ -1384,7 +1383,7 @@
   "bb_scroll": -0.0,
   "clicks": 23,
   "kind": "calc",
-  "sec": 21.0,
+  "sec": 22.5,
   "ext_hold": []
  },
  {
@@ -1403,7 +1402,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"키\" 칸을 입력해 주세요.",
-  "ba_scroll": 486,
+  "ba_scroll": 0,
   "dl": [
    "적정체중 계산기.png"
   ],
@@ -1417,10 +1416,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/health/bmi/",
-  "bb_scroll": 486,
+  "bb_scroll": 0,
   "clicks": 15,
   "kind": "calc",
-  "sec": 16.8,
+  "sec": 18.5,
   "ext_hold": []
  },
  {
@@ -1439,9 +1438,8 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"월 근로소득\" 칸을 입력해 주세요.",
-  "ba_scroll": -0.0,
+  "ba_scroll": 0,
   "dl": [
-   "기초연금 수급 판정 계산기.png",
    "기초연금 수급 판정 계산기.png"
   ],
   "img_ok": true,
@@ -1454,10 +1452,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/pension-welfare/national-pension/",
-  "bb_scroll": -0.0,
+  "bb_scroll": 0,
   "clicks": 23,
   "kind": "calc",
-  "sec": 18.6,
+  "sec": 19.7,
   "ext_hold": []
  },
  {
@@ -1493,7 +1491,7 @@
   "bb_scroll": -0.0,
   "clicks": 14,
   "kind": "calc",
-  "sec": 16.6,
+  "sec": 16.9,
   "ext_hold": []
  },
  {
@@ -1525,7 +1523,7 @@
   "c_next": "/calc/pension-welfare/retirement-living/",
   "clicks": 31,
   "kind": "calc",
-  "sec": 16.9,
+  "sec": 17.3,
   "ext_hold": []
  },
  {
@@ -1544,7 +1542,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"월 평균 기준소득월액\" 칸을 입력해 주세요.",
-  "ba_scroll": 0,
+  "ba_scroll": -0.0,
   "dl": [
    "국민연금 수령액 계산기.png"
   ],
@@ -1558,10 +1556,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/pension-welfare/basic-pension/",
-  "bb_scroll": 0,
-  "clicks": 26,
+  "bb_scroll": -0.0,
+  "clicks": 29,
   "kind": "calc",
-  "sec": 31.2,
+  "sec": 31.6,
   "ext_hold": []
  },
  {
@@ -1582,7 +1580,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"연간 사적연금 수령액\" 칸을 입력해 주세요.",
-  "ba_scroll": 0,
+  "ba_scroll": -0.0,
   "dl": [
    "연금소득세 계산기.png"
   ],
@@ -1598,7 +1596,7 @@
   "c_next": "/calc/pension-welfare/national-pension/",
   "clicks": 19,
   "kind": "calc",
-  "sec": 27.1,
+  "sec": 28.2,
   "ext_hold": []
  },
  {
@@ -1617,7 +1615,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"희망 월 생활비\" 칸을 입력해 주세요.",
-  "ba_scroll": -0.0,
+  "ba_scroll": 0,
   "dl": [
    "노후 생활비 계산기.png"
   ],
@@ -1631,10 +1629,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/pension-welfare/national-pension/",
-  "bb_scroll": -0.0,
+  "bb_scroll": 0,
   "clicks": 12,
   "kind": "calc",
-  "sec": 16.3,
+  "sec": 16.4,
   "ext_hold": []
  },
  {
@@ -1653,7 +1651,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"분양/입양비\" 칸을 입력해 주세요.",
-  "ba_scroll": -0.0,
+  "ba_scroll": 0,
   "dl": [
    "반려동물 입양 초기비용 계산기.png"
   ],
@@ -1667,10 +1665,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/pet/monthly-cost/",
-  "bb_scroll": -0.0,
+  "bb_scroll": 0,
   "clicks": 22,
   "kind": "calc",
-  "sec": 25.3,
+  "sec": 25.5,
   "ext_hold": []
  },
  {
@@ -1689,7 +1687,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"나이 (년)\", \"개월 (선택)\" 중 한 칸 이상 입력해 주세요.",
-  "ba_scroll": 412,
+  "ba_scroll": 442,
   "dl": [
    "고양이 나이 계산기.png"
   ],
@@ -1703,10 +1701,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/pet/dog-age/",
-  "bb_scroll": 412,
+  "bb_scroll": 442,
   "clicks": 12,
   "kind": "calc",
-  "sec": 16.3,
+  "sec": 16.1,
   "ext_hold": []
  },
  {
@@ -1742,7 +1740,7 @@
   "bb_scroll": -0.0,
   "clicks": 16,
   "kind": "calc",
-  "sec": 16.5,
+  "sec": 16.8,
   "ext_hold": []
  },
  {
@@ -1776,9 +1774,9 @@
   ],
   "c_next": "/calc/pet/dog-age/",
   "bb_scroll": -0.0,
-  "clicks": 21,
+  "clicks": 22,
   "kind": "calc",
-  "sec": 17.3,
+  "sec": 17.6,
   "ext_hold": []
  },
  {
@@ -1814,7 +1812,7 @@
   "bb_scroll": -0.0,
   "clicks": 18,
   "kind": "calc",
-  "sec": 16.9,
+  "sec": 18.3,
   "ext_hold": []
  },
  {
@@ -1850,7 +1848,7 @@
   "bb_scroll": -0.0,
   "clicks": 17,
   "kind": "calc",
-  "sec": 17.2,
+  "sec": 19.8,
   "ext_hold": []
  },
  {
@@ -1886,7 +1884,7 @@
   "bb_scroll": -0.0,
   "clicks": 18,
   "kind": "calc",
-  "sec": 16.9,
+  "sec": 18.4,
   "ext_hold": []
  },
  {
@@ -1922,7 +1920,7 @@
   "bb_scroll": -0.0,
   "clicks": 17,
   "kind": "calc",
-  "sec": 17.1,
+  "sec": 20.3,
   "ext_hold": []
  },
  {
@@ -1956,9 +1954,9 @@
   ],
   "c_next": "/calc/realestate/ltv/?price=90000&from=acquisition",
   "bb_scroll": -0.0,
-  "clicks": 27,
+  "clicks": 30,
   "kind": "calc",
-  "sec": 34.1,
+  "sec": 44.8,
   "ext_hold": []
  },
  {
@@ -1994,7 +1992,7 @@
   "bb_scroll": -0.0,
   "clicks": 25,
   "kind": "calc",
-  "sec": 27.0,
+  "sec": 29.4,
   "ext_hold": []
  },
  {
@@ -2030,7 +2028,7 @@
   "bb_scroll": -0.0,
   "clicks": 28,
   "kind": "calc",
-  "sec": 39.7,
+  "sec": 41.4,
   "ext_hold": []
  },
  {
@@ -2066,7 +2064,7 @@
   "bb_scroll": -0.0,
   "clicks": 16,
   "kind": "calc",
-  "sec": 17.5,
+  "sec": 19.1,
   "ext_hold": []
  },
  {
@@ -2085,7 +2083,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"주택가격\" 칸을 입력해 주세요.",
-  "ba_scroll": 0,
+  "ba_scroll": -0.0,
   "dl": [
    "디딤돌대출 계산기.png"
   ],
@@ -2102,7 +2100,7 @@
   "bb_scroll": -0.0,
   "clicks": 22,
   "kind": "calc",
-  "sec": 17.7,
+  "sec": 18.3,
   "ext_hold": []
  },
  {
@@ -2136,14 +2134,6 @@
   ],
   "ext_hold": [
    "http://t1.kakaocdn.net/kas/static/ba.min.js",
-   "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css",
-   "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2/Pretendard-Black.woff2",
-   "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2/Pretendard-Bold.woff2",
-   "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2/Pretendard-ExtraBold.woff2",
-   "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2/Pretendard-Medium.woff2",
-   "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2/Pretendard-Regular.woff2",
-   "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2/Pretendard-SemiBold.woff2",
-   "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js",
    "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
    "https://www.googletagmanager.com/gtag/js"
   ],
@@ -2151,7 +2141,7 @@
   "bb_scroll": -0.0,
   "clicks": 19,
   "kind": "calc",
-  "sec": 17.6
+  "sec": 17.7
  },
  {
   "key": "realestate/gift",
@@ -2186,7 +2176,7 @@
   "bb_scroll": -0.0,
   "clicks": 19,
   "kind": "calc",
-  "sec": 16.9,
+  "sec": 17.3,
   "ext_hold": []
  },
  {
@@ -2220,9 +2210,9 @@
   ],
   "c_next": "/calc/realestate/gift/",
   "bb_scroll": -0.0,
-  "clicks": 17,
+  "clicks": 20,
   "kind": "calc",
-  "sec": 19.2,
+  "sec": 21.9,
   "ext_hold": []
  },
  {
@@ -2256,9 +2246,9 @@
   ],
   "c_next": "/calc/realestate/conversion/",
   "bb_scroll": 0,
-  "clicks": 18,
+  "clicks": 22,
   "kind": "calc",
-  "sec": 17.2,
+  "sec": 18.1,
   "ext_hold": []
  },
  {
@@ -2294,7 +2284,7 @@
   "bb_scroll": -0.0,
   "clicks": 17,
   "kind": "calc",
-  "sec": 18.4,
+  "sec": 18.9,
   "ext_hold": []
  },
  {
@@ -2327,10 +2317,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/realestate/property-tax-comprehensive/?price=120000&from=jongbu",
-  "bb_scroll": -0.0,
-  "clicks": 19,
+  "bb_scroll": 0,
+  "clicks": 29,
   "kind": "calc",
-  "sec": 17.2,
+  "sec": 45.4,
   "ext_hold": []
  },
  {
@@ -2349,7 +2339,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"대출금액\" 칸을 입력해 주세요.",
-  "ba_scroll": 0,
+  "ba_scroll": -0.0,
   "dl": [
    "대출이자 계산기.png"
   ],
@@ -2363,10 +2353,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/realestate/dsr/",
-  "bb_scroll": 0,
+  "bb_scroll": -0.0,
   "clicks": 17,
   "kind": "calc",
-  "sec": 17.2,
+  "sec": 17.4,
   "ext_hold": []
  },
  {
@@ -2399,22 +2389,19 @@
    "이미지저장"
   ],
   "c_next": "/calc/realestate/dsr/",
-  "bb_scroll": 0,
-  "clicks": 17,
+  "bb_scroll": -0.0,
+  "clicks": 19,
   "kind": "calc",
-  "sec": 17.3,
+  "sec": 17.8,
   "ext_hold": []
  },
  {
   "key": "realestate/property-tax-comprehensive",
-  "fail": [
-   "ba: 결과 불일치\n      기대 공시가격10억원──재산세──재산세과세표준(×60%)6억원재산세177만원도시지역분(과세표준×0.14%)84만원지방교육세(재산세×20%)35만원──종합부동산세──기본공제-9억원(2주택이하)종부세과세표준6,000만원종부세산출세액30만원재산세중복분공제-14만원종합부동산세16만\n      실제 공시가격10억원──재산세──재산세과세표준(×60%)6억원재산세177만원도시지역분(과세표준×0.14%)84만원지방교육세(재산세×20%)35만원──종합부동산세──기본공제-9억원(2주택이하)종부세과세표준6,000만원종부세산출세액30만원재산세중복분공제-14만원종합부동산세16만",
-   "bb: 결과 불일치\n      기대 공시가격20억원──재산세──재산세과세표준(×45%)9억원재산세297만원도시지역분(과세표준×0.14%)126만원지방교육세(재산세×20%)59만원──종합부동산세──기본공제-12억원(1세대1주택)종부세과세표준4억8,000만원종부세산출세액276만원재산세중복분공제-86만원종합부\n      실제 공시가격20억원──재산세──재산세과세표준(×45%)9억원재산세297만원도시지역분(과세표준×0.14%)126만원지방교육세(재산세×20%)59만원──종합부동산세──기본공제-12억원(1세대1주택)종부세과세표준4억8,000만원종부세산출세액276만원재산세중복분공제-86만원종합부"
-  ],
+  "fail": [],
   "errors": [],
   "dialogs": [],
   "notes": [],
-  "step": "390 button\"닫기\"",
+  "step": "390 button\"15년 이상\"",
   "ext": [
    "http://t1.kakaocdn.net/kas/static/ba.min.js",
    "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
@@ -2438,10 +2425,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/realestate/jongbu/?price=100000&from=property-tax-comprehensive",
-  "bb_scroll": -0.0,
-  "clicks": 18,
+  "bb_scroll": 0,
+  "clicks": 26,
   "kind": "calc",
-  "sec": 17.3,
+  "sec": 40.1,
   "ext_hold": []
  },
  {
@@ -2477,7 +2464,7 @@
   "bb_scroll": 0,
   "clicks": 19,
   "kind": "calc",
-  "sec": 18.4,
+  "sec": 21.9,
   "ext_hold": []
  },
  {
@@ -2513,7 +2500,7 @@
   "bb_scroll": -0.0,
   "clicks": 19,
   "kind": "calc",
-  "sec": 17.7,
+  "sec": 17.3,
   "ext_hold": []
  },
  {
@@ -2549,7 +2536,7 @@
   "bb_scroll": -0.0,
   "clicks": 14,
   "kind": "calc",
-  "sec": 17.2,
+  "sec": 20.2,
   "ext_hold": []
  },
  {
@@ -2568,7 +2555,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"월 통상임금\" 칸을 입력해 주세요.",
-  "ba_scroll": 0,
+  "ba_scroll": -0.0,
   "dl": [
    "연차수당 계산기.png"
   ],
@@ -2582,10 +2569,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/salary/dismissal-notice-pay/?monthly=300&from=annual-leave-pay",
-  "bb_scroll": 0,
+  "bb_scroll": -0.0,
   "clicks": 13,
   "kind": "calc",
-  "sec": 17.5,
+  "sec": 16.6,
   "ext_hold": []
  },
  {
@@ -2621,7 +2608,7 @@
   "bb_scroll": 0,
   "clicks": 12,
   "kind": "calc",
-  "sec": 17.4,
+  "sec": 16.6,
   "ext_hold": []
  },
  {
@@ -2655,9 +2642,9 @@
   ],
   "c_next": "/calc/salary/take-home-pay/",
   "bb_scroll": 0,
-  "clicks": 15,
+  "clicks": 16,
   "kind": "calc",
-  "sec": 17.0,
+  "sec": 17.2,
   "ext_hold": []
  },
  {
@@ -2693,7 +2680,7 @@
   "bb_scroll": -0.0,
   "clicks": 12,
   "kind": "calc",
-  "sec": 16.4,
+  "sec": 17.2,
   "ext_hold": []
  },
  {
@@ -2729,7 +2716,7 @@
   "bb_scroll": -0.0,
   "clicks": 16,
   "kind": "calc",
-  "sec": 17.6,
+  "sec": 16.7,
   "ext_hold": []
  },
  {
@@ -2748,7 +2735,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"연봉\" 칸을 입력해 주세요.",
-  "ba_scroll": 0,
+  "ba_scroll": -0.0,
   "dl": [
    "시급·일급 변환 계산기.png"
   ],
@@ -2762,7 +2749,7 @@
    "이미지저장"
   ],
   "c_next": "/calc/salary/take-home-pay/?salary=3600&from=hourly-wage",
-  "bb_scroll": 0,
+  "bb_scroll": -0.0,
   "clicks": 22,
   "kind": "calc",
   "sec": 25.8,
@@ -2784,7 +2771,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"현재 연봉\" 칸을 입력해 주세요.",
-  "ba_scroll": 0,
+  "ba_scroll": -0.0,
   "dl": [
    "이직 연봉 비교 계산기.png"
   ],
@@ -2798,10 +2785,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/salary/take-home-pay/?salary=4200&from=job-change",
-  "bb_scroll": 0,
+  "bb_scroll": -0.0,
   "clicks": 13,
   "kind": "calc",
-  "sec": 16.6,
+  "sec": 17.2,
   "ext_hold": []
  },
  {
@@ -2820,7 +2807,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"기본급\" 칸을 입력해 주세요.",
-  "ba_scroll": 0,
+  "ba_scroll": -0.0,
   "dl": [
    "통상임금 계산기.png"
   ],
@@ -2834,10 +2821,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/salary/premium-pay/",
-  "bb_scroll": 0,
+  "bb_scroll": -0.0,
   "clicks": 13,
   "kind": "calc",
-  "sec": 17.7,
+  "sec": 16.9,
   "ext_hold": []
  },
  {
@@ -2856,7 +2843,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"통상시급\" 칸을 입력해 주세요.",
-  "ba_scroll": -0.0,
+  "ba_scroll": 0,
   "dl": [
    "가산수당 계산기.png"
   ],
@@ -2870,10 +2857,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/salary/ordinary-wage/",
-  "bb_scroll": -0.0,
-  "clicks": 15,
+  "bb_scroll": 0,
+  "clicks": 16,
   "kind": "calc",
-  "sec": 17.5,
+  "sec": 17.1,
   "ext_hold": []
  },
  {
@@ -2892,7 +2879,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"인상 전 연봉\" 칸을 입력해 주세요.",
-  "ba_scroll": -0.0,
+  "ba_scroll": 0,
   "dl": [
    "연봉 인상률 계산기.png"
   ],
@@ -2906,10 +2893,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/salary/take-home-pay/?salary=4500&from=raise-rate",
-  "bb_scroll": -0.0,
+  "bb_scroll": 0,
   "clicks": 13,
   "kind": "calc",
-  "sec": 16.8,
+  "sec": 17.4,
   "ext_hold": []
  },
  {
@@ -2941,11 +2928,11 @@
    "결과공유",
    "이미지저장"
   ],
-  "c_next": "/calc/salary/unemployment/?monthly=350&from=severance",
+  "c_next": "/calc/salary/unemployment/?avgwage=350&from=severance",
   "bb_scroll": -0.0,
   "clicks": 14,
   "kind": "calc",
-  "sec": 16.6,
+  "sec": 17.3,
   "ext_hold": []
  },
  {
@@ -2981,7 +2968,7 @@
   "bb_scroll": -0.0,
   "clicks": 22,
   "kind": "calc",
-  "sec": 18.7,
+  "sec": 18.9,
   "ext_hold": []
  },
  {
@@ -3000,7 +2987,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"이직 전 3개월 평균 월급여\" 칸을 입력해 주세요.",
-  "ba_scroll": 0,
+  "ba_scroll": -0.0,
   "dl": [
    "실업급여 계산기.png"
   ],
@@ -3014,10 +3001,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/salary/severance/",
-  "bb_scroll": 0,
+  "bb_scroll": -0.0,
   "clicks": 21,
   "kind": "calc",
-  "sec": 17.6,
+  "sec": 18.3,
   "ext_hold": []
  },
  {
@@ -3053,7 +3040,7 @@
   "bb_scroll": 0,
   "clicks": 18,
   "kind": "calc",
-  "sec": 17.1,
+  "sec": 18.6,
   "ext_hold": []
  },
  {
@@ -3089,7 +3076,7 @@
   "bb_scroll": -0.0,
   "clicks": 16,
   "kind": "calc",
-  "sec": 17.4,
+  "sec": 18.0,
   "ext_hold": []
  },
  {
@@ -3144,7 +3131,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"월 평균 수입 (세전) 만원 단위\" 칸을 입력해 주세요.",
-  "ba_scroll": 0,
+  "ba_scroll": -0.0,
   "dl": [
    "프리랜서 월 순수입 계산기.png"
   ],
@@ -3158,10 +3145,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/tax/withholding/",
-  "bb_scroll": 0,
+  "bb_scroll": -0.0,
   "clicks": 19,
   "kind": "calc",
-  "sec": 17.2,
+  "sec": 16.9,
   "ext_hold": []
  },
  {
@@ -3180,7 +3167,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"연간 총수입 (세전) 만원 단위\" 칸을 입력해 주세요.",
-  "ba_scroll": 0,
+  "ba_scroll": -0.0,
   "dl": [
    "종합소득세 계산기.png"
   ],
@@ -3194,10 +3181,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/tax/withholding/",
-  "bb_scroll": 0,
+  "bb_scroll": -0.0,
   "clicks": 17,
   "kind": "calc",
-  "sec": 18.0,
+  "sec": 16.8,
   "ext_hold": []
  },
  {
@@ -3216,7 +3203,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"월 급여 (세전) 만원 단위\" 칸을 입력해 주세요.",
-  "ba_scroll": 0,
+  "ba_scroll": -0.0,
   "dl": [
    "4대보험 vs 3.3% 비교 계산기.png"
   ],
@@ -3230,10 +3217,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/tax/four-insurance/?salary_m=300&from=insurance-comparison",
-  "bb_scroll": 0,
+  "bb_scroll": -0.0,
   "clicks": 11,
   "kind": "calc",
-  "sec": 16.5,
+  "sec": 16.6,
   "ext_hold": []
  },
  {
@@ -3252,7 +3239,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"총급여액\" 칸을 입력해 주세요.",
-  "ba_scroll": -0.0,
+  "ba_scroll": 0,
   "dl": [
    "의료비 세액공제 계산기.png"
   ],
@@ -3266,10 +3253,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/tax/copay-ceiling/",
-  "bb_scroll": -0.0,
+  "bb_scroll": 0,
   "clicks": 14,
   "kind": "calc",
-  "sec": 17.0,
+  "sec": 16.8,
   "ext_hold": []
  },
  {
@@ -3288,7 +3275,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"연 소득금액\", \"재산세 과세표준 합계\" 중 한 칸 이상 입력해 주세요.",
-  "ba_scroll": 0,
+  "ba_scroll": -0.0,
   "dl": [
    "지역가입자 건강보험료 계산기.png"
   ],
@@ -3301,11 +3288,11 @@
    "결과공유",
    "이미지저장"
   ],
-  "c_next": "/calc/tax/four-insurance/",
-  "bb_scroll": 0,
+  "c_next": "/calc/tax/insurance-comparison/",
+  "bb_scroll": -0.0,
   "clicks": 12,
   "kind": "calc",
-  "sec": 16.5,
+  "sec": 16.3,
   "ext_hold": []
  },
  {
@@ -3314,7 +3301,7 @@
   "errors": [],
   "dialogs": [],
   "notes": [],
-  "step": "390 button\"닫기\"",
+  "step": "390 button\"금융·보험·부동산임대 등 40%\"",
   "ext": [
    "http://t1.kakaocdn.net/kas/static/ba.min.js",
    "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
@@ -3323,7 +3310,7 @@
   ],
   "button": true,
   "a": "hint",
-  "a_hint": "\"연간 매출액 공급가액 기준 (부가세 제외) · 연간 합계\" 칸을 입력해 주세요.",
+  "a_hint": "\"공급가액 단가 또는 총액 · 원 단위\" 중 한 칸 이상 입력해 주세요.",
   "ba_scroll": -0.0,
   "dl": [
    "부가가치세 계산기.png"
@@ -3339,9 +3326,9 @@
   ],
   "c_next": "/calc/tax/income-tax/",
   "bb_scroll": -0.0,
-  "clicks": 19,
+  "clicks": 31,
   "kind": "calc",
-  "sec": 30.7,
+  "sec": 47.1,
   "ext_hold": []
  },
  {
@@ -3360,7 +3347,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"계약 금액 (세전) 단위 선택\" 칸을 입력해 주세요.",
-  "ba_scroll": 0,
+  "ba_scroll": -0.0,
   "dl": [
    "3.3% 원천징수 계산기.png"
   ],
@@ -3374,10 +3361,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/tax/freelancer-income/",
-  "bb_scroll": 0,
+  "bb_scroll": -0.0,
   "clicks": 20,
   "kind": "calc",
-  "sec": 17.1,
+  "sec": 17.3,
   "ext_hold": []
  },
  {
@@ -3395,7 +3382,7 @@
   ],
   "button": true,
   "a": "hint",
-  "a_hint": "\"연 사업·근로소득\" 칸을 입력해 주세요.",
+  "a_hint": "\"연 사업소득금액\" 칸을 입력해 주세요.",
   "ba_scroll": -0.0,
   "dl": [
    "노란우산공제 계산기.png"
@@ -3413,7 +3400,7 @@
   "bb_scroll": -0.0,
   "clicks": 13,
   "kind": "calc",
-  "sec": 16.7,
+  "sec": 16.8,
   "ext_hold": []
  },
  {
@@ -3431,6 +3418,7 @@
   ],
   "button": false,
   "dl": [
+   "글자수 세기.png",
    "글자수 세기.png"
   ],
   "img_ok": true,
@@ -3445,7 +3433,7 @@
   "c_next": "/calc/tools/gpa/",
   "clicks": 20,
   "kind": "calc",
-  "sec": 15.8,
+  "sec": 16.7,
   "ext_hold": []
  },
  {
@@ -3481,7 +3469,7 @@
   "bb_scroll": -0.0,
   "clicks": 16,
   "kind": "calc",
-  "sec": 17.6,
+  "sec": 16.6,
   "ext_hold": []
  },
  {
@@ -3500,7 +3488,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "빈 칸을 입력해 주세요.",
-  "ba_scroll": 0,
+  "ba_scroll": -0.0,
   "dl": [
    "학점 계산기.png"
   ],
@@ -3514,10 +3502,10 @@
    "이미지저장"
   ],
   "c_next": "/calc/tools/naesin-grade/",
-  "bb_scroll": 0,
+  "bb_scroll": -0.0,
   "clicks": 21,
   "kind": "calc",
-  "sec": 20.2,
+  "sec": 18.4,
   "ext_hold": []
  },
  {
@@ -3537,6 +3525,7 @@
   "a": "default",
   "ba_scroll": -0.0,
   "dl": [
+   "음력 양력 변환기.png",
    "음력 양력 변환기.png"
   ],
   "img_ok": true,
@@ -3548,11 +3537,11 @@
    "결과공유",
    "이미지저장"
   ],
-  "c_next": "/calc/tools/percent/",
+  "c_next": "/calc/date/dday/",
   "bb_scroll": 0,
   "clicks": 23,
   "kind": "calc",
-  "sec": 21.8,
+  "sec": 20.1,
   "ext_hold": []
  },
  {
@@ -3571,7 +3560,7 @@
   "button": true,
   "a": "hint",
   "a_hint": "\"내 석차 (등수)\" 칸을 입력해 주세요.",
-  "ba_scroll": -0.0,
+  "ba_scroll": 0,
   "dl": [
    "내신 등급 계산기.png"
   ],
@@ -3584,11 +3573,11 @@
    "결과공유",
    "이미지저장"
   ],
-  "c_next": "/calc/tools/gpa/",
-  "bb_scroll": -0.0,
-  "clicks": 21,
+  "c_next": "/calc/date/dday/",
+  "bb_scroll": 0,
+  "clicks": 28,
   "kind": "calc",
-  "sec": 17.7,
+  "sec": 19.0,
   "ext_hold": []
  },
  {
@@ -3624,7 +3613,7 @@
   "bb_scroll": -0.0,
   "clicks": 18,
   "kind": "calc",
-  "sec": 19.0,
+  "sec": 17.1,
   "ext_hold": []
  },
  {
@@ -3660,7 +3649,7 @@
   "bb_scroll": 0,
   "clicks": 19,
   "kind": "calc",
-  "sec": 17.7,
+  "sec": 17.3,
   "ext_hold": []
  },
  {
@@ -3678,7 +3667,7 @@
   ],
   "clicks": 7,
   "kind": "page",
-  "sec": 9.7,
+  "sec": 10.1,
   "ext_hold": []
  },
  {
@@ -3688,10 +3677,12 @@
   "dialogs": [],
   "notes": [],
   "step": "1280 button\"카테고리\"",
+  "ext": [
+   "https://www.googletagmanager.com/gtag/js"
+  ],
   "clicks": 5,
   "kind": "page",
   "sec": 3.2,
-  "ext": [],
   "ext_hold": []
  },
  {
@@ -3706,7 +3697,7 @@
   ],
   "clicks": 5,
   "kind": "page",
-  "sec": 3.3,
+  "sec": 3.6,
   "ext_hold": []
  },
  {
@@ -3715,39 +3706,39 @@
   "errors": [],
   "dialogs": [],
   "notes": [
-   "390 button\"부동산\" → http://127.0.0.1:52047/blog/?cat=%EB%B6%80%EB%8F%99%EC%82%B0",
-   "390 button\"이직/연봉\" → http://127.0.0.1:52047/blog/?cat=%EC%9D%B4%EC%A7%81%2F%EC%97%B0%EB%B4%89",
-   "390 button\"생활·도구\" → http://127.0.0.1:52047/blog/?cat=%EC%83%9D%ED%99%9C%C2%B7%EB%8F%84%EA%B5%AC",
-   "390 button\"프리랜서 세금\" → http://127.0.0.1:52047/blog/?cat=%ED%94%84%EB%A6%AC%EB%9E%9C%EC%84%9C%20%EC%84%B8%EA%B8%88",
-   "390 button\"연금·복지\" → http://127.0.0.1:52047/blog/?cat=%EC%97%B0%EA%B8%88%C2%B7%EB%B3%B5%EC%A7%80",
-   "390 button\"금융·이자\" → http://127.0.0.1:52047/blog/?cat=%EA%B8%88%EC%9C%B5%C2%B7%EC%9D%B4%EC%9E%90",
-   "390 button\"날짜·D-day\" → http://127.0.0.1:52047/blog/?cat=%EB%82%A0%EC%A7%9C%C2%B7D-day",
-   "390 button\"건강\" → http://127.0.0.1:52047/blog/?cat=%EA%B1%B4%EA%B0%95",
-   "390 button\"AI/테크\" → http://127.0.0.1:52047/blog/?cat=AI%2F%ED%85%8C%ED%81%AC",
-   "390 button\"반려동물\" → http://127.0.0.1:52047/blog/?cat=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC",
-   "390 button\"자동차\" → http://127.0.0.1:52047/blog/?cat=%EC%9E%90%EB%8F%99%EC%B0%A8",
-   "390 button\"출산·육아\" → http://127.0.0.1:52047/blog/?cat=%EC%B6%9C%EC%82%B0%C2%B7%EC%9C%A1%EC%95%84",
-   "1280 button\"부동산\" → http://127.0.0.1:52047/blog/?cat=%EB%B6%80%EB%8F%99%EC%82%B0",
-   "1280 button\"이직/연봉\" → http://127.0.0.1:52047/blog/?cat=%EC%9D%B4%EC%A7%81%2F%EC%97%B0%EB%B4%89",
-   "1280 button\"생활·도구\" → http://127.0.0.1:52047/blog/?cat=%EC%83%9D%ED%99%9C%C2%B7%EB%8F%84%EA%B5%AC",
-   "1280 button\"프리랜서 세금\" → http://127.0.0.1:52047/blog/?cat=%ED%94%84%EB%A6%AC%EB%9E%9C%EC%84%9C%20%EC%84%B8%EA%B8%88",
-   "1280 button\"연금·복지\" → http://127.0.0.1:52047/blog/?cat=%EC%97%B0%EA%B8%88%C2%B7%EB%B3%B5%EC%A7%80",
-   "1280 button\"금융·이자\" → http://127.0.0.1:52047/blog/?cat=%EA%B8%88%EC%9C%B5%C2%B7%EC%9D%B4%EC%9E%90",
-   "1280 button\"날짜·D-day\" → http://127.0.0.1:52047/blog/?cat=%EB%82%A0%EC%A7%9C%C2%B7D-day",
-   "1280 button\"건강\" → http://127.0.0.1:52047/blog/?cat=%EA%B1%B4%EA%B0%95",
-   "1280 button\"AI/테크\" → http://127.0.0.1:52047/blog/?cat=AI%2F%ED%85%8C%ED%81%AC",
-   "1280 button\"반려동물\" → http://127.0.0.1:52047/blog/?cat=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC",
-   "1280 button\"자동차\" → http://127.0.0.1:52047/blog/?cat=%EC%9E%90%EB%8F%99%EC%B0%A8",
-   "1280 button\"출산·육아\" → http://127.0.0.1:52047/blog/?cat=%EC%B6%9C%EC%82%B0%C2%B7%EC%9C%A1%EC%95%84"
+   "390 button\"부동산\" → http://127.0.0.1:42347/blog/?cat=%EB%B6%80%EB%8F%99%EC%82%B0",
+   "390 button\"이직/연봉\" → http://127.0.0.1:42347/blog/?cat=%EC%9D%B4%EC%A7%81%2F%EC%97%B0%EB%B4%89",
+   "390 button\"생활·도구\" → http://127.0.0.1:42347/blog/?cat=%EC%83%9D%ED%99%9C%C2%B7%EB%8F%84%EA%B5%AC",
+   "390 button\"프리랜서 세금\" → http://127.0.0.1:42347/blog/?cat=%ED%94%84%EB%A6%AC%EB%9E%9C%EC%84%9C%20%EC%84%B8%EA%B8%88",
+   "390 button\"연금·복지\" → http://127.0.0.1:42347/blog/?cat=%EC%97%B0%EA%B8%88%C2%B7%EB%B3%B5%EC%A7%80",
+   "390 button\"금융·이자\" → http://127.0.0.1:42347/blog/?cat=%EA%B8%88%EC%9C%B5%C2%B7%EC%9D%B4%EC%9E%90",
+   "390 button\"날짜·D-day\" → http://127.0.0.1:42347/blog/?cat=%EB%82%A0%EC%A7%9C%C2%B7D-day",
+   "390 button\"건강\" → http://127.0.0.1:42347/blog/?cat=%EA%B1%B4%EA%B0%95",
+   "390 button\"AI/테크\" → http://127.0.0.1:42347/blog/?cat=AI%2F%ED%85%8C%ED%81%AC",
+   "390 button\"반려동물\" → http://127.0.0.1:42347/blog/?cat=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC",
+   "390 button\"자동차\" → http://127.0.0.1:42347/blog/?cat=%EC%9E%90%EB%8F%99%EC%B0%A8",
+   "390 button\"출산·육아\" → http://127.0.0.1:42347/blog/?cat=%EC%B6%9C%EC%82%B0%C2%B7%EC%9C%A1%EC%95%84",
+   "1280 button\"부동산\" → http://127.0.0.1:42347/blog/?cat=%EB%B6%80%EB%8F%99%EC%82%B0",
+   "1280 button\"이직/연봉\" → http://127.0.0.1:42347/blog/?cat=%EC%9D%B4%EC%A7%81%2F%EC%97%B0%EB%B4%89",
+   "1280 button\"생활·도구\" → http://127.0.0.1:42347/blog/?cat=%EC%83%9D%ED%99%9C%C2%B7%EB%8F%84%EA%B5%AC",
+   "1280 button\"프리랜서 세금\" → http://127.0.0.1:42347/blog/?cat=%ED%94%84%EB%A6%AC%EB%9E%9C%EC%84%9C%20%EC%84%B8%EA%B8%88",
+   "1280 button\"연금·복지\" → http://127.0.0.1:42347/blog/?cat=%EC%97%B0%EA%B8%88%C2%B7%EB%B3%B5%EC%A7%80",
+   "1280 button\"금융·이자\" → http://127.0.0.1:42347/blog/?cat=%EA%B8%88%EC%9C%B5%C2%B7%EC%9D%B4%EC%9E%90",
+   "1280 button\"날짜·D-day\" → http://127.0.0.1:42347/blog/?cat=%EB%82%A0%EC%A7%9C%C2%B7D-day",
+   "1280 button\"건강\" → http://127.0.0.1:42347/blog/?cat=%EA%B1%B4%EA%B0%95",
+   "1280 button\"AI/테크\" → http://127.0.0.1:42347/blog/?cat=AI%2F%ED%85%8C%ED%81%AC",
+   "1280 button\"반려동물\" → http://127.0.0.1:42347/blog/?cat=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC",
+   "1280 button\"자동차\" → http://127.0.0.1:42347/blog/?cat=%EC%9E%90%EB%8F%99%EC%B0%A8",
+   "1280 button\"출산·육아\" → http://127.0.0.1:42347/blog/?cat=%EC%B6%9C%EC%82%B0%C2%B7%EC%9C%A1%EC%95%84"
   ],
-  "step": "1280 button\"+157개의 글 더 보기\"",
+  "step": "1280 button\"+165개의 글 더 보기\"",
   "ext": [
    "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
    "https://www.googletagmanager.com/gtag/js"
   ],
   "clicks": 32,
   "kind": "page",
-  "sec": 22.6,
+  "sec": 26.6,
   "ext_hold": []
  },
  {
@@ -3765,7 +3756,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 13.0,
+  "sec": 13.3,
   "ext_hold": []
  },
  {
@@ -3782,7 +3773,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 13.2,
   "ext_hold": []
  },
  {
@@ -3799,7 +3790,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 13.3,
   "ext_hold": []
  },
  {
@@ -3816,7 +3807,7 @@
   ],
   "clicks": 27,
   "kind": "page",
-  "sec": 11.7,
+  "sec": 12.0,
   "ext_hold": []
  },
  {
@@ -3834,7 +3825,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.2,
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -3852,7 +3843,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.7,
+  "sec": 13.4,
   "ext_hold": []
  },
  {
@@ -3870,7 +3861,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 13.1,
   "ext_hold": []
  },
  {
@@ -3888,7 +3879,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.2,
+  "sec": 13.5,
   "ext_hold": []
  },
  {
@@ -3906,7 +3897,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.2,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -3942,7 +3933,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 12.9,
   "ext_hold": []
  },
  {
@@ -3960,7 +3951,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.3,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -3978,7 +3969,7 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 12.9,
+  "sec": 13.4,
   "ext_hold": []
  },
  {
@@ -3996,7 +3987,7 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 13.2,
+  "sec": 13.3,
   "ext_hold": []
  },
  {
@@ -4014,7 +4005,7 @@
   ],
   "clicks": 45,
   "kind": "page",
-  "sec": 13.7,
+  "sec": 14.1,
   "ext_hold": []
  },
  {
@@ -4032,7 +4023,7 @@
   ],
   "clicks": 41,
   "kind": "page",
-  "sec": 13.1,
+  "sec": 13.4,
   "ext_hold": []
  },
  {
@@ -4050,7 +4041,25 @@
   ],
   "clicks": 25,
   "kind": "page",
-  "sec": 11.6,
+  "sec": 11.8,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/bogo-deal-unit-price-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 제이퍼 할인율 계산기로 1+1 실제 할인율을 확인\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 27,
+  "kind": "page",
+  "sec": 11.9,
   "ext_hold": []
  },
  {
@@ -4068,7 +4077,7 @@
   ],
   "clicks": 45,
   "kind": "page",
-  "sec": 13.8,
+  "sec": 14.1,
   "ext_hold": []
  },
  {
@@ -4086,7 +4095,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.2,
+  "sec": 12.5,
   "ext_hold": []
  },
  {
@@ -4104,7 +4113,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -4122,7 +4131,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 13.1,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -4140,7 +4149,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.0,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -4158,7 +4167,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.0,
+  "sec": 12.1,
   "ext_hold": []
  },
  {
@@ -4176,7 +4185,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.0,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -4194,7 +4203,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.2,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -4212,7 +4221,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.5,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -4230,7 +4239,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.2,
+  "sec": 12.5,
   "ext_hold": []
  },
  {
@@ -4248,7 +4257,7 @@
   ],
   "clicks": 27,
   "kind": "page",
-  "sec": 11.8,
+  "sec": 12.0,
   "ext_hold": []
  },
  {
@@ -4266,7 +4275,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.7,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -4284,7 +4293,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.5,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -4302,7 +4311,7 @@
   ],
   "clicks": 41,
   "kind": "page",
-  "sec": 13.2,
+  "sec": 13.3,
   "ext_hold": []
  },
  {
@@ -4319,7 +4328,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.7,
   "ext_hold": []
  },
  {
@@ -4337,7 +4346,7 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 12.9,
+  "sec": 13.3,
   "ext_hold": []
  },
  {
@@ -4373,7 +4382,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -4391,7 +4400,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.2,
+  "sec": 12.5,
   "ext_hold": []
  },
  {
@@ -4409,7 +4418,7 @@
   ],
   "clicks": 41,
   "kind": "page",
-  "sec": 13.4,
+  "sec": 13.3,
   "ext_hold": []
  },
  {
@@ -4426,7 +4435,7 @@
   ],
   "clicks": 43,
   "kind": "page",
-  "sec": 13.5,
+  "sec": 13.4,
   "ext_hold": []
  },
  {
@@ -4444,7 +4453,7 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 13.2,
+  "sec": 13.0,
   "ext_hold": []
  },
  {
@@ -4462,7 +4471,7 @@
   ],
   "clicks": 43,
   "kind": "page",
-  "sec": 13.8,
+  "sec": 13.9,
   "ext_hold": []
  },
  {
@@ -4480,7 +4489,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 12.7,
   "ext_hold": []
  },
  {
@@ -4498,7 +4507,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -4516,7 +4525,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.9,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -4533,7 +4542,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.3,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -4551,7 +4560,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -4569,7 +4578,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.5,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -4587,7 +4596,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 12.9,
+  "sec": 13.0,
   "ext_hold": []
  },
  {
@@ -4623,7 +4632,7 @@
   ],
   "clicks": 25,
   "kind": "page",
-  "sec": 11.8,
+  "sec": 11.6,
   "ext_hold": []
  },
  {
@@ -4641,7 +4650,7 @@
   ],
   "clicks": 43,
   "kind": "page",
-  "sec": 13.7,
+  "sec": 13.8,
   "ext_hold": []
  },
  {
@@ -4659,7 +4668,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.5,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -4695,7 +4704,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.3,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -4713,7 +4722,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -4749,7 +4758,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -4767,7 +4776,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -4785,7 +4794,7 @@
   ],
   "clicks": 49,
   "kind": "page",
-  "sec": 14.2,
+  "sec": 14.1,
   "ext_hold": []
  },
  {
@@ -4803,7 +4812,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 13.0,
+  "sec": 13.1,
   "ext_hold": []
  },
  {
@@ -4820,7 +4829,7 @@
   ],
   "clicks": 27,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 11.8,
   "ext_hold": []
  },
  {
@@ -4838,7 +4847,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.5,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -4856,7 +4865,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -4874,7 +4883,7 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 14.0,
+  "sec": 13.2,
   "ext_hold": []
  },
  {
@@ -4892,7 +4901,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.7,
+  "sec": 12.5,
   "ext_hold": []
  },
  {
@@ -4910,7 +4919,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 13.3,
+  "sec": 13.4,
   "ext_hold": []
  },
  {
@@ -4928,7 +4937,7 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 13.3,
+  "sec": 13.1,
   "ext_hold": []
  },
  {
@@ -4982,7 +4991,7 @@
   ],
   "clicks": 27,
   "kind": "page",
-  "sec": 12.1,
+  "sec": 11.8,
   "ext_hold": []
  },
  {
@@ -5000,7 +5009,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.7,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -5018,7 +5027,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.1,
   "ext_hold": []
  },
  {
@@ -5036,7 +5045,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 13.1,
+  "sec": 12.9,
   "ext_hold": []
  },
  {
@@ -5054,7 +5063,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.1,
   "ext_hold": []
  },
  {
@@ -5072,7 +5081,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.5,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -5090,7 +5099,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.7,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -5108,7 +5117,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 13.1,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -5126,7 +5135,7 @@
   ],
   "clicks": 41,
   "kind": "page",
-  "sec": 13.7,
+  "sec": 13.8,
   "ext_hold": []
  },
  {
@@ -5144,7 +5153,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.3,
+  "sec": 12.0,
   "ext_hold": []
  },
  {
@@ -5162,7 +5171,7 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 13.5,
+  "sec": 13.9,
   "ext_hold": []
  },
  {
@@ -5180,7 +5189,7 @@
   ],
   "clicks": 23,
   "kind": "page",
-  "sec": 11.6,
+  "sec": 11.5,
   "ext_hold": []
  },
  {
@@ -5198,7 +5207,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 12.5,
   "ext_hold": []
  },
  {
@@ -5216,7 +5225,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.3,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -5234,7 +5243,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 12.5,
   "ext_hold": []
  },
  {
@@ -5252,7 +5261,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.5,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -5288,7 +5297,25 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 13.2,
+  "sec": 13.0,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/income-tax-interim-prepayment-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 이 사이트의 종합소득세 계산기로 중간예납세액을 계\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -5305,7 +5332,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -5323,7 +5350,7 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 13.2,
+  "sec": 13.0,
   "ext_hold": []
  },
  {
@@ -5341,7 +5368,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -5359,7 +5386,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 13.5,
   "ext_hold": []
  },
  {
@@ -5377,7 +5404,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.5,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -5413,7 +5440,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -5431,7 +5458,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.7,
+  "sec": 12.5,
   "ext_hold": []
  },
  {
@@ -5449,7 +5476,7 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 13.2,
+  "sec": 13.3,
   "ext_hold": []
  },
  {
@@ -5467,7 +5494,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.7,
+  "sec": 12.5,
   "ext_hold": []
  },
  {
@@ -5485,7 +5512,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 13.0,
   "ext_hold": []
  },
  {
@@ -5503,7 +5530,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 13.0,
+  "sec": 12.7,
   "ext_hold": []
  },
  {
@@ -5521,7 +5548,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 13.4,
+  "sec": 13.0,
   "ext_hold": []
  },
  {
@@ -5539,7 +5566,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.3,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -5556,7 +5583,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 13.0,
+  "sec": 12.5,
   "ext_hold": []
  },
  {
@@ -5574,7 +5601,7 @@
   ],
   "clicks": 43,
   "kind": "page",
-  "sec": 13.7,
+  "sec": 13.6,
   "ext_hold": []
  },
  {
@@ -5592,7 +5619,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -5610,7 +5637,7 @@
   ],
   "clicks": 45,
   "kind": "page",
-  "sec": 14.2,
+  "sec": 13.9,
   "ext_hold": []
  },
  {
@@ -5628,7 +5655,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -5646,7 +5673,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.2,
+  "sec": 12.0,
   "ext_hold": []
  },
  {
@@ -5664,7 +5691,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.3,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -5682,7 +5709,7 @@
   ],
   "clicks": 63,
   "kind": "page",
-  "sec": 15.8,
+  "sec": 15.7,
   "ext_hold": []
  },
  {
@@ -5700,7 +5727,7 @@
   ],
   "clicks": 49,
   "kind": "page",
-  "sec": 14.5,
+  "sec": 14.0,
   "ext_hold": []
  },
  {
@@ -5718,7 +5745,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.5,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -5736,7 +5763,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.9,
+  "sec": 12.7,
   "ext_hold": []
  },
  {
@@ -5754,7 +5781,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 13.2,
+  "sec": 12.7,
   "ext_hold": []
  },
  {
@@ -5772,7 +5799,25 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 12.7,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/mortgage-lien-setup-cost-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 이 사이트의 등기비용 계산기로 근저당 설정 비용을\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 41,
+  "kind": "page",
+  "sec": 13.6,
   "ext_hold": []
  },
  {
@@ -5790,7 +5835,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.5,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -5808,7 +5853,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.3,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -5826,7 +5871,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.1,
   "ext_hold": []
  },
  {
@@ -5844,7 +5889,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -5862,7 +5907,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 12.5,
   "ext_hold": []
  },
  {
@@ -5880,7 +5925,7 @@
   ],
   "clicks": 43,
   "kind": "page",
-  "sec": 13.8,
+  "sec": 14.1,
   "ext_hold": []
  },
  {
@@ -5916,7 +5961,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -5934,7 +5979,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 12.7,
   "ext_hold": []
  },
  {
@@ -5952,7 +5997,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 13.5,
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -5970,7 +6015,7 @@
   ],
   "clicks": 51,
   "kind": "page",
-  "sec": 14.3,
+  "sec": 14.5,
   "ext_hold": []
  },
  {
@@ -5988,7 +6033,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 12.9,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -6006,7 +6051,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.0,
+  "sec": 12.1,
   "ext_hold": []
  },
  {
@@ -6024,7 +6069,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -6042,7 +6087,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -6078,7 +6123,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.3,
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -6096,7 +6141,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 12.7,
   "ext_hold": []
  },
  {
@@ -6114,7 +6159,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 12.7,
   "ext_hold": []
  },
  {
@@ -6132,7 +6177,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -6150,7 +6195,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.7,
+  "sec": 12.9,
   "ext_hold": []
  },
  {
@@ -6186,7 +6231,7 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 13.1,
+  "sec": 13.3,
   "ext_hold": []
  },
  {
@@ -6203,7 +6248,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 11.9,
+  "sec": 12.1,
   "ext_hold": []
  },
  {
@@ -6221,7 +6266,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.0,
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -6275,7 +6320,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.0,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -6293,7 +6338,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.1,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -6310,7 +6355,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.2,
+  "sec": 12.5,
   "ext_hold": []
  },
  {
@@ -6346,7 +6391,25 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.7,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/pregnancy-medical-voucher-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 남은 금액을 아기 병원비에 써도 되나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.1,
   "ext_hold": []
  },
  {
@@ -6355,7 +6418,7 @@
   "errors": [],
   "dialogs": [],
   "notes": [],
-  "step": "1280 summary\"Q. 이 사이트의 대출 상환 계산기로 중도상환수수료도 \"",
+  "step": "1280 summary\"Q. 이 사이트에서 중도상환수수료를 바로 계산할 수 있\"",
   "ext": [
    "http://t1.kakaocdn.net/kas/static/ba.min.js",
    "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
@@ -6364,7 +6427,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.7,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -6382,7 +6445,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -6400,7 +6463,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 13.0,
   "ext_hold": []
  },
  {
@@ -6454,7 +6517,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 12.7,
   "ext_hold": []
  },
  {
@@ -6472,7 +6535,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 13.8,
+  "sec": 13.0,
   "ext_hold": []
  },
  {
@@ -6490,7 +6553,7 @@
   ],
   "clicks": 41,
   "kind": "page",
-  "sec": 13.2,
+  "sec": 13.8,
   "ext_hold": []
  },
  {
@@ -6508,7 +6571,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.3,
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -6526,7 +6589,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 13.1,
   "ext_hold": []
  },
  {
@@ -6544,7 +6607,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 13.2,
   "ext_hold": []
  },
  {
@@ -6580,7 +6643,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 13.0,
   "ext_hold": []
  },
  {
@@ -6598,7 +6661,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.3,
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -6616,7 +6679,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.2,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -6634,7 +6697,7 @@
   ],
   "clicks": 47,
   "kind": "page",
-  "sec": 14.0,
+  "sec": 14.5,
   "ext_hold": []
  },
  {
@@ -6669,7 +6732,7 @@
   ],
   "clicks": 43,
   "kind": "page",
-  "sec": 13.6,
+  "sec": 14.0,
   "ext_hold": []
  },
  {
@@ -6685,9 +6748,9 @@
    "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
    "https://www.googletagmanager.com/gtag/js"
   ],
-  "clicks": 43,
+  "clicks": 45,
   "kind": "page",
-  "sec": 13.5,
+  "sec": 13.7,
   "ext_hold": []
  },
  {
@@ -6704,7 +6767,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.2,
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -6722,7 +6785,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 12.9,
   "ext_hold": []
  },
  {
@@ -6740,7 +6803,7 @@
   ],
   "clicks": 37,
   "kind": "page",
-  "sec": 13.0,
+  "sec": 13.2,
   "ext_hold": []
  },
  {
@@ -6758,7 +6821,7 @@
   ],
   "clicks": 33,
   "kind": "page",
-  "sec": 12.4,
+  "sec": 17.2,
   "ext_hold": []
  },
  {
@@ -6775,7 +6838,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.7,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -6809,9 +6872,9 @@
    "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
    "https://www.googletagmanager.com/gtag/js"
   ],
-  "clicks": 41,
+  "clicks": 39,
   "kind": "page",
-  "sec": 13.3,
+  "sec": 16.6,
   "ext_hold": []
  },
  {
@@ -6829,7 +6892,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.2,
+  "sec": 12.7,
   "ext_hold": []
  },
  {
@@ -6847,7 +6910,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -6865,7 +6928,7 @@
   ],
   "clicks": 27,
   "kind": "page",
-  "sec": 11.8,
+  "sec": 13.0,
   "ext_hold": []
  },
  {
@@ -6883,7 +6946,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 11.9,
+  "sec": 15.1,
   "ext_hold": []
  },
  {
@@ -6901,7 +6964,25 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.2,
+  "sec": 13.0,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/tax-free-comprehensive-savings-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 이 사이트 예금 이자 계산기로 비과세 효과를 계산\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.5,
   "ext_hold": []
  },
  {
@@ -6919,7 +7000,7 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 13.2,
+  "sec": 14.0,
   "ext_hold": []
  },
  {
@@ -6937,7 +7018,7 @@
   ],
   "clicks": 35,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 13.1,
   "ext_hold": []
  },
  {
@@ -6955,7 +7036,25 @@
   ],
   "clicks": 41,
   "kind": "page",
-  "sec": 13.7,
+  "sec": 13.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/vet-fee-disclosure-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"진료비 비교를 계산기로 활용할 수 있나요?\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 31,
+  "kind": "page",
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -6991,7 +7090,7 @@
   ],
   "clicks": 41,
   "kind": "page",
-  "sec": 13.4,
+  "sec": 14.3,
   "ext_hold": []
  },
  {
@@ -7009,7 +7108,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.2,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -7026,7 +7125,7 @@
   ],
   "clicks": 39,
   "kind": "page",
-  "sec": 13.2,
+  "sec": 13.0,
   "ext_hold": []
  },
  {
@@ -7044,7 +7143,43 @@
   ],
   "clicks": 41,
   "kind": "page",
-  "sec": 13.4,
+  "sec": 13.9,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/year-end-tax-2026-changes.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 내 환급액을 직접 계산해 보려면 무엇을 넣으면 되\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 35,
+  "kind": "page",
+  "sec": 15.5,
+  "ext_hold": []
+ },
+ {
+  "key": "/blog/posts/year-end-tax-refund-guide.html",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "1280 summary\"Q. 내 환급액을 계산기로 확인하려면 어떤 값을 넣어야\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "clicks": 33,
+  "kind": "page",
+  "sec": 12.6,
   "ext_hold": []
  },
  {
@@ -7062,7 +7197,7 @@
   ],
   "clicks": 31,
   "kind": "page",
-  "sec": 12.6,
+  "sec": 12.3,
   "ext_hold": []
  },
  {
@@ -7080,7 +7215,7 @@
   ],
   "clicks": 19,
   "kind": "page",
-  "sec": 10.9,
+  "sec": 11.6,
   "ext_hold": []
  },
  {
@@ -7096,7 +7231,7 @@
   ],
   "clicks": 19,
   "kind": "page",
-  "sec": 12.0,
+  "sec": 11.8,
   "ext_hold": []
  },
  {
@@ -7112,7 +7247,7 @@
   ],
   "clicks": 27,
   "kind": "page",
-  "sec": 12.8,
+  "sec": 12.0,
   "ext_hold": []
  },
  {
@@ -7130,7 +7265,7 @@
   ],
   "clicks": 19,
   "kind": "page",
-  "sec": 11.0,
+  "sec": 11.2,
   "ext_hold": []
  },
  {
@@ -7166,7 +7301,7 @@
   ],
   "clicks": 21,
   "kind": "page",
-  "sec": 11.1,
+  "sec": 11.4,
   "ext_hold": []
  },
  {
@@ -7184,7 +7319,7 @@
   ],
   "clicks": 19,
   "kind": "page",
-  "sec": 10.9,
+  "sec": 12.0,
   "ext_hold": []
  },
  {
@@ -7202,7 +7337,7 @@
   ],
   "clicks": 21,
   "kind": "page",
-  "sec": 11.1,
+  "sec": 11.2,
   "ext_hold": []
  },
  {
@@ -7220,7 +7355,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.0,
+  "sec": 12.8,
   "ext_hold": []
  },
  {
@@ -7238,7 +7373,7 @@
   ],
   "clicks": 29,
   "kind": "page",
-  "sec": 12.1,
+  "sec": 12.2,
   "ext_hold": []
  },
  {
@@ -7274,7 +7409,7 @@
   ],
   "clicks": 25,
   "kind": "page",
-  "sec": 11.8,
+  "sec": 12.4,
   "ext_hold": []
  },
  {
@@ -7289,7 +7424,7 @@
   ],
   "clicks": 5,
   "kind": "page",
-  "sec": 3.3,
+  "sec": 3.4,
   "ext_hold": []
  },
  {
@@ -7304,7 +7439,7 @@
   ],
   "clicks": 5,
   "kind": "page",
-  "sec": 3.2,
+  "sec": 3.3,
   "ext_hold": []
  },
  {
@@ -7319,7 +7454,7 @@
   ],
   "clicks": 5,
   "kind": "page",
-  "sec": 3.5,
+  "sec": 3.6,
   "ext_hold": []
  },
  {
@@ -7349,7 +7484,7 @@
   ],
   "clicks": 5,
   "kind": "page",
-  "sec": 3.2,
+  "sec": 3.3,
   "ext_hold": []
  }
 ]

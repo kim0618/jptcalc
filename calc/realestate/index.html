@@ -55,6 +55,7 @@
       {"@type": "WebApplication", "name": "양도소득세 계산기", "url": "https://www.jptcalc.kr/calc/realestate/capital-gains/"},
       {"@type": "WebApplication", "name": "등기비용 계산기", "url": "https://www.jptcalc.kr/calc/realestate/registry/"},
       {"@type": "WebApplication", "name": "평수 변환", "url": "https://www.jptcalc.kr/calc/realestate/pyeong/"},
+      {"@type": "WebApplication", "name": "전용면적 계산기", "url": "https://www.jptcalc.kr/calc/realestate/exclusive-area/"},
       {"@type": "WebApplication", "name": "증여세 계산기", "url": "https://www.jptcalc.kr/calc/realestate/gift/"},
       {"@type": "WebApplication", "name": "상속세 계산기", "url": "https://www.jptcalc.kr/calc/realestate/inheritance/"},
       {"@type": "WebApplication", "name": "재산세 계산기", "url": "https://www.jptcalc.kr/calc/realestate/propertytax/"},
@@ -94,7 +95,7 @@
   </script>
 <link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
   <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
-  <link rel="stylesheet" href="/assets/ds/base.css?v=64bd9b22" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=9112fd1c" />
 </head>
 <body data-cat="realestate" style="--cat: var(--c-realestate)">
 <header id="ds-site-header" class="ds-header">
@@ -107,7 +108,7 @@
 <div class="ds-container ds-hub">
   <aside class="ds-hub-nav" aria-label="카테고리">
     <h2>카테고리</h2>
-    <nav><a href="/calc/realestate/" aria-current="page" style="--cat: var(--c-realestate)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-house"></use></svg></span>부동산<em>19</em></a><a href="/calc/salary/" style="--cat: var(--c-salary)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-briefcase"></use></svg></span>이직/연봉<em>15</em></a><a href="/calc/tools/" style="--cat: var(--c-tools)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-wrench"></use></svg></span>생활·도구<em>8</em></a><a href="/calc/tax/" style="--cat: var(--c-tax)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-receipt"></use></svg></span>프리랜서 세금<em>10</em></a><a href="/calc/pension-welfare/" style="--cat: var(--c-pension-welfare)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span>연금·복지<em>6</em></a><a href="/calc/finance/" style="--cat: var(--c-finance)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-piggy-bank"></use></svg></span>금융·이자<em>9</em></a><a href="/calc/date/" style="--cat: var(--c-date)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-calendar-days"></use></svg></span>날짜·D-day<em>5</em></a><a href="/calc/health/" style="--cat: var(--c-health)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-heart-pulse"></use></svg></span>건강<em>5</em></a><a href="/calc/ai/" style="--cat: var(--c-ai)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-cpu"></use></svg></span>AI/테크<em>5</em></a><a href="/calc/pet/" style="--cat: var(--c-pet)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-paw-print"></use></svg></span>반려동물<em>8</em></a><a href="/calc/auto/" style="--cat: var(--c-auto)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-car"></use></svg></span>자동차<em>7</em></a><a href="/calc/baby/" style="--cat: var(--c-baby)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-baby"></use></svg></span>출산·육아<em>9</em></a></nav>
+    <nav><a href="/calc/realestate/" aria-current="page" style="--cat: var(--c-realestate)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-house"></use></svg></span>부동산<em>20</em></a><a href="/calc/salary/" style="--cat: var(--c-salary)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-briefcase"></use></svg></span>이직/연봉<em>15</em></a><a href="/calc/tools/" style="--cat: var(--c-tools)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-wrench"></use></svg></span>생활·도구<em>11</em></a><a href="/calc/tax/" style="--cat: var(--c-tax)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-receipt"></use></svg></span>프리랜서 세금<em>10</em></a><a href="/calc/pension-welfare/" style="--cat: var(--c-pension-welfare)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-shield-check"></use></svg></span>연금·복지<em>6</em></a><a href="/calc/finance/" style="--cat: var(--c-finance)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-piggy-bank"></use></svg></span>금융·이자<em>10</em></a><a href="/calc/date/" style="--cat: var(--c-date)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-calendar-days"></use></svg></span>날짜·D-day<em>5</em></a><a href="/calc/health/" style="--cat: var(--c-health)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-heart-pulse"></use></svg></span>건강<em>6</em></a><a href="/calc/ai/" style="--cat: var(--c-ai)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-cpu"></use></svg></span>AI/테크<em>5</em></a><a href="/calc/pet/" style="--cat: var(--c-pet)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-paw-print"></use></svg></span>반려동물<em>8</em></a><a href="/calc/auto/" style="--cat: var(--c-auto)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-car"></use></svg></span>자동차<em>7</em></a><a href="/calc/baby/" style="--cat: var(--c-baby)"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-baby"></use></svg></span>출산·육아<em>9</em></a></nav>
   </aside>
 
   <main class="ds-hub-main">
@@ -117,7 +118,7 @@
       <div class="ds-hub-title">
         <img src="/assets/img/illust/cat-realestate.webp" alt="" width="40" height="40" decoding="async">
         <h1 class="page-title">부동산 계산기</h1>
-        <p class="page-subtitle">취득·보유·매도·대출까지 부동산 전 과정 19가지 계산기</p>
+        <p class="page-subtitle">취득·보유·매도·대출까지 부동산 전 과정 20가지 계산기</p>
       </div>
     </div>
 
@@ -134,6 +135,7 @@
           <a class="ds-hub-row" id="calc-brokerage" href="/calc/realestate/brokerage/"><span class="ds-hub-body"><b>중개수수료</b><span>법정 상한 수수료 자동 계산</span></span><span class="ds-badge-pop">인기</span><svg class="ds-i ds-chevron" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
           <a class="ds-hub-row" id="calc-registry" href="/calc/realestate/registry/"><span class="ds-hub-body"><b>등기비용</b><span>등록면허세·교육세·수수료</span></span><svg class="ds-i ds-chevron" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
           <a class="ds-hub-row" id="calc-pyeong" href="/calc/realestate/pyeong/"><span class="ds-hub-body"><b>평수 변환</b><span>평 ↔ m² 단위 환산</span></span><svg class="ds-i ds-chevron" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+          <a class="ds-hub-row" id="calc-exclusive-area" href="/calc/realestate/exclusive-area/"><span class="ds-hub-body"><b>전용면적</b><span>평형 ↔ 전용면적·전용률</span></span><svg class="ds-i ds-chevron" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
           <a class="ds-hub-row" id="calc-joint" href="/calc/realestate/joint/"><span class="ds-hub-body"><b>공동명의 비교</b><span>단독 vs 공동 절세 효과</span></span><svg class="ds-i ds-chevron" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
         </div>
       </section>
@@ -203,7 +205,7 @@
   </div>
 
       <div class="hub-intro">
-    부동산 거래는 취득부터 보유, 매도까지 단계마다 세금과 비용이 발생합니다. 3억원짜리 아파트를 사고팔 때 취득세·등기비용·중개수수료만 합쳐도 수백만원이 들고, 보유 기간 중 재산세와 종합부동산세, 매도 시 양도소득세까지 합산하면 부동산 비용은 거래가의 10%를 넘는 경우도 많습니다. 취득 단계의 <a href="/calc/realestate/acquisition/" style="color:var(--primary);font-weight:600;">취득세</a>와 <a href="/calc/realestate/brokerage/" style="color:var(--primary);font-weight:600;">중개수수료</a>, 보유 중 <a href="/calc/realestate/property-tax-comprehensive/" style="color:var(--primary);font-weight:600;">보유세</a>, 매도 시 <a href="/calc/realestate/capital-gains/" style="color:var(--primary);font-weight:600;">양도소득세</a>를 각 단계에 맞게 미리 계산해두면 자금 계획과 절세 타이밍을 잡을 수 있습니다. 19개 계산기를 아래에서 단계·목적별로 바로 사용하세요.
+    부동산 거래는 취득부터 보유, 매도까지 단계마다 세금과 비용이 발생합니다. 3억원짜리 아파트를 사고팔 때 취득세·등기비용·중개수수료만 합쳐도 수백만원이 들고, 보유 기간 중 재산세와 종합부동산세, 매도 시 양도소득세까지 합산하면 부동산 비용은 거래가의 10%를 넘는 경우도 많습니다. 취득 단계의 <a href="/calc/realestate/acquisition/" style="color:var(--primary);font-weight:600;">취득세</a>와 <a href="/calc/realestate/brokerage/" style="color:var(--primary);font-weight:600;">중개수수료</a>, 보유 중 <a href="/calc/realestate/property-tax-comprehensive/" style="color:var(--primary);font-weight:600;">보유세</a>, 매도 시 <a href="/calc/realestate/capital-gains/" style="color:var(--primary);font-weight:600;">양도소득세</a>를 각 단계에 맞게 미리 계산해두면 자금 계획과 절세 타이밍을 잡을 수 있습니다. 20개 계산기를 아래에서 단계·목적별로 바로 사용하세요.
   </div>
 
       <div class="adfit-slot ds-ad">
@@ -396,8 +398,8 @@
 </footer>
 <div class="toast" id="toast"></div>
 
-<script src="/assets/calc-registry.js?v=b859b628"></script>
-<script src="/assets/ds/site-shell.js?v=f9632873"></script>
+<script src="/assets/calc-registry.js?v=ec2fa08f"></script>
+<script src="/assets/ds/site-shell.js?v=ffeb3ffa"></script>
 <script>
 /* 상황 탭(C1·C2): 고른 그룹만 보이기. 옛 주소의 #계산기(예: #brokerage, #capital-gains)는 그 줄로 이동해 강조 */
 (function () {

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>중도상환수수료 계산기 - 대출 실행일·상환일로 수수료와 면제일 계산 | 제이퍼</title>
+  <meta name="description" content="대출을 만기 전에 갚을 때 내는 중도상환수수료를 상환금액·수수료율·대출 실행일·상환일로 계산합니다. 3년 경과 면제일, 하루에 줄어드는 금액, 연 10% 면제 한도 적용 결과까지 함께 보여줍니다." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/finance/prepayment-fee/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="중도상환수수료 계산기" />
+  <meta property="og:description" content="상환금액·수수료율·대출 실행일·상환일로 중도상환수수료와 수수료가 0원이 되는 날을 계산합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/finance/prepayment-fee/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=9112fd1c" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "중도상환수수료 계산기", "url": "https://www.jptcalc.kr/calc/finance/prepayment-fee/", "description": "상환금액·수수료율·대출 실행일·상환일로 중도상환수수료와 수수료가 0원이 되는 날을 계산합니다.", "applicationCategory": "FinanceApplication", "operatingSystem": "All", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "KRW"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.jptcalc.kr/"}, {"@type": "ListItem", "position": 2, "name": "금융·이자 계산기", "item": "https://www.jptcalc.kr/calc/finance/"}, {"@type": "ListItem", "position": 3, "name": "중도상환수수료 계산기", "item": "https://www.jptcalc.kr/calc/finance/prepayment-fee/"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "중도상환수수료는 어떻게 계산하나요?", "acceptedAnswer": {"@type": "Answer", "text": "중도상환금액 × 수수료율 × 잔존일수 ÷ 대출기간 일수입니다. 대출기간이 3년을 넘으면 3년(1,095일)을 기준으로 합니다. 1억원을 요율 0.55%로 대출 1년 차(365일 경과)에 갚으면 1억 × 0.55% × 730 ÷ 1,095 = 약 366,667원입니다."}}, {"@type": "Question", "name": "대출 후 3년이 지나면 수수료가 없나요?", "acceptedAnswer": {"@type": "Answer", "text": "네. 금융소비자 보호에 관한 법률 제20조제1항제4호나목은 대출계약이 성립한 날부터 3년 이내에 상환하는 경우 등을 빼고는 중도상환수수료를 받지 못하게 합니다. 계산기는 대출 실행일부터 3년이 되는 날부터 0원으로 계산합니다."}}, {"@type": "Question", "name": "수수료율은 어디서 확인하나요?", "acceptedAnswer": {"@type": "Answer", "text": "대출 약정서와 은행 앱의 대출 상세 화면에 적혀 있고, 은행연합회 소비자포털에도 은행별 요율이 공시됩니다. 요율은 대출 실행 시점에 정해져 바뀌지 않으므로, 2025년 1월 13일 전후 중 언제 대출받았는지 확인하세요."}}, {"@type": "Question", "name": "일부만 갚아도 수수료를 내나요?", "acceptedAnswer": {"@type": "Answer", "text": "갚는 금액만큼 수수료를 냅니다. 다만 해마다 최초 대출금액의 일정 비율(흔히 10%)까지 수수료 없이 갚을 수 있는 상품이 있습니다. 약정서에 이런 조건이 있으면 계산기의 면제 한도 칸에 최초 대출금액과 비율을 넣으세요."}}, {"@type": "Question", "name": "대출을 갈아탈 때도 중도상환수수료를 내나요?", "acceptedAnswer": {"@type": "Answer", "text": "기존 대출을 새 대출로 갚는 것이므로 기존 대출의 중도상환수수료가 붙습니다. 갈아타기 전에 수수료와, 낮아지는 금리로 아끼는 이자를 함께 비교하세요. 대출이자 계산기에 새 금리를 넣어 이자 차이를 확인할 수 있습니다."}}]}</script>
+  <link rel="stylesheet" href="/assets/vendor/flatpickr/4.6.13/flatpickr.min.css?v=1b34a425" />
+  <style>
+/* 중도상환수수료 계산기 고유 부품(토큰만 사용) */
+.pf-modes { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.pf-modes .seg-btn { flex: 1 1 calc(50% - var(--space-2)); border: 1px solid var(--line); border-radius: var(--radius-md); min-height: var(--h-seg); }
+.pf-modes .seg-btn:first-child { border-left: 1px solid var(--line); }
+.pf-modes .seg-btn.active { border-color: var(--blue); background: var(--primary-tint); color: var(--text); }
+.pf-hint { margin-top: var(--space-2); font-size: var(--fs-meta); color: var(--text-sub); }
+.pf-warn { margin-top: var(--space-2); font-size: var(--fs-meta); color: var(--warn-text); }
+.pf-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2); }
+.pf-grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-2); }
+.pf-grid .field, .pf-grid3 .field { margin-bottom: 0; }
+.pf-grid, .pf-grid3 { margin-bottom: var(--space-3); }
+.pf-gap { margin-top: var(--space-3); }
+  </style>
+</head>
+<body data-cat="finance" style="--cat: var(--c-finance)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
+</header>
+
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/finance/">금융·이자 계산기</a> &rsaquo; 중도상환수수료 계산기</div>
+      <div class="page-badge">금융소비자보호법 3년 기준</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-piggy-bank"></use></svg></span>
+        <h1 class="page-title">중도상환수수료 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">금소법 제20조</span>
+          <span class="ds-trust-chip">2026.11.17 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">상환금액·요율·대출 실행일로 중도상환수수료와 면제일을 계산합니다</p>
+    </div>
+  </div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+      <div class="field-label ds-group-label">상환 내용</div>
+      <div class="field"><div class="field-label">갚을 금액 <span class="label-hint">중도상환금액</span></div><div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="pf-amt" placeholder="예) 10000" oninput="calcPf()" aria-label="갚을 금액" /><span class="unit">만원</span></div></div>
+      <div class="field"><div class="field-label">중도상환수수료율 <span class="label-hint">대출 약정서·은행 앱의 요율</span></div><div class="input-wrap"><input type="number" step="0.01" inputmode="decimal" id="pf-rate" placeholder="예) 0.55" oninput="calcPf()" aria-label="중도상환수수료율" /><span class="unit">%</span></div></div>
+    </div>
+    <div class="card">
+      <div class="field-label ds-group-label">대출 기간</div>
+      <div class="pf-grid"><div class="field"><div class="field-label">대출 실행일</div><div class="input-wrap"><input type="date" id="pf-start" oninput="calcPf()" onchange="calcPf()" aria-label="대출 실행일" /></div></div><div class="field"><div class="field-label">상환 예정일</div><div class="input-wrap"><input type="date" id="pf-end" oninput="calcPf()" onchange="calcPf()" aria-label="상환 예정일" /></div></div></div>
+      <div class="field"><div class="field-label">대출기간 <span class="label-hint">약정 만기까지 · 6개월은 0.5</span></div><div class="input-wrap"><input type="number" step="0.5" inputmode="decimal" id="pf-term" placeholder="예) 30" oninput="calcPf()" aria-label="대출기간" /><span class="unit">년</span></div></div>
+      <div class="pf-hint">대출기간이 3년을 넘으면 3년(1,095일)을 기준으로 계산합니다. 대출 후 3년이 지나면 수수료는 0원입니다.</div>
+    </div>
+    <details class="card"><summary class="field-label ds-group-label">매년 원금의 10% 면제 한도가 있으면 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+      <p class="pf-hint">일부 대출은 해마다 최초 대출금액의 일정 비율까지 수수료 없이 갚게 해 줍니다. 약정서에 있을 때만 넣으세요.</p>
+      <div class="pf-grid"><div class="field"><div class="field-label">최초 대출금액</div><div class="input-wrap"><input type="text" inputmode="numeric" autocomplete="off" data-ds-num id="pf-orig" placeholder="예) 30000" oninput="calcPf()" aria-label="최초 대출금액" /><span class="unit">만원</span></div></div><div class="field"><div class="field-label">면제 비율</div><div class="input-wrap"><input type="number" step="1" inputmode="decimal" id="pf-free" placeholder="예) 10" oninput="calcPf()" aria-label="면제 비율" /><span class="unit">%</span></div></div></div>
+    </details>
+    <div id="pf-warn" class="pf-warn" style="display:none"></div>
+
+        <button type="button" class="ds-btn-calc" data-calc-submit="submitPf" data-result="pf-result" data-required="">계산하기</button>
+      </div>
+    </section>
+
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="pf-result"><div class="result-highlight"><div class="rh-label" id="pf-label">예상 중도상환수수료</div><div class="rh-value" id="pf-main">-</div><div class="rh-sub" id="pf-sub">-</div></div>
+        <div id="pf-rows"></div>
+        <p class="result-note" id="pf-note">※ 수수료 = 상환금액 × 수수료율 × 잔존일수 ÷ 대출기간 일수(3년을 넘는 대출은 3년 = 1,095일). 은행마다 날수 세는 방식이 달라 몇 원 차이가 날 수 있습니다.</p>
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('pf-result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/finance/loan-repayment/">대출 상환 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">예상 중도상환수수료</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">상환금액·요율·날짜를 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="prepayment-fee-next">
+        <a class="ds-next-card" href="/calc/finance/loan-repayment/" data-next="loan-repayment"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-piggy-bank"></use></svg></span><span class="ds-next-body"><b>대출 상환 계산기</b><span>원리금균등·원금균등·만기일시 상환 방식별 월 상환액과 총이자를 비교합니다. 일부를 갚은 뒤 줄어드는 이자를 가늠할 때 씁니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/realestate/loan/" data-next="loan"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-house"></use></svg></span><span class="ds-next-body"><b>대출이자 계산기</b><span>주택담보대출 금액·금리·기간으로 월 납입액과 총이자를 계산합니다. 갈아탈 대출의 금리를 넣어 비교할 수 있습니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
+  </div>
+
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">금융소비자 보호에 관한 법률 제20조제1항제4호나목(대출계약 성립일부터 3년 이내 상환 등이 아니면 중도상환수수료 부과 금지) <a href="https://www.law.go.kr/법령/금융소비자보호에관한법률" target="_blank" rel="noopener">법령 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#prepayment-fee-s1">계산식</a><a href="#prepayment-fee-s2">시점별 표</a><a href="#prepayment-fee-s3">요율 확인</a><a href="#prepayment-fee-s4">갚을지 판단</a><a href="#prepayment-fee-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+
+  <div class="guide-section">
+        <section class="ds-section ds-prose" aria-labelledby="prepayment-fee-s1">
+          <div class="ds-section-head"><h2 id="prepayment-fee-s1">중도상환수수료는 이렇게 계산합니다</h2></div>
+<p>은행 대출 안내문의 계산식은 구조가 같습니다. 갚는 금액에 약정 요율을 곱하고, 대출기간 중 남은 기간의 비율만큼만 받습니다. 남은 기간이 짧아질수록 수수료가 날마다 일정하게 줄어드는 구조입니다.</p>
+      <ul>
+        <li><strong>수수료</strong> = 중도상환금액 × 수수료율 × 잔존일수 ÷ 대출기간 일수</li>
+        <li><strong>잔존일수</strong> = 대출기간 일수 - 대출 실행일부터 상환일까지 지난 일수</li>
+        <li><strong>대출기간이 3년을 넘으면</strong> 3년(1,095일)을 대출기간으로 봅니다. 30년 주택담보대출도 분모는 1,095일입니다.</li>
+      </ul>
+      <p>3년이라는 선은 법에서 나옵니다. 금융소비자 보호에 관한 법률 제20조제1항제4호나목은 대출계약이 성립한 날부터 3년 이내에 갚는 경우 등을 빼고는 이름이 무엇이든 중도상환수수료를 받지 못하게 합니다. 그래서 대출 후 3년이 지나면 계산기는 0원을 보여줍니다.</p>
+        </section>
+        <section class="ds-section ds-prose" aria-labelledby="prepayment-fee-s2">
+          <div class="ds-section-head"><h2 id="prepayment-fee-s2">1억원을 갚을 때 시점별 수수료</h2></div>
+<p class="ds-table-lead">1억원을 30년 대출(기준 1,095일)에서 갚는 경우입니다. 원 미만은 반올림했습니다.</p>
+<div class="ds-table-card"><table><thead><tr><th>상환 시점</th><th>경과</th><th>잔존</th><th>요율 0.55%</th><th>요율 1.20%</th></tr></thead><tbody><tr><td>3개월</td><td>91일</td><td>1,004일</td><td>504,292원</td><td>1,100,274원</td></tr><tr><td>6개월</td><td>182일</td><td>913일</td><td>458,584원</td><td>1,000,548원</td></tr><tr><td>1년</td><td>365일</td><td>730일</td><td>366,667원</td><td>800,000원</td></tr><tr><td>1년 6개월</td><td>547일</td><td>548일</td><td>275,251원</td><td>600,548원</td></tr><tr><td>2년</td><td>730일</td><td>365일</td><td>183,333원</td><td>400,000원</td></tr><tr><td>2년 6개월</td><td>912일</td><td>183일</td><td>91,918원</td><td>200,548원</td></tr><tr><td>3년 경과</td><td>1,095일</td><td>0일</td><td>0원</td><td>0원</td></tr></tbody></table></div>
+      <p>요율이 두 배면 수수료도 두 배이고, 같은 요율이면 수수료는 남은 일수에 정확히 비례합니다. 1년 차에 갚으면 처음 수수료의 3분의 2, 2년 차에 갚으면 3분의 1만 냅니다.</p>
+        </section>
+        <section class="ds-section ds-prose" aria-labelledby="prepayment-fee-s3">
+          <div class="ds-section-head"><h2 id="prepayment-fee-s3">내 요율은 대출받은 날짜에 따라 다릅니다</h2></div>
+<p>중도상환수수료율은 대출을 실행할 때 약정서에 정해져 만기까지 그대로 갑니다. 금융위원회는 은행이 자금 운용 차질 같은 실제 비용 안에서만 수수료를 받도록 제도를 바꿨고, 이 기준은 2025년 1월 13일 이후 새로 맺은 계약부터 적용됩니다. 그 전에 받은 주택담보대출은 1%대 요율이 흔하고, 이후 대출은 0%대가 많습니다.</p>
+      <ul>
+        <li>요율은 대출 약정서, 은행 앱의 대출 상세, 은행연합회 소비자포털 공시에서 확인할 수 있습니다.</li>
+        <li>같은 은행이라도 담보대출·신용대출, 고정·변동금리에 따라 요율이 다릅니다.</li>
+        <li>일부 상품은 해마다 최초 대출금액의 일정 비율(흔히 10%)까지 수수료 없이 갚을 수 있습니다. 계산기의 면제 한도 칸에 넣으면 그만큼 빼고 계산합니다.</li>
+      </ul>
+        </section>
+        <section class="ds-section ds-prose" aria-labelledby="prepayment-fee-s4">
+          <div class="ds-section-head"><h2 id="prepayment-fee-s4">기다렸다 갚을까, 지금 갚을까</h2></div>
+<p>수수료만 보면 늦게 갚을수록 이득이지만, 갚지 않은 동안 그 돈에는 대출이자가 붙습니다. 판단은 "기다려서 줄어드는 수수료"와 "그동안 더 내는 이자"를 비교하면 됩니다.</p>
+      <ul>
+        <li>계산기의 "하루 늦출 때마다 줄어드는 금액"에 기다릴 날수를 곱한 값이 절약되는 수수료입니다.</li>
+        <li>같은 기간의 이자는 갚을 금액 × 대출금리 × 날수 ÷ 365입니다. 예금에 두면 받는 이자는 여기서 뺍니다.</li>
+        <li>1억원, 요율 0.55%, 대출금리 연 4%라면 하루에 수수료는 약 502원 줄지만 이자는 약 10,959원 붙습니다. 이런 경우는 바로 갚는 쪽이 유리합니다.</li>
+      </ul>
+        </section>
+        <section class="ds-section faq-card" aria-labelledby="prepayment-fee-faq">
+          <div class="ds-section-head"><h2 id="prepayment-fee-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>중도상환수수료는 어떻게 계산하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>중도상환금액 × 수수료율 × 잔존일수 ÷ 대출기간 일수입니다. 대출기간이 3년을 넘으면 3년(1,095일)을 기준으로 합니다. 1억원을 요율 0.55%로 대출 1년 차(365일 경과)에 갚으면 1억 × 0.55% × 730 ÷ 1,095 = 약 366,667원입니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>대출 후 3년이 지나면 수수료가 없나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>네. 금융소비자 보호에 관한 법률 제20조제1항제4호나목은 대출계약이 성립한 날부터 3년 이내에 상환하는 경우 등을 빼고는 중도상환수수료를 받지 못하게 합니다. 계산기는 대출 실행일부터 3년이 되는 날부터 0원으로 계산합니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>수수료율은 어디서 확인하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>대출 약정서와 은행 앱의 대출 상세 화면에 적혀 있고, 은행연합회 소비자포털에도 은행별 요율이 공시됩니다. 요율은 대출 실행 시점에 정해져 바뀌지 않으므로, 2025년 1월 13일 전후 중 언제 대출받았는지 확인하세요.</p>
+            </details>
+<details class="faq-item"><summary><h3>일부만 갚아도 수수료를 내나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>갚는 금액만큼 수수료를 냅니다. 다만 해마다 최초 대출금액의 일정 비율(흔히 10%)까지 수수료 없이 갚을 수 있는 상품이 있습니다. 약정서에 이런 조건이 있으면 계산기의 면제 한도 칸에 최초 대출금액과 비율을 넣으세요.</p>
+            </details>
+<details class="faq-item"><summary><h3>대출을 갈아탈 때도 중도상환수수료를 내나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>기존 대출을 새 대출로 갚는 것이므로 기존 대출의 중도상환수수료가 붙습니다. 갈아타기 전에 수수료와, 낮아지는 금리로 아끼는 이자를 함께 비교하세요. 대출이자 계산기에 새 금리를 넣어 이자 차이를 확인할 수 있습니다.</p>
+            </details>
+      <div class="update-note">최종 검토: 2026.11.17 · 계산 결과는 참고용입니다.</div>
+          </div>
+        </section>
+  </div>
+
+    </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: "금융소비자 보호에 관한 법률 제20조제1항제4호나목, 은행 공시 중도상환수수료 계산식",
+    appliedFrom: "2026년 현행 법령 기준 (요율은 대출 약정서 기준)",
+    exceptions: [
+      "은행마다 날수 계산(윤일·실행일 포함 여부)이 달라 몇 원 차이가 날 수 있습니다",
+      "정책대출·보금자리론 등은 별도 수수료 규정을 따를 수 있습니다"
+    ],
+    references: [{"name": "국가법령정보센터 금융소비자 보호에 관한 법률(law.go.kr)", "url": "https://www.law.go.kr/법령/금융소비자보호에관한법률"}, {"name": "은행연합회 소비자포털(portal.kfb.or.kr)", "url": "https://portal.kfb.or.kr"}],
+    lastReviewed: '2026.11.17',
+  };
+  </script>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 금융·이자 계산기</h2>
+    <div class="sibling-list">
+      <a href="/calc/finance/deposit/" class="sibling-link">예금 이자</a>
+      <a href="/calc/finance/savings/" class="sibling-link">적금 만기</a>
+      <a href="/calc/finance/compound/" class="sibling-link">복리 계산</a>
+      <a href="/calc/finance/loan-repayment/" class="sibling-link">대출 상환</a>
+      <a href="/calc/finance/investment/" class="sibling-link">투자 수익률</a>
+      <a href="/calc/finance/stock-average/" class="sibling-link">주식 평단가</a>
+      <a href="/calc/finance/jangbyeong-savings/" class="sibling-link">장병내일준비적금</a>
+      <a href="/calc/finance/youth-leap-account/" class="sibling-link">청년도약계좌</a>
+      <a href="/calc/finance/youth-future-savings/" class="sibling-link">청년미래적금</a>
+    </div>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/prepayment-fee-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/prepayment-fee-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>중도상환수수료 계산법 2026 - 같은 1억을 1년 차에 갚는데 36만원과 93만원이 갈리는 이유</span></a>
+    </div>
+  </div>
+</main>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
+  </div>
+</footer>
+
+<script src="/assets/ds/calc-kit.js?v=806eb872"></script>
+<script>
+/* 중도상환수수료: 수수료 = 상환금액 × 요율 × 잔존일수 ÷ 대출기간일수, 대출기간 3년 초과 시 3년(1,095일) 기준(은행 공시 계산식, 블로그 prepayment-fee-guide와 같은 규칙)
+   금융소비자 보호에 관한 법률 제20조①4나1): 대출계약 성립일부터 3년 이내 상환 등이 아니면 부과 금지 → 경과 1,095일 이상이면 0원 (data-points §94) */
+var PF_BASE=1095;
+function pfNum(id){var v=parseFloat(String(document.getElementById(id).value).replace(/,/g,''));return isFinite(v)?v:NaN}
+function pfDate(id){var v=document.getElementById(id).value;if(!/^\d{4}-\d{2}-\d{2}$/.test(v))return null;var p=v.split('-');return Date.UTC(+p[0],+p[1]-1,+p[2])}
+function pfWon(n){return Math.round(n).toLocaleString('ko-KR')+'원'}
+function pfDay(ms){var d=new Date(ms);return d.getUTCFullYear()+'년 '+(d.getUTCMonth()+1)+'월 '+d.getUTCDate()+'일'}
+function pfRow(l,v){return '<div class="result-row"><span class="result-label">'+l+'</span><span class="result-value">'+v+'</span></div>'}
+function calcPf(){
+  var res=document.getElementById('pf-result'),warn=document.getElementById('pf-warn');warn.style.display='none';
+  var amt=pfNum('pf-amt'),rate=pfNum('pf-rate'),s=pfDate('pf-start'),e=pfDate('pf-end'),term=pfNum('pf-term');
+  if(!(amt>0)||!(rate>=0)||s==null||e==null){res.classList.remove('show');return}
+  var el=Math.round((e-s)/864e5);
+  if(el<0){warn.textContent='상환 예정일이 대출 실행일보다 앞섭니다.';warn.style.display='block';res.classList.remove('show');return}
+  if(rate>5){warn.textContent='중도상환수수료율은 보통 0~2% 안쪽입니다. 대출 금리를 넣지 않았는지 확인하세요.';warn.style.display='block'}
+  var termDays=PF_BASE*30;
+  if(term>0){var mt=new Date(s);mt.setUTCMonth(mt.getUTCMonth()+Math.round(term*12));termDays=Math.round((mt.getTime()-s)/864e5)}   // 만기 = 실행일 + 개월 수(달력)
+  var base=Math.min(termDays,PF_BASE);
+  var won=amt*10000, free=0, orig=pfNum('pf-orig'), fr=pfNum('pf-free');
+  if(orig>0)free=orig*10000*((fr>=0?fr:10)/100);
+  var charged=Math.max(won-free,0), remain=Math.max(base-el,0);
+  var ann=new Date(s);ann.setUTCFullYear(ann.getUTCFullYear()+3);var zeroDay=Math.min(ann.getTime(),s+termDays*864e5);
+  if(e<zeroDay&&remain<1)remain=1;   // 1,095일째와 달력상 3년 되는 날 사이(윤일)는 하루치를 남겨 표시와 금액을 맞춘다
+  var fee=e>=zeroDay?0:Math.round(charged*rate/100*remain/base);
+  var perDay=charged*rate/100/base, dLeft=Math.max(Math.round((zeroDay-e)/864e5),0);
+  var rows=[];
+  rows.push(pfRow('수수료가 붙는 금액',pfWon(charged)+(free>0?' (면제 '+pfWon(Math.min(free,won))+' 뺌)':'')));
+  rows.push(pfRow('경과 일수 / 기준 일수',el.toLocaleString('ko-KR')+'일 / '+base.toLocaleString('ko-KR')+'일'));
+  rows.push(pfRow('남은 일수',remain.toLocaleString('ko-KR')+'일'));
+  rows.push(pfRow(zeroDay===ann.getTime()?'3년 면제일 (0원)':'만기일 (0원)',pfDay(zeroDay)+(e<zeroDay?'':' (지남)')));
+  if(fee>0)rows.push(pfRow('하루 늦출 때마다 줄어드는 금액','약 '+pfWon(perDay)));
+  if(fee>0&&remain>30)rows.push(pfRow('30일 뒤 갚으면',pfWon(Math.round(charged*rate/100*(remain-30)/base))));
+  document.getElementById('pf-main').textContent=pfWon(fee);
+  document.getElementById('pf-sub').textContent=fee>0?'갚을 금액의 '+(fee/won*100).toFixed(3)+'%':e>=zeroDay?'대출 후 3년(또는 만기)이 지나 수수료 없음':'수수료 없음';
+  document.getElementById('pf-rows').innerHTML=rows.join('');res.classList.add('show');
+}
+function submitPf(){
+  var need=[['pf-amt','갚을 금액을 입력해 주세요.'],['pf-rate','수수료율을 입력해 주세요.'],['pf-start','대출 실행일을 고르세요.'],['pf-end','상환 예정일을 고르세요.']];
+  for(var i=0;i<need.length;i++){var el=document.getElementById(need[i][0]);if(!el.value&&window.DSCalc&&DSCalc.need){DSCalc.need(el,need[i][1]);return}}
+  calcPf();
+}
+(function(){var t=new Date(),el=document.getElementById('pf-end');if(el&&!el.value)el.value=t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0')})();
+</script>
+<script src="/assets/vendor/flatpickr/4.6.13/flatpickr.min.js?v=1eeab1cb"></script>
+<script src="/assets/vendor/flatpickr/4.6.13/l10n/ko.js?v=a9c2b216"></script>
+<script>document.querySelectorAll('input[type=date]').forEach(function(el){flatpickr(el,{locale:'ko',dateFormat:'Y-m-d',altInput:true,altFormat:'Y.m.d',onReady:function(d,s,fp){if(fp.altInput){fp.altInput.setAttribute('inputmode','decimal');fp.altInput.placeholder='2026.01.15'}},parseDate:function(s){var m=String(s).match(/(\d{4})\D+(\d{1,2})\D+(\d{1,2})/);return m?new Date(+m[1],m[2]-1,+m[3]):undefined},disableMobile:true,monthSelectorType:'dropdown',allowInput:true})});</script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
+<script src="/assets/calc-registry.js?v=ec2fa08f"></script>
+<script src="/assets/ds/site-shell.js?v=ffeb3ffa"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: "금융소비자 보호에 관한 법률 2026년 기준",
+  basisDate: '2026년 기준',
+  referenceOrg: "금융위원회",
+  lastReviewed: '2026.11.17',
+  category: 'finance'
+};
+</script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "pf-result", "required": [], "waitText": "상환금액·요율·날짜를 입력하면 계산됩니다", "nextBox": "#prepayment-fee-next", "next": []});
+  DSCalc.placeTrust('ds-trust-col');
+</script>
+<script src="/assets/ds/prefill.js?v=6cc70a47" defer></script>
+</body>
+</html>

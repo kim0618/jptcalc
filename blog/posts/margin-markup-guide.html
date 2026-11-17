@@ -38,7 +38,7 @@
     }
   },
   "datePublished": "2026-10-05",
-  "dateModified": "2026-10-05",
+  "dateModified": "2026-11-17",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://www.jptcalc.kr/blog/posts/margin-markup-guide.html"
@@ -120,7 +120,7 @@
 }
   </script>
   <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
-  <link rel="stylesheet" href="/assets/ds/base.css?v=64bd9b22" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=9112fd1c" />
 </head>
 <body data-cat="tools" style="--cat: var(--c-tools)">
 <header id="ds-site-header" class="ds-header">
@@ -138,7 +138,7 @@
     <picture><source media="(min-width: 1024px)" srcset="/assets/img/blog-thumb/margin-markup-guide-16x9.webp" width="1280" height="720"><img class="ds-post-thumb is-cover" src="/assets/img/blog-thumb/margin-markup-guide-3x1.webp" alt="23.08% 원가에 30% 붙인 실제 마진" width="1440" height="480" decoding="async" fetchpriority="high"></picture>
     <div class="ds-post-body ds-prose">
 <p>스마트스토어를 시작한 이OO씨(31세)는 도매로 18,000원에 떼어 온 텀블러에 마진 30%를 붙여 23,400원으로 등록했습니다. 18,000원에 1.3을 곱한 가격입니다. 한 달 뒤 따져 보니 판매가 대비 남는 이익(수수료·부가세를 빼기 전)은 23.08%였습니다. 계산을 틀린 게 아닙니다. 마진 30%라는 말이 두 가지 뜻으로 쓰이는데, 이OO씨는 한 쪽으로 계산하고 다른 쪽으로 읽었을 뿐입니다.</p>
-    <a class="ds-post-cta" href="/calc/tools/percent/" style="--cat: var(--c-tools)"><span class="ds-icon-tile"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-wrench"></use></svg></span><span class="ds-post-cta-body"><b>퍼센트 계산기</b><span>전체의 몇 %, 한 값이 다른 값의 몇 %, 두 값 사이의 증감률, X% 증가·감소한 값까지 네 가지 비율 계산을 한 화면에서 처리합니다.</span></span><span class="ds-post-cta-go">계산하기 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></span></a>
+    <a class="ds-post-cta" href="/calc/tools/margin/" style="--cat: var(--c-tools)"><span class="ds-icon-tile"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-wrench"></use></svg></span><span class="ds-post-cta-body"><b>마진율 계산기</b><span></span></span><span class="ds-post-cta-go">계산하기 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></span></a>
 
     <details class="ds-post-toc"><summary>목차 (7)<svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary><ol><li><a href="#sec-1">같은 이익인데 분모가 다르다 - 마크업률과 마진율</a></li><li><a href="#sec-2">이OO씨의 텀블러, 마진 30%는 원가÷0.7로 구한다</a></li><li><a href="#sec-3">마진 30% 상품을 30% 깎아 팔면 이익은 정확히 0원이다 - 여기서 함정이 있다</a></li><li><a href="#sec-4">수수료와 목표 마진은 분모에서 한꺼번에 뺀다</a></li><li><a href="#sec-5">부가세가 낀 가격은 공급가액으로 다시 나눈다</a></li><li><a href="#sec-6">자주 나오는 질문</a></li><li><a href="#sec-7">가격표 만들기 전 체크리스트</a></li></ol></details>
 
@@ -301,9 +301,10 @@
     <p>원가 쪽도 같은 문제가 있습니다. 매입 영수증이 부가세 포함인지, 매입세액 공제를 받는지는 사업자 유형(일반과세자·간이과세자·면세사업자)에 따라 다르고, 이 글은 그 판단까지 다루지 않습니다. 가격을 정할 때는 판매가와 원가를 반드시 같은 기준(둘 다 부가세 포함이거나 둘 다 제외)으로 맞춰서 계산하세요. 세율 구조와 신고는 <a href="../posts/vat-guide.html">부가가치세 신고 가이드</a>에, 비율 계산의 기초는 <a href="../posts/percent-guide.html">퍼센트 계산 가이드</a>에 정리해 두었습니다. 사업자 유형별 부가세 처리는 국세청(<a href="https://www.nts.go.kr" target="_blank" rel="noopener">nts.go.kr</a>) 안내나 세무사에게 확인하는 것이 정확합니다.</p>
 
     <div class="cta-box">
-      <p>이익을 판매가로 나눠 마진율을, 원가로 나눠 마크업률을<br>퍼센트 계산기로 바로 확인해 보세요.</p>
-      <a href="../../calc/tools/percent/" class="cta-btn">퍼센트 계산기 바로가기 →</a>
+      <p>원가와 판매가를 넣으면 마진율과 마크업률을, 목표 마진율을 넣으면 수수료·부가세까지 반영한 판매가를<br>마진율 계산기로 바로 확인해 보세요.</p>
+      <a href="../../calc/tools/margin/" class="cta-btn">마진율 계산기 바로가기 →</a>
     </div>
+    <p class="ds-t-sub" style="font-size: var(--fs-meta); margin-top: 8px">관련 계산기: <a href="../../calc/tools/percent/">퍼센트 계산기</a> · <a href="../../calc/tools/discount/">할인율 계산기</a></p>
     <p class="ds-t-sub" style="font-size: var(--fs-meta); margin-top: 8px; text-align: center">A는 B의 몇 % 모드에 이익과 판매가(마진율) 또는 이익과 원가(마크업률)를 넣으세요. 원가에서 판매가까지 몇 % 올랐는지는 증감률 모드가 바로 보여줍니다.</p>
 
     <h2 id="sec-6">자주 나오는 질문</h2>
@@ -324,7 +325,7 @@
     <p>첫째, 마진이라는 말이 원가 기준(마크업)인지 판매가 기준(마진율)인지 정합니다. 둘째, 목표 마진율에서는 원가에 곱하지 않고 1에서 마진율과 수수료율을 뺀 값으로 원가를 나눕니다. 셋째, 할인 이벤트를 걸 계획이라면 마진율이 할인율보다 충분히 커야 하고, 쿠폰 한 번에 필요한 판매량 배수를 표에서 미리 봅니다. 넷째, 판매가와 원가의 부가세 기준을 같게 맞춥니다. 일반과세자라면 표시가가 아니라 공급가액으로 마진을 계산해야 합니다.</p>
     <p>이OO씨의 텀블러는 원가 18,000원에 마진 30%를 노렸지만 원가×1.3으로 정한 23,400원에서는 마진율이 23.08%였습니다. 부가세를 뺀 기준으로 약 25,714원이어야 30.0%가 맞고(일반과세자 표시가로는 약 28,286원), 그 차이는 개당 2,314원, 월 300개 기준 약 69만원이었습니다. 숫자는 퍼센트 계산기로 몇 번만 눌러보면 검산됩니다. 가격을 올리기 전에 이익을 어느 숫자로 나누는지부터 한 번 더 확인해 보세요.</p>
     </div>
-    <aside class="article-info" aria-label="글 작성 및 검토 정보"><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">작성</span><span class="article-info__value">제이퍼 계산기 편집팀</span></div><span class="article-info__sep" aria-hidden="true">|</span><div class="article-info__item"><span class="article-info__label">최종 검토일</span><span class="article-info__value">2026.10.05</span></div></div><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">검토 기준</span><span class="article-info__value">부가가치세법 제30조(세율), 마진율·마크업률 산식과 본문 계산 예시, 2026년 기준</span></div></div><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">적용 기준</span><span class="article-info__value">2026년 기준</span></div><span class="article-info__sep" aria-hidden="true">|</span><div class="article-info__item"><span class="article-info__label">참고 기관</span><span class="article-info__value">국세청(nts.go.kr), 국가법령정보센터(law.go.kr)</span></div></div><div class="article-info__calc"><span class="article-info__label">관련 계산기</span> <a href="/calc/tools/percent/">퍼센트 계산기 &rarr;</a></div><p class="article-info__disclaimer">본 내용은 참고용이며, 수수료율·할인율·원가 구성은 판매 채널과 사업자 유형에 따라 달라집니다. 세금 처리는 세무사 또는 국세청에서 확인하시기 바랍니다.</p></aside>
+    <aside class="article-info" aria-label="글 작성 및 검토 정보"><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">작성</span><span class="article-info__value">제이퍼 계산기 편집팀</span></div><span class="article-info__sep" aria-hidden="true">|</span><div class="article-info__item"><span class="article-info__label">최종 검토일</span><span class="article-info__value">2026.10.05</span></div></div><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">검토 기준</span><span class="article-info__value">부가가치세법 제30조(세율), 마진율·마크업률 산식과 본문 계산 예시, 2026년 기준</span></div></div><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">적용 기준</span><span class="article-info__value">2026년 기준</span></div><span class="article-info__sep" aria-hidden="true">|</span><div class="article-info__item"><span class="article-info__label">참고 기관</span><span class="article-info__value">국세청(nts.go.kr), 국가법령정보센터(law.go.kr)</span></div></div><div class="article-info__calc"><span class="article-info__label">관련 계산기</span> <a href="/calc/tools/margin/">마진율 계산기 &rarr;</a></div><p class="article-info__disclaimer">본 내용은 참고용이며, 수수료율·할인율·원가 구성은 판매 채널과 사업자 유형에 따라 달라집니다. 세금 처리는 세무사 또는 국세청에서 확인하시기 바랍니다.</p></aside>
   </article>
 </main>
 
@@ -348,11 +349,11 @@ window.ARTICLE_INFO_CONFIG = {
   referenceOrg: "국세청(nts.go.kr), 국가법령정보센터(law.go.kr)",
   lastReviewed: '2026.10.05',
   disclaimer: "본 내용은 참고용이며, 수수료율·할인율·원가 구성은 판매 채널과 사업자 유형에 따라 달라집니다. 세금 처리는 세무사 또는 국세청에서 확인하시기 바랍니다.",
-  relatedCalc: { name: '퍼센트 계산기', url: '/calc/tools/percent/' },
+  relatedCalc: { name: '마진율 계산기', url: '/calc/tools/margin/' },
   category: 'tools'
 };
 </script>
-<script src="/assets/calc-registry.js?v=b859b628"></script>
-<script src="/assets/ds/site-shell.js?v=f9632873"></script>
+<script src="/assets/calc-registry.js?v=ec2fa08f"></script>
+<script src="/assets/ds/site-shell.js?v=ffeb3ffa"></script>
 </body>
 </html>

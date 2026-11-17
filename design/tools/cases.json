@@ -566,5 +566,34 @@
     "70"
    ]
   ]
+ },
+ "tax/vat": {
+  "a": [
+   [
+    "set",
+    "#vat-amt",
+    "100000"
+   ]
+  ],
+  "b": [
+   [
+    "click",
+    "#vat-mode .mode-btn[data-mode=report]"
+   ],
+   [
+    "click",
+    "#vat-report .seg-group .seg-btn:nth-child(2)"
+   ],
+   [
+    "set",
+    "#vat-sales",
+    "6000"
+   ],
+   [
+    "set",
+    "#vat-purchase",
+    "1000"
+   ]
+  ]
  }
 }

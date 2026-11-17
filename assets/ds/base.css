@@ -190,7 +190,8 @@ html body #jpt-cookie-bar .ds-cookie-text { min-width: 0; overflow: hidden; text
 html body #jpt-cookie-bar a { flex-shrink: 0; color: var(--primary) !important; text-decoration: underline !important; font-weight: var(--fw-label) !important; }
 html body #jpt-cookie-ok { flex-shrink: 0; width: auto !important; height: 40px !important; padding: 0 var(--space-4) !important; margin: 0 !important; border-radius: var(--radius-sm) !important; background: var(--primary) !important; color: var(--on-brand) !important; font-size: var(--fs-meta) !important; font-weight: var(--fw-label) !important; }
 @media (min-width: 1024px) {
-  html body #jpt-cookie-bar { left: 50% !important; right: auto !important; width: min(720px, calc(100% - 2 * var(--space-4))) !important; transform: translateX(-50%); bottom: var(--space-4) !important; }
+  /* 데스크톱: 가운데(입력·결과 열 위) 대신 오른쪽 아래 구석. 입력칸·계산하기·결과를 가리지 않게(11/17 실제 크롬 검사) */
+  html body #jpt-cookie-bar { left: auto !important; right: var(--space-4) !important; width: min(440px, calc(100% - 2 * var(--space-4))) !important; transform: none; bottom: var(--space-4) !important; }
 }
 .ds-rbar { position: fixed; left: 0; right: 0; bottom: calc(var(--h-tabbar) + env(safe-area-inset-bottom, 0px)); z-index: 52; display: flex; align-items: center; gap: var(--space-2); height: var(--h-sticky-bar); padding: 0 var(--space-page-x); background: var(--surface); box-shadow: 0 -1px 0 var(--line), 0 -4px 12px color-mix(in srgb, var(--text) 6%, transparent); font-size: var(--fs-label); color: var(--text); font-variant-numeric: tabular-nums; cursor: pointer; }
 .ds-rbar[hidden] { display: none; }
@@ -267,14 +268,18 @@ html body .action-btn { background: var(--surface); border: 0; box-shadow: var(-
 .ds-side-card h2 .ds-i { color: var(--blue); }
 .ds-list-item .ds-cat-ico { width: 32px; height: 32px; }
 .ds-hero--calc .ds-hero-inner { padding-top: var(--space-2); padding-bottom: var(--space-1); }
-.ds-hero--calc .page-header { display: grid; grid-template-columns: auto auto minmax(0, 1fr); grid-template-areas: "crumbs crumbs crumbs" "ico title chips" "sub sub sub"; align-items: center; column-gap: var(--space-2); row-gap: var(--space-1); margin: 0; min-width: 0; }
+.ds-hero--calc .page-header { display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-areas: "crumbs crumbs" "ico title" "sub sub" "chips chips"; align-items: center; column-gap: var(--space-2); row-gap: var(--space-1); margin: 0; min-width: 0; }
 .ds-hero--calc .ds-title-row { display: contents; }
 .ds-hero--calc .breadcrumb { grid-area: crumbs; margin: 0; line-height: 1.4; }
 .ds-hero--calc .ds-title-ico { grid-area: ico; width: var(--icon-tile); height: var(--icon-tile); border-radius: var(--radius-md); }
 .ds-title-ico .ds-i { width: 20px; height: 20px; }
 .ds-hero--calc .page-title { grid-area: title; margin: 0; font-size: var(--fs-title); line-height: 1.25; white-space: nowrap; color: var(--navy); }
 .ds-hero--calc .page-subtitle { grid-area: sub; margin: 0; font-size: var(--fs-meta); line-height: 1.4; color: var(--text-sub); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.ds-hero--calc .ds-trust-chips { grid-area: chips; display: flex; gap: var(--space-1); min-width: 0; overflow-x: auto; scrollbar-width: none; -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); mask-image: linear-gradient(90deg, #000 85%, transparent); }
+/* brief v4 DTI 마스터 3: 신뢰 칩은 설명 아래 한 줄, 넘치면 첫 칩 + "+N"(site-shell.js chipFit) */
+.ds-hero--calc .ds-trust-chips { grid-area: chips; display: flex; gap: var(--space-1); min-width: 0; overflow: hidden; }
+.ds-hero--calc .ds-trust-chips.is-collapsed > .ds-trust-chip:not(:first-child):not(.ds-chip-more) { display: none; }
+.ds-hero--calc .ds-trust-chips.is-open { flex-wrap: wrap; }
+.ds-chip-more { border: 0; font-family: inherit; cursor: pointer; }
 .ds-hero--calc .ds-trust-chips::-webkit-scrollbar { display: none; }
 .ds-trust-chip { flex-shrink: 0; display: inline-flex; align-items: center; padding: 2px var(--space-3); border-radius: var(--radius-lg); background: var(--line); color: var(--text-sub); font-size: var(--fs-meta); font-weight: var(--fw-meta); white-space: nowrap; }
 @media (min-width: 1024px) {

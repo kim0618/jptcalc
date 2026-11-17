@@ -97,6 +97,11 @@ window.CALC_REGISTRY = {
         "icon": "📐"
       },
       {
+        "slug": "exclusive-area",
+        "icon": "📏",
+        "name": "전용면적"
+      },
+      {
         "slug": "registry",
         "name": "등기비용",
         "icon": "📋"
@@ -268,6 +273,11 @@ window.CALC_REGISTRY = {
         "name": "대출 상환"
       },
       {
+        "slug": "prepayment-fee",
+        "icon": "🧾",
+        "name": "중도상환수수료"
+      },
+      {
         "slug": "investment",
         "icon": "📉",
         "name": "투자 수익률"
@@ -323,6 +333,11 @@ window.CALC_REGISTRY = {
         "slug": "ideal-weight",
         "icon": "⚖️",
         "name": "적정체중"
+      },
+      {
+        "slug": "checkup-result",
+        "icon": "🩺",
+        "name": "건강검진 수치 판정"
       }
     ]
   },
@@ -485,6 +500,11 @@ window.CALC_REGISTRY = {
         "name": "퍼센트 계산기"
       },
       {
+        "slug": "ratio",
+        "icon": "➗",
+        "name": "비율 계산기"
+      },
+      {
         "slug": "unit-converter",
         "icon": "📐",
         "name": "단위 변환기"
@@ -500,6 +520,11 @@ window.CALC_REGISTRY = {
         "name": "할인율 계산기"
       },
       {
+        "slug": "margin",
+        "icon": "💹",
+        "name": "마진율 계산기"
+      },
+      {
         "slug": "gpa",
         "icon": "🎓",
         "name": "학점 계산기"
@@ -508,6 +533,11 @@ window.CALC_REGISTRY = {
         "slug": "naesin-grade",
         "icon": "🏫",
         "name": "내신 등급 계산기"
+      },
+      {
+        "slug": "achievement-grade",
+        "icon": "🅰️",
+        "name": "성취도 계산기"
       },
       {
         "slug": "char-count",

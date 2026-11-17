@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>전용면적 계산기 - 평형으로 전용면적, 전용면적으로 평형·전용률 계산 | 제이퍼</title>
+  <meta name="description" content="34평형은 전용 몇 ㎡일까? 평형(공급면적)과 전용률로 전용면적을 추정하고, 전용면적으로 평형을, 전용·공급면적으로 전용률과 주거공용면적을 계산합니다. 국민주택규모 85㎡ 해당 여부도 함께 봅니다." />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.jptcalc.kr/calc/realestate/exclusive-area/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="전용면적 계산기" />
+  <meta property="og:description" content="평형·전용면적·공급면적을 서로 바꾸고 전용률과 국민주택규모(85㎡) 해당 여부를 계산합니다." />
+  <meta property="og:url" content="https://www.jptcalc.kr/calc/realestate/exclusive-area/" />
+  <meta property="og:site_name" content="제이퍼 계산기" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.jptcalc.kr/android-chrome-512x512.png" />
+  <meta name="twitter:card" content="summary" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRSX3F10MZ"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6112766558731601" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BRSX3F10MZ');</script>
+  <link rel="stylesheet" href="/assets/vendor/pretendard/1.3.9/pretendard.css?v=60669db8" />
+  <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=9112fd1c" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "전용면적 계산기", "url": "https://www.jptcalc.kr/calc/realestate/exclusive-area/", "description": "평형·전용면적·공급면적을 서로 바꾸고 전용률과 국민주택규모(85㎡) 해당 여부를 계산합니다.", "applicationCategory": "FinanceApplication", "operatingSystem": "All", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "KRW"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.jptcalc.kr/"}, {"@type": "ListItem", "position": 2, "name": "부동산 계산기", "item": "https://www.jptcalc.kr/calc/realestate/"}, {"@type": "ListItem", "position": 3, "name": "전용면적 계산기", "item": "https://www.jptcalc.kr/calc/realestate/exclusive-area/"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "34평형은 전용면적이 몇 ㎡인가요?", "acceptedAnswer": {"@type": "Answer", "text": "34평형의 공급면적은 34 × 3.30579 = 약 112.4㎡입니다. 여기에 아파트 전용률 74~78%를 곱하면 전용면적은 약 83.2~87.7㎡입니다. 흔한 84㎡ 타입이 이 범위에 있습니다. 단지마다 전용률이 달라 정확한 값은 입주자모집공고나 등기부의 주거전용면적으로 확인하세요."}}, {"@type": "Question", "name": "전용률은 어떻게 계산하나요?", "acceptedAnswer": {"@type": "Answer", "text": "전용률 = 전용면적 ÷ 공급면적 × 100입니다. 전용 84.97㎡, 공급 113.18㎡라면 75.1%입니다. 계산기의 \"전용률 계산\"에 두 면적을 넣으면 전용률과 함께 주거공용면적(공급 - 전용)도 보여줍니다."}}, {"@type": "Question", "name": "평형과 평수는 같은 말인가요?", "acceptedAnswer": {"@type": "Answer", "text": "보통 \"34평형\"처럼 평형은 공급면적을 평으로 부른 값이고, 실제로 쓰는 공간을 평으로 말하면 전용 평수입니다. 전용 84㎡는 약 25.4평이지만 평형으로는 32~34평형으로 부릅니다. 두 숫자를 섞으면 집 크기를 잘못 비교하게 됩니다."}}, {"@type": "Question", "name": "발코니 확장 면적도 전용면적에 들어가나요?", "acceptedAnswer": {"@type": "Answer", "text": "들어가지 않습니다. 발코니는 서비스면적이라 확장해도 등기부의 전용면적은 그대로입니다. 국민주택규모(85㎡) 판정도 발코니를 뺀 전용면적으로 합니다. 다만 실제 생활 공간은 넓어지므로 계산기는 발코니 면적을 넣으면 실사용 면적을 따로 보여줍니다."}}, {"@type": "Question", "name": "오피스텔 전용률은 왜 낮은가요?", "acceptedAnswer": {"@type": "Answer", "text": "오피스텔은 복도·로비·엘리베이터 같은 공용 공간 비중이 커서 전용률이 대체로 50~65% 수준입니다. 아파트(74~78%)와 같은 평수로 부르더라도 실제 쓰는 공간이 훨씬 작을 수 있어, 오피스텔을 고를 때는 전용면적 ㎡로 비교하는 것이 좋습니다."}}]}</script>
+  <style>
+/* 전용면적 계산기 고유 부품(토큰만 사용) */
+.ea-modes { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.ea-modes .seg-btn { flex: 1 1 calc(50% - var(--space-2)); border: 1px solid var(--line); border-radius: var(--radius-md); min-height: var(--h-seg); }
+.ea-modes .seg-btn:first-child { border-left: 1px solid var(--line); }
+.ea-modes .seg-btn.active { border-color: var(--blue); background: var(--primary-tint); color: var(--text); }
+.ea-hint { margin-top: var(--space-2); font-size: var(--fs-meta); color: var(--text-sub); }
+.ea-warn { margin-top: var(--space-2); font-size: var(--fs-meta); color: var(--warn-text); }
+.ea-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2); }
+.ea-grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-2); }
+.ea-grid .field, .ea-grid3 .field { margin-bottom: 0; }
+.ea-grid, .ea-grid3 { margin-bottom: var(--space-3); }
+.ea-gap { margin-top: var(--space-3); }
+  </style>
+</head>
+<body data-cat="realestate" style="--cat: var(--c-realestate)">
+<header id="ds-site-header" class="ds-header">
+  <div class="ds-container"><div class="ds-header-inner">
+    <a class="ds-logo" href="/"><span class="ds-logo-text">제이퍼계산기</span></a>
+    <nav class="ds-header-nav" aria-label="주 메뉴"><a href="/#situations">상황별</a><a href="/#categories" aria-current="page">카테고리</a><a href="/blog/">블로그</a></nav>
+  </div></div>
+</header>
+
+<div class="ds-hero ds-hero--calc">
+  <div class="ds-container ds-hero-inner">
+    <div class="page-header">
+      <div class="breadcrumb ds-crumbs"><a href="/">홈</a> &rsaquo; <a href="/calc/realestate/">부동산 계산기</a> &rsaquo; 전용면적 계산기</div>
+      <div class="page-badge">주택공급규칙 면적 구분 기준</div>
+      <div class="ds-title-row">
+        <span class="ds-cat-ico ds-title-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-house"></use></svg></span>
+        <h1 class="page-title">전용면적 계산기</h1>
+        <div class="ds-trust-chips" aria-label="기준 정보">
+          <span class="ds-trust-chip">주택법 85㎡ 기준</span>
+          <span class="ds-trust-chip">2026.11.17 검토</span>
+        </div>
+      </div>
+      <p class="page-subtitle">평형·공급면적·전용면적을 서로 바꾸고 전용률을 계산합니다</p>
+    </div>
+  </div>
+</div>
+
+<main class="page-wrap ds-main ds-container">
+  <div class="ds-calc">
+    <section class="ds-calc-input" aria-labelledby="ds-h-input">
+      <h2 class="ds-col-title" id="ds-h-input">계산 입력</h2>
+      <div class="ds-input-card">
+<div class="card">
+      <div class="field-label ds-group-label">무엇을 알고 있나요</div>
+      <div class="ea-modes" id="ea-mode" role="group" aria-label="계산 방식"><button type="button" class="seg-btn active" data-mode="py" onclick="setEaMode('py',this)">평형 → 전용면적</button><button type="button" class="seg-btn" data-mode="ex" onclick="setEaMode('ex',this)">전용면적 → 평형</button><button type="button" class="seg-btn" data-mode="rate" onclick="setEaMode('rate',this)">전용률 계산</button></div>
+    </div>
+    <div class="card">
+      <div id="ea-in-py"><div class="field"><div class="field-label">광고 평형 <span class="label-hint">공급면적 기준 "34평형"의 숫자</span></div><div class="input-wrap"><input type="number" step="any" inputmode="decimal" id="ea-py" placeholder="예) 34" oninput="calcEa()" aria-label="광고 평형" /><span class="unit">평</span></div></div></div>
+      <div id="ea-in-ex" style="display:none"><div class="field"><div class="field-label">전용면적 <span class="label-hint">등기부·공고문의 주거전용면적</span></div><div class="input-wrap"><input type="number" step="any" inputmode="decimal" id="ea-ex" placeholder="예) 84" oninput="calcEa()" aria-label="전용면적" /><span class="unit">㎡</span></div></div></div>
+      <div id="ea-in-rate" style="display:none"><div class="ea-grid"><div class="field"><div class="field-label">전용면적</div><div class="input-wrap"><input type="number" step="any" inputmode="decimal" id="ea-ex2" placeholder="예) 84.97" oninput="calcEa()" aria-label="전용면적" /><span class="unit">㎡</span></div></div><div class="field"><div class="field-label">공급면적</div><div class="input-wrap"><input type="number" step="any" inputmode="decimal" id="ea-sup" placeholder="예) 113.18" oninput="calcEa()" aria-label="공급면적" /><span class="unit">㎡</span></div></div></div></div>
+      <div id="ea-type-box">
+        <div class="field-label" style="margin-top:var(--space-3)">건물 종류 (전용률)</div>
+        <div class="seg-group" id="ea-type" role="group" aria-label="건물 종류"><button type="button" class="seg-btn active" onclick="setEaType('apt',this)"><b>아파트</b>74~78%</button><button type="button" class="seg-btn" onclick="setEaType('off',this)"><b>오피스텔</b>50~65%</button><button type="button" class="seg-btn" onclick="setEaType('own',this)"><b>직접 입력</b>%</button></div>
+        <div id="ea-own-box" style="display:none"><div class="field"><div class="field-label">전용률 <span class="label-hint">공고문 전용률을 알면</span></div><div class="input-wrap"><input type="number" step="any" inputmode="decimal" id="ea-own" placeholder="예) 76" oninput="calcEa()" aria-label="전용률" /><span class="unit">%</span></div></div></div>
+      </div>
+      <div class="field" style="margin-top:var(--space-3)"><div class="field-label">발코니 확장 면적 <span class="label-hint">선택 · 서비스면적</span></div><div class="input-wrap"><input type="number" step="any" inputmode="decimal" id="ea-bal" placeholder="모르면 비워 두세요" oninput="calcEa()" aria-label="발코니 확장 면적" /><span class="unit">㎡</span></div></div>
+      <div id="ea-warn" class="ea-warn" style="display:none"></div>
+    </div>
+
+        <button type="button" class="ds-btn-calc" data-calc-submit="submitEa" data-result="ea-result" data-required="">계산하기</button>
+      </div>
+    </section>
+
+    <section class="ds-calc-result" aria-labelledby="ds-h-result">
+      <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
+      <div class="result-card ds-wrap" id="ea-result"><div class="result-highlight"><div class="rh-label" id="ea-label">전용면적</div><div class="rh-value" id="ea-main">-</div><div class="rh-sub" id="ea-sub">-</div></div>
+        <div id="ea-rows"></div>
+        <p class="result-note" id="ea-note">※ 평형은 공급면적(전용+주거공용) ÷ 3.30579로 부른 값입니다. 실제 면적은 입주자모집공고·등기부의 ㎡를 확인하세요.</p>
+        <div class="ds-result-actions">
+          <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('ea-result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
+          <a class="ds-btn-primary" id="ds-primary-next" href="/calc/realestate/pyeong/">평수 변환 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="ds-result-empty">
+        <div class="ds-rbox is-ghost"><span class="ds-result-label">전용면적</span><span class="ds-result-number">--</span><span class="ds-ghost-msg">면적을 입력하면 계산됩니다</span></div>
+      </div>
+    </section>
+
+    <section class="ds-calc-next" aria-labelledby="ds-h-next">
+      <h2 class="ds-col-title" id="ds-h-next">이어서 계산</h2>
+      <div class="ds-next" id="exclusive-area-next">
+        <a class="ds-next-card" href="/calc/realestate/pyeong/" data-next="pyeong"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-house"></use></svg></span><span class="ds-next-body"><b>평수 변환 계산기</b><span>평과 ㎡를 서로 바꾸고 자주 찾는 전용면적(59·84·114㎡)을 바로 평으로 환산합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+        <a class="ds-next-card" href="/calc/realestate/acquisition/" data-next="acquisition"><span class="ds-cat-ico"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-house"></use></svg></span><span class="ds-next-body"><b>취득세 계산기</b><span>집값과 전용면적 85㎡ 초과 여부, 주택 수로 취득세·지방교육세·농어촌특별세를 계산합니다.</span></span><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-right"></use></svg></a>
+      </div>
+
+    </section>
+  </div>
+
+  <section class="ds-basis" aria-labelledby="ds-h-basis">
+    <h2 class="ds-block-title" id="ds-h-basis">계산 근거</h2>
+    <div class="ds-basis-card">주택공급에 관한 규칙 제21조제5항(주거전용면적·주거공용면적·그 밖의 공용면적), 주택법 제2조제6호(국민주택규모 85㎡) <a href="https://www.law.go.kr/법령/주택공급에관한규칙" target="_blank" rel="noopener">법령 확인 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-up-right"></use></svg></a></div>
+  </section>
+
+  <div class="ds-calc-flow">
+
+      <nav class="ds-toc" aria-label="이 페이지 내용">
+        <a href="#exclusive-area-s1">면적 구분</a><a href="#exclusive-area-s2">평형별 표</a><a href="#exclusive-area-s3">아파트·오피스텔</a><a href="#exclusive-area-s4">85㎡ 기준</a><a href="#exclusive-area-faq">FAQ</a>
+      </nav>
+<div class="adfit-slot ds-ad">
+    <ins class="kakao_ad_area" style="display:none" data-ad-unit="DAN-hNe8uZYR1mwCNEke" data-ad-width="300" data-ad-height="250"></ins>
+    <script async type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js"></script>
+  </div>
+
+  <div class="guide-section">
+        <section class="ds-section ds-prose" aria-labelledby="exclusive-area-s1">
+          <div class="ds-section-head"><h2 id="exclusive-area-s1">전용·공용·공급·계약면적, 무엇이 다른가</h2></div>
+<p>아파트 한 세대에는 면적 숫자가 여러 개 붙습니다. 주택공급에 관한 규칙 제21조제5항은 공급면적을 세대별로 표시할 때 주거전용면적으로 표시하고, 공용면적은 주거공용면적과 그 밖의 공용면적으로 나눠 따로 적을 수 있다고 정합니다. 광고의 "평형"은 대개 전용과 주거공용을 더한 공급면적을 평으로 바꾼 숫자입니다.</p>
+      <div class="ds-table-card"><table><thead><tr><th>면적</th><th>들어가는 공간</th><th>주로 쓰이는 곳</th></tr></thead><tbody><tr><td>주거전용면적</td><td>방·거실·주방·욕실 등 세대 안</td><td>등기부, 국민주택규모(85㎡) 판정, 청약 주택형</td></tr><tr><td>주거공용면적</td><td>계단·복도·현관 등 지상층 공용</td><td>공급면적 계산</td></tr><tr><td>공급면적</td><td>전용 + 주거공용</td><td>"34평형" 같은 평형 표기</td></tr><tr><td>그 밖의 공용면적</td><td>지하층·관리사무소·노인정 등</td><td>계약면적 계산</td></tr><tr><td>계약면적</td><td>공급 + 그 밖의 공용</td><td>분양 계약서</td></tr><tr><td>서비스면적</td><td>발코니(전용에 안 들어감)</td><td>확장하면 실사용 공간이 늘어남</td></tr></tbody></table></div>
+      <p>그래서 전용률(전용 ÷ 공급)을 알면 평형과 전용면적을 서로 바꿀 수 있습니다. 전용률은 단지마다 달라서 이 계산기는 아파트는 74~78%, 오피스텔은 50~65% 범위로 결과를 보여주고, 공고문의 전용률을 알면 직접 넣어 한 값으로 계산합니다.</p>
+        </section>
+        <section class="ds-section ds-prose" aria-labelledby="exclusive-area-s2">
+          <div class="ds-section-head"><h2 id="exclusive-area-s2">자주 보는 평형의 전용면적 범위</h2></div>
+<p class="ds-table-lead">공급면적 = 평형 × 3.30579㎡로 바꾼 뒤 아파트 전용률 74~78%를 곱한 값입니다.</p>
+<div class="ds-table-card"><table><thead><tr><th>평형</th><th>공급면적</th><th>전용면적 (전용률 74~78%)</th><th>전용 평수</th></tr></thead><tbody><tr><td>18평형</td><td>59.5㎡</td><td>44.0~46.4㎡</td><td>13.3~14.0평</td></tr><tr><td>24평형</td><td>79.3㎡</td><td>58.7~61.9㎡</td><td>17.8~18.7평</td></tr><tr><td>25평형</td><td>82.6㎡</td><td>61.2~64.5㎡</td><td>18.5~19.5평</td></tr><tr><td>32평형</td><td>105.8㎡</td><td>78.3~82.5㎡</td><td>23.7~25.0평</td></tr><tr><td>33평형</td><td>109.1㎡</td><td>80.7~85.1㎡</td><td>24.4~25.7평</td></tr><tr><td>34평형</td><td>112.4㎡</td><td>83.2~87.7㎡</td><td>25.2~26.5평</td></tr><tr><td>43평형</td><td>142.1㎡</td><td>105.2~110.9㎡</td><td>31.8~33.5평</td></tr><tr><td>45평형</td><td>148.8㎡</td><td>110.1~116.0㎡</td><td>33.3~35.1평</td></tr></tbody></table></div>
+      <p>흔히 "국민평형"이라 부르는 34평형은 전용 약 83~88㎡ 범위에 걸칩니다. 같은 34평형이라도 전용률이 높은 단지는 85㎡를 넘을 수 있어, 국민주택규모 여부는 반드시 공고문의 주거전용면적으로 확인해야 합니다. 반대로 전용 84㎡는 공급면적 107.7~113.5㎡, 곧 32.6~34.3평형으로 나옵니다.</p>
+        </section>
+        <section class="ds-section ds-prose" aria-labelledby="exclusive-area-s3">
+          <div class="ds-section-head"><h2 id="exclusive-area-s3">같은 30평형이어도 오피스텔이 좁은 이유</h2></div>
+<p>오피스텔은 복도·엘리베이터 같은 공용 공간 비율이 높아 전용률이 아파트보다 낮습니다. 공급면적 30평(99.2㎡)을 기준으로 비교하면 차이가 분명합니다.</p>
+      <div class="ds-table-card"><table><thead><tr><th>건물</th><th>전용률</th><th>전용면적</th><th>전용 평수</th></tr></thead><tbody><tr><td>아파트</td><td>74~78%</td><td>73.4~77.4㎡</td><td>22.2~23.4평</td></tr><tr><td>오피스텔</td><td>50~65%</td><td>49.6~64.5㎡</td><td>15.0~19.5평</td></tr></tbody></table></div>
+      <p>오피스텔 광고는 계약면적이나 공급면적으로 평수를 부르는 경우가 많아, 같은 "30평"이라는 말을 들어도 실제 쓰는 공간은 아파트의 3분의 2 정도일 수 있습니다. 매물을 비교할 때는 평형 대신 전용면적 ㎡끼리 비교하는 것이 가장 정확합니다.</p>
+        </section>
+        <section class="ds-section ds-prose" aria-labelledby="exclusive-area-s4">
+          <div class="ds-section-head"><h2 id="exclusive-area-s4">전용 85㎡ 국민주택규모와 발코니</h2></div>
+<p>주택법 제2조제6호는 주거전용면적이 1세대당 85㎡ 이하인 주택을 국민주택규모로 정합니다. 수도권을 제외한 도시지역이 아닌 읍·면 지역은 100㎡ 이하입니다. 이 경계는 공급면적이 아니라 전용면적으로 판단하므로, 평형만 보고 85㎡ 이하인지 짐작하면 틀릴 수 있습니다.</p>
+      <ul>
+        <li>평형에서 전용면적을 추정하면 범위로 나오고, 그 범위가 85㎡를 걸치면 계산기에 "경계"로 표시됩니다.</li>
+        <li>발코니는 서비스면적이라 전용면적에 들어가지 않습니다. 확장해 넓어진 실사용 공간은 계산기에 따로 보여주지만 85㎡ 판정에는 넣지 않습니다.</li>
+        <li>등기부와 계약서에는 ㎡만 적힙니다. 평은 이해를 돕는 참고값입니다.</li>
+      </ul>
+        </section>
+        <section class="ds-section faq-card" aria-labelledby="exclusive-area-faq">
+          <div class="ds-section-head"><h2 id="exclusive-area-faq">자주 묻는 질문</h2></div>
+          <div class="ds-faq">
+<details class="faq-item"><summary><h3>34평형은 전용면적이 몇 ㎡인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>34평형의 공급면적은 34 × 3.30579 = 약 112.4㎡입니다. 여기에 아파트 전용률 74~78%를 곱하면 전용면적은 약 83.2~87.7㎡입니다. 흔한 84㎡ 타입이 이 범위에 있습니다. 단지마다 전용률이 달라 정확한 값은 입주자모집공고나 등기부의 주거전용면적으로 확인하세요.</p>
+            </details>
+<details class="faq-item"><summary><h3>전용률은 어떻게 계산하나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>전용률 = 전용면적 ÷ 공급면적 × 100입니다. 전용 84.97㎡, 공급 113.18㎡라면 75.1%입니다. 계산기의 "전용률 계산"에 두 면적을 넣으면 전용률과 함께 주거공용면적(공급 - 전용)도 보여줍니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>평형과 평수는 같은 말인가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>보통 "34평형"처럼 평형은 공급면적을 평으로 부른 값이고, 실제로 쓰는 공간을 평으로 말하면 전용 평수입니다. 전용 84㎡는 약 25.4평이지만 평형으로는 32~34평형으로 부릅니다. 두 숫자를 섞으면 집 크기를 잘못 비교하게 됩니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>발코니 확장 면적도 전용면적에 들어가나요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>들어가지 않습니다. 발코니는 서비스면적이라 확장해도 등기부의 전용면적은 그대로입니다. 국민주택규모(85㎡) 판정도 발코니를 뺀 전용면적으로 합니다. 다만 실제 생활 공간은 넓어지므로 계산기는 발코니 면적을 넣으면 실사용 면적을 따로 보여줍니다.</p>
+            </details>
+<details class="faq-item"><summary><h3>오피스텔 전용률은 왜 낮은가요?</h3><svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary>
+              <p>오피스텔은 복도·로비·엘리베이터 같은 공용 공간 비중이 커서 전용률이 대체로 50~65% 수준입니다. 아파트(74~78%)와 같은 평수로 부르더라도 실제 쓰는 공간이 훨씬 작을 수 있어, 오피스텔을 고를 때는 전용면적 ㎡로 비교하는 것이 좋습니다.</p>
+            </details>
+      <div class="update-note">최종 검토: 2026.11.17 · 계산 결과는 참고용입니다.</div>
+          </div>
+        </section>
+  </div>
+
+    </div>
+
+  <div class="ds-aside-row">
+    <div class="ds-aside-col" id="ds-trust-col"></div>
+  </div>
+
+  <script>
+  window.TRUST_BLOCK_CONFIG = {
+    standard: "주택공급에 관한 규칙 제21조제5항 면적 구분, 주택법 제2조제6호 국민주택규모",
+    appliedFrom: "2026년 현행 법령 기준",
+    exceptions: [
+      "전용률 범위(아파트 74~78%, 오피스텔 50~65%)는 흔한 값을 잡은 추정치로, 단지마다 다릅니다",
+      "수도권을 제외한 도시지역이 아닌 읍·면은 국민주택규모가 100㎡ 이하입니다"
+    ],
+    references: [{"name": "국가법령정보센터 주택공급에 관한 규칙(law.go.kr)", "url": "https://www.law.go.kr/법령/주택공급에관한규칙"}, {"name": "국가법령정보센터 주택법(law.go.kr)", "url": "https://www.law.go.kr/법령/주택법"}],
+    lastReviewed: '2026.11.17',
+  };
+  </script>
+  <script src="/assets/trust-block.js?v=ac07516f"></script>
+  <div class="sibling-section ds-section">
+    <h2 class="sibling-title">다른 부동산 계산기</h2>
+    <div class="sibling-list">
+      <a href="/calc/realestate/brokerage/" class="sibling-link">중개수수료</a>
+      <a href="/calc/realestate/acquisition/" class="sibling-link">취득세</a>
+      <a href="/calc/realestate/conversion/" class="sibling-link">전월세 전환율</a>
+      <a href="/calc/realestate/loan/" class="sibling-link">대출이자</a>
+      <a href="/calc/realestate/rental/" class="sibling-link">임대수익률</a>
+      <a href="/calc/realestate/capital-gains/" class="sibling-link">양도소득세</a>
+      <a href="/calc/realestate/dsr/" class="sibling-link">대출한도 (DSR)</a>
+      <a href="/calc/realestate/dti/" class="sibling-link">총부채상환비율 (DTI)</a>
+      <a href="/calc/realestate/ltv/" class="sibling-link">주택담보인정비율 (LTV)</a>
+      <a href="/calc/realestate/didimdol/" class="sibling-link">디딤돌대출</a>
+      <a href="/calc/realestate/jeonse-loan/" class="sibling-link">전세자금대출</a>
+      <a href="/calc/realestate/gift/" class="sibling-link">증여세</a>
+      <a href="/calc/realestate/inheritance/" class="sibling-link">상속세</a>
+      <a href="/calc/realestate/joint/" class="sibling-link">공동명의비교</a>
+      <a href="/calc/realestate/jongbu/" class="sibling-link">종합부동산세</a>
+      <a href="/calc/realestate/property-tax-comprehensive/" class="sibling-link">재산세 종합</a>
+      <a href="/calc/realestate/propertytax/" class="sibling-link">재산세</a>
+      <a href="/calc/realestate/pyeong/" class="sibling-link">평수 변환</a>
+      <a href="/calc/realestate/registry/" class="sibling-link">등기비용</a>
+    </div>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/apartment-area-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/apartment-area-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>아파트 평수 완전 해석 - 전용·공급·계약면적 차이와 실사용 크기 비교</span></a>
+    </div>
+  </div>
+</main>
+<footer id="ds-site-footer" class="site-footer ds-footer">
+  <div class="ds-container">
+    <div class="ds-footer-top">
+      <ul class="ds-footer-cats" aria-label="계산기 카테고리"><li><a href="/calc/realestate/">부동산</a></li><li><a href="/calc/salary/">이직/연봉</a></li><li><a href="/calc/tools/">생활·도구</a></li><li><a href="/calc/tax/">프리랜서 세금</a></li><li><a href="/calc/pension-welfare/">연금·복지</a></li><li><a href="/calc/finance/">금융·이자</a></li><li><a href="/calc/date/">날짜·D-day</a></li><li><a href="/calc/health/">건강</a></li><li><a href="/calc/ai/">AI/테크</a></li><li><a href="/calc/pet/">반려동물</a></li><li><a href="/calc/auto/">자동차</a></li><li><a href="/calc/baby/">출산·육아</a></li></ul>
+      <div class="ds-footer-links footer-links">
+        <a href="/">홈</a><a href="/about.html">소개</a><a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a><a href="/contact.html">문의하기</a><a href="/disclaimer.html">면책조항</a>
+      </div>
+    </div>
+    <p class="ds-footer-copy footer-copy">&copy; 2026 제이퍼 계산기 - 본 결과는 참고용이며 정확한 세액은 전문가에게 문의하세요.</p>
+  </div>
+</footer>
+
+<script src="/assets/ds/calc-kit.js?v=806eb872"></script>
+<script>
+/* 전용면적 계산기: 주택공급에 관한 규칙 제21조⑤(주거전용·주거공용·그 밖의 공용면적), 주택법 제2조제6호(국민주택규모 85㎡).
+   평형 = 공급면적(전용+주거공용) ÷ 3.30579. 전용률 범위는 평수 계산기와 같은 가정(아파트 74~78%, 오피스텔 50~65%, data-points §93) */
+var PY=3.30579,eaMode='py',eaType='apt';
+var EA_RATE={apt:[0.74,0.78],off:[0.50,0.65]};
+function eaNum(id){var v=parseFloat(String(document.getElementById(id).value).replace(/,/g,''));return isFinite(v)?v:NaN}
+function eaF(v,d){return v.toLocaleString('ko-KR',{minimumFractionDigits:d,maximumFractionDigits:d})}
+function eaRange(a,b,d,u){return Math.abs(a-b)<1e-9?eaF(a,d)+u:eaF(a,d)+'~'+eaF(b,d)+u}
+function setEaMode(m,btn){eaMode=m;document.querySelectorAll('#ea-mode .seg-btn').forEach(function(b){b.classList.toggle('active',b===btn)});
+  ['py','ex','rate'].forEach(function(k){document.getElementById('ea-in-'+k).style.display=k===m?'':'none'});
+  document.getElementById('ea-type-box').style.display=m==='rate'?'none':'';
+  var eaL=m==='py'?'전용면적':m==='ex'?'평형(공급면적 기준)':'전용률';document.getElementById('ea-label').textContent=eaL;var eaG=document.querySelector('.ds-result-empty .ds-result-label');if(eaG)eaG.textContent=eaL;
+  document.getElementById('ea-result').classList.remove('show');calcEa()}
+function setEaType(t,btn){eaType=t;btn.parentElement.querySelectorAll('.seg-btn').forEach(function(b){b.classList.toggle('active',b===btn)});
+  document.getElementById('ea-own-box').style.display=t==='own'?'':'none';calcEa()}
+function eaRates(){if(eaType!=='own')return EA_RATE[eaType];var r=eaNum('ea-own');return isFinite(r)&&r>0&&r<=100?[r/100,r/100]:null}
+function eaNat(lo,hi){if(hi<=85)return '국민주택규모 이하 (85㎡ 이하)';if(lo>85)return '국민주택규모 초과 (85㎡ 초과)';return '85㎡ 경계 · 공고문 전용면적 확인 필요'}
+function eaRow(l,v){return '<div class="result-row"><span class="result-label">'+l+'</span><span class="result-value">'+v+'</span></div>'}
+function calcEa(){
+  var res=document.getElementById('ea-result'),warn=document.getElementById('ea-warn');warn.style.display='none';
+  var bal=eaNum('ea-bal');if(!(bal>0))bal=0;
+  var main,sub,rows=[];
+  if(eaMode==='rate'){
+    var ex=eaNum('ea-ex2'),sup=eaNum('ea-sup');
+    if(!(ex>0)||!(sup>0)){res.classList.remove('show');return}
+    if(ex>sup){warn.textContent='전용면적이 공급면적보다 클 수 없습니다. 두 칸을 바꿔 넣었는지 확인하세요.';warn.style.display='block';res.classList.remove('show');return}
+    var r=ex/sup*100;main=eaF(r,1)+'%';sub='전용 '+eaF(ex/PY,1)+'평 · 공급 '+eaF(sup/PY,1)+'평형';
+    rows.push(eaRow('전용면적',eaF(ex,2)+'㎡ ('+eaF(ex/PY,2)+'평)'));
+    rows.push(eaRow('공급면적',eaF(sup,2)+'㎡ ('+eaF(sup/PY,2)+'평)'));
+    rows.push(eaRow('주거공용면적 (공급 - 전용)',eaF(sup-ex,2)+'㎡ ('+eaF((sup-ex)/PY,2)+'평)'));
+    rows.push(eaRow('전용률 판단',r>=74&&r<=78?'아파트 흔한 범위(74~78%) 안':r>78?'아파트 흔한 범위보다 높음 (계단식·대형 평형에 많음)':r>=65?'아파트 흔한 범위보다 낮음 (복도식·소형에 많음)':'오피스텔·주상복합 수준'));
+    rows.push(eaRow('국민주택규모',eaNat(ex,ex)));
+    if(bal)rows.push(eaRow('발코니 확장 시 실사용',eaF(ex+bal,1)+'㎡ ('+eaF((ex+bal)/PY,1)+'평)'));
+  } else {
+    var R=eaRates();if(!R){if(eaType==='own'){warn.textContent='전용률을 1~100% 사이로 입력하세요.';warn.style.display='block'}res.classList.remove('show');return}
+    var lo=R[0],hi=R[1],rateTxt=lo===hi?eaF(lo*100,1)+'%':eaF(lo*100,0)+'~'+eaF(hi*100,0)+'%';
+    if(eaMode==='py'){
+      var py=eaNum('ea-py');if(!(py>0)){res.classList.remove('show');return}
+      var sp=py*PY,a=sp*lo,b=sp*hi;
+      main=eaRange(a,b,1,'㎡');sub='전용 '+eaRange(a/PY,b/PY,1,'평')+' · 전용률 '+rateTxt;
+      rows.push(eaRow('공급면적 ('+py.toLocaleString('ko-KR',{maximumFractionDigits:1})+'평형)',eaF(sp,2)+'㎡'));
+      rows.push(eaRow('전용면적 추정',eaRange(a,b,2,'㎡')));
+      rows.push(eaRow('주거공용면적 추정',eaRange(sp-b,sp-a,1,'㎡')));
+      rows.push(eaRow('국민주택규모',eaNat(a,b)));
+      if(bal)rows.push(eaRow('발코니 확장 시 실사용',eaRange(a+bal,b+bal,1,'㎡')+' ('+eaRange((a+bal)/PY,(b+bal)/PY,1,'평')+')'));
+    } else {
+      var ex=eaNum('ea-ex');if(!(ex>0)){res.classList.remove('show');return}
+      var s1=ex/hi,s2=ex/lo;
+      main=eaRange(s1/PY,s2/PY,1,'평형');sub='공급면적 '+eaRange(s1,s2,1,'㎡')+' · 전용률 '+rateTxt;
+      rows.push(eaRow('전용면적',eaF(ex,2)+'㎡ ('+eaF(ex/PY,2)+'평)'));
+      rows.push(eaRow('공급면적 추정',eaRange(s1,s2,2,'㎡')));
+      rows.push(eaRow('주거공용면적 추정',eaRange(s1-ex,s2-ex,1,'㎡')));
+      rows.push(eaRow('국민주택규모',eaNat(ex,ex)));
+      if(bal)rows.push(eaRow('발코니 확장 시 실사용',eaF(ex+bal,1)+'㎡ ('+eaF((ex+bal)/PY,1)+'평)'));
+    }
+  }
+  document.getElementById('ea-main').textContent=main;document.getElementById('ea-sub').textContent=sub;
+  document.getElementById('ea-rows').innerHTML=rows.join('');res.classList.add('show');
+}
+function submitEa(){
+  var id=eaMode==='py'?'ea-py':eaMode==='ex'?'ea-ex':(isFinite(eaNum('ea-ex2'))?'ea-sup':'ea-ex2');
+  if(!(eaNum(id)>0)&&window.DSCalc&&DSCalc.need){DSCalc.need(document.getElementById(id),'면적을 입력해 주세요.');return}
+  calcEa();
+}
+</script>
+<script src="/assets/calc-validate.js?v=80f1784e"></script>
+<script src="/assets/calc-result-tools.js?v=25a4281d"></script>
+<script src="/assets/calc-registry.js?v=ec2fa08f"></script>
+<script src="/assets/ds/site-shell.js?v=ffeb3ffa"></script>
+<script>
+window.ARTICLE_INFO_CONFIG = {
+  author: '제이퍼 계산기 편집팀',
+  reviewBasis: "주택공급에 관한 규칙·주택법 2026년 기준",
+  basisDate: '2026년 기준',
+  referenceOrg: "국토교통부",
+  lastReviewed: '2026.11.17',
+  category: 'realestate'
+};
+</script>
+<script src="/assets/blog-article-info.js?v=81c529db"></script>
+<script src="/assets/blog-review-footer.js?v=0f5ce259"></script>
+<script>
+  // 새 틀 연결: 결과 바 · 결과 복사 · 이어서 계산 값 싣기 · 신뢰 블록 배치 (원본 계산 스크립트는 그대로)
+  DSCalc.auto({"card": "ea-result", "required": [], "waitText": "면적을 입력하면 계산됩니다", "nextBox": "#exclusive-area-next", "next": []});
+  DSCalc.placeTrust('ds-trust-col');
+</script>
+<script src="/assets/ds/prefill.js?v=6cc70a47" defer></script>
+</body>
+</html>

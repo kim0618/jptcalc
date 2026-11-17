@@ -91,7 +91,7 @@
   </script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.jptcalc.kr/"}, {"@type": "ListItem", "position": 2, "name": "블로그", "item": "https://www.jptcalc.kr/blog/"}, {"@type": "ListItem", "position": 3, "name": "건강", "item": "https://www.jptcalc.kr/blog/?cat=건강"}, {"@type": "ListItem", "position": 4, "name": "콜레스테롤 정상수치 - LDL·HDL·중성지방 기준과 건강검진 결과 단계별 해석", "item": "https://www.jptcalc.kr/blog/posts/cholesterol-levels-guide.html"}]}</script>
   <link rel="stylesheet" href="/assets/ds/tokens.css?v=7f9e4444" />
-  <link rel="stylesheet" href="/assets/ds/base.css?v=64bd9b22" />
+  <link rel="stylesheet" href="/assets/ds/base.css?v=9112fd1c" />
 </head>
 <body data-cat="health" style="--cat: var(--c-health)">
 <header id="ds-site-header" class="ds-header">
@@ -109,7 +109,7 @@
     <picture><source media="(min-width: 1024px)" srcset="/assets/img/blog-thumb/cholesterol-levels-guide-16x9.webp" width="1280" height="720"><img class="ds-post-thumb is-cover" src="/assets/img/blog-thumb/cholesterol-levels-guide-3x1.webp" alt="200 미만 총콜레스테롤 정상 기준" width="1440" height="480" decoding="async" fetchpriority="high"></picture>
     <div class="ds-post-body ds-prose">
 <p>콜레스테롤 정상 범위는 총콜레스테롤 200 미만, LDL 100 미만(최적)·130 미만(일반인 기준), HDL 60 이상, 중성지방 150 미만입니다(단위 mg/dL). 다만 같은 총콜레스테롤 220이어도 위험도는 사람마다 다릅니다. 건강검진 결과지에서 가장 먼저 봐야 할 줄은 총콜레스테롤이 아니라 LDL과 HDL이기 때문입니다.</p>
-    <a class="ds-post-cta" href="/calc/health/bmi/" style="--cat: var(--c-health)"><span class="ds-icon-tile"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-heart-pulse"></use></svg></span><span class="ds-post-cta-body"><b>BMI 계산기</b><span>키와 체중만 입력하면 대한비만학회 기준(정상 18.5~22.9, 비만 25 이상)으로 자동 판정합니다. WHO 기준과 한국 기준 차이도 함께 안내합니다.</span></span><span class="ds-post-cta-go">계산하기 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></span></a>
+    <a class="ds-post-cta" href="/calc/health/checkup-result/" style="--cat: var(--c-health)"><span class="ds-icon-tile"><svg class="ds-i" aria-hidden="true"><use href="/assets/ds/icons.svg#i-heart-pulse"></use></svg></span><span class="ds-post-cta-body"><b>건강검진 수치 판정 계산기</b><span></span></span><span class="ds-post-cta-go">계산하기 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></span></a>
 
     <details class="ds-post-toc"><summary>목차 (13)<svg class="ds-i ds-faq-chev" aria-hidden="true"><use href="/assets/ds/icons.svg#i-chevron-down"></use></svg></summary><ol><li><a href="#sec-1">콜레스테롤 결과지에 적힌 4가지 숫자, 무슨 뜻인가</a></li><li><a href="#sec-2">수치별 기준표 - 한국·미국 가이드라인 통합</a></li><li><a href="#sec-3">한국 성인 콜레스테롤 현실 - 평균은 어디쯤일까</a></li><li><a href="#sec-4">시나리오 1 - 35세 사무직 박지훈, 총콜 220 받았을 때</a></li><li><a href="#sec-5">시나리오 2 - 52세 폐경기 김미라, LDL 172의 의미</a></li><li><a href="#sec-6">시나리오 3 - 28세 운동인 이서윤, 총콜 245지만 괜찮은 이유</a></li><li><a href="#sec-7">총콜레스테롤 220이 LDL 130보다 안전할 수 있다</a></li><li><a href="#sec-8">LDL을 약 없이 10~15% 낮추는 6가지 식이 전략</a></li><li><a href="#sec-9">스타틴 약물 치료 - 누가 언제 시작해야 하나</a></li><li><a href="#sec-10">건강검진 채혈 전 - 꼭 알아둘 3가지</a></li><li><a href="#sec-11">한 가지 더 - HDL이 낮은 사람을 위한 처방</a></li><li><a href="#sec-12">콜레스테롤 관리에 자주 나오는 궁금증</a></li><li><a href="#sec-13">핵심만 정리하면</a></li></ol></details>
 
@@ -211,6 +211,8 @@
       <text x="24" y="214" font-size="11" font-family="Pretendard,sans-serif" style="fill: var(--text-sub)">출처: NCEP ATP III · 한국지질동맥경화학회 2022 진료지침</text>
     </svg>
     </div>
+
+    <p><a href="../../calc/health/checkup-result/" style="font-weight: 600">건강검진 판정기준(정상A·정상B·질환의심)으로 내 콜레스테롤 4가지 수치 확인하기</a></p>
 
     <h2 id="sec-3">한국 성인 콜레스테롤 현실 - 평균은 어디쯤일까</h2>
     <p>질병관리청 「국민건강영양조사」(2023년) 기준 한국 성인의 평균 수치는 다음과 같습니다. 본인 수치를 평균과 비교해 보면 어디쯤 와 있는지 감이 옵니다.</p>
@@ -372,7 +374,7 @@
     <h2 id="sec-13">핵심만 정리하면</h2>
     <p>콜레스테롤 결과지에서 가장 먼저 봐야 할 줄은 총콜레스테롤이 아니라 LDL과 HDL입니다. 총콜레스테롤 220(HDL 68)인 사람과 195(HDL 32)인 사람의 10년 심혈관 위험은 정반대일 수 있습니다. 핵심 숫자 하나만 기억한다면, <strong>비-HDL 콜레스테롤 = 총콜 - HDL, 목표는 160 미만</strong>입니다. 본인 검진지에 비-HDL이 없으면 직접 빼서 계산하면 됩니다. 약 없이도 식이 + 운동 6개월이면 LDL 10~15% 감소가 충분히 가능하니, 결과지를 받았다면 다음 검진까지 6개월을 어떻게 보낼지 오늘 결정해 보세요.</p>
     </div>
-    <aside class="article-info" aria-label="글 작성 및 검토 정보"><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">작성</span><span class="article-info__value">제이퍼 계산기 편집팀</span></div><span class="article-info__sep" aria-hidden="true">|</span><div class="article-info__item"><span class="article-info__label">최종 검토일</span><span class="article-info__value">2026.08.05</span></div></div><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">참고 기준</span><span class="article-info__value">한국지질·동맥경화학회 이상지질혈증 진료지침 2022 · NCEP ATP III · 질병관리청 국민건강영양조사 2023</span></div></div><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">기준 시점</span><span class="article-info__value">2026년 기준</span></div><span class="article-info__sep" aria-hidden="true">|</span><div class="article-info__item"><span class="article-info__label">참고 기관</span><span class="article-info__value">한국지질·동맥경화학회</span></div></div><div class="article-info__calc"><span class="article-info__label">관련 계산기</span> <a href="/calc/health/bmi/">BMI 계산기 &rarr;</a></div><p class="article-info__disclaimer">본 내용은 참고용이며 정확한 진단은 의사에게 문의하세요.</p></aside>
+    <aside class="article-info" aria-label="글 작성 및 검토 정보"><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">작성</span><span class="article-info__value">제이퍼 계산기 편집팀</span></div><span class="article-info__sep" aria-hidden="true">|</span><div class="article-info__item"><span class="article-info__label">최종 검토일</span><span class="article-info__value">2026.08.05</span></div></div><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">참고 기준</span><span class="article-info__value">한국지질·동맥경화학회 이상지질혈증 진료지침 2022 · NCEP ATP III · 질병관리청 국민건강영양조사 2023</span></div></div><div class="article-info__row"><div class="article-info__item"><span class="article-info__label">기준 시점</span><span class="article-info__value">2026년 기준</span></div><span class="article-info__sep" aria-hidden="true">|</span><div class="article-info__item"><span class="article-info__label">참고 기관</span><span class="article-info__value">한국지질·동맥경화학회</span></div></div><div class="article-info__calc"><span class="article-info__label">관련 계산기</span> <a href="/calc/health/checkup-result/">건강검진 수치 판정 계산기 &rarr;</a></div><p class="article-info__disclaimer">본 내용은 참고용이며 정확한 진단은 의사에게 문의하세요.</p></aside>
   </article>
 </main>
 
@@ -396,11 +398,11 @@ window.ARTICLE_INFO_CONFIG = {
   referenceOrg: "한국지질·동맥경화학회",
   lastReviewed: '2026.08.05',
   disclaimer: "본 내용은 참고용이며 정확한 진단은 의사에게 문의하세요.",
-  relatedCalc: { name: 'BMI 계산기', url: '/calc/health/bmi/' },
+  relatedCalc: { name: '건강검진 수치 판정 계산기', url: '/calc/health/checkup-result/' },
   category: 'health'
 };
 </script>
-<script src="/assets/calc-registry.js?v=b859b628"></script>
-<script src="/assets/ds/site-shell.js?v=f9632873"></script>
+<script src="/assets/calc-registry.js?v=ec2fa08f"></script>
+<script src="/assets/ds/site-shell.js?v=ffeb3ffa"></script>
 </body>
 </html>

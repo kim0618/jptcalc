@@ -1,6 +1,6 @@
 [
  {
-  "key": "realestate/property-tax-comprehensive",
+  "key": "health/bmr",
   "fail": [],
   "errors": [],
   "dialogs": [],
@@ -14,10 +14,10 @@
   ],
   "button": true,
   "a": "hint",
-  "a_hint": "\"공시가격\" 칸을 입력해 주세요.",
+  "a_hint": "\"나이\" 칸을 입력해 주세요.",
   "ba_scroll": -0.0,
   "dl": [
-   "보유세 종합 계산기.png"
+   "기초대사량 계산기.png"
   ],
   "img_ok": true,
   "c_buttons": [
@@ -28,11 +28,118 @@
    "결과공유",
    "이미지저장"
   ],
-  "c_next": "/calc/realestate/jongbu/?price=100000&from=property-tax-comprehensive",
+  "c_next": "/calc/health/calories/",
   "bb_scroll": -0.0,
-  "clicks": 18,
+  "clicks": 17,
   "kind": "calc",
-  "sec": 17.9,
+  "sec": 21.1,
+  "ext_hold": []
+ },
+ {
+  "key": "realestate/ltv",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"닫기\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"주택 가격\" 칸을 입력해 주세요.",
+  "ba_scroll": 0,
+  "dl": [
+   "LTV 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/realestate/dsr/",
+  "bb_scroll": -0.0,
+  "clicks": 19,
+  "kind": "calc",
+  "sec": 21.6,
+  "ext_hold": []
+ },
+ {
+  "key": "tax/vat",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"금융·보험·부동산임대 등 40%\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "hint",
+  "a_hint": "\"공급가액 단가 또는 총액 · 원 단위\" 중 한 칸 이상 입력해 주세요.",
+  "ba_scroll": -0.0,
+  "dl": [
+   "부가가치세 계산기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/tax/income-tax/",
+  "bb_scroll": 0,
+  "clicks": 31,
+  "kind": "calc",
+  "sec": 48.2,
+  "ext_hold": []
+ },
+ {
+  "key": "tools/lunar-calendar",
+  "fail": [],
+  "errors": [],
+  "dialogs": [],
+  "notes": [],
+  "step": "390 button\"전체 삭제\"",
+  "ext": [
+   "http://t1.kakaocdn.net/kas/static/ba.min.js",
+   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+   "https://t1.kakaocdn.net/kas/static/third-party/cookie/ct2.html",
+   "https://www.googletagmanager.com/gtag/js"
+  ],
+  "button": true,
+  "a": "default",
+  "ba_scroll": -0.0,
+  "dl": [
+   "음력 양력 변환기.png"
+  ],
+  "img_ok": true,
+  "c_buttons": [
+   "결과 복사",
+   "저장·공유",
+   "저장",
+   "기록",
+   "결과공유",
+   "이미지저장"
+  ],
+  "c_next": "/calc/date/dday/",
+  "bb_scroll": 0,
+  "clicks": 23,
+  "kind": "calc",
+  "sec": 23.2,
   "ext_hold": []
  }
 ]

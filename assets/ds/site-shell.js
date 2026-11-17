@@ -90,7 +90,7 @@
     if (INDEX) return cb();
     if (window.CALC_REGISTRY) { INDEX = buildIndex(); return cb(); }
     var s = document.createElement('script');
-    s.src = '/assets/calc-registry.js?v=b859b628';
+    s.src = '/assets/calc-registry.js?v=ec2fa08f';
     s.onload = function () { INDEX = buildIndex(); cb(); };
     document.head.appendChild(s);
   }
@@ -232,7 +232,7 @@
 
   // ── 배포 데이터(/assets/ds/*.json, build_home.py가 생성): 상황 시트·헤더 메뉴 공용. 처음 필요할 때 한 번 받는다 ──
   var DATA = {};
-  var DS_DATA_V = {"situations": "8544dfb8", "cat-menu": "365b21b2"};   // 메뉴 데이터 캐시 버전(design/tools/asset_version.py가 파일 내용 해시로 채움)
+  var DS_DATA_V = {"situations": "8544dfb8", "cat-menu": "e8dfe67b"};   // 메뉴 데이터 캐시 버전(design/tools/asset_version.py가 파일 내용 해시로 채움)
   function load(name, ok, fail) {
     var d = DATA[name];
     if (d && d.v) return ok(d.v);
@@ -859,6 +859,26 @@
       }
     });
   }
+  /* 신뢰 칩 한 줄(brief v4 DTI 마스터 3): 넘치면 첫 칩만 두고 "+N" 칩, 누르면 모두 펼침 */
+  function chipFit() {
+    Array.prototype.forEach.call(document.querySelectorAll('.ds-hero--calc .ds-trust-chips'), function (box) {
+      if (box.classList.contains('is-open') || !box.getClientRects().length) return;
+      var more = box.querySelector('.ds-chip-more');
+      box.classList.remove('is-collapsed'); if (more) more.parentNode.removeChild(more);
+      var chips = box.querySelectorAll('.ds-trust-chip');
+      if (chips.length < 2 || box.scrollWidth <= box.clientWidth + 1) return;
+      box.classList.add('is-collapsed');
+      more = document.createElement('button'); more.type = 'button'; more.className = 'ds-trust-chip ds-chip-more';
+      more.textContent = '+' + (chips.length - 1); more.setAttribute('aria-label', '기준 정보 ' + (chips.length - 1) + '개 더 보기');
+      more.addEventListener('click', function () { box.classList.remove('is-collapsed'); box.classList.add('is-open'); more.parentNode.removeChild(more); });
+      box.appendChild(more);
+    });
+  }
+  var cfT = 0;
+  window.addEventListener('resize', function () { clearTimeout(cfT); cfT = setTimeout(chipFit, 150); });
+  window.addEventListener('load', chipFit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(chipFit);
+  chipFit();
   var f1T = 0;
   window.addEventListener('resize', function () { clearTimeout(f1T); f1T = setTimeout(fitOneLine, 150); });
   window.addEventListener('load', fitOneLine);
