@@ -395,13 +395,25 @@ def convert(cat, slug):
 {''.join(card(h, t) for h, t in related)}      </div>
     </section>
   </div>
-{('''
+@@AD@@{('''
   <div class="ds-calc-extra">
     ''' + extra + '''
   </div>
 ''') if extra and not extra_in_result else ''}{basis_html}
 {flow}
 '''
+    # 광고(애드핏 300x250)는 가이드 본문 속이 아니라 계산 칸(결과·이어서 계산) 바로 아래로 (2026-11-18)
+    # 리뉴얼 뒤 FAQ 앞까지 내려가 폰 기준 2.1화면 아래였음 → 계산 근거 위 1.5화면
+    a0 = page.find('<div class="adfit-slot ds-ad">')
+    if a0 > 0:
+        a1 = div_end(page, a0)
+        ad_html = page[a0:a1]
+        ls = page.rfind('\n', 0, a0) + 1
+        page = page[:ls] + page[a1:].lstrip(' \t').removeprefix('\n') if page[ls:a0].strip() == '' else page[:a0] + page[a1:]
+        page = page.replace('@@AD@@', '  ' + ad_html + '\n', 1)
+        log.append('광고를 계산 칸 아래로')
+    else:
+        page = page.replace('@@AD@@', '', 1)
     if table:   # 입력·결과 칸 자리에 표 카드 한 칸(카드 제목이 칸 제목)
         tm_ = re.search(r'<div class="card-title">(.*?)</div>', res, re.S)
         body_ = res[res.index('>') + 1:-len('</div>')].replace(tm_.group(0), '', 1).replace('<div class="guide-table-wrap">', '<div class="ds-table-card">')

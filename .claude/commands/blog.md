@@ -692,6 +692,8 @@ window.ARTICLE_INFO_CONFIG = {
 
 **체제 A 전면차단 15편** (`robots noindex,follow`, 2026-06-29) - 구글·네이버 모두 차단 + 세 파일에서 제외. 아래 원문 참조.
 
+> **2026-11-18 체제 B 해제(사용자 결정)**: 105편의 googlebot noindex를 원고(`design/blog-source/posts/`)와 공개본에서 모두 뺐다. 3개월간 구글 회복 신호가 없었고 구글이 105편 중 97편은 태그를 읽지도 않았다. 지금 체제 B 대상은 0편이다. 아래 설명은 경위 기록이며, **기존 글에 googlebot noindex를 다시 걸지 말 것.** 새 글에 넣지 않는 규칙은 그대로다.
+
 **체제 B 구글한정 105편** (`googlebot noindex,follow`, 2026-08-13) - 애드센스 4차 거절 후속. 구글이 이미 색인을 거부한 블로그 105편을 **구글 시야에서만** 뺐다. 이 글들은 네이버 트래픽의 본체이므로 **sitemap·blog/index·rss 에 그대로 남겨야 한다**(체제 A와 정반대). 절대 하면 안 되는 것:
 
 - 이 105편에 범용 `name="robots"` noindex 를 걸지 말 것. 네이버까지 죽어서 트래픽 본체가 날아간다. 반드시 `name="googlebot"` 이어야 한다.
@@ -753,7 +755,7 @@ window.ARTICLE_INFO_CONFIG = {
 □ 마무리 h2 제목이 "마무리"가 아닌 다른 표현인지 확인
 □ 카카오 애드핏 슬롯 2개 포함 여부 - ①상단(DAN-IE2k, 목차 직후) ②본문중간(DAN-88xhd, 중간 h2 앞, FAQ/마무리 회피). 하단 CTA엔 광고 없어야 함
 □ **공통 크롬 검증: 생성 후 `node scripts/check-post-chrome.mjs` 실행** (생성된 blog/posts가 새 틀인지: site-shell·정적 작성자 안내·ARTICLE_INFO_CONFIG 필수, 옛 스크립트·옛 헤더가 있으면 실패. 전 글 통과해야 함)
-□ **noindex 격리 검증: `node scripts/check-noindex-excluded.mjs` 실행** (위 0번. 체제 A 15편이 sitemap·blog/index·rss 에 되살아났는지 + 체제 B 105편이 sitemap 에서 빠졌는지 양방향 검출. 종료코드 0이어야 함)
+□ **noindex 격리 검증: `node scripts/check-noindex-excluded.mjs` 실행** (위 0번. 체제 A 15편이 sitemap·blog/index·rss 에 되살아났는지 + 체제 B는 2026-11-18 해제되어 대상 0편. 종료코드 0이어야 함)
 □ **새 글에 googlebot noindex 가 안 들어갔는지 확인** (위 0번. 신규 글은 구글 색인 회복 카나리아라 반드시 색인 가능해야 함)
 □ **요율/기준표 가드: `node scripts/check-rate-tables.mjs` 실행** (정책·기준표 카테고리 9종 salary·tax·realestate·finance·auto·baby·pet·health·pension-welfare 표 누락 + 상속·증여 부결안 회귀 검출. 종료코드 0이어야 함)
 □ **원문 검증 의무 이행 확인** (위 "원문 검증 의무" 섹션): 글에 쓴 **조문번호·과태료 금액·수수료·의학 기준·통계·정부 일정**을 하나씩 짚어, 각각 원문(law.go.kr 조문·별표 / 고시 / 학회 지침 / 원 보고서 / 공고)을 실제로 열어 확인했는지 자문한다. **웹서치 요약만 본 항목이 하나라도 있으면 발행 전에 원문을 열거나 그 주장을 뺀다.** 특히 ①조문번호(전부개정으로 바뀌었을 수 있음) ②수수료를 실제 비용으로 뭉갰는지 ③통계 분모 ④"예정"이라 썼는데 이미 공고됐는지
