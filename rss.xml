@@ -5,9 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 17 Nov 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
 
+    <item>
+      <title>부가세 신고기간 2026·2027 - 일반·간이과세자 기한 달력, 놓치면 가산세 얼마</title>
+      <link>https://www.jptcalc.kr/blog/posts/vat-filing-period-guide.html</link>
+      <description>부가세 신고기간은 개인 일반과세자 1월·7월 25일, 간이과세자 1월 25일입니다. 4월·10월 25일은 신고가 아니라 예정고지 납부이고, 같은 300만원도 하루 늦으면 660원이 아니라 9만원이 붙습니다. 2027년 기한표를 넣었습니다.</description>
+      <pubDate>Thu, 19 Nov 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/vat-filing-period-guide.html</guid>
+    </item>
     <item>
       <title>원천징수영수증 보는 법 2026 - 결정세액·기납부세액·차감징수세액 읽는 순서와 발급 기한</title>
       <link>https://www.jptcalc.kr/blog/posts/year-end-withholding-receipt-guide.html</link>

@@ -16,9 +16,9 @@
     },
     '/calc/tax/vat/': {
       key:'vat',
-      quick:['일반과세자는 매출세액에서 매입세액을 차감한 금액을 납부합니다.','간이과세자는 업종별 부가가치율을 적용하여 세액을 계산합니다.','연 매출 8,000만원 미만 간이과세자는 납부 면제 대상일 수 있습니다.','세금계산서 발행 여부와 과세 유형을 미리 확인하세요.'],
+      quick:['일반과세자는 매출세액에서 매입세액을 차감한 금액을 납부합니다.','간이과세자는 업종별 부가가치율을 적용하여 세액을 계산합니다.','연 공급대가 4,800만원 미만 간이과세자는 납부의무가 면제됩니다.','세금계산서 발행 여부와 과세 유형을 미리 확인하세요.'],
       related:[['/calc/tax/withholding/','3.3% 원천징수 계산기','💲'],['/calc/tax/income-tax/','종합소득세 계산기','📈'],['/calc/tax/freelancer-income/','월 순수입 계산기','💰']],
-      guides:[['/blog/posts/vat-guide.html','부가가치세 신고 완벽 가이드 - 일반·간이과세자 차이'],['/blog/posts/comprehensive-income-tax.html','종합소득세 신고 완벽 가이드 2026']]
+      guides:[['/blog/posts/vat-filing-period-guide.html','부가세 신고기간 2026·2027 - 일반·간이과세자 기한 달력, 놓치면 가산세 얼마'],['/blog/posts/vat-guide.html','부가가치세 신고 완벽 가이드 - 일반·간이과세자 차이'],['/blog/posts/comprehensive-income-tax.html','종합소득세 신고 완벽 가이드 2026']]
     },
     '/calc/tax/insurance-comparison/': {
       key:'insurance-comparison',
