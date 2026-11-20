@@ -696,6 +696,9 @@ html body #jpt-cookie-bar[style*="display: none"], html body #jpt-cookie-bar[sty
 .ds-input-card div[style*="display:flex"] > .input-wrap { flex: 1.25 !important; }
 .ds-input-card div[style*="display:flex"] > .input-wrap input { padding: 0 var(--space-3); }
 .ds-input-card div[style*="display:flex"] > .input-wrap .unit { padding: 0 var(--space-3); }
+/* 3칸 입력 줄(나이·키·체중, 년·월·일): 카드가 좁아(PC 346px) 기본 여백이면 숫자 자리가 20px뿐이라 "160"이 "16"으로 잘림 → 입력·단위 여백을 줄여 세 자리 이상 보이게 (2026-11-19) */
+.ds-input-card [style*="1fr 1fr 1fr"] .input-wrap input { padding: 0 var(--space-2); }
+.ds-input-card [style*="1fr 1fr 1fr"] .input-wrap .unit { padding: 0 var(--space-2); }
 
 /* ================================================
    카테고리 허브 (C1 모바일 · C2 데스크톱): 상황 탭 + 그룹별 한 카드 구분선 목록, 데스크톱은 왼쪽 카테고리 내비
