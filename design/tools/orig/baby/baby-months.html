@@ -252,10 +252,11 @@ function calc(){
   if(isNaN(b.getTime()) || b.getTime()>today.getTime()){res.classList.remove('show');return;}
   res.classList.add('show');
   // 만 개월 + 일
-  let m=(today.getFullYear()-b.getFullYear())*12+(today.getMonth()-b.getMonth());
-  let days;
-  if(today.getDate()>=b.getDate()){ days=today.getDate()-b.getDate(); }
-  else { m--; const pm=new Date(today.getFullYear(),today.getMonth(),0).getDate(); days=pm-b.getDate()+today.getDate(); }
+  // 출생일에 N개월을 더한 날(그 달에 같은 날짜가 없으면 말일)을 넘긴 만큼 센다: 1/31생은 2/28에 만 1개월, 3/31에 만 2개월
+  const addMonthsClamp=(base,n)=>{const t=base.getMonth()+n;const y=base.getFullYear()+Math.floor(t/12),mo=((t%12)+12)%12;return new Date(y,mo,Math.min(base.getDate(),new Date(y,mo+1,0).getDate()));};
+  let m=(today.getFullYear()-b.getFullYear())*12+(today.getMonth()-b.getMonth())+1;
+  while(m>0&&addMonthsClamp(b,m)>today)m--;
+  const days=Math.round((today-addMonthsClamp(b,m))/86400000);
   const totalDays=Math.floor((today.getTime()-b.getTime())/86400000);
   const years=Math.floor(m/12), remM=m%12;
   document.getElementById('r-months').textContent='만 '+m+'개월 '+days+'일';

@@ -106,7 +106,7 @@
 
     <section class="ds-calc-result" aria-labelledby="ds-h-result">
       <h2 class="ds-col-title" id="ds-h-result">계산 결과</h2>
-      <div class="result-card ds-wrap" id="s0-result"><div class="result-highlight"><div class="rh-label">BMI 지수</div><div class="rh-value" id="bmi-value">-</div><div><span class="bmi-status" id="bmi-status-badge">-</span></div></div><div class="bmi-gauge"><div class="bmi-track"><div class="bmi-needle" id="bmi-needle" style="left:0%"></div></div></div><div class="bmi-labels"><span>저체중<br>&lt;18.5</span><span>정상<br>18.5~23</span><span>과체중<br>23~25</span><span>비만<br>25~30</span><span>고도비만<br>30+</span></div><div class="result-row"><span class="result-label">현재 체중</span><span class="result-value" id="bmi-cur-weight">-</span></div><div class="result-row"><span class="result-label">정상 체중 범위 (BMI 18.5~23)</span><span class="result-value" id="bmi-normal-range">-</span></div><div class="result-row"><span class="result-label">적정 체중 (BMI 22)</span><span class="result-value" id="bmi-ideal">-</span></div><div class="result-row result-total-row"><span class="result-total-label">적정 체중과의 차이</span><span class="result-total-value" id="bmi-diff">-</span></div><p class="result-note">※ 한국·아시아태평양 기준(대한비만학회): BMI 18.5 미만=저체중, 18.5~22.9=정상, 23~24.9=과체중, 25~29.9=비만, 30 이상=고도비만</p>
+      <div class="result-card ds-wrap" id="s0-result"><div class="result-highlight"><div class="rh-label">BMI 지수</div><div class="rh-value" id="bmi-value">-</div><div><span class="bmi-status" id="bmi-status-badge">-</span></div></div><div class="bmi-gauge"><div class="bmi-track"><div class="bmi-needle" id="bmi-needle" style="left:0%"></div></div></div><div class="bmi-labels"><span>저체중<br>&lt;18.5</span><span>정상<br>18.5~23</span><span>과체중<br>23~25</span><span>비만<br>25~35</span><span>고도비만<br>35+</span></div><div class="result-row"><span class="result-label">현재 체중</span><span class="result-value" id="bmi-cur-weight">-</span></div><div class="result-row"><span class="result-label">정상 체중 범위 (BMI 18.5~23)</span><span class="result-value" id="bmi-normal-range">-</span></div><div class="result-row"><span class="result-label">적정 체중 (BMI 22)</span><span class="result-value" id="bmi-ideal">-</span></div><div class="result-row result-total-row"><span class="result-total-label">적정 체중과의 차이</span><span class="result-total-value" id="bmi-diff">-</span></div><p class="result-note">※ 한국·아시아태평양 기준(대한비만학회): BMI 18.5 미만=저체중, 18.5~22.9=정상, 23~24.9=과체중, 25~29.9=1단계 비만, 30~34.9=2단계 비만, 35 이상=3단계 비만(고도비만)</p>
         <div class="ds-result-actions">
           <button type="button" class="ds-btn-outline" onclick="DSCalc.copy('s0-result')"><svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-copy"></use></svg>결과 복사</button>
           <a class="ds-btn-primary" id="ds-primary-next" href="/calc/health/body-fat/">체지방률 계산 <svg class="ds-i ds-i-sm" aria-hidden="true"><use href="/assets/ds/icons.svg#i-arrow-right"></use></svg></a>
@@ -165,8 +165,9 @@
             <tr><td>18.5 미만</td><td>저체중</td><td>영양·근육량 점검 필요</td></tr>
             <tr><td>18.5 ~ 22.9</td><td>정상</td><td>건강 체중 범위</td></tr>
             <tr><td>23 ~ 24.9</td><td>과체중</td><td>비만전단계</td></tr>
-            <tr><td>25 ~ 29.9</td><td>비만</td><td>1단계 비만</td></tr>
-            <tr><td>30 이상</td><td>고도비만</td><td>2단계(30~34.9)·3단계(35 이상)</td></tr>
+            <tr><td>25 ~ 29.9</td><td>1단계 비만</td><td>당뇨·고혈압 위험 증가</td></tr>
+            <tr><td>30 ~ 34.9</td><td>2단계 비만</td><td>적극적 체중 관리 필요</td></tr>
+            <tr><td>35 이상</td><td>고도비만</td><td>3단계 비만</td></tr>
           </tbody>
         </table>
       </div>
@@ -190,8 +191,9 @@
         <li>BMI 18.5 미만: 저체중 - 영양 부족·면역력 저하 위험</li>
         <li>BMI 18.5~23: 정상 - 건강 체중 범위</li>
         <li>BMI 23~25: 과체중 - 생활습관 개선 권장</li>
-        <li>BMI 25~30: 비만 - 당뇨·고혈압 등 만성질환 위험 증가</li>
-        <li>BMI 30 이상: 고도비만 - 적극적 체중 관리 필요</li>
+        <li>BMI 25~30: 1단계 비만 - 당뇨·고혈압 등 만성질환 위험 증가</li>
+        <li>BMI 30~35: 2단계 비만 - 적극적 체중 관리 필요</li>
+        <li>BMI 35 이상: 3단계 비만(고도비만) - 의료진 상담 권장</li>
       </ul>
       <h3>입력 시 주의사항</h3>
       <ul>
@@ -331,8 +333,8 @@ function bmiNeedlePct(bmi){
   if(bmi<18.5)pct=Math.max((bmi/18.5),0)*20;
   else if(bmi<23)pct=20+((bmi-18.5)/4.5)*20;
   else if(bmi<25)pct=40+((bmi-23)/2)*20;
-  else if(bmi<30)pct=60+((bmi-25)/5)*20;
-  else pct=80+Math.min((bmi-30)/10,1)*20;
+  else if(bmi<35)pct=60+((bmi-25)/10)*20;
+  else pct=80+Math.min((bmi-35)/10,1)*20;
   return Math.min(Math.max(pct,0),100);
 }
 function calcBmi(){
@@ -350,10 +352,12 @@ function calcBmi(){
   if(bmi<18.5)status='저체중';
   else if(bmi<23)status='정상';
   else if(bmi<25)status='과체중';
-  else if(bmi<30)status='비만';
+  else if(bmi<30)status='1단계 비만';
+  else if(bmi<35)status='2단계 비만';
   else status='고도비만';
   var badge=document.getElementById('bmi-status-badge');
-  badge.textContent=status;badge.className='bmi-status '+status;
+  var cls=status.indexOf('단계 비만')>0?'비만':status;
+  badge.textContent=status;badge.className='bmi-status '+cls;
   document.getElementById('bmi-needle').style.left=bmiNeedlePct(bmi)+'%';
   var ideal=hm*hm*22,normalMin=hm*hm*18.5,normalMax=hm*hm*23;
   var diff=w-ideal;
