@@ -281,3 +281,5 @@
 | 2026-11-20 | 13:49 | tistory-publish | DESKTOP-C4EV6UM |
 | 2026-11-23 | 09:29 | tistory-verify | DESKTOP-C4EV6UM |
 | 2026-11-23 | 11:11 | keyword | DESKTOP-C4EV6UM |
+| 2026-11-23 | 17:15 | blog | DESKTOP-C4EV6UM |
+| 2026-11-23 | 17:22 | verify | DESKTOP-C4EV6UM |

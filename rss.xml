@@ -5,9 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Thu, 19 Nov 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
 
+    <item>
+      <title>파킹통장 이자 계산법 2026 - 하루 이자·세후 이자 공식과 한도 구간 함정</title>
+      <link>https://www.jptcalc.kr/blog/posts/parking-account-interest-guide.html</link>
+      <description>파킹통장 이자는 잔액 × 연금리 ÷ 365에서 이자소득세 15.4%를 뺀 값입니다. 1,000만원 연 2.5%면 하루 세후 579원이고, 30만원까지만 연 8%인 통장은 초과분 0.1%면 3,000만원에서 연 이자 5만 3,700원으로 연 1.8% 통장의 10분의 1입니다.</description>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/parking-account-interest-guide.html</guid>
+    </item>
     <item>
       <title>부가세 신고기간 2026·2027 - 일반·간이과세자 기한 달력, 놓치면 가산세 얼마</title>
       <link>https://www.jptcalc.kr/blog/posts/vat-filing-period-guide.html</link>
