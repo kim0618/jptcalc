@@ -1,3 +1,4 @@
+A NEW empty Chrome window was just opened for this job: do all work in that new window (create your tab group there), never in the user's existing windows. Close that window at the end.
 READ-ONLY task in the user's logged-in Chrome on their own Tistory blog. Do NOT edit, save or publish anything.
 For each post number N in POSTNOS:
 1. Open https://jptcalc.tistory.com/N in ONE tab (reuse it), wait for load, scroll to the bottom once so lazy images load, then scroll back.

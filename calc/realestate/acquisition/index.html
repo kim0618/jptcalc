@@ -539,13 +539,13 @@ function getAcqRate(priceMan, cnt, adjust) {
   if (cnt === 4 || cnt === 5) return 0.12;  // 법인, 4주택 이상(비조정도 12%, 제13조의2①3호)
   if (cnt === 1) {
     if (p <= 600000000) return 0.01;
-    if (p <= 900000000) return (p * 2 / 300000000 - 3) / 100;
+    if (p <= 900000000) return Math.round((p * 2 / 300000000 - 3) * 10000) / 1000000;  // 지방세법 §11①8나: 소수점 다섯째 자리 반올림
     return 0.03;
   }
   if (cnt === 2) {
     if (adjust) return 0.08;
     if (p <= 600000000) return 0.01;
-    if (p <= 900000000) return (p * 2 / 300000000 - 3) / 100;
+    if (p <= 900000000) return Math.round((p * 2 / 300000000 - 3) * 10000) / 1000000;  // 지방세법 §11①8나: 소수점 다섯째 자리 반올림
     return 0.03;
   }
   if (cnt === 3) return adjust ? 0.12 : 0.08;

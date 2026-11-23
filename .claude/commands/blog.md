@@ -474,14 +474,13 @@ date +"%Y-%m-%d (%a) u=%u"   # u: 1=월 2=화 3=수 4=목 5=금 6=토 7=일
 - 텍스트는 font-family="Pretendard, sans-serif" 사용
 - 색상: --primary (강조), #6B7280 (보조 텍스트), #F3F4F6 (배경), #111827 (레이블)
 - 반응형: viewBox 사용, width="100%" 고정
-- 접근성: `role="img"` + `<title>` 태그 포함
+- 접근성: `<svg role="img" aria-label="차트 설명">`으로 쓴다. **SVG 안에 `<title>` 태그를 절대 넣지 않는다**(2026-11-23: 네이버가 SVG 안 `<title>`을 페이지 제목으로 세어 약 110페이지에 "`<title>` 2개 이상" 경고, 140편 일괄 교체함)
 - 데이터는 본문의 비교표/계산 예시와 일치해야 함
 
 **SVG 코드 예시 (수평 막대 비교):**
 ```html
 <div style="margin:24px 0;overflow-x:auto">
-<svg role="img" width="100%" viewBox="0 0 680 160" xmlns="http://www.w3.org/2000/svg">
-  <title>항목 비교 차트</title>
+<svg role="img" aria-label="항목 비교 차트" width="100%" viewBox="0 0 680 160" xmlns="http://www.w3.org/2000/svg">
   <rect width="680" height="160" rx="12" fill="#F9FAFB"/>
   <text x="24" y="36" font-size="14" font-weight="800" fill="#111827" font-family="Pretendard,sans-serif">비교 제목</text>
   <text x="24" y="72" font-size="13" fill="#6B7280" font-family="Pretendard,sans-serif">항목 A</text>
