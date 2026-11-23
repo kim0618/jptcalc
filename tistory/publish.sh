@@ -59,5 +59,6 @@ Do not change settings, skin, menu, categories or other posts.
 Final answer (English): per post: post number/URL, reservation date shown, capture placed+alt, thumbnail set, any problem. Note if any body image shows the "검토중" censoring placeholder.
 P
 fi
-powershell.exe -NoProfile -Command "Start-Process chrome.exe -ArgumentList '--new-window','about:blank'" ; sleep 3
+powershell.exe -NoProfile -Command "Start-Process chrome.exe -ArgumentList '--new-window','data:text/html,<title>claude-job</title>'" ; sleep 3
 cd /mnt/c/Users/jinsung && powershell.exe -NoProfile -Command "[Console]::OutputEncoding=[System.Text.Encoding]::UTF8; \$p = Get-Content -Raw -Encoding UTF8 '$WIN\prompt.txt'; \$p | & '$EXE_WIN' --chrome -p --output-format text --max-turns 250 --allowedTools 'mcp__claude-in-chrome__*' 'PowerShell' 'Bash' 'Read'" 2>&1 | grep -v "^Permission allow rule"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File 'C:\Users\jinsung\Downloads\claude-chrome\close_job_windows.ps1' | tail -1
