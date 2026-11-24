@@ -62,6 +62,9 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 - 저장: `posts/tNNN-<slug>.html`, `meta/tNNN.txt`(TITLE·CATEGORY·TAGS·DATE `YYYY-MM-DD 08:00`·ALT).
 - 제목: 공백 포함 42자 이하. 첫 쉼표 앞 = 검색어(대표이미지에 크게 들어감), 뒤 = 결론 숫자(노란 줄). 쉼표를 꼭 넣는다.
 
+### 4-2. 예시 일관성표 (11/24 필수)
+예시 인물·거래의 사실(생년월일·만 나이·학년, 입사일·퇴사일·기간, 대출 시작·만기, 날짜별 요일, 사건 순서, 금액 합계·차이)을 python3로 계산해 `meta/tNNN.txt` 끝에 `EXAMPLE:` 줄로 적고(한 줄에 사실 하나), 본문·표·캡처 설명·캡처 setup의 같은 값과 한 줄씩 대조한다. 결론의 이유가 본문의 다른 권고와 충돌하지 않는지도 본다. (폼다 11/24: 2010년생 고2, 12월 시작인데 "6개월 이상(5월까지)", 내용증명 보낸 날 입금 → 검증에서 걸림)
+
 ### 5. 검사
 `python3 ~/jptcalc/tistory/check_post.py posts/tNNN-*.html --numbers` → PASS까지 고친다. 검사 항목: 금지 표현·문장 끝 반복·다른 원고와 겹침·분량/구성 몰림·제목 길이·meta/thumb/cap 존재·기준 줄·글쓴이 단락·www 주소와 utm_campaign 번호·스페이서·표 칸 수.
 `--numbers`가 뽑아 준 숫자 문장 목록을 **한 줄씩 3단계 스크립트 결과와 대조**한다. 그다음 직접 다시 읽고 rules §11-1 네 가지에 예라고 답할 수 있는지 본다. 아니면 다시 쓴다.

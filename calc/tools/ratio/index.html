@@ -214,6 +214,10 @@
       <a href="/calc/tools/char-count/" class="sibling-link">글자수 세기</a>
       <a href="/calc/tools/lunar-calendar/" class="sibling-link">음력 양력 변환기</a>
     </div>
+    <h2 class="sibling-title">관련 가이드</h2>
+    <div class="sibling-list sibling-guides">
+      <a href="/blog/posts/ratio-calculation-guide.html" class="sibling-link sibling-guide"><img src="/assets/img/blog-thumb/ratio-calculation-guide-1x1.webp" alt="" width="240" height="240" loading="lazy" decoding="async"><span>비율 계산법 2026 - 비율 줄이기·금액 나누기·비례식·화면 비율 총정리</span></a>
+    </div>
   </div>
 </main>
 <footer id="ds-site-footer" class="site-footer ds-footer">
@@ -234,7 +238,7 @@
 /* 비율 계산기: 약분(최대공약수), 금액 배분(최대 잔여 방식으로 원 단위 합계 맞춤), 비례식 x = B×C/A, 화면 비율(가로·세로 약분)
    퍼센트 계산기와 겹치지 않게 "A는 B의 몇 %"는 넣지 않음 (data-points §94) */
 var rtMode='simp';
-var RT_NAMED={'16:9':'16:9 (HD·FHD·4K)','4:3':'4:3 (구형 모니터·태블릿)','3:2':'3:2 (사진·노트북)','1:1':'1:1 (정사각형)','9:16':'9:16 (세로 영상)','21:9':'21:9 (울트라와이드)','43:18':'약 21:9 (울트라와이드 3440×1440)','64:27':'약 21:9 (2560×1080)','16:10':'16:10 (노트북·모니터)','5:4':'5:4','4:5':'4:5 (인스타 세로)'};
+var RT_NAMED={'16:9':'16:9 (HD·FHD·4K)','4:3':'4:3 (구형 모니터·태블릿)','3:2':'3:2 (사진·노트북)','1:1':'1:1 (정사각형)','9:16':'9:16 (세로 영상)','7:3':'7:3 (=21:9 울트라와이드)','43:18':'약 21:9 (울트라와이드 3440×1440)','64:27':'약 21:9 (2560×1080)','8:5':'8:5 (=16:10 노트북·모니터)','5:4':'5:4','4:5':'4:5 (인스타 세로)'};
 function rtNum(id){var v=parseFloat(String(document.getElementById(id).value).replace(/,/g,''));return isFinite(v)?v:NaN}
 function rtGcd(a,b){a=Math.abs(a);b=Math.abs(b);while(b){var t=b;b=a%b;a=t}return a}
 function rtDec(x){var s=String(x);if(s.indexOf('e')>=0)return 4;var i=s.indexOf('.');return i<0?0:Math.min(s.length-i-1,4)}

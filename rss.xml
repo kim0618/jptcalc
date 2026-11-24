@@ -5,9 +5,16 @@
     <link>https://www.jptcalc.kr/blog/</link>
     <description>세금, 부동산, 연봉, 금융, 건강, AI 등 실생활에 도움되는 계산 가이드와 정보를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 23 Nov 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.jptcalc.kr/rss.xml" rel="self" type="application/rss+xml" />
 
+    <item>
+      <title>비율 계산법 2026 - 비율 줄이기·금액 나누기·비례식·화면 비율 총정리</title>
+      <link>https://www.jptcalc.kr/blog/posts/ratio-calculation-guide.html</link>
+      <description>1,000,000원을 세 명이 나누면 1원이 남는 이유, 12:18을 2:3으로 줄이는 법, 3명이 10일 걸리는 일을 5명이 하면 6일인 계산, 같은 55인치인데 21:9 화면 면적이 84.7%인 이유까지 예시로 풀었습니다.</description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.jptcalc.kr/blog/posts/ratio-calculation-guide.html</guid>
+    </item>
     <item>
       <title>파킹통장 이자 계산법 2026 - 하루 이자·세후 이자 공식과 한도 구간 함정</title>
       <link>https://www.jptcalc.kr/blog/posts/parking-account-interest-guide.html</link>
