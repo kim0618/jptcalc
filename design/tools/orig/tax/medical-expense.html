@@ -207,13 +207,6 @@
     <button onclick="calculate()" style="width:100%;padding:14px;background:var(--primary);color:#fff;border:none;border-radius:12px;font-size:16px;font-weight:800;cursor:pointer;font-family:inherit;margin-top:4px;display:none;">세액공제 계산하기</button>
   </div>
 
-  <!-- 공제 불가 안내 -->
-  <div class="no-deduction" id="noDeduction">
-    <strong>&#9888;&#65039; 의료비 세액공제 해당 없음</strong><br>
-    의료비 합계(<span id="ndTotalMedical"></span>원)가 총급여 × 3%(<span id="ndThreshold"></span>원)에 미치지 않아 세액공제를 받을 수 없습니다.<br>
-    총급여 3% 초과분부터 공제가 적용됩니다.
-  </div>
-
   <!-- 결과 카드 -->
   <div class="result-card" id="resultCard">
     <div class="result-section-title">계산 요약</div>
@@ -255,6 +248,11 @@
       <span class="result-total-value" id="rTotalCredit">-</span>
     </div>
 
+    <div class="no-deduction" id="noDeduction" style="margin-top:12px;">
+      <strong>&#9888;&#65039; 의료비 세액공제 해당 없음</strong><br>
+      의료비 합계(<span id="ndTotalMedical"></span>원)가 총급여 × 3%(<span id="ndThreshold"></span>원)에 미치지 않아 세액공제를 받을 수 없습니다.<br>
+      총급여 3% 초과분부터 공제가 적용됩니다.
+    </div>
     <div class="result-note" id="rNote"></div>
   </div>
 
@@ -456,10 +454,17 @@ function calculate() {
   const resultCard = document.getElementById('resultCard');
 
   if (totalMedical <= threshold) {
-    noDeduct.classList.add('show');
-    resultCard.classList.remove('show');
+    // 공제 0원도 결과 칸에 보여준다(11/25: 경고가 입력 칸 아래에만 뜨고 결과 칸은 "값을 입력하면"으로 남던 것)
+    document.getElementById('rSalary').textContent = fmt(salary);
+    document.getElementById('rThreshold').textContent = fmt(threshold);
+    document.getElementById('rTotalMedical').textContent = fmt(totalMedical);
+    document.getElementById('rTotalCredit').textContent = '0원';
+    ['rowInfertility','rowPremature','rowSelf','rowOther'].forEach(id => { document.getElementById(id).style.display = 'none'; });
     document.getElementById('ndTotalMedical').textContent = fmt(totalMedical).replace('원','');
     document.getElementById('ndThreshold').textContent = fmt(threshold).replace('원','');
+    document.getElementById('rNote').textContent = '';
+    noDeduct.classList.add('show');
+    resultCard.classList.add('show');
     return;
   }
 
