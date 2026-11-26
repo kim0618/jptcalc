@@ -16,8 +16,10 @@ function JPT_simplifiedTax(taxableMonthlyWon, depCount, childCount){
     tax = SIMPLIFIED_TAX_TABLE[lo][dep];
   } else if (thou >= 10000) {
     // 월 1,000만원 초과 공식 (PDF 별표2)
-    const base = SIMPLIFIED_TAX_TABLE[SIMPLIFIED_TAX_TABLE.length - 1][dep];
-    if (thou <= 14000) tax = base + (thou - 10000) * 1000 * 0.98 * 0.35 + 25000;
+    // 10,000천원 행은 표 본체(마지막 9,980천원 행)와 별도로 있다(소득세법 시행령 별표2, 2026-11-26 원문 대조로 추가)
+    const base = [0, 1507400, 1431570, 1200840, 1170840, 1140840, 1110840, 1080840, 1050840, 1020840, 990840, 960840][dep];
+    if (thou === 10000) tax = base;
+    else if (thou <= 14000) tax = base + (thou - 10000) * 1000 * 0.98 * 0.35 + 25000;
     else if (thou <= 28000) tax = base + 1397000 + (thou - 14000) * 1000 * 0.98 * 0.38;
     else if (thou <= 30000) tax = base + 6610600 + (thou - 28000) * 1000 * 0.98 * 0.40;
     else if (thou <= 45000) tax = base + 7394600 + (thou - 30000) * 1000 * 0.40;

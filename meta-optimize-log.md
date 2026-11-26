@@ -1,3 +1,19 @@
+## 2026-11-26 (7차 - 11/16 키워드사운드 스윕 후속, 리뉴얼 쿨다운 해제 후)
+근거: 네이버 자동완성 실측(부가세 계산기·평수계산기·음력 양력 변환기·기초대사량 계산기·ltv 계산기·실업급여조건·퇴직금 지급기준·연차발생기준) + 11/16 키워드사운드 월 검색량. 서치어드바이저 페이지별 CTR은 이번엔 안 봄. 모든 대상의 직전 메타 변경은 4~6월(4주 쿨다운 충족).
+- calc/tax/vat/: "부가가치세" → 검색어 "부가세 계산기" 앞으로, 공급가액 나누기(10%)·간이·일반 납부세액 기능을 제목에. 브랜드 jptcalc→제이퍼 계산기
+- calc/realestate/pyeong/: "평수 변환 계산기" → "평수 계산기", "84㎡는 몇 평?" 질문형, desc에 1평=3.3058㎡·평형 버튼
+- calc/tools/lunar-calendar/: "(KASI 만세력)" 괄호 제거, 음력 생일 양력 날짜·윤달·띠, desc에 띠 두 기준(설·입춘)과 1900~2050년
+- calc/health/bmr/: BMR·하루 소모 칼로리·남녀 평균(자동완성 "여자 기초대사량 평균"), desc에 공식 3종 비교. 브랜드 통일
+- calc/realestate/ltv/: 규제지역 40%·비규제 70%를 제목에, desc에 10·15 대책 금액한도(6억/4억/2억, 같은 날 재검증에서 "수도권·규제지역" 적용 범위 명시)·방공제·희망 금액 LTV. 옛 desc의 "6억원 한도"만 쓴 표현 정리
+- calc/tax/medical-expense/: "2026년 연말정산" → "2026년 귀속 연말정산"(본문 표기와 일치), desc에 3% 문턱·한도·공제율
+- posts/unemployment-benefit-guide: "실업급여 계산법" → "실업급여 조건", 수급 자격 4가지 결론 먼저
+- posts/severance-pay-guide: "퇴직금 계산 공식" → "퇴직금 지급기준", 1년·주 15시간·14일 지급 결론 먼저
+- posts/annual-leave-guide: "연차 발생기준"으로 전환. **본문 사실 오류 정정 동반**: 1년 미만 월 단위 연차 소멸을 "입사 2년차 말"로 쓴 곳 2군데(본문·요약) → "입사 1년이 되는 날까지"(근로기준법 제60조제7항, 2020.3.31 개정). 본문 다른 곳은 이미 "1년 되면 소멸"이라 글 안에서 모순이었음. dateModified·lastReviewed·sitemap 11/26. JSON-LD Article description이 meta와 달랐던 것도 맞춤
+- posts/vat-guide: "부가가치세 신고" → "부가세 계산법"(신고기간은 vat-filing-period-guide와 겹치지 않게 제목에서 뺌)
+- posts/four-insurance-vs-33-comparison: 제목 유지(27만원 차이 맞음), desc·결론 문단의 "차이가 거의 사라집니다" → 전제 명시(연금 적립까지 맞추면 본전 단가 약 314만원·퇴직금 포함 339만원 / 현금만 보면 경비율 60% 가정에서 프리랜서가 월 10만원 안팎 앞섬). RECHECK 해소
+- 제외: pet-travel-guide(본문 전체가 2026 추석 기준이라 제목만 바꾸면 어긋남, 본문 재작성 필요), calc/realestate/registry(11/12 변경이라 12/10 이후)
+- 검증: title 38~55자, desc 106~148자, og·twitter·WebApplication/Article description·headline·Breadcrumb 4 동기화 스크립트 확인, 목록 카드·rss.xml 반영, build_blog 재생성 결과 바뀐 글은 이 5편뿐. 재측정 2026-12-24 이후(4주)
+
 
 ## 2026-05-31 (6차 라운드 - 노출 상위 calc 페이지)
 - calc/date/age/: 노출 3,566 CTR 1.3% (최다 노출 페이지) - "만나이 생일 당일"·"만 나이 계산법 생일" 쿼리 대응, title "생일 지났나?" 질문형 훅 추가 + "법적나이"→"연나이"로 검색 의도 정렬, og/twitter/WebApp description 본 title·desc와 완전 동기화 (재측정 2026-06-28 예정)
